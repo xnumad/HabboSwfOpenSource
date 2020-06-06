@@ -43,7 +43,7 @@
             var k:XML = (this._handler.widget.assets.getAssetByName("mystery_box_toolbar_extension").content as XML);
             this._window = (this._handler.container.windowManager.buildFromXML(k) as IWindowContainer);
             this._window.findChildByName("faq_link").visible = (!(this._handler.container.config.getProperty("mysterybox.faq.url") == ""));
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._handler.container.toolbar.extensionView.attachExtension(ToolbarDisplayExtensionIds.MYSTERY_BOX, this._window);
             var _local_2:ISessionDataManager = this._handler.container.sessionDataManager;
             _local_2.events.addEventListener(MysteryBoxKeysUpdateEvent.MBKE_UPDATE, this._Str_19397);
@@ -51,7 +51,7 @@
             this._Str_21472(_local_2.mysteryBoxColor, _local_2.mysteryKeyColor);
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

@@ -35,10 +35,10 @@
         private function createWindow():void
         {
             this._window = IWindowContainer(this._catalog.utils.createWindow("bundlesInfoItem"));
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

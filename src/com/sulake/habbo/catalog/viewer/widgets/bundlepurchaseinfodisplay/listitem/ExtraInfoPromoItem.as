@@ -85,7 +85,7 @@
         private function createWindow():void
         {
             this._window = IWindowContainer(this._catalog.utils.createWindow("discountPromoItem"));
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             var k:IBitmapWrapperWindow = IBitmapWrapperWindow(this._window.findChildByName("icon_bitmap"));
             HabboCatalogUtils._Str_14396(k, BitmapData(this._catalog.assets.getAssetByName("thumb_up").content).clone());
         }
@@ -148,7 +148,7 @@
             }
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (_arg_2.name == "click_region")
             {

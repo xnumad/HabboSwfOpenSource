@@ -49,7 +49,7 @@
         {
             if (((this._window == null) || (this._window.disposed)))
             {
-                this._window = this.createWindow(_Str_18774, this._Str_2533);
+                this._window = this.createWindow(_Str_18774, this.windowProcedure);
                 (this._window.findChildByName("content") as ITextWindow).styleSheet = styleSheet;
                 (this._window.findChildByName("content") as ITextWindow).addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_24991);
             }
@@ -75,7 +75,7 @@
             return _local_5;
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

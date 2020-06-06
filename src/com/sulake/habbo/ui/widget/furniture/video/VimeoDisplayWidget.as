@@ -57,7 +57,7 @@
             this._window = (windowManager.buildFromXML(XML(assets.getAssetByName("vimeo_viewer_xml").content)) as IWindowContainer);
             this._window.findChildByName("video_id_editor").visible = k;
             this._window.findChildByName("video_wrapper").visible = (_arg_2 > 0);
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._window.center();
             var _local_3:IDisplayObjectWrapper = IDisplayObjectWrapper(this._window.findChildByName("video_wrapper"));
             this._player = new VimeoPlayer(_Str_16140, _arg_2, _local_3.width, _local_3.height);
@@ -74,7 +74,7 @@
             }
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:int;
             switch (k.type)

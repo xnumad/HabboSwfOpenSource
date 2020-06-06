@@ -114,7 +114,7 @@
             }
             this._window = IFrameWindow(windowManager.buildFromXML(XML(this._component.assets.getAssetByName("iro_room_thumbnail_camera_xml").content)));
             this._imageWindow = IBitmapWrapperWindow(this._window.findChildByName("viewfinder"));
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._window.center();
             this._component.registerUpdateReceiver(this, 10);
         }
@@ -154,7 +154,7 @@
             this.container._Str_2476.playSound(HabboSoundTypesEnum.CAMERA_SHUTTER);
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             //var _local_4:RenderRoomThumbnailMessageComposer;
             var _local_3:WindowMouseEvent = (k as WindowMouseEvent);

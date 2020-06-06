@@ -43,7 +43,7 @@
             var _local_9:IAsset = this._habboNotifications.assets.getAssetByName("layout_notification_popup_xml");
             this._Str_2440 = this._habboNotifications.windowManager.buildModalDialogFromXML((_local_9.content as XML));
             var _local_10:IWindowContainer = (this._Str_2440._Str_2429 as IWindowContainer);
-            _local_10.procedure = this._Str_2533;
+            _local_10.procedure = this.windowProcedure;
             _local_10.caption = _local_4;
             if (_local_6 != null)
             {
@@ -82,7 +82,7 @@
             return this._Str_2440 == null;
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (this.disposed)
             {

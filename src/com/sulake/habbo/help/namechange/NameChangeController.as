@@ -144,7 +144,7 @@
             this._habboHelp.events.dispatchEvent(new HabboHelpTutorialEvent(HabboHelpTutorialEvent.HHTPNUFWE_AVATAR_TUTORIAL_START));
         }
 
-        public function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        public function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             switch (k.type)
             {

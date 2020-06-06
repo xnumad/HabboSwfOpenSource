@@ -85,7 +85,7 @@
                 this._window.findChildByName("video_background").setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH);
                 this._window.width = (this._window.width - 250);
             }
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._window.center();
             this._Str_25201();
         }
@@ -220,7 +220,7 @@
             super.dispose();
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:IItemListWindow;
             var _local_4:IWindow;

@@ -140,7 +140,7 @@
         {
             this.hide();
             this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName("offer_center_xml").content as XML)) as IWindowContainer);
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._window.center();
             this._rewardTemplate = IItemListWindow(this._window.findChildByName("reward_list")).removeListItemAt(0);
             this._Str_22857();
@@ -159,7 +159,7 @@
             return (!(this._currentProvider == null)) && (this._currentProvider._Str_16897);
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((!(k.type == WindowMouseEvent.CLICK)) || (!(this.visible))))
             {

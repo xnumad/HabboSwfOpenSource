@@ -27,7 +27,7 @@
         {
             this._toolbar = k;
             this._window = (_arg_2.buildFromXML((_arg_3.getAssetByName("offer_extension_xml").content as XML)) as IWindowContainer);
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._window.visible = false;
             this._list = (this._window.findChildByName("list") as IItemListWindow);
             this._offerCenter = _arg_4._Str_17606(this);
@@ -35,7 +35,7 @@
             this.refresh();
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

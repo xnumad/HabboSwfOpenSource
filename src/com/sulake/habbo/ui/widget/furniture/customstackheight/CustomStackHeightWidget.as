@@ -44,7 +44,7 @@
             if (!this._window)
             {
                 this._window = IWindowContainer(windowManager.buildFromXML(XML(assets.getAssetByName("custom_stack_height_xml").content)));
-                this._window.procedure = this._Str_2533;
+                this._window.procedure = this.windowProcedure;
                 this._window.center();
             }
         }
@@ -81,7 +81,7 @@
             }
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (_arg_2 == null)
             {
@@ -174,7 +174,7 @@
             var _local_3:Number = (this._window.findChildByName("slider").width - _Str_15538);
             this._window.procedure = null;
             this._window.findChildByName("slider_button").x = (_local_3 * _local_2);
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
         }
 
         private function _Str_21486(k:Boolean=false):void

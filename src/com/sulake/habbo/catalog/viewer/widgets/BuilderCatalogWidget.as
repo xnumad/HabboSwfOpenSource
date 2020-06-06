@@ -59,7 +59,7 @@
             }
             _Str_2819(CatalogWidgetEnum.BUILDER);
             this._Str_2771(false);
-            _window.procedure = this._Str_2533;
+            _window.procedure = this.windowProcedure;
             events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
             events.addEventListener(CatalogWidgetEvent.ROOM_CHANGED, this._Str_24491);
             return true;
@@ -79,7 +79,7 @@
             this._Str_2771(true);
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

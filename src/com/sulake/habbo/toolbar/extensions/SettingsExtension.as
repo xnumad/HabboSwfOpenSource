@@ -31,7 +31,7 @@
             super();
             this._toolbar = k;
             this._window = (this._toolbar.windowManager.buildFromXML((k.assets.getAssetByName("settings_xml").content as XML)) as IWindowContainer);
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._Str_16134("avatar_settings", this._toolbar.localization.getLocalization("widget.memenu.settings.character", "avatar settings"));
             this._Str_16134("sound", this._toolbar.localization.getLocalization("widget.memenu.settings.audio", "sound settings"));
             this._Str_16134("chat", this._toolbar.localization.getLocalization("widget.memenu.settings.other", "other settings"));
@@ -73,7 +73,7 @@
             }
             _local_3.x = _Str_5133;
             _local_3.name = k;
-            _local_3.procedure = this._Str_2533;
+            _local_3.procedure = this.windowProcedure;
             this._buttons.push(_local_3);
             this._window.height = (this._buttons[(this._buttons.length - 1)].bottom + _Str_5133);
         }
@@ -94,7 +94,7 @@
             k.window.x = ((_local_2.width - k.window.width) - 200);
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

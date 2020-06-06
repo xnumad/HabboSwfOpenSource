@@ -104,7 +104,7 @@
             this._Str_17640 = this._Str_2726.width;
             this._Str_21362 = this._Str_2726.height;
             this._Str_2726.visible = true;
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
         }
 
         public function update(k:uint):void
@@ -175,7 +175,7 @@
             this._widget.component.removeUpdateReceiver(this);
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:IStaticBitmapWrapperWindow;
             var _local_4:RenderRoomMessageComposer;

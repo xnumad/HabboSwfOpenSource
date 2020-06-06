@@ -41,10 +41,10 @@
             this._window = (this._habboToolbar.windowManager.buildFromXML((_local_3.content as XML), 2) as IWindowContainer);
             this._Str_7348 = new MeMenuIconLoader(this._habboToolbar);
             this._window.visible = false;
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:IRegionWindow;
             var _local_4:IStaticBitmapWrapperWindow;

@@ -81,7 +81,7 @@
                 return;
             }
             this._window = IFrameWindow(windowManager.buildFromXML(XML(assets.getAssetByName("lock_confirm_xml").content)));
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._otherLockedContainerHeight = this._window.findChildByName("other_locked_container").height;
             this._window.center();
         }
@@ -100,7 +100,7 @@
             return FriendFurniConfirmWidgetHandler(_handler);
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

@@ -30,7 +30,7 @@
         {
             this._toolbar = k;
             this._window = (this._toolbar.windowManager.buildFromXML((k.assets.getAssetByName("purse_xml").content as XML)) as IWindowContainer);
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._clubArea = new PurseClubArea(k, (this._window as IWindowContainer));
             this._catalog = _arg_2;
             this._catalog.events.addEventListener(PurseEvent.CATALOG_PURSE_CREDIT_BALANCE, this._Str_24822);
@@ -165,7 +165,7 @@
             return _local_2;
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

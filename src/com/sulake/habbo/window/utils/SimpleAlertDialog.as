@@ -52,7 +52,7 @@
             this._Str_1676 = ITextLinkWindow(this._window.findChildByName("link"));
             this._Str_5447 = IStaticBitmapWrapperWindow(this._window.findChildByName("illustration"));
             this._window.findChildByName("header_button_close").dispose();
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._window.caption = _arg_2;
             this._Str_18789.caption = _arg_4;
             if (_arg_7 != null)
@@ -150,7 +150,7 @@
             }
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((k.type == WindowMouseEvent.CLICK) && (_arg_2.name == "close_button")))
             {

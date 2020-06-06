@@ -35,7 +35,7 @@
             this.close();
             this._dialog = this._navigator.windowManager.buildModalDialogFromXML((this._navigator.assets.getAssetByName("enforce_category_xml").content as XML));
             this._window = (this._dialog._Str_2429 as IFrameWindow);
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._window.center();
             this._window.findChildByName("header_button_close").visible = false;
             var _local_2:IDropMenuWindow = (this._window.findChildByName("trade_mode") as IDropMenuWindow);
@@ -73,7 +73,7 @@
             }
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:int;
             if (k.type == WindowMouseEvent.CLICK)

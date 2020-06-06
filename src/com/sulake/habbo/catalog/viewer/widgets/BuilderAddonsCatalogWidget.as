@@ -28,7 +28,7 @@
             {
                 return false;
             }
-            _window.procedure = this._Str_2533;
+            _window.procedure = this.windowProcedure;
             var k:IItemListWindow = (_window.findChildByName("addons_list") as IItemListWindow);
             var _local_2:IWindow = k.removeListItemAt(0);
             var _local_3:int;
@@ -57,7 +57,7 @@
             return true;
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

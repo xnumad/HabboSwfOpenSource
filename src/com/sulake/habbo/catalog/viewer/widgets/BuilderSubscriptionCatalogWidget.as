@@ -31,7 +31,7 @@
             }
             this._optionalSubscribeUrl = this._catalog.getProperty("builders_club.buy_membership_page");
             this._Str_19488();
-            _window.procedure = this._Str_2533;
+            _window.procedure = this.windowProcedure;
             events.addEventListener(CatalogWidgetEvent.BUILDER_SUBSCRIPTION_UPDATED, this._Str_23869);
             return true;
         }
@@ -82,7 +82,7 @@
             this._Str_19488();
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

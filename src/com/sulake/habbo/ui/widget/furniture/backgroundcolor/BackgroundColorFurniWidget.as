@@ -81,7 +81,7 @@
             if (!this._window)
             {
                 this._window = IFrameWindow(windowManager.buildFromXML((assets.getAssetByName("background_color_ui_xml").content as XML)));
-                this._window.procedure = this._Str_2533;
+                this._window.procedure = this.windowProcedure;
                 this._window.center();
                 this._sliders.push(new BackgroundColorWidgetSlider(this, HUE, IWindowContainer(this._window.findChildByName("hue_container")), this._hue));
                 this._sliders.push(new BackgroundColorWidgetSlider(this, SATURATION, IWindowContainer(this._window.findChildByName("saturation_container")), this._saturation));
@@ -117,7 +117,7 @@
             k.bitmap = _local_2;
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((!(_arg_2 == null)) && (k.type == WindowMouseEvent.CLICK)))
             {

@@ -89,14 +89,14 @@
                 return;
             }
             this._window = (windowManager.buildFromXML(XML(assets.getAssetByName("rentablespace_xml").content)) as IWindowContainer);
-            this._window.procedure = this._Str_2533;
+            this._window.procedure = this.windowProcedure;
             this._window.center();
             this._window.findChildByName("rent_button").disable();
             this._window.findChildByName("rented_view").visible = false;
             this._window.findChildByName("error_view").visible = false;
         }
 
-        private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
+        private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             switch (k.type)
             {
