@@ -6,13 +6,13 @@
     {
         private var _searchCodeOriginal:String;
         private var _filteringData:String;
-        private var _Str_13083:SearchResultSet;
+        private var _resultSet:SearchResultSet;
 
         public function SearchResultContainer(k:SearchResultSet)
         {
             this._searchCodeOriginal = k._Str_4569;
             this._filteringData = k._Str_5610;
-            this._Str_13083 = k;
+            this._resultSet = k;
         }
 
         public function get _Str_4569():String
@@ -27,14 +27,14 @@
 
         public function get _Str_11413():SearchResultSet
         {
-            return this._Str_13083;
+            return this._resultSet;
         }
 
         public function _Str_6684(k:int):GuestRoomData
         {
-            if (this._Str_13083 != null)
+            if (this._resultSet != null)
             {
-                return this._Str_13083._Str_6684(k);
+                return this._resultSet._Str_6684(k);
             }
             return null;
         }
