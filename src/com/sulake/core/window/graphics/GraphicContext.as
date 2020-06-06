@@ -107,7 +107,7 @@
             }
         }
 
-        public function _Str_24550(k:Point):void
+        public function offSet(k:Point):void
         {
             this.x = k.x;
             this.y = k.y;

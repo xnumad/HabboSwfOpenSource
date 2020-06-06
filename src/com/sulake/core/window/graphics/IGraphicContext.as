@@ -21,7 +21,7 @@
         function set blend(_arg_1:Number):void;
         function get _Str_10223():Boolean;
         function set _Str_10223(_arg_1:Boolean):void;
-        function _Str_24550(_arg_1:Point):void;
+        function offSet(_arg_1:Point):void;
         function getDrawRegion():Rectangle;
         function _Str_15334(_arg_1:Rectangle, _arg_2:Boolean, _arg_3:Rectangle):BitmapData;
         function getDisplayObject():DisplayObject;
