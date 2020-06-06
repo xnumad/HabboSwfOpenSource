@@ -137,7 +137,7 @@
                     this._controller = k.controller;
                     this._senderName = k._Str_22956;
                     this._senderFigure = k._Str_23105;
-                    this._Str_3030();
+                    this.showInterface();
                     this._Str_9278(k._Str_11625);
                     return;
                 case RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_FLOOR:
@@ -565,7 +565,7 @@
             this._Str_16305();
         }
 
-        private function _Str_3030():void
+        private function showInterface():void
         {
             var _local_7:String;
             var _local_8:String;

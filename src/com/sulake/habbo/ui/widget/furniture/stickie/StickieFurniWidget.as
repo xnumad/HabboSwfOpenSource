@@ -90,10 +90,10 @@
             this._text = k.text;
             this._Str_3062 = k._Str_10471;
             this._controller = k.controller;
-            this._Str_3030();
+            this.showInterface();
         }
 
-        protected function _Str_3030():void
+        protected function showInterface():void
         {
             var _local_3:ITextFieldWindow;
             var _local_4:BitmapDataAsset;
@@ -263,7 +263,7 @@
                 _local_3 = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_UPDATE, this._objectId, this._text, this._Str_3062);
                 messageListener.processWidgetMessage(_local_3);
             }
-            this._Str_3030();
+            this.showInterface();
         }
 
         protected function sendDelete():void

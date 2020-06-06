@@ -66,10 +66,10 @@
             this._Str_10662 = k.objectId;
             this._value = k._Str_22599;
 			this._furniType = k.furniType;
-            this._Str_3030();
+            this.showInterface();
         }
 
-        private function _Str_3030():void
+        private function showInterface():void
         {
             var _local_3:IWindow;
             if (this._Str_10662 == -1)

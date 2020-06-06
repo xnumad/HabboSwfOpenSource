@@ -106,7 +106,7 @@
                 this._presets.push(_local_4);
                 _local_2++;
             }
-            this._Str_3030();
+            this.showInterface();
         }
 
         private function _Str_21426(k:RoomWidgetDimmerUpdateEvent):void
@@ -146,7 +146,7 @@
             messageListener.processWidgetMessage(_local_2);
         }
 
-        private function _Str_3030():void
+        private function showInterface():void
         {
             if (this._view == null)
             {
@@ -154,7 +154,7 @@
             }
             if (this._view != null)
             {
-                this._view._Str_3030();
+                this._view.showInterface();
             }
         }
 

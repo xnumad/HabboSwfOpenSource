@@ -53,7 +53,7 @@
             _text = "";
             _Str_3062 = "FFFF33";
             _controller = true;
-            _Str_3030();
+            showInterface();
         }
 
         override protected function sendUpdate():void
@@ -85,7 +85,7 @@
                 return;
             }
             _Str_3062 = _local_2;
-            _Str_3030();
+            showInterface();
         }
 
         override protected function sendDelete():void

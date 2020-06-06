@@ -4,6 +4,6 @@
     {
         function dispose():void;
         function _Str_7493():void;
-        function _Str_3030():Boolean;
+        function showInterface():Boolean;
     }
 }

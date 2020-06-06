@@ -33,7 +33,7 @@
             this._widget = null;
         }
 
-        public function _Str_3030():Boolean
+        public function showInterface():Boolean
         {
             var _local_3:IWindow;
             var _local_4:IWindowContainer;

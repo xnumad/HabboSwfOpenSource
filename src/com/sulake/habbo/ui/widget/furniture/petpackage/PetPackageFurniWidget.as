@@ -78,7 +78,7 @@
                     this._objectId = event.objectId;
                     this._petImage = event.image;
                     this._typeId = event.typeId;
-                    this._Str_3030();
+                    this.showInterface();
                     this._Str_18625();
                     return;
                 case _Str_3085.RWOPPUE_OPEN_PET_PACKAGE_RESULT:
@@ -149,7 +149,7 @@
             this._petImage = null;
         }
 
-        private function _Str_3030():void
+        private function showInterface():void
         {
             var _local_4:IWindow;
             if (this._objectId < 0)

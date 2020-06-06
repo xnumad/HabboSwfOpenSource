@@ -88,7 +88,7 @@
                     this._text = k.text;
                     this._controller = k.controller;
                     this._Str_6880 = k._Str_17878;
-                    this._Str_3030();
+                    this.showInterface();
                     return;
                 case _Str_3072.RWEBDUE_CONTENTS:
                     if (!this._Str_3608)
@@ -96,7 +96,7 @@
                         return;
                     }
                     this._objectId = k.objectId;
-                    this._Str_3030();
+                    this.showInterface();
                     this._Str_9278(k._Str_11625);
                     this._Str_23892(k.text);
                     this._Str_19806(false);
@@ -157,7 +157,7 @@
             }
         }
 
-        private function _Str_3030():void
+        private function showInterface():void
         {
             var _local_3:ITextWindow;
             var _local_4:IWindow;

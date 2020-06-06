@@ -60,7 +60,7 @@
             this._widget = null;
         }
 
-        public function _Str_3030():void
+        public function showInterface():void
         {
             if (this._window == null)
             {

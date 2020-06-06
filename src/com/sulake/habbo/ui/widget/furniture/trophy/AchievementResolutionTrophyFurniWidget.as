@@ -105,7 +105,7 @@
                 default:
                     this._view = new TrophyView(this);
             }
-            this._view._Str_3030();
+            this._view.showInterface();
         }
     }
 }

@@ -48,10 +48,10 @@
 
         private function _Str_10637(k:_Str_4984):void
         {
-            this._Str_3030();
+            this.showInterface();
         }
 
-        private function _Str_3030():void
+        private function showInterface():void
         {
             if (this._view == null)
             {

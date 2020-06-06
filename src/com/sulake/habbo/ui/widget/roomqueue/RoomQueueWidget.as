@@ -92,7 +92,7 @@
             localizations.registerParameter("room.queue.position.hc", "position", this._queuePosition.toString());
             localizations.registerParameter("room.queue.spectator.position", "position", this._queuePosition.toString());
             localizations.registerParameter("room.queue.spectator.position.hc", "position", this._queuePosition.toString());
-            this._Str_3030();
+            this.showInterface();
         }
 
         private function createWindow():Boolean
@@ -132,7 +132,7 @@
             return true;
         }
 
-        private function _Str_3030():void
+        private function showInterface():void
         {
             if (!this.createWindow())
             {
