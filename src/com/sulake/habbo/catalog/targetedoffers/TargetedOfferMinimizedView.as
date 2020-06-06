@@ -28,7 +28,7 @@
             var _local_5:String = (((_arg_2._Str_13452) && (_arg_2._Str_13452.length > 0)) ? _arg_2._Str_13452 : _Str_5155);
             IStaticBitmapWrapperWindow(_window.findChildByName("bmp_icon")).assetUri = (_local_4 + _local_5);
             _Str_5181 = getLocalization("targeted.offer.minimized.timeleft", "");
-            if (_Str_2324.expirationTime == 0)
+            if (_offer.expirationTime == 0)
             {
                 _local_6 = (_window.findChildByName("itemlist") as IItemListWindow);
                 if (_local_6)
@@ -52,7 +52,7 @@
             }
             if (k.type == WindowMouseEvent.DOWN)
             {
-                _controller.maximizeOffer(_Str_2324);
+                _controller.maximizeOffer(_offer);
                 switch (_arg_2.name)
                 {
                 }

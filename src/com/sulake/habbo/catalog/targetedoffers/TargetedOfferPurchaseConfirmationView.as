@@ -79,10 +79,10 @@
                         return;
                     case "header_button_close":
                     case "cancel_button":
-                        _controller.maximizeOffer(_Str_2324);
+                        _controller.maximizeOffer(_offer);
                         return;
                     case "buy_button":
-                        _controller.purchaseTargetedOffer(_Str_2324, this._quantity);
+                        _controller.purchaseTargetedOffer(_offer, this._quantity);
                         return;
                 }
             }

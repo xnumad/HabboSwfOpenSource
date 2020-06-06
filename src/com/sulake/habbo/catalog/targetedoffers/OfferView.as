@@ -12,7 +12,7 @@
     {
         protected var _window:IWindowContainer;
         protected var _controller:OfferController;
-        protected var _Str_2324:TargetedOffer;
+        protected var _offer:TargetedOffer;
         protected var _Str_2788:Timer;
         protected var _disposed:Boolean;
         protected var _Str_5181:String;
@@ -20,7 +20,7 @@
         public function OfferView(k:OfferController, _arg_2:TargetedOffer)
         {
             this._controller = k;
-            this._Str_2324 = _arg_2;
+            this._offer = _arg_2;
         }
 
         public function dispose():void
@@ -62,8 +62,8 @@
 
         protected function _Str_20163():void
         {
-            this.setTimeLeft(RemainingTimeFormatter._Str_25649(this._controller.catalog.localization, this._Str_2324._Str_18165()));
-            if (this._Str_2324._Str_18165() == 0)
+            this.setTimeLeft(RemainingTimeFormatter._Str_25649(this._controller.catalog.localization, this._offer._Str_18165()));
+            if (this._offer._Str_18165() == 0)
             {
                 this._controller._Str_6602();
             }
@@ -86,9 +86,9 @@
             {
                 return null;
             }
-            if (this._Str_2324)
+            if (this._offer)
             {
-                _local_3 = _local_3.replace("%itemsleft%", this._Str_2324.purchaseLimit);
+                _local_3 = _local_3.replace("%itemsleft%", this._offer.purchaseLimit);
             }
             return _local_3;
         }

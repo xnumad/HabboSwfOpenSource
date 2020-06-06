@@ -25,7 +25,7 @@
         private static const AMOUNT_TEXT_RIGHT:String = "amount_text_right";
         private static const CURRENCY_INDICATOR_RIGHT:String = "currency_indicator_bitmap_right";
 
-        protected var _Str_2324:IPurchasableOffer;
+        protected var _offer:IPurchasableOffer;
         protected var _products:Vector.<IProduct>;
 
         public function ProductContainer(k:IPurchasableOffer, _arg_2:Vector.<IProduct>, _arg_3:HabboCatalog)
@@ -41,7 +41,7 @@
                     break;
                 }
             }
-            this._Str_2324 = k;
+            this._offer = k;
             this._products = _arg_2;
         }
 
@@ -66,7 +66,7 @@
 
         public function get offer():IPurchasableOffer
         {
-            return this._Str_2324;
+            return this._offer;
         }
 
         override public function dispose():void
@@ -102,18 +102,18 @@
             {
                 return;
             }
-            if (((((catalog) && (this._Str_2324.badgeCode)) && (!(this._Str_2324.badgeCode == ""))) && (this._Str_2324.productContainer.products.length > 1)))
+            if (((((catalog) && (this._offer.badgeCode)) && (!(this._offer.badgeCode == ""))) && (this._offer.productContainer.products.length > 1)))
             {
                 this._Str_20490("catalog_icon_badge_included");
             }
             else
             {
-                if (((catalog) && (this._Str_2324.productContainer.products.length == 2)))
+                if (((catalog) && (this._offer.productContainer.products.length == 2)))
                 {
                     _local_2 = 0;
                     while (_local_2 < 2)
                     {
-                        _local_3 = this._Str_2324.productContainer.products[_local_2];
+                        _local_3 = this._offer.productContainer.products[_local_2];
                         if (((_local_3.productType == ProductTypeEnum.EFFECT) && (_local_3.productClassId == Product._Str_10915)))
                         {
                             this._Str_20490("catalog_icon_ninja_effect_included");
@@ -197,9 +197,9 @@
             var _local_3:ITextWindow;
             var _local_4:ITextWindow;
             var _local_5:IWindow;
-            if (this._Str_2324.priceInCredits > 0)
+            if (this._offer.priceInCredits > 0)
             {
-                if (this._Str_2324.priceInActivityPoints > 0)
+                if (this._offer.priceInActivityPoints > 0)
                 {
                     _local_3 = ITextWindow(_view.findChildByName(AMOUNT_TEXT_LEFT));
                 }
@@ -209,10 +209,10 @@
                 }
                 if (_local_3)
                 {
-                    _local_3.text = (this._Str_2324.priceInCredits + "");
+                    _local_3.text = (this._offer.priceInCredits + "");
                 }
             }
-            if (this._Str_2324.priceInActivityPoints > 0)
+            if (this._offer.priceInActivityPoints > 0)
             {
                 _local_4 = ITextWindow(_view.findChildByName(AMOUNT_TEXT_RIGHT));
                 if (_local_4)
@@ -220,9 +220,9 @@
                     _local_5 = _view.findChildByName(CURRENCY_INDICATOR_RIGHT);
                     if (_local_5)
                     {
-                        _local_5.style = ActivityPointTypeEnum.getIconStyleFor(this._Str_2324.activityPointType, k, false);
+                        _local_5.style = ActivityPointTypeEnum.getIconStyleFor(this._offer.activityPointType, k, false);
                     }
-                    _local_4.text = (this._Str_2324.priceInActivityPoints + "");
+                    _local_4.text = (this._offer.priceInActivityPoints + "");
                 }
             }
             var _local_2:IItemListWindow = IItemListWindow(_view.findChildByName(TOTALPRICE_CONTAINER));

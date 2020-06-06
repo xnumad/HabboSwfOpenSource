@@ -12,7 +12,7 @@
 
     public class ClubBuyDialog 
     {
-        private var _Str_2324:ClubBuyOfferData;
+        private var _offer:ClubBuyOfferData;
         private var _window:IWindowContainer;
         private var _Str_2619:ICatalogPage;
 
@@ -21,7 +21,7 @@
             var _local_3:XML;
             var _local_5:ILocalization;
             super();
-            this._Str_2324 = k;
+            this._offer = k;
             this._Str_2619 = _arg_2;
             if (k.vip)
             {
@@ -53,7 +53,7 @@
 
         private function _Str_12134(k:WindowMouseEvent):void
         {
-            HabboCatalog(this._Str_2619.viewer.catalog)._Str_5649(this._Str_2324, this._Str_2619.pageId);
+            HabboCatalog(this._Str_2619.viewer.catalog)._Str_5649(this._offer, this._Str_2619.pageId);
         }
 
         private function getAssetXML(k:String):XML

@@ -10,7 +10,7 @@
 
     public class ClubOffer implements IDisposable 
     {
-        private var _Str_2324:ClubBuyOfferData;
+        private var _offer:ClubBuyOfferData;
         private var _window:IWindowContainer;
         private var _habboCatalog:HabboCatalog;
         private var _disposed:Boolean = false;
@@ -20,7 +20,7 @@
         {
             var _local_5:ILocalization;
             super();
-            this._Str_2324 = k;
+            this._offer = k;
             this._habboCatalog = _arg_2;
             this._Str_25725 = _arg_3;
             this._window = (this._habboCatalog.utils.createWindow("vip_buy_item") as IWindowContainer);
@@ -36,7 +36,7 @@
                 _local_5 = _local_4.getLocalizationRaw("catalog.vip.item.header.days");
             }
             this._window.findChildByName("item_header").caption = ((_local_5 != null) ? _local_5.value : "-");
-            this._habboCatalog.utils._Str_6455((this._window.findChildByName("item_price") as IWindowContainer), this._Str_2324);
+            this._habboCatalog.utils._Str_6455((this._window.findChildByName("item_price") as IWindowContainer), this._offer);
             this._window.findChildByName("item_buy").addEventListener(WindowMouseEvent.CLICK, this._Str_12134);
             if (k.giftable)
             {
@@ -66,13 +66,13 @@
         private function _Str_12134(k:WindowMouseEvent):void
         {
             this._habboCatalog._Str_8986(false);
-            this._habboCatalog._Str_5649(this._Str_2324, ((this._Str_2324.page == null) ? -1 : this._Str_2324.page.pageId));
+            this._habboCatalog._Str_5649(this._offer, ((this._offer.page == null) ? -1 : this._offer.page.pageId));
         }
 
         private function _Str_18825(k:WindowMouseEvent):void
         {
             this._habboCatalog._Str_8986(true);
-            this._habboCatalog._Str_5649(this._Str_2324, ((this._Str_2324.page == null) ? -1 : this._Str_2324.page.pageId));
+            this._habboCatalog._Str_5649(this._offer, ((this._offer.page == null) ? -1 : this._offer.page.pageId));
         }
 
         public function get window():IWindow

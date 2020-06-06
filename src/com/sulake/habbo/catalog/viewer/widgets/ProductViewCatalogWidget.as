@@ -76,7 +76,7 @@
         private var _Str_17788:Boolean = true;
         private var _Str_21871:Boolean = false;
         private var _Str_18902:Boolean = true;
-        private var _Str_2324:IPurchasableOffer;
+        private var _offer:IPurchasableOffer;
         private var _Str_14556:Boolean;
 
         public function ProductViewCatalogWidget(k:IWindowContainer, _arg_2:HabboCatalog)
@@ -209,9 +209,9 @@
                 case WindowMouseEvent.OUT:
                     if (this._Str_14556)
                     {
-                        if (this._habboCatalog.isDraggable(this._Str_2324))
+                        if (this._habboCatalog.isDraggable(this._offer))
                         {
-                            this._habboCatalog._Str_8289(this, this._Str_2324);
+                            this._habboCatalog._Str_8289(this, this._offer);
                         }
                     }
                     this._Str_14556 = false;
@@ -261,7 +261,7 @@
             this._Str_10575 = k;
             this._Str_24628();
             _local_3 = k.offer;
-            this._Str_2324 = _local_3;
+            this._offer = _local_3;
             if (this._Str_3889 != null)
             {
                 this._Str_3889.visible = false;

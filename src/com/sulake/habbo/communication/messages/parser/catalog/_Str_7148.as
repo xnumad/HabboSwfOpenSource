@@ -6,24 +6,24 @@
 
     public class _Str_7148 implements IMessageParser 
     {
-        private var _Str_2324:_Str_5335;
+        private var _offer:_Str_5335;
 
 
         public function flush():Boolean
         {
-            this._Str_2324 = null;
+            this._offer = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2324 = new _Str_5335(k);
+            this._offer = new _Str_5335(k);
             return true;
         }
 
         public function offer():_Str_5335
         {
-            return this._Str_2324;
+            return this._offer;
         }
     }
 }

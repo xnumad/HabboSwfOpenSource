@@ -38,17 +38,17 @@
             _window = IWindowContainer(_controller.catalog.windowManager.buildFromXML(XML(_controller.catalog.assets.getAssetByName(k).content)));
             if (IFrameWindow(_window))
             {
-                IFrameWindow(_window).title.text = getLocalization(_Str_2324.title);
+                IFrameWindow(_window).title.text = getLocalization(_offer.title);
             }
             var _local_2:ITextWindow = ITextWindow(_window.findChildByName("txt_title"));
             if (_local_2)
             {
-                _local_2.text = getLocalization(_Str_2324.title);
+                _local_2.text = getLocalization(_offer.title);
             }
             _local_2 = ITextWindow(_window.findChildByName("txt_description"));
             if (_local_2)
             {
-                _local_2.text = getLocalization(_Str_2324.description);
+                _local_2.text = getLocalization(_offer.description);
                 this._Str_10740(_local_2);
             }
             _local_2 = ITextWindow(_window.findChildByName("txt_price_label"));
@@ -56,21 +56,21 @@
             {
                 _local_2.text = getLocalization("targeted.offer.price.label");
             }
-            var _local_3:Map = _controller.catalog.utils.getPriceMap(_Str_2324, this._quantity);
+            var _local_3:Map = _controller.catalog.utils.getPriceMap(_offer, this._quantity);
             this._Str_23782(_window, _local_3);
             var _local_4:IStaticBitmapWrapperWindow = IStaticBitmapWrapperWindow(_window.findChildByName("bmp_illustration"));
             if (_local_4)
             {
                 _local_6 = (_controller.catalog as IHabboConfigurationManager).getProperty("image.library.url");
-                _local_7 = this._Str_23626(_Str_2324);
+                _local_7 = this._Str_23626(_offer);
                 if (((_local_7 == null) || (_local_7.length == 0)))
                 {
-                    _local_7 = (((_Str_2324.imageUrl) && (_Str_2324.imageUrl.length > 0)) ? _Str_2324.imageUrl : _Str_5155);
+                    _local_7 = (((_offer.imageUrl) && (_offer.imageUrl.length > 0)) ? _offer.imageUrl : _Str_5155);
                 }
                 _local_4.assetUri = (_local_6 + _local_7);
             }
             _Str_5181 = getLocalization("targeted.offer.timeleft", "");
-            if (_Str_2324.expirationTime == 0)
+            if (_offer.expirationTime == 0)
             {
                 if (_window.findChildByName("cnt_time_left"))
                 {
@@ -151,7 +151,7 @@
             {
                 return;
             }
-            var _local_2:Boolean = _Str_2324.checkPurseBalance(_controller.catalog.getPurse(), this._quantity);
+            var _local_2:Boolean = _offer.checkPurseBalance(_controller.catalog.getPurse(), this._quantity);
             if (_local_2)
             {
                 k.text = "";
@@ -165,7 +165,7 @@
             }
             if (_window.findChildByName("cnt_quantity"))
             {
-                _window.findChildByName("cnt_quantity").visible = (_Str_2324.purchaseLimit > 1);
+                _window.findChildByName("cnt_quantity").visible = (_offer.purchaseLimit > 1);
             }
             if (_window.findChildByName("btn_get_credits"))
             {
@@ -196,12 +196,12 @@
             var k:ITextWindow = ITextWindow(_window.findChildByName("txt_price_credits"));
             if (k)
             {
-                k.text = ((this._quantity * _Str_2324.priceInCredits) + "");
+                k.text = ((this._quantity * _offer.priceInCredits) + "");
             }
             var _local_2:ITextWindow = ITextWindow(_window.findChildByName("txt_price_activityPoints"));
             if (_local_2)
             {
-                _local_2.text = ((this._quantity * _Str_2324.priceInActivityPoints) + "");
+                _local_2.text = ((this._quantity * _offer.priceInActivityPoints) + "");
             }
         }
 
@@ -216,17 +216,17 @@
                 switch (_arg_2.name)
                 {
                     case "header_button_close":
-                        _controller.minimizeOffer(_Str_2324);
+                        _controller.minimizeOffer(_offer);
                         return;
                     case "btn_get_credits":
-                        _controller.purchaseCredits(_Str_2324);
+                        _controller.purchaseCredits(_offer);
                         return;
                     case "btn_buy":
                         if (!this._Str_19566())
                         {
                             return;
                         }
-                        _controller.showConfirmation(_Str_2324, this._quantity);
+                        _controller.showConfirmation(_offer, this._quantity);
                         return;
                 }
             }
@@ -234,13 +234,13 @@
 
         private function _Str_19566():Boolean
         {
-            return (this._quantity >= 1) && (this._quantity <= _Str_2324.purchaseLimit);
+            return (this._quantity >= 1) && (this._quantity <= _offer.purchaseLimit);
         }
 
         private function _Str_23435(k:WindowKeyboardEvent):void
         {
             var _local_2:int = parseInt(k.target.caption);
-            if (((((_local_2 == 0) && (!(k.target.caption == ""))) || (_local_2 > 999)) || (_local_2 > _Str_2324.purchaseLimit)))
+            if (((((_local_2 == 0) && (!(k.target.caption == ""))) || (_local_2 > 999)) || (_local_2 > _offer.purchaseLimit)))
             {
                 k.target.caption = this._quantity.toString();
                 return;
