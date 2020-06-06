@@ -26,7 +26,7 @@
         protected var _Str_20720:String = "5 5 5 5";
         protected var _Str_12703:Number = 1;
         protected var _Str_4544:String = null;
-        protected var _Str_671:* = null;
+        protected var _image:* = null;
         protected var _Str_6712:* = null;
 
         public function BaseRegionConfig(k:Object=null)
@@ -360,27 +360,27 @@
 
         public function set image(k:*):void
         {
-            this._Str_671 = k;
+            this._image = k;
         }
 
         public function get image():*
         {
-            return this._Str_671;
+            return this._image;
         }
 
         public function _Str_24560():Boolean
         {
-            return !(this._Str_671 == null);
+            return !(this._image == null);
         }
 
         public function _Str_24467():Boolean
         {
-            return this._Str_671 is Bitmap;
+            return this._image is Bitmap;
         }
 
         public function _Str_23156():Boolean
         {
-            return this._Str_671 is Loader;
+            return this._image is Loader;
         }
 
         public function set swf(k:*):void

@@ -21,7 +21,7 @@
 
         private var _disposed:Boolean = false;
         private var _disabled:Boolean = false;
-        protected var _Str_671:BitmapDataAsset;
+        protected var _image:BitmapDataAsset;
         protected var _Str_1868:IBitmapWrapperWindow;
         private var _Str_4220:uint;
         protected var _timer:Timer;
@@ -49,13 +49,13 @@
 
         protected function set image(k:BitmapDataAsset):void
         {
-            this._Str_671 = k;
+            this._image = k;
             this._Str_6950();
         }
 
         protected function get image():BitmapDataAsset
         {
-            return this._Str_671;
+            return this._image;
         }
 
         protected function set canvas(k:IBitmapWrapperWindow):void
@@ -123,10 +123,10 @@
                 {
                     this._Str_1868.bitmap.fillRect(this._Str_1868.bitmap.rect, 0);
                 }
-                if (((this._Str_671) && (!(this._Str_671.disposed))))
+                if (((this._image) && (!(this._image.disposed))))
                 {
                     this._Str_6692.x = (this._Str_6692.y = 0);
-                    k = (this._Str_671.content as BitmapData);
+                    k = (this._image.content as BitmapData);
                     switch ((this._Str_4220 & _Str_17719))
                     {
                         case _Str_8982:

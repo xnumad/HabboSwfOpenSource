@@ -6,7 +6,7 @@
     {
         protected var _Str_2699:Boolean = false;
         protected var _Str_2442:Object = null;
-        protected var _Str_671:String = null;
+        protected var _image:String = null;
         protected var _Str_6712:String = null;
         protected var _Str_4544:String = null;
         protected var _width:int = -1;
@@ -43,7 +43,7 @@
             }
             if (k.image != undefined)
             {
-                this._Str_671 = k.image;
+                this._image = k.image;
             }
             if (k.swf != undefined)
             {
@@ -168,7 +168,7 @@
 
         public function isCustomImageButton():Boolean
         {
-            return !(this._Str_671 == null);
+            return !(this._image == null);
         }
 
         public function _Str_19315():Boolean
@@ -208,12 +208,12 @@
 
         public function set image(k:String):void
         {
-            this._Str_671 = k;
+            this._image = k;
         }
 
         public function get image():String
         {
-            return this._Str_671;
+            return this._image;
         }
 
         public function set swf(k:String):void

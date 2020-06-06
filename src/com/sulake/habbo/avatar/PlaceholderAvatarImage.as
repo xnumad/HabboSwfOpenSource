@@ -29,11 +29,11 @@
                 _figure = null;
                 _avatarDataContainer = null;
                 _Str_614 = null;
-                if (((!(_Str_1586)) && (_Str_671)))
+                if (((!(_Str_1586)) && (_image)))
                 {
-                    _Str_671.dispose();
+                    _image.dispose();
                 }
-                _Str_671 = null;
+                _image = null;
                 _Str_903 = null;
                 _Str_580 = true;
             }

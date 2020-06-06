@@ -51,7 +51,7 @@
         protected var _figure:AvatarFigureContainer;
         protected var _avatarDataContainer:IAvatarDataContainer;
         protected var _Str_614:Array;
-        protected var _Str_671:BitmapData;
+        protected var _image:BitmapData;
         private var _defaultAction:IActiveActionData;
         private var _frameCounter:int = 0;
         private var _directionOffset:int = 0;
@@ -123,9 +123,9 @@
                 this._figure = null;
                 this._avatarDataContainer = null;
                 this._Str_614 = null;
-                if (this._Str_671)
+                if (this._image)
                 {
-                    this._Str_671.dispose();
+                    this._image.dispose();
                 }
                 if (this._Str_586)
                 {
@@ -141,7 +141,7 @@
                     this._fullImageCache.dispose();
                     this._fullImageCache = null;
                 }
-                this._Str_671 = null;
+                this._image = null;
                 this._Str_903 = null;
                 this._Str_580 = true;
             }
@@ -308,7 +308,7 @@
             var _local_15:Matrix;
             if (!this._useTextures)
             {
-                return this._Str_671;
+                return this._image;
             }
 			
             if (this._Str_1708 == null)
@@ -331,9 +331,9 @@
                     {
                         return (this.getFullImage(_local_4) as BitmapData).clone();
                     }
-                    this._Str_671 = (this.getFullImage(_local_4) as BitmapData);
+                    this._image = (this.getFullImage(_local_4) as BitmapData);
                     this._Str_1586 = true;
-                    return this._Str_671;
+                    return this._image;
                 }
             }
 			
@@ -343,19 +343,19 @@
                 return null;
             }
 			
-            if ((((this._Str_1586) || (this._Str_671 == null)) || ((!(this._Str_671.width == _local_5.width)) || (!(this._Str_671.height == _local_5.height)))))
+            if ((((this._Str_1586) || (this._image == null)) || ((!(this._image.width == _local_5.width)) || (!(this._image.height == _local_5.height)))))
             {
-                if (((!(this._Str_671 == null)) && (!(this._Str_1586))))
+                if (((!(this._image == null)) && (!(this._Str_1586))))
                 {
-                    this._Str_671.dispose();
+                    this._image.dispose();
                 }
-                this._Str_671 = new BitmapData(_local_5.width, _local_5.height, true, 0);
+                this._image = new BitmapData(_local_5.width, _local_5.height, true, 0);
                 this._Str_1586 = false;
             }
 			
             var _local_6:Array = this.getBodyParts(k, this._Str_1708.definition.geometryType, this._Str_1668);
-            this._Str_671.lock();
-            this._Str_671.fillRect(this._Str_671.rect, 0);
+            this._image.lock();
+            this._image.fillRect(this._image.rect, 0);
             var _local_11:Boolean = true;
             var _local_12:int = (_local_6.length - 1);
             while (_local_12 >= 0)
@@ -370,48 +370,48 @@
                     if (((_local_9) && (_local_10)))
                     {
                         _local_10 = _local_10.add(_local_5._Str_1076);
-                        this._Str_671.copyPixels(_local_9, _local_9.rect, _local_10, null, null, true);
+                        this._image.copyPixels(_local_9, _local_9.rect, _local_10, null, null, true);
                     }
                 }
                 _local_12--;
             }
-            this._Str_671.unlock();
+            this._image.unlock();
             this._useTextures = false;
             if (this._avatarDataContainer != null)
             {
                 if (this._avatarDataContainer.paletteIsGrayscale)
                 {
-                    _local_13 = this.convertToGrayscale(this._Str_671);
-                    if (this._Str_671)
+                    _local_13 = this.convertToGrayscale(this._image);
+                    if (this._image)
                     {
-                        this._Str_671.dispose();
+                        this._image.dispose();
                     }
-                    this._Str_671 = _local_13;
-                    this._Str_671.paletteMap(this._Str_671, this._Str_671.rect, new Point(0, 0), this._avatarDataContainer.reds, [], []);
+                    this._image = _local_13;
+                    this._image.paletteMap(this._image, this._image.rect, new Point(0, 0), this._avatarDataContainer.reds, [], []);
                 }
                 else
                 {
-                    this._Str_671.copyChannel(this._Str_671, this._Str_671.rect, new Point(0, 0), 2, 8);
+                    this._image.copyChannel(this._image, this._image.rect, new Point(0, 0), 2, 8);
                 }
             }
             if (((!(_local_4 == null)) && (_local_11)))
             {
-                this.cacheFullImage(_local_4, this._Str_671.clone());
+                this.cacheFullImage(_local_4, this._image.clone());
             }
             if (_arg_3 != 1)
             {
-                _local_14 = new BitmapData((this._Str_671.width * _arg_3), (this._Str_671.height * _arg_3), true, 0);
+                _local_14 = new BitmapData((this._image.width * _arg_3), (this._image.height * _arg_3), true, 0);
                 _local_15 = new Matrix();
                 _local_15.scale(_arg_3, _arg_3);
-                _local_14.draw(this._Str_671, _local_15, null, null, null, true);
+                _local_14.draw(this._image, _local_15, null, null, null, true);
                 _local_14.applyFilter(_local_14, _local_14.rect, new Point(), this._Str_1901());
-                this._Str_671 = _local_14;
+                this._image = _local_14;
             }
-            if (((this._Str_671) && (_arg_2)))
+            if (((this._image) && (_arg_2)))
             {
-                return this._Str_671.clone();
+                return this._image.clone();
             }
-            return this._Str_671;
+            return this._image;
         }
 
         private function _Str_1901():ConvolutionFilter

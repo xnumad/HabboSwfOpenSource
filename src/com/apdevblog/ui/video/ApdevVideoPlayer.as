@@ -64,7 +64,7 @@
         private var _Str_12093:Timer;
         private var _Str_19802:int;
         private var _Str_8247:*;
-        private var _Str_671:_Str_11881;
+        private var _image:_Str_11881;
         private var _Str_18114:Boolean;
 
         public function ApdevVideoPlayer(k:int, _arg_2:int)
@@ -98,7 +98,7 @@
                 this._Str_4218 = true;
                 this._Str_13484.start();
                 this._Str_8436.start();
-                this._Str_671.visible = false;
+                this._image.visible = false;
             }
         }
 
@@ -122,7 +122,7 @@
                 this.load(this._Str_11229);
                 return;
             }
-            this._Str_671.visible = false;
+            this._image.visible = false;
             this._Str_3167.resume();
             this._Str_8436.start();
             this._Str_3404 = _Str_2872.VIDEOSTATEPLAYING;
@@ -198,9 +198,9 @@
             this._Str_3319 = new _Str_8021(this._Str_9635);
             this._Str_14540 = false;
             addChild(this._Str_3319);
-            this._Str_671 = new _Str_11881(this._Str_9635, this._Str_5932);
-            this._Str_671.visible = false;
-            addChild(this._Str_671);
+            this._image = new _Str_11881(this._Str_9635, this._Str_5932);
+            this._image.visible = false;
+            addChild(this._image);
         }
 
         private function _Str_1400(k:int, _arg_2:int):void
@@ -656,17 +656,17 @@
             this._Str_8247 = k;
             if (this._Str_3404 == _Str_2872.VIDEOSTATEEMPTY)
             {
-                this._Str_671.visible = true;
+                this._image.visible = true;
                 if ((this._Str_8247 is URLRequest))
                 {
-                    this._Str_671.load(this._Str_8247);
+                    this._image.load(this._Str_8247);
                 }
                 else
                 {
                     if ((this._Str_8247 is String))
                     {
                         _local_2 = new URLRequest(this._Str_8247);
-                        this._Str_671.load(_local_2);
+                        this._image.load(_local_2);
                     }
                 }
             }
