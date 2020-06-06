@@ -47,12 +47,12 @@
             this._headline = k;
         }
 
-        public function get _Str_6760():int
+        public function get numQuestions():int
         {
             return this._numQuestions;
         }
 
-        public function set _Str_6760(k:int):void
+        public function set numQuestions(k:int):void
         {
             this._numQuestions = k;
         }

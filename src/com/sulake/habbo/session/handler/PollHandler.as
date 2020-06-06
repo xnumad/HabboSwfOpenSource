@@ -79,7 +79,7 @@
             _local_4 = new _Str_3051(_Str_3051.RSPE_POLL_CONTENT, _local_2, _local_3.id);
             _local_4._Str_6013 = _local_3._Str_6013;
             _local_4._Str_5838 = _local_3._Str_5838;
-            _local_4._Str_6760 = _local_3._Str_6760;
+            _local_4.numQuestions = _local_3.numQuestions;
             _local_4._Str_5643 = _local_3._Str_5643;
             _local_4._Str_6196 = _local_3._Str_6196;
             listener.events.dispatchEvent(_local_4);

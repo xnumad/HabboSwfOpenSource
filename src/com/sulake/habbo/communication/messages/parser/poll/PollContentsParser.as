@@ -28,7 +28,7 @@
             return this._Str_4781;
         }
 
-        public function get _Str_6760():int
+        public function get numQuestions():int
         {
             return this._numQuestions;
         }

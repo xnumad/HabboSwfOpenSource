@@ -101,7 +101,7 @@
                     _local_3 = new _Str_2888(_local_2.id, _Str_2888.RWPUW_CONTENT);
                     _local_3._Str_6013 = _local_2._Str_6013;
                     _local_3._Str_5838 = _local_2._Str_5838;
-                    _local_3._Str_6760 = _local_2._Str_6760;
+                    _local_3.numQuestions = _local_2.numQuestions;
                     _local_3._Str_5643 = _local_2._Str_5643;
                     _local_3._Str_6196 = _local_2._Str_6196;
                     break;
