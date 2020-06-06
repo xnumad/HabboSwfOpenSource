@@ -492,7 +492,7 @@
         public function _Str_8316(k:int):Boolean
         {
             ErrorReportStorage.addDebugData("MainViewCtrl", "Reloading RoomList");
-            if ((((this.isOpen()) && (!(this._navigator.data._Str_4518 == null))) && (this._navigator.data._Str_4518.searchType == k)))
+            if ((((this.isOpen()) && (!(this._navigator.data.guestRoomSearchResults == null))) && (this._navigator.data.guestRoomSearchResults.searchType == k)))
             {
                 this._Str_2798(this._navigator.tabs.getSelected().id, k, "");
                 return true;

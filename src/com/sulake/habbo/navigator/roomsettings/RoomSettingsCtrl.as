@@ -1098,9 +1098,9 @@
             var k:_Str_4081;
             this._navigator.send(new _Str_9786(this._roomSettingsData.roomId));
             this.close();
-            if (this._navigator.data._Str_4518 != null)
+            if (this._navigator.data.guestRoomSearchResults != null)
             {
-                k = this._navigator.data._Str_4518;
+                k = this._navigator.data.guestRoomSearchResults;
                 this._navigator._Str_2813._Str_2798(this._navigator.tabs.getSelected().id, k.searchType, k._Str_25185);
             }
         }

@@ -241,7 +241,7 @@
 
         public function getRooms():Array
         {
-            return ((((this._navigator == null) || (this._navigator.data == null)) || (this._navigator.data._Str_4518 == null)) || (this._navigator.data._Str_4518.rooms == null)) ? (new Array()) : this._navigator.data._Str_4518.rooms;
+            return ((((this._navigator == null) || (this._navigator.data == null)) || (this._navigator.data.guestRoomSearchResults == null)) || (this._navigator.data.guestRoomSearchResults.rooms == null)) ? (new Array()) : this._navigator.data.guestRoomSearchResults.rooms;
         }
 
         private function getRoomAt(k:int):GuestRoomData

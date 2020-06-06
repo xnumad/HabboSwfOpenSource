@@ -141,7 +141,7 @@
             return (!(this._lastMsg == null)) && (!((this._lastMsg as _Str_5546) == null));
         }
 
-        public function set _Str_4518(k:_Str_4081):void
+        public function set guestRoomSearchResults(k:_Str_4081):void
         {
             this._Str_12759();
             this._lastMsg = k;
@@ -195,7 +195,7 @@
             return this._adRoomData;
         }
 
-        public function get _Str_4518():_Str_4081
+        public function get guestRoomSearchResults():_Str_4081
         {
             return this._lastMsg as _Str_4081;
         }

@@ -267,8 +267,8 @@
         private function _Str_16568(k:IMessageEvent):void
         {
             var _local_2:_Str_4081 = _Str_4910(k).getParser().data;
-            this.data._Str_4518 = _local_2;
-            Logger.log(("Received GuestRoomSearch: " + ((this.data._Str_4518.rooms) ? this.data._Str_4518.rooms.length : " no rooms")));
+            this.data.guestRoomSearchResults = _local_2;
+            Logger.log(("Received GuestRoomSearch: " + ((this.data.guestRoomSearchResults.rooms) ? this.data.guestRoomSearchResults.rooms.length : " no rooms")));
         }
 
         private function _Str_17226(k:IMessageEvent):void
