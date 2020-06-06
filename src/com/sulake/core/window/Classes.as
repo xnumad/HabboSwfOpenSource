@@ -50,87 +50,87 @@
 
     public class Classes 
     {
-        protected static var _Str_2474:Dictionary;
+        protected static var _windowClassTable:Dictionary;
 
 
         public static function init():void
         {
-            if (!_Str_2474)
+            if (!_windowClassTable)
             {
-                _Str_2474 = new Dictionary();
-                _Str_2474[WindowType.WINDOW_TYPE_NULL] = WindowController;
-                _Str_2474[WindowType.WINDOW_TYPE_ACTIVATOR] = ActivatorController;
-                _Str_2474[WindowType.WINDOW_TYPE_BACKGROUND] = BackgroundController;
-                _Str_2474[WindowType.WINDOW_TYPE_BORDER] = BorderController;
-                _Str_2474[WindowType.WINDOW_TYPE_BOXSIZER] = BoxSizerController;
-                _Str_2474[WindowType.WINDOW_TYPE_BUBBLE] = BubbleController;
-                _Str_2474[WindowType.WINDOW_TYPE_BUBBLE_POINTER_UP] = WindowController;
-                _Str_2474[WindowType.WINDOW_TYPE_BUBBLE_POINTER_RIGHT] = WindowController;
-                _Str_2474[WindowType.WINDOW_TYPE_BUBBLE_POINTER_DOWN] = WindowController;
-                _Str_2474[WindowType.WINDOW_TYPE_BUBBLE_POINTER_LEFT] = WindowController;
-                _Str_2474[WindowType.WINDOW_TYPE_BUTTON] = ButtonController;
-                _Str_2474[WindowType.WINDOW_TYPE_BUTTON_THICK] = ButtonController;
-                _Str_2474[WindowType.WINDOW_TYPE_BUTTON_GROUP_LEFT] = ButtonGroupController;
-                _Str_2474[WindowType.WINDOW_TYPE_BUTTON_GROUP_CENTER] = ButtonGroupController;
-                _Str_2474[WindowType.WINDOW_TYPE_BUTTON_GROUP_RIGHT] = ButtonGroupController;
-                _Str_2474[WindowType.WINDOW_TYPE_BITMAP_WRAPPER] = BitmapWrapperController;
-                _Str_2474[WindowType.WINDOW_TYPE_CHECKBOX] = CheckboxController;
-                _Str_2474[WindowType.WINDOW_TYPE_CONTAINER] = ContainerController;
-                _Str_2474[WindowType.WINDOW_TYPE_CONTAINER_BUTTON] = ContainerButtonController;
-                _Str_2474[WindowType.WINDOW_TYPE_CLOSEBUTTON] = CloseButtonController;
-                _Str_2474[WindowType.WINDOW_TYPE_DISPLAY_OBJECT_WRAPPER] = DisplayObjectWrapperController;
-                _Str_2474[WindowType.WINDOW_TYPE_DRAGBAR] = DragBarController;
-                _Str_2474[WindowType.WINDOW_TYPE_DROPMENU] = DropMenuController;
-                _Str_2474[WindowType.WINDOW_TYPE_DROPMENU_ITEM] = DropMenuItemController;
-                _Str_2474[WindowType.WINDOW_TYPE_DROPLIST] = DropListController;
-                _Str_2474[WindowType.WINDOW_TYPE_DROPLIST_ITEM] = DropListItemController;
-                _Str_2474[WindowType.WINDOW_TYPE_FORMATTED_TEXT] = FormattedTextController;
-                _Str_2474[WindowType.WINDOW_TYPE_FRAME] = FrameController;
-                _Str_2474[WindowType.WINDOW_TYPE_HEADER] = HeaderController;
-                _Str_2474[WindowType.WINDOW_TYPE_HTML] = HTMLTextController;
-                _Str_2474[WindowType.WINDOW_TYPE_ICON] = IconController;
-                _Str_2474[WindowType.WINDOW_TYPE_ITEMLIST] = ItemListController;
-                _Str_2474[WindowType.WINDOW_TYPE_ITEMLIST_HORIZONTAL] = ItemListController;
-                _Str_2474[WindowType.WINDOW_TYPE_ITEMLIST_VERTICAL] = ItemListController;
-                _Str_2474[WindowType.WINDOW_TYPE_ITEMGRID] = ItemGridController;
-                _Str_2474[WindowType.WINDOW_TYPE_ITEMGRID_HORIZONTAL] = ItemGridController;
-                _Str_2474[WindowType.WINDOW_TYPE_ITEMGRID_VERTICAL] = ItemGridController;
-                _Str_2474[WindowType.WINDOW_TYPE_LABEL] = TextLabelController;
-                _Str_2474[WindowType.WINDOW_TYPE_LINK] = TextLinkController;
-                _Str_2474[WindowType.WINDOW_TYPE_PASSWORD] = PasswordFieldController;
-                _Str_2474[WindowType.WINDOW_TYPE_RADIOBUTTON] = RadioButtonController;
-                _Str_2474[WindowType.WINDOW_TYPE_REGION] = RegionController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCALER] = ScalerController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLBAR_HORIZONTAL] = ScrollBarController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLBAR_VERTICAL] = ScrollBarController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BUTTON_UP] = ButtonController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BUTTON_DOWN] = ButtonController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BUTTON_LEFT] = ButtonController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BUTTON_RIGHT] = ButtonController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BAR_HORIZONTAL] = DragBarController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BAR_VERTICAL] = DragBarController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_TRACK_HORIZONTAL] = WindowController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_TRACK_VERTICAL] = WindowController;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLABLE_ITEMLIST_VERTICAL] = ScrollableItemListWindow;
-                _Str_2474[WindowType.WINDOW_TYPE_SCROLLABLE_ITEMGRID_VERTICAL] = ScrollableItemGridWindow;
-                _Str_2474[WindowType.WINDOW_TYPE_SELECTOR] = SelectorController;
-                _Str_2474[WindowType.WINDOW_TYPE_SELECTOR_LIST] = SelectorListController;
-                _Str_2474[WindowType.WINDOW_TYPE_STATIC_BITMAP_WRAPPER] = StaticBitmapController;
-                _Str_2474[WindowType.WINDOW_TYPE_TAB_BUTTON] = TabButtonController;
-                _Str_2474[WindowType.WINDOW_TYPE_TAB_CONTAINER_BUTTON] = TabContainerController;
-                _Str_2474[WindowType.WINDOW_TYPE_TAB_CONTENT] = ContainerController;
-                _Str_2474[WindowType.WINDOW_TYPE_TAB_CONTEXT] = TabContextController;
-                _Str_2474[WindowType.WINDOW_TYPE_TAB_SELECTOR] = SelectorListController;
-                _Str_2474[WindowType.WINDOW_TYPE_TEXT] = TextController;
-                _Str_2474[WindowType.WINDOW_TYPE_TEXTFIELD] = TextFieldController;
-                _Str_2474[WindowType.WINDOW_TYPE_TOOLTIP] = TooltipController;
-                _Str_2474[WindowType.WINDOW_TYPE_WIDGET] = WidgetWindowController;
+                _windowClassTable = new Dictionary();
+                _windowClassTable[WindowType.WINDOW_TYPE_NULL] = WindowController;
+                _windowClassTable[WindowType.WINDOW_TYPE_ACTIVATOR] = ActivatorController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BACKGROUND] = BackgroundController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BORDER] = BorderController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BOXSIZER] = BoxSizerController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BUBBLE] = BubbleController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BUBBLE_POINTER_UP] = WindowController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BUBBLE_POINTER_RIGHT] = WindowController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BUBBLE_POINTER_DOWN] = WindowController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BUBBLE_POINTER_LEFT] = WindowController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BUTTON] = ButtonController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BUTTON_THICK] = ButtonController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BUTTON_GROUP_LEFT] = ButtonGroupController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BUTTON_GROUP_CENTER] = ButtonGroupController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BUTTON_GROUP_RIGHT] = ButtonGroupController;
+                _windowClassTable[WindowType.WINDOW_TYPE_BITMAP_WRAPPER] = BitmapWrapperController;
+                _windowClassTable[WindowType.WINDOW_TYPE_CHECKBOX] = CheckboxController;
+                _windowClassTable[WindowType.WINDOW_TYPE_CONTAINER] = ContainerController;
+                _windowClassTable[WindowType.WINDOW_TYPE_CONTAINER_BUTTON] = ContainerButtonController;
+                _windowClassTable[WindowType.WINDOW_TYPE_CLOSEBUTTON] = CloseButtonController;
+                _windowClassTable[WindowType.WINDOW_TYPE_DISPLAY_OBJECT_WRAPPER] = DisplayObjectWrapperController;
+                _windowClassTable[WindowType.WINDOW_TYPE_DRAGBAR] = DragBarController;
+                _windowClassTable[WindowType.WINDOW_TYPE_DROPMENU] = DropMenuController;
+                _windowClassTable[WindowType.WINDOW_TYPE_DROPMENU_ITEM] = DropMenuItemController;
+                _windowClassTable[WindowType.WINDOW_TYPE_DROPLIST] = DropListController;
+                _windowClassTable[WindowType.WINDOW_TYPE_DROPLIST_ITEM] = DropListItemController;
+                _windowClassTable[WindowType.WINDOW_TYPE_FORMATTED_TEXT] = FormattedTextController;
+                _windowClassTable[WindowType.WINDOW_TYPE_FRAME] = FrameController;
+                _windowClassTable[WindowType.WINDOW_TYPE_HEADER] = HeaderController;
+                _windowClassTable[WindowType.WINDOW_TYPE_HTML] = HTMLTextController;
+                _windowClassTable[WindowType.WINDOW_TYPE_ICON] = IconController;
+                _windowClassTable[WindowType.WINDOW_TYPE_ITEMLIST] = ItemListController;
+                _windowClassTable[WindowType.WINDOW_TYPE_ITEMLIST_HORIZONTAL] = ItemListController;
+                _windowClassTable[WindowType.WINDOW_TYPE_ITEMLIST_VERTICAL] = ItemListController;
+                _windowClassTable[WindowType.WINDOW_TYPE_ITEMGRID] = ItemGridController;
+                _windowClassTable[WindowType.WINDOW_TYPE_ITEMGRID_HORIZONTAL] = ItemGridController;
+                _windowClassTable[WindowType.WINDOW_TYPE_ITEMGRID_VERTICAL] = ItemGridController;
+                _windowClassTable[WindowType.WINDOW_TYPE_LABEL] = TextLabelController;
+                _windowClassTable[WindowType.WINDOW_TYPE_LINK] = TextLinkController;
+                _windowClassTable[WindowType.WINDOW_TYPE_PASSWORD] = PasswordFieldController;
+                _windowClassTable[WindowType.WINDOW_TYPE_RADIOBUTTON] = RadioButtonController;
+                _windowClassTable[WindowType.WINDOW_TYPE_REGION] = RegionController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCALER] = ScalerController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLBAR_HORIZONTAL] = ScrollBarController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLBAR_VERTICAL] = ScrollBarController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BUTTON_UP] = ButtonController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BUTTON_DOWN] = ButtonController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BUTTON_LEFT] = ButtonController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BUTTON_RIGHT] = ButtonController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BAR_HORIZONTAL] = DragBarController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_BAR_VERTICAL] = DragBarController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_TRACK_HORIZONTAL] = WindowController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLBAR_SLIDER_TRACK_VERTICAL] = WindowController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLABLE_ITEMLIST_VERTICAL] = ScrollableItemListWindow;
+                _windowClassTable[WindowType.WINDOW_TYPE_SCROLLABLE_ITEMGRID_VERTICAL] = ScrollableItemGridWindow;
+                _windowClassTable[WindowType.WINDOW_TYPE_SELECTOR] = SelectorController;
+                _windowClassTable[WindowType.WINDOW_TYPE_SELECTOR_LIST] = SelectorListController;
+                _windowClassTable[WindowType.WINDOW_TYPE_STATIC_BITMAP_WRAPPER] = StaticBitmapController;
+                _windowClassTable[WindowType.WINDOW_TYPE_TAB_BUTTON] = TabButtonController;
+                _windowClassTable[WindowType.WINDOW_TYPE_TAB_CONTAINER_BUTTON] = TabContainerController;
+                _windowClassTable[WindowType.WINDOW_TYPE_TAB_CONTENT] = ContainerController;
+                _windowClassTable[WindowType.WINDOW_TYPE_TAB_CONTEXT] = TabContextController;
+                _windowClassTable[WindowType.WINDOW_TYPE_TAB_SELECTOR] = SelectorListController;
+                _windowClassTable[WindowType.WINDOW_TYPE_TEXT] = TextController;
+                _windowClassTable[WindowType.WINDOW_TYPE_TEXTFIELD] = TextFieldController;
+                _windowClassTable[WindowType.WINDOW_TYPE_TOOLTIP] = TooltipController;
+                _windowClassTable[WindowType.WINDOW_TYPE_WIDGET] = WidgetWindowController;
             }
         }
 
         public static function _Str_23901(k:uint):Class
         {
-            return _Str_2474[k];
+            return _windowClassTable[k];
         }
     }
 }
