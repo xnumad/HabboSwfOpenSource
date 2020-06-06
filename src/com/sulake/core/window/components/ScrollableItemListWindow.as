@@ -12,7 +12,7 @@
 
     public class ScrollableItemListWindow extends WindowController implements IScrollableListWindow 
     {
-        private var _Str_12337:IItemListWindow;
+        private var _cachedItemList:IItemListWindow;
         private var _cachedScrollBar:IScrollbarWindow;
         private var _autoHideScrollBar:Boolean = true;
 
@@ -34,20 +34,20 @@
                 this._cachedScrollBar.removeEventListener(WindowEvent.WINDOW_EVENT_DISABLED, this.scrollBarEventProc);
                 this._cachedScrollBar = null;
             }
-            if (this._Str_12337)
+            if (this._cachedItemList)
             {
-                this._Str_12337 = null;
+                this._cachedItemList = null;
             }
             super.dispose();
         }
 
         protected function get _itemList():IItemListWindow
         {
-            if (!this._Str_12337)
+            if (!this._cachedItemList)
             {
-                this._Str_12337 = (findChildByTag("_ITEMLIST") as IItemListWindow);
+                this._cachedItemList = (findChildByTag("_ITEMLIST") as IItemListWindow);
             }
-            return this._Str_12337;
+            return this._cachedItemList;
         }
 
         public function get scrollableWindow():IWindow
