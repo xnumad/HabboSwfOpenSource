@@ -235,7 +235,7 @@
             return this._eventMod;
         }
 
-        public function get _Str_14374():Boolean
+        public function get roomPicker():Boolean
         {
             return this._roomPicker;
         }
@@ -320,7 +320,7 @@
             this._eventMod = k;
         }
 
-        public function set _Str_14374(k:Boolean):void
+        public function set roomPicker(k:Boolean):void
         {
             this._roomPicker = k;
         }

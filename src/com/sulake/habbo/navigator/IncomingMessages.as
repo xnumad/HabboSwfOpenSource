@@ -204,7 +204,7 @@
             }
             if (_local_2.securityLevel >= SecurityLevelEnum.COMMUNITY)
             {
-                this._navigator.data._Str_14374 = true;
+                this._navigator.data.roomPicker = true;
             }
         }
 

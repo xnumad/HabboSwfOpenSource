@@ -215,7 +215,7 @@
             if (this._window)
             {
                 _local_2 = this._window.findChildByName("staff_pick_button");
-                if (!this._navigator.data._Str_14374)
+                if (!this._navigator.data.roomPicker)
                 {
                     _local_2.visible = false;
                     return;
