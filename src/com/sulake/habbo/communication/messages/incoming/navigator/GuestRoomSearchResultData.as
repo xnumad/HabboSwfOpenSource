@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4081 implements IDisposable, _Str_5733 
+    public class GuestRoomSearchResultData implements IDisposable, _Str_5733
     {
         private var _searchType:int;
         private var _Str_21188:String;
@@ -11,7 +11,7 @@
         private var _ad:_Str_2632;
         private var _disposed:Boolean;
 
-        public function _Str_4081(k:IMessageDataWrapper):void
+        public function GuestRoomSearchResultData(k:IMessageDataWrapper):void
         {
             this._rooms = new Array();
             super();

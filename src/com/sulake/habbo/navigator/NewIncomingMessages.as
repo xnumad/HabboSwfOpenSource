@@ -57,7 +57,7 @@
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6885;
     import com.sulake.habbo.communication.messages.parser.navigator.OfficialRoomsMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4081;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4587;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6918;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6280;
@@ -266,7 +266,7 @@
 
         private function _Str_16568(k:IMessageEvent):void
         {
-            var _local_2:_Str_4081 = _Str_4910(k).getParser().data;
+            var _local_2:GuestRoomSearchResultData = _Str_4910(k).getParser().data;
             this.data.guestRoomSearchResults = _local_2;
             Logger.log(("Received GuestRoomSearch: " + ((this.data.guestRoomSearchResults.rooms) ? this.data.guestRoomSearchResults.rooms.length : " no rooms")));
         }

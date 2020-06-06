@@ -12,7 +12,7 @@
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4587;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4081;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5078;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5546;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
@@ -128,7 +128,7 @@
 
         public function get guestRoomSearchArrived():Boolean
         {
-            return (!(this._lastMsg == null)) && (!((this._lastMsg as _Str_4081) == null));
+            return (!(this._lastMsg == null)) && (!((this._lastMsg as GuestRoomSearchResultData) == null));
         }
 
         public function get _Str_23411():Boolean
@@ -141,7 +141,7 @@
             return (!(this._lastMsg == null)) && (!((this._lastMsg as _Str_5546) == null));
         }
 
-        public function set guestRoomSearchResults(k:_Str_4081):void
+        public function set guestRoomSearchResults(k:GuestRoomSearchResultData):void
         {
             this._Str_12759();
             this._lastMsg = k;
@@ -195,9 +195,9 @@
             return this._adRoomData;
         }
 
-        public function get guestRoomSearchResults():_Str_4081
+        public function get guestRoomSearchResults():GuestRoomSearchResultData
         {
-            return this._lastMsg as _Str_4081;
+            return this._lastMsg as GuestRoomSearchResultData;
         }
 
         public function get _Str_6697():_Str_4587

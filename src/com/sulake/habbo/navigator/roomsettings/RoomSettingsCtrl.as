@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveRoomSettingsMessageComposer;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.window.utils.IAlertDialog;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4081;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_9786;
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_11252;
@@ -1095,7 +1095,7 @@
 
         private function _Str_22815():void
         {
-            var k:_Str_4081;
+            var k:GuestRoomSearchResultData;
             this._navigator.send(new _Str_9786(this._roomSettingsData.roomId));
             this.close();
             if (this._navigator.data.guestRoomSearchResults != null)
