@@ -24,7 +24,7 @@
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorLiftedRoomsEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.CollapsedCategoriesEvent;
-	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_9455;
+	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_10763;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_11277;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_11298;
@@ -1225,7 +1225,7 @@
             INCOMING_PACKETS[2665] = QuestionEvent;
             INCOMING_PACKETS[2668] = _Str_17379;
             INCOMING_PACKETS[2674] = _Str_9538;
-            INCOMING_PACKETS[2690] = _Str_9455;
+            INCOMING_PACKETS[2690] = NavigatorSearchResultBlocksEvent;
             INCOMING_PACKETS[2696] = _Str_7080;
             INCOMING_PACKETS[2703] = ObjectRemoveMessageEvent;
             INCOMING_PACKETS[2704] = WhisperMessageEvent;
