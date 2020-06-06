@@ -87,7 +87,7 @@
                 this._isChangePossible = true;
             }
             this._hasClub = k.hasHabboClub;
-            this._isClubQueue = k._Str_23206;
+            this._isClubQueue = k.isClubQueue;
             localizations.registerParameter("room.queue.position", "position", this._queuePosition.toString());
             localizations.registerParameter("room.queue.position.hc", "position", this._queuePosition.toString());
             localizations.registerParameter("room.queue.spectator.position", "position", this._queuePosition.toString());

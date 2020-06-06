@@ -34,7 +34,7 @@
             return this._isActive;
         }
 
-        public function get _Str_23206():Boolean
+        public function get isClubQueue():Boolean
         {
             return this._isClubQueue;
         }
