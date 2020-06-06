@@ -200,7 +200,7 @@
             var _local_2:UserRightsMessageEvent = UserRightsMessageEvent(k);
             if (_local_2.securityLevel >= SecurityLevelEnum.MODERATOR)
             {
-                this._navigator.data._Str_15161 = true;
+                this._navigator.data.eventMod = true;
             }
             if (_local_2.securityLevel >= SecurityLevelEnum.COMMUNITY)
             {

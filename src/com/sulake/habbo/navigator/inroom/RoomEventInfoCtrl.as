@@ -55,7 +55,7 @@
                 return;
             }
             var k:* = (!(this._navigator.data.roomEventData == null));
-            var _local_2:Boolean = ((this._navigator.data._Str_12763) || (this._navigator.data._Str_15161));
+            var _local_2:Boolean = ((this._navigator.data._Str_12763) || (this._navigator.data.eventMod));
             var _local_3:int = this._navigator.data._Str_20386;
             var _local_4:IRoomSession = this._navigator.roomSessionManager.getSession(_local_3);
             if (!_local_4)

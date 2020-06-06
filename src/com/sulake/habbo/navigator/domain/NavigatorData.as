@@ -230,7 +230,7 @@
             return this._avatarId;
         }
 
-        public function get _Str_15161():Boolean
+        public function get eventMod():Boolean
         {
             return this._eventMod;
         }
@@ -315,7 +315,7 @@
             this._hcMember = k;
         }
 
-        public function set _Str_15161(k:Boolean):void
+        public function set eventMod(k:Boolean):void
         {
             this._eventMod = k;
         }
