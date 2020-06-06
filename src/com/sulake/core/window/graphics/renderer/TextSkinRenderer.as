@@ -17,12 +17,12 @@
     {
         private static const _Str_4005:ColorTransform = new ColorTransform(0, 0, 0, 1, 0xFF, 0xFF, 0xFF, 0);
 
-        protected var _Str_2085:Matrix;
+        protected var _matrix:Matrix;
 
         public function TextSkinRenderer(k:String)
         {
             super(k);
-            this._Str_2085 = new Matrix();
+            this._matrix = new Matrix();
         }
 
         override public function parse(k:IAsset, _arg_2:XMLList, _arg_3:IAssetLibrary):void
@@ -45,17 +45,17 @@
                 _local_7 = ITextWindow(k);
                 _local_8 = _local_7.autoSize;
                 _local_9 = _local_6.textField;
-                this._Str_2085.tx = _local_6.margins.left;
-                this._Str_2085.ty = _local_6.margins.top;
+                this._matrix.tx = _local_6.margins.left;
+                this._matrix.ty = _local_6.margins.top;
                 if (_local_8 == TextFieldAutoSize.RIGHT)
                 {
-                    this._Str_2085.tx = Math.floor((k.width - _local_9.width));
+                    this._matrix.tx = Math.floor((k.width - _local_9.width));
                 }
                 else
                 {
                     if (_local_8 == TextFieldAutoSize.CENTER)
                     {
-                        this._Str_2085.tx = Math.floor(((k.width / 2) - (_local_9.width / 2)));
+                        this._matrix.tx = Math.floor(((k.width / 2) - (_local_9.width / 2)));
                     }
                 }
                 if ((uint(_local_7.etchingColor) & 0xFF000000) != 0)
@@ -67,18 +67,18 @@
                     _local_11 = _Str_3766[_local_7.etchingPosition];
                     if (_local_11 != null)
                     {
-                        this._Str_2085.tx = (this._Str_2085.tx + _local_11.x);
-                        this._Str_2085.ty = (this._Str_2085.ty + _local_11.y);
-                        _arg_2.draw(_local_9, this._Str_2085, _Str_4005, null, null, false);
-                        this._Str_2085.tx = (this._Str_2085.tx - _local_11.x);
-                        this._Str_2085.ty = (this._Str_2085.ty - _local_11.y);
+                        this._matrix.tx = (this._matrix.tx + _local_11.x);
+                        this._matrix.ty = (this._matrix.ty + _local_11.y);
+                        _arg_2.draw(_local_9, this._matrix, _Str_4005, null, null, false);
+                        this._matrix.tx = (this._matrix.tx - _local_11.x);
+                        this._matrix.ty = (this._matrix.ty - _local_11.y);
                     }
                 }
                 if (k.dynamicStyleColor)
                 {
                     _local_10 = k.dynamicStyleColor;
                 }
-                _arg_2.draw(_local_9, this._Str_2085, _local_10, null, null, false);
+                _arg_2.draw(_local_9, this._matrix, _local_10, null, null, false);
             }
         }
 

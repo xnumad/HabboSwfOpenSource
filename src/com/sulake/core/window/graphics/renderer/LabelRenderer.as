@@ -14,14 +14,14 @@
     {
         private static const _Str_4005:ColorTransform = new ColorTransform(0, 0, 0, 1, 0xFF, 0xFF, 0xFF, 0);
 
-        protected var _Str_2085:Matrix;
+        protected var _matrix:Matrix;
         protected var _Str_20528:TextStyle;
         protected var _Str_7685:TextField;
 
         public function LabelRenderer(k:String)
         {
             super(k);
-            this._Str_2085 = new Matrix();
+            this._matrix = new Matrix();
         }
 
         override public function draw(k:IWindow, _arg_2:BitmapData, _arg_3:Rectangle, _arg_4:uint, _arg_5:Boolean):void
@@ -40,18 +40,18 @@
                     this._Str_7685 = TextFieldCache.getTextFieldByStyle(_local_7);
                     this._Str_20528 = _local_7;
                 }
-                this._Str_2085.tx = _local_6.drawOffsetX;
-                this._Str_2085.ty = _local_6.drawOffsetY;
+                this._matrix.tx = _local_6.drawOffsetX;
+                this._matrix.ty = _local_6.drawOffsetY;
                 this._Str_7685.text = _local_6.text;
                 _local_8 = uint(_local_7.color);
                 this._Str_7685.textColor = ((_local_6.hasTextColor) ? _local_6.textColor : _local_8);
                 if (_local_6.vertical)
                 {
-                    this._Str_2085.a = 0;
-                    this._Str_2085.b = -1;
-                    this._Str_2085.c = 1;
-                    this._Str_2085.d = 0;
-                    this._Str_2085.ty = (this._Str_2085.ty + _local_6.height);
+                    this._matrix.a = 0;
+                    this._matrix.b = -1;
+                    this._matrix.c = 1;
+                    this._matrix.d = 0;
+                    this._matrix.ty = (this._matrix.ty + _local_6.height);
                 }
                 if ((uint(_local_7.etchingColor) & 0xFF000000) != 0)
                 {
@@ -63,19 +63,19 @@
                     {
                         if (_local_6.vertical)
                         {
-                            this._Str_2085.tx = (this._Str_2085.tx + _local_10.y);
-                            this._Str_2085.ty = (this._Str_2085.ty - _local_10.x);
-                            _arg_2.draw(this._Str_7685, this._Str_2085, _Str_4005, null, null, false);
-                            this._Str_2085.tx = (this._Str_2085.tx - _local_10.y);
-                            this._Str_2085.ty = (this._Str_2085.ty + _local_10.x);
+                            this._matrix.tx = (this._matrix.tx + _local_10.y);
+                            this._matrix.ty = (this._matrix.ty - _local_10.x);
+                            _arg_2.draw(this._Str_7685, this._matrix, _Str_4005, null, null, false);
+                            this._matrix.tx = (this._matrix.tx - _local_10.y);
+                            this._matrix.ty = (this._matrix.ty + _local_10.x);
                         }
                         else
                         {
-                            this._Str_2085.tx = (this._Str_2085.tx + _local_10.x);
-                            this._Str_2085.ty = (this._Str_2085.ty + _local_10.y);
-                            _arg_2.draw(this._Str_7685, this._Str_2085, _Str_4005, null, null, false);
-                            this._Str_2085.tx = (this._Str_2085.tx - _local_10.x);
-                            this._Str_2085.ty = (this._Str_2085.ty - _local_10.y);
+                            this._matrix.tx = (this._matrix.tx + _local_10.x);
+                            this._matrix.ty = (this._matrix.ty + _local_10.y);
+                            _arg_2.draw(this._Str_7685, this._matrix, _Str_4005, null, null, false);
+                            this._matrix.tx = (this._matrix.tx - _local_10.x);
+                            this._matrix.ty = (this._matrix.ty - _local_10.y);
                         }
                     }
                 }
@@ -83,14 +83,14 @@
                 {
                     _local_9 = k.dynamicStyleColor;
                 }
-                _arg_2.draw(this._Str_7685, this._Str_2085, _local_9, null, null, false);
+                _arg_2.draw(this._Str_7685, this._matrix, _local_9, null, null, false);
                 if (_local_6.vertical)
                 {
-                    this._Str_2085.a = 1;
-                    this._Str_2085.b = 0;
-                    this._Str_2085.c = 0;
-                    this._Str_2085.d = 1;
-                    this._Str_2085.ty = (this._Str_2085.ty - _local_6.height);
+                    this._matrix.a = 1;
+                    this._matrix.b = 0;
+                    this._matrix.c = 0;
+                    this._matrix.d = 1;
+                    this._matrix.ty = (this._matrix.ty - _local_6.height);
                 }
                 this._Str_7685.textColor = _local_8;
             }
