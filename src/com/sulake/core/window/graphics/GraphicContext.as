@@ -25,7 +25,7 @@
         public static const _Str_22036:uint = (1 << 6);
         public static const _Str_19868:uint = (1 << 7);
         public static const GC_TYPE_DESKTOP:uint = (1 << 8);
-        protected static var _Str_2214:uint = 0;
+        protected static var _counter:uint = 0;
         protected static var _Str_4712:uint = 0;
 
         protected var _Str_4059:DisplayObjectContainer;
@@ -39,7 +39,7 @@
         {
             var _local_4:TextField;
             super();
-            _Str_2214++;
+            _counter++;
             if (_arg_3 == null)
             {
                 _arg_3 = new Rectangle(0, 0, 0, 0);
@@ -86,7 +86,7 @@
 
         public static function get _Str_26083():uint
         {
-            return _Str_2214;
+            return _counter;
         }
 
         public static function get allocatedByteCount():uint
@@ -179,7 +179,7 @@
                 }
                 this._Str_3303 = null;
                 this._disposed = true;
-                _Str_2214--;
+                _counter--;
             }
         }
 

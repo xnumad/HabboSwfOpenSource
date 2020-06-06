@@ -19,7 +19,7 @@
         protected static const _ALERT_BUTTON_CUSTOM:String = "_alert_button_custom";
         protected static const HEADER_BUTTON_CLOSE:String = "header_button_close";
         protected static const _ALERT_TEXT_SUMMARY:String = "_alert_text_summary";
-        private static var _Str_2214:uint = 0;
+        private static var _counter:uint = 0;
 
         protected var _Str_2495:String = "";
         protected var _Str_4444:String = "";
@@ -32,7 +32,7 @@
         {
             var _local_9:IWindow;
             super();
-            _Str_2214++;
+            _counter++;
             if (_arg_7)
             {
                 this._Str_2440 = k.buildModalDialogFromXML(_arg_2);
