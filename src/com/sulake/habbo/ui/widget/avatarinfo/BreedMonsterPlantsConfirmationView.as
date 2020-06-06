@@ -156,22 +156,22 @@
             this.addClickListener(SAVE_BUTTON);
             this.addClickListener(ACCEPT_BUTTON);
             this.addClickListener(CANCEL_BUTTON);
-            this._Str_2513(DESCRIPTION, false);
-            this._Str_2513(REQUEST, false);
-            this._Str_2513(SAVE_BUTTON, false);
-            this._Str_2513(SAVE_BUTTON, false);
-            this._Str_2513(ACCEPT_BUTTON, false);
-            this._Str_2513(CANCEL_BUTTON, true);
-            this._Str_2513(CANCEL_BUTTON, true);
+            this.enableElement(DESCRIPTION, false);
+            this.enableElement(REQUEST, false);
+            this.enableElement(SAVE_BUTTON, false);
+            this.enableElement(SAVE_BUTTON, false);
+            this.enableElement(ACCEPT_BUTTON, false);
+            this.enableElement(CANCEL_BUTTON, true);
+            this.enableElement(CANCEL_BUTTON, true);
             switch (this._state)
             {
                 case _Str_13053:
-                    this._Str_2513(DESCRIPTION, true);
-                    this._Str_2513(SAVE_BUTTON, true);
+                    this.enableElement(DESCRIPTION, true);
+                    this.enableElement(SAVE_BUTTON, true);
                     break;
                 case _Str_15445:
-                    this._Str_2513(REQUEST, true);
-                    this._Str_2513(ACCEPT_BUTTON, true);
+                    this.enableElement(REQUEST, true);
+                    this.enableElement(ACCEPT_BUTTON, true);
                     break;
             }
             var k:BitmapData = this._Str_3993(this._roomUserData.figure, "preview_image");
@@ -237,7 +237,7 @@
             }
         }
 
-        private function _Str_2513(k:String, _arg_2:Boolean):void
+        private function enableElement(k:String, _arg_2:Boolean):void
         {
             var _local_3:IWindow = this._window.findChildByName(k);
             if (_local_3 != null)

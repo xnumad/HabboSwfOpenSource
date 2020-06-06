@@ -175,62 +175,62 @@
             }
             this._window.center();
             this._window.visible = true;
-            this._Str_2513(ELEM_SEED1_BUTTONLIST, false);
-            this._Str_2513(ELEM_SEED2_BUTTONLIST, false);
-            this._Str_2513(ELEM_PLACE_BUTTON1, false);
-            this._Str_2513(ELEM_PICK_BUTTON1, false);
-            this._Str_2513(ELEM_PLACE_BUTTON2, false);
-            this._Str_2513(ELEM_PICK_BUTTON2, false);
-            this._Str_2513(CLOSE_BUTTON, false);
+            this.enableElement(ELEM_SEED1_BUTTONLIST, false);
+            this.enableElement(ELEM_SEED2_BUTTONLIST, false);
+            this.enableElement(ELEM_PLACE_BUTTON1, false);
+            this.enableElement(ELEM_PICK_BUTTON1, false);
+            this.enableElement(ELEM_PLACE_BUTTON2, false);
+            this.enableElement(ELEM_PICK_BUTTON2, false);
+            this.enableElement(CLOSE_BUTTON, false);
             if (_local_4)
             {
-                this._Str_2513(ELEM_PLACE_BUTTON1, true);
-                this._Str_2513(ELEM_SEED1_BUTTONLIST, true);
+                this.enableElement(ELEM_PLACE_BUTTON1, true);
+                this.enableElement(ELEM_SEED1_BUTTONLIST, true);
             }
             if (_local_5)
             {
-                this._Str_2513(ELEM_PLACE_BUTTON2, true);
-                this._Str_2513(ELEM_SEED2_BUTTONLIST, true);
+                this.enableElement(ELEM_PLACE_BUTTON2, true);
+                this.enableElement(ELEM_SEED2_BUTTONLIST, true);
             }
             if (_local_6)
             {
-                this._Str_2513(PREVIEW_BUTTONLIST, true);
+                this.enableElement(PREVIEW_BUTTONLIST, true);
             }
-            this._Str_2513(ELEM_SEED2_ITEMLIST, true);
+            this.enableElement(ELEM_SEED2_ITEMLIST, true);
             if (this._resultData2.stuffId == -1)
             {
-                this._Str_2513(ELEM_SEED2_ITEMLIST, false);
+                this.enableElement(ELEM_SEED2_ITEMLIST, false);
             }
-            this._Str_2513(DESCRIPTION, true);
-            this._Str_2513(INFO, true);
-            this._Str_2513(DESCRIPTION_SORRY, false);
-            this._Str_2513(INFO, false);
-            this._Str_2513(BUTTON_LIST, false);
-            this._Str_2513(CLOSE_BUTTON, false);
+            this.enableElement(DESCRIPTION, true);
+            this.enableElement(INFO, true);
+            this.enableElement(DESCRIPTION_SORRY, false);
+            this.enableElement(INFO, false);
+            this.enableElement(BUTTON_LIST, false);
+            this.enableElement(CLOSE_BUTTON, false);
             if (!_local_6)
             {
-                this._Str_2513(PREVIEW_BUTTONLIST, false);
-                this._Str_2513(DESCRIPTION, false);
-                this._Str_2513(INFO, false);
-                this._Str_2513(SAVE_BUTTON, false);
-                this._Str_2513(ELEM_PLACE_BUTTON1, false);
-                this._Str_2513(ELEM_PICK_BUTTON1, false);
-                this._Str_2513(ELEM_PLACE_BUTTON2, false);
-                this._Str_2513(ELEM_PICK_BUTTON2, false);
-                this._Str_2513(BUTTON_LIST, true);
-                this._Str_2513(DESCRIPTION_SORRY, true);
-                this._Str_2513(INFO_SORRY, true);
-                this._Str_2513(CLOSE_BUTTON, true);
+                this.enableElement(PREVIEW_BUTTONLIST, false);
+                this.enableElement(DESCRIPTION, false);
+                this.enableElement(INFO, false);
+                this.enableElement(SAVE_BUTTON, false);
+                this.enableElement(ELEM_PLACE_BUTTON1, false);
+                this.enableElement(ELEM_PICK_BUTTON1, false);
+                this.enableElement(ELEM_PLACE_BUTTON2, false);
+                this.enableElement(ELEM_PICK_BUTTON2, false);
+                this.enableElement(BUTTON_LIST, true);
+                this.enableElement(DESCRIPTION_SORRY, true);
+                this.enableElement(INFO_SORRY, true);
+                this.enableElement(CLOSE_BUTTON, true);
             }
-            this._Str_2513(ELEM_INFO_MUTATE1, false);
-            this._Str_2513(ELEM_INFO_MUTATE2, false);
+            this.enableElement(ELEM_INFO_MUTATE1, false);
+            this.enableElement(ELEM_INFO_MUTATE2, false);
             if (this._Str_3111._Str_4788)
             {
-                this._Str_2513(ELEM_INFO_MUTATE1, true);
+                this.enableElement(ELEM_INFO_MUTATE1, true);
             }
             if (this._resultData2._Str_4788)
             {
-                this._Str_2513(ELEM_INFO_MUTATE2, true);
+                this.enableElement(ELEM_INFO_MUTATE2, true);
             }
             this.addClickListener(SAVE_BUTTON);
             this.addClickListener(HEADER_BUTTON_CLOSE);
@@ -249,7 +249,7 @@
             this._window.invalidate();
         }
 
-        private function _Str_2513(k:String, _arg_2:Boolean):void
+        private function enableElement(k:String, _arg_2:Boolean):void
         {
             var _local_3:IWindow = this._window.findChildByName(k);
             if (_local_3 != null)

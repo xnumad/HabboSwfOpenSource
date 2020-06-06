@@ -239,20 +239,20 @@
 
         private function disable():void
         {
-            this._Str_2513(DESCRIPTION, false, false);
-            this._Str_2513(REQUEST, false, false);
-            this._Str_2513(CANCEL_BUTTON, false, true);
-            this._Str_2513(DESCRIPTION, false, true);
-            this._Str_2513(SAVE_BUTTON, false, true);
+            this.enableElement(DESCRIPTION, false, false);
+            this.enableElement(REQUEST, false, false);
+            this.enableElement(CANCEL_BUTTON, false, true);
+            this.enableElement(DESCRIPTION, false, true);
+            this.enableElement(SAVE_BUTTON, false, true);
         }
 
         public function enable():void
         {
-            this._Str_2513(DESCRIPTION, false, false);
-            this._Str_2513(REQUEST, false, false);
-            this._Str_2513(CANCEL_BUTTON, true, true);
-            this._Str_2513(DESCRIPTION, true, true);
-            this._Str_2513(SAVE_BUTTON, true, true);
+            this.enableElement(DESCRIPTION, false, false);
+            this.enableElement(REQUEST, false, false);
+            this.enableElement(CANCEL_BUTTON, true, true);
+            this.enableElement(DESCRIPTION, true, true);
+            this.enableElement(SAVE_BUTTON, true, true);
         }
 
         private function addClickListener(k:String):void
@@ -264,7 +264,7 @@
             }
         }
 
-        private function _Str_2513(k:String, _arg_2:Boolean, _arg_3:Boolean):void
+        private function enableElement(k:String, _arg_2:Boolean, _arg_3:Boolean):void
         {
             var _local_4:IWindow = this._window.findChildByName(k);
             if (_local_4 != null)

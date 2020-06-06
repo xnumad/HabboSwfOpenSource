@@ -1222,7 +1222,7 @@
             var _local_4:int;
             var _local_5:int;
             var _local_6:IWindow;
-            this._Str_2513(k, _arg_2);
+            this.enableElement(k, _arg_2);
             if ((k is IIterable))
             {
                 _local_3 = IIterable(k).iterator;
@@ -1235,7 +1235,7 @@
                         _local_6 = (_local_3[_local_5] as IWindow);
                         if (_local_6 != null)
                         {
-                            this._Str_2513(_local_6, _arg_2);
+                            this.enableElement(_local_6, _arg_2);
                             if ((_local_6 is IIterable))
                             {
                                 this._Str_5244(_local_6, _arg_2);
@@ -1247,7 +1247,7 @@
             }
         }
 
-        private function _Str_2513(k:IWindow, _arg_2:Boolean):void
+        private function enableElement(k:IWindow, _arg_2:Boolean):void
         {
             if (_arg_2)
             {
