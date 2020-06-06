@@ -262,16 +262,16 @@
                 return;
             }
             var _local_3:int = _local_2[1];
-            this._Str_12717(_local_3);
+            this.openGroupInfo(_local_3);
         }
 
         public function _Str_12867(k:Boolean, _arg_2:int):void
         {
-            this._Str_12717(_arg_2);
+            this.openGroupInfo(_arg_2);
             this.send(new EventLogMessageComposer(HABBOGROUPS, ("" + _arg_2), "badge clicked"));
         }
 
-        public function _Str_12717(k:int):void
+        public function openGroupInfo(k:int):void
         {
             this.send(new _Str_2863(k, true));
         }

@@ -135,7 +135,7 @@
                 }
                 if (_arg_2.name == "profile_link")
                 {
-                    this._Str_17990._Str_12717(this._guildId);
+                    this._Str_17990.openGroupInfo(this._guildId);
                 }
                 _local_3 = true;
             }
