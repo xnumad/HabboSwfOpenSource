@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.window.utils
 {
-    public interface _Str_5394 
+    public interface ICaption
     {
         function get text():String;
         function set text(_arg_1:String):void;

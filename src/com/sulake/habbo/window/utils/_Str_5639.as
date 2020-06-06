@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.window.utils
 {
-    public class _Str_5639 implements _Str_5394 
+    public class _Str_5639 implements ICaption
     {
         private var _text:String;
         private var _Str_18097:String;

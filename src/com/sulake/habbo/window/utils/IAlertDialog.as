@@ -10,7 +10,7 @@
         function get summary():String;
         function set callback(_arg_1:Function):void;
         function get callback():Function;
-        function getButtonCaption(_arg_1:int):_Str_5394;
-        function setButtonCaption(_arg_1:int, _arg_2:_Str_5394):void;
+        function getButtonCaption(_arg_1:int):ICaption;
+        function setButtonCaption(_arg_1:int, _arg_2:ICaption):void;
     }
 }

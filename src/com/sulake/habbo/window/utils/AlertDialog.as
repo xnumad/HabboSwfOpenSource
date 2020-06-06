@@ -128,7 +128,7 @@
             }
         }
 
-        public function getButtonCaption(k:int):_Str_5394
+        public function getButtonCaption(k:int):ICaption
         {
             var _local_2:IInteractiveWindow;
             if (!this._disposed)
@@ -149,7 +149,7 @@
             return (_local_2) ? new _Str_5639(_local_2.caption, _local_2._Str_2613, _local_2.visible) : null;
         }
 
-        public function setButtonCaption(k:int, _arg_2:_Str_5394):void
+        public function setButtonCaption(k:int, _arg_2:ICaption):void
         {
             var _local_3:IInteractiveWindow;
             if (!this._disposed)
