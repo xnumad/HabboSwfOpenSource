@@ -32,7 +32,7 @@
         private const _Str_18094:Number = 1;
         private const _Str_18535:Number = 0.2;
 
-        protected var _Str_1636:Map;
+        protected var _items:Map;
         protected var _window:IWindowContainer;
         protected var _model:FurniModel;
         private var _type:int;
@@ -65,7 +65,7 @@
             this._type = _arg_2;
             this._roomEngine = _arg_4;
             this._Str_14011 = _arg_5;
-            this._Str_1636 = new Map();
+            this._items = new Map();
             this._category = _arg_3;
             this._stuffData = _arg_6;
             this._extra = _arg_7;
@@ -265,10 +265,10 @@
             this._model = null;
             this._Str_2779 = null;
             this._roomEngine = null;
-            if (this._Str_1636)
+            if (this._items)
             {
-                this._Str_1636.dispose();
-                this._Str_1636 = null;
+                this._items.dispose();
+                this._items = null;
             }
             this._stuffData = null;
             if (this._window)
@@ -322,10 +322,10 @@
 
         public function push(k:FurnitureItem, _arg_2:Boolean=false):void
         {
-            var _local_3:FurnitureItem = this._Str_1636.getValue(k.id);
+            var _local_3:FurnitureItem = this._items.getValue(k.id);
             if (_local_3 == null)
             {
-                this._Str_1636.add(k.id, k);
+                this._items.add(k.id, k);
             }
             else
             {
@@ -350,10 +350,10 @@
 
         public function unshift(k:FurnitureItem):void
         {
-            var _local_2:FurnitureItem = this._Str_1636.getValue(k.id);
+            var _local_2:FurnitureItem = this._items.getValue(k.id);
             if (_local_2 == null)
             {
-                this._Str_1636.unshift(k.id, k);
+                this._items.unshift(k.id, k);
             }
             else
             {
@@ -365,10 +365,10 @@
         public function pop():FurnitureItem
         {
             var k:FurnitureItem;
-            if (this._Str_1636.length > 0)
+            if (this._items.length > 0)
             {
-                k = (this._Str_1636.getWithIndex((this._Str_1636.length - 1)) as FurnitureItem);
-                this._Str_1636.remove(k.id);
+                k = (this._items.getWithIndex((this._items.length - 1)) as FurnitureItem);
+                this._items.remove(k.id);
             }
             this._Str_10703();
             return k;
@@ -377,9 +377,9 @@
         public function _Str_3205():FurnitureItem
         {
             var k:FurnitureItem;
-            if (this._Str_1636.length > 0)
+            if (this._items.length > 0)
             {
-                k = (this._Str_1636.getWithIndex((this._Str_1636.length - 1)) as FurnitureItem);
+                k = (this._items.getWithIndex((this._items.length - 1)) as FurnitureItem);
                 this._Str_10703();
             }
             return k;
@@ -387,7 +387,7 @@
 
         public function _Str_5087(k:int):FurnitureItem
         {
-            return this._Str_1636.getWithIndex(k);
+            return this._items.getWithIndex(k);
         }
 
         public function _Str_25861(k:int):Vector.<IFurnitureItem>
@@ -401,13 +401,13 @@
             }
             var _local_4:int;
             var _local_5:int;
-            while (_local_5 < this._Str_1636.length)
+            while (_local_5 < this._items.length)
             {
                 if (_local_4 >= k)
                 {
                     break;
                 }
-                _local_6 = this._Str_1636.getWithIndex(_local_5);
+                _local_6 = this._items.getWithIndex(_local_5);
                 if ((((!(_local_6.locked)) && (_local_6._Str_8386)) && (_local_6.type == _local_3.type)))
                 {
                     _local_4++;
@@ -422,18 +422,18 @@
         {
             var _local_2:FurnitureItem;
             var _local_3:FurnitureItem;
-            if (((this._Str_4881 >= 0) && (this._Str_4881 < this._Str_1636.length)))
+            if (((this._Str_4881 >= 0) && (this._Str_4881 < this._items.length)))
             {
-                _local_2 = this._Str_1636.getWithIndex(this._Str_4881);
+                _local_2 = this._items.getWithIndex(this._Str_4881);
                 if (((!(_local_2.locked)) && (_local_2._Str_8386)))
                 {
                     return _local_2;
                 }
             }
             var k:int;
-            while (k < this._Str_1636.length)
+            while (k < this._items.length)
             {
-                _local_3 = this._Str_1636.getWithIndex(k);
+                _local_3 = this._items.getWithIndex(k);
                 if (((!(_local_3.locked)) && (_local_3._Str_8386)))
                 {
                     return _local_3;
@@ -447,9 +447,9 @@
         {
             var _local_2:FurnitureItem;
             var k:int;
-            while (k < this._Str_1636.length)
+            while (k < this._items.length)
             {
-                _local_2 = this._Str_1636.getWithIndex(k);
+                _local_2 = this._items.getWithIndex(k);
                 if (((!(_local_2.locked)) && (_local_2._Str_16260)))
                 {
                     this._Str_15750(_local_2.id);
@@ -464,9 +464,9 @@
         {
             var _local_2:FurnitureItem;
             var k:int;
-            while (k < this._Str_1636.length)
+            while (k < this._items.length)
             {
-                _local_2 = this._Str_1636.getWithIndex(k);
+                _local_2 = this._items.getWithIndex(k);
                 if (((!(_local_2.locked)) && (_local_2.sellable)))
                 {
                     return _local_2;
@@ -480,7 +480,7 @@
         {
             var _local_2:FurnitureItem;
             var k:Array = [];
-            for each (_local_2 in this._Str_1636)
+            for each (_local_2 in this._items)
             {
                 k.push(_local_2.id);
             }
@@ -491,7 +491,7 @@
         {
             var _local_2:FurnitureItem;
             var k:Array = [];
-            for each (_local_2 in this._Str_1636)
+            for each (_local_2 in this._items)
             {
                 if (!_local_2.rentable)
                 {
@@ -505,9 +505,9 @@
         {
             var _local_3:FurnitureItem;
             var _local_2:int;
-            while (_local_2 < this._Str_1636.length)
+            while (_local_2 < this._items.length)
             {
-                _local_3 = this._Str_1636.getWithIndex(_local_2);
+                _local_3 = this._items.getWithIndex(_local_2);
                 if (_local_3.id == k)
                 {
                     _local_3.locked = true;
@@ -524,10 +524,10 @@
             var _local_3:Boolean;
             var _local_4:FurnitureItem;
             var _local_5:Boolean;
-            var _local_2:int = (this._Str_1636.length - 1);
+            var _local_2:int = (this._items.length - 1);
             while (_local_2 >= 0)
             {
-                _local_4 = this._Str_1636.getWithIndex(_local_2);
+                _local_4 = this._items.getWithIndex(_local_2);
                 _local_5 = (k.indexOf(_local_4.ref) >= 0);
                 if (_local_4.locked != _local_5)
                 {
@@ -546,9 +546,9 @@
         {
             var _local_3:FurnitureItem;
             var _local_2:int;
-            while (_local_2 < this._Str_1636.length)
+            while (_local_2 < this._items.length)
             {
-                _local_3 = this._Str_1636.getWithIndex(_local_2);
+                _local_3 = this._items.getWithIndex(_local_2);
                 if (_local_3.id == k)
                 {
                     _local_3.locked = false;
@@ -565,10 +565,10 @@
         {
             var k:Boolean;
             var _local_3:FurnitureItem;
-            var _local_2:int = (this._Str_1636.length - 1);
+            var _local_2:int = (this._items.length - 1);
             while (_local_2 >= 0)
             {
-                _local_3 = this._Str_1636.getWithIndex(_local_2);
+                _local_3 = this._items.getWithIndex(_local_2);
                 if (_local_3.locked)
                 {
                     _local_3.locked = false;
@@ -591,15 +591,15 @@
             {
                 k = 0;
                 _local_2 = 0;
-                while (_local_2 < this._Str_1636.length)
+                while (_local_2 < this._items.length)
                 {
-                    _local_3 = (this._Str_1636.getWithIndex(_local_2) as FurnitureItem);
+                    _local_3 = (this._items.getWithIndex(_local_2) as FurnitureItem);
                     k = (k + int(_local_3.stuffData.getLegacyString()));
                     _local_2++;
                 }
                 return k;
             }
-            return this._Str_1636.length;
+            return this._items.length;
         }
 
         public function _Str_22135():int
@@ -607,9 +607,9 @@
             var _local_3:FurnitureItem;
             var k:int;
             var _local_2:int;
-            while (_local_2 < this._Str_1636.length)
+            while (_local_2 < this._items.length)
             {
-                _local_3 = (this._Str_1636.getWithIndex(_local_2) as FurnitureItem);
+                _local_3 = (this._items.getWithIndex(_local_2) as FurnitureItem);
                 if (((_local_3._Str_16260) && (!(_local_3.locked))))
                 {
                     k++;
@@ -624,9 +624,9 @@
             var _local_3:FurnitureItem;
             var k:int;
             var _local_2:int;
-            while (_local_2 < this._Str_1636.length)
+            while (_local_2 < this._items.length)
             {
-                _local_3 = (this._Str_1636.getWithIndex(_local_2) as FurnitureItem);
+                _local_3 = (this._items.getWithIndex(_local_2) as FurnitureItem);
                 if (((_local_3._Str_8386) && (!(_local_3.locked))))
                 {
                     k++;
@@ -638,10 +638,10 @@
 
         public function remove(k:int):FurnitureItem
         {
-            var _local_2:FurnitureItem = this._Str_1636.getValue(k);
+            var _local_2:FurnitureItem = this._items.getValue(k);
             if (_local_2)
             {
-                this._Str_1636.remove(k);
+                this._items.remove(k);
                 this._Str_10703();
                 return _local_2;
             }
@@ -650,13 +650,13 @@
 
         public function _Str_2990(k:int):FurnitureItem
         {
-            var _local_2:FurnitureItem = this._Str_1636.getValue(k);
+            var _local_2:FurnitureItem = this._items.getValue(k);
             return _local_2;
         }
 
         public function _Str_23685(k:int, _arg_2:FurnitureItem):void
         {
-            this._Str_1636.add(k, _arg_2);
+            this._items.add(k, _arg_2);
             this._Str_10703();
         }
 
@@ -674,9 +674,9 @@
             }
             var _local_2:int;
             var _local_3:int;
-            while (_local_3 < this._Str_1636.length)
+            while (_local_3 < this._items.length)
             {
-                k = this._Str_1636.getWithIndex(_local_3);
+                k = this._items.getWithIndex(_local_3);
                 if (!k.locked)
                 {
                     _local_2++;
@@ -1048,7 +1048,7 @@
 
         public function set _Str_4405(k:int):void
         {
-            if (k >= this._Str_1636.length)
+            if (k >= this._items.length)
             {
                 k = 0;
             }

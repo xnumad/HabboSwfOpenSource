@@ -6,15 +6,15 @@
 
     public class _Str_7601 implements IMessageParser 
     {
-        private var _Str_1636:Map;
+        private var _items:Map;
 
 
         public function flush():Boolean
         {
-            if (this._Str_1636)
+            if (this._items)
             {
-                this._Str_1636.dispose();
-                this._Str_1636 = null;
+                this._items.dispose();
+                this._items = null;
             }
             return true;
         }
@@ -25,7 +25,7 @@
             var _local_3:Array;
             var _local_6:int;
             var _local_7:int;
-            this._Str_1636 = new Map();
+            this._items = new Map();
             var _local_4:int = k.readInteger();
             var _local_5:int;
             while (_local_5 < _local_4)
@@ -39,7 +39,7 @@
                     _local_3.push(k.readInteger());
                     _local_7++;
                 }
-                this._Str_1636.add(_local_2, _local_3);
+                this._items.add(_local_2, _local_3);
                 _local_5++;
             }
             return true;
@@ -47,12 +47,12 @@
 
         public function _Str_17858():Array
         {
-            return this._Str_1636.getKeys();
+            return this._items.getKeys();
         }
 
         public function _Str_24396(k:int):Array
         {
-            return this._Str_1636.getValue(k);
+            return this._items.getValue(k);
         }
     }
 }
