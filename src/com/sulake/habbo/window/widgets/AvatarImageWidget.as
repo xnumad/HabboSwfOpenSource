@@ -136,7 +136,7 @@
                         this.scale = String(_local_2.value);
                         break;
                     case _Str_15149:
-                        this._Str_13957 = Boolean(_local_2.value);
+                        this.onlyHead = Boolean(_local_2.value);
                         break;
                     case _Str_13883:
                         this._Str_13833 = Boolean(_local_2.value);
@@ -170,12 +170,12 @@
             this.refresh();
         }
 
-        public function get _Str_13957():Boolean
+        public function get onlyHead():Boolean
         {
             return this._onlyHead;
         }
 
-        public function set _Str_13957(k:Boolean):void
+        public function set onlyHead(k:Boolean):void
         {
             this._onlyHead = k;
             this.refresh();
