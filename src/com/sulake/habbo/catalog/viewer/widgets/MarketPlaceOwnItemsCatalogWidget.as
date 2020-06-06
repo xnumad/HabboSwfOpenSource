@@ -48,11 +48,11 @@
             {
                 return false;
             }
-            if (this._Str_2552 == null)
+            if (this.marketPlace == null)
             {
                 return false;
             }
-            var k:IHabboWindowManager = this._Str_2552.windowManager;
+            var k:IHabboWindowManager = this.marketPlace.windowManager;
             if (k == null)
             {
                 return false;
@@ -62,8 +62,8 @@
             this._itemTemplates.add(MarketPlaceOfferState._Str_15376, _local_2.removeListItem(_local_2.getListItemByName("ongoing_item")));
             this._itemTemplates.add(MarketPlaceOfferState._Str_8295, _local_2.removeListItem(_local_2.getListItemByName("sold_item")));
             this._itemTemplates.add(MarketPlaceOfferState._Str_6495, _local_2.removeListItem(_local_2.getListItemByName("expired_item")));
-            this._Str_2552.registerVisualization(this);
-            this._Str_2552.requestOwnItems();
+            this.marketPlace.registerVisualization(this);
+            this.marketPlace.requestOwnItems();
             this._Str_10239(this._Str_11360);
             this._Str_21553(false);
             return true;
@@ -84,21 +84,21 @@
 
         public function listUpdatedNotify():void
         {
-            if (this._Str_2552 == null)
+            if (this.marketPlace == null)
             {
                 return;
             }
-            this._Str_11855(this._Str_2552.latestOwnOffers());
+            this._Str_11855(this.marketPlace.latestOwnOffers());
         }
 
         private function _Str_10239(k:int, _arg_2:int=-1):void
         {
             var _local_5:String;
-            if (((!(this._Str_2552)) || (!(window))))
+            if (((!(this.marketPlace)) || (!(window))))
             {
                 return;
             }
-            var _local_3:IHabboLocalizationManager = this._Str_2552.localization;
+            var _local_3:IHabboLocalizationManager = this.marketPlace.localization;
             if (!_local_3)
             {
                 return;
@@ -130,7 +130,7 @@
             _local_4.caption = _local_5;
         }
 
-        private function get _Str_2552():IMarketPlace
+        private function get marketPlace():IMarketPlace
         {
             if ((((!(page)) || (!(page.viewer))) || (!(page.viewer.catalog))))
             {
@@ -165,12 +165,12 @@
             var _local_30:_Str_3353;
             var _local_31:IWidgetWindow;
             var _local_32:_Str_3083;
-            if ((((!(k)) || (!(this._Str_2552))) || (!(window))))
+            if ((((!(k)) || (!(this.marketPlace))) || (!(window))))
             {
                 return;
             }
             this._offers = k;
-            var _local_2:IHabboLocalizationManager = this._Str_2552.localization;
+            var _local_2:IHabboLocalizationManager = this.marketPlace.localization;
             if (!_local_2)
             {
                 return;
@@ -206,12 +206,12 @@
                         _local_13 = _local_12.findChildByName("item_name");
                         if (_local_13 != null)
                         {
-                            _local_13.caption = ((this._Str_2552 != null) ? ((("$" + "{") + this._Str_2552.getNameLocalizationKey(_local_11)) + "}") : "");
+                            _local_13.caption = ((this.marketPlace != null) ? ((("$" + "{") + this.marketPlace.getNameLocalizationKey(_local_11)) + "}") : "");
                         }
                         _local_14 = _local_12.findChildByName("item_desc");
                         if (_local_14 != null)
                         {
-                            _local_14.caption = ((this._Str_2552 != null) ? ((("$" + "{") + this._Str_2552.getDescriptionLocalizationKey(_local_11)) + "}") : "");
+                            _local_14.caption = ((this.marketPlace != null) ? ((("$" + "{") + this.marketPlace.getDescriptionLocalizationKey(_local_11)) + "}") : "");
                         }
                         _local_15 = _local_12.findChildByName("item_price");
                         if (_local_15 != null)
@@ -309,7 +309,7 @@
                 {
                     _local_8.enable();
                     _local_2.registerParameter("catalog.marketplace.redeem.get_credits", "count", _local_5.toString());
-                    _local_2.registerParameter("catalog.marketplace.redeem.get_credits", "credits", this._Str_2552.creditsWaiting.toString());
+                    _local_2.registerParameter("catalog.marketplace.redeem.get_credits", "credits", this.marketPlace.creditsWaiting.toString());
                     _local_9.caption = ("$" + "{catalog.marketplace.redeem.get_credits}");
                 }
                 else
@@ -333,7 +333,7 @@
             var _local_5:MarketPlaceOfferData;
             var _local_6:IBitmapWrapperWindow;
             var _local_7:Point;
-            if ((((((disposed) || (!(this._Str_2552))) || (!(_arg_2))) || (!(this._itemList))) || (!(this._offers))))
+            if ((((((disposed) || (!(this.marketPlace))) || (!(_arg_2))) || (!(this._itemList))) || (!(this._offers))))
             {
                 return;
             }
@@ -394,7 +394,7 @@
             var _local_6:MarketPlaceOfferData;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                if ((((!(this._Str_2552)) || (!(_arg_2))) || (!(window))))
+                if ((((!(this.marketPlace)) || (!(_arg_2))) || (!(window))))
                 {
                     return;
                 }
@@ -406,7 +406,7 @@
                         return;
                     }
                     _local_4 = _local_3.getListItemIndex(k.window.parent);
-                    _local_5 = this._Str_2552.latestOwnOffers();
+                    _local_5 = this.marketPlace.latestOwnOffers();
                     if (!_local_5)
                     {
                         return;
@@ -414,7 +414,7 @@
                     _local_6 = (_local_5.getWithIndex(_local_4) as MarketPlaceOfferData);
                     if (_local_6)
                     {
-                        this._Str_2552.redeemExpiredOffer(_local_6.offerId);
+                        this.marketPlace.redeemExpiredOffer(_local_6.offerId);
                     }
                 }
             }
@@ -431,9 +431,9 @@
                 switch (_arg_2.name)
                 {
                     case "redeem_sold":
-                        if (this._Str_2552)
+                        if (this.marketPlace)
                         {
-                            this._Str_2552.redeemSoldOffers();
+                            this.marketPlace.redeemSoldOffers();
                         }
                         return;
                 }
