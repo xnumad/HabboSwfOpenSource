@@ -19,8 +19,8 @@
         public function ScrollableItemListWindow(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
-            this._Str_2734.scrollable = this._itemList;
-            if (((this._Str_2734.testStateFlag(WindowState.DISABLED)) && (this._autoHideScrollBar)))
+            this._scrollBar.scrollable = this._itemList;
+            if (((this._scrollBar.testStateFlag(WindowState.DISABLED)) && (this._autoHideScrollBar)))
             {
                 this.hideScrollBar();
             }
@@ -55,7 +55,7 @@
             return this._itemList;
         }
 
-        protected function get _Str_2734():IScrollbarWindow
+        protected function get _scrollBar():IScrollbarWindow
         {
             if (!this._cachedScrollBar)
             {
@@ -86,19 +86,19 @@
 
         private function hideScrollBar():void
         {
-            if (this._Str_2734.visible)
+            if (this._scrollBar.visible)
             {
-                this._Str_2734.visible = false;
+                this._scrollBar.visible = false;
                 this._itemList.width = _w;
             }
         }
 
         private function showScrollBar():void
         {
-            if (!this._Str_2734.visible)
+            if (!this._scrollBar.visible)
             {
-                this._Str_2734.visible = true;
-                this._itemList.width = (_w - this._Str_2734.width);
+                this._scrollBar.visible = true;
+                this._itemList.width = (_w - this._scrollBar.width);
             }
         }
 
@@ -106,9 +106,9 @@
         {
             if (this._autoHideScrollBar)
             {
-                if (this._Str_2734.testStateFlag(WindowState.DISABLED))
+                if (this._scrollBar.testStateFlag(WindowState.DISABLED))
                 {
-                    if (this._Str_2734.visible)
+                    if (this._scrollBar.visible)
                     {
                         this.hideScrollBar();
                     }
@@ -116,7 +116,7 @@
             }
             else
             {
-                if (((k) || (this._Str_2734.visible)))
+                if (((k) || (this._scrollBar.visible)))
                 {
                     this.showScrollBar();
                 }
@@ -125,7 +125,7 @@
 
         protected function isConstructionReady():Boolean
         {
-            return (this._itemList) && (this._Str_2734);
+            return (this._itemList) && (this._scrollBar);
         }
 
         public function set autoHideScrollBar(k:Boolean):void

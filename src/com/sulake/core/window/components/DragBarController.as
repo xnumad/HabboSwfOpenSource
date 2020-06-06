@@ -11,7 +11,7 @@
     {
         protected var _Str_18200:Number;
         protected var _Str_18429:Number;
-        protected var _Str_2734:ScrollBarController;
+        protected var _scrollBar:ScrollBarController;
 
         public function DragBarController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
@@ -26,7 +26,7 @@
             {
                 if ((_local_12 is IScrollbarWindow))
                 {
-                    this._Str_2734 = ScrollBarController(_local_12);
+                    this._scrollBar = ScrollBarController(_local_12);
                     _local_12 = null;
                 }
                 else
@@ -34,7 +34,7 @@
                     _local_12 = _local_12.parent;
                 }
             }
-            if (this._Str_2734.horizontal)
+            if (this._scrollBar.horizontal)
             {
                 limits.minWidth = width;
             }
@@ -69,10 +69,10 @@
             {
                 this._Str_18200 = ((x != 0) ? (x / Number((_parent.width - width))) : 0);
                 this._Str_18429 = ((y != 0) ? (y / Number((_parent.height - height))) : 0);
-                if (_parent != this._Str_2734)
+                if (_parent != this._scrollBar)
                 {
                     _local_3 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this, null);
-                    this._Str_2734.update(this, _local_3);
+                    this._scrollBar.update(this, _local_3);
                     _local_3.recycle();
                 }
             }
