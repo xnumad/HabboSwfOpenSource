@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10037 implements IMessageComposer 
+    public class SelectClubGiftComposer implements IMessageComposer
     {
         private var _productCode:String;
 
-        public function _Str_10037(k:String)
+        public function SelectClubGiftComposer(k:String)
         {
             this._productCode = k;
         }

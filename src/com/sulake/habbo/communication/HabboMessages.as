@@ -633,7 +633,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8136;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_9462;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_9799;
-	import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_10037;
+	import com.sulake.habbo.communication.messages.outgoing._Str_63.SelectClubGiftComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_10123;
 	import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_10231;
 	import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_10281;
@@ -1679,7 +1679,7 @@
             OUTGOING_PACKETS[2264] = _Str_12153;
             OUTGOING_PACKETS[2266] = _Str_9956;
             OUTGOING_PACKETS[2267] = _Str_12287;
-            OUTGOING_PACKETS[2276] = _Str_10037;
+            OUTGOING_PACKETS[2276] = SelectClubGiftComposer;
             OUTGOING_PACKETS[2277] = _Str_9988;
             OUTGOING_PACKETS[2281] = UpdateActionMessageComposer;
             OUTGOING_PACKETS[2283] = _Str_12488;
