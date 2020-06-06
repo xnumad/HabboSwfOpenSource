@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.help.HabboHelp;
     import com.sulake.habbo.help.GuideHelpManager;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -23,7 +23,7 @@
         private var _habboHelp:HabboHelp;
         private var _guideHelp:GuideHelpManager;
         private var _disposed:Boolean = false;
-        private var _helpDialog:_Str_2784;
+        private var _helpDialog:IModalDialog;
         private var _tourPopup:IWindowContainer;
         private var _tourPopupShowTime:int;
         private var _pendingRequestWindow:IWindowContainer;

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.help
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import __AS3__.vec.Vector;
     import com.sulake.core.window.components.IItemListWindow;
@@ -50,7 +50,7 @@
 
         private var _habboHelp:HabboHelp;
         private var _disposed:Boolean = false;
-        private var _helpDialog:_Str_2784;
+        private var _helpDialog:IModalDialog;
         private var _view:IWindowContainer;
         private var _containers:Vector.<String>;
         private var _usersList:IItemListWindow;

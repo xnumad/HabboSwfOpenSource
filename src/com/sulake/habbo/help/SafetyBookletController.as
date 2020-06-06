@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.help
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -16,7 +16,7 @@
         private const _Str_20665:int = 7;
 
         private var _habboHelp:HabboHelp;
-        private var _dialog:_Str_2784;
+        private var _dialog:IModalDialog;
         private var _window:IWindowContainer;
         private var _disposed:Boolean = false;
         private var _currentPage:int = 0;

@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.room.IGetImageListener;
     import com.sulake.habbo.ui.widget.furniture.contextmenu.FurnitureContextMenuWidget;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7564;
@@ -28,7 +28,7 @@
     {
         private var _disposed:Boolean;
         private var _widget:FurnitureContextMenuWidget;
-        private var _dialog:_Str_2784;
+        private var _dialog:IModalDialog;
         private var _window:IWindowContainer;
         private var _object:IRoomObject;
         private var _showMysteryBoxWaitMessageEvent:_Str_7564;

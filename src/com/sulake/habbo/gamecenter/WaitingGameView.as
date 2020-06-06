@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.gamecenter
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.ITextLinkWindow;
@@ -19,7 +19,7 @@
 
         private var _disposed:Boolean;
         private var _gameCenterView:GameCenterView;
-        private var _waitingGameDialog:_Str_2784;
+        private var _waitingGameDialog:IModalDialog;
         private var _waitingGameWindow:IWindowContainer;
         private var _logoImage:IStaticBitmapWrapperWindow;
         private var _cancelLink:ITextLinkWindow;

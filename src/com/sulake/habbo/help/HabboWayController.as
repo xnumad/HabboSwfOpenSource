@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.help
 {
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.window.widgets._Str_4466;
     import com.sulake.core.window.components.IWidgetWindow;
@@ -16,7 +16,7 @@
         private var _pageCount:int = 0;
         private var _currentPage:int = 0;
         private var _habboHelp:HabboHelp;
-        private var _dialog:_Str_2784;
+        private var _dialog:IModalDialog;
         private var _window:IWindowContainer;
         private var _disposed:Boolean = false;
 

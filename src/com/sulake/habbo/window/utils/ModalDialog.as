@@ -17,7 +17,7 @@
     import com.sulake.core.window.WindowController;
     import flash.geom.Matrix;
 
-    public class ModalDialog implements _Str_2784 
+    public class ModalDialog implements IModalDialog
     {
         private static const _Str_4923:int = 3;
         private static const _Str_5846:ColorTransform = new ColorTransform(0.25, 0.25, 0.25);

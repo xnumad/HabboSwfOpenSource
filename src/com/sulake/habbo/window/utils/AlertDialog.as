@@ -26,7 +26,7 @@
         protected var _disposed:Boolean = false;
         protected var _Str_2715:Function = null;
         protected var window:IFrameWindow;
-        protected var _Str_2440:_Str_2784;
+        protected var _Str_2440:IModalDialog;
 
         public function AlertDialog(k:IHabboWindowManager, _arg_2:XML, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function, _arg_7:Boolean)
         {

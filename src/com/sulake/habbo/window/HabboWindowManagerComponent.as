@@ -74,7 +74,7 @@
     import com.sulake.core.window.IWidget;
     import com.sulake.core.assets.IResourceManager;
     import com.sulake.habbo.window.utils.ModalDialog;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.habbo.window.utils.SimpleAlertDialog;
     import flash.text.StyleSheet;
     import com.sulake.core.window.events.*;
@@ -606,7 +606,7 @@
             return this._localization;
         }
 
-        public function buildModalDialogFromXML(k:XML):_Str_2784
+        public function buildModalDialogFromXML(k:XML):IModalDialog
         {
             return new ModalDialog(this, k);
         }

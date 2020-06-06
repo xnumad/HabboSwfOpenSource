@@ -51,7 +51,7 @@
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.utils.ErrorReportStorage;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_10695;
     import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_6216;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_12273;
@@ -539,11 +539,11 @@
             return window;
         }
 
-        public function _Str_4804(name:String):_Str_2784
+        public function _Str_4804(name:String):IModalDialog
         {
             var asset:IAsset;
             var xmlAsset:XmlAsset;
-            var dialog:_Str_2784;
+            var dialog:IModalDialog;
             try
             {
                 asset = assets.getAssetByName((name + "_xml"));

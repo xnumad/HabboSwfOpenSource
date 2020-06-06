@@ -38,7 +38,7 @@
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.utils.ErrorReportStorage;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.habbo.communication.enum.HabboCommunicationEvent;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10198;
     import com.sulake.core.communication.encryption.CryptoTools;
@@ -262,11 +262,11 @@
             return window;
         }
 
-        public function _Str_4804(name:String, appendix:String="_xml"):_Str_2784
+        public function _Str_4804(name:String, appendix:String="_xml"):IModalDialog
         {
             var asset:IAsset;
             var xmlAsset:XmlAsset;
-            var window:_Str_2784;
+            var window:IModalDialog;
             try
             {
                 asset = assets.getAssetByName((name + appendix));

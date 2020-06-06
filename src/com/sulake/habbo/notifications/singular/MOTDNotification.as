@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.notifications.singular
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.utils.Map;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.assets.IAsset;
@@ -15,7 +15,7 @@
     public class MOTDNotification implements IDisposable 
     {
         private var _habboNotifications:HabboNotifications;
-        private var _Str_2440:_Str_2784;
+        private var _Str_2440:IModalDialog;
         private var _type:String;
         private var _Str_4071:Map;
 

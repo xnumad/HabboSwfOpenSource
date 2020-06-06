@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.demo
 {
     import com.sulake.core.runtime.events.EventDispatcherWrapper;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IDropListWindow;
     import flash.utils.Dictionary;
@@ -28,7 +28,7 @@
         private const _Str_4939:String = "fuselogin";
 
         private var _habboLogin:HabboCommunicationDemo;
-        private var _dialog:_Str_2784;
+        private var _dialog:IModalDialog;
         private var _window:IWindowContainer;
         private var _parsedTicket:SSOTicket;
         private var _firstTryUsingExistingSession:Boolean = false;

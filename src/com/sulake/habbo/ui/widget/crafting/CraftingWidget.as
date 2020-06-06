@@ -3,7 +3,7 @@
     import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.RoomUI;
     import com.sulake.habbo.ui.widget.crafting.utils.CraftingFurnitureItem;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.ui.widget.crafting.controller.CraftingInventoryListController;
     import com.sulake.habbo.ui.widget.crafting.controller.CraftingRecipeListController;
@@ -35,7 +35,7 @@
 
         private var _roomUI:RoomUI;
         private var _selectedProduct:CraftingFurnitureItem;
-        private var _modal:_Str_2784;
+        private var _modal:IModalDialog;
         private var _itemTemplate:IWindowContainer;
         private var _inventoryCtrl:CraftingInventoryListController;
         private var _recipeCtrl:CraftingRecipeListController;

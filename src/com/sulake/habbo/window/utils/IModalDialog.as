@@ -4,7 +4,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
 
-    public interface _Str_2784 extends IDisposable 
+    public interface IModalDialog extends IDisposable
     {
         function get rootWindow():IWindow;
         function get background():IBitmapWrapperWindow;

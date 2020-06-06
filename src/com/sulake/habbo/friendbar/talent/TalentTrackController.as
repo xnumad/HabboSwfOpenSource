@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.friendbar.talent
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.communication.messages.parser.talent.TalentTrack;
@@ -53,9 +53,9 @@
 
         private var _habboTalent:HabboTalent;
         private var _disposed:Boolean = false;
-        private var _dialog:_Str_2784;
+        private var _dialog:IModalDialog;
         private var _window:IWindowContainer;
-        private var _taskProgressPopup:_Str_2784;
+        private var _taskProgressPopup:IModalDialog;
         private var _panoramaList:IItemListWindow;
         private var _talentTrack:TalentTrack;
         private var _talentProgressMeter:TalentProgressMeter;

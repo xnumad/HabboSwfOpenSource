@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.avatar.IAvatarImageListener;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.ITextLinkWindow;
@@ -34,7 +34,7 @@
         private var _disposed:Boolean;
         private var _initialized:Boolean;
         private var _gameCenterView:GameCenterView;
-        private var _leaderboardDialog:_Str_2784;
+        private var _leaderboardDialog:IModalDialog;
         private var _leaderboardWindow:IWindowContainer;
         private var _entryWindow:IWindowContainer;
         private var _thisWeekList:IItemListWindow;

@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.navigator.IHabboTransitionalNavigator;
     import com.sulake.core.window.components.IFrameWindow;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.core.window.components.IDropMenuWindow;
     import com.sulake.habbo.session.SecurityLevelEnum;
@@ -15,7 +15,7 @@
     {
         private var _navigator:IHabboTransitionalNavigator;
         private var _window:IFrameWindow;
-        private var _dialog:_Str_2784;
+        private var _dialog:IModalDialog;
         private var _categorySelection:int = 0;
         private var _tradeModeSelection:int = 0;
         private var _visibleAndSelectableCategories:Array;

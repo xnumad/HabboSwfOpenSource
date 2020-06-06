@@ -11,7 +11,7 @@
     import com.sulake.core.window.IInputEventTracker;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.assets.IResourceManager;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.utils.Map;
     import com.sulake.core.assets.IAssetLibrary;
     import flash.text.StyleSheet;
@@ -33,7 +33,7 @@
         function removeMouseEventTracker(_arg_1:IInputEventTracker):void;
         function createUnseenItemCounter():IWindowContainer;
         function get resourceManager():IResourceManager;
-        function buildModalDialogFromXML(_arg_1:XML):_Str_2784;
+        function buildModalDialogFromXML(_arg_1:XML):IModalDialog;
         function simpleAlert(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String=null, _arg_5:String=null, _arg_6:Map=null, _arg_7:String=null, _arg_8:Function=null, _arg_9:Function=null):void;
         function get assets():IAssetLibrary;
         function registerHintWindow(_arg_1:String, _arg_2:IWindow, _arg_3:int=1):void;

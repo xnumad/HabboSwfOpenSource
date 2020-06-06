@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.room.IGetImageListener;
     import com.sulake.habbo.campaign.HabboCampaigns;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import flash.display.Stage;
     import flash.events.Event;
@@ -23,7 +23,7 @@
         private static const MARGIN:int = 75;
 
         private var _controller:HabboCampaigns;
-        private var _modal:_Str_2784;
+        private var _modal:IModalDialog;
         private var _selectedIndex:int = -1;
         private var _itemsOnScreen:int;
 

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.gamecenter
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.window.utils._Str_2784;
+    import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IDisplayObjectWrapper;
     import flash.display.Loader;
@@ -20,7 +20,7 @@
 
         private var _disposed:Boolean;
         private var _gameCenterView:GameCenterView;
-        private var _teaserDialog:_Str_2784;
+        private var _teaserDialog:IModalDialog;
         private var _teaserWindow:IWindowContainer;
         private var _teaserWrapper:IDisplayObjectWrapper;
         private var _teaserPlayer:Object;

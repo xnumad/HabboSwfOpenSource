@@ -18,7 +18,7 @@
         private static const _Str_4658:int = 10;
 
         private var _disposed:Boolean;
-        private var _Str_2440:_Str_2784;
+        private var _Str_2440:IModalDialog;
         private var _Str_577:String;
         private var _window:IWindowContainer;
         private var _list:IItemListWindow;
