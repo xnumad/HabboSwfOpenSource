@@ -12,7 +12,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_10646;
+    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_10646;
     import com.sulake.habbo.session.events.RoomSessionDoorbellEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
     import com.sulake.core.utils.ErrorReportStorage;

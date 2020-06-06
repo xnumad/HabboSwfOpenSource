@@ -41,7 +41,7 @@
 	import com.sulake.core.communication.messages.IMessageComposer;
 	import com.sulake.habbo.events.js.JsMessageHandler;
 	import com.sulake.habbo.communication.IHabboCommunicationManager;
-	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
+	import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
 	import com.sulake.habbo.room.IRoomEngine;
 	import com.sulake.iid.IIDAvatarRenderManager;
 	import com.sulake.iid.IIDHabboCatalog;

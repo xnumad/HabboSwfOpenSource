@@ -8,7 +8,7 @@
     import com.sulake.habbo.session.events.RoomSessionEvent;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.session.enum.RoomTradingLevelEnum;
-    import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_5756;
+    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_5756;
     import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_12300;
     import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
     import flash.utils.getTimer;
@@ -52,8 +52,8 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_10642;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
     import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_10856;
-    import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
-    import com.sulake.habbo.communication.messages.outgoing._Str_84.ChangeQueueMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session.ChangeQueueMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8017;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsData;
 	import com.sulake.habbo.ui.widget.infobuspolls.VotePollCounterMessageComposer;

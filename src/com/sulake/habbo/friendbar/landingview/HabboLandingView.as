@@ -41,7 +41,7 @@
     import com.sulake.core.window.components.IDesktopWindow;
     import com.sulake.habbo.toolbar.HabboToolbarEnum;
     import com.sulake.core.communication.messages.IMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.gamecenter.GameCenterEvent;
     import com.sulake.habbo.catalog.event.CatalogEvent;

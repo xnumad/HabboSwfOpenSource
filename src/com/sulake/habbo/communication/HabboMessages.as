@@ -926,10 +926,10 @@
 	import com.sulake.habbo.communication.messages.incoming.poll.PollErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.PollContentsEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll._Str_8879;
-	import com.sulake.habbo.communication.messages.outgoing._Str_84.ChangeQueueMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_10646;
-	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
-	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_5756;
+	import com.sulake.habbo.communication.messages.outgoing.room.session.ChangeQueueMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.room.session._Str_10646;
+	import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
+	import com.sulake.habbo.communication.messages.outgoing.room.session._Str_5756;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.*;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.SetActivatedBadgesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.RequestABadgeComposer;

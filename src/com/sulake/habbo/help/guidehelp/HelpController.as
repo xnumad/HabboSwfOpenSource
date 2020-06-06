@@ -9,7 +9,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import flash.utils.getTimer;

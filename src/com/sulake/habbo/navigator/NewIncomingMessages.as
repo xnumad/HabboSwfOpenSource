@@ -88,7 +88,7 @@
     import com.sulake.core.window.IWindowContext;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.parser.room.session.CantConnectMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
 

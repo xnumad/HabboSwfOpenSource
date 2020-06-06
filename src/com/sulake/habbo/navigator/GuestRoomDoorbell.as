@@ -8,7 +8,7 @@
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
 
     public class GuestRoomDoorbell 
     {
