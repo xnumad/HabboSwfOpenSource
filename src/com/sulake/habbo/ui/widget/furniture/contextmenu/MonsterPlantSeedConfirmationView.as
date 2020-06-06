@@ -96,7 +96,7 @@
             {
                 _local_5 = "use_product_widget_frame_plant_seed_xml";
                 this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName(_local_5).content as XML)) as IWindowContainer);
-                this._Str_2471(HEADER_BUTTON_CLOSE);
+                this.addClickListener(HEADER_BUTTON_CLOSE);
                 this._window.center();
             }
             this._widget.localizations.registerParameter("useproduct.widget.text.plant_seed", "productName", this._furnitureData.localizedName);
@@ -107,8 +107,8 @@
             switch (k)
             {
                 case _Str_9984:
-                    this._Str_2471(SAVE_BUTTON);
-                    this._Str_2471(CANCEL_TEXT);
+                    this.addClickListener(SAVE_BUTTON);
+                    this.addClickListener(CANCEL_TEXT);
                     _local_2 = this._Str_3993(this._furnitureData);
                     break;
                 default:
@@ -197,7 +197,7 @@
             }
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             this._window.findChildByName(k).addEventListener(WindowMouseEvent.CLICK, this.onMouseClick);
         }

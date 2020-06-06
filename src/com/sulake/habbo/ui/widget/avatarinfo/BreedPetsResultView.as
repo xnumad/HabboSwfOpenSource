@@ -171,7 +171,7 @@
             if (!this._window)
             {
                 this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName("breed_pets_result_xml").content as XML)) as IFrameWindow);
-                this._Str_2471(HEADER_BUTTON_CLOSE);
+                this.addClickListener(HEADER_BUTTON_CLOSE);
             }
             this._window.center();
             this._window.visible = true;
@@ -232,15 +232,15 @@
             {
                 this._Str_2513(ELEM_INFO_MUTATE2, true);
             }
-            this._Str_2471(SAVE_BUTTON);
-            this._Str_2471(HEADER_BUTTON_CLOSE);
-            this._Str_2471(CLOSE_BUTTON);
-            this._Str_2471(ELEM_PLACE_BUTTON1);
-            this._Str_2471(ELEM_PLACE_BUTTON2);
-            this._Str_2471(ELEM_PICK_BUTTON1);
-            this._Str_2471(ELEM_PICK_BUTTON2);
-            this._Str_2471(PREVIEW_IMAGE_REGION);
-            this._Str_2471(ELEM_PREVIEW_IMAGE_REGION2);
+            this.addClickListener(SAVE_BUTTON);
+            this.addClickListener(HEADER_BUTTON_CLOSE);
+            this.addClickListener(CLOSE_BUTTON);
+            this.addClickListener(ELEM_PLACE_BUTTON1);
+            this.addClickListener(ELEM_PLACE_BUTTON2);
+            this.addClickListener(ELEM_PICK_BUTTON1);
+            this.addClickListener(ELEM_PICK_BUTTON2);
+            this.addClickListener(PREVIEW_IMAGE_REGION);
+            this.addClickListener(ELEM_PREVIEW_IMAGE_REGION2);
             var _local_7:BitmapData = this._Str_3993(k.id, PREVIEW_IMAGE);
             this._Str_3060(((_local_7 != null) ? _local_7 : new BitmapData(10, 10)), PREVIEW_IMAGE);
             _local_7 = this._Str_3993(k.id, ELEM_PREVIEW_IMAGE2);
@@ -324,7 +324,7 @@
             }
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             var _local_2:IWindow = this._window.findChildByName(k);
             if (_local_2 != null)

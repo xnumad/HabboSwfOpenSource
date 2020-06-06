@@ -139,7 +139,7 @@
             if (!this._window)
             {
                 this._window = (windowManager.buildFromXML((assets.getAssetByName("mannequin_widget_frame_xml").content as XML)) as IWindowContainer);
-                this._Str_2471(HEADER_BUTTON_CLOSE);
+                this.addClickListener(HEADER_BUTTON_CLOSE);
                 this._window.center();
             }
             (this._window as IFrameWindow).content.removeChildAt(0);
@@ -148,10 +148,10 @@
             switch (k)
             {
                 case _Str_9305:
-                    this._Str_2471(CONFIGURE_BUTTON);
-                    this._Str_2471(WEAR_BUTTON);
+                    this.addClickListener(CONFIGURE_BUTTON);
+                    this.addClickListener(WEAR_BUTTON);
                     this._Str_24329(OUTFIT_NAME_SET);
-                    this._Str_2471(OUTFIT_NAME_SET);
+                    this.addClickListener(OUTFIT_NAME_SET);
                     _local_3 = _local_6._Str_718(this._mannequinFigure);
                     this._Str_17455(_local_3);
                     _local_2 = this.createAvatarImage(_local_3.getFigureString());
@@ -160,8 +160,8 @@
                     this._Str_23723();
                     break;
                 case _Str_11074:
-                    this._Str_2471(SAVE_BUTTON);
-                    this._Str_2471(BACK_REGION);
+                    this.addClickListener(SAVE_BUTTON);
+                    this.addClickListener(BACK_REGION);
                     _local_3 = _local_6._Str_718(_local_5);
                     this._Str_17455(_local_3);
                     _local_2 = this.createAvatarImage(_local_3.getFigureString());
@@ -169,20 +169,20 @@
                     this._Str_6655(_local_7);
                     break;
                 case _Str_10942:
-                    this._Str_2471(WEAR_BUTTON);
+                    this.addClickListener(WEAR_BUTTON);
                     _local_3 = this._Str_19759(_local_5, this._mannequinFigure);
                     _local_2 = this.createAvatarImage(_local_3.getFigureString());
                     this._Str_11068(this._mannequinClubLevel);
                     this._Str_6655(_local_7);
                     break;
                 case _Str_8565:
-                    this._Str_2471(GET_CLUB_BUTTON);
+                    this.addClickListener(GET_CLUB_BUTTON);
                     _local_3 = this._Str_19759(_local_5, this._mannequinFigure);
                     _local_2 = this.createAvatarImage(_local_3.getFigureString());
                     this._Str_11068(this._mannequinClubLevel);
                     break;
                 case _Str_9053:
-                    this._Str_2471(OK_BUTTON);
+                    this.addClickListener(OK_BUTTON);
                     _local_3 = _local_6._Str_718(this._mannequinFigure);
                     this._Str_17455(_local_3);
                     _local_2 = this.createAvatarImage(_local_3.getFigureString());
@@ -386,7 +386,7 @@
             return (k == _local_2) ? "" : k;
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             this._window.findChildByName(k).addEventListener(WindowMouseEvent.CLICK, this.onMouseClick);
         }

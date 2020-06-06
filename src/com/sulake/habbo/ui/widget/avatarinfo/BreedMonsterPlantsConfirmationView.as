@@ -149,13 +149,13 @@
             if (!this._window)
             {
                 this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName("breed_pets_confirmation_xml").content as XML)) as IFrameWindow);
-                this._Str_2471(HEADER_BUTTON_CLOSE);
+                this.addClickListener(HEADER_BUTTON_CLOSE);
             }
             this._window.center();
             this._window.visible = true;
-            this._Str_2471(SAVE_BUTTON);
-            this._Str_2471(ACCEPT_BUTTON);
-            this._Str_2471(CANCEL_BUTTON);
+            this.addClickListener(SAVE_BUTTON);
+            this.addClickListener(ACCEPT_BUTTON);
+            this.addClickListener(CANCEL_BUTTON);
             this._Str_2513(DESCRIPTION, false);
             this._Str_2513(REQUEST, false);
             this._Str_2513(SAVE_BUTTON, false);
@@ -228,7 +228,7 @@
             }
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             var _local_2:IWindow = this._window.findChildByName(k);
             if (_local_2 != null)

@@ -164,9 +164,9 @@
             this._window.findChildByTag("close").procedure = this.onWindowClose;
             this._window.center();
             this._window.visible = true;
-            this._Str_2471(HEADER_BUTTON_CLOSE);
-            this._Str_2471(SAVE_BUTTON);
-            this._Str_2471(CANCEL_BUTTON);
+            this.addClickListener(HEADER_BUTTON_CLOSE);
+            this.addClickListener(SAVE_BUTTON);
+            this.addClickListener(CANCEL_BUTTON);
         }
 
         private function onWindowClose(k:WindowEvent, _arg_2:IWindow):void
@@ -177,7 +177,7 @@
             }
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             var _local_2:IWindow = this._window.findChildByName(k);
             if (_local_2 != null)

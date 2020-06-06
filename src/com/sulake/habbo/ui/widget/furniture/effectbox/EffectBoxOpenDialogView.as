@@ -63,9 +63,9 @@
             {
                 k = "effectbox_xml";
                 this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName(k).content as XML)) as IWindowContainer);
-                this._Str_2471(OK);
-                this._Str_2471(CANCEL);
-                this._Str_2471(HEADER_BUTTON_CLOSE);
+                this.addClickListener(OK);
+                this.addClickListener(CANCEL);
+                this.addClickListener(HEADER_BUTTON_CLOSE);
                 this._window.center();
             }
         }
@@ -78,7 +78,7 @@
             }
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             this._window.findChildByName(k).addEventListener(WindowMouseEvent.CLICK, this.onMouseClick);
         }

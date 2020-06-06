@@ -107,7 +107,7 @@
             {
                 _local_4 = "use_product_widget_frame_plant_seed_xml";
                 this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName(_local_4).content as XML)) as IWindowContainer);
-                this._Str_2471(HEADER_BUTTON_CLOSE);
+                this.addClickListener(HEADER_BUTTON_CLOSE);
                 this._window.center();
             }
             this._window.caption = "${useproduct.widget.title.bind_clothing}";
@@ -119,8 +119,8 @@
             switch (k)
             {
                 case _Str_10898:
-                    this._Str_2471(SAVE_BUTTON);
-                    this._Str_2471(CANCEL_TEXT);
+                    this.addClickListener(SAVE_BUTTON);
+                    this.addClickListener(CANCEL_TEXT);
                     break;
                 default:
                     throw (new Error(("Invalid type for use product confirmation content apply: " + k)));
@@ -160,7 +160,7 @@
             }
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             this._window.findChildByName(k).addEventListener(WindowMouseEvent.CLICK, this.onMouseClick);
         }

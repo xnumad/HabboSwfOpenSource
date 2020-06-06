@@ -64,11 +64,11 @@
         private function createWindow():void
         {
             this._window = IFrameWindow(this._controller.questEngine.getXmlWindow("AchievementResolutionCompleted"));
-            this._Str_2471(HEADER_BUTTON_CLOSE);
-            this._Str_2471(CANCEL_BUTTON);
+            this.addClickListener(HEADER_BUTTON_CLOSE);
+            this.addClickListener(CANCEL_BUTTON);
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             var _local_2:IWindow = this._window.findChildByName(k);
             if (_local_2 != null)

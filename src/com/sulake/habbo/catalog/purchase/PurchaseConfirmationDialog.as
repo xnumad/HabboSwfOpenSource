@@ -253,9 +253,9 @@
             this._Str_23404(k);
             var _local_3:IWindowContainer = (this._window.findChildByName("purchase_cost_box") as IWindowContainer);
             this._catalog.utils._Str_6455(_local_3, k, this._quantity);
-            this._Str_2471("buy_button", this._Str_13434);
-            this._Str_2471("cancel_button", this.onClose);
-            this._Str_2471("header_button_close", this.onClose);
+            this.addClickListener("buy_button", this._Str_13434);
+            this.addClickListener("cancel_button", this.onClose);
+            this.addClickListener("header_button_close", this.onClose);
             this._window.center();
             if (this._catalog.getBoolean("disclaimer.credit_spending.enabled"))
             {
@@ -400,7 +400,7 @@
             this._catalog.windowManager.registerLocalizationParameter("catalog.purchase.confirmation.dialog.costs", "offer_name", _local_3);
         }
 
-        private function _Str_2471(k:String, _arg_2:Function):void
+        private function addClickListener(k:String, _arg_2:Function):void
         {
             var _local_3:IWindow = this._window.findChildByName(k);
             if (_local_3 != null)
@@ -609,9 +609,9 @@
                 return;
             }
             this._window.center();
-            this._Str_2471("give_gift_button", this._Str_23085);
-            this._Str_2471("cancel_link_region", this._Str_21578);
-            this._Str_2471("header_button_close", this._Str_21578);
+            this.addClickListener("give_gift_button", this._Str_23085);
+            this.addClickListener("cancel_link_region", this._Str_21578);
+            this.addClickListener("header_button_close", this._Str_21578);
             var _local_2:IWindow = this._window.findChildByName("name_input");
             if (_local_2 != null)
             {
@@ -676,10 +676,10 @@
                 this._localization.registerParameter(_local_10, "name", _local_9);
                 _local_7.caption = this._localization.getLocalization(_local_10, _local_9);
             }
-            this._Str_2471("ribbon_prev", this._Str_23680);
-            this._Str_2471("ribbon_next", this._Str_25226);
-            this._Str_2471("box_prev", this._Str_24477);
-            this._Str_2471("box_next", this._Str_24629);
+            this.addClickListener("ribbon_prev", this._Str_23680);
+            this.addClickListener("ribbon_next", this._Str_25226);
+            this.addClickListener("box_prev", this._Str_24477);
+            this.addClickListener("box_next", this._Str_24629);
             this._localization.registerParameter("catalog.gift_wrapping_new.price", "price", k.price.toString());
             if (k.defaultStuffTypes.length > 0)
             {

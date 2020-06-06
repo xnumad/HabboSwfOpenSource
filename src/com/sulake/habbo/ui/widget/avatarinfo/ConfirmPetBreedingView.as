@@ -160,12 +160,12 @@
             if (!this._window)
             {
                 this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName("confirm_pet_breeding_xml").content as XML)) as IFrameWindow);
-                this._Str_2471(HEADER_BUTTON_CLOSE);
+                this.addClickListener(HEADER_BUTTON_CLOSE);
             }
             this._window.center();
             this._window.visible = true;
-            this._Str_2471(SAVE_BUTTON);
-            this._Str_2471(CANCEL_BUTTON);
+            this.addClickListener(SAVE_BUTTON);
+            this.addClickListener(CANCEL_BUTTON);
             this.enable();
             var k:BitmapData = this._Str_3993(this._roomUserData.figure, "preview_image");
             this._Str_3060(((k != null) ? k : new BitmapData(10, 10)), "preview_image");
@@ -255,7 +255,7 @@
             this._Str_2513(SAVE_BUTTON, true, true);
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             var _local_2:IWindow = this._window.findChildByName(k);
             if (_local_2 != null)

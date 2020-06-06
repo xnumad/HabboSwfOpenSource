@@ -77,11 +77,11 @@
             if (!this._window)
             {
                 this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName("nestBreedingSuccess_xml").content as XML)) as IFrameWindow);
-                this._Str_2471(HEADER_BUTTON_CLOSE);
+                this.addClickListener(HEADER_BUTTON_CLOSE);
             }
             this._window.center();
             this._window.visible = true;
-            this._Str_2471(BUTTON_OK);
+            this.addClickListener(BUTTON_OK);
             this._window.findChildByName("pet.name").caption = this._petData.name;
             this._window.findChildByName("pet.raritycategory").caption = (("${breedpets.nestbreeding.success.raritycategory." + this._rarityCategory) + "}");
             var k:BitmapData = this._Str_3993(this._petData.figure, "pet_image");
@@ -97,7 +97,7 @@
             }
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             var _local_2:IWindow = this._window.findChildByName(k);
             if (_local_2 != null)

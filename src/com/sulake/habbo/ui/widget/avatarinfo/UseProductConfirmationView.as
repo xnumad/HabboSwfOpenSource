@@ -169,7 +169,7 @@
                         _local_4 = "use_product_widget_frame_xml";
                 }
                 this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName(_local_4).content as XML)) as IWindowContainer);
-                this._Str_2471(HEADER_BUTTON_CLOSE);
+                this.addClickListener(HEADER_BUTTON_CLOSE);
             }
             this._widget.localizations.registerParameter("useproduct.widget.text.saddle", "productName", this._furnitureData.localizedName);
             this._widget.localizations.registerParameter("useproduct.widget.text.custompart", "productName", this._furnitureData.localizedName);
@@ -189,9 +189,9 @@
                 case _Str_8759:
                 case _Str_8432:
                 case _Str_9653:
-                    this._Str_2471(PREVIEW_IMAGE_REGION);
-                    this._Str_2471(SAVE_BUTTON);
-                    this._Str_2471(CANCEL_TEXT);
+                    this.addClickListener(PREVIEW_IMAGE_REGION);
+                    this.addClickListener(SAVE_BUTTON);
+                    this.addClickListener(CANCEL_TEXT);
                     _local_2 = this._Str_3993(this._furnitureData);
                     break;
                 default:
@@ -428,7 +428,7 @@
             this._window.visible = false;
         }
 
-        private function _Str_2471(k:String):void
+        private function addClickListener(k:String):void
         {
             var _local_2:IWindow = this._window.findChildByName(k);
             if (_local_2 != null)
