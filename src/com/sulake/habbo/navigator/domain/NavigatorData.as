@@ -112,7 +112,7 @@
             this._enteredGuestRoom = k;
         }
 
-        public function set _Str_4112(k:_Str_3579):void
+        public function set roomEventData(k:_Str_3579):void
         {
             if (this._roomEventData != null)
             {
@@ -220,7 +220,7 @@
             return this._promotedRooms;
         }
 
-        public function get _Str_4112():_Str_3579
+        public function get roomEventData():_Str_3579
         {
             return this._roomEventData;
         }

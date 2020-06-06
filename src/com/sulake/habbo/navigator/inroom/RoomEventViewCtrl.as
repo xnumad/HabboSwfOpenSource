@@ -52,7 +52,7 @@
             }
             this.prepareWindow();
             this.clearErrors();
-            var k:_Str_3579 = this._navigator.data._Str_4112;
+            var k:_Str_3579 = this._navigator.data.roomEventData;
             if (k == null)
             {
                 this._Str_25306();
@@ -91,7 +91,7 @@
 
         private function save():void
         {
-            var k:int = this._navigator.data._Str_4112.adId;
+            var k:int = this._navigator.data.roomEventData.adId;
             var _local_2:String = this._Str_5340.getText();
             var _local_3:String = this._Str_5951.getText();
             if (!this._Str_17505())
@@ -103,7 +103,7 @@
 
         private function _Str_26060(k:WindowEvent):void
         {
-            this._navigator.send(new _Str_11893(this._navigator.data._Str_4112.adId));
+            this._navigator.send(new _Str_11893(this._navigator.data.roomEventData.adId));
             this.close();
         }
 
@@ -114,7 +114,7 @@
 
         private function _Str_5137(k:WindowEvent):void
         {
-            if (this._navigator.data._Str_4112 != null)
+            if (this._navigator.data.roomEventData != null)
             {
                 this.save();
             }

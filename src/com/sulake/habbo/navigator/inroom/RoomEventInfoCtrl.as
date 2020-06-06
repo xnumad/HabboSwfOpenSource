@@ -54,7 +54,7 @@
             {
                 return;
             }
-            var k:* = (!(this._navigator.data._Str_4112 == null));
+            var k:* = (!(this._navigator.data.roomEventData == null));
             var _local_2:Boolean = ((this._navigator.data._Str_12763) || (this._navigator.data._Str_15161));
             var _local_3:int = this._navigator.data._Str_20386;
             var _local_4:IRoomSession = this._navigator.roomSessionManager.getSession(_local_3);
@@ -93,8 +93,8 @@
             this._window.visible = (((k) && ((((((_local_6) || (_local_7)) || (_local_8)) || (_local_9)) || (_local_11)) || (_local_12))) || (_local_10));
             if (k)
             {
-                this._window.findChildByName("header_txt").caption = this._navigator.data._Str_4112.eventName;
-                this._window.findChildByName("desc_txt").caption = this._navigator.data._Str_4112.eventDescription;
+                this._window.findChildByName("header_txt").caption = this._navigator.data.roomEventData.eventName;
+                this._window.findChildByName("desc_txt").caption = this._navigator.data.roomEventData.eventDescription;
             }
             this._navigator.toolbar.extensionView.attachExtension(ROOM_EVENT_INFO, this._window, -1, ["next_quest_timer", "quest_tracker"]);
             this._window.x = 0;
@@ -104,7 +104,7 @@
 
         private function _Str_23285():Boolean
         {
-            var k:_Str_3579 = this._navigator.data._Str_4112;
+            var k:_Str_3579 = this._navigator.data.roomEventData;
             if (k == null)
             {
                 return false;
@@ -123,7 +123,7 @@
 
         private function _Str_17806(k:WindowEvent):void
         {
-            if (this._navigator.data._Str_4112 != null)
+            if (this._navigator.data.roomEventData != null)
             {
                 this._expanded = (!(this._expanded));
                 this.refresh();
@@ -168,7 +168,7 @@
             var _local_3:_Str_3579;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = this._navigator.data._Str_4112;
+                _local_3 = this._navigator.data.roomEventData;
                 this._navigator._Str_14281(_local_3.eventName, _local_3.eventDescription, _local_3._Str_21519, _local_3._Str_2712);
             }
         }
