@@ -36,7 +36,7 @@
             var _local_4:int;
             var _local_5:int;
             var _local_6:String;
-            var _local_7:_Str_2484;
+            var _local_7:IssueMessageData;
             this._issues = new Array();
             var _local_2:int = k.readInteger();
             var _local_3:int;
@@ -45,7 +45,7 @@
                 _local_4 = k.readInteger();
                 _local_5 = k.readInteger();
                 _local_6 = k.readString();
-                _local_7 = new _Str_2484(_local_4, 0, 0, 0, 0, 0, 0, 0, null, 0, null, _local_5, _local_6, null, 0, []);
+                _local_7 = new IssueMessageData(_local_4, 0, 0, 0, 0, 0, 0, 0, null, 0, null, _local_5, _local_6, null, 0, []);
                 this._issues.push(_local_7);
                 _local_3++;
             }

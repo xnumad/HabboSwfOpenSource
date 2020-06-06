@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.moderation
 {
     import com.sulake.core.runtime.IUpdateReceiver;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.core.window.components.IFrameWindow;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpCategoryData;
@@ -28,7 +28,7 @@
 
         private var _moderationManager:ModerationManager;
         private var _issueBundle:IssueBundle;
-        private var _selectedIssue:_Str_2484;
+        private var _selectedIssue:IssueMessageData;
         private var _window:IFrameWindow;
         private var _cfhCategories:Vector.<CallForHelpCategoryData>;
         private var _topicIdByDropdownIdx:Array;
@@ -269,7 +269,7 @@
         private function _Str_21213():void
         {
             var _local_4:IWindowContainer;
-            var _local_9:_Str_2484;
+            var _local_9:IssueMessageData;
             var _local_11:IWindowContainer;
             var _local_12:IWindow;
             var _local_13:String;
@@ -315,7 +315,7 @@
                     }
                 }
             }
-            var _local_7:_Str_2484 = this._issueBundle._Str_5216();
+            var _local_7:IssueMessageData = this._issueBundle._Str_5216();
             var _local_8:int = ((_local_7 == null) ? 0 : _local_7._Str_2869);
             var _local_10:int = getTimer();
             _local_3 = 0;
@@ -342,7 +342,7 @@
         private function _Str_21255():void
         {
             var _local_4:ITextFieldWindow;
-            var _local_7:_Str_2484;
+            var _local_7:IssueMessageData;
             var _local_8:ITextWindow;
             var _local_9:IWindow;
             if (this._window == null)
@@ -528,7 +528,7 @@
 
         private function _Str_20796(k:WindowMouseEvent):void
         {
-            var _local_2:_Str_2484;
+            var _local_2:IssueMessageData;
             var _local_3:int;
             for each (_local_2 in this._issueBundle.issues)
             {

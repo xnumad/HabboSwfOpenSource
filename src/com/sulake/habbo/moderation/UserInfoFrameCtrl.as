@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.components.IFrameWindow;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -14,9 +14,9 @@
         private var _frame:IFrameWindow;
         private var _disposed:Boolean;
         private var _userInfoCtrl:UserInfoCtrl;
-        private var _issue:_Str_2484;
+        private var _issue:IssueMessageData;
 
-        public function UserInfoFrameCtrl(k:ModerationManager, _arg_2:int, _arg_3:_Str_2484=null)
+        public function UserInfoFrameCtrl(k:ModerationManager, _arg_2:int, _arg_3:IssueMessageData=null)
         {
             this._main = k;
             this._userId = _arg_2;

@@ -5,7 +5,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpCategoryData;
     import flash.events.TimerEvent;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ReleaseIssuesMessageComposer;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import flash.events.Event;
@@ -90,7 +90,7 @@
             var _local_4:Array = this._bundles.getValues();
             for each (_local_6 in _local_4)
             {
-                if (((_local_6.state == _Str_2484._Str_5035) && ((_local_5 == null) || (this._Str_25768(_local_6, _local_5)))))
+                if (((_local_6.state == IssueMessageData._Str_5035) && ((_local_5 == null) || (this._Str_25768(_local_6, _local_5)))))
                 {
                     _local_5 = _local_6;
                 }
@@ -122,7 +122,7 @@
             var _local_2:Array = [];
             for each (_local_3 in this._bundles)
             {
-                if (((_local_3.state == _Str_2484._Str_8056) && (_local_3._Str_5547 == k)))
+                if (((_local_3.state == IssueMessageData._Str_8056) && (_local_3._Str_5547 == k)))
                 {
                     _local_2 = _local_2.concat(_local_3._Str_7101());
                 }
@@ -154,7 +154,7 @@
             this._releaseQueue = this._releaseQueue.concat(k);
         }
 
-        public function playSound(k:_Str_2484):void
+        public function playSound(k:IssueMessageData):void
         {
             if (this._issues[k._Str_2869] != null)
             {
@@ -166,7 +166,7 @@
             }
         }
 
-        public function _Str_12118(k:_Str_2484):void
+        public function _Str_12118(k:IssueMessageData):void
         {
             var _local_3:IssueBundle;
             var _local_4:IssueBundle;
@@ -204,7 +204,7 @@
                     }
                 }
             }
-            if (k.state == _Str_2484._Str_17136)
+            if (k.state == IssueMessageData._Str_17136)
             {
                 this._issues.remove(k._Str_2869);
                 return;
@@ -239,13 +239,13 @@
                 _local_5 = this._moderationManager.sessionDataManager.userId;
                 if (_local_5 != k._Str_5547)
                 {
-                    if (k.state == _Str_2484._Str_8056)
+                    if (k.state == IssueMessageData._Str_8056)
                     {
                         this._Str_22925(_local_3.id);
                     }
                 }
             }
-            if (k.state == _Str_2484._Str_5035)
+            if (k.state == IssueMessageData._Str_5035)
             {
                 _local_6 = this._Str_15829(ISSUE_BUNDLE_MY);
                 _local_7 = false;
@@ -350,19 +350,19 @@
                 switch (k)
                 {
                     case ISSUE_BUNDLE_OPEN:
-                        if (_local_4.state == _Str_2484._Str_5035)
+                        if (_local_4.state == IssueMessageData._Str_5035)
                         {
                             _local_2.push(_local_4);
                         }
                         break;
                     case ISSUE_BUNDLE_MY:
-                        if (((_local_4.state == _Str_2484._Str_8056) && (_local_4._Str_5547 == _local_3)))
+                        if (((_local_4.state == IssueMessageData._Str_8056) && (_local_4._Str_5547 == _local_3)))
                         {
                             _local_2.push(_local_4);
                         }
                         break;
                     case ISSUE_BUNDLE_PICKED:
-                        if (((_local_4.state == _Str_2484._Str_8056) && (!(_local_4._Str_5547 == _local_3))))
+                        if (((_local_4.state == IssueMessageData._Str_8056) && (!(_local_4._Str_5547 == _local_3))))
                         {
                             _local_2.push(_local_4);
                         }
@@ -534,7 +534,7 @@
             var _local_4:int = this._moderationManager.sessionDataManager.userId;
             for each (_local_5 in _local_2)
             {
-                if (((((_local_5.state == _Str_2484._Str_8056) && (_local_5._Str_5547 == _local_4)) && (!(_local_5.id == k))) && ((_local_3 == null) || (_local_5.highestPriority < _local_3.highestPriority))))
+                if (((((_local_5.state == IssueMessageData._Str_8056) && (_local_5._Str_5547 == _local_4)) && (!(_local_5.id == k))) && ((_local_3 == null) || (_local_5.highestPriority < _local_3.highestPriority))))
                 {
                     _local_3 = _local_5;
                 }
@@ -549,7 +549,7 @@
 
         public function _Str_25696(k:Array):Boolean
         {
-            var _local_4:_Str_2484;
+            var _local_4:IssueMessageData;
             var _local_5:int;
             var _local_6:String;
             var _local_7:int;

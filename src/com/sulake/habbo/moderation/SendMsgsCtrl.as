@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.moderation
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.components.IDropMenuWindow;
     import com.sulake.core.window.components.ITextFieldWindow;
@@ -19,14 +19,14 @@
         private var _main:ModerationManager;
         private var _targetUserId:int;
         private var _targetUserName:String;
-        private var _issue:_Str_2484;
+        private var _issue:IssueMessageData;
         private var _frame:IFrameWindow;
         private var _msgSelect:IDropMenuWindow;
         private var _msgInput:ITextFieldWindow;
         private var _disposed:Boolean;
         private var _placeHolderMessage:Boolean = true;
 
-        public function SendMsgsCtrl(k:ModerationManager, _arg_2:int, _arg_3:String, _arg_4:_Str_2484)
+        public function SendMsgsCtrl(k:ModerationManager, _arg_2:int, _arg_3:String, _arg_4:IssueMessageData)
         {
             this._main = k;
             this._targetUserId = _arg_2;

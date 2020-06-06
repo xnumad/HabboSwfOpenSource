@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.moderation
 {
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
 
     public class IssueBundle 
     {
@@ -14,10 +14,10 @@
         private var _groupingId:int;
         private var _messageCount:int = 0;
         private var _issueAgeInMilliseconds:int = 0;
-        private var _oldestIssue:_Str_2484 = null;
-        private var _highestPriorityIssue:_Str_2484 = null;
+        private var _oldestIssue:IssueMessageData = null;
+        private var _highestPriorityIssue:IssueMessageData = null;
 
-        public function IssueBundle(k:int, _arg_2:_Str_2484)
+        public function IssueBundle(k:int, _arg_2:IssueMessageData)
         {
             this._id = k;
             this._issues = new Map();
@@ -54,7 +54,7 @@
             return this._pickerName;
         }
 
-        public function _Str_12152(k:_Str_2484, _arg_2:Boolean=false):Boolean
+        public function _Str_12152(k:IssueMessageData, _arg_2:Boolean=false):Boolean
         {
             if (((this._groupingId == 0) || (k._Str_16842 == 0)))
             {
@@ -87,13 +87,13 @@
             return this._issues.getKeys().indexOf(k) > -1;
         }
 
-        public function _Str_12118(k:_Str_2484):void
+        public function _Str_12118(k:IssueMessageData):void
         {
             this._Str_11063(k._Str_2869);
             this._Str_20388(k);
         }
 
-        private function _Str_20388(k:_Str_2484):void
+        private function _Str_20388(k:IssueMessageData):void
         {
             this._issues.add(k._Str_2869, k);
             this._issueAgeInMilliseconds = k.issueAgeInMilliseconds;
@@ -109,9 +109,9 @@
             this._Str_5216();
         }
 
-        public function _Str_11063(k:int):_Str_2484
+        public function _Str_11063(k:int):IssueMessageData
         {
-            var _local_2:_Str_2484 = (this._issues.remove(k) as _Str_2484);
+            var _local_2:IssueMessageData = (this._issues.remove(k) as IssueMessageData);
             if (_local_2 != null)
             {
                 if (((!(_local_2.message == null)) && (!(_local_2.message == ""))))
@@ -143,12 +143,12 @@
             return 0;
         }
 
-        public function _Str_5216():_Str_2484
+        public function _Str_5216():IssueMessageData
         {
-            var k:_Str_2484;
-            var _local_2:_Str_2484;
+            var k:IssueMessageData;
+            var _local_2:IssueMessageData;
             var _local_3:int;
-            var _local_4:_Str_2484;
+            var _local_4:IssueMessageData;
             var _local_5:Boolean;
             if (this._highestPriorityIssue == null)
             {
@@ -224,8 +224,8 @@
 
         public function _Str_15885(k:int):String
         {
-            var _local_3:_Str_2484;
-            var _local_2:_Str_2484 = this._oldestIssue;
+            var _local_3:IssueMessageData;
+            var _local_2:IssueMessageData = this._oldestIssue;
             if (_local_2 == null)
             {
                 for each (_local_3 in this._issues)

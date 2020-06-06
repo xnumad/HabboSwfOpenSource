@@ -5,10 +5,10 @@
 
     public class _Str_5460 implements IMessageParser 
     {
-        private var _Str_13730:_Str_2484;
+        private var _Str_13730:IssueMessageData;
 
 
-        public function get _Str_22192():_Str_2484
+        public function get _Str_22192():IssueMessageData
         {
             return this._Str_13730;
         }
@@ -47,7 +47,7 @@
                 _local_18.push(new _Str_8176(k));
                 _local_19++;
             }
-            this._Str_13730 = new _Str_2484(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, _local_8, _local_9, _local_10, _local_11, _local_12, _local_13, _local_14, _local_15, _local_16, _local_18);
+            this._Str_13730 = new IssueMessageData(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, _local_8, _local_9, _local_10, _local_11, _local_12, _local_13, _local_14, _local_15, _local_16, _local_18);
             return true;
         }
     }

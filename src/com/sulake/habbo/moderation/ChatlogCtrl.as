@@ -7,7 +7,7 @@
     import flash.utils.Dictionary;
     import flash.utils.Timer;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IFrameWindow;
     import flash.events.TimerEvent;
@@ -42,11 +42,11 @@
         private var _hilitedUserIds:Dictionary;
         private var _resizeTimer:Timer;
         private var _chatLogUserIds:Map;
-        private var _issue:_Str_2484;
+        private var _issue:IssueMessageData;
         private var _contentLines:Array;
         private var _headers:Array;
 
-        public function ChatlogCtrl(k:IMessageComposer, _arg_2:ModerationManager, _arg_3:int, _arg_4:int, _arg_5:_Str_2484=null, _arg_6:IWindowContainer=null, _arg_7:IItemListWindow=null, _arg_8:Boolean=false)
+        public function ChatlogCtrl(k:IMessageComposer, _arg_2:ModerationManager, _arg_3:int, _arg_4:int, _arg_5:IssueMessageData=null, _arg_6:IWindowContainer=null, _arg_7:IItemListWindow=null, _arg_8:Boolean=false)
         {
             this._contentLines = [];
             this._headers = [];

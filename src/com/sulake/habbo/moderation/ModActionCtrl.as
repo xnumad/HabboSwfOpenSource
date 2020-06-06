@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.components.IDropMenuWindow;
     import com.sulake.core.window.components.ITextFieldWindow;
@@ -30,7 +30,7 @@
         private var _Str_2327:ModerationManager;
         private var _Str_4127:int;
         private var _Str_7866:String;
-        private var _Str_3598:_Str_2484;
+        private var _Str_3598:IssueMessageData;
         private var _frame:IFrameWindow;
         private var _Str_3643:IDropMenuWindow;
         private var _Str_5384:Array;
@@ -39,7 +39,7 @@
         private var _disposed:Boolean;
         private var _Str_9258:UserInfoCtrl;
 
-        public function ModActionCtrl(k:ModerationManager, _arg_2:int, _arg_3:String, _arg_4:_Str_2484, _arg_5:UserInfoCtrl)
+        public function ModActionCtrl(k:ModerationManager, _arg_2:int, _arg_3:String, _arg_4:IssueMessageData, _arg_5:UserInfoCtrl)
         {
             this._Str_2327 = k;
             this._Str_4127 = _arg_2;

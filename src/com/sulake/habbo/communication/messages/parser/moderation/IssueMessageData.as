@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import flash.utils.getTimer;
 
-    public class _Str_2484 implements IDisposable 
+    public class IssueMessageData implements IDisposable
     {
         public static const _Str_5035:int = 1;
         public static const _Str_8056:int = 2;
@@ -28,7 +28,7 @@
         private var _disposed:Boolean = false;
         private var _Str_19084:Number;
 
-        public function _Str_2484(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:Number, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:String, _arg_10:int, _arg_11:String, _arg_12:int, _arg_13:String, _arg_14:String, _arg_15:int, _arg_16:Array)
+        public function IssueMessageData(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:Number, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:String, _arg_10:int, _arg_11:String, _arg_12:int, _arg_13:String, _arg_14:String, _arg_15:int, _arg_16:Array)
         {
             this._Str_6036 = k;
             this._state = _arg_2;

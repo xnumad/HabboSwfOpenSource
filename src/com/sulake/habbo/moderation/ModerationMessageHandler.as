@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_9038;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_5460;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8164;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_5018;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_6924;
@@ -98,14 +98,14 @@
             {
                 return;
             }
-            var _local_3:_Str_2484 = _local_2._Str_22192;
+            var _local_3:IssueMessageData = _local_2._Str_22192;
             this._moderationManager.issueManager.playSound(_local_3);
             this._moderationManager.issueManager._Str_12118(_local_3);
         }
 
         private function onModeratorInit(k:_Str_7080):void
         {
-            var _local_6:_Str_2484;
+            var _local_6:IssueMessageData;
             if (((k == null) || (this._moderationManager == null)))
             {
                 return;

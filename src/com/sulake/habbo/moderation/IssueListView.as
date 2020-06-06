@@ -4,7 +4,7 @@
     import com.sulake.core.window.IWindowContainer;
     import flash.display.BitmapData;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.utils.getTimer;
@@ -37,7 +37,7 @@
             var _local_6:IWindow;
             var _local_7:IssueBundle;
             var _local_9:IWindow;
-            var _local_10:_Str_2484;
+            var _local_10:IssueMessageData;
             var _local_11:IBitmapWrapperWindow;
             var _local_12:String;
             var _local_13:BitmapDataAsset;
