@@ -90,7 +90,7 @@
                 this._animElement = null;
             }
             this.animate(false);
-            this._Str_10712();
+            this.destroyExpirationTimer();
         }
 
         public function dispose():void
@@ -141,7 +141,7 @@
                 this._view = this.createWindow();
                 if (this._expirationTimer != null)
                 {
-                    this._Str_10712();
+                    this.destroyExpirationTimer();
                 }
                 if (((this._toolbar.inventory._Str_6338 < 1440) && (this._toolbar.inventory._Str_6338 > 0)))
                 {
@@ -159,7 +159,7 @@
             }
         }
 
-        private function _Str_10712():void
+        private function destroyExpirationTimer():void
         {
             if (this._expirationTimer)
             {

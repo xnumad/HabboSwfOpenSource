@@ -54,7 +54,7 @@
                 this._view.dispose();
                 this._view = null;
             }
-            this._Str_10712();
+            this.destroyExpirationTimer();
         }
 
         private function get extensionView():IExtensionView
@@ -99,7 +99,7 @@
                 this._view = this.createWindow();
                 if (this._expirationTimer != null)
                 {
-                    this._Str_10712();
+                    this.destroyExpirationTimer();
                 }
                 if (((this._toolbar.inventory._Str_6338 < 1440) && (this._toolbar.inventory._Str_6338 > 0)))
                 {
@@ -120,7 +120,7 @@
             }
         }
 
-        private function _Str_10712():void
+        private function destroyExpirationTimer():void
         {
             if (this._expirationTimer)
             {
