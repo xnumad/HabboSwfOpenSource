@@ -56,7 +56,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6885;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6320;
+    import com.sulake.habbo.communication.messages.parser.navigator.OfficialRoomsMessageParser;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4081;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4587;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6918;
@@ -257,7 +257,7 @@
 
         private function _Str_16321(k:IMessageEvent):void
         {
-            var _local_2:_Str_6320 = _Str_5134(k).getParser();
+            var _local_2:OfficialRoomsMessageParser = _Str_5134(k).getParser();
             this.data._Str_5645 = _local_2.data;
             this.data._Str_5653 = _local_2._Str_5653;
             this.data.promotedRooms = _local_2.promotedRooms;

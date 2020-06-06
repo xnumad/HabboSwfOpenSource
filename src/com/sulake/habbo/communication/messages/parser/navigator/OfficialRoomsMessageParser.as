@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5485;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6320 implements IMessageParser 
+    public class OfficialRoomsMessageParser implements IMessageParser
     {
         private var _data:_Str_5078;
         private var _Str_8807:_Str_2632;
