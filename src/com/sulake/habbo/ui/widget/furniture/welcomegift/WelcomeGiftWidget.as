@@ -266,7 +266,7 @@
             {
                 return;
             }
-            k.addEventListener(_Str_5438.RWWGUE_WELCOME_GIFT_WIDGET_STATUS, this._Str_2557);
+            k.addEventListener(_Str_5438.RWWGUE_WELCOME_GIFT_WIDGET_STATUS, this.updateEventHandler);
             k.addEventListener(_Str_6843.RWCERE_CHANGE_EMAIL_RESULT, this._Str_21802);
             super.registerUpdateEvents(k);
         }
@@ -277,11 +277,11 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_5438.RWWGUE_WELCOME_GIFT_WIDGET_STATUS, this._Str_2557);
+            k.removeEventListener(_Str_5438.RWWGUE_WELCOME_GIFT_WIDGET_STATUS, this.updateEventHandler);
             k.removeEventListener(_Str_6843.RWCERE_CHANGE_EMAIL_RESULT, this._Str_21802);
         }
 
-        private function _Str_2557(k:_Str_5438):void
+        private function updateEventHandler(k:_Str_5438):void
         {
             switch (k.type)
             {

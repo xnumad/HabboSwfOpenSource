@@ -421,32 +421,32 @@
             {
                 return;
             }
-            k.addEventListener(RoomWidgetRentableBotForceOpenContextMenuEvent.OPEN, this._Str_2557);
-            k.addEventListener(_Str_5375.RWRBSLUE_SKILL_LIST, this._Str_2557);
-            k.addEventListener(RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT, this._Str_2557);
-            k.addEventListener(_Str_5393.RWAIE_AVATAR_INFO, this._Str_2557);
-            k.addEventListener(RoomWidgetUserInfoUpdateEvent.OWN_USER, this._Str_2557);
-            k.addEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this._Str_2557);
-            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED, this._Str_2557);
-            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_SELECTED, this._Str_2557);
-            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_2557);
-            k.addEventListener(RoomWidgetFurniInfostandUpdateEvent.FURNI, this._Str_2557);
-            k.addEventListener(RoomWidgetUserInfoUpdateEvent.BOT, this._Str_2557);
-            k.addEventListener(RoomWidgetPetInfostandUpdateEvent.PET_INFO, this._Str_2557);
-            k.addEventListener(_Str_7783.RWUDUE_USER_DATA_UPDATED, this._Str_2557);
-            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.USER_REMOVED, this._Str_2557);
-            k.addEventListener(_Str_3345.RWREUE_NORMAL_MODE, this._Str_2557);
-            k.addEventListener(_Str_3345.RWREUE_GAME_MODE, this._Str_2557);
-            k.addEventListener(_Str_3735.RWONE_TYPE, this._Str_2557);
-            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OVER, this._Str_2557);
-            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OUT, this._Str_2557);
-            k.addEventListener(_Str_4828.RWPIUE_PET_STATUS_UPDATE, this._Str_2557);
-            k.addEventListener(_Str_4818.RWPLUE_PET_LEVEL_UPDATE, this._Str_2557);
-            k.addEventListener(_Str_4736.RWPBRE_PET_BREEDING_RESULT, this._Str_2557);
-            k.addEventListener(_Str_3919.RWPPBE_PET_BREEDING_, this._Str_2557);
-            k.addEventListener(RoomWidgetInventoryUpdatedMessage.RWIUM_INVENTORY_UPDATED, this._Str_2557);
-            k.addEventListener(_Str_4624.RWPPBE_CONFIRM_PET_BREEDING_, this._Str_2557);
-            k.addEventListener(_Str_3962.RWPPBE_CONFIRM_PET_BREEDING_RESULT, this._Str_2557);
+            k.addEventListener(RoomWidgetRentableBotForceOpenContextMenuEvent.OPEN, this.updateEventHandler);
+            k.addEventListener(_Str_5375.RWRBSLUE_SKILL_LIST, this.updateEventHandler);
+            k.addEventListener(RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT, this.updateEventHandler);
+            k.addEventListener(_Str_5393.RWAIE_AVATAR_INFO, this.updateEventHandler);
+            k.addEventListener(RoomWidgetUserInfoUpdateEvent.OWN_USER, this.updateEventHandler);
+            k.addEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this.updateEventHandler);
+            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED, this.updateEventHandler);
+            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_SELECTED, this.updateEventHandler);
+            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this.updateEventHandler);
+            k.addEventListener(RoomWidgetFurniInfostandUpdateEvent.FURNI, this.updateEventHandler);
+            k.addEventListener(RoomWidgetUserInfoUpdateEvent.BOT, this.updateEventHandler);
+            k.addEventListener(RoomWidgetPetInfostandUpdateEvent.PET_INFO, this.updateEventHandler);
+            k.addEventListener(_Str_7783.RWUDUE_USER_DATA_UPDATED, this.updateEventHandler);
+            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.USER_REMOVED, this.updateEventHandler);
+            k.addEventListener(_Str_3345.RWREUE_NORMAL_MODE, this.updateEventHandler);
+            k.addEventListener(_Str_3345.RWREUE_GAME_MODE, this.updateEventHandler);
+            k.addEventListener(_Str_3735.RWONE_TYPE, this.updateEventHandler);
+            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OVER, this.updateEventHandler);
+            k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OUT, this.updateEventHandler);
+            k.addEventListener(_Str_4828.RWPIUE_PET_STATUS_UPDATE, this.updateEventHandler);
+            k.addEventListener(_Str_4818.RWPLUE_PET_LEVEL_UPDATE, this.updateEventHandler);
+            k.addEventListener(_Str_4736.RWPBRE_PET_BREEDING_RESULT, this.updateEventHandler);
+            k.addEventListener(_Str_3919.RWPPBE_PET_BREEDING_, this.updateEventHandler);
+            k.addEventListener(RoomWidgetInventoryUpdatedMessage.RWIUM_INVENTORY_UPDATED, this.updateEventHandler);
+            k.addEventListener(_Str_4624.RWPPBE_CONFIRM_PET_BREEDING_, this.updateEventHandler);
+            k.addEventListener(_Str_3962.RWPPBE_CONFIRM_PET_BREEDING_RESULT, this.updateEventHandler);
             super.registerUpdateEvents(k);
         }
 
@@ -456,35 +456,35 @@
             {
                 return;
             }
-            k.removeEventListener(RoomWidgetRentableBotForceOpenContextMenuEvent.OPEN, this._Str_2557);
-            k.removeEventListener(_Str_5375.RWRBSLUE_SKILL_LIST, this._Str_2557);
-            k.removeEventListener(RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT, this._Str_2557);
-            k.removeEventListener(_Str_5393.RWAIE_AVATAR_INFO, this._Str_2557);
-            k.removeEventListener(RoomWidgetUserInfoUpdateEvent.OWN_USER, this._Str_2557);
-            k.removeEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this._Str_2557);
-            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED, this._Str_2557);
-            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_SELECTED, this._Str_2557);
-            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_2557);
-            k.removeEventListener(RoomWidgetFurniInfostandUpdateEvent.FURNI, this._Str_2557);
-            k.removeEventListener(RoomWidgetUserInfoUpdateEvent.BOT, this._Str_2557);
-            k.removeEventListener(RoomWidgetPetInfostandUpdateEvent.PET_INFO, this._Str_2557);
-            k.removeEventListener(_Str_7783.RWUDUE_USER_DATA_UPDATED, this._Str_2557);
-            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.USER_REMOVED, this._Str_2557);
-            k.removeEventListener(_Str_3345.RWREUE_NORMAL_MODE, this._Str_2557);
-            k.removeEventListener(_Str_3345.RWREUE_GAME_MODE, this._Str_2557);
-            k.removeEventListener(_Str_3735.RWONE_TYPE, this._Str_2557);
-            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OUT, this._Str_2557);
-            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OUT, this._Str_2557);
-            k.removeEventListener(_Str_4828.RWPIUE_PET_STATUS_UPDATE, this._Str_2557);
-            k.removeEventListener(_Str_4818.RWPLUE_PET_LEVEL_UPDATE, this._Str_2557);
-            k.removeEventListener(_Str_4736.RWPBRE_PET_BREEDING_RESULT, this._Str_2557);
-            k.removeEventListener(_Str_3919.RWPPBE_PET_BREEDING_, this._Str_2557);
-            k.removeEventListener(RoomWidgetInventoryUpdatedMessage.RWIUM_INVENTORY_UPDATED, this._Str_2557);
-            k.removeEventListener(_Str_4624.RWPPBE_CONFIRM_PET_BREEDING_, this._Str_2557);
-            k.removeEventListener(_Str_3962.RWPPBE_CONFIRM_PET_BREEDING_RESULT, this._Str_2557);
+            k.removeEventListener(RoomWidgetRentableBotForceOpenContextMenuEvent.OPEN, this.updateEventHandler);
+            k.removeEventListener(_Str_5375.RWRBSLUE_SKILL_LIST, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT, this.updateEventHandler);
+            k.removeEventListener(_Str_5393.RWAIE_AVATAR_INFO, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetUserInfoUpdateEvent.OWN_USER, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_SELECTED, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetFurniInfostandUpdateEvent.FURNI, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetUserInfoUpdateEvent.BOT, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetPetInfostandUpdateEvent.PET_INFO, this.updateEventHandler);
+            k.removeEventListener(_Str_7783.RWUDUE_USER_DATA_UPDATED, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.USER_REMOVED, this.updateEventHandler);
+            k.removeEventListener(_Str_3345.RWREUE_NORMAL_MODE, this.updateEventHandler);
+            k.removeEventListener(_Str_3345.RWREUE_GAME_MODE, this.updateEventHandler);
+            k.removeEventListener(_Str_3735.RWONE_TYPE, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OUT, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OUT, this.updateEventHandler);
+            k.removeEventListener(_Str_4828.RWPIUE_PET_STATUS_UPDATE, this.updateEventHandler);
+            k.removeEventListener(_Str_4818.RWPLUE_PET_LEVEL_UPDATE, this.updateEventHandler);
+            k.removeEventListener(_Str_4736.RWPBRE_PET_BREEDING_RESULT, this.updateEventHandler);
+            k.removeEventListener(_Str_3919.RWPPBE_PET_BREEDING_, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetInventoryUpdatedMessage.RWIUM_INVENTORY_UPDATED, this.updateEventHandler);
+            k.removeEventListener(_Str_4624.RWPPBE_CONFIRM_PET_BREEDING_, this.updateEventHandler);
+            k.removeEventListener(_Str_3962.RWPPBE_CONFIRM_PET_BREEDING_RESULT, this.updateEventHandler);
         }
 
-        private function _Str_2557(k:RoomWidgetUpdateEvent):void
+        private function updateEventHandler(k:RoomWidgetUpdateEvent):void
         {
             var _local_2:_Str_5393;
             var _local_3:_Str_4828;
