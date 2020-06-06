@@ -245,7 +245,7 @@
             return this._currentRoomOwner;
         }
 
-        public function get _Str_2678():GuestRoomData
+        public function get enteredGuestRoom():GuestRoomData
         {
             return this._enteredGuestRoom;
         }

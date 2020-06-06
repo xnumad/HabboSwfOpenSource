@@ -191,7 +191,7 @@
         {
             this.close();
             this._Str_2449 = k;
-            this._Str_2366 = this._navigator.data._Str_2678.habboGroupId;
+            this._Str_2366 = this._navigator.data.enteredGuestRoom.habboGroupId;
             this._navigator.send(new _Str_7484(this._Str_2449));
             this._navigator.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT));
         }
@@ -453,7 +453,7 @@
             this._window.findChildByTag("close").addEventListener(WindowMouseEvent.CLICK, this.onCloseHandler);
             this._Str_23113().addEventListener(WindowMouseEvent.CLICK, this._Str_25553);
             this._window.findChildByName("filter_users_input").addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_22741);
-            this._Str_17244 = ((!(this._navigator.data._Str_2678)) || (!(this._navigator.data._Str_2678.flatId == this._roomSettingsData.roomId)));
+            this._Str_17244 = ((!(this._navigator.data.enteredGuestRoom)) || (!(this._navigator.data.enteredGuestRoom.flatId == this._roomSettingsData.roomId)));
             if (this._Str_17244)
             {
                 this._window.findChildByName("remove_link_region").visible = false;
@@ -663,7 +663,7 @@
             this._Str_4194.setText("");
             this._Str_7349.setText("");
             var _local_2:ISelectorWindow = (this._window.findChildByName("doormode") as ISelectorWindow);
-            if (this._navigator.data._Str_2678)
+            if (this._navigator.data.enteredGuestRoom)
             {
                 this._window.findChildByName("doormode_override_info").visible = ((this._navigator.isDoorModeOverriddenInCurrentRoom) && (!(this._navigator.sessionData.hasSecurity(SecurityLevelEnum.EMPLOYEE))));
                 switch (k.doorMode)
@@ -1126,11 +1126,11 @@
             {
                 return;
             }
-            if (!this._navigator.data._Str_2678)
+            if (!this._navigator.data.enteredGuestRoom)
             {
                 return;
             }
-            var k:Boolean = (this._navigator.data._Str_2678.habboGroupId > 0);
+            var k:Boolean = (this._navigator.data.enteredGuestRoom.habboGroupId > 0);
             this._window.findChildByName("guild_access_disclaimer").visible = k;
         }
 
@@ -1141,11 +1141,11 @@
             {
                 return;
             }
-            if (!this._navigator.data._Str_2678)
+            if (!this._navigator.data.enteredGuestRoom)
             {
                 return;
             }
-            var k:Boolean = false;//(this._navigator.data._Str_2678.habboGroupId > 0);
+            var k:Boolean = false;//(this._navigator.data.enteredGuestRoom.habboGroupId > 0);
             this._window.findChildByName("guild_rights_container").visible = k;
             this._window.findChildByName("normal_rights_container").visible = (!(k));
             if (k)

@@ -37,7 +37,7 @@
 
         private function _Str_24741():void
         {
-            if (this._navigator.data._Str_2678 == null)
+            if (this._navigator.data.enteredGuestRoom == null)
             {
                 return;
             }

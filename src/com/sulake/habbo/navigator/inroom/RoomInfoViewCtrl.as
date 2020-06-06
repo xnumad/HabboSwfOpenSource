@@ -110,17 +110,17 @@
 
         private function refresh():void
         {
-            if (this._navigator.data._Str_2678 == null)
+            if (this._navigator.data.enteredGuestRoom == null)
             {
                 return;
             }
             this._tagRenderer._Str_8651 = true;
             this.prepareWindow();
             Util._Str_2930(this._window.content);
-            this.refreshRoomDetails(this._navigator.data._Str_2678);
+            this.refreshRoomDetails(this._navigator.data.enteredGuestRoom);
             this.refreshEmbed();
-            this._guildInfoCtrl.refresh(this._window.content, this._navigator.data._Str_2678);
-            this.refreshButtons(this._navigator.data._Str_2678);
+            this._guildInfoCtrl.refresh(this._window.content, this._navigator.data.enteredGuestRoom);
+            this.refreshButtons(this._navigator.data.enteredGuestRoom);
             Util.moveChildrenToColumn(this._window.content, ["room_details", "public_space_details", "guild_info", "embed_info", "buttons_cont"], 0, 3);
             this._window.findChildByName("guild_info").x = 11;
             this._window.height = (Util.getLowestPoint(this._window.content) + 45);
@@ -138,7 +138,7 @@
             var _local_6:IWindow;
             var k:IWindowContainer = IWindowContainer(this.find("embed_info"));
             var _local_2:Boolean = this._navigator.getBoolean("embed.showInRoomInfo");
-            var _local_3:* = (!(this._navigator.data._Str_2678 == null));
+            var _local_3:* = (!(this._navigator.data.enteredGuestRoom == null));
             if (((_local_3) && (_local_2)))
             {
                 _local_4 = ITextWindow(k.findChildByName("embed_info_txt"));
@@ -235,7 +235,7 @@
         public function refreshButtons(k:GuestRoomData):void
         {
             var _local_7:IWindowContainer;
-            if (((this._navigator.data._Str_2678 == null) || (this._window == null)))
+            if (((this._navigator.data.enteredGuestRoom == null) || (this._window == null)))
             {
                 return;
             }
@@ -251,10 +251,10 @@
             }
             this.refreshStaffPick();
             var _local_2:IWindow = this.find("room_muteall_button");
-            _local_2.visible = ((this._navigator.data._Str_2678._Str_16504) && (this._navigator.getBoolean("room_moderation.mute_all.enabled")));
-            var _local_3:Boolean = this._navigator.data._Str_2678._Str_12127;
+            _local_2.visible = ((this._navigator.data.enteredGuestRoom._Str_16504) && (this._navigator.getBoolean("room_moderation.mute_all.enabled")));
+            var _local_3:Boolean = this._navigator.data.enteredGuestRoom._Str_12127;
             _local_2.caption = ((_local_3) ? "${navigator.muteall_on}" : "${navigator.muteall_off}");
-            var _local_4:IRoomSession = this._navigator.roomSessionManager.getSession(this._navigator.data._Str_2678.flatId);
+            var _local_4:IRoomSession = this._navigator.roomSessionManager.getSession(this._navigator.data.enteredGuestRoom.flatId);
             this.find("floor_plan_editor_button").visible = (_local_4.roomControllerLevel >= RoomControllerLevel.GUEST);
             var _local_5:IWindowContainer = IWindowContainer(this._window.findChildByName("buttons_cont"));
             var _local_6:Array = ["room_settings_button", "room_filter_button", "floor_plan_editor_button", "staff_pick_button", "room_report_button", "room_muteall_button"];
@@ -285,7 +285,7 @@
             this.addMouseClickListener(this.find("embed_src_txt"), this.onEmbedSrcClick);
             this.addMouseClickListener(this.find("staff_pick_button"), this.onStaffPick);
             this.addMouseClickListener(this.find("room_report_button"), this.onRoomReport);
-            this._navigator.refreshButton(IRegionWindow(this.find("remove_rights_region")), "remove_rights", this._navigator.hasRoomRightsButIsNotOwner(this._navigator.data._Str_2678.flatId), null, 0);
+            this._navigator.refreshButton(IRegionWindow(this.find("remove_rights_region")), "remove_rights", this._navigator.hasRoomRightsButIsNotOwner(this._navigator.data.enteredGuestRoom.flatId), null, 0);
             this._navigator.refreshButton(IRegionWindow(this.find("make_home_region")), "make_home", true, null, 0);
             this._navigator.refreshButton(IRegionWindow(this.find("favourite_region")), "favourite", true, null, 0);
             this._navigator.refreshButton(IRegionWindow(this.find("make_favourite_region")), "make_favourite", true, null, 0);
@@ -310,22 +310,22 @@
                     this.addMouseClickListener(this.find("add_thumbnail_region"), this.onAddRoomThumbnail);
                 }
                 _local_5 = "";
-                if (this._navigator.data._Str_2678.officialRoomPicRef != null)
+                if (this._navigator.data.enteredGuestRoom.officialRoomPicRef != null)
                 {
                     if (this._navigator.getBoolean("new.navigator.official.room.thumbnails.in.amazon"))
                     {
                         k = this._navigator.getProperty("navigator.thumbnail.url_base");
-                        _local_5 = ((k + this._navigator.data._Str_2678.flatId) + ".png");
+                        _local_5 = ((k + this._navigator.data.enteredGuestRoom.flatId) + ".png");
                     }
                     else
                     {
-                        _local_5 = (this._navigator.getProperty("image.library.url") + this._navigator.data._Str_2678.officialRoomPicRef);
+                        _local_5 = (this._navigator.getProperty("image.library.url") + this._navigator.data.enteredGuestRoom.officialRoomPicRef);
                     }
                 }
                 else
                 {
                     k = this._navigator.getProperty("navigator.thumbnail.url_base");
-                    _local_5 = ((k + this._navigator.data._Str_2678.flatId) + ".png");
+                    _local_5 = ((k + this._navigator.data.enteredGuestRoom.flatId) + ".png");
                 }
                 IStaticBitmapWrapperWindow(this._window.findChildByName("thumbnail_image")).assetUri = _local_5;
             }
@@ -364,7 +364,7 @@
         public function onAddFavouriteClick(k:WindowEvent):void
         {
             var _local_2:SimpleAlertView;
-            if (this._navigator.data._Str_2678 == null)
+            if (this._navigator.data.enteredGuestRoom == null)
             {
                 return;
             }
@@ -376,23 +376,23 @@
             else
             {
                 this._navigator.trackGoogle("roomInfo", "addFavourite");
-                this._navigator.send(new _Str_4893(this._navigator.data._Str_2678.flatId));
+                this._navigator.send(new _Str_4893(this._navigator.data.enteredGuestRoom.flatId));
             }
         }
 
         public function onRemoveFavouriteClick(k:WindowEvent):void
         {
-            if (this._navigator.data._Str_2678 == null)
+            if (this._navigator.data.enteredGuestRoom == null)
             {
                 return;
             }
             this._navigator.trackGoogle("roomInfo", "removeFavourite");
-            this._navigator.send(new _Str_5262(this._navigator.data._Str_2678.flatId));
+            this._navigator.send(new _Str_5262(this._navigator.data.enteredGuestRoom.flatId));
         }
 
         private function onRoomSettingsClick(k:WindowEvent):void
         {
-            var _local_2:GuestRoomData = this._navigator.data._Str_2678;
+            var _local_2:GuestRoomData = this._navigator.data.enteredGuestRoom;
             if (_local_2 == null)
             {
                 Logger.log("No entered room data?!");
@@ -405,7 +405,7 @@
 
         private function onRoomFilterButtonClick(k:WindowEvent):void
         {
-            var _local_2:GuestRoomData = this._navigator.data._Str_2678;
+            var _local_2:GuestRoomData = this._navigator.data.enteredGuestRoom;
             if (_local_2 == null)
             {
                 Logger.log("No entered room data?!");
@@ -430,7 +430,7 @@
 
         private function onMakeHomeClick(k:WindowEvent):void
         {
-            var _local_2:GuestRoomData = this._navigator.data._Str_2678;
+            var _local_2:GuestRoomData = this._navigator.data.enteredGuestRoom;
             if (_local_2 == null)
             {
                 Logger.log("No entered room data?!");
@@ -455,13 +455,13 @@
         private function onStaffPick(k:WindowEvent):void
         {
             this.refreshStaffPick(true);
-            this._navigator.send(new _Str_11662(this._navigator.data._Str_2678.flatId, this._navigator.data._Str_8299));
+            this._navigator.send(new _Str_11662(this._navigator.data.enteredGuestRoom.flatId, this._navigator.data._Str_8299));
         }
 
         private function onRoomReport(k:WindowEvent):void
         {
             this._navigator.trackGoogle("roomInfo", "reportRoom");
-            var _local_2:GuestRoomData = this._navigator.data._Str_2678;
+            var _local_2:GuestRoomData = this._navigator.data.enteredGuestRoom;
             this._navigator.habboHelp.reportRoom(_local_2.flatId, _local_2.roomName, _local_2.description);
             this.close();
         }
@@ -477,7 +477,7 @@
         {
             (this._navigator.windowManager as Component).context.createLinkEvent("roomThumbnailCamera/open");
             this.close();
-            var _local_2:* = ((this._navigator.getProperty("navigator.thumbnail.url_base") + this._navigator.data._Str_2678.flatId) + ".png");
+            var _local_2:* = ((this._navigator.getProperty("navigator.thumbnail.url_base") + this._navigator.data.enteredGuestRoom.flatId) + ".png");
             this._navigator.windowManager.resourceManager.removeAsset(_local_2);
             this._navigator.trackGoogle("roomInfo", "addThumbnail");
         }
@@ -496,10 +496,10 @@
         {
             var k:String;
             var _local_2:String;
-            if (this._navigator.data._Str_2678 != null)
+            if (this._navigator.data.enteredGuestRoom != null)
             {
                 k = "private";
-                _local_2 = ("" + this._navigator.data._Str_2678.flatId);
+                _local_2 = ("" + this._navigator.data.enteredGuestRoom.flatId);
             }
             var _local_3:String = this._navigator.getProperty("user.hash");
             this._navigator.registerParameter("navigator.embed.src", "roomType", k);
@@ -525,7 +525,7 @@
             {
                 this._navigator.trackGoogle("roomInfo", "extendedProfile");
                 this._navigator.trackGoogle("extendedProfile", "navigator_roomInfo");
-                this._navigator.send(new GetExtendedProfileMessageComposer(this._navigator.data._Str_2678.ownerId));
+                this._navigator.send(new GetExtendedProfileMessageComposer(this._navigator.data.enteredGuestRoom.ownerId));
             }
         }
     }

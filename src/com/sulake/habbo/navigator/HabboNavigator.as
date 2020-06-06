@@ -566,7 +566,7 @@
             {
                 return;
             }
-            var _local_5:String = this._data._Str_2678.roomName;
+            var _local_5:String = this._data.enteredGuestRoom.roomName;
             this._catalog.openRoomAdCatalogPageInExtendedMode("room_ad", k, _arg_2, _local_5, _arg_3, _arg_4);
         }
 
@@ -743,7 +743,7 @@
         {
             if (this._data)
             {
-                return this._data._Str_2678;
+                return this._data.enteredGuestRoom;
             }
             return null;
         }

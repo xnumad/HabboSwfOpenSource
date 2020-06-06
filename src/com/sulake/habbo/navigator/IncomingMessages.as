@@ -172,13 +172,13 @@
         {
             var _local_2:_Str_5038 = (k as _Str_5038);
             var _local_3:_Str_6564 = _local_2.getParser();
-            var _local_4:GuestRoomData = this._navigator.data._Str_2678;
+            var _local_4:GuestRoomData = this._navigator.data.enteredGuestRoom;
             if (_local_4 != null)
             {
                 _local_4._Str_12127 = _local_3._Str_20186;
                 if (this._navigator._Str_4012 != null)
                 {
-                    this._navigator._Str_4012.refreshButtons(this._navigator.data._Str_2678);
+                    this._navigator._Str_4012.refreshButtons(this._navigator.data.enteredGuestRoom);
                 }
             }
         }
@@ -301,7 +301,7 @@
                     this._Str_19492();
                 }
                 this.data._Str_11597 = 0;
-                if (((!(this.data._Str_2678 == null)) && (this.data._Str_2678.habboGroupId > 0)))
+                if (((!(this.data.enteredGuestRoom == null)) && (this.data.enteredGuestRoom.habboGroupId > 0)))
                 {
                     this._navigator._Str_5048.expanded = false;
                     this._navigator._Str_5048.refresh();
