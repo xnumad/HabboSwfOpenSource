@@ -61,7 +61,7 @@
             _buttons = (window.getListItemByName("button_list") as IItemListWindow);
             if (_border != null)
             {
-                _Str_2373 = (_border.findChildByName("infostand_element_list") as IItemListWindow);
+                _infoElements = (_border.findChildByName("infostand_element_list") as IItemListWindow);
             }
             window.name = k;
             _widget.mainContainer.addChild(window);
@@ -114,7 +114,7 @@
                 _local_6 = (_local_5.content as BitmapData);
                 _local_8.bitmap = _local_6.clone();
             }
-            var _local_9:IRegionWindow = (_Str_2373.getListItemByName("owner_region") as IRegionWindow);
+            var _local_9:IRegionWindow = (_infoElements.getListItemByName("owner_region") as IRegionWindow);
             if (_local_9 != null)
             {
                 _local_9.addEventListener(WindowMouseEvent.CLICK, _Str_4711);
@@ -125,7 +125,7 @@
 
         private function set _Str_8410(k:String):void
         {
-            var _local_2:IWindowContainer = (_Str_2373.getListItemByName("trackname_container") as IWindowContainer);
+            var _local_2:IWindowContainer = (_infoElements.getListItemByName("trackname_container") as IWindowContainer);
             if (_local_2 == null)
             {
                 return;
@@ -143,7 +143,7 @@
 
         private function set _Str_6415(k:String):void
         {
-            var _local_2:IWindowContainer = (_Str_2373.getListItemByName("creatorname_container") as IWindowContainer);
+            var _local_2:IWindowContainer = (_infoElements.getListItemByName("creatorname_container") as IWindowContainer);
             if (_local_2 == null)
             {
                 return;

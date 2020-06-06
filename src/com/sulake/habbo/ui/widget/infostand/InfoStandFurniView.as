@@ -61,7 +61,7 @@
         private var _Str_5729:int;
         private var _ownerId:int = 0;
         protected var _widget:InfoStandWidget;
-        protected var _Str_2373:IItemListWindow;
+        protected var _infoElements:IItemListWindow;
 
         public function InfoStandFurniView(k:InfoStandWidget, _arg_2:String, _arg_3:IHabboCatalog)
         {
@@ -111,7 +111,7 @@
             }
             if (this._border != null)
             {
-                this._Str_2373 = (this._border.findChildByName("infostand_element_list") as IItemListWindow);
+                this._infoElements = (this._border.findChildByName("infostand_element_list") as IItemListWindow);
             }
             this._window.name = k;
             this._widget.mainContainer.addChild(this._window);
@@ -150,7 +150,7 @@
             {
                 this._Str_3810.addEventListener(WindowMouseEvent.CLICK, this._Str_15887);
             }
-            var _local_5:IRegionWindow = (this._Str_2373.getListItemByName("owner_region") as IRegionWindow);
+            var _local_5:IRegionWindow = (this._infoElements.getListItemByName("owner_region") as IRegionWindow);
             if (_local_5 != null)
             {
                 _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_4711);
@@ -264,7 +264,7 @@
 
         public function set name(k:String):void
         {
-            var _local_2:ITextWindow = (this._Str_2373.getListItemByName("name_text") as ITextWindow);
+            var _local_2:ITextWindow = (this._infoElements.getListItemByName("name_text") as ITextWindow);
             if (_local_2 == null)
             {
                 return;
@@ -299,7 +299,7 @@
 
         public function set description(k:String):void
         {
-            var _local_2:ITextWindow = (this._Str_2373.getListItemByName("description_text") as ITextWindow);
+            var _local_2:ITextWindow = (this._infoElements.getListItemByName("description_text") as ITextWindow);
             if (_local_2 == null)
             {
                 return;
@@ -323,7 +323,7 @@
             }
             else
             {
-                _local_3 = (this._Str_2373.getListItemByName("owner_region") as IRegionWindow);
+                _local_3 = (this._infoElements.getListItemByName("owner_region") as IRegionWindow);
                 _local_4 = (_local_3.findChildByName("owner_name") as ITextWindow);
                 _local_5 = _local_3.findChildByName("owner_link");
                 _local_6 = _local_3.findChildByName("bcw_icon");
@@ -356,7 +356,7 @@
 
         private function set expiration(k:int):void
         {
-            var _local_2:IWindow = this._Str_2373.getListItemByName("expiration_text");
+            var _local_2:IWindow = this._infoElements.getListItemByName("expiration_text");
             if (_local_2 == null)
             {
                 return;
@@ -451,14 +451,14 @@
 
         protected function updateWindow():void
         {
-            if ((((this._Str_2373 == null) || (this._border == null)) || (this._buttons == null)))
+            if ((((this._infoElements == null) || (this._border == null)) || (this._buttons == null)))
             {
                 return;
             }
-            this._Str_2373.arrangeListItems();
+            this._infoElements.arrangeListItems();
             this._buttons.width = this._buttons.scrollableRegion.width;
-            this._Str_2373.height = this._Str_2373.scrollableRegion.height;
-            this._border.height = (this._Str_2373.height + 20);
+            this._infoElements.height = this._infoElements.scrollableRegion.height;
+            this._border.height = (this._infoElements.height + 20);
             this._window.width = Math.max(this._border.width, this._buttons.width);
             this._window.height = this._window.scrollableRegion.height;
             if (this._border.width < this._buttons.width)
@@ -601,7 +601,7 @@
             var _local_4:IWindowContainer;
             var _local_5:IWindow;
             var _local_6:IWindow;
-            if (this._Str_2373 != null)
+            if (this._infoElements != null)
             {
                 _local_3 = (this._widget.assets.getAssetByName("furni_view_branding_element") as XmlAsset);
                 if (_local_3 != null)
@@ -622,7 +622,7 @@
                         }
                         if (((!(_local_5 == null)) && (!(_local_6 == null))))
                         {
-                            this._Str_2373.addListItem(_local_4);
+                            this._infoElements.addListItem(_local_4);
                         }
                     }
                 }
@@ -812,13 +812,13 @@
                 this._Str_3810.visible = _local_10;
                 _local_7 = ((_local_7) || (_local_10));
             }
-            var _local_13:IItemListWindow = (this._Str_2373.getListItemByName("purchase_buttons") as IItemListWindow);
+            var _local_13:IItemListWindow = (this._infoElements.getListItemByName("purchase_buttons") as IItemListWindow);
             if (_local_13 != null)
             {
                 _local_13.arrangeListItems();
                 _local_13.visible = _local_7;
             }
-            this._Str_2373.arrangeListItems();
+            this._infoElements.arrangeListItems();
         }
 
         public function set groupName(k:String):void

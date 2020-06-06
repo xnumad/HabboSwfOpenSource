@@ -28,7 +28,7 @@
 
         private function _Str_25073(k:int, _arg_2:int):void
         {
-            var _local_3:IWindow = _Str_2373.getListItemByName("hits_remaining");
+            var _local_3:IWindow = _infoElements.getListItemByName("hits_remaining");
             if (_local_3 == null)
             {
                 return;
@@ -53,7 +53,7 @@
             _buttons = (_window.getListItemByName("button_list") as IItemListWindow);
             if (_border != null)
             {
-                _Str_2373 = (_border.findChildByName("infostand_element_list") as IItemListWindow);
+                _infoElements = (_border.findChildByName("infostand_element_list") as IItemListWindow);
             }
             _window.name = k;
             _widget.mainContainer.addChild(window);
@@ -92,7 +92,7 @@
             {
                 _Str_3810.addEventListener(WindowMouseEvent.CLICK, _Str_15887);
             }
-            var _local_5:IRegionWindow = (_Str_2373.getListItemByName("owner_region") as IRegionWindow);
+            var _local_5:IRegionWindow = (_infoElements.getListItemByName("owner_region") as IRegionWindow);
             if (_local_5 != null)
             {
                 _local_5.addEventListener(WindowMouseEvent.CLICK, _Str_4711);

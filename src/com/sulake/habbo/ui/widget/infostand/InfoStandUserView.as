@@ -51,7 +51,7 @@
 
         protected var _widget:InfoStandWidget;
         protected var _window:IItemListWindow;
-        protected var _Str_2373:IItemListWindow;
+        protected var _infoElements:IItemListWindow;
         protected var _Str_20844:IItemListWindow;
         private var _border:IBorderWindow;
         private var _tagRenderer:TagListRenderer;
@@ -88,12 +88,12 @@
 
         protected function updateWindow():void
         {
-            if (((this._Str_2373 == null) || (this._border == null)))
+            if (((this._infoElements == null) || (this._border == null)))
             {
                 return;
             }
-            this._Str_2373.height = this._Str_2373.scrollableRegion.height;
-            this._border.height = (this._Str_2373.height + 20);
+            this._infoElements.height = this._infoElements.scrollableRegion.height;
+            this._border.height = (this._infoElements.height + 20);
             this._window.width = this._border.width;
             this._window.height = this._window.scrollableRegion.height;
             this._widget._Str_10301();
@@ -112,7 +112,7 @@
             this._border = (this._window.getListItemByName("info_border") as IBorderWindow);
             if (this._border != null)
             {
-                this._Str_2373 = (this._border.findChildByName("infostand_element_list") as IItemListWindow);
+                this._infoElements = (this._border.findChildByName("infostand_element_list") as IItemListWindow);
                 this._Str_20844 = (this._border.findChildByName("relationship_status_container") as IItemListWindow);
                 this._Str_20844.visible = this._widget.config.getBoolean("relationship.status.enabled");
                 this._border.findChildByName("heart_randomusername").procedure = this._Str_18506;
@@ -289,7 +289,7 @@
         {
             if (this._Str_4966 == null)
             {
-                this._Str_4966 = (this._Str_2373.getListItemByName("profile_link") as IRegionWindow);
+                this._Str_4966 = (this._infoElements.getListItemByName("profile_link") as IRegionWindow);
                 if (this._Str_4966 == null)
                 {
                     return;
@@ -308,7 +308,7 @@
 
         public function set realName(k:String):void
         {
-            var _local_2:ITextWindow = (this._Str_2373.getListItemByName("realname_text") as ITextWindow);
+            var _local_2:ITextWindow = (this._infoElements.getListItemByName("realname_text") as ITextWindow);
             if (_local_2 == null)
             {
                 return;
@@ -334,14 +334,14 @@
 
         public function _Str_12782(k:String, _arg_2:Boolean):void
         {
-            var _local_3:IWindowContainer = (this._Str_2373.getListItemByName("motto_container") as IWindowContainer);
+            var _local_3:IWindowContainer = (this._infoElements.getListItemByName("motto_container") as IWindowContainer);
             if (!_local_3)
             {
                 return;
             }
             var _local_4:IWindow = _local_3.findChildByName("changemotto.image");
             var _local_5:ITextWindow = (_local_3.findChildByName("motto_text") as ITextWindow);
-            var _local_6:IWindowContainer = (this._Str_2373.getListItemByName("motto_spacer") as IWindowContainer);
+            var _local_6:IWindowContainer = (this._infoElements.getListItemByName("motto_spacer") as IWindowContainer);
             if (((_local_5 == null) || (_local_6 == null)))
             {
                 return;
@@ -396,7 +396,7 @@
             {
                 return;
             }
-            var _local_2:ITextWindow = (this._Str_2373.getListItemByName("score_value") as ITextWindow);
+            var _local_2:ITextWindow = (this._infoElements.getListItemByName("score_value") as ITextWindow);
             if (_local_2 == null)
             {
                 return;
@@ -407,8 +407,8 @@
         public function set carryItem(k:int):void
         {
             var _local_6:String;
-            var _local_2:ITextWindow = (this._Str_2373.getListItemByName("handitem_txt") as ITextWindow);
-            var _local_3:IWindowContainer = (this._Str_2373.getListItemByName("handitem_spacer") as IWindowContainer);
+            var _local_2:ITextWindow = (this._infoElements.getListItemByName("handitem_txt") as ITextWindow);
+            var _local_3:IWindowContainer = (this._infoElements.getListItemByName("handitem_spacer") as IWindowContainer);
             if (((_local_2 == null) || (_local_3 == null)))
             {
                 return;
@@ -425,15 +425,15 @@
             _local_3.visible = _local_5;
             if (_local_5 != _local_4)
             {
-                this._Str_2373.arrangeListItems();
+                this._infoElements.arrangeListItems();
             }
             this.updateWindow();
         }
 
         public function set xp(k:int):void
         {
-            var _local_2:ITextWindow = (this._Str_2373.getListItemByName("xp_text") as ITextWindow);
-            var _local_3:IWindowContainer = (this._Str_2373.getListItemByName("xp_spacer") as IWindowContainer);
+            var _local_2:ITextWindow = (this._infoElements.getListItemByName("xp_text") as ITextWindow);
+            var _local_3:IWindowContainer = (this._infoElements.getListItemByName("xp_spacer") as IWindowContainer);
             if (((_local_2 == null) || (_local_3 == null)))
             {
                 return;
@@ -446,15 +446,15 @@
             _local_3.visible = _local_5;
             if (_local_5 != _local_4)
             {
-                this._Str_2373.arrangeListItems();
+                this._infoElements.arrangeListItems();
             }
             this.updateWindow();
         }
 
         public function _Str_17290(k:Array, _arg_2:Array=null):void
         {
-            var _local_3:IWindowContainer = (this._Str_2373.getListItemByName("tags_container") as IWindowContainer);
-            var _local_4:IWindowContainer = (this._Str_2373.getListItemByName("tags_spacer") as IWindowContainer);
+            var _local_3:IWindowContainer = (this._infoElements.getListItemByName("tags_container") as IWindowContainer);
+            var _local_4:IWindowContainer = (this._infoElements.getListItemByName("tags_spacer") as IWindowContainer);
             if (((_local_3 == null) || (_local_4 == null)))
             {
                 return;
@@ -573,7 +573,7 @@
             var _local_5:RoomWidgetChangeMottoMessage;
             var _local_6:int;
             var _local_7:int;
-            var _local_2:IWindowContainer = (this._Str_2373.getListItemByName("motto_container") as IWindowContainer);
+            var _local_2:IWindowContainer = (this._infoElements.getListItemByName("motto_container") as IWindowContainer);
             if (!_local_2)
             {
                 return;
@@ -604,7 +604,7 @@
 
         protected function _Str_20920(k:WindowMouseEvent):void
         {
-            var _local_2:IWindowContainer = (this._Str_2373.getListItemByName("motto_container") as IWindowContainer);
+            var _local_2:IWindowContainer = (this._infoElements.getListItemByName("motto_container") as IWindowContainer);
             if (!_local_2)
             {
                 return;
