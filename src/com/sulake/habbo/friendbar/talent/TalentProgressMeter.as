@@ -6,7 +6,7 @@
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.utils._Str_988;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.IWindow;
 
     public class TalentProgressMeter implements IDisposable 
@@ -60,7 +60,7 @@
                 k++;
             }
             this._progressNeedle = IWidgetWindow(this._progressContainer.findChildByName("progress_needle"));
-            _Str_2483(this._progressNeedle.widget).figure = this._habboTalent._Str_20410.figure;
+            IAvatarImageWidget(this._progressNeedle.widget).figure = this._habboTalent._Str_20410.figure;
             this._progressContainer.setChildIndex(this._progressNeedle, (this._progressContainer.numChildren - 1));
         }
 

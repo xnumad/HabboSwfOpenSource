@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.friendbar.landingview.layout.WidgetContainerLayout;
     import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
     import com.sulake.habbo.friendbar.landingview.*;
@@ -153,7 +153,7 @@
         private function _Str_7815():void
         {
             var k:IWidgetWindow = IWidgetWindow(this._container.findChildByName("avatar_image"));
-            var _local_2:_Str_2483 = _Str_2483(k.widget);
+            var _local_2:IAvatarImageWidget = IAvatarImageWidget(k.widget);
             _local_2.figure = this._figure;
         }
 

@@ -7,7 +7,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.quest._Str_4106;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
     import com.sulake.core.window.events.WindowEvent;
@@ -80,7 +80,7 @@
             var _local_3:IWindowContainer;
             var _local_4:_Str_4106;
             var _local_5:IWidgetWindow;
-            var _local_6:_Str_2483;
+            var _local_6:IAvatarImageWidget;
             var k:int = this._startOffset;
             var _local_2:int;
             while (_local_2 < 10)
@@ -98,7 +98,7 @@
                 if (_local_4)
                 {
                     _local_5 = IWidgetWindow(_local_3.findChildByName("avatar_image_widget"));
-                    _local_6 = _Str_2483(_local_5.widget);
+                    _local_6 = IAvatarImageWidget(_local_5.widget);
                     _local_6.figure = _local_4.figure;
                 }
                 _local_2++;
@@ -130,7 +130,7 @@
         private function _Str_24987(k:IWindowContainer, _arg_2:int):void
         {
             var _local_3:IWidgetWindow = IWidgetWindow(k.findChildByName("avatar_image_widget"));
-            var _local_4:_Str_2483 = _Str_2483(_local_3.widget);
+            var _local_4:IAvatarImageWidget = IAvatarImageWidget(_local_3.widget);
             k.y = (k.y + (this._avatarOffsetsY[_arg_2] + 70));
             if (this._avatarOffsetsY[_arg_2] < 0)
             {

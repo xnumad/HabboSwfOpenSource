@@ -14,7 +14,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.ISelectorWindow;
     import com.sulake.habbo.help.cfh.registry.user.UserRegistryItem;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -370,7 +370,7 @@
                     this._reportedRoomId = _local_4.roomId;
                 }
                 _local_5.findChildByName("room_name").caption = ((_local_4.roomName != "") ? this._habboHelp.localization.getLocalizationWithParams("help.emergency.main.step.two.room.name", "", "room_name", _local_4.roomName) : "");
-                _Str_2483(IWidgetWindow(_local_5.findChildByName("user_avatar")).widget).figure = _local_4.figure;
+                IAvatarImageWidget(IWidgetWindow(_local_5.findChildByName("user_avatar")).widget).figure = _local_4.figure;
                 k.addListItemAt(_local_5, _local_3);
                 if (_local_6)
                 {

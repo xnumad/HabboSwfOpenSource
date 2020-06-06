@@ -18,7 +18,7 @@
     import com.sulake.habbo.utils.FriendlyTime;
     import com.sulake.habbo.communication.messages.incoming.users._Str_4838;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -271,7 +271,7 @@
             {
                 _local_5.caption = _local_2._Str_20359;
                 _local_6.visible = true;
-                _Str_2483(_local_6.widget).figure = _local_2._Str_22960;
+                IAvatarImageWidget(_local_6.widget).figure = _local_2._Str_22960;
                 if (_local_2.friendCount > 1)
                 {
                     _local_4.visible = true;
@@ -468,7 +468,7 @@
         private function _Str_16592(k:Boolean=false):void
         {
             var _local_2:IWidgetWindow = IWidgetWindow(this._window.findChildByName("avatar_image"));
-            var _local_3:_Str_2483 = _Str_2483(_local_2.widget);
+            var _local_3:IAvatarImageWidget = IAvatarImageWidget(_local_2.widget);
             _local_3.figure = this._data.figure;
         }
 

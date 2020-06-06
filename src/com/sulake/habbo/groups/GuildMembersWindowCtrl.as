@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_2891;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_11096;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_12026;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10517;
@@ -293,7 +293,7 @@
             _local_11.visible = ((!(_local_9)) && (!(_arg_2._Str_20842 == "")));
             this._manager.localization.registerParameter("group.members.since", "date", _arg_2._Str_20842);
             _local_11.caption = this._manager.localization.getLocalization("group.members.since");
-            _Str_2483(IWidgetWindow(k.findChildByName("avatar_image")).widget).figure = _arg_2.figure;
+            IAvatarImageWidget(IWidgetWindow(k.findChildByName("avatar_image")).widget).figure = _arg_2.figure;
             if (_arg_2.blocked)
             {
                 this._Str_11551(k, "group.members.unblock", false);

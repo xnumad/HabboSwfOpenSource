@@ -36,7 +36,7 @@
         private var _flipped:Boolean;
         private var _userName:ILabelWindow;
         private var _avatarWrapper:IWindow;
-        private var _avatarWidget:_Str_2483;
+        private var _avatarWidget:IAvatarImageWidget;
         private var _bubbleWrapper:IWindow;
         private var _message:ITextWindow;
         private var _postTime:_Str_5483;
@@ -54,7 +54,7 @@
             this._userName = (this._root.findChildByName("user_name") as ILabelWindow);
             var _local_3:IWidgetWindow = (this._root.findChildByName("user_avatar") as IWidgetWindow);
             this._avatarWrapper = _local_3.parent;
-            this._avatarWidget = (_local_3.widget as _Str_2483);
+            this._avatarWidget = (_local_3.widget as IAvatarImageWidget);
             this._bubbleWrapper = this._root.findChildByName("bubble_wrapper");
             this._message = (this._root.findChildByName("message") as ITextWindow);
             this._postTime = (IWidgetWindow(this._root.findChildByName("post_time")).widget as _Str_5483);

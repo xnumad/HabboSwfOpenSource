@@ -6,7 +6,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
 
     public class SafetyQuizPromoWidget implements ILandingViewWidget 
@@ -39,7 +39,7 @@
         {
             if (((!(this._container == null)) && (!(this._container.disposed))))
             {
-                _Str_2483(IWidgetWindow(this._container.findChildByName("avatar")).widget).figure = this._landingView.sessionDataManager.figure;
+                IAvatarImageWidget(IWidgetWindow(this._container.findChildByName("avatar")).widget).figure = this._landingView.sessionDataManager.figure;
             }
         }
 

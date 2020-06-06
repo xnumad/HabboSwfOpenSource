@@ -7,7 +7,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_2814;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
@@ -265,7 +265,7 @@
             _local_11.id = k._Str_18036;
             _local_11.removeEventListener(WindowMouseEvent.CLICK, this._Str_19785);
             _local_11.addEventListener(WindowMouseEvent.CLICK, this._Str_19785);
-            _Str_2483(IWidgetWindow(_local_11.findChildByName("avatar_widget")).widget).figure = k._Str_18957;
+            IAvatarImageWidget(IWidgetWindow(_local_11.findChildByName("avatar_widget")).widget).figure = k._Str_18957;
             _local_11.findChildByName("author").caption = k._Str_6415;
             _local_11.findChildByName("author_post_count").caption = ((k._Str_17584 + " ") + this._controller.localizationManager.getLocalization("messageboard.messages", "posts"));
             this._Str_15972(_local_3, k, _local_4);

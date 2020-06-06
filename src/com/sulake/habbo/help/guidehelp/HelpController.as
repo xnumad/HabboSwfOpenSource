@@ -15,7 +15,7 @@
     import flash.utils.getTimer;
     import com.sulake.habbo.window.widgets._Str_5483;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.communication.messages.parser.help.data._Str_5959;
 
     public class HelpController implements IDisposable 
@@ -221,7 +221,7 @@
                     return;
                 case _Str_2849._Str_8260:
                     this._pendingRequestWindow.findChildByName("user_name").caption = k._Str_25260;
-                    _Str_2483(IWidgetWindow(this._pendingRequestWindow.findChildByName("user_avatar")).widget).figure = k._Str_25026;
+                    IAvatarImageWidget(IWidgetWindow(this._pendingRequestWindow.findChildByName("user_avatar")).widget).figure = k._Str_25026;
                     _Str_5483(IWidgetWindow(this._pendingRequestWindow.findChildByName("timestamp")).widget).timeStamp = (new Date().getTime() - (k._Str_20952 * 1000));
                     this._habboHelp.localization.registerParameter("guide.pending.bully.room", "room", k.roomName);
                     return;

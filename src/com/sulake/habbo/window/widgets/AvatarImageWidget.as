@@ -19,7 +19,7 @@
     import flash.filters.ColorMatrixFilter;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
 
-    public class AvatarImageWidget implements _Str_2483, IAvatarImageListener 
+    public class AvatarImageWidget implements IAvatarImageWidget, IAvatarImageListener
     {
         public static const AVATAR_IMAGE:String = "avatar_image";
         private static const _Str_4305:String = (AVATAR_IMAGE + ":figure");

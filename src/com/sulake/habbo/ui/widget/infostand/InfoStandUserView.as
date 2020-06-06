@@ -15,7 +15,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
@@ -328,7 +328,7 @@
 
         public function _Str_7907(k:String):void
         {
-            var _local_2:_Str_2483 = (IWidgetWindow(this._border.findChildByName("avatar_image")).widget as _Str_2483);
+            var _local_2:IAvatarImageWidget = (IWidgetWindow(this._border.findChildByName("avatar_image")).widget as IAvatarImageWidget);
             _local_2.figure = k;
         }
 

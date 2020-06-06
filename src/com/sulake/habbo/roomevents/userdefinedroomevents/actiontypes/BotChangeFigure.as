@@ -3,7 +3,7 @@
     import com.sulake.habbo.roomevents.HabboUserDefinedRoomEvents;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.roomevents.userdefinedroomevents.UserDefinedRoomEventsCtrl;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.Triggerable;
     import com.sulake.core.window.components.ITextFieldWindow;
@@ -53,7 +53,7 @@
                 this._figureString = _local_3[1];
             }
             this.getInput(k, "bot_name").text = this._botName;
-            _Str_2483(IWidgetWindow(k.findChildByName("avatar_image")).widget).figure = this._figureString;
+            IAvatarImageWidget(IWidgetWindow(k.findChildByName("avatar_image")).widget).figure = this._figureString;
             k.findChildByName("capture_figure").procedure = this._Str_24248;
             this._window = k;
         }
@@ -74,7 +74,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._figureString = this._component.sessionDataManager.figure;
-                _Str_2483(IWidgetWindow(this._window.findChildByName("avatar_image")).widget).figure = this._figureString;
+                IAvatarImageWidget(IWidgetWindow(this._window.findChildByName("avatar_image")).widget).figure = this._figureString;
             }
         }
     }

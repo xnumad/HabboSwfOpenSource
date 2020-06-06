@@ -16,7 +16,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.session.talent.TalentEnum;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.parser.talent._Str_3450;
     import com.sulake.habbo.communication.messages.parser.talent._Str_3457;
@@ -221,7 +221,7 @@
             var _local_2:IWidgetWindow = (k.findChildByName("avatar_image") as IWidgetWindow);
             if (_local_2 != null)
             {
-                _Str_2483(_local_2.widget).figure = this._habboTalent._Str_20410.figure;
+                IAvatarImageWidget(_local_2.widget).figure = this._habboTalent._Str_20410.figure;
             }
         }
 

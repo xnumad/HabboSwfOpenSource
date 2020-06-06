@@ -46,7 +46,7 @@
     import com.sulake.habbo.communication.messages.parser.game.score.Game2WeeklyLeaderboardParser;
     import com.sulake.habbo.communication.messages.parser.game.score._Str_7552;
     import com.sulake.habbo.communication.messages.parser.game.score._Str_7341;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
     import com.sulake.habbo.avatar.IAvatarImage;
     import com.sulake.habbo.avatar.enum.AvatarSetType;
@@ -624,7 +624,7 @@
                         this._gameCenterViewWindow.findChildByName("previous_winner").visible = true;
                         this._gameCenterViewWindow.findChildByName("previous_winner_name").caption = _local_5.name;
                         this._gameCenterViewWindow.findChildByName("previous_winner_score").caption = this._gameCenterView.localization.registerParameter("gamecenter.featured_player_points", "score", _local_5.score.toString());
-                        ((this._gameCenterViewWindow.findChildByName("previous_winner_avatar") as IWidgetWindow).widget as _Str_2483).figure = _local_5.figure;
+                        ((this._gameCenterViewWindow.findChildByName("previous_winner_avatar") as IWidgetWindow).widget as IAvatarImageWidget).figure = _local_5.figure;
                     }
                     else
                     {

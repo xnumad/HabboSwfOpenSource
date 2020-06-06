@@ -8,7 +8,7 @@
     import com.sulake.habbo.avatar.events.AvatarUpdateEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
 
     public class AvatarImageWidget implements ILandingViewWidget 
     {
@@ -92,14 +92,14 @@
 
         private function _Str_7815(k:String=null):void
         {
-            var _local_2:_Str_2483;
+            var _local_2:IAvatarImageWidget;
             if (((!(k)) && (this._landingView.sessionDataManager)))
             {
                 k = this._landingView.sessionDataManager.figure;
             }
             if (this._avatarImageWidget != null)
             {
-                _local_2 = (this._avatarImageWidget.widget as _Str_2483);
+                _local_2 = (this._avatarImageWidget.widget as IAvatarImageWidget);
                 if (_local_2 != null)
                 {
                     _local_2.figure = k;

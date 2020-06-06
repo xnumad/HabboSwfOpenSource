@@ -11,7 +11,7 @@
     import com.sulake.habbo.window.widgets._Str_2789;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendlist.IFriend;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.core.window.components.IRegionWindow;
@@ -204,7 +204,7 @@
             var _local_4:IWindowContainer;
             var _local_5:IWidgetWindow;
             var _local_6:IWidgetWindow;
-            var _local_7:_Str_2483;
+            var _local_7:IAvatarImageWidget;
             var _local_8:IBadgeImageWidget;
             if (!(k in this._chatEntries))
             {
@@ -236,7 +236,7 @@
                 _local_6 = (_local_4.findChildByName("group_badge_image") as IWidgetWindow);
                 if (_local_3.id > 0)
                 {
-                    _local_7 = (_local_5.widget as _Str_2483);
+                    _local_7 = (_local_5.widget as IAvatarImageWidget);
                     if (_local_3 != null)
                     {
                         _local_7.figure = _local_3.figure;
@@ -566,7 +566,7 @@
                         {
                             if (this._currentConversationId > 0)
                             {
-                                _local_3.figure = _Str_2483(IWidgetWindow(_local_9.getChildByName("avatar_image")).widget).figure;
+                                _local_3.figure = IAvatarImageWidget(IWidgetWindow(_local_9.getChildByName("avatar_image")).widget).figure;
                                 _local_3.userName = IRegionWindow(_local_9.findChildByName("avatar_click_region"))._Str_2613;
                                 _local_3.userId = _local_9.id;
                             }

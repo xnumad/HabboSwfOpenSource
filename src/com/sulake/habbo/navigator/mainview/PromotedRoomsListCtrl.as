@@ -12,7 +12,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.navigator.*;
 
     public class PromotedRoomsListCtrl implements IDisposable 
@@ -186,7 +186,7 @@
         private function _Str_16592(k:IWindowContainer, _arg_2:_Str_3451):void
         {
             var _local_3:IWidgetWindow = IWidgetWindow(k.findChildByName("avatar_image_widget"));
-            var _local_4:_Str_2483 = _Str_2483(_local_3.widget);
+            var _local_4:IAvatarImageWidget = IAvatarImageWidget(_local_3.widget);
             _local_4.figure = _arg_2._Str_23315;
         }
     }

@@ -65,7 +65,7 @@
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_10522;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7077;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_4434;
     import mx.utils.StringUtil;
     import com.sulake.habbo.utils.FriendlyTime;
@@ -788,7 +788,7 @@
                 this._window.findChildByName("close_reason").caption = this._habboHelp.localization.getLocalization("guide.help.request.guide.closed.reason.you", "");
             }
             this._window.findChildByName("report_link").caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.closed.report.link", "", "name", this._sessionData.userName);
-            _Str_2483(IWidgetWindow(this._window.findChildByName("requester_avatar")).widget).figure = this._sessionData._Str_7586;
+            IAvatarImageWidget(IWidgetWindow(this._window.findChildByName("requester_avatar")).widget).figure = this._sessionData._Str_7586;
         }
 
         private function _Str_22605(k:WindowEvent, _arg_2:IWindow):void

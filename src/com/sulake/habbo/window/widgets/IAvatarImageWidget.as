@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWidget;
 
-    public interface _Str_2483 extends IWidget 
+    public interface IAvatarImageWidget extends IWidget
     {
         function get figure():String;
         function set figure(_arg_1:String):void;

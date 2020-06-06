@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
     import com.sulake.habbo.help.cfh.registry.user.UserRegistryItem;
     import com.sulake.habbo.help.cfh.registry.chat.ChatRegistryItem;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpCategoryData;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.ITextLinkWindow;
@@ -476,7 +476,7 @@
                         this._habboHelp._Str_3469 = _local_3.roomId;
                     }
                     _local_5.findChildByName("room_name").caption = ((_local_3.roomName != "") ? this._habboHelp.localization.getLocalizationWithParams("help.emergency.main.step.two.room.name", "", "room_name", _local_3.roomName) : "");
-                    _Str_2483(IWidgetWindow(_local_5.findChildByName("user_avatar")).widget).figure = _local_3.figure;
+                    IAvatarImageWidget(IWidgetWindow(_local_5.findChildByName("user_avatar")).widget).figure = _local_3.figure;
                     this._usersList.addListItemAt(_local_5, k);
                     if (_local_6)
                     {
@@ -807,7 +807,7 @@
                         if (k)
                         {
                             this._reportedUserName = k.userName;
-                            _Str_2483(IWidgetWindow(this._view.findChildByName("reported_user_avatar")).widget).figure = k.figure;
+                            IAvatarImageWidget(IWidgetWindow(this._view.findChildByName("reported_user_avatar")).widget).figure = k.figure;
                         }
                         else
                         {

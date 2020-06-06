@@ -38,7 +38,7 @@
     import flash.geom.Rectangle;
     import __AS3__.vec.Vector;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2483;
+    import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.components.IScrollbarWindow;
     import com.sulake.habbo.window.utils.floorplaneditor.binaryData.*;
 
@@ -554,7 +554,7 @@
 
         private function _Str_16217():void
         {
-            var k:_Str_2483 = (IWidgetWindow(this._editorWindow.findChildByName("enterdirection_ghost_avatar")).widget as _Str_2483);
+            var k:IAvatarImageWidget = (IWidgetWindow(this._editorWindow.findChildByName("enterdirection_ghost_avatar")).widget as IAvatarImageWidget);
             k.direction = this._floorPlanCache._Str_6184;
         }
 
