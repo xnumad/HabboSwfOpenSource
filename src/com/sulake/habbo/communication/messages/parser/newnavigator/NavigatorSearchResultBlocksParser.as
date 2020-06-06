@@ -6,24 +6,24 @@
 
     public class NavigatorSearchResultBlocksParser implements IMessageParser
     {
-        private var _Str_16531:SearchResultSet;
+        private var _searchResult:SearchResultSet;
 
 
         public function flush():Boolean
         {
-            this._Str_16531 = null;
+            this._searchResult = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_16531 = new SearchResultSet(k);
+            this._searchResult = new SearchResultSet(k);
             return true;
         }
 
         public function get _Str_22419():SearchResultSet
         {
-            return this._Str_16531;
+            return this._searchResult;
         }
     }
 }
