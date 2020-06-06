@@ -75,7 +75,7 @@
             return (!(this._enteredGuestRoom == null)) && (!(this._currentRoomOwner));
         }
 
-        public function get _Str_11824():Boolean
+        public function get canEditRoomSettings():Boolean
         {
             return (!(this._enteredGuestRoom == null)) && ((this._currentRoomOwner) || (this._navigator.sessionData.hasSecurity(SecurityLevelEnum.MODERATOR)));
         }

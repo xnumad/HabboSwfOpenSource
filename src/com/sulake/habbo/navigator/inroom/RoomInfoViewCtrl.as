@@ -203,7 +203,7 @@
             this._window.findChildByName("make_home_region").visible = (!(this.isHome(k)));
             this._window.findChildByName("make_favourite_region").visible = ((!(this._navigator.data._Str_12763)) && (!(this._navigator.data._Str_21092())));
             this._window.findChildByName("favourite_region").visible = ((!(this._navigator.data._Str_12763)) && (this._navigator.data._Str_21092()));
-            this._window.findChildByName("floor_plan_editor_button").visible = this._navigator.data._Str_11824;
+            this._window.findChildByName("floor_plan_editor_button").visible = this._navigator.data.canEditRoomSettings;
             Util.moveChildrenToColumn(_local_2, ["room_name", "owner_name_cont", "rating_cont", "ranking_cont", "padding_cont", "tags", "room_desc", "thumbnail_container"], _local_3.y, 0);
             _local_2.visible = true;
             _local_2.height = Util.getLowestPoint(_local_2);
@@ -239,8 +239,8 @@
             {
                 return;
             }
-            this.find("room_settings_button").visible = this._navigator.data._Str_11824;
-            this.find("room_filter_button").visible = ((this._navigator.data._Str_11824) && (this._navigator.getBoolean("room.custom.filter.enabled")));
+            this.find("room_settings_button").visible = this._navigator.data.canEditRoomSettings;
+            this.find("room_filter_button").visible = ((this._navigator.data.canEditRoomSettings) && (this._navigator.getBoolean("room.custom.filter.enabled")));
             if (!this._navigator.getBoolean("room.report.enabled"))
             {
                 _local_7 = IWindowContainer(this.find("room_report_button"));
@@ -304,8 +304,8 @@
             _local_3.findChildByName("embed_info_region").procedure = this.onEmbedInfo;
             if (this._navigator.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
             {
-                this._window.findChildByName("add_thumbnail_region").visible = this._navigator.data._Str_11824;
-                if (this._navigator.data._Str_11824)
+                this._window.findChildByName("add_thumbnail_region").visible = this._navigator.data.canEditRoomSettings;
+                if (this._navigator.data.canEditRoomSettings)
                 {
                     this.addMouseClickListener(this.find("add_thumbnail_region"), this.onAddRoomThumbnail);
                 }
