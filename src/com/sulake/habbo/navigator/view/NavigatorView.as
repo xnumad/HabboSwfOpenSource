@@ -14,7 +14,7 @@
     import com.sulake.habbo.navigator.view.search.ViewMode;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SavedSearch;
-    import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_4173;
+    import com.sulake.habbo.communication.messages.incoming.newnavigator.SearchResultContainer;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.components.IScrollableListWindow;
@@ -177,7 +177,7 @@
             }
         }
 
-        public function _Str_18091(k:_Str_4173, _arg_2:String=""):void
+        public function _Str_18091(k:SearchResultContainer, _arg_2:String=""):void
         {
             var _local_3:int;
             if (this._habboNewNavigator.newResultsRendered)

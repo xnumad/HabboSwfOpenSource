@@ -17,7 +17,7 @@
     import com.sulake.habbo.navigator.context.ContextContainer;
     import com.sulake.habbo.navigator.lift.LiftDataContainer;
     import com.sulake.habbo.navigator.context.SearchContextHistoryManager;
-    import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_4173;
+    import com.sulake.habbo.communication.messages.incoming.newnavigator.SearchResultContainer;
     import com.sulake.core.utils.Map;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.navigator.NavigatorCache;
@@ -87,7 +87,7 @@
         private var _contextContainer:ContextContainer;
         private var _liftDataContainer:LiftDataContainer;
         private var _searchContextHistoryManager:SearchContextHistoryManager;
-        private var _currentResults:_Str_4173;
+        private var _currentResults:SearchResultContainer;
         private var _groupDetails:Map;
         private var _currentResultRoomNameData:Map;
         private var _collapsedCategories:Vector.<String>;
@@ -220,7 +220,7 @@
             this._contextContainer.initialize(k);
         }
 
-        public function onSearchResult(k:_Str_4173):void
+        public function onSearchResult(k:SearchResultContainer):void
         {
             this._newResultsRendered = false;
             this._currentResults = k;
@@ -326,7 +326,7 @@
         {
             this._navigatorView._Str_9330 = true;
             this._previousFilterInput = _arg_3;
-            var _local_4:_Str_4173 = this._navigatorCache._Str_4666(((k + "/") + _arg_2));
+            var _local_4:SearchResultContainer = this._navigatorCache._Str_4666(((k + "/") + _arg_2));
             if (_local_4 != null)
             {
                 this.onSearchResult(_local_4);
@@ -485,7 +485,7 @@
             return this._liftDataContainer;
         }
 
-        public function get _Str_3440():_Str_4173
+        public function get _Str_3440():SearchResultContainer
         {
             return this._currentResults;
         }

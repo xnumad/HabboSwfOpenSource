@@ -2,13 +2,13 @@
 {
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
 
-    public class _Str_4173 
+    public class SearchResultContainer
     {
         private var _Str_8772:String;
         private var _Str_8699:String;
         private var _Str_13083:SearchResultSet;
 
-        public function _Str_4173(k:SearchResultSet)
+        public function SearchResultContainer(k:SearchResultSet)
         {
             this._Str_8772 = k._Str_4569;
             this._Str_8699 = k._Str_5610;

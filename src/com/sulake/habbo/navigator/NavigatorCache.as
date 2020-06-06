@@ -3,7 +3,7 @@
 	import com.sulake.habbo.navigator.cache.NavigatorCacheEntry;
     import flash.utils.Dictionary;
     import flash.utils.getTimer;
-    import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_4173;
+    import com.sulake.habbo.communication.messages.incoming.newnavigator.SearchResultContainer;
 
     public class NavigatorCache 
     {
@@ -16,14 +16,14 @@
             this._Str_6451 = new Dictionary();
         }
 
-        public function _Str_22588(k:String, _arg_2:_Str_4173):void
+        public function _Str_22588(k:String, _arg_2:SearchResultContainer):void
         {
             this._Str_23575();
             var _local_3:Number = getTimer();
             this._Str_6451[k] = new NavigatorCacheEntry(k, _arg_2, _local_3, this._Str_25767(_local_3));
         }
 
-        public function _Str_4666(k:String):_Str_4173
+        public function _Str_4666(k:String):SearchResultContainer
         {
             var _local_2:NavigatorCacheEntry = this._Str_6451[k];
             if (_local_2 != null)
