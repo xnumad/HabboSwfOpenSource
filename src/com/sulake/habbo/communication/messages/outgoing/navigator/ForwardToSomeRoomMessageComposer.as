@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7393 implements IMessageComposer 
+    public class ForwardToSomeRoomMessageComposer implements IMessageComposer
     {
         private var _type:String;
 
-        public function _Str_7393(k:String):void
+        public function ForwardToSomeRoomMessageComposer(k:String):void
         {
             this._type = k;
         }

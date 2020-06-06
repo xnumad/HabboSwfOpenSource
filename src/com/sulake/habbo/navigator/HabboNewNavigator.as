@@ -53,7 +53,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_11429;
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_9950;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7393;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
     import com.sulake.habbo.utils.Base64;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
@@ -419,7 +419,7 @@
                                 }
                                 else
                                 {
-                                    this.communication.connection.send(new _Str_7393(_local_2[2]));
+                                    this.communication.connection.send(new ForwardToSomeRoomMessageComposer(_local_2[2]));
                                 }
                         }
                     }

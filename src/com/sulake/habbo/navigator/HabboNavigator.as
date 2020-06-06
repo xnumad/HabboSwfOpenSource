@@ -68,7 +68,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4374;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7393;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
     import com.sulake.habbo.navigator.inroom.*;
 
     public class HabboNavigator extends Component implements IHabboNavigator, IHabboTransitionalNavigator, ILinkEventTracker 
@@ -785,7 +785,7 @@
                                 }
                                 else
                                 {
-                                    this.send(new _Str_7393(_local_2[2]));
+                                    this.send(new ForwardToSomeRoomMessageComposer(_local_2[2]));
                                 }
                         }
                     }

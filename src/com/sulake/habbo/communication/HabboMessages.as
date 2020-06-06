@@ -529,7 +529,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7214;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7393;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7413;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7911;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_8102;
@@ -1606,7 +1606,7 @@
             OUTGOING_PACKETS[1691] = _Str_6133;
             OUTGOING_PACKETS[1697] = _Str_7568;
             OUTGOING_PACKETS[17] = _Str_12283;
-            OUTGOING_PACKETS[1703] = _Str_7393;
+            OUTGOING_PACKETS[1703] = ForwardToSomeRoomMessageComposer;
             OUTGOING_PACKETS[172] = _Str_11657;
             OUTGOING_PACKETS[1740] = _Str_7911;
             OUTGOING_PACKETS[1752] = _Str_5945;
