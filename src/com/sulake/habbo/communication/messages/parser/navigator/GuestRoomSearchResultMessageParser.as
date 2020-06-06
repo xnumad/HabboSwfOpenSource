@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9296 implements IMessageParser 
+    public class GuestRoomSearchResultMessageParser implements IMessageParser
     {
         private var _data:GuestRoomSearchResultData;
 
