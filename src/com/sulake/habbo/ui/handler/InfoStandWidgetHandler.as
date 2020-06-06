@@ -43,7 +43,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_8184;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10794;
     import com.sulake.habbo.room.object.RoomObjectOperationEnum;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.utils._Str_6093;
@@ -554,7 +554,7 @@
                     {
                         this._container.habboTracking.trackGoogle("extendedProfile", _local_17.trackingLocation);
                     }
-                    this._container.connection.send(new _Str_2553(_local_17.userId));
+                    this._container.connection.send(new GetExtendedProfileMessageComposer(_local_17.userId));
                     break;
                 case RoomWidgetPresentOpenMessage.RWPOM_OPEN_PRESENT:
                     _local_18 = (k as RoomWidgetPresentOpenMessage);

@@ -48,7 +48,7 @@
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.tracking.HabboTracking;
     import flash.net.navigateToURL;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import org.openvideoads.util.StringUtils;
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.habbo.window.widgets._Str_2789;
@@ -574,7 +574,7 @@
                     HabboTracking.getInstance().trackEventLog("Stories", "facebook", "stories.share.clicked", this._Str_6733);
                     return;
                 case "senderNameButton":
-                    this._Str_2844.sendMessage(new _Str_2553(this._Str_3017));
+                    this._Str_2844.sendMessage(new GetExtendedProfileMessageComposer(this._Str_3017));
                     return;
                 case "urlField":
                     _local_4 = (this._window.findChildByName("urlField") as ITextFieldWindow);

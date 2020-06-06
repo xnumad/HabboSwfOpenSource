@@ -57,7 +57,7 @@
     import com.sulake.habbo.utils.Base64;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11137;
@@ -500,7 +500,7 @@
 
         public function _Str_12024(k:int):void
         {
-            this.communication.connection.send(new _Str_2553(k));
+            this.communication.connection.send(new GetExtendedProfileMessageComposer(k));
         }
 
         public function get _Str_25225():String

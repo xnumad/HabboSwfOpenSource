@@ -9,7 +9,7 @@
     import com.sulake.habbo.utils.FriendlyTime;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
@@ -199,7 +199,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._navigator.trackGoogle("extendedProfile", "navigator_roomPopup");
-                this._navigator.send(new _Str_2553(this._room.ownerId));
+                this._navigator.send(new GetExtendedProfileMessageComposer(this._room.ownerId));
                 this._Str_14696();
             }
         }

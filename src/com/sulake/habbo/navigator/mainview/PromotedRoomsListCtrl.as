@@ -10,7 +10,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.navigator.domain.RoomSessionTags;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.navigator.*;
@@ -152,7 +152,7 @@
             {
                 _local_3 = this._Str_5067(_arg_2);
                 this._navigator.trackGoogle("extendedProfile", "navigator_promotedRoom");
-                this._navigator.send(new _Str_2553(_local_3._Str_7144.ownerId));
+                this._navigator.send(new GetExtendedProfileMessageComposer(_local_3._Str_7144.ownerId));
             }
         }
 

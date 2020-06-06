@@ -16,7 +16,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
     import flash.utils.Dictionary;
     import flash.utils.getTimer;
@@ -481,7 +481,7 @@
                     if (k.type == WindowMouseEvent.CLICK)
                     {
                         this._friendList.trackGoogle("extendedProfile", "friendList_friendsView");
-                        this._friendList.send(new _Str_2553(_arg_2.parent.id));
+                        this._friendList.send(new GetExtendedProfileMessageComposer(_arg_2.parent.id));
                     }
                 }
             }

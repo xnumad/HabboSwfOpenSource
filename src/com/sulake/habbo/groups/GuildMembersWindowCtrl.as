@@ -33,7 +33,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10517;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_12111;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9949;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9979;
     import com.sulake.core.window.components.IDropMenuWindow;
     import flash.events.Event;
@@ -473,7 +473,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._manager.send(new _Str_2553(_arg_2.id));
+                this._manager.send(new GetExtendedProfileMessageComposer(_arg_2.id));
             }
         }
 

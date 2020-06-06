@@ -33,7 +33,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetOpenProfileMessage;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.ITextLinkWindow;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 
     public class InfoStandUserView 
     {
@@ -666,7 +666,7 @@
         {
             if (((k.type == WindowMouseEvent.CLICK) && (_arg_2 is ITextLinkWindow)))
             {
-                this._widget.handler.container.connection.send(new _Str_2553(_arg_2.id));
+                this._widget.handler.container.connection.send(new GetExtendedProfileMessageComposer(_arg_2.id));
             }
         }
     }

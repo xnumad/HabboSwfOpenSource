@@ -9,7 +9,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.friendbar.landingview.*;
 
@@ -155,7 +155,7 @@
             }
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._landingView.send(new _Str_2553(_local_3.userId));
+                this._landingView.send(new GetExtendedProfileMessageComposer(_local_3.userId));
             }
             else
             {

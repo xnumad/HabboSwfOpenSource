@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
     import com.sulake.habbo.friendlist.events._Str_2948;
     import com.sulake.habbo.friendbar.events.FriendBarUpdateEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_7285;
     import com.sulake.habbo.friendbar.events.FriendRequestUpdateEvent;
@@ -242,7 +242,7 @@
             {
                 if (k > 0)
                 {
-                    this._habboCommunicationManager.connection.send(new _Str_2553(k));
+                    this._habboCommunicationManager.connection.send(new GetExtendedProfileMessageComposer(k));
                 }
                 else
                 {

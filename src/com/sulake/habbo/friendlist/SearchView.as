@@ -9,7 +9,7 @@
     import com.sulake.habbo.utils._Str_3521;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import flash.ui.Keyboard;
@@ -228,7 +228,7 @@
                     if (k.type == WindowMouseEvent.CLICK)
                     {
                         this._friendList.trackGoogle("extendedProfile", "friendList_friendsSearch");
-                        this._friendList.send(new _Str_2553(_arg_2.id));
+                        this._friendList.send(new GetExtendedProfileMessageComposer(_arg_2.id));
                     }
                 }
             }

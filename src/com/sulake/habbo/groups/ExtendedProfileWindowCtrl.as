@@ -7,7 +7,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.friendlist.RelationshipStatusEnum;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.users._Str_3266;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
@@ -112,7 +112,7 @@
         {
             if (((((!(this._data == null)) && (this._data.userId == k)) && (!(this._window == null))) && (this._window.visible)))
             {
-                this._manager.send(new _Str_2553(k));
+                this._manager.send(new GetExtendedProfileMessageComposer(k));
                 this._updateExpected = true;
             }
         }
@@ -476,7 +476,7 @@
         {
             if (((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data.userId == k))))
             {
-                this._manager.send(new _Str_2553(k));
+                this._manager.send(new GetExtendedProfileMessageComposer(k));
             }
         }
 

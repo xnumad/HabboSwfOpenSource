@@ -484,7 +484,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12111;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12242;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12283;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_5697;
@@ -1831,7 +1831,7 @@
             OUTGOING_PACKETS[3257] = _Str_7426;
             OUTGOING_PACKETS[3259] = _Str_16208;
             OUTGOING_PACKETS[3260] = _Str_12412;
-            OUTGOING_PACKETS[3265] = _Str_2553;
+            OUTGOING_PACKETS[3265] = GetExtendedProfileMessageComposer;
             OUTGOING_PACKETS[3267] = _Str_10695;
             OUTGOING_PACKETS[3283] = _Str_8167;
             OUTGOING_PACKETS[3285] = _Str_10337;

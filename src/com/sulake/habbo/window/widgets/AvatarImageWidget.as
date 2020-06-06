@@ -17,7 +17,7 @@
     import flash.display.BitmapData;
     import flash.geom.Point;
     import flash.filters.ColorMatrixFilter;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 
     public class AvatarImageWidget implements IAvatarImageWidget, IAvatarImageListener
     {
@@ -284,7 +284,7 @@
         {
             if (this._userId > 0)
             {
-                this._windowManager.communication.connection.send(new _Str_2553(this._userId));
+                this._windowManager.communication.connection.send(new GetExtendedProfileMessageComposer(this._userId));
             }
         }
     }

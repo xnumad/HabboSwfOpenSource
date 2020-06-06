@@ -14,7 +14,7 @@
     import com.sulake.core.window.utils.IIterator;
     import com.sulake.habbo.window.enum._Str_3724;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
 
     public class IlluminaChatBubbleWidget implements _Str_3904 
@@ -252,7 +252,7 @@
                 case WindowMouseEvent.CLICK:
                     if (((this.userId > 0) && (_arg_2.name == "user_name_region")))
                     {
-                        this._windowManager.communication.connection.send(new _Str_2553(this.userId));
+                        this._windowManager.communication.connection.send(new GetExtendedProfileMessageComposer(this.userId));
                     }
                     return;
             }

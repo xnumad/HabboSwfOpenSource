@@ -12,7 +12,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.navigator.IHabboNavigator;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.core.window.events.WindowEvent;
@@ -89,7 +89,7 @@
                             switch (_arg_2.name)
                             {
                                 case "profile":
-                                    this._habboToolbar.connection.send(new _Str_2553(this._habboToolbar.sessionDataManager.userId));
+                                    this._habboToolbar.connection.send(new GetExtendedProfileMessageComposer(this._habboToolbar.sessionDataManager.userId));
                                     break;
                                 case "minimail":
                                     HabboWebTools.openMinimail("#mail/inbox/");

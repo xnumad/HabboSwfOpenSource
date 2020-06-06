@@ -80,7 +80,7 @@
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_11712;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_8228;
     import __AS3__.vec.*;
 
@@ -642,7 +642,7 @@
 
         public function showExtendedProfile(k:int):void
         {
-            this.send(new _Str_2553(k));
+            this.send(new GetExtendedProfileMessageComposer(k));
         }
 
         public function openCatalog(k:String):void

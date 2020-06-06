@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7911;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11662;
     import com.sulake.core.runtime.Component;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 
     public class RoomInfoViewCtrl
     {
@@ -525,7 +525,7 @@
             {
                 this._navigator.trackGoogle("roomInfo", "extendedProfile");
                 this._navigator.trackGoogle("extendedProfile", "navigator_roomInfo");
-                this._navigator.send(new _Str_2553(this._navigator.data._Str_2678.ownerId));
+                this._navigator.send(new GetExtendedProfileMessageComposer(this._navigator.data._Str_2678.ownerId));
             }
         }
     }

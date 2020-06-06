@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.outgoing.friendlist.AcceptFriendMessageComposer;
     import com.sulake.habbo.friendlist.events._Str_2948;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.DeclineFriendMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 
     public class FriendRequestsView implements _Str_6180, _Str_4097
     {
@@ -276,7 +276,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._habboFriendList.trackGoogle("extendedProfile", "friendList_friendRequests");
-                this._habboFriendList.send(new _Str_2553(_arg_2.id));
+                this._habboFriendList.send(new GetExtendedProfileMessageComposer(_arg_2.id));
             }
         }
 

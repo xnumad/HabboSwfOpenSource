@@ -12,7 +12,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 
     public class UserListCtrl implements IDisposable 
     {
@@ -175,7 +175,7 @@
         private function _Str_25336(k:WindowEvent):void
         {
             this._navigator.trackGoogle("extendedProfile", "navigator_roomSettingsUsersList");
-            this._navigator.send(new _Str_2553(k.target.id));
+            this._navigator.send(new GetExtendedProfileMessageComposer(k.target.id));
         }
     }
 }

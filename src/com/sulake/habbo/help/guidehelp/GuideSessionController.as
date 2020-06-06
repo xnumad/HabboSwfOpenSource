@@ -70,7 +70,7 @@
     import mx.utils.StringUtil;
     import com.sulake.habbo.utils.FriendlyTime;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_10003;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_8134;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_4981;
@@ -928,7 +928,7 @@
             switch (_arg_2.name)
             {
                 case "guide_name_link":
-                    this._habboHelp.sendMessage(new _Str_2553(this._sessionData._Str_5587));
+                    this._habboHelp.sendMessage(new GetExtendedProfileMessageComposer(this._sessionData._Str_5587));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickProfile"));
                     return;
                 case "report_guide_link":
@@ -968,7 +968,7 @@
                     this.closeWindow();
                     return;
                 case "guide_name_link":
-                    this._habboHelp.sendMessage(new _Str_2553(this._sessionData._Str_5587));
+                    this._habboHelp.sendMessage(new GetExtendedProfileMessageComposer(this._sessionData._Str_5587));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickProfile"));
                     return;
                 case "report_guide_link":
@@ -1005,7 +1005,7 @@
             switch (_arg_2.name)
             {
                 case "guide_name_link":
-                    this._habboHelp.sendMessage(new _Str_2553(this._sessionData._Str_5587));
+                    this._habboHelp.sendMessage(new GetExtendedProfileMessageComposer(this._sessionData._Str_5587));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickProfile"));
                     return;
                 case "report_guide_link":
