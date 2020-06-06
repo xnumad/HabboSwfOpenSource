@@ -46,7 +46,7 @@
 
         override public function dispose():void
         {
-            this._Str_2669();
+            this.destroyWindow();
             super.dispose();
         }
 
@@ -89,7 +89,7 @@
             }
         }
 
-        private function _Str_2669():void
+        private function destroyWindow():void
         {
             var k:BackgroundColorWidgetSlider;
             for each (k in this._sliders)
@@ -130,7 +130,7 @@
                         this.handler.container.connection.send(new _Str_3382(this._furniId));
                         return;
                     case "header_button_close":
-                        this._Str_2669();
+                        this.destroyWindow();
                         return;
                 }
             }

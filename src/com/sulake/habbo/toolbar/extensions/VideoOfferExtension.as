@@ -48,7 +48,7 @@
             if ((((this._toolbar.inventory._Str_6682) && (!(this._view))) && (this._Str_20377())))
             {
                 this._toolbar.extensionView.detachExtension(VIDEO_OFFER);
-                this._Str_2669();
+                this.destroyWindow();
                 return;
             }
             if (((!(this._promoClosed)) && (!(this._view))))
@@ -72,7 +72,7 @@
             {
                 if (this._view)
                 {
-                    this._Str_2669();
+                    this.destroyWindow();
                 }
                 return;
             }
@@ -139,7 +139,7 @@
             return k;
         }
 
-        private function _Str_2669():void
+        private function destroyWindow():void
         {
             if (this._view)
             {
@@ -169,14 +169,14 @@
                 return;
             }
             this._toolbar.extensionView.detachExtension(VIDEO_OFFER);
-            this._Str_2669();
+            this.destroyWindow();
             this._toolbar = null;
         }
 
         private function _Str_14359(k:WindowMouseEvent):void
         {
             this._promoClosed = true;
-            this._Str_2669();
+            this.destroyWindow();
             this._toolbar.connection.send(new EventLogMessageComposer("SuperSaverAds", "client_action", "supersaverads.video.promo.close_clicked"));
         }
 
@@ -200,7 +200,7 @@
         {
             if (!this._toolbar.catalog.videoOffers.launch(VideoOfferTypeEnum.CREDIT))
             {
-                this._Str_2669();
+                this.destroyWindow();
             }
         }
 

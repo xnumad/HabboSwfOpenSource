@@ -84,7 +84,7 @@
                     this._talentProgressMeter.dispose();
                     this._talentProgressMeter = null;
                 }
-                this._Str_2669();
+                this.destroyWindow();
                 this._habboTalent = null;
             }
         }
@@ -149,7 +149,7 @@
         {
             var _local_4:String;
             var _local_7:IWindowContainer;
-            this._Str_2669();
+            this.destroyWindow();
             this._dialog = this._habboTalent._Str_4804("talent_track");
             this._window = IWindowContainer(this._dialog.rootWindow);
             this._window.procedure = this.onWindowEvent;
@@ -525,7 +525,7 @@
             return _local_3;
         }
 
-        private function _Str_2669():void
+        private function destroyWindow():void
         {
             this._Str_8036();
             if (this._overlayTemplate != null)
@@ -613,7 +613,7 @@
             switch (_arg_2.name)
             {
                 case "header_button_close":
-                    this._Str_2669();
+                    this.destroyWindow();
                     return;
                 case "progress_container":
                     _local_3 = WindowMouseEvent(k).localX;
@@ -657,7 +657,7 @@
             {
                 return;
             }
-            this._Str_2669();
+            this.destroyWindow();
         }
 
         private function _Str_19216(k:int):void
@@ -835,7 +835,7 @@
 
         private function _Str_8556(k:String):void
         {
-            this._Str_2669();
+            this.destroyWindow();
             this._habboTalent.tracking.trackEventLog("Talent", this._talentTrack.name, "talent.progress.click_activity", k);
         }
 
@@ -852,7 +852,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._Str_2669();
+                this.destroyWindow();
                 this._Str_8036();
                 this._habboTalent.send(new _Str_6216());
                 this._habboTalent.habboHelp._Str_18271();
@@ -873,7 +873,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._Str_2669();
+                this.destroyWindow();
                 this._Str_8036();
                 this._habboTalent.send(new _Str_6216());
                 this._habboTalent.tracking.trackEventLog("Help", "", "tour.new_user.cancel");

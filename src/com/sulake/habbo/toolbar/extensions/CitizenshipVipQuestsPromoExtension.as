@@ -59,7 +59,7 @@
                 this._connection.removeMessageEvent(this._promoEnabledListener);
                 this._promoEnabledListener = null;
             }
-            this._Str_2669();
+            this.destroyWindow();
             this._localization = null;
             this._assets = null;
             this._events = null;
@@ -87,7 +87,7 @@
             return k;
         }
 
-        private function _Str_2669():void
+        private function destroyWindow():void
         {
             if (this._extensionView)
             {
@@ -106,7 +106,7 @@
             {
                 this._connection.send(new _Str_7568(this._vipQuestsCampaignName));
             }
-            this._Str_2669();
+            this.destroyWindow();
         }
 
         private function _Str_12174(k:WindowMouseEvent):void

@@ -30,7 +30,7 @@
 
         override public function dispose():void
         {
-            this._Str_2669();
+            this.destroyWindow();
             super.dispose();
         }
 
@@ -71,7 +71,7 @@
             this._window.visible = false;
         }
 
-        private function _Str_2669():void
+        private function destroyWindow():void
         {
             if (this._window)
             {
@@ -99,7 +99,7 @@
                         this.handler.container.connection.send(new _Str_7290(this._Str_2502));
                         break;
                     case "header_button_close":
-                        this._Str_2669();
+                        this.destroyWindow();
                         break;
                     case "slider":
                         this._window.findChildByName("slider_button").x = WindowMouseEvent(k).localX;

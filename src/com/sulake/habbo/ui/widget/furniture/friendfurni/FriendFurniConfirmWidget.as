@@ -27,7 +27,7 @@
         override public function dispose():void
         {
             this._stuffId = -1;
-            this._Str_2669();
+            this.destroyWindow();
             super.dispose();
         }
 
@@ -41,7 +41,7 @@
             if ((((this._window) && (this._window.visible)) && (!(this._stuffId == -1))))
             {
                 this._Str_14761.sendLockConfirm(this._stuffId, false);
-                this._Str_2669();
+                this.destroyWindow();
             }
             this._stuffId = k;
             this.createWindow();
@@ -61,7 +61,7 @@
         {
             if (k == this._stuffId)
             {
-                this._Str_2669();
+                this.destroyWindow();
             }
         }
 
@@ -86,7 +86,7 @@
             this._window.center();
         }
 
-        private function _Str_2669():void
+        private function destroyWindow():void
         {
             if (this._window != null)
             {
@@ -109,11 +109,11 @@
                     case "header_button_close":
                     case "cancel_button":
                         this._Str_14761.sendLockConfirm(this._stuffId, false);
-                        this._Str_2669();
+                        this.destroyWindow();
                         return;
                     case "confirm_button":
                         this._Str_14761.sendLockConfirm(this._stuffId, true);
-                        this._Str_2669();
+                        this.destroyWindow();
                         return;
                 }
             }

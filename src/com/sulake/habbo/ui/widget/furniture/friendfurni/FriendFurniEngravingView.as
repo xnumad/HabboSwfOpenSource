@@ -90,7 +90,7 @@
         {
             if (!this.disposed)
             {
-                this._Str_2669();
+                this.destroyWindow();
                 this._widget = null;
                 this._stuffData = null;
                 this._disposed = true;
@@ -104,7 +104,7 @@
 
         public function close():void
         {
-            this._Str_2669();
+            this.destroyWindow();
         }
 
         protected function assetName():String
@@ -161,7 +161,7 @@
             setElementImage(_local_3, _arg_2, 0, 0, 0);
         }
 
-        private function _Str_2669():void
+        private function destroyWindow():void
         {
             if (this._window)
             {

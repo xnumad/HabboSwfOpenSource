@@ -66,7 +66,7 @@
         {
             if (this._bubble != null)
             {
-                this._Str_2669();
+                this.destroyWindow();
             }
             this._rootContainerBackground.removeEventListener(WindowEvent.WINDOW_EVENT_PARENT_RESIZED, this._Str_18177);
             this._rootContainerBackground.dispose();
@@ -81,7 +81,7 @@
             var _local_8:IWindowContainer;
             if (this._bubble != null)
             {
-                this._Str_2669();
+                this.destroyWindow();
             }
             if (((!(_arg_3.clearType == _Str_8951)) && (!(_arg_3.scoreType == _Str_8951))))
             {
@@ -141,7 +141,7 @@
             this._rootContainerBackground.addChild(k);
         }
 
-        private function _Str_2669():void
+        private function destroyWindow():void
         {
             this._rootContainerBackground.removeChild(this._bubble);
             this._lastPosition.x = this._bubble.x;
@@ -169,7 +169,7 @@
 
         public function close():void
         {
-            this._Str_2669();
+            this.destroyWindow();
         }
     }
 }

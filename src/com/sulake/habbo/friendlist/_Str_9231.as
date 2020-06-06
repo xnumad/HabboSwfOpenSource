@@ -24,7 +24,7 @@
         {
             if (!this._disposed)
             {
-                this._Str_2669();
+                this.destroyWindow();
                 this._disposed = true;
             }
         }
@@ -61,7 +61,7 @@
             this._window.visible = false;
         }
 
-        private function _Str_2669():void
+        private function destroyWindow():void
         {
             if (this._window)
             {

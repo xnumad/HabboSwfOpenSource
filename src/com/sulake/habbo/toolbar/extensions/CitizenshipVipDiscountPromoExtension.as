@@ -47,7 +47,7 @@
             return k;
         }
 
-        private function _Str_2669():void
+        private function destroyWindow():void
         {
             if (this._view)
             {
@@ -72,7 +72,7 @@
             {
                 this.extensionView.detachExtension(ToolbarDisplayExtensionIds.CLUB_PROMO);
             }
-            this._Str_2669();
+            this.destroyWindow();
             this._toolbar = null;
         }
 
@@ -116,7 +116,7 @@
             else
             {
                 this._toolbar.extensionView.detachExtension(ToolbarDisplayExtensionIds.VIP_QUESTS);
-                this._Str_2669();
+                this.destroyWindow();
             }
         }
 
@@ -133,7 +133,7 @@
         private function onTimerComplete(k:TimerEvent):void
         {
             this._toolbar.extensionView.detachExtension(ToolbarDisplayExtensionIds.CLUB_PROMO);
-            this._Str_2669();
+            this.destroyWindow();
         }
 
         private function _Str_17305():Boolean
