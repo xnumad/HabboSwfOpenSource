@@ -130,7 +130,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484)));
-            this._messageListeners.push(k.connection.addMessageEvent(new _Str_9455(this._Str_25622)));
+            this._messageListeners.push(k.connection.addMessageEvent(new _Str_9455(this.onNavigatorSearchResultBlocks)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5711(this._Str_18125)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344)));
@@ -169,7 +169,7 @@
             this._navigator.initialize(k.getParser());
         }
 
-        private function _Str_25622(k:_Str_9455):void
+        private function onNavigatorSearchResultBlocks(k:_Str_9455):void
         {
             this._navigator._Str_20936(new _Str_4173(k.getParser()._Str_22419));
         }
