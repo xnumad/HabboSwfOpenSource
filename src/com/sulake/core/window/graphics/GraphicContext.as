@@ -26,7 +26,7 @@
         public static const _Str_19868:uint = (1 << 7);
         public static const GC_TYPE_DESKTOP:uint = (1 << 8);
         protected static var _counter:uint = 0;
-        protected static var _Str_4712:uint = 0;
+        protected static var _allocated:uint = 0;
 
         protected var _Str_4059:DisplayObjectContainer;
         protected var _Str_21049:Boolean;
@@ -91,7 +91,7 @@
 
         public static function get allocatedByteCount():uint
         {
-            return _Str_4712;
+            return _allocated;
         }
 
 
@@ -292,7 +292,7 @@
                         if (((!(_local_4.width == k)) || (!(_local_4.height == _arg_2))))
                         {
                             _local_3.bitmapData = null;
-                            _Str_4712 = (_Str_4712 - ((_local_4.width * _local_4.height) * 4));
+                            _allocated = (_allocated - ((_local_4.width * _local_4.height) * 4));
                             _local_4.dispose();
                             _local_4 = null;
                         }
@@ -300,7 +300,7 @@
                     if ((((_local_4 == null) && (k > 0)) && (_arg_2 > 0)))
                     {
                         _local_4 = new TrackedBitmapData(this, k, _arg_2, this._Str_21049, 0xFFFFFF);
-                        _Str_4712 = (_Str_4712 + ((_local_4.width * _local_4.height) * 4));
+                        _allocated = (_allocated + ((_local_4.width * _local_4.height) * 4));
                         _local_3.bitmapData = _local_4;
                     }
                     return _local_4;
@@ -322,7 +322,7 @@
                     if (_local_2 != null)
                     {
                         k.bitmapData = null;
-                        _Str_4712 = (_Str_4712 - ((_local_2.width * _local_2.height) * 4));
+                        _allocated = (_allocated - ((_local_2.width * _local_2.height) * 4));
                         _local_2.dispose();
                     }
                 }
