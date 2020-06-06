@@ -32,7 +32,7 @@
 
     public class ItemGridCatalogWidget extends CatalogWidget implements _Str_4311, _Str_4431 
     {
-        protected var _Str_2448:IItemGridWindow;
+        protected var _itemGrid:IItemGridWindow;
         protected var _Str_3370:XML;
         protected var _Str_16251:XML;
         protected var _Str_18737:XML;
@@ -67,10 +67,10 @@
                 this._timer.removeEventListener(TimerEvent.TIMER, this._Str_10532);
                 this._timer = null;
             }
-            if (this._Str_2448 != null)
+            if (this._itemGrid != null)
             {
-                this._Str_2448.destroyGridItems();
-                this._Str_2448 = null;
+                this._itemGrid.destroyGridItems();
+                this._itemGrid = null;
             }
             this._Str_3370 = null;
             this._Str_16251 = null;
@@ -87,13 +87,13 @@
             }
             _Str_2819(CatalogWidgetEnum.ITEM_GRID);
             var k:* = (_window.tags.indexOf("FIXED") > -1);
-            this._Str_2448 = (_window.findChildByName("itemGrid") as IItemGridWindow);
+            this._itemGrid = (_window.findChildByName("itemGrid") as IItemGridWindow);
             if (!k)
             {
                 _window.getChildAt(0).width = _window.width;
                 _window.getChildAt(0).height = _window.height;
             }
-            this._Str_2448.verticalSpacing = 0;
+            this._itemGrid.verticalSpacing = 0;
             var _local_2:XmlAsset = (page.viewer.catalog.assets.getAssetByName("gridItem") as XmlAsset);
             this._Str_3370 = (_local_2.content as XML);
             _local_2 = (page.viewer.catalog.assets.getAssetByName("grid_item_with_price_single") as XmlAsset);
@@ -345,7 +345,7 @@
             var _local_6:IWindowContainer = (page.viewer.catalog.windowManager.buildFromXML(_local_3) as IWindowContainer);
             if (_arg_2)
             {
-                this._Str_2448.addGridItem(_local_6);
+                this._itemGrid.addGridItem(_local_6);
             }
             k.view = _local_6;
             if ((_local_4 is ProductContainer))
@@ -389,7 +389,7 @@
             this._selectedGuildColor1 = k.color1;
             this._selectedGuildColor2 = k.color2;
             this._Str_19595 = k.badgeCode;
-            this._Str_2448.destroyGridItems();
+            this._itemGrid.destroyGridItems();
             for each (_local_2 in page.offers)
             {
                 this._Str_7360(_local_2.gridItem);
@@ -400,9 +400,9 @@
 
         private function _Str_25239(k:IPurchasableOffer):void
         {
-            if (this._Str_2448.getGridItemIndex(k.gridItem.view) >= 0)
+            if (this._itemGrid.getGridItemIndex(k.gridItem.view) >= 0)
             {
-                this._Str_2448.removeGridItem(k.gridItem.view);
+                this._itemGrid.removeGridItem(k.gridItem.view);
             }
         }
 
@@ -422,14 +422,14 @@
             {
                 return;
             }
-            _local_4 = this._Str_2448.getGridItemIndex(_local_2.gridItem.view);
+            _local_4 = this._itemGrid.getGridItemIndex(_local_2.gridItem.view);
             this._Str_25239(_local_2);
             var _local_5:String = ((_local_2.product.furnitureData.fullName.split("*")[0] + "*") + (k.index + 1));
             for each (_local_3 in page.offers)
             {
                 if (_local_3.product.furnitureData.fullName == _local_5)
                 {
-                    this._Str_2448.addGridItemAt(_local_3.gridItem.view, _local_4);
+                    this._itemGrid.addGridItemAt(_local_3.gridItem.view, _local_4);
                     this.select(_local_3.gridItem, false);
                     _local_3.gridItem.grid = this;
                 }

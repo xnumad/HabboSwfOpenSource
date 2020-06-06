@@ -94,7 +94,7 @@
         public function _Str_25508(k:int):void
         {
             var _local_2:IPurchasableOffer;
-            if (((k > -1) && (k < _Str_2448.numGridItems)))
+            if (((k > -1) && (k < _itemGrid.numGridItems)))
             {
                 _local_2 = this._groups[this._selectedGroup][k];
                 this.select(_local_2.gridItem, false);
@@ -233,9 +233,9 @@
                 }
                 _Str_2537 = null;
                 this._selectedGroup = _local_2;
-                if (_Str_2448)
+                if (_itemGrid)
                 {
-                    _Str_2448.destroyGridItems();
+                    _itemGrid.destroyGridItems();
                 }
                 _local_3 = ((this._groups[this._selectedGroup] == null) ? new Vector.<IPurchasableOffer>(0) : this._groups[this._selectedGroup]);
                 page.replaceOffers(_local_3, false);

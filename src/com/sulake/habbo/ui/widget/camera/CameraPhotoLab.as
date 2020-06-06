@@ -50,7 +50,7 @@
         private var _Str_10873:ITextWindow;
         private var _Str_4049:CameraEffect;
         private var _Str_4335:Map;
-        private var _Str_2448:IScrollableGridWindow;
+        private var _itemGrid:IScrollableGridWindow;
         private var _Str_11677:Sprite;
         private var _Str_11626:Map;
         private var _Str_9410:int = 0;
@@ -153,11 +153,11 @@
             {
                 return;
             }
-            var k:int = ((this._window as IFrameWindow).margins.left + this._Str_2448.x);
+            var k:int = ((this._window as IFrameWindow).margins.left + this._itemGrid.x);
             var _local_2:int = 6;
             var _local_3:int = 2;
             var _local_4:IWindowContainer = this._Str_22253(CameraEffect.COLORMATRIX, "camera_icon_colorfilter");
-            _local_4.x = (k + ((this._Str_2448.width - ((_local_3 * (_local_4.width + _local_2)) - _local_2)) / 2));
+            _local_4.x = (k + ((this._itemGrid.width - ((_local_3 * (_local_4.width + _local_2)) - _local_2)) / 2));
             _local_4.y = 50;
             this._window.addChild(_local_4);
             var _local_5:IWindowContainer = this._Str_22253(CameraEffect.COMPOSITE, "camera_icon_compositefilter");
@@ -273,8 +273,8 @@
                 this._Str_19845(null);
                 return;
             }
-            this._Str_2448 = (this._window.findChildByName("item_grid") as IScrollableGridWindow);
-            this._Str_2448.spacing = 7;
+            this._itemGrid = (this._window.findChildByName("item_grid") as IScrollableGridWindow);
+            this._itemGrid.spacing = 7;
             this._Str_2726 = (this._window.findChildByName("image") as IBitmapWrapperWindow);
             this._window.procedure = this._Str_3545;
             var _local_2:ITextWindow = ITextWindow(this._window.findChildByName("captionInput"));
@@ -558,12 +558,12 @@
             {
                 this._Str_4049._Str_18911();
             }
-            this._Str_2448.removeGridItems();
+            this._itemGrid.removeGridItems();
             for each (_local_2 in this._Str_4335)
             {
                 if (_local_2.type == k)
                 {
-                    this._Str_2448.addGridItem(_local_2.button);
+                    this._itemGrid.addGridItem(_local_2.button);
                 }
             }
             this._Str_22699(k);

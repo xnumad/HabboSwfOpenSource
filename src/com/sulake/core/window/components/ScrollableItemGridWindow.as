@@ -19,7 +19,7 @@
         public function ScrollableItemGridWindow(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
-            this._scrollBar.scrollable = this._Str_2448;
+            this._scrollBar.scrollable = this._itemGrid;
             if (this._scrollBar.testStateFlag(WindowState.DISABLED))
             {
                 this.hideScrollBar();
@@ -73,137 +73,137 @@
 
         public function get iterator():IIterator
         {
-            return (this.isConstructionReady()) ? this._Str_2448.iterator : null;
+            return (this.isConstructionReady()) ? this._itemGrid.iterator : null;
         }
 
         public function get scrollH():Number
         {
-            return this._Str_2448.scrollH;
+            return this._itemGrid.scrollH;
         }
 
         public function set scrollH(k:Number):void
         {
-            this._Str_2448.scrollH = k;
+            this._itemGrid.scrollH = k;
         }
 
         public function get scrollV():Number
         {
-            return this._Str_2448.scrollV;
+            return this._itemGrid.scrollV;
         }
 
         public function set scrollV(k:Number):void
         {
-            this._Str_2448.scrollV = k;
+            this._itemGrid.scrollV = k;
         }
 
         public function get maxScrollH():int
         {
-            return this._Str_2448.maxScrollH;
+            return this._itemGrid.maxScrollH;
         }
 
         public function get maxScrollV():int
         {
-            return this._Str_2448.maxScrollV;
+            return this._itemGrid.maxScrollV;
         }
 
         public function get visibleRegion():Rectangle
         {
-            return this._Str_2448.visibleRegion;
+            return this._itemGrid.visibleRegion;
         }
 
         public function get scrollableRegion():Rectangle
         {
-            return this._Str_2448.scrollableRegion;
+            return this._itemGrid.scrollableRegion;
         }
 
         public function get scrollStepH():Number
         {
-            return this._Str_2448.scrollStepH;
+            return this._itemGrid.scrollStepH;
         }
 
         public function set scrollStepH(k:Number):void
         {
-            this._Str_2448.scrollStepH = k;
+            this._itemGrid.scrollStepH = k;
         }
 
         public function get scrollStepV():Number
         {
-            return this._Str_2448.scrollStepV;
+            return this._itemGrid.scrollStepV;
         }
 
         public function set scrollStepV(k:Number):void
         {
-            this._Str_2448.scrollStepV = k;
+            this._itemGrid.scrollStepV = k;
         }
 
         public function get autoArrangeItems():Boolean
         {
-            return this._Str_2448.autoArrangeItems;
+            return this._itemGrid.autoArrangeItems;
         }
 
         public function set autoArrangeItems(k:Boolean):void
         {
-            this._Str_2448.autoArrangeItems = k;
+            this._itemGrid.autoArrangeItems = k;
         }
 
         public function get numColumns():uint
         {
-            return this._Str_2448.numColumns;
+            return this._itemGrid.numColumns;
         }
 
         public function get numRows():uint
         {
-            return this._Str_2448.numRows;
+            return this._itemGrid.numRows;
         }
 
         public function get numGridItems():uint
         {
-            return this._Str_2448.numGridItems;
+            return this._itemGrid.numGridItems;
         }
 
         public function get shouldRebuildGridOnResize():Boolean
         {
-            return this._Str_2448.shouldRebuildGridOnResize;
+            return this._itemGrid.shouldRebuildGridOnResize;
         }
 
         public function set shouldRebuildGridOnResize(k:Boolean):void
         {
-            this._Str_2448.shouldRebuildGridOnResize = k;
+            this._itemGrid.shouldRebuildGridOnResize = k;
         }
 
         public function get spacing():int
         {
-            return this._Str_2448.spacing;
+            return this._itemGrid.spacing;
         }
 
         public function set spacing(k:int):void
         {
-            this._Str_2448.spacing = k;
+            this._itemGrid.spacing = k;
         }
 
         public function set verticalSpacing(k:int):void
         {
-            this._Str_2448.verticalSpacing = k;
+            this._itemGrid.verticalSpacing = k;
         }
 
         public function get scaleToFitItems():Boolean
         {
-            return this._Str_2448.scaleToFitItems;
+            return this._itemGrid.scaleToFitItems;
         }
 
         public function set scaleToFitItems(k:Boolean):void
         {
-            this._Str_2448.scaleToFitItems = k;
+            this._itemGrid.scaleToFitItems = k;
         }
 
         public function get resizeOnItemUpdate():Boolean
         {
-            return this._Str_2448.resizeOnItemUpdate;
+            return this._itemGrid.resizeOnItemUpdate;
         }
 
         public function set resizeOnItemUpdate(k:Boolean):void
         {
-            this._Str_2448.resizeOnItemUpdate = k;
+            this._itemGrid.resizeOnItemUpdate = k;
         }
 
         public function set containerResizeToColumns(k:Boolean):void
@@ -215,7 +215,7 @@
             return false;
         }
 
-        protected function get _Str_2448():IItemGridWindow
+        protected function get _itemGrid():IItemGridWindow
         {
             if (!this._cachedGridList)
             {
@@ -255,82 +255,82 @@
 
         public function addGridItem(k:IWindow):IWindow
         {
-            return this._Str_2448.addGridItem(k);
+            return this._itemGrid.addGridItem(k);
         }
 
         public function addGridItemAt(k:IWindow, _arg_2:uint):IWindow
         {
-            return this._Str_2448.addGridItemAt(k, _arg_2);
+            return this._itemGrid.addGridItemAt(k, _arg_2);
         }
 
         public function getGridItemAt(k:uint):IWindow
         {
-            return this._Str_2448.getGridItemAt(k);
+            return this._itemGrid.getGridItemAt(k);
         }
 
         public function getGridItemByID(k:uint):IWindow
         {
-            return this._Str_2448.getGridItemByID(k);
+            return this._itemGrid.getGridItemByID(k);
         }
 
         public function getGridItemByName(k:String):IWindow
         {
-            return this._Str_2448.getGridItemByName(k);
+            return this._itemGrid.getGridItemByName(k);
         }
 
         public function getGridItemByTag(k:String):IWindow
         {
-            return this._Str_2448.getGridItemByTag(k);
+            return this._itemGrid.getGridItemByTag(k);
         }
 
         public function getGridItemIndex(k:IWindow):int
         {
-            return this._Str_2448.getGridItemIndex(k);
+            return this._itemGrid.getGridItemIndex(k);
         }
 
         public function removeGridItem(k:IWindow):IWindow
         {
-            return this._Str_2448.removeGridItem(k);
+            return this._itemGrid.removeGridItem(k);
         }
 
         public function removeGridItemAt(k:int):IWindow
         {
-            return this._Str_2448.removeGridItemAt(k);
+            return this._itemGrid.removeGridItemAt(k);
         }
 
         public function setGridItemIndex(k:IWindow, _arg_2:int):void
         {
-            this._Str_2448.setGridItemIndex(k, _arg_2);
+            this._itemGrid.setGridItemIndex(k, _arg_2);
         }
 
         public function swapGridItems(k:IWindow, _arg_2:IWindow):void
         {
-            this._Str_2448.swapGridItems(k, _arg_2);
+            this._itemGrid.swapGridItems(k, _arg_2);
         }
 
         public function swapGridItemsAt(k:int, _arg_2:int):void
         {
-            this._Str_2448.swapGridItemsAt(k, _arg_2);
+            this._itemGrid.swapGridItemsAt(k, _arg_2);
         }
 
         public function removeGridItems():void
         {
-            this._Str_2448.removeGridItems();
+            this._itemGrid.removeGridItems();
         }
 
         public function destroyGridItems():void
         {
-            this._Str_2448.destroyGridItems();
+            this._itemGrid.destroyGridItems();
         }
 
         public function rebuildGridStructure():void
         {
-            this._Str_2448.rebuildGridStructure();
+            this._itemGrid.rebuildGridStructure();
         }
 
         protected function isConstructionReady():Boolean
         {
-            return (this._Str_2448) && (this._scrollBar);
+            return (this._itemGrid) && (this._scrollBar);
         }
 
         private function scrollBarEventProc(k:WindowEvent):void
