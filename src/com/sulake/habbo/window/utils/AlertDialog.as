@@ -128,7 +128,7 @@
             }
         }
 
-        public function _Str_24380(k:int):_Str_5394
+        public function getButtonCaption(k:int):_Str_5394
         {
             var _local_2:IInteractiveWindow;
             if (!this._disposed)

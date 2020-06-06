@@ -10,7 +10,7 @@
         function get summary():String;
         function set callback(_arg_1:Function):void;
         function get callback():Function;
-        function _Str_24380(_arg_1:int):_Str_5394;
+        function getButtonCaption(_arg_1:int):_Str_5394;
         function _Str_13956(_arg_1:int, _arg_2:_Str_5394):void;
     }
 }
