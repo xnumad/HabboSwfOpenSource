@@ -275,7 +275,7 @@
             _local_4.id = _arg_2.userId;
             this._Str_17814(false, k);
             this._Str_16819(false, k);
-            _local_5 = (_arg_2.userId == this._manager._Str_3251);
+            _local_5 = (_arg_2.userId == this._manager.avatarId);
             var _local_6:IRegionWindow = IRegionWindow(k.findChildByName("remove_region"));
             _local_6.toolTipCaption = this._manager.localization.getLocalization(((_arg_2.member) ? "group.members.kick" : "group.members.reject"));
             _local_6.visible = ((((!(_arg_2.owner)) && (!(_local_5))) && (this._data.allowedToManage)) && (!(_arg_2.blocked)));

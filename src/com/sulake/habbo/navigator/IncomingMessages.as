@@ -190,7 +190,7 @@
         private function onUserObject(k:IMessageEvent):void
         {
             var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
-            this.data._Str_3251 = _local_2.id;
+            this.data.avatarId = _local_2.id;
             this._navigator.send(new _Str_8102());
             this._navigator.send(new _Str_7413());
         }

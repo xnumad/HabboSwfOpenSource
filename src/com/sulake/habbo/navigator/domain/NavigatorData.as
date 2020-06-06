@@ -225,7 +225,7 @@
             return this._roomEventData;
         }
 
-        public function get _Str_3251():int
+        public function get avatarId():int
         {
             return this._avatarId;
         }
@@ -300,7 +300,7 @@
             return this._currentRoomId;
         }
 
-        public function set _Str_3251(k:int):void
+        public function set avatarId(k:int):void
         {
             this._avatarId = k;
         }

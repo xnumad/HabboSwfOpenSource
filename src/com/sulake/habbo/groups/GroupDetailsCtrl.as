@@ -162,7 +162,7 @@
                 return;
             }
             this._manager.trackGoogle("groupDetails", "leaveGroup");
-            this._manager._Str_20430(this._manager._Str_3251, this._selectedGroup.groupId);
+            this._manager._Str_20430(this._manager.avatarId, this._selectedGroup.groupId);
         }
 
         private function _Str_11995(k:WindowEvent, _arg_2:IWindow):void

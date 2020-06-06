@@ -226,7 +226,7 @@
         private function onUserObject(k:IMessageEvent):void
         {
             var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
-            this._navigator.data._Str_3251 = _local_2.id;
+            this._navigator.data.avatarId = _local_2.id;
             LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_8102());
             LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_7413());
         }

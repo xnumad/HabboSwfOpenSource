@@ -23,14 +23,14 @@
             var _local_3:_Str_3696;
             for each (_local_2 in this._friends)
             {
-                if (_local_2._Str_3251 == k)
+                if (_local_2.avatarId == k)
                 {
                     return _local_2;
                 }
             }
             for each (_local_3 in this._others)
             {
-                if (_local_3._Str_3251 == k)
+                if (_local_3.avatarId == k)
                 {
                     return _local_3;
                 }

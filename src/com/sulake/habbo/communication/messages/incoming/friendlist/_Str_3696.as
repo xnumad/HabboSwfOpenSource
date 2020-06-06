@@ -27,7 +27,7 @@
             this._realName = k.readString();
         }
 
-        public function get _Str_3251():int
+        public function get avatarId():int
         {
             return this._Str_3764;
         }

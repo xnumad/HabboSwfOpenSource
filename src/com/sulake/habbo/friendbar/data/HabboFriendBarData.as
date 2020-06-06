@@ -597,7 +597,7 @@
             var _local_3:* = (!(_local_2._Str_3293 == FriendNotification._Str_5815));
             var _local_4:* = (!(_local_2._Str_3293 == FriendNotification._Str_9572));
             var _local_5:* = (!(_local_2._Str_3293 == FriendNotification._Str_5815));
-            this._Str_14341(_local_2._Str_3251, _local_2._Str_3293, _local_2.message, _local_3, _local_4, _local_5);
+            this._Str_14341(_local_2.avatarId, _local_2._Str_3293, _local_2.message, _local_3, _local_4, _local_5);
         }
 
         private function _Str_14341(k:String, _arg_2:int, _arg_3:String, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Boolean=true):void

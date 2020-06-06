@@ -76,7 +76,7 @@
                     if (_local_2 <= k.friends.length)
                     {
                         _local_4 = k.friends[(_local_2 - 1)];
-                        this.refreshEntry(true, _local_2, _local_4._Str_17102, _local_4._Str_8751, null, ((_local_4._Str_25717) || (_local_3)), false, _local_4._Str_3251);
+                        this.refreshEntry(true, _local_2, _local_4._Str_17102, _local_4._Str_8751, null, ((_local_4._Str_25717) || (_local_3)), false, _local_4.avatarId);
                     }
                     else
                     {
@@ -89,7 +89,7 @@
                             if (_local_2 <= ((k.friends.length + k.others.length) + 1))
                             {
                                 _local_5 = k.others[((_local_2 - 2) - k.friends.length)];
-                                this.refreshEntry(true, _local_2, _local_5._Str_17102, _local_5._Str_8751, null, false, ((!(_local_5._Str_3251 == this._friendList._Str_3251)) && (!(this._friendList._Str_4227.isRequestFriend(_local_5._Str_3251)))), _local_5._Str_3251);
+                                this.refreshEntry(true, _local_2, _local_5._Str_17102, _local_5._Str_8751, null, false, ((!(_local_5.avatarId == this._friendList.avatarId)) && (!(this._friendList._Str_4227.isRequestFriend(_local_5.avatarId)))), _local_5.avatarId);
                             }
                             else
                             {
@@ -260,7 +260,7 @@
                 return;
             }
             Logger.log(("Search result found: " + _local_3._Str_8751));
-            var _local_4:Boolean = this._friendList.askForAFriend(_local_3._Str_3251, _local_3._Str_8751);
+            var _local_4:Boolean = this._friendList.askForAFriend(_local_3.avatarId, _local_3._Str_8751);
             if (!_local_4)
             {
                 this._friendList._Str_18624();
@@ -268,7 +268,7 @@
             else
             {
                 this._friendList._Str_23469(_local_3._Str_8751);
-                this.refreshEntry(true, this._Str_22578(_local_3._Str_3251), _local_3._Str_17102, _local_3._Str_8751, null, false, false, _local_3._Str_3251);
+                this.refreshEntry(true, this._Str_22578(_local_3.avatarId), _local_3._Str_17102, _local_3._Str_8751, null, false, false, _local_3.avatarId);
             }
         }
 
@@ -299,7 +299,7 @@
                 Logger.log(("No search result found with id: " + _arg_2.id));
                 return;
             }
-            this._friendList.messenger.startConversation(_local_3._Str_3251);
+            this._friendList.messenger.startConversation(_local_3.avatarId);
         }
 
         private function _Str_24321(k:WindowEvent, _arg_2:IWindow):void

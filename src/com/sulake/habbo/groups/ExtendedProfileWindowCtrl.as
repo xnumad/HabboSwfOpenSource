@@ -174,7 +174,7 @@
             var _local_3:IWindowContainer;
             var _local_4:IBadgeImageWidget;
             var _local_5:IWindowContainer;
-            var k:* = (this._data.userId == this._manager._Str_3251);
+            var k:* = (this._data.userId == this._manager.avatarId);
             this._groupsList.visible = (this._data.guilds.length > 0);
             this._groupsList.destroyListItems();
             for each (_local_2 in this._data.guilds)
@@ -222,7 +222,7 @@
 
         private function _Str_11540():void
         {
-            var k:* = (this._data.userId == this._manager._Str_3251);
+            var k:* = (this._data.userId == this._manager.avatarId);
             this._window.findChildByName("motto_txt").caption = this._data.motto;
             this._window.findChildByName("status_txt").visible = ((this._data.isFriend) || (k));
             this._window.findChildByName("friend_request_sent_txt").visible = this._data.isRequestFriend;

@@ -15,7 +15,7 @@
             return this._Str_5400;
         }
 
-        public function get _Str_3251():String
+        public function get avatarId():String
         {
             return this._Str_3764;
         }

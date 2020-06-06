@@ -592,7 +592,7 @@
             return this._guildEditorData;
         }
 
-        public function get _Str_3251():int
+        public function get avatarId():int
         {
             return this._avatarId;
         }
