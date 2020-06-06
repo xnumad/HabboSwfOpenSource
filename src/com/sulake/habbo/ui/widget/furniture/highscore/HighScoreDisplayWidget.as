@@ -102,14 +102,14 @@
             for each (_local_5 in _arg_3.entries)
             {
                 _local_8 = IWindowContainer(this._entryTemplate.clone());
-                _local_8.getChildByName("usernames").caption = this._Str_24324(_local_5.users);
+                _local_8.getChildByName("usernames").caption = this.getUserNameList(_local_5.users);
                 _local_8.getChildByName("score").caption = _local_5.score.toString();
                 _local_4.addListItem(_local_8);
             }
             _local_4.invalidate();
         }
 
-        private function _Str_24324(k:Array):String
+        private function getUserNameList(k:Array):String
         {
             var _local_3:String;
             var _local_2:String = "";
