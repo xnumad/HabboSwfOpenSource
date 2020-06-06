@@ -151,7 +151,7 @@
             var _local_7:IWindowContainer;
             this._Str_2669();
             this._dialog = this._habboTalent._Str_4804("talent_track");
-            this._window = IWindowContainer(this._dialog._Str_2429);
+            this._window = IWindowContainer(this._dialog.rootWindow);
             this._window.procedure = this.onWindowEvent;
             this._dialog.background.procedure = this._Str_22317;
             this._habboTalent.windowManager.getWindowContext(_Str_4923).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
@@ -697,9 +697,9 @@
                 return;
             }
             this._taskProgressPopup = this._habboTalent._Str_4804("task_progress_dialog");
-            this._taskProgressPopup._Str_2429.procedure = this._Str_22508;
+            this._taskProgressPopup.rootWindow.procedure = this._Str_22508;
             this._taskProgressPopup.background.procedure = this._Str_22368;
-            var _local_3:IWindowContainer = IWindowContainer(this._taskProgressPopup._Str_2429);
+            var _local_3:IWindowContainer = IWindowContainer(this._taskProgressPopup.rootWindow);
             _local_3.findChildByName("instruction").caption = this._habboTalent.localizationManager._Str_16142(_local_2.badgeCode);
             _local_3.findChildByName("title").caption = this._habboTalent.localizationManager._Str_18132(_local_2.badgeCode);
             _local_3.findChildByName("progress_text").caption = ((((this._habboTalent.localizationManager.getLocalization("talent.track.task.progress.dialog.progress") + " ") + _local_2._Str_7605) + "/") + _local_2._Str_15676);
@@ -757,11 +757,11 @@
 
         private function _Str_7795():IWindowContainer
         {
-            if (((this._taskProgressPopup == null) || (this._taskProgressPopup._Str_2429 == null)))
+            if (((this._taskProgressPopup == null) || (this._taskProgressPopup.rootWindow == null)))
             {
                 return null;
             }
-            var k:IWindowContainer = IWindowContainer(this._taskProgressPopup._Str_2429);
+            var k:IWindowContainer = IWindowContainer(this._taskProgressPopup.rootWindow);
             return (k == null) ? null : IWindowContainer(k.findChildByName("email_container"));
         }
 
@@ -842,7 +842,7 @@
         private function _Str_23046():void
         {
             this._taskProgressPopup = this._habboTalent._Str_4804("tour_task_progress_dialog");
-            var k:IWindowContainer = IWindowContainer(this._taskProgressPopup._Str_2429);
+            var k:IWindowContainer = IWindowContainer(this._taskProgressPopup.rootWindow);
             k.findChildByName("take_tour_button").procedure = this._Str_23407;
             k.findChildByName("decline_tour_region").procedure = this._Str_23494;
             k.findChildByName("header_button_close").procedure = this._Str_22924;

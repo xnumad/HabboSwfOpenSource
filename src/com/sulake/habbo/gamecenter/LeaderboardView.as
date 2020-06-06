@@ -122,7 +122,7 @@
             var k:IAsset = this._gameCenterView.assets.getAssetByName(GAME_CENTER_LEADERBOARD_VIEW_XML);
             var _local_2:XmlAsset = XmlAsset(k);
             this._leaderboardDialog = this._gameCenterView.windowManager.buildModalDialogFromXML(XML(_local_2.content));
-            this._leaderboardWindow = (this._leaderboardDialog._Str_2429 as IWindowContainer);
+            this._leaderboardWindow = (this._leaderboardDialog.rootWindow as IWindowContainer);
             this._leaderboardWindow.findChildByTag("close").addEventListener(WindowMouseEvent.CLICK, this.onCloseHandler);
             this._thisWeekList = (this._leaderboardWindow.findChildByName("this_week_list") as IItemListWindow);
             this._thisWeekToggle = (this._leaderboardWindow.findChildByName("this_week_toggle") as ITextLinkWindow);

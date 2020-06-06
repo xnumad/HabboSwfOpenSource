@@ -147,8 +147,8 @@
             if (((this._helpDialog == null) && (!(this.disposed))))
             {
                 this._helpDialog = this._habboHelp._Str_4804("topics_flow_help");
-                this._helpDialog._Str_2429.procedure = this._Str_18394;
-                this._view = (this._helpDialog._Str_2429 as IWindowContainer);
+                this._helpDialog.rootWindow.procedure = this._Str_18394;
+                this._view = (this._helpDialog.rootWindow as IWindowContainer);
                 this._usersList = (this._view.findChildByName("user_list") as IItemListWindow);
                 this._reasonsList = (this._view.findChildByName("reason_list") as IItemListWindow);
                 this._chatList = (this._view.findChildByName("chat_list") as IItemListWindow);

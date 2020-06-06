@@ -177,7 +177,7 @@
         }
 
 
-        public function get _Str_2429():IWindow
+        public function get rootWindow():IWindow
         {
             return this._Str_7545;
         }

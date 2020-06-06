@@ -6,7 +6,7 @@
 
     public interface _Str_2784 extends IDisposable 
     {
-        function get _Str_2429():IWindow;
+        function get rootWindow():IWindow;
         function get background():IBitmapWrapperWindow;
     }
 }

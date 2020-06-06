@@ -116,7 +116,7 @@
                 return;
             }
             this._modal = windowManager.buildModalDialogFromXML(XML(assets.getAssetByName("craftingwidget_xml").content));
-            if (((!(this._modal)) || (!(this._modal._Str_2429))))
+            if (((!(this._modal)) || (!(this._modal.rootWindow))))
             {
                 return;
             }
@@ -354,7 +354,7 @@
 
         public function get window():IWindowContainer
         {
-            return (this._modal) ? (this._modal._Str_2429 as IWindowContainer) : null;
+            return (this._modal) ? (this._modal.rootWindow as IWindowContainer) : null;
         }
     }
 }

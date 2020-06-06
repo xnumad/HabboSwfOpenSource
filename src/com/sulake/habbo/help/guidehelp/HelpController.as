@@ -57,7 +57,7 @@
             if (((this._helpDialog == null) && (!(this.disposed))))
             {
                 this._helpDialog = this._guideHelp.habboHelp._Str_4804("main_help");
-                this._helpDialog._Str_2429.procedure = this._Str_18394;
+                this._helpDialog.rootWindow.procedure = this._Str_18394;
             }
         }
 
@@ -120,7 +120,7 @@
                     this.closeWindow();
                     return;
                 case "emergency_button":
-                    _local_3 = (IWindowContainer(this._helpDialog._Str_2429).findChildByName("leave_room") as ICheckBoxWindow);
+                    _local_3 = (IWindowContainer(this._helpDialog.rootWindow).findChildByName("leave_room") as ICheckBoxWindow);
                     if (((!(_local_3 == null)) && (_local_3.Selected)))
                     {
                         this._habboHelp.sendMessage(new _Str_3719());

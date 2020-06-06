@@ -68,7 +68,7 @@
             this.closeWindow();
             var k:XML = (this._widget.assets.getAssetByName("mystery_box_open_dialog").content as XML);
             this._dialog = this._widget.handler.container.windowManager.buildModalDialogFromXML(k);
-            this._window = (this._dialog._Str_2429 as IWindowContainer);
+            this._window = (this._dialog.rootWindow as IWindowContainer);
             this._window.procedure = this._Str_25449;
             var _local_2:Boolean = this._widget.handler.container.isOwnerOfFurniture(this._object);
             var _local_3:String = ((_local_2) ? "mysterybox.dialog.owner." : "mysterybox.dialog.other.");
@@ -113,7 +113,7 @@
             this.closeWindow();
             var _local_3:XML = (this._widget.assets.getAssetByName("mystery_box_reward").content as XML);
             this._dialog = this._widget.handler.container.windowManager.buildModalDialogFromXML(_local_3);
-            this._window = (this._dialog._Str_2429 as IWindowContainer);
+            this._window = (this._dialog.rootWindow as IWindowContainer);
             this._window.procedure = this._Str_24015;
             this._imageId = -1;
             var _local_4:ImageResult;

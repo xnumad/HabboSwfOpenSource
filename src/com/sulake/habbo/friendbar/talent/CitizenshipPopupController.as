@@ -59,8 +59,8 @@
         {
             this.hide();
             this._dialog = this._habboTalent._Str_4804("citizenship_welcome");
-            this._dialog._Str_2429.procedure = this.onWindowEvent;
-            IWindowContainer(this._dialog._Str_2429).findChildByName("header_button_close").visible = false;
+            this._dialog.rootWindow.procedure = this.onWindowEvent;
+            IWindowContainer(this._dialog.rootWindow).findChildByName("header_button_close").visible = false;
         }
 
         private function hide():void

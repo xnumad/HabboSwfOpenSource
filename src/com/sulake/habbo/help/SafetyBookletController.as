@@ -48,7 +48,7 @@
         {
             this.closeWindow();
             this._dialog = this._habboHelp._Str_4804("safety_booklet");
-            this._window = IWindowContainer(this._dialog._Str_2429);
+            this._window = IWindowContainer(this._dialog.rootWindow);
             this._window.procedure = this.onWindowEvent;
             this._Str_7910(this._Str_7835);
             this._habboHelp.tracking.trackEventLog("Quiz", "", "talent.quiz.open");

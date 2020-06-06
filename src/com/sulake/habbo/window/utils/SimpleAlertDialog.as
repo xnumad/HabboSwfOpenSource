@@ -43,7 +43,7 @@
             this._habboWindowManagerComponent = k;
             var _local_11:IAsset = k.assets.getAssetByName("simple_alert_xml");
             this._Str_2440 = k.buildModalDialogFromXML((_local_11.content as XML));
-            this._window = IWindowContainer(this._Str_2440._Str_2429);
+            this._window = IWindowContainer(this._Str_2440.rootWindow);
             this._list = IItemListWindow(this._window.findChildByName("list"));
             this._Str_7458 = IItemListWindow(this._window.findChildByName("list_top"));
             this._Str_13821 = IItemListWindow(this._window.findChildByName("list_bottom"));

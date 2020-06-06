@@ -36,7 +36,7 @@
             if (_arg_7)
             {
                 this._Str_2440 = k.buildModalDialogFromXML(_arg_2);
-                this.window = (this._Str_2440._Str_2429 as IFrameWindow);
+                this.window = (this._Str_2440.rootWindow as IFrameWindow);
             }
             else
             {

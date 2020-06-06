@@ -137,7 +137,7 @@
             var k:IAsset = this._gameCenterView.assets.getAssetByName(GAME_CENTER_WAITING_GAME_VIEW_XML);
             var _local_2:XmlAsset = XmlAsset(k);
             this._waitingGameDialog = this._gameCenterView.windowManager.buildModalDialogFromXML(XML(_local_2.content));
-            this._waitingGameWindow = (this._waitingGameDialog._Str_2429 as IWindowContainer);
+            this._waitingGameWindow = (this._waitingGameDialog.rootWindow as IWindowContainer);
             this._waitingGameWindow.findChildByTag("close").addEventListener(WindowMouseEvent.CLICK, this.onCloseHandler);
             this._cancelLink = (this._waitingGameWindow.findChildByName("cancel_link") as ITextLinkWindow);
             this._cancelLink.addEventListener(WindowMouseEvent.CLICK, this._Str_26455);

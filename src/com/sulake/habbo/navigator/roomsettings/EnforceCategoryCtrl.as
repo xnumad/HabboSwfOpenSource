@@ -34,7 +34,7 @@
             var _local_7:FlatCategory;
             this.close();
             this._dialog = this._navigator.windowManager.buildModalDialogFromXML((this._navigator.assets.getAssetByName("enforce_category_xml").content as XML));
-            this._window = (this._dialog._Str_2429 as IFrameWindow);
+            this._window = (this._dialog.rootWindow as IFrameWindow);
             this._window.procedure = this.windowProcedure;
             this._window.center();
             this._window.findChildByName("header_button_close").visible = false;

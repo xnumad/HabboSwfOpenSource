@@ -33,7 +33,7 @@
             super();
             this._controller = k;
             this._modal = _arg_2.buildModalDialogFromXML(XML(this._controller.assets.getAssetByName("campaign_calendar_xml").content));
-            if ((((!(this._modal)) || (!(this._modal._Str_2429))) || (!(this.itemList))))
+            if ((((!(this._modal)) || (!(this._modal.rootWindow))) || (!(this.itemList))))
             {
                 return;
             }
@@ -103,7 +103,7 @@
         {
             var _local_2:Stage = this._controller.context.displayObjectContainer.stage;
             this._itemsOnScreen = Math.floor(((_local_2.stageWidth - (MARGIN * 2)) / (this._Str_13395 + this._Str_18214)));
-            this._modal._Str_2429.width = this._Str_18893(this._itemsOnScreen);
+            this._modal.rootWindow.width = this._Str_18893(this._itemsOnScreen);
             var _local_3:IWindow = this.window.findChildByName("btn_forward");
             if (_local_3)
             {
@@ -240,7 +240,7 @@
 
         public function get window():IFrameWindow
         {
-            return (this._modal) ? (this._modal._Str_2429 as IFrameWindow) : null;
+            return (this._modal) ? (this._modal.rootWindow as IFrameWindow) : null;
         }
 
         private function _Str_26368(k:int):int

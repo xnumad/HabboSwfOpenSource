@@ -90,7 +90,7 @@
             var k:IAsset = this._gameCenterView.assets.getAssetByName(GAME_CENTER_TEASER_VIEW_XML);
             var _local_2:XmlAsset = XmlAsset(k);
             this._teaserDialog = this._gameCenterView.windowManager.buildModalDialogFromXML(XML(_local_2.content));
-            this._teaserWindow = (this._teaserDialog._Str_2429 as IWindowContainer);
+            this._teaserWindow = (this._teaserDialog.rootWindow as IWindowContainer);
             this._teaserWindow.findChildByTag("close").addEventListener(WindowMouseEvent.CLICK, this.onCloseHandler);
             this._teaserWrapper = (this._teaserWindow.findChildByName("teaser_wrapper") as IDisplayObjectWrapper);
             this._Str_23580();
