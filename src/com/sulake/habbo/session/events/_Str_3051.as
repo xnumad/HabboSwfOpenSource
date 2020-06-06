@@ -11,7 +11,7 @@
         private var _id:int = -1;
         private var _headline:String;
         private var _summary:String;
-        private var _Str_5366:int = 0;
+        private var _numQuestions:int = 0;
         private var _Str_5879:String = "";
         private var _Str_4781:String = "";
         private var _Str_5432:Array = null;
@@ -50,12 +50,12 @@
 
         public function get _Str_6760():int
         {
-            return this._Str_5366;
+            return this._numQuestions;
         }
 
         public function set _Str_6760(k:int):void
         {
-            this._Str_5366 = k;
+            this._numQuestions = k;
         }
 
         public function get _Str_6013():String

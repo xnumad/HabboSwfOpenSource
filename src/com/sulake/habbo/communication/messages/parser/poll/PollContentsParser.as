@@ -8,7 +8,7 @@
         private var _id:int = -1;
         private var _Str_5879:String = "";
         private var _Str_4781:String = "";
-        private var _Str_5366:int = 0;
+        private var _numQuestions:int = 0;
         private var _Str_5432:Array = null;
         private var _Str_4353:Boolean = false;
 
@@ -30,7 +30,7 @@
 
         public function get _Str_6760():int
         {
-            return this._Str_5366;
+            return this._numQuestions;
         }
 
         public function get _Str_5643():Array
@@ -48,7 +48,7 @@
             this._id = -1;
             this._Str_5879 = "";
             this._Str_4781 = "";
-            this._Str_5366 = 0;
+            this._numQuestions = 0;
             this._Str_5432 = null;
             return true;
         }
@@ -61,10 +61,10 @@
             this._id = k.readInteger();
             this._Str_5879 = k.readString();
             this._Str_4781 = k.readString();
-            this._Str_5366 = k.readInteger();
+            this._numQuestions = k.readInteger();
             this._Str_5432 = new Array();
             var _local_2:int;
-            while (_local_2 < this._Str_5366)
+            while (_local_2 < this._numQuestions)
             {
                 _local_3 = this.parsePollQuestion(k);
                 _local_4 = k.readInteger();
