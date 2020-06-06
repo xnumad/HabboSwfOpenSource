@@ -913,7 +913,7 @@
             this._container.events.dispatchEvent(_local_6);
             var _local_8:Array = this._container.sessionDataManager.getUserTags(_arg_4.id);
             this._Str_16287(_arg_4.id, _local_8);
-            this._container.habboGroupsManager._Str_14387(_arg_4.id);
+            this._container.habboGroupsManager.updateVisibleExtendedProfile(_arg_4.id);
             this._container.connection.send(new _Str_8049(_arg_4.id));
         }
 

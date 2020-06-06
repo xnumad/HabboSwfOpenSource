@@ -472,7 +472,7 @@
             _local_3.figure = this._data.figure;
         }
 
-        public function _Str_14387(k:int):void
+        public function updateVisibleExtendedProfile(k:int):void
         {
             if (((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data.userId == k))))
             {

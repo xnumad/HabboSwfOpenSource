@@ -635,9 +635,9 @@
             return this._toolbar;
         }
 
-        public function _Str_14387(k:int):void
+        public function updateVisibleExtendedProfile(k:int):void
         {
-            this._extendedProfileWindowCtrl._Str_14387(k);
+            this._extendedProfileWindowCtrl.updateVisibleExtendedProfile(k);
         }
 
         public function showExtendedProfile(k:int):void

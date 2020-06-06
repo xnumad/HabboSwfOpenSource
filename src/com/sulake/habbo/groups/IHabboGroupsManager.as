@@ -7,7 +7,7 @@
     {
         function _Str_12867(_arg_1:Boolean, _arg_2:int):void;
         function _Str_12717(_arg_1:int):void;
-        function _Str_14387(_arg_1:int):void;
+        function updateVisibleExtendedProfile(_arg_1:int):void;
         function showExtendedProfile(_arg_1:int):void;
         function get events():IEventDispatcher;
     }
