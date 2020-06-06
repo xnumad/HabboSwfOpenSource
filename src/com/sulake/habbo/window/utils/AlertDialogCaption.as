@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.window.utils
 {
-    public class _Str_5639 implements ICaption
+    public class AlertDialogCaption implements ICaption
     {
         private var _text:String;
         private var _Str_18097:String;
         private var _visible:Boolean;
 
-        public function _Str_5639(k:String, _arg_2:String, _arg_3:Boolean)
+        public function AlertDialogCaption(k:String, _arg_2:String, _arg_3:Boolean)
         {
             this._text = k;
             this._Str_18097 = _arg_2;

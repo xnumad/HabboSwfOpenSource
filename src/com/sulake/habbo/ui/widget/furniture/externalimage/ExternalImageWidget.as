@@ -44,7 +44,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.window.enum._Str_3023;
-    import com.sulake.habbo.window.utils._Str_5639;
+    import com.sulake.habbo.window.utils.AlertDialogCaption;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.tracking.HabboTracking;
     import flash.net.navigateToURL;
@@ -539,7 +539,7 @@
                     return;
                 case "removebutton":
                     _local_3 = windowManager.confirm(_localizations.getLocalization("inventory.remove.external_image_wallitem_header"), _localizations.getLocalization("inventory.remove.external_image_wallitem_body"), 0, this._Str_25380);
-                    _local_3.setButtonCaption(_Str_3023.BUTTON_OK, new _Str_5639(_localizations.getLocalization("inventory.remove.external_image_wallitem_delete"), "", true));
+                    _local_3.setButtonCaption(_Str_3023.BUTTON_OK, new AlertDialogCaption(_localizations.getLocalization("inventory.remove.external_image_wallitem_delete"), "", true));
                     return;
                 case "makeOwnButton":
                     if (this.getType() == PHOTO_POSTER)

@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.incoming.camera.CameraPublishStatusMessageEvent;
     import com.sulake.habbo.window.utils._Str_2910;
     import com.sulake.habbo.window.enum._Str_3023;
-    import com.sulake.habbo.window.utils._Str_5639;
+    import com.sulake.habbo.window.utils.AlertDialogCaption;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -415,8 +415,8 @@
                         this._competitionSubmitted = false;
                         this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("generic.failed");
                         _local_3 = this._widget.windowManager.confirm("${generic.alert.title}", "${camera.competition.email.not.verified}", (_Str_3023.BUTTON_OK | _Str_3023.BUTTON_CANCEL), this._Str_22568);
-                        _local_3.setButtonCaption(_Str_3023.BUTTON_OK, new _Str_5639(this._widget.localizations.getLocalization("email.settings"), "", true));
-                        _local_3.setButtonCaption(_Str_3023.BUTTON_CANCEL, new _Str_5639(this._widget.localizations.getLocalization("groupforum.settings.cancel"), "", true));
+                        _local_3.setButtonCaption(_Str_3023.BUTTON_OK, new AlertDialogCaption(this._widget.localizations.getLocalization("email.settings"), "", true));
+                        _local_3.setButtonCaption(_Str_3023.BUTTON_CANCEL, new AlertDialogCaption(this._widget.localizations.getLocalization("groupforum.settings.cancel"), "", true));
                     }
                 }
             }
