@@ -398,7 +398,7 @@
         {
             Util._Str_2930(this._listContent);
             var _local_2:Tab = this._navigator.tabs.getSelected();
-            var _local_3:Boolean = ((this._navigator.data._Str_25514) && (_local_2._Str_22642 == Tabs._Str_6358));
+            var _local_3:Boolean = ((this._navigator.data.guestRoomSearchArrived) && (_local_2._Str_22642 == Tabs._Str_6358));
             this._Str_25672(k, _local_3);
             this._Str_24977(k, (!(_local_3)));
             this._Str_23623(k, this._navigator.data.popularTagsArrived);

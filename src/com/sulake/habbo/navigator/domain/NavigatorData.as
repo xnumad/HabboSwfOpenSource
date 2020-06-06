@@ -126,7 +126,7 @@
             return (!(this._lastMsg == null)) && (!((this._lastMsg as _Str_4587) == null));
         }
 
-        public function get _Str_25514():Boolean
+        public function get guestRoomSearchArrived():Boolean
         {
             return (!(this._lastMsg == null)) && (!((this._lastMsg as _Str_4081) == null));
         }
