@@ -154,7 +154,7 @@
             if (_local_4 != null)
             {
                 _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_23155);
-                _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_12867);
+                _local_4.addEventListener(WindowMouseEvent.OVER, this.showGroupBadgeInfo);
                 _local_4.addEventListener(WindowMouseEvent.OUT, this._Str_23279);
             }
             var _local_6:IWindow = this._border.findChildByName("avatar_image_profile_link");
@@ -181,7 +181,7 @@
             this._widget.messageListener.processWidgetMessage(_local_3);
         }
 
-        private function _Str_12867(k:WindowMouseEvent):void
+        private function showGroupBadgeInfo(k:WindowMouseEvent):void
         {
             if (this._widget.userData.groupId < 0)
             {

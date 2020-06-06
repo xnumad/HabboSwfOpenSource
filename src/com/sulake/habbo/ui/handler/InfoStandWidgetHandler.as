@@ -515,7 +515,7 @@
                     {
                         return null;
                     }
-                    this._container.habboGroupsManager._Str_12867(_local_12.own, _local_12.groupId);
+                    this._container.habboGroupsManager.showGroupBadgeInfo(_local_12.own, _local_12.groupId);
                     break;
                 case RoomWidgetGetBadgeImageMessage.RWGOI_MESSAGE_GET_BADGE_IMAGE:
                     _local_13 = (k as RoomWidgetGetBadgeImageMessage);

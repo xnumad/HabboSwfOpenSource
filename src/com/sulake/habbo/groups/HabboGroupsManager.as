@@ -265,7 +265,7 @@
             this.openGroupInfo(_local_3);
         }
 
-        public function _Str_12867(k:Boolean, _arg_2:int):void
+        public function showGroupBadgeInfo(k:Boolean, _arg_2:int):void
         {
             this.openGroupInfo(_arg_2);
             this.send(new EventLogMessageComposer(HABBOGROUPS, ("" + _arg_2), "badge clicked"));
