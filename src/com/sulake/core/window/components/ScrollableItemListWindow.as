@@ -19,7 +19,7 @@
         public function ScrollableItemListWindow(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
-            this._Str_2734.scrollable = this._Str_2338;
+            this._Str_2734.scrollable = this._itemList;
             if (((this._Str_2734.testStateFlag(WindowState.DISABLED)) && (this._autoHideScrollBar)))
             {
                 this.hideScrollBar();
@@ -41,7 +41,7 @@
             super.dispose();
         }
 
-        protected function get _Str_2338():IItemListWindow
+        protected function get _itemList():IItemListWindow
         {
             if (!this._Str_12337)
             {
@@ -52,7 +52,7 @@
 
         public function get scrollableWindow():IWindow
         {
-            return this._Str_2338;
+            return this._itemList;
         }
 
         protected function get _Str_2734():IScrollbarWindow
@@ -89,7 +89,7 @@
             if (this._Str_2734.visible)
             {
                 this._Str_2734.visible = false;
-                this._Str_2338.width = _w;
+                this._itemList.width = _w;
             }
         }
 
@@ -98,7 +98,7 @@
             if (!this._Str_2734.visible)
             {
                 this._Str_2734.visible = true;
-                this._Str_2338.width = (_w - this._Str_2734.width);
+                this._itemList.width = (_w - this._Str_2734.width);
             }
         }
 
@@ -125,7 +125,7 @@
 
         protected function isConstructionReady():Boolean
         {
-            return (this._Str_2338) && (this._Str_2734);
+            return (this._itemList) && (this._Str_2734);
         }
 
         public function set autoHideScrollBar(k:Boolean):void
@@ -141,217 +141,217 @@
 
         public function get iterator():IIterator
         {
-            return (this.isConstructionReady()) ? this._Str_2338.iterator : null;
+            return (this.isConstructionReady()) ? this._itemList.iterator : null;
         }
 
         public function get scrollH():Number
         {
-            return this._Str_2338.scrollH;
+            return this._itemList.scrollH;
         }
 
         public function get scrollV():Number
         {
-            return this._Str_2338.scrollV;
+            return this._itemList.scrollV;
         }
 
         public function set scrollH(k:Number):void
         {
-            this._Str_2338.scrollH = k;
+            this._itemList.scrollH = k;
         }
 
         public function set scrollV(k:Number):void
         {
-            this._Str_2338.scrollV = k;
+            this._itemList.scrollV = k;
         }
 
         public function get maxScrollH():int
         {
-            return this._Str_2338.maxScrollH;
+            return this._itemList.maxScrollH;
         }
 
         public function get maxScrollV():int
         {
-            return this._Str_2338.maxScrollV;
+            return this._itemList.maxScrollV;
         }
 
         public function get visibleRegion():Rectangle
         {
-            return this._Str_2338.visibleRegion;
+            return this._itemList.visibleRegion;
         }
 
         public function get scrollableRegion():Rectangle
         {
-            return this._Str_2338.scrollableRegion;
+            return this._itemList.scrollableRegion;
         }
 
         public function get scrollStepH():Number
         {
-            return this._Str_2338.scrollStepH;
+            return this._itemList.scrollStepH;
         }
 
         public function get scrollStepV():Number
         {
-            return this._Str_2338.scrollStepV;
+            return this._itemList.scrollStepV;
         }
 
         public function set scrollStepH(k:Number):void
         {
-            this._Str_2338.scrollStepH = k;
+            this._itemList.scrollStepH = k;
         }
 
         public function set scrollStepV(k:Number):void
         {
-            this._Str_2338.scrollStepV = k;
+            this._itemList.scrollStepV = k;
         }
 
         public function get spacing():int
         {
-            return this._Str_2338.spacing;
+            return this._itemList.spacing;
         }
 
         public function set spacing(k:int):void
         {
-            this._Str_2338.spacing = k;
+            this._itemList.spacing = k;
         }
 
         public function get scaleToFitItems():Boolean
         {
-            return this._Str_2338.scaleToFitItems;
+            return this._itemList.scaleToFitItems;
         }
 
         public function set scaleToFitItems(k:Boolean):void
         {
-            this._Str_2338.scaleToFitItems = k;
+            this._itemList.scaleToFitItems = k;
         }
 
         public function get autoArrangeItems():Boolean
         {
-            return this._Str_2338.autoArrangeItems;
+            return this._itemList.autoArrangeItems;
         }
 
         public function set autoArrangeItems(k:Boolean):void
         {
-            this._Str_2338.autoArrangeItems = k;
+            this._itemList.autoArrangeItems = k;
         }
 
         public function set resizeOnItemUpdate(k:Boolean):void
         {
-            this._Str_2338.resizeOnItemUpdate = k;
+            this._itemList.resizeOnItemUpdate = k;
         }
 
         public function get resizeOnItemUpdate():Boolean
         {
-            return this._Str_2338.resizeOnItemUpdate;
+            return this._itemList.resizeOnItemUpdate;
         }
 
         public function get numListItems():int
         {
-            return this._Str_2338.numListItems;
+            return this._itemList.numListItems;
         }
 
         public function addListItem(k:IWindow):IWindow
         {
-            return this._Str_2338.addListItem(k);
+            return this._itemList.addListItem(k);
         }
 
         public function addListItemAt(k:IWindow, _arg_2:uint):IWindow
         {
-            return this._Str_2338.addListItemAt(k, _arg_2);
+            return this._itemList.addListItemAt(k, _arg_2);
         }
 
         public function getListItemAt(k:uint):IWindow
         {
-            return this._Str_2338.getListItemAt(k);
+            return this._itemList.getListItemAt(k);
         }
 
         public function getListItemByID(k:uint):IWindow
         {
-            return this._Str_2338.getListItemByID(k);
+            return this._itemList.getListItemByID(k);
         }
 
         public function getListItemByName(k:String):IWindow
         {
-            return this._Str_2338.getListItemByName(k);
+            return this._itemList.getListItemByName(k);
         }
 
         public function getListItemByTag(k:String):IWindow
         {
-            return this._Str_2338.getListItemByTag(k);
+            return this._itemList.getListItemByTag(k);
         }
 
         public function getListItemIndex(k:IWindow):int
         {
-            return this._Str_2338.getListItemIndex(k);
+            return this._itemList.getListItemIndex(k);
         }
 
         public function removeListItem(k:IWindow):IWindow
         {
-            return this._Str_2338.removeListItem(k);
+            return this._itemList.removeListItem(k);
         }
 
         public function removeListItemAt(k:int):IWindow
         {
-            return this._Str_2338.removeListItemAt(k);
+            return this._itemList.removeListItemAt(k);
         }
 
         public function setListItemIndex(k:IWindow, _arg_2:int):void
         {
-            this._Str_2338.setListItemIndex(k, _arg_2);
+            this._itemList.setListItemIndex(k, _arg_2);
         }
 
         public function swapListItems(k:IWindow, _arg_2:IWindow):void
         {
-            this._Str_2338.swapListItems(k, _arg_2);
+            this._itemList.swapListItems(k, _arg_2);
         }
 
         public function swapListItemsAt(k:int, _arg_2:int):void
         {
-            this._Str_2338.swapListItemsAt(k, _arg_2);
+            this._itemList.swapListItemsAt(k, _arg_2);
         }
 
         public function groupListItemsWithID(k:uint, _arg_2:Array, _arg_3:int=0):uint
         {
-            return this._Str_2338.groupListItemsWithID(k, _arg_2, _arg_3);
+            return this._itemList.groupListItemsWithID(k, _arg_2, _arg_3);
         }
 
         public function groupListItemsWithTag(k:String, _arg_2:Array, _arg_3:int=0):uint
         {
-            return this._Str_2338.groupListItemsWithTag(k, _arg_2, _arg_3);
+            return this._itemList.groupListItemsWithTag(k, _arg_2, _arg_3);
         }
 
         public function removeListItems():void
         {
-            this._Str_2338.removeListItems();
+            this._itemList.removeListItems();
         }
 
         public function destroyListItems():void
         {
-            this._Str_2338.destroyListItems();
+            this._itemList.destroyListItems();
         }
 
         public function arrangeListItems():void
         {
-            this._Str_2338.arrangeListItems();
+            this._itemList.arrangeListItems();
         }
 
         public function stopDragging():void
         {
-            this._Str_2338.stopDragging();
+            this._itemList.stopDragging();
         }
 
         public function set disableAutodrag(k:Boolean):void
         {
-            this._Str_2338.disableAutodrag = k;
+            this._itemList.disableAutodrag = k;
         }
 
         public function get isPartOfGridWindow():Boolean
         {
-            return this._Str_2338.isPartOfGridWindow;
+            return this._itemList.isPartOfGridWindow;
         }
 
         public function set isPartOfGridWindow(k:Boolean):void
         {
-            this._Str_2338.disableAutodrag = k;
+            this._itemList.disableAutodrag = k;
         }
 
         override public function get properties():Array

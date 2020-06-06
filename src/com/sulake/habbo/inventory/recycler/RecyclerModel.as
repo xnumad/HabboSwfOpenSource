@@ -25,7 +25,7 @@
         private var _disposed:Boolean = false;
         private var _running:Boolean = false;
         private var _state:uint = 0;
-        private var _Str_2338:Map;
+        private var _itemList:Map;
 
         public function RecyclerModel(k:HabboInventory, _arg_2:IHabboWindowManager, _arg_3:IHabboCommunicationManager, _arg_4:IAssetLibrary, _arg_5:IRoomEngine, _arg_6:IHabboLocalizationManager)
         {
@@ -77,32 +77,32 @@
                 return;
             }
             this._state = _Str_4158;
-            this._Str_2338 = new Map();
+            this._itemList = new Map();
             this._habboInventory._Str_2834._Str_14978(true);
         }
 
         public function _Str_20195():void
         {
             var _local_2:int;
-            if ((((this._Str_2338 == null) || (this._habboInventory == null)) || (this._habboInventory._Str_2834 == null)))
+            if ((((this._itemList == null) || (this._habboInventory == null)) || (this._habboInventory._Str_2834 == null)))
             {
                 return;
             }
             this._state = _Str_599;
             this._habboInventory._Str_2834._Str_14978(false);
             var k:int;
-            while (k < this._Str_2338.length)
+            while (k < this._itemList.length)
             {
-                _local_2 = this._Str_2338.getKey(k);
+                _local_2 = this._itemList.getKey(k);
                 this._habboInventory._Str_2834._Str_10184(_local_2);
                 k++;
             }
-            this._Str_2338 = null;
+            this._itemList = null;
         }
 
         public function _Str_22697():int
         {
-            if ((((this._Str_2338 == null) || (this._habboInventory == null)) || (this._habboInventory._Str_2834 == null)))
+            if ((((this._itemList == null) || (this._habboInventory == null)) || (this._habboInventory._Str_2834 == null)))
             {
                 return 0;
             }
@@ -111,20 +111,20 @@
             {
                 return 0;
             }
-            if (this._Str_2338.getValue(k.id) == null)
+            if (this._itemList.getValue(k.id) == null)
             {
-                this._Str_2338.add(k.id, k);
+                this._itemList.add(k.id, k);
             }
             return k.id;
         }
 
         public function _Str_23825(k:int):Boolean
         {
-            if (this._Str_2338 == null)
+            if (this._itemList == null)
             {
                 return true;
             }
-            var _local_2:IFurnitureItem = this._Str_2338.getValue(k);
+            var _local_2:IFurnitureItem = this._itemList.getValue(k);
             if (_local_2 == null)
             {
                 return false;
@@ -135,21 +135,21 @@
                 return false;
             }
             _local_3._Str_10184(k);
-            this._Str_2338.remove(k);
+            this._itemList.remove(k);
             return true;
         }
 
         public function _Str_23744():Array
         {
             var k:Array = new Array();
-            if (this._Str_2338 == null)
+            if (this._itemList == null)
             {
                 return [];
             }
             var _local_2:int;
-            while (_local_2 < this._Str_2338.length)
+            while (_local_2 < this._itemList.length)
             {
-                k.push(this._Str_2338.getKey(_local_2));
+                k.push(this._itemList.getKey(_local_2));
                 _local_2++;
             }
             return k;

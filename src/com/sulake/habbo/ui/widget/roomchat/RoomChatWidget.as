@@ -60,7 +60,7 @@
         private var _Str_2496:IWindowContainer;
         private var _Str_4396:IItemListWindow;
         private var _Str_3454:IWindowContainer;
-        private var _Str_2338:Array;
+        private var _itemList:Array;
         private var _Str_3107:Array;
         private var _Str_4125:Array;
         private var _Str_11471:int;
@@ -85,7 +85,7 @@
 
         public function RoomChatWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary, _arg_4:IHabboLocalizationManager, _arg_5:IHabboConfigurationManager, _arg_6:int, _arg_7:Component)
         {
-            this._Str_2338 = new Array();
+            this._itemList = new Array();
             this._Str_3107 = new Array();
             this._Str_4125 = new Array();
             this._Str_7165 = new Point();
@@ -180,9 +180,9 @@
             }
             this._Str_2701.dispose();
             this._Str_2701 = null;
-            while (this._Str_2338.length > 0)
+            while (this._itemList.length > 0)
             {
-                k = this._Str_2338.shift();
+                k = this._itemList.shift();
                 k.dispose();
             }
             while (this._Str_3107.length > 0)
@@ -355,7 +355,7 @@
                 this._Str_20317();
             }
             var k:Boolean;
-            if (this._Str_2338.length == 0)
+            if (this._itemList.length == 0)
             {
                 k = true;
             }
@@ -370,9 +370,9 @@
             }
             else
             {
-                if (((this._Str_2338.length > 0) && (this._Str_3107.length > 0)))
+                if (((this._itemList.length > 0) && (this._Str_3107.length > 0)))
                 {
-                    this._Str_9513 = this._Str_9323(this._Str_2338[(this._Str_2338.length - 1)], this._Str_3107[0]);
+                    this._Str_9513 = this._Str_9323(this._itemList[(this._itemList.length - 1)], this._Str_3107[0]);
                 }
                 else
                 {
@@ -399,7 +399,7 @@
             if (!this._Str_16477(this._Str_3107[0]))
             {
                 this._Str_19863();
-                this._Str_20086(this._Str_9323(this._Str_2338[(this._Str_2338.length - 1)], this._Str_3107[0]));
+                this._Str_20086(this._Str_9323(this._itemList[(this._itemList.length - 1)], this._Str_3107[0]));
                 if (!this._Str_16477(this._Str_3107[0]))
                 {
                     this._Str_3454.height = (this._Str_3454.height + _Str_3729);
@@ -418,11 +418,11 @@
                 {
                     this._Str_3454.addChild(_local_2);
                     k.timeStamp = new Date().time;
-                    this._Str_2338.push(k);
+                    this._itemList.push(k);
                     _local_3 = 0;
-                    if (this._Str_2338.length > 1)
+                    if (this._itemList.length > 1)
                     {
-                        _local_3 = this._Str_2338[(this._Str_2338.length - 2)].screenLevel;
+                        _local_3 = this._itemList[(this._itemList.length - 2)].screenLevel;
                         if (this._Str_3910())
                         {
                             k.screenLevel = (_local_3 + 1);
@@ -451,11 +451,11 @@
 
         private function _Str_16477(k:RoomChatItem):Boolean
         {
-            if (this._Str_2338.length == 0)
+            if (this._itemList.length == 0)
             {
                 return true;
             }
-            var _local_2:RoomChatItem = this._Str_2338[(this._Str_2338.length - 1)];
+            var _local_2:RoomChatItem = this._itemList[(this._itemList.length - 1)];
             if (((k == null) || (_local_2 == null)))
             {
                 return false;
@@ -480,10 +480,10 @@
             {
                 return;
             }
-            k = (this._Str_2338.length - 1);
+            k = (this._itemList.length - 1);
             while (k >= 0)
             {
-                _local_2 = this._Str_2338[k];
+                _local_2 = this._itemList[k];
                 if (_local_2 != null)
                 {
                     this._Str_14645(_local_2);
@@ -492,9 +492,9 @@
                 k--;
             }
             k = 0;
-            while (k < this._Str_2338.length)
+            while (k < this._itemList.length)
             {
-                _local_2 = this._Str_2338[k];
+                _local_2 = this._itemList[k];
                 if (_local_2 != null)
                 {
                     this._Str_19620(_local_2);
@@ -539,7 +539,7 @@
             this._Str_4125 = new Array();
             var k:int = new Date().time;
             var _local_2:int;
-            if (this._Str_2338.length == 0)
+            if (this._itemList.length == 0)
             {
                 this._Str_7136 = 1;
                 return;
@@ -549,10 +549,10 @@
                 return;
             }
             this._Str_7136++;
-            var _local_3:int = (this._Str_2338.length - 1);
+            var _local_3:int = (this._itemList.length - 1);
             while (_local_3 >= 0)
             {
-                _local_4 = this._Str_2338[_local_3];
+                _local_4 = this._itemList[_local_3];
                 if (_local_4.view != null)
                 {
                     if ((((_local_4.screenLevel > _Str_6970) || (_local_4.screenLevel == (_local_2 - 1))) || ((k - _local_4.timeStamp) >= _Str_17591)))
@@ -588,7 +588,7 @@
                 {
                     if (_local_4 == -1)
                     {
-                        _local_4 = this._Str_2338.indexOf(_local_2);
+                        _local_4 = this._itemList.indexOf(_local_2);
                     }
                     else
                     {
@@ -604,9 +604,9 @@
                     }
                     if (_local_4 > 0)
                     {
-                        if (this._Str_2338[(_local_4 - 1)].view != null)
+                        if (this._itemList[(_local_4 - 1)].view != null)
                         {
-                            if (((_local_2.y - k) - this._Str_2338[(_local_4 - 1)].y) < this._Str_9323(this._Str_2338[(_local_4 - 1)], _local_2))
+                            if (((_local_2.y - k) - this._itemList[(_local_4 - 1)].y) < this._Str_9323(this._itemList[(_local_4 - 1)], _local_2))
                             {
                                 _local_3 = false;
                             }
@@ -670,22 +670,22 @@
             var _local_4:Number;
             if (k != null)
             {
-                _local_2 = this._Str_2338.indexOf(k);
+                _local_2 = this._itemList.indexOf(k);
                 _local_3 = ((this._Str_3910()) ? 0 : this._Str_7136);
-                if (_local_2 == (this._Str_2338.length - 1))
+                if (_local_2 == (this._itemList.length - 1))
                 {
                     k.y = ((this._Str_23166() - ((_local_3 + 1) * _Str_3729)) - _Str_6383);
                 }
                 else
                 {
-                    _local_4 = this._Str_2338[(_local_2 + 1)].aboveLevels;
+                    _local_4 = this._itemList[(_local_2 + 1)].aboveLevels;
                     if (_local_4 < 2)
                     {
-                        k.y = (this._Str_2338[(_local_2 + 1)].y - this._Str_9323(k, this._Str_2338[(_local_2 + 1)]));
+                        k.y = (this._itemList[(_local_2 + 1)].y - this._Str_9323(k, this._itemList[(_local_2 + 1)]));
                     }
                     else
                     {
-                        k.y = (this._Str_2338[(_local_2 + 1)].y - (_local_4 * _Str_3729));
+                        k.y = (this._itemList[(_local_2 + 1)].y - (_local_4 * _Str_3729));
                     }
                 }
             }
@@ -722,9 +722,9 @@
             var k:RoomChatItem;
             var _local_2:int;
             var _local_3:int;
-            while (_local_3 < this._Str_2338.length)
+            while (_local_3 < this._itemList.length)
             {
-                k = this._Str_2338[_local_3];
+                k = this._itemList[_local_3];
                 if (k != null)
                 {
                     if (_local_3 == 0)
@@ -733,7 +733,7 @@
                     }
                     else
                     {
-                        _local_2 = (_local_2 + this._Str_9323(this._Str_2338[(_local_3 - 1)], k));
+                        _local_2 = (_local_2 + this._Str_9323(this._itemList[(_local_3 - 1)], k));
                     }
                     _local_2 = (_local_2 + ((k.aboveLevels - 1) * _Str_3729));
                 }
@@ -770,9 +770,9 @@
             }
             var k:int;
             var _local_3:int;
-            while (this._Str_2338.length > this._Str_19219)
+            while (this._itemList.length > this._Str_19219)
             {
-                _local_2 = this._Str_2338.shift();
+                _local_2 = this._itemList.shift();
                 _local_3 = this._Str_4125.indexOf(_local_2);
                 if (_local_3 > -1)
                 {
@@ -788,9 +788,9 @@
             }
             var _local_4:Boolean;
             k = 0;
-            while (k < this._Str_2338.length)
+            while (k < this._itemList.length)
             {
-                _local_2 = this._Str_2338[k];
+                _local_2 = this._itemList[k];
                 if (_local_2 != null)
                 {
                     if (_local_2.y <= -(_Str_11054))
@@ -979,9 +979,9 @@
             var _local_4:RoomChatItem;
             var k:int;
             var _local_2:int;
-            while (_local_2 < this._Str_2338.length)
+            while (_local_2 < this._itemList.length)
             {
-                _local_4 = this._Str_2338[_local_2];
+                _local_4 = this._itemList[_local_2];
                 if (_local_4.y > k)
                 {
                     k = _local_4.y;
@@ -1009,9 +1009,9 @@
                 return;
             }
             _local_2 = 0;
-            while (_local_2 < this._Str_2338.length)
+            while (_local_2 < this._itemList.length)
             {
-                _local_4 = this._Str_2338[_local_2];
+                _local_4 = this._itemList[_local_2];
                 _local_4.y = (_local_4.y + _local_3);
                 _local_2++;
             }
@@ -1062,9 +1062,9 @@
             var _local_2:int;
             var k:RoomChatItem;
             _local_2 = 0;
-            while (_local_2 < this._Str_2338.length)
+            while (_local_2 < this._itemList.length)
             {
-                k = this._Str_2338[_local_2];
+                k = this._itemList[_local_2];
                 k._Str_16939();
                 _local_2++;
             }
@@ -1082,9 +1082,9 @@
             var _local_2:int;
             var k:RoomChatItem;
             _local_2 = 0;
-            while (_local_2 < this._Str_2338.length)
+            while (_local_2 < this._itemList.length)
             {
-                k = this._Str_2338[_local_2];
+                k = this._itemList[_local_2];
                 k._Str_22093();
                 _local_2++;
             }
@@ -1105,10 +1105,10 @@
         public function removeItem(k:RoomChatItem):void
         {
             var _local_2:int;
-            _local_2 = this._Str_2338.indexOf(k);
+            _local_2 = this._itemList.indexOf(k);
             if (_local_2 > -1)
             {
-                this._Str_2338.splice(_local_2, 1);
+                this._itemList.splice(_local_2, 1);
             }
             _local_2 = this._Str_4125.indexOf(k);
             if (_local_2 > -1)

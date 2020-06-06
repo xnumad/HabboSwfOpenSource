@@ -18,7 +18,7 @@
     {
         private var _Str_3154:Array;
         private var _Str_4944:PrizeViewer;
-        private var _Str_2338:IItemListWindow;
+        private var _itemList:IItemListWindow;
         private var _Str_3370:XML;
         private var _Str_16116:XML;
         private var _Str_2537:IGridItem;
@@ -37,7 +37,7 @@
                 this._Str_4944 = null;
             }
             this._Str_3154 = null;
-            this._Str_2338 = null;
+            this._itemList = null;
             this._Str_3370 = null;
             this._Str_16116 = null;
             this._Str_2537 = null;
@@ -56,7 +56,7 @@
             {
                 return false;
             }
-            this._Str_2338 = (_window.findChildByName("itemList") as IItemListWindow);
+            this._itemList = (_window.findChildByName("itemList") as IItemListWindow);
             k = (page.viewer.catalog.assets.getAssetByName("gridItem") as XmlAsset);
             this._Str_3370 = (k.content as XML);
             k = (page.viewer.catalog.assets.getAssetByName("recyclerPrizesWidgetLevelItem") as XmlAsset);
@@ -83,7 +83,7 @@
         {
             var _local_6:_Str_3903;
             var _local_2:IWindowContainer = (page.viewer.catalog.windowManager.buildFromXML(this._Str_16116) as IWindowContainer);
-            this._Str_2338.addListItem(_local_2);
+            this._itemList.addListItem(_local_2);
             var _local_3:IWindow = _local_2.findChildByName("headerText");
             if (_local_3 != null)
             {
