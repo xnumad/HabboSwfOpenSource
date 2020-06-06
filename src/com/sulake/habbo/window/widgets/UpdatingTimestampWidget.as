@@ -20,7 +20,7 @@
         private var _disposed:Boolean;
         private var _Str_2326:IWidgetWindow;
         private var _habboWindowManagerComponent:HabboWindowManagerComponent;
-        private var _Str_2302:ILabelWindow;
+        private var _root:ILabelWindow;
         private var _timeStamp:Number;
 
         {
@@ -31,9 +31,9 @@
         {
             this._Str_2326 = k;
             this._habboWindowManagerComponent = _arg_2;
-            this._Str_2302 = (this._habboWindowManagerComponent.create("", WindowType.WINDOW_TYPE_LABEL, 100, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle()) as ILabelWindow);
-            this._Str_2302.textColor = 0x555555;
-            this._Str_2326.rootWindow = this._Str_2302;
+            this._root = (this._habboWindowManagerComponent.create("", WindowType.WINDOW_TYPE_LABEL, 100, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle()) as ILabelWindow);
+            this._root.textColor = 0x555555;
+            this._Str_2326.rootWindow = this._root;
             _Str_10472.addEventListener(TimerEvent.TIMER, this._Str_12760);
             this.reset();
         }
@@ -55,7 +55,7 @@
 
         public function set align(k:String):void
         {
-            this._Str_2302.defaultTextFormat.align = k;
+            this._root.defaultTextFormat.align = k;
         }
 
         public function dispose():void
@@ -63,10 +63,10 @@
             if (!this._disposed)
             {
                 _Str_10472.removeEventListener(TimerEvent.TIMER, this._Str_12760);
-                if (this._Str_2302 != null)
+                if (this._root != null)
                 {
-                    this._Str_2302.dispose();
-                    this._Str_2302 = null;
+                    this._root.dispose();
+                    this._root = null;
                 }
                 if (this._Str_2326 != null)
                 {
@@ -101,11 +101,11 @@
 
         private function _Str_12760(k:TimerEvent=null):void
         {
-            if (((((this._disposed) || (!(this._Str_2302))) || (!(this._habboWindowManagerComponent))) || (!(this._habboWindowManagerComponent.localization))))
+            if (((((this._disposed) || (!(this._root))) || (!(this._habboWindowManagerComponent))) || (!(this._habboWindowManagerComponent.localization))))
             {
                 return;
             }
-            this._Str_2302.caption = FriendlyTime.format(this._habboWindowManagerComponent.localization, ((new Date().getTime() - this._timeStamp) / 1000), ".ago", 1);
+            this._root.caption = FriendlyTime.format(this._habboWindowManagerComponent.localization, ((new Date().getTime() - this._timeStamp) / 1000), ".ago", 1);
         }
     }
 }

@@ -41,8 +41,8 @@
                     this._Str_3422 = k.caption;
                     this._Str_3681 = 500;
                 }
-                _Str_3282.x = _Str_2302.mouseX;
-                _Str_3282.y = _Str_2302.mouseY;
+                _Str_3282.x = _root.mouseX;
+                _Str_3282.y = _root.mouseY;
                 getMousePositionRelativeTo(k, _Str_3282, this._Str_4734);
                 if (this._Str_5194 == null)
                 {

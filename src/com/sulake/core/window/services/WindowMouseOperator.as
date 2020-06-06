@@ -11,7 +11,7 @@
 
     public class WindowMouseOperator implements IDisposable 
     {
-        protected var _Str_2302:DisplayObject;
+        protected var _root:DisplayObject;
         protected var window:WindowController;
         protected var _Str_5527:Boolean;
         protected var _offset:Point;
@@ -22,7 +22,7 @@
 
         public function WindowMouseOperator(k:DisplayObject)
         {
-            this._Str_2302 = k;
+            this._root = k;
             this._Str_3368 = new Point();
             this._Str_3282 = new Point();
             this._offset = new Point();
@@ -41,7 +41,7 @@
             this._offset = null;
             this._Str_3282 = null;
             this._Str_3368 = null;
-            this._Str_2302 = null;
+            this._root = null;
             this._disposed = true;
         }
 
@@ -55,11 +55,11 @@
             }
             if (((k) && (!(k.disposed))))
             {
-                this._Str_2302.addEventListener(MouseEvent.MOUSE_DOWN, this.handler, false);
-                this._Str_2302.addEventListener(MouseEvent.MOUSE_UP, this.handler, false);
-                this._Str_2302.addEventListener(Event.ENTER_FRAME, this.handler);
-                this._Str_3282.x = this._Str_2302.mouseX;
-                this._Str_3282.y = this._Str_2302.mouseY;
+                this._root.addEventListener(MouseEvent.MOUSE_DOWN, this.handler, false);
+                this._root.addEventListener(MouseEvent.MOUSE_UP, this.handler, false);
+                this._root.addEventListener(Event.ENTER_FRAME, this.handler);
+                this._Str_3282.x = this._root.mouseX;
+                this._Str_3282.y = this._root.mouseY;
                 this.window = WindowController(k);
                 this.getMousePositionRelativeTo(k, this._Str_3282, this._offset);
                 this.window.addEventListener(WindowEvent.WINDOW_EVENT_DESTROYED, this.clientWindowDestroyed);
@@ -75,9 +75,9 @@
             {
                 if (this.window == k)
                 {
-                    this._Str_2302.removeEventListener(MouseEvent.MOUSE_DOWN, this.handler, false);
-                    this._Str_2302.removeEventListener(MouseEvent.MOUSE_UP, this.handler, false);
-                    this._Str_2302.removeEventListener(Event.ENTER_FRAME, this.handler);
+                    this._root.removeEventListener(MouseEvent.MOUSE_DOWN, this.handler, false);
+                    this._root.removeEventListener(MouseEvent.MOUSE_UP, this.handler, false);
+                    this._root.removeEventListener(Event.ENTER_FRAME, this.handler);
                     if (!this.window.disposed)
                     {
                         this.window.removeEventListener(WindowEvent.WINDOW_EVENT_DESTROYED, this.clientWindowDestroyed);
@@ -102,11 +102,11 @@
                     }
                     else
                     {
-                        if (((!(this._Str_3282.x == this._Str_2302.mouseX)) || (!(this._Str_3282.y == this._Str_2302.mouseY))))
+                        if (((!(this._Str_3282.x == this._root.mouseX)) || (!(this._Str_3282.y == this._root.mouseY))))
                         {
-                            this.operate(this._Str_2302.mouseX, this._Str_2302.mouseY);
-                            this._Str_3282.x = this._Str_2302.mouseX;
-                            this._Str_3282.y = this._Str_2302.mouseY;
+                            this.operate(this._root.mouseX, this._root.mouseY);
+                            this._Str_3282.x = this._root.mouseX;
+                            this._Str_3282.y = this._root.mouseY;
                         }
                     }
                     return;

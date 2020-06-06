@@ -16,7 +16,7 @@
         private var _Str_2326:IWidgetWindow;
         private var _habboWindowManagerComponent:HabboWindowManagerComponent;
         private var _disposed:Boolean;
-        private var _Str_2302:IWindowContainer;
+        private var _root:IWindowContainer;
         private var _rarityLevel:int;
         private var _Str_26422:IStaticBitmapWrapperWindow;
 
@@ -24,8 +24,8 @@
         {
             this._Str_2326 = k;
             this._habboWindowManagerComponent = _arg_2;
-            this._Str_2302 = IWindowContainer(this._habboWindowManagerComponent.buildFromXML(XML(this._habboWindowManagerComponent.assets.getAssetByName("rarity_item_overlay_griditem_xml").content)));
-            this._Str_2326.rootWindow = this._Str_2302;
+            this._root = IWindowContainer(this._habboWindowManagerComponent.buildFromXML(XML(this._habboWindowManagerComponent.assets.getAssetByName("rarity_item_overlay_griditem_xml").content)));
+            this._Str_2326.rootWindow = this._root;
         }
 
         public function get disposed():Boolean
@@ -36,7 +36,7 @@
         public function set rarityLevel(k:int):void
         {
             this._rarityLevel = k;
-            var _local_2:IBitmapWrapperWindow = IBitmapWrapperWindow(this._Str_2302.findChildByName("rarity_item_overlay_plaque_number_bitmap"));
+            var _local_2:IBitmapWrapperWindow = IBitmapWrapperWindow(this._root.findChildByName("rarity_item_overlay_plaque_number_bitmap"));
             _local_2.bitmap = LimitedItemOverlayNumberBitmapGenerator._Str_14181(this._habboWindowManagerComponent.assets, this.rarityLevel, _local_2.width, _local_2.height);
         }
 
@@ -63,10 +63,10 @@
                     this._Str_2326.rootWindow = null;
                     this._Str_2326 = null;
                 }
-                if (this._Str_2302 != null)
+                if (this._root != null)
                 {
-                    this._Str_2302.dispose();
-                    this._Str_2302 = null;
+                    this._root.dispose();
+                    this._root = null;
                 }
                 this._habboWindowManagerComponent = null;
                 this._disposed = true;

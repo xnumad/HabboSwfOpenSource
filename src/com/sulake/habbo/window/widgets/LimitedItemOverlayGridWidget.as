@@ -23,7 +23,7 @@
         private var _disposed:Boolean = false;
         private var _Str_2326:IWidgetWindow;
         private var _habboWindowManagerComponent:HabboWindowManagerComponent;
-        private var _Str_2302:IWindowContainer;
+        private var _root:IWindowContainer;
         private var _Str_11590:BitmapData;
         private var _Str_5779:IBitmapWrapperWindow;
         private var _Str_12147:int;
@@ -39,10 +39,10 @@
             this._Str_2326 = k;
             this._habboWindowManagerComponent = _arg_2;
             this._Str_11590 = BitmapData(this._habboWindowManagerComponent.assets.getAssetByName("unique_item_label_plaque_metal").content).clone();
-            this._Str_2302 = IWindowContainer(this._habboWindowManagerComponent.buildFromXML(XML(this._habboWindowManagerComponent.assets.getAssetByName("unique_item_overlay_griditem_xml").content)));
-            this._Str_5779 = IBitmapWrapperWindow(this._Str_2302.findChildByName("unique_item_overlay_plaque_background_bitmap"));
+            this._root = IWindowContainer(this._habboWindowManagerComponent.buildFromXML(XML(this._habboWindowManagerComponent.assets.getAssetByName("unique_item_overlay_griditem_xml").content)));
+            this._Str_5779 = IBitmapWrapperWindow(this._root.findChildByName("unique_item_overlay_plaque_background_bitmap"));
             this._Str_5779.bitmap = this._Str_11590;
-            this._Str_2326.rootWindow = this._Str_2302;
+            this._Str_2326.rootWindow = this._root;
         }
 
         public function dispose():void
@@ -58,10 +58,10 @@
                     this._Str_2326.rootWindow = null;
                     this._Str_2326 = null;
                 }
-                if (this._Str_2302 != null)
+                if (this._root != null)
                 {
-                    this._Str_2302.dispose();
-                    this._Str_2302 = null;
+                    this._root.dispose();
+                    this._root = null;
                 }
                 this._habboWindowManagerComponent = null;
                 this._disposed = true;
@@ -76,7 +76,7 @@
         public function set _Str_3442(k:int):void
         {
             this._Str_12147 = k;
-            var _local_2:IBitmapWrapperWindow = IBitmapWrapperWindow(this._Str_2302.findChildByName("unique_item_overlay_plaque_number_bitmap"));
+            var _local_2:IBitmapWrapperWindow = IBitmapWrapperWindow(this._root.findChildByName("unique_item_overlay_plaque_number_bitmap"));
             _local_2.bitmap = LimitedItemOverlayNumberBitmapGenerator._Str_14181(this._habboWindowManagerComponent.assets, this._Str_3442, _local_2.width, _local_2.height);
         }
 

@@ -24,7 +24,7 @@
         private var _disposed:Boolean;
         private var _Str_2326:IWidgetWindow;
         private var _habboWindowManagerComponent:HabboWindowManagerComponent;
-        private var _Str_2302:IWindowContainer;
+        private var _root:IWindowContainer;
         private var _Str_1868:IBitmapWrapperWindow;
         private var _Str_2903:BitmapData;
         private var _children:IWindowContainer;
@@ -36,18 +36,18 @@
             super();
             this._Str_2326 = k;
             this._habboWindowManagerComponent = _arg_2;
-            this._Str_2302 = (this._habboWindowManagerComponent.buildFromXML((this._habboWindowManagerComponent.assets.getAssetByName("separator_xml").content as XML)) as IWindowContainer);
-            this._Str_1868 = (this._Str_2302.getChildByName("canvas") as IBitmapWrapperWindow);
-            this._children = (this._Str_2302.getChildByName("children") as IWindowContainer);
+            this._root = (this._habboWindowManagerComponent.buildFromXML((this._habboWindowManagerComponent.assets.getAssetByName("separator_xml").content as XML)) as IWindowContainer);
+            this._Str_1868 = (this._root.getChildByName("canvas") as IBitmapWrapperWindow);
+            this._children = (this._root.getChildByName("children") as IWindowContainer);
             this._Str_1868.addEventListener(WindowEvent.WINDOW_EVENT_RESIZE, this._Str_2832);
             this._Str_1868.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_2832);
             this._children.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_ADDED, this._Str_2832);
             this._children.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this._Str_2832);
             this._children.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this._Str_2832);
             this._children.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_2832);
-            this._Str_2326.rootWindow = this._Str_2302;
-            this._Str_2302.width = this._Str_2326.width;
-            this._Str_2302.height = this._Str_2326.height;
+            this._Str_2326.rootWindow = this._root;
+            this._root.width = this._Str_2326.width;
+            this._root.height = this._Str_2326.height;
         }
 
         private function _Str_2832(k:WindowEvent):void
@@ -78,10 +78,10 @@
                     this._children.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_2832);
                     this._children = null;
                 }
-                if (this._Str_2302 != null)
+                if (this._root != null)
                 {
-                    this._Str_2302.dispose();
-                    this._Str_2302 = null;
+                    this._root.dispose();
+                    this._root = null;
                 }
                 if (this._Str_2326 != null)
                 {

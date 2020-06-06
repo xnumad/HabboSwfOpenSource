@@ -16,7 +16,7 @@
 
         private var _Str_2326:IWidgetWindow;
         private var _habboWindowManagerComponent:HabboWindowManagerComponent;
-        private var _Str_2302:IWindowContainer;
+        private var _root:IWindowContainer;
         private var _rarityLevel:int;
         private var _disposed:Boolean;
         private var _Str_19285:ITextWindow;
@@ -25,9 +25,9 @@
         {
             this._Str_2326 = k;
             this._habboWindowManagerComponent = _arg_2;
-            this._Str_2302 = IWindowContainer(this._habboWindowManagerComponent.buildFromXML(XML(this._habboWindowManagerComponent.assets.getAssetByName("rarity_item_overlay_preview_xml").content)));
-            this._Str_19285 = (this._Str_2302.findChildByName("level") as ITextWindow);
-            this._Str_2326.rootWindow = this._Str_2302;
+            this._root = IWindowContainer(this._habboWindowManagerComponent.buildFromXML(XML(this._habboWindowManagerComponent.assets.getAssetByName("rarity_item_overlay_preview_xml").content)));
+            this._Str_19285 = (this._root.findChildByName("level") as ITextWindow);
+            this._Str_2326.rootWindow = this._root;
         }
 
         public function set rarityLevel(k:int):void
@@ -70,10 +70,10 @@
         {
             if (!this.disposed)
             {
-                if (this._Str_2302 != null)
+                if (this._root != null)
                 {
-                    this._Str_2302.dispose();
-                    this._Str_2302 = null;
+                    this._root.dispose();
+                    this._root = null;
                 }
             }
             this._disposed = true;
