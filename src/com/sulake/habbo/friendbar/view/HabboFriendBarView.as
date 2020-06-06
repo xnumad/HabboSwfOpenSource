@@ -101,7 +101,7 @@
         private var _gameManager:IHabboGameManager;
         private var _friendsList:IHabboFriendsList;
         private var _toolbar:IHabboToolbar;
-        private var _Str_2563:IWindowContainer;
+        private var _friendBarWindow:IWindowContainer;
         private var _Str_4452:IWindowContainer;
         private var _Str_3984:IWindowContainer;
         private var _Str_2868:Vector.<ITab>;
@@ -147,7 +147,7 @@
 
         public function get _Str_20387():int
         {
-            return (this._Str_2563 == null) ? 0 : ((this._Str_3312) ? _Str_6651 : this._Str_2563.width);
+            return (this._friendBarWindow == null) ? 0 : ((this._Str_3312) ? _Str_6651 : this._friendBarWindow.width);
         }
 
         public function _Str_25574(k:Boolean):void
@@ -205,10 +205,10 @@
                     this._Str_3984.dispose();
                     this._Str_3984 = null;
                 }
-                if (this._Str_2563)
+                if (this._friendBarWindow)
                 {
-                    this._Str_2563.dispose();
-                    this._Str_2563 = null;
+                    this._friendBarWindow.dispose();
+                    this._friendBarWindow = null;
                 }
                 if (this._Str_4452)
                 {
@@ -260,18 +260,18 @@
 
         public function set visible(k:Boolean):void
         {
-            if (this._Str_2563)
+            if (this._friendBarWindow)
             {
-                this._Str_2563.visible = k;
-                this._Str_2563.activate();
+                this._friendBarWindow.visible = k;
+                this._friendBarWindow.activate();
             }
             if (this._Str_3984)
             {
                 this._Str_3984.visible = (!(k));
-                if (this._Str_2563)
+                if (this._friendBarWindow)
                 {
-                    this._Str_3984.x = this._Str_2563.x;
-                    this._Str_3984.y = this._Str_2563.y;
+                    this._Str_3984.x = this._friendBarWindow.x;
+                    this._Str_3984.y = this._friendBarWindow.y;
                     this._Str_3984.activate();
                 }
             }
@@ -279,11 +279,11 @@
 
         private function _Str_25736():void
         {
-            var k:IWindow = _windowManager.createWindow("bar_dimmer", "", WindowType.WINDOW_TYPE_BORDER, _Str_3108._Str_9798, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, this._Str_2563.width, this._Str_2563.height), null, 0);
+            var k:IWindow = _windowManager.createWindow("bar_dimmer", "", WindowType.WINDOW_TYPE_BORDER, _Str_3108._Str_9798, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, this._friendBarWindow.width, this._friendBarWindow.height), null, 0);
             k.color = 0;
             k.blend = 0.3;
-            this._Str_2563.addChild(k);
-            this._Str_2563.invalidate();
+            this._friendBarWindow.addChild(k);
+            this._friendBarWindow.invalidate();
             if (this._Str_2978 == null)
             {
                 this._Str_2978 = new Timer(RoomEnterEffect.totalRunningTime, 1);
@@ -296,17 +296,17 @@
         {
             this._Str_2978.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
             this._Str_2978 = null;
-            var _local_2:IWindow = this._Str_2563.findChildByName("bar_dimmer");
+            var _local_2:IWindow = this._friendBarWindow.findChildByName("bar_dimmer");
             if (_local_2 != null)
             {
-                this._Str_2563.removeChild(_local_2);
+                this._friendBarWindow.removeChild(_local_2);
                 _windowManager.destroy(_local_2);
             }
         }
 
         public function get visible():Boolean
         {
-            return (this._Str_2563) && (this._Str_2563.visible);
+            return (this._friendBarWindow) && (this._friendBarWindow.visible);
         }
 
         public function populate():void
@@ -317,13 +317,13 @@
             var _local_13:Tab;
             var _local_14:int;
             var _local_15:Tab;
-            if (!(!(this._Str_2563 == null)))
+            if (!(!(this._friendBarWindow == null)))
             {
                 return;
             }
             var k:int = this._Str_7119;
             this.deSelect(false);
-            var _local_2:IItemListWindow = (this._Str_2563.findChildByName(LIST) as IItemListWindow);
+            var _local_2:IItemListWindow = (this._friendBarWindow.findChildByName(LIST) as IItemListWindow);
             if (!(!(_local_2 == null)))
             {
                 return;
@@ -476,7 +476,7 @@
 
         private function _Str_22610():Boolean
         {
-            return (this._Str_2563) && (!(this._Str_2563.disposed));
+            return (this._friendBarWindow) && (!(this._friendBarWindow.disposed));
         }
 
         private function _Str_20691():void
@@ -494,16 +494,16 @@
             Token._Str_2787 = assets;
             Token.GAMES = this._gameManager;
             var k:IAsset = assets.getAssetByName(NEW_BAR_XML);
-            this._Str_2563 = (_windowManager.buildFromXML((k.content as XML), WINDOW_LAYER_INDEX) as IWindowContainer);
-            this._Str_2563.y = (this._Str_2563.parent.height - (this._Str_2563.height + _Str_16889));
-            this._Str_2563.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_MOVE, true);
-            this._Str_2563.procedure = this._Str_22794;
+            this._friendBarWindow = (_windowManager.buildFromXML((k.content as XML), WINDOW_LAYER_INDEX) as IWindowContainer);
+            this._friendBarWindow.y = (this._friendBarWindow.parent.height - (this._friendBarWindow.height + _Str_16889));
+            this._friendBarWindow.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_MOVE, true);
+            this._friendBarWindow.procedure = this._Str_22794;
             if (_Str_17134)
             {
                 k = assets.getAssetByName(TOGGLE_XML);
                 this._Str_3984 = (_windowManager.buildFromXML((k.content as XML), WINDOW_LAYER_INDEX) as IWindowContainer);
-                this._Str_3984.x = this._Str_2563.x;
-                this._Str_3984.y = this._Str_2563.y;
+                this._Str_3984.x = this._friendBarWindow.x;
+                this._Str_3984.y = this._friendBarWindow.y;
                 this._Str_3984.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_MOVE, true);
                 this._Str_3984.visible = false;
                 this._Str_3984.procedure = this._Str_24861;
@@ -512,7 +512,7 @@
             {
                 this._Str_25736();
             }
-            var _local_2:IWindowContainer = (this._Str_2563.findChildByName(FRIENDTOOLS) as IWindowContainer);
+            var _local_2:IWindowContainer = (this._friendBarWindow.findChildByName(FRIENDTOOLS) as IWindowContainer);
             this._Str_5894 = (_local_2.getChildByName("line") as IStaticBitmapWrapperWindow);
             this._Str_4075 = IWindowContainer(_local_2.findChildByName("icon_messenger"));
             if (this._Str_4075)
@@ -530,12 +530,12 @@
             {
                 _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_22502);
             }
-            this._Str_10857 = (this._Str_2563.findChildByName(COLLAPSE_LEFT) as IRegionWindow);
+            this._Str_10857 = (this._friendBarWindow.findChildByName(COLLAPSE_LEFT) as IRegionWindow);
             if (this._Str_10857)
             {
                 this._Str_10857.addEventListener(WindowMouseEvent.CLICK, this._Str_20689);
             }
-            this._Str_11102 = (this._Str_2563.findChildByName(COLLAPSE_RIGHT) as IRegionWindow);
+            this._Str_11102 = (this._friendBarWindow.findChildByName(COLLAPSE_RIGHT) as IRegionWindow);
             if (this._Str_11102)
             {
                 this._Str_11102.addEventListener(WindowMouseEvent.CLICK, this._Str_20689);
@@ -579,7 +579,7 @@
             var _local_11:IWindowContainer;
             var _local_12:IBitmapWrapperWindow;
             var _local_13:Tab;
-            var _local_3:IItemListWindow = (this._Str_2563.findChildByName(LIST) as IItemListWindow);
+            var _local_3:IItemListWindow = (this._friendBarWindow.findChildByName(LIST) as IItemListWindow);
             var _local_4:int = this._Str_2780._Str_7830;
             var _local_5:int;
             while (_local_5 < _local_4)
@@ -699,7 +699,7 @@
         public function getIconLocation(k:String):IWindowContainer
         {
             var _local_2:IWindowContainer;
-            _local_2 = IWindowContainer(this._Str_2563.findChildByName(k));
+            _local_2 = IWindowContainer(this._friendBarWindow.findChildByName(k));
             return _local_2;
         }
 
@@ -731,7 +731,7 @@
             {
                 this._Str_8151.notify((this._Str_2780._Str_10570 > 0));
             }
-            if (this._Str_2563)
+            if (this._friendBarWindow)
             {
                 this._Str_21482(this._Str_2780._Str_10570);
                 this._Str_6258(true);
@@ -970,7 +970,7 @@
             }
             if (this._Str_4452)
             {
-                _local_2 = (this._Str_2563.findChildByName("icon_all_friends") as IRegionWindow);
+                _local_2 = (this._friendBarWindow.findChildByName("icon_all_friends") as IRegionWindow);
                 if (_local_2)
                 {
                     _local_2.addChild(this._Str_4452);
@@ -1007,8 +1007,8 @@
 
         private function _Str_22571(k:Boolean, _arg_2:Boolean, _arg_3:Boolean):void
         {
-            var _local_4:IRegionWindow = (this._Str_2563.findChildByName(BUTTON_LEFT_PAGE) as IRegionWindow);
-            var _local_5:IRegionWindow = (this._Str_2563.findChildByName(BUTTON_RIGHT_PAGE) as IRegionWindow);
+            var _local_4:IRegionWindow = (this._friendBarWindow.findChildByName(BUTTON_LEFT_PAGE) as IRegionWindow);
+            var _local_5:IRegionWindow = (this._friendBarWindow.findChildByName(BUTTON_RIGHT_PAGE) as IRegionWindow);
             if (_local_4 != null)
             {
                 _local_4.visible = k;
@@ -1046,10 +1046,10 @@
             var _local_3:int;
             if (!disposed)
             {
-                if (this._Str_2563)
+                if (this._friendBarWindow)
                 {
                     _local_2 = this._toolbar.getRect();
-                    this._Str_2563.width = (this._Str_2563.parent.width - _local_2.right);
+                    this._friendBarWindow.width = (this._friendBarWindow.parent.width - _local_2.right);
                     this._Str_5894.visible = (!(this._Str_3312));
                     if (!k)
                     {
@@ -1090,11 +1090,11 @@
                     }
                     if (this._Str_3312)
                     {
-                        this._Str_2563.x = (this._Str_2563.desktop.width - _Str_6651);
+                        this._friendBarWindow.x = (this._friendBarWindow.desktop.width - _Str_6651);
                     }
                     else
                     {
-                        this._Str_2563.x = (this._Str_2563.desktop.width - this._Str_2563.width);
+                        this._friendBarWindow.x = (this._friendBarWindow.desktop.width - this._friendBarWindow.width);
                         this._Str_5894.x = 1;
                     }
                 }
@@ -1105,7 +1105,7 @@
         {
             var _local_2:IWindow;
             var k:int;
-            for each (_local_2 in this._Str_2563.iterator)
+            for each (_local_2 in this._friendBarWindow.iterator)
             {
                 if (!_local_2.visible)
                 {
@@ -1116,7 +1116,7 @@
                     k = (k + _local_2.width);
                 }
             }
-            this._Str_2563.width = k;
+            this._friendBarWindow.width = k;
         }
 
         private function get _Str_24539():int
@@ -1143,9 +1143,9 @@
 
         private function get _Str_7488():int
         {
-            var k:IItemListWindow = (this._Str_2563.findChildByName(LIST) as IItemListWindow);
-            var _local_2:IWindowContainer = (this._Str_2563.findChildByName(FRIENDTOOLS) as IWindowContainer);
-            var _local_3:int = (((this._Str_2563.width - _local_2.width) - _Str_17338) / (_Str_18952 + k.spacing));
+            var k:IItemListWindow = (this._friendBarWindow.findChildByName(LIST) as IItemListWindow);
+            var _local_2:IWindowContainer = (this._friendBarWindow.findChildByName(FRIENDTOOLS) as IWindowContainer);
+            var _local_3:int = (((this._friendBarWindow.width - _local_2.width) - _Str_17338) / (_Str_18952 + k.spacing));
             return _local_3;
         }
 
