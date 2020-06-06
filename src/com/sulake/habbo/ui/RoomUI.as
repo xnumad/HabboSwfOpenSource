@@ -58,7 +58,7 @@
     import com.sulake.habbo.session.events.RoomSessionPetPackageEvent;
     import com.sulake.habbo.session.events.RoomSessionErrorMessageEvent;
     import com.sulake.habbo.session.events.RoomSessionQueueEvent;
-    import com.sulake.habbo.session.events._Str_3051;
+    import com.sulake.habbo.session.events.RoomSessionPollEvent;
     import com.sulake.habbo.session.events.RoomSessionWordQuizEvent;
     import com.sulake.habbo.session.events.RoomSessionDimmerPresetsEvent;
     import com.sulake.habbo.session.events.RoomSessionFriendRequestEvent;
@@ -115,7 +115,7 @@
     import com.sulake.habbo.ui.widget.events.HideRoomWidgetEvent;
     import flash.events.MouseEvent;
     import com.sulake.habbo.freeflowchat.style.IChatStyleLibrary;
-	import com.sulake.habbo.session.events.RoomSessionPollEvent;
+	import com.sulake.habbo.session.events.RoomSessionVoteEvent;
 
     public class RoomUI extends Component implements IRoomUI, IUpdateReceiver 
     {
@@ -408,13 +408,13 @@
                 "type":RoomSessionQueueEvent.RSQE_QUEUE_STATUS,
                 "callback":this.roomSessionEventHandler
             }, {
-                "type":_Str_3051.RSPE_POLL_CONTENT,
+                "type":RoomSessionPollEvent.RSPE_POLL_CONTENT,
                 "callback":this.roomSessionEventHandler
             }, {
-                "type":_Str_3051.ERROR,
+                "type":RoomSessionPollEvent.ERROR,
                 "callback":this.roomSessionEventHandler
             }, {
-                "type":_Str_3051.RSPE_POLL_OFFER,
+                "type":RoomSessionPollEvent.RSPE_POLL_OFFER,
                 "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionWordQuizEvent.RWPUW_QUESTION_ANSWERED,
@@ -432,10 +432,10 @@
                 "type":RoomSessionFriendRequestEvent.RSFRE_FRIEND_REQUEST,
                 "callback":this.roomSessionEventHandler
             }, {
-                "type":RoomSessionPollEvent.VOTE_QUESTION,
+                "type":RoomSessionVoteEvent.VOTE_QUESTION,
                 "callback":this.roomSessionEventHandler
             },  {
-                "type":RoomSessionPollEvent.VOTE_RESULT,
+                "type":RoomSessionVoteEvent.VOTE_RESULT,
                 "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionUserDataUpdateEvent.RSUDUE_USER_DATA_UPDATED,

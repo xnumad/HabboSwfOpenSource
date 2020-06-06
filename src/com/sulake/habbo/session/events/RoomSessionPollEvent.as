@@ -1,54 +1,101 @@
-package com.sulake.habbo.session.events 
+﻿package com.sulake.habbo.session.events
 {
-	import com.sulake.habbo.session.IRoomSession;
-	/**
-	 * ...
-	 * @author 
-	 */
-	public class RoomSessionPollEvent extends RoomSessionEvent
-	{
-		public static const VOTE_QUESTION:String = "RSPE_VOTE_QUESTION";
-        public static const VOTE_RESULT:String = "RSPE_VOTE_RESULT";
-		
-		private var _question:String = "";
-        private var _choices:Array;
-        private var _SafeStr_7651:Array;
-        private var _SafeStr_7654:int = 0;
-		
-		public function RoomSessionPollEvent(_arg_1:String, _arg_2:IRoomSession, _arg_3:String, _arg_4:Array, _arg_5:Array=null, _arg_6:int=0, _arg_7:Boolean=false, _arg_8:Boolean=false) 
-		{
-			this._choices = [];
-            this._SafeStr_7651 = [];
-            super(_arg_1, _arg_2, _arg_7, _arg_8);
-            this._question = _arg_3;
-            this._choices = _arg_4;
-            this._SafeStr_7651 = _arg_5;
-            if (this._SafeStr_7651 == null)
-            {
-                this._SafeStr_7651 = [];
-            }
-            this._SafeStr_7654 = _arg_6;
-		}
-		
-		public function get question():String
+    import com.sulake.habbo.session.IRoomSession;
+
+    public class RoomSessionPollEvent extends RoomSessionEvent
+    {
+        public static const RSPE_POLL_OFFER:String = "RSPE_POLL_OFFER";
+        public static const ERROR:String = "RSPE_POLL_ERROR";
+        public static const RSPE_POLL_CONTENT:String = "RSPE_POLL_CONTENT";
+
+        private var _id:int = -1;
+        private var _headline:String;
+        private var _summary:String;
+        private var _numQuestions:int = 0;
+        private var _Str_5879:String = "";
+        private var _Str_4781:String = "";
+        private var _Str_5432:Array = null;
+        private var _Str_4353:Boolean = false;
+
+        public function RoomSessionPollEvent(k:String, _arg_2:IRoomSession, _arg_3:int)
         {
-            return this._question;
+            this._id = _arg_3;
+            super(k, _arg_2);
         }
 
-        public function get choices():Array
+        public function get id():int
         {
-            return this._choices.slice();
+            return this._id;
         }
 
-        public function get _SafeStr_4173():Array
+        public function get headline():String
         {
-            return this._SafeStr_7651.slice();
+            return this._headline;
         }
 
-        public function get _SafeStr_4174():int
+        public function set headline(k:String):void
         {
-            return this._SafeStr_7654;
+            this._headline = k;
         }
-	}
 
+        public function get summary():String
+        {
+            return this._summary;
+        }
+
+        public function set summary(k:String):void
+        {
+            this._summary = k;
+        }
+
+        public function get numQuestions():int
+        {
+            return this._numQuestions;
+        }
+
+        public function set numQuestions(k:int):void
+        {
+            this._numQuestions = k;
+        }
+
+        public function get _Str_6013():String
+        {
+            return this._Str_5879;
+        }
+
+        public function set _Str_6013(k:String):void
+        {
+            this._Str_5879 = k;
+        }
+
+        public function get _Str_5838():String
+        {
+            return this._Str_4781;
+        }
+
+        public function set _Str_5838(k:String):void
+        {
+            this._Str_4781 = k;
+        }
+
+        public function get _Str_5643():Array
+        {
+            return this._Str_5432;
+        }
+
+        public function set _Str_5643(k:Array):void
+        {
+            this._Str_5432 = k;
+        }
+
+        public function get _Str_6196():Boolean
+        {
+            return this._Str_4353;
+        }
+
+        public function set _Str_6196(k:Boolean):void
+        {
+            this._Str_4353 = k;
+        }
+    }
 }

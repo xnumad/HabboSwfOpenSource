@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.incoming.poll.PollErrorEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
-    import com.sulake.habbo.session.events._Str_3051;
+    import com.sulake.habbo.session.events.RoomSessionPollEvent;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.communication.messages.parser.poll.PollOfferParser;
     import com.sulake.habbo.communication.messages.parser.poll.PollErrorParser;
@@ -27,7 +27,7 @@
 
         private function parsePollOfferEvent(k:PollOfferEvent):void
         {
-            var _local_4:_Str_3051;
+            var _local_4:RoomSessionPollEvent;
             if (!k)
             {
                 return;
@@ -38,7 +38,7 @@
                 return;
             }
             var _local_3:PollOfferParser = k.getParser();
-            _local_4 = new _Str_3051(_Str_3051.RSPE_POLL_OFFER, _local_2, _local_3.id);
+            _local_4 = new RoomSessionPollEvent(RoomSessionPollEvent.RSPE_POLL_OFFER, _local_2, _local_3.id);
             _local_4.summary = _local_3.headline;
             _local_4.summary = _local_3.summary;
             listener.events.dispatchEvent(_local_4);
@@ -46,7 +46,7 @@
 
         private function parsePollErrorEvent(k:PollErrorEvent):void
         {
-            var _local_4:_Str_3051;
+            var _local_4:RoomSessionPollEvent;
             if (!k)
             {
                 return;
@@ -57,7 +57,7 @@
                 return;
             }
             var _local_3:PollErrorParser = k.getParser();
-            _local_4 = new _Str_3051(_Str_3051.ERROR, _local_2, -1);
+            _local_4 = new RoomSessionPollEvent(RoomSessionPollEvent.ERROR, _local_2, -1);
             _local_4.headline = "???";
             _local_4.summary = "???";
             listener.events.dispatchEvent(_local_4);
@@ -65,7 +65,7 @@
 
         private function parsePollContentsEvent(k:PollContentsEvent):void
         {
-            var _local_4:_Str_3051;
+            var _local_4:RoomSessionPollEvent;
             if (!k)
             {
                 return;
@@ -76,7 +76,7 @@
                 return;
             }
             var _local_3:PollContentsParser = k.getParser();
-            _local_4 = new _Str_3051(_Str_3051.RSPE_POLL_CONTENT, _local_2, _local_3.id);
+            _local_4 = new RoomSessionPollEvent(RoomSessionPollEvent.RSPE_POLL_CONTENT, _local_2, _local_3.id);
             _local_4._Str_6013 = _local_3._Str_6013;
             _local_4._Str_5838 = _local_3._Str_5838;
             _local_4.numQuestions = _local_3.numQuestions;
