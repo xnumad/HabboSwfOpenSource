@@ -83,8 +83,8 @@
 
         public function _Str_19195(k:WindowEvent):void
         {
-            this._navigator.performSearch(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440._Str_5610);
-            this._navigator.trackEventLog("browse.expandsearch", "Results", HabboNewNavigator._Str_6560(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440._Str_5610));
+            this._navigator.performSearch(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440.filteringData);
+            this._navigator.trackEventLog("browse.expandsearch", "Results", HabboNewNavigator._Str_6560(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440.filteringData));
         }
 
         public function _Str_23002(k:WindowEvent):void
@@ -97,7 +97,7 @@
             this._navigator._Str_23169(this._searchCodeShowMore[k.window.id]);
             this._navigator._Str_8273.push(this._searchCodeShowMore[k.window.id]);
             this._Str_18512(k.window.id, false);
-            this._navigator.trackEventLog("browse.collapsecategory", "Results", HabboNewNavigator._Str_6560(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440._Str_5610));
+            this._navigator.trackEventLog("browse.collapsecategory", "Results", HabboNewNavigator._Str_6560(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440.filteringData));
         }
 
         public function _Str_21896(k:WindowEvent):void
@@ -105,12 +105,12 @@
             this._navigator._Str_23630(this._searchCodeShowMore[k.window.id]);
             this._navigator._Str_8273.splice(this._navigator._Str_8273.indexOf(this._searchCodeShowMore[k.window.id]), 1);
             this._Str_18512(k.window.id, true);
-            this._navigator.trackEventLog("browse.uncollapsecategory", "Results", HabboNewNavigator._Str_6560(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440._Str_5610));
+            this._navigator.trackEventLog("browse.uncollapsecategory", "Results", HabboNewNavigator._Str_6560(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440.filteringData));
         }
 
         public function _Str_21650(k:WindowEvent):void
         {
-            this._navigator._Str_25074(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440._Str_5610);
+            this._navigator._Str_25074(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440.filteringData);
         }
 
         public function _Str_20474(k:WindowEvent):void

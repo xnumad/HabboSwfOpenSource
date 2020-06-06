@@ -211,7 +211,7 @@
                 this._window.findChildByName("random_room_border").visible = true;
                 this._window.findChildByName("random_room").procedure = this._Str_22366;
             }
-            this._Str_9680._Str_22850(k._Str_5610, _arg_2);
+            this._Str_9680._Str_22850(k.filteringData, _arg_2);
             this._habboNewNavigator.newResultsRendered = true;
             this._Str_9330 = false;
             if (this._roomInfoPopup)

@@ -11,7 +11,7 @@
         public function SearchResultContainer(k:SearchResultSet)
         {
             this._searchCodeOriginal = k.searchCodeOriginal;
-            this._filteringData = k._Str_5610;
+            this._filteringData = k.filteringData;
             this._resultSet = k;
         }
 
@@ -20,7 +20,7 @@
             return this._searchCodeOriginal;
         }
 
-        public function get _Str_5610():String
+        public function get filteringData():String
         {
             return this._filteringData;
         }

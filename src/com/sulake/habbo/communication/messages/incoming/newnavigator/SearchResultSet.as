@@ -42,7 +42,7 @@
             return this._searchCodeOriginal;
         }
 
-        public function get _Str_5610():String
+        public function get filteringData():String
         {
             return this._filteringData;
         }
