@@ -18,7 +18,7 @@
     import com.sulake.habbo.catalog.enum.CatalogType;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.assets.IAsset;
     import flash.geom.Matrix;
     import com.sulake.habbo.utils.HabboWebTools;
@@ -308,7 +308,7 @@
             }
             IStaticBitmapWrapperWindow(_local_7.findChildByName("asset_image")).assetUri = "catalogue_badge_background";
             var _local_8:IWidgetWindow = (_local_7.findChildByName("badge_image") as IWidgetWindow);
-            var _local_9:_Str_2402 = (_local_8.widget as _Str_2402);
+            var _local_9:IBadgeImageWidget = (_local_8.widget as IBadgeImageWidget);
             _local_8.visible = true;
             _local_9.badgeId = k;
             _arg_2.addChild(_local_7);

@@ -6,7 +6,7 @@
     import com.sulake.habbo.navigator.view.search.ViewMode;
     import com.sulake.core.window.components.IBorderWindow;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -78,7 +78,7 @@
             if (k._Str_7146 != "")
             {
                 _local_3.findChildByName("room_group_badge").visible = true;
-                _Str_2402(IWidgetWindow(_local_3.findChildByName("room_group_badge")).widget).badgeId = k._Str_7146;
+                IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("room_group_badge")).widget).badgeId = k._Str_7146;
             }
             if (k.officialRoomPicRef != null)
             {

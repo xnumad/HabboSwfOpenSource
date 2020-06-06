@@ -12,7 +12,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendlist.IFriend;
     import com.sulake.habbo.window.widgets._Str_2483;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.core.window.components.IRegionWindow;
     import flash.events.TimerEvent;
@@ -205,7 +205,7 @@
             var _local_5:IWidgetWindow;
             var _local_6:IWidgetWindow;
             var _local_7:_Str_2483;
-            var _local_8:_Str_2402;
+            var _local_8:IBadgeImageWidget;
             if (!(k in this._chatEntries))
             {
                 this._chatEntries[k] = [];
@@ -246,7 +246,7 @@
                 }
                 else
                 {
-                    _local_8 = (_local_6.widget as _Str_2402);
+                    _local_8 = (_local_6.widget as IBadgeImageWidget);
                     _local_8.badgeId = _local_3.figure;
                     _local_8.groupId = _local_3.id;
                     _local_6.visible = true;

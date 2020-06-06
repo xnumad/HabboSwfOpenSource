@@ -37,7 +37,7 @@
     import com.sulake.habbo.window.widgets._Str_3338;
     import com.sulake.habbo.room.IStuffData;
     import com.sulake.habbo.window.widgets._Str_4520;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
 
     public class InfoStandFurniView 
     {
@@ -882,7 +882,7 @@
         public function set groupBadgeId(k:String):void
         {
             var _local_2:IWidgetWindow = (this._Str_2341.findChildByName("group_badge_image") as IWidgetWindow);
-            var _local_3:_Str_2402 = (_local_2.widget as _Str_2402);
+            var _local_3:IBadgeImageWidget = (_local_2.widget as IBadgeImageWidget);
             _local_3.badgeId = k;
             _local_3.groupId = this._widget.furniData.groupId;
             _local_2.visible = true;

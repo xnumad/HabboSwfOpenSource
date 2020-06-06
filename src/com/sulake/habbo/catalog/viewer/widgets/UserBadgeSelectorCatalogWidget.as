@@ -10,7 +10,7 @@
     import com.sulake.habbo.catalog.IPurchasableOffer;
     import com.sulake.habbo.catalog.viewer.widgets.events._Str_3308;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.enum._Str_4387;
     import com.sulake.core.window.components.IBorderWindow;
@@ -88,7 +88,7 @@
         protected function _Str_7360(k:String, _arg_2:int):IWindowContainer
         {
             var _local_3:IWindowContainer = (page.viewer.catalog.windowManager.buildFromXML(this._gridItemLayout) as IWindowContainer);
-            var _local_4:_Str_2402 = _Str_2402(IWidgetWindow(_local_3.findChildByName("badgeWidget")).widget);
+            var _local_4:IBadgeImageWidget = IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("badgeWidget")).widget);
             _local_4.type = _Str_4387.NORMAL;
             _local_4.badgeId = k;
             _local_3.id = _arg_2;
@@ -109,7 +109,7 @@
         private function _Str_22817(k:int):String
         {
             var _local_2:IWindowContainer = IWindowContainer(this._itemGrid.getGridItemAt(k));
-            var _local_3:_Str_2402 = _Str_2402(IWidgetWindow(_local_2.findChildByName("badgeWidget")).widget);
+            var _local_3:IBadgeImageWidget = IBadgeImageWidget(IWidgetWindow(_local_2.findChildByName("badgeWidget")).widget);
             return _local_3.badgeId;
         }
 

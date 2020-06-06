@@ -17,7 +17,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.session.events.BadgeImageReadyEvent;
 
@@ -655,7 +655,7 @@
         private function _Str_9242(k:IWindowContainer, _arg_2:Achievement):void
         {
             var _local_3:IWidgetWindow = (k.findChildByName("achievement_pic_bitmap") as IWidgetWindow);
-            var _local_4:_Str_2402 = (_local_3.widget as _Str_2402);
+            var _local_4:IBadgeImageWidget = (_local_3.widget as IBadgeImageWidget);
             if (_arg_2 == null)
             {
                 _local_3.visible = false;
@@ -670,7 +670,7 @@
         private function _Str_16547(k:IWindowContainer, _arg_2:Achievement):void
         {
             var _local_3:IWidgetWindow = (k.findChildByName("achievement_pic_bitmap") as IWidgetWindow);
-            var _local_4:_Str_2402 = (_local_3.widget as _Str_2402);
+            var _local_4:IBadgeImageWidget = (_local_3.widget as IBadgeImageWidget);
             IStaticBitmapWrapperWindow(IWindowContainer(_local_3.rootWindow).findChildByName("bitmap")).assetUri = "common_loading_icon";
             _local_4.badgeId = this._Str_16394(_arg_2);
             _local_4.greyscale = (!(_arg_2._Str_10438));

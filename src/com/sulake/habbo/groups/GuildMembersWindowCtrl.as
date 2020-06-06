@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -195,7 +195,7 @@
                 this.refreshEntry(k, _local_3, _local_2[_local_3]);
                 _local_3++;
             }
-            var _local_4:_Str_2402 = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as _Str_2402);
+            var _local_4:IBadgeImageWidget = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as IBadgeImageWidget);
             _local_4.badgeId = this._data.badgeCode;
             _local_4.groupId = this._data.groupId;
             this._manager.localization.registerParameter("group.members.pageinfo", "amount", ("" + this._data.totalEntries));

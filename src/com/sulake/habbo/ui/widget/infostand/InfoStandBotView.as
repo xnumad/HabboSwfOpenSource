@@ -10,7 +10,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets._Str_2483;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
 
     public class InfoStandBotView 
@@ -258,17 +258,17 @@
 
         public function _Str_5605(k:int, _arg_2:String):void
         {
-            var _local_3:_Str_2402 = (IWidgetWindow(this._border.findChildByName(("badge_" + k))).widget as _Str_2402);
+            var _local_3:IBadgeImageWidget = (IWidgetWindow(this._border.findChildByName(("badge_" + k))).widget as IBadgeImageWidget);
             _local_3.badgeId = _arg_2;
         }
 
         public function _Str_10630():void
         {
-            var _local_2:_Str_2402;
+            var _local_2:IBadgeImageWidget;
             var k:int;
             while (k < 5)
             {
-                _local_2 = (IWidgetWindow(this._border.findChildByName(("badge_" + k))).widget as _Str_2402);
+                _local_2 = (IWidgetWindow(this._border.findChildByName(("badge_" + k))).widget as IBadgeImageWidget);
                 _local_2.badgeId = "";
                 k++;
             }

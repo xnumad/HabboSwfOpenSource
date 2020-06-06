@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
 
     public class Badge 
@@ -23,7 +23,7 @@
             this._window = window;
             this._selectionHighlighter = this._window.findChildByTag("BG_COLOR");
             this._isUnseen = isUnseen;
-            _Str_2402(IWidgetWindow(this._window.findChildByName("badge")).widget).badgeId = badgeId;
+            IBadgeImageWidget(IWidgetWindow(this._window.findChildByName("badge")).widget).badgeId = badgeId;
             this._window.findChildByName("badge").visible = true;
             this.Selected = false;
         }

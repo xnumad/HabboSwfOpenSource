@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_3372;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.habbo.window.enum._Str_4387;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IRegionWindow;
@@ -73,7 +73,7 @@
             var _local_3:IWindowContainer = (k.findChildByName("top_part") as IWindowContainer);
             var _local_4:IWidgetWindow = IWidgetWindow(_local_3.findChildByName("group_icon"));
             _local_4.visible = true;
-            var _local_5:_Str_2402 = (_local_4.widget as _Str_2402);
+            var _local_5:IBadgeImageWidget = (_local_4.widget as IBadgeImageWidget);
             _local_5.badgeId = _arg_2.icon;
             _local_5.groupId = _arg_2.groupId;
             _local_5.type = _Str_4387.GROUP;

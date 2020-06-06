@@ -16,7 +16,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets._Str_2483;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
 
     public class InfoStandRentableBotView 
@@ -262,7 +262,7 @@
 
         private function _Str_5605(k:String):void
         {
-            var _local_2:_Str_2402 = (IWidgetWindow(this._border.findChildByName("badge")).widget as _Str_2402);
+            var _local_2:IBadgeImageWidget = (IWidgetWindow(this._border.findChildByName("badge")).widget as IBadgeImageWidget);
             _local_2.badgeId = k;
         }
 

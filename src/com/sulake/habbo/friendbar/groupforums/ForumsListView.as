@@ -7,7 +7,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.habbo.window.enum._Str_4387;
 
     public class ForumsListView 
@@ -75,7 +75,7 @@
             _local_7.bold = (_local_5 > 0);
             _local_7.text = this._controller.localizationManager.getLocalizationWithParams("groupforum.view.thread_details2", "", "total_messages", _arg_2._Str_8598, "new_messages", _local_5);
             var _local_8:IWidgetWindow = IWidgetWindow(_local_4.findChildByName("group_icon"));
-            var _local_9:_Str_2402 = (_local_8.widget as _Str_2402);
+            var _local_9:IBadgeImageWidget = (_local_8.widget as IBadgeImageWidget);
             _local_9.badgeId = _arg_2.icon;
             _local_9.groupId = _arg_2.groupId;
             _local_9.type = _Str_4387.GROUP;

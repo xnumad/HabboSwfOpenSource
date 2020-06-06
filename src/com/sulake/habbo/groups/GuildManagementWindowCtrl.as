@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.CreateGuildMessageComposer;
     import com.sulake.core.window.components.IDropMenuWindow;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
 
     public class GuildManagementWindowCtrl implements IDisposable 
     {
@@ -734,7 +734,7 @@
         private function _Str_9242():void
         {
             var k:IWindow = this._window.findChildByName("step_1_badge");
-            var _local_2:_Str_2402 = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as _Str_2402);
+            var _local_2:IBadgeImageWidget = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as IBadgeImageWidget);
             if (((_local_2 == null) || (k == null)))
             {
                 return;

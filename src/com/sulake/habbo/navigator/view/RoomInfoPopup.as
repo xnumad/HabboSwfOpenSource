@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.utils.FriendlyTime;
     import com.sulake.habbo.session.enum.RoomTradingLevelEnum;
@@ -187,7 +187,7 @@
             this._window.findChildByName("room_group_owner_container").visible = ((_local_4) || (this._guestRoomData._Str_6938));
             if (_local_4)
             {
-                _Str_2402(IWidgetWindow(this._window.findChildByName("room_group_badge")).widget).badgeId = this._guestRoomData._Str_7146;
+                IBadgeImageWidget(IWidgetWindow(this._window.findChildByName("room_group_badge")).widget).badgeId = this._guestRoomData._Str_7146;
                 this._window.findChildByName("group_name").caption = this._guestRoomData.groupName;
                 this._window.findChildByName("group_name").id = this._guestRoomData.habboGroupId;
                 this._window.findChildByName("room_group_region").id = this._guestRoomData.habboGroupId;

@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -103,7 +103,7 @@
             this._window.findChildByName("group_room_link_region").visible = (_arg_2.roomId > -1);
             this._manager.windowManager.registerLocalizationParameter("group.linktobase", "room_name", _arg_2.roomName);
             this._window.findChildByName("group_room_link").caption = this._manager.localization.getLocalization("group.linktobase");
-            var _local_7:_Str_2402 = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as _Str_2402);
+            var _local_7:IBadgeImageWidget = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as IBadgeImageWidget);
             _local_7.badgeId = this._selectedGroup.badgeCode;
             _local_7.groupId = this._selectedGroup.groupId;
             this._window.findChildByName("join_button").visible = _arg_2._Str_19430;

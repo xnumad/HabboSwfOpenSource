@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
 
@@ -35,10 +35,10 @@
 
         private function _Str_3115(k:SelectProductEvent):void
         {
-            var _local_2:_Str_2402;
+            var _local_2:IBadgeImageWidget;
             if (((!(disposed)) && (k.offer.badgeCode)))
             {
-                _local_2 = (IWidgetWindow(_window.findChildByName("badge")).widget as _Str_2402);
+                _local_2 = (IWidgetWindow(_window.findChildByName("badge")).widget as IBadgeImageWidget);
                 if (_local_2 != null)
                 {
                     _local_2.badgeId = k.offer.badgeCode;

@@ -4,7 +4,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetGuildSelectedEvent;
 
     public class GuildBadgeViewCatalogWidget extends CatalogWidget
@@ -43,7 +43,7 @@
             {
                 return;
             }
-            var _local_2:_Str_2402 = (IWidgetWindow(_window.findChildByName("badge")).widget as _Str_2402);
+            var _local_2:IBadgeImageWidget = (IWidgetWindow(_window.findChildByName("badge")).widget as IBadgeImageWidget);
             if (_local_2 != null)
             {
                 _local_2.badgeId = k.badgeCode;

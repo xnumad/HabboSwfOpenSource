@@ -36,7 +36,7 @@
     import flash.display.BitmapData;
     import com.sulake.core.assets.IAsset;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.Achievement;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.habbo.communication.messages.parser.game.lobby.UserGameAchievementsMessageParser;
     import com.sulake.habbo.game.WindowUtils;
     import com.sulake.core.window.components.IWidgetWindow;
@@ -518,7 +518,7 @@
             var _local_7:String;
             var _local_8:String;
             var _local_9:IWindowContainer;
-            var _local_10:_Str_2402;
+            var _local_10:IBadgeImageWidget;
             var _local_2:UserGameAchievementsMessageEvent = (k as UserGameAchievementsMessageEvent);
             var _local_3:UserGameAchievementsMessageParser = (_local_2.getParser() as UserGameAchievementsMessageParser);
             if (((this._achievementList) && (_local_3.gameTypeId == this._selectedGame)))
@@ -537,7 +537,7 @@
                     _local_9 = (_local_4.clone() as IWindowContainer);
                     this._Str_4343(_local_9, "achievement_name", _local_7);
                     this._Str_4343(_local_9, "achievement_desc", _local_8);
-                    _local_10 = (IWidgetWindow(_local_9.findChildByName("achievement_image")).widget as _Str_2402);
+                    _local_10 = (IWidgetWindow(_local_9.findChildByName("achievement_image")).widget as IBadgeImageWidget);
                     _local_10.badgeId = _local_6;
                     _local_10.greyscale = (!(_local_5._Str_10438));
                     _local_9.findChildByName("achievement_locked_image").visible = (!(_local_5._Str_10438));

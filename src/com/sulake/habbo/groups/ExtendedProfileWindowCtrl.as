@@ -12,7 +12,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.enum._Str_4387;
     import com.sulake.habbo.utils.FriendlyTime;
@@ -172,7 +172,7 @@
         {
             var _local_2:_Str_3266;
             var _local_3:IWindowContainer;
-            var _local_4:_Str_2402;
+            var _local_4:IBadgeImageWidget;
             var _local_5:IWindowContainer;
             var k:* = (this._data.userId == this._manager._Str_3251);
             this._groupsList.visible = (this._data.guilds.length > 0);
@@ -189,7 +189,7 @@
                 _local_3.findChildByName("make_favourite").procedure = this._Str_24216;
                 _local_3.findChildByName("make_favourite").visible = ((!(_local_2.favourite)) && (k));
                 _local_3.findChildByName("make_favourite").id = _local_2.groupId;
-                _local_4 = _Str_2402(IWidgetWindow(_local_3.findChildByName("group_pic_bitmap")).widget);
+                _local_4 = IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("group_pic_bitmap")).widget);
                 _local_4.type = _Str_4387.GROUP;
                 _local_4.badgeId = _local_2.badgeCode;
                 _local_4.groupId = _local_2.groupId;
@@ -317,13 +317,13 @@
         public function onUserBadges(k:int, _arg_2:Array):void
         {
             var _local_3:int;
-            var _local_4:_Str_2402;
+            var _local_4:IBadgeImageWidget;
             if ((((this._data) && (this._Str_12511)) && (!(this._window == null))))
             {
                 _local_3 = 0;
                 while (_local_3 < 5)
                 {
-                    _local_4 = _Str_2402(IWidgetWindow(this._window.findChildByName(("badge_" + _local_3))).widget);
+                    _local_4 = IBadgeImageWidget(IWidgetWindow(this._window.findChildByName(("badge_" + _local_3))).widget);
                     _local_4.type = _Str_4387.NORMAL;
                     _local_4.badgeId = ((_local_3 < _arg_2.length) ? _arg_2[_local_3] : "");
                     _local_3++;

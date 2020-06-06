@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -112,7 +112,7 @@
             this._window.findChildByName("group_logo").visible = this._expanded;
             this._window.findChildByName("group_name_txt").caption = this._group.groupName;
             this._window.findChildByName("info_region").visible = this._expanded;
-            var k:_Str_2402 = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as _Str_2402);
+            var k:IBadgeImageWidget = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as IBadgeImageWidget);
             k.badgeId = this._group.badgeCode;
             k.groupId = this._group.groupId;
             this._window.x = 0;

@@ -25,7 +25,7 @@
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.parser.talent.TalentTrackLevel;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.habbo.utils._Str_988;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -426,7 +426,7 @@
                 case TalentTrack.STATE_ACHIEVED:
                 case TalentTrack.STATE_ONGOING:
                     _local_3 = IWindowContainer(this._rewardAchievedTemplate.clone());
-                    _Str_2402(IWidgetWindow(_local_3.findChildByName("achieved")).widget).badgeId = _arg_2._Str_10964;
+                    IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("achieved")).widget).badgeId = _arg_2._Str_10964;
                     break;
                 case TalentTrack.STATE_LOCKED:
                     _local_3 = IWindowContainer(this._rewardLockedTemplate.clone());
@@ -487,11 +487,11 @@
             {
                 case TalentTrack.STATE_ACHIEVED:
                     _local_3 = IWindowContainer(this._taskAchievedTemplate.clone());
-                    _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _arg_2.badgeCode;
+                    IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _arg_2.badgeCode;
                     break;
                 case TalentTrack.STATE_ONGOING:
                     _local_3 = IWindowContainer(this._taskOngoingTemplate.clone());
-                    _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _arg_2.badgeCode;
+                    IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _arg_2.badgeCode;
                     _local_3.findChildByName("task_progress_fg").width = _Str_988._Str_1452(_arg_2._Str_7605, 0, _arg_2._Str_15676, 0, 48);
                     _local_6 = (_local_3.findChildByName("task_ongoing_region") as IRegionWindow);
                     _local_6.id = _arg_2.achievementId;
@@ -703,7 +703,7 @@
             _local_3.findChildByName("instruction").caption = this._habboTalent.localizationManager._Str_16142(_local_2.badgeCode);
             _local_3.findChildByName("title").caption = this._habboTalent.localizationManager._Str_18132(_local_2.badgeCode);
             _local_3.findChildByName("progress_text").caption = ((((this._habboTalent.localizationManager.getLocalization("talent.track.task.progress.dialog.progress") + " ") + _local_2._Str_7605) + "/") + _local_2._Str_15676);
-            _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _local_2.badgeCode;
+            IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _local_2.badgeCode;
             this._Str_7795().visible = false;
             if (this._habboTalent._Str_9968)
             {

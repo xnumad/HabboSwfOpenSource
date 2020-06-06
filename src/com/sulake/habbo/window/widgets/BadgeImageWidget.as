@@ -19,7 +19,7 @@
     import com.sulake.habbo.gamecenter.GameConfigurations;
     import flash.geom.Point;
 
-    public class BadgeImageWidget implements _Str_2402 
+    public class BadgeImageWidget implements IBadgeImageWidget
     {
         public static const BADGE_IMAGE:String = "badge_image";
         private static const _Str_13540:String = (BADGE_IMAGE + ":type");

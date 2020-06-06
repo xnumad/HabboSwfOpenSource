@@ -18,7 +18,7 @@
     import com.sulake.habbo.window.widgets._Str_2483;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.events.WindowKeyboardEvent;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRoomTagSearchMessage;
     import com.sulake.habbo.communication.messages.incoming.users._Str_4838;
     import com.sulake.habbo.friendlist.RelationshipStatusEnum;
@@ -474,17 +474,17 @@
 
         public function _Str_5605(k:int, _arg_2:String):void
         {
-            var _local_3:_Str_2402 = (IWidgetWindow(this._Str_2341.findChildByName(("badge_" + k))).widget as _Str_2402);
+            var _local_3:IBadgeImageWidget = (IWidgetWindow(this._Str_2341.findChildByName(("badge_" + k))).widget as IBadgeImageWidget);
             _local_3.badgeId = _arg_2;
         }
 
         public function _Str_10630():void
         {
-            var _local_2:_Str_2402;
+            var _local_2:IBadgeImageWidget;
             var k:int;
             while (k < 5)
             {
-                _local_2 = (IWidgetWindow(this._Str_2341.findChildByName(("badge_" + k))).widget as _Str_2402);
+                _local_2 = (IWidgetWindow(this._Str_2341.findChildByName(("badge_" + k))).widget as IBadgeImageWidget);
                 _local_2.badgeId = "";
                 k++;
             }
@@ -492,13 +492,13 @@
 
         public function _Str_21116():void
         {
-            var k:_Str_2402 = (IWidgetWindow(this._Str_2341.findChildByName("badge_group")).widget as _Str_2402);
+            var k:IBadgeImageWidget = (IWidgetWindow(this._Str_2341.findChildByName("badge_group")).widget as IBadgeImageWidget);
             k.badgeId = "";
         }
 
         public function _Str_16673(k:String):void
         {
-            var _local_2:_Str_2402 = (IWidgetWindow(this._Str_2341.findChildByName("badge_group")).widget as _Str_2402);
+            var _local_2:IBadgeImageWidget = (IWidgetWindow(this._Str_2341.findChildByName("badge_group")).widget as IBadgeImageWidget);
             _local_2.badgeId = k;
         }
 

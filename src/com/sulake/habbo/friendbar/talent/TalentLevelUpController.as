@@ -11,7 +11,7 @@
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IItemListWindow;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
@@ -124,7 +124,7 @@
         private function _Str_13209(k:_Str_3450):IWindow
         {
             var _local_2:IWindowContainer = (this._rewardPerkTemplate.clone() as IWindowContainer);
-            _Str_2402(IWidgetWindow(_local_2.findChildByName("perk_image")).widget).badgeId = k._Str_10964;
+            IBadgeImageWidget(IWidgetWindow(_local_2.findChildByName("perk_image")).widget).badgeId = k._Str_10964;
             _local_2.findChildByName("perk_name").caption = (("${perk." + k._Str_10964) + ".name}");
             return _local_2;
         }

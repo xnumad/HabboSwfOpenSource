@@ -6,7 +6,7 @@
     import com.sulake.core.window.components.IItemGridWindow;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.components.IButtonWindow;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import com.sulake.core.window.IWindow;
@@ -117,7 +117,7 @@
                 }
                 this._Str_19119(this._model.controller.localization.getBadgeName(_local_2.badgeId));
                 this._Str_20172(this._model.controller.localization.getBadgeDesc(_local_2.badgeId));
-                _Str_2402(IWidgetWindow(this._view.findChildByName("badge_image")).widget).badgeId = _local_2.badgeId;
+                IBadgeImageWidget(IWidgetWindow(this._view.findChildByName("badge_image")).widget).badgeId = _local_2.badgeId;
                 this._view.findChildByName("badge_image").visible = true;
                 _local_3 = this._model._Str_5453(BadgesModel._Str_6557);
                 if ((((!(_local_3 == null)) && (_local_3.length >= this._model._Str_23348())) && (!(_local_2._Str_3222))))

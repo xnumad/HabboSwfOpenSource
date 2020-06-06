@@ -16,7 +16,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.window.widgets._Str_2402;
+    import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
 
     public class AchievementsResolutionController implements IDisposable 
@@ -312,7 +312,7 @@
         private function _Str_9242(k:IWindowContainer, _arg_2:AchievementResolution):void
         {
             var _local_3:IWidgetWindow = (k.findChildByName("achievement_pic_bitmap") as IWidgetWindow);
-            var _local_4:_Str_2402 = (_local_3.widget as _Str_2402);
+            var _local_4:IBadgeImageWidget = (_local_3.widget as IBadgeImageWidget);
             if (_arg_2 == null)
             {
                 _local_3.visible = false;
@@ -327,7 +327,7 @@
         private function _Str_16547(k:AchievementResolution):void
         {
             var _local_2:IWidgetWindow = (this._window.findChildByName("achievement_badge") as IWidgetWindow);
-            var _local_3:_Str_2402 = (_local_2.widget as _Str_2402);
+            var _local_3:IBadgeImageWidget = (_local_2.widget as IBadgeImageWidget);
             IStaticBitmapWrapperWindow(IWindowContainer(_local_2.rootWindow).findChildByName("bitmap")).assetUri = "common_loading_icon";
             _local_3.badgeId = k.badgeId;
             _local_3.greyscale = (!(k.enabled));
