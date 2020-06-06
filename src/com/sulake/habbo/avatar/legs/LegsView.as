@@ -21,14 +21,14 @@
         {
             if (!window)
             {
-                window = (_Str_2307.controller.view.getCategoryContainer(AvatarEditorFigureCategory.LEGS) as IWindowContainer);
+                window = (_model.controller.view.getCategoryContainer(AvatarEditorFigureCategory.LEGS) as IWindowContainer);
                 window.visible = false;
                 window.procedure = this._Str_3328;
             }
             _isInitialized = true;
-            if (((_Str_2307) && (_Str_2889 == "")))
+            if (((_model) && (_Str_2889 == "")))
             {
-                _Str_2307.switchCategory(FigureData.LG);
+                _model.switchCategory(FigureData.LG);
             }
         }
 

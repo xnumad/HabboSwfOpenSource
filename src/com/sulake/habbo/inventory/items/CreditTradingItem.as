@@ -66,7 +66,7 @@
 
         override protected function createWindow():void
         {
-            _window = _Str_2307.createItemWindow(INVENTORY_THUMB_CREDITS_XML);
+            _window = _model.createItemWindow(INVENTORY_THUMB_CREDITS_XML);
         }
 
         override public function getMinimumItemsToShowCounter():int

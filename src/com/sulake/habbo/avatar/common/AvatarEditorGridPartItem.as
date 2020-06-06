@@ -28,7 +28,7 @@
 
         private const _Str_7127:Array = [2, 6, 0, 4, 3, 1];
 
-        private var _Str_2307:IAvatarEditorCategoryModel;
+        private var _model:IAvatarEditorCategoryModel;
         private var _view:IWindowContainer;
         private var _Str_2779:IWindow;
         private var _partSet:IFigurePartSet;
@@ -75,7 +75,7 @@
             var _local_7:IFigurePart;
             var _local_8:Array;
             super();
-            this._Str_2307 = _arg_2;
+            this._model = _arg_2;
             this._partSet = _arg_3;
             this._view = k;
             this._Str_2779 = this._view.findChildByTag("BG_COLOR");
@@ -94,7 +94,7 @@
                     this._Str_18982 = Math.max(this._Str_18982, _local_7._Str_827);
                 }
             }
-            this._Str_1599 = this._Str_2307.controller.manager.avatarRenderManager;
+            this._Str_1599 = this._model.controller.manager.avatarRenderManager;
             this._view.addEventListener(WindowMouseEvent.OVER, this.onMouseOver);
             this._view.addEventListener(WindowMouseEvent.OUT, this._Str_17495);
             this._Str_8768();
@@ -124,7 +124,7 @@
             {
                 return;
             }
-            this._Str_2307 = null;
+            this._model = null;
             this._partSet = null;
             if (this._view != null)
             {
@@ -268,7 +268,7 @@
             var _local_3:String;
             var _local_4:BitmapDataAsset;
             var _local_5:BitmapData;
-            if (this._Str_2307 == null)
+            if (this._model == null)
             {
                 this._Str_6176 = null;
                 return false;
@@ -346,7 +346,7 @@
             {
                 return null;
             }
-            if (this._Str_2307 == null)
+            if (this._model == null)
             {
                 return null;
             }
@@ -356,7 +356,7 @@
                 {
                     if (!_Str_8581)
                     {
-                        _local_9 = this._Str_2307.controller.manager.windowManager.assets.getAssetByName("avatar_editor_avatar_editor_download_icon");
+                        _local_9 = this._model.controller.manager.windowManager.assets.getAssetByName("avatar_editor_avatar_editor_download_icon");
                         _Str_8581 = (_local_9.content as BitmapData);
                     }
                     return _Str_8581;

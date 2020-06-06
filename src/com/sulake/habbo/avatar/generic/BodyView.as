@@ -31,7 +31,7 @@
         {
             if (!window)
             {
-                window = (_Str_2307.controller.view.getCategoryContainer(AvatarEditorFigureCategory.GENERIC) as IWindowContainer);
+                window = (_model.controller.view.getCategoryContainer(AvatarEditorFigureCategory.GENERIC) as IWindowContainer);
                 window.visible = false;
                 window.procedure = this.windowEventProc;
             }
@@ -52,11 +52,11 @@
 
         public function updateGenderTab():void
         {
-            if (_Str_2307 == null)
+            if (_model == null)
             {
                 return;
             }
-            switch (_Str_2307.controller.gender)
+            switch (_model.controller.gender)
             {
                 case FigureData.M:
                     _Str_3621(this.TAB_BOY_ID);
@@ -82,11 +82,11 @@
                 switch (_arg_2.name)
                 {
                     case this.TAB_BOY_ID:
-                        _Str_2307.controller.gender = FigureData.M;
+                        _model.controller.gender = FigureData.M;
                         k.stopPropagation();
                         break;
                     case this.TAB_GIRL_ID:
-                        _Str_2307.controller.gender = FigureData.F;
+                        _model.controller.gender = FigureData.F;
                         k.stopPropagation();
                         break;
                 }

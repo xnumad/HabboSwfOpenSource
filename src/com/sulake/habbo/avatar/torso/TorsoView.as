@@ -20,21 +20,21 @@
         {
             if (!window)
             {
-                window = (_Str_2307.controller.view.getCategoryContainer(AvatarEditorFigureCategory.TORSO) as IWindowContainer);
+                window = (_model.controller.view.getCategoryContainer(AvatarEditorFigureCategory.TORSO) as IWindowContainer);
                 window.visible = false;
                 window.procedure = this._Str_3328;
             }
             _isInitialized = true;
-            if (((_Str_2307) && (_Str_2889 == "")))
+            if (((_model) && (_Str_2889 == "")))
             {
-                _Str_2307.switchCategory(FigureData.CH);
+                _model.switchCategory(FigureData.CH);
             }
         }
 
         override public function dispose():void
         {
             super.dispose();
-            _Str_2307 = null;
+            _model = null;
         }
 
         public function switchCategory(k:String):void

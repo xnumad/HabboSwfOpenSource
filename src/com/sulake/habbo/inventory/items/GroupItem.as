@@ -34,7 +34,7 @@
 
         protected var _Str_1636:Map;
         protected var _window:IWindowContainer;
-        protected var _Str_2307:FurniModel;
+        protected var _model:FurniModel;
         private var _type:int;
         private var _roomEngine:IRoomEngine;
         private var _Str_1352:Boolean;
@@ -61,7 +61,7 @@
 
         public function GroupItem(k:FurniModel, _arg_2:int, _arg_3:int, _arg_4:IRoomEngine, _arg_5:Boolean, _arg_6:IStuffData, _arg_7:Number, _arg_8:BitmapData, _arg_9:Boolean, _arg_10:String)
         {
-            this._Str_2307 = k;
+            this._model = k;
             this._type = _arg_2;
             this._roomEngine = _arg_4;
             this._Str_14011 = _arg_5;
@@ -75,19 +75,19 @@
             switch (this._category)
             {
                 case FurniCategory.WALL_PAPER:
-                    this._name = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.wallpaper.name");
-                    this._description = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.wallpaper.desc");
+                    this._name = this._model.controller.localization.getLocalization("inventory.furni.item.wallpaper.name");
+                    this._description = this._model.controller.localization.getLocalization("inventory.furni.item.wallpaper.desc");
                     break;
                 case FurniCategory.FLOOR:
-                    this._name = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.floor.name");
-                    this._description = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.floor.desc");
+                    this._name = this._model.controller.localization.getLocalization("inventory.furni.item.floor.name");
+                    this._description = this._model.controller.localization.getLocalization("inventory.furni.item.floor.desc");
                     break;
                 case FurniCategory.LANDSCAPE:
-                    this._name = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.landscape.name");
-                    this._description = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.landscape.desc");
+                    this._name = this._model.controller.localization.getLocalization("inventory.furni.item.landscape.name");
+                    this._description = this._model.controller.localization.getLocalization("inventory.furni.item.landscape.desc");
                     break;
             }
-            this._Str_2307._Str_2476.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
+            this._model._Str_2476.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
         }
 
         public function get _Str_23694():Boolean
@@ -255,14 +255,14 @@
 
         public function dispose():void
         {
-            if (this._Str_2307._Str_2476)
+            if (this._model._Str_2476)
             {
-                if (this._Str_2307._Str_2476.events != null)
+                if (this._model._Str_2476.events != null)
                 {
-                    this._Str_2307._Str_2476.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
+                    this._model._Str_2476.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
                 }
             }
-            this._Str_2307 = null;
+            this._model = null;
             this._Str_2779 = null;
             this._roomEngine = null;
             if (this._Str_1636)
@@ -755,7 +755,7 @@
                 return;
             }
             _local_2.visible = ((k.secondsToExpiration >= 0) && (k.hasRentPeriodStarted));
-            var _local_3:int = this._Str_2307.controller.getInteger("purchase.rent.warning_duration_seconds", 172800);
+            var _local_3:int = this._model.controller.getInteger("purchase.rent.warning_duration_seconds", 172800);
             _local_2.assetUri = ((k.secondsToExpiration < _local_3) ? "inventory_thumb_rent_ending" : "inventory_thumb_rent_started");
         }
 
@@ -864,21 +864,21 @@
             {
                 case WindowMouseEvent.UP:
                     this._Str_8894 = false;
-                    this._Str_2307._Str_5298();
+                    this._model._Str_5298();
                     return;
                 case WindowMouseEvent.DOWN:
-                    this._Str_2307._Str_19669();
+                    this._model._Str_19669();
                     this.Selected = true;
                     this._Str_8894 = true;
-                    this._Str_2307._Str_2944();
-                    this._Str_2307._Str_21498 = this;
+                    this._model._Str_2944();
+                    this._model._Str_21498 = this;
                     return;
                 case WindowMouseEvent.OUT:
-                    if (((!(this._Str_8894)) || (this._Str_2307._Str_7553)))
+                    if (((!(this._Str_8894)) || (this._model._Str_7553)))
                     {
                         return;
                     }
-                    _local_3 = this._Str_2307._Str_5337(true);
+                    _local_3 = this._model._Str_5337(true);
                     if (_local_3)
                     {
                         this._Str_8894 = false;
@@ -888,7 +888,7 @@
                     this._Str_8894 = false;
                     return;
                 case WindowMouseEvent.DOUBLE_CLICK:
-                    this._Str_2307._Str_25520();
+                    this._model._Str_25520();
                     this._Str_8894 = false;
                     return;
             }
@@ -928,7 +928,7 @@
 
         protected function createWindow():void
         {
-            this._window = this._Str_2307.createItemWindow(INVENTORY_THUMB_XML);
+            this._window = this._model.createItemWindow(INVENTORY_THUMB_XML);
         }
 
         private function _Str_20913():String
@@ -947,7 +947,7 @@
                     _local_2 = (("poster_" + k.stuffData.getLegacyString()) + "_name");
                     break;
                 case FurniCategory.TRAX_SONG:
-                    _local_3 = this._Str_2307._Str_2476._Str_2774._Str_3255(k._Str_2794);
+                    _local_3 = this._model._Str_2476._Str_2774._Str_3255(k._Str_2794);
                     if (_local_3 != null)
                     {
                         return _local_3.name;
@@ -964,7 +964,7 @@
                         _local_2 = ("roomItem.name." + k.type);
                     }
             }
-            return this._Str_2307.controller.localization.getLocalization(_local_2);
+            return this._model.controller.localization.getLocalization(_local_2);
         }
 
         private function _Str_21119():String
@@ -983,7 +983,7 @@
                     _local_2 = (("poster_" + k.stuffData.getLegacyString()) + "_desc");
                     break;
                 case FurniCategory.TRAX_SONG:
-                    _local_3 = this._Str_2307._Str_2476._Str_2774._Str_3255(k._Str_2794);
+                    _local_3 = this._model._Str_2476._Str_2774._Str_3255(k._Str_2794);
                     if (_local_3 != null)
                     {
                         return _local_3.creator;
@@ -1000,7 +1000,7 @@
                         _local_2 = ("roomItem.desc." + k.type);
                     }
             }
-            return this._Str_2307.controller.localization.getLocalization(_local_2);
+            return this._model.controller.localization.getLocalization(_local_2);
         }
 
         private function _Str_3255(k:FurnitureItem):void
@@ -1017,10 +1017,10 @@
                 if (k.category == FurniCategory.TRAX_SONG)
                 {
                     _local_2 = k._Str_2794;
-                    _local_3 = this._Str_2307._Str_2476._Str_2774._Str_3255(_local_2);
+                    _local_3 = this._model._Str_2476._Str_2774._Str_3255(_local_2);
                     if (_local_3 == null)
                     {
-                        this._Str_2307._Str_2476._Str_2774._Str_7732(_local_2);
+                        this._model._Str_2476._Str_2774._Str_7732(_local_2);
                         this._Str_14420 = _local_2;
                     }
                 }
@@ -1034,9 +1034,9 @@
                 this._Str_14420 = -1;
                 this._name = this._Str_20913();
                 this._description = this._Str_21119();
-                if (this._Str_2307._Str_3968() == this)
+                if (this._model._Str_3968() == this)
                 {
-                    this._Str_2307._Str_2944();
+                    this._model._Str_2944();
                 }
             }
         }
