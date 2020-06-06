@@ -8,7 +8,7 @@
     import com.sulake.core.runtime.IHabboConfigurationManager;
     import flash.utils.Timer;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.catalog.IHabboCatalog;
     import com.sulake.habbo.room.events.RoomEngineObjectEvent;
     import com.sulake.habbo.inventory.events.HabboInventoryEffectsEvent;
@@ -107,7 +107,7 @@
         private var _breedMonsterPlantsConfirmationView:BreedMonsterPlantsConfirmationView;
         private var _confirmPetBreedingView:ConfirmPetBreedingView;
         private var _breedPetsResultView:BreedPetsResultView;
-        private var _breedingConfirmationAlert:_Str_2418;
+        private var _breedingConfirmationAlert:IAlertDialog;
         private var _breedingConfirmationAlertRequestRoomObjectId:int = -1;
         private var _breedingConfirmationAlertTargetRoomObjectId:int = -1;
         private var _isDancing:Boolean = false;
@@ -1458,7 +1458,7 @@
             this._breedingConfirmationAlertTargetRoomObjectId = _arg_2;
         }
 
-        public function _Str_23917(k:_Str_2418, _arg_2:WindowEvent):void
+        public function _Str_23917(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
@@ -1512,7 +1512,7 @@
             windowManager.alert("${breedpets.cancel.notification.title}", "${breedpets.cancel.notification.text}", 0, this._Str_25650);
         }
 
-        public function _Str_25650(k:_Str_2418, _arg_2:WindowEvent):void
+        public function _Str_25650(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) || (_arg_2.type == WindowEvent.WINDOW_EVENT_CANCEL)))
             {

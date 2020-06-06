@@ -13,7 +13,7 @@
     import com.sulake.habbo.catalog.enum.CatalogPageName;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habboclient._Str_5079;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import flash.display.BitmapData;
@@ -225,7 +225,7 @@
             }
         }
 
-        private function _Str_7790(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_7790(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

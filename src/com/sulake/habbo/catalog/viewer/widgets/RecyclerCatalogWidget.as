@@ -18,7 +18,7 @@
     import com.sulake.habbo.room.ISelectedRoomObjectData;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.room.object.RoomObjectOperationEnum;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class RecyclerCatalogWidget extends CatalogWidget implements _Str_7232 
     {
@@ -282,7 +282,7 @@
                     {
                         if (objectData.operation != RoomObjectOperationEnum.OBJECT_PLACE)
                         {
-                            page.viewer.catalog.windowManager.alert("${generic.alert.title}", "${catalog.alert.recycler.inventory}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                            page.viewer.catalog.windowManager.alert("${generic.alert.title}", "${catalog.alert.recycler.inventory}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                             {
                                 k.dispose();
                             });

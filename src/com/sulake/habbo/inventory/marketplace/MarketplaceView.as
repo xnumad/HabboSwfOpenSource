@@ -27,7 +27,7 @@
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habboclient._Str_5079;
     import com.sulake.core.window.components.IButtonWindow;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class MarketplaceView implements IGetImageListener 
     {
@@ -374,7 +374,7 @@
             this._windowManager.alert(_local_2, _local_3, 0, this._Str_21629);
         }
 
-        private function _Str_21629(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_21629(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             if (k == null)
             {

@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12485;
     import com.sulake.habbo.utils.StringUtil;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7103;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class ModActionCtrl implements IDisposable, ITrackedWindow 
     {
@@ -346,7 +346,7 @@
             this._Str_2327 = null;
         }
 
-        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

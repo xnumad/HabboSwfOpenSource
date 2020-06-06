@@ -18,7 +18,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.GuildEditData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9952;
     import com.sulake.habbo.groups.events.GuildSettingsChangedInManageEvent;
@@ -519,7 +519,7 @@
             }
         }
 
-        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             this._alertVisible = false;

@@ -59,7 +59,7 @@
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.habbo.friendbar.view.tabs.FriendRequestTab;
     import flash.events.Event;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.window.enum._Str_3023;
     import com.sulake.habbo.session.UIFlags;
     import com.sulake.habbo.friendbar.events.FriendBarResizeEvent;
@@ -719,7 +719,7 @@
         {
             var title:String = ((event.success) ? "${friendbar.find.success.title}" : "${friendbar.find.error.title}");
             var text:String = ((event.success) ? "${friendbar.find.success.text}" : "${friendbar.find.error.text}");
-            _windowManager.notify(title, text, function (k:_Str_2418, _arg_2:WindowEvent):void
+            _windowManager.notify(title, text, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
             }, _Str_3023.BUTTON_OK);

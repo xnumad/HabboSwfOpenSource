@@ -4,7 +4,7 @@
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.habbo.help.IHabboHelp;
     import com.sulake.habbo.window.enum.FrankIllustration;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
 
     public class HabboAlertDialogManager 
@@ -81,7 +81,7 @@
             {
                 this._localization.registerParameter("opening.hours.disconnected", "h", _Str_4652(openHour));
                 this._localization.registerParameter("opening.hours.disconnected", "m", _Str_4652(openMinute));
-                this._windowManager.alert("${opening.hours.title}", "${opening.hours.disconnected}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                this._windowManager.alert("${opening.hours.title}", "${opening.hours.disconnected}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                 });
@@ -90,7 +90,7 @@
             {
                 this._localization.registerParameter("opening.hours.closed", "h", _Str_4652(openHour));
                 this._localization.registerParameter("opening.hours.closed", "m", _Str_4652(openMinute));
-                this._windowManager.alert("${opening.hours.title}", "${opening.hours.closed}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                this._windowManager.alert("${opening.hours.title}", "${opening.hours.closed}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                 });
@@ -101,7 +101,7 @@
         {
             this._localization.registerParameter("opening.hours.disconnected", "h", _Str_4652(openHour));
             this._localization.registerParameter("opening.hours.disconnected", "m", _Str_4652(openMinute));
-            this._windowManager.alert("${opening.hours.title}", "${opening.hours.disconnected}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+            this._windowManager.alert("${opening.hours.title}", "${opening.hours.disconnected}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
             });

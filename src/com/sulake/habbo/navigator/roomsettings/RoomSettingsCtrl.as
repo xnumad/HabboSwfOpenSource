@@ -35,7 +35,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3560;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveRoomSettingsMessageComposer;
     import com.sulake.core.runtime.Component;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4081;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_9786;
     import flash.utils.Dictionary;
@@ -1088,7 +1088,7 @@
             }
         }
 
-        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

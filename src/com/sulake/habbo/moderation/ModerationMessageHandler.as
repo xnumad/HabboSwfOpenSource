@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation._Str_5018;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_6924;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_6763;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7250;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7467;
@@ -162,7 +162,7 @@
             }
             if (alert)
             {
-                this._moderationManager.windowManager.alert("Error", "Issue picking failed", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                this._moderationManager.windowManager.alert("Error", "Issue picking failed", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                 });
@@ -443,7 +443,7 @@
             this._userClassificationListener = _local_2;
         }
 
-        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

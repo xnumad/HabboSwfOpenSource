@@ -18,7 +18,7 @@
     import com.sulake.habbo.catalog.viewer.IProduct;
     import com.sulake.habbo.catalog.viewer.Offer;
     import com.sulake.habbo.catalog.viewer.widgets.events.SetExtraPurchaseParameterEvent;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.tracking.HabboTracking;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetInitPurchaseEvent;
@@ -256,7 +256,7 @@
                     {
                         if (this._catalog._Str_3064.flatId == 0)
                         {
-                            this._catalog.windowManager.alert("${roomad.error.title}", "${roomad.alert.no.available.room}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                            this._catalog.windowManager.alert("${roomad.error.title}", "${roomad.alert.no.available.room}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                             {
                                 k.dispose();
                             });
@@ -264,7 +264,7 @@
                         }
                         if ((((this._catalog._Str_3064.name == null) || (this._catalog._Str_3064.name.length < 5)) || (this._catalog._Str_3064.name.substr(0, 1) == " ")))
                         {
-                            this._catalog.windowManager.alert("${roomad.error.title}", "${roomad.alert.name.empty}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                            this._catalog.windowManager.alert("${roomad.error.title}", "${roomad.alert.name.empty}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                             {
                                 k.dispose();
                             });

@@ -98,7 +98,7 @@
     import com.sulake.habbo.toolbar.HabboToolbarEnum;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsData;
     import com.sulake.habbo.session.IRoomSession;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_11497;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetChangePostureMessage;
@@ -752,7 +752,7 @@
                 default:
                     return;
             }
-            this._windowManager.alert(errorTitle, errorMessage, 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+            this._windowManager.alert(errorTitle, errorMessage, 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
             });

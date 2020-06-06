@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.ui.widget.poll
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
 
     public class _Str_3703 implements IDisposable 
@@ -92,7 +92,7 @@
 
         public function _Str_24541():void
         {
-            this._roomPollWidget.windowManager.alert("${poll_thanks_title}", this._Str_4781, 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+            this._roomPollWidget.windowManager.alert("${poll_thanks_title}", this._Str_4781, 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
             });

@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.parser.marketplace._Str_6982;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
     import com.sulake.habbo.communication.messages.parser.marketplace._Str_6144;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
     import com.sulake.habbo.communication.messages.parser.marketplace._Str_5775;
@@ -336,7 +336,7 @@
                     }
                     if (this._windowManager != null)
                     {
-                        this._windowManager.alert("${catalog.marketplace.not_available_title}", "${catalog.marketplace.not_available_header}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                        this._windowManager.alert("${catalog.marketplace.not_available_title}", "${catalog.marketplace.not_available_header}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                         {
                             k.dispose();
                         });
@@ -367,7 +367,7 @@
                         {
                             if (this._windowManager != null)
                             {
-                                this._windowManager.alert("${catalog.alert.notenough.title}", "${catalog.alert.notenough.credits.description}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                                this._windowManager.alert("${catalog.alert.notenough.title}", "${catalog.alert.notenough.credits.description}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                                 {
                                     k.dispose();
                                 });
@@ -407,7 +407,7 @@
             {
                 if (this._windowManager != null)
                 {
-                    this._windowManager.alert("${catalog.marketplace.operation_failed.topic}", "${catalog.marketplace.cancel_failed}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._windowManager.alert("${catalog.marketplace.operation_failed.topic}", "${catalog.marketplace.cancel_failed}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });

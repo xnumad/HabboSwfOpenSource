@@ -9,7 +9,7 @@
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.habbo.ui.widget.events._Str_3085;
     import flash.events.IEventDispatcher;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.assets.IAsset;
@@ -107,7 +107,7 @@
                             error = "bobba";
                     }
                     resultMessage = this._Str_4902(error, nameValidationInfo);
-                    windowManager.alert("${widgets.petpackage.alert.petname.title}", resultMessage, 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    windowManager.alert("${widgets.petpackage.alert.petname.title}", resultMessage, 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
@@ -238,7 +238,7 @@
             var name:String = this.getName();
             if (((name == null) || (name.length < 1)))
             {
-                windowManager.alert("${widgets.petpackage.alert.petname.title}", "${catalog.alert.petname.short}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                windowManager.alert("${widgets.petpackage.alert.petname.title}", "${catalog.alert.petname.short}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                 });

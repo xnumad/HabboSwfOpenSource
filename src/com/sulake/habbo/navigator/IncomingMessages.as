@@ -94,7 +94,7 @@
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6887;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6752;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6587;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6990;
@@ -629,25 +629,25 @@
                     this._navigator._Str_7174._Str_15400();
                     return;
                 case 4009:
-                    this._navigator.windowManager.alert("${generic.alert.title}", "${navigator.alert.need.to.be.vip}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._navigator.windowManager.alert("${generic.alert.title}", "${navigator.alert.need.to.be.vip}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
                     return;
                 case 4010:
-                    this._navigator.windowManager.alert("${generic.alert.title}", "${navigator.alert.invalid_room_name}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._navigator.windowManager.alert("${generic.alert.title}", "${navigator.alert.invalid_room_name}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
                     return;
                 case 4011:
-                    this._navigator.windowManager.alert("${generic.alert.title}", "${navigator.alert.cannot_perm_ban}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._navigator.windowManager.alert("${generic.alert.title}", "${navigator.alert.cannot_perm_ban}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
                     return;
                 case 4013:
-                    this._navigator.windowManager.alert("${generic.alert.title}", "${navigator.alert.room_in_maintenance}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._navigator.windowManager.alert("${generic.alert.title}", "${navigator.alert.room_in_maintenance}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });

@@ -22,7 +22,7 @@
     import com.sulake.core.assets.IAsset;
     import flash.geom.Matrix;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_4615;
     import com.sulake.habbo.tracking.HabboTracking;
@@ -394,7 +394,7 @@
             }
         }
 
-        private function _Str_22522(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_22522(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

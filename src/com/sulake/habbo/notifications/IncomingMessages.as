@@ -59,7 +59,7 @@
     import com.sulake.habbo.communication.messages.parser.notifications.NotificationDialogMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetScratchFailedMessageParser;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.parser.notifications.ClubGiftNotificationParser;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.users.AccountSafetyLockStatusChangeMessageParser;
@@ -422,7 +422,7 @@
 			this._notifications.windowManager.alert(titleMessage, packet.alertMessage, 0, this.onAlert);
 		}
 
-        public function onAlert(k:_Str_2418, _arg_2:WindowEvent):void
+        public function onAlert(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) || (_arg_2.type == WindowEvent.WINDOW_EVENT_CANCEL)))
             {

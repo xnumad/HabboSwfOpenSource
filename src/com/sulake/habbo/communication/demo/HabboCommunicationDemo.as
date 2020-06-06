@@ -54,7 +54,7 @@
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_8322;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.parser.handshake.GenericErrorParser;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9307;
     import com.sulake.habbo.communication.messages.parser.error.ErrorReportMessageParser;
@@ -437,13 +437,13 @@
             switch (parser.errorCode)
             {
                 case -3:
-                    this._windowManager.alert("${connection.error.id.title}", "${connection.login.error.-3.desc}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._windowManager.alert("${connection.error.id.title}", "${connection.login.error.-3.desc}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
                     return;
                 case -400:
-                    this._windowManager.alert("${connection.error.id.title}", "${connection.login.error.-400.desc}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._windowManager.alert("${connection.error.id.title}", "${connection.login.error.-400.desc}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
@@ -516,7 +516,7 @@
             {
                 case 0:
                     this._windowManager.registerLocalizationParameter("connection.server.error.desc", "errorCode", String(errorCode));
-                    this._windowManager.alert("${connection.server.error.title}", "${connection.server.error.desc}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._windowManager.alert("${connection.server.error.title}", "${connection.server.error.desc}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
@@ -543,14 +543,14 @@
                     event.connection.close();
                     return;
                 case 4013:
-                    this._windowManager.alert("${connection.room.maintenance.title}", "${connection.room.maintenance.desc}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._windowManager.alert("${connection.room.maintenance.title}", "${connection.room.maintenance.desc}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
                     return;
                 default:
                     this._windowManager.registerLocalizationParameter("connection.server.error.desc", "errorCode", String(errorCode));
-                    this._windowManager.alert("${connection.server.error.title}", "${connection.server.error.desc}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._windowManager.alert("${connection.server.error.title}", "${connection.server.error.desc}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });

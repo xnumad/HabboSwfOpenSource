@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
 
-    public interface _Str_2418 extends IDisposable 
+    public interface IAlertDialog extends IDisposable
     {
         function set title(_arg_1:String):void;
         function get title():String;

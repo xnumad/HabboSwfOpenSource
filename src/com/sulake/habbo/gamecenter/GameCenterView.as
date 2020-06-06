@@ -4,7 +4,7 @@
     import com.sulake.habbo.room.IGetImageListener;
     import com.sulake.habbo.game.HabboGameManager;
     import flash.utils.Timer;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
@@ -32,7 +32,7 @@
         private var _teaserView:TeaserView;
         private var _waitingGameTimer:Timer;
         private var _waitingGameId:int = -1;
-        private var _alert:_Str_2418;
+        private var _alert:IAlertDialog;
         private var _gameRewardListener:IGameRewardListener;
         private var _waitingRewardFurniId:int;
         private var _startPlaying:Boolean;
@@ -283,7 +283,7 @@
             }
         }
 
-        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             this._Str_18574();
         }

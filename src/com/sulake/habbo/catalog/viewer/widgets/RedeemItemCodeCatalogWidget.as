@@ -8,7 +8,7 @@
     import flash.ui.Keyboard;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class RedeemItemCodeCatalogWidget extends CatalogWidget
     {
@@ -82,7 +82,7 @@
                 }
                 else
                 {
-                    page.viewer.catalog.windowManager.alert("${catalog.voucher.empty.title}", "${catalog.voucher.empty.desc}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    page.viewer.catalog.windowManager.alert("${catalog.voucher.empty.title}", "${catalog.voucher.empty.desc}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });

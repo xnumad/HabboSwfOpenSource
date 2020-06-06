@@ -15,7 +15,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetMultiColoursEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetColourIndexEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetApproveNameResultEvent;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetSellablePetPalettesEvent;
@@ -240,25 +240,25 @@
             switch (event.result)
             {
                 case 1:
-                    this._catalog.windowManager.alert("${catalog.alert.purchaseerror.title}", this._Str_4902("long", nameValidationInfo), 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._catalog.windowManager.alert("${catalog.alert.purchaseerror.title}", this._Str_4902("long", nameValidationInfo), 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
                     return;
                 case 2:
-                    this._catalog.windowManager.alert("${catalog.alert.purchaseerror.title}", this._Str_4902("short", nameValidationInfo), 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._catalog.windowManager.alert("${catalog.alert.purchaseerror.title}", this._Str_4902("short", nameValidationInfo), 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
                     return;
                 case 3:
-                    this._catalog.windowManager.alert("${catalog.alert.purchaseerror.title}", this._Str_4902("chars", nameValidationInfo), 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._catalog.windowManager.alert("${catalog.alert.purchaseerror.title}", this._Str_4902("chars", nameValidationInfo), 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
                     return;
                 case 4:
-                    this._catalog.windowManager.alert("${catalog.alert.purchaseerror.title}", this._Str_4902("bobba", nameValidationInfo), 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._catalog.windowManager.alert("${catalog.alert.purchaseerror.title}", this._Str_4902("bobba", nameValidationInfo), 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
@@ -392,7 +392,7 @@
             var name:String = this._inputField.caption;
             if (((name == null) || (name.length == 0)))
             {
-                this._catalog.windowManager.alert("${catalog.alert.purchaseerror.title}", "${catalog.alert.petname.empty}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                this._catalog.windowManager.alert("${catalog.alert.purchaseerror.title}", "${catalog.alert.petname.empty}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                 });

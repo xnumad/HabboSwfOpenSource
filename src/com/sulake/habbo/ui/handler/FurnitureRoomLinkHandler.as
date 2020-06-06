@@ -13,7 +13,7 @@
     import com.sulake.habbo.window.enum._Str_3023;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.runtime.Component;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.room.events.RoomEngineTriggerWidgetEvent;
@@ -79,7 +79,7 @@
                 {
                     message = message.replace("%%room_owner%%", ownerName);
                 }
-                this._confirmDialog = this._container.windowManager.confirm("${room.link.confirmation.title}", message, (_Str_3023.BUTTON_OK | _Str_3023.BUTTON_CANCEL), function (k:_Str_2418, _arg_2:WindowEvent):void
+                this._confirmDialog = this._container.windowManager.confirm("${room.link.confirmation.title}", message, (_Str_3023.BUTTON_OK | _Str_3023.BUTTON_CANCEL), function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     if (((!(_container.roomEngine == null)) && (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)))
                     {

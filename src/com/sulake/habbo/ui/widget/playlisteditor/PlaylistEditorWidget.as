@@ -25,7 +25,7 @@
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetPlayListUserActionMessage;
     import com.sulake.habbo.catalog.enum.CatalogPageName;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
 
     public class PlaylistEditorWidget extends RoomWidgetBase
@@ -230,7 +230,7 @@
             this.windowManager.alert(("$" + "{playlist.editor.alert.playlist.full.title}"), ("$" + "{playlist.editor.alert.playlist.full}"), 0, this._Str_18087);
         }
 
-        private function _Str_18087(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_18087(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

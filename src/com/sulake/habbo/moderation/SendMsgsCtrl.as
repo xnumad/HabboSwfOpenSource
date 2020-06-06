@@ -10,7 +10,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7103;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_4767;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class SendMsgsCtrl implements IDisposable, ITrackedWindow 
     {
@@ -144,7 +144,7 @@
             this._main = null;
         }
 
-        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

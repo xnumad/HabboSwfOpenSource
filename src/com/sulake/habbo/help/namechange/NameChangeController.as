@@ -16,7 +16,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_12037;
     import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7887;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.parser.avatar.ChangeUserNameResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.avatar.CheckUserNameResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
@@ -176,7 +176,7 @@
                 return;
             }
             this._habboHelp.localization.registerParameter("help.tutorial.name.changed", "name", name);
-            this._habboHelp.windowManager.alert("${generic.notice}", "${help.tutorial.name.changed}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+            this._habboHelp.windowManager.alert("${generic.notice}", "${help.tutorial.name.changed}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
             });

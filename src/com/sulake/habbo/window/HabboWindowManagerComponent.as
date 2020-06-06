@@ -57,7 +57,7 @@
     import com.sulake.core.window.components.IDesktopWindow;
     import com.sulake.habbo.window.utils._Str_4045;
     import com.sulake.core.window.utils.INotify;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.window.utils._Str_12599;
     import com.sulake.habbo.window.utils._Str_10548;
     import com.sulake.habbo.window.utils._Str_9679;
@@ -372,7 +372,7 @@
             return new _Str_4045(this, _local_6, k, _arg_2, _arg_4, _arg_3, false);
         }
 
-        public function alert(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2418
+        public function alert(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IAlertDialog
         {
             var alertAsset:IAsset = assets.getAssetByName("habbo_window_alert_xml");
             if (!alertAsset)
@@ -383,7 +383,7 @@
             return new _Str_4045(this, _local_6, k, _arg_2, _arg_3, _arg_4, false);
         }
 
-        public function alertWithModal(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2418
+        public function alertWithModal(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IAlertDialog
         {
             var alertAsset:IAsset = assets.getAssetByName("habbo_window_alert_xml");
             if (!alertAsset)

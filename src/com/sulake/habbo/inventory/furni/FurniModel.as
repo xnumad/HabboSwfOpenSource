@@ -39,7 +39,7 @@
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.habbo.room.object.data.LegacyStuffData;
     import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_5270;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_5756;
@@ -792,7 +792,7 @@
                     {
                         offerInTradingCount.caption = "1";
                     }
-                    this._windowManager.alert("${trading.items.too_many_items.title}", "${trading.items.too_many_items.desc}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._windowManager.alert("${trading.items.too_many_items.title}", "${trading.items.too_many_items.desc}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.quest
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementEvent;
@@ -49,7 +49,7 @@
     public class IncomingMessages implements IDisposable 
     {
         private var _questEngine:HabboQuestEngine;
-        private var _alertDialog:_Str_2418;
+        private var _alertDialog:IAlertDialog;
         private var _isDisposed:Boolean = false;
 
         public function IncomingMessages(k:HabboQuestEngine)

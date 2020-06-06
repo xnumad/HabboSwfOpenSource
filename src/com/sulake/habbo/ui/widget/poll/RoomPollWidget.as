@@ -9,7 +9,7 @@
     import com.sulake.habbo.ui.widget.events._Str_2888;
     import flash.events.IEventDispatcher;
     import flash.events.Event;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
 
     public class RoomPollWidget extends RoomWidgetBase
@@ -94,7 +94,7 @@
 
         private function _Str_21733(e:Event):void
         {
-            windowManager.alert("${win_error}", _Str_2888(e).summary, 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+            windowManager.alert("${win_error}", _Str_2888(e).summary, 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
             });

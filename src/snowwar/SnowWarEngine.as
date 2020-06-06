@@ -15,7 +15,7 @@
 	import com.sulake.habbo.ui.IRoomUI;
 	import com.sulake.habbo.window.IHabboWindowManager;
 	import com.sulake.habbo.friendlist.IHabboFriendsList;
-	import com.sulake.habbo.window.utils._Str_2418;
+	import com.sulake.habbo.window.utils.IAlertDialog;
 	import com.sulake.habbo.sound.IHabboSoundManager;
 	import com.sulake.habbo.sound.HabboSoundTypesEnum;
 	import com.sulake.habbo.help.IHabboHelp;
@@ -124,7 +124,7 @@
         private var _gameArenaView:GameArenaView;
         private var _SafeStr_13145:int;
         private var _gameState:int = 0;
-        private var _alertWindow:_Str_2418;
+        private var _alertWindow:IAlertDialog;
         private var _gamePlayerId:int;
         private var _SafeStr_13149:Map;
         private var _currentSubTurn:int = 0;
@@ -999,7 +999,7 @@
             this._forceFullStatusRequest = true;
         }
 
-        private function _SafeStr_8319(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _SafeStr_8319(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             this.disposeAlertWindow();
         }

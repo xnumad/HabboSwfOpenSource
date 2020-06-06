@@ -216,7 +216,7 @@
     import com.sulake.habbo.catalog.enum.ClubOfferRequestSource;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7118;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetSellablePetPalettesEvent;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.window.utils._Str_2910;
     import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_12068;
     import com.sulake.habbo.catalog.enum.BuilderFurniPlaceableStatus;
@@ -2289,7 +2289,7 @@
             }
         }
 
-        private function _Str_7211(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_7211(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             this._Str_4663();
@@ -2321,7 +2321,7 @@
             }
         }
 
-        private function _Str_7790(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_7790(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

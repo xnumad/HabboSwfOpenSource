@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_6006;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10313;
     import com.sulake.habbo.window.utils._Str_2910;
@@ -206,7 +206,7 @@
             }
         }
 
-        private function _Str_7790(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_7790(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

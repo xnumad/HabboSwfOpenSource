@@ -67,7 +67,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.GuildCreationData;
     import com.sulake.habbo.communication.messages.incoming.users.GuildEditData;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.groups.events.HabboGroupsEditorData;
     import com.sulake.habbo.communication.messages.parser.users.GuildEditFailedMessageParser;
@@ -400,7 +400,7 @@
             this._roomId = _local_2.guestRoomId;
         }
 
-        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

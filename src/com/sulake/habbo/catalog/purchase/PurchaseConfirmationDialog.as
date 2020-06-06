@@ -51,7 +51,7 @@
     import com.sulake.core.window.utils.IIterator;
     import com.sulake.core.window.utils.IIterable;
     import flash.text.TextFormat;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class PurchaseConfirmationDialog implements IAvatarImageListener, IGetImageListener 
     {
@@ -1476,7 +1476,7 @@
             this._catalog.windowManager.alert(("$" + "{catalog.gift_wrapping.receiver_not_found.title}"), ("$" + "{catalog.gift_wrapping.receiver_not_found.info}"), 0, this._Str_18087);
         }
 
-        private function _Str_18087(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_18087(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             this._Str_4401(true);

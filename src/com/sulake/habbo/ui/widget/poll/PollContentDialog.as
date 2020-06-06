@@ -16,7 +16,7 @@
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.enum.WindowState;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetPollMessage;
 
     public class PollContentDialog implements _Str_7707 
@@ -420,7 +420,7 @@
                     answerArray = this._Str_22504(question);
                     if (answerArray.length < 0)
                     {
-                        this._widget.windowManager.alert("${win_error}", "${poll_alert_answer_missing}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                        this._widget.windowManager.alert("${win_error}", "${poll_alert_answer_missing}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                         {
                             k.dispose();
                         });
@@ -428,7 +428,7 @@
                     }
                     if (answerArray.length > question.questionChoices.length)
                     {
-                        this._widget.windowManager.alert("${win_error}", "${poll_alert_invalid_selection}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                        this._widget.windowManager.alert("${win_error}", "${poll_alert_invalid_selection}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                         {
                             k.dispose();
                         });

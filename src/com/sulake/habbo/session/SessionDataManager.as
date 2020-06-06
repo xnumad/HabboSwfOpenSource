@@ -55,7 +55,7 @@
     import com.sulake.habbo.communication.messages.outgoing.preferences.SetUIFlagsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
     import flash.display.BitmapData;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10714;
@@ -620,7 +620,7 @@
             return this._badgeImageManager.getBadgeImageWithInfo(k);
         }
 
-        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

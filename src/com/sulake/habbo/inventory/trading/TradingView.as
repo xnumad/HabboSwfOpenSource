@@ -23,7 +23,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenFailedEvent;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.room.ImageResult;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -500,7 +500,7 @@
 
         public function _Str_26089(title:String, description:String, callback:Function):void
         {
-            this._windowManager.alert(title, description, 0, ((callback != null) ? callback : function (k:_Str_2418, _arg_2:WindowEvent):void
+            this._windowManager.alert(title, description, 0, ((callback != null) ? callback : function (k:IAlertDialog, _arg_2:WindowEvent):void
 {
     k.dispose();
 }));
@@ -597,7 +597,7 @@
         {
         }
 
-        public function _Str_16452(k:_Str_2418, _arg_2:WindowEvent):void
+        public function _Str_16452(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {

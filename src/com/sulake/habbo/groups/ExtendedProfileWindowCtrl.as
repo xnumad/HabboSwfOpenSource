@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10887;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_11883;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class ExtendedProfileWindowCtrl implements IDisposable 
     {
@@ -500,7 +500,7 @@
             return this._relationshipUpdateExpected;
         }
 
-        private function _Str_24203(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_24203(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {

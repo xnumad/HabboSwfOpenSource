@@ -28,7 +28,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetOpenProfileMessage;
     import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.habbo.tracking.HabboTracking;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.parser.perk.PerkAllowancesMessageParser;
 
@@ -383,7 +383,7 @@
             HabboTracking.getInstance().trackEventLog("MeMenu", "click", _local_3);
         }
 
-        private function _Str_26302(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_26302(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

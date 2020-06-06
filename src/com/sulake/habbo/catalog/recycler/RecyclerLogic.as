@@ -4,7 +4,7 @@
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerStatusEvent;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
 
     public class RecyclerLogic implements IRecycler 
@@ -168,7 +168,7 @@
                     break;
                 case RecyclerFinishedEvent._Str_18717:
                     Logger.log("* Recycler finished with FAILURE");
-                    this._windowManager.alert("${generic.alert.title}", "${recycler.info.closed}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                    this._windowManager.alert("${generic.alert.title}", "${recycler.info.closed}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                     });
@@ -226,7 +226,7 @@
             var itemId:int = this._habboCatalog.requestInventoryFurniToRecycler();
             if (itemId == 0)
             {
-                this._windowManager.alert("${generic.alert.title}", "${recycler.alert.non.recyclable}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                this._windowManager.alert("${generic.alert.title}", "${recycler.alert.non.recyclable}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                 });
@@ -289,7 +289,7 @@
             }
             if (this._Str_22951())
             {
-                this._windowManager.alert("${generic.alert.title}", "${recycler.alert.trading}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                this._windowManager.alert("${generic.alert.title}", "${recycler.alert.trading}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                 });
@@ -312,7 +312,7 @@
         {
             if (((!(this._habboCatalog.privateRoomSessionActive)) && (this.ready)))
             {
-                this._windowManager.alert("${generic.alert.title}", "${recycler.alert.privateroom}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+                this._windowManager.alert("${generic.alert.title}", "${recycler.alert.privateroom}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                 });

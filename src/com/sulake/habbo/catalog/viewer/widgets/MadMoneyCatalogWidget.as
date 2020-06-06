@@ -3,7 +3,7 @@
     import com.sulake.core.window.components.IButtonWindow;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
 
     public class MadMoneyCatalogWidget extends CatalogWidget
@@ -40,7 +40,7 @@
 
         private function _Str_5162(event:WindowMouseEvent):void
         {
-            page.viewer.catalog.windowManager.alert("TODO", "Fix in MadMoneyCatalogWidget.as", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
+            page.viewer.catalog.windowManager.alert("TODO", "Fix in MadMoneyCatalogWidget.as", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
             });

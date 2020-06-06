@@ -8,7 +8,7 @@
     import flash.events.Event;
     import com.sulake.habbo.communication.enum.HabboCommunicationEvent;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.localization.enum.LocalizationEvent;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
@@ -157,7 +157,7 @@
             this._badgePointLimits[k] = _arg_2;
         }
 
-        private function _Str_25984(k:_Str_2418, _arg_2:*):void
+        private function _Str_25984(k:IAlertDialog, _arg_2:*):void
         {
             k.dispose();
             printNonExistingKeys();

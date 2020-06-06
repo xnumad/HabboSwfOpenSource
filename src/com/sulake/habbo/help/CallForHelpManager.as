@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help._Str_8070;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7656;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7494;
-    import com.sulake.habbo.window.utils._Str_2418;
+    import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.parser.help._Str_7877;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help._Str_7322;
@@ -625,7 +625,7 @@
             this._habboHelp._Str_19312();
         }
 
-        private function _Str_24374(k:_Str_2418, _arg_2:WindowEvent):void
+        private function _Str_24374(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {

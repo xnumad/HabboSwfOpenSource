@@ -11,7 +11,7 @@
     import com.sulake.core.window.components.IInteractiveWindow;
     import com.sulake.core.window.components.ITextWindow;
 
-    public class _Str_4045 implements _Str_2418, INotify 
+    public class _Str_4045 implements IAlertDialog, INotify
     {
         protected static const _ALERT_BUTTON_LIST:String = "_alert_button_list";
         protected static const _ALERT_BUTTON_OK:String = "_alert_button_ok";
