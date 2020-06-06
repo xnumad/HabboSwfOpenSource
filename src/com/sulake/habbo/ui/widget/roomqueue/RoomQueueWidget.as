@@ -111,12 +111,12 @@
             var _local_2:IWindow = this._window.findChildByTag("close");
             if (_local_2 != null)
             {
-                _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_22101);
+                _local_2.addEventListener(WindowMouseEvent.CLICK, this.exitQueue);
             }
             _local_2 = this._window.findChildByName("cancel_button");
             if (_local_2 != null)
             {
-                _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_22101);
+                _local_2.addEventListener(WindowMouseEvent.CLICK, this.exitQueue);
             }
             _local_2 = this._window.findChildByName("link_text");
             if (_local_2 != null)
@@ -166,7 +166,7 @@
             this._window.visible = true;
         }
 
-        private function _Str_22101(k:WindowMouseEvent):void
+        private function exitQueue(k:WindowMouseEvent):void
         {
             if (messageListener == null)
             {
