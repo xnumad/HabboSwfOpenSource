@@ -22,7 +22,7 @@
 
         override public function readStringParamFromForm(k:IWindowContainer):String
         {
-            var _local_2:String = this._Str_2453(k, "bot_name").text;
+            var _local_2:String = this.getInput(k, "bot_name").text;
             return _local_2;
         }
 
@@ -35,7 +35,7 @@
 
         override public function onEditStart(k:IWindowContainer, _arg_2:Triggerable):void
         {
-            this._Str_2453(k, "bot_name").text = _arg_2.stringData;
+            this.getInput(k, "bot_name").text = _arg_2.stringData;
             this._Str_18464(k, _arg_2.intData[0]);
         }
 
@@ -76,7 +76,7 @@
             return true;
         }
 
-        private function _Str_2453(k:IWindowContainer, _arg_2:String):ITextFieldWindow
+        private function getInput(k:IWindowContainer, _arg_2:String):ITextFieldWindow
         {
             var _local_3:ITextFieldWindow = ITextFieldWindow(k.findChildByName(_arg_2));
             return _local_3;

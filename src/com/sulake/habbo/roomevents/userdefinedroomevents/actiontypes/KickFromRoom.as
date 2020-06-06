@@ -14,13 +14,13 @@
 
         override public function readStringParamFromForm(k:IWindowContainer):String
         {
-            var _local_2:String = this._Str_2453(k).text;
+            var _local_2:String = this.getInput(k).text;
             return _local_2;
         }
 
         override public function onEditStart(k:IWindowContainer, _arg_2:Triggerable):void
         {
-            this._Str_2453(k).text = _arg_2.stringData;
+            this.getInput(k).text = _arg_2.stringData;
         }
 
         override public function get hasSpecialInputs():Boolean
@@ -28,7 +28,7 @@
             return true;
         }
 
-        private function _Str_2453(k:IWindowContainer):ITextFieldWindow
+        private function getInput(k:IWindowContainer):ITextFieldWindow
         {
             var _local_2:ITextFieldWindow = ITextFieldWindow(k.findChildByName("chat_message"));
             return _local_2;
@@ -38,7 +38,7 @@
         {
             var _local_4:String;
             var _local_3:int = 100;
-            if (this._Str_2453(k).text.length > _local_3)
+            if (this.getInput(k).text.length > _local_3)
             {
                 _local_4 = "wiredfurni.chatmsgtoolong";
                 return _arg_2.localization.getLocalization(_local_4, _local_4);

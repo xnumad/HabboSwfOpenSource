@@ -19,13 +19,13 @@
 
         override public function readStringParamFromForm(k:IWindowContainer):String
         {
-            var _local_2:String = this._Str_2453(k).text;
+            var _local_2:String = this.getInput(k).text;
             return _local_2;
         }
 
         override public function onEditStart(k:IWindowContainer, _arg_2:Triggerable):void
         {
-            this._Str_2453(k).text = _arg_2.stringData;
+            this.getInput(k).text = _arg_2.stringData;
         }
 
         override public function get hasSpecialInputs():Boolean
@@ -33,7 +33,7 @@
             return true;
         }
 
-        private function _Str_2453(k:IWindowContainer):ITextFieldWindow
+        private function getInput(k:IWindowContainer):ITextFieldWindow
         {
             var _local_2:ITextFieldWindow = ITextFieldWindow(k.findChildByName("bot_name"));
             return _local_2;

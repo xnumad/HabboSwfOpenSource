@@ -23,7 +23,7 @@
 
         override public function readStringParamFromForm(k:IWindowContainer):String
         {
-            return this._Str_2453(k).text;
+            return this.getInput(k).text;
         }
 
         override public function onInit(k:IWindowContainer, _arg_2:HabboUserDefinedRoomEvents):void
@@ -33,7 +33,7 @@
 
         override public function onEditStart(k:IWindowContainer, _arg_2:Triggerable):void
         {
-            this._Str_2453(k).text = _arg_2.stringData;
+            this.getInput(k).text = _arg_2.stringData;
             if (((_arg_2.intData.length > 0) && (_arg_2.intData[0] == 1)))
             {
                 this._Str_4281(k).setSelected(this._Str_20767(k));
@@ -49,7 +49,7 @@
             return true;
         }
 
-        private function _Str_2453(k:IWindowContainer):ITextFieldWindow
+        private function getInput(k:IWindowContainer):ITextFieldWindow
         {
             var _local_2:ITextFieldWindow = ITextFieldWindow(k.findChildByName("chat_txt"));
             return _local_2;

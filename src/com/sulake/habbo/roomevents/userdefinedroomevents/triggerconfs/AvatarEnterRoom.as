@@ -20,7 +20,7 @@
 
         override public function readStringParamFromForm(k:IWindowContainer):String
         {
-            var _local_2:String = this._Str_2453().text;
+            var _local_2:String = this.getInput().text;
             return (this._Str_14247().Selected) ? _local_2 : "";
         }
 
@@ -36,14 +36,14 @@
             if (_arg_2.stringData != "")
             {
                 this._Str_4281().setSelected(this._Str_14247());
-                this._Str_2453().text = _arg_2.stringData;
-                this._Str_2453().visible = true;
+                this.getInput().text = _arg_2.stringData;
+                this.getInput().visible = true;
             }
             else
             {
                 this._Str_4281().setSelected(this._Str_16153());
-                this._Str_2453().text = "";
-                this._Str_2453().visible = false;
+                this.getInput().text = "";
+                this.getInput().visible = false;
             }
         }
 
@@ -52,7 +52,7 @@
             return true;
         }
 
-        private function _Str_2453():ITextFieldWindow
+        private function getInput():ITextFieldWindow
         {
             return ITextFieldWindow(this._cont.findChildByName("avatar_name_txt"));
         }
@@ -74,13 +74,13 @@
 
         private function _Str_22463(k:WindowEvent):void
         {
-            this._Str_2453().visible = true;
+            this.getInput().visible = true;
         }
 
         private function _Str_24589(k:WindowEvent):void
         {
-            this._Str_2453().text = "";
-            this._Str_2453().visible = false;
+            this.getInput().text = "";
+            this.getInput().visible = false;
         }
     }
 }

@@ -37,7 +37,7 @@
 
         override public function readStringParamFromForm(k:IWindowContainer):String
         {
-            var _local_2:String = this._Str_2453(k, "bot_name").text;
+            var _local_2:String = this.getInput(k, "bot_name").text;
             return (_local_2 + _Str_4332) + this._figureString;
         }
 
@@ -52,7 +52,7 @@
             {
                 this._figureString = _local_3[1];
             }
-            this._Str_2453(k, "bot_name").text = this._botName;
+            this.getInput(k, "bot_name").text = this._botName;
             _Str_2483(IWidgetWindow(k.findChildByName("avatar_image")).widget).figure = this._figureString;
             k.findChildByName("capture_figure").procedure = this._Str_24248;
             this._window = k;
@@ -63,7 +63,7 @@
             return true;
         }
 
-        private function _Str_2453(k:IWindowContainer, _arg_2:String):ITextFieldWindow
+        private function getInput(k:IWindowContainer, _arg_2:String):ITextFieldWindow
         {
             var _local_3:ITextFieldWindow = ITextFieldWindow(k.findChildByName(_arg_2));
             return _local_3;

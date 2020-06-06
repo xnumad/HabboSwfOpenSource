@@ -29,7 +29,7 @@
         override public function onInit(k:IWindowContainer, _arg_2:HabboUserDefinedRoomEvents):void
         {
             this._roomEvents = _arg_2;
-            this._slider = new SliderWindowController(_arg_2, this._Str_2453(k), _arg_2.assets, 1, 1200, 1);
+            this._slider = new SliderWindowController(_arg_2, this.getInput(k), _arg_2.assets, 1, 1200, 1);
             this._slider.setValue(1);
             this._slider.addEventListener(Event.CHANGE, this.onSliderChange);
         }
@@ -45,7 +45,7 @@
             return true;
         }
 
-        private function _Str_2453(k:IWindowContainer):IWindowContainer
+        private function getInput(k:IWindowContainer):IWindowContainer
         {
             return k.findChildByName("slider_container") as IWindowContainer;
         }

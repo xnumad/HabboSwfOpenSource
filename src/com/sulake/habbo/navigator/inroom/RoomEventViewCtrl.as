@@ -79,7 +79,7 @@
             this._Str_5340.goBackToInitialState();
         }
 
-        private function _Str_2453(k:String):ITextFieldWindow
+        private function getInput(k:String):ITextFieldWindow
         {
             return ITextFieldWindow(this._window.findChildByName(k));
         }
@@ -164,8 +164,8 @@
             }
             this._window = IFrameWindow(this._navigator.getXmlWindow("iro_event_settings"));
             this.addMouseClickListener(this._window.findChildByTag("close"), this.onClose);
-            this._Str_5340 = new TextFieldManager(this._navigator, this._Str_2453("event_name"), 25);
-            this._Str_5951 = new TextFieldManager(this._navigator, this._Str_2453("event_desc"), 100);
+            this._Str_5340 = new TextFieldManager(this._navigator, this.getInput("event_name"), 25);
+            this._Str_5951 = new TextFieldManager(this._navigator, this.getInput("event_desc"), 100);
             this._Str_5340.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
             this._Str_5951.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
             this._navigator.communication.addHabboConnectionMessageEvent(new RoomAdErrorEvent(this._Str_24049));
