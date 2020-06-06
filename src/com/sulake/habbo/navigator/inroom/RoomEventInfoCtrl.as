@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3579;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventData;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;
@@ -104,7 +104,7 @@
 
         private function _Str_23285():Boolean
         {
-            var k:_Str_3579 = this._navigator.data.roomEventData;
+            var k:RoomEventData = this._navigator.data.roomEventData;
             if (k == null)
             {
                 return false;
@@ -165,7 +165,7 @@
 
         private function _Str_25123(k:WindowEvent, _arg_2:IWindow):void
         {
-            var _local_3:_Str_3579;
+            var _local_3:RoomEventData;
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this._navigator.data.roomEventData;

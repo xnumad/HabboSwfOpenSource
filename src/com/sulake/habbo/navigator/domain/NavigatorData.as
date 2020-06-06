@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.navigator.HabboNavigator;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5733;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3579;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventData;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2632;
@@ -28,7 +28,7 @@
 
         private var _navigator:HabboNavigator;
         private var _lastMsg:_Str_5733;
-        private var _roomEventData:_Str_3579;
+        private var _roomEventData:RoomEventData;
         private var _eventMod:Boolean;
         private var _roomPicker:Boolean;
         private var _currentRoomOwner:Boolean;
@@ -112,7 +112,7 @@
             this._enteredGuestRoom = k;
         }
 
-        public function set roomEventData(k:_Str_3579):void
+        public function set roomEventData(k:RoomEventData):void
         {
             if (this._roomEventData != null)
             {
@@ -220,7 +220,7 @@
             return this._promotedRooms;
         }
 
-        public function get roomEventData():_Str_3579
+        public function get roomEventData():RoomEventData
         {
             return this._roomEventData;
         }

@@ -4,7 +4,7 @@
     import com.sulake.habbo.navigator.IHabboTransitionalNavigator;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.navigator.TextFieldManager;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3579;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventData;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9806;
@@ -52,7 +52,7 @@
             }
             this.prepareWindow();
             this.clearErrors();
-            var k:_Str_3579 = this._navigator.data.roomEventData;
+            var k:RoomEventData = this._navigator.data.roomEventData;
             if (k == null)
             {
                 this._Str_25306();
@@ -65,7 +65,7 @@
             this._window.activate();
         }
 
-        private function _Str_26474(k:_Str_3579):void
+        private function _Str_26474(k:RoomEventData):void
         {
             this._window.caption = this._navigator.getText("navigator.eventsettings.editcaption");
             this._Str_5340.setText(k.eventName);

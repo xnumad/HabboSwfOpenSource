@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3579 implements IDisposable 
+    public class RoomEventData implements IDisposable
     {
         private var _adId:int;
         private var _Str_21450:int;
@@ -17,7 +17,7 @@
         private var _Str_20383:Date;
         private var _disposed:Boolean;
 
-        public function _Str_3579(k:IMessageDataWrapper)
+        public function RoomEventData(k:IMessageDataWrapper)
         {
             this._adId = k.readInteger();
             this._Str_21450 = k.readInteger();
