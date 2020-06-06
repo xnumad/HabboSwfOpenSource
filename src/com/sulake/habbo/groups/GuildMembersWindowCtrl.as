@@ -277,12 +277,12 @@
             this._Str_16819(false, k);
             _local_5 = (_arg_2.userId == this._manager._Str_3251);
             var _local_6:IRegionWindow = IRegionWindow(k.findChildByName("remove_region"));
-            _local_6._Str_2613 = this._manager.localization.getLocalization(((_arg_2.member) ? "group.members.kick" : "group.members.reject"));
+            _local_6.toolTipCaption = this._manager.localization.getLocalization(((_arg_2.member) ? "group.members.kick" : "group.members.reject"));
             _local_6.visible = ((((!(_arg_2.owner)) && (!(_local_5))) && (this._data.allowedToManage)) && (!(_arg_2.blocked)));
             _local_6.id = _arg_2.userId;
             var _local_7:Boolean = ((((((_arg_2.member) && (!(_arg_2.owner))) && (!(_local_5))) && (this._data.allowedToManage)) && (this._manager.getBoolean("group.blocking.enabled"))) && (!(_arg_2.blocked)));
             var _local_8:IRegionWindow = IRegionWindow(k.findChildByName("block_region"));
-            _local_8._Str_2613 = this._manager.localization.getLocalization("group.members.block");
+            _local_8.toolTipCaption = this._manager.localization.getLocalization("group.members.block");
             _local_8.visible = _local_7;
             _local_8.id = _arg_2.userId;
             var _local_9:Boolean = ((!(_local_5)) && (this._data.allowedToManage));

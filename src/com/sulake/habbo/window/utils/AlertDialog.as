@@ -146,7 +146,7 @@
                         break;
                 }
             }
-            return (_local_2) ? new AlertDialogCaption(_local_2.caption, _local_2._Str_2613, _local_2.visible) : null;
+            return (_local_2) ? new AlertDialogCaption(_local_2.caption, _local_2.toolTipCaption, _local_2.visible) : null;
         }
 
         public function setButtonCaption(k:int, _arg_2:ICaption):void

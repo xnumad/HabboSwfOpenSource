@@ -193,7 +193,7 @@
                     {
                         _local_7 = ((this._widget.localizations.getLocalization("camera.effect.required.level") + " ") + _local_5._Str_15852);
                     }
-                    IRegionWindow(_local_3)._Str_2613 = _local_7;
+                    IRegionWindow(_local_3).toolTipCaption = _local_7;
                 }
             }
             _local_6 = (this._window.findChildByName("slider_container") as IWindowContainer);
@@ -209,7 +209,7 @@
             var _local_4:IBitmapWrapperWindow = (_local_3.findChildByName("icon") as IBitmapWrapperWindow);
             _local_4.bitmap = (this._widget.windowManager.assets.getAssetByName(_arg_2).content as BitmapData).clone();
             _local_3.name = ("typebutton," + k);
-            _local_3._Str_2613 = k;
+            _local_3.toolTipCaption = k;
             this._Str_11626.add(k, _local_3);
             return _local_3;
         }

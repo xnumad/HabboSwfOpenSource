@@ -378,7 +378,7 @@
             _local_3.addEventListener(WindowMouseEvent.OVER, onMouseOver);
             _local_3.addEventListener(WindowMouseEvent.OUT, onMouseOut);
             _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_5926);
-            _local_4._Str_2613 = _Str_3840.getLocalization("infostand.profile.link.tooltip", "");
+            _local_4.toolTipCaption = _Str_3840.getLocalization("infostand.profile.link.tooltip", "");
             _local_4._Str_3099 = 100;
             _local_5.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
             _local_5.addEventListener(WindowMouseEvent.OVER, onMouseOver);

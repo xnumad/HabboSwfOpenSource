@@ -83,7 +83,7 @@
             this._window.findChildByName("box_colour").visible = _local_3;
             this._window.findChildByName("box_overlay").visible = _local_3;
             this._window.findChildByName("small_box").visible = ((_local_3) && (this._Str_18883));
-            IRegionWindow(this._window.findChildByName("box_region"))._Str_2613 = ((_local_3) ? (("${mysterybox.tracker.box." + k.toLowerCase()) + "}") : "");
+            IRegionWindow(this._window.findChildByName("box_region")).toolTipCaption = ((_local_3) ? (("${mysterybox.tracker.box." + k.toLowerCase()) + "}") : "");
             if (_local_3)
             {
                 _local_5 = _Str_4471[k.toLowerCase()];
@@ -94,7 +94,7 @@
             this._window.findChildByName("key_colour").visible = _local_4;
             this._window.findChildByName("key_overlay").visible = _local_4;
             this._window.findChildByName("small_key").visible = ((_local_4) && (this._Str_18883));
-            IRegionWindow(this._window.findChildByName("key_region"))._Str_2613 = ((_local_4) ? (("${mysterybox.tracker.key." + _arg_2.toLowerCase()) + "}") : "");
+            IRegionWindow(this._window.findChildByName("key_region")).toolTipCaption = ((_local_4) ? (("${mysterybox.tracker.key." + _arg_2.toLowerCase()) + "}") : "");
             if (_local_4)
             {
                 _local_6 = _Str_4471[_arg_2.toLowerCase()];

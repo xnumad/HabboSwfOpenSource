@@ -283,7 +283,7 @@
                     {
                         _local_3.assetUri = "inventory_furni_no_trade_icon";
                         _local_4.visible = false;
-                        _local_5._Str_2613 = "${inventory.furni.preview.not_tradeable}";
+                        _local_5.toolTipCaption = "${inventory.furni.preview.not_tradeable}";
                         _local_4.filters = [];
                     }
                     else
@@ -291,7 +291,7 @@
                         _local_3.assetUri = "inventory_furni_trade_icon";
                         _local_4.visible = true;
                         _local_4.text = String(_local_13);
-                        _local_5._Str_2613 = "${inventory.furni.preview.tradeable_amount}";
+                        _local_5.toolTipCaption = "${inventory.furni.preview.tradeable_amount}";
                         _local_4.filters = [new GlowFilter(0xFFFFFF, 1, 3, 3, 300)];
                     }
                 }
@@ -305,7 +305,7 @@
                     {
                         _local_3.assetUri = "inventory_furni_no_recycle_icon";
                         _local_4.visible = false;
-                        _local_5._Str_2613 = "${inventory.furni.preview.not_recyclable}";
+                        _local_5.toolTipCaption = "${inventory.furni.preview.not_recyclable}";
                         _local_4.filters = [];
                     }
                     else
@@ -313,7 +313,7 @@
                         _local_3.assetUri = "inventory_furni_recycle_icon";
                         _local_4.visible = true;
                         _local_4.text = String(_local_13);
-                        _local_5._Str_2613 = "${inventory.furni.preview.recyclable_amount}";
+                        _local_5.toolTipCaption = "${inventory.furni.preview.recyclable_amount}";
                         _local_4.filters = [new GlowFilter(0xFFFFFF, 1, 3, 3, 300)];
                     }
                 }

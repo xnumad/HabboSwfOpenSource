@@ -28,12 +28,12 @@
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
         }
 
-        public function set _Str_2613(k:String):void
+        public function set toolTipCaption(k:String):void
         {
             this._Str_3422 = ((k == null) ? "" : k);
         }
 
-        public function get _Str_2613():String
+        public function get toolTipCaption():String
         {
             return this._Str_3422;
         }

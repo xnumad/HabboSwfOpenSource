@@ -526,14 +526,14 @@
             {
                 return;
             }
-            this._window._Str_2613 = "";
+            this._window.toolTipCaption = "";
             if (this._widget.isGameSession)
             {
                 return;
             }
             if (this._dragTooltipEnabled)
             {
-                this._window._Str_2613 = _Str_17786;
+                this._window.toolTipCaption = _Str_17786;
             }
             this._window._Str_3099 = 500;
         }

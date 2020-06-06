@@ -110,7 +110,7 @@
                     default:
                         _local_7 = "";
                 }
-                IInteractiveWindow(IWindowContainer(k.getListItemByName("trade")).getChildByName("button"))._Str_2613 = _local_7;
+                IInteractiveWindow(IWindowContainer(k.getListItemByName("trade")).getChildByName("button")).toolTipCaption = _local_7;
                 showButton("whisper");
                 showButton("group");
                 if (this.widget.configuration.getBoolean("handitem.give.enabled"))

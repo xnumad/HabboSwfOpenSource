@@ -4,8 +4,8 @@
 
     public interface IInteractiveWindow extends IWindow 
     {
-        function set _Str_2613(_arg_1:String):void;
-        function get _Str_2613():String;
+        function set toolTipCaption(_arg_1:String):void;
+        function get toolTipCaption():String;
         function set _Str_3099(_arg_1:uint):void;
         function get _Str_3099():uint;
         function set _Str_4074(_arg_1:Boolean):void;

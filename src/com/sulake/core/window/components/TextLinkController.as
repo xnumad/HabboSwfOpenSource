@@ -48,12 +48,12 @@
             return 0;
         }
 
-        public function set _Str_2613(k:String):void
+        public function set toolTipCaption(k:String):void
         {
             this._Str_3422 = ((k == null) ? "" : k);
         }
 
-        public function get _Str_2613():String
+        public function get toolTipCaption():String
         {
             return this._Str_3422;
         }

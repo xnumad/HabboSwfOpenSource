@@ -186,7 +186,7 @@
             }
             _local_9.bitmap = this._SafeStr_18799(k.skillLevel, k.final);
             var _local_10:IRegionWindow = (_local_6.findChildByName("scoreTooltip") as IRegionWindow);
-            _local_10._Str_2613 = ((k._SafeStr_17897.toString() + "/") + k._SafeStr_18803.toString());
+            _local_10.toolTipCaption = ((k._SafeStr_17897.toString() + "/") + k._SafeStr_18803.toString());
             _local_10.visible = true;
             _local_3.addListItem(_local_4);
             var _local_11:IBitmapWrapperWindow = (_local_7.findChildByName("loadingIcon") as IBitmapWrapperWindow);

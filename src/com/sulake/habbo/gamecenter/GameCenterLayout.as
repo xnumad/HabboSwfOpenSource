@@ -279,7 +279,7 @@
             var _local_6:IStaticBitmapWrapperWindow = (_local_5 as IStaticBitmapWrapperWindow);
             _local_6.assetUri = "game_center_loading_icon";
             _local_6.assetUri = _local_4;
-            _local_3._Str_2613 = this._gameCenterView.localization.getLocalization((("gamecenter." + _local_2) + ".name"), (("gamecenter." + _local_2) + ".name"));
+            _local_3.toolTipCaption = this._gameCenterView.localization.getLocalization((("gamecenter." + _local_2) + ".name"), (("gamecenter." + _local_2) + ".name"));
         }
 
         public function activate(k:int, _arg_2:Boolean):void

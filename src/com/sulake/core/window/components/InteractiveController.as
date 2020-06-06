@@ -56,7 +56,7 @@
             }
             else
             {
-                if (((!(k._Str_2613 == null)) && (k._Str_2613.length > 0)))
+                if (((!(k.toolTipCaption == null)) && (k.toolTipCaption.length > 0)))
                 {
                     if (_arg_2.type == WindowMouseEvent.OVER)
                     {
@@ -81,9 +81,9 @@
                 switch (_local_3.key)
                 {
                     case PropertyKeys.TOOL_TIP_CAPTION:
-                        if (_local_3.value != k._Str_2613)
+                        if (_local_3.value != k.toolTipCaption)
                         {
-                            k._Str_2613 = (_local_3.value as String);
+                            k.toolTipCaption = (_local_3.value as String);
                         }
                         break;
                     case PropertyKeys.TOOL_TIP_DELAY:
@@ -104,19 +104,19 @@
 
         public static function _Str_8987(k:IInteractiveWindow, _arg_2:Array):Array
         {
-            _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_CAPTION, k._Str_2613));
+            _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_CAPTION, k.toolTipCaption));
             _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_DELAY, k._Str_3099));
             _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_IS_DYNAMIC, k._Str_4074));
             return _arg_2;
         }
 
 
-        public function set _Str_2613(k:String):void
+        public function set toolTipCaption(k:String):void
         {
             this._Str_3422 = ((k == null) ? String(getDefaultProperty(PropertyKeys.TOOL_TIP_CAPTION).value) : k);
         }
 
-        public function get _Str_2613():String
+        public function get toolTipCaption():String
         {
             return this._Str_3422;
         }

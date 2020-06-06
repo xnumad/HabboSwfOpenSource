@@ -34,7 +34,7 @@
                 _local_7.y = _arg_6;
                 _arg_2.addChild(_local_7);
             }
-            IInteractiveWindow(_local_7)._Str_2613 = _arg_4;
+            IInteractiveWindow(_local_7).toolTipCaption = _arg_4;
             var _local_8:ITextWindow = ITextWindow(_local_7.findChildByName("txt"));
             _local_8.text = ("" + _arg_3);
             var _local_9:String = this.getBgColor(k, _arg_3);

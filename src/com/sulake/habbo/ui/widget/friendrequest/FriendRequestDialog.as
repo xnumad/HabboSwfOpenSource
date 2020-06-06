@@ -74,7 +74,7 @@
             if (_local_2)
             {
                 _local_2.procedure = this._Str_18339;
-                _local_2._Str_2613 = this._widget.localizations.getLocalization("infostand.profile.link.tooltip", "");
+                _local_2.toolTipCaption = this._widget.localizations.getLocalization("infostand.profile.link.tooltip", "");
                 _local_2._Str_3099 = 100;
             }
             var _local_3:ITextWindow = (this._window.findChildByName("text") as ITextWindow);

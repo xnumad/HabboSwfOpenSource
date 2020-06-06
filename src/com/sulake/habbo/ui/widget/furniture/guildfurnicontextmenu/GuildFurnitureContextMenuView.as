@@ -72,7 +72,7 @@
                 if (_local_1)
                 {
                     _local_1.procedure = this.buttonEventProc;
-                    _local_1._Str_2613 = this.widget.localizations.getLocalization("infostand.profile.link.tooltip", "Click to view profile");
+                    _local_1.toolTipCaption = this.widget.localizations.getLocalization("infostand.profile.link.tooltip", "Click to view profile");
                     _local_1._Str_3099 = 100;
                 }
                 _window.findChildByName("name").caption = _Str_2495;

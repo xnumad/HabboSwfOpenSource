@@ -330,7 +330,7 @@
                 if (this._ownerId != _Str_12261)
                 {
                     _local_4.text = _arg_2;
-                    _local_3._Str_2613 = this._widget.localizations.getLocalization("infostand.profile.link.tooltip", "");
+                    _local_3.toolTipCaption = this._widget.localizations.getLocalization("infostand.profile.link.tooltip", "");
                     _local_3._Str_3099 = 100;
                     _local_5.visible = true;
                     if (_local_6 != null)
@@ -341,7 +341,7 @@
                 else
                 {
                     _local_4.text = "${builder.catalog.title}";
-                    _local_3._Str_2613 = "";
+                    _local_3.toolTipCaption = "";
                     _local_5.visible = false;
                     if (_local_6 != null)
                     {

@@ -252,7 +252,7 @@
                     _local_6.visible = true;
                     _local_5.visible = false;
                 }
-                IRegionWindow(_local_4.findChildByName("avatar_click_region"))._Str_2613 = _local_3.name;
+                IRegionWindow(_local_4.findChildByName("avatar_click_region")).toolTipCaption = _local_3.name;
                 this._avatarList.addChild(_local_4);
                 this.refreshAvatarList();
             }
@@ -567,7 +567,7 @@
                             if (this._currentConversationId > 0)
                             {
                                 _local_3.figure = IAvatarImageWidget(IWidgetWindow(_local_9.getChildByName("avatar_image")).widget).figure;
-                                _local_3.userName = IRegionWindow(_local_9.findChildByName("avatar_click_region"))._Str_2613;
+                                _local_3.userName = IRegionWindow(_local_9.findChildByName("avatar_click_region")).toolTipCaption;
                                 _local_3.userId = _local_9.id;
                             }
                             else

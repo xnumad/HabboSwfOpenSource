@@ -497,7 +497,7 @@
                     _local_6.id = _arg_2.achievementId;
                     if (_arg_2.badgeCode == _Str_2821._Str_7735)
                     {
-                        _local_6._Str_2613 = "";
+                        _local_6.toolTipCaption = "";
                         _local_6.name = _arg_2.badgeCode;
                     }
                     break;

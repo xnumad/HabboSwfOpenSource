@@ -288,7 +288,7 @@
                         _local_11 = (_local_10.getGridItemAt(_local_9) as IRegionWindow);
                         if (_local_11)
                         {
-                            _local_11._Str_2613 = _local_14.name;
+                            _local_11.toolTipCaption = _local_14.name;
                             _local_11.mouseThreshold = 0;
                             _local_12 = (_local_11.findChildByName("image") as IBitmapWrapperWindow);
                             _local_13 = this._SafeStr_18586.remove(_local_12);

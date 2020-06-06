@@ -33,7 +33,7 @@
             {
                 if ((k is IInteractiveWindow))
                 {
-                    this._Str_3422 = IInteractiveWindow(k)._Str_2613;
+                    this._Str_3422 = IInteractiveWindow(k).toolTipCaption;
                     this._Str_3681 = IInteractiveWindow(k)._Str_3099;
                 }
                 else
@@ -93,7 +93,7 @@
             {
                 if ((window is IInteractiveWindow))
                 {
-                    this._Str_3422 = IInteractiveWindow(window)._Str_2613;
+                    this._Str_3422 = IInteractiveWindow(window).toolTipCaption;
                 }
                 else
                 {
@@ -129,7 +129,7 @@
             }
             if ((k is IInteractiveWindow))
             {
-                _local_2 = IInteractiveWindow(k)._Str_2613;
+                _local_2 = IInteractiveWindow(k).toolTipCaption;
             }
             else
             {

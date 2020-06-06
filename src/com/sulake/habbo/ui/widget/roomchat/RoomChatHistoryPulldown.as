@@ -70,7 +70,7 @@
                 this._region.mouseThreshold = 0;
                 this._region.addEventListener(WindowMouseEvent.DOWN, this.onPulldownMouseDown);
                 this._containerWindow.addChild(this._region);
-                this._region._Str_2613 = "${chat.history.drag.tooltip}";
+                this._region.toolTipCaption = "${chat.history.drag.tooltip}";
                 this._region._Str_3099 = 250;
             }
             var _local_5:XmlAsset = (_arg_4.getAssetByName("chat_history_pulldown") as XmlAsset);
