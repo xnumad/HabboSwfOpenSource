@@ -798,7 +798,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8665;
 	import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetLevelNotificationEvent;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9435;
+	import com.sulake.habbo.communication.messages.incoming.notifications.UnseenItemsEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9995;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.*;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.AcceptFriendMessageComposer;
@@ -1151,7 +1151,7 @@
             INCOMING_PACKETS[207] = IgnoreResultMessageEvent;
             INCOMING_PACKETS[2088] = _Str_6213;
             INCOMING_PACKETS[2101] = _Str_9550;
-            INCOMING_PACKETS[2103] = _Str_9435;
+            INCOMING_PACKETS[2103] = UnseenItemsEvent;
             INCOMING_PACKETS[2107] = AchievementEvent;
             INCOMING_PACKETS[2124] = CraftingRecipesAvailableEvent;
             INCOMING_PACKETS[2125] = _Str_7261;

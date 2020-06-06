@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import flash.utils.Dictionary;
     import flash.events.IEventDispatcher;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_9435;
+    import com.sulake.habbo.communication.messages.incoming.notifications.UnseenItemsEvent;
     import com.sulake.habbo.communication.messages.parser.notifications.UnseenItemsParser;
     import com.sulake.habbo.inventory.enum.UnseenItemCategoryEnum;
     import com.sulake.habbo.inventory.events.HabboUnseenItemsUpdatedEvent;
@@ -23,7 +23,7 @@
             this._inventory = _arg_3;
             this._events = _arg_2;
             this._unseenItems = new Dictionary();
-            this._communication.addHabboConnectionMessageEvent(new _Str_9435(this._Str_14461));
+            this._communication.addHabboConnectionMessageEvent(new UnseenItemsEvent(this._Str_14461));
         }
 
         public function dispose():void
@@ -120,7 +120,7 @@
             return 0;
         }
 
-        private function _Str_14461(k:_Str_9435):void
+        private function _Str_14461(k:UnseenItemsEvent):void
         {
             var _local_3:Boolean;
             var _local_4:int;
