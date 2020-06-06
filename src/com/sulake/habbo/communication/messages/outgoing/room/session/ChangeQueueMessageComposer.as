@@ -4,16 +4,16 @@
 
     public class ChangeQueueMessageComposer implements IMessageComposer
     {
-        private var _Str_19441:int;
+        private var _targetQueue:int;
 
         public function ChangeQueueMessageComposer(k:int)
         {
-            this._Str_19441 = k;
+            this._targetQueue = k;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_19441];
+            return [this._targetQueue];
         }
 
         public function dispose():void
