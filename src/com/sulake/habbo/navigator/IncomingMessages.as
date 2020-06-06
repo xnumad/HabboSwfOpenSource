@@ -118,7 +118,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5711(this._Str_18125));
             _local_2.addHabboConnectionMessageEvent(new _Str_5212(this._Str_17011));
             _local_2.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226));
-            _local_2.addHabboConnectionMessageEvent(new _Str_4910(this._Str_16568));
+            _local_2.addHabboConnectionMessageEvent(new _Str_4910(this.onGuestRoomSearch));
             _local_2.addHabboConnectionMessageEvent(new _Str_4187(this._Str_12114));
             _local_2.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
             _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
@@ -224,7 +224,7 @@
             Logger.log(("Received Official rooms: " + this.data._Str_5645.entries.length));
         }
 
-        private function _Str_16568(k:IMessageEvent):void
+        private function onGuestRoomSearch(k:IMessageEvent):void
         {
             var _local_2:GuestRoomSearchResultData = _Str_4910(k).getParser().data;
             this.data.guestRoomSearchResults = _local_2;
