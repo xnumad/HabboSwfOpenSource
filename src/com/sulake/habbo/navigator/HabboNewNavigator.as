@@ -224,7 +224,7 @@
         {
             this._newResultsRendered = false;
             this._currentResults = k;
-            this._Str_25713(k._Str_11413);
+            this.extractRoomNamesFromResults(k._Str_11413);
             if (!this._noPushToHistoryDueToNavigation)
             {
                 this._searchContextHistoryManager._Str_23951(new SearchContext(k._Str_4569, k._Str_5610));
@@ -237,7 +237,7 @@
             }
         }
 
-        private function _Str_25713(k:SearchResultSet):void
+        private function extractRoomNamesFromResults(k:SearchResultSet):void
         {
             var _local_2:SearchResultList;
             var _local_3:GuestRoomData;
