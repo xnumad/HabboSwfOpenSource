@@ -4,7 +4,7 @@
     import flash.utils.Dictionary;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9435;
-    import com.sulake.habbo.communication.messages.parser.notifications._Str_7601;
+    import com.sulake.habbo.communication.messages.parser.notifications.UnseenItemsParser;
     import com.sulake.habbo.inventory.enum.UnseenItemCategoryEnum;
     import com.sulake.habbo.inventory.events.HabboUnseenItemsUpdatedEvent;
     import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemIdsComposer;
@@ -125,7 +125,7 @@
             var _local_3:Boolean;
             var _local_4:int;
             var _local_5:Array;
-            var _local_2:_Str_7601 = k.getParser();
+            var _local_2:UnseenItemsParser = k.getParser();
             for each (_local_4 in _local_2._Str_17858())
             {
                 _local_5 = _local_2._Str_24396(_local_4);

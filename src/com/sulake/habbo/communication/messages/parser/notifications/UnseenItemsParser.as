@@ -4,7 +4,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7601 implements IMessageParser 
+    public class UnseenItemsParser implements IMessageParser
     {
         private var _items:Map;
 
