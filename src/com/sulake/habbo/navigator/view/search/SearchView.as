@@ -109,7 +109,7 @@
         {
             if (k.keyCode == Keyboard.ENTER)
             {
-                this._navigator._Str_3310(this._navigator._Str_3440._Str_4569, this._Str_24862());
+                this._navigator.performSearch(this._navigator._Str_3440._Str_4569, this._Str_24862());
             }
         }
 

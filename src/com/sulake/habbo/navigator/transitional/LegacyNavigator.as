@@ -227,17 +227,17 @@
 
         public function _Str_18427():void
         {
-            return this._newNavigator._Str_3310("favorites");
+            return this._newNavigator.performSearch("favorites");
         }
 
         public function _Str_16885():void
         {
-            return this._newNavigator._Str_3310("history");
+            return this._newNavigator.performSearch("history");
         }
 
         public function _Str_17131():void
         {
-            return this._newNavigator._Str_3310("history_freq");
+            return this._newNavigator.performSearch("history_freq");
         }
 
         public function get tracking():IHabboTracking
@@ -303,17 +303,17 @@
 
         public function performGuildBaseSearch():void
         {
-            return this._newNavigator._Str_3310("groups");
+            return this._newNavigator.performSearch("groups");
         }
 
         public function performCompetitionRoomsSearch(k:int, _arg_2:int):void
         {
-            return this._newNavigator._Str_3310("competition");
+            return this._newNavigator.performSearch("competition");
         }
 
         public function showOwnRooms():void
         {
-            return this._newNavigator._Str_3310("myworld_view");
+            return this._newNavigator.performSearch("myworld_view");
         }
 
         public function goToPrivateRoom(k:int):void

@@ -318,11 +318,11 @@
             if (((!(this._lastSearchCode == null)) && (!(this._lastFilteringData == null))))
             {
                 this._navigatorCache._Str_25085(((this._lastSearchCode + "/") + this._lastFilteringData));
-                this._Str_3310(this._lastSearchCode, this._lastFilteringData);
+                this.performSearch(this._lastSearchCode, this._lastFilteringData);
             }
         }
 
-        public function _Str_3310(k:String, _arg_2:String="", _arg_3:String=""):void
+        public function performSearch(k:String, _arg_2:String="", _arg_3:String=""):void
         {
             this._navigatorView._Str_9330 = true;
             this._previousFilterInput = _arg_3;
@@ -343,7 +343,7 @@
 
         public function _Str_21272(k:SearchContext):void
         {
-            this._Str_3310(k.searchCode, k.filtering);
+            this.performSearch(k.searchCode, k.filtering);
         }
 
         public function _Str_25074(k:String, _arg_2:String):void
@@ -427,19 +427,19 @@
                 case "search":
                     if (_local_2.length > 2)
                     {
-                        this._Str_3310("hotel_view", _local_2[2]);
+                        this.performSearch("hotel_view", _local_2[2]);
                     }
                     return;
                 case "tag":
                     if (_local_2.length > 2)
                     {
-                        this._Str_3310("hotel_view", _local_2[2]);
+                        this.performSearch("hotel_view", _local_2[2]);
                     }
                     return;
                 case "tab":
                     if (_local_2.length > 2)
                     {
-                        this._Str_3310(_local_2[2]);
+                        this.performSearch(_local_2[2]);
                     }
                     return;
                 case "report":
@@ -510,7 +510,7 @@
 
         public function performTagSearch(k:String):void
         {
-            this._Str_3310("hotel_view", ("tag:" + k));
+            this.performSearch("hotel_view", ("tag:" + k));
         }
 
         public function createRoom():void

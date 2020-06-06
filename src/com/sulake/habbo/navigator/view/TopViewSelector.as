@@ -67,7 +67,7 @@
             {
                 if (this._navigator._Str_7014._Str_9965().length > _arg_2.id)
                 {
-                    this._navigator._Str_3310(this._navigator._Str_7014._Str_9965()[_arg_2.id], "", this._navigator.view._Str_24940());
+                    this._navigator.performSearch(this._navigator._Str_7014._Str_9965()[_arg_2.id], "", this._navigator.view._Str_24940());
                 }
             }
         }

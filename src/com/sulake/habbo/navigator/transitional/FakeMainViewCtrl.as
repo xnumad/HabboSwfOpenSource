@@ -123,7 +123,7 @@
 
         public function _Str_2798(k:int, _arg_2:int, _arg_3:String="-1", _arg_4:int=1):void
         {
-            this._newNavigator._Str_3310(this._Str_22867(_arg_2), _arg_3);
+            this._newNavigator.performSearch(this._Str_22867(_arg_2), _arg_3);
         }
 
         public function update(k:uint):void

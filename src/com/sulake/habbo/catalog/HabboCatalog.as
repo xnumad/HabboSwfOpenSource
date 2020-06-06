@@ -1554,7 +1554,7 @@
             {
                 if (k.keyCode == Keyboard.ENTER)
                 {
-                    this._Str_3310(k.target.caption);
+                    this.performSearch(k.target.caption);
                 }
             }
         }
@@ -1562,10 +1562,10 @@
         private function _Str_24381(k:TimerEvent):void
         {
             var _local_2:ITextFieldWindow = (this._mainContainer.findChildByName("search.input") as ITextFieldWindow);
-            this._Str_3310(_local_2.caption);
+            this.performSearch(_local_2.caption);
         }
 
-        private function _Str_3310(k:String):void
+        private function performSearch(k:String):void
         {
             var _local_5:IFurnitureData;
             var _local_6:String;

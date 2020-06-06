@@ -6,7 +6,7 @@
     public interface IHabboNewNavigator extends IUnknown 
     {
         function open():void;
-        function _Str_3310(_arg_1:String, _arg_2:String="", _arg_3:String=""):void;
+        function performSearch(_arg_1:String, _arg_2:String="", _arg_3:String=""):void;
         function performTagSearch(_arg_1:String):void;
         function goToRoom(_arg_1:int, _arg_2:String="mainview"):void;
         function get isReady():Boolean;

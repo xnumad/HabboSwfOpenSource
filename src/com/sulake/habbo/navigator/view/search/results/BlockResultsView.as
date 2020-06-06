@@ -83,7 +83,7 @@
 
         public function _Str_19195(k:WindowEvent):void
         {
-            this._navigator._Str_3310(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440._Str_5610);
+            this._navigator.performSearch(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440._Str_5610);
             this._navigator.trackEventLog("browse.expandsearch", "Results", HabboNewNavigator._Str_6560(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440._Str_5610));
         }
 

@@ -99,7 +99,7 @@
                 {
                     if (!this._Str_16928)
                     {
-                        this._habboNewNavigator._Str_3310(ViewMode.OFFICIAL_VIEW);
+                        this._habboNewNavigator.performSearch(ViewMode.OFFICIAL_VIEW);
                     }
                 }
                 this._window.activate();
