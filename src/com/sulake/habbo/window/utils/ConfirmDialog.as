@@ -5,9 +5,9 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;
 
-    public class _Str_9679 extends AlertDialog implements IConfirmDialog
+    public class ConfirmDialog extends AlertDialog implements IConfirmDialog
     {
-        public function _Str_9679(k:IHabboWindowManager, _arg_2:XML, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function, _arg_7:Boolean)
+        public function ConfirmDialog(k:IHabboWindowManager, _arg_2:XML, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function, _arg_7:Boolean)
         {
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7);
         }

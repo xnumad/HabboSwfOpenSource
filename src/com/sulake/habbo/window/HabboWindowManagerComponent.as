@@ -60,7 +60,7 @@
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.window.utils._Str_12599;
     import com.sulake.habbo.window.utils._Str_10548;
-    import com.sulake.habbo.window.utils._Str_9679;
+    import com.sulake.habbo.window.utils.ConfirmDialog;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.core.window.utils.MouseCursorControl;
     import com.sulake.core.utils.ErrorReportStorage;
@@ -413,7 +413,7 @@
                 throw (new Error("Failed to initialize aleret dialog; missing asset!"));
             }
             var _local_6:XML = (confirmAsset.content as XML);
-            return new _Str_9679(this, _local_6, k, _arg_2, _arg_3, _arg_4, false);
+            return new ConfirmDialog(this, _local_6, k, _arg_2, _arg_3, _arg_4, false);
         }
 
         public function confirmWithModal(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IConfirmDialog
@@ -424,7 +424,7 @@
                 throw (new Error("Failed to initialize aleret dialog; missing asset!"));
             }
             var _local_6:XML = (confirmAsset.content as XML);
-            return new _Str_9679(this, _local_6, k, _arg_2, _arg_3, _arg_4, true);
+            return new ConfirmDialog(this, _local_6, k, _arg_2, _arg_3, _arg_4, true);
         }
 
         public function registerLocalizationParameter(k:String, _arg_2:String, _arg_3:String, _arg_4:String="%"):void
