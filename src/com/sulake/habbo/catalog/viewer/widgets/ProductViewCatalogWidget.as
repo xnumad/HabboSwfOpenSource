@@ -312,7 +312,7 @@
             }
             if (ProductImageConfiguration._Str_17970(_local_3.localizationId))
             {
-                this._Str_6504(ProductImageConfiguration._Str_2643[_local_3.localizationId]);
+                this._Str_6504(ProductImageConfiguration.PRODUCT_IMAGES[_local_3.localizationId]);
                 if (this._Str_3864 != null)
                 {
                     this._Str_3864.visible = false;
