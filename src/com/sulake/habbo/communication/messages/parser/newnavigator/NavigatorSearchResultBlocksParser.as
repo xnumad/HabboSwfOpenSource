@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SearchResultSet;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9643 implements IMessageParser 
+    public class NavigatorSearchResultBlocksParser implements IMessageParser
     {
         private var _Str_16531:SearchResultSet;
 
