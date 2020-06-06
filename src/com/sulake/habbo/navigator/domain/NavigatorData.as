@@ -70,7 +70,7 @@
             this._navigator = k;
         }
 
-        public function get _Str_26243():Boolean
+        public function get canAddFavourite():Boolean
         {
             return (!(this._enteredGuestRoom == null)) && (!(this._currentRoomOwner));
         }
