@@ -180,7 +180,7 @@
         public function _Str_18091(k:_Str_4173, _arg_2:String=""):void
         {
             var _local_3:int;
-            if (this._habboNewNavigator._Str_16771)
+            if (this._habboNewNavigator.newResultsRendered)
             {
                 return;
             }
@@ -212,7 +212,7 @@
                 this._window.findChildByName("random_room").procedure = this._Str_22366;
             }
             this._Str_9680._Str_22850(k._Str_5610, _arg_2);
-            this._habboNewNavigator._Str_16771 = true;
+            this._habboNewNavigator.newResultsRendered = true;
             this._Str_9330 = false;
             if (this._roomInfoPopup)
             {

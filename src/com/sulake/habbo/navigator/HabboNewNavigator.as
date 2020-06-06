@@ -251,12 +251,12 @@
             }
         }
 
-        public function get _Str_16771():Boolean
+        public function get newResultsRendered():Boolean
         {
             return this._newResultsRendered;
         }
 
-        public function set _Str_16771(k:Boolean):void
+        public function set newResultsRendered(k:Boolean):void
         {
             this._newResultsRendered = k;
         }
