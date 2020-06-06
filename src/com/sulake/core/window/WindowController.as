@@ -2739,12 +2739,12 @@
                 {
                     if (this._immediateClickMode)
                     {
-                        _local_2._Str_10223 = true;
+                        _local_2.mouse = true;
                         _local_2.addEventListener(MouseEvent.CLICK, this.immediateClickHandler);
                     }
                     else
                     {
-                        _local_2._Str_10223 = false;
+                        _local_2.mouse = false;
                         _local_2.removeEventListener(MouseEvent.CLICK, this.immediateClickHandler);
                     }
                 }

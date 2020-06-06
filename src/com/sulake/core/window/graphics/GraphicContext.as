@@ -133,12 +133,12 @@
             this.alpha = k;
         }
 
-        public function get _Str_10223():Boolean
+        public function get mouse():Boolean
         {
             return super.mouseEnabled;
         }
 
-        public function set _Str_10223(k:Boolean):void
+        public function set mouse(k:Boolean):void
         {
             super.mouseEnabled = k;
         }
