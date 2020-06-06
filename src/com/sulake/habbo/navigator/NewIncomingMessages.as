@@ -260,7 +260,7 @@
             var _local_2:_Str_6320 = _Str_5134(k).getParser();
             this.data._Str_5645 = _local_2.data;
             this.data._Str_5653 = _local_2._Str_5653;
-            this.data._Str_5482 = _local_2._Str_5482;
+            this.data.promotedRooms = _local_2.promotedRooms;
             Logger.log(("Received Official rooms: " + this.data._Str_5645.entries.length));
         }
 

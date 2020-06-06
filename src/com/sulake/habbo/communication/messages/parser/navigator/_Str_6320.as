@@ -40,7 +40,7 @@
             return this._Str_8807;
         }
 
-        public function get _Str_5482():_Str_5485
+        public function get promotedRooms():_Str_5485
         {
             return this._Str_12284;
         }

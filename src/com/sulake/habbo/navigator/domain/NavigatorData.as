@@ -185,7 +185,7 @@
             this._adRoomData = k;
         }
 
-        public function set _Str_5482(k:_Str_5485):void
+        public function set promotedRooms(k:_Str_5485):void
         {
             this._promotedRooms = k;
         }
@@ -215,7 +215,7 @@
             return this._lastMsg as _Str_5546;
         }
 
-        public function get _Str_5482():_Str_5485
+        public function get promotedRooms():_Str_5485
         {
             return this._promotedRooms;
         }

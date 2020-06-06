@@ -163,9 +163,9 @@
             var _local_5:_Str_3451;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                while (_local_3 < this._navigator.data._Str_5482.entries.length)
+                while (_local_3 < this._navigator.data.promotedRooms.entries.length)
                 {
-                    _local_5 = this._navigator.data._Str_5482.entries[_local_3];
+                    _local_5 = this._navigator.data.promotedRooms.entries[_local_3];
                     if (_arg_2.id != _local_3)
                     {
                         _local_5.open = false;
@@ -180,7 +180,7 @@
 
         private function _Str_5067(k:IWindow):_Str_3451
         {
-            return this._navigator.data._Str_5482.entries[k.id];
+            return this._navigator.data.promotedRooms.entries[k.id];
         }
 
         private function _Str_16592(k:IWindowContainer, _arg_2:_Str_3451):void

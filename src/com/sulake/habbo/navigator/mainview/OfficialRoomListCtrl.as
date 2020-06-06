@@ -113,7 +113,7 @@
         private function _Str_25113():void
         {
             var k:IWindowContainer = IWindowContainer(this._list.getListItemAt(0));
-            this._promotedRoomsListCtrl.refresh(k, this._navigator.data._Str_5482.entries);
+            this._promotedRoomsListCtrl.refresh(k, this._navigator.data.promotedRooms.entries);
         }
     }
 }
