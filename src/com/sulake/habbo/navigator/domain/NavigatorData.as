@@ -24,7 +24,7 @@
 
     public class NavigatorData 
     {
-        private static const _Str_19461:int = 10;
+        private static const MAX_HISTORY_LENGTH:int = 10;
 
         private var _navigator:HabboNavigator;
         private var _lastMsg:_Str_5733;
