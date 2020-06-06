@@ -293,7 +293,7 @@
             Logger.log(((("Got room info: " + _local_2._Str_15487) + ", ") + _local_2._Str_18882));
             if (_local_2._Str_15487)
             {
-                this.data._Str_20702 = _local_2.data;
+                this.data.enteredRoom = _local_2.data;
                 this.data._Str_8299 = _local_2._Str_21489;
                 _local_3 = (this.data.createdFlatId == _local_2.data.flatId);
                 if (((!(_local_3)) && (_local_2.data._Str_24051)))
@@ -338,7 +338,7 @@
                 }
                 else
                 {
-                    this.data._Str_20702 = _local_2.data;
+                    this.data.enteredRoom = _local_2.data;
                     this.data._Str_8299 = _local_2._Str_21489;
                     this._navigator._Str_4012.reload();
                 }

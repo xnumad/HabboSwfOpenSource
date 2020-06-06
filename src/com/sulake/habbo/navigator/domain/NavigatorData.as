@@ -103,7 +103,7 @@
             this._currentRoomOwner = false;
         }
 
-        public function set _Str_20702(k:GuestRoomData):void
+        public function set enteredRoom(k:GuestRoomData):void
         {
             if (this._enteredGuestRoom != null)
             {
