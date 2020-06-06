@@ -25,7 +25,7 @@
             return this._filteringData;
         }
 
-        public function get _Str_11413():SearchResultSet
+        public function get resultSet():SearchResultSet
         {
             return this._resultSet;
         }

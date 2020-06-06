@@ -224,7 +224,7 @@
         {
             this._newResultsRendered = false;
             this._currentResults = k;
-            this.extractRoomNamesFromResults(k._Str_11413);
+            this.extractRoomNamesFromResults(k.resultSet);
             if (!this._noPushToHistoryDueToNavigation)
             {
                 this._searchContextHistoryManager._Str_23951(new SearchContext(k.searchCodeOriginal, k.filteringData));
