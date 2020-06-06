@@ -21,7 +21,7 @@
             return true;
         }
 
-        public function get _Str_22419():SearchResultSet
+        public function get searchResult():SearchResultSet
         {
             return this._searchResult;
         }

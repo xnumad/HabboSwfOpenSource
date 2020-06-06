@@ -171,7 +171,7 @@
 
         private function onNavigatorSearchResultBlocks(k:NavigatorSearchResultBlocksEvent):void
         {
-            this._navigator._Str_20936(new _Str_4173(k.getParser()._Str_22419));
+            this._navigator._Str_20936(new _Str_4173(k.getParser().searchResult));
         }
 
         private function _Str_23664(k:NavigatorLiftedRoomsEvent):void
