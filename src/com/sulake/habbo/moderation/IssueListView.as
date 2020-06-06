@@ -120,7 +120,7 @@
                 _local_6 = _local_3.findChildByName("target_name");
                 if (_local_6 != null)
                 {
-                    if (_local_10._Str_2662 != 0)
+                    if (_local_10.reportedUserId != 0)
                     {
                         _local_6.caption = _local_10._Str_5842;
                     }
@@ -132,7 +132,7 @@
                 _local_11 = (_local_3.findChildByName("target_icon") as IBitmapWrapperWindow);
                 if (_local_11 != null)
                 {
-                    _local_12 = ((_local_10._Str_2662) ? "user_icon_png" : "room_icon_png");
+                    _local_12 = ((_local_10.reportedUserId) ? "user_icon_png" : "room_icon_png");
                     _local_13 = (this._issueBrowser.assets.getAssetByName(_local_12) as BitmapDataAsset);
                     if (((!(_local_13 == null)) && (!((_local_13.content as BitmapData) == null))))
                     {

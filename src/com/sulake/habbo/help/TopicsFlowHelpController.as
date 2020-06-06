@@ -238,7 +238,7 @@
 
         private function _Str_19840():Boolean
         {
-            if (this._habboHelp._Str_2662 == -1)
+            if (this._habboHelp.reportedUserId == -1)
             {
                 this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${guide.bully.request.usermissing}", 0, null);
                 return false;
@@ -264,7 +264,7 @@
 
         private function _Str_23993():Boolean
         {
-            var k:Array = this._habboHelp._Str_5721._Str_18787._Str_9701(this._contentModerationType, this._habboHelp._Str_2662);
+            var k:Array = this._habboHelp._Str_5721._Str_18787._Str_9701(this._contentModerationType, this._habboHelp.reportedUserId);
             if (((k == null) || (k.length == 0)))
             {
                 this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.chatmissing}", 0, null);
@@ -421,10 +421,10 @@
             switch (this._contentModerationType)
             {
                 case HabboHelp._Str_7161:
-                    this._habboHelp.sendMessage(new _Str_7640(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp._Str_2662, this._currentTopic.id, this._habboHelp._Str_10658));
+                    this._habboHelp.sendMessage(new _Str_7640(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp.reportedUserId, this._currentTopic.id, this._habboHelp._Str_10658));
                     return;
                 case HabboHelp._Str_4315:
-                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp._Str_2662, this._habboHelp._Str_5721._Str_18787._Str_9701(HabboHelp._Str_4315, this._habboHelp._Str_2662)));
+                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721._Str_18787._Str_9701(HabboHelp._Str_4315, this._habboHelp.reportedUserId)));
                     return;
                 case HabboHelp._Str_4786:
                     this._habboHelp.sendMessage(new _Str_6133(this._message, this._currentTopic.id, -1, this._habboHelp._Str_3469, []));
@@ -438,11 +438,11 @@
                 default:
                     if (((((k) && (this._currentTopic.name == BULLYING)) && (this._habboHelp.getBoolean("guides.enabled"))) && (this._habboHelp._Str_16486)))
                     {
-                        this._habboHelp.sendMessage(new _Str_7634(this._habboHelp._Str_2662, this._habboHelp._Str_3469));
+                        this._habboHelp.sendMessage(new _Str_7634(this._habboHelp.reportedUserId, this._habboHelp._Str_3469));
                     }
                     else
                     {
-                        this._habboHelp.sendMessage(new _Str_6133(this._message, this._currentTopic.id, this._habboHelp._Str_2662, this._habboHelp._Str_3469, this._habboHelp._Str_5721._Str_18787._Str_9701(HabboHelp._Str_5723, -1)));
+                        this._habboHelp.sendMessage(new _Str_6133(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_3469, this._habboHelp._Str_5721._Str_18787._Str_9701(HabboHelp._Str_5723, -1)));
                     }
             }
         }
@@ -465,7 +465,7 @@
                 else
                 {
                     _local_5 = (this._userPrototype.clone() as IWindowContainer);
-                    _local_6 = (_local_3.userId == this._habboHelp._Str_2662);
+                    _local_6 = (_local_3.userId == this._habboHelp.reportedUserId);
                     _local_5.name = _local_3.userId.toString();
                     _local_5.findChildByName("user_bg").blend = ((_local_6) ? 1 : 0);
                     _local_5.procedure = this._Str_17107;
@@ -487,7 +487,7 @@
             }
             if (!_local_2)
             {
-                this._habboHelp._Str_2662 = -1;
+                this._habboHelp.reportedUserId = -1;
                 this._habboHelp._Str_3469 = -1;
             }
             return this._usersList.numListItems > 0;
@@ -500,7 +500,7 @@
             while (k < this._usersList.numListItems)
             {
                 _local_2 = IWindowContainer(this._usersList.getListItemAt(k));
-                _local_2.findChildByName("user_bg").blend = ((int(_local_2.name) == this._habboHelp._Str_2662) ? 1 : 0);
+                _local_2.findChildByName("user_bg").blend = ((int(_local_2.name) == this._habboHelp.reportedUserId) ? 1 : 0);
                 k++;
             }
         }
@@ -516,7 +516,7 @@
         private function _Str_17740(k:IWindowContainer):void
         {
             var _local_2:int = int(k.name);
-            this._habboHelp._Str_2662 = _local_2;
+            this._habboHelp.reportedUserId = _local_2;
             this._habboHelp._Str_3469 = k.findChildByName("room_name").id;
             this._Str_18558();
         }
@@ -600,8 +600,8 @@
             var _local_5:ICheckBoxWindow;
             this._chatList.removeListItems();
             this._habboHelp._Str_3531._Str_7724 = true;
-            var k:Vector.<ChatRegistryItem> = ((this._habboHelp._Str_2662 > 0) ? this._habboHelp._Str_3531._Str_5150(this._habboHelp._Str_2662) : this._habboHelp._Str_3531._Str_6828());
-            Logger.log(((("Found chat items: " + k.length) + " from user:") + this._habboHelp._Str_2662));
+            var k:Vector.<ChatRegistryItem> = ((this._habboHelp.reportedUserId > 0) ? this._habboHelp._Str_3531._Str_5150(this._habboHelp.reportedUserId) : this._habboHelp._Str_3531._Str_6828());
+            Logger.log(((("Found chat items: " + k.length) + " from user:") + this._habboHelp.reportedUserId));
             for each (_local_2 in k)
             {
                 if (_local_2.userId == this._habboHelp._Str_6240)
@@ -686,7 +686,7 @@
             var _local_4:ICheckBoxWindow;
             this._chatList.removeListItems();
             this._habboHelp._Str_3977._Str_7724 = true;
-            var k:Vector.<InstantMessageRegistryItem> = this._habboHelp._Str_3977._Str_5150(this._habboHelp._Str_2662);
+            var k:Vector.<InstantMessageRegistryItem> = this._habboHelp._Str_3977._Str_5150(this._habboHelp.reportedUserId);
             for each (_local_2 in k)
             {
                 _local_3 = (this._chatPrototype.clone() as IWindowContainer);
@@ -720,7 +720,7 @@
                         _local_4 = (_arg_2 as ICheckBoxWindow);
                     }
                 }
-                _local_5 = this._habboHelp._Str_3977._Str_2990(this._habboHelp._Str_2662, _local_3);
+                _local_5 = this._habboHelp._Str_3977._Str_2990(this._habboHelp.reportedUserId, _local_3);
                 if (_local_5)
                 {
                     _local_5.selected = (!(_local_5.selected));
@@ -758,7 +758,7 @@
         private function _Str_25232():Boolean
         {
             this._Str_16001();
-            if (this._habboHelp._Str_2662 <= 0)
+            if (this._habboHelp.reportedUserId <= 0)
             {
                 this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.no_user_data}", 0, null);
                 this.closeWindow();
@@ -801,9 +801,9 @@
                     this._view.findChildByName("reported_user_name").visible = false;
                     return;
                 default:
-                    if (this._habboHelp._Str_2662 > 0)
+                    if (this._habboHelp.reportedUserId > 0)
                     {
-                        k = this._habboHelp._Str_17447._Str_4666(this._habboHelp._Str_2662);
+                        k = this._habboHelp._Str_17447._Str_4666(this._habboHelp.reportedUserId);
                         if (k)
                         {
                             this._reportedUserName = k.userName;

@@ -211,7 +211,7 @@
             _local_3.push(_local_2.data._Str_17106);
             var _local_4:Dictionary = new Dictionary();
             _local_4[_local_2.data._Str_23592] = 0;
-            _local_4[_local_2.data._Str_2662] = 1;
+            _local_4[_local_2.data.reportedUserId] = 1;
             this.onChatlog(("Call For Help Evidence #" + _local_2.data._Str_20325), WindowTracker._Str_15411, _local_2.data.callId, _local_3, _local_4);
         }
 

@@ -94,7 +94,7 @@
             return this._Str_19722;
         }
 
-        public function get _Str_2662():int
+        public function get reportedUserId():int
         {
             return this._Str_2797;
         }

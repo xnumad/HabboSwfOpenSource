@@ -29,7 +29,7 @@
             return this._Str_20226;
         }
 
-        public function get _Str_2662():int
+        public function get reportedUserId():int
         {
             return this._Str_2797;
         }

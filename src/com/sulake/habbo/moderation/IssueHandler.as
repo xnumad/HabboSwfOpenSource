@@ -181,9 +181,9 @@
                 this._moderationManager.issueManager._Str_16247(this._issueBundle.id, _Str_12881);
             }
             var _local_4:IWindowContainer = IWindowContainer(this._window.findChildByName("reported_user_info"));
-            if (this._issueBundle._Str_2662 > 0)
+            if (this._issueBundle.reportedUserId > 0)
             {
-                this._reportedUserInfo.load(_local_4, this._issueBundle._Str_2662);
+                this._reportedUserInfo.load(_local_4, this._issueBundle.reportedUserId);
             }
             else
             {
@@ -201,7 +201,7 @@
             this._chatList = IItemListWindow(this._chatFrame.findChildByName("evidence_list"));
             this._chatLogCtrl = new ChatlogCtrl(new _Str_7268(this._selectedIssue._Str_2869), this._moderationManager, WindowTracker._Str_15411, this._selectedIssue._Str_2869, this._selectedIssue, this._chatFrame, this._chatList, true);
             this._chatLogCtrl.show();
-            Logger.log(("HARASSER: " + this._issueBundle._Str_2662));
+            Logger.log(("HARASSER: " + this._issueBundle.reportedUserId));
             this._Str_21213();
             this._Str_21255();
         }
@@ -565,7 +565,7 @@
             {
                 return;
             }
-            if (k != this._issueBundle._Str_2662)
+            if (k != this._issueBundle.reportedUserId)
             {
                 return;
             }

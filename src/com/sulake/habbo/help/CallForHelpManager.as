@@ -100,7 +100,7 @@
             return this._disposed;
         }
 
-        public function get _Str_2662():int
+        public function get reportedUserId():int
         {
             return this._reportedUserId;
         }
@@ -145,7 +145,7 @@
             return this._reportedMessageId;
         }
 
-        public function set _Str_2662(k:int):void
+        public function set reportedUserId(k:int):void
         {
             this._reportedUserId = k;
         }

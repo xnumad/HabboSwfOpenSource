@@ -24,7 +24,7 @@
             this._state = _arg_2.state;
             this._pickerUserId = _arg_2._Str_5547;
             this._pickerName = _arg_2._Str_22164;
-            this._reportedUserId = _arg_2._Str_2662;
+            this._reportedUserId = _arg_2.reportedUserId;
             this._groupingId = _arg_2._Str_16842;
             this._Str_20388(_arg_2);
         }
@@ -60,7 +60,7 @@
             {
                 return false;
             }
-            if (((!(this._groupingId == k._Str_16842)) || (!(this._reportedUserId == k._Str_2662))))
+            if (((!(this._groupingId == k._Str_16842)) || (!(this._reportedUserId == k.reportedUserId))))
             {
                 return false;
             }
@@ -207,7 +207,7 @@
             return this._issues.getKeys();
         }
 
-        public function get _Str_2662():int
+        public function get reportedUserId():int
         {
             return this._reportedUserId;
         }

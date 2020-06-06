@@ -206,7 +206,7 @@
             if (this._callForHelpManager != null)
             {
                 this._callForHelpManager._Str_3469 = this._currentRoomId;
-                this._callForHelpManager._Str_2662 = k;
+                this._callForHelpManager.reportedUserId = k;
                 this._callForHelpManager._Str_5842 = _arg_2;
                 this._callForHelpManager._Str_10658 = _arg_4;
                 this._callForHelpManager._Str_11455 = _arg_3;
@@ -216,13 +216,13 @@
 
         public function reportUser(k:int, _arg_2:int, _arg_3:String):void
         {
-            this._callForHelpManager._Str_2662 = k;
+            this._callForHelpManager.reportedUserId = k;
             this._topicsFlowHelpController._Str_25197();
         }
 
         public function _Str_25290(k:int, _arg_2:String):void
         {
-            this._callForHelpManager._Str_2662 = k;
+            this._callForHelpManager.reportedUserId = k;
             this._callForHelpManager._Str_5842 = _arg_2;
             this._callForHelpManager._Str_3469 = -1;
             this._topicsFlowHelpController._Str_24232();
@@ -232,7 +232,7 @@
         {
             if (this._callForHelpManager != null)
             {
-                this._callForHelpManager._Str_2662 = k;
+                this._callForHelpManager.reportedUserId = k;
                 this._topicsFlowHelpController._Str_23015();
             }
         }
@@ -243,7 +243,7 @@
             {
                 this._callForHelpManager._Str_3469 = k;
                 this._callForHelpManager._Str_16366 = _arg_2;
-                this._callForHelpManager._Str_2662 = -1;
+                this._callForHelpManager.reportedUserId = -1;
                 this._callForHelpManager._Str_5842 = "";
                 this._topicsFlowHelpController._Str_15173(_Str_4786);
             }
@@ -697,13 +697,13 @@
         public function _Str_19312():void
         {
             var k:RemoveFriendMessageComposer;
-            if (this._callForHelpManager._Str_2662 > 0)
+            if (this._callForHelpManager.reportedUserId > 0)
             {
-                this.sendMessage(new _Str_5697(this._callForHelpManager._Str_2662));
-                if (this._friendList.getFriend(this._callForHelpManager._Str_2662) != null)
+                this.sendMessage(new _Str_5697(this._callForHelpManager.reportedUserId));
+                if (this._friendList.getFriend(this._callForHelpManager.reportedUserId) != null)
                 {
                     k = new RemoveFriendMessageComposer();
-                    k.addRemovedFriend(this._callForHelpManager._Str_2662);
+                    k.addRemovedFriend(this._callForHelpManager.reportedUserId);
                     this.sendMessage(k);
                 }
             }
@@ -779,9 +779,9 @@
             return "help/";
         }
 
-        public function get _Str_2662():int
+        public function get reportedUserId():int
         {
-            return this._callForHelpManager._Str_2662;
+            return this._callForHelpManager.reportedUserId;
         }
 
         public function get _Str_5842():String
@@ -804,9 +804,9 @@
             return this._callForHelpManager._Str_10658;
         }
 
-        public function set _Str_2662(k:int):void
+        public function set reportedUserId(k:int):void
         {
-            this._callForHelpManager._Str_2662 = k;
+            this._callForHelpManager.reportedUserId = k;
         }
 
         public function set _Str_3469(k:int):void
