@@ -7,7 +7,7 @@
     import com.sulake.habbo.session.events.RoomSessionQueueEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
-    import com.sulake.habbo.ui.widget.events._Str_3879;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRoomQueueUpdateEvent;
     import flash.events.Event;
 
     public class RoomQueueWidgetHandler implements IRoomWidgetHandler 
@@ -92,7 +92,7 @@
             var _local_5:Array;
             var _local_6:int;
             var _local_7:Boolean;
-            var _local_8:_Str_3879;
+            var _local_8:RoomWidgetRoomQueueUpdateEvent;
             if (((this._container == null) || (this._container.events == null)))
             {
                 return;
@@ -108,10 +108,10 @@
                     switch (_local_2.queueSetTarget)
                     {
                         case RoomSessionQueueEvent.QUEUE_TARGET_VISITOR:
-                            _local_3 = _Str_3879.RWRQUE_VISITOR_QUEUE_STATUS;
+                            _local_3 = RoomWidgetRoomQueueUpdateEvent.RWRQUE_VISITOR_QUEUE_STATUS;
                             break;
                         case RoomSessionQueueEvent.QUEUE_TARGET_SPECTATOR:
-                            _local_3 = _Str_3879.RWRQUE_SPECTATOR_QUEUE_STATUS;
+                            _local_3 = RoomWidgetRoomQueueUpdateEvent.RWRQUE_SPECTATOR_QUEUE_STATUS;
                             break;
                     }
                     if (_local_3 == null)
@@ -141,7 +141,7 @@
                     {
                         _local_6 = (_local_2.getQueueSize(_local_5[0]) + 1);
                     }
-                    _local_8 = new _Str_3879(_local_3, _local_6, _local_4, _local_2.isActive, _local_7);
+                    _local_8 = new RoomWidgetRoomQueueUpdateEvent(_local_3, _local_6, _local_4, _local_2.isActive, _local_7);
                     this._container.events.dispatchEvent(_local_8);
                     return;
             }

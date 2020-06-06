@@ -7,7 +7,7 @@
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
-    import com.sulake.habbo.ui.widget.events._Str_3879;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRoomQueueUpdateEvent;
     import flash.events.IEventDispatcher;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.IWindow;
@@ -46,8 +46,8 @@
             {
                 return;
             }
-            k.addEventListener(_Str_3879.RWRQUE_VISITOR_QUEUE_STATUS, this.onQueueStatus);
-            k.addEventListener(_Str_3879.RWRQUE_SPECTATOR_QUEUE_STATUS, this.onQueueStatus);
+            k.addEventListener(RoomWidgetRoomQueueUpdateEvent.RWRQUE_VISITOR_QUEUE_STATUS, this.onQueueStatus);
+            k.addEventListener(RoomWidgetRoomQueueUpdateEvent.RWRQUE_SPECTATOR_QUEUE_STATUS, this.onQueueStatus);
             super.registerUpdateEvents(k);
         }
 
@@ -57,8 +57,8 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_3879.RWRQUE_VISITOR_QUEUE_STATUS, this.onQueueStatus);
-            k.removeEventListener(_Str_3879.RWRQUE_SPECTATOR_QUEUE_STATUS, this.onQueueStatus);
+            k.removeEventListener(RoomWidgetRoomQueueUpdateEvent.RWRQUE_VISITOR_QUEUE_STATUS, this.onQueueStatus);
+            k.removeEventListener(RoomWidgetRoomQueueUpdateEvent.RWRQUE_SPECTATOR_QUEUE_STATUS, this.onQueueStatus);
         }
 
         private function removeWindow():void
@@ -70,7 +70,7 @@
             }
         }
 
-        private function onQueueStatus(k:_Str_3879):void
+        private function onQueueStatus(k:RoomWidgetRoomQueueUpdateEvent):void
         {
             if (k == null)
             {
@@ -145,12 +145,12 @@
             {
                 switch (this._activeTarget)
                 {
-                    case _Str_3879.RWRQUE_VISITOR_QUEUE_STATUS:
+                    case RoomWidgetRoomQueueUpdateEvent.RWRQUE_VISITOR_QUEUE_STATUS:
                         k.caption = ((this._isClubQueue) ? "${room.queue.position.hc}" : "${room.queue.position}");
                         _local_2.caption = "${room.queue.spectatormode}";
                         _local_3.visible = this._isChangePossible;
                         break;
-                    case _Str_3879.RWRQUE_SPECTATOR_QUEUE_STATUS:
+                    case RoomWidgetRoomQueueUpdateEvent.RWRQUE_SPECTATOR_QUEUE_STATUS:
                         k.caption = ((this._isClubQueue) ? "${room.queue.spectator.position.hc}" : "${room.queue.spectator.position}");
                         _local_2.caption = "${room.queue.back}";
                         _local_3.visible = false;
@@ -189,7 +189,7 @@
             {
                 return;
             }
-            if (this._activeTarget == _Str_3879.RWRQUE_VISITOR_QUEUE_STATUS)
+            if (this._activeTarget == RoomWidgetRoomQueueUpdateEvent.RWRQUE_VISITOR_QUEUE_STATUS)
             {
                 _local_2 = new RoomWidgetRoomQueueMessage(RoomWidgetRoomQueueMessage.RWRQM_CHANGE_TO_SPECTATOR_QUEUE);
             }
