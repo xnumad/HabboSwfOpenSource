@@ -12,7 +12,7 @@
 
     public class ScrollableItemGridWindow extends WindowController implements IScrollableGridWindow 
     {
-        private var _Str_12329:IItemGridWindow;
+        private var _cachedGridList:IItemGridWindow;
         private var _Str_3397:IScrollbarWindow;
         private var _autoHideScrollBar:Boolean = true;
 
@@ -217,11 +217,11 @@
 
         protected function get _Str_2448():IItemGridWindow
         {
-            if (!this._Str_12329)
+            if (!this._cachedGridList)
             {
-                this._Str_12329 = (findChildByTag("_ITEMGRID") as IItemGridWindow);
+                this._cachedGridList = (findChildByTag("_ITEMGRID") as IItemGridWindow);
             }
-            return this._Str_12329;
+            return this._cachedGridList;
         }
 
         protected function get _Str_2734():IScrollbarWindow
@@ -246,9 +246,9 @@
                 this._Str_3397.removeEventListener(WindowEvent.WINDOW_EVENT_DISABLED, this.scrollBarEventProc);
                 this._Str_3397 = null;
             }
-            if (this._Str_12329)
+            if (this._cachedGridList)
             {
-                this._Str_12329 = null;
+                this._cachedGridList = null;
             }
             super.dispose();
         }
