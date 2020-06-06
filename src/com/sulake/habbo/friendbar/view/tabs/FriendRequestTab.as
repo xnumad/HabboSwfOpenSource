@@ -80,7 +80,7 @@
             {
                 if (!_Str_2638)
                 {
-                    _Str_2568 = null;
+                    _friend = null;
                     _Str_2638 = true;
                     _Str_4254 = this;
                 }
@@ -213,7 +213,7 @@
                 switch (_arg_2.name)
                 {
                     case BUTTON_ACCEPT:
-                        _Str_2925.acceptFriendRequest(_Str_2568.id);
+                        _Str_2925.acceptFriendRequest(_friend.id);
                         break;
                     case BUTTON_CLOSE:
                         if (selected)
@@ -223,10 +223,10 @@
                         break;
                     case BUTTON_PROFILE:
                         _Str_4533.trackGoogle("extendedProfile", "friendBar_friendRequestButton");
-                        _Str_2925.showProfile(_Str_2568.id);
+                        _Str_2925.showProfile(_friend.id);
                         break;
                     case CLICK_REGION_REJECT:
-                        _Str_2925.declineFriendRequest(_Str_2568.id);
+                        _Str_2925.declineFriendRequest(_friend.id);
                         break;
                 }
             }

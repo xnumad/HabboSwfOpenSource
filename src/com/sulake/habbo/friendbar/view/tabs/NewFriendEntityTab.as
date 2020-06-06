@@ -67,7 +67,7 @@
         private static const POOL:Vector.<NewFriendEntityTab> = new Vector.<NewFriendEntityTab>();
         private static const _Str_4561:Vector.<IWindowContainer> = new Vector.<IWindowContainer>();
 
-        protected var _Str_2568:IFriendEntity;
+        protected var _friend:IFriendEntity;
         protected var _Str_2765:Vector.<Token>;
         protected var _Str_5783:Boolean = false;
         protected var _Str_4947:Boolean = false;
@@ -121,13 +121,13 @@
 
         public function set friend(k:IFriendEntity):void
         {
-            this._Str_2568 = k;
+            this._friend = k;
             this.refresh();
         }
 
         public function get friend():IFriendEntity
         {
-            return this._Str_2568;
+            return this._friend;
         }
 
         override public function recycle():void
@@ -149,7 +149,7 @@
                         }
                         this._Str_2765 = null;
                     }
-                    this._Str_2568 = null;
+                    this._friend = null;
                     this._Str_5783 = false;
                     this._Str_4947 = false;
                     this._Str_4018 = "";
@@ -339,20 +339,20 @@
             {
                 _window = this._Str_16688();
             }
-            if (this._Str_2568)
+            if (this._friend)
             {
-                window.id = this._Str_2568.id;
+                window.id = this._friend.id;
                 k = (IItemListWindow(window.getChildByName(PIECES)).getListItemByName(HEADER) as IWindowContainer);
-                k.findChildByName(NAME).caption = this._Str_2568.name;
+                k.findChildByName(NAME).caption = this._friend.name;
                 _Str_9890.crop((k.getChildByName(NAME) as ITextWindow));
                 _local_2 = IBitmapWrapperWindow(k.findChildByName(CANVAS));
-                if (this._Str_2568.id > 0)
+                if (this._friend.id > 0)
                 {
-                    _local_2.bitmap = _Str_3553.getAvatarFaceBitmap(this._Str_2568.figure);
+                    _local_2.bitmap = _Str_3553.getAvatarFaceBitmap(this._friend.figure);
                 }
                 else
                 {
-                    _local_2.bitmap = _Str_3553.getGroupIconBitmap(this._Str_2568.figure);
+                    _local_2.bitmap = _Str_3553.getGroupIconBitmap(this._friend.figure);
                 }
                 _local_2.width = _local_2.bitmap.width;
                 _local_2.height = _local_2.bitmap.height;
@@ -435,9 +435,9 @@
                     case MESSAGE:
                     case ICON_MESSAGE:
                         _Str_3553.removeMessengerNotifications();
-                        if (((_Str_2925) && (this._Str_2568)))
+                        if (((_Str_2925) && (this._friend)))
                         {
-                            _Str_2925.startConversation(this._Str_2568.id);
+                            _Str_2925.startConversation(this._friend.id);
                             this.deselect(true);
                             if (k.window.name == ICON_MESSAGE)
                             {
@@ -446,24 +446,24 @@
                         }
                         return;
                     case BTN_VISIT:
-                        if (((_Str_2925) && (this._Str_2568)))
+                        if (((_Str_2925) && (this._friend)))
                         {
-                            _Str_2925.followToRoom(this._Str_2568.id);
+                            _Str_2925.followToRoom(this._friend.id);
                             this.deselect(true);
                         }
                         return;
                     case BUTTON_PROFILE:
-                        if (((_Str_2925) && (this._Str_2568)))
+                        if (((_Str_2925) && (this._friend)))
                         {
                             _Str_4533.trackGoogle("extendedProfile", "friendToolbar_friendButton");
-                            _Str_2925.showProfile(this._Str_2568.id);
+                            _Str_2925.showProfile(this._friend.id);
                             this.deselect(true);
                         }
                         return;
                     case BTN_CHAT:
-                        if (((_Str_2925) && (this._Str_2568)))
+                        if (((_Str_2925) && (this._friend)))
                         {
-                            _Str_2925.startConversation(this._Str_2568.id);
+                            _Str_2925.startConversation(this._friend.id);
                             this.deselect(true);
                         }
                         return;
@@ -506,7 +506,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _Str_4533.trackGoogle("extendedProfile", "friendBar_friendAvatar");
-                _Str_2925.showProfile(this._Str_2568.id);
+                _Str_2925.showProfile(this._friend.id);
                 this.deselect(true);
             }
         }
@@ -612,7 +612,7 @@
                     this._Str_2765.splice(_local_3, 1);
                     if (_arg_2)
                     {
-                        this._Str_2568.notifications.splice(this._Str_2568.notifications.indexOf(_local_4.notification), 1);
+                        this._friend.notifications.splice(this._friend.notifications.indexOf(_local_4.notification), 1);
                     }
                     _local_4.dispose();
                     return;
@@ -633,7 +633,7 @@
                         {
                             _local_3 = GAMES.getGameId(this._Str_4018);
                             GAMES.showGameCenter("showGameCenter.friendEntityTab", _local_3);
-                            GAMES.acceptGameInvite(_local_3, this._Str_2568.id);
+                            GAMES.acceptGameInvite(_local_3, this._friend.id);
                         }
                     case BUBBLE_BUTTON_CLOSE:
                     case BUBBLE_CLICK_REGION_REJECT:
@@ -647,7 +647,7 @@
 
         public function toString():String
         {
-            return (getQualifiedClassName(this) + " ") + this._Str_2568.name;
+            return (getQualifiedClassName(this) + " ") + this._friend.name;
         }
     }
 }
