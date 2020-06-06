@@ -126,7 +126,7 @@
         {
             var _local_2:Rectangle = new Rectangle();
             k.window.getGlobalRectangle(_local_2);
-            this._navigator.view._Str_15353(this._navigator._Str_3440._Str_6684(k.window.id), _local_2.right, (((_local_2.bottom - _local_2.top) / 2) + _local_2.top));
+            this._navigator.view._Str_15353(this._navigator._Str_3440.findGuestRoom(k.window.id), _local_2.right, (((_local_2.bottom - _local_2.top) / 2) + _local_2.top));
         }
 
         private function _Str_25237(k:WindowEvent):void
@@ -136,7 +136,7 @@
             {
                 _local_2 = new Rectangle();
                 k.window.getGlobalRectangle(_local_2);
-                this._navigator.view._Str_15353(this._navigator._Str_3440._Str_6684(k.window.id), _local_2.right, (((_local_2.bottom - _local_2.top) / 2) + _local_2.top), true);
+                this._navigator.view._Str_15353(this._navigator._Str_3440.findGuestRoom(k.window.id), _local_2.right, (((_local_2.bottom - _local_2.top) / 2) + _local_2.top), true);
             }
         }
 
@@ -147,7 +147,7 @@
             {
                 _local_2 = new Rectangle();
                 k.window.getGlobalRectangle(_local_2);
-                this._navigator.view._Str_15353(this._navigator._Str_3440._Str_6684(k.window.id), (_local_2.right - 6), ((((_local_2.bottom - _local_2.top) / 2) + _local_2.top) + 56), true);
+                this._navigator.view._Str_15353(this._navigator._Str_3440.findGuestRoom(k.window.id), (_local_2.right - 6), ((((_local_2.bottom - _local_2.top) / 2) + _local_2.top) + 56), true);
             }
         }
 
@@ -158,7 +158,7 @@
             {
                 _local_2 = new Rectangle();
                 k.window.getGlobalRectangle(_local_2);
-                this._navigator.view._Str_15353(this._navigator._Str_3440._Str_6684(k.window.id), (_local_2.right + 20), (((_local_2.bottom - _local_2.top) / 2) + _local_2.top), true);
+                this._navigator.view._Str_15353(this._navigator._Str_3440.findGuestRoom(k.window.id), (_local_2.right + 20), (((_local_2.bottom - _local_2.top) / 2) + _local_2.top), true);
             }
         }
 

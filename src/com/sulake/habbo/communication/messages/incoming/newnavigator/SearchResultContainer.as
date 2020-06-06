@@ -30,11 +30,11 @@
             return this._resultSet;
         }
 
-        public function _Str_6684(k:int):GuestRoomData
+        public function findGuestRoom(k:int):GuestRoomData
         {
             if (this._resultSet != null)
             {
-                return this._resultSet._Str_6684(k);
+                return this._resultSet.findGuestRoom(k);
             }
             return null;
         }

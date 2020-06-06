@@ -71,7 +71,7 @@
             this._viewMode = k;
         }
 
-        public function _Str_6684(k:int):GuestRoomData
+        public function findGuestRoom(k:int):GuestRoomData
         {
             var _local_2:GuestRoomData;
             for each (_local_2 in this._guestRooms)

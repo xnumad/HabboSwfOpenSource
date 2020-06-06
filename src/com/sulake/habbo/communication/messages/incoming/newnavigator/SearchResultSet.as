@@ -52,13 +52,13 @@
             return this._blocks;
         }
 
-        public function _Str_6684(k:int):GuestRoomData
+        public function findGuestRoom(k:int):GuestRoomData
         {
             var _local_2:SearchResultList;
             var _local_3:GuestRoomData;
             for each (_local_2 in this._blocks)
             {
-                _local_3 = _local_2._Str_6684(k);
+                _local_3 = _local_2.findGuestRoom(k);
                 if (_local_3 != null)
                 {
                     return _local_3;
