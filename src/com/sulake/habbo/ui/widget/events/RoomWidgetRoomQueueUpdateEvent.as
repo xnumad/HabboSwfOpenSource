@@ -6,7 +6,7 @@
         public static const RWRQUE_SPECTATOR_QUEUE_STATUS:String = "RWRQUE_SPECTATOR_QUEUE_STATUS";
 
         private var _position:int;
-        private var _Str_19946:Boolean;
+        private var _hasHabboClub:Boolean;
         private var _isActive:Boolean;
         private var _Str_9011:Boolean;
 
@@ -14,7 +14,7 @@
         {
             super(k, _arg_6, _arg_7);
             this._position = _arg_2;
-            this._Str_19946 = _arg_3;
+            this._hasHabboClub = _arg_3;
             this._isActive = _arg_4;
             this._Str_9011 = _arg_5;
         }
@@ -26,7 +26,7 @@
 
         public function get _Str_25661():Boolean
         {
-            return this._Str_19946;
+            return this._hasHabboClub;
         }
 
         public function get isActive():Boolean
