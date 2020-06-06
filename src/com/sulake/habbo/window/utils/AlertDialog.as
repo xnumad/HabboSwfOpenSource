@@ -149,7 +149,7 @@
             return (_local_2) ? new _Str_5639(_local_2.caption, _local_2._Str_2613, _local_2.visible) : null;
         }
 
-        public function _Str_13956(k:int, _arg_2:_Str_5394):void
+        public function setButtonCaption(k:int, _arg_2:_Str_5394):void
         {
             var _local_3:IInteractiveWindow;
             if (!this._disposed)

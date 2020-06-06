@@ -539,7 +539,7 @@
                     return;
                 case "removebutton":
                     _local_3 = windowManager.confirm(_localizations.getLocalization("inventory.remove.external_image_wallitem_header"), _localizations.getLocalization("inventory.remove.external_image_wallitem_body"), 0, this._Str_25380);
-                    _local_3._Str_13956(_Str_3023.BUTTON_OK, new _Str_5639(_localizations.getLocalization("inventory.remove.external_image_wallitem_delete"), "", true));
+                    _local_3.setButtonCaption(_Str_3023.BUTTON_OK, new _Str_5639(_localizations.getLocalization("inventory.remove.external_image_wallitem_delete"), "", true));
                     return;
                 case "makeOwnButton":
                     if (this.getType() == PHOTO_POSTER)
