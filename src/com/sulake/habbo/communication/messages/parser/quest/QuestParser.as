@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.communication.messages.parser.quest
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class QuestParser implements IMessageParser 
     {
-        private var _quest:_Str_2455;
+        private var _quest:QuestMessageData;
 
 
         public function flush():Boolean
@@ -17,11 +17,11 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._quest = new _Str_2455(k);
+            this._quest = new QuestMessageData(k);
             return true;
         }
 
-        public function get quest():_Str_2455
+        public function get quest():QuestMessageData
         {
             return this._quest;
         }

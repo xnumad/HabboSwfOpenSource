@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.habbo.quest.seasonalcalendar.MainWindow;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
 
     public class QuestController implements IDisposable, IUpdateReceiver 
     {
@@ -39,7 +39,7 @@
             }
         }
 
-        public function _Str_4750(k:_Str_2455):void
+        public function _Str_4750(k:QuestMessageData):void
         {
             this._questTracker._Str_4750(k);
             this._questDetails._Str_4750(k);
@@ -47,7 +47,7 @@
             this._nextQuestTimer._Str_4750(k);
         }
 
-        public function _Str_5657(k:_Str_2455, _arg_2:Boolean):void
+        public function _Str_5657(k:QuestMessageData, _arg_2:Boolean):void
         {
             this._questTracker._Str_5657(k, _arg_2);
             this._questDetails._Str_5657(k);

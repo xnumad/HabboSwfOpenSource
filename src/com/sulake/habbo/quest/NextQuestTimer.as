@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.quest
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.utils.FriendlyTime;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -14,7 +14,7 @@
         private static const NEXT_QUEST:String = "next_quest";
 
         private var _questEngine:HabboQuestEngine;
-        private var _quest:_Str_2455;
+        private var _quest:QuestMessageData;
         private var _window:IWindowContainer;
         private var _expanded:Boolean = false;
         private var _msecsToRefresh:int;
@@ -59,7 +59,7 @@
             }
         }
 
-        public function _Str_4750(k:_Str_2455):void
+        public function _Str_4750(k:QuestMessageData):void
         {
             if (k._Str_3935 < 1)
             {

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.quest
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class QuestsParser implements IMessageParser 
@@ -22,7 +22,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._quests.push(new _Str_2455(k));
+                this._quests.push(new QuestMessageData(k));
                 _local_3++;
             }
             this._Str_14850 = k.readBoolean();

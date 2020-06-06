@@ -6,7 +6,7 @@
     import com.sulake.habbo.utils._Str_3942;
     import com.sulake.habbo.quest.events.QuestsListEvent;
     import com.sulake.habbo.quest.events.QuestCompletedEvent;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -149,7 +149,7 @@
 
         private function _Str_22256(k:Array):int
         {
-            var _local_3:_Str_2455;
+            var _local_3:QuestMessageData;
             var _local_2:int;
             for each (_local_3 in k)
             {

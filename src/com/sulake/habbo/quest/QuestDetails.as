@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import flash.geom.Point;
     import com.sulake.core.window.components.IFrameWindow;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IRegionWindow;
@@ -25,7 +25,7 @@
         private var _questEngine:HabboQuestEngine;
         private var _window:IFrameWindow;
         private var _openForNextQuest:Boolean;
-        private var _quest:_Str_2455;
+        private var _quest:QuestMessageData;
         private var _msecsToRefresh:int;
         private var _goToRoomsOnActivate:Boolean = false;
 
@@ -50,7 +50,7 @@
             return this._questEngine == null;
         }
 
-        public function _Str_4750(k:_Str_2455):void
+        public function _Str_4750(k:QuestMessageData):void
         {
             if (this._openForNextQuest)
             {
@@ -66,7 +66,7 @@
             }
         }
 
-        public function _Str_5657(k:_Str_2455):void
+        public function _Str_5657(k:QuestMessageData):void
         {
             this.close();
         }
@@ -89,7 +89,7 @@
             }
         }
 
-        public function _Str_5386(k:_Str_2455):void
+        public function _Str_5386(k:QuestMessageData):void
         {
             if (((this._window) && (this._window.visible)))
             {
@@ -99,7 +99,7 @@
             this._Str_8199(k);
         }
 
-        public function _Str_8199(k:_Str_2455, _arg_2:Boolean=false):void
+        public function _Str_8199(k:QuestMessageData, _arg_2:Boolean=false):void
         {
             var _local_9:IWindowContainer;
             this._quest = k;

@@ -9,7 +9,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import flash.utils.Timer;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.assets.IAsset;
     import flash.events.TimerEvent;
     import com.sulake.core.window.components.IFrameWindow;
@@ -142,7 +142,7 @@
             var _local_3:int = this._totalEntityCount;
             this._quests = [];
             this._highestAvailableQuestIndex = 0;
-            var _local_4:_Str_2455;
+            var _local_4:QuestMessageData;
             for each (_local_4 in k)
             {
                 if (this._questEngine._Str_7575(_local_4))
@@ -204,7 +204,7 @@
 
         public function refresh():void
         {
-            var k:_Str_2455;
+            var k:QuestMessageData;
             var _local_2:int;
             var _local_3:int;
             for each (k in this._quests)
@@ -232,7 +232,7 @@
 
         private function _Str_20728():void
         {
-            var _local_5:_Str_2455;
+            var _local_5:QuestMessageData;
             var _local_7:int;
             var _local_8:Boolean;
             var _local_9:int;
@@ -493,14 +493,14 @@
                 _local_5.bitmap = null;
             }
             var _local_6:ITextWindow = (_local_3.findChildByName("entity_indicator_text") as ITextWindow);
-            var _local_7:_Str_2455 = this._Str_19266(k);
+            var _local_7:QuestMessageData = this._Str_19266(k);
             if (_local_7 != null)
             {
                 _local_6.text = this._questEngine._Str_15926(_local_7);
             }
             else
             {
-                _local_9 = _Str_2455._Str_18415(((this._questEngine._Str_9628() + "_") + (k + 1)));
+                _local_9 = QuestMessageData._Str_18415(((this._questEngine._Str_9628() + "_") + (k + 1)));
                 _local_6.text = this._questEngine._Str_21680(_local_9);
             }
         }
@@ -826,7 +826,7 @@
         private function _Str_25473(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:int;
-            var _local_4:_Str_2455;
+            var _local_4:QuestMessageData;
             if (_arg_2.name == "entity_mouse_region")
             {
                 _local_3 = this._entityWindows.indexOf((_arg_2.parent as IWindowContainer));
@@ -851,9 +851,9 @@
             }
         }
 
-        private function _Str_19266(k:int):_Str_2455
+        private function _Str_19266(k:int):QuestMessageData
         {
-            var _local_2:_Str_2455;
+            var _local_2:QuestMessageData;
             for each (_local_2 in this._quests)
             {
                 if ((_local_2.sortOrder - 1) == k)

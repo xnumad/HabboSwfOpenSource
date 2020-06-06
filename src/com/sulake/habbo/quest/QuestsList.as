@@ -6,7 +6,7 @@
     import com.sulake.core.window.components.IScrollbarWindow;
     import com.sulake.habbo.utils._Str_3942;
     import com.sulake.habbo.quest.events.QuestsListEvent;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.ITextWindow;
@@ -112,7 +112,7 @@
         private function _Str_8212(k:Array, _arg_2:Boolean):void
         {
             this._quests = [];
-            var _local_3:_Str_2455;
+            var _local_3:QuestMessageData;
             for each (_local_3 in k)
             {
                 if (!this._questEngine._Str_7575(_local_3))
@@ -176,7 +176,7 @@
             this._list.spacing = _Str_17206;
         }
 
-        private function refreshEntry(k:Boolean, _arg_2:int, _arg_3:_Str_2455, _arg_4:Boolean):Boolean
+        private function refreshEntry(k:Boolean, _arg_2:int, _arg_3:QuestMessageData, _arg_4:Boolean):Boolean
         {
             var _local_5:IWindowContainer = IWindowContainer(this._list.getListItemAt(_arg_2));
             var _local_6:Boolean;
@@ -251,7 +251,7 @@
             _local_6.y = (_local_5 + _local_6.height);
         }
 
-        public function refreshEntryDetails(k:IWindowContainer, _arg_2:_Str_2455):void
+        public function refreshEntryDetails(k:IWindowContainer, _arg_2:QuestMessageData):void
         {
             k.findChildByName("campaign_header_txt").caption = this._questEngine._Str_15926(_arg_2);
             k.findChildByName("completion_txt").caption = ((_arg_2._Str_18579 + "/") + _arg_2._Str_25129);
@@ -273,7 +273,7 @@
             }
         }
 
-        private function _Str_19824(k:IWindowContainer, _arg_2:_Str_2455):void
+        private function _Str_19824(k:IWindowContainer, _arg_2:QuestMessageData):void
         {
             k.findChildByName("quest_header_txt").caption = this._questEngine._Str_23055(_arg_2);
             k.findChildByName("desc_txt").caption = this._questEngine._Str_20120(_arg_2);
@@ -291,7 +291,7 @@
             k.findChildByName("desc_txt").visible = (_arg_2._Str_3935 < 1);
         }
 
-        public function _Str_17692(k:IWindowContainer, _arg_2:_Str_2455):Boolean
+        public function _Str_17692(k:IWindowContainer, _arg_2:QuestMessageData):Boolean
         {
             var _local_3:int;
             var _local_4:String;

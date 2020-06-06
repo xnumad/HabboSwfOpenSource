@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.components.IFrameWindow;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.quest._Str_7551;
     import com.sulake.core.window.events.WindowEvent;
@@ -18,7 +18,7 @@
 
         private var _window:IFrameWindow;
         private var _questEngine:HabboQuestEngine;
-        private var _quest:_Str_2455;
+        private var _quest:QuestMessageData;
         private var _twinkleAnimation:Animation;
         private var _openQuestCompletedIn:int;
 
@@ -48,7 +48,7 @@
             return this._window == null;
         }
 
-        public function _Str_4750(k:_Str_2455):void
+        public function _Str_4750(k:QuestMessageData):void
         {
             this.close();
         }
@@ -58,7 +58,7 @@
             this.close();
         }
 
-        public function _Str_5657(k:_Str_2455, _arg_2:Boolean):void
+        public function _Str_5657(k:QuestMessageData, _arg_2:Boolean):void
         {
             if (_arg_2)
             {
@@ -95,7 +95,7 @@
             }
         }
 
-        public function prepare(k:_Str_2455):void
+        public function prepare(k:QuestMessageData):void
         {
             this._quest = k;
             if (this._window == null)

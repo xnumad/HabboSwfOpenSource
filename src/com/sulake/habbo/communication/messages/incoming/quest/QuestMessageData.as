@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2455 
+    public class QuestMessageData
     {
         private var _Str_15344:String;
         private var _Str_16809:int;
@@ -23,7 +23,7 @@
         private var _easy:Boolean;
         private var _Str_16973:Date;
 
-        public function _Str_2455(k:IMessageDataWrapper)
+        public function QuestMessageData(k:IMessageDataWrapper)
         {
             this._Str_16973 = new Date();
             super();

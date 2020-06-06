@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.window.IWindowContainer;
     import flash.utils.Timer;
     import flash.events.TimerEvent;
@@ -42,7 +42,7 @@
         private static const _Str_16708:int = 10;
 
         private var _questEngine:HabboQuestEngine;
-        private var _questInTracker:_Str_2455;
+        private var _questInTracker:QuestMessageData;
         private var _window:IWindowContainer;
         private var _startQuestTimer:Timer;
         private var _progressBar:ProgressBar;
@@ -93,7 +93,7 @@
             return this._questEngine == null;
         }
 
-        public function _Str_5657(k:_Str_2455, _arg_2:Boolean):void
+        public function _Str_5657(k:QuestMessageData, _arg_2:Boolean):void
         {
             if (this._window)
             {
@@ -146,7 +146,7 @@
             }
         }
 
-        public function _Str_4750(k:_Str_2455):void
+        public function _Str_4750(k:QuestMessageData):void
         {
             if (this._startQuestTimer != null)
             {

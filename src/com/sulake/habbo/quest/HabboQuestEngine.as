@@ -36,7 +36,7 @@
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.runtime.IID;
     import com.sulake.core.runtime.IUnknown;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.core.communication.messages.IMessageComposer;
@@ -363,7 +363,7 @@
             return this._tracking;
         }
 
-        public function openCatalog(k:_Str_2455):void
+        public function openCatalog(k:QuestMessageData):void
         {
             var _local_2:String = k._Str_23842;
             if (_local_2 != "")
@@ -378,7 +378,7 @@
             }
         }
 
-        public function openNavigator(k:_Str_2455):void
+        public function openNavigator(k:QuestMessageData):void
         {
             var _local_3:String;
             var _local_2:Boolean = this._Str_17631((k._Str_5688() + ".searchtag"));
@@ -500,25 +500,25 @@
             return this._questController._Str_20198.isVisible();
         }
 
-        public function _Str_23055(k:_Str_2455):String
+        public function _Str_23055(k:QuestMessageData):String
         {
             var _local_2:String = ((k._Str_3935 < 1) ? (k._Str_5688() + ".name") : "quests.list.questdelayed");
             return this._localization.getLocalization(_local_2, _local_2);
         }
 
-        public function _Str_10470(k:_Str_2455):String
+        public function _Str_10470(k:QuestMessageData):String
         {
             var _local_2:* = (k._Str_5688() + ".name");
             return this._localization.getLocalization(_local_2, _local_2);
         }
 
-        public function _Str_20120(k:_Str_2455):String
+        public function _Str_20120(k:QuestMessageData):String
         {
             var _local_2:* = (k._Str_5688() + ".desc");
             return this._localization.getLocalization(_local_2, _local_2);
         }
 
-        public function _Str_23561(k:_Str_2455):String
+        public function _Str_23561(k:QuestMessageData):String
         {
             var _local_2:* = (k._Str_5688() + ".hint");
             return this._localization.getLocalization(_local_2, _local_2);
@@ -536,7 +536,7 @@
             return this._localization.getLocalization(_local_2, _local_2);
         }
 
-        public function _Str_15926(k:_Str_2455):String
+        public function _Str_15926(k:QuestMessageData):String
         {
             return this._Str_21680(k._Str_9246());
         }
@@ -547,14 +547,14 @@
             return this._localization.getLocalization(_local_2, _local_2);
         }
 
-        public function _Str_19955(k:IWindowContainer, _arg_2:_Str_2455):void
+        public function _Str_19955(k:IWindowContainer, _arg_2:QuestMessageData):void
         {
             var _local_3:IStaticBitmapWrapperWindow = (k.findChildByName("quest_pic_bitmap") as IStaticBitmapWrapperWindow);
             var _local_4:String = ((_arg_2._Str_3935 > 0) ? ("quest_timer_questionmark") : ((((_arg_2._Str_6549 + "_") + _arg_2._Str_5961) + _arg_2._Str_22072) + ((this._Str_17760(_arg_2)) ? "_a" : "")).toLowerCase());
             _local_3.assetUri = (("${image.library.questing.url}" + _local_4) + ".png");
         }
 
-        public function _Str_22546(k:IWindowContainer, _arg_2:_Str_2455, _arg_3:String):void
+        public function _Str_22546(k:IWindowContainer, _arg_2:QuestMessageData, _arg_3:String):void
         {
             var _local_4:IStaticBitmapWrapperWindow = (k.findChildByName(("prompt_pic_" + _arg_3)) as IStaticBitmapWrapperWindow);
             _local_4.assetUri = (("${image.library.questing.url}" + (((((_arg_2._Str_6549 + "_") + _arg_2._Str_5961) + _arg_2._Str_22072) + "_") + _arg_3).toLowerCase()) + ".png");
@@ -566,7 +566,7 @@
             _local_3.style = ActivityPointTypeEnum.getIconStyleFor(_arg_2, this, true);
         }
 
-        public function _Str_19396(k:IWindowContainer, _arg_2:_Str_2455, _arg_3:Boolean):void
+        public function _Str_19396(k:IWindowContainer, _arg_2:QuestMessageData, _arg_3:Boolean):void
         {
             var _local_4:IStaticBitmapWrapperWindow = (k.findChildByName("campaign_pic_bitmap") as IStaticBitmapWrapperWindow);
             if (!_arg_3)
@@ -589,7 +589,7 @@
             _local_4.assetUri = (("${image.library.questing.url}" + ((_arg_3) ? ((("achcategory_" + _arg_2.code) + ((_arg_2._Str_9594() > 0) ? "_active" : "_inactive"))) : (("achicon_" + _arg_2.code)))) + ".png");
         }
 
-        public function _Str_17760(k:_Str_2455):Boolean
+        public function _Str_17760(k:QuestMessageData):Boolean
         {
             return _Str_18303.indexOf(k._Str_5961) > -1;
         }
@@ -651,7 +651,7 @@
             return this._configuration.getBoolean("seasonalQuestCalendar.enabled");
         }
 
-        public function _Str_7575(k:_Str_2455):Boolean
+        public function _Str_7575(k:QuestMessageData):Boolean
         {
             var _local_2:String = this._Str_9628();
             return (!(_local_2 == "")) && (k._Str_6549.indexOf(_local_2) == 0);

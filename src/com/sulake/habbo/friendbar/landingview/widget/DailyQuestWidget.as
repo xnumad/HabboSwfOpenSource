@@ -6,7 +6,7 @@
     import com.sulake.habbo.friendbar.landingview.interfaces._Str_6397;
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
+    import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.quest.QuestDailyMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.quest._Str_5085;
@@ -22,7 +22,7 @@
     {
         private var _landingView:HabboLandingView;
         private var _container:IWindowContainer;
-        private var _data:_Str_2455;
+        private var _data:QuestMessageData;
         private var _easyQuestCount:int;
         private var _hardQuestCount:int;
         private var _index:int;
