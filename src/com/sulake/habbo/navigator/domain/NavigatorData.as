@@ -250,7 +250,7 @@
             return this._enteredGuestRoom;
         }
 
-        public function get _Str_20281():Boolean
+        public function get hcMember():Boolean
         {
             return this._hcMember;
         }
@@ -310,7 +310,7 @@
             this._createdFlatId = k;
         }
 
-        public function set _Str_20281(k:Boolean):void
+        public function set hcMember(k:Boolean):void
         {
             this._hcMember = k;
         }

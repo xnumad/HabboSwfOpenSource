@@ -373,7 +373,7 @@
         {
             var _local_2:ScrSendUserInfoMessageParser = ScrSendUserInfoEvent(k).getParser();
             Logger.log(((((((((("Got subscription info: " + _local_2.productName) + ", ") + _local_2.daysToPeriodEnd) + ", ") + _local_2.memberPeriods) + ", ") + _local_2.periodsSubscribedAhead) + ", ") + _local_2.responseType));
-            this.data._Str_20281 = (_local_2.daysToPeriodEnd > 0);
+            this.data.hcMember = (_local_2.daysToPeriodEnd > 0);
         }
 
         private function _Str_22797(k:IMessageEvent):void
