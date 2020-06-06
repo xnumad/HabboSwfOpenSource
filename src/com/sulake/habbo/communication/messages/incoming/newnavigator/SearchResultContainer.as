@@ -4,20 +4,20 @@
 
     public class SearchResultContainer
     {
-        private var _Str_8772:String;
+        private var _searchCodeOriginal:String;
         private var _Str_8699:String;
         private var _Str_13083:SearchResultSet;
 
         public function SearchResultContainer(k:SearchResultSet)
         {
-            this._Str_8772 = k._Str_4569;
+            this._searchCodeOriginal = k._Str_4569;
             this._Str_8699 = k._Str_5610;
             this._Str_13083 = k;
         }
 
         public function get _Str_4569():String
         {
-            return this._Str_8772;
+            return this._searchCodeOriginal;
         }
 
         public function get _Str_5610():String
