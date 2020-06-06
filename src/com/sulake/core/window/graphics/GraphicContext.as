@@ -84,7 +84,7 @@
             }
         }
 
-        public static function get _Str_26083():uint
+        public static function get numGraphicContexts():uint
         {
             return _counter;
         }
