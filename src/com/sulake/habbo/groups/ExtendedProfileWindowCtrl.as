@@ -377,7 +377,7 @@
                     _local_5 = _local_4._Str_21077;
                     if (_local_5)
                     {
-                        this._manager._Str_21987(_local_5);
+                        this._manager.showExtendedProfile(_local_5);
                     }
                 }
                 else

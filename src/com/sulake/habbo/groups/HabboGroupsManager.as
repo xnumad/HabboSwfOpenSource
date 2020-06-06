@@ -640,7 +640,7 @@
             this._extendedProfileWindowCtrl._Str_14387(k);
         }
 
-        public function _Str_21987(k:int):void
+        public function showExtendedProfile(k:int):void
         {
             this.send(new _Str_2553(k));
         }

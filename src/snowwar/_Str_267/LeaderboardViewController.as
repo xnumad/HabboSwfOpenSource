@@ -769,7 +769,7 @@
 
         private function _SafeStr_18659(k:WindowMouseEvent):void
         {
-            this._SafeStr_18579.groupsManager._Str_21987(k.window.id);
+            this._SafeStr_18579.groupsManager.showExtendedProfile(k.window.id);
         }
 
         private function _SafeStr_18660():void
