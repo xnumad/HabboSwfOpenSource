@@ -139,7 +139,7 @@
                         this.onlyHead = Boolean(_local_2.value);
                         break;
                     case _Str_13883:
-                        this._Str_13833 = Boolean(_local_2.value);
+                        this.cropped = Boolean(_local_2.value);
                         break;
                     case _Str_4259:
                         this.direction = _Str_3257.indexOf(String(_local_2.value));
@@ -181,12 +181,12 @@
             this.refresh();
         }
 
-        public function get _Str_13833():Boolean
+        public function get cropped():Boolean
         {
             return this._cropped;
         }
 
-        public function set _Str_13833(k:Boolean):void
+        public function set cropped(k:Boolean):void
         {
             this._cropped = k;
             this.refresh();

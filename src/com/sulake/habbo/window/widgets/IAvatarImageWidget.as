@@ -10,8 +10,8 @@
         function set scale(_arg_1:String):void;
         function get onlyHead():Boolean;
         function set onlyHead(_arg_1:Boolean):void;
-        function get _Str_13833():Boolean;
-        function set _Str_13833(_arg_1:Boolean):void;
+        function get cropped():Boolean;
+        function set cropped(_arg_1:Boolean):void;
         function get direction():int;
         function set direction(_arg_1:int):void;
         function get userId():int;
