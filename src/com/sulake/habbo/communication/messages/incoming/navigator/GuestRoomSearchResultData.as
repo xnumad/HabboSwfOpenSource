@@ -6,7 +6,7 @@
     public class GuestRoomSearchResultData implements IDisposable, _Str_5733
     {
         private var _searchType:int;
-        private var _Str_21188:String;
+        private var _searchParam:String;
         private var _rooms:Array;
         private var _ad:_Str_2632;
         private var _disposed:Boolean;
@@ -16,7 +16,7 @@
             this._rooms = new Array();
             super();
             this._searchType = k.readInteger();
-            this._Str_21188 = k.readString();
+            this._searchParam = k.readString();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
@@ -66,7 +66,7 @@
 
         public function get _Str_25185():String
         {
-            return this._Str_21188;
+            return this._searchParam;
         }
 
         public function get rooms():Array
