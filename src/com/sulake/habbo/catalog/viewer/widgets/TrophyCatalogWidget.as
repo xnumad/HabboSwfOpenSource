@@ -150,7 +150,7 @@
             }
             var _local_2:IPurchasableOffer = k.offer;
             var _local_3:IProductData = page.viewer.catalog.getProductData(_local_2.localizationId);
-            if (ProductImageConfiguration._Str_17970(_local_2.localizationId))
+            if (ProductImageConfiguration.hasProductImage(_local_2.localizationId))
             {
                 this._Str_6504(ProductImageConfiguration.PRODUCT_IMAGES[_local_2.localizationId]);
             }

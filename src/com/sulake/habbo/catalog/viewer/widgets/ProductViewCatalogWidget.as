@@ -310,7 +310,7 @@
                     this._habboCatalog.utils._Str_23233(_window);
                 }
             }
-            if (ProductImageConfiguration._Str_17970(_local_3.localizationId))
+            if (ProductImageConfiguration.hasProductImage(_local_3.localizationId))
             {
                 this._Str_6504(ProductImageConfiguration.PRODUCT_IMAGES[_local_3.localizationId]);
                 if (this._Str_3864 != null)

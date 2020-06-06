@@ -294,7 +294,7 @@
             if (_local_6 != null)
             {
                 _local_9 = false;
-                if (ProductImageConfiguration._Str_17970(k.localizationId))
+                if (ProductImageConfiguration.hasProductImage(k.localizationId))
                 {
                     _local_10 = ProductImageConfiguration.PRODUCT_IMAGES[k.localizationId];
                     _local_11 = (this._assets.getAssetByName(_local_10) as BitmapDataAsset);

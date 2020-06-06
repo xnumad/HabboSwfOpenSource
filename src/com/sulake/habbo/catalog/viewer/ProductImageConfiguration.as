@@ -51,7 +51,7 @@
         }
 
 
-        public static function _Str_17970(k:String):Boolean
+        public static function hasProductImage(k:String):Boolean
         {
             return !(PRODUCT_IMAGES[k] == null);
         }
