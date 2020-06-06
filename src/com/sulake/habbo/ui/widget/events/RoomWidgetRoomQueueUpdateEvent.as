@@ -24,7 +24,7 @@
             return this._position;
         }
 
-        public function get _Str_25661():Boolean
+        public function get hasHabboClub():Boolean
         {
             return this._hasHabboClub;
         }

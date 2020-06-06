@@ -86,7 +86,7 @@
             {
                 this._isChangePossible = true;
             }
-            this._hasClub = k._Str_25661;
+            this._hasClub = k.hasHabboClub;
             this._isClubQueue = k._Str_23206;
             localizations.registerParameter("room.queue.position", "position", this._queuePosition.toString());
             localizations.registerParameter("room.queue.position.hc", "position", this._queuePosition.toString());
