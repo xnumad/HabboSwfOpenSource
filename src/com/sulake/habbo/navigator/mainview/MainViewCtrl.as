@@ -401,7 +401,7 @@
             var _local_3:Boolean = ((this._navigator.data._Str_25514) && (_local_2._Str_22642 == Tabs._Str_6358));
             this._Str_25672(k, _local_3);
             this._Str_24977(k, (!(_local_3)));
-            this._Str_23623(k, this._navigator.data._Str_25160);
+            this._Str_23623(k, this._navigator.data.popularTagsArrived);
             this._Str_25576(k, this._navigator.data._Str_23411);
         }
 

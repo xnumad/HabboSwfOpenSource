@@ -121,7 +121,7 @@
             this._roomEventData = k;
         }
 
-        public function get _Str_25160():Boolean
+        public function get popularTagsArrived():Boolean
         {
             return (!(this._lastMsg == null)) && (!((this._lastMsg as _Str_4587) == null));
         }
