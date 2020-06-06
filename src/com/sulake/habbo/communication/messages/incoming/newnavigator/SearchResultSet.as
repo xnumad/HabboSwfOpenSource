@@ -47,7 +47,7 @@
             return this._filteringData;
         }
 
-        public function get _Str_7385():Vector.<SearchResultList>
+        public function get blocks():Vector.<SearchResultList>
         {
             return this._blocks;
         }

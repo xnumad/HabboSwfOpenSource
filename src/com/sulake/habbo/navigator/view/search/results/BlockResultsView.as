@@ -58,7 +58,7 @@
             this._searchCodeShowMore = new Dictionary();
             this._searchCodeViewMode = new Dictionary();
             this._itemList.destroyListItems();
-            if (this._navigator._Str_3440.resultSet._Str_7385.length == 0)
+            if (this._navigator._Str_3440.resultSet.blocks.length == 0)
             {
                 this._itemList.addListItem(this._categoryElementFactory._Str_24646());
             }
@@ -66,9 +66,9 @@
             {
                 _local_2 = this._navigator._Str_3440.resultSet;
                 _local_3 = 0;
-                while (_local_3 < _local_2._Str_7385.length)
+                while (_local_3 < _local_2.blocks.length)
                 {
-                    _local_4 = _local_2._Str_7385[_local_3];
+                    _local_4 = _local_2.blocks[_local_3];
                     k = this._Str_20272(_local_3, (((!(this._Str_23804(_local_4.searchCode))) || (this._Str_25088(_local_2))) && (!(_local_4._Str_25561))));
                     k.id = _local_3;
                     this._itemList.addListItem(k);
@@ -117,7 +117,7 @@
         {
             var _local_2:int = this._Str_25538(this._searchCodeViewMode[k.window.id]);
             this._navigator._Str_25231(this._searchCodeShowMore[k.window.id], _local_2);
-            this._navigator._Str_3440.resultSet._Str_7385[k.window.id].viewMode = _local_2;
+            this._navigator._Str_3440.resultSet.blocks[k.window.id].viewMode = _local_2;
             this._Str_18512(k.window.id, true);
             this._searchCodeViewMode[k.window.id] = _local_2;
         }
@@ -143,13 +143,13 @@
 
         private function _Str_25088(k:SearchResultSet):Boolean
         {
-            return k._Str_7385.length == 1;
+            return k.blocks.length == 1;
         }
 
         private function _Str_20272(k:int, _arg_2:Boolean):IWindow
         {
             var _local_5:int;
-            var _local_3:SearchResultList = this._navigator._Str_3440.resultSet._Str_7385[k];
+            var _local_3:SearchResultList = this._navigator._Str_3440.resultSet.blocks[k];
             var _local_4:String = ((_local_3.text == "") ? (("${navigator.searchcode.title." + _local_3.searchCode) + "}") : _local_3.text);
             if (_arg_2)
             {

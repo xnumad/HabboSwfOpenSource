@@ -242,7 +242,7 @@
             var _local_2:SearchResultList;
             var _local_3:GuestRoomData;
             this._currentResultRoomNameData = new Map();
-            for each (_local_2 in k._Str_7385)
+            for each (_local_2 in k.blocks)
             {
                 for each (_local_3 in _local_2.guestRooms)
                 {
