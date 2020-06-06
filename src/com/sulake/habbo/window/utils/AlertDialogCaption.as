@@ -3,13 +3,13 @@
     public class AlertDialogCaption implements ICaption
     {
         private var _text:String;
-        private var _Str_18097:String;
+        private var _toolTip:String;
         private var _visible:Boolean;
 
         public function AlertDialogCaption(k:String, _arg_2:String, _arg_3:Boolean)
         {
             this._text = k;
-            this._Str_18097 = _arg_2;
+            this._toolTip = _arg_2;
             this._visible = _arg_3;
         }
 
@@ -25,12 +25,12 @@
 
         public function get toolTip():String
         {
-            return this._Str_18097;
+            return this._toolTip;
         }
 
         public function set toolTip(k:String):void
         {
-            this._Str_18097 = k;
+            this._toolTip = k;
         }
 
         public function get visible():Boolean
