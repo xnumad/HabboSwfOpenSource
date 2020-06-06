@@ -926,7 +926,7 @@
 	import com.sulake.habbo.communication.messages.incoming.poll.PollErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.PollContentsEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll._Str_8879;
-	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_10314;
+	import com.sulake.habbo.communication.messages.outgoing._Str_84.ChangeQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_10646;
 	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
 	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_5756;
@@ -1801,7 +1801,7 @@
             OUTGOING_PACKETS[3082] = _Str_11484;
             OUTGOING_PACKETS[3086] = GetCraftingRecipesAvailableComposer;
             OUTGOING_PACKETS[309] = _Str_5262;
-            OUTGOING_PACKETS[3093] = _Str_10314;
+            OUTGOING_PACKETS[3093] = ChangeQueueMessageComposer;
             OUTGOING_PACKETS[3095] = _Str_10323;
             OUTGOING_PACKETS[31] = _Str_11384;
             OUTGOING_PACKETS[3107] = _Str_8008;

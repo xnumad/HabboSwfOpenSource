@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10314 implements IMessageComposer 
+    public class ChangeQueueMessageComposer implements IMessageComposer
     {
         private var _Str_19441:int;
 
-        public function _Str_10314(k:int)
+        public function ChangeQueueMessageComposer(k:int)
         {
             this._Str_19441 = k;
         }

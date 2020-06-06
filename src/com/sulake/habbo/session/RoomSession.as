@@ -53,7 +53,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
     import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_10856;
     import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
-    import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_10314;
+    import com.sulake.habbo.communication.messages.outgoing._Str_84.ChangeQueueMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8017;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsData;
 	import com.sulake.habbo.ui.widget.infobuspolls.VotePollCounterMessageComposer;
@@ -517,7 +517,7 @@
             {
                 return;
             }
-            this._connection.send(new _Str_10314(k));
+            this._connection.send(new ChangeQueueMessageComposer(k));
         }
 
         public function sendUpdateClothingChangeFurniture(k:int, _arg_2:String, _arg_3:String):void
