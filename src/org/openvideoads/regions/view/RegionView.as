@@ -41,7 +41,7 @@
         protected var _Str_2728:_Str_4474 = null;
         protected var _Str_7726:Boolean = true;
         protected var _Str_2450:Loader = null;
-        protected var _Str_2341:Sprite;
+        protected var _border:Sprite;
         protected var _width:Number = 0;
         protected var _height:Number = 0;
         protected var _Str_11697:Boolean = false;
@@ -1213,18 +1213,18 @@
 
         private function _Str_25466():void
         {
-            if (((this._Str_2341) && (this._Str_2341.parent == this)))
+            if (((this._border) && (this._border.parent == this)))
             {
-                removeChild(this._Str_2341);
+                removeChild(this._border);
             }
             if (this.borderWidth <= 0)
             {
                 return;
             }
-            this._Str_2341 = new Sprite();
-            addChild(this._Str_2341);
-            this._Str_2341.graphics.lineStyle(this.borderWidth, this._Str_23277());
-            GraphicsUtils.drawRoundRectangle(this._Str_2341.graphics, 0, 0, this.width, this.height, this.borderRadius);
+            this._border = new Sprite();
+            addChild(this._border);
+            this._border.graphics.lineStyle(this.borderWidth, this._Str_23277());
+            GraphicsUtils.drawRoundRectangle(this._border.graphics, 0, 0, this.width, this.height, this.borderRadius);
         }
 
         protected function _Str_16801(k:String, _arg_2:int=1):void

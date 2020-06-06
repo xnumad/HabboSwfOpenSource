@@ -53,7 +53,7 @@
         protected var _window:IItemListWindow;
         protected var _Str_2373:IItemListWindow;
         protected var _Str_20844:IItemListWindow;
-        private var _Str_2341:IBorderWindow;
+        private var _border:IBorderWindow;
         private var _tagRenderer:TagListRenderer;
         private var _Str_2919:IBorderWindow;
         private var _Str_19966:int;
@@ -88,13 +88,13 @@
 
         protected function updateWindow():void
         {
-            if (((this._Str_2373 == null) || (this._Str_2341 == null)))
+            if (((this._Str_2373 == null) || (this._border == null)))
             {
                 return;
             }
             this._Str_2373.height = this._Str_2373.scrollableRegion.height;
-            this._Str_2341.height = (this._Str_2373.height + 20);
-            this._window.width = this._Str_2341.width;
+            this._border.height = (this._Str_2373.height + 20);
+            this._window.width = this._border.width;
             this._window.height = this._window.scrollableRegion.height;
             this._widget._Str_10301();
         }
@@ -109,18 +109,18 @@
             {
                 throw (new Error("Failed to construct window from XML!"));
             }
-            this._Str_2341 = (this._window.getListItemByName("info_border") as IBorderWindow);
-            if (this._Str_2341 != null)
+            this._border = (this._window.getListItemByName("info_border") as IBorderWindow);
+            if (this._border != null)
             {
-                this._Str_2373 = (this._Str_2341.findChildByName("infostand_element_list") as IItemListWindow);
-                this._Str_20844 = (this._Str_2341.findChildByName("relationship_status_container") as IItemListWindow);
+                this._Str_2373 = (this._border.findChildByName("infostand_element_list") as IItemListWindow);
+                this._Str_20844 = (this._border.findChildByName("relationship_status_container") as IItemListWindow);
                 this._Str_20844.visible = this._widget.config.getBoolean("relationship.status.enabled");
-                this._Str_2341.findChildByName("heart_randomusername").procedure = this._Str_18506;
-                this._Str_2341.findChildByName("smile_randomusername").procedure = this._Str_18506;
-                this._Str_2341.findChildByName("bobba_randomusername").procedure = this._Str_18506;
+                this._border.findChildByName("heart_randomusername").procedure = this._Str_18506;
+                this._border.findChildByName("smile_randomusername").procedure = this._Str_18506;
+                this._border.findChildByName("bobba_randomusername").procedure = this._Str_18506;
             }
             this._window.name = k;
-            var _local_2:IBitmapWrapperWindow = (this._Str_2341.findChildByName("home_icon") as IBitmapWrapperWindow);
+            var _local_2:IBitmapWrapperWindow = (this._border.findChildByName("home_icon") as IBitmapWrapperWindow);
             if (_local_2 != null)
             {
                 _local_2.bitmap = new BitmapData(_local_2.width, _local_2.height, true, 0);
@@ -131,7 +131,7 @@
                 _local_2.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             }
             this._widget.mainContainer.addChild(this._window);
-            var _local_3:IWindow = this._Str_2341.findChildByTag("close");
+            var _local_3:IWindow = this._border.findChildByTag("close");
             if (_local_3 != null)
             {
                 _local_3.addEventListener(WindowMouseEvent.CLICK, this.onCloseHandler);
@@ -139,7 +139,7 @@
             var _local_5:int;
             while (_local_5 < 5)
             {
-                _local_4 = this._Str_2341.findChildByName(("badge_" + _local_5));
+                _local_4 = this._border.findChildByName(("badge_" + _local_5));
                 if (_local_4 == null)
                 {
                 }
@@ -150,23 +150,23 @@
                 }
                 _local_5++;
             }
-            _local_4 = this._Str_2341.findChildByName("badge_group");
+            _local_4 = this._border.findChildByName("badge_group");
             if (_local_4 != null)
             {
                 _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_23155);
                 _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_12867);
                 _local_4.addEventListener(WindowMouseEvent.OUT, this._Str_23279);
             }
-            var _local_6:IWindow = this._Str_2341.findChildByName("avatar_image_profile_link");
+            var _local_6:IWindow = this._border.findChildByName("avatar_image_profile_link");
             if (_local_6 != null)
             {
                 _local_6.procedure = this._Str_21251;
             }
             if (this._widget.handler.isActivityDisplayEnabled)
             {
-                this._Str_2341.findChildByName("score_spacer").visible = true;
-                this._Str_2341.findChildByName("score_value").visible = true;
-                this._Str_2341.findChildByName("score_text").visible = true;
+                this._border.findChildByName("score_spacer").visible = true;
+                this._border.findChildByName("score_value").visible = true;
+                this._border.findChildByName("score_text").visible = true;
             }
         }
 
@@ -328,7 +328,7 @@
 
         public function _Str_7907(k:String):void
         {
-            var _local_2:_Str_2483 = (IWidgetWindow(this._Str_2341.findChildByName("avatar_image")).widget as _Str_2483);
+            var _local_2:_Str_2483 = (IWidgetWindow(this._border.findChildByName("avatar_image")).widget as _Str_2483);
             _local_2.figure = k;
         }
 
@@ -474,7 +474,7 @@
 
         public function _Str_5605(k:int, _arg_2:String):void
         {
-            var _local_3:IBadgeImageWidget = (IWidgetWindow(this._Str_2341.findChildByName(("badge_" + k))).widget as IBadgeImageWidget);
+            var _local_3:IBadgeImageWidget = (IWidgetWindow(this._border.findChildByName(("badge_" + k))).widget as IBadgeImageWidget);
             _local_3.badgeId = _arg_2;
         }
 
@@ -484,7 +484,7 @@
             var k:int;
             while (k < 5)
             {
-                _local_2 = (IWidgetWindow(this._Str_2341.findChildByName(("badge_" + k))).widget as IBadgeImageWidget);
+                _local_2 = (IWidgetWindow(this._border.findChildByName(("badge_" + k))).widget as IBadgeImageWidget);
                 _local_2.badgeId = "";
                 k++;
             }
@@ -492,13 +492,13 @@
 
         public function _Str_21116():void
         {
-            var k:IBadgeImageWidget = (IWidgetWindow(this._Str_2341.findChildByName("badge_group")).widget as IBadgeImageWidget);
+            var k:IBadgeImageWidget = (IWidgetWindow(this._border.findChildByName("badge_group")).widget as IBadgeImageWidget);
             k.badgeId = "";
         }
 
         public function _Str_16673(k:String):void
         {
-            var _local_2:IBadgeImageWidget = (IWidgetWindow(this._Str_2341.findChildByName("badge_group")).widget as IBadgeImageWidget);
+            var _local_2:IBadgeImageWidget = (IWidgetWindow(this._border.findChildByName("badge_group")).widget as IBadgeImageWidget);
             _local_2.badgeId = k;
         }
 
@@ -529,26 +529,26 @@
             var _local_5:_Str_4838;
             var _local_6:String;
             var _local_7:IWindow;
-            if (((!(this._Str_2341)) || (!(this._widget))))
+            if (((!(this._border)) || (!(this._widget))))
             {
                 return;
             }
             for each (_local_2 in RelationshipStatusEnum._Str_15184)
             {
                 _local_3 = RelationshipStatusEnum._Str_7401(_local_2);
-                _local_4 = this._Str_2341.findChildByName(("relationship_" + _local_3));
+                _local_4 = this._border.findChildByName(("relationship_" + _local_3));
                 _local_5 = k.getValue(_local_2);
                 if (_local_5)
                 {
                     _local_4.visible = (_local_5.friendCount > 0);
                     _local_6 = (_local_3 + "_randomusername");
-                    _local_7 = this._Str_2341.findChildByName(_local_6);
+                    _local_7 = this._border.findChildByName(_local_6);
                     if (_local_7)
                     {
                         _local_7.caption = _local_5._Str_20359;
                         _local_7.id = int(_local_5._Str_21077);
                     }
-                    this._Str_2341.findChildByName((_local_3 + "_others")).visible = (_local_5.friendCount > 1);
+                    this._border.findChildByName((_local_3 + "_others")).visible = (_local_5.friendCount > 1);
                     this._widget.localizations.registerParameter((("infostand.relstatus." + _local_3) + ".others"), "amount", (_local_5.friendCount - 1).toString());
                 }
                 else

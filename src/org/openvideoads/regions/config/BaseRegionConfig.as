@@ -10,7 +10,7 @@
         protected var _Str_19957:String;
         protected var _style:String = null;
         protected var _id:String = null;
-        protected var _Str_2341:String = null;
+        protected var _border:String = null;
         protected var _Str_10333:int = -1;
         protected var _Str_17448:int = -1;
         protected var _Str_16588:String = null;
@@ -194,17 +194,17 @@
 
         public function set border(k:String):void
         {
-            this._Str_2341 = k;
+            this._border = k;
         }
 
         public function get border():String
         {
-            return this._Str_2341;
+            return this._border;
         }
 
         public function _Str_14610():Boolean
         {
-            return !(this._Str_2341 == null);
+            return !(this._border == null);
         }
 
         public function set borderColor(k:String):void

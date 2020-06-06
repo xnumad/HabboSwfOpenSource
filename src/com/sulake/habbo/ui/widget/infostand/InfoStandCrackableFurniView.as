@@ -49,15 +49,15 @@
             {
                 throw (new Error("Failed to construct window from XML!"));
             }
-            _Str_2341 = (_window.getListItemByName("info_border") as IBorderWindow);
+            _border = (_window.getListItemByName("info_border") as IBorderWindow);
             _buttons = (_window.getListItemByName("button_list") as IItemListWindow);
-            if (_Str_2341 != null)
+            if (_border != null)
             {
-                _Str_2373 = (_Str_2341.findChildByName("infostand_element_list") as IItemListWindow);
+                _Str_2373 = (_border.findChildByName("infostand_element_list") as IItemListWindow);
             }
             _window.name = k;
             _widget.mainContainer.addChild(window);
-            var _local_3:IWindow = _Str_2341.findChildByTag("close");
+            var _local_3:IWindow = _border.findChildByTag("close");
             if (_local_3 != null)
             {
                 _local_3.addEventListener(WindowMouseEvent.CLICK, onCloseHandler);
@@ -72,22 +72,22 @@
                     _local_6++;
                 }
             }
-            _Str_3793 = _Str_2341.findChildByTag("catalog");
+            _Str_3793 = _border.findChildByTag("catalog");
             if (_Str_3793 != null)
             {
                 _Str_3793.addEventListener(WindowMouseEvent.CLICK, _Str_12960);
             }
-            _Str_3823 = _Str_2341.findChildByName("rent_button");
+            _Str_3823 = _border.findChildByName("rent_button");
             if (_Str_3823 != null)
             {
                 _Str_3823.addEventListener(WindowMouseEvent.CLICK, _Str_12518);
             }
-            _Str_3747 = _Str_2341.findChildByName("extend_button");
+            _Str_3747 = _border.findChildByName("extend_button");
             if (_Str_3747 != null)
             {
                 _Str_3747.addEventListener(WindowMouseEvent.CLICK, _Str_15302);
             }
-            _Str_3810 = _Str_2341.findChildByName("buyout_button");
+            _Str_3810 = _border.findChildByName("buyout_button");
             if (_Str_3810 != null)
             {
                 _Str_3810.addEventListener(WindowMouseEvent.CLICK, _Str_15887);

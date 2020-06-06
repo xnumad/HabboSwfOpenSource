@@ -50,7 +50,7 @@
         protected var _window:IItemListWindow;
         protected var _Str_4258:IWindowContainer;
         protected var _Str_21812:IWindow;
-        protected var _Str_2341:IBorderWindow;
+        protected var _border:IBorderWindow;
         protected var _buttons:IItemListWindow;
         protected var _Str_2276:IHabboCatalog;
         protected var _Str_2421:IHabboTracking;
@@ -96,7 +96,7 @@
             {
                 throw (new Error("Failed to construct window from XML!"));
             }
-            this._Str_2341 = (this._window.getListItemByName("info_border") as IBorderWindow);
+            this._border = (this._window.getListItemByName("info_border") as IBorderWindow);
             this._buttons = (this._window.getListItemByName("button_list") as IItemListWindow);
             this._Str_4258 = (this._window.getListItemByName("custom_variables") as IWindowContainer);
             if (!this._widget.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))
@@ -109,13 +109,13 @@
                 this._Str_4258.procedure = this._Str_25802;
                 this._Str_21812 = IItemListWindow(this._Str_4258.findChildByName("variable_list")).removeListItemAt(0);
             }
-            if (this._Str_2341 != null)
+            if (this._border != null)
             {
-                this._Str_2373 = (this._Str_2341.findChildByName("infostand_element_list") as IItemListWindow);
+                this._Str_2373 = (this._border.findChildByName("infostand_element_list") as IItemListWindow);
             }
             this._window.name = k;
             this._widget.mainContainer.addChild(this._window);
-            var _local_3:IWindow = this._Str_2341.findChildByTag("close");
+            var _local_3:IWindow = this._border.findChildByTag("close");
             if (_local_3 != null)
             {
                 _local_3.addEventListener(WindowMouseEvent.CLICK, this.onCloseHandler);
@@ -130,22 +130,22 @@
                     _local_7++;
                 }
             }
-            this._Str_3793 = this._Str_2341.findChildByTag("catalog");
+            this._Str_3793 = this._border.findChildByTag("catalog");
             if (this._Str_3793 != null)
             {
                 this._Str_3793.addEventListener(WindowMouseEvent.CLICK, this._Str_12960);
             }
-            this._Str_3823 = this._Str_2341.findChildByName("rent_button");
+            this._Str_3823 = this._border.findChildByName("rent_button");
             if (this._Str_3823 != null)
             {
                 this._Str_3823.addEventListener(WindowMouseEvent.CLICK, this._Str_12518);
             }
-            this._Str_3747 = this._Str_2341.findChildByName("extend_button");
+            this._Str_3747 = this._border.findChildByName("extend_button");
             if (this._Str_3747 != null)
             {
                 this._Str_3747.addEventListener(WindowMouseEvent.CLICK, this._Str_15302);
             }
-            this._Str_3810 = this._Str_2341.findChildByName("buyout_button");
+            this._Str_3810 = this._border.findChildByName("buyout_button");
             if (this._Str_3810 != null)
             {
                 this._Str_3810.addEventListener(WindowMouseEvent.CLICK, this._Str_15887);
@@ -157,7 +157,7 @@
                 _local_5.addEventListener(WindowMouseEvent.OVER, this._Str_4711);
                 _local_5.addEventListener(WindowMouseEvent.OUT, this._Str_4711);
             }
-            var _local_6:IWindow = this._Str_2341.findChildByName("group_details_container");
+            var _local_6:IWindow = this._border.findChildByName("group_details_container");
             if (_local_6)
             {
                 _local_6.addEventListener(WindowMouseEvent.CLICK, this._Str_23310);
@@ -282,7 +282,7 @@
 
         private function _Str_3523(k:BitmapData, _arg_2:String):void
         {
-            var _local_3:IBitmapWrapperWindow = (this._Str_2341.findChildByName(_arg_2) as IBitmapWrapperWindow);
+            var _local_3:IBitmapWrapperWindow = (this._border.findChildByName(_arg_2) as IBitmapWrapperWindow);
             if (_local_3 == null)
             {
                 return;
@@ -451,38 +451,38 @@
 
         protected function updateWindow():void
         {
-            if ((((this._Str_2373 == null) || (this._Str_2341 == null)) || (this._buttons == null)))
+            if ((((this._Str_2373 == null) || (this._border == null)) || (this._buttons == null)))
             {
                 return;
             }
             this._Str_2373.arrangeListItems();
             this._buttons.width = this._buttons.scrollableRegion.width;
             this._Str_2373.height = this._Str_2373.scrollableRegion.height;
-            this._Str_2341.height = (this._Str_2373.height + 20);
-            this._window.width = Math.max(this._Str_2341.width, this._buttons.width);
+            this._border.height = (this._Str_2373.height + 20);
+            this._window.width = Math.max(this._border.width, this._buttons.width);
             this._window.height = this._window.scrollableRegion.height;
-            if (this._Str_2341.width < this._buttons.width)
+            if (this._border.width < this._buttons.width)
             {
-                this._Str_2341.x = (this._window.width - this._Str_2341.width);
+                this._border.x = (this._window.width - this._border.width);
                 this._buttons.x = 0;
             }
             else
             {
                 this._buttons.x = (this._window.width - this._buttons.width);
-                this._Str_2341.x = 0;
+                this._border.x = 0;
             }
             if (this._Str_4258 != null)
             {
-                this._Str_4258.x = this._Str_2341.x;
+                this._Str_4258.x = this._border.x;
             }
             this._widget._Str_10301();
         }
 
         public function update(k:RoomWidgetFurniInfostandUpdateEvent):void
         {
-            if (this._Str_2341 != null)
+            if (this._border != null)
             {
-                this._Str_2341.color = ((_Str_6093._Str_7070(k.id)) ? 0xD77900 : 0xFFFFFF);
+                this._border.color = ((_Str_6093._Str_7070(k.id)) ? 0xD77900 : 0xFFFFFF);
             }
             this.name = k.name;
             this.description = k.description;
@@ -668,10 +668,10 @@
             var _local_6:String;
             var _local_7:String;
             var k:String = "";
-            if (this._Str_2341 != null)
+            if (this._border != null)
             {
                 _local_2 = [];
-                this._Str_2341.groupChildrenWithTag("branding_element", _local_2, -1);
+                this._border.groupChildrenWithTag("branding_element", _local_2, -1);
                 if (_local_2.length > 0)
                 {
                     for each (_local_3 in _local_2)
@@ -709,27 +709,27 @@
             var _local_8:Map;
             var _local_9:String;
             var _local_10:String;
-            if (((this._widget == null) || (this._Str_2341 == null)))
+            if (((this._widget == null) || (this._border == null)))
             {
                 return;
             }
-            var _local_2:IWindow = this._Str_2341.findChildByName("furni_details_spacer");
+            var _local_2:IWindow = this._border.findChildByName("furni_details_spacer");
             if (_local_2 != null)
             {
                 _local_2.visible = k;
             }
             var _local_3:Array = [];
-            this._Str_2341.groupChildrenWithTag("branding_element", _local_3, -1);
+            this._border.groupChildrenWithTag("branding_element", _local_3, -1);
             if (_local_3.length > 0)
             {
                 for each (_local_6 in _local_3)
                 {
-                    this._Str_2341.removeChild(_local_6);
+                    this._border.removeChild(_local_6);
                     _local_6.dispose();
                 }
             }
             var _local_4:Boolean;
-            var _local_5:IWindow = (this._Str_2341.findChildByName("furni_details_text") as ITextWindow);
+            var _local_5:IWindow = (this._border.findChildByName("furni_details_text") as ITextWindow);
             if (_local_5 != null)
             {
                 _local_5.visible = k;
@@ -759,7 +759,7 @@
 
         private function _Str_3360(k:String, _arg_2:Boolean):void
         {
-            var _local_3:IWindow = this._Str_2341.findChildByName(k);
+            var _local_3:IWindow = this._border.findChildByName(k);
             if (_local_3)
             {
                 _local_3.visible = _arg_2;
@@ -823,7 +823,7 @@
 
         public function set groupName(k:String):void
         {
-            var _local_2:IWindow = this._Str_2341.findChildByName("group_name");
+            var _local_2:IWindow = this._border.findChildByName("group_name");
             if (_local_2)
             {
                 _local_2.caption = k;
@@ -835,8 +835,8 @@
         {
             var _local_5:IWidgetWindow;
             var _local_6:_Str_3338;
-            var _local_3:IWindowContainer = (this._Str_2341.findChildByName("unique_item_background_container") as IWindowContainer);
-            var _local_4:IWindowContainer = (this._Str_2341.findChildByName("unique_item_overlay_container") as IWindowContainer);
+            var _local_3:IWindowContainer = (this._border.findChildByName("unique_item_background_container") as IWindowContainer);
+            var _local_4:IWindowContainer = (this._border.findChildByName("unique_item_overlay_container") as IWindowContainer);
             if (((!(_local_3)) || (!(_local_4))))
             {
                 return;
@@ -861,7 +861,7 @@
         {
             var _local_4:IWidgetWindow;
             var _local_5:_Str_4520;
-            var _local_3:IWindowContainer = (this._Str_2341.findChildByName("rarity_item_overlay_container") as IWindowContainer);
+            var _local_3:IWindowContainer = (this._border.findChildByName("rarity_item_overlay_container") as IWindowContainer);
             if (!_local_3)
             {
                 return;
@@ -881,7 +881,7 @@
 
         public function set groupBadgeId(k:String):void
         {
-            var _local_2:IWidgetWindow = (this._Str_2341.findChildByName("group_badge_image") as IWidgetWindow);
+            var _local_2:IWidgetWindow = (this._border.findChildByName("group_badge_image") as IWidgetWindow);
             var _local_3:IBadgeImageWidget = (_local_2.widget as IBadgeImageWidget);
             _local_3.badgeId = k;
             _local_3.groupId = this._widget.furniData.groupId;
