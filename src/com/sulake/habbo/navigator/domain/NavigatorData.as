@@ -255,7 +255,7 @@
             return this._hcMember;
         }
 
-        public function get _Str_11597():int
+        public function get createdFlatId():int
         {
             return this._createdFlatId;
         }
@@ -305,7 +305,7 @@
             this._avatarId = k;
         }
 
-        public function set _Str_11597(k:int):void
+        public function set createdFlatId(k:int):void
         {
             this._createdFlatId = k;
         }

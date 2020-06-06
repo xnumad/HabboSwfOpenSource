@@ -295,12 +295,12 @@
             {
                 this.data._Str_20702 = _local_2.data;
                 this.data._Str_8299 = _local_2._Str_21489;
-                _local_3 = (this.data._Str_11597 == _local_2.data.flatId);
+                _local_3 = (this.data.createdFlatId == _local_2.data.flatId);
                 if (((!(_local_3)) && (_local_2.data._Str_24051)))
                 {
                     this._Str_19492();
                 }
-                this.data._Str_11597 = 0;
+                this.data.createdFlatId = 0;
                 if (((!(this.data.enteredGuestRoom == null)) && (this.data.enteredGuestRoom.habboGroupId > 0)))
                 {
                     this._navigator._Str_5048.expanded = false;
@@ -357,7 +357,7 @@
         {
             var _local_2:_Str_5936 = _Str_3992(k).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ((("Flat created: " + _local_2.flatId) + ", ") + _local_2._Str_18439));
-            this.data._Str_11597 = _local_2.flatId;
+            this.data.createdFlatId = _local_2.flatId;
             this._navigator.goToRoom(_local_2.flatId, true);
             this._navigator._Str_2813._Str_8316(Tabs._Str_4869);
             this._navigator._Str_10330();
