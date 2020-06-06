@@ -265,7 +265,7 @@
             return this._homeRoomId;
         }
 
-        public function get _Str_23665():Boolean
+        public function get hotRoomPopupOpen():Boolean
         {
             return this._hotRoomPopupOpen;
         }
@@ -325,7 +325,7 @@
             this._roomPicker = k;
         }
 
-        public function set _Str_23665(k:Boolean):void
+        public function set hotRoomPopupOpen(k:Boolean):void
         {
             this._hotRoomPopupOpen = k;
         }
