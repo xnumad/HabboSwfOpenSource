@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.GuestRoomSearchResultMessageParser;
 
-    public class _Str_4910 extends MessageEvent implements IMessageEvent 
+    public class GuestRoomSearchResultEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_4910(k:Function)
+        public function GuestRoomSearchResultEvent(k:Function)
         {
             super(k, GuestRoomSearchResultMessageParser);
         }

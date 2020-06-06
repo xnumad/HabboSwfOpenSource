@@ -18,7 +18,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4910;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
@@ -126,7 +126,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4187(this._Str_12114)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4910(this.onGuestRoomSearch)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484)));
@@ -266,7 +266,7 @@
 
         private function onGuestRoomSearch(k:IMessageEvent):void
         {
-            var _local_2:GuestRoomSearchResultData = _Str_4910(k).getParser().data;
+            var _local_2:GuestRoomSearchResultData = GuestRoomSearchResultEvent(k).getParser().data;
             this.data.guestRoomSearchResults = _local_2;
             Logger.log(("Received GuestRoomSearch: " + ((this.data.guestRoomSearchResults.rooms) ? this.data.guestRoomSearchResults.rooms.length : " no rooms")));
         }

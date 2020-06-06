@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5711;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5212;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4910;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
@@ -118,7 +118,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5711(this._Str_18125));
             _local_2.addHabboConnectionMessageEvent(new _Str_5212(this._Str_17011));
             _local_2.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226));
-            _local_2.addHabboConnectionMessageEvent(new _Str_4910(this.onGuestRoomSearch));
+            _local_2.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch));
             _local_2.addHabboConnectionMessageEvent(new _Str_4187(this._Str_12114));
             _local_2.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
             _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
@@ -226,7 +226,7 @@
 
         private function onGuestRoomSearch(k:IMessageEvent):void
         {
-            var _local_2:GuestRoomSearchResultData = _Str_4910(k).getParser().data;
+            var _local_2:GuestRoomSearchResultData = GuestRoomSearchResultEvent(k).getParser().data;
             this.data.guestRoomSearchResults = _local_2;
             Logger.log(("Received GuestRoomSearch: " + this.data.guestRoomSearchResults.rooms.length));
         }

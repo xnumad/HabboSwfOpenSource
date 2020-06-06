@@ -364,7 +364,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4910;
+	import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
@@ -1400,7 +1400,7 @@
             INCOMING_PACKETS[509] = _Str_9446;
             INCOMING_PACKETS[513] = AccountPreferencesEvent;
             INCOMING_PACKETS[518] = _Str_8763;
-            INCOMING_PACKETS[52] = _Str_4910;
+            INCOMING_PACKETS[52] = GuestRoomSearchResultEvent;
             INCOMING_PACKETS[54] = _Str_9517;
             INCOMING_PACKETS[546] = _Str_8241;
             INCOMING_PACKETS[558] = HeightMapUpdateMessageEvent;
