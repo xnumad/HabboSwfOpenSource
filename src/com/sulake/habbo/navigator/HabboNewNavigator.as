@@ -220,7 +220,7 @@
             this._contextContainer.initialize(k);
         }
 
-        public function _Str_20936(k:_Str_4173):void
+        public function onSearchResult(k:_Str_4173):void
         {
             this._newResultsRendered = false;
             this._currentResults = k;
@@ -329,7 +329,7 @@
             var _local_4:_Str_4173 = this._navigatorCache._Str_4666(((k + "/") + _arg_2));
             if (_local_4 != null)
             {
-                this._Str_20936(_local_4);
+                this.onSearchResult(_local_4);
             }
             else
             {
