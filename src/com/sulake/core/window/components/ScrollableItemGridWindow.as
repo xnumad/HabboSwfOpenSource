@@ -13,7 +13,7 @@
     public class ScrollableItemGridWindow extends WindowController implements IScrollableGridWindow 
     {
         private var _cachedGridList:IItemGridWindow;
-        private var _Str_3397:IScrollbarWindow;
+        private var _cachedScrollBar:IScrollbarWindow;
         private var _autoHideScrollBar:Boolean = true;
 
         public function ScrollableItemGridWindow(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
@@ -226,25 +226,25 @@
 
         protected function get _Str_2734():IScrollbarWindow
         {
-            if (!this._Str_3397)
+            if (!this._cachedScrollBar)
             {
-                this._Str_3397 = (findChildByTag("_SCROLLBAR") as IScrollbarWindow);
-                if (this._Str_3397)
+                this._cachedScrollBar = (findChildByTag("_SCROLLBAR") as IScrollbarWindow);
+                if (this._cachedScrollBar)
                 {
-                    this._Str_3397.addEventListener(WindowEvent.WINDOW_EVENT_ENABLED, this.scrollBarEventProc);
-                    this._Str_3397.addEventListener(WindowEvent.WINDOW_EVENT_DISABLED, this.scrollBarEventProc);
+                    this._cachedScrollBar.addEventListener(WindowEvent.WINDOW_EVENT_ENABLED, this.scrollBarEventProc);
+                    this._cachedScrollBar.addEventListener(WindowEvent.WINDOW_EVENT_DISABLED, this.scrollBarEventProc);
                 }
             }
-            return this._Str_3397;
+            return this._cachedScrollBar;
         }
 
         override public function dispose():void
         {
-            if (this._Str_3397)
+            if (this._cachedScrollBar)
             {
-                this._Str_3397.removeEventListener(WindowEvent.WINDOW_EVENT_ENABLED, this.scrollBarEventProc);
-                this._Str_3397.removeEventListener(WindowEvent.WINDOW_EVENT_DISABLED, this.scrollBarEventProc);
-                this._Str_3397 = null;
+                this._cachedScrollBar.removeEventListener(WindowEvent.WINDOW_EVENT_ENABLED, this.scrollBarEventProc);
+                this._cachedScrollBar.removeEventListener(WindowEvent.WINDOW_EVENT_DISABLED, this.scrollBarEventProc);
+                this._cachedScrollBar = null;
             }
             if (this._cachedGridList)
             {
