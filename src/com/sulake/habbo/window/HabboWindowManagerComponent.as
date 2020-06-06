@@ -55,7 +55,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.window.utils.DefaultAttStruct;
     import com.sulake.core.window.components.IDesktopWindow;
-    import com.sulake.habbo.window.utils._Str_4045;
+    import com.sulake.habbo.window.utils.AlertDialog;
     import com.sulake.core.window.utils.INotify;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.window.utils._Str_12599;
@@ -369,7 +369,7 @@
                 throw (new Error("Failed to initialize alert dialog; missing asset!"));
             }
             var _local_6:XML = (alertAsset.content as XML);
-            return new _Str_4045(this, _local_6, k, _arg_2, _arg_4, _arg_3, false);
+            return new AlertDialog(this, _local_6, k, _arg_2, _arg_4, _arg_3, false);
         }
 
         public function alert(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IAlertDialog
@@ -380,7 +380,7 @@
                 throw (new Error("Failed to initialize alert dialog; missing asset!"));
             }
             var _local_6:XML = (alertAsset.content as XML);
-            return new _Str_4045(this, _local_6, k, _arg_2, _arg_3, _arg_4, false);
+            return new AlertDialog(this, _local_6, k, _arg_2, _arg_3, _arg_4, false);
         }
 
         public function alertWithModal(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IAlertDialog
@@ -391,7 +391,7 @@
                 throw (new Error("Failed to initialize alert dialog; missing asset!"));
             }
             var _local_6:XML = (alertAsset.content as XML);
-            return new _Str_4045(this, _local_6, k, _arg_2, _arg_3, _arg_4, true);
+            return new AlertDialog(this, _local_6, k, _arg_2, _arg_3, _arg_4, true);
         }
 
         public function alertWithLink(k:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function):_Str_10548

@@ -11,7 +11,7 @@
     import com.sulake.core.window.components.IInteractiveWindow;
     import com.sulake.core.window.components.ITextWindow;
 
-    public class _Str_4045 implements IAlertDialog, INotify
+    public class AlertDialog implements IAlertDialog, INotify
     {
         protected static const _ALERT_BUTTON_LIST:String = "_alert_button_list";
         protected static const _ALERT_BUTTON_OK:String = "_alert_button_ok";
@@ -28,7 +28,7 @@
         protected var window:IFrameWindow;
         protected var _Str_2440:_Str_2784;
 
-        public function _Str_4045(k:IHabboWindowManager, _arg_2:XML, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function, _arg_7:Boolean)
+        public function AlertDialog(k:IHabboWindowManager, _arg_2:XML, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function, _arg_7:Boolean)
         {
             var _local_9:IWindow;
             super();

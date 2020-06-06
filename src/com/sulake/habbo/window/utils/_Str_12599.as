@@ -7,7 +7,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IButtonWindow;
 
-    public class _Str_12599 extends _Str_4045 implements _Str_10548 
+    public class _Str_12599 extends AlertDialog implements _Str_10548
     {
         protected var _Str_17547:String = "";
         protected var _Str_15928:String = "";
