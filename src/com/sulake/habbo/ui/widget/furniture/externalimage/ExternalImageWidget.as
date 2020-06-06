@@ -38,7 +38,7 @@
     import flash.events.Event;
     import flash.events.IOErrorEvent;
     import flash.display.Stage;
-    import com.sulake.habbo.window.utils._Str_2910;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -516,7 +516,7 @@
 
         private function onWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
-            var _local_3:_Str_2910;
+            var _local_3:IConfirmDialog;
             var _local_4:ITextFieldWindow;
             var _local_5:HabboToolbarEvent;
             if (_arg_2 == this._window)
@@ -675,7 +675,7 @@
             }
         }
 
-        private function _Str_25380(k:_Str_2910, _arg_2:WindowEvent):void
+        private function _Str_25380(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)

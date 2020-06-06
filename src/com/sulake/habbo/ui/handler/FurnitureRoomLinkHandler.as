@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
-    import com.sulake.habbo.window.utils._Str_2910;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
@@ -29,7 +29,7 @@
         private static const INTERNALLINK:String = "internalLink";
 
         private var _container:IRoomWidgetHandlerContainer;
-        private var _confirmDialog:_Str_2910;
+        private var _confirmDialog:IConfirmDialog;
         private var _communicationManagerMessageEvents:Vector.<IMessageEvent>;
         private var _communicationManager:IHabboCommunicationManager;
         private var _roomIdToEnter:int = 0;

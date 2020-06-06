@@ -22,7 +22,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.roomevents.userdefinedroomevents.actiontypes.ActionType;
     import com.sulake.habbo.roomevents.userdefinedroomevents.triggerconfs.WiredTrigger;
-    import com.sulake.habbo.window.utils._Str_2910;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.UpdateTriggerMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.UpdateActionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.UpdateConditionMessageComposer;
@@ -304,7 +304,7 @@
             //}
         }
 
-        private function _Str_24497(k:_Str_2910, _arg_2:WindowEvent):void
+        private function _Str_24497(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)

@@ -16,7 +16,7 @@
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10313;
-    import com.sulake.habbo.window.utils._Str_2910;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
     import com.sulake.habbo.catalog.enum.CatalogPageName;
 
@@ -230,7 +230,7 @@
             this._manager.windowManager.confirm("${group.deleteconfirm.title}", "${group.deleteconfirm.desc}", 0, this._Str_23912);
         }
 
-        private function _Str_23912(k:_Str_2910, _arg_2:WindowEvent):void
+        private function _Str_23912(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)

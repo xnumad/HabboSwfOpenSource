@@ -61,7 +61,7 @@
     import com.sulake.habbo.window.utils._Str_12599;
     import com.sulake.habbo.window.utils._Str_10548;
     import com.sulake.habbo.window.utils._Str_9679;
-    import com.sulake.habbo.window.utils._Str_2910;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.core.window.utils.MouseCursorControl;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.tracking.HabboErrorVariableEnum;
@@ -405,7 +405,7 @@
             return new _Str_12599(this, _local_8, k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
         }
 
-        public function confirm(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2910
+        public function confirm(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IConfirmDialog
         {
             var confirmAsset:IAsset = assets.getAssetByName("habbo_window_confirm_xml");
             if (!confirmAsset)
@@ -416,7 +416,7 @@
             return new _Str_9679(this, _local_6, k, _arg_2, _arg_3, _arg_4, false);
         }
 
-        public function confirmWithModal(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2910
+        public function confirmWithModal(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IConfirmDialog
         {
             var confirmAsset:IAsset = assets.getAssetByName("habbo_window_confirm_xml");
             if (!confirmAsset)

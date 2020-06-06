@@ -63,7 +63,7 @@
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
-    import com.sulake.habbo.window.utils._Str_2910;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.session.product.IProductDataListener;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
@@ -826,7 +826,7 @@
             }
             if ((((session.isRoomOwner) || (this.isAnyRoomController)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
-                this._windowManager.confirm("${generic.alert.title}", "${room.confirm.pick_all}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
+                this._windowManager.confirm("${generic.alert.title}", "${room.confirm.pick_all}", 0, function (k:IConfirmDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                     if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
@@ -850,7 +850,7 @@
             }
             if ((((session.isRoomOwner) || (this.isAnyRoomController)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
-                this._windowManager.confirm("${generic.alert.title}", "${room.confirm.eject_all}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
+                this._windowManager.confirm("${generic.alert.title}", "${room.confirm.eject_all}", 0, function (k:IConfirmDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                     if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
@@ -891,7 +891,7 @@
             }
             if ((((session.isRoomOwner) || (this.isAnyRoomController)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
-                this._windowManager.confirm("${generic.alert.title}", "${room.confirm.pick_all_bc}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
+                this._windowManager.confirm("${generic.alert.title}", "${room.confirm.pick_all_bc}", 0, function (k:IConfirmDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                     if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)

@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.Achievement;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_9826;
-    import com.sulake.habbo.window.utils._Str_2910;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets._Str_2961;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -130,7 +130,7 @@
             {
                 title = "${resolution.reset.confirmation.title}";
                 summary = "${resolution.reset.confirmation.text}";
-                this._questEngine.windowManager.confirm(title, summary, 0, function (k:_Str_2910, _arg_2:WindowEvent):void
+                this._questEngine.windowManager.confirm(title, summary, 0, function (k:IConfirmDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
                     if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
@@ -202,7 +202,7 @@
                     title = "${resolution.confirmation.title}";
                     summary = "${resolution.confirmation.text}";
                     this.close();
-                    this._questEngine.windowManager.confirm(title, summary, 0, function (k:_Str_2910, _arg_2:WindowEvent):void
+                    this._questEngine.windowManager.confirm(title, summary, 0, function (k:IConfirmDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                         if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)

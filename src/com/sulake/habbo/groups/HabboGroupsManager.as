@@ -76,7 +76,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_2891;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberData;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
-    import com.sulake.habbo.window.utils._Str_2910;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_11712;
@@ -492,7 +492,7 @@
             }
         }
 
-        private function _Str_12803(k:_Str_2910, _arg_2:WindowEvent):void
+        private function _Str_12803(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             if ((((k == null) || (k.disposed)) || (this._kickData == null)))
             {

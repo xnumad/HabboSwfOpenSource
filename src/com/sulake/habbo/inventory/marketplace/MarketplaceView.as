@@ -20,7 +20,7 @@
     import flash.display.BitmapData;
     import flash.geom.Matrix;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.window.utils._Str_2910;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -240,7 +240,7 @@
             this._windowManager.confirm(k, _local_2, 0, this._Str_22733);
         }
 
-        private function _Str_22733(k:_Str_2910, _arg_2:WindowEvent):void
+        private function _Str_22733(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             if (((k == null) || (_arg_2 == null)))
             {

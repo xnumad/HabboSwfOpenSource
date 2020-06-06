@@ -29,7 +29,7 @@
     import com.sulake.habbo.room.events.RoomEngineUseProductEvent;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.window.utils._Str_2910;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.ui.widget.events._Str_7783;
@@ -311,7 +311,7 @@
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_COMPOST_PLANT:
                     localization = this._widget.catalog.localization;
-                    this._widget.windowManager.confirm(localization.getLocalization("monsterplant.confirm.title.compost"), localization.getLocalization("monsterplant.confirm.desc.compost"), 0, function onCompostConfirmed (k:_Str_2910, _arg_2:WindowEvent):void
+                    this._widget.windowManager.confirm(localization.getLocalization("monsterplant.confirm.title.compost"), localization.getLocalization("monsterplant.confirm.desc.compost"), 0, function onCompostConfirmed (k:IConfirmDialog, _arg_2:WindowEvent):void
                     {
                         k.dispose();
                         if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
