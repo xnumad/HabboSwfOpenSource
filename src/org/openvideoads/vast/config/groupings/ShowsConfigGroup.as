@@ -6,7 +6,7 @@
 
     public class ShowsConfigGroup extends AbstractStreamsConfig implements _Str_2741 
     {
-        protected var _Str_2466:String = null;
+        protected var _previewImage:String = null;
         protected var _Str_3402:Array;
         protected var _Str_2519:ShowsPlaylistConfigGroup = null;
         protected var _Str_9912:StreamTimerConfig;
@@ -28,7 +28,7 @@
                 {
                     if (k.preview != undefined)
                     {
-                        this._Str_2466 = k.preview;
+                        this._previewImage = k.preview;
                     }
                     if (k.streamTimer != undefined)
                     {
@@ -111,7 +111,7 @@
 
         public function _Str_12928():String
         {
-            return this._Str_2466;
+            return this._previewImage;
         }
 
         public function _Str_24712():Boolean

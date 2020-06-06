@@ -1714,7 +1714,7 @@
 
         public function clone(k:int=0):AdSlot
         {
-            var _local_2:AdSlot = new AdSlot(_parent, this._owner, _Str_2335, _Str_2987, _Str_7240, (_id + "-c"), this._Str_15246, this._Str_2539, this._Str_15880, _Str_2467, _Str_10178, _Str_990, this._Str_3124, this._Str_13174, null, this._Str_6910, _Str_4718, _Str_4101, _Str_4980, _Str_4538, _Str_3744, _Str_3869, this._Str_3908, _Str_4797, this._Str_15504, this._Str_23197, _Str_2466, this._Str_5097, this._Str_8738);
+            var _local_2:AdSlot = new AdSlot(_parent, this._owner, _Str_2335, _Str_2987, _Str_7240, (_id + "-c"), this._Str_15246, this._Str_2539, this._Str_15880, _Str_2467, _Str_10178, _Str_990, this._Str_3124, this._Str_13174, null, this._Str_6910, _Str_4718, _Str_4101, _Str_4980, _Str_4538, _Str_3744, _Str_3869, this._Str_3908, _Str_4797, this._Str_15504, this._Str_23197, _previewImage, this._Str_5097, this._Str_8738);
             _local_2._Str_20694 = this._Str_12489;
             _local_2._Str_6097 = this._Str_5596;
             _local_2._Str_25791(this);

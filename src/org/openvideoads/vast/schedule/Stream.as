@@ -43,7 +43,7 @@
         protected var _Str_3869:Boolean = true;
         protected var _Str_4904:String = null;
         protected var _Str_4797:Object;
-        protected var _Str_2466:String = null;
+        protected var _previewImage:String = null;
         protected var _index:int = -1;
         protected var _Str_7240:int = 0;
         protected var _Str_8737:int = 0;
@@ -89,7 +89,7 @@
             {
                 this._Str_3753 = _arg_22;
             }
-            this._Str_2466 = _arg_19;
+            this._previewImage = _arg_19;
             this._Str_8737 = _arg_20;
             this._Str_20639 = _arg_21;
             this._Str_6195 = _arg_23;
@@ -241,12 +241,12 @@
 
         public function set previewImage(k:String):void
         {
-            this._Str_2466 = k;
+            this._previewImage = k;
         }
 
         public function get previewImage():String
         {
-            return this._Str_2466;
+            return this._previewImage;
         }
 
         public function set autoPlay(k:Boolean):void

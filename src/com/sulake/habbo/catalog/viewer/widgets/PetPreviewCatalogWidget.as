@@ -32,7 +32,7 @@
         private var _Str_24699:int = -1;
         private var _Str_3160:IWindow;
         private var _Str_3938:IWindow;
-        private var _Str_2466:IBitmapWrapperWindow;
+        private var _previewImage:IBitmapWrapperWindow;
         private var _Str_7406:Point;
         private var _Str_3412:int;
         protected var _Str_3370:XML;
@@ -62,8 +62,8 @@
             this._Str_3160.caption = "";
             this._Str_3938 = _window.findChildByName("ctlg_description");
             this._Str_3938.caption = "";
-            this._Str_2466 = (_window.findChildByName("ctlg_teaserimg_1") as IBitmapWrapperWindow);
-            this._Str_7406 = new Point(this._Str_2466.x, this._Str_2466.y);
+            this._previewImage = (_window.findChildByName("ctlg_teaserimg_1") as IBitmapWrapperWindow);
+            this._Str_7406 = new Point(this._previewImage.x, this._previewImage.y);
             var k:XmlAsset = (page.viewer.catalog.assets.getAssetByName("gridItem") as XmlAsset);
             this._Str_3370 = (k.content as XML);
             var _local_2:ImageResult = (page.viewer.catalog as HabboCatalog).roomEngine.getPetImage(this._Str_25057, this._Str_14581, this.COLOR, new Vector3d(90), 64, this, true, 0);
@@ -125,7 +125,7 @@
             this._Str_3160.caption = _local_4;
             this._Str_3938.caption = _local_5;
             this._Str_3938.y = ((this._Str_3160.y + this._Str_3160.height) + 5);
-            this._Str_3004 = this._habboCatalog.utils._Str_7075(k.offer, _window, this._Str_3004, this._Str_2466, -6, true, 6);
+            this._Str_3004 = this._habboCatalog.utils._Str_7075(k.offer, _window, this._Str_3004, this._previewImage, -6, true, 6);
             var _local_7:Point = new Point(0, 0);
             _local_8 = (page.viewer.catalog as HabboCatalog).roomEngine;
             switch (_local_2.pricingModel)
@@ -272,27 +272,27 @@
         private function _Str_3234(k:BitmapData, _arg_2:Boolean, _arg_3:Point=null):void
         {
             var _local_4:Point;
-            if (((!(this._Str_2466 == null)) && (!(window.disposed))))
+            if (((!(this._previewImage == null)) && (!(window.disposed))))
             {
                 if (k == null)
                 {
                     k = new BitmapData(1, 1);
                     _arg_2 = true;
                 }
-                if (this._Str_2466.bitmap == null)
+                if (this._previewImage.bitmap == null)
                 {
-                    this._Str_2466.bitmap = new BitmapData(this._Str_2466.width, this._Str_2466.height, true, 0xFFFFFF);
+                    this._previewImage.bitmap = new BitmapData(this._previewImage.width, this._previewImage.height, true, 0xFFFFFF);
                 }
-                this._Str_2466.bitmap.fillRect(this._Str_2466.bitmap.rect, 0xFFFFFF);
-                _local_4 = new Point(((this._Str_2466.width - k.width) / 2), ((this._Str_2466.height - k.height) / 2));
-                this._Str_2466.bitmap.copyPixels(k, k.rect, _local_4, null, null, true);
-                this._Str_2466.invalidate();
-                this._Str_2466.x = this._Str_7406.x;
-                this._Str_2466.y = this._Str_7406.y;
+                this._previewImage.bitmap.fillRect(this._previewImage.bitmap.rect, 0xFFFFFF);
+                _local_4 = new Point(((this._previewImage.width - k.width) / 2), ((this._previewImage.height - k.height) / 2));
+                this._previewImage.bitmap.copyPixels(k, k.rect, _local_4, null, null, true);
+                this._previewImage.invalidate();
+                this._previewImage.x = this._Str_7406.x;
+                this._previewImage.y = this._Str_7406.y;
                 if (_arg_3 != null)
                 {
-                    this._Str_2466.x = (this._Str_2466.x + _arg_3.x);
-                    this._Str_2466.y = (this._Str_2466.y + _arg_3.y);
+                    this._previewImage.x = (this._previewImage.x + _arg_3.x);
+                    this._previewImage.y = (this._previewImage.y + _arg_3.y);
                 }
             }
             if (_arg_2)

@@ -62,7 +62,7 @@
         private var _Str_17061:BitmapData;
         private var _Str_3160:IWindow;
         private var _Str_3938:IWindow;
-        private var _Str_2466:IBitmapWrapperWindow;
+        private var _previewImage:IBitmapWrapperWindow;
         private var _Str_3864:IWindowContainer;
         private var _Str_3605:IDisplayObjectWrapper;
         private var _Str_7406:Point;
@@ -148,7 +148,7 @@
             this._Str_3938.caption = "";
             (this._Str_3160 as ITextWindow).textColor = 0;
             (this._Str_3938 as ITextWindow).textColor = 0;
-            this._Str_2466 = (_window.findChildByName("ctlg_teaserimg_1") as IBitmapWrapperWindow);
+            this._previewImage = (_window.findChildByName("ctlg_teaserimg_1") as IBitmapWrapperWindow);
             this._Str_3864 = (_window.findChildByName("room_canvas_container") as IWindowContainer);
             if (this._Str_3864 != null)
             {
@@ -172,7 +172,7 @@
                     this._Str_3605 = null;
                 }
             }
-            this._Str_7406 = new Point(this._Str_2466.x, this._Str_2466.y);
+            this._Str_7406 = new Point(this._previewImage.x, this._previewImage.y);
             this._Str_3889 = (_window.findChildByName("bundleGrid") as IItemGridWindow);
             if (this._Str_3889 == null)
             {
@@ -284,7 +284,7 @@
             }
             if (this._Str_17788)
             {
-                this._Str_3004 = this._habboCatalog.utils._Str_7075(_local_3, _window, this._Str_3004, this._Str_2466, -6, false, 6, page.acceptSeasonCurrencyAsCredits, page.acceptSeasonCurrencyAsCredits);
+                this._Str_3004 = this._habboCatalog.utils._Str_7075(_local_3, _window, this._Str_3004, this._previewImage, -6, false, 6, page.acceptSeasonCurrencyAsCredits, page.acceptSeasonCurrencyAsCredits);
             }
             else
             {
@@ -449,7 +449,7 @@
                                         _local_24.visible = true;
                                         _local_25 = _local_24.color;
                                     }
-                                    _local_4 = new BitmapData(this._Str_2466.width, this._Str_2466.height, false, _local_25);
+                                    _local_4 = new BitmapData(this._previewImage.width, this._previewImage.height, false, _local_25);
                                     _local_26 = null;
                                     _local_27 = (page.viewer.catalog as HabboCatalog);
                                     if (_local_27.avatarRenderManager != null)
@@ -573,7 +573,7 @@
             var _local_20:Matrix;
             for each (_local_6 in _arg_2._Str_754())
             {
-                _local_7 = _window.getChildIndex(this._Str_2466);
+                _local_7 = _window.getChildIndex(this._previewImage);
                 _local_8 = _arg_2.getLayerData(_local_6);
                 _local_9 = 0;
                 _local_10 = _local_6.getDirectionOffsetX(_arg_2.getDirection());
@@ -674,27 +674,27 @@
         private function _Str_3234(k:BitmapData, _arg_2:Boolean, _arg_3:Point=null):void
         {
             var _local_4:Point;
-            if (((!(this._Str_2466 == null)) && (!(window.disposed))))
+            if (((!(this._previewImage == null)) && (!(window.disposed))))
             {
                 if (k == null)
                 {
                     k = new BitmapData(1, 1);
                     _arg_2 = true;
                 }
-                if (this._Str_2466.bitmap == null)
+                if (this._previewImage.bitmap == null)
                 {
-                    this._Str_2466.bitmap = new BitmapData(this._Str_2466.width, this._Str_2466.height, true, 0xFFFFFF);
+                    this._previewImage.bitmap = new BitmapData(this._previewImage.width, this._previewImage.height, true, 0xFFFFFF);
                 }
-                this._Str_2466.bitmap.fillRect(this._Str_2466.bitmap.rect, 0xFFFFFF);
-                _local_4 = new Point(((this._Str_2466.width - k.width) / 2), ((this._Str_2466.height - k.height) / 2));
-                this._Str_2466.bitmap.copyPixels(k, k.rect, _local_4, null, null, true);
-                this._Str_2466.invalidate();
-                this._Str_2466.x = this._Str_7406.x;
-                this._Str_2466.y = this._Str_7406.y;
+                this._previewImage.bitmap.fillRect(this._previewImage.bitmap.rect, 0xFFFFFF);
+                _local_4 = new Point(((this._previewImage.width - k.width) / 2), ((this._previewImage.height - k.height) / 2));
+                this._previewImage.bitmap.copyPixels(k, k.rect, _local_4, null, null, true);
+                this._previewImage.invalidate();
+                this._previewImage.x = this._Str_7406.x;
+                this._previewImage.y = this._Str_7406.y;
                 if (_arg_3 != null)
                 {
-                    this._Str_2466.x = (this._Str_2466.x + _arg_3.x);
-                    this._Str_2466.y = (this._Str_2466.y + _arg_3.y);
+                    this._previewImage.x = (this._previewImage.x + _arg_3.x);
+                    this._previewImage.y = (this._previewImage.y + _arg_3.y);
                 }
             }
             if (_arg_2)
