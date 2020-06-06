@@ -104,7 +104,7 @@
             return this._container.roomSession.roomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
         }
 
-        public function _Str_2488(k:IMessageComposer):void
+        public function sendMessage(k:IMessageComposer):void
         {
             this._container.connection.send(k);
         }

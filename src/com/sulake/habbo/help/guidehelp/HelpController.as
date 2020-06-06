@@ -123,7 +123,7 @@
                     _local_3 = (IWindowContainer(this._helpDialog._Str_2429).findChildByName("leave_room") as ICheckBoxWindow);
                     if (((!(_local_3 == null)) && (_local_3.Selected)))
                     {
-                        this._habboHelp._Str_2488(new _Str_3719());
+                        this._habboHelp.sendMessage(new _Str_3719());
                     }
                     this.closeWindow();
                     this._habboHelp._Str_22356();

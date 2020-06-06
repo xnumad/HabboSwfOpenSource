@@ -78,12 +78,12 @@
 
         public function _Str_16933():void
         {
-            this._habboHelp._Str_2488(new _Str_8147(_Str_10976));
+            this._habboHelp.sendMessage(new _Str_8147(_Str_10976));
         }
 
         public function _Str_14041():void
         {
-            this._habboHelp._Str_2488(new _Str_8147(_Str_14005));
+            this._habboHelp.sendMessage(new _Str_8147(_Str_14005));
         }
 
         private function _Str_23120(k:_Str_9419):void
@@ -266,7 +266,7 @@
             var _local_10:int;
             if (k >= this._Str_8127)
             {
-                this._habboHelp._Str_2488(new PostQuizAnswersComposer(this._quizCode, this._answerIds));
+                this._habboHelp.sendMessage(new PostQuizAnswersComposer(this._quizCode, this._answerIds));
             }
             else
             {

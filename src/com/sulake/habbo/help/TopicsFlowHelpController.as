@@ -421,28 +421,28 @@
             switch (this._contentModerationType)
             {
                 case HabboHelp._Str_7161:
-                    this._habboHelp._Str_2488(new _Str_7640(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp._Str_2662, this._currentTopic.id, this._habboHelp._Str_10658));
+                    this._habboHelp.sendMessage(new _Str_7640(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp._Str_2662, this._currentTopic.id, this._habboHelp._Str_10658));
                     return;
                 case HabboHelp._Str_4315:
-                    this._habboHelp._Str_2488(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp._Str_2662, this._habboHelp._Str_5721._Str_18787._Str_9701(HabboHelp._Str_4315, this._habboHelp._Str_2662)));
+                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp._Str_2662, this._habboHelp._Str_5721._Str_18787._Str_9701(HabboHelp._Str_4315, this._habboHelp._Str_2662)));
                     return;
                 case HabboHelp._Str_4786:
-                    this._habboHelp._Str_2488(new _Str_6133(this._message, this._currentTopic.id, -1, this._habboHelp._Str_3469, []));
+                    this._habboHelp.sendMessage(new _Str_6133(this._message, this._currentTopic.id, -1, this._habboHelp._Str_3469, []));
                     return;
                 case HabboHelp._Str_4459:
-                    this._habboHelp._Str_2488(new _Str_7656(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._currentTopic.id, this._message));
+                    this._habboHelp.sendMessage(new _Str_7656(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._currentTopic.id, this._message));
                     return;
                 case HabboHelp._Str_4490:
-                    this._habboHelp._Str_2488(new _Str_7494(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._habboHelp._Str_5721._Str_16155, this._currentTopic.id, this._message));
+                    this._habboHelp.sendMessage(new _Str_7494(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._habboHelp._Str_5721._Str_16155, this._currentTopic.id, this._message));
                     return;
                 default:
                     if (((((k) && (this._currentTopic.name == BULLYING)) && (this._habboHelp.getBoolean("guides.enabled"))) && (this._habboHelp._Str_16486)))
                     {
-                        this._habboHelp._Str_2488(new _Str_7634(this._habboHelp._Str_2662, this._habboHelp._Str_3469));
+                        this._habboHelp.sendMessage(new _Str_7634(this._habboHelp._Str_2662, this._habboHelp._Str_3469));
                     }
                     else
                     {
-                        this._habboHelp._Str_2488(new _Str_6133(this._message, this._currentTopic.id, this._habboHelp._Str_2662, this._habboHelp._Str_3469, this._habboHelp._Str_5721._Str_18787._Str_9701(HabboHelp._Str_5723, -1)));
+                        this._habboHelp.sendMessage(new _Str_6133(this._message, this._currentTopic.id, this._habboHelp._Str_2662, this._habboHelp._Str_3469, this._habboHelp._Str_5721._Str_18787._Str_9701(HabboHelp._Str_5723, -1)));
                     }
             }
         }

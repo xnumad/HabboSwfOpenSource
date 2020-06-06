@@ -571,7 +571,7 @@
             this._reportMessage = k;
         }
 
-        public function _Str_2488(k:IMessageComposer):void
+        public function sendMessage(k:IMessageComposer):void
         {
             if (((!(this._communicationManager == null)) && (!(k == null))))
             {
@@ -602,14 +602,14 @@
         public function _Str_8128(k:int):void
         {
             this._reportType = k;
-            this._Str_2488(new _Str_10695());
+            this.sendMessage(new _Str_10695());
         }
 
         public function _Str_24148(k:int):void
         {
             this._requestType = k;
-            this._Str_2488(new _Str_6216());
-            this._Str_2488(new _Str_12273());
+            this.sendMessage(new _Str_6216());
+            this.sendMessage(new _Str_12273());
         }
 
         private function _Str_23679(k:IMessageEvent):void
@@ -676,7 +676,7 @@
                 case _Str_7161:
                     if (this._reportMessage != null)
                     {
-                        this._Str_2488(this._reportMessage);
+                        this.sendMessage(this._reportMessage);
                         this._reportMessage = null;
                     }
                     break;
@@ -699,12 +699,12 @@
             var k:RemoveFriendMessageComposer;
             if (this._callForHelpManager._Str_2662 > 0)
             {
-                this._Str_2488(new _Str_5697(this._callForHelpManager._Str_2662));
+                this.sendMessage(new _Str_5697(this._callForHelpManager._Str_2662));
                 if (this._friendList.getFriend(this._callForHelpManager._Str_2662) != null)
                 {
                     k = new RemoveFriendMessageComposer();
                     k.addRemovedFriend(this._callForHelpManager._Str_2662);
-                    this._Str_2488(k);
+                    this.sendMessage(k);
                 }
             }
         }
@@ -859,7 +859,7 @@
 
         public function _Str_19612(k:Boolean):void
         {
-            this._Str_2488(new _Str_11701(k));
+            this.sendMessage(new _Str_11701(k));
         }
 
         private function _Str_22418(k:SanctionStatusEvent):void

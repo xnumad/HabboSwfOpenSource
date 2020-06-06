@@ -247,7 +247,7 @@
                 this._sessionData._Str_17222 = GuideSessionData._Str_11013;
                 this._sessionData._Str_3201 = GuideSessionStateEnum.USER_CREATE;
                 this._sessionData._Str_3989 = k;
-                this._habboHelp._Str_2488(new _Str_7293(k, this._habboHelp.localization.getLocalization("guide.help.request.tour.description")));
+                this._habboHelp.sendMessage(new _Str_7293(k, this._habboHelp.localization.getLocalization("guide.help.request.tour.description")));
             }
             else
             {
@@ -257,7 +257,7 @@
 
         public function _Str_18976():void
         {
-            this._habboHelp._Str_2488(new _Str_4553(this._onDuty, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
+            this._habboHelp.sendMessage(new _Str_4553(this._onDuty, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
         }
 
         private function _window9(k:_Str_8903):void
@@ -500,7 +500,7 @@
                     if (this._onDuty)
                     {
                         this._Str_10865(false);
-                        this._habboHelp._Str_2488(new _Str_4553(false, false, false, false));
+                        this._habboHelp.sendMessage(new _Str_4553(false, false, false, false));
                     }
                     this._Str_4260(false);
                 }
@@ -586,7 +586,7 @@
                         _local_3 = this._habboHelp.getInteger("guide.help.alpha.groupid", 0);
                         if (_local_3 > 0)
                         {
-                            this._habboHelp._Str_2488(new _Str_2863(_local_3, true));
+                            this._habboHelp.sendMessage(new _Str_2863(_local_3, true));
                             this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_groupProfile"));
                         }
                     }
@@ -618,12 +618,12 @@
                                 this._Str_13929(false);
                                 return;
                             }
-                            this._habboHelp._Str_2488(new _Str_4553(true, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
+                            this._habboHelp.sendMessage(new _Str_4553(true, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
                             this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_onDuty"));
                             break;
                         case WindowEvent.WINDOW_EVENT_UNSELECTED:
                             this._Str_13929(false);
-                            this._habboHelp._Str_2488(new _Str_4553(false, false, false, false));
+                            this._habboHelp.sendMessage(new _Str_4553(false, false, false, false));
                             this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_offDuty"));
                             break;
                     }
@@ -634,7 +634,7 @@
                         if (this._habboHelp.getBoolean("talent.track.enabled"))
                         {
                             this._habboHelp.tracking.trackTalentTrackOpen(TalentEnum.HELPER, "guidetool");
-                            this._habboHelp._Str_2488(new _Str_3075(TalentEnum.HELPER));
+                            this._habboHelp.sendMessage(new _Str_3075(TalentEnum.HELPER));
                             this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_talent"));
                         }
                     }
@@ -698,12 +698,12 @@
             switch (_arg_2.name)
             {
                 case "accept_button":
-                    this._habboHelp._Str_2488(new _Str_7016(true));
+                    this._habboHelp.sendMessage(new _Str_7016(true));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickAccept"));
                     this.closeWindow();
                     return;
                 case "skip_link":
-                    this._habboHelp._Str_2488(new _Str_7016(false));
+                    this._habboHelp.sendMessage(new _Str_7016(false));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickSkip"));
                     this.closeWindow();
                     return;
@@ -736,7 +736,7 @@
                     k.dispose();
                     if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
                     {
-                        _habboHelp._Str_2488(new _Str_7364());
+                        _habboHelp.sendMessage(new _Str_7364());
                     }
                 });
             }
@@ -751,11 +751,11 @@
             switch (_arg_2.name)
             {
                 case "visit_button":
-                    this._habboHelp._Str_2488(new _Str_7364());
+                    this._habboHelp.sendMessage(new _Str_7364());
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickVisit"));
                     return;
                 case "invite_button":
-                    this._habboHelp._Str_2488(new _Str_10522());
+                    this._habboHelp.sendMessage(new _Str_10522());
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickInvite"));
                     return;
                 case "report_link":
@@ -763,7 +763,7 @@
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickReport"));
                     return;
                 case "close_link":
-                    this._habboHelp._Str_2488(new _Str_7077());
+                    this._habboHelp.sendMessage(new _Str_7077());
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickClose"));
                     this.closeWindow();
                     return;
@@ -801,7 +801,7 @@
             {
                 case "close_button":
                 case "header_button_close":
-                    this._habboHelp._Str_2488(new _Str_4434(true));
+                    this._habboHelp.sendMessage(new _Str_4434(true));
                     this.closeWindow();
                     return;
                 case "report_link":
@@ -848,7 +848,7 @@
                     }
                     else
                     {
-                        this._habboHelp._Str_2488(new _Str_7293(this._sessionData._Str_3989, _local_3));
+                        this._habboHelp.sendMessage(new _Str_7293(this._sessionData._Str_3989, _local_3));
                         this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickCreate"));
                         this.closeWindow();
                     }
@@ -886,7 +886,7 @@
             switch (_arg_2.name)
             {
                 case "cancel_button":
-                    this._habboHelp._Str_2488(new _Str_10003());
+                    this._habboHelp.sendMessage(new _Str_10003());
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickCancel"));
                     this.closeWindow();
                     return;
@@ -928,7 +928,7 @@
             switch (_arg_2.name)
             {
                 case "guide_name_link":
-                    this._habboHelp._Str_2488(new _Str_2553(this._sessionData._Str_5587));
+                    this._habboHelp.sendMessage(new _Str_2553(this._sessionData._Str_5587));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickProfile"));
                     return;
                 case "report_guide_link":
@@ -936,7 +936,7 @@
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickReport"));
                     return;
                 case "close_link":
-                    this._habboHelp._Str_2488(new _Str_7077());
+                    this._habboHelp.sendMessage(new _Str_7077());
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickClose"));
                     this.closeWindow();
                     return;
@@ -964,11 +964,11 @@
             switch (_arg_2.name)
             {
                 case "header_button_close":
-                    this._habboHelp._Str_2488(new _Str_4434(false));
+                    this._habboHelp.sendMessage(new _Str_4434(false));
                     this.closeWindow();
                     return;
                 case "guide_name_link":
-                    this._habboHelp._Str_2488(new _Str_2553(this._sessionData._Str_5587));
+                    this._habboHelp.sendMessage(new _Str_2553(this._sessionData._Str_5587));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickProfile"));
                     return;
                 case "report_guide_link":
@@ -977,7 +977,7 @@
                     return;
                 case "resubmit_button":
                     this._resubmitDescription = true;
-                    this._habboHelp._Str_2488(new _Str_4434(false));
+                    this._habboHelp.sendMessage(new _Str_4434(false));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickResubmit"));
                     this.closeWindow();
                     return;
@@ -1005,7 +1005,7 @@
             switch (_arg_2.name)
             {
                 case "guide_name_link":
-                    this._habboHelp._Str_2488(new _Str_2553(this._sessionData._Str_5587));
+                    this._habboHelp.sendMessage(new _Str_2553(this._sessionData._Str_5587));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickProfile"));
                     return;
                 case "report_guide_link":
@@ -1013,12 +1013,12 @@
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickReport"));
                     return;
                 case "positive_button":
-                    this._habboHelp._Str_2488(new _Str_4434(true));
+                    this._habboHelp.sendMessage(new _Str_4434(true));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickPositiveFeedback"));
                     this.closeWindow();
                     return;
                 case "negative_button":
-                    this._habboHelp._Str_2488(new _Str_4434(false));
+                    this._habboHelp.sendMessage(new _Str_4434(false));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickNegativeFeedback"));
                     this.closeWindow();
                     return;
@@ -1070,11 +1070,11 @@
             switch (_arg_2.name)
             {
                 case "skip_link":
-                    this._habboHelp._Str_2488(new _Str_8134(false));
+                    this._habboHelp.sendMessage(new _Str_8134(false));
                     this._Str_4260(true);
                     return;
                 case "accept_button":
-                    this._habboHelp._Str_2488(new _Str_8134(true));
+                    this._habboHelp.sendMessage(new _Str_8134(true));
                     this._Str_24340();
                     return;
             }
@@ -1096,7 +1096,7 @@
             switch (_arg_2.name)
             {
                 case "close_link":
-                    this._habboHelp._Str_2488(new _Str_4981());
+                    this._habboHelp.sendMessage(new _Str_4981());
                     this._Str_4260(true);
                     return;
             }
@@ -1183,19 +1183,19 @@
                 switch (_arg_2.name)
                 {
                     case "close_link":
-                        this._habboHelp._Str_2488(new _Str_4981());
+                        this._habboHelp.sendMessage(new _Str_4981());
                         this._Str_4260(true);
                         break;
                     case "vote_ok":
-                        this._habboHelp._Str_2488(new _Str_5876(_Str_10084));
+                        this._habboHelp.sendMessage(new _Str_5876(_Str_10084));
                         this._Str_18645(_Str_10084);
                         break;
                     case "vote_bad":
-                        this._habboHelp._Str_2488(new _Str_5876(_Str_9791));
+                        this._habboHelp.sendMessage(new _Str_5876(_Str_9791));
                         this._Str_18645(_Str_9791);
                         break;
                     case "vote_very_bad":
-                        this._habboHelp._Str_2488(new _Str_5876(_Str_10906));
+                        this._habboHelp.sendMessage(new _Str_5876(_Str_10906));
                         this._Str_18645(_Str_10906);
                         break;
                 }
@@ -1256,7 +1256,7 @@
             {
                 case "header_button_close":
                 case "close_button":
-                    this._habboHelp._Str_2488(new _Str_4981());
+                    this._habboHelp.sendMessage(new _Str_4981());
                     this._Str_4260(true);
                     return;
             }
@@ -1283,7 +1283,7 @@
             {
                 case "header_button_close":
                 case "close_button":
-                    this._habboHelp._Str_2488(new _Str_4981());
+                    this._habboHelp.sendMessage(new _Str_4981());
                     this._Str_4260(true);
                     return;
             }
@@ -1487,7 +1487,7 @@
                     }
                     else
                     {
-                        this._habboHelp._Str_2488(new _Str_11135(_local_3));
+                        this._habboHelp.sendMessage(new _Str_11135(_local_3));
                         this._habboHelp.trackGoogle("guideHelp", (this._reportWindow.name + "_clickReport"));
                         this._Str_19564();
                         this.closeWindow();
@@ -1648,7 +1648,7 @@
         {
             if (_arg_2.length > 0)
             {
-                this._habboHelp._Str_2488(new _Str_11187(_arg_2));
+                this._habboHelp.sendMessage(new _Str_11187(_arg_2));
                 _Str_2789(k.widget).message = "";
                 this._Str_21639();
             }
@@ -1698,7 +1698,7 @@
             var _local_3:* = (!(this._lastMessageTypedLength == _local_2));
             if (this._lastTypingInfo != _local_3)
             {
-                this._habboHelp._Str_2488(new _Str_11748(_local_3));
+                this._habboHelp.sendMessage(new _Str_11748(_local_3));
                 this._lastTypingInfo = _local_3;
             }
             this._lastMessageTypedLength = _local_2;
@@ -1761,7 +1761,7 @@
         {
             if (((this._onDuty) && ((getTimer() - this._idleCheckLastActivity) > (this._habboHelp.getInteger("guidetool.idle.timeout", 300) * 1000))))
             {
-                this._habboHelp._Str_2488(new _Str_4553(false, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
+                this._habboHelp.sendMessage(new _Str_4553(false, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
             }
         }
     }

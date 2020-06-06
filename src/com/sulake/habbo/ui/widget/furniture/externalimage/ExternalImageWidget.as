@@ -574,7 +574,7 @@
                     HabboTracking.getInstance().trackEventLog("Stories", "facebook", "stories.share.clicked", this._Str_6733);
                     return;
                 case "senderNameButton":
-                    this._Str_2844._Str_2488(new _Str_2553(this._Str_3017));
+                    this._Str_2844.sendMessage(new _Str_2553(this._Str_3017));
                     return;
                 case "urlField":
                     _local_4 = (this._window.findChildByName("urlField") as ITextFieldWindow);

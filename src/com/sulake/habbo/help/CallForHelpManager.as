@@ -238,7 +238,7 @@
 
         public function _Str_12812(k:String, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:int):void
         {
-            this._habboHelp._Str_2488(new _Str_11879(k, _arg_3, _arg_4, _arg_2, _arg_5));
+            this._habboHelp.sendMessage(new _Str_11879(k, _arg_3, _arg_4, _arg_2, _arg_5));
         }
 
         public function _Str_14206(k:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):void
@@ -452,8 +452,8 @@
                     case "submit_button":
                         if (this._reportedUserId > 0)
                         {
-                            this._habboHelp._Str_2488(new _Str_5697(this._reportedUserId));
-                            this._habboHelp._Str_2488(new _Str_7634(this._reportedUserId, this._reportedRoomId));
+                            this._habboHelp.sendMessage(new _Str_5697(this._reportedUserId));
+                            this._habboHelp.sendMessage(new _Str_7634(this._reportedUserId, this._reportedRoomId));
                             this.closeWindow();
                         }
                         else
@@ -610,16 +610,16 @@
                 case HabboHelp._Str_5723:
                 case HabboHelp._Str_4786:
                     k = ((this._chatReportController._Str_3469 <= 0) ? this._reportedRoomId : this._chatReportController._Str_3469);
-                    this._habboHelp._Str_2488(new _Str_6133(this._message, this._topicIndex, this._reportedUserId, k, this._chatReportController._Str_9701(this._reportType, -1)));
+                    this._habboHelp.sendMessage(new _Str_6133(this._message, this._topicIndex, this._reportedUserId, k, this._chatReportController._Str_9701(this._reportType, -1)));
                     break;
                 case HabboHelp._Str_4315:
-                    this._habboHelp._Str_2488(new _Str_8070(this._message, this._topicIndex, this._reportedUserId, this._chatReportController._Str_9701(HabboHelp._Str_4315, -1)));
+                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._topicIndex, this._reportedUserId, this._chatReportController._Str_9701(HabboHelp._Str_4315, -1)));
                     break;
                 case HabboHelp._Str_4459:
-                    this._habboHelp._Str_2488(new _Str_7656(this._reportedGroupId, this._reportedThreadId, this._topicIndex, this._message));
+                    this._habboHelp.sendMessage(new _Str_7656(this._reportedGroupId, this._reportedThreadId, this._topicIndex, this._message));
                     break;
                 case HabboHelp._Str_4490:
-                    this._habboHelp._Str_2488(new _Str_7494(this._reportedGroupId, this._reportedThreadId, this._reportedMessageId, this._topicIndex, this._message));
+                    this._habboHelp.sendMessage(new _Str_7494(this._reportedGroupId, this._reportedThreadId, this._reportedMessageId, this._topicIndex, this._message));
                     break;
             }
             this._habboHelp._Str_19312();
@@ -693,7 +693,7 @@
 
         private function _Str_23590():void
         {
-            this._habboHelp._Str_2488(new _Str_12224());
+            this._habboHelp.sendMessage(new _Str_12224());
         }
 
         public function get _Str_18787():ChatReportController

@@ -160,13 +160,13 @@
         public function _Str_20431(k:String):void
         {
             this.disposeWindow();
-            this._habboHelp._Str_2488(new _Str_12037(k));
+            this._habboHelp.sendMessage(new _Str_12037(k));
         }
 
         public function checkName(k:String):void
         {
             this.disposeWindow();
-            this._habboHelp._Str_2488(new _Str_7887(k));
+            this._habboHelp.sendMessage(new _Str_7887(k));
         }
 
         public function _Str_25375(name:String):void
