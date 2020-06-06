@@ -23,12 +23,12 @@
             this._text = k;
         }
 
-        public function get _Str_17629():String
+        public function get toolTip():String
         {
             return this._Str_18097;
         }
 
-        public function set _Str_17629(k:String):void
+        public function set toolTip(k:String):void
         {
             this._Str_18097 = k;
         }
