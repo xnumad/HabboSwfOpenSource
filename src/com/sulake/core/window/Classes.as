@@ -128,7 +128,7 @@
             }
         }
 
-        public static function _Str_23901(k:uint):Class
+        public static function getWindowClassByType(k:uint):Class
         {
             return _windowClassTable[k];
         }

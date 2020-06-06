@@ -270,7 +270,7 @@
         public function create(k:String, _arg_2:String, _arg_3:uint, _arg_4:uint, _arg_5:uint, _arg_6:Rectangle, _arg_7:Function, _arg_8:IWindow, _arg_9:uint, _arg_10:Array=null, _arg_11:String="", _arg_12:Array=null):IWindow
         {
             var _local_13:IWindow;
-            var _local_14:Class = Classes._Str_23901(_arg_3);
+            var _local_14:Class = Classes.getWindowClassByType(_arg_3);
             if (_local_14 == null)
             {
                 this.handleError(WindowContext.ERROR_UNKNOWN_WINDOW_TYPE, new Error((('Failed to solve implementation for window "' + k) + '"!')));
