@@ -10,7 +10,7 @@
         function performTagSearch(_arg_1:String):void;
         function goToRoom(_arg_1:int, _arg_2:String="mainview"):void;
         function get isReady():Boolean;
-        function get _Str_2559():IHabboNavigator;
+        function get legacyNavigator():IHabboNavigator;
         function get habboHelp():IHabboHelp;
     }
 }

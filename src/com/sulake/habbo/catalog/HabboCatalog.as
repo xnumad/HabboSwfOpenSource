@@ -447,7 +447,7 @@
 
         public function get navigator():IHabboNavigator
         {
-            return this._newNavigator._Str_2559;
+            return this._newNavigator.legacyNavigator;
         }
 
         public function get utils():HabboCatalogUtils

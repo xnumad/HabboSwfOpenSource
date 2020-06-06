@@ -118,7 +118,7 @@
             {
                 return this._roomHomeAlteredValue;
             }
-            return this._navigator._Str_2559._Str_8458(this._guestRoomData.flatId);
+            return this._navigator.legacyNavigator._Str_8458(this._guestRoomData.flatId);
         }
 
         private function set _Str_11907(k:Boolean):void
@@ -133,7 +133,7 @@
             {
                 return this._roomFavoriteAlteredValue;
             }
-            return this._navigator._Str_2559._Str_12281(this._guestRoomData.flatId);
+            return this._navigator.legacyNavigator._Str_12281(this._guestRoomData.flatId);
         }
 
         private function set _Str_9158(k:Boolean):void
@@ -341,7 +341,7 @@
             var _local_3:RoomSettingsCtrl;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = LegacyNavigator(this._navigator._Str_2559)._Str_3188;
+                _local_3 = LegacyNavigator(this._navigator.legacyNavigator)._Str_3188;
                 _local_3._Str_21207(this._guestRoomData.flatId, this._guestRoomData.habboGroupId);
                 this.destroy();
             }

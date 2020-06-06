@@ -174,7 +174,7 @@
 
         private function _Str_26403(k:WindowEvent):void
         {
-            var _local_2:Boolean = this._navigator._Str_2559._Str_12281(k.window.id);
+            var _local_2:Boolean = this._navigator.legacyNavigator._Str_12281(k.window.id);
             if (_local_2)
             {
                 this._navigator.communication.connection.send(new _Str_5262(k.window.id));

@@ -212,9 +212,9 @@
             if (_local_4 != null)
             {
                 _local_4._Str_12127 = _local_3._Str_20186;
-                if (LegacyNavigator(this._navigator._Str_2559)._Str_4012 != null)
+                if (LegacyNavigator(this._navigator.legacyNavigator)._Str_4012 != null)
                 {
-                    LegacyNavigator(this._navigator._Str_2559)._Str_4012.refreshButtons(this._navigator.data._Str_2678);
+                    LegacyNavigator(this._navigator.legacyNavigator)._Str_4012.refreshButtons(this._navigator.data._Str_2678);
                 }
             }
         }
@@ -227,8 +227,8 @@
         {
             var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
             this._navigator.data._Str_3251 = _local_2.id;
-            LegacyNavigator(this._navigator._Str_2559).send(new _Str_8102());
-            LegacyNavigator(this._navigator._Str_2559).send(new _Str_7413());
+            LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_8102());
+            LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_7413());
         }
 
         private function onUserRights(k:IMessageEvent):void
@@ -283,13 +283,13 @@
             var _local_2:_Str_6918 = _Str_5051(k).getParser();
             Logger.log(((("Got room event: " + _local_2.data._Str_13361) + ", ") + _local_2.data.eventName));
             this.data._Str_4112 = ((_local_2.data._Str_13361 > 0) ? _local_2.data : null);
-            LegacyNavigator(this._navigator._Str_2559)._Str_5048.refresh();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_5048.refresh();
         }
 
         private function _Str_15955(k:IMessageEvent):void
         {
             this.data._Str_4112 = null;
-            LegacyNavigator(this._navigator._Str_2559)._Str_5048.refresh();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_5048.refresh();
         }
 
         private function _Str_17011(k:IMessageEvent):void
@@ -299,11 +299,11 @@
             Logger.log(("CAN CREATE EVENT: " + _local_2._Str_13420));
             if (_local_2._Str_13420)
             {
-                LegacyNavigator(this._navigator._Str_2559)._Str_6939.show();
+                LegacyNavigator(this._navigator.legacyNavigator)._Str_6939.show();
             }
             else
             {
-                _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator._Str_2559), "${navigator.cannotcreateevent.title}", (("${navigator.cannotcreateevent.error." + _local_2.errorCode) + "}"));
+                _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator.legacyNavigator), "${navigator.cannotcreateevent.title}", (("${navigator.cannotcreateevent.error." + _local_2.errorCode) + "}"));
                 _local_3.show();
                 Logger.log("Cannot create an event just now...");
             }
@@ -322,26 +322,26 @@
             var _local_2:_Str_5936 = _Str_3992(k).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ((("Flat created: " + _local_2.flatId) + ", ") + _local_2._Str_18439));
             this.data._Str_11597 = _local_2.flatId;
-            LegacyNavigator(this._navigator._Str_2559).goToRoom(_local_2.flatId, true);
-            LegacyNavigator(this._navigator._Str_2559)._Str_2813._Str_8316(Tabs._Str_4869);
-            LegacyNavigator(this._navigator._Str_2559)._Str_10330();
-            LegacyNavigator(this._navigator._Str_2559).closeNavigator();
+            LegacyNavigator(this._navigator.legacyNavigator).goToRoom(_local_2.flatId, true);
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_2813._Str_8316(Tabs._Str_4869);
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_10330();
+            LegacyNavigator(this._navigator.legacyNavigator).closeNavigator();
         }
 
         private function _Str_22297(k:IMessageEvent):void
         {
-            LegacyNavigator(this._navigator._Str_2559)._Str_2813.close();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_2813.close();
         }
 
         private function onRoomExit(k:IMessageEvent):void
         {
             Logger.log("Navigator: exiting room");
             this.data.onRoomExit();
-            LegacyNavigator(this._navigator._Str_2559)._Str_4012.close();
-            LegacyNavigator(this._navigator._Str_2559)._Str_5048.close();
-            LegacyNavigator(this._navigator._Str_2559)._Str_6939.close();
-            LegacyNavigator(this._navigator._Str_2559)._Str_3188.close();
-            LegacyNavigator(this._navigator._Str_2559).roomFilterCtrl.close();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_4012.close();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_5048.close();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_6939.close();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_3188.close();
+            LegacyNavigator(this._navigator.legacyNavigator).roomFilterCtrl.close();
             var _local_2:Boolean = this._navigator.getBoolean("news.auto_popup.enabled");
             if (_local_2)
             {
@@ -353,7 +353,7 @@
         {
             var _local_2:_Str_6478 = (k as _Str_5728).getParser();
             this._navigator.data.categories = _local_2.nodes;
-            var _local_3:RoomsTabPageDecorator = RoomsTabPageDecorator(LegacyNavigator(this._navigator._Str_2559).tabs._Str_9436(Tabs._Str_3866)._Str_5252);
+            var _local_3:RoomsTabPageDecorator = RoomsTabPageDecorator(LegacyNavigator(this._navigator.legacyNavigator).tabs._Str_9436(Tabs._Str_3866)._Str_5252);
             _local_3._Str_19000();
         }
 
@@ -369,7 +369,7 @@
             try
             {
                 parser = (event as _Str_5993).getParser();
-                LegacyNavigator(this._navigator._Str_2559)._Str_3188.onRoomSettings(parser.data);
+                LegacyNavigator(this._navigator.legacyNavigator)._Str_3188.onRoomSettings(parser.data);
                 Logger.log(((((("GOT ROOM SETTINGS DATA: " + parser.data.name) + ", ") + parser.data._Str_5552) + ", ") + parser.data._Str_13128));
             }
             catch(e:Error)
@@ -381,7 +381,7 @@
         private function _Str_9592(k:IMessageEvent):void
         {
             var _local_2:RoomFilterSettingsMessageParser = (k as RoomFilterSettingsMessageEvent).getParser();
-            LegacyNavigator(this._navigator._Str_2559).roomFilterCtrl._Str_9592(_local_2.badWords);
+            LegacyNavigator(this._navigator.legacyNavigator).roomFilterCtrl._Str_9592(_local_2.badWords);
             Logger.log(("GOT ROOM FILTER SETTINGS: " + _local_2.badWords));
         }
 
@@ -394,20 +394,20 @@
         {
             var _local_2:_Str_6506 = (k as _Str_5081).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ("Room settings saved: " + _local_2.roomId));
-            LegacyNavigator(this._navigator._Str_2559)._Str_2813._Str_8316(Tabs._Str_4869);
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_2813._Str_8316(Tabs._Str_4869);
         }
 
         private function _Str_8265(k:IMessageEvent):void
         {
             var _local_2:_Str_4043 = (k as _Str_6030).getParser();
-            LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8265(_local_2.roomId, _local_2.errorCode, _local_2.info);
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_3188._Str_8265(_local_2.roomId, _local_2.errorCode, _local_2.info);
         }
 
         private function _Str_18125(k:IMessageEvent):void
         {
             var _local_2:_Str_6683 = (k as _Str_5711).getParser();
             Logger.log(("ROOM UPDATED: " + _local_2.flatId));
-            LegacyNavigator(this._navigator._Str_2559).send(new _Str_3570(_local_2.flatId, false, false));
+            LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_3570(_local_2.flatId, false, false));
         }
 
         private function _Str_8561(k:IMessageEvent):void
@@ -422,43 +422,43 @@
             var _local_2:_Str_6561 = (k as _Str_5795).getParser();
             Logger.log(((("Received favourite changed: " + _local_2.flatId) + ", ") + _local_2._Str_13819));
             this.data._Str_21350(_local_2.flatId, _local_2._Str_13819);
-            LegacyNavigator(this._navigator._Str_2559)._Str_4012.reload();
-            LegacyNavigator(this._navigator._Str_2559)._Str_2813.refresh();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_4012.reload();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_2813.refresh();
         }
 
         private function _Str_8576(k:IMessageEvent):void
         {
             var _local_2:_Str_6355 = (k as _Str_5771).getParser();
             Logger.log(((("Got flat controllers: " + _local_2.roomId) + ", ") + _local_2._Str_8349.length));
-            LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8576(_local_2.roomId, _local_2._Str_8349);
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_3188._Str_8576(_local_2.roomId, _local_2._Str_8349);
         }
 
         private function _Str_9346(k:IMessageEvent):void
         {
             var _local_2:_Str_6824 = (k as _Str_6213).getParser();
             Logger.log(((((("Flat controller added: " + _local_2.flatId) + ", ") + _local_2.data.userId) + ", ") + _local_2.data.userName));
-            LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_9346(_local_2.flatId, _local_2.data);
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_3188._Str_9346(_local_2.flatId, _local_2.data);
         }
 
         private function _Str_8484(k:IMessageEvent):void
         {
             var _local_2:_Str_6887 = (k as _Str_5683).getParser();
             Logger.log(((("Flat controller removed: " + _local_2.flatId) + ", ") + _local_2.userId));
-            LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8484(_local_2.flatId, _local_2.userId);
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_3188._Str_8484(_local_2.flatId, _local_2.userId);
         }
 
         private function _Str_8907(k:IMessageEvent):void
         {
             var _local_2:_Str_6752 = (k as _Str_5881).getParser();
             Logger.log(((("Got Banned users for room: " + _local_2.roomId) + ", ") + _local_2._Str_14901.length));
-            LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8907(_local_2.roomId, _local_2._Str_14901);
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_3188._Str_8907(_local_2.roomId, _local_2._Str_14901);
         }
 
         private function _Str_8351(k:IMessageEvent):void
         {
             var _local_2:_Str_6587 = (k as _Str_5655).getParser();
             Logger.log(((("User was unbanned from room. User Id: " + _local_2.userId) + " Room Id: ") + _local_2.roomId));
-            LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8351(_local_2.roomId, _local_2.userId);
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_3188._Str_8351(_local_2.roomId, _local_2.userId);
         }
 
         private function onDoorbell(k:IMessageEvent):void
@@ -472,7 +472,7 @@
             {
                 return;
             }
-            LegacyNavigator(this._navigator._Str_2559).doorbell._Str_19346();
+            LegacyNavigator(this._navigator.legacyNavigator).doorbell._Str_19346();
         }
 
         private function _Str_16100(k:IMessageEvent):void
@@ -485,7 +485,7 @@
             var _local_3:FlatAccessibleMessageParser = _local_2.getParser();
             if (((!(_local_3 == null)) && ((_local_3.userName == null) || (_local_3.userName.length == 0))))
             {
-                LegacyNavigator(this._navigator._Str_2559).doorbell.hide();
+                LegacyNavigator(this._navigator.legacyNavigator).doorbell.hide();
             }
         }
 
@@ -495,7 +495,7 @@
             Logger.log(("Received room rating: " + _local_2.rating));
             this.data._Str_15395 = _local_2.rating;
             this.data._Str_5090 = _local_2._Str_5090;
-            LegacyNavigator(this._navigator._Str_2559)._Str_4012.reload();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_4012.reload();
         }
 
         private function _Str_12114(k:IMessageEvent):void
@@ -503,7 +503,7 @@
             var _local_2:_Str_5700 = (k as _Str_4187).getParser();
             if (((_local_2.userName == null) || (_local_2.userName == "")))
             {
-                LegacyNavigator(this._navigator._Str_2559).doorbell._Str_20293();
+                LegacyNavigator(this._navigator.legacyNavigator).doorbell._Str_20293();
             }
         }
 
@@ -515,7 +515,7 @@
         private function _Str_4132(k:IMessageEvent):void
         {
             this.data.friendList._Str_4132(k);
-            LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_4132();
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_3188._Str_4132();
         }
 
         private function _Str_26467(k:_Str_5767):void
@@ -525,13 +525,13 @@
 
         private function _Str_14669(k:int):void
         {
-            LegacyNavigator(this._navigator._Str_2559).send(new _Str_3570(k, false, true));
-            LegacyNavigator(this._navigator._Str_2559)._Str_4051("Room Forward", "go.roomforward", "", k);
+            LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_3570(k, false, true));
+            LegacyNavigator(this._navigator.legacyNavigator)._Str_4051("Room Forward", "go.roomforward", "", k);
         }
 
         private function _Str_18130(k:_Str_5891):void
         {
-            LegacyNavigator(this._navigator._Str_2559).startRoomCreation();
+            LegacyNavigator(this._navigator.legacyNavigator).startRoomCreation();
         }
 
         private function _Str_20233():void
@@ -580,25 +580,25 @@
             switch (_local_2.reason)
             {
                 case CantConnectMessageParser.REASON_FULL:
-                    _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator._Str_2559), "${navigator.guestroomfull.title}", "${navigator.guestroomfull.text}");
+                    _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator.legacyNavigator), "${navigator.guestroomfull.title}", "${navigator.guestroomfull.text}");
                     _local_3.show();
                     break;
                 case CantConnectMessageParser.REASON_QUEUE_ERROR:
-                    _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator._Str_2559), "${room.queue.error.title}", (("${room.queue.error." + _local_2.parameter) + "}"));
+                    _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator.legacyNavigator), "${room.queue.error.title}", (("${room.queue.error." + _local_2.parameter) + "}"));
                     _local_3.show();
                     break;
                 case CantConnectMessageParser.REASON_BANNED:
-                    _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator._Str_2559), "${navigator.banned.title}", "${navigator.banned.text}");
+                    _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator.legacyNavigator), "${navigator.banned.title}", "${navigator.banned.text}");
                     _local_3.show();
                     break;
                 default:
-                    _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator._Str_2559), "${room.queue.error.title}", "${room.queue.error.title}");
+                    _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator.legacyNavigator), "${room.queue.error.title}", "${room.queue.error.title}");
                     _local_3.show();
             }
-            LegacyNavigator(this._navigator._Str_2559).send(new _Str_3719());
+            LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_3719());
             var _local_4:HabboToolbarEvent = new HabboToolbarEvent(HabboToolbarEvent.HTE_TOOLBAR_CLICK);
             _local_4.iconId = HabboToolbarIconEnum.RECEPTION;
-            LegacyNavigator(this._navigator._Str_2559).toolbar.events.dispatchEvent(_local_4);
+            LegacyNavigator(this._navigator.legacyNavigator).toolbar.events.dispatchEvent(_local_4);
         }
     }
 }

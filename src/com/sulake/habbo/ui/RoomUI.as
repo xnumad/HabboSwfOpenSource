@@ -1095,7 +1095,7 @@
             _local_3.inventory = this._inventory;
             _local_3.messenger = this._messenger;
             _local_3.toolbar = this._toolbar;
-            _local_3.navigator = this._newNavigator._Str_2559;
+            _local_3.navigator = this._newNavigator.legacyNavigator;
             _local_3.habboGroupsManager = this._habboGroupsManager;
             _local_3.avatarEditor = this._avatarEditor;
             _local_3.catalog = this._catalog;

@@ -564,7 +564,7 @@
             }
         }
 
-        public function get _Str_2559():IHabboNavigator
+        public function get legacyNavigator():IHabboNavigator
         {
             return this._legacyNavigator;
         }

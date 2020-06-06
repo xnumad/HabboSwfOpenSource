@@ -868,7 +868,7 @@
         {
             if (this._newNavigator != null)
             {
-                return this._newNavigator._Str_2559;
+                return this._newNavigator.legacyNavigator;
             }
             return null;
         }
