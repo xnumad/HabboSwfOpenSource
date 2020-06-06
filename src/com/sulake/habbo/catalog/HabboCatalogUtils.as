@@ -381,11 +381,11 @@
             }
             else
             {
-                this._Str_16541(this._habboCatalog.getProperty("link.format.club"));
+                this.openLink(this._habboCatalog.getProperty("link.format.club"));
             }
         }
 
-        public function _Str_16541(k:String):void
+        public function openLink(k:String):void
         {
             if (k != "")
             {

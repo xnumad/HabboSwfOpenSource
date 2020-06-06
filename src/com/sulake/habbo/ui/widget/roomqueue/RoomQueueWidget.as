@@ -121,7 +121,7 @@
             _local_2 = this._window.findChildByName("link_text");
             if (_local_2 != null)
             {
-                _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_16541);
+                _local_2.addEventListener(WindowMouseEvent.CLICK, this.openLink);
             }
             _local_2 = this._window.findChildByName("change_button");
             if (_local_2 != null)
@@ -177,7 +177,7 @@
             this.removeWindow();
         }
 
-        private function _Str_16541(k:WindowMouseEvent):void
+        private function openLink(k:WindowMouseEvent):void
         {
             messageListener.processWidgetMessage(new RoomWidgetRoomQueueMessage(RoomWidgetRoomQueueMessage.RWRQM_CLUB_LINK));
         }
