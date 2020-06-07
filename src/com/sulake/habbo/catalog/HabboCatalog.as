@@ -88,7 +88,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.ApproveNameMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseOKMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_8801;
+    import com.sulake.habbo.communication.messages.incoming.catalog.VoucherRedeemOkMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8530;
@@ -550,7 +550,7 @@
             this.addMessageEvent(new ApproveNameMessageEvent(this._Str_11705));
             this.addMessageEvent(new PurchaseOKMessageEvent(this._Str_16050));
             this.addMessageEvent(new HabboActivityPointNotificationMessageEvent(this.onActivityPointNotification));
-            this.addMessageEvent(new _Str_8801(this._Str_25682));
+            this.addMessageEvent(new VoucherRedeemOkMessageEvent(this._Str_25682));
             this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
             this.addMessageEvent(new _Str_8409(this._Str_23986));
             this.addMessageEvent(new _Str_8530(this._Str_24685));
@@ -1986,7 +1986,7 @@
             }
         }
 
-        private function _Str_25682(k:_Str_8801):void
+        private function _Str_25682(k:VoucherRedeemOkMessageEvent):void
         {
             if (k == null)
             {

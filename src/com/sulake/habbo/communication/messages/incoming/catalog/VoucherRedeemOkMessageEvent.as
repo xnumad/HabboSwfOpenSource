@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.VoucherRedeemOkMessageParser;
 
-    public class _Str_8801 extends MessageEvent implements IMessageEvent 
+    public class VoucherRedeemOkMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8801(k:Function)
+        public function VoucherRedeemOkMessageEvent(k:Function)
         {
             super(k, VoucherRedeemOkMessageParser);
         }
