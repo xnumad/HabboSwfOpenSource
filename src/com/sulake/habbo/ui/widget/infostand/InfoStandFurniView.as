@@ -853,7 +853,7 @@
                 _local_5 = IWidgetWindow(_local_4.findChildByName("unique_item_plaque_widget"));
                 _local_6 = _Str_3338(_local_5.widget);
                 _local_6._Str_3442 = _arg_2.uniqueSerialNumber;
-                _local_6._Str_4345 = _arg_2._Str_5330;
+                _local_6._Str_4345 = _arg_2.uniqueSeriesSize;
             }
         }
 

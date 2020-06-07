@@ -14,9 +14,9 @@
         function compare(_arg_1:IStuffData):Boolean;
         function set flags(_arg_1:int):void;
         function get uniqueSerialNumber():int;
-        function get _Str_5330():int;
+        function get uniqueSeriesSize():int;
         function set uniqueSerialNumber(_arg_1:int):void;
-        function set _Str_5330(_arg_1:int):void;
+        function set uniqueSeriesSize(_arg_1:int):void;
         function get rarityLevel():int;
     }
 }

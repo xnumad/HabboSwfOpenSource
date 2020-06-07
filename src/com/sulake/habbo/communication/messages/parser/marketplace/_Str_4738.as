@@ -67,7 +67,7 @@
                             _local_5 = k.readInteger();
                             _local_7 = StuffDataFactory.getStuffDataWrapperForType(LegacyStuffData.FORMAT_KEY);
                             _local_7.uniqueSerialNumber = k.readInteger();
-                            _local_7._Str_5330 = k.readInteger();
+                            _local_7.uniqueSeriesSize = k.readInteger();
                             _local_4 = _Str_8964;
                         }
                     }

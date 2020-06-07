@@ -45,7 +45,7 @@
             return this._uniqueSerialNumber;
         }
 
-        public function get _Str_5330():int
+        public function get uniqueSeriesSize():int
         {
             return this._uniqueSeriesSize;
         }
@@ -55,7 +55,7 @@
             this._uniqueSerialNumber = k;
         }
 
-        public function set _Str_5330(k:int):void
+        public function set uniqueSeriesSize(k:int):void
         {
             this._uniqueSeriesSize = k;
         }
