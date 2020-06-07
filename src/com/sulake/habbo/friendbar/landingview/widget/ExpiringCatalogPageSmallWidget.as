@@ -12,7 +12,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets._Str_2961;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_4625;
+    import com.sulake.habbo.communication.messages.parser.catalog.CatalogPageWithEarliestExpiryMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.friendbar.landingview.layout.WidgetContainerLayout;
     import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
@@ -103,7 +103,7 @@
 
         private function _Str_11267(k:IMessageEvent):void
         {
-            var _local_2:_Str_4625 = _Str_4625(k.parser);
+            var _local_2:CatalogPageWithEarliestExpiryMessageParser = CatalogPageWithEarliestExpiryMessageParser(k.parser);
             this._pageName = _local_2.pageName;
             this._secondsToExpiry = _local_2._Str_17123;
             this.refreshContent();
