@@ -214,7 +214,7 @@
     import com.sulake.habbo.communication.messages.parser.marketplace._Str_6596;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_6792;
     import com.sulake.habbo.catalog.enum.ClubOfferRequestSource;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7118;
+    import com.sulake.habbo.communication.messages.parser.catalog.SellablePetPalettesParser;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetSellablePetPalettesEvent;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.window.utils.IConfirmDialog;
@@ -2265,7 +2265,7 @@
 
         private function _Str_23837(k:_Str_8784):void
         {
-            var _local_2:_Str_7118 = k.getParser();
+            var _local_2:SellablePetPalettesParser = k.getParser();
             this._Str_7969.remove(_local_2.productCode);
             var _local_3:Array = _local_2._Str_13588;
             if (_local_3 != null)

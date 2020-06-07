@@ -3,12 +3,12 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7118 implements IMessageParser 
+    public class SellablePetPalettesParser implements IMessageParser
     {
         private var _productCode:String = "";
         private var _Str_6479:Array;
 
-        public function _Str_7118()
+        public function SellablePetPalettesParser()
         {
             this._Str_6479 = [];
             super();
