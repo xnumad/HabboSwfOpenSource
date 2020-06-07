@@ -92,7 +92,7 @@
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8530;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_7086;
+    import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseNotAllowedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7288;
@@ -554,7 +554,7 @@
             this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
             this.addMessageEvent(new _Str_8409(this._Str_23986));
             this.addMessageEvent(new _Str_8530(this._Str_24685));
-            this.addMessageEvent(new _Str_7086(this._Str_23734));
+            this.addMessageEvent(new PurchaseNotAllowedMessageEvent(this._Str_23734));
             this.addMessageEvent(new GiftWrappingConfigurationEvent(this._Str_23158));
             this.addMessageEvent(new PurchaseErrorMessageEvent(this._Str_19518));
             this.addMessageEvent(new _Str_7288(this._Str_22941));
@@ -1866,7 +1866,7 @@
 
         private function _Str_23734(k:IMessageEvent):void
         {
-            var _local_2:_Str_7086 = (k as _Str_7086);
+            var _local_2:PurchaseNotAllowedMessageEvent = (k as PurchaseNotAllowedMessageEvent);
             var _local_3:PurchaseNotAllowedMessageParser = _local_2.getParser();
             var _local_4:int = _local_3.errorCode;
             var _local_5:String = "";

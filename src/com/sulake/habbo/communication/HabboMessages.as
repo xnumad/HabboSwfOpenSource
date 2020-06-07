@@ -405,7 +405,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5514;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6906;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7086;
+	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseNotAllowedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7288;
 	import com.sulake.habbo.communication.messages.incoming.catalog.RoomAdPurchaseInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.SeasonalCalendarDailyOfferMessageEvent;
@@ -1354,7 +1354,7 @@
             INCOMING_PACKETS[374] = UsersEvent;
             INCOMING_PACKETS[3753] = FriendFurniStartConfirmationMessageEvent;
             INCOMING_PACKETS[377] = _Str_8530;
-            INCOMING_PACKETS[3770] = _Str_7086;
+            INCOMING_PACKETS[3770] = PurchaseNotAllowedMessageEvent;
             INCOMING_PACKETS[3776] = ObjectUpdateMessageEvent;
             INCOMING_PACKETS[378] = _Str_9492;
             INCOMING_PACKETS[3783] = FlatAccessibleMessageEvent;

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.PurchaseNotAllowedMessageParser;
 
-    public class _Str_7086 extends MessageEvent implements IMessageEvent 
+    public class PurchaseNotAllowedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7086(k:Function)
+        public function PurchaseNotAllowedMessageEvent(k:Function)
         {
             super(k, PurchaseNotAllowedMessageParser);
         }
