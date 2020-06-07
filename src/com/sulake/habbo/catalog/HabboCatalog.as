@@ -195,7 +195,7 @@
     import com.sulake.habbo.communication.messages.parser.catalog.PurchaseNotAllowedMessageParser;
     import com.sulake.habbo.communication.messages.parser.catalog.PurchaseOKMessageParser;
     import com.sulake.habbo.catalog.navigation.events.CatalogFurniPurchaseEvent;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7888;
+    import com.sulake.habbo.communication.messages.parser.catalog.NotEnoughBalanceMessageParser;
     import com.sulake.habbo.communication.messages.parser.users.ApproveNameMessageParser;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetApproveNameResultEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.purse.UserCreditsMessageParser;
@@ -1927,7 +1927,7 @@
         private function _Str_24443(k:IMessageEvent):void
         {
             var _local_2:_Str_5514 = (k as _Str_5514);
-            var _local_3:_Str_7888 = _local_2.getParser();
+            var _local_3:NotEnoughBalanceMessageParser = _local_2.getParser();
             if (_local_3._Str_16424)
             {
                 this.showNotEnoughCreditsAlert();

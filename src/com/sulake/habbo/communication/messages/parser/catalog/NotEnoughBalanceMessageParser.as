@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7888 implements IMessageParser 
+    public class NotEnoughBalanceMessageParser implements IMessageParser
     {
         private var _Str_17433:Boolean = false;
         private var _Str_19031:Boolean = false;
