@@ -192,7 +192,7 @@
     import com.sulake.habbo.catalog.viewer.IPageLocalization;
     import com.sulake.habbo.catalog.viewer.Product;
     import com.sulake.habbo.communication.messages.parser.catalog.PurchaseErrorMessageParser;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7823;
+    import com.sulake.habbo.communication.messages.parser.catalog.PurchaseNotAllowedMessageParser;
     import com.sulake.habbo.communication.messages.parser.catalog.PurchaseOKMessageParser;
     import com.sulake.habbo.catalog.navigation.events.CatalogFurniPurchaseEvent;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7888;
@@ -1867,7 +1867,7 @@
         private function _Str_23734(k:IMessageEvent):void
         {
             var _local_2:_Str_7086 = (k as _Str_7086);
-            var _local_3:_Str_7823 = _local_2.getParser();
+            var _local_3:PurchaseNotAllowedMessageParser = _local_2.getParser();
             var _local_4:int = _local_3.errorCode;
             var _local_5:String = "";
             switch (_local_4)

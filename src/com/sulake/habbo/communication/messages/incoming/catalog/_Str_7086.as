@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7823;
+    import com.sulake.habbo.communication.messages.parser.catalog.PurchaseNotAllowedMessageParser;
 
     public class _Str_7086 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_7086(k:Function)
         {
-            super(k, _Str_7823);
+            super(k, PurchaseNotAllowedMessageParser);
         }
 
-        public function getParser():_Str_7823
+        public function getParser():PurchaseNotAllowedMessageParser
         {
-            return this._parser as _Str_7823;
+            return this._parser as PurchaseNotAllowedMessageParser;
         }
     }
 }
