@@ -410,7 +410,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.RoomAdPurchaseInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.SeasonalCalendarDailyOfferMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7618;
+	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageWithEarliestExpiryMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseOKMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7706;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
@@ -1203,7 +1203,7 @@
             INCOMING_PACKETS[2494] = _Str_18853;
             INCOMING_PACKETS[2501] = _Str_8980;
             INCOMING_PACKETS[2505] = TradingOpenEvent;
-            INCOMING_PACKETS[2515] = _Str_7618;
+            INCOMING_PACKETS[2515] = CatalogPageWithEarliestExpiryMessageEvent;
             INCOMING_PACKETS[2524] = _Str_5795;
             INCOMING_PACKETS[2525] = CommunityGoalProgressMessageEvent;
             INCOMING_PACKETS[2527] = _Str_9632;

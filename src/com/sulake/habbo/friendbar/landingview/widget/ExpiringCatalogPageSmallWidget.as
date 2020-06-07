@@ -5,7 +5,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_7618;
+    import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageWithEarliestExpiryMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7384;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -48,7 +48,7 @@
             this._container = IWindowContainer(this._landingView.getXmlWindow("expiring_catalog_page_small"));
             this._container.findChildByName("open_catalog_button").procedure = this._Str_9063;
             this._container.visible = false;
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_7618(this._Str_11267));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CatalogPageWithEarliestExpiryMessageEvent(this._Str_11267));
         }
 
         public function refresh():void
