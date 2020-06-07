@@ -6,7 +6,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindowContainer;
     import flash.utils.Timer;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_8320;
+    import com.sulake.habbo.communication.messages.incoming.catalog.LimitedOfferAppearingNextMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9801;
     import flash.events.TimerEvent;
     import com.sulake.core.window.IWindow;
@@ -61,7 +61,7 @@
             this._container.findChildByName("get").procedure = this._Str_9063;
             this._container.findChildByName("catalogue_button").procedure = this._Str_9063;
             this._container.visible = false;
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_8320(this._Str_23091));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new LimitedOfferAppearingNextMessageEvent(this._Str_23091));
             this._Str_17444(null);
         }
 
@@ -148,7 +148,7 @@
             this._modeSwitchTimer.start();
         }
 
-        private function _Str_23091(k:_Str_8320):void
+        private function _Str_23091(k:LimitedOfferAppearingNextMessageEvent):void
         {
             this._appearsInSeconds = k.getParser()._Str_23051;
             this._pageId = k.getParser().pageId;

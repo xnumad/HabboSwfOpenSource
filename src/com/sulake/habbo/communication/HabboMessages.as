@@ -414,7 +414,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseOKMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubOffersMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8320;
+	import com.sulake.habbo.communication.messages.incoming.catalog.LimitedOfferAppearingNextMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
@@ -1390,7 +1390,7 @@
             INCOMING_PACKETS[416] = _Str_17054;
             INCOMING_PACKETS[420] = GuildMembershipsMessageEvent;
             INCOMING_PACKETS[426] = _Str_9995;
-            INCOMING_PACKETS[44] = _Str_8320;
+            INCOMING_PACKETS[44] = LimitedOfferAppearingNextMessageEvent;
             INCOMING_PACKETS[448] = YouArePlayingGameMessageEvent;
             INCOMING_PACKETS[462] = _Str_9229;
             INCOMING_PACKETS[463] = _Str_15969;

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.LimitedOfferAppearingNextMessageParser;
 
-    public class _Str_8320 extends MessageEvent implements IMessageEvent 
+    public class LimitedOfferAppearingNextMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8320(k:Function)
+        public function LimitedOfferAppearingNextMessageEvent(k:Function)
         {
             super(k, LimitedOfferAppearingNextMessageParser);
         }
