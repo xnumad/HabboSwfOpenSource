@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_2866;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8067 implements IMessageParser 
+    public class RoomAdPurchaseInfoEventParser implements IMessageParser
     {
         private var _Str_6052:Boolean;
         private var _rooms:Array;

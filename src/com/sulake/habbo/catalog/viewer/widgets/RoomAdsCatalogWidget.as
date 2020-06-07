@@ -13,7 +13,7 @@
     import com.sulake.habbo.room.events.RoomEngineEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4253;
     import com.sulake.habbo.communication.messages.incoming.users._Str_2866;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_8067;
+    import com.sulake.habbo.communication.messages.parser.catalog.RoomAdPurchaseInfoEventParser;
     import com.sulake.habbo.catalog.IPurchasableOffer;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events._Str_3308;
@@ -209,7 +209,7 @@
                 return;
             }
             var _local_2:_Str_7365 = (k as _Str_7365);
-            var _local_3:_Str_8067 = _local_2.getParser();
+            var _local_3:RoomAdPurchaseInfoEventParser = _local_2.getParser();
             var _local_4:IDropMenuWindow = (window.findChildByName("room_drop_menu") as IDropMenuWindow);
             this._rooms = _local_3.rooms;
             this._isVip = _local_3._Str_12313;
