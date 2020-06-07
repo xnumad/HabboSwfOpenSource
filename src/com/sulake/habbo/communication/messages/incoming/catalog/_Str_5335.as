@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5335 extends _Str_5442 
+    public class _Str_5335 extends ClubOfferData
     {
         private var _Str_16193:int;
         private var _Str_22071:int;

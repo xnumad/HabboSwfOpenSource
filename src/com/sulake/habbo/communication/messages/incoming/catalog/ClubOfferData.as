@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5442 
+    public class ClubOfferData
     {
         private var _Str_2507:int;
         private var _productCode:String;
@@ -18,7 +18,7 @@
         private var _day:int;
         private var _Str_4135:Boolean;
 
-        public function _Str_5442(k:IMessageDataWrapper)
+        public function ClubOfferData(k:IMessageDataWrapper)
         {
             this._Str_2507 = k.readInteger();
             this._productCode = k.readString();

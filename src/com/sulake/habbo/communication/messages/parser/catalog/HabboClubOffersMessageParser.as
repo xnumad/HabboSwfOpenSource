@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.catalog
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5442;
+    import com.sulake.habbo.communication.messages.incoming.catalog.ClubOfferData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class HabboClubOffersMessageParser implements IMessageParser
@@ -23,7 +23,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._offers.push(new _Str_5442(k));
+                this._offers.push(new ClubOfferData(k));
                 _local_3++;
             }
             this._source = k.readInteger();

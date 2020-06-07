@@ -3,7 +3,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.IVipBuyCatalogWidget;
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.core.communication.connection.IConnection;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5442;
+    import com.sulake.habbo.communication.messages.incoming.catalog.ClubOfferData;
     import com.sulake.habbo.communication.messages.parser.catalog.HabboClubOffersMessageParser;
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.window.IHabboWindowManager;
@@ -63,7 +63,7 @@
         public function onOffers(k:HabboClubOffersMessageParser):void
         {
             var _local_3:ClubBuyOfferData;
-            var _local_4:_Str_5442;
+            var _local_4:ClubOfferData;
             var _local_5:ClubBuyOfferData;
             var _local_6:Boolean;
             var _local_7:Array;
