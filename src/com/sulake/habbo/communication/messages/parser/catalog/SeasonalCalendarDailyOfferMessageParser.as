@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageOfferData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6581 implements IMessageParser 
+    public class SeasonalCalendarDailyOfferMessageParser implements IMessageParser
     {
         private var _pageId:int;
         private var _Str_8357:CatalogPageMessageOfferData;
