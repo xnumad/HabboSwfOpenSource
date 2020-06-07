@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.communication.connection.IConnection;
 	import com.sulake.core.communication.messages.IMessageDataWrapper;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_7365;
+    import com.sulake.habbo.communication.messages.incoming.catalog.RoomAdPurchaseInfoEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
     import com.sulake.habbo.catalog.purchase.RoomAdPurchaseData;
@@ -52,7 +52,7 @@
             var k:IConnection = this._catalog.connection;
             if (this._messageListener == null)
             {
-                this._messageListener = new _Str_7365(this._Str_22552);
+                this._messageListener = new RoomAdPurchaseInfoEvent(this._Str_22552);
                 k.addMessageEvent(this._messageListener);
             }
             this._catalog._Str_15954();
@@ -208,7 +208,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7365 = (k as _Str_7365);
+            var _local_2:RoomAdPurchaseInfoEvent = (k as RoomAdPurchaseInfoEvent);
             var _local_3:RoomAdPurchaseInfoEventParser = _local_2.getParser();
             var _local_4:IDropMenuWindow = (window.findChildByName("room_drop_menu") as IDropMenuWindow);
             this._rooms = _local_3.rooms;

@@ -407,7 +407,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6906;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7086;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7288;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7365;
+	import com.sulake.habbo.communication.messages.incoming.catalog.RoomAdPurchaseInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.SeasonalCalendarDailyOfferMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7618;
@@ -1197,7 +1197,7 @@
             INCOMING_PACKETS[2429] = FigureUpdateEvent;
             INCOMING_PACKETS[2445] = GuildMembershipRejectedMessageEvent;
             INCOMING_PACKETS[2454] = RoomPropertyMessageEvent;
-            INCOMING_PACKETS[2468] = _Str_7365;
+            INCOMING_PACKETS[2468] = RoomAdPurchaseInfoEvent;
             INCOMING_PACKETS[2491] = AuthenticationOKMessageEvent;
             INCOMING_PACKETS[2493] = _Str_8120;
             INCOMING_PACKETS[2494] = _Str_18853;
