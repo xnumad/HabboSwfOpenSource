@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8488 implements IMessageParser 
+    public class VoucherRedeemOkMessageParser implements IMessageParser
     {
         private var _productName:String = "";
         private var _productDescription:String = "";
