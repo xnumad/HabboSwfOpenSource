@@ -191,7 +191,7 @@
     import com.sulake.habbo.communication.messages.parser.catalog.CatalogPageMessageParser;
     import com.sulake.habbo.catalog.viewer.IPageLocalization;
     import com.sulake.habbo.catalog.viewer.Product;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7694;
+    import com.sulake.habbo.communication.messages.parser.catalog.PurchaseErrorMessageParser;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7823;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7635;
     import com.sulake.habbo.catalog.navigation.events.CatalogFurniPurchaseEvent;
@@ -1853,7 +1853,7 @@
         private function _Str_19518(k:IMessageEvent):void
         {
             var _local_2:_Str_8078 = (k as _Str_8078);
-            var _local_3:_Str_7694 = _local_2.getParser();
+            var _local_3:PurchaseErrorMessageParser = _local_2.getParser();
             var _local_4:int = _local_3.errorCode;
             var _local_5:String = ((_local_4 > 0) ? (("${catalog.alert.purchaseerror.description." + _local_4) + "}") : "${catalog.alert.purchaseerror.description}");
             this._windowManager.alert("${catalog.alert.purchaseerror.title}", _local_5, 0, this._Str_7211);
