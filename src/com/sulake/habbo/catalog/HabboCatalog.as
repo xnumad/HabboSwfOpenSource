@@ -86,7 +86,7 @@
     import com.sulake.iid.IIDHabboAvatarEditor;
     import com.sulake.iid.IIDHabboQuestEngine;
     import com.sulake.habbo.communication.messages.incoming.users.ApproveNameMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_7677;
+    import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseOKMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8801;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
@@ -548,7 +548,7 @@
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new ApproveNameMessageEvent(this._Str_11705));
-            this.addMessageEvent(new _Str_7677(this._Str_16050));
+            this.addMessageEvent(new PurchaseOKMessageEvent(this._Str_16050));
             this.addMessageEvent(new HabboActivityPointNotificationMessageEvent(this.onActivityPointNotification));
             this.addMessageEvent(new _Str_8801(this._Str_25682));
             this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
@@ -1887,7 +1887,7 @@
             var _local_5:BitmapData;
             var _local_6:Point;
             var _local_7:String;
-            var _local_2:_Str_7677 = (k as _Str_7677);
+            var _local_2:PurchaseOKMessageEvent = (k as PurchaseOKMessageEvent);
             var _local_3:PurchaseOKMessageParser = _local_2.getParser();
             events.dispatchEvent(new CatalogFurniPurchaseEvent(_local_3.offer.localizationId));
             if (this._purchaseConfirmationDialog != null)

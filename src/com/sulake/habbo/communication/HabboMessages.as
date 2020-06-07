@@ -411,7 +411,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.SeasonalCalendarDailyOfferMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7618;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7677;
+	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseOKMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7706;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8320;
@@ -1444,7 +1444,7 @@
             INCOMING_PACKETS[84] = _Str_7883;
             INCOMING_PACKETS[841] = GuideSessionEvent;
             INCOMING_PACKETS[859] = PetLevelNotificationEvent;
-            INCOMING_PACKETS[869] = _Str_7677;
+            INCOMING_PACKETS[869] = PurchaseOKMessageEvent;
             INCOMING_PACKETS[872] = _Str_16892;
             INCOMING_PACKETS[876] = ExtendedProfileChangedMessageEvent;
             INCOMING_PACKETS[878] = _Str_4187;
