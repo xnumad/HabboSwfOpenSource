@@ -21,7 +21,7 @@
 
         public function initializeFromIncomingMessage(k:IMessageDataWrapper):void
         {
-            if ((this._flags & StuffDataFlagsEnum._Str_17042) > 0)
+            if ((this._flags & StuffDataFlagsEnum.UNIQUE_SERIAL_NUMBER) > 0)
             {
                 this._uniqueSerialNumber = k.readInteger();
                 this._uniqueSeriesSize = k.readInteger();

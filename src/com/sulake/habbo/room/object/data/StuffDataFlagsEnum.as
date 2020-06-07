@@ -2,6 +2,6 @@
 {
     public class StuffDataFlagsEnum 
     {
-        public static const _Str_17042:uint = 0x0100;
+        public static const UNIQUE_SERIAL_NUMBER:uint = 0x0100;
     }
 }
