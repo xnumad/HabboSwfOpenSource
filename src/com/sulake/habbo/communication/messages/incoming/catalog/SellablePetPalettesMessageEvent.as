@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.SellablePetPalettesParser;
 
-    public class _Str_8784 extends MessageEvent implements IMessageEvent 
+    public class SellablePetPalettesMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8784(k:Function)
+        public function SellablePetPalettesMessageEvent(k:Function)
         {
             super(k, SellablePetPalettesParser);
         }

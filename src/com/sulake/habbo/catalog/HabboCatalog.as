@@ -101,7 +101,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_8784;
+    import com.sulake.habbo.communication.messages.incoming.catalog.SellablePetPalettesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7169;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
@@ -563,7 +563,7 @@
             this.addMessageEvent(new _Str_8504(this._Str_11267));
             this.addMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
-            this.addMessageEvent(new _Str_8784(this._Str_23837));
+            this.addMessageEvent(new SellablePetPalettesMessageEvent(this._Str_23837));
             this.addMessageEvent(new _Str_7169(this._Str_25537));
             this.addMessageEvent(new _Str_5417(this._Str_24973));
             this.addMessageEvent(new _Str_6344(this._Str_23861));
@@ -2263,7 +2263,7 @@
         {
         }
 
-        private function _Str_23837(k:_Str_8784):void
+        private function _Str_23837(k:SellablePetPalettesMessageEvent):void
         {
             var _local_2:SellablePetPalettesParser = k.getParser();
             this._Str_7969.remove(_local_2.productCode);

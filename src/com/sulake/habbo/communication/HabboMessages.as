@@ -419,7 +419,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8530;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8784;
+	import com.sulake.habbo.communication.messages.incoming.catalog.SellablePetPalettesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8801;
 	import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftSelectedEvent;
@@ -1309,7 +1309,7 @@
             INCOMING_PACKETS[3297] = _Str_5711;
             INCOMING_PACKETS[3315] = _Str_9393;
             INCOMING_PACKETS[3319] = CommunityGoalEarnedPrizesMessageEvent;
-            INCOMING_PACKETS[3331] = _Str_8784;
+            INCOMING_PACKETS[3331] = SellablePetPalettesMessageEvent;
             INCOMING_PACKETS[3336] = _Str_8801;
             INCOMING_PACKETS[3359] = _Str_8339;
             INCOMING_PACKETS[3365] = _Str_7199;
