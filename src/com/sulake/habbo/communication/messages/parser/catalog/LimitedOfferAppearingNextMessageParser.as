@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9527 implements IMessageParser 
+    public class LimitedOfferAppearingNextMessageParser implements IMessageParser
     {
         private var _Str_6800:int;
         private var _pageId:int;
