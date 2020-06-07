@@ -193,7 +193,7 @@
     import com.sulake.habbo.catalog.viewer.Product;
     import com.sulake.habbo.communication.messages.parser.catalog.PurchaseErrorMessageParser;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7823;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7635;
+    import com.sulake.habbo.communication.messages.parser.catalog.PurchaseOKMessageParser;
     import com.sulake.habbo.catalog.navigation.events.CatalogFurniPurchaseEvent;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7888;
     import com.sulake.habbo.communication.messages.parser.users.ApproveNameMessageParser;
@@ -1888,7 +1888,7 @@
             var _local_6:Point;
             var _local_7:String;
             var _local_2:_Str_7677 = (k as _Str_7677);
-            var _local_3:_Str_7635 = _local_2.getParser();
+            var _local_3:PurchaseOKMessageParser = _local_2.getParser();
             events.dispatchEvent(new CatalogFurniPurchaseEvent(_local_3.offer.localizationId));
             if (this._purchaseConfirmationDialog != null)
             {

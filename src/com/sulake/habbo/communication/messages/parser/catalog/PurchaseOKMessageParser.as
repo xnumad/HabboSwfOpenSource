@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseOKMessageOfferData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7635 implements IMessageParser 
+    public class PurchaseOKMessageParser implements IMessageParser
     {
         private var _offer:PurchaseOKMessageOfferData;
 
