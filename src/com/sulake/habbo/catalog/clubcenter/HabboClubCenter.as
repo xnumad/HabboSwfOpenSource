@@ -24,7 +24,7 @@
     import com.sulake.iid.IIDHabboLocalizationManager;
     import com.sulake.iid.IIDHabboCatalog;
     import com.sulake.iid.IIDHabboToolbar;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5425;
+    import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendKickbackInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
     import com.sulake.habbo.session.events.BadgeImageReadyEvent;
@@ -101,7 +101,7 @@
         override protected function initComponent():void
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new _Str_5425(this._Str_18504));
+            this.addMessageEvent(new ClubGiftInfoEvent(this._Str_18504));
             this.addMessageEvent(new ScrSendKickbackInfoMessageEvent(this._Str_22489));
             this.addMessageEvent(new _Str_5147(this._Str_18002));
             context.addLinkEventTracker(this);
@@ -217,7 +217,7 @@
             this.populate();
         }
 
-        private function _Str_18504(k:_Str_5425):void
+        private function _Str_18504(k:ClubGiftInfoEvent):void
         {
             this._giftsAvailable = k.getParser()._Str_7574;
             this.populate();

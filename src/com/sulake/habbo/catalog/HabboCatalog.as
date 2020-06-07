@@ -109,7 +109,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
     import com.sulake.habbo.communication.messages.incoming.users.UserCreditsEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipsMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5425;
+    import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubOffersMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6022;
@@ -571,7 +571,7 @@
             this.addMessageEvent(new _Str_5264(this._Str_12366));
             this.addMessageEvent(new UserCreditsEvent(this.onCreditBalance));
             this.addMessageEvent(new GuildMembershipsMessageEvent(this._Str_24089));
-            this.addMessageEvent(new _Str_5425(this._Str_18504));
+            this.addMessageEvent(new ClubGiftInfoEvent(this._Str_18504));
             this.addMessageEvent(new HabboClubOffersMessageEvent(this._Str_23194));
             this.addMessageEvent(new ScrSendUserInfoEvent(this._Str_11640));
             this.addMessageEvent(new _Str_6022(this._Str_16181));
@@ -2099,7 +2099,7 @@
             }
         }
 
-        private function _Str_18504(k:_Str_5425):void
+        private function _Str_18504(k:ClubGiftInfoEvent):void
         {
             if (((!(k)) || (!(this._clubGiftController))))
             {

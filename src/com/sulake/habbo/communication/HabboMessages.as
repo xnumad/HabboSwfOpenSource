@@ -401,7 +401,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_17379;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5425;
+	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5514;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6906;
@@ -1412,7 +1412,7 @@
             INCOMING_PACKETS[607] = _Str_8088;
             INCOMING_PACKETS[612] = EmailStatusResultEvent;
             INCOMING_PACKETS[618] = CraftingResultEvent;
-            INCOMING_PACKETS[619] = _Str_5425;
+            INCOMING_PACKETS[619] = ClubGiftInfoEvent;
             INCOMING_PACKETS[634] = _Str_9293;
             INCOMING_PACKETS[638] = TalentLevelUpEvent;
             INCOMING_PACKETS[639] = BotErrorEvent;
