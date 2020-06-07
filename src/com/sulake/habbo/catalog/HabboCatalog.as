@@ -204,7 +204,7 @@
     import com.sulake.habbo.catalog.purse.PurseUpdateEvent;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import flash.external.ExternalInterface;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7459;
+    import com.sulake.habbo.communication.messages.parser.catalog.ClubGiftInfoParser;
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerStatusMessageParser;
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser;
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerPrizesMessageParser;
@@ -2105,7 +2105,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7459 = k.getParser();
+            var _local_2:ClubGiftInfoParser = k.getParser();
             if (!_local_2)
             {
                 return;

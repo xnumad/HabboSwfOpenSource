@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageOfferData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7459 implements IMessageParser 
+    public class ClubGiftInfoParser implements IMessageParser
     {
         private var _Str_10647:int;
         private var _Str_5369:int;
