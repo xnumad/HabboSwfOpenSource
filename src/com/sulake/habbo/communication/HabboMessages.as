@@ -424,7 +424,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftSelectedEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9208;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9458;
+	import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9560;
 	import com.sulake.habbo.communication.messages.incoming._Str_530._Str_9665;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.*;
@@ -1363,7 +1363,7 @@
             INCOMING_PACKETS[3801] = _Str_8665;
             INCOMING_PACKETS[3805] = GameStatusMessageEvent;
             INCOMING_PACKETS[382] = FriendFurniOtherLockConfirmedMessageEvent;
-            INCOMING_PACKETS[3828] = _Str_9458;
+            INCOMING_PACKETS[3828] = BuildersClubFurniCountMessageEvent;
             INCOMING_PACKETS[383] = WiredTriggerDataEvent;
             INCOMING_PACKETS[3841] = _Str_8237;
             INCOMING_PACKETS[3863] = _Str_18906;

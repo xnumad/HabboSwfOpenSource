@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.BuildersClubFurniCountMessageParser;
 
-    public class _Str_9458 extends MessageEvent implements IMessageEvent 
+    public class BuildersClubFurniCountMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9458(k:Function)
+        public function BuildersClubFurniCountMessageEvent(k:Function)
         {
             super(k, BuildersClubFurniCountMessageParser);
         }

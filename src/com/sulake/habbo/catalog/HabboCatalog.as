@@ -120,7 +120,7 @@
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5514;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_9458;
+    import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
     import com.sulake.habbo.catalog.event.CatalogEvent;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12000;
@@ -582,7 +582,7 @@
             this.addMessageEvent(new _Str_5946(this._Str_16617));
             this.addMessageEvent(new _Str_5514(this._Str_24443));
             this.addMessageEvent(new _Str_6375(this._Str_23226));
-            this.addMessageEvent(new _Str_9458(this._Str_23753));
+            this.addMessageEvent(new BuildersClubFurniCountMessageEvent(this._Str_23753));
             this.addMessageEvent(new _Str_8418(this._Str_25811));
 			this.addMessageEvent(new FireworkChargeDataEvent(this.onFireworkChargeHandler));
             context.addLinkEventTracker(this);
@@ -3020,7 +3020,7 @@
             this._Str_15371();
         }
 
-        private function _Str_23753(k:_Str_9458):void
+        private function _Str_23753(k:BuildersClubFurniCountMessageEvent):void
         {
             this._Str_18106 = k.getParser().furniCount;
             if (this._Str_3854 != null)
