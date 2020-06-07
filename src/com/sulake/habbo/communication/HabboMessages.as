@@ -413,7 +413,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7618;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7677;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7706;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8078;
+	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8320;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
@@ -1045,7 +1045,7 @@
             INCOMING_PACKETS[1373] = TradingCloseEvent;
             INCOMING_PACKETS[138] = GuideSessionDetachedEvent;
             INCOMING_PACKETS[1381] = _Str_9631;
-            INCOMING_PACKETS[1404] = _Str_8078;
+            INCOMING_PACKETS[1404] = PurchaseErrorMessageEvent;
             INCOMING_PACKETS[1411] = _Str_8731;
             INCOMING_PACKETS[143] = _Str_9097;
             INCOMING_PACKETS[1434] = WiredEffectDataEvent;
