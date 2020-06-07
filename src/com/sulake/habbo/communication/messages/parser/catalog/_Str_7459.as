@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5178;
+    import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftData;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageOfferData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
@@ -28,7 +28,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             var _local_3:int;
-            var _local_4:_Str_5178;
+            var _local_4:ClubGiftData;
             this._Str_10647 = k.readInteger();
             this._Str_5369 = k.readInteger();
             this._offers = new Array();
@@ -44,7 +44,7 @@
             _local_3 = 0;
             while (_local_3 < _local_2)
             {
-                _local_4 = new _Str_5178(k);
+                _local_4 = new ClubGiftData(k);
                 this._Str_5759.add(_local_4.offerId, _local_4);
                 _local_3++;
             }

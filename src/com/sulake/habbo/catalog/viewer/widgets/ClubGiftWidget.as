@@ -11,7 +11,7 @@
     import com.sulake.habbo.catalog.viewer.IProduct;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_2853;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5178;
+    import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftData;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.catalog.viewer.Product;
     import com.sulake.core.window.components.IItemListWindow;
@@ -161,7 +161,7 @@
             var _local_7:Vector.<IProduct>;
             var _local_8:IProductData;
             var _local_9:_Str_2853;
-            var _local_10:_Str_5178;
+            var _local_10:ClubGiftData;
             var _local_11:IFurnitureData;
             var _local_12:Product;
             if ((((!(this._controller)) || (!(window))) || (!(page))))
@@ -201,7 +201,7 @@
                 }
                 k = new Offer(_local_6.offerId, _local_6.localizationId, _local_6.isRent, _local_6.priceInCredits, _local_6.priceInActivityPoints, _local_6.activityPointType, _local_6.giftable, _local_6.clubLevel, _local_7, _local_6.bundlePurchaseAllowed, this._catalog);
                 k.page = page;
-                _local_10 = (_local_3.getValue(k.offerId) as _Str_5178);
+                _local_10 = (_local_3.getValue(k.offerId) as ClubGiftData);
                 _local_5 = this._Str_6850(k, _local_10);
                 if (!_local_5)
                 {
@@ -214,7 +214,7 @@
             }
         }
 
-        private function _Str_6850(k:IPurchasableOffer, _arg_2:_Str_5178):IWindow
+        private function _Str_6850(k:IPurchasableOffer, _arg_2:ClubGiftData):IWindow
         {
             var _local_6:int;
             var _local_7:String;

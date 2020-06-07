@@ -2,14 +2,14 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5178 
+    public class ClubGiftData
     {
         private var _Str_2507:int;
         private var _isVip:Boolean;
         private var _Str_693:Boolean;
         private var _Str_19803:int;
 
-        public function _Str_5178(k:IMessageDataWrapper)
+        public function ClubGiftData(k:IMessageDataWrapper)
         {
             this._Str_2507 = k.readInteger();
             this._isVip = k.readBoolean();
