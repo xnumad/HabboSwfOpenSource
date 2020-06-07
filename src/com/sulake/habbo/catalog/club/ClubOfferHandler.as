@@ -4,7 +4,7 @@
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5442;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_6792;
+    import com.sulake.habbo.communication.messages.parser.catalog.HabboClubOffersMessageParser;
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
@@ -60,7 +60,7 @@
             this._Str_2397 = [];
         }
 
-        public function onOffers(k:_Str_6792):void
+        public function onOffers(k:HabboClubOffersMessageParser):void
         {
             var _local_3:ClubBuyOfferData;
             var _local_4:_Str_5442;
