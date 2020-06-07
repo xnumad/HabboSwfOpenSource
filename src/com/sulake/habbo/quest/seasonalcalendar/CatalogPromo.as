@@ -7,7 +7,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_2853;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_7445;
+    import com.sulake.habbo.communication.messages.incoming.catalog.SeasonalCalendarDailyOfferMessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7426;
@@ -35,7 +35,7 @@
         private var _productData:_Str_2853 = null;
         private var _offerId:int = -1;
         private var _pageId:int = -1;
-        private var _cachedDailyOfferMessageEvent:_Str_7445 = null;
+        private var _cachedDailyOfferMessageEvent:SeasonalCalendarDailyOfferMessageEvent = null;
         private var _dailyOfferListener:IMessageEvent = null;
         private var _catalogPublishedListener:IMessageEvent = null;
 
@@ -95,7 +95,7 @@
             this._connection = this._questEngine.communication.connection;
             if (this._connection != null)
             {
-                this._dailyOfferListener = new _Str_7445(this._Str_22066);
+                this._dailyOfferListener = new SeasonalCalendarDailyOfferMessageEvent(this._Str_22066);
                 this._catalogPublishedListener = new _Str_5264(this._Str_12366);
                 this._connection.addMessageEvent(this._dailyOfferListener);
                 this._connection.addMessageEvent(this._catalogPublishedListener);
@@ -159,7 +159,7 @@
             }
         }
 
-        private function _Str_22066(k:_Str_7445):void
+        private function _Str_22066(k:SeasonalCalendarDailyOfferMessageEvent):void
         {
             this._window.findChildByName("buy_button").enable();
             var _local_2:IProductData = this._questEngine.sessionDataManager.getProductData(k.offer.localizationId);

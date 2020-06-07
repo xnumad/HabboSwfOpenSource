@@ -408,7 +408,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7086;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7288;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7365;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7445;
+	import com.sulake.habbo.communication.messages.incoming.catalog.SeasonalCalendarDailyOfferMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7618;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7677;
@@ -1122,7 +1122,7 @@
             INCOMING_PACKETS[1869] = _Str_5881;
             INCOMING_PACKETS[1876] = GuildMemberFurniCountInHQMessageEvent;
             INCOMING_PACKETS[1878] = QuestDailyMessageEvent;
-            INCOMING_PACKETS[1889] = _Str_7445;
+            INCOMING_PACKETS[1889] = SeasonalCalendarDailyOfferMessageEvent;
             INCOMING_PACKETS[1890] = _Str_9583;
             INCOMING_PACKETS[1907] = PetStatusUpdateEvent;
             INCOMING_PACKETS[1911] = _Str_11459;

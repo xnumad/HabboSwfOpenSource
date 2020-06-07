@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.SeasonalCalendarDailyOfferMessageParser;
 
-    public class _Str_7445 extends MessageEvent implements IMessageEvent 
+    public class SeasonalCalendarDailyOfferMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7445(k:Function)
+        public function SeasonalCalendarDailyOfferMessageEvent(k:Function)
         {
             super(k, SeasonalCalendarDailyOfferMessageParser);
         }
