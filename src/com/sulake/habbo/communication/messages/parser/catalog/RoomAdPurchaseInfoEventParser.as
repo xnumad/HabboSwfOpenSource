@@ -6,7 +6,7 @@
 
     public class RoomAdPurchaseInfoEventParser implements IMessageParser
     {
-        private var _Str_6052:Boolean;
+        private var _isVip:Boolean;
         private var _rooms:Array;
 
 
@@ -22,7 +22,7 @@
 
         public function get _Str_12313():Boolean
         {
-            return this._Str_6052;
+            return this._isVip;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
@@ -32,7 +32,7 @@
             var _local_6:Boolean;
             var _local_7:_Str_2866;
             this._rooms = new Array();
-            this._Str_6052 = k.readBoolean();
+            this._isVip = k.readBoolean();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
