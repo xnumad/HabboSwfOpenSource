@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.NotEnoughBalanceMessageParser;
 
-    public class _Str_5514 extends MessageEvent implements IMessageEvent 
+    public class NotEnoughBalanceMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_5514(callback:Function)
+        public function NotEnoughBalanceMessageEvent(callback:Function)
         {
             super(callback, NotEnoughBalanceMessageParser);
         }

@@ -118,7 +118,7 @@
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerStatusEvent;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerPrizesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5514;
+    import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
     import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
@@ -580,7 +580,7 @@
             this.addMessageEvent(new RecyclerStatusEvent(this._Str_24950));
             this.addMessageEvent(new RecyclerPrizesEvent(this._Str_23749));
             this.addMessageEvent(new _Str_5946(this._Str_16617));
-            this.addMessageEvent(new _Str_5514(this._Str_24443));
+            this.addMessageEvent(new NotEnoughBalanceMessageEvent(this._Str_24443));
             this.addMessageEvent(new _Str_6375(this._Str_23226));
             this.addMessageEvent(new BuildersClubFurniCountMessageEvent(this._Str_23753));
             this.addMessageEvent(new _Str_8418(this._Str_25811));
@@ -1926,7 +1926,7 @@
 
         private function _Str_24443(k:IMessageEvent):void
         {
-            var _local_2:_Str_5514 = (k as _Str_5514);
+            var _local_2:NotEnoughBalanceMessageEvent = (k as NotEnoughBalanceMessageEvent);
             var _local_3:NotEnoughBalanceMessageParser = _local_2.getParser();
             if (_local_3._Str_16424)
             {

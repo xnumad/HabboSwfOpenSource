@@ -402,7 +402,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5514;
+	import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6906;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseNotAllowedMessageEvent;
@@ -1373,7 +1373,7 @@
             INCOMING_PACKETS[3885] = CompleteDiffieHandshakeEvent;
             INCOMING_PACKETS[3896] = _Str_8939;
             INCOMING_PACKETS[3898] = ExtendedProfileMessageEvent;
-            INCOMING_PACKETS[3914] = _Str_5514;
+            INCOMING_PACKETS[3914] = NotEnoughBalanceMessageEvent;
             INCOMING_PACKETS[3915] = _Str_15952;
             INCOMING_PACKETS[3920] = UserChangeMessageEvent;
             INCOMING_PACKETS[3926] = _Str_9217;
