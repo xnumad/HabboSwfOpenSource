@@ -110,7 +110,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.UserCreditsEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5425;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_7706;
+    import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubOffersMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6022;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_9560;
@@ -572,7 +572,7 @@
             this.addMessageEvent(new UserCreditsEvent(this.onCreditBalance));
             this.addMessageEvent(new GuildMembershipsMessageEvent(this._Str_24089));
             this.addMessageEvent(new _Str_5425(this._Str_18504));
-            this.addMessageEvent(new _Str_7706(this._Str_23194));
+            this.addMessageEvent(new HabboClubOffersMessageEvent(this._Str_23194));
             this.addMessageEvent(new ScrSendUserInfoEvent(this._Str_11640));
             this.addMessageEvent(new _Str_6022(this._Str_16181));
             this.addMessageEvent(new _Str_9560(this._Str_25412));
@@ -2238,7 +2238,7 @@
             }
         }
 
-        private function _Str_23194(k:_Str_7706):void
+        private function _Str_23194(k:HabboClubOffersMessageEvent):void
         {
             var _local_2:HabboClubOffersMessageParser = k.getParser();
             if (((!(this._clubOfferHandler == null)) && ((((_local_2.source == ClubOfferRequestSource._Str_15734) || (_local_2.source == ClubOfferRequestSource._Str_12589)) || (_local_2.source == ClubOfferRequestSource._Str_15001)) || (_local_2.source == ClubOfferRequestSource._Str_15727))))

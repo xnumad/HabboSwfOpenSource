@@ -412,7 +412,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageWithEarliestExpiryMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseOKMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7706;
+	import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubOffersMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8320;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
@@ -1193,7 +1193,7 @@
             INCOMING_PACKETS[2380] = _Str_8382;
             INCOMING_PACKETS[2392] = _Str_8236;
             INCOMING_PACKETS[2402] = HabboGroupBadgesMessageEvent;
-            INCOMING_PACKETS[2405] = _Str_7706;
+            INCOMING_PACKETS[2405] = HabboClubOffersMessageEvent;
             INCOMING_PACKETS[2429] = FigureUpdateEvent;
             INCOMING_PACKETS[2445] = GuildMembershipRejectedMessageEvent;
             INCOMING_PACKETS[2454] = RoomPropertyMessageEvent;
