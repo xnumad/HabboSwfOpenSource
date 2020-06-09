@@ -35,7 +35,7 @@
         {
             this._container = IWindowContainer(this._landingView.getXmlWindow("habbo_way_promo"));
             this._container.findChildByName("go_button").procedure = this._Str_5735;
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this.onCommunityGoalProgress));
         }
 
         public function refresh():void
@@ -57,7 +57,7 @@
             }
         }
 
-        private function _Str_5286(k:CommunityGoalProgressMessageEvent):void
+        private function onCommunityGoalProgress(k:CommunityGoalProgressMessageEvent):void
         {
             this._completions = k.getParser().data._Str_12030;
             this.refreshContent();

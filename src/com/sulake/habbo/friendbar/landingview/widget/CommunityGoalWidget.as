@@ -67,7 +67,7 @@
         public function initialize():void
         {
             var k:IWindow;
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this.onCommunityGoalProgress));
             this._communityGoalContainer = IWindowContainer(((this._withVoting) ? (this._landingView.getXmlWindow("community_goal_voting")) : this._landingView.getXmlWindow("community_goal")));
             this._meterNeedle = IStaticBitmapWrapperWindow(this._communityGoalContainer.findChildByName("meter_needle"));
             if (!this._withVoting)
@@ -219,7 +219,7 @@
             }
         }
 
-        private function _Str_5286(k:IMessageEvent):void
+        private function onCommunityGoalProgress(k:IMessageEvent):void
         {
             this._communityProgress = CommunityGoalProgressParser(k.parser).data;
             this._communityProgressRequested = false;

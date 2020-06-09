@@ -43,7 +43,7 @@
         public function initialize():void
         {
             this._container = IWindowContainer(this._landingView.getXmlWindow("achievement_competition_prizes"));
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this.onCommunityGoalProgress));
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new UserChangeMessageEvent(this.onUserChange));
         }
@@ -107,7 +107,7 @@
             return this._data._Str_20155[(k - 1)];
         }
 
-        private function _Str_5286(k:CommunityGoalProgressMessageEvent):void
+        private function onCommunityGoalProgress(k:CommunityGoalProgressMessageEvent):void
         {
             this._data = k.getParser().data;
             this.refreshContent();

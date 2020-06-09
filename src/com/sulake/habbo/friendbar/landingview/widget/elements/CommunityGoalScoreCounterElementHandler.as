@@ -30,7 +30,7 @@
         {
             if (this._landingView)
             {
-                this._landingView.communicationManager.removeHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
+                this._landingView.communicationManager.removeHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this.onCommunityGoalProgress));
                 this._landingView = null;
             }
             if (this._pollTimer)
@@ -64,7 +64,7 @@
                 this._window.x = int(_arg_3[5]);
                 this._window.y = int(_arg_3[6]);
             }
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this.onCommunityGoalProgress));
             this._pollTimer = new Timer(_local_7);
             this._pollTimer.addEventListener(TimerEvent.TIMER, this._Str_10015);
         }
@@ -91,7 +91,7 @@
             return "element_community_goal_score";
         }
 
-        private function _Str_5286(k:CommunityGoalProgressMessageEvent):void
+        private function onCommunityGoalProgress(k:CommunityGoalProgressMessageEvent):void
         {
             var _local_2:CommunityGoalProgress;
             var _local_3:IWidgetWindow;
