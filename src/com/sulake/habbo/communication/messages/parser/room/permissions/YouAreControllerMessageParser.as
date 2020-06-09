@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8378 implements IMessageParser 
+    public class YouAreControllerMessageParser implements IMessageParser
     {
         private var _roomControllerLevel:int = 0;
 
