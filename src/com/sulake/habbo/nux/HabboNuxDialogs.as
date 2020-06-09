@@ -254,7 +254,7 @@
             }
         }
 
-        private function _Str_25909():void
+        private function startNoobRoomOfferTimer():void
         {
         }
 
