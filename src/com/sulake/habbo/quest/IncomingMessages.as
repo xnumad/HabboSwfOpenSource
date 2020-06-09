@@ -222,7 +222,7 @@
         {
             var _local_2:_Str_3660 = (k as _Str_3660);
             var _local_3:_Str_5519 = _local_2.getParser();
-            var _local_4:String = this._questEngine.localization._Str_21634(_local_3.data.badgeCode);
+            var _local_4:String = this._questEngine.localization.getBadgeBaseName(_local_3.data.badgeCode);
             this._questEngine.send(new EventLogMessageComposer("Achievements", _local_4, "Leveled", "", _local_3.data.level));
             this._questEngine._Str_10255.onLevelUp(_local_3.data);
         }

@@ -114,7 +114,7 @@
             return (_local_4 != null) ? _local_4 : "";
         }
 
-        public function _Str_21634(k:String):String
+        public function getBadgeBaseName(k:String):String
         {
             var _local_2:BadgeBaseAndLevel = new BadgeBaseAndLevel(k);
             return _local_2.base;

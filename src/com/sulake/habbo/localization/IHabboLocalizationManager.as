@@ -11,7 +11,7 @@
         function _Str_18132(_arg_1:String):String;
         function _Str_23690(_arg_1:String, _arg_2:int):String;
         function _Str_16142(_arg_1:String):String;
-        function _Str_21634(_arg_1:String):String;
+        function getBadgeBaseName(_arg_1:String):String;
         function getBadgeName(_arg_1:String):String;
         function getBadgeDesc(_arg_1:String):String;
         function setBadgePointLimit(_arg_1:String, _arg_2:int):void;
