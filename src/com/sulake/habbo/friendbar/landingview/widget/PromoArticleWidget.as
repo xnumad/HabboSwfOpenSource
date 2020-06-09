@@ -181,7 +181,7 @@
             this._landingView.registerUpdateReceiver(this, 1);
         }
 
-        private function _Str_24556():void
+        private function stopFade():void
         {
             this._landingView.removeUpdateReceiver(this);
             this.setBlend(1);
@@ -279,7 +279,7 @@
             this._fadePhase = _local_2;
             if (this._fadePhase >= (_Str_6534 * 2))
             {
-                this._Str_24556();
+                this.stopFade();
             }
         }
     }
