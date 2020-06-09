@@ -287,7 +287,7 @@
             _local_5 = ["notification", _arg_2, _arg_3].join(".");
             if (((this.localization.hasLocalization(_local_5)) || (_arg_4)))
             {
-                return this.localization._Str_21551(_local_5, _local_5, k);
+                return this.localization.getLocalizationWithParamMap(_local_5, _local_5, k);
             }
             return null;
         }

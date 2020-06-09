@@ -7,7 +7,7 @@
     public interface IHabboLocalizationManager extends ICoreLocalizationManager, IUnknown 
     {
         function getLocalizationWithParams(_arg_1:String, _arg_2:String="", ... _args):String;
-        function _Str_21551(_arg_1:String, _arg_2:String="", _arg_3:Map=null):String;
+        function getLocalizationWithParamMap(_arg_1:String, _arg_2:String="", _arg_3:Map=null):String;
         function getAchievementName(_arg_1:String):String;
         function getAchievementDesc(_arg_1:String, _arg_2:int):String;
         function getAchievementInstruction(_arg_1:String):String;

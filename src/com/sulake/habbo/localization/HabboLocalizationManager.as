@@ -68,7 +68,7 @@
             return this.getLocalization(k, _arg_2);
         }
 
-        public function _Str_21551(k:String, _arg_2:String="", _arg_3:Map=null):String
+        public function getLocalizationWithParamMap(k:String, _arg_2:String="", _arg_3:Map=null):String
         {
             var _local_4:String;
             if (_arg_3 != null)
