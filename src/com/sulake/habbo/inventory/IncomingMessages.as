@@ -143,7 +143,7 @@
             this._com.addHabboConnectionMessageEvent(new TradingAcceptEvent(this._Str_23770, TradingAcceptParser));
             this._com.addHabboConnectionMessageEvent(new AchievementsScoreEvent(this._Str_18065));
             this._com.addHabboConnectionMessageEvent(new _Str_9550(this._Str_23427));
-            this._com.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this._Str_23143));
+            this._com.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onClubStatus));
             this._com.addHabboConnectionMessageEvent(new TradingNotOpenEvent(this._Str_23644, TradingNotOpenParser));
             this._com.addHabboConnectionMessageEvent(new FurniListRemoveEvent(this._Str_25700));
             this._com.addHabboConnectionMessageEvent(new _Str_5720(this._Str_17365));
@@ -400,7 +400,7 @@
             this._inventory._Str_7796();
         }
 
-        public function _Str_23143(k:IMessageEvent):void
+        public function onClubStatus(k:IMessageEvent):void
         {
             var _local_2:ScrSendUserInfoMessageParser = (k as ScrSendUserInfoEvent).getParser();
             if (((_local_2.productName == "habbo_club") || (_local_2.productName == "club_habbo")))
