@@ -130,7 +130,7 @@
                 case "lobbyoffer":
                     if (((_local_2.length > 2) && (_local_2[2] == "show")))
                     {
-                        this._Str_21884();
+                        this.createNoobRoomOfferView();
                     }
                     else
                     {
@@ -190,7 +190,7 @@
             {
                 _local_2 = (getInteger("nux.noob.lobby.popup.delay", 70) * 1000);
                 this._Str_4439 = new Timer(_local_2, 1);
-                this._Str_4439.addEventListener(TimerEvent.TIMER, this._Str_21884);
+                this._Str_4439.addEventListener(TimerEvent.TIMER, this.createNoobRoomOfferView);
                 this._Str_4439.start();
             }
             else
@@ -258,7 +258,7 @@
         {
         }
 
-        private function _Str_21884(k:TimerEvent=null):void
+        private function createNoobRoomOfferView(k:TimerEvent=null):void
         {
             if (((!(getBoolean("nux.lobbies.enabled"))) || (!(this._sessionDataManager.isRealNoob))))
             {
