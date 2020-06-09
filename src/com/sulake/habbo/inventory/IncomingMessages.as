@@ -11,11 +11,11 @@
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingCompletedParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingItemListEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingItemListParser;
-    import com.sulake.habbo.communication.messages.incoming._Str_433.BotRemovedFromInventoryEvent;
+    import com.sulake.habbo.communication.messages.incoming.bots.BotRemovedFromInventoryEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListInvalidateEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.clothes.FigureSetIdsEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
-    import com.sulake.habbo.communication.messages.incoming._Str_433._Str_9129;
+    import com.sulake.habbo.communication.messages.incoming.bots._Str_9129;
     import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingCloseEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingCloseParser;
     import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8892;
+    import com.sulake.habbo.communication.messages.incoming.bots._Str_8892;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.PostItPlacedEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenFailedEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOpenFailedEventParser;

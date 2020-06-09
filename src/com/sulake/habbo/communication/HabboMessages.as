@@ -287,10 +287,10 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_10856;
 	import com.sulake.habbo.communication.messages.outgoing._Str_428.NewUserExperienceGetGiftsMessageComposer;
 	import com.sulake.habbo.communication._Str_8686;
-	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_16597;
-	import com.sulake.habbo.communication.messages.incoming._Str_433.BotRemovedFromInventoryEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8892;
-	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_9129;
+	import com.sulake.habbo.communication.messages.incoming.bots._Str_16597;
+	import com.sulake.habbo.communication.messages.incoming.bots.BotRemovedFromInventoryEvent;
+	import com.sulake.habbo.communication.messages.incoming.bots._Str_8892;
+	import com.sulake.habbo.communication.messages.incoming.bots._Str_9129;
 	import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
