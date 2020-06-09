@@ -29,7 +29,7 @@
         protected var _landingView:HabboLandingView;
         protected var _communityGoalContainer:IWindowContainer;
         private var _meterNeedle:IStaticBitmapWrapperWindow;
-        protected var _Str_3597:CommunityGoalProgress;
+        protected var _communityProgress:CommunityGoalProgress;
         private var _Str_17426:Boolean = false;
         private var _Str_16752:Number = 0;
         private var _Str_10390:Number = 0;
@@ -56,7 +56,7 @@
             }
             this._landingView = null;
             this._communityGoalContainer = null;
-            this._Str_3597 = null;
+            this._communityProgress = null;
         }
 
         public function get disposed():Boolean
@@ -84,7 +84,7 @@
         {
             var _local_2:IStaticBitmapWrapperWindow = IStaticBitmapWrapperWindow(k);
             var _local_3:int = _local_2.assetUri.indexOf(".png");
-            _local_2.assetUri = (((_local_2.assetUri.substr(0, _local_3) + "_") + this._Str_3597.goalCode) + ".png");
+            _local_2.assetUri = (((_local_2.assetUri.substr(0, _local_3) + "_") + this._communityProgress.goalCode) + ".png");
         }
 
         protected function _Str_7300(k:String, _arg_2:String):void
@@ -92,25 +92,25 @@
             var _local_3:IWindow = this._communityGoalContainer.findChildByName(k);
             if (_local_3 != null)
             {
-                _local_3.caption = (((("${" + _arg_2) + ".") + this._Str_3597.goalCode) + "}");
+                _local_3.caption = (((("${" + _arg_2) + ".") + this._communityProgress.goalCode) + "}");
             }
         }
 
         protected function getCurrentNeedleFrame():int
         {
-            if (this._Str_3597.communityHighestAchievedLevel >= (CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length - 1))
+            if (this._communityProgress.communityHighestAchievedLevel >= (CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length - 1))
             {
                 return CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES[(CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length - 1)];
             }
-            var k:int = CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES[this._Str_3597.communityHighestAchievedLevel];
-            var _local_2:int = (CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES[(this._Str_3597.communityHighestAchievedLevel + 1)] - k);
-            return k + Math.floor(((this._Str_3597.percentCompletionTowardsNextLevel * (_local_2 + 0.001)) / 100));
+            var k:int = CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES[this._communityProgress.communityHighestAchievedLevel];
+            var _local_2:int = (CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES[(this._communityProgress.communityHighestAchievedLevel + 1)] - k);
+            return k + Math.floor(((this._communityProgress.percentCompletionTowardsNextLevel * (_local_2 + 0.001)) / 100));
         }
 
         private function _Str_16817():void
         {
             var k:int;
-            if (((!(this._Str_3597 == null)) && (!(this._Str_3597.goalCode == null))))
+            if (((!(this._communityProgress == null)) && (!(this._communityProgress.goalCode == null))))
             {
                 k = 0;
                 while (k < CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length)
@@ -133,7 +133,7 @@
 
         private function refreshContent():void
         {
-            if (this._Str_3597 == null)
+            if (this._communityProgress == null)
             {
                 this._communityGoalContainer.visible = false;
                 return;
@@ -151,12 +151,12 @@
                 k++;
             }
             var _local_2:String = "landing.view.community.meter";
-            this._landingView.localizationManager.registerParameter(_local_2, "userRank", this._Str_3597._Str_10549.toString());
-            this._landingView.localizationManager.registerParameter(_local_2, "userAmount", this._Str_3597.personalContributionScore.toString());
-            this._landingView.localizationManager.registerParameter(_local_2, "totalAmount", this._Str_3597._Str_12030.toString());
-            if (((!(this._Str_3597 == null)) && (!(this._Str_3597.goalCode == null))))
+            this._landingView.localizationManager.registerParameter(_local_2, "userRank", this._communityProgress._Str_10549.toString());
+            this._landingView.localizationManager.registerParameter(_local_2, "userAmount", this._communityProgress.personalContributionScore.toString());
+            this._landingView.localizationManager.registerParameter(_local_2, "totalAmount", this._communityProgress._Str_12030.toString());
+            if (((!(this._communityProgress == null)) && (!(this._communityProgress.goalCode == null))))
             {
-                this._landingView.localizationManager.registerParameter(("landing.view.community.meter." + this._Str_3597.goalCode), "totalAmount", this._Str_3597._Str_12030.toString());
+                this._landingView.localizationManager.registerParameter(("landing.view.community.meter." + this._communityProgress.goalCode), "totalAmount", this._communityProgress._Str_12030.toString());
                 this._Str_7300("community_total_status", "landing.view.community.meter");
                 if (this._Str_11816)
                 {
@@ -221,7 +221,7 @@
 
         private function _Str_5286(k:IMessageEvent):void
         {
-            this._Str_3597 = CommunityGoalProgressParser(k.parser).data;
+            this._communityProgress = CommunityGoalProgressParser(k.parser).data;
             this._Str_17426 = false;
             this.refreshContent();
             Component(this._landingView.windowManager).registerUpdateReceiver(this, 10);
@@ -245,7 +245,7 @@
 
         protected function get _Str_6672():CommunityGoalProgress
         {
-            return this._Str_3597;
+            return this._communityProgress;
         }
     }
 }
