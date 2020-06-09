@@ -32,7 +32,7 @@
         protected var _communityProgress:CommunityGoalProgress;
         private var _communityProgressRequested:Boolean = false;
         private var _buildupDelay:Number = 0;
-        private var _Str_10390:Number = 0;
+        private var _buildupProgress:Number = 0;
         private var _isInitialized:Boolean = false;
         private var _Str_18550:Boolean = true;
         private var _Str_11816:Boolean = false;
@@ -209,13 +209,13 @@
             this._buildupDelay = (this._buildupDelay + k);
             if (this._buildupDelay > METER_INITIAL_DELAY_MS)
             {
-                this._Str_10390 = (this._Str_10390 + (k / METER_BUILDUP_TIME_MS));
-                if (this._Str_10390 > 1)
+                this._buildupProgress = (this._buildupProgress + (k / METER_BUILDUP_TIME_MS));
+                if (this._buildupProgress > 1)
                 {
-                    this._Str_10390 = 1;
+                    this._buildupProgress = 1;
                     Component(this._landingView.windowManager).removeUpdateReceiver(this);
                 }
-                this._Str_17006(Math.floor((this.getCurrentNeedleFrame() * this._Str_10390)));
+                this._Str_17006(Math.floor((this.getCurrentNeedleFrame() * this._buildupProgress)));
             }
         }
 
