@@ -6,7 +6,7 @@
     public class IsBadgeRequestFulfilledParser implements IMessageParser
     {
         private var _requestCode:String;
-        private var _Str_22220:Boolean;
+        private var _fulfilled:Boolean;
 
 
         public function flush():Boolean
@@ -17,7 +17,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._requestCode = k.readString();
-            this._Str_22220 = k.readBoolean();
+            this._fulfilled = k.readBoolean();
             return true;
         }
 
@@ -28,7 +28,7 @@
 
         public function get _Str_25366():Boolean
         {
-            return this._Str_22220;
+            return this._fulfilled;
         }
     }
 }
