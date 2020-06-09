@@ -101,7 +101,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_7183;
     import com.sulake.habbo.inventory.bots.BotsModel;
     import com.sulake.habbo.communication.messages.parser.inventory.bots._Str_7631;
-    import com.sulake.habbo.communication.messages.parser.inventory.bots._Str_7906;
+    import com.sulake.habbo.communication.messages.parser.inventory.bots.BotRemovedFromInventoryParser;
     import com.sulake.habbo.communication.messages.parser.inventory.bots._Str_6995;
     import com.sulake.habbo.inventory.marketplace.MarketplaceModel;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceConfigurationMessageParser;
@@ -838,7 +838,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7906 = k.getParser();
+            var _local_3:BotRemovedFromInventoryParser = k.getParser();
             _local_2.removeItem(_local_3.itemId);
         }
 
