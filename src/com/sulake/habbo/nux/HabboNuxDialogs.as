@@ -170,7 +170,7 @@
 
         private function onNewUserExperienceNotCompleteMessage(k:NewUserExperienceNotCompleteEvent):void
         {
-            this._Str_22781();
+            this.createNuxOfferView();
         }
 
         private function onNewUserExperienceGiftOfferMessage(k:NewUserExperienceGiftOfferEvent):void
@@ -224,7 +224,7 @@
             return this._Str_2276;
         }
 
-        private function _Str_22781():void
+        private function createNuxOfferView():void
         {
             this._Str_8646();
             this._Str_14050 = new NuxOfferOldUserView(this);
