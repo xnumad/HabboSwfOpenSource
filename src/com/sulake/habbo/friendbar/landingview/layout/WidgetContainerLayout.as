@@ -176,15 +176,15 @@
             this.resizeWindow();
             this.landingView.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
             this.windowContainer.invalidate();
-            if (this._Str_21419 != null)
+            if (this.navigatorPosition != null)
             {
-                this.landingView.navigator.openNavigator(this._Str_21419);
+                this.landingView.navigator.openNavigator(this.navigatorPosition);
             }
             this.landingView.send(new _Str_5974(this._schedulingStr));
             this.windowContainer.visible = true;
         }
 
-        private function get _Str_21419():Point
+        private function get navigatorPosition():Point
         {
             var point:Point;
             var placer:IWindow = this.windowContainer.findChildByName("navigator_placer");
