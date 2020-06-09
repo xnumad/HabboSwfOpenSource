@@ -6,7 +6,7 @@
     import com.sulake.habbo.friendbar.landingview.widget.AvatarImageWidget;
     import com.sulake.habbo.friendbar.landingview.widget.CommunityGoalWidget;
     import com.sulake.habbo.friendbar.landingview.widget.CommunityGoalVsModeWidget;
-    import com.sulake.habbo.friendbar.landingview.widget.CommunityGoalVsModeVoteWidget;
+    import com.sulake.habbo.friendbar.landingview.widget.CommunityGoalVsModeWidgetWithVoting;
     import com.sulake.habbo.friendbar.landingview.widget.CatalogPromoWidget;
     import com.sulake.habbo.friendbar.landingview.widget.CatalogPromoSmallWidget;
     import com.sulake.habbo.friendbar.landingview.widget.DailyQuestWidget;
@@ -72,7 +72,7 @@
                     widget = new CommunityGoalVsModeWidget(landingView);
                     break;
                 case HabboLandingViewWidgets.COMMUNITY_GOAL_VS_MODE_VOTE:
-                    widget = new CommunityGoalVsModeVoteWidget(landingView);
+                    widget = new CommunityGoalVsModeWidgetWithVoting(landingView);
                     break;
                 case HabboLandingViewWidgets.CATALOG_PROMO:
                     widget = new CatalogPromoWidget(landingView);

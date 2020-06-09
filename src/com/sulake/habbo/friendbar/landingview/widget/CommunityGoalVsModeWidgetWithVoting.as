@@ -6,13 +6,13 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
 
-    public class CommunityGoalVsModeVoteWidget extends CommunityGoalVsModeWidget 
+    public class CommunityGoalVsModeWidgetWithVoting extends CommunityGoalVsModeWidget
     {
         private var _Str_11930:IWindow;
         private var _Str_11586:IWindow;
         private var _Str_16156:String;
 
-        public function CommunityGoalVsModeVoteWidget(k:HabboLandingView)
+        public function CommunityGoalVsModeWidgetWithVoting(k:HabboLandingView)
         {
             super(k, true);
         }
