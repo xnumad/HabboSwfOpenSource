@@ -167,7 +167,7 @@
             this._com.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this._com.addHabboConnectionMessageEvent(new _Str_6944(this._Str_18461));
             this._com.addHabboConnectionMessageEvent(new _Str_9047(this._Str_22306));
-            this._com.addHabboConnectionMessageEvent(new BadgePointLimitsEvent(this._Str_25648));
+            this._com.addHabboConnectionMessageEvent(new BadgePointLimitsEvent(this.onBadgePointLimits));
         }
 
         public function dispose():void
@@ -439,7 +439,7 @@
             this._inventory._Str_5943(InventoryCategory.BADGES);
         }
 
-        public function _Str_25648(k:IMessageEvent):void
+        public function onBadgePointLimits(k:IMessageEvent):void
         {
             var _local_3:BadgeAndPointLimit;
             var _local_2:BadgePointLimitsParser = (k as BadgePointLimitsEvent).getParser();
