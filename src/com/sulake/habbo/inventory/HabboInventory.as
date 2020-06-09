@@ -197,7 +197,7 @@
             if (this._purseTimer != null)
             {
                 this._purseTimer.stop();
-                this._purseTimer.removeEventListener(TimerEvent.TIMER, this._Str_17588);
+                this._purseTimer.removeEventListener(TimerEvent.TIMER, this.onPurseTimer);
                 this._purseTimer = null;
             }
             if (this._inventories)
@@ -378,7 +378,7 @@
                 if (this._purseTimer == null)
                 {
                     this._purseTimer = new Timer((60 * 1000), 0);
-                    this._purseTimer.addEventListener(TimerEvent.TIMER, this._Str_17588);
+                    this._purseTimer.addEventListener(TimerEvent.TIMER, this.onPurseTimer);
                 }
                 if (!this._purseTimer.running)
                 {
@@ -390,13 +390,13 @@
                 if (this._purseTimer != null)
                 {
                     this._purseTimer.stop();
-                    this._purseTimer.removeEventListener(TimerEvent.TIMER, this._Str_17588);
+                    this._purseTimer.removeEventListener(TimerEvent.TIMER, this.onPurseTimer);
                     this._purseTimer = null;
                 }
             }
         }
 
-        private function _Str_17588(k:TimerEvent):void
+        private function onPurseTimer(k:TimerEvent):void
         {
             this._communication.connection.send(new _Str_6530("habbo_club"));
         }
