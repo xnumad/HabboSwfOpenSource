@@ -103,7 +103,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new ClubGiftInfoEvent(this._Str_18504));
             this.addMessageEvent(new ScrSendKickbackInfoMessageEvent(this._Str_22489));
-            this.addMessageEvent(new BadgesEvent(this._Str_18002));
+            this.addMessageEvent(new BadgesEvent(this.onBadges));
             context.addLinkEventTracker(this);
             if (((getBoolean("offers.enabled")) && (getBoolean("offers.habboclub.enabled"))))
             {
@@ -233,7 +233,7 @@
             this.populate();
         }
 
-        public function _Str_18002(k:IMessageEvent):void
+        public function onBadges(k:IMessageEvent):void
         {
             var _local_2:BadgesParser = (k as BadgesEvent).getParser();
             this._badgeId = ((BadgeResolver._Str_25437(_local_2.getAllBadgeCodes())) || (BadgeResolver._Str_16636));

@@ -133,7 +133,7 @@
             this._com.addHabboConnectionMessageEvent(new FigureSetIdsEvent(this._Str_25862));
             this._com.addHabboConnectionMessageEvent(new _Str_4187(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new _Str_9129(this._Str_23613));
-            this._com.addHabboConnectionMessageEvent(new BadgesEvent(this._Str_18002));
+            this._com.addHabboConnectionMessageEvent(new BadgesEvent(this.onBadges));
             this._com.addHabboConnectionMessageEvent(new UserBadgesEvent(this.onUserBadges));
             this._com.addHabboConnectionMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
             this._com.addHabboConnectionMessageEvent(new OpenConnectionMessageEvent(this._Str_15910));
@@ -410,7 +410,7 @@
             }
         }
 
-        public function _Str_18002(k:IMessageEvent):void
+        public function onBadges(k:IMessageEvent):void
         {
             var _local_4:int;
             var _local_5:String;
