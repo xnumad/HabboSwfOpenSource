@@ -203,7 +203,7 @@
             {
                 return;
             }
-            if (((_local_2 == ClientPhoneVerificationStatusEnum._Str_18531) && ((_local_3 == PhoneNumberStatusEnum._Str_11502) || (_local_3 == PhoneNumberStatusEnum._Str_13360))))
+            if (((_local_2 == ClientPhoneVerificationStatusEnum.TOKEN_INPUT) && ((_local_3 == PhoneNumberStatusEnum._Str_11502) || (_local_3 == PhoneNumberStatusEnum._Str_13360))))
             {
                 this._Str_7383();
                 if (_local_2 == ClientPhoneVerificationStatusEnum.MINIMIZED)
