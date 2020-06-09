@@ -7,7 +7,7 @@
         public static const PRODUCT_TYPE_ITEM:String = "i";
         public static const PRODUCT_TYPE_STUFF:String = "s";
         public static const PRODUCT_TYPE_EFFECT:String = "e";
-        public static const B:String = "b";
+        public static const PRODUCT_TYPE_BADGE:String = "b";
 
         private var _Str_3032:String;
         private var _Str_20686:int;
@@ -22,7 +22,7 @@
             this._Str_3032 = k.readString();
             switch (this._Str_3032)
             {
-                case B:
+                case PRODUCT_TYPE_BADGE:
                     this._Str_3194 = k.readString();
                     this._productCount = 1;
                     return;
