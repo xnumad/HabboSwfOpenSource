@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication
+﻿package com.sulake.habbo.communication.messages.outgoing.inventory.purse
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 

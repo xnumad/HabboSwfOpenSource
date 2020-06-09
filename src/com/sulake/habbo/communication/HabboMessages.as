@@ -286,7 +286,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_3365;
 	import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_10856;
 	import com.sulake.habbo.communication.messages.outgoing._Str_428.NewUserExperienceGetGiftsMessageComposer;
-	import com.sulake.habbo.communication.GetCreditsInfoComposer;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.purse.GetCreditsInfoComposer;
 	import com.sulake.habbo.communication.messages.incoming.bots._Str_16597;
 	import com.sulake.habbo.communication.messages.incoming.bots.BotRemovedFromInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.bots._Str_8892;

@@ -32,7 +32,7 @@
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.iid.IIDHabboSoundManager;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
-    import com.sulake.habbo.communication.GetCreditsInfoComposer;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.purse.GetCreditsInfoComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_6530;
     import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_9250;
     import flash.events.TimerEvent;
