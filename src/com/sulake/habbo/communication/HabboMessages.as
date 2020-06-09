@@ -973,7 +973,7 @@
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingRecipeEvent;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingRecipesAvailableEvent;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingResultEvent;
-	import com.sulake.habbo.communication.messages.incoming.users.UserCreditsEvent;
+	import com.sulake.habbo.communication.messages.incoming.users.CreditBalanceEvent;
 	import com.sulake.habbo.communication.messages.outgoing.achievements.RequestAchievementsMessageComposer;
 	import snowwar._Str_448.*;
 	import snowwar._Str_477.*;
@@ -1328,7 +1328,7 @@
             INCOMING_PACKETS[3441] = PetSupplementedNotificationEvent;
             INCOMING_PACKETS[3463] = _Str_9074;
             INCOMING_PACKETS[3473] = _Str_12022;
-            INCOMING_PACKETS[3475] = UserCreditsEvent;
+            INCOMING_PACKETS[3475] = CreditBalanceEvent;
             INCOMING_PACKETS[3479] = _Str_8029;
             INCOMING_PACKETS[35] = _Str_7104;
             INCOMING_PACKETS[3506] = CompetitionVotingInfoMessageEvent;

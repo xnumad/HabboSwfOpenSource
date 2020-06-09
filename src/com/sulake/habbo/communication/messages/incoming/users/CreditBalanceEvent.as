@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.purse.CreditBalanceParser;
 
-    public class UserCreditsEvent extends MessageEvent implements IMessageEvent 
+    public class CreditBalanceEvent extends MessageEvent implements IMessageEvent
     {
-        public function UserCreditsEvent(k:Function)
+        public function CreditBalanceEvent(k:Function)
         {
             super(k, CreditBalanceParser);
         }

@@ -107,7 +107,7 @@
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
     import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
-    import com.sulake.habbo.communication.messages.incoming.users.UserCreditsEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.CreditBalanceEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubOffersMessageEvent;
@@ -569,7 +569,7 @@
             this.addMessageEvent(new _Str_6344(this._Str_23861));
             this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
             this.addMessageEvent(new _Str_5264(this._Str_12366));
-            this.addMessageEvent(new UserCreditsEvent(this.onCreditBalance));
+            this.addMessageEvent(new CreditBalanceEvent(this.onCreditBalance));
             this.addMessageEvent(new GuildMembershipsMessageEvent(this._Str_24089));
             this.addMessageEvent(new ClubGiftInfoEvent(this._Str_18504));
             this.addMessageEvent(new HabboClubOffersMessageEvent(this._Str_23194));
@@ -2026,7 +2026,7 @@
 
         private function onCreditBalance(k:IMessageEvent):void
         {
-            var _local_2:UserCreditsEvent = (k as UserCreditsEvent);
+            var _local_2:CreditBalanceEvent = (k as CreditBalanceEvent);
             var _local_3:CreditBalanceParser = _local_2.getParser();
             this._purse.credits = _local_3.balance;
             this._Str_12017();
