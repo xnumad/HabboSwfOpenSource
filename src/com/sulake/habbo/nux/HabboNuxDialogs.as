@@ -96,7 +96,7 @@
             {
                 this._windowManager = null;
             }
-            this._Str_17452();
+            this.destroyGiftSelectionView();
             this._Str_11922();
             this.destroyNuxOfferView();
             super.dispose();
@@ -164,7 +164,7 @@
 
         public function onSendGetGifts(k:Vector.<_Str_4584>):void
         {
-            this._Str_17452();
+            this.destroyGiftSelectionView();
             this._Str_2310.send(new _Str_11372(k));
         }
 
@@ -241,11 +241,11 @@
 
         private function createGiftSelectionView(k:Vector.<NewUserExperienceGiftOptions>):void
         {
-            this._Str_17452();
+            this.destroyGiftSelectionView();
             this._Str_13375 = new NuxGiftSelectionView(this, k);
         }
 
-        private function _Str_17452():void
+        private function destroyGiftSelectionView():void
         {
             if (this._Str_13375)
             {
