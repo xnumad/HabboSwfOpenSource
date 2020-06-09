@@ -718,7 +718,7 @@
 
         private function _Str_16394(k:Achievement):String
         {
-            return (k._Str_7518) ? k.badgeId : this._questEngine.localization._Str_18179(k.badgeId);
+            return (k._Str_7518) ? k.badgeId : this._questEngine.localization.getPreviousLevelBadgeId(k.badgeId);
         }
 
         private function _Str_26271(k:int):int

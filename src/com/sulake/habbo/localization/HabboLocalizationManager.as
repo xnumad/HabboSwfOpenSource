@@ -145,7 +145,7 @@
             return _local_2;
         }
 
-        public function _Str_18179(k:String):String
+        public function getPreviousLevelBadgeId(k:String):String
         {
             var _local_2:BadgeBaseAndLevel = new BadgeBaseAndLevel(k);
             _local_2.level--;

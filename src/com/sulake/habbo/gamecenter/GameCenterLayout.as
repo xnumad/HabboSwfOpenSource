@@ -531,7 +531,7 @@
                 _local_4 = (WindowUtils.createWindow("game_achievement_entry_xml") as IWindowContainer);
                 for each (_local_5 in _local_3.achievements)
                 {
-                    _local_6 = (((_local_5._Str_10438) && (!(_local_5._Str_7518))) ? (this._gameCenterView.localization._Str_18179(_local_5.badgeId)) : _local_5.badgeId);
+                    _local_6 = (((_local_5._Str_10438) && (!(_local_5._Str_7518))) ? (this._gameCenterView.localization.getPreviousLevelBadgeId(_local_5.badgeId)) : _local_5.badgeId);
                     _local_7 = this._gameCenterView.localization.getBadgeName(_local_6);
                     _local_8 = this._gameCenterView.localization.getBadgeDesc(_local_6);
                     _local_9 = (_local_4.clone() as IWindowContainer);

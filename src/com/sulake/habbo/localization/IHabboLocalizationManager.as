@@ -15,6 +15,6 @@
         function getBadgeName(_arg_1:String):String;
         function getBadgeDesc(_arg_1:String):String;
         function setBadgePointLimit(_arg_1:String, _arg_2:int):void;
-        function _Str_18179(_arg_1:String):String;
+        function getPreviousLevelBadgeId(_arg_1:String):String;
     }
 }
