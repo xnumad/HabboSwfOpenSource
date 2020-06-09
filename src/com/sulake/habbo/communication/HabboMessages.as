@@ -426,7 +426,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9208;
 	import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9560;
-	import com.sulake.habbo.communication.messages.incoming._Str_530.CommunityGoalVoteMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.landingview.votes.CommunityGoalVoteMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.*;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;

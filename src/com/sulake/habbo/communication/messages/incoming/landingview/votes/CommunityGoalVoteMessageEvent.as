@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.incoming._Str_530
+﻿package com.sulake.habbo.communication.messages.incoming.landingview.votes
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser._Str_539._Str_8895;
