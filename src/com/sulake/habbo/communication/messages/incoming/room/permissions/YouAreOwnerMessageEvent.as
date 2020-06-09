@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.permissions._Str_8433;
 
-    public class _Str_5266 extends MessageEvent 
+    public class YouAreOwnerMessageEvent extends MessageEvent
     {
-        public function _Str_5266(k:Function)
+        public function YouAreOwnerMessageEvent(k:Function)
         {
             super(k, _Str_8433);
         }

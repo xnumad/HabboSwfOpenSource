@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.catalog.IPurchasableOffer;
-    import com.sulake.habbo.communication.messages.incoming.room.permissions._Str_5266;
+    import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreOwnerMessageEvent;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
     import com.sulake.habbo.catalog.enum.CatalogType;
@@ -20,13 +20,13 @@
     {
         private var _catalog:HabboCatalog;
         private var _offer:IPurchasableOffer;
-        private var _youAreOwnerMessageEvent:_Str_5266;
+        private var _youAreOwnerMessageEvent:YouAreOwnerMessageEvent;
 
         public function BuilderCatalogWidget(k:IWindowContainer, _arg_2:HabboCatalog)
         {
             super(k);
             this._catalog = _arg_2;
-            this._youAreOwnerMessageEvent = new _Str_5266(this.onYouAreOwner);
+            this._youAreOwnerMessageEvent = new YouAreOwnerMessageEvent(this.onYouAreOwner);
             this._catalog.connection.addMessageEvent(this._youAreOwnerMessageEvent);
         }
 
@@ -70,7 +70,7 @@
             this._Str_2771(false);
         }
 
-        private function onYouAreOwner(k:_Str_5266):void
+        private function onYouAreOwner(k:YouAreOwnerMessageEvent):void
         {
             if (this._catalog.catalogType != CatalogType.BUILDER)
             {

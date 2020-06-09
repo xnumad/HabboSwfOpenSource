@@ -952,7 +952,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.ShoutMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
-	import com.sulake.habbo.communication.messages.incoming.room.permissions._Str_5266;
+	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreOwnerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreControllerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreNotControllerMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_11327;
@@ -1316,7 +1316,7 @@
             INCOMING_PACKETS[3370] = AchievementResolutionProgressMessageEvent;
             INCOMING_PACKETS[3377] = _Str_7898;
             INCOMING_PACKETS[3388] = _Str_9560;
-            INCOMING_PACKETS[339] = _Str_5266;
+            INCOMING_PACKETS[339] = YouAreOwnerMessageEvent;
             INCOMING_PACKETS[34] = _Str_7248;
             INCOMING_PACKETS[340] = _Str_6450;
             INCOMING_PACKETS[3403] = FavoriteMembershipUpdateMessageEvent;
