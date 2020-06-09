@@ -575,7 +575,7 @@
             this.addMessageEvent(new HabboClubOffersMessageEvent(this._Str_23194));
             this.addMessageEvent(new ScrSendUserInfoEvent(this._Str_11640));
             this.addMessageEvent(new _Str_6022(this._Str_16181));
-            this.addMessageEvent(new _Str_9560(this._Str_25412));
+            this.addMessageEvent(new _Str_9560(this.onProductOffer));
             this.addMessageEvent(new _Str_6345(this._Str_24794));
             this.addMessageEvent(new RecyclerStatusEvent(this._Str_24950));
             this.addMessageEvent(new RecyclerPrizesEvent(this._Str_23749));
@@ -2958,7 +2958,7 @@
             }
         }
 
-        private function _Str_25412(k:_Str_9560):void
+        private function onProductOffer(k:_Str_9560):void
         {
             var _local_7:Offer;
             var _local_8:IFurnitureData;
