@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.nux._Str_9322;
+    import com.sulake.habbo.communication.messages.parser.nux.NewUserExperienceNotCompleteParser;
 
     public class NewUserExperienceNotCompleteEvent extends MessageEvent implements IMessageEvent
     {
         public function NewUserExperienceNotCompleteEvent(k:Function)
         {
-            super(k, _Str_9322);
+            super(k, NewUserExperienceNotCompleteParser);
         }
 
-        public function getParser():_Str_9322
+        public function getParser():NewUserExperienceNotCompleteParser
         {
-            return _parser as _Str_9322;
+            return _parser as NewUserExperienceNotCompleteParser;
         }
     }
 }
