@@ -44,7 +44,7 @@
             k.registerUpdateReceiver(this, 1000);
         }
 
-        private static function findColorableChildren(k:IWindowContainer):Array
+        private static function getColorizableElements(k:IWindowContainer):Array
         {
             var colorableChildren:Array = new Array(0);
             k.groupChildrenWithTag(COLORABLE, colorableChildren, -1);
@@ -58,7 +58,7 @@
             {
                 return;
             }
-            for each (textWindow in findColorableChildren(search))
+            for each (textWindow in getColorizableElements(search))
             {
                 textWindow.textColor = newTextColor;
             }
@@ -71,7 +71,7 @@
             {
                 return;
             }
-            for each (textWindow in findColorableChildren(search))
+            for each (textWindow in getColorizableElements(search))
             {
                 textWindow.etchingColor = newEtchingColor;
             }
@@ -84,7 +84,7 @@
             {
                 return;
             }
-            for each (textWindow in findColorableChildren(search))
+            for each (textWindow in getColorizableElements(search))
             {
                 textWindow.etchingPosition = newEtchingPosition;
             }
@@ -99,7 +99,7 @@
             }
             if ((((_arg_2.isTextColorSet) || (_arg_2.isEtchingColorSet)) || (_arg_2.isEtchingPositionSet)))
             {
-                for each (_local_3 in findColorableChildren(search))
+                for each (_local_3 in getColorizableElements(search))
                 {
                     _local_3.textColor = ((_arg_2.isTextColorSet) ? _arg_2.textColor : _local_3.textColor);
                     _local_3.etchingColor = ((_arg_2.isEtchingColorSet) ? _arg_2.etchingColor : _local_3.etchingColor);
