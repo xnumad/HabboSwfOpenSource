@@ -31,7 +31,7 @@
         private var _meterNeedle:IStaticBitmapWrapperWindow;
         protected var _communityProgress:CommunityGoalProgress;
         private var _communityProgressRequested:Boolean = false;
-        private var _Str_16752:Number = 0;
+        private var _buildupDelay:Number = 0;
         private var _Str_10390:Number = 0;
         private var _isInitialized:Boolean = false;
         private var _Str_18550:Boolean = true;
@@ -206,8 +206,8 @@
 
         public function update(k:uint):void
         {
-            this._Str_16752 = (this._Str_16752 + k);
-            if (this._Str_16752 > METER_INITIAL_DELAY_MS)
+            this._buildupDelay = (this._buildupDelay + k);
+            if (this._buildupDelay > METER_INITIAL_DELAY_MS)
             {
                 this._Str_10390 = (this._Str_10390 + (k / METER_BUILDUP_TIME_MS));
                 if (this._Str_10390 > 1)
