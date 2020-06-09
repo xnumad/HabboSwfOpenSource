@@ -94,7 +94,7 @@
         private function refreshContent():void
         {
             this._Str_24669();
-            this._Str_23645();
+            this.setNavigationDisks();
         }
 
         private function _Str_24669():void
@@ -120,7 +120,7 @@
             }
         }
 
-        private function _Str_23645():void
+        private function setNavigationDisks():void
         {
             var _local_3:IRegionWindow;
             var _local_4:IStaticBitmapWrapperWindow;
