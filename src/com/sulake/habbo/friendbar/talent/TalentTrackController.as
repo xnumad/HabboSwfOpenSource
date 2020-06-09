@@ -507,7 +507,7 @@
             }
             var _local_4:IWindow = _local_3.findChildByName("title");
             var _local_5:IWindow = _local_3.findChildByName("description");
-            _local_4.caption = this._habboTalent.localizationManager._Str_18132(_arg_2.badgeCode).toUpperCase();
+            _local_4.caption = this._habboTalent.localizationManager.getAchievementName(_arg_2.badgeCode).toUpperCase();
             _local_5.caption = this._habboTalent.localizationManager.getAchievementInstruction(_arg_2.badgeCode);
             if (_local_4.height > 20)
             {
@@ -701,7 +701,7 @@
             this._taskProgressPopup.background.procedure = this._Str_22368;
             var _local_3:IWindowContainer = IWindowContainer(this._taskProgressPopup.rootWindow);
             _local_3.findChildByName("instruction").caption = this._habboTalent.localizationManager.getAchievementInstruction(_local_2.badgeCode);
-            _local_3.findChildByName("title").caption = this._habboTalent.localizationManager._Str_18132(_local_2.badgeCode);
+            _local_3.findChildByName("title").caption = this._habboTalent.localizationManager.getAchievementName(_local_2.badgeCode);
             _local_3.findChildByName("progress_text").caption = ((((this._habboTalent.localizationManager.getLocalization("talent.track.task.progress.dialog.progress") + " ") + _local_2._Str_7605) + "/") + _local_2._Str_15676);
             IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _local_2.badgeCode;
             this._Str_7795().visible = false;

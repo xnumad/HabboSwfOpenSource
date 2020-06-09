@@ -87,7 +87,7 @@
             return interpolate(_local_3);
         }
 
-        public function _Str_18132(k:String):String
+        public function getAchievementName(k:String):String
         {
             var _local_2:BadgeBaseAndLevel = new BadgeBaseAndLevel(k);
             var _local_3:String = this.getExistingKey([("badge_name_al_" + k), ("badge_name_al_" + _local_2.base), ("badge_name_" + k), ("badge_name_" + _local_2.base)]);
