@@ -51,7 +51,7 @@
             return colorableChildren;
         }
 
-        public static function _Str_26034(search:IWindowContainer, newTextColor:uint):void
+        public static function applyColorizableWidgetTextColor(search:IWindowContainer, newTextColor:uint):void
         {
             var textWindow:ITextWindow;
             if (search == null)
