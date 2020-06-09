@@ -5,7 +5,7 @@
 
     public class _Str_9126 implements IMessageParser 
     {
-        private var _Str_3032:String;
+        private var _productType:String;
         private var _Str_4261:int;
         private var _Str_5859:int;
         private var _Str_7388:int;
@@ -15,14 +15,14 @@
         {
             this._Str_5859 = -1;
             this._Str_7388 = -1;
-            this._Str_3032 = "";
+            this._productType = "";
             this._Str_4261 = -1;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_3032 = k.readString();
+            this._productType = k.readString();
             this._Str_4261 = k.readInteger();
             this._Str_5859 = k.readInteger();
             this._Str_7388 = k.readInteger();
@@ -41,7 +41,7 @@
 
         public function get productType():String
         {
-            return this._Str_3032;
+            return this._productType;
         }
 
         public function get productClassId():int

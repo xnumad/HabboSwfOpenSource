@@ -9,7 +9,7 @@
         public static const PRODUCT_TYPE_EFFECT:String = "e";
         public static const PRODUCT_TYPE_BADGE:String = "b";
 
-        private var _Str_3032:String;
+        private var _productType:String;
         private var _furniClassId:int;
         private var _extraParam:String;
         private var _productCount:int;
@@ -19,8 +19,8 @@
 
         public function CatalogPageMessageProductData(k:IMessageDataWrapper)
         {
-            this._Str_3032 = k.readString();
-            switch (this._Str_3032)
+            this._productType = k.readString();
+            switch (this._productType)
             {
                 case PRODUCT_TYPE_BADGE:
                     this._extraParam = k.readString();
@@ -41,7 +41,7 @@
 
         public function get productType():String
         {
-            return this._Str_3032;
+            return this._productType;
         }
 
         public function get _Str_6164():int

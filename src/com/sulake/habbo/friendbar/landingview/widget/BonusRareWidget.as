@@ -22,7 +22,7 @@
     {
         private var _habboLandingView:HabboLandingView;
         private var _container:IWindowContainer;
-        private var _Str_3032:String;
+        private var _productType:String;
         private var _Str_4261:int = -1;
         private var _Str_5859:int;
         private var _Str_7388:int;
@@ -99,7 +99,7 @@
                 return;
             }
             this._container.visible = (!(this._Str_4261 == -1));
-            var k:IProductData = this._habboLandingView.getProductData(this._Str_3032, this);
+            var k:IProductData = this._habboLandingView.getProductData(this._productType, this);
             if (k != null)
             {
                 IStaticBitmapWrapperWindow(this._container.findChildByName("promo_image")).assetUri = this._habboLandingView.getProperty("landing.view.bonus.rare.image.uri");
@@ -111,7 +111,7 @@
 
         private function _Str_21615(k:_Str_6906):void
         {
-            this._Str_3032 = k.getParser().productType;
+            this._productType = k.getParser().productType;
             this._Str_4261 = k.getParser().productClassId;
             this._Str_5859 = k.getParser()._Str_25710;
             this._Str_7388 = k.getParser()._Str_25484;
