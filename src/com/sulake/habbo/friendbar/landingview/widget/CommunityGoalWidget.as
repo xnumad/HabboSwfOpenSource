@@ -23,7 +23,7 @@
     public class CommunityGoalWidget implements IUpdateReceiver, ILandingViewWidget, ISettingsAwareWidget 
     {
         private static const CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES:Array = [0, 8, 16, 23];
-        private static const _Str_18831:int = 1500;
+        private static const METER_INITIAL_DELAY_MS:int = 1500;
         private static const _Str_17898:int = 1000;
 
         protected var _Str_2298:HabboLandingView;
@@ -207,7 +207,7 @@
         public function update(k:uint):void
         {
             this._Str_16752 = (this._Str_16752 + k);
-            if (this._Str_16752 > _Str_18831)
+            if (this._Str_16752 > METER_INITIAL_DELAY_MS)
             {
                 this._Str_10390 = (this._Str_10390 + (k / _Str_17898));
                 if (this._Str_10390 > 1)
