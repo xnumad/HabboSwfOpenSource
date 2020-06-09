@@ -5,7 +5,7 @@
     public class CommunityGoalVsModeWidget extends CommunityGoalWidget 
     {
         private static const NEEDLE_LEVELS:Array = [-3, -2, -1, 0, 1, 2, 3];
-        private static const _Str_7755:Array = [0, 0, 4.75, 11.5, 16.25, 23, 23];
+        private static const NEEDLE_FRAMES:Array = [0, 0, 4.75, 11.5, 16.25, 23, 23];
 
         public function CommunityGoalVsModeWidget(k:HabboLandingView, _arg_2:Boolean=false)
         {
@@ -16,16 +16,16 @@
         {
             if (_Str_6672.communityHighestAchievedLevel <= NEEDLE_LEVELS[0])
             {
-                return int(Math.round(_Str_7755[0]));
+                return int(Math.round(NEEDLE_FRAMES[0]));
             }
             if (_Str_6672.communityHighestAchievedLevel >= NEEDLE_LEVELS[(NEEDLE_LEVELS.length - 1)])
             {
-                return int(Math.round(_Str_7755[(NEEDLE_LEVELS.length - 1)]));
+                return int(Math.round(NEEDLE_FRAMES[(NEEDLE_LEVELS.length - 1)]));
             }
             var k:int = ((_Str_6672.scoreRemainingUntilNextLevel < 0) ? -1 : 1);
             var _local_2:int = _Str_6672.communityHighestAchievedLevel;
-            var _local_3:Number = _Str_7755[NEEDLE_LEVELS.indexOf(_local_2)];
-            var _local_4:Number = Math.abs((_Str_7755[NEEDLE_LEVELS.indexOf((_local_2 + k))] - _Str_7755[NEEDLE_LEVELS.indexOf(_local_2)]));
+            var _local_3:Number = NEEDLE_FRAMES[NEEDLE_LEVELS.indexOf(_local_2)];
+            var _local_4:Number = Math.abs((NEEDLE_FRAMES[NEEDLE_LEVELS.indexOf((_local_2 + k))] - NEEDLE_FRAMES[NEEDLE_LEVELS.indexOf(_local_2)]));
             return Math.round((_local_3 + (((_Str_6672.percentCompletionTowardsNextLevel / 100) * _local_4) * k)));
         }
 
