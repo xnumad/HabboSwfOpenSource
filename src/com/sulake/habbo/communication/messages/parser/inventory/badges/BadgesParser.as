@@ -7,14 +7,14 @@
     public class BadgesParser implements IMessageParser
     {
         private var _allBadgeCodes:Array;
-        private var _Str_13962:Array;
+        private var _activeBadgeCodes:Array;
         private var _Str_4833:Map;
 
 
         public function flush():Boolean
         {
             this._allBadgeCodes = [];
-            this._Str_13962 = [];
+            this._activeBadgeCodes = [];
             if (this._Str_4833)
             {
                 this._Str_4833.dispose();
@@ -40,14 +40,14 @@
                 this._allBadgeCodes.push(_local_3);
                 _local_5++;
             }
-            this._Str_13962 = new Array();
+            this._activeBadgeCodes = new Array();
             var _local_6:int = k.readInteger();
             var _local_7:int;
             while (_local_7 < _local_6)
             {
                 _local_8 = k.readInteger();
                 _local_3 = k.readString();
-                this._Str_13962.push(_local_3);
+                this._activeBadgeCodes.push(_local_3);
                 _local_7++;
             }
             return true;
@@ -65,7 +65,7 @@
 
         public function _Str_23681():Array
         {
-            return this._Str_13962;
+            return this._activeBadgeCodes;
         }
     }
 }
