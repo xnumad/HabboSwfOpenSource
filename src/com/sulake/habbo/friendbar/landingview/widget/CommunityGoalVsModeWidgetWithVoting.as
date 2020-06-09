@@ -20,9 +20,9 @@
         override public function initialize():void
         {
             super.initialize();
-            this._voteOptionOneButton = _Str_3186.findChildByName("community_vote_one_button");
+            this._voteOptionOneButton = _communityGoalContainer.findChildByName("community_vote_one_button");
             this._voteOptionOneButton.procedure = this.onVoteOptionOneClick;
-            this._voteOptionTwoButton = _Str_3186.findChildByName("community_vote_two_button");
+            this._voteOptionTwoButton = _communityGoalContainer.findChildByName("community_vote_two_button");
             this._voteOptionTwoButton.procedure = this.onVoteOptionTwoClick;
             _landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_9665(this.onInfo));
         }

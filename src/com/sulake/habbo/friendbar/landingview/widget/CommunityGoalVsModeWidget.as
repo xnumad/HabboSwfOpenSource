@@ -37,7 +37,7 @@
         override public function initialize():void
         {
             super.initialize();
-            _Str_3186.findChildByName("community_total_status").visible = false;
+            _communityGoalContainer.findChildByName("community_total_status").visible = false;
         }
     }
 }

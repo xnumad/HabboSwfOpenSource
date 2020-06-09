@@ -27,7 +27,7 @@
         private static const METER_BUILDUP_TIME_MS:int = 1000;
 
         protected var _landingView:HabboLandingView;
-        protected var _Str_3186:IWindowContainer;
+        protected var _communityGoalContainer:IWindowContainer;
         private var _Str_19676:IStaticBitmapWrapperWindow;
         protected var _Str_3597:CommunityGoalProgress;
         private var _Str_17426:Boolean = false;
@@ -45,7 +45,7 @@
 
         public function get container():IWindow
         {
-            return this._Str_3186;
+            return this._communityGoalContainer;
         }
 
         public function dispose():void
@@ -55,7 +55,7 @@
                 Component(this._landingView.windowManager).removeUpdateReceiver(this);
             }
             this._landingView = null;
-            this._Str_3186 = null;
+            this._communityGoalContainer = null;
             this._Str_3597 = null;
         }
 
@@ -68,16 +68,16 @@
         {
             var k:IWindow;
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
-            this._Str_3186 = IWindowContainer(((this._Str_11816) ? (this._landingView.getXmlWindow("community_goal_voting")) : this._landingView.getXmlWindow("community_goal")));
-            this._Str_19676 = IStaticBitmapWrapperWindow(this._Str_3186.findChildByName("meter_needle"));
+            this._communityGoalContainer = IWindowContainer(((this._Str_11816) ? (this._landingView.getXmlWindow("community_goal_voting")) : this._landingView.getXmlWindow("community_goal")));
+            this._Str_19676 = IStaticBitmapWrapperWindow(this._communityGoalContainer.findChildByName("meter_needle"));
             if (!this._Str_11816)
             {
-                k = this._Str_3186.findChildByName("community_catalog_button");
+                k = this._communityGoalContainer.findChildByName("community_catalog_button");
                 this._Str_18550 = this._landingView.getBoolean("landing.view.community.interactive");
                 k.visible = this._Str_18550;
                 k.procedure = this._Str_24653;
             }
-            HabboLandingView._Str_9079(this._Str_3186, "community_title", "hdr_line");
+            HabboLandingView._Str_9079(this._communityGoalContainer, "community_title", "hdr_line");
         }
 
         private function _Str_17143(k:IWindow):void
@@ -89,7 +89,7 @@
 
         protected function _Str_7300(k:String, _arg_2:String):void
         {
-            var _local_3:IWindow = this._Str_3186.findChildByName(k);
+            var _local_3:IWindow = this._communityGoalContainer.findChildByName(k);
             if (_local_3 != null)
             {
                 _local_3.caption = (((("${" + _arg_2) + ".") + this._Str_3597.goalCode) + "}");
@@ -115,11 +115,11 @@
                 k = 0;
                 while (k < CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length)
                 {
-                    this._Str_17143(this._Str_3186.findChildByName(("meter_level_" + k)));
+                    this._Str_17143(this._communityGoalContainer.findChildByName(("meter_level_" + k)));
                     if (k > 0)
                     {
-                        this._Str_17143(this._Str_3186.findChildByName((("meter_level_" + k) + "_icon")));
-                        this._Str_17143(this._Str_3186.findChildByName((("meter_level_" + k) + "_icon_locked")));
+                        this._Str_17143(this._communityGoalContainer.findChildByName((("meter_level_" + k) + "_icon")));
+                        this._Str_17143(this._communityGoalContainer.findChildByName((("meter_level_" + k) + "_icon_locked")));
                     }
                     k++;
                 }
@@ -135,7 +135,7 @@
         {
             if (this._Str_3597 == null)
             {
-                this._Str_3186.visible = false;
+                this._communityGoalContainer.visible = false;
                 return;
             }
             if (!this._isInitialized)
@@ -145,9 +145,9 @@
             var k:int = 1;
             while (k < CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length)
             {
-                this._Str_3186.findChildByName(("meter_level_" + k)).visible = false;
-                this._Str_3186.findChildByName((("meter_level_" + k) + "_icon")).visible = false;
-                this._Str_3186.findChildByName((("meter_level_" + k) + "_icon_locked")).visible = false;
+                this._communityGoalContainer.findChildByName(("meter_level_" + k)).visible = false;
+                this._communityGoalContainer.findChildByName((("meter_level_" + k) + "_icon")).visible = false;
+                this._communityGoalContainer.findChildByName((("meter_level_" + k) + "_icon_locked")).visible = false;
                 k++;
             }
             var _local_2:String = "landing.view.community.meter";
@@ -164,14 +164,14 @@
                     this._Str_7300("community_vote_two_button", "landing.view.vote_two_button.text");
                 }
             }
-            var _local_3:ITextWindow = ITextWindow(this._Str_3186.findChildByName("goal_info"));
+            var _local_3:ITextWindow = ITextWindow(this._communityGoalContainer.findChildByName("goal_info"));
             _local_3.height = (_local_3.textHeight + 6);
             if (!this._Str_11816)
             {
-                this._Str_3186.findChildByName("community_catalog_button").visible = this._Str_18550;
+                this._communityGoalContainer.findChildByName("community_catalog_button").visible = this._Str_18550;
             }
-            this._Str_3186.visible = true;
-            this._Str_3186.invalidate();
+            this._communityGoalContainer.visible = true;
+            this._communityGoalContainer.invalidate();
         }
 
         protected function _Str_17006(k:int, _arg_2:Boolean=true):void
@@ -181,9 +181,9 @@
             while (_local_3 < CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length)
             {
                 _local_4 = ((_arg_2) && (k >= CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES[_local_3]));
-                this._Str_3186.findChildByName(("meter_level_" + _local_3)).visible = _local_4;
-                this._Str_3186.findChildByName((("meter_level_" + _local_3) + "_icon")).visible = _local_4;
-                this._Str_3186.findChildByName((("meter_level_" + _local_3) + "_icon_locked")).visible = (!(_local_4));
+                this._communityGoalContainer.findChildByName(("meter_level_" + _local_3)).visible = _local_4;
+                this._communityGoalContainer.findChildByName((("meter_level_" + _local_3) + "_icon")).visible = _local_4;
+                this._communityGoalContainer.findChildByName((("meter_level_" + _local_3) + "_icon_locked")).visible = (!(_local_4));
                 _local_3++;
             }
             this._Str_19676.assetUri = ("landing_view_needle_meter_needle" + k);
@@ -240,7 +240,7 @@
 
         public function set settings(k:CommonWidgetSettings):void
         {
-            WidgetContainerLayout._Str_5630(this._Str_3186, k);
+            WidgetContainerLayout._Str_5630(this._communityGoalContainer, k);
         }
 
         protected function get _Str_6672():CommunityGoalProgress
