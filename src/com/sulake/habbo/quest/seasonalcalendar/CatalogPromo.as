@@ -126,7 +126,7 @@
                 }
                 else
                 {
-                    if (this._productData.productType == CatalogPageMessageProductData.S)
+                    if (this._productData.productType == CatalogPageMessageProductData.PRODUCT_TYPE_STUFF)
                     {
                         _local_5 = this._questEngine.roomEngine.getFurnitureImage(this._productData._Str_6164, new Vector3d(90, 0, 0), 64, this);
                     }

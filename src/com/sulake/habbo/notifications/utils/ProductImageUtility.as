@@ -35,7 +35,7 @@
             var _local_7:int;
             switch (k)
             {
-                case CatalogPageMessageProductData.S:
+                case CatalogPageMessageProductData.PRODUCT_TYPE_STUFF:
                     _local_5 = this._roomEngine.getFurnitureIcon(_arg_2, this);
                     break;
                 case CatalogPageMessageProductData.PRODUCT_TYPE_ITEM:
