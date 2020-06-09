@@ -10,7 +10,7 @@
         public static const PRODUCT_TYPE_BADGE:String = "b";
 
         private var _Str_3032:String;
-        private var _Str_20686:int;
+        private var _furniClassId:int;
         private var _extraParam:String;
         private var _productCount:int;
         private var _uniqueLimitedItem:Boolean;
@@ -27,7 +27,7 @@
                     this._productCount = 1;
                     return;
                 default:
-                    this._Str_20686 = k.readInteger();
+                    this._furniClassId = k.readInteger();
                     this._extraParam = k.readString();
                     this._productCount = k.readInteger();
                     this._uniqueLimitedItem = k.readBoolean();
@@ -46,7 +46,7 @@
 
         public function get _Str_6164():int
         {
-            return this._Str_20686;
+            return this._furniClassId;
         }
 
         public function get extraParam():String
