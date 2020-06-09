@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.clothes.FigureSetIdsEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
     import com.sulake.habbo.communication.messages.incoming._Str_433._Str_9129;
-    import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
+    import com.sulake.habbo.communication.messages.incoming._Str_87.BadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.OpenConnectionMessageEvent;
@@ -133,7 +133,7 @@
             this._com.addHabboConnectionMessageEvent(new FigureSetIdsEvent(this._Str_25862));
             this._com.addHabboConnectionMessageEvent(new _Str_4187(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new _Str_9129(this._Str_23613));
-            this._com.addHabboConnectionMessageEvent(new _Str_5147(this._Str_18002));
+            this._com.addHabboConnectionMessageEvent(new BadgesEvent(this._Str_18002));
             this._com.addHabboConnectionMessageEvent(new UserBadgesEvent(this.onUserBadges));
             this._com.addHabboConnectionMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
             this._com.addHabboConnectionMessageEvent(new OpenConnectionMessageEvent(this._Str_15910));
@@ -416,7 +416,7 @@
             var _local_5:String;
             var _local_8:Boolean;
             var _local_9:int;
-            var _local_2:BadgesParser = (k as _Str_5147).getParser();
+            var _local_2:BadgesParser = (k as BadgesEvent).getParser();
             if (_local_2 == null)
             {
                 return;

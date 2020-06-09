@@ -26,7 +26,7 @@
     import com.sulake.iid.IIDHabboToolbar;
     import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendKickbackInfoMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
+    import com.sulake.habbo.communication.messages.incoming._Str_87.BadgesEvent;
     import com.sulake.habbo.session.events.BadgeImageReadyEvent;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendKickbackInfoMessageParser;
     import flash.utils.getTimer;
@@ -103,7 +103,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new ClubGiftInfoEvent(this._Str_18504));
             this.addMessageEvent(new ScrSendKickbackInfoMessageEvent(this._Str_22489));
-            this.addMessageEvent(new _Str_5147(this._Str_18002));
+            this.addMessageEvent(new BadgesEvent(this._Str_18002));
             context.addLinkEventTracker(this);
             if (((getBoolean("offers.enabled")) && (getBoolean("offers.habboclub.enabled"))))
             {
@@ -235,7 +235,7 @@
 
         public function _Str_18002(k:IMessageEvent):void
         {
-            var _local_2:BadgesParser = (k as _Str_5147).getParser();
+            var _local_2:BadgesParser = (k as BadgesEvent).getParser();
             this._badgeId = ((BadgeResolver._Str_25437(_local_2.getAllBadgeCodes())) || (BadgeResolver._Str_16636));
         }
 

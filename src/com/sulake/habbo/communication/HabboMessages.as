@@ -942,7 +942,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_10459;
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_12393;
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_7271;
-	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
+	import com.sulake.habbo.communication.messages.incoming._Str_87.BadgesEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_87.BadgeReceivedEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_87.IsBadgeRequestFulfilledEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_87.BadgePointLimitsEvent;
@@ -1424,7 +1424,7 @@
             INCOMING_PACKETS[687] = GetGuestRoomResultEvent;
             INCOMING_PACKETS[69] = BotSkillListUpdateEvent;
             INCOMING_PACKETS[714] = _Str_8418;
-            INCOMING_PACKETS[717] = _Str_5147;
+            INCOMING_PACKETS[717] = BadgesEvent;
             INCOMING_PACKETS[725] = _Str_5946;
             INCOMING_PACKETS[735] = _Str_8747;
             INCOMING_PACKETS[740] = AchievementResolutionCompletedMessageEvent;

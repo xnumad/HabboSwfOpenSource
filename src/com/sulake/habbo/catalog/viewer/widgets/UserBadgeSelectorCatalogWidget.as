@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
+    import com.sulake.habbo.communication.messages.incoming._Str_87.BadgesEvent;
     import com.sulake.habbo.catalog.IPurchasableOffer;
     import com.sulake.habbo.catalog.viewer.widgets.events._Str_3308;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
@@ -58,7 +58,7 @@
             this._gridItemLayout = (k.content as XML);
             this._Str_20622();
             events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
-            this._badgesUpdatedMessageListener = new _Str_5147(this._Str_22798);
+            this._badgesUpdatedMessageListener = new BadgesEvent(this._Str_22798);
             this._catalog.connection.addMessageEvent(this._badgesUpdatedMessageListener);
             return true;
         }
