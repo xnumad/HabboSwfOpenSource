@@ -171,11 +171,11 @@
             }
             else
             {
-                this._Str_24739();
+                this.startFade();
             }
         }
 
-        private function _Str_24739():void
+        private function startFade():void
         {
             this._fadePhase = 0;
             this._landingView.registerUpdateReceiver(this, 1);
