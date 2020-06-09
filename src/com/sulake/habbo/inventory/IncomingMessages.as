@@ -80,7 +80,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgesParser;
     import com.sulake.habbo.inventory.badges.BadgesModel;
     import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgeAndPointLimit;
-    import com.sulake.habbo.communication.messages.parser.inventory.badges._Str_7305;
+    import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgePointLimitsParser;
     import com.sulake.habbo.communication.messages.parser.notifications._Str_5519;
     import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgeReceivedParser;
     import com.sulake.habbo.communication.messages.parser.inventory.achievements.AchievementsScoreParser;
@@ -442,7 +442,7 @@
         public function _Str_25648(k:IMessageEvent):void
         {
             var _local_3:BadgeAndPointLimit;
-            var _local_2:_Str_7305 = (k as _Str_8980).getParser();
+            var _local_2:BadgePointLimitsParser = (k as _Str_8980).getParser();
             for each (_local_3 in _local_2.data)
             {
                 this._inventory.localization._Str_20202(_local_3.badgeId, _local_3.limit);

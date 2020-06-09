@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7305 implements IMessageParser 
+    public class BadgePointLimitsParser implements IMessageParser
     {
         private var _data:Array;
 
