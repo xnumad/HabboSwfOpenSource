@@ -5,9 +5,9 @@
         function set credits(_arg_1:int):void;
         function set clubDays(_arg_1:int):void;
         function set clubPeriods(_arg_1:int):void;
-        function get _Str_14389():Boolean;
+        function get isExpiring():Boolean;
         function get minutesUntilExpiration():int;
-        function set _Str_14389(_arg_1:Boolean):void;
+        function set isExpiring(_arg_1:Boolean):void;
         function get credits():int;
         function get clubDays():int;
         function get clubPeriods():int;

@@ -66,12 +66,12 @@
             return this._isVIP;
         }
 
-        public function get _Str_14389():Boolean
+        public function get isExpiring():Boolean
         {
             return this._isExpiring;
         }
 
-        public function set _Str_14389(k:Boolean):void
+        public function set isExpiring(k:Boolean):void
         {
             this._isExpiring = k;
         }

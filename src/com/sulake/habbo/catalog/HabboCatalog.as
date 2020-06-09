@@ -2076,7 +2076,7 @@
             this._purse.isVIP = _local_2.isVIP;
             this._purse.pastClubDays = _local_2.pastClubDays;
             this._purse.pastVipDays = _local_2.pastVipDays;
-            this._purse._Str_14389 = ((_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_DISCOUNT_AVAILABLE) ? true : false);
+            this._purse.isExpiring = ((_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_DISCOUNT_AVAILABLE) ? true : false);
             this._purse.minutesUntilExpiration = _local_2.minutesUntilExpiration;
             this._purse.minutesSinceLastModified = _local_2.minutesSinceLastModified;
             if (ExternalInterface.available)
