@@ -28,7 +28,7 @@
 
         protected var _landingView:HabboLandingView;
         protected var _communityGoalContainer:IWindowContainer;
-        private var _Str_19676:IStaticBitmapWrapperWindow;
+        private var _meterNeedle:IStaticBitmapWrapperWindow;
         protected var _Str_3597:CommunityGoalProgress;
         private var _Str_17426:Boolean = false;
         private var _Str_16752:Number = 0;
@@ -69,7 +69,7 @@
             var k:IWindow;
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
             this._communityGoalContainer = IWindowContainer(((this._Str_11816) ? (this._landingView.getXmlWindow("community_goal_voting")) : this._landingView.getXmlWindow("community_goal")));
-            this._Str_19676 = IStaticBitmapWrapperWindow(this._communityGoalContainer.findChildByName("meter_needle"));
+            this._meterNeedle = IStaticBitmapWrapperWindow(this._communityGoalContainer.findChildByName("meter_needle"));
             if (!this._Str_11816)
             {
                 k = this._communityGoalContainer.findChildByName("community_catalog_button");
@@ -186,7 +186,7 @@
                 this._communityGoalContainer.findChildByName((("meter_level_" + _local_3) + "_icon_locked")).visible = (!(_local_4));
                 _local_3++;
             }
-            this._Str_19676.assetUri = ("landing_view_needle_meter_needle" + k);
+            this._meterNeedle.assetUri = ("landing_view_needle_meter_needle" + k);
         }
 
         public function refresh():void
