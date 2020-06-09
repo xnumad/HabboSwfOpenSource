@@ -176,7 +176,7 @@
         private function onNewUserExperienceGiftOfferMessage(k:NewUserExperienceGiftOfferEvent):void
         {
             var _local_2:NewUserExperienceGiftOfferParser = k.getParser();
-            this._Str_24881(_local_2.giftOptions);
+            this.createGiftSelectionView(_local_2.giftOptions);
         }
 
         private function onRoomSessionEvent(k:RoomSessionEvent):void
@@ -239,7 +239,7 @@
             }
         }
 
-        private function _Str_24881(k:Vector.<NewUserExperienceGiftOptions>):void
+        private function createGiftSelectionView(k:Vector.<NewUserExperienceGiftOptions>):void
         {
             this._Str_17452();
             this._Str_13375 = new NuxGiftSelectionView(this, k);
