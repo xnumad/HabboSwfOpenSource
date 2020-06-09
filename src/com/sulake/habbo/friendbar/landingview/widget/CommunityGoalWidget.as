@@ -87,7 +87,7 @@
             _local_2.assetUri = (((_local_2.assetUri.substr(0, _local_3) + "_") + this._communityProgress.goalCode) + ".png");
         }
 
-        protected function _Str_7300(k:String, _arg_2:String):void
+        protected function setCampaignLocalization(k:String, _arg_2:String):void
         {
             var _local_3:IWindow = this._communityGoalContainer.findChildByName(k);
             if (_local_3 != null)
@@ -123,10 +123,10 @@
                     }
                     k++;
                 }
-                this._Str_7300("community_title", "landing.view.community.headline");
-                this._Str_7300("goal_caption", "landing.view.community.caption");
-                this._Str_7300("goal_info", "landing.view.community.info");
-                this._Str_7300("community_catalog_button", "landing.view.community_catalog_button.text");
+                this.setCampaignLocalization("community_title", "landing.view.community.headline");
+                this.setCampaignLocalization("goal_caption", "landing.view.community.caption");
+                this.setCampaignLocalization("goal_info", "landing.view.community.info");
+                this.setCampaignLocalization("community_catalog_button", "landing.view.community_catalog_button.text");
                 this._isInitialized = true;
             }
         }
@@ -157,11 +157,11 @@
             if (((!(this._communityProgress == null)) && (!(this._communityProgress.goalCode == null))))
             {
                 this._landingView.localizationManager.registerParameter(("landing.view.community.meter." + this._communityProgress.goalCode), "totalAmount", this._communityProgress._Str_12030.toString());
-                this._Str_7300("community_total_status", "landing.view.community.meter");
+                this.setCampaignLocalization("community_total_status", "landing.view.community.meter");
                 if (this._withVoting)
                 {
-                    this._Str_7300("community_vote_one_button", "landing.view.vote_one_button.text");
-                    this._Str_7300("community_vote_two_button", "landing.view.vote_two_button.text");
+                    this.setCampaignLocalization("community_vote_one_button", "landing.view.vote_one_button.text");
+                    this.setCampaignLocalization("community_vote_two_button", "landing.view.vote_two_button.text");
                 }
             }
             var _local_3:ITextWindow = ITextWindow(this._communityGoalContainer.findChildByName("goal_info"));
