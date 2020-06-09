@@ -9,7 +9,7 @@
         function getLocalizationWithParams(_arg_1:String, _arg_2:String="", ... _args):String;
         function _Str_21551(_arg_1:String, _arg_2:String="", _arg_3:Map=null):String;
         function _Str_18132(_arg_1:String):String;
-        function _Str_23690(_arg_1:String, _arg_2:int):String;
+        function getAchievementDesc(_arg_1:String, _arg_2:int):String;
         function getAchievementInstruction(_arg_1:String):String;
         function getBadgeBaseName(_arg_1:String):String;
         function getBadgeName(_arg_1:String):String;

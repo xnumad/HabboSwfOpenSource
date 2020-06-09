@@ -96,7 +96,7 @@
             return (_local_4 != null) ? _local_4 : "";
         }
 
-        public function _Str_23690(k:String, _arg_2:int):String
+        public function getAchievementDesc(k:String, _arg_2:int):String
         {
             var _local_3:BadgeBaseAndLevel = new BadgeBaseAndLevel(k);
             var _local_4:String = this.getExistingKey([("badge_desc_al_" + k), ("badge_desc_al_" + _local_3.base), ("badge_desc_" + k), ("badge_desc_" + _local_3.base)]);
