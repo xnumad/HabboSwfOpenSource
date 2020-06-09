@@ -263,7 +263,7 @@
     public class HabboCatalog extends Component implements IHabboCatalog, IProductDataListener, IUpdateReceiver, ILinkEventTracker, IFurniDataListener 
     {
         private static const DESKTOP_WINDOW_LAYER:uint = 1;
-        private static const _Str_6092:Point = new Point(100, 20);
+        private static const DEFAULT_VIEW_LOCATION:Point = new Point(100, 20);
         private static const _Str_16980:Point = new Point(100, 5);
         private static const _Str_18347:uint = 200;
         private static const _Str_12843:int = -1;

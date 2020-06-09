@@ -59,7 +59,7 @@
         private static const _Str_4906:int = 22;
         private static const _Str_15966:int = 60;
 
-        private const _Str_6092:Point = new Point(100, 10);
+        private const DEFAULT_VIEW_LOCATION:Point = new Point(100, 10);
 
         private var _navigator:HabboNavigator;
         private var _mainWindow:IFrameWindow;
@@ -322,7 +322,7 @@
             }
             this._mainWindow.scaler.setParamFlag(WindowParam.WINDOW_PARAM_MOUSE_SCALING_TRIGGER, false);
             this._mainWindow.scaler.setParamFlag(WindowParam.WINDOW_PARAM_VERTICAL_MOUSE_SCALING_TRIGGER, true);
-            this._mainWindow.position = this._Str_6092;
+            this._mainWindow.position = this.DEFAULT_VIEW_LOCATION;
             this._Str_22839();
         }
 
@@ -755,7 +755,7 @@
             {
                 if (this._mainWindow.position.x == 0)
                 {
-                    this._mainWindow.position = this._Str_6092;
+                    this._mainWindow.position = this.DEFAULT_VIEW_LOCATION;
                 }
             }
         }
