@@ -191,11 +191,11 @@
 
         public function refresh():void
         {
-            this._Str_25827();
+            this.requestCommunityGoalProgress();
             this.refreshContent();
         }
 
-        private function _Str_25827():void
+        private function requestCommunityGoalProgress():void
         {
             if (!this._communityProgressRequested)
             {
