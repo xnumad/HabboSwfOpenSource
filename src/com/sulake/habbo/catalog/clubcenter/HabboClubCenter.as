@@ -166,7 +166,7 @@
             }
             if (this._Str_25344())
             {
-                this._Str_25141();
+                this.updateData();
             }
             else
             {
@@ -244,7 +244,7 @@
             return (!(this._dataPending)) && ((getTimer() - this._dataTimestamp) > _Str_14332);
         }
 
-        private function _Str_25141():void
+        private function updateData():void
         {
             this._dataPending = true;
             this._communicationManager.connection.send(new _Str_7891());
