@@ -53,7 +53,7 @@
                 _local_2.visible = false;
             }
             _local_2 = this._frame.findChildByName("btnSkip");
-            _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_19003);
+            _local_2.addEventListener(WindowMouseEvent.CLICK, this.onReject);
             _local_2 = this._frame.findChildByName("btnGo");
             _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_17239);
         }
@@ -69,9 +69,9 @@
             this.hide();
         }
 
-        private function _Str_19003(k:WindowMouseEvent):void
+        private function onReject(k:WindowMouseEvent):void
         {
-            this._component._Str_19003();
+            this._component.onReject();
         }
     }
 }

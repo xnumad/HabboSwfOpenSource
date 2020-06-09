@@ -147,7 +147,7 @@
             this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum._Str_4917));
         }
 
-        public function _Str_19003():void
+        public function onReject():void
         {
             this._windowManager.confirm("${phone.number.never.again.confirm.title}", "${phone.number.never.again.confirm.text}", 0, this.onNeverAgainConfirmClose);
         }
