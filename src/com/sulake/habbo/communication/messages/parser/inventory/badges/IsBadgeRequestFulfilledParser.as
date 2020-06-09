@@ -21,7 +21,7 @@
             return true;
         }
 
-        public function get _Str_25181():String
+        public function get requestCode():String
         {
             return this._requestCode;
         }
