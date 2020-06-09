@@ -943,7 +943,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_12393;
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_7271;
 	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
-	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8120;
+	import com.sulake.habbo.communication.messages.incoming._Str_87.BadgeReceivedEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_87.IsBadgeRequestFulfilledEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_87.BadgePointLimitsEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.*;
@@ -1199,7 +1199,7 @@
             INCOMING_PACKETS[2454] = RoomPropertyMessageEvent;
             INCOMING_PACKETS[2468] = RoomAdPurchaseInfoEvent;
             INCOMING_PACKETS[2491] = AuthenticationOKMessageEvent;
-            INCOMING_PACKETS[2493] = _Str_8120;
+            INCOMING_PACKETS[2493] = BadgeReceivedEvent;
             INCOMING_PACKETS[2494] = _Str_18853;
             INCOMING_PACKETS[2501] = BadgePointLimitsEvent;
             INCOMING_PACKETS[2505] = TradingOpenEvent;

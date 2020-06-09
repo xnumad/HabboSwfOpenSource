@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOpenParser;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8120;
+    import com.sulake.habbo.communication.messages.incoming._Str_87.BadgeReceivedEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6450;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9259;
@@ -155,7 +155,7 @@
             this._com.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new TradingOpenEvent(this._Str_22556, TradingOpenParser));
             this._com.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
-            this._com.addHabboConnectionMessageEvent(new _Str_8120(this._Str_23620));
+            this._com.addHabboConnectionMessageEvent(new BadgeReceivedEvent(this._Str_23620));
             this._com.addHabboConnectionMessageEvent(new _Str_5946(this._Str_16617));
             this._com.addHabboConnectionMessageEvent(new _Str_6450(this.onAvatarEffects));
             this._com.addHabboConnectionMessageEvent(new _Str_9259(this._Str_24135));
@@ -484,7 +484,7 @@
 
         public function _Str_23620(k:IMessageEvent):void
         {
-            var _local_2:BadgeReceivedParser = _Str_8120(k).getParser();
+            var _local_2:BadgeReceivedParser = BadgeReceivedEvent(k).getParser();
             var _local_3:BadgesModel = this._inventory._Str_7962;
             if (_local_3 != null)
             {

@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgeReceivedParser;
 
-    public class _Str_8120 extends MessageEvent 
+    public class BadgeReceivedEvent extends MessageEvent
     {
-        public function _Str_8120(k:Function)
+        public function BadgeReceivedEvent(k:Function)
         {
             super(k, BadgeReceivedParser);
         }
