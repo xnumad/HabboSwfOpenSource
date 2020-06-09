@@ -6,17 +6,17 @@
 
     public class PromoArticlesMessageParser implements IMessageParser
     {
-        private var _Str_4386:Array;
+        private var _articles:Array;
 
 
         public function get _Str_23579():Array
         {
-            return this._Str_4386;
+            return this._articles;
         }
 
         public function flush():Boolean
         {
-            this._Str_4386 = [];
+            this._articles = [];
             return true;
         }
 
@@ -26,7 +26,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_4386.push(new PromoArticleData(k));
+                this._articles.push(new PromoArticleData(k));
                 _local_3++;
             }
             return true;
