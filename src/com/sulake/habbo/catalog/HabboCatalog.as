@@ -262,7 +262,7 @@
 
     public class HabboCatalog extends Component implements IHabboCatalog, IProductDataListener, IUpdateReceiver, ILinkEventTracker, IFurniDataListener 
     {
-        private static const _Str_6198:uint = 1;
+        private static const DESKTOP_WINDOW_LAYER:uint = 1;
         private static const _Str_6092:Point = new Point(100, 20);
         private static const _Str_16980:Point = new Point(100, 5);
         private static const _Str_18347:uint = 200;
@@ -1456,7 +1456,7 @@
                 k = "catalog_ubuntu_with_tabs";
             }
             var _local_2:XmlAsset = (assets.getAssetByName(k) as XmlAsset);
-            this._mainContainer = (this._windowManager.buildFromXML((_local_2.content as XML), _Str_6198) as IWindowContainer);
+            this._mainContainer = (this._windowManager.buildFromXML((_local_2.content as XML), DESKTOP_WINDOW_LAYER) as IWindowContainer);
             this._mainContainer.tags.push("habbo_catalog");
             this._mainContainer.position = _Str_16980;
             this._Str_15729();
@@ -2808,7 +2808,7 @@
             var k:IDesktopWindow;
             if ((((!(this._windowManager == null)) && (!(this._mainContainer == null))) && (this._mainContainer.parent == null)))
             {
-                k = this._windowManager.getDesktop(_Str_6198);
+                k = this._windowManager.getDesktop(DESKTOP_WINDOW_LAYER);
                 if (k != null)
                 {
                     k.addChild(this._mainContainer);
@@ -2821,7 +2821,7 @@
             var k:IDesktopWindow;
             if ((((!(this._windowManager == null)) && (!(this._mainContainer == null))) && (!(this._mainContainer.parent == null))))
             {
-                k = this._windowManager.getDesktop(_Str_6198);
+                k = this._windowManager.getDesktop(DESKTOP_WINDOW_LAYER);
                 if (((!(k == null)) && (!(this._Str_13637))))
                 {
                     k.removeChild(this._mainContainer);

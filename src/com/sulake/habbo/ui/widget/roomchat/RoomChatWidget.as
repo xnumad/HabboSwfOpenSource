@@ -51,7 +51,7 @@
         private static const _Str_17276:int = (((_Str_11205 + _Str_6970) * _Str_3729) + _Str_3729);//247
         private static const _Str_6383:int = 23;
         private static const _Str_18228:int = 40;
-        private static const _Str_6198:uint = 1;
+        private static const DESKTOP_WINDOW_LAYER:uint = 1;
         private static const _Str_17685:int = 750;
         private static const _Str_16222:int = 1000;
 
@@ -93,7 +93,7 @@
             (k as ChatWidgetHandler).widget = this;
             this._configurationManager = _arg_5;
             this._Str_11471 = _arg_6;
-            var _local_8:IDesktopWindow = _arg_2.getDesktop(_Str_6198);
+            var _local_8:IDesktopWindow = _arg_2.getDesktop(DESKTOP_WINDOW_LAYER);
             if (_local_8.height >= _Str_16222)
             {
                 this._Str_8959 = _Str_17276;
