@@ -147,7 +147,7 @@
                     this._Str_13939();
                     return;
                 case PhoneNumberStatusEnum.ERROR:
-                case PhoneNumberStatusEnum._Str_14795:
+                case PhoneNumberStatusEnum.RATE_LIMIT:
                 case PhoneNumberStatusEnum._Str_13712:
                 case PhoneNumberStatusEnum._Str_17772:
                     if (((!(this._Str_7950)) && (!(this._Str_9469))))
@@ -229,7 +229,7 @@
                     this._Str_9778();
                     return;
                 case PhoneNumberStatusEnum.ERROR:
-                case PhoneNumberStatusEnum._Str_14795:
+                case PhoneNumberStatusEnum.RATE_LIMIT:
                 case PhoneNumberStatusEnum._Str_13712:
                     Logger.log("INVALID STATE!! Phone number / verify errors should not be handled here!");
                     return;
