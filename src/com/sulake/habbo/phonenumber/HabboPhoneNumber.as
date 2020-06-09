@@ -149,7 +149,7 @@
                 case PhoneNumberStatusEnum.ERROR:
                 case PhoneNumberStatusEnum.RATE_LIMIT:
                 case PhoneNumberStatusEnum.NUMBER_MISTYPED:
-                case PhoneNumberStatusEnum._Str_17772:
+                case PhoneNumberStatusEnum.NUMBER_ALREADY_VERIFIED:
                     if (((!(this._Str_7950)) && (!(this._Str_9469))))
                     {
                         this._Str_16750();
