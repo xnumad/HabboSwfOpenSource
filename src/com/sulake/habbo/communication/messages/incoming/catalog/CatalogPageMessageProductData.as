@@ -11,7 +11,7 @@
 
         private var _Str_3032:String;
         private var _Str_20686:int;
-        private var _Str_3194:String;
+        private var _extraParam:String;
         private var _productCount:int;
         private var _uniqueLimitedItem:Boolean;
         private var _uniqueLimitedItemSeriesSize:int;
@@ -23,12 +23,12 @@
             switch (this._Str_3032)
             {
                 case PRODUCT_TYPE_BADGE:
-                    this._Str_3194 = k.readString();
+                    this._extraParam = k.readString();
                     this._productCount = 1;
                     return;
                 default:
                     this._Str_20686 = k.readInteger();
-                    this._Str_3194 = k.readString();
+                    this._extraParam = k.readString();
                     this._productCount = k.readInteger();
                     this._uniqueLimitedItem = k.readBoolean();
                     if (this._uniqueLimitedItem)
@@ -51,7 +51,7 @@
 
         public function get extraParam():String
         {
-            return this._Str_3194;
+            return this._extraParam;
         }
 
         public function get productCount():int

@@ -20,7 +20,7 @@
         private var _expiration:int = -1;
         private var _Str_25890:int = -1;
         private var _Str_6693:int = -1;
-        private var _Str_3194:String = "";
+        private var _extraParam:String = "";
         private var _isOwner:Boolean = false;
         private var _stuffData:IStuffData = null;
         private var _groupId:int = 0;
@@ -160,12 +160,12 @@
 
         public function set extraParam(k:String):void
         {
-            this._Str_3194 = k;
+            this._extraParam = k;
         }
 
         public function get extraParam():String
         {
-            return this._Str_3194;
+            return this._extraParam;
         }
 
         public function set isOwner(k:Boolean):void
