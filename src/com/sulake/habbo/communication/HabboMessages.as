@@ -285,7 +285,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_12054;
 	import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_3365;
 	import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_10856;
-	import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_11372;
+	import com.sulake.habbo.communication.messages.outgoing._Str_428.NewUserExperienceGetGiftsMessageComposer;
 	import com.sulake.habbo.communication._Str_8686;
 	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_16597;
 	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8269;
@@ -1616,7 +1616,7 @@
             OUTGOING_PACKETS[1782] = _Str_7413;
             OUTGOING_PACKETS[1786] = _Str_10079;
             OUTGOING_PACKETS[1820] = _Str_11883;
-            OUTGOING_PACKETS[1822] = _Str_11372;
+            OUTGOING_PACKETS[1822] = NewUserExperienceGetGiftsMessageComposer;
             OUTGOING_PACKETS[1826] = _Str_11313;
             OUTGOING_PACKETS[1827] = GetPromoArticlesComposer;
             OUTGOING_PACKETS[1834] = _Str_12436;

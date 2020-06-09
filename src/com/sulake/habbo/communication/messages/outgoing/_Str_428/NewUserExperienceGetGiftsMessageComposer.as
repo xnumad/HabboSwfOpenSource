@@ -4,11 +4,11 @@
     import com.sulake.core.runtime.IDisposable;
     import __AS3__.vec.Vector;
 
-    public class _Str_11372 implements IMessageComposer, IDisposable 
+    public class NewUserExperienceGetGiftsMessageComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function _Str_11372(k:Vector.<_Str_4584>)
+        public function NewUserExperienceGetGiftsMessageComposer(k:Vector.<_Str_4584>)
         {
             var _local_2:_Str_4584;
             this._array = new Array();

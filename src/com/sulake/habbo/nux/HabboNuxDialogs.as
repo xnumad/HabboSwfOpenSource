@@ -29,7 +29,7 @@
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.window.utils.IConfirmDialog;
-    import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_11372;
+    import com.sulake.habbo.communication.messages.outgoing._Str_428.NewUserExperienceGetGiftsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_4584;
     import com.sulake.habbo.communication.messages.parser.nux.NewUserExperienceGiftOfferParser;
     import flash.events.TimerEvent;
@@ -165,7 +165,7 @@
         public function onSendGetGifts(k:Vector.<_Str_4584>):void
         {
             this.destroyGiftSelectionView();
-            this._Str_2310.send(new _Str_11372(k));
+            this._Str_2310.send(new NewUserExperienceGetGiftsMessageComposer(k));
         }
 
         private function onNewUserExperienceNotCompleteMessage(k:NewUserExperienceNotCompleteEvent):void
