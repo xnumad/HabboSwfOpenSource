@@ -24,7 +24,7 @@
     {
         private static const CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES:Array = [0, 8, 16, 23];
         private static const METER_INITIAL_DELAY_MS:int = 1500;
-        private static const _Str_17898:int = 1000;
+        private static const METER_BUILDUP_TIME_MS:int = 1000;
 
         protected var _Str_2298:HabboLandingView;
         protected var _Str_3186:IWindowContainer;
@@ -209,7 +209,7 @@
             this._Str_16752 = (this._Str_16752 + k);
             if (this._Str_16752 > METER_INITIAL_DELAY_MS)
             {
-                this._Str_10390 = (this._Str_10390 + (k / _Str_17898));
+                this._Str_10390 = (this._Str_10390 + (k / METER_BUILDUP_TIME_MS));
                 if (this._Str_10390 > 1)
                 {
                     this._Str_10390 = 1;
