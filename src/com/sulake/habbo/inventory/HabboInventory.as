@@ -33,7 +33,7 @@
     import com.sulake.iid.IIDHabboSoundManager;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
     import com.sulake.habbo.communication.messages.outgoing.inventory.purse.GetCreditsInfoComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_6530;
+    import com.sulake.habbo.communication.messages.outgoing.users.ScrGetUserInfoMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_9250;
     import flash.events.TimerEvent;
     import com.sulake.habbo.inventory.furni.FurniModel;
@@ -180,7 +180,7 @@
             this._unseenItemTracker = new UnseenItemTracker(this._communication, events, this);
             this._view = new InventoryMainView(this, this._windowManager, assets);
             this._communication.connection.send(new GetCreditsInfoComposer());
-            this._communication.connection.send(new _Str_6530("habbo_club"));
+            this._communication.connection.send(new ScrGetUserInfoMessageComposer("habbo_club"));
             this._communication.connection.send(new _Str_9250());
         }
 
@@ -398,7 +398,7 @@
 
         private function onPurseTimer(k:TimerEvent):void
         {
-            this._communication.connection.send(new _Str_6530("habbo_club"));
+            this._communication.connection.send(new ScrGetUserInfoMessageComposer("habbo_club"));
         }
 
         private function roomSessionEventHandler(k:RoomSessionEvent):void

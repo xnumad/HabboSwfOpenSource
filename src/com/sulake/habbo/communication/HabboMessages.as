@@ -489,7 +489,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_5697;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_6006;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_6530;
+	import com.sulake.habbo.communication.messages.outgoing.users.ScrGetUserInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_7285;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
@@ -1818,7 +1818,7 @@
             OUTGOING_PACKETS[3150] = _Str_7844;
             OUTGOING_PACKETS[3157] = _Str_11418;
             OUTGOING_PACKETS[3159] = _Str_11137;
-            OUTGOING_PACKETS[3166] = _Str_6530;
+            OUTGOING_PACKETS[3166] = ScrGetUserInfoMessageComposer;
             OUTGOING_PACKETS[3171] = _Str_10594;
             OUTGOING_PACKETS[3182] = _Str_10878;
             OUTGOING_PACKETS[3189] = _Str_10944;
