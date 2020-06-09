@@ -55,7 +55,7 @@
             _local_2 = this._frame.findChildByName("btnSkip");
             _local_2.addEventListener(WindowMouseEvent.CLICK, this.onReject);
             _local_2 = this._frame.findChildByName("btnGo");
-            _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_17239);
+            _local_2.addEventListener(WindowMouseEvent.CLICK, this.onVerify);
         }
 
         private function onCloseHandler(k:WindowMouseEvent):void
@@ -63,9 +63,9 @@
             this.hide();
         }
 
-        private function _Str_17239(k:WindowMouseEvent):void
+        private function onVerify(k:WindowMouseEvent):void
         {
-            this._component._Str_17239();
+            this._component.onVerify();
             this.hide();
         }
 
