@@ -93,11 +93,11 @@
 
         private function refreshContent():void
         {
-            this._Str_24669();
+            this.setArticleContent();
             this.setNavigationDisks();
         }
 
-        private function _Str_24669():void
+        private function setArticleContent():void
         {
             var article:PromoArticleData;
             article = this._articles[this._currentArticle];
