@@ -32,7 +32,7 @@
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.iid.IIDHabboSoundManager;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
-    import com.sulake.habbo.communication._Str_8686;
+    import com.sulake.habbo.communication.GetCreditsInfoComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_6530;
     import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_9250;
     import flash.events.TimerEvent;
@@ -179,7 +179,7 @@
             context.addLinkEventTracker(this);
             this._unseenItemTracker = new UnseenItemTracker(this._communication, events, this);
             this._view = new InventoryMainView(this, this._windowManager, assets);
-            this._communication.connection.send(new _Str_8686());
+            this._communication.connection.send(new GetCreditsInfoComposer());
             this._communication.connection.send(new _Str_6530("habbo_club"));
             this._communication.connection.send(new _Str_9250());
         }

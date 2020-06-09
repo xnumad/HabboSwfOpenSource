@@ -286,7 +286,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_3365;
 	import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_10856;
 	import com.sulake.habbo.communication.messages.outgoing._Str_428.NewUserExperienceGetGiftsMessageComposer;
-	import com.sulake.habbo.communication._Str_8686;
+	import com.sulake.habbo.communication.GetCreditsInfoComposer;
 	import com.sulake.habbo.communication.messages.incoming.bots._Str_16597;
 	import com.sulake.habbo.communication.messages.incoming.bots.BotRemovedFromInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.bots._Str_8892;
@@ -1748,7 +1748,7 @@
             OUTGOING_PACKETS[272] = _Str_12106;
             OUTGOING_PACKETS[2721] = _Str_10410;
             OUTGOING_PACKETS[2725] = _Str_11893;
-            OUTGOING_PACKETS[273] = _Str_8686;
+            OUTGOING_PACKETS[273] = GetCreditsInfoComposer;
             OUTGOING_PACKETS[2730] = _Str_4639;
             OUTGOING_PACKETS[2735] = _Str_10123;
             OUTGOING_PACKETS[2741] = _Str_7498;
