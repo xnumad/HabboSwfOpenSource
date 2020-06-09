@@ -265,7 +265,7 @@
         private static const DESKTOP_WINDOW_LAYER:uint = 1;
         private static const DEFAULT_VIEW_LOCATION:Point = new Point(100, 20);
         private static const DEFAULT_VIEW_LOCATION_LARGE:Point = new Point(100, 5);
-        private static const _Str_18347:uint = 200;
+        private static const MAX_SEARCH_RESULTS_LENGTH:uint = 200;
         private static const _Str_12843:int = -1;
 
         private var _windowManager:IHabboWindowManager;
@@ -1616,7 +1616,7 @@
                                 if (_local_6.indexOf(_local_4) >= 0)
                                 {
                                     _local_3.push(_local_5);
-                                    if (_local_3.length >= _Str_18347)
+                                    if (_local_3.length >= MAX_SEARCH_RESULTS_LENGTH)
                                     {
                                         break;
                                     }
