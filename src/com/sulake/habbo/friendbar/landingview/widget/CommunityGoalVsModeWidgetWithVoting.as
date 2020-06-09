@@ -47,7 +47,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._Str_16270();
+                this.hideVoteButtons();
                 _Str_2298.communityGoalVote(1);
                 _Str_2298.tracking.trackGoogle("landingView", "click_voteoption_one");
             }
@@ -57,7 +57,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._Str_16270();
+                this.hideVoteButtons();
                 _Str_2298.communityGoalVote(2);
                 _Str_2298.tracking.trackGoogle("landingView", "click_voteoption_two");
             }
@@ -67,11 +67,11 @@
         {
             if (k.getParser()._Str_23568)
             {
-                this._Str_16270();
+                this.hideVoteButtons();
             }
         }
 
-        private function _Str_16270():void
+        private function hideVoteButtons():void
         {
             this._voteOptionOneButton.visible = false;
             this._voteOptionTwoButton.visible = false;
