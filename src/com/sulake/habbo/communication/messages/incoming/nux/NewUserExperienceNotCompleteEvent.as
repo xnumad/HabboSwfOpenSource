@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.nux._Str_9322;
 
-    public class _Str_8454 extends MessageEvent implements IMessageEvent 
+    public class NewUserExperienceNotCompleteEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8454(k:Function)
+        public function NewUserExperienceNotCompleteEvent(k:Function)
         {
             super(k, _Str_9322);
         }

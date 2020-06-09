@@ -23,7 +23,7 @@
     import com.sulake.iid.IIDHabboRoomSessionManager;
     import com.sulake.habbo.session.events.RoomSessionEvent;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.nux._Str_8454;
+    import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceNotCompleteEvent;
     import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOfferEvent;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_6202;
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
@@ -107,7 +107,7 @@
             this._Str_2310 = this._Str_2355.connection;
             if (this._Str_2310)
             {
-                this._Str_2310.addMessageEvent(new _Str_8454(this.onNewUserExperienceNotCompleteMessage));
+                this._Str_2310.addMessageEvent(new NewUserExperienceNotCompleteEvent(this.onNewUserExperienceNotCompleteMessage));
                 this._Str_2310.addMessageEvent(new NewUserExperienceGiftOfferEvent(this.onNewUserExperienceGiftOfferMessage));
             }
             context.addLinkEventTracker(this);
@@ -168,7 +168,7 @@
             this._Str_2310.send(new _Str_11372(k));
         }
 
-        private function onNewUserExperienceNotCompleteMessage(k:_Str_8454):void
+        private function onNewUserExperienceNotCompleteMessage(k:NewUserExperienceNotCompleteEvent):void
         {
             this._Str_22781();
         }

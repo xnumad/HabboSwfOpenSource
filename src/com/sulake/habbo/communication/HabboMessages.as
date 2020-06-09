@@ -169,7 +169,7 @@
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionVotingInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_8237;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_9217;
-	import com.sulake.habbo.communication.messages.incoming.nux._Str_8454;
+	import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceNotCompleteEvent;
 	import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_11645;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_16667;
@@ -1344,7 +1344,7 @@
             INCOMING_PACKETS[3609] = _Str_9065;
             INCOMING_PACKETS[3625] = QuestsMessageEvent;
             INCOMING_PACKETS[3635] = _Str_7620;
-            INCOMING_PACKETS[3639] = _Str_8454;
+            INCOMING_PACKETS[3639] = NewUserExperienceNotCompleteEvent;
             INCOMING_PACKETS[3654] = LoadGameMessageEvent;
             INCOMING_PACKETS[3684] = _Str_16597;
             INCOMING_PACKETS[3696] = CameraStorageUrlMessageEvent;
