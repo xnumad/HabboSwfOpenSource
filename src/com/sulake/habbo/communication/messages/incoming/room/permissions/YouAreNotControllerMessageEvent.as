@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.permissions.YouAreNotControllerMessageParser;
 
-    public class _Str_8236 extends MessageEvent 
+    public class YouAreNotControllerMessageEvent extends MessageEvent
     {
-        public function _Str_8236(k:Function)
+        public function YouAreNotControllerMessageEvent(k:Function)
         {
             super(k, YouAreNotControllerMessageParser);
         }

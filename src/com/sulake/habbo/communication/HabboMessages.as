@@ -954,7 +954,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions._Str_5266;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreControllerMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.permissions._Str_8236;
+	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreNotControllerMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_11327;
 	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_5270;
 	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_7844;
@@ -1191,7 +1191,7 @@
             INCOMING_PACKETS[2376] = _Str_7657;
             INCOMING_PACKETS[2379] = _Str_8905;
             INCOMING_PACKETS[2380] = _Str_8382;
-            INCOMING_PACKETS[2392] = _Str_8236;
+            INCOMING_PACKETS[2392] = YouAreNotControllerMessageEvent;
             INCOMING_PACKETS[2402] = HabboGroupBadgesMessageEvent;
             INCOMING_PACKETS[2405] = HabboClubOffersMessageEvent;
             INCOMING_PACKETS[2429] = FigureUpdateEvent;

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.session.handler
 {
     import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreControllerMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.permissions._Str_8236;
+    import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreNotControllerMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.permissions._Str_5266;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
@@ -19,7 +19,7 @@
                 return;
             }
             k.addMessageEvent(new YouAreControllerMessageEvent(this.onYouAreController));
-            k.addMessageEvent(new _Str_8236(this.onYouAreNotController));
+            k.addMessageEvent(new YouAreNotControllerMessageEvent(this.onYouAreNotController));
             k.addMessageEvent(new _Str_5266(this.onYouAreOwner));
         }
 
@@ -40,7 +40,7 @@
 
         private function onYouAreNotController(k:IMessageEvent):void
         {
-            var _local_2:_Str_8236 = (k as _Str_8236);
+            var _local_2:YouAreNotControllerMessageEvent = (k as YouAreNotControllerMessageEvent);
             if (_local_2 == null)
             {
                 return;
