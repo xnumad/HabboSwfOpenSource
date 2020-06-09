@@ -80,7 +80,7 @@
             HabboLandingView._Str_9079(this._communityGoalContainer, "community_title", "hdr_line");
         }
 
-        private function _Str_17143(k:IWindow):void
+        private function campaignizeMeterElementAssetUri(k:IWindow):void
         {
             var _local_2:IStaticBitmapWrapperWindow = IStaticBitmapWrapperWindow(k);
             var _local_3:int = _local_2.assetUri.indexOf(".png");
@@ -115,11 +115,11 @@
                 k = 0;
                 while (k < CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length)
                 {
-                    this._Str_17143(this._communityGoalContainer.findChildByName(("meter_level_" + k)));
+                    this.campaignizeMeterElementAssetUri(this._communityGoalContainer.findChildByName(("meter_level_" + k)));
                     if (k > 0)
                     {
-                        this._Str_17143(this._communityGoalContainer.findChildByName((("meter_level_" + k) + "_icon")));
-                        this._Str_17143(this._communityGoalContainer.findChildByName((("meter_level_" + k) + "_icon_locked")));
+                        this.campaignizeMeterElementAssetUri(this._communityGoalContainer.findChildByName((("meter_level_" + k) + "_icon")));
+                        this.campaignizeMeterElementAssetUri(this._communityGoalContainer.findChildByName((("meter_level_" + k) + "_icon_locked")));
                     }
                     k++;
                 }
