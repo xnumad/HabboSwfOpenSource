@@ -556,7 +556,7 @@
             this.addMessageEvent(new _Str_8530(this._Str_24685));
             this.addMessageEvent(new PurchaseNotAllowedMessageEvent(this._Str_23734));
             this.addMessageEvent(new GiftWrappingConfigurationEvent(this._Str_23158));
-            this.addMessageEvent(new PurchaseErrorMessageEvent(this._Str_19518));
+            this.addMessageEvent(new PurchaseErrorMessageEvent(this.onPurchaseError));
             this.addMessageEvent(new _Str_7288(this._Str_22941));
             this.addMessageEvent(new CatalogPagesListEvent(this._Str_25188));
             this.addMessageEvent(new _Str_7697(this._Str_25346));
@@ -1850,7 +1850,7 @@
             }
         }
 
-        private function _Str_19518(k:IMessageEvent):void
+        private function onPurchaseError(k:IMessageEvent):void
         {
             var _local_2:PurchaseErrorMessageEvent = (k as PurchaseErrorMessageEvent);
             var _local_3:PurchaseErrorMessageParser = _local_2.getParser();

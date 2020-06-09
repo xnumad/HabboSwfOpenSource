@@ -302,7 +302,7 @@
             _local_7.visible = (_local_2.visible = (_local_6.visible = k));
         }
 
-        private function _Str_19518(event:Event):void
+        private function onPurchaseError(event:Event):void
         {
             var data:Object;
             try
