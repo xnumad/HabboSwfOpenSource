@@ -56,7 +56,7 @@
             }
             else
             {
-                this._Str_21361(this._currentArticle);
+                this.goToArticle(this._currentArticle);
             }
         }
 
@@ -143,7 +143,7 @@
             }
         }
 
-        private function _Str_21361(k:int):void
+        private function goToArticle(k:int):void
         {
             var _local_2:* = (k == this._currentArticle);
             if (this._articles.length == 0)
@@ -227,7 +227,7 @@
                     this.followLink();
                     return;
                 case "article_navigation":
-                    this._Str_21361(_arg_2.id);
+                    this.goToArticle(_arg_2.id);
                     return;
             }
         }
