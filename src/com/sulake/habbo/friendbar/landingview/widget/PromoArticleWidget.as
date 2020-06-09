@@ -187,7 +187,7 @@
             this.setBlend(1);
         }
 
-        private function _Str_24223():void
+        private function followLink():void
         {
             var k:PromoArticleData = this._articles[this._currentArticle];
             switch (k.linkType)
@@ -224,7 +224,7 @@
             switch (_arg_2.name)
             {
                 case "button":
-                    this._Str_24223();
+                    this.followLink();
                     return;
                 case "article_navigation":
                     this._Str_21361(_arg_2.id);
