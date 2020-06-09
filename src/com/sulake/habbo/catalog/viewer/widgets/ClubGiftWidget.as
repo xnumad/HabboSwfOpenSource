@@ -10,7 +10,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.catalog.viewer.IProduct;
     import com.sulake.habbo.session.product.IProductData;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_2853;
+    import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageProductData;
     import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftData;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.catalog.viewer.Product;
@@ -160,7 +160,7 @@
             var _local_6:CatalogPageMessageOfferData;
             var _local_7:Vector.<IProduct>;
             var _local_8:IProductData;
-            var _local_9:_Str_2853;
+            var _local_9:CatalogPageMessageProductData;
             var _local_10:ClubGiftData;
             var _local_11:IFurnitureData;
             var _local_12:Product;

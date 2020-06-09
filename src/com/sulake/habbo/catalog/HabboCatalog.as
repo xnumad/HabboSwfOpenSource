@@ -187,7 +187,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageOfferData;
     import com.sulake.habbo.catalog.viewer.IProduct;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_2853;
+    import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageProductData;
     import com.sulake.habbo.communication.messages.parser.catalog.CatalogPageMessageParser;
     import com.sulake.habbo.catalog.viewer.IPageLocalization;
     import com.sulake.habbo.catalog.viewer.Product;
@@ -1783,7 +1783,7 @@
             var _local_11:CatalogPageMessageOfferData;
             var _local_12:Vector.<IProduct>;
             var _local_13:IProductData;
-            var _local_14:_Str_2853;
+            var _local_14:CatalogPageMessageProductData;
             var _local_15:Offer;
             var _local_16:IFurnitureData;
             var _local_2:CatalogPageMessageParser = k.getParser();
@@ -2968,7 +2968,7 @@
             {
                 return;
             }
-            var _local_4:_Str_2853 = _local_3.products[0];
+            var _local_4:CatalogPageMessageProductData = _local_3.products[0];
             if (_local_4._Str_18468)
             {
                 this._catalogViewer._Str_3854._Str_19621(_local_3.offerId, _local_4.uniqueLimitedItemsLeft);

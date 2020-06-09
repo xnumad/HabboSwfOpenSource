@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.catalog
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_2853;
+    import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageProductData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class ClubGiftSelectedParser implements IMessageParser
@@ -24,7 +24,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._products.push(new _Str_2853(k));
+                this._products.push(new CatalogPageMessageProductData(k));
                 _local_3++;
             }
             return true;

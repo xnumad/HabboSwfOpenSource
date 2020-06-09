@@ -64,7 +64,7 @@
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.users.AccountSafetyLockStatusChangeMessageParser;
     import com.sulake.habbo.communication.messages.parser.catalog.ClubGiftSelectedParser;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_2853;
+    import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageProductData;
     import com.sulake.habbo.catalog.purse.ActivityPointTypeEnum;
     import __AS3__.vec.*;
 
@@ -482,7 +482,7 @@
             {
                 return;
             }
-            var _local_4:_Str_2853 = (_local_3[0] as _Str_2853);
+            var _local_4:CatalogPageMessageProductData = (_local_3[0] as CatalogPageMessageProductData);
             if (!_local_4)
             {
                 return;

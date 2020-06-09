@@ -6,7 +6,7 @@
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.habbo.room.ImageResult;
     import flash.display.BitmapData;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_2853;
+    import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageProductData;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.inventory.enum.FurniCategory;
 
@@ -35,10 +35,10 @@
             var _local_7:int;
             switch (k)
             {
-                case _Str_2853.S:
+                case CatalogPageMessageProductData.S:
                     _local_5 = this._roomEngine.getFurnitureIcon(_arg_2, this);
                     break;
-                case _Str_2853.I:
+                case CatalogPageMessageProductData.I:
                     _local_7 = this._Str_23700("I", _arg_2);
                     if (_local_7 == 1)
                     {
@@ -73,7 +73,7 @@
                         _local_5 = null;
                     }
                     break;
-                case _Str_2853.E:
+                case CatalogPageMessageProductData.E:
                     _local_4 = ((this._inventory as Component).assets.getAssetByName((("fx_icon_" + _arg_2) + "_png")) as BitmapDataAsset);
                     if (_local_4 != null)
                     {

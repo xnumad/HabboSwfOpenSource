@@ -6,7 +6,7 @@
     import com.sulake.habbo.quest.HabboQuestEngine;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.communication.connection.IConnection;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_2853;
+    import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageProductData;
     import com.sulake.habbo.communication.messages.incoming.catalog.SeasonalCalendarDailyOfferMessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
@@ -32,7 +32,7 @@
         private var _window:IWindowContainer;
         private var _connection:IConnection;
         private var _mainWindow:MainWindow;
-        private var _productData:_Str_2853 = null;
+        private var _productData:CatalogPageMessageProductData = null;
         private var _offerId:int = -1;
         private var _pageId:int = -1;
         private var _cachedDailyOfferMessageEvent:SeasonalCalendarDailyOfferMessageEvent = null;
@@ -120,13 +120,13 @@
             {
                 _local_4 = null;
                 _local_5 = null;
-                if (this._productData.productType == _Str_2853.I)
+                if (this._productData.productType == CatalogPageMessageProductData.I)
                 {
                     _local_5 = this._questEngine.roomEngine.getWallItemImage(this._productData._Str_6164, new Vector3d(90, 0, 0), 64, this, 0, this._productData.extraParam);
                 }
                 else
                 {
-                    if (this._productData.productType == _Str_2853.S)
+                    if (this._productData.productType == CatalogPageMessageProductData.S)
                     {
                         _local_5 = this._questEngine.roomEngine.getFurnitureImage(this._productData._Str_6164, new Vector3d(90, 0, 0), 64, this);
                     }
@@ -170,7 +170,7 @@
                 this._offerId = k.offer.offerId;
                 if (k.offer.products.length > 0)
                 {
-                    this._productData = _Str_2853(k.offer.products[0]);
+                    this._productData = CatalogPageMessageProductData(k.offer.products[0]);
                     this.refresh();
                 }
             }

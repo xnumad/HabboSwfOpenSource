@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2853 
+    public class CatalogPageMessageProductData
     {
         public static const I:String = "i";
         public static const S:String = "s";
@@ -17,7 +17,7 @@
         private var _uniqueLimitedItemSeriesSize:int;
         private var _uniqueLimitedItemsLeft:int;
 
-        public function _Str_2853(k:IMessageDataWrapper)
+        public function CatalogPageMessageProductData(k:IMessageDataWrapper)
         {
             this._Str_3032 = k.readString();
             switch (this._Str_3032)

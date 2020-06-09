@@ -15,7 +15,7 @@
         private var _clubLevel:int;
         private var _giftable:Boolean;
         private var _bundlePurchaseAllowed:Boolean;
-        private var _products:Vector.<_Str_2853>;
+        private var _products:Vector.<CatalogPageMessageProductData>;
 
         public function PurchaseOKMessageOfferData(k:IMessageDataWrapper)
         {
@@ -27,11 +27,11 @@
             this._activityPointType = k.readInteger();
             this._giftable = k.readBoolean();
             var _local_2:int = k.readInteger();
-            this._products = new Vector.<_Str_2853>(0);
+            this._products = new Vector.<CatalogPageMessageProductData>(0);
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._products.push(new _Str_2853(k));
+                this._products.push(new CatalogPageMessageProductData(k));
                 _local_3++;
             }
             this._clubLevel = k.readInteger();
@@ -63,7 +63,7 @@
             return this._priceInActivityPoints;
         }
 
-        public function get products():Vector.<_Str_2853>
+        public function get products():Vector.<CatalogPageMessageProductData>
         {
             return this._products;
         }
