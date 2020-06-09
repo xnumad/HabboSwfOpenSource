@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.landingview.PromoArticleData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8888 implements IMessageParser 
+    public class PromoArticlesMessageParser implements IMessageParser
     {
         private var _Str_4386:Array;
 
