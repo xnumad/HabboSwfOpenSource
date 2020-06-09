@@ -266,7 +266,7 @@
         private static const DEFAULT_VIEW_LOCATION:Point = new Point(100, 20);
         private static const DEFAULT_VIEW_LOCATION_LARGE:Point = new Point(100, 5);
         private static const MAX_SEARCH_RESULTS_LENGTH:uint = 200;
-        private static const _Str_12843:int = -1;
+        private static const NO_KNOWN_OFFER:int = -1;
 
         private var _windowManager:IHabboWindowManager;
         private var _communicationManager:IHabboCommunicationManager;
@@ -1597,7 +1597,7 @@
                         _local_6 = [_local_5.className, _local_5.localizedName, _local_5.description].join(" ");
                         _local_6 = _local_6.replace(/ /gi, "").toLowerCase();
 
-                        if (((this._catalogType == CatalogType.BUILDER) && (_local_5.purchaseOfferId == _Str_12843)) && (_local_5.rentOfferId == _Str_12843))
+                        if (((this._catalogType == CatalogType.BUILDER) && (_local_5.purchaseOfferId == NO_KNOWN_OFFER)) && (_local_5.rentOfferId == NO_KNOWN_OFFER))
                         {
                             if (((!(_local_5.furniLine == "")) && (_local_2.indexOf(_local_5.furniLine) < 0)))
                             {
