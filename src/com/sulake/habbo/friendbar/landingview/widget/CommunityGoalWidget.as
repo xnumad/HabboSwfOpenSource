@@ -26,7 +26,7 @@
         private static const METER_INITIAL_DELAY_MS:int = 1500;
         private static const METER_BUILDUP_TIME_MS:int = 1000;
 
-        protected var _Str_2298:HabboLandingView;
+        protected var _landingView:HabboLandingView;
         protected var _Str_3186:IWindowContainer;
         private var _Str_19676:IStaticBitmapWrapperWindow;
         protected var _Str_3597:CommunityGoalProgress;
@@ -39,7 +39,7 @@
 
         public function CommunityGoalWidget(k:HabboLandingView, _arg_2:Boolean=false)
         {
-            this._Str_2298 = k;
+            this._landingView = k;
             this._Str_11816 = _arg_2;
         }
 
@@ -50,30 +50,30 @@
 
         public function dispose():void
         {
-            if (((!(this._Str_2298 == null)) && (this._Str_2298.windowManager)))
+            if (((!(this._landingView == null)) && (this._landingView.windowManager)))
             {
-                Component(this._Str_2298.windowManager).removeUpdateReceiver(this);
+                Component(this._landingView.windowManager).removeUpdateReceiver(this);
             }
-            this._Str_2298 = null;
+            this._landingView = null;
             this._Str_3186 = null;
             this._Str_3597 = null;
         }
 
         public function get disposed():Boolean
         {
-            return this._Str_2298 == null;
+            return this._landingView == null;
         }
 
         public function initialize():void
         {
             var k:IWindow;
-            this._Str_2298.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
-            this._Str_3186 = IWindowContainer(((this._Str_11816) ? (this._Str_2298.getXmlWindow("community_goal_voting")) : this._Str_2298.getXmlWindow("community_goal")));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
+            this._Str_3186 = IWindowContainer(((this._Str_11816) ? (this._landingView.getXmlWindow("community_goal_voting")) : this._landingView.getXmlWindow("community_goal")));
             this._Str_19676 = IStaticBitmapWrapperWindow(this._Str_3186.findChildByName("meter_needle"));
             if (!this._Str_11816)
             {
                 k = this._Str_3186.findChildByName("community_catalog_button");
-                this._Str_18550 = this._Str_2298.getBoolean("landing.view.community.interactive");
+                this._Str_18550 = this._landingView.getBoolean("landing.view.community.interactive");
                 k.visible = this._Str_18550;
                 k.procedure = this._Str_24653;
             }
@@ -151,12 +151,12 @@
                 k++;
             }
             var _local_2:String = "landing.view.community.meter";
-            this._Str_2298.localizationManager.registerParameter(_local_2, "userRank", this._Str_3597._Str_10549.toString());
-            this._Str_2298.localizationManager.registerParameter(_local_2, "userAmount", this._Str_3597.personalContributionScore.toString());
-            this._Str_2298.localizationManager.registerParameter(_local_2, "totalAmount", this._Str_3597._Str_12030.toString());
+            this._landingView.localizationManager.registerParameter(_local_2, "userRank", this._Str_3597._Str_10549.toString());
+            this._landingView.localizationManager.registerParameter(_local_2, "userAmount", this._Str_3597.personalContributionScore.toString());
+            this._landingView.localizationManager.registerParameter(_local_2, "totalAmount", this._Str_3597._Str_12030.toString());
             if (((!(this._Str_3597 == null)) && (!(this._Str_3597.goalCode == null))))
             {
-                this._Str_2298.localizationManager.registerParameter(("landing.view.community.meter." + this._Str_3597.goalCode), "totalAmount", this._Str_3597._Str_12030.toString());
+                this._landingView.localizationManager.registerParameter(("landing.view.community.meter." + this._Str_3597.goalCode), "totalAmount", this._Str_3597._Str_12030.toString());
                 this._Str_7300("community_total_status", "landing.view.community.meter");
                 if (this._Str_11816)
                 {
@@ -199,7 +199,7 @@
         {
             if (!this._Str_17426)
             {
-                this._Str_2298.send(new _Str_4438());
+                this._landingView.send(new _Str_4438());
                 this._Str_17426 = true;
             }
         }
@@ -213,7 +213,7 @@
                 if (this._Str_10390 > 1)
                 {
                     this._Str_10390 = 1;
-                    Component(this._Str_2298.windowManager).removeUpdateReceiver(this);
+                    Component(this._landingView.windowManager).removeUpdateReceiver(this);
                 }
                 this._Str_17006(Math.floor((this.getCurrentNeedleFrame() * this._Str_10390)));
             }
@@ -224,7 +224,7 @@
             this._Str_3597 = CommunityGoalProgressParser(k.parser).data;
             this._Str_17426 = false;
             this.refreshContent();
-            Component(this._Str_2298.windowManager).registerUpdateReceiver(this, 10);
+            Component(this._landingView.windowManager).registerUpdateReceiver(this, 10);
         }
 
         private function _Str_24653(k:WindowEvent, _arg_2:IWindow):void
@@ -232,9 +232,9 @@
             var _local_3:String;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = this._Str_2298.getProperty("landing.view.community.catalog.target");
-                this._Str_2298.catalog.openCatalogPage(_local_3);
-                this._Str_2298.tracking.trackGoogle("landingView", "click_communityCatalogTarget");
+                _local_3 = this._landingView.getProperty("landing.view.community.catalog.target");
+                this._landingView.catalog.openCatalogPage(_local_3);
+                this._landingView.tracking.trackGoogle("landingView", "click_communityCatalogTarget");
             }
         }
 
