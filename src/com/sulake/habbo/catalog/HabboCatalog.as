@@ -198,7 +198,7 @@
     import com.sulake.habbo.communication.messages.parser.catalog.NotEnoughBalanceMessageParser;
     import com.sulake.habbo.communication.messages.parser.users.ApproveNameMessageParser;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetApproveNameResultEvent;
-    import com.sulake.habbo.communication.messages.parser.inventory.purse.UserCreditsMessageParser;
+    import com.sulake.habbo.communication.messages.parser.inventory.purse.CreditBalanceParser;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import com.sulake.habbo.catalog.purse.PurseEvent;
     import com.sulake.habbo.catalog.purse.PurseUpdateEvent;
@@ -2027,7 +2027,7 @@
         private function onCreditBalance(k:IMessageEvent):void
         {
             var _local_2:UserCreditsEvent = (k as UserCreditsEvent);
-            var _local_3:UserCreditsMessageParser = _local_2.getParser();
+            var _local_3:CreditBalanceParser = _local_2.getParser();
             this._purse.credits = _local_3.balance;
             this._Str_12017();
             if (((!(this._Str_19689)) && (!(this._soundManager == null))))

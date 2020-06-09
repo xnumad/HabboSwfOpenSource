@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class UserCreditsMessageParser implements IMessageParser 
+    public class CreditBalanceParser implements IMessageParser
     {
         private var _balance:int;
 
