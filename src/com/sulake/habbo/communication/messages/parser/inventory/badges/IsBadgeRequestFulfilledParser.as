@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9135 implements IMessageParser 
+    public class IsBadgeRequestFulfilledParser implements IMessageParser
     {
         private var _requestCode:String;
         private var _Str_22220:Boolean;
