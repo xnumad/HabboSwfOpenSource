@@ -34,7 +34,7 @@
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
     import com.sulake.habbo.communication.messages.outgoing.inventory.purse.GetCreditsInfoComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.ScrGetUserInfoMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_9250;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.badges.GetBadgePointLimitsComposer;
     import flash.events.TimerEvent;
     import com.sulake.habbo.inventory.furni.FurniModel;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
@@ -181,7 +181,7 @@
             this._view = new InventoryMainView(this, this._windowManager, assets);
             this._communication.connection.send(new GetCreditsInfoComposer());
             this._communication.connection.send(new ScrGetUserInfoMessageComposer("habbo_club"));
-            this._communication.connection.send(new _Str_9250());
+            this._communication.connection.send(new GetBadgePointLimitsComposer());
         }
 
         override public function dispose():void

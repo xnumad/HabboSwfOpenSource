@@ -935,7 +935,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.RequestABadgeComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.GetIsBadgeRequestFulfilledComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_7891;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_9250;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.GetBadgePointLimitsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.*;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.CraftSecretComposer;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftingRecipesAvailableComposer;
@@ -1563,7 +1563,7 @@
             OUTGOING_PACKETS[1364] = GetIsBadgeRequestFulfilledComposer;
             OUTGOING_PACKETS[1367] = _Str_11698;
             OUTGOING_PACKETS[137] = AcceptFriendMessageComposer;
-            OUTGOING_PACKETS[1371] = _Str_9250;
+            OUTGOING_PACKETS[1371] = GetBadgePointLimitsComposer;
             OUTGOING_PACKETS[1379] = _Str_6202;
             OUTGOING_PACKETS[1391] = _Str_11910;
             OUTGOING_PACKETS[1392] = _Str_7202;

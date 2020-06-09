@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_9250 implements IMessageComposer 
+    public class GetBadgePointLimitsComposer implements IMessageComposer
     {
         public function dispose():void
         {
