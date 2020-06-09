@@ -953,7 +953,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming._Str_89._Str_5266;
-	import com.sulake.habbo.communication.messages.incoming._Str_89._Str_7845;
+	import com.sulake.habbo.communication.messages.incoming._Str_89.YouAreControllerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_89._Str_8236;
 	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_11327;
 	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_5270;
@@ -1434,7 +1434,7 @@
             INCOMING_PACKETS[762] = HabboGroupJoinFailedMessageEvent;
             INCOMING_PACKETS[77] = _Str_11155;
             INCOMING_PACKETS[770] = FriendFurniCancelLockMessageEvent;
-            INCOMING_PACKETS[780] = _Str_7845;
+            INCOMING_PACKETS[780] = YouAreControllerMessageEvent;
             INCOMING_PACKETS[793] = IsFirstLoginOfDayEvent;
             INCOMING_PACKETS[800] = TryPhoneNumberResultMessageEvent;
             INCOMING_PACKETS[804] = _Str_8504;

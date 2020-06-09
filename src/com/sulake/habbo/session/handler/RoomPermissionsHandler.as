@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.session.handler
 {
-    import com.sulake.habbo.communication.messages.incoming._Str_89._Str_7845;
+    import com.sulake.habbo.communication.messages.incoming._Str_89.YouAreControllerMessageEvent;
     import com.sulake.habbo.communication.messages.incoming._Str_89._Str_8236;
     import com.sulake.habbo.communication.messages.incoming._Str_89._Str_5266;
     import com.sulake.core.communication.connection.IConnection;
@@ -18,14 +18,14 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_7845(this.onYouAreController));
+            k.addMessageEvent(new YouAreControllerMessageEvent(this.onYouAreController));
             k.addMessageEvent(new _Str_8236(this.onYouAreNotController));
             k.addMessageEvent(new _Str_5266(this.onYouAreOwner));
         }
 
         private function onYouAreController(k:IMessageEvent):void
         {
-            var _local_2:_Str_7845 = (k as _Str_7845);
+            var _local_2:YouAreControllerMessageEvent = (k as YouAreControllerMessageEvent);
             if (_local_2 == null)
             {
                 return;
