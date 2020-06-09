@@ -502,7 +502,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9979;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
 	import com.sulake.habbo.communication.messages.outgoing._Str_566._Str_16121;
-	import com.sulake.habbo.communication.messages.incoming._Str_567.CameraSnapshotMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.camera.CameraSnapshotMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10079;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10157;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;

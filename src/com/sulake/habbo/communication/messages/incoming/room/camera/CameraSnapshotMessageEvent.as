@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.incoming._Str_567
+﻿package com.sulake.habbo.communication.messages.incoming.room.camera
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.camera.CameraSnapshotMessageParser;
