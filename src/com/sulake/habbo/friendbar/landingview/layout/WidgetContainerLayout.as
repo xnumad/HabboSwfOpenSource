@@ -77,7 +77,7 @@
             }
         }
 
-        public static function _Str_26344(search:IWindowContainer, newEtchingPosition:String):void
+        public static function applyColorizableWidgetEtchingPosition(search:IWindowContainer, newEtchingPosition:String):void
         {
             var textWindow:ITextWindow;
             if (search == null)
