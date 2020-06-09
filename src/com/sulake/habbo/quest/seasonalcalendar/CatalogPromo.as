@@ -120,7 +120,7 @@
             {
                 _local_4 = null;
                 _local_5 = null;
-                if (this._productData.productType == CatalogPageMessageProductData.I)
+                if (this._productData.productType == CatalogPageMessageProductData.PRODUCT_TYPE_ITEM)
                 {
                     _local_5 = this._questEngine.roomEngine.getWallItemImage(this._productData._Str_6164, new Vector3d(90, 0, 0), 64, this, 0, this._productData.extraParam);
                 }

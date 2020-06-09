@@ -38,7 +38,7 @@
                 case CatalogPageMessageProductData.S:
                     _local_5 = this._roomEngine.getFurnitureIcon(_arg_2, this);
                     break;
-                case CatalogPageMessageProductData.I:
+                case CatalogPageMessageProductData.PRODUCT_TYPE_ITEM:
                     _local_7 = this._Str_23700("I", _arg_2);
                     if (_local_7 == 1)
                     {

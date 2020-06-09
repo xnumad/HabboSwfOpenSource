@@ -4,7 +4,7 @@
 
     public class CatalogPageMessageProductData
     {
-        public static const I:String = "i";
+        public static const PRODUCT_TYPE_ITEM:String = "i";
         public static const S:String = "s";
         public static const E:String = "e";
         public static const B:String = "b";
