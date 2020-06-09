@@ -107,7 +107,7 @@
             this._Str_2310 = this._Str_2355.connection;
             if (this._Str_2310)
             {
-                this._Str_2310.addMessageEvent(new _Str_8454(this._Str_23208));
+                this._Str_2310.addMessageEvent(new _Str_8454(this.onNewUserExperienceNotCompleteMessage));
                 this._Str_2310.addMessageEvent(new NewUserExperienceGiftOfferEvent(this.onNewUserExperienceGiftOfferMessage));
             }
             context.addLinkEventTracker(this);
@@ -168,7 +168,7 @@
             this._Str_2310.send(new _Str_11372(k));
         }
 
-        private function _Str_23208(k:_Str_8454):void
+        private function onNewUserExperienceNotCompleteMessage(k:_Str_8454):void
         {
             this._Str_22781();
         }
