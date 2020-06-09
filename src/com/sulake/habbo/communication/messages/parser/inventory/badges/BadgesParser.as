@@ -58,7 +58,7 @@
             return this._badgeIds.getValue(k);
         }
 
-        public function _Str_21415():Array
+        public function getAllBadgeCodes():Array
         {
             return this._allBadgeCodes;
         }

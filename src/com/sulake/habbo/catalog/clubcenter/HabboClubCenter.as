@@ -236,7 +236,7 @@
         public function _Str_18002(k:IMessageEvent):void
         {
             var _local_2:BadgesParser = (k as _Str_5147).getParser();
-            this._badgeId = ((BadgeResolver._Str_25437(_local_2._Str_21415())) || (BadgeResolver._Str_16636));
+            this._badgeId = ((BadgeResolver._Str_25437(_local_2.getAllBadgeCodes())) || (BadgeResolver._Str_16636));
         }
 
         private function _Str_25344():Boolean

@@ -426,7 +426,7 @@
             {
                 return;
             }
-            var _local_6:Array = _local_2._Str_21415();
+            var _local_6:Array = _local_2.getAllBadgeCodes();
             var _local_7:Array = _local_2._Str_23681();
             for each (_local_5 in _local_6)
             {
