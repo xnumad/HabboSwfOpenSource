@@ -105,7 +105,7 @@
             return this.getLocalization(_local_4);
         }
 
-        public function _Str_16142(k:String):String
+        public function getAchievementInstruction(k:String):String
         {
             var _local_2:BadgeBaseAndLevel = new BadgeBaseAndLevel(k);
             var _local_3:String = this.getExistingKey([("badge_instruction_" + _local_2.base)]);
