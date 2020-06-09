@@ -264,7 +264,7 @@
     {
         private static const DESKTOP_WINDOW_LAYER:uint = 1;
         private static const DEFAULT_VIEW_LOCATION:Point = new Point(100, 20);
-        private static const _Str_16980:Point = new Point(100, 5);
+        private static const DEFAULT_VIEW_LOCATION_LARGE:Point = new Point(100, 5);
         private static const _Str_18347:uint = 200;
         private static const _Str_12843:int = -1;
 
@@ -1458,7 +1458,7 @@
             var _local_2:XmlAsset = (assets.getAssetByName(k) as XmlAsset);
             this._mainContainer = (this._windowManager.buildFromXML((_local_2.content as XML), DESKTOP_WINDOW_LAYER) as IWindowContainer);
             this._mainContainer.tags.push("habbo_catalog");
-            this._mainContainer.position = _Str_16980;
+            this._mainContainer.position = DEFAULT_VIEW_LOCATION_LARGE;
             this._Str_15729();
             var _local_3:IWindow = this._mainContainer.findChildByName("titlebar_close_button");
             if (_local_3 == null)
