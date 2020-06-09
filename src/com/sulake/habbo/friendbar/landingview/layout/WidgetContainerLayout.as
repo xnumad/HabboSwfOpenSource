@@ -64,7 +64,7 @@
             }
         }
 
-        public static function _Str_26390(search:IWindowContainer, newEtchingColor:uint):void
+        public static function applyColorizableWidgetEtchingColor(search:IWindowContainer, newEtchingColor:uint):void
         {
             var textWindow:ITextWindow;
             if (search == null)
