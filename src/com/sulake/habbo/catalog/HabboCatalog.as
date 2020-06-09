@@ -553,7 +553,7 @@
             this.addMessageEvent(new VoucherRedeemOkMessageEvent(this._Str_25682));
             this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
             this.addMessageEvent(new _Str_8409(this._Str_23986));
-            this.addMessageEvent(new _Str_8530(this._Str_24685));
+            this.addMessageEvent(new _Str_8530(this.onLimitedEditionSoldOut));
             this.addMessageEvent(new PurchaseNotAllowedMessageEvent(this.onPurchaseNotAllowed));
             this.addMessageEvent(new GiftWrappingConfigurationEvent(this._Str_23158));
             this.addMessageEvent(new PurchaseErrorMessageEvent(this.onPurchaseError));
@@ -2948,7 +2948,7 @@
             this._utils._Str_24024();
         }
 
-        private function _Str_24685(k:_Str_8530):void
+        private function onLimitedEditionSoldOut(k:_Str_8530):void
         {
             this._windowManager.alert("${catalog.alert.limited_edition_sold_out.title}", "${catalog.alert.limited_edition_sold_out.message}", 0, this._Str_7211);
             if (this._purchaseConfirmationDialog != null)
