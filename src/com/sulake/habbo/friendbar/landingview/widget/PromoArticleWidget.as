@@ -184,7 +184,7 @@
         private function _Str_24556():void
         {
             this._landingView.removeUpdateReceiver(this);
-            this._Str_17062(1);
+            this.setBlend(1);
         }
 
         private function _Str_24223():void
@@ -253,7 +253,7 @@
             this.refresh();
         }
 
-        private function _Str_17062(k:Number):void
+        private function setBlend(k:Number):void
         {
             this._container.findChildByName("promo_title").blend = k;
             this._container.findChildByName("promo_text").blend = k;
@@ -266,7 +266,7 @@
             var _local_2:uint = (this._fadePhase + k);
             if (this._fadePhase < _Str_6534)
             {
-                this._Str_17062(Math.max(0, (1 - (this._fadePhase / _Str_6534))));
+                this.setBlend(Math.max(0, (1 - (this._fadePhase / _Str_6534))));
                 if (_local_2 >= _Str_6534)
                 {
                     this.refreshContent();
@@ -274,7 +274,7 @@
             }
             else
             {
-                this._Str_17062(Math.min(1, ((this._fadePhase - _Str_6534) / _Str_6534)));
+                this.setBlend(Math.min(1, ((this._fadePhase - _Str_6534) / _Str_6534)));
             }
             this._fadePhase = _local_2;
             if (this._fadePhase >= (_Str_6534 * 2))
