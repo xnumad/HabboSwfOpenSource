@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.camera.CameraSnapshotMessageParser;
 
-    public class _Str_15969 extends MessageEvent 
+    public class CameraSnapshotMessageEvent extends MessageEvent
     {
-        public function _Str_15969(k:Function)
+        public function CameraSnapshotMessageEvent(k:Function)
         {
             super(k, CameraSnapshotMessageParser);
         }

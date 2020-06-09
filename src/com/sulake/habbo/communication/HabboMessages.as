@@ -502,7 +502,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9979;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
 	import com.sulake.habbo.communication.messages.outgoing._Str_566._Str_16121;
-	import com.sulake.habbo.communication.messages.incoming._Str_567._Str_15969;
+	import com.sulake.habbo.communication.messages.incoming._Str_567.CameraSnapshotMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10079;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10157;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;
@@ -1393,7 +1393,7 @@
             INCOMING_PACKETS[44] = LimitedOfferAppearingNextMessageEvent;
             INCOMING_PACKETS[448] = YouArePlayingGameMessageEvent;
             INCOMING_PACKETS[462] = _Str_9229;
-            INCOMING_PACKETS[463] = _Str_15969;
+            INCOMING_PACKETS[463] = CameraSnapshotMessageEvent;
             INCOMING_PACKETS[468] = RecyclerFinishedEvent;
             INCOMING_PACKETS[469] = _Str_8016;
             INCOMING_PACKETS[482] = _Str_6001;
