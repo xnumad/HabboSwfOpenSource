@@ -22,7 +22,7 @@
 
     public class CommunityGoalWidget implements IUpdateReceiver, ILandingViewWidget, ISettingsAwareWidget 
     {
-        private static const _Str_5070:Array = [0, 8, 16, 23];
+        private static const CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES:Array = [0, 8, 16, 23];
         private static const _Str_18831:int = 1500;
         private static const _Str_17898:int = 1000;
 
@@ -98,12 +98,12 @@
 
         protected function getCurrentNeedleFrame():int
         {
-            if (this._Str_3597.communityHighestAchievedLevel >= (_Str_5070.length - 1))
+            if (this._Str_3597.communityHighestAchievedLevel >= (CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length - 1))
             {
-                return _Str_5070[(_Str_5070.length - 1)];
+                return CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES[(CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length - 1)];
             }
-            var k:int = _Str_5070[this._Str_3597.communityHighestAchievedLevel];
-            var _local_2:int = (_Str_5070[(this._Str_3597.communityHighestAchievedLevel + 1)] - k);
+            var k:int = CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES[this._Str_3597.communityHighestAchievedLevel];
+            var _local_2:int = (CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES[(this._Str_3597.communityHighestAchievedLevel + 1)] - k);
             return k + Math.floor(((this._Str_3597.percentCompletionTowardsNextLevel * (_local_2 + 0.001)) / 100));
         }
 
@@ -113,7 +113,7 @@
             if (((!(this._Str_3597 == null)) && (!(this._Str_3597.goalCode == null))))
             {
                 k = 0;
-                while (k < _Str_5070.length)
+                while (k < CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length)
                 {
                     this._Str_17143(this._Str_3186.findChildByName(("meter_level_" + k)));
                     if (k > 0)
@@ -143,7 +143,7 @@
                 this._Str_16817();
             }
             var k:int = 1;
-            while (k < _Str_5070.length)
+            while (k < CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length)
             {
                 this._Str_3186.findChildByName(("meter_level_" + k)).visible = false;
                 this._Str_3186.findChildByName((("meter_level_" + k) + "_icon")).visible = false;
@@ -178,9 +178,9 @@
         {
             var _local_4:Boolean;
             var _local_3:int = 1;
-            while (_local_3 < _Str_5070.length)
+            while (_local_3 < CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length)
             {
-                _local_4 = ((_arg_2) && (k >= _Str_5070[_local_3]));
+                _local_4 = ((_arg_2) && (k >= CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES[_local_3]));
                 this._Str_3186.findChildByName(("meter_level_" + _local_3)).visible = _local_4;
                 this._Str_3186.findChildByName((("meter_level_" + _local_3) + "_icon")).visible = _local_4;
                 this._Str_3186.findChildByName((("meter_level_" + _local_3) + "_icon_locked")).visible = (!(_local_4));
