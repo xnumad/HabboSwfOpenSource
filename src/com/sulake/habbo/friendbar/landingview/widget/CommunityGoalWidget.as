@@ -35,12 +35,12 @@
         private var _buildupProgress:Number = 0;
         private var _isInitialized:Boolean = false;
         private var _isInteractive:Boolean = true;
-        private var _Str_11816:Boolean = false;
+        private var _withVoting:Boolean = false;
 
         public function CommunityGoalWidget(k:HabboLandingView, _arg_2:Boolean=false)
         {
             this._landingView = k;
-            this._Str_11816 = _arg_2;
+            this._withVoting = _arg_2;
         }
 
         public function get container():IWindow
@@ -68,9 +68,9 @@
         {
             var k:IWindow;
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
-            this._communityGoalContainer = IWindowContainer(((this._Str_11816) ? (this._landingView.getXmlWindow("community_goal_voting")) : this._landingView.getXmlWindow("community_goal")));
+            this._communityGoalContainer = IWindowContainer(((this._withVoting) ? (this._landingView.getXmlWindow("community_goal_voting")) : this._landingView.getXmlWindow("community_goal")));
             this._meterNeedle = IStaticBitmapWrapperWindow(this._communityGoalContainer.findChildByName("meter_needle"));
-            if (!this._Str_11816)
+            if (!this._withVoting)
             {
                 k = this._communityGoalContainer.findChildByName("community_catalog_button");
                 this._isInteractive = this._landingView.getBoolean("landing.view.community.interactive");
@@ -158,7 +158,7 @@
             {
                 this._landingView.localizationManager.registerParameter(("landing.view.community.meter." + this._communityProgress.goalCode), "totalAmount", this._communityProgress._Str_12030.toString());
                 this._Str_7300("community_total_status", "landing.view.community.meter");
-                if (this._Str_11816)
+                if (this._withVoting)
                 {
                     this._Str_7300("community_vote_one_button", "landing.view.vote_one_button.text");
                     this._Str_7300("community_vote_two_button", "landing.view.vote_two_button.text");
@@ -166,7 +166,7 @@
             }
             var _local_3:ITextWindow = ITextWindow(this._communityGoalContainer.findChildByName("goal_info"));
             _local_3.height = (_local_3.textHeight + 6);
-            if (!this._Str_11816)
+            if (!this._withVoting)
             {
                 this._communityGoalContainer.findChildByName("community_catalog_button").visible = this._isInteractive;
             }
