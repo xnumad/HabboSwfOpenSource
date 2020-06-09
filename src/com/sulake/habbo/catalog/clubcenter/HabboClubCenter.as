@@ -30,7 +30,7 @@
     import com.sulake.habbo.session.events.BadgeImageReadyEvent;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendKickbackInfoMessageParser;
     import flash.utils.getTimer;
-    import com.sulake.habbo.communication.messages.parser.inventory.badges._Str_6941;
+    import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgesParser;
     import com.sulake.habbo.catalog.clubcenter.util.BadgeResolver;
     import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_7891;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7373;
@@ -235,7 +235,7 @@
 
         public function _Str_18002(k:IMessageEvent):void
         {
-            var _local_2:_Str_6941 = (k as _Str_5147).getParser();
+            var _local_2:BadgesParser = (k as _Str_5147).getParser();
             this._badgeId = ((BadgeResolver._Str_25437(_local_2._Str_21415())) || (BadgeResolver._Str_16636));
         }
 

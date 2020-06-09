@@ -77,7 +77,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect._Str_7054;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.inventory.events.HabboInventoryHabboClubEvent;
-    import com.sulake.habbo.communication.messages.parser.inventory.badges._Str_6941;
+    import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgesParser;
     import com.sulake.habbo.inventory.badges.BadgesModel;
     import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgeAndPointLimit;
     import com.sulake.habbo.communication.messages.parser.inventory.badges._Str_7305;
@@ -416,7 +416,7 @@
             var _local_5:String;
             var _local_8:Boolean;
             var _local_9:int;
-            var _local_2:_Str_6941 = (k as _Str_5147).getParser();
+            var _local_2:BadgesParser = (k as _Str_5147).getParser();
             if (_local_2 == null)
             {
                 return;
