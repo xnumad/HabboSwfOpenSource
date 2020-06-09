@@ -23,7 +23,7 @@
             this._voteOptionOneButton = _Str_3186.findChildByName("community_vote_one_button");
             this._voteOptionOneButton.procedure = this.onVoteOptionOneClick;
             this._voteOptionTwoButton = _Str_3186.findChildByName("community_vote_two_button");
-            this._voteOptionTwoButton.procedure = this._Str_23139;
+            this._voteOptionTwoButton.procedure = this.onVoteOptionTwoClick;
             _Str_2298.communicationManager.addHabboConnectionMessageEvent(new _Str_9665(this._Str_9863));
         }
 
@@ -53,7 +53,7 @@
             }
         }
 
-        private function _Str_23139(k:WindowEvent, _arg_2:IWindow):void
+        private function onVoteOptionTwoClick(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
