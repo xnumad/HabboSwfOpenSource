@@ -195,8 +195,8 @@
                 _local_8 = this._controller.catalog.getProductData(_local_6.localizationId);
                 for each (_local_9 in _local_6.products)
                 {
-                    _local_11 = this._controller.catalog.getFurnitureData(_local_9._Str_6164, _local_9.productType);
-                    _local_12 = new Product(_local_9.productType, _local_9._Str_6164, _local_9.extraParam, _local_9.productCount, _local_8, _local_11, this._catalog);
+                    _local_11 = this._controller.catalog.getFurnitureData(_local_9.furniClassId, _local_9.productType);
+                    _local_12 = new Product(_local_9.productType, _local_9.furniClassId, _local_9.extraParam, _local_9.productCount, _local_8, _local_11, this._catalog);
                     _local_7.push(_local_12);
                 }
                 k = new Offer(_local_6.offerId, _local_6.localizationId, _local_6.isRent, _local_6.priceInCredits, _local_6.priceInActivityPoints, _local_6.activityPointType, _local_6.giftable, _local_6.clubLevel, _local_7, _local_6.bundlePurchaseAllowed, this._catalog);

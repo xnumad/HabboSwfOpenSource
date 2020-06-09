@@ -44,7 +44,7 @@
             return this._productType;
         }
 
-        public function get _Str_6164():int
+        public function get furniClassId():int
         {
             return this._furniClassId;
         }

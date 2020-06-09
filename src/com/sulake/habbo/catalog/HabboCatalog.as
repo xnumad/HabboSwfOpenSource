@@ -1805,8 +1805,8 @@
                 _local_13 = this.getProductData(_local_11.localizationId);
                 for each (_local_14 in _local_11.products)
                 {
-                    _local_16 = this.getFurnitureData(_local_14._Str_6164, _local_14.productType);
-                    _local_12.push(new Product(_local_14.productType, _local_14._Str_6164, _local_14.extraParam, _local_14.productCount, _local_13, _local_16, this, _local_14.uniqueLimitedItem, _local_14.uniqueLimitedItemSeriesSize, _local_14.uniqueLimitedItemsLeft));
+                    _local_16 = this.getFurnitureData(_local_14.furniClassId, _local_14.productType);
+                    _local_12.push(new Product(_local_14.productType, _local_14.furniClassId, _local_14.extraParam, _local_14.productCount, _local_13, _local_16, this, _local_14.uniqueLimitedItem, _local_14.uniqueLimitedItemSeriesSize, _local_14.uniqueLimitedItemsLeft));
                 }
                 if (((_local_12.length == 0) && (!(HabboCatalogUtils._Str_21831(_local_11.localizationId)))))
                 {
@@ -2977,8 +2977,8 @@
             var _local_6:IProductData = this.getProductData(_local_3.localizationId);
             for each (_local_4 in _local_3.products)
             {
-                _local_8 = this.getFurnitureData(_local_4._Str_6164, _local_4.productType);
-                _local_5.push(new Product(_local_4.productType, _local_4._Str_6164, _local_4.extraParam, _local_4.productCount, _local_6, _local_8, this, _local_4.uniqueLimitedItem, _local_4.uniqueLimitedItemSeriesSize, _local_4.uniqueLimitedItemsLeft));
+                _local_8 = this.getFurnitureData(_local_4.furniClassId, _local_4.productType);
+                _local_5.push(new Product(_local_4.productType, _local_4.furniClassId, _local_4.extraParam, _local_4.productCount, _local_6, _local_8, this, _local_4.uniqueLimitedItem, _local_4.uniqueLimitedItemSeriesSize, _local_4.uniqueLimitedItemsLeft));
             }
             _local_7 = new Offer(_local_3.offerId, _local_3.localizationId, _local_3.isRent, _local_3.priceInCredits, _local_3.priceInActivityPoints, _local_3.activityPointType, _local_3.giftable, _local_3.clubLevel, _local_5, _local_3.bundlePurchaseAllowed, this);
             if (!this._Str_19704(_local_7))

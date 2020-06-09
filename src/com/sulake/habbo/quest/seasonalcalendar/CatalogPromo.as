@@ -122,13 +122,13 @@
                 _local_5 = null;
                 if (this._productData.productType == CatalogPageMessageProductData.PRODUCT_TYPE_ITEM)
                 {
-                    _local_5 = this._questEngine.roomEngine.getWallItemImage(this._productData._Str_6164, new Vector3d(90, 0, 0), 64, this, 0, this._productData.extraParam);
+                    _local_5 = this._questEngine.roomEngine.getWallItemImage(this._productData.furniClassId, new Vector3d(90, 0, 0), 64, this, 0, this._productData.extraParam);
                 }
                 else
                 {
                     if (this._productData.productType == CatalogPageMessageProductData.PRODUCT_TYPE_STUFF)
                     {
-                        _local_5 = this._questEngine.roomEngine.getFurnitureImage(this._productData._Str_6164, new Vector3d(90, 0, 0), 64, this);
+                        _local_5 = this._questEngine.roomEngine.getFurnitureImage(this._productData.furniClassId, new Vector3d(90, 0, 0), 64, this);
                     }
                 }
                 if (((!(_local_5 == null)) && (!(_local_5.data == null))))
