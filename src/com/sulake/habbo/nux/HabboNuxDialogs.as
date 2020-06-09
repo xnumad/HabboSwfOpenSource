@@ -144,7 +144,7 @@
 
         public function _Str_17239():void
         {
-            this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum._Str_4917));
+            this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NON_EXISTING));
         }
 
         public function onReject():void

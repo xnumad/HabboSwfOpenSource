@@ -219,7 +219,7 @@
             }
             switch (_local_3)
             {
-                case PhoneNumberStatusEnum._Str_4917:
+                case PhoneNumberStatusEnum.NON_EXISTING:
                 case PhoneNumberStatusEnum._Str_11502:
                     this._Str_16750();
                     return;

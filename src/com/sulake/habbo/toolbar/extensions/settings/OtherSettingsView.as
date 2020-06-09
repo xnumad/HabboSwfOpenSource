@@ -53,10 +53,10 @@
                 ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected = this._toolbar.sessionDataManager.isRoomCameraFollowDisabled;
             }
             var _local_4:Boolean = this._toolbar.getBoolean("sms.identity.verification.enabled");
-            var _local_5:* = (this._toolbar.getInteger("phone.verification.status", PhoneNumberStatusEnum._Str_4917) == PhoneNumberStatusEnum._Str_9489);
-            var _local_6:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum._Str_4917) == ClientPhoneVerificationStatusEnum._Str_9095);
+            var _local_5:* = (this._toolbar.getInteger("phone.verification.status", PhoneNumberStatusEnum.NON_EXISTING) == PhoneNumberStatusEnum._Str_9489);
+            var _local_6:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum.NON_EXISTING) == ClientPhoneVerificationStatusEnum._Str_9095);
             var _local_7:Boolean = this._toolbar.getBoolean("sms.identity.verification.button.enabled");
-            var _local_8:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum._Str_4917) == ClientPhoneVerificationStatusEnum._Str_4917);
+            var _local_8:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum.NON_EXISTING) == ClientPhoneVerificationStatusEnum.NON_EXISTING);
             var _local_9:Boolean = (((_local_4) && (!(_local_5))) && ((_local_6) || ((_local_7) && (_local_8))));
             this._window.findChildByName("btn_reset_phone_number_collection").visible = _local_9;
         }
