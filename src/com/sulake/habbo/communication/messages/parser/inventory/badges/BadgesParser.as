@@ -8,17 +8,17 @@
     {
         private var _allBadgeCodes:Array;
         private var _activeBadgeCodes:Array;
-        private var _Str_4833:Map;
+        private var _badgeIds:Map;
 
 
         public function flush():Boolean
         {
             this._allBadgeCodes = [];
             this._activeBadgeCodes = [];
-            if (this._Str_4833)
+            if (this._badgeIds)
             {
-                this._Str_4833.dispose();
-                this._Str_4833 = null;
+                this._badgeIds.dispose();
+                this._badgeIds = null;
             }
             return true;
         }
@@ -29,14 +29,14 @@
             var _local_3:String;
             var _local_8:int;
             this._allBadgeCodes = new Array();
-            this._Str_4833 = new Map();
+            this._badgeIds = new Map();
             var _local_4:int = k.readInteger();
             var _local_5:int;
             while (_local_5 < _local_4)
             {
                 _local_2 = k.readInteger();
                 _local_3 = k.readString();
-                this._Str_4833.add(_local_3, _local_2);
+                this._badgeIds.add(_local_3, _local_2);
                 this._allBadgeCodes.push(_local_3);
                 _local_5++;
             }
@@ -55,7 +55,7 @@
 
         public function getBadgeId(k:String):int
         {
-            return this._Str_4833.getValue(k);
+            return this._badgeIds.getValue(k);
         }
 
         public function _Str_21415():Array
