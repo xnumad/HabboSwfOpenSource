@@ -107,7 +107,7 @@
 
         public function set settings(k:CommonWidgetSettings):void
         {
-            WidgetContainerLayout._Str_5630(this._container, k);
+            WidgetContainerLayout.applyCommonWidgetSettings(this._container, k);
         }
     }
 }

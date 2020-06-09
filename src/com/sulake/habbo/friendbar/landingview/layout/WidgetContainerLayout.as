@@ -90,7 +90,7 @@
             }
         }
 
-        public static function _Str_5630(search:IWindowContainer, _arg_2:CommonWidgetSettings):void
+        public static function applyCommonWidgetSettings(search:IWindowContainer, _arg_2:CommonWidgetSettings):void
         {
             var _local_3:ITextWindow;
             if (search == null)

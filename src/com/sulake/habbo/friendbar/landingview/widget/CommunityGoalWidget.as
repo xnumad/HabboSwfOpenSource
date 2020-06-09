@@ -240,7 +240,7 @@
 
         public function set settings(k:CommonWidgetSettings):void
         {
-            WidgetContainerLayout._Str_5630(this._communityGoalContainer, k);
+            WidgetContainerLayout.applyCommonWidgetSettings(this._communityGoalContainer, k);
         }
 
         protected function get communityProgress():CommunityGoalProgress

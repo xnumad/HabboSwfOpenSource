@@ -129,7 +129,7 @@
 
         public function set settings(k:CommonWidgetSettings):void
         {
-            WidgetContainerLayout._Str_5630(this._container, k);
+            WidgetContainerLayout.applyCommonWidgetSettings(this._container, k);
         }
 
         private function _Str_11199(k:int, _arg_2:int):void
