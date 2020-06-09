@@ -148,7 +148,7 @@
                     return;
                 case PhoneNumberStatusEnum.ERROR:
                 case PhoneNumberStatusEnum.RATE_LIMIT:
-                case PhoneNumberStatusEnum._Str_13712:
+                case PhoneNumberStatusEnum.NUMBER_MISTYPED:
                 case PhoneNumberStatusEnum._Str_17772:
                     if (((!(this._Str_7950)) && (!(this._Str_9469))))
                     {
@@ -230,7 +230,7 @@
                     return;
                 case PhoneNumberStatusEnum.ERROR:
                 case PhoneNumberStatusEnum.RATE_LIMIT:
-                case PhoneNumberStatusEnum._Str_13712:
+                case PhoneNumberStatusEnum.NUMBER_MISTYPED:
                     Logger.log("INVALID STATE!! Phone number / verify errors should not be handled here!");
                     return;
             }
