@@ -2042,7 +2042,7 @@
         private function onActivityPointNotification(k:IMessageEvent):void
         {
             var _local_2:HabboActivityPointNotificationMessageEvent = (k as HabboActivityPointNotificationMessageEvent);
-            this._purse._Str_18527[_local_2.type] = _local_2.amount;
+            this._purse.activityPoints[_local_2.type] = _local_2.amount;
             this._Str_12017();
             if (((!(this._soundManager == null)) && (_local_2.type == ActivityPointTypeEnum.DUCKET)))
             {
@@ -2057,7 +2057,7 @@
             var _local_3:String;
             var _local_4:int;
             var _local_2:ActivityPointsEvent = (k as ActivityPointsEvent);
-            this._purse._Str_18527 = _local_2.points;
+            this._purse.activityPoints = _local_2.points;
             this._Str_12017();
             for (_local_3 in _local_2.points)
             {

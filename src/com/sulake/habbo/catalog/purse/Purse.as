@@ -103,12 +103,12 @@
             this._pastVipDays = k;
         }
 
-        public function get _Str_18527():Dictionary
+        public function get activityPoints():Dictionary
         {
             return this._activityPoints;
         }
 
-        public function set _Str_18527(k:Dictionary):void
+        public function set activityPoints(k:Dictionary):void
         {
             this._lastUpdated = getTimer();
             this._activityPoints = k;
