@@ -69,7 +69,7 @@
             return this._questEngine == null;
         }
 
-        public function _Str_4970(k:int, _arg_2:int):void
+        public function onActivityPoints(k:int, _arg_2:int):void
         {
             if (k == this._Str_13323())
             {

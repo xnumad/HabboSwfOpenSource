@@ -146,11 +146,11 @@
             return this._seasonalCalendarWindow;
         }
 
-        public function _Str_4970(k:int, _arg_2:int):void
+        public function onActivityPoints(k:int, _arg_2:int):void
         {
             if (this._seasonalCalendarWindow)
             {
-                this._seasonalCalendarWindow._Str_4970(k, _arg_2);
+                this._seasonalCalendarWindow.onActivityPoints(k, _arg_2);
             }
         }
     }

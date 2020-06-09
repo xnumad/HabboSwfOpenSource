@@ -142,9 +142,9 @@
             this._questEngine._Str_9649();
         }
 
-        public function _Str_4970(k:int, _arg_2:int):void
+        public function onActivityPoints(k:int, _arg_2:int):void
         {
-            this._catalogPromo._Str_4970(k, _arg_2);
+            this._catalogPromo.onActivityPoints(k, _arg_2);
         }
 
         private function _Str_22256(k:Array):int

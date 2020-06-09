@@ -76,7 +76,7 @@
             _local_2.addHabboConnectionMessageEvent(new ObjectAddMessageEvent(this._Str_19159));
             _local_2.addHabboConnectionMessageEvent(new IsFirstLoginOfDayEvent(this._Str_22814));
             _local_2.addHabboConnectionMessageEvent(new QuestCompletedMessageEvent(this._Str_5657));
-            _local_2.addHabboConnectionMessageEvent(new ActivityPointsEvent(this._Str_4970));
+            _local_2.addHabboConnectionMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
             _local_2.addHabboConnectionMessageEvent(new AchievementsEvent(this._Str_17329));
             _local_2.addHabboConnectionMessageEvent(new QuestCancelledMessageEvent(this._Str_5242));
         }
@@ -251,24 +251,24 @@
             }
         }
 
-        private function _Str_4970(k:IMessageEvent):void
+        private function onActivityPoints(k:IMessageEvent):void
         {
             var _local_3:int;
             var _local_4:Object;
             var _local_2:Dictionary = ActivityPointsEvent(k).points;
             for each (_local_3 in ActivityPointTypeEnum.values())
             {
-                this._questEngine._Str_3398._Str_4970(_local_3, 0);
+                this._questEngine._Str_3398.onActivityPoints(_local_3, 0);
             }
             for (_local_4 in _local_2)
             {
-                this._questEngine._Str_3398._Str_4970(int(_local_4), _local_2[_local_4]);
+                this._questEngine._Str_3398.onActivityPoints(int(_local_4), _local_2[_local_4]);
             }
         }
 
         private function _Str_24427(k:HabboActivityPointNotificationMessageEvent):void
         {
-            this._questEngine._Str_3398._Str_4970(k.type, k.amount);
+            this._questEngine._Str_3398.onActivityPoints(k.type, k.amount);
         }
     }
 }

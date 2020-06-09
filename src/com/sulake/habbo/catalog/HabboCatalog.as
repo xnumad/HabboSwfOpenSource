@@ -567,7 +567,7 @@
             this.addMessageEvent(new _Str_7169(this._Str_25537));
             this.addMessageEvent(new _Str_5417(this._Str_24973));
             this.addMessageEvent(new _Str_6344(this._Str_23861));
-            this.addMessageEvent(new ActivityPointsEvent(this._Str_4970));
+            this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
             this.addMessageEvent(new _Str_5264(this._Str_12366));
             this.addMessageEvent(new UserCreditsEvent(this.onCreditBalance));
             this.addMessageEvent(new GuildMembershipsMessageEvent(this._Str_24089));
@@ -2052,7 +2052,7 @@
             events.dispatchEvent(new PurseUpdateEvent());
         }
 
-        private function _Str_4970(k:IMessageEvent):void
+        private function onActivityPoints(k:IMessageEvent):void
         {
             var _local_3:String;
             var _local_4:int;
