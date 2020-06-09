@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.landingview.PromoArticlesMessageParser;
 
-    public class _Str_9504 extends MessageEvent implements IMessageEvent 
+    public class PromoArticlesMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9504(k:Function)
+        public function PromoArticlesMessageEvent(k:Function)
         {
             super(k, PromoArticlesMessageParser);
         }

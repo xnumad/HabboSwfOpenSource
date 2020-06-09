@@ -6,7 +6,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.landingview._Str_9504;
+    import com.sulake.habbo.communication.messages.incoming.landingview.PromoArticlesMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.landingview.GetPromoArticlesComposer;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.layout.WidgetContainerLayout;
@@ -43,7 +43,7 @@
         {
             this._container = IWindowContainer(this._landingView.getXmlWindow("promo_article"));
             this._container.procedure = this.onMouse;
-            this._articlesListener = new _Str_9504(this.onPromoArticles);
+            this._articlesListener = new PromoArticlesMessageEvent(this.onPromoArticles);
             this._landingView.communicationManager.addHabboConnectionMessageEvent(this._articlesListener);
         }
 
@@ -242,7 +242,7 @@
             _local_3.assetUri = ("progress_disk_flat_" + ((_arg_2) ? "on" : "off"));
         }
 
-        private function onPromoArticles(k:_Str_9504):void
+        private function onPromoArticles(k:PromoArticlesMessageEvent):void
         {
             var _local_2:PromoArticleData;
             this._articles = [];

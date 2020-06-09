@@ -297,7 +297,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7023;
 	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7289;
 	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_8089;
-	import com.sulake.habbo.communication.messages.incoming.landingview._Str_9504;
+	import com.sulake.habbo.communication.messages.incoming.landingview.PromoArticlesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.layout.RoomEntryTileMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.layout.RoomOccupiedTilesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
@@ -1252,7 +1252,7 @@
             INCOMING_PACKETS[2819] = _Str_16028;
             INCOMING_PACKETS[2824] = PetLevelUpdateEvent;
             INCOMING_PACKETS[2833] = MysteryBoxKeysMessageEvent;
-            INCOMING_PACKETS[286] = _Str_9504;
+            INCOMING_PACKETS[286] = PromoArticlesMessageEvent;
             INCOMING_PACKETS[2866] = _Str_9413;
             INCOMING_PACKETS[2867] = _Str_6944;
             INCOMING_PACKETS[2873] = TradingNoSuchItemEvent;
