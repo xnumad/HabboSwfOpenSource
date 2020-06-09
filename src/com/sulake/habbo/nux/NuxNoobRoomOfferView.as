@@ -66,7 +66,7 @@
 
         private function onCloseHandler(k:WindowMouseEvent):void
         {
-            this._component._Str_11922();
+            this._component.destroyNoobRoomOfferView();
         }
     }
 }

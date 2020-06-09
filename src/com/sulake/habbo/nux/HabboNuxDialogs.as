@@ -97,7 +97,7 @@
                 this._windowManager = null;
             }
             this.destroyGiftSelectionView();
-            this._Str_11922();
+            this.destroyNoobRoomOfferView();
             this.destroyNuxOfferView();
             super.dispose();
         }
@@ -134,7 +134,7 @@
                     }
                     else
                     {
-                        this._Str_11922();
+                        this.destroyNoobRoomOfferView();
                     }
                     return;
                 default:
@@ -195,7 +195,7 @@
             }
             else
             {
-                this._Str_11922();
+                this.destroyNoobRoomOfferView();
             }
         }
 
@@ -264,12 +264,12 @@
             {
                 return;
             }
-            this._Str_11922();
+            this.destroyNoobRoomOfferView();
             this._Str_13625 = new NuxNoobRoomOfferView(this);
             this._Str_2310.send(new EventLogMessageComposer("NewNavigator", "nux.offer.lobby", "nux.offer.lobby"));
         }
 
-        public function _Str_11922():void
+        public function destroyNoobRoomOfferView():void
         {
             if (this._Str_4439)
             {
