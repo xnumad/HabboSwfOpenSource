@@ -9,7 +9,7 @@
     public class CommunityGoalVsModeWidgetWithVoting extends CommunityGoalVsModeWidget
     {
         private var _voteOptionOneButton:IWindow;
-        private var _Str_11586:IWindow;
+        private var _voteOptionTwoButton:IWindow;
         private var _Str_16156:String;
 
         public function CommunityGoalVsModeWidgetWithVoting(k:HabboLandingView)
@@ -22,8 +22,8 @@
             super.initialize();
             this._voteOptionOneButton = _Str_3186.findChildByName("community_vote_one_button");
             this._voteOptionOneButton.procedure = this._Str_22940;
-            this._Str_11586 = _Str_3186.findChildByName("community_vote_two_button");
-            this._Str_11586.procedure = this._Str_23139;
+            this._voteOptionTwoButton = _Str_3186.findChildByName("community_vote_two_button");
+            this._voteOptionTwoButton.procedure = this._Str_23139;
             _Str_2298.communicationManager.addHabboConnectionMessageEvent(new _Str_9665(this._Str_9863));
         }
 
@@ -36,9 +36,9 @@
                 {
                     this._voteOptionOneButton.visible = (_Str_6672.personalContributionScore == 0);
                 }
-                if (this._Str_11586 != null)
+                if (this._voteOptionTwoButton != null)
                 {
-                    this._Str_11586.visible = (_Str_6672.personalContributionScore == 0);
+                    this._voteOptionTwoButton.visible = (_Str_6672.personalContributionScore == 0);
                 }
             }
         }
@@ -74,7 +74,7 @@
         private function _Str_16270():void
         {
             this._voteOptionOneButton.visible = false;
-            this._Str_11586.visible = false;
+            this._voteOptionTwoButton.visible = false;
         }
     }
 }
