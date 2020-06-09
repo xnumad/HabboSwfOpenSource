@@ -10,7 +10,7 @@
     {
         private var _voteOptionOneButton:IWindow;
         private var _voteOptionTwoButton:IWindow;
-        private var _Str_16156:String;
+        private var _voteOption:String;
 
         public function CommunityGoalVsModeWidgetWithVoting(k:HabboLandingView)
         {
