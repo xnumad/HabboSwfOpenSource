@@ -207,13 +207,13 @@
             {
                 if (k.type == WindowMouseEvent.OVER)
                 {
-                    this._Str_19342(_arg_2, true);
+                    this.hoverOverNavigation(_arg_2, true);
                 }
                 else
                 {
                     if (((k.type == WindowMouseEvent.OUT) && (!(_arg_2.id == this._currentArticle))))
                     {
-                        this._Str_19342(_arg_2, false);
+                        this.hoverOverNavigation(_arg_2, false);
                     }
                 }
             }
@@ -232,7 +232,7 @@
             }
         }
 
-        private function _Str_19342(k:IWindow, _arg_2:Boolean):void
+        private function hoverOverNavigation(k:IWindow, _arg_2:Boolean):void
         {
             var _local_3:IStaticBitmapWrapperWindow = IStaticBitmapWrapperWindow(IWindowContainer(k).getChildAt(0));
             if (!_local_3)
