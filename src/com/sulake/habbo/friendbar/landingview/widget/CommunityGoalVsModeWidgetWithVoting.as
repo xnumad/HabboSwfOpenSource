@@ -30,15 +30,15 @@
         override public function refresh():void
         {
             super.refresh();
-            if (_Str_6672 != null)
+            if (communityProgress != null)
             {
                 if (this._voteOptionOneButton != null)
                 {
-                    this._voteOptionOneButton.visible = (_Str_6672.personalContributionScore == 0);
+                    this._voteOptionOneButton.visible = (communityProgress.personalContributionScore == 0);
                 }
                 if (this._voteOptionTwoButton != null)
                 {
-                    this._voteOptionTwoButton.visible = (_Str_6672.personalContributionScore == 0);
+                    this._voteOptionTwoButton.visible = (communityProgress.personalContributionScore == 0);
                 }
             }
         }

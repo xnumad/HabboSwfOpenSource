@@ -243,7 +243,7 @@
             WidgetContainerLayout._Str_5630(this._communityGoalContainer, k);
         }
 
-        protected function get _Str_6672():CommunityGoalProgress
+        protected function get communityProgress():CommunityGoalProgress
         {
             return this._communityProgress;
         }

@@ -14,19 +14,19 @@
 
         override protected function getCurrentNeedleFrame():int
         {
-            if (_Str_6672.communityHighestAchievedLevel <= NEEDLE_LEVELS[0])
+            if (communityProgress.communityHighestAchievedLevel <= NEEDLE_LEVELS[0])
             {
                 return int(Math.round(NEEDLE_FRAMES[0]));
             }
-            if (_Str_6672.communityHighestAchievedLevel >= NEEDLE_LEVELS[(NEEDLE_LEVELS.length - 1)])
+            if (communityProgress.communityHighestAchievedLevel >= NEEDLE_LEVELS[(NEEDLE_LEVELS.length - 1)])
             {
                 return int(Math.round(NEEDLE_FRAMES[(NEEDLE_LEVELS.length - 1)]));
             }
-            var k:int = ((_Str_6672.scoreRemainingUntilNextLevel < 0) ? -1 : 1);
-            var _local_2:int = _Str_6672.communityHighestAchievedLevel;
+            var k:int = ((communityProgress.scoreRemainingUntilNextLevel < 0) ? -1 : 1);
+            var _local_2:int = communityProgress.communityHighestAchievedLevel;
             var _local_3:Number = NEEDLE_FRAMES[NEEDLE_LEVELS.indexOf(_local_2)];
             var _local_4:Number = Math.abs((NEEDLE_FRAMES[NEEDLE_LEVELS.indexOf((_local_2 + k))] - NEEDLE_FRAMES[NEEDLE_LEVELS.indexOf(_local_2)]));
-            return Math.round((_local_3 + (((_Str_6672.percentCompletionTowardsNextLevel / 100) * _local_4) * k)));
+            return Math.round((_local_3 + (((communityProgress.percentCompletionTowardsNextLevel / 100) * _local_4) * k)));
         }
 
         override public function update(k:uint):void
