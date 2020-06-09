@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.friendbar.landingview.widget.elements
 {
     import com.sulake.habbo.friendbar.landingview.interfaces.elements.IFloatingElement;
-    import com.sulake.habbo.communication.messages.incoming._Str_87.IsBadgeRequestFulfilledEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.badges.IsBadgeRequestFulfilledEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_4585;
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;

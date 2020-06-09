@@ -942,10 +942,10 @@
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_10459;
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_12393;
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_7271;
-	import com.sulake.habbo.communication.messages.incoming._Str_87.BadgesEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_87.BadgeReceivedEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_87.IsBadgeRequestFulfilledEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_87.BadgePointLimitsEvent;
+	import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgesEvent;
+	import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgeReceivedEvent;
+	import com.sulake.habbo.communication.messages.incoming.inventory.badges.IsBadgeRequestFulfilledEvent;
+	import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgePointLimitsEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.WhisperMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.CancelTypingMessageComposer;

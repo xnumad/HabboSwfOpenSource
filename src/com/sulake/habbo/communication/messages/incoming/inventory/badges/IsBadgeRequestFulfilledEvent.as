@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.incoming._Str_87
+﻿package com.sulake.habbo.communication.messages.incoming.inventory.badges
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.badges.IsBadgeRequestFulfilledParser;

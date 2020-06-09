@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.clothes.FigureSetIdsEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
     import com.sulake.habbo.communication.messages.incoming._Str_433._Str_9129;
-    import com.sulake.habbo.communication.messages.incoming._Str_87.BadgesEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.OpenConnectionMessageEvent;
@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOpenParser;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_87.BadgeReceivedEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgeReceivedEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6450;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9259;
@@ -56,7 +56,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
-    import com.sulake.habbo.communication.messages.incoming._Str_87.BadgePointLimitsEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgePointLimitsEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.furni.FurniListParser;
     import com.sulake.habbo.inventory.furni.FurniModel;
     import com.sulake.habbo.inventory.events.HabboInventoryFurniListParsedEvent;

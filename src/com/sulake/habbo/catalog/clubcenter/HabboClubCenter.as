@@ -26,7 +26,7 @@
     import com.sulake.iid.IIDHabboToolbar;
     import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendKickbackInfoMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_87.BadgesEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgesEvent;
     import com.sulake.habbo.session.events.BadgeImageReadyEvent;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendKickbackInfoMessageParser;
     import flash.utils.getTimer;

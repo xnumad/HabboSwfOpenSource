@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_87.BadgesEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgesEvent;
     import com.sulake.habbo.catalog.IPurchasableOffer;
     import com.sulake.habbo.catalog.viewer.widgets.events._Str_3308;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
