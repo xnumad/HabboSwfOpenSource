@@ -933,7 +933,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.*;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.SetActivatedBadgesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.RequestABadgeComposer;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_7854;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.GetIsBadgeRequestFulfilledComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_7891;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_9250;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.*;
@@ -1560,7 +1560,7 @@
             OUTGOING_PACKETS[1342] = _Str_11638;
             OUTGOING_PACKETS[1343] = _Str_8012;
             OUTGOING_PACKETS[1347] = _Str_12467;
-            OUTGOING_PACKETS[1364] = _Str_7854;
+            OUTGOING_PACKETS[1364] = GetIsBadgeRequestFulfilledComposer;
             OUTGOING_PACKETS[1367] = _Str_11698;
             OUTGOING_PACKETS[137] = AcceptFriendMessageComposer;
             OUTGOING_PACKETS[1371] = _Str_9250;

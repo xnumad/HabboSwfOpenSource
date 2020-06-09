@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7854 implements IMessageComposer 
+    public class GetIsBadgeRequestFulfilledComposer implements IMessageComposer
     {
         private var messageArray:Array;
 
-        public function _Str_7854(k:String)
+        public function GetIsBadgeRequestFulfilledComposer(k:String)
         {
             this.messageArray = new Array();
             super();

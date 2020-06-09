@@ -6,7 +6,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_7854;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.badges.GetIsBadgeRequestFulfilledComposer;
 
     public class RequestBadgeButtonElementHandler extends AbstractButtonElementHandler implements IFloatingElement 
     {
@@ -37,7 +37,7 @@
         override public function refresh():void
         {
             super.refresh();
-            landingView.send(new _Str_7854(this._badgeRequestCode));
+            landingView.send(new GetIsBadgeRequestFulfilledComposer(this._badgeRequestCode));
         }
 
         public function _Str_7806(k:Boolean):Boolean
@@ -57,7 +57,7 @@
         {
             if (window)
             {
-                landingView.send(new _Str_7854(this._badgeRequestCode));
+                landingView.send(new GetIsBadgeRequestFulfilledComposer(this._badgeRequestCode));
             }
         }
     }
