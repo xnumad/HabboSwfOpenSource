@@ -108,7 +108,7 @@
             if (this._Str_2310)
             {
                 this._Str_2310.addMessageEvent(new _Str_8454(this._Str_23208));
-                this._Str_2310.addMessageEvent(new NewUserExperienceGiftOfferEvent(this._Str_22466));
+                this._Str_2310.addMessageEvent(new NewUserExperienceGiftOfferEvent(this.onNewUserExperienceGiftOfferMessage));
             }
             context.addLinkEventTracker(this);
         }
@@ -173,7 +173,7 @@
             this._Str_22781();
         }
 
-        private function _Str_22466(k:NewUserExperienceGiftOfferEvent):void
+        private function onNewUserExperienceGiftOfferMessage(k:NewUserExperienceGiftOfferEvent):void
         {
             var _local_2:NewUserExperienceGiftOfferParser = k.getParser();
             this._Str_24881(_local_2.giftOptions);
