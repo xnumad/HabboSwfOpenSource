@@ -94,7 +94,7 @@
 
         public function _Str_23711():void
         {
-            this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum._Str_9095));
+            this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
             this._Str_7383();
         }
 
@@ -199,7 +199,7 @@
             var _local_3:int = k.getParser().phoneStatusCode;
             context.configuration.setProperty("phone.collection.status", _local_2.toString());
             context.configuration.setProperty("phone.verification.status", _local_3.toString());
-            if (_local_2 == ClientPhoneVerificationStatusEnum._Str_9095)
+            if (_local_2 == ClientPhoneVerificationStatusEnum.NEVER_AGAIN)
             {
                 return;
             }

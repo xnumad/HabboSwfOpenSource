@@ -54,7 +54,7 @@
             }
             var _local_4:Boolean = this._toolbar.getBoolean("sms.identity.verification.enabled");
             var _local_5:* = (this._toolbar.getInteger("phone.verification.status", PhoneNumberStatusEnum.NON_EXISTING) == PhoneNumberStatusEnum._Str_9489);
-            var _local_6:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum.NON_EXISTING) == ClientPhoneVerificationStatusEnum._Str_9095);
+            var _local_6:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum.NON_EXISTING) == ClientPhoneVerificationStatusEnum.NEVER_AGAIN);
             var _local_7:Boolean = this._toolbar.getBoolean("sms.identity.verification.button.enabled");
             var _local_8:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum.NON_EXISTING) == ClientPhoneVerificationStatusEnum.NON_EXISTING);
             var _local_9:Boolean = (((_local_4) && (!(_local_5))) && ((_local_6) || ((_local_7) && (_local_8))));

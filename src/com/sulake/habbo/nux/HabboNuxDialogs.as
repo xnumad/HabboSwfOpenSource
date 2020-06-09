@@ -158,7 +158,7 @@
             if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) && (this._Str_2310)))
             {
                 this._Str_8646();
-                this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum._Str_9095));
+                this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
             }
         }
 
