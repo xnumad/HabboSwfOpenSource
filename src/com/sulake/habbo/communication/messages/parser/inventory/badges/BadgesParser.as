@@ -6,14 +6,14 @@
 
     public class BadgesParser implements IMessageParser
     {
-        private var _Str_13713:Array;
+        private var _allBadgeCodes:Array;
         private var _Str_13962:Array;
         private var _Str_4833:Map;
 
 
         public function flush():Boolean
         {
-            this._Str_13713 = [];
+            this._allBadgeCodes = [];
             this._Str_13962 = [];
             if (this._Str_4833)
             {
@@ -28,7 +28,7 @@
             var _local_2:int;
             var _local_3:String;
             var _local_8:int;
-            this._Str_13713 = new Array();
+            this._allBadgeCodes = new Array();
             this._Str_4833 = new Map();
             var _local_4:int = k.readInteger();
             var _local_5:int;
@@ -37,7 +37,7 @@
                 _local_2 = k.readInteger();
                 _local_3 = k.readString();
                 this._Str_4833.add(_local_3, _local_2);
-                this._Str_13713.push(_local_3);
+                this._allBadgeCodes.push(_local_3);
                 _local_5++;
             }
             this._Str_13962 = new Array();
@@ -60,7 +60,7 @@
 
         public function _Str_21415():Array
         {
-            return this._Str_13713;
+            return this._allBadgeCodes;
         }
 
         public function _Str_23681():Array
