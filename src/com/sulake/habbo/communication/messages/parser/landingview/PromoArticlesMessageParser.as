@@ -9,7 +9,7 @@
         private var _articles:Array;
 
 
-        public function get _Str_23579():Array
+        public function get articles():Array
         {
             return this._articles;
         }

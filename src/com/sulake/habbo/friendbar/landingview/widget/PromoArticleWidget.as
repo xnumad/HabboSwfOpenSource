@@ -246,7 +246,7 @@
         {
             var _local_2:PromoArticleData;
             this._articles = [];
-            for each (_local_2 in k.getParser()._Str_23579)
+            for each (_local_2 in k.getParser().articles)
             {
                 this._articles.push(_local_2);
             }
