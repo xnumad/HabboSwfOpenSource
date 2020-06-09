@@ -31,7 +31,7 @@
 
         override public function update(k:uint):void
         {
-            _Str_17006(Math.floor(this.getCurrentNeedleFrame()), false);
+            updateMeter(Math.floor(this.getCurrentNeedleFrame()), false);
         }
 
         override public function initialize():void

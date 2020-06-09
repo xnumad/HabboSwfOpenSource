@@ -174,7 +174,7 @@
             this._communityGoalContainer.invalidate();
         }
 
-        protected function _Str_17006(k:int, _arg_2:Boolean=true):void
+        protected function updateMeter(k:int, _arg_2:Boolean=true):void
         {
             var _local_4:Boolean;
             var _local_3:int = 1;
@@ -215,7 +215,7 @@
                     this._buildupProgress = 1;
                     Component(this._landingView.windowManager).removeUpdateReceiver(this);
                 }
-                this._Str_17006(Math.floor((this.getCurrentNeedleFrame() * this._buildupProgress)));
+                this.updateMeter(Math.floor((this.getCurrentNeedleFrame() * this._buildupProgress)));
             }
         }
 
