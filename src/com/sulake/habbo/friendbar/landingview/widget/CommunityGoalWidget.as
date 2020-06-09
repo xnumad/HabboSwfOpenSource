@@ -34,7 +34,7 @@
         private var _buildupDelay:Number = 0;
         private var _buildupProgress:Number = 0;
         private var _isInitialized:Boolean = false;
-        private var _Str_18550:Boolean = true;
+        private var _isInteractive:Boolean = true;
         private var _Str_11816:Boolean = false;
 
         public function CommunityGoalWidget(k:HabboLandingView, _arg_2:Boolean=false)
@@ -73,8 +73,8 @@
             if (!this._Str_11816)
             {
                 k = this._communityGoalContainer.findChildByName("community_catalog_button");
-                this._Str_18550 = this._landingView.getBoolean("landing.view.community.interactive");
-                k.visible = this._Str_18550;
+                this._isInteractive = this._landingView.getBoolean("landing.view.community.interactive");
+                k.visible = this._isInteractive;
                 k.procedure = this._Str_24653;
             }
             HabboLandingView._Str_9079(this._communityGoalContainer, "community_title", "hdr_line");
@@ -168,7 +168,7 @@
             _local_3.height = (_local_3.textHeight + 6);
             if (!this._Str_11816)
             {
-                this._communityGoalContainer.findChildByName("community_catalog_button").visible = this._Str_18550;
+                this._communityGoalContainer.findChildByName("community_catalog_button").visible = this._isInteractive;
             }
             this._communityGoalContainer.visible = true;
             this._communityGoalContainer.invalidate();
