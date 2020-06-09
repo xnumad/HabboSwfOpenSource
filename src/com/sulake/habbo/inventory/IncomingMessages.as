@@ -427,7 +427,7 @@
                 return;
             }
             var _local_6:Array = _local_2.getAllBadgeCodes();
-            var _local_7:Array = _local_2._Str_23681();
+            var _local_7:Array = _local_2.getActiveBadgeCodes();
             for each (_local_5 in _local_6)
             {
                 _local_8 = (_local_7.indexOf(_local_5) > -1);

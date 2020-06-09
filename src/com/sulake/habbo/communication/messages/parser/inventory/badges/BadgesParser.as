@@ -63,7 +63,7 @@
             return this._allBadgeCodes;
         }
 
-        public function _Str_23681():Array
+        public function getActiveBadgeCodes():Array
         {
             return this._activeBadgeCodes;
         }
