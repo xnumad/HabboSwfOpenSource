@@ -445,7 +445,7 @@
             var _local_2:BadgePointLimitsParser = (k as BadgePointLimitsEvent).getParser();
             for each (_local_3 in _local_2.data)
             {
-                this._inventory.localization._Str_20202(_local_3.badgeId, _local_3.limit);
+                this._inventory.localization.setBadgePointLimit(_local_3.badgeId, _local_3.limit);
             }
         }
 

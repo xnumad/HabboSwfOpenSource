@@ -152,7 +152,7 @@
             return _local_2.badgeId;
         }
 
-        public function _Str_20202(k:String, _arg_2:int):void
+        public function setBadgePointLimit(k:String, _arg_2:int):void
         {
             this._badgePointLimits[k] = _arg_2;
         }
