@@ -141,7 +141,7 @@
                     return;
                 case PhoneNumberStatusEnum.OK:
                 case PhoneNumberStatusEnum._Str_11502:
-                case PhoneNumberStatusEnum._Str_13360:
+                case PhoneNumberStatusEnum.TOKEN_SENT:
                     this._Str_7383();
                     this._Str_15062 = (k.getParser().millisToAllowProcessReset + getTimer());
                     this._Str_13939();
@@ -203,7 +203,7 @@
             {
                 return;
             }
-            if (((_local_2 == ClientPhoneVerificationStatusEnum.TOKEN_INPUT) && ((_local_3 == PhoneNumberStatusEnum._Str_11502) || (_local_3 == PhoneNumberStatusEnum._Str_13360))))
+            if (((_local_2 == ClientPhoneVerificationStatusEnum.TOKEN_INPUT) && ((_local_3 == PhoneNumberStatusEnum._Str_11502) || (_local_3 == PhoneNumberStatusEnum.TOKEN_SENT))))
             {
                 this._Str_7383();
                 if (_local_2 == ClientPhoneVerificationStatusEnum.MINIMIZED)

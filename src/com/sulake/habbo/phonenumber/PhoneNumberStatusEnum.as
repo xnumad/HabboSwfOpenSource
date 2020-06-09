@@ -3,7 +3,7 @@
     public class PhoneNumberStatusEnum 
     {
         public static const NON_EXISTING:int = 0;
-        public static const _Str_13360:int = 1;
+        public static const TOKEN_SENT:int = 1;
         public static const _Str_9489:int = 2;
         public static const OK:int = 3;
         public static const ERROR:int = 4;
