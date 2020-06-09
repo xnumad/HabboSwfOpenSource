@@ -59,7 +59,7 @@
             return this._productCount;
         }
 
-        public function get _Str_18468():Boolean
+        public function get uniqueLimitedItem():Boolean
         {
             return this._uniqueLimitedItem;
         }
