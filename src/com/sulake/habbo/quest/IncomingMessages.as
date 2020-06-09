@@ -68,7 +68,7 @@
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionsMessageEvent(this._Str_23908));
             _local_2.addHabboConnectionMessageEvent(new AchievementsScoreEvent(this._Str_18065));
             _local_2.addHabboConnectionMessageEvent(new QuestsMessageEvent(this._Str_8212));
-            _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this._Str_24584));
+            _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionUserInfoEvent));
             _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionCompletedMessageEvent(this._Str_24464));
             _local_2.addHabboConnectionMessageEvent(new _Str_3660(this.onLevelUp));
@@ -243,7 +243,7 @@
             this._questEngine._Str_8189._Str_16392(k);
         }
 
-        private function _Str_24584(k:ScrSendUserInfoEvent):void
+        private function onSubscriptionUserInfoEvent(k:ScrSendUserInfoEvent):void
         {
             if (((k.getParser().isVIP) && (k.getParser().responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_PURCHASE)))
             {
