@@ -42,7 +42,7 @@
         public function initialize():void
         {
             this._container = IWindowContainer(this._landingView.getXmlWindow("promo_article"));
-            this._container.procedure = this._Str_22952;
+            this._container.procedure = this.onMouse;
             this._articlesListener = new _Str_9504(this.onPromoArticles);
             this._landingView.communicationManager.addHabboConnectionMessageEvent(this._articlesListener);
         }
@@ -201,7 +201,7 @@
             }
         }
 
-        private function _Str_22952(k:WindowEvent, _arg_2:IWindow):void
+        private function onMouse(k:WindowEvent, _arg_2:IWindow):void
         {
             if (_arg_2.name == "article_navigation")
             {
