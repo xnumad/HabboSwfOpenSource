@@ -24,7 +24,7 @@
             {
                 this._isFloating = (_arg_3[5] == "true");
             }
-            k.communicationManager.addHabboConnectionMessageEvent(new _Str_8179(this._Str_9863));
+            k.communicationManager.addHabboConnectionMessageEvent(new _Str_8179(this.onInfo));
             k.communicationManager.addHabboConnectionMessageEvent(new _Str_4585(this._Str_23794));
         }
 
@@ -45,7 +45,7 @@
             return this._isFloating;
         }
 
-        private function _Str_9863(k:_Str_8179):void
+        private function onInfo(k:_Str_8179):void
         {
             if (k.getParser().requestCode == this._badgeRequestCode)
             {
