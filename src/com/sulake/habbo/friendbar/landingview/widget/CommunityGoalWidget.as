@@ -75,7 +75,7 @@
                 k = this._communityGoalContainer.findChildByName("community_catalog_button");
                 this._isInteractive = this._landingView.getBoolean("landing.view.community.interactive");
                 k.visible = this._isInteractive;
-                k.procedure = this._Str_24653;
+                k.procedure = this.onCommunityCatalogButtonClick;
             }
             HabboLandingView._Str_9079(this._communityGoalContainer, "community_title", "hdr_line");
         }
@@ -227,7 +227,7 @@
             Component(this._landingView.windowManager).registerUpdateReceiver(this, 10);
         }
 
-        private function _Str_24653(k:WindowEvent, _arg_2:IWindow):void
+        private function onCommunityCatalogButtonClick(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:String;
             if (k.type == WindowMouseEvent.CLICK)
