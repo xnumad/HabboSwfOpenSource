@@ -13,7 +13,7 @@
         private var _Str_20686:int;
         private var _Str_3194:String;
         private var _productCount:int;
-        private var _Str_16693:Boolean;
+        private var _uniqueLimitedItem:Boolean;
         private var _uniqueLimitedItemSeriesSize:int;
         private var _uniqueLimitedItemsLeft:int;
 
@@ -30,8 +30,8 @@
                     this._Str_20686 = k.readInteger();
                     this._Str_3194 = k.readString();
                     this._productCount = k.readInteger();
-                    this._Str_16693 = k.readBoolean();
-                    if (this._Str_16693)
+                    this._uniqueLimitedItem = k.readBoolean();
+                    if (this._uniqueLimitedItem)
                     {
                         this._uniqueLimitedItemSeriesSize = k.readInteger();
                         this._uniqueLimitedItemsLeft = k.readInteger();
@@ -61,7 +61,7 @@
 
         public function get _Str_18468():Boolean
         {
-            return this._Str_16693;
+            return this._uniqueLimitedItem;
         }
 
         public function get uniqueLimitedItemSeriesSize():int
