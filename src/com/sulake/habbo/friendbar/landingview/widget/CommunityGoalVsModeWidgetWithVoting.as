@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
-    import com.sulake.habbo.communication.messages.incoming._Str_530._Str_9665;
+    import com.sulake.habbo.communication.messages.incoming._Str_530.CommunityGoalVoteMessageEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
 
@@ -24,7 +24,7 @@
             this._voteOptionOneButton.procedure = this.onVoteOptionOneClick;
             this._voteOptionTwoButton = _communityGoalContainer.findChildByName("community_vote_two_button");
             this._voteOptionTwoButton.procedure = this.onVoteOptionTwoClick;
-            _landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_9665(this.onInfo));
+            _landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalVoteMessageEvent(this.onInfo));
         }
 
         override public function refresh():void
@@ -63,7 +63,7 @@
             }
         }
 
-        private function onInfo(k:_Str_9665):void
+        private function onInfo(k:CommunityGoalVoteMessageEvent):void
         {
             if (k.getParser()._Str_23568)
             {

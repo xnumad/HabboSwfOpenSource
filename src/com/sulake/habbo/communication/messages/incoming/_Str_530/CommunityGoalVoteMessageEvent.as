@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser._Str_539._Str_8895;
 
-    public class _Str_9665 extends MessageEvent 
+    public class CommunityGoalVoteMessageEvent extends MessageEvent
     {
-        public function _Str_9665(k:Function)
+        public function CommunityGoalVoteMessageEvent(k:Function)
         {
             super(k, _Str_8895);
         }
