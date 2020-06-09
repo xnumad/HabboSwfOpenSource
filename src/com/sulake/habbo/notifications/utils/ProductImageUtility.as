@@ -73,7 +73,7 @@
                         _local_5 = null;
                     }
                     break;
-                case CatalogPageMessageProductData.E:
+                case CatalogPageMessageProductData.PRODUCT_TYPE_EFFECT:
                     _local_4 = ((this._inventory as Component).assets.getAssetByName((("fx_icon_" + _arg_2) + "_png")) as BitmapDataAsset);
                     if (_local_4 != null)
                     {

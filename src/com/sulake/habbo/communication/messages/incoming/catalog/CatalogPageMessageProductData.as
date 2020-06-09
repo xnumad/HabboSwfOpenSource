@@ -6,7 +6,7 @@
     {
         public static const PRODUCT_TYPE_ITEM:String = "i";
         public static const PRODUCT_TYPE_STUFF:String = "s";
-        public static const E:String = "e";
+        public static const PRODUCT_TYPE_EFFECT:String = "e";
         public static const B:String = "b";
 
         private var _Str_3032:String;
