@@ -65,7 +65,7 @@
         {
             if (this._component)
             {
-                this._component._Str_8646();
+                this._component.destroyNuxOfferView();
             }
         }
 

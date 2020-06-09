@@ -98,7 +98,7 @@
             }
             this._Str_17452();
             this._Str_11922();
-            this._Str_8646();
+            this.destroyNuxOfferView();
             super.dispose();
         }
 
@@ -157,7 +157,7 @@
             k.dispose();
             if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) && (this._Str_2310)))
             {
-                this._Str_8646();
+                this.destroyNuxOfferView();
                 this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
             }
         }
@@ -226,11 +226,11 @@
 
         private function createNuxOfferView():void
         {
-            this._Str_8646();
+            this.destroyNuxOfferView();
             this._Str_14050 = new NuxOfferOldUserView(this);
         }
 
-        public function _Str_8646():void
+        public function destroyNuxOfferView():void
         {
             if (this._Str_14050)
             {
