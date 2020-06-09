@@ -43,7 +43,7 @@
         {
             this._container = IWindowContainer(this._landingView.getXmlWindow("promo_article"));
             this._container.procedure = this._Str_22952;
-            this._articlesListener = new _Str_9504(this._Str_25476);
+            this._articlesListener = new _Str_9504(this.onPromoArticles);
             this._landingView.communicationManager.addHabboConnectionMessageEvent(this._articlesListener);
         }
 
@@ -242,7 +242,7 @@
             _local_3.assetUri = ("progress_disk_flat_" + ((_arg_2) ? "on" : "off"));
         }
 
-        private function _Str_25476(k:_Str_9504):void
+        private function onPromoArticles(k:_Str_9504):void
         {
             var _local_2:PromoArticleData;
             this._articles = [];
