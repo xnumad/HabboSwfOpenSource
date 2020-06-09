@@ -49,7 +49,7 @@
         {
             if (k.getParser().requestCode == this._badgeRequestCode)
             {
-                window.visible = (!(k.getParser()._Str_25366));
+                window.visible = (!(k.getParser().fulfilled));
             }
         }
 

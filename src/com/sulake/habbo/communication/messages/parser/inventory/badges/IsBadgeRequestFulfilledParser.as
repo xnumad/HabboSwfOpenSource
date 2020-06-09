@@ -26,7 +26,7 @@
             return this._requestCode;
         }
 
-        public function get _Str_25366():Boolean
+        public function get fulfilled():Boolean
         {
             return this._fulfilled;
         }
