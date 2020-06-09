@@ -952,9 +952,9 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.ShoutMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
-	import com.sulake.habbo.communication.messages.incoming._Str_89._Str_5266;
-	import com.sulake.habbo.communication.messages.incoming._Str_89.YouAreControllerMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_89._Str_8236;
+	import com.sulake.habbo.communication.messages.incoming.room.permissions._Str_5266;
+	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreControllerMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.permissions._Str_8236;
 	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_11327;
 	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_5270;
 	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_7844;

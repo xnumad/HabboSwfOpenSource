@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.catalog.IPurchasableOffer;
-    import com.sulake.habbo.communication.messages.incoming._Str_89._Str_5266;
+    import com.sulake.habbo.communication.messages.incoming.room.permissions._Str_5266;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
     import com.sulake.habbo.catalog.enum.CatalogType;
