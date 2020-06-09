@@ -136,7 +136,7 @@
         {
             switch (k.getParser().resultCode)
             {
-                case PhoneNumberStatusEnum._Str_9489:
+                case PhoneNumberStatusEnum.VERIFIED:
                     this._Str_7383();
                     return;
                 case PhoneNumberStatusEnum.OK:
@@ -171,7 +171,7 @@
         {
             switch (k.getParser().resultCode)
             {
-                case PhoneNumberStatusEnum._Str_9489:
+                case PhoneNumberStatusEnum.VERIFIED:
                 case PhoneNumberStatusEnum.OK:
                     this._Str_9778();
                     return;
@@ -223,7 +223,7 @@
                 case PhoneNumberStatusEnum._Str_11502:
                     this._Str_16750();
                     return;
-                case PhoneNumberStatusEnum._Str_9489:
+                case PhoneNumberStatusEnum.VERIFIED:
                 case PhoneNumberStatusEnum.OK:
                     this._Str_7383();
                     this._Str_9778();

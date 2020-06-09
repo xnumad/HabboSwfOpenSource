@@ -53,7 +53,7 @@
                 ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected = this._toolbar.sessionDataManager.isRoomCameraFollowDisabled;
             }
             var _local_4:Boolean = this._toolbar.getBoolean("sms.identity.verification.enabled");
-            var _local_5:* = (this._toolbar.getInteger("phone.verification.status", PhoneNumberStatusEnum.NON_EXISTING) == PhoneNumberStatusEnum._Str_9489);
+            var _local_5:* = (this._toolbar.getInteger("phone.verification.status", PhoneNumberStatusEnum.NON_EXISTING) == PhoneNumberStatusEnum.VERIFIED);
             var _local_6:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum.NON_EXISTING) == ClientPhoneVerificationStatusEnum.NEVER_AGAIN);
             var _local_7:Boolean = this._toolbar.getBoolean("sms.identity.verification.button.enabled");
             var _local_8:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum.NON_EXISTING) == ClientPhoneVerificationStatusEnum.NON_EXISTING);
