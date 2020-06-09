@@ -149,10 +149,10 @@
 
         public function _Str_19003():void
         {
-            this._windowManager.confirm("${phone.number.never.again.confirm.title}", "${phone.number.never.again.confirm.text}", 0, this._Str_16253);
+            this._windowManager.confirm("${phone.number.never.again.confirm.title}", "${phone.number.never.again.confirm.text}", 0, this.onNeverAgainConfirmClose);
         }
 
-        private function _Str_16253(k:IConfirmDialog, _arg_2:WindowEvent):void
+        private function onNeverAgainConfirmClose(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) && (this._Str_2310)))

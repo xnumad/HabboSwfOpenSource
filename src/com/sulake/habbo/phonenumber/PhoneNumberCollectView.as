@@ -128,7 +128,7 @@
             return (_local_2 != null) ? _local_2.code : "--";
         }
 
-        private function _Str_16253(k:IConfirmDialog, _arg_2:WindowEvent):void
+        private function onNeverAgainConfirmClose(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) && (this._component)))
             {
@@ -169,7 +169,7 @@
                         this._component._Str_17799(true);
                         break;
                     case "never_link":
-                        this._component.windowManager.confirm("${phone.number.never.again.confirm.title}", "${phone.number.never.again.confirm.text}", 0, this._Str_16253);
+                        this._component.windowManager.confirm("${phone.number.never.again.confirm.title}", "${phone.number.never.again.confirm.text}", 0, this.onNeverAgainConfirmClose);
                         break;
                     case "ok_button":
                         this._component._Str_22965(this._Str_22788, this._window.findChildByName("phone_number_input").caption);
