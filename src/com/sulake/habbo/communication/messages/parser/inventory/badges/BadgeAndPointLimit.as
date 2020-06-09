@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7446 
+    public class BadgeAndPointLimit
     {
         private var _badgeId:String;
         private var _limit:int;
 
-        public function _Str_7446(k:String, _arg_2:IMessageDataWrapper)
+        public function BadgeAndPointLimit(k:String, _arg_2:IMessageDataWrapper)
         {
             this._badgeId = (("ACH_" + k) + _arg_2.readInteger());
             this._limit = _arg_2.readInteger();

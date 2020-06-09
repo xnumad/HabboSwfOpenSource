@@ -28,7 +28,7 @@
                 _local_6 = 0;
                 while (_local_6 < _local_5)
                 {
-                    this._data.push(new _Str_7446(_local_4, k));
+                    this._data.push(new BadgeAndPointLimit(_local_4, k));
                     _local_6++;
                 }
                 _local_3++;
