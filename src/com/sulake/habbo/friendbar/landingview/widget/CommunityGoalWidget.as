@@ -30,7 +30,7 @@
         protected var _communityGoalContainer:IWindowContainer;
         private var _meterNeedle:IStaticBitmapWrapperWindow;
         protected var _communityProgress:CommunityGoalProgress;
-        private var _Str_17426:Boolean = false;
+        private var _communityProgressRequested:Boolean = false;
         private var _Str_16752:Number = 0;
         private var _Str_10390:Number = 0;
         private var _isInitialized:Boolean = false;
@@ -197,10 +197,10 @@
 
         private function _Str_25827():void
         {
-            if (!this._Str_17426)
+            if (!this._communityProgressRequested)
             {
                 this._landingView.send(new _Str_4438());
-                this._Str_17426 = true;
+                this._communityProgressRequested = true;
             }
         }
 
@@ -222,7 +222,7 @@
         private function _Str_5286(k:IMessageEvent):void
         {
             this._communityProgress = CommunityGoalProgressParser(k.parser).data;
-            this._Str_17426 = false;
+            this._communityProgressRequested = false;
             this.refreshContent();
             Component(this._landingView.windowManager).registerUpdateReceiver(this, 10);
         }
