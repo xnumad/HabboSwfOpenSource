@@ -944,7 +944,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_7271;
 	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
 	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8120;
-	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8179;
+	import com.sulake.habbo.communication.messages.incoming._Str_87.IsBadgeRequestFulfilledEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_87.BadgePointLimitsEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.WhisperMessageComposer;
@@ -1266,7 +1266,7 @@
             INCOMING_PACKETS[2937] = RoomFilterSettingsMessageEvent;
             INCOMING_PACKETS[296] = BotForceOpenContextMenuEvent;
             INCOMING_PACKETS[2997] = PollContentsEvent;
-            INCOMING_PACKETS[2998] = _Str_8179;
+            INCOMING_PACKETS[2998] = IsBadgeRequestFulfilledEvent;
             INCOMING_PACKETS[30] = _Str_10860;
             INCOMING_PACKETS[3001] = _Str_9509;
             INCOMING_PACKETS[3005] = CommunityGoalHallOfFameMessageEvent;

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.friendbar.landingview.widget.elements
 {
     import com.sulake.habbo.friendbar.landingview.interfaces.elements.IFloatingElement;
-    import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8179;
+    import com.sulake.habbo.communication.messages.incoming._Str_87.IsBadgeRequestFulfilledEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_4585;
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
@@ -24,7 +24,7 @@
             {
                 this._isFloating = (_arg_3[5] == "true");
             }
-            k.communicationManager.addHabboConnectionMessageEvent(new _Str_8179(this.onInfo));
+            k.communicationManager.addHabboConnectionMessageEvent(new IsBadgeRequestFulfilledEvent(this.onInfo));
             k.communicationManager.addHabboConnectionMessageEvent(new _Str_4585(this._Str_23794));
         }
 
@@ -45,7 +45,7 @@
             return this._isFloating;
         }
 
-        private function onInfo(k:_Str_8179):void
+        private function onInfo(k:IsBadgeRequestFulfilledEvent):void
         {
             if (k.getParser().requestCode == this._badgeRequestCode)
             {

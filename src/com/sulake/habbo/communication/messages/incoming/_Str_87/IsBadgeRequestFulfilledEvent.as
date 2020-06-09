@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.badges.IsBadgeRequestFulfilledParser;
 
-    public class _Str_8179 extends MessageEvent 
+    public class IsBadgeRequestFulfilledEvent extends MessageEvent
     {
-        public function _Str_8179(k:Function)
+        public function IsBadgeRequestFulfilledEvent(k:Function)
         {
             super(k, IsBadgeRequestFulfilledParser);
         }
