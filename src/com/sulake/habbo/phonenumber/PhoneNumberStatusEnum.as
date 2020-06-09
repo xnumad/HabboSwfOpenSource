@@ -11,7 +11,7 @@
         public static const NUMBER_MISTYPED:int = 6;
         public static const TOKEN_MISMATCH:int = 7;
         public static const NOT_FOUND:int = 8;
-        public static const _Str_11502:int = 9;
+        public static const NON_VERIFIED:int = 9;
         public static const _Str_17772:int = 10;
     }
 }

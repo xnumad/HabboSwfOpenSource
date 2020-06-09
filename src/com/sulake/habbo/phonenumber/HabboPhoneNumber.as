@@ -140,7 +140,7 @@
                     this._Str_7383();
                     return;
                 case PhoneNumberStatusEnum.OK:
-                case PhoneNumberStatusEnum._Str_11502:
+                case PhoneNumberStatusEnum.NON_VERIFIED:
                 case PhoneNumberStatusEnum.TOKEN_SENT:
                     this._Str_7383();
                     this._Str_15062 = (k.getParser().millisToAllowProcessReset + getTimer());
@@ -203,7 +203,7 @@
             {
                 return;
             }
-            if (((_local_2 == ClientPhoneVerificationStatusEnum.TOKEN_INPUT) && ((_local_3 == PhoneNumberStatusEnum._Str_11502) || (_local_3 == PhoneNumberStatusEnum.TOKEN_SENT))))
+            if (((_local_2 == ClientPhoneVerificationStatusEnum.TOKEN_INPUT) && ((_local_3 == PhoneNumberStatusEnum.NON_VERIFIED) || (_local_3 == PhoneNumberStatusEnum.TOKEN_SENT))))
             {
                 this._Str_7383();
                 if (_local_2 == ClientPhoneVerificationStatusEnum.MINIMIZED)
@@ -220,7 +220,7 @@
             switch (_local_3)
             {
                 case PhoneNumberStatusEnum.NON_EXISTING:
-                case PhoneNumberStatusEnum._Str_11502:
+                case PhoneNumberStatusEnum.NON_VERIFIED:
                     this._Str_16750();
                     return;
                 case PhoneNumberStatusEnum.VERIFIED:
