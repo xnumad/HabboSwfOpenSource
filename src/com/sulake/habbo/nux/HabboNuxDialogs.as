@@ -162,7 +162,7 @@
             }
         }
 
-        public function _Str_25203(k:Vector.<_Str_4584>):void
+        public function onSendGetGifts(k:Vector.<_Str_4584>):void
         {
             this._Str_17452();
             this._Str_2310.send(new _Str_11372(k));

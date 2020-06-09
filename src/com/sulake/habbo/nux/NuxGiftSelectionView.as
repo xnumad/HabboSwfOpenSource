@@ -196,7 +196,7 @@
                 this._currentIndex++;
                 if (this._currentIndex == this._giftOptions.length)
                 {
-                    this._component._Str_25203(this._selectedOptions);
+                    this._component.onSendGetGifts(this._selectedOptions);
                 }
                 else
                 {
