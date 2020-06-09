@@ -945,7 +945,7 @@
 	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
 	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8120;
 	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8179;
-	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8980;
+	import com.sulake.habbo.communication.messages.incoming._Str_87.BadgePointLimitsEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.WhisperMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.CancelTypingMessageComposer;
@@ -1201,7 +1201,7 @@
             INCOMING_PACKETS[2491] = AuthenticationOKMessageEvent;
             INCOMING_PACKETS[2493] = _Str_8120;
             INCOMING_PACKETS[2494] = _Str_18853;
-            INCOMING_PACKETS[2501] = _Str_8980;
+            INCOMING_PACKETS[2501] = BadgePointLimitsEvent;
             INCOMING_PACKETS[2505] = TradingOpenEvent;
             INCOMING_PACKETS[2515] = CatalogPageWithEarliestExpiryMessageEvent;
             INCOMING_PACKETS[2524] = _Str_5795;

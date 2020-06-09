@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgePointLimitsParser;
 
-    public class _Str_8980 extends MessageEvent 
+    public class BadgePointLimitsEvent extends MessageEvent
     {
-        public function _Str_8980(k:Function)
+        public function BadgePointLimitsEvent(k:Function)
         {
             super(k, BadgePointLimitsParser);
         }

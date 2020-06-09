@@ -56,7 +56,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
-    import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8980;
+    import com.sulake.habbo.communication.messages.incoming._Str_87.BadgePointLimitsEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.furni.FurniListParser;
     import com.sulake.habbo.inventory.furni.FurniModel;
     import com.sulake.habbo.inventory.events.HabboInventoryFurniListParsedEvent;
@@ -167,7 +167,7 @@
             this._com.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this._com.addHabboConnectionMessageEvent(new _Str_6944(this._Str_18461));
             this._com.addHabboConnectionMessageEvent(new _Str_9047(this._Str_22306));
-            this._com.addHabboConnectionMessageEvent(new _Str_8980(this._Str_25648));
+            this._com.addHabboConnectionMessageEvent(new BadgePointLimitsEvent(this._Str_25648));
         }
 
         public function dispose():void
@@ -442,7 +442,7 @@
         public function _Str_25648(k:IMessageEvent):void
         {
             var _local_3:BadgeAndPointLimit;
-            var _local_2:BadgePointLimitsParser = (k as _Str_8980).getParser();
+            var _local_2:BadgePointLimitsParser = (k as BadgePointLimitsEvent).getParser();
             for each (_local_3 in _local_2.data)
             {
                 this._inventory.localization._Str_20202(_local_3.badgeId, _local_3.limit);
