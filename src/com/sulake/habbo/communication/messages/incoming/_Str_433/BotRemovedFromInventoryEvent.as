@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.bots.BotRemovedFromInventoryParser;
 
-    public class _Str_8269 extends MessageEvent implements IMessageEvent 
+    public class BotRemovedFromInventoryEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8269(k:Function)
+        public function BotRemovedFromInventoryEvent(k:Function)
         {
             super(k, BotRemovedFromInventoryParser);
         }

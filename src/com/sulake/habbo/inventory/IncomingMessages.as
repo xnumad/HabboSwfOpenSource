@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingCompletedParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingItemListEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingItemListParser;
-    import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8269;
+    import com.sulake.habbo.communication.messages.incoming._Str_433.BotRemovedFromInventoryEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListInvalidateEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.clothes.FigureSetIdsEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
@@ -128,7 +128,7 @@
             this._com.addHabboConnectionMessageEvent(new TradingConfirmationEvent(this._Str_25011, TradingConfirmationParser));
             this._com.addHabboConnectionMessageEvent(new TradingCompletedEvent(this._Str_23780, TradingCompletedParser));
             this._com.addHabboConnectionMessageEvent(new TradingItemListEvent(this._Str_25320, TradingItemListParser));
-            this._com.addHabboConnectionMessageEvent(new _Str_8269(this._Str_24595));
+            this._com.addHabboConnectionMessageEvent(new BotRemovedFromInventoryEvent(this._Str_24595));
             this._com.addHabboConnectionMessageEvent(new FurniListInvalidateEvent(this._Str_18656));
             this._com.addHabboConnectionMessageEvent(new FigureSetIdsEvent(this._Str_25862));
             this._com.addHabboConnectionMessageEvent(new _Str_4187(this._Str_15910));
@@ -827,7 +827,7 @@
             _local_2._Str_11524();
         }
 
-        private function _Str_24595(k:_Str_8269):void
+        private function _Str_24595(k:BotRemovedFromInventoryEvent):void
         {
             if (((k == null) || (this._inventory == null)))
             {

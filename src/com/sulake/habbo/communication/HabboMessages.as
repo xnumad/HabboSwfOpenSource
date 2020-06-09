@@ -288,7 +288,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_428.NewUserExperienceGetGiftsMessageComposer;
 	import com.sulake.habbo.communication._Str_8686;
 	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_16597;
-	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8269;
+	import com.sulake.habbo.communication.messages.incoming._Str_433.BotRemovedFromInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8892;
 	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_9129;
 	import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
@@ -1184,7 +1184,7 @@
             INCOMING_PACKETS[2309] = _Str_4129;
             INCOMING_PACKETS[2313] = _Str_16135;
             INCOMING_PACKETS[2324] = GamePlayerValueMessageEvent;
-            INCOMING_PACKETS[233] = _Str_8269;
+            INCOMING_PACKETS[233] = BotRemovedFromInventoryEvent;
             INCOMING_PACKETS[2335] = _Str_9341;
             INCOMING_PACKETS[2347] = _Str_7288;
             INCOMING_PACKETS[2366] = _Str_9687;
