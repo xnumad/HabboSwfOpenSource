@@ -107,7 +107,7 @@
             return k + Math.floor(((this._communityProgress.percentCompletionTowardsNextLevel * (_local_2 + 0.001)) / 100));
         }
 
-        private function _Str_16817():void
+        private function initializeLocalizations():void
         {
             var k:int;
             if (((!(this._communityProgress == null)) && (!(this._communityProgress.goalCode == null))))
@@ -140,7 +140,7 @@
             }
             if (!this._isInitialized)
             {
-                this._Str_16817();
+                this.initializeLocalizations();
             }
             var k:int = 1;
             while (k < CHALLENGE_LEVEL_NEEDLE_BASE_FRAMES.length)

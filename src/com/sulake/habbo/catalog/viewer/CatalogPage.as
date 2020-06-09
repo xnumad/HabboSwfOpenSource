@@ -517,11 +517,11 @@
                 }
             }
             this._Str_24047(_local_2);
-            this._Str_16817();
+            this.initializeLocalizations();
             this._Str_5564.dispatchEvent(new _Str_3308(CatalogWidgetEvent.WIDGETS_INITIALIZED));
         }
 
-        private function _Str_16817():void
+        private function initializeLocalizations():void
         {
             var k:CatalogWidget = new LocalizationCatalogWidget(this._window, this._habboCatalog);
             this._widgets.push(k);
