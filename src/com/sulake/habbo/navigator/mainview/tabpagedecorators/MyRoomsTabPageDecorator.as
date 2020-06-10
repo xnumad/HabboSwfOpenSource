@@ -12,7 +12,7 @@
 
     public class MyRoomsTabPageDecorator implements ITabPageDecorator 
     {
-        private const _Str_8929:Array = [[Tabs._Str_4869, "navigator.navisel.myrooms"], [Tabs._Str_8473, "navigator.navisel.wherearemyfriends"], [Tabs.SEARCHTYPE_MY_FRIENDS_ROOMS, "navigator.navisel.myfriendsrooms"], [Tabs._Str_12236, "navigator.navisel.roomswithrights"], [Tabs._Str_10261, "navigator.navisel.mygroups"], [Tabs._Str_8122, "navigator.navisel.myfavourites"], [Tabs._Str_8161, "navigator.navisel.visitedrooms"], [Tabs._Str_7094, ""]];
+        private const _Str_8929:Array = [[Tabs._Str_4869, "navigator.navisel.myrooms"], [Tabs.SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE, "navigator.navisel.wherearemyfriends"], [Tabs.SEARCHTYPE_MY_FRIENDS_ROOMS, "navigator.navisel.myfriendsrooms"], [Tabs._Str_12236, "navigator.navisel.roomswithrights"], [Tabs._Str_10261, "navigator.navisel.mygroups"], [Tabs._Str_8122, "navigator.navisel.myfavourites"], [Tabs._Str_8161, "navigator.navisel.visitedrooms"], [Tabs._Str_7094, ""]];
 
         private var _navigator:HabboNavigator;
         private var _filter:IDropMenuWindow;

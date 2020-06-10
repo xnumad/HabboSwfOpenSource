@@ -591,7 +591,7 @@
                 case Tabs.SEARCHTYPE_POPULAR_ROOMS:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_POPULAR_ROOMS));
                     return;
-                case Tabs._Str_8473:
+                case Tabs.SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE));
                     return;
                 case Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
@@ -624,7 +624,7 @@
                     return new _Str_9988();
                 case Tabs.SEARCHTYPE_POPULAR_ROOMS:
                     return new _Str_10157(_arg_2, this._navigator.data._Str_6357);
-                case Tabs._Str_8473:
+                case Tabs.SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE:
                     return new _Str_10079();
                 case Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
                     return new _Str_9889(this._navigator.data._Str_6357);

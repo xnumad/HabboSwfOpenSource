@@ -76,7 +76,7 @@
                     return "highest_score";
                 case Tabs.SEARCHTYPE_MY_FRIENDS_ROOMS:
                     return "friends_rooms";
-                case Tabs._Str_8473:
+                case Tabs.SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE:
                     return "with_friends";
                 case Tabs._Str_4869:
                     return "my";
