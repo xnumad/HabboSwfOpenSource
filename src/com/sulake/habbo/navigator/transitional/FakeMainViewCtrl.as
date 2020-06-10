@@ -82,7 +82,7 @@
                     return "my";
                 case Tabs.SEARCHTYPE_MY_FAVOURITES:
                     return "favorites";
-                case Tabs._Str_8161:
+                case Tabs.SEARCHTYPE_MY_HISTORY:
                     return "history";
                 case Tabs._Str_5622:
                     return "query";

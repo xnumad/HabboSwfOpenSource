@@ -579,7 +579,7 @@
                 case Tabs.SEARCHTYPE_MY_FRIENDS_ROOMS:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_FRIENDS_ROOMS));
                     return;
-                case Tabs._Str_8161:
+                case Tabs.SEARCHTYPE_MY_HISTORY:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_HISTORY));
                     return;
                 case Tabs.SEARCHTYPE_MY_ROOMS:
@@ -618,7 +618,7 @@
                     return new _Str_11329();
                 case Tabs.SEARCHTYPE_MY_FRIENDS_ROOMS:
                     return new _Str_9956();
-                case Tabs._Str_8161:
+                case Tabs.SEARCHTYPE_MY_HISTORY:
                     return new _Str_12153();
                 case Tabs.SEARCHTYPE_MY_ROOMS:
                     return new _Str_9988();

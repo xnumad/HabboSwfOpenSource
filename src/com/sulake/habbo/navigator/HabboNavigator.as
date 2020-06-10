@@ -670,7 +670,7 @@
 
         public function showHistoryRooms():void
         {
-            this._Str_18163(Tabs._Str_8161);
+            this._Str_18163(Tabs.SEARCHTYPE_MY_HISTORY);
         }
 
         public function showFrequentRooms():void
