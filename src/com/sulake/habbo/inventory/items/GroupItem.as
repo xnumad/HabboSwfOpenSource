@@ -408,7 +408,7 @@
                     break;
                 }
                 _local_6 = this._items.getWithIndex(_local_5);
-                if ((((!(_local_6.locked)) && (_local_6._Str_8386)) && (_local_6.type == _local_3.type)))
+                if ((((!(_local_6.locked)) && (_local_6.tradeable)) && (_local_6.type == _local_3.type)))
                 {
                     _local_4++;
                     _local_2.push(_local_6);
@@ -425,7 +425,7 @@
             if (((this._Str_4881 >= 0) && (this._Str_4881 < this._items.length)))
             {
                 _local_2 = this._items.getWithIndex(this._Str_4881);
-                if (((!(_local_2.locked)) && (_local_2._Str_8386)))
+                if (((!(_local_2.locked)) && (_local_2.tradeable)))
                 {
                     return _local_2;
                 }
@@ -434,7 +434,7 @@
             while (k < this._items.length)
             {
                 _local_3 = this._items.getWithIndex(k);
-                if (((!(_local_3.locked)) && (_local_3._Str_8386)))
+                if (((!(_local_3.locked)) && (_local_3.tradeable)))
                 {
                     return _local_3;
                 }
@@ -627,7 +627,7 @@
             while (_local_2 < this._items.length)
             {
                 _local_3 = (this._items.getWithIndex(_local_2) as FurnitureItem);
-                if (((_local_3._Str_8386) && (!(_local_3.locked))))
+                if (((_local_3.tradeable) && (!(_local_3.locked))))
                 {
                     k++;
                 }

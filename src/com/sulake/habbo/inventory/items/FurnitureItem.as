@@ -99,7 +99,7 @@
             return this._recyclable;
         }
 
-        public function get _Str_8386():Boolean
+        public function get tradeable():Boolean
         {
             return this._tradeable;
         }

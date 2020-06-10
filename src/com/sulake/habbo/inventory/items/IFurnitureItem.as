@@ -11,7 +11,7 @@
         function get _Str_2794():Number;
         function get category():int;
         function get recyclable():Boolean;
-        function get _Str_8386():Boolean;
+        function get tradeable():Boolean;
         function get _Str_13551():Boolean;
         function get sellable():Boolean;
         function get locked():Boolean;

@@ -563,7 +563,7 @@
             }
             if (((((k) && (!(_local_3 == null))) && (!(_local_4 == null))) && (this._model._Str_16742())))
             {
-                if (((_local_3.getUnlockedCount()) && (_local_4._Str_8386)))
+                if (((_local_3.getUnlockedCount()) && (_local_4.tradeable)))
                 {
                     this._offerInTradingButton.enable();
                     this._offerInTradingCountButton.enable();
