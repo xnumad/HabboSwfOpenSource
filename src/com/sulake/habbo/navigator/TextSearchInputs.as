@@ -57,7 +57,7 @@
                     case Tabs.SEARCHTYPE_TEXT_SEARCH:
                         this._searchType.selection = 0;
                         return;
-                    case Tabs._Str_9661:
+                    case Tabs.SEARCHTYPE_BY_OWNER:
                         this._searchType.selection = 1;
                         return;
                     case Tabs.SEARCHTYPE_ROOM_NAME_SEARCH:
@@ -97,7 +97,7 @@
                         this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
                         break;
                     case 1:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_9661, k);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_BY_OWNER, k);
                         break;
                     case 2:
                         this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_ROOM_NAME_SEARCH, k);

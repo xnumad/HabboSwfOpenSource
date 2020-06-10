@@ -648,7 +648,7 @@
                     return new _Str_12106();
                 case Tabs.SEARCHTYPE_MY_GUILD_BASES:
                     return new _Str_9844();
-                case Tabs._Str_9661:
+                case Tabs.SEARCHTYPE_BY_OWNER:
                     return new _Str_4390(("owner:" + _arg_2));
                 case Tabs._Str_9699:
                     return new _Str_9807();

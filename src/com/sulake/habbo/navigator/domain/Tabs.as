@@ -40,7 +40,7 @@
         public static const SEARCHTYPE_NEW_ROOM_ADS:int = 17;
         public static const SEARCHTYPE_ROOMS_WITH_RIGHTS:int = 18;
         public static const SEARCHTYPE_MY_GUILD_BASES:int = 19;
-        public static const _Str_9661:int = 20;
+        public static const SEARCHTYPE_BY_OWNER:int = 20;
         public static const _Str_10877:int = 21;
         public static const _Str_9699:int = 22;
         public static const _Str_7094:int = 23;

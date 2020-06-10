@@ -108,7 +108,7 @@
                     return "with_rights";
                 case Tabs.SEARCHTYPE_MY_GUILD_BASES:
                     return "my_groups";
-                case Tabs._Str_9661:
+                case Tabs.SEARCHTYPE_BY_OWNER:
                     return "query";
                 case Tabs._Str_10877:
                     return "all_categories";
