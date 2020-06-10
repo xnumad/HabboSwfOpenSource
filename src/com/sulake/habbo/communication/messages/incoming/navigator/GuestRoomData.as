@@ -240,12 +240,12 @@
             this._roomName = k;
         }
 
-        public function get _Str_16504():Boolean
+        public function get canMute():Boolean
         {
             return this._canMute;
         }
 
-        public function set _Str_16504(k:Boolean):void
+        public function set canMute(k:Boolean):void
         {
             this._canMute = k;
         }

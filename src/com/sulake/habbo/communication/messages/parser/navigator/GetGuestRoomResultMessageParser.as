@@ -33,7 +33,7 @@
             var _local_2:Boolean = k.readBoolean();
             this._roomModerationSettings = new RoomModerationSettings(k);
             this._data.allInRoomMuted = _local_2;
-            this._data._Str_16504 = k.readBoolean();
+            this._data.canMute = k.readBoolean();
             this._chatSettings = new RoomChatSettings(k);
             return true;
         }
