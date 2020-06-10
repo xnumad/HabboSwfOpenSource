@@ -205,7 +205,7 @@
             return this._displayRoomEntryAd;
         }
 
-        public function get _Str_8163():String
+        public function get roomAdName():String
         {
             return this._roomAdName;
         }

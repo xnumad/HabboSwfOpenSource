@@ -106,7 +106,7 @@
 
         private function refreshEventInfo(k:GuestRoomData):void
         {
-            if (((k._Str_8163 == null) || (k._Str_8163.length == 0)))
+            if (((k.roomAdName == null) || (k.roomAdName.length == 0)))
             {
                 return;
             }
@@ -116,7 +116,7 @@
             var _local_4:ITextWindow = ITextWindow(_local_2.findChildByName("eventinfo_desc"));
             var _local_5:ITextWindow = ITextWindow(_local_2.findChildByName("eventinfo_expirationtime"));
             var _local_6:ITextWindow = ITextWindow(_local_2.findChildByName("eventinfo.caption"));
-            _local_3.caption = k._Str_8163;
+            _local_3.caption = k.roomAdName;
             _local_4.caption = k._Str_22089;
             _local_5.caption = FriendlyTime.format(this._navigator.localization, (k.roomAdExpiresInMin * 60));
             _local_4.height = (_local_4.textHeight + 10);

@@ -101,7 +101,7 @@
         private function _Str_20769(k:IWindowContainer, _arg_2:GuestRoomData, _arg_3:Boolean):void
         {
             k.findChildByName("room_usercount").caption = _arg_2.userCount.toString();
-            k.findChildByName("room_name").caption = ((ViewMode._Str_25096(this._viewMode)) ? _arg_2._Str_8163 : _arg_2.roomName);
+            k.findChildByName("room_name").caption = ((ViewMode._Str_25096(this._viewMode)) ? _arg_2.roomAdName : _arg_2.roomName);
             k.findChildByName("go_to_room_region").id = _arg_2.flatId;
             k.findChildByName("go_to_room_region").addEventListener(WindowMouseEvent.CLICK, this._Str_23456);
             k.findChildByName("go_to_room_region").addEventListener(WindowMouseEvent.OVER, ((_arg_3) ? this._Str_25608 : this._Str_24397));

@@ -39,7 +39,7 @@
             k.visible = true;
             var _local_3:ITextWindow = ITextWindow(k.getChildByName("adname"));
             _local_3.visible = true;
-            Util._Str_21212(_local_3, _arg_2._Str_8163, k.width);
+            Util._Str_21212(_local_3, _arg_2.roomAdName, k.width);
             _navigator.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
             _navigator.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
             _navigator.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
@@ -58,7 +58,7 @@
             var _local_4:GuestRoomData = this.getRoomAt(_local_3);
             if (_navigator)
             {
-                _navigator.send(new _Str_11792(_local_4.flatId, _local_4._Str_8163, _local_4.roomAdExpiresInMin));
+                _navigator.send(new _Str_11792(_local_4.flatId, _local_4.roomAdName, _local_4.roomAdExpiresInMin));
             }
             super.onMouseClick(k);
         }
