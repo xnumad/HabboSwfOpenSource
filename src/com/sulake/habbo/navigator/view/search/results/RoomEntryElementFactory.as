@@ -169,7 +169,7 @@
 
         private function _Str_26401(k:WindowEvent):void
         {
-            this._navigator._Str_18961(k.window.id);
+            this._navigator.getGuildInfo(k.window.id);
         }
 
         private function _Str_26403(k:WindowEvent):void

@@ -313,7 +313,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._navigator._Str_18961(_arg_2.id);
+                this._navigator.getGuildInfo(_arg_2.id);
                 this.destroy();
             }
         }

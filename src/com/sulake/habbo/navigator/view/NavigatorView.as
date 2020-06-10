@@ -257,7 +257,7 @@
                 this._roomInfoPopup._Str_5479(k);
                 if (((!(k.habboGroupId == 0)) && (this._habboNewNavigator._Str_20693(k.habboGroupId) == null)))
                 {
-                    this._habboNewNavigator._Str_18961(k.habboGroupId, false);
+                    this._habboNewNavigator.getGuildInfo(k.habboGroupId, false);
                     this._Str_16641 = k.habboGroupId;
                 }
                 this._roomInfoPopup._Str_23392(true, _arg_2, _arg_3);

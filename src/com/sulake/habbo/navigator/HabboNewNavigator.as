@@ -579,7 +579,7 @@
             this._communication.connection.send(new _Str_11137(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6));
         }
 
-        public function _Str_18961(k:int, _arg_2:Boolean=true):void
+        public function getGuildInfo(k:int, _arg_2:Boolean=true):void
         {
             this._communication.connection.send(new _Str_2863(k, _arg_2));
         }
