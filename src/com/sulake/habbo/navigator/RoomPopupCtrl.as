@@ -209,7 +209,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._navigator.trackGoogle("roomInfo", "editRoomSettings");
-                this._navigator._Str_3188._Str_21207(this._room.flatId, this._room.habboGroupId);
+                this._navigator.roomSettingsCtrl._Str_21207(this._room.flatId, this._room.habboGroupId);
                 this._Str_14696();
             }
         }

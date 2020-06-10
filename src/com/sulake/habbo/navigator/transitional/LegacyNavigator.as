@@ -115,7 +115,7 @@
             return this._oldNavigator.communication;
         }
 
-        public function get _Str_3188():RoomSettingsCtrl
+        public function get roomSettingsCtrl():RoomSettingsCtrl
         {
             return this._roomSettingsCtrl;
         }
@@ -450,7 +450,7 @@
 
         public function get _Str_26424():RoomSettingsCtrl
         {
-            return this._oldNavigator._Str_3188;
+            return this._oldNavigator.roomSettingsCtrl;
         }
     }
 }

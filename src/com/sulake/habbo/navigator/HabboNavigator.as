@@ -160,7 +160,7 @@
             return this._communication;
         }
 
-        public function get _Str_3188():RoomSettingsCtrl
+        public function get roomSettingsCtrl():RoomSettingsCtrl
         {
             return this._roomSettingsCtrl;
         }

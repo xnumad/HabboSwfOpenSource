@@ -341,7 +341,7 @@
             var _local_3:RoomSettingsCtrl;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = LegacyNavigator(this._navigator.legacyNavigator)._Str_3188;
+                _local_3 = LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl;
                 _local_3._Str_21207(this._guestRoomData.flatId, this._guestRoomData.habboGroupId);
                 this.destroy();
             }

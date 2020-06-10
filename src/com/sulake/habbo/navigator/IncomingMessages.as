@@ -280,7 +280,7 @@
             Logger.log("Sent get guest room...");
             this._navigator._Str_5048.refresh();
             this._navigator._Str_6939.close();
-            this._navigator._Str_3188.close();
+            this._navigator.roomSettingsCtrl.close();
             this._navigator.roomFilterCtrl.close();
             HabboWebTools.closeNews();
         }
@@ -471,7 +471,7 @@
             this._navigator.roomInfoViewCtrl.close();
             this._navigator._Str_5048.close();
             this._navigator._Str_6939.close();
-            this._navigator._Str_3188.close();
+            this._navigator.roomSettingsCtrl.close();
             this._navigator.roomFilterCtrl.close();
             var _local_2:Boolean = this._navigator.getBoolean("news.auto_popup.enabled");
             if (_local_2)
@@ -500,7 +500,7 @@
             try
             {
                 parser = (event as _Str_5993).getParser();
-                this._navigator._Str_3188.onRoomSettings(parser.data);
+                this._navigator.roomSettingsCtrl.onRoomSettings(parser.data);
                 Logger.log(((((("GOT ROOM SETTINGS DATA: " + parser.data.name) + ", ") + parser.data._Str_5552) + ", ") + parser.data._Str_13128));
             }
             catch(e:Error)
@@ -531,7 +531,7 @@
         private function _Str_8265(k:IMessageEvent):void
         {
             var _local_2:_Str_4043 = (k as _Str_6030).getParser();
-            this._navigator._Str_3188._Str_8265(_local_2.roomId, _local_2.errorCode, _local_2.info);
+            this._navigator.roomSettingsCtrl._Str_8265(_local_2.roomId, _local_2.errorCode, _local_2.info);
         }
 
         private function _Str_18125(k:IMessageEvent):void
@@ -585,35 +585,35 @@
         {
             var _local_2:_Str_6355 = (k as _Str_5771).getParser();
             Logger.log(((("Got flat controllers: " + _local_2.roomId) + ", ") + _local_2._Str_8349.length));
-            this._navigator._Str_3188._Str_8576(_local_2.roomId, _local_2._Str_8349);
+            this._navigator.roomSettingsCtrl._Str_8576(_local_2.roomId, _local_2._Str_8349);
         }
 
         private function _Str_9346(k:IMessageEvent):void
         {
             var _local_2:_Str_6824 = (k as _Str_6213).getParser();
             Logger.log(((((("Flat controller added: " + _local_2.flatId) + ", ") + _local_2.data.userId) + ", ") + _local_2.data.userName));
-            this._navigator._Str_3188._Str_9346(_local_2.flatId, _local_2.data);
+            this._navigator.roomSettingsCtrl._Str_9346(_local_2.flatId, _local_2.data);
         }
 
         private function _Str_8484(k:IMessageEvent):void
         {
             var _local_2:_Str_6887 = (k as _Str_5683).getParser();
             Logger.log(((("Flat controller removed: " + _local_2.flatId) + ", ") + _local_2.userId));
-            this._navigator._Str_3188._Str_8484(_local_2.flatId, _local_2.userId);
+            this._navigator.roomSettingsCtrl._Str_8484(_local_2.flatId, _local_2.userId);
         }
 
         private function _Str_8907(k:IMessageEvent):void
         {
             var _local_2:_Str_6752 = (k as _Str_5881).getParser();
             Logger.log(((("Got Banned users for room: " + _local_2.roomId) + ", ") + _local_2._Str_14901.length));
-            this._navigator._Str_3188._Str_8907(_local_2.roomId, _local_2._Str_14901);
+            this._navigator.roomSettingsCtrl._Str_8907(_local_2.roomId, _local_2._Str_14901);
         }
 
         private function _Str_8351(k:IMessageEvent):void
         {
             var _local_2:_Str_6587 = (k as _Str_5655).getParser();
             Logger.log(((("User was unbanned from room. User Id: " + _local_2.userId) + " Room Id: ") + _local_2.roomId));
-            this._navigator._Str_3188._Str_8351(_local_2.roomId, _local_2.userId);
+            this._navigator.roomSettingsCtrl._Str_8351(_local_2.roomId, _local_2.userId);
         }
 
         private function onError(event:IMessageEvent):void
@@ -709,7 +709,7 @@
         private function _Str_4132(k:IMessageEvent):void
         {
             this._navigator.data.friendList._Str_4132(k);
-            this._navigator._Str_3188._Str_4132();
+            this._navigator.roomSettingsCtrl._Str_4132();
         }
 
         private function _Str_26467(k:_Str_5767):void
