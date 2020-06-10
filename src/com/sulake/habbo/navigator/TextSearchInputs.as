@@ -66,7 +66,7 @@
                     case Tabs.SEARCHTYPE_TAG_SEARCH:
                         this._searchType.selection = 3;
                         return;
-                    case Tabs._Str_8671:
+                    case Tabs.SEARCHTYPE_GROUP_NAME_SEARCH:
                         this._searchType.selection = 4;
                         return;
                 }
@@ -106,7 +106,7 @@
                         this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TAG_SEARCH, k);
                         break;
                     case 4:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_8671, k);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_GROUP_NAME_SEARCH, k);
                         break;
                 }
             }

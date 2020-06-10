@@ -33,7 +33,7 @@
         public static const SEARCHTYPE_ROOM_NAME_SEARCH:int = 10;
         public static const SEARCHTYPE_OFFICIALROOMS:int = 11;
         public static const SEARCHTYPE_LATEST_EVENTS:int = 12;
-        public static const _Str_8671:int = 13;
+        public static const SEARCHTYPE_GROUP_NAME_SEARCH:int = 13;
         public static const _Str_10120:int = 14;
         public static const _Str_9891:int = 15;
         public static const _Str_6358:int = 16;

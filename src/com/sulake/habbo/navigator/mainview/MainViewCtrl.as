@@ -632,7 +632,7 @@
                     return new _Str_4390(("tag:" + _arg_2));
                 case Tabs.SEARCHTYPE_TEXT_SEARCH:
                     return new _Str_4390(_arg_2);
-                case Tabs._Str_8671:
+                case Tabs.SEARCHTYPE_GROUP_NAME_SEARCH:
                     return new _Str_4390(("group:" + _arg_2));
                 case Tabs.SEARCHTYPE_ROOM_NAME_SEARCH:
                     return new _Str_4390(("roomname:" + _arg_2));

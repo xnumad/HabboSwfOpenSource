@@ -94,7 +94,7 @@
                     return "official";
                 case Tabs.SEARCHTYPE_LATEST_EVENTS:
                     return "new_ads";
-                case Tabs._Str_8671:
+                case Tabs.SEARCHTYPE_GROUP_NAME_SEARCH:
                     return "groups";
                 case Tabs._Str_10120:
                     return "groups";
