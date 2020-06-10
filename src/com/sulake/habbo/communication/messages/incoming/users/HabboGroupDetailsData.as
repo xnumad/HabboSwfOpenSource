@@ -26,7 +26,7 @@
         private var _favourite:Boolean;
         private var _creationDate:String;
         private var _isOwner:Boolean;
-        private var _Str_14681:Boolean;
+        private var _isAdmin:Boolean;
         private var _ownerName:String;
         private var _Str_20023:Boolean;
         private var _Str_19985:Boolean;
@@ -48,7 +48,7 @@
             this._favourite = k.readBoolean();
             this._creationDate = k.readString();
             this._isOwner = k.readBoolean();
-            this._Str_14681 = k.readBoolean();
+            this._isAdmin = k.readBoolean();
             this._ownerName = k.readString();
             this._Str_20023 = k.readBoolean();
             this._Str_22088 = k.readBoolean();
@@ -123,7 +123,7 @@
 
         public function get isAdmin():Boolean
         {
-            return this._Str_14681;
+            return this._isAdmin;
         }
 
         public function get ownerName():String
