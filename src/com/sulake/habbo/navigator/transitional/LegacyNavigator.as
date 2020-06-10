@@ -235,7 +235,7 @@
             return this._newNavigator.performSearch("history");
         }
 
-        public function _Str_17131():void
+        public function showFrequentRooms():void
         {
             return this._newNavigator.performSearch("history_freq");
         }

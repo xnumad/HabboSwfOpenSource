@@ -102,7 +102,7 @@
 
         private function _Str_24692(k:WindowMouseEvent):void
         {
-            this._habboNavigator._Str_17131();
+            this._habboNavigator.showFrequentRooms();
             this._Str_8696();
         }
 

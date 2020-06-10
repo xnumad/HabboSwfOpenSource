@@ -673,7 +673,7 @@
             this._Str_18163(Tabs._Str_8161);
         }
 
-        public function _Str_17131():void
+        public function showFrequentRooms():void
         {
             this._Str_18163(Tabs._Str_7094);
         }
