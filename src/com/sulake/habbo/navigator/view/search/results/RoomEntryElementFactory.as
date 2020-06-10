@@ -13,7 +13,7 @@
     import com.sulake.habbo.window.utils._Str_18430;
     import com.sulake.core.window.events.WindowEvent;
     import flash.geom.Rectangle;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
     import com.sulake.core.window.components.IRegionWindow;
 
@@ -177,7 +177,7 @@
             var _local_2:Boolean = this._navigator.legacyNavigator._Str_12281(k.window.id);
             if (_local_2)
             {
-                this._navigator.communication.connection.send(new _Str_5262(k.window.id));
+                this._navigator.communication.connection.send(new DeleteFavouriteRoomMessageComposer(k.window.id));
             }
             else
             {

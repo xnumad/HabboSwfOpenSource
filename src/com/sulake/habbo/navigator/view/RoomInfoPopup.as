@@ -21,7 +21,7 @@
     import com.sulake.habbo.navigator.roomsettings.RoomSettingsCtrl;
     import com.sulake.habbo.navigator.transitional.LegacyNavigator;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7911;
     import __AS3__.vec.*;
 
@@ -358,7 +358,7 @@
                 }
                 else
                 {
-                    this._navigator.communication.connection.send(new _Str_5262(this._guestRoomData.flatId));
+                    this._navigator.communication.connection.send(new DeleteFavouriteRoomMessageComposer(this._guestRoomData.flatId));
                     this._Str_9158 = false;
                 }
                 IStaticBitmapWrapperWindow(this._window.findChildByName("favorite_icon")).assetUri = ("newnavigator_icon_fav_" + ((this._Str_9158) ? "yes" : "no"));

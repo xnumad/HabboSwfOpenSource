@@ -17,7 +17,7 @@
     import com.sulake.core.window.IWindow;
     import flash.geom.Point;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
     import com.sulake.core.window.*;
     import com.sulake.core.window.components.*;
@@ -346,7 +346,7 @@
             {
                 return;
             }
-            this._navigator.send(new _Str_5262(_local_3.flatId));
+            this._navigator.send(new DeleteFavouriteRoomMessageComposer(_local_3.flatId));
         }
 
         private function onAddFavouriteClick(k:WindowMouseEvent):void

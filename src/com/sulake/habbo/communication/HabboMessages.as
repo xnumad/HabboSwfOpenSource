@@ -527,7 +527,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4390;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7214;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7413;
@@ -1800,7 +1800,7 @@
             OUTGOING_PACKETS[3077] = RequestABadgeComposer;
             OUTGOING_PACKETS[3082] = _Str_11484;
             OUTGOING_PACKETS[3086] = GetCraftingRecipesAvailableComposer;
-            OUTGOING_PACKETS[309] = _Str_5262;
+            OUTGOING_PACKETS[309] = DeleteFavouriteRoomMessageComposer;
             OUTGOING_PACKETS[3093] = ChangeQueueMessageComposer;
             OUTGOING_PACKETS[3095] = _Str_10323;
             OUTGOING_PACKETS[31] = _Str_11384;

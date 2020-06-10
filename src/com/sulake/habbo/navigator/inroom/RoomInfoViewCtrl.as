@@ -22,7 +22,7 @@
     import com.sulake.habbo.navigator.SimpleAlertView;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.MuteAllInRoomComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7911;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11662;
@@ -387,7 +387,7 @@
                 return;
             }
             this._navigator.trackGoogle("roomInfo", "removeFavourite");
-            this._navigator.send(new _Str_5262(this._navigator.data.enteredGuestRoom.flatId));
+            this._navigator.send(new DeleteFavouriteRoomMessageComposer(this._navigator.data.enteredGuestRoom.flatId));
         }
 
         private function onRoomSettingsClick(k:WindowEvent):void
