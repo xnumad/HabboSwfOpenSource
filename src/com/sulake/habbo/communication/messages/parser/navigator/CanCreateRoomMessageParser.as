@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7400 implements IMessageParser 
+    public class CanCreateRoomMessageParser implements IMessageParser
     {
         public static const _Str_21199:int = 0;
         public static const _Str_21069:int = 1;

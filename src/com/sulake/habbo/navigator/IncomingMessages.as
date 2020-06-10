@@ -87,7 +87,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6683;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6043;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6561;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_7400;
+    import com.sulake.habbo.communication.messages.parser.navigator.CanCreateRoomMessageParser;
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6355;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6824;
@@ -560,7 +560,7 @@
         private function _Str_25812(k:IMessageEvent):void
         {
             var _local_3:AlertView;
-            var _local_2:_Str_7400 = (k as _Str_9492).getParser();
+            var _local_2:CanCreateRoomMessageParser = (k as _Str_9492).getParser();
             Logger.log(((("Can create room: " + _local_2.resultCode) + ", ") + _local_2._Str_20396));
             if (_local_2.resultCode == 0)
             {
