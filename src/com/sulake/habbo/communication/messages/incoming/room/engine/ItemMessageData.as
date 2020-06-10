@@ -5,7 +5,7 @@
         private var _id:int = 0;
         private var _isOldFormat:Boolean = false;
         private var _wallX:int = 0;
-        private var _Str_19818:int = 0;
+        private var _wallY:int = 0;
         private var _localX:int = 0;
         private var _localY:int = 0;
         private var _y:Number = 0;
@@ -57,14 +57,14 @@
 
         public function get _Str_15569():Number
         {
-            return this._Str_19818;
+            return this._wallY;
         }
 
         public function set _Str_15569(k:Number):void
         {
             if (!this._isReadOnly)
             {
-                this._Str_19818 = k;
+                this._wallY = k;
             }
         }
 
