@@ -3,7 +3,7 @@
     public class ItemMessageData
     {
         private var _id:int = 0;
-        private var _Str_19875:Boolean = false;
+        private var _isOldFormat:Boolean = false;
         private var _Str_21211:int = 0;
         private var _Str_19818:int = 0;
         private var _localX:int = 0;
@@ -24,7 +24,7 @@
         {
             this._id = k;
             this._type = _arg_2;
-            this._Str_19875 = _arg_3;
+            this._isOldFormat = _arg_3;
         }
 
         public function setReadOnly():void
@@ -39,7 +39,7 @@
 
         public function get _Str_22379():Boolean
         {
-            return this._Str_19875;
+            return this._isOldFormat;
         }
 
         public function get _Str_15139():Number
