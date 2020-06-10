@@ -93,7 +93,7 @@
             return this._Str_9291;
         }
 
-        public function get _Str_9050():int
+        public function get creationMonth():int
         {
             return this._Str_8744;
         }

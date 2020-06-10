@@ -163,7 +163,7 @@
             return 0;
         }
 
-        public function get _Str_9050():int
+        public function get creationMonth():int
         {
             return 0;
         }

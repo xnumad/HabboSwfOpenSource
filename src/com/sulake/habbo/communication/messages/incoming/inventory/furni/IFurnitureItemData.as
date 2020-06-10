@@ -24,7 +24,7 @@
         function get hasRentPeriodStarted():Boolean;
         function get _Str_10616():int;
         function get _Str_8932():int;
-        function get _Str_9050():int;
+        function get creationMonth():int;
         function get creationYear():int;
         function get isExternalImageFurni():Boolean;
     }
