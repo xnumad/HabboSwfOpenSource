@@ -143,7 +143,7 @@
             }
             if (this.type == _Str_12025)
             {
-                return this._Str_2567._Str_9029;
+                return this._Str_2567.maxUserCount;
             }
             return 0;
         }

@@ -204,7 +204,7 @@
                 k.findChildByName("room_number").caption = ((k.tags[0] + 2) + ".");
             }
             this.refreshRoomName(k, _arg_2);
-            this._userCountRenderer.refreshUserCount(_arg_2._Str_9029, k, _arg_2.userCount, "${navigator.usercounttooltip.users}", 308, 2);
+            this._userCountRenderer.refreshUserCount(_arg_2.maxUserCount, k, _arg_2.userCount, "${navigator.usercounttooltip.users}", 308, 2);
             k.name = ((("guestroom_" + _arg_2.ownerName) + "_") + _arg_2.roomName);
         }
 

@@ -108,7 +108,7 @@
             k.findChildByName("info_popup_click_region").id = _arg_2.flatId;
             k.findChildByName("info_popup_click_region").addEventListener(WindowMouseEvent.CLICK, this._Str_24506);
             k.findChildByName("info_popup_click_region").addEventListener(WindowMouseEvent.OVER, this._Str_25237);
-            IBorderWindow(k.findChildByName("room_info_usercount_border")).color = _Str_18430._Str_25426(_arg_2.userCount, _arg_2._Str_9029);
+            IBorderWindow(k.findChildByName("room_info_usercount_border")).color = _Str_18430._Str_25426(_arg_2.userCount, _arg_2.maxUserCount);
             IStaticBitmapWrapperWindow(k.findChildByName("doormode_icon")).assetUri = RoomEntryUtils._Str_25339(_arg_2.doorMode);
         }
 

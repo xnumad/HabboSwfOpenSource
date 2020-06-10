@@ -120,7 +120,7 @@
             k.findChildByName("open_txt").visible = (!(_arg_2.open));
             k.findChildByName("arrow_down_icon").x = this._Str_17813(k, "close_txt");
             k.findChildByName("arrow_right_icon").x = this._Str_17813(k, "open_txt");
-            this._userCountRenderer.refreshUserCount(_arg_2._Str_7144._Str_9029, IWindowContainer(k.findChildByName("enter_room_button")), _arg_2._Str_7144.userCount, "${navigator.usercounttooltip.users}", 222, 35);
+            this._userCountRenderer.refreshUserCount(_arg_2._Str_7144.maxUserCount, IWindowContainer(k.findChildByName("enter_room_button")), _arg_2._Str_7144.userCount, "${navigator.usercounttooltip.users}", 222, 35);
             this._Str_16592(k, _arg_2);
             k.findChildByName("item_list").visible = _arg_2.open;
             if (_arg_2.open)

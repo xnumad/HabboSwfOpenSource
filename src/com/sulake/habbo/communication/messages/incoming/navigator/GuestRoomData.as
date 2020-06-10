@@ -140,7 +140,7 @@
             return this._userCount;
         }
 
-        public function get _Str_9029():int
+        public function get maxUserCount():int
         {
             return this._maxUserCount;
         }

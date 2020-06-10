@@ -247,7 +247,7 @@
             {
                 this._Str_16458("properties", "${navigator.roompopup.property.ranking}", this._guestRoomData.ranking.toString());
             }
-            this._Str_16458("properties", "${navigator.roompopup.property.max_users}", this._guestRoomData._Str_9029.toString());
+            this._Str_16458("properties", "${navigator.roompopup.property.max_users}", this._guestRoomData.maxUserCount.toString());
             IStaticBitmapWrapperWindow(this._window.findChildByName("room_thumbnail")).assetUri = "newnavigator_default_room";
             if (this._navigator.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
             {
