@@ -31,7 +31,7 @@
         private var _openDetails:Boolean;
         private var _hasBoard:Boolean;
         private var _membersCanDecorate:Boolean;
-        private var _Str_21164:int;
+        private var _pendingMemberCount:int;
 
         public function HabboGroupDetailsData(k:IMessageDataWrapper)
         {
@@ -52,7 +52,7 @@
             this._ownerName = k.readString();
             this._openDetails = k.readBoolean();
             this._membersCanDecorate = k.readBoolean();
-            this._Str_21164 = k.readInteger();
+            this._pendingMemberCount = k.readInteger();
             this._hasBoard = k.readBoolean();
         }
 
@@ -143,7 +143,7 @@
 
         public function get _Str_18324():int
         {
-            return this._Str_21164;
+            return this._pendingMemberCount;
         }
 
         public function get _Str_25156():Boolean
