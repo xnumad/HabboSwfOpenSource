@@ -26,7 +26,7 @@
         public function _Str_25329():void
         {
             var k:Boolean = this._navigator.context.configuration.getBoolean("navigator.2014.personalized.navigator");
-            if (((k) && (this.id == Tabs._Str_3866)))
+            if (((k) && (this.id == Tabs.TAB_ROOMS)))
             {
                 this._defaultSearchType = Tabs._Str_9699;
             }

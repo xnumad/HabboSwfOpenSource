@@ -353,7 +353,7 @@
         {
             var _local_2:_Str_6478 = (k as _Str_5728).getParser();
             this._navigator.data.categories = _local_2.nodes;
-            var _local_3:RoomsTabPageDecorator = RoomsTabPageDecorator(LegacyNavigator(this._navigator.legacyNavigator).tabs._Str_9436(Tabs._Str_3866)._Str_5252);
+            var _local_3:RoomsTabPageDecorator = RoomsTabPageDecorator(LegacyNavigator(this._navigator.legacyNavigator).tabs._Str_9436(Tabs.TAB_ROOMS)._Str_5252);
             _local_3._Str_19000();
         }
 

@@ -280,7 +280,7 @@
             {
                 k = getProperty("new.identity.navigator.default_tab");
             }
-            this.tabs._Str_13005(Tabs._Str_20758(k, Tabs._Str_3866));
+            this.tabs._Str_13005(Tabs._Str_20758(k, Tabs.TAB_ROOMS));
             this._roomSettingsCtrl = new RoomSettingsCtrl(this);
             if (ExternalInterface.available)
             {
@@ -416,7 +416,7 @@
                         case Tabs._Str_5203:
                             this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.me", String(k), _local_5);
                             return;
-                        case Tabs._Str_3866:
+                        case Tabs.TAB_ROOMS:
                             this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.rooms", String(k), _local_5);
                             return;
                         case Tabs.TAB_EVENTS:
@@ -805,7 +805,7 @@
                 case "tab":
                     if (_local_2.length > 2)
                     {
-                        this.tabs._Str_13005(Tabs._Str_20758(_local_2[2], Tabs._Str_3866));
+                        this.tabs._Str_13005(Tabs._Str_20758(_local_2[2], Tabs.TAB_ROOMS));
                         this.openNavigator(null);
                     }
                     return;

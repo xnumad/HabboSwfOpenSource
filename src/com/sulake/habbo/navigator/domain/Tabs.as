@@ -15,7 +15,7 @@
     public class Tabs 
     {
         public static const TAB_EVENTS:int = 1;
-        public static const _Str_3866:int = 2;
+        public static const TAB_ROOMS:int = 2;
         public static const _Str_5203:int = 3;
         public static const _Str_6250:int = 4;
         public static const _Str_3813:int = 5;
@@ -49,7 +49,7 @@
         private var _navigator:HabboNavigator;
 
         {
-            _Str_5586["popular"] = _Str_3866;
+            _Str_5586["popular"] = TAB_ROOMS;
             _Str_5586["official"] = _Str_6250;
             _Str_5586["me"] = _Str_5203;
             _Str_5586["events"] = TAB_EVENTS;
@@ -63,7 +63,7 @@
             this._tabs = new Array();
             this._tabs.push(new Tab(this._navigator, TAB_EVENTS, _Str_6358, new EventsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, _Str_7172, _Str_10877, new CategoriesTabPageDecorator(this._navigator), MainViewCtrl._Str_13989));
-            this._tabs.push(new Tab(this._navigator, _Str_3866, _Str_5348, new RoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
+            this._tabs.push(new Tab(this._navigator, TAB_ROOMS, _Str_5348, new RoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, _Str_6250, _Str_8698, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
             this._tabs.push(new Tab(this._navigator, _Str_5203, _Str_4869, new MyRoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, _Str_3813, _Str_5622, new SearchTabPageDecorator(this._navigator), MainViewCtrl._Str_14620));

@@ -477,7 +477,7 @@
                 case Tabs._Str_6250:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_OFFICIAL));
                     return;
-                case Tabs._Str_3866:
+                case Tabs.TAB_ROOMS:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_ROOMS));
                     return;
                 case Tabs._Str_3813:
