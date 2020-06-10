@@ -169,7 +169,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this._navigator.data.roomEventData;
-                this._navigator._Str_14281(_local_3.eventName, _local_3.eventDescription, _local_3._Str_21519, _local_3.categoryId);
+                this._navigator.openCatalogRoomAdsExtendPage(_local_3.eventName, _local_3.eventDescription, _local_3._Str_21519, _local_3.categoryId);
             }
         }
 

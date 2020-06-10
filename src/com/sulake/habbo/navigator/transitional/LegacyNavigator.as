@@ -413,9 +413,9 @@
             return this._oldNavigator == null;
         }
 
-        public function _Str_14281(k:String, _arg_2:String, _arg_3:Date, _arg_4:int):void
+        public function openCatalogRoomAdsExtendPage(k:String, _arg_2:String, _arg_3:Date, _arg_4:int):void
         {
-            return this._oldNavigator._Str_14281(k, _arg_2, _arg_3, _arg_4);
+            return this._oldNavigator.openCatalogRoomAdsExtendPage(k, _arg_2, _arg_3, _arg_4);
         }
 
         public function getProperty(k:String, _arg_2:Dictionary=null):String

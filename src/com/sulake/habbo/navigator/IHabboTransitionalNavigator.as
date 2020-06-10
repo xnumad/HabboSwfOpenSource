@@ -59,7 +59,7 @@
         function getButtonImage(_arg_1:String, _arg_2:String="_png"):BitmapData;
         function openCatalogClubPage(_arg_1:String):void;
         function openCatalogRoomAdsPage():void;
-        function _Str_14281(_arg_1:String, _arg_2:String, _arg_3:Date, _arg_4:int):void;
+        function openCatalogRoomAdsExtendPage(_arg_1:String, _arg_2:String, _arg_3:Date, _arg_4:int):void;
         function _Str_18427():void;
         function _Str_16885():void;
         function _Str_17131():void;

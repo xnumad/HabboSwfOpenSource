@@ -560,7 +560,7 @@
             this._catalog.openCatalogPage("room_ad");
         }
 
-        public function _Str_14281(k:String, _arg_2:String, _arg_3:Date, _arg_4:int):void
+        public function openCatalogRoomAdsExtendPage(k:String, _arg_2:String, _arg_3:Date, _arg_4:int):void
         {
             if (this._catalog == null)
             {
