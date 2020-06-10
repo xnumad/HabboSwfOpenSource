@@ -4,13 +4,13 @@
     {
         private var _roomId:int;
         private var _roomName:String;
-        private var _Str_21104:Boolean = false;
+        private var _hasControllers:Boolean = false;
 
         public function RoomEntryData(k:int, _arg_2:String, _arg_3:Boolean)
         {
             this._roomId = k;
             this._roomName = _arg_2;
-            this._Str_21104 = _arg_3;
+            this._hasControllers = _arg_3;
         }
 
         public function get roomId():int
@@ -25,7 +25,7 @@
 
         public function get _Str_22776():Boolean
         {
-            return this._Str_21104;
+            return this._hasControllers;
         }
     }
 }
