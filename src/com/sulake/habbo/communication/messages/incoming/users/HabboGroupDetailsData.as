@@ -28,7 +28,7 @@
         private var _isOwner:Boolean;
         private var _isAdmin:Boolean;
         private var _ownerName:String;
-        private var _Str_20023:Boolean;
+        private var _openDetails:Boolean;
         private var _Str_19985:Boolean;
         private var _Str_22088:Boolean;
         private var _Str_21164:int;
@@ -50,7 +50,7 @@
             this._isOwner = k.readBoolean();
             this._isAdmin = k.readBoolean();
             this._ownerName = k.readString();
-            this._Str_20023 = k.readBoolean();
+            this._openDetails = k.readBoolean();
             this._Str_22088 = k.readBoolean();
             this._Str_21164 = k.readInteger();
             this._Str_19985 = k.readBoolean();
@@ -133,7 +133,7 @@
 
         public function get _Str_8199():Boolean
         {
-            return this._Str_20023;
+            return this._openDetails;
         }
 
         public function get _Str_17307():Boolean
