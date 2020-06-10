@@ -180,7 +180,7 @@
             return this._groupName;
         }
 
-        public function get _Str_7146():String
+        public function get groupBadgeCode():String
         {
             return this._groupBadgeCode;
         }

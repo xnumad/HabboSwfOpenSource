@@ -67,7 +67,7 @@
             }
             IBorderWindow(_local_4).color = RoomEntryUtils._Str_24293(_arg_2, IBorderWindow(_local_4).color);
             this._Str_20769(_local_4, k, false);
-            _local_4.findChildByName("grouphome_icon").visible = (!(k._Str_7146 == ""));
+            _local_4.findChildByName("grouphome_icon").visible = (!(k.groupBadgeCode == ""));
             return _local_4;
         }
 
@@ -75,10 +75,10 @@
         {
             var _local_3:IWindowContainer = IWindowContainer(this._tileEntryTemplate.clone());
             this._Str_20769(_local_3, k, true);
-            if (k._Str_7146 != "")
+            if (k.groupBadgeCode != "")
             {
                 _local_3.findChildByName("room_group_badge").visible = true;
-                IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("room_group_badge")).widget).badgeId = k._Str_7146;
+                IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("room_group_badge")).widget).badgeId = k.groupBadgeCode;
             }
             if (k.officialRoomPicRef != null)
             {

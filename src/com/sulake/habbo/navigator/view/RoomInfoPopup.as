@@ -155,7 +155,7 @@
             var _local_2:IItemListWindow = IItemListWindow(this._window.findChildByName("header_content"));
             var _local_3:IItemListWindow = IItemListWindow(this._window.findChildByName("bottom_itemlist"));
             this._window.findChildByName("room_owner_region").visible = this._guestRoomData._Str_6938;
-            this._window.findChildByName("room_group_region").visible = (!(this._guestRoomData._Str_7146 == ""));
+            this._window.findChildByName("room_group_region").visible = (!(this._guestRoomData.groupBadgeCode == ""));
             this._window.findChildByName("room_name").caption = this._guestRoomData.roomName;
             this._window.findChildByName("room_desc").caption = this._guestRoomData.description;
             this._window.findChildByName("owner_name").caption = this._guestRoomData.ownerName;
@@ -180,14 +180,14 @@
             IItemListWindow(this._window.findChildByName("midBottom_itemlist")).arrangeListItems();
             IStaticBitmapWrapperWindow(this._window.findChildByName("favorite_icon")).assetUri = ("newnavigator_icon_fav_" + ((this._Str_9158) ? "yes" : "no"));
             IStaticBitmapWrapperWindow(this._window.findChildByName("home_icon")).assetUri = ("newnavigator_icon_home_" + ((this._Str_11907) ? "yes" : "no"));
-            var _local_4:* = (!(this._guestRoomData._Str_7146 == ""));
+            var _local_4:* = (!(this._guestRoomData.groupBadgeCode == ""));
             this._window.findChildByName("room_group_badge").visible = _local_4;
             this._window.findChildByName("room_owner_region").visible = this._guestRoomData._Str_6938;
             this._window.findChildByName("room_group_region").visible = _local_4;
             this._window.findChildByName("room_group_owner_container").visible = ((_local_4) || (this._guestRoomData._Str_6938));
             if (_local_4)
             {
-                IBadgeImageWidget(IWidgetWindow(this._window.findChildByName("room_group_badge")).widget).badgeId = this._guestRoomData._Str_7146;
+                IBadgeImageWidget(IWidgetWindow(this._window.findChildByName("room_group_badge")).widget).badgeId = this._guestRoomData.groupBadgeCode;
                 this._window.findChildByName("group_name").caption = this._guestRoomData.groupName;
                 this._window.findChildByName("group_name").id = this._guestRoomData.habboGroupId;
                 this._window.findChildByName("room_group_region").id = this._guestRoomData.habboGroupId;
