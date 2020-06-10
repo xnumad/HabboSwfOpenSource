@@ -117,7 +117,7 @@
             var _local_5:ITextWindow = ITextWindow(_local_2.findChildByName("eventinfo_expirationtime"));
             var _local_6:ITextWindow = ITextWindow(_local_2.findChildByName("eventinfo.caption"));
             _local_3.caption = k.roomAdName;
-            _local_4.caption = k._Str_22089;
+            _local_4.caption = k.roomAdDescription;
             _local_5.caption = FriendlyTime.format(this._navigator.localization, (k.roomAdExpiresInMin * 60));
             _local_4.height = (_local_4.textHeight + 10);
             _local_5.y = (_local_4.y + _local_4.height);

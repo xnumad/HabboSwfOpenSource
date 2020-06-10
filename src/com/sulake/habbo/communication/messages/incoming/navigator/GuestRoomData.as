@@ -210,7 +210,7 @@
             return this._roomAdName;
         }
 
-        public function get _Str_22089():String
+        public function get roomAdDescription():String
         {
             return this._roomAdDescription;
         }

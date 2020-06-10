@@ -224,7 +224,7 @@
             if (_local_5)
             {
                 _local_9 = ((this._navigator.localization.getLocalizationWithParams("navigator.eventsettings.name") + ": ") + this._guestRoomData.roomAdName);
-                _local_10 = (((this._navigator.localization.getLocalizationWithParams("navigator.eventsettings.desc") + ": ") + this._guestRoomData._Str_22089) + "\n");
+                _local_10 = (((this._navigator.localization.getLocalizationWithParams("navigator.eventsettings.desc") + ": ") + this._guestRoomData.roomAdDescription) + "\n");
                 _local_10 = (_local_10 + (this._navigator.localization.getLocalizationWithParams("roomad.event.expiration_time") + FriendlyTime.format(this._navigator.localization, (this._guestRoomData.roomAdExpiresInMin * 60))));
                 this._window.findChildByName("event_name").caption = _local_9;
                 this._window.findChildByName("event_desc").caption = _local_10;
