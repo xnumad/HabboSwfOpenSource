@@ -200,7 +200,7 @@
             return this._habboHelp;
         }
 
-        public function get _Str_5048():RoomEventInfoCtrl
+        public function get roomEventInfoCtrl():RoomEventInfoCtrl
         {
             return this._roomEventInfoCtrl;
         }

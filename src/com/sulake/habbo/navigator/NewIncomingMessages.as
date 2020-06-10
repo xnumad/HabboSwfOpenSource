@@ -283,13 +283,13 @@
             var _local_2:_Str_6918 = _Str_5051(k).getParser();
             Logger.log(((("Got room event: " + _local_2.data._Str_13361) + ", ") + _local_2.data.eventName));
             this.data.roomEventData = ((_local_2.data._Str_13361 > 0) ? _local_2.data : null);
-            LegacyNavigator(this._navigator.legacyNavigator)._Str_5048.refresh();
+            LegacyNavigator(this._navigator.legacyNavigator).roomEventInfoCtrl.refresh();
         }
 
         private function _Str_15955(k:IMessageEvent):void
         {
             this.data.roomEventData = null;
-            LegacyNavigator(this._navigator.legacyNavigator)._Str_5048.refresh();
+            LegacyNavigator(this._navigator.legacyNavigator).roomEventInfoCtrl.refresh();
         }
 
         private function _Str_17011(k:IMessageEvent):void
@@ -338,7 +338,7 @@
             Logger.log("Navigator: exiting room");
             this.data.onRoomExit();
             LegacyNavigator(this._navigator.legacyNavigator).roomInfoViewCtrl.close();
-            LegacyNavigator(this._navigator.legacyNavigator)._Str_5048.close();
+            LegacyNavigator(this._navigator.legacyNavigator).roomEventInfoCtrl.close();
             LegacyNavigator(this._navigator.legacyNavigator).roomEventViewCtrl.close();
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl.close();
             LegacyNavigator(this._navigator.legacyNavigator).roomFilterCtrl.close();

@@ -243,13 +243,13 @@
             var _local_2:_Str_6918 = _Str_5051(k).getParser();
             Logger.log(((("Got room event: " + _local_2.data._Str_13361) + ", ") + _local_2.data.eventName));
             this.data.roomEventData = ((_local_2.data._Str_13361 > 0) ? _local_2.data : null);
-            this._navigator._Str_5048.refresh();
+            this._navigator.roomEventInfoCtrl.refresh();
         }
 
         private function _Str_15955(k:IMessageEvent):void
         {
             this.data.roomEventData = null;
-            this._navigator._Str_5048.refresh();
+            this._navigator.roomEventInfoCtrl.refresh();
         }
 
         private function _Str_17011(k:IMessageEvent):void
@@ -278,7 +278,7 @@
             this._navigator.roomInfoViewCtrl.close();
             this._navigator.send(new _Str_3570(_local_2.guestRoomId, true, false));
             Logger.log("Sent get guest room...");
-            this._navigator._Str_5048.refresh();
+            this._navigator.roomEventInfoCtrl.refresh();
             this._navigator.roomEventViewCtrl.close();
             this._navigator.roomSettingsCtrl.close();
             this._navigator.roomFilterCtrl.close();
@@ -303,8 +303,8 @@
                 this.data.createdFlatId = 0;
                 if (((!(this.data.enteredGuestRoom == null)) && (this.data.enteredGuestRoom.habboGroupId > 0)))
                 {
-                    this._navigator._Str_5048.expanded = false;
-                    this._navigator._Str_5048.refresh();
+                    this._navigator.roomEventInfoCtrl.expanded = false;
+                    this._navigator.roomEventInfoCtrl.refresh();
                 }
                 _local_4 = this._navigator.data._Str_23466();
                 if (_local_4 != null)
@@ -469,7 +469,7 @@
             Logger.log("Navigator: exiting room");
             this.data.onRoomExit();
             this._navigator.roomInfoViewCtrl.close();
-            this._navigator._Str_5048.close();
+            this._navigator.roomEventInfoCtrl.close();
             this._navigator.roomEventViewCtrl.close();
             this._navigator.roomSettingsCtrl.close();
             this._navigator.roomFilterCtrl.close();

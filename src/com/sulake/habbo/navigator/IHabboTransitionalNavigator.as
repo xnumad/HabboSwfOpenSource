@@ -46,7 +46,7 @@
         function get officialRoomEntryManager():OfficialRoomEntryManager;
         function get toolbar():IHabboToolbar;
         function get habboHelp():IHabboHelp;
-        function get _Str_5048():RoomEventInfoCtrl;
+        function get roomEventInfoCtrl():RoomEventInfoCtrl;
         function get roomFilterCtrl():RoomFilterCtrl;
         function get roomSessionManager():IRoomSessionManager;
         function get enforceCategoryCtrl():EnforceCategoryCtrl;
