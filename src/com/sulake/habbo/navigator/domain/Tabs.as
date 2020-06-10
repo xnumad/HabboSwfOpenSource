@@ -70,7 +70,7 @@
             this._Str_13005(TAB_EVENTS);
         }
 
-        public static function _Str_20758(k:String, _arg_2:int):int
+        public static function tabIdFromName(k:String, _arg_2:int):int
         {
             return (k in TAB_NAMES) ? TAB_NAMES[k] : _arg_2;
         }
