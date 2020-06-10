@@ -103,10 +103,10 @@
                 {
                     return true;
                 }
-                _arg_3 = this._navigator._Str_7596._Str_9034(_arg_2);
+                _arg_3 = this._navigator.officialRoomEntryManager._Str_9034(_arg_2);
                 this._list.addListItem(_arg_3);
             }
-            this._navigator._Str_7596.refreshEntry(_arg_3, k, _arg_4);
+            this._navigator.officialRoomEntryManager.refreshEntry(_arg_3, k, _arg_4);
             return false;
         }
 

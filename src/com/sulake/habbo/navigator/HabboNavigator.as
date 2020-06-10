@@ -185,7 +185,7 @@
             return this._roomEventViewCtrl;
         }
 
-        public function get _Str_7596():OfficialRoomEntryManager
+        public function get officialRoomEntryManager():OfficialRoomEntryManager
         {
             return this._officialRoomEntryManager;
         }

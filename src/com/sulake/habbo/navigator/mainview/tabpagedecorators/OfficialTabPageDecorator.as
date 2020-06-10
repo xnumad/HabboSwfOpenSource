@@ -24,7 +24,7 @@
 
         public function _Str_5920(k:IWindowContainer):void
         {
-            this._navigator._Str_7596._Str_21717(k);
+            this._navigator.officialRoomEntryManager._Str_21717(k);
         }
 
         public function _Str_8146():void

@@ -43,7 +43,7 @@
         function get doorbell():GuestRoomDoorbell;
         function get roomEventViewCtrl():RoomEventViewCtrl;
         function get localization():IHabboLocalizationManager;
-        function get _Str_7596():OfficialRoomEntryManager;
+        function get officialRoomEntryManager():OfficialRoomEntryManager;
         function get toolbar():IHabboToolbar;
         function get habboHelp():IHabboHelp;
         function get _Str_5048():RoomEventInfoCtrl;

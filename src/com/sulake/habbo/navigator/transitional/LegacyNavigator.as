@@ -145,9 +145,9 @@
             return this._oldNavigator.localization;
         }
 
-        public function get _Str_7596():OfficialRoomEntryManager
+        public function get officialRoomEntryManager():OfficialRoomEntryManager
         {
-            return this._oldNavigator._Str_7596;
+            return this._oldNavigator.officialRoomEntryManager;
         }
 
         public function get toolbar():IHabboToolbar
