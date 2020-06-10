@@ -105,7 +105,7 @@
             return this._roomInfoViewCtrl;
         }
 
-        public function get _Str_15114():RoomCreateViewCtrl
+        public function get roomCreateViewCtrl():RoomCreateViewCtrl
         {
             return this._roomCreateViewCtrl;
         }

@@ -515,7 +515,7 @@
 
         public function createRoom():void
         {
-            this._legacyNavigator._Str_15114.show();
+            this._legacyNavigator.roomCreateViewCtrl.show();
         }
 
         public function open():void

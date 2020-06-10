@@ -564,7 +564,7 @@
             Logger.log(((("Can create room: " + _local_2.resultCode) + ", ") + _local_2._Str_20396));
             if (_local_2.resultCode == 0)
             {
-                this._navigator._Str_15114.show();
+                this._navigator.roomCreateViewCtrl.show();
             }
             else
             {

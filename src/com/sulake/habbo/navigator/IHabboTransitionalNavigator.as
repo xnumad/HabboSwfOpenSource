@@ -35,7 +35,7 @@
         function get mainViewCtrl():ITransitionalMainViewCtrl;
         function get tabs():Tabs;
         function get roomInfoViewCtrl():RoomInfoViewCtrl;
-        function get _Str_15114():RoomCreateViewCtrl;
+        function get roomCreateViewCtrl():RoomCreateViewCtrl;
         function get communication():IHabboCommunicationManager;
         function get _Str_3188():RoomSettingsCtrl;
         function get sessionData():ISessionDataManager;
