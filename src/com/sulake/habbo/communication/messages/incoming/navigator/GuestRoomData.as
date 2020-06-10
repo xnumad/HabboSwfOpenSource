@@ -215,7 +215,7 @@
             return this._roomAdDescription;
         }
 
-        public function get _Str_15104():int
+        public function get roomAdExpiresInMin():int
         {
             return this._roomAdExpiresInMin;
         }

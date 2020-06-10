@@ -58,7 +58,7 @@
             var _local_4:GuestRoomData = this.getRoomAt(_local_3);
             if (_navigator)
             {
-                _navigator.send(new _Str_11792(_local_4.flatId, _local_4._Str_8163, _local_4._Str_15104));
+                _navigator.send(new _Str_11792(_local_4.flatId, _local_4._Str_8163, _local_4.roomAdExpiresInMin));
             }
             super.onMouseClick(k);
         }
