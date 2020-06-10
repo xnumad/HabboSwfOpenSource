@@ -39,7 +39,7 @@
         function get communication():IHabboCommunicationManager;
         function get roomSettingsCtrl():RoomSettingsCtrl;
         function get sessionData():ISessionDataManager;
-        function get _Str_7174():GuestRoomPasswordInput;
+        function get passwordInput():GuestRoomPasswordInput;
         function get doorbell():GuestRoomDoorbell;
         function get _Str_6939():RoomEventViewCtrl;
         function get localization():IHabboLocalizationManager;

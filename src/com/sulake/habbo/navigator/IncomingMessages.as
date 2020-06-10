@@ -324,7 +324,7 @@
                     {
                         if (((_local_2.data.doorMode == RoomSettingsData.DOORMODE_PASSWORD) && ((!(this._navigator.sessionData.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
                         {
-                            this._navigator._Str_7174.show(_local_2.data);
+                            this._navigator.passwordInput.show(_local_2.data);
                         }
                         else
                         {
@@ -626,7 +626,7 @@
             switch (error.getParser().errorCode)
             {
                 case -100002:
-                    this._navigator._Str_7174._Str_15400();
+                    this._navigator.passwordInput._Str_15400();
                     return;
                 case 4009:
                     this._navigator.windowManager.alert("${generic.alert.title}", "${navigator.alert.need.to.be.vip}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void

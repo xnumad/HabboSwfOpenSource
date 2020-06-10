@@ -125,9 +125,9 @@
             return this._oldNavigator.sessionData;
         }
 
-        public function get _Str_7174():GuestRoomPasswordInput
+        public function get passwordInput():GuestRoomPasswordInput
         {
-            return this._oldNavigator._Str_7174;
+            return this._oldNavigator.passwordInput;
         }
 
         public function get doorbell():GuestRoomDoorbell

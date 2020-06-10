@@ -170,7 +170,7 @@
             return this._sessionData;
         }
 
-        public function get _Str_7174():GuestRoomPasswordInput
+        public function get passwordInput():GuestRoomPasswordInput
         {
             return this._passwordInput;
         }

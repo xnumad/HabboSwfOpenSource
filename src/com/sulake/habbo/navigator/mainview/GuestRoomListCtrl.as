@@ -282,7 +282,7 @@
                 switch (_local_4.doorMode)
                 {
                     case _Str_3560.DOORMODE_PASSWORD:
-                        this._navigator._Str_7174.show(_local_4, _local_5);
+                        this._navigator.passwordInput.show(_local_4, _local_5);
                         return;
                     case _Str_3560.DOORMODE_CLOSED:
                         this._navigator.doorbell.show(_local_4, _local_5);
