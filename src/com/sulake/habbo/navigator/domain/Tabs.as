@@ -30,7 +30,7 @@
         public static const SEARCHTYPE_MY_HISTORY:int = 7;
         public static const SEARCHTYPE_TEXT_SEARCH:int = 8;
         public static const SEARCHTYPE_TAG_SEARCH:int = 9;
-        public static const _Str_9523:int = 10;
+        public static const SEARCHTYPE_ROOM_NAME_SEARCH:int = 10;
         public static const _Str_8698:int = 11;
         public static const _Str_16397:int = 12;
         public static const _Str_8671:int = 13;

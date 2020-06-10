@@ -88,7 +88,7 @@
                     return "query";
                 case Tabs.SEARCHTYPE_TAG_SEARCH:
                     return "query";
-                case Tabs._Str_9523:
+                case Tabs.SEARCHTYPE_ROOM_NAME_SEARCH:
                     return "query";
                 case Tabs._Str_8698:
                     return "official";

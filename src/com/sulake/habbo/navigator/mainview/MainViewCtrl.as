@@ -634,7 +634,7 @@
                     return new _Str_4390(_arg_2);
                 case Tabs._Str_8671:
                     return new _Str_4390(("group:" + _arg_2));
-                case Tabs._Str_9523:
+                case Tabs.SEARCHTYPE_ROOM_NAME_SEARCH:
                     return new _Str_4390(("roomname:" + _arg_2));
                 case Tabs._Str_10120:
                     return new _Str_10574(this._navigator.data._Str_6357);

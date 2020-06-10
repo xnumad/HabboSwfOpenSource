@@ -60,7 +60,7 @@
                     case Tabs._Str_9661:
                         this._searchType.selection = 1;
                         return;
-                    case Tabs._Str_9523:
+                    case Tabs.SEARCHTYPE_ROOM_NAME_SEARCH:
                         this._searchType.selection = 2;
                         return;
                     case Tabs.SEARCHTYPE_TAG_SEARCH:
@@ -100,7 +100,7 @@
                         this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_9661, k);
                         break;
                     case 2:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_9523, k);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_ROOM_NAME_SEARCH, k);
                         break;
                     case 3:
                         this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TAG_SEARCH, k);
