@@ -665,7 +665,7 @@
 
         public function showFavouriteRooms():void
         {
-            this._Str_18163(Tabs._Str_8122);
+            this._Str_18163(Tabs.SEARCHTYPE_MY_FAVOURITES);
         }
 
         public function showHistoryRooms():void

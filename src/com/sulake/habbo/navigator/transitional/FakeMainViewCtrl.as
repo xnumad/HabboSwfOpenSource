@@ -80,7 +80,7 @@
                     return "with_friends";
                 case Tabs.SEARCHTYPE_MY_ROOMS:
                     return "my";
-                case Tabs._Str_8122:
+                case Tabs.SEARCHTYPE_MY_FAVOURITES:
                     return "favorites";
                 case Tabs._Str_8161:
                     return "history";

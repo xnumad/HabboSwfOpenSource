@@ -573,7 +573,7 @@
         {
             switch (k)
             {
-                case Tabs._Str_8122:
+                case Tabs.SEARCHTYPE_MY_FAVOURITES:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_FAVOURITES));
                     return;
                 case Tabs.SEARCHTYPE_MY_FRIENDS_ROOMS:
@@ -614,7 +614,7 @@
             var _local_3:_Str_4374;
             switch (k)
             {
-                case Tabs._Str_8122:
+                case Tabs.SEARCHTYPE_MY_FAVOURITES:
                     return new _Str_11329();
                 case Tabs.SEARCHTYPE_MY_FRIENDS_ROOMS:
                     return new _Str_9956();

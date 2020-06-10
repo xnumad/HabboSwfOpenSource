@@ -26,7 +26,7 @@
         public static const SEARCHTYPE_MY_FRIENDS_ROOMS:int = 3;
         public static const SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE:int = 4;
         public static const SEARCHTYPE_MY_ROOMS:int = 5;
-        public static const _Str_8122:int = 6;
+        public static const SEARCHTYPE_MY_FAVOURITES:int = 6;
         public static const _Str_8161:int = 7;
         public static const _Str_5622:int = 8;
         public static const _Str_5383:int = 9;
