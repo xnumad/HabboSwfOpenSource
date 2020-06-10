@@ -410,7 +410,7 @@
                     _local_5 = ((_arg_4 > -1) ? (_arg_4 + 1) : 0);
                     switch (this.tabs.getSelected().id)
                     {
-                        case Tabs._Str_6250:
+                        case Tabs.TAB_OFFICIAL:
                             this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.official", String(k), _local_5);
                             return;
                         case Tabs.TAB_ME:

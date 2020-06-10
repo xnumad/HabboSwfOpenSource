@@ -17,7 +17,7 @@
         public static const TAB_EVENTS:int = 1;
         public static const TAB_ROOMS:int = 2;
         public static const TAB_ME:int = 3;
-        public static const _Str_6250:int = 4;
+        public static const TAB_OFFICIAL:int = 4;
         public static const _Str_3813:int = 5;
         public static const _Str_7172:int = 6;
         private static const _Str_5586:Dictionary = new Dictionary();
@@ -50,7 +50,7 @@
 
         {
             _Str_5586["popular"] = TAB_ROOMS;
-            _Str_5586["official"] = _Str_6250;
+            _Str_5586["official"] = TAB_OFFICIAL;
             _Str_5586["me"] = TAB_ME;
             _Str_5586["events"] = TAB_EVENTS;
             _Str_5586["search"] = _Str_3813;
@@ -64,7 +64,7 @@
             this._tabs.push(new Tab(this._navigator, TAB_EVENTS, _Str_6358, new EventsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, _Str_7172, _Str_10877, new CategoriesTabPageDecorator(this._navigator), MainViewCtrl._Str_13989));
             this._tabs.push(new Tab(this._navigator, TAB_ROOMS, _Str_5348, new RoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
-            this._tabs.push(new Tab(this._navigator, _Str_6250, _Str_8698, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
+            this._tabs.push(new Tab(this._navigator, TAB_OFFICIAL, _Str_8698, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
             this._tabs.push(new Tab(this._navigator, TAB_ME, _Str_4869, new MyRoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, _Str_3813, _Str_5622, new SearchTabPageDecorator(this._navigator), MainViewCtrl._Str_14620));
             this._Str_13005(TAB_EVENTS);
@@ -78,7 +78,7 @@
 
         public function _Str_25916():Boolean
         {
-            return this.getSelected().id == _Str_6250;
+            return this.getSelected().id == TAB_OFFICIAL;
         }
 
         public function get tabs():Array
