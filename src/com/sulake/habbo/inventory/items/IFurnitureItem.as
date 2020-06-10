@@ -12,7 +12,7 @@
         function get category():int;
         function get recyclable():Boolean;
         function get tradeable():Boolean;
-        function get _Str_13551():Boolean;
+        function get groupable():Boolean;
         function get sellable():Boolean;
         function get locked():Boolean;
         function set locked(_arg_1:Boolean):void;

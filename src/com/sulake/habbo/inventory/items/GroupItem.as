@@ -234,7 +234,7 @@
         public function get isGroupable():Boolean
         {
             var k:FurnitureItem = this._Str_5087(0);
-            return (k) ? k._Str_13551 : true;
+            return (k) ? k.groupable : true;
         }
 
         public function get _Str_3459():Boolean

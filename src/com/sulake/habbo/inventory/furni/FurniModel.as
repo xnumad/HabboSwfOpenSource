@@ -534,7 +534,7 @@
         public function _Str_20455(k:FurnitureItem, _arg_2:Boolean):void
         {
             var _local_3:GroupItem;
-            if (!k._Str_13551)
+            if (!k.groupable)
             {
                 _local_3 = this._Str_22387(k, _arg_2);
             }
@@ -784,7 +784,7 @@
                     {
                         offerInTradingCount.caption = String(itemIds.length);
                     }
-                    trading._Str_24612(itemIds, coreItem._Str_2770, coreItem.type, coreItem.category, coreItem._Str_13551, coreItem.stuffData);
+                    trading._Str_24612(itemIds, coreItem._Str_2770, coreItem.type, coreItem.category, coreItem.groupable, coreItem.stuffData);
                 }
                 else
                 {

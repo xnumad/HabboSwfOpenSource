@@ -104,7 +104,7 @@
             return this._tradeable;
         }
 
-        public function get _Str_13551():Boolean
+        public function get groupable():Boolean
         {
             return this._groupable;
         }
