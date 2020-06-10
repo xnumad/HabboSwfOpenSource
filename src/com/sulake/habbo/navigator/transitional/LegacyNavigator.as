@@ -230,7 +230,7 @@
             return this._newNavigator.performSearch("favorites");
         }
 
-        public function _Str_16885():void
+        public function showHistoryRooms():void
         {
             return this._newNavigator.performSearch("history");
         }

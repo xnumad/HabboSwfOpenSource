@@ -96,7 +96,7 @@
 
         private function _Str_23602(k:WindowMouseEvent):void
         {
-            this._habboNavigator._Str_16885();
+            this._habboNavigator.showHistoryRooms();
             this._Str_8696();
         }
 

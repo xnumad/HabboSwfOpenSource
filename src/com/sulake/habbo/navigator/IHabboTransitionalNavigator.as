@@ -61,7 +61,7 @@
         function openCatalogRoomAdsPage():void;
         function openCatalogRoomAdsExtendPage(_arg_1:String, _arg_2:String, _arg_3:Date, _arg_4:int):void;
         function showFavouriteRooms():void;
-        function _Str_16885():void;
+        function showHistoryRooms():void;
         function _Str_17131():void;
         function get tracking():IHabboTracking;
         function _Str_10330():void;

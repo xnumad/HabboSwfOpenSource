@@ -668,7 +668,7 @@
             this._Str_18163(Tabs._Str_8122);
         }
 
-        public function _Str_16885():void
+        public function showHistoryRooms():void
         {
             this._Str_18163(Tabs._Str_8161);
         }
