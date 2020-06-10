@@ -413,7 +413,7 @@
                         case Tabs._Str_6250:
                             this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.official", String(k), _local_5);
                             return;
-                        case Tabs._Str_5203:
+                        case Tabs.TAB_ME:
                             this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.me", String(k), _local_5);
                             return;
                         case Tabs.TAB_ROOMS:
@@ -659,8 +659,8 @@
             {
                 return;
             }
-            this._mainViewCtrl._Str_2798(Tabs._Str_5203, Tabs._Str_4869);
-            this._tabs._Str_9436(Tabs._Str_5203)._Str_5252._Str_6883();
+            this._mainViewCtrl._Str_2798(Tabs.TAB_ME, Tabs._Str_4869);
+            this._tabs._Str_9436(Tabs.TAB_ME)._Str_5252._Str_6883();
         }
 
         public function showFavouriteRooms():void
@@ -684,8 +684,8 @@
             {
                 return;
             }
-            this._mainViewCtrl._Str_2798(Tabs._Str_5203, k);
-            this._tabs._Str_9436(Tabs._Str_5203)._Str_5252._Str_8025(k);
+            this._mainViewCtrl._Str_2798(Tabs.TAB_ME, k);
+            this._tabs._Str_9436(Tabs.TAB_ME)._Str_5252._Str_8025(k);
         }
 
         public function trackNavigationDataPoint(k:String, _arg_2:String, _arg_3:String="", _arg_4:int=0):void
