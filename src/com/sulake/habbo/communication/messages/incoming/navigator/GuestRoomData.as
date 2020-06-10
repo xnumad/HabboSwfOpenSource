@@ -195,7 +195,7 @@
             return this._thumbnail;
         }
 
-        public function get _Str_5667():Boolean
+        public function get allowPets():Boolean
         {
             return this._allowPets;
         }

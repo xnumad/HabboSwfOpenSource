@@ -67,12 +67,12 @@
             this._tradeMode = k;
         }
 
-        public function get _Str_5667():Boolean
+        public function get allowPets():Boolean
         {
             return this._allowPets;
         }
 
-        public function set _Str_5667(k:Boolean):void
+        public function set allowPets(k:Boolean):void
         {
             this._allowPets = k;
         }

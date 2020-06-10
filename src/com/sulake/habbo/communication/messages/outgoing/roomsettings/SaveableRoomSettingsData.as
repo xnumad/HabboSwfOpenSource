@@ -39,12 +39,12 @@
             this._Str_4667 = k;
         }
 
-        public function get _Str_5667():Boolean
+        public function get allowPets():Boolean
         {
             return this._Str_6656;
         }
 
-        public function set _Str_5667(k:Boolean):void
+        public function set allowPets(k:Boolean):void
         {
             this._Str_6656 = k;
         }

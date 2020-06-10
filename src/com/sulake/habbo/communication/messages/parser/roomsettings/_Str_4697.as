@@ -30,7 +30,7 @@
                 _local_3++;
             }
             this._roomSettingsData.tradeMode = k.readInteger();
-            this._roomSettingsData._Str_5667 = (k.readInteger() == 1);
+            this._roomSettingsData.allowPets = (k.readInteger() == 1);
             this._roomSettingsData._Str_7595 = (k.readInteger() == 1);
             this._roomSettingsData._Str_7273 = (k.readInteger() == 1);
             this._roomSettingsData._Str_7455 = (k.readInteger() == 1);

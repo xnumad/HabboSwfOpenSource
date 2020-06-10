@@ -43,7 +43,7 @@
             _local_4.tradeMode = _local_5.tradeMode;
             _local_4.isGuildRoom = (!(_local_5.habboGroupId == 0));
             _local_4.doorMode = _local_5.doorMode;
-            _local_4.arePetsAllowed = _local_5._Str_5667;
+            _local_4.arePetsAllowed = _local_5.allowPets;
             _local_4.roomModerationSettings = _local_3.roomModerationSettings;
             listener.events.dispatchEvent(new RoomSessionPropertyUpdateEvent(RoomSessionPropertyUpdateEvent.RSDUE_ALLOW_PETS, _local_4));
             listener.events.dispatchEvent(new RoomSessionEvent(RoomSessionEvent.ROOM_DATA, _local_4));
