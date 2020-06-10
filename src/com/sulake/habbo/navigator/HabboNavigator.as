@@ -624,7 +624,7 @@
             {
                 return;
             }
-            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_5622, k);
+            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
             this.trackNavigationDataPoint("Search", "search", k);
             this._mainViewCtrl.mainWindow.activate();
             this._mainViewCtrl._Str_6414._Str_17634.setText(k);

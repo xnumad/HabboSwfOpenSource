@@ -84,7 +84,7 @@
                     return "favorites";
                 case Tabs.SEARCHTYPE_MY_HISTORY:
                     return "history";
-                case Tabs._Str_5622:
+                case Tabs.SEARCHTYPE_TEXT_SEARCH:
                     return "query";
                 case Tabs._Str_5383:
                     return "query";

@@ -54,7 +54,7 @@
             {
                 switch (_arg_2)
                 {
-                    case Tabs._Str_5622:
+                    case Tabs.SEARCHTYPE_TEXT_SEARCH:
                         this._searchType.selection = 0;
                         return;
                     case Tabs._Str_9661:
@@ -94,7 +94,7 @@
                 switch (this._searchType.selection)
                 {
                     case 0:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_5622, k);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
                         break;
                     case 1:
                         this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_9661, k);
@@ -112,7 +112,7 @@
             }
             else
             {
-                this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_5622, k);
+                this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
             }
             this._navigator.trackNavigationDataPoint("Search", "search", k);
         }

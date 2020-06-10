@@ -28,7 +28,7 @@
         public static const SEARCHTYPE_MY_ROOMS:int = 5;
         public static const SEARCHTYPE_MY_FAVOURITES:int = 6;
         public static const SEARCHTYPE_MY_HISTORY:int = 7;
-        public static const _Str_5622:int = 8;
+        public static const SEARCHTYPE_TEXT_SEARCH:int = 8;
         public static const _Str_5383:int = 9;
         public static const _Str_9523:int = 10;
         public static const _Str_8698:int = 11;
@@ -66,7 +66,7 @@
             this._tabs.push(new Tab(this._navigator, TAB_ROOMS, SEARCHTYPE_POPULAR_ROOMS, new RoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, TAB_OFFICIAL, _Str_8698, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
             this._tabs.push(new Tab(this._navigator, TAB_ME, SEARCHTYPE_MY_ROOMS, new MyRoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
-            this._tabs.push(new Tab(this._navigator, TAB_SEARCH, _Str_5622, new SearchTabPageDecorator(this._navigator), MainViewCtrl._Str_14620));
+            this._tabs.push(new Tab(this._navigator, TAB_SEARCH, SEARCHTYPE_TEXT_SEARCH, new SearchTabPageDecorator(this._navigator), MainViewCtrl._Str_14620));
             this._Str_13005(TAB_EVENTS);
         }
 

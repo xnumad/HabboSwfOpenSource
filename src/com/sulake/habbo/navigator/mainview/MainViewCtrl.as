@@ -600,7 +600,7 @@
                 case Tabs._Str_5383:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_TAG_SEARCH));
                     return;
-                case Tabs._Str_5622:
+                case Tabs.SEARCHTYPE_TEXT_SEARCH:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_TEXT_SEARCH));
                     return;
                 case Tabs._Str_7094:
@@ -630,7 +630,7 @@
                     return new _Str_9889(this._navigator.data._Str_6357);
                 case Tabs._Str_5383:
                     return new _Str_4390(("tag:" + _arg_2));
-                case Tabs._Str_5622:
+                case Tabs.SEARCHTYPE_TEXT_SEARCH:
                     return new _Str_4390(_arg_2);
                 case Tabs._Str_8671:
                     return new _Str_4390(("group:" + _arg_2));
