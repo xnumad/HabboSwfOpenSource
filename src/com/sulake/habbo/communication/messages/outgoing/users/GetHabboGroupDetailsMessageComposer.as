@@ -6,12 +6,12 @@
     {
         private var _data:Array;
 
-        public function GetHabboGroupDetailsMessageComposer(k:int, _arg_2:Boolean)
+        public function GetHabboGroupDetailsMessageComposer(groupId:int, openDetails:Boolean)
         {
             this._data = [];
             super();
-            this._data.push(k);
-            this._data.push(_arg_2);
+            this._data.push(groupId);
+            this._data.push(openDetails);
         }
 
         public function dispose():void
