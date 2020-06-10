@@ -26,7 +26,7 @@
         private var _flatId:int;
         private var _isWallItem:Boolean;
         private var _hasRentPeriodStarted:Boolean;
-        private var _Str_5390:int;
+        private var _expirationTimeStamp:int;
         private var _slotId:String = "";
         private var _Str_2808:int = -1;
 
@@ -43,7 +43,7 @@
             this._isGroupable = k.readBoolean();
             this._sellable = k.readBoolean();
             this._secondsToExpiration = k.readInteger();
-            this._Str_5390 = getTimer();
+            this._expirationTimeStamp = getTimer();
             if (this.secondsToExpiration > -1)
             {
                 this._rentable = true;
@@ -155,7 +155,7 @@
 
         public function get _Str_10616():int
         {
-            return this._Str_5390;
+            return this._expirationTimeStamp;
         }
 
         public function get _Str_8932():int

@@ -8,7 +8,7 @@
 
     public class ItemDataStructure implements IFurnitureItemData 
     {
-        private var _Str_5390:int;
+        private var _expirationTimeStamp:int;
         private var _isWallItem:Boolean;
         private var _itemId:int;
         private var _furniType:String;
@@ -37,7 +37,7 @@
             this._isGroupable = k.readBoolean();
             this._stuffData = ObjectDataParser.parseStuffData(k);
             this._secondsToExpiration = -1;
-            this._Str_5390 = getTimer();
+            this._expirationTimeStamp = getTimer();
             this._hasRentPeriodStarted = false;
             this._Str_9291 = k.readInteger();
             this._Str_8744 = k.readInteger();
@@ -135,7 +135,7 @@
 
         public function get _Str_10616():int
         {
-            return this._Str_5390;
+            return this._expirationTimeStamp;
         }
 
         public function get isRecycleable():Boolean
