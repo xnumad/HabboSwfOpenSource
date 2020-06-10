@@ -176,9 +176,9 @@
             if (_local_4 != null)
             {
                 _local_4.allInRoomMuted = _local_3._Str_20186;
-                if (this._navigator._Str_4012 != null)
+                if (this._navigator.roomInfoViewCtrl != null)
                 {
-                    this._navigator._Str_4012.refreshButtons(this._navigator.data.enteredGuestRoom);
+                    this._navigator.roomInfoViewCtrl.refreshButtons(this._navigator.data.enteredGuestRoom);
                 }
             }
         }
@@ -275,7 +275,7 @@
             Logger.log("Navigator: entering room");
             this.data.onRoomEnter(_local_2);
             this._Str_20233();
-            this._navigator._Str_4012.close();
+            this._navigator.roomInfoViewCtrl.close();
             this._navigator.send(new _Str_3570(_local_2.guestRoomId, true, false));
             Logger.log("Sent get guest room...");
             this._navigator._Str_5048.refresh();
@@ -340,7 +340,7 @@
                 {
                     this.data.enteredRoom = _local_2.data;
                     this.data._Str_8299 = _local_2._Str_21489;
-                    this._navigator._Str_4012.reload();
+                    this._navigator.roomInfoViewCtrl.reload();
                 }
             }
         }
@@ -460,7 +460,7 @@
             }
             else
             {
-                this._navigator._Str_4012.reload();
+                this._navigator.roomInfoViewCtrl.reload();
             }
         }
 
@@ -468,7 +468,7 @@
         {
             Logger.log("Navigator: exiting room");
             this.data.onRoomExit();
-            this._navigator._Str_4012.close();
+            this._navigator.roomInfoViewCtrl.close();
             this._navigator._Str_5048.close();
             this._navigator._Str_6939.close();
             this._navigator._Str_3188.close();
@@ -553,7 +553,7 @@
             var _local_2:_Str_6561 = (k as _Str_5795).getParser();
             Logger.log(((("Received favourite changed: " + _local_2.flatId) + ", ") + _local_2._Str_13819));
             this._navigator.data._Str_21350(_local_2.flatId, _local_2._Str_13819);
-            this._navigator._Str_4012.reload();
+            this._navigator.roomInfoViewCtrl.reload();
             this._navigator.mainViewCtrl.refresh();
         }
 
@@ -689,7 +689,7 @@
             Logger.log(("Received room rating: " + _local_2.rating));
             this._navigator.data._Str_15395 = _local_2.rating;
             this._navigator.data._Str_5090 = _local_2._Str_5090;
-            this._navigator._Str_4012.reload();
+            this._navigator.roomInfoViewCtrl.reload();
         }
 
         private function _Str_12114(k:IMessageEvent):void

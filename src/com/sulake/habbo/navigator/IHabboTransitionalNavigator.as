@@ -34,7 +34,7 @@
         function get data():NavigatorData;
         function get mainViewCtrl():ITransitionalMainViewCtrl;
         function get tabs():Tabs;
-        function get _Str_4012():RoomInfoViewCtrl;
+        function get roomInfoViewCtrl():RoomInfoViewCtrl;
         function get _Str_15114():RoomCreateViewCtrl;
         function get communication():IHabboCommunicationManager;
         function get _Str_3188():RoomSettingsCtrl;

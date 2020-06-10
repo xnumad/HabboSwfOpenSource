@@ -100,7 +100,7 @@
             return this._oldNavigator.tabs;
         }
 
-        public function get _Str_4012():RoomInfoViewCtrl
+        public function get roomInfoViewCtrl():RoomInfoViewCtrl
         {
             return this._roomInfoViewCtrl;
         }

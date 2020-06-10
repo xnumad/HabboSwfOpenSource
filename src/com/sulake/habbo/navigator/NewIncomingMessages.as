@@ -212,9 +212,9 @@
             if (_local_4 != null)
             {
                 _local_4.allInRoomMuted = _local_3._Str_20186;
-                if (LegacyNavigator(this._navigator.legacyNavigator)._Str_4012 != null)
+                if (LegacyNavigator(this._navigator.legacyNavigator).roomInfoViewCtrl != null)
                 {
-                    LegacyNavigator(this._navigator.legacyNavigator)._Str_4012.refreshButtons(this._navigator.data.enteredGuestRoom);
+                    LegacyNavigator(this._navigator.legacyNavigator).roomInfoViewCtrl.refreshButtons(this._navigator.data.enteredGuestRoom);
                 }
             }
         }
@@ -337,7 +337,7 @@
         {
             Logger.log("Navigator: exiting room");
             this.data.onRoomExit();
-            LegacyNavigator(this._navigator.legacyNavigator)._Str_4012.close();
+            LegacyNavigator(this._navigator.legacyNavigator).roomInfoViewCtrl.close();
             LegacyNavigator(this._navigator.legacyNavigator)._Str_5048.close();
             LegacyNavigator(this._navigator.legacyNavigator)._Str_6939.close();
             LegacyNavigator(this._navigator.legacyNavigator)._Str_3188.close();
@@ -422,7 +422,7 @@
             var _local_2:_Str_6561 = (k as _Str_5795).getParser();
             Logger.log(((("Received favourite changed: " + _local_2.flatId) + ", ") + _local_2._Str_13819));
             this.data._Str_21350(_local_2.flatId, _local_2._Str_13819);
-            LegacyNavigator(this._navigator.legacyNavigator)._Str_4012.reload();
+            LegacyNavigator(this._navigator.legacyNavigator).roomInfoViewCtrl.reload();
             LegacyNavigator(this._navigator.legacyNavigator).mainViewCtrl.refresh();
         }
 
@@ -495,7 +495,7 @@
             Logger.log(("Received room rating: " + _local_2.rating));
             this.data._Str_15395 = _local_2.rating;
             this.data._Str_5090 = _local_2._Str_5090;
-            LegacyNavigator(this._navigator.legacyNavigator)._Str_4012.reload();
+            LegacyNavigator(this._navigator.legacyNavigator).roomInfoViewCtrl.reload();
         }
 
         private function _Str_12114(k:IMessageEvent):void
