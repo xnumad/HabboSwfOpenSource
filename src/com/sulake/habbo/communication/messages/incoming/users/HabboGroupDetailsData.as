@@ -14,7 +14,7 @@
         public static const STATUS_PENDING:int = 2;
 
         private var _groupId:int;
-        private var _Str_16148:Boolean;
+        private var _isGuild:Boolean;
         private var _type:int;
         private var _groupName:String;
         private var _description:String;
@@ -36,7 +36,7 @@
         public function HabboGroupDetailsData(k:IMessageDataWrapper)
         {
             this._groupId = k.readInteger();
-            this._Str_16148 = k.readBoolean();
+            this._isGuild = k.readBoolean();
             this._type = k.readInteger();
             this._groupName = k.readString();
             this._description = k.readString();
@@ -63,7 +63,7 @@
 
         public function get _Str_6444():Boolean
         {
-            return this._Str_16148;
+            return this._isGuild;
         }
 
         public function get type():int
@@ -163,7 +163,7 @@
 
         public function get _Str_24358():Boolean
         {
-            return ((this._Str_16148) && (!(this._isOwner))) && (this._status == HabboGroupDetailsData.STATUS_MEMBER);
+            return ((this._isGuild) && (!(this._isOwner))) && (this._status == HabboGroupDetailsData.STATUS_MEMBER);
         }
     }
 }
