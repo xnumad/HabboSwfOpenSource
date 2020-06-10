@@ -20,7 +20,7 @@
         public static const TAB_OFFICIAL:int = 4;
         public static const TAB_SEARCH:int = 5;
         public static const TAB_CATEGORIES:int = 6;
-        private static const _Str_5586:Dictionary = new Dictionary();
+        private static const TAB_NAMES:Dictionary = new Dictionary();
         public static const _Str_5348:int = 1;
         public static const _Str_9593:int = 2;
         public static const _Str_9161:int = 3;
@@ -49,12 +49,12 @@
         private var _navigator:HabboNavigator;
 
         {
-            _Str_5586["popular"] = TAB_ROOMS;
-            _Str_5586["official"] = TAB_OFFICIAL;
-            _Str_5586["me"] = TAB_ME;
-            _Str_5586["events"] = TAB_EVENTS;
-            _Str_5586["search"] = TAB_SEARCH;
-            _Str_5586["categories"] = TAB_CATEGORIES;
+            TAB_NAMES["popular"] = TAB_ROOMS;
+            TAB_NAMES["official"] = TAB_OFFICIAL;
+            TAB_NAMES["me"] = TAB_ME;
+            TAB_NAMES["events"] = TAB_EVENTS;
+            TAB_NAMES["search"] = TAB_SEARCH;
+            TAB_NAMES["categories"] = TAB_CATEGORIES;
         }
 
         public function Tabs(k:HabboNavigator)
@@ -72,7 +72,7 @@
 
         public static function _Str_20758(k:String, _arg_2:int):int
         {
-            return (k in _Str_5586) ? _Str_5586[k] : _arg_2;
+            return (k in TAB_NAMES) ? TAB_NAMES[k] : _arg_2;
         }
 
 
