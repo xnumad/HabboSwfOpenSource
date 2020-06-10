@@ -92,7 +92,7 @@
                     return "query";
                 case Tabs.SEARCHTYPE_OFFICIALROOMS:
                     return "official";
-                case Tabs._Str_16397:
+                case Tabs.SEARCHTYPE_LATEST_EVENTS:
                     return "new_ads";
                 case Tabs._Str_8671:
                     return "groups";

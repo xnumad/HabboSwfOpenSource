@@ -32,7 +32,7 @@
         public static const SEARCHTYPE_TAG_SEARCH:int = 9;
         public static const SEARCHTYPE_ROOM_NAME_SEARCH:int = 10;
         public static const SEARCHTYPE_OFFICIALROOMS:int = 11;
-        public static const _Str_16397:int = 12;
+        public static const SEARCHTYPE_LATEST_EVENTS:int = 12;
         public static const _Str_8671:int = 13;
         public static const _Str_10120:int = 14;
         public static const _Str_9891:int = 15;
