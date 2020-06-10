@@ -68,7 +68,7 @@
             return this._figure;
         }
 
-        public function get _Str_2712():int
+        public function get categoryId():int
         {
             return this._Str_2629;
         }

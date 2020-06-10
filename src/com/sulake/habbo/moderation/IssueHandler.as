@@ -175,7 +175,7 @@
             this._callerUserInfo = new UserInfoCtrl(this._window, this._moderationManager, this._selectedIssue, this);
             this._reportedUserInfo = new UserInfoCtrl(this._window, this._moderationManager, this._selectedIssue, this);
             this._callerUserInfo.load(IWindowContainer(this._window.findChildByName("caller_user_info")), this._selectedIssue._Str_19929);
-            if (((this._selectedIssue._Str_2712 == _Str_18676) && (this._selectedIssue._Str_7437 == _Str_13006)))
+            if (((this._selectedIssue.categoryId == _Str_18676) && (this._selectedIssue._Str_7437 == _Str_13006)))
             {
                 this._topicDropdown.selection = this._sexualTalkTopicItemIndex;
                 this._moderationManager.issueManager._Str_16247(this._issueBundle.id, _Str_12881);
@@ -331,7 +331,7 @@
                 _local_4.removeEventListener(WindowMouseEvent.CLICK, this._Str_20796);
                 _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_20796);
                 this._Str_4180(_local_4.findChildByName("reporter"), _local_9._Str_19615);
-                this._Str_4180(_local_4.findChildByName("type"), IssueCategoryNames._Str_21676(_local_9._Str_2712));
+                this._Str_4180(_local_4.findChildByName("type"), IssueCategoryNames._Str_21676(_local_9.categoryId));
                 this._Str_4180(_local_4.findChildByName("category"), IssueCategoryNames._Str_21569(_local_9._Str_7437));
                 this._Str_4180(_local_4.findChildByName("time_open"), _local_9._Str_15885(_local_10));
                 _local_13 = (((_local_9._Str_2869 == _local_8) && (_local_6 > 1)) ? "Volter Bold" : "Volter");

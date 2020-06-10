@@ -95,7 +95,7 @@
             var k:Array = [];
             for each (_local_2 in this._catalog.navigator._Str_8075)
             {
-                k.push((("${navigator.searchcode.title.eventcategory__" + _local_2._Str_2712) + "}"));
+                k.push((("${navigator.searchcode.title.eventcategory__" + _local_2.categoryId) + "}"));
             }
             this._categoryMenu.populate(k);
             this._categoryMenu.selection = 0;
@@ -196,7 +196,7 @@
                 {
                     this._categoryMenu = (window.findChildByName("categories_list") as IDropMenuWindow);
                 }
-                this._categoryMenu.selection = (k._Str_2712 - 1);
+                this._categoryMenu.selection = (k.categoryId - 1);
             }
         }
 
@@ -316,7 +316,7 @@
                 {
                     if (_local_4 == _local_2)
                     {
-                        _local_3 = _local_5._Str_2712;
+                        _local_3 = _local_5.categoryId;
                         break;
                     }
                     _local_2++;
@@ -325,7 +325,7 @@
             _local_6 = this._catalog._Str_3064;
             if (_local_6)
             {
-                _local_6._Str_2712 = _local_3;
+                _local_6.categoryId = _local_3;
             }
         }
 

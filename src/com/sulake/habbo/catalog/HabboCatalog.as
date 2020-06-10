@@ -797,7 +797,7 @@
                 {
                     this._roomAdPurchaseData._Str_8314 = false;
                 }
-                this.send(new _Str_10613(k, _arg_2, this._Str_3064.flatId, this._Str_3064.name, this._Str_3064._Str_8314, this._Str_3064.description, this._Str_3064._Str_2712));
+                this.send(new _Str_10613(k, _arg_2, this._Str_3064.flatId, this._Str_3064.name, this._Str_3064._Str_8314, this._Str_3064.description, this._Str_3064.categoryId));
             }
         }
 
@@ -997,7 +997,7 @@
             this._roomAdPurchaseData.flatId = this._roomEngine.activeRoomId;
             this._roomAdPurchaseData.roomName = _arg_4;
             this._roomAdPurchaseData.expirationTime = _arg_5;
-            this._roomAdPurchaseData._Str_2712 = _arg_6;
+            this._roomAdPurchaseData.categoryId = _arg_6;
             this.openCatalogPage(k);
             var _local_8:ICatalogNode = this._Str_3361.getNodeByName(k);
             if (((!(_local_8 == null)) && (_local_8.pageId == _local_7)))

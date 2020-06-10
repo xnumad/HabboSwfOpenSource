@@ -10,7 +10,7 @@
         function get online():Boolean;
         function get allowFollow():Boolean;
         function get figure():String;
-        function get _Str_2712():int;
+        function get categoryId():int;
         function get motto():String;
         function get _Str_5261():String;
         function get realName():String;

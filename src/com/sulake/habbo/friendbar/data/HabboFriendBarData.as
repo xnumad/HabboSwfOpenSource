@@ -468,7 +468,7 @@
                         _local_3.online = _local_4.online;
                         _local_3.allowFollow = _local_4._Str_4501;
                         _local_3.figure = _local_4.figure;
-                        _local_3._Str_2712 = _local_4._Str_2712;
+                        _local_3.categoryId = _local_4.categoryId;
                         _local_3._Str_5261 = _local_4._Str_5261;
                     }
                     else
@@ -481,7 +481,7 @@
                 {
                     if (((_local_4.online) || (_Str_6664)))
                     {
-                        _local_3 = new FriendEntity(_local_4.id, _local_4.name, _local_4.realName, _local_4.motto, _local_4.gender, _local_4.online, _local_4._Str_4501, _local_4.figure, _local_4._Str_2712, _local_4._Str_5261);
+                        _local_3 = new FriendEntity(_local_4.id, _local_4.name, _local_4.realName, _local_4.motto, _local_4.gender, _local_4.online, _local_4._Str_4501, _local_4.figure, _local_4.categoryId, _local_4._Str_5261);
                         this._friendEntityList.splice(0, 0, _local_3);
                         this._friendMappedByID.add(_local_3.id, _local_3);
                     }
@@ -493,7 +493,7 @@
                 {
                     if (this._friendMappedByID.getValue(_local_4.id) == null)
                     {
-                        _local_3 = new FriendEntity(_local_4.id, _local_4.name, _local_4.realName, _local_4.motto, _local_4.gender, _local_4.online, _local_4._Str_4501, _local_4.figure, _local_4._Str_2712, _local_4._Str_5261);
+                        _local_3 = new FriendEntity(_local_4.id, _local_4.name, _local_4.realName, _local_4.motto, _local_4.gender, _local_4.online, _local_4._Str_4501, _local_4.figure, _local_4.categoryId, _local_4._Str_5261);
                         this._friendEntityList.push(_local_3);
                         this._friendMappedByID.add(_local_3.id, _local_3);
                     }
@@ -658,7 +658,7 @@
             {
                 if (((_local_2.online) || (_Str_6664)))
                 {
-                    _local_3 = new FriendEntity(_local_2.id, _local_2.name, _local_2.realName, _local_2.motto, _local_2.gender, _local_2.online, _local_2._Str_4501, _local_2.figure, _local_2._Str_2712, _local_2._Str_5261);
+                    _local_3 = new FriendEntity(_local_2.id, _local_2.name, _local_2.realName, _local_2.motto, _local_2.gender, _local_2.online, _local_2._Str_4501, _local_2.figure, _local_2.categoryId, _local_2._Str_5261);
                     this._friendEntityList.push(_local_3);
                     this._friendMappedByID.add(_local_3.id, _local_3);
                 }

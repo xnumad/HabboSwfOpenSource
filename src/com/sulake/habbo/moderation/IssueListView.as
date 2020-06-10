@@ -110,7 +110,7 @@
                 _local_6 = _local_3.findChildByName("source");
                 if (_local_6 != null)
                 {
-                    _local_6.caption = IssueCategoryNames._Str_21676(_local_10._Str_2712);
+                    _local_6.caption = IssueCategoryNames._Str_21676(_local_10.categoryId);
                 }
                 _local_6 = _local_3.findChildByName("category");
                 if (_local_6 != null)

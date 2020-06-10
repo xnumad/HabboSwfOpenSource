@@ -46,7 +46,7 @@
             this._guildInfoCtrl.refresh(this._details, this._room);
             this.refreshRoomName(this._details, this._room);
             this.refreshOwnerName();
-            this.refreshTextWithCaption("roomctg", this._details, this.getRoomCtg(this._room._Str_2712));
+            this.refreshTextWithCaption("roomctg", this._details, this.getRoomCtg(this._room.categoryId));
             this.refreshRoomDesc(this._details, this._room);
             this.refreshExtraCont();
             this.refreshEventInfo(this._room);

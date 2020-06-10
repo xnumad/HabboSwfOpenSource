@@ -28,7 +28,7 @@
 
         public function _Str_11247(k:Friend):_Str_2591
         {
-            var _local_2:int = ((k.online) ? k._Str_2712 : _Str_2591._Str_7666);
+            var _local_2:int = ((k.online) ? k.categoryId : _Str_2591._Str_7666);
             var _local_3:_Str_2591 = this._Str_5067(_local_2);
             if (_local_3 != null)
             {

@@ -44,13 +44,13 @@
             this._figure = k.figure;
             this._motto = k.motto;
             this._lastAccess = k._Str_5261;
-            this._categoryId = k._Str_2712;
+            this._categoryId = k.categoryId;
             this._realName = k.realName;
             this._persistedMessageUser = k._Str_9624;
             this._vipMember = k._Str_17677;
             this._pocketHabboUser = k.pocketHabboUser;
             this._relationshipStatus = k._Str_10060;
-            Logger.log(((((((((((((("Creating friend: " + this.id) + ", ") + this.name) + ", ") + this.gender) + ", ") + this.online) + ", ") + this._Str_4501) + ", ") + this.figure) + ", ") + this._Str_2712));
+            Logger.log(((((((((((((("Creating friend: " + this.id) + ", ") + this.name) + ", ") + this.gender) + ", ") + this.online) + ", ") + this._Str_4501) + ", ") + this.figure) + ", ") + this.categoryId));
         }
 
         public function dispose():void
@@ -113,7 +113,7 @@
             return this._lastAccess;
         }
 
-        public function get _Str_2712():int
+        public function get categoryId():int
         {
             return this._categoryId;
         }
@@ -198,7 +198,7 @@
             this._lastAccess = k;
         }
 
-        public function set _Str_2712(k:int):void
+        public function set categoryId(k:int):void
         {
             this._categoryId = k;
         }

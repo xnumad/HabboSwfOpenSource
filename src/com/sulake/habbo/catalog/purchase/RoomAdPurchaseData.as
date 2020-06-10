@@ -104,12 +104,12 @@
             this._expirationTime = k;
         }
 
-        public function get _Str_2712():int
+        public function get categoryId():int
         {
             return this._categoryId;
         }
 
-        public function set _Str_2712(k:int):void
+        public function set categoryId(k:int):void
         {
             this._categoryId = k;
         }

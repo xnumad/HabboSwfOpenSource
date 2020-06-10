@@ -426,7 +426,7 @@
             var _local_2:_Str_4253;
             for each (_local_2 in this._allCategories)
             {
-                if (_local_2._Str_2712 == k)
+                if (_local_2.categoryId == k)
                 {
                     return _local_2;
                 }
