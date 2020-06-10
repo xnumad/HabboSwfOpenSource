@@ -98,7 +98,7 @@
             return this._Str_8744;
         }
 
-        public function get _Str_9408():int
+        public function get creationYear():int
         {
             return this._Str_9700;
         }

@@ -168,7 +168,7 @@
             return 0;
         }
 
-        public function get _Str_9408():int
+        public function get creationYear():int
         {
             return 0;
         }

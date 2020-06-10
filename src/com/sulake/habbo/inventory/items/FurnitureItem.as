@@ -46,7 +46,7 @@
             this._hasRentPeriodStarted = k.hasRentPeriodStarted;
             this._creationDay = k._Str_8932;
             this._creationMonth = k._Str_9050;
-            this._creationYear = k._Str_9408;
+            this._creationYear = k.creationYear;
             this._slotId = k.slotId;
             this._songId = k._Str_3951;
             this._flatId = k.flatId;
@@ -146,7 +146,7 @@
             return this._creationMonth;
         }
 
-        public function get _Str_9408():int
+        public function get creationYear():int
         {
             return this._creationYear;
         }
@@ -207,7 +207,7 @@
             this._hasRentPeriodStarted = k.hasRentPeriodStarted;
             this._creationDay = k._Str_8932;
             this._creationMonth = k._Str_9050;
-            this._creationYear = k._Str_9408;
+            this._creationYear = k.creationYear;
             this._slotId = k.slotId;
             this._songId = k._Str_3951;
             this._flatId = k.flatId;
