@@ -84,7 +84,7 @@
 
         private function _Str_26475(k:WindowMouseEvent):void
         {
-            this._habboNavigator._Str_18427();
+            this._habboNavigator.showFavouriteRooms();
             this._Str_8696();
         }
 

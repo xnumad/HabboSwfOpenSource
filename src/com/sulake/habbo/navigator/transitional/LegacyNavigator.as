@@ -225,7 +225,7 @@
             return this._oldNavigator.openCatalogRoomAdsPage();
         }
 
-        public function _Str_18427():void
+        public function showFavouriteRooms():void
         {
             return this._newNavigator.performSearch("favorites");
         }

@@ -663,7 +663,7 @@
             this._tabs._Str_9436(Tabs._Str_5203)._Str_5252._Str_6883();
         }
 
-        public function _Str_18427():void
+        public function showFavouriteRooms():void
         {
             this._Str_18163(Tabs._Str_8122);
         }

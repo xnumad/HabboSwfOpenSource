@@ -60,7 +60,7 @@
         function openCatalogClubPage(_arg_1:String):void;
         function openCatalogRoomAdsPage():void;
         function openCatalogRoomAdsExtendPage(_arg_1:String, _arg_2:String, _arg_3:Date, _arg_4:int):void;
-        function _Str_18427():void;
+        function showFavouriteRooms():void;
         function _Str_16885():void;
         function _Str_17131():void;
         function get tracking():IHabboTracking;
