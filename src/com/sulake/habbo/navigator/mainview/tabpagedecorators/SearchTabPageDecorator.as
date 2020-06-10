@@ -30,7 +30,7 @@
 
         public function _Str_8146():void
         {
-            this._navigator._Str_2813.open();
+            this._navigator.mainViewCtrl.open();
         }
 
         public function get _Str_5960():String

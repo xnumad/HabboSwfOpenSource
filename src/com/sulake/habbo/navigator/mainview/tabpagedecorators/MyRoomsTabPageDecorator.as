@@ -96,7 +96,7 @@
         private function _Str_2798():void
         {
             var k:int = (((this._filter == null) || (this._filter.disposed)) ? 0 : this._filter.selection);
-            this._navigator._Str_2813._Str_2798(Tabs._Str_5203, this._Str_24302(k));
+            this._navigator.mainViewCtrl._Str_2798(Tabs._Str_5203, this._Str_24302(k));
         }
 
         private function _Str_24302(k:int):int

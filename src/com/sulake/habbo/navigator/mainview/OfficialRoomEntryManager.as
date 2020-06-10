@@ -345,14 +345,14 @@
                     }
                     else
                     {
-                        this._navigator._Str_2813._Str_2798(Tabs._Str_3813, Tabs._Str_5383, _local_2.tag);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_5383, _local_2.tag);
                     }
                 }
                 else
                 {
                     Logger.log(("FOLDER CLICKD: " + _local_2.index));
                     _local_2._Str_16147();
-                    this._navigator._Str_2813.refresh();
+                    this._navigator.mainViewCtrl.refresh();
                 }
             }
         }

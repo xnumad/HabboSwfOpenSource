@@ -32,7 +32,7 @@
         function get assets():IAssetLibrary;
         function get windowManager():IHabboWindowManager;
         function get data():NavigatorData;
-        function get _Str_2813():ITransitionalMainViewCtrl;
+        function get mainViewCtrl():ITransitionalMainViewCtrl;
         function get tabs():Tabs;
         function get _Str_4012():RoomInfoViewCtrl;
         function get _Str_15114():RoomCreateViewCtrl;

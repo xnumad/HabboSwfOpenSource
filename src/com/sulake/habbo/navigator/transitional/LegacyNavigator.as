@@ -90,7 +90,7 @@
             return this._oldNavigator.data;
         }
 
-        public function get _Str_2813():ITransitionalMainViewCtrl
+        public function get mainViewCtrl():ITransitionalMainViewCtrl
         {
             return this._fakeMainViewCtrl;
         }

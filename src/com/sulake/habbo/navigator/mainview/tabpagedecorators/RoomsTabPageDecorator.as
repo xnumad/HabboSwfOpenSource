@@ -92,19 +92,19 @@
             Logger.log(("Room filter changed: " + k));
             if (k == 0)
             {
-                this._navigator._Str_2813._Str_2798(Tabs._Str_3866, Tabs._Str_5348);
+                this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3866, Tabs._Str_5348);
             }
             else
             {
                 if (k == 1)
                 {
-                    this._navigator._Str_2813._Str_2798(Tabs._Str_3866, Tabs._Str_9593);
+                    this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3866, Tabs._Str_9593);
                 }
                 else
                 {
                     if (((k == 2) && (this._personalizedRoomsEnabled)))
                     {
-                        this._navigator._Str_2813._Str_2798(Tabs._Str_3866, Tabs._Str_9699);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3866, Tabs._Str_9699);
                     }
                     else
                     {
@@ -121,7 +121,7 @@
                         }
                         _local_4 = _local_3.nodeId;
                         Logger.log(("Searching with catId: " + _local_4));
-                        this._navigator._Str_2813._Str_2798(Tabs._Str_3866, Tabs._Str_5348, ("" + _local_4));
+                        this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3866, Tabs._Str_5348, ("" + _local_4));
                     }
                 }
             }

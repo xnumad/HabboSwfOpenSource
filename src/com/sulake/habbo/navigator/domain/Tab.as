@@ -30,7 +30,7 @@
             {
                 this._defaultSearchType = Tabs._Str_9699;
             }
-            this._navigator._Str_2813._Str_2798(this._id, this._defaultSearchType, "-1", this._searchMsg);
+            this._navigator.mainViewCtrl._Str_2798(this._id, this._defaultSearchType, "-1", this._searchMsg);
         }
 
         public function set selected(k:Boolean):void

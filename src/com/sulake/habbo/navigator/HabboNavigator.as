@@ -130,7 +130,7 @@
             return this._data;
         }
 
-        public function get _Str_2813():ITransitionalMainViewCtrl
+        public function get mainViewCtrl():ITransitionalMainViewCtrl
         {
             return this._mainViewCtrl;
         }

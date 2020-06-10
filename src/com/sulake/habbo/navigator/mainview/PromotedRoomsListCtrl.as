@@ -174,7 +174,7 @@
                 }
                 _local_4 = this._Str_5067(_arg_2);
                 _local_4._Str_16147();
-                this._navigator._Str_2813.refresh();
+                this._navigator.mainViewCtrl.refresh();
             }
         }
 

@@ -359,14 +359,14 @@
             ErrorReportStorage.addDebugData("IncomingEvent", ((("Flat created: " + _local_2.flatId) + ", ") + _local_2._Str_18439));
             this.data.createdFlatId = _local_2.flatId;
             this._navigator.goToRoom(_local_2.flatId, true);
-            this._navigator._Str_2813._Str_8316(Tabs._Str_4869);
+            this._navigator.mainViewCtrl._Str_8316(Tabs._Str_4869);
             this._navigator._Str_10330();
             this._navigator.closeNavigator();
         }
 
         private function _Str_22297(k:IMessageEvent):void
         {
-            this._navigator._Str_2813.close();
+            this._navigator.mainViewCtrl.close();
         }
 
         private function _Str_11640(k:IMessageEvent):void
@@ -408,7 +408,7 @@
             var _local_3:* = (!(this._navigator.data._Str_17024));
             this._navigator.data.homeRoomId = _local_2.homeRoomId;
             this._navigator.data._Str_17024 = true;
-            this._navigator._Str_2813.refresh();
+            this._navigator.mainViewCtrl.refresh();
             var _local_4:int = -1;
             var _local_5:int = -1;
             if (((_local_3) && (!(HabboComponentFlags.isRoomViewerMode(this._navigator.flags)))))
@@ -453,9 +453,9 @@
                         }
                     }
                 }
-                if (((_local_6) && (!(this._navigator._Str_2813.isOpen()))))
+                if (((_local_6) && (!(this._navigator.mainViewCtrl.isOpen()))))
                 {
-                    this._navigator._Str_2813._Str_18392();
+                    this._navigator.mainViewCtrl._Str_18392();
                 }
             }
             else
@@ -525,7 +525,7 @@
         {
             var _local_2:_Str_6506 = (k as _Str_5081).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ("Room settings saved: " + _local_2.roomId));
-            this._navigator._Str_2813._Str_8316(Tabs._Str_4869);
+            this._navigator.mainViewCtrl._Str_8316(Tabs._Str_4869);
         }
 
         private function _Str_8265(k:IMessageEvent):void
@@ -554,7 +554,7 @@
             Logger.log(((("Received favourite changed: " + _local_2.flatId) + ", ") + _local_2._Str_13819));
             this._navigator.data._Str_21350(_local_2.flatId, _local_2._Str_13819);
             this._navigator._Str_4012.reload();
-            this._navigator._Str_2813.refresh();
+            this._navigator.mainViewCtrl.refresh();
         }
 
         private function _Str_25812(k:IMessageEvent):void

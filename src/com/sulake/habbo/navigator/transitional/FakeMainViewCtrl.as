@@ -132,7 +132,7 @@
 
         public function get _Str_6414():TextSearchInputs
         {
-            return this._oldNavigator._Str_2813._Str_6414;
+            return this._oldNavigator.mainViewCtrl._Str_6414;
         }
 
         public function _Str_20903(k:Point):void
@@ -142,7 +142,7 @@
 
         public function get _Str_13071():Boolean
         {
-            return this._oldNavigator._Str_2813._Str_13071;
+            return this._oldNavigator.mainViewCtrl._Str_13071;
         }
     }
 }

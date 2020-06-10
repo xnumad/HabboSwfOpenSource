@@ -29,7 +29,7 @@
 
         public function _Str_8146():void
         {
-            this._navigator._Str_2813._Str_2798(Tabs._Str_6250, Tabs._Str_8698, "-1", MainViewCtrl._Str_15148);
+            this._navigator.mainViewCtrl._Str_2798(Tabs._Str_6250, Tabs._Str_8698, "-1", MainViewCtrl._Str_15148);
         }
 
         public function get _Str_5960():String
