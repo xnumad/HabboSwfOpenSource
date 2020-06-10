@@ -110,7 +110,7 @@
                     return "my_groups";
                 case Tabs.SEARCHTYPE_BY_OWNER:
                     return "query";
-                case Tabs._Str_10877:
+                case Tabs.SEARCHTYPE_CATEGORIES:
                     return "all_categories";
                 case Tabs._Str_9699:
                     return "recommended";

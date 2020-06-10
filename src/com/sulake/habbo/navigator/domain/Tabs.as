@@ -41,7 +41,7 @@
         public static const SEARCHTYPE_ROOMS_WITH_RIGHTS:int = 18;
         public static const SEARCHTYPE_MY_GUILD_BASES:int = 19;
         public static const SEARCHTYPE_BY_OWNER:int = 20;
-        public static const _Str_10877:int = 21;
+        public static const SEARCHTYPE_CATEGORIES:int = 21;
         public static const _Str_9699:int = 22;
         public static const _Str_7094:int = 23;
 
@@ -62,7 +62,7 @@
             this._navigator = k;
             this._tabs = new Array();
             this._tabs.push(new Tab(this._navigator, TAB_EVENTS, SEARCHTYPE_ROOM_ADS, new EventsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
-            this._tabs.push(new Tab(this._navigator, TAB_CATEGORIES, _Str_10877, new CategoriesTabPageDecorator(this._navigator), MainViewCtrl._Str_13989));
+            this._tabs.push(new Tab(this._navigator, TAB_CATEGORIES, SEARCHTYPE_CATEGORIES, new CategoriesTabPageDecorator(this._navigator), MainViewCtrl._Str_13989));
             this._tabs.push(new Tab(this._navigator, TAB_ROOMS, SEARCHTYPE_POPULAR_ROOMS, new RoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, TAB_OFFICIAL, SEARCHTYPE_OFFICIALROOMS, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
             this._tabs.push(new Tab(this._navigator, TAB_ME, SEARCHTYPE_MY_ROOMS, new MyRoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
