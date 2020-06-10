@@ -636,7 +636,7 @@
                     return new _Str_4390(("group:" + _arg_2));
                 case Tabs.SEARCHTYPE_ROOM_NAME_SEARCH:
                     return new _Str_4390(("roomname:" + _arg_2));
-                case Tabs._Str_10120:
+                case Tabs.SEARCHTYPE_GUILD_BASES:
                     return new _Str_10574(this._navigator.data._Str_6357);
                 case Tabs._Str_9891:
                     _local_3 = this._navigator.data._Str_4079;

@@ -648,7 +648,7 @@
             {
                 return;
             }
-            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_10120, "");
+            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_GUILD_BASES, "");
             this._mainViewCtrl.mainWindow.activate();
             this._mainViewCtrl._Str_6414._Str_17634.setText("");
         }

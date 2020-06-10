@@ -96,7 +96,7 @@
                     return "new_ads";
                 case Tabs.SEARCHTYPE_GROUP_NAME_SEARCH:
                     return "groups";
-                case Tabs._Str_10120:
+                case Tabs.SEARCHTYPE_GUILD_BASES:
                     return "groups";
                 case Tabs._Str_9891:
                     return "competition";
