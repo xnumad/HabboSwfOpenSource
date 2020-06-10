@@ -720,7 +720,7 @@
         private function _Str_14669(k:int):void
         {
             this._navigator.send(new _Str_3570(k, false, true));
-            this._navigator._Str_4051("Room Forward", "go.roomforward", "", k);
+            this._navigator.trackNavigationDataPoint("Room Forward", "go.roomforward", "", k);
         }
 
         private function _Str_18130(k:_Str_5891):void

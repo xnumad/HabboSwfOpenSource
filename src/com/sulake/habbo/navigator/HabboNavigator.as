@@ -411,19 +411,19 @@
                     switch (this.tabs.getSelected().id)
                     {
                         case Tabs._Str_6250:
-                            this._Str_4051(this.tabs.getSelected()._Str_5252._Str_5960, "go.official", String(k), _local_5);
+                            this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.official", String(k), _local_5);
                             return;
                         case Tabs._Str_5203:
-                            this._Str_4051(this.tabs.getSelected()._Str_5252._Str_5960, "go.me", String(k), _local_5);
+                            this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.me", String(k), _local_5);
                             return;
                         case Tabs._Str_3866:
-                            this._Str_4051(this.tabs.getSelected()._Str_5252._Str_5960, "go.rooms", String(k), _local_5);
+                            this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.rooms", String(k), _local_5);
                             return;
                         case Tabs._Str_6209:
-                            this._Str_4051("Events", "go.events", String(k), _local_5);
+                            this.trackNavigationDataPoint("Events", "go.events", String(k), _local_5);
                             return;
                         case Tabs._Str_3813:
-                            this._Str_4051("Search", "go.search", String(k), _local_5);
+                            this.trackNavigationDataPoint("Search", "go.search", String(k), _local_5);
                             return;
                     }
                 }
@@ -614,7 +614,7 @@
                 k = (('"' + k) + '"');
             }
             this._mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_5383, k);
-            this._Str_4051("Search", "search.tag", k);
+            this.trackNavigationDataPoint("Search", "search.tag", k);
             this._mainViewCtrl.mainWindow.activate();
         }
 
@@ -625,7 +625,7 @@
                 return;
             }
             this._mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_5622, k);
-            this._Str_4051("Search", "search", k);
+            this.trackNavigationDataPoint("Search", "search", k);
             this._mainViewCtrl.mainWindow.activate();
             this._mainViewCtrl._Str_6414._Str_17634.setText(k);
         }
@@ -688,7 +688,7 @@
             this._tabs._Str_9436(Tabs._Str_5203)._Str_5252._Str_8025(k);
         }
 
-        public function _Str_4051(k:String, _arg_2:String, _arg_3:String="", _arg_4:int=0):void
+        public function trackNavigationDataPoint(k:String, _arg_2:String, _arg_3:String="", _arg_4:int=0):void
         {
             if (this._tracking)
             {

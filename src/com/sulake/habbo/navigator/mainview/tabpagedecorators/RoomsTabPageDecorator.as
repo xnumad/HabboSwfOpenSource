@@ -127,7 +127,7 @@
             }
             if (((this._filter) && (!(this._filter.disposed))))
             {
-                this._navigator._Str_4051(this._filter.items()[this._filter.selection], "category.view");
+                this._navigator.trackNavigationDataPoint(this._filter.items()[this._filter.selection], "category.view");
             }
         }
 

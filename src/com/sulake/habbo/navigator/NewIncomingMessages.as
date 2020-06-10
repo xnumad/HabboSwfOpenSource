@@ -526,7 +526,7 @@
         private function _Str_14669(k:int):void
         {
             LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_3570(k, false, true));
-            LegacyNavigator(this._navigator.legacyNavigator)._Str_4051("Room Forward", "go.roomforward", "", k);
+            LegacyNavigator(this._navigator.legacyNavigator).trackNavigationDataPoint("Room Forward", "go.roomforward", "", k);
         }
 
         private function _Str_18130(k:_Str_5891):void

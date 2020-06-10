@@ -114,7 +114,7 @@
             {
                 this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_5622, k);
             }
-            this._navigator._Str_4051("Search", "search", k);
+            this._navigator.trackNavigationDataPoint("Search", "search", k);
         }
 
         public function get _Str_17634():TextFieldManager

@@ -89,7 +89,7 @@
             var _local_2:IWindow = k.target;
             if ((_local_2 is IDropMenuWindow))
             {
-                this._navigator._Str_4051(IDropMenuWindow(_local_2).items()[IDropMenuWindow(_local_2).selection], "category.view");
+                this._navigator.trackNavigationDataPoint(IDropMenuWindow(_local_2).items()[IDropMenuWindow(_local_2).selection], "category.view");
             }
         }
 
