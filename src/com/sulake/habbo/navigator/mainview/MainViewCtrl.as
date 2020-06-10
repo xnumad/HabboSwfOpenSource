@@ -561,7 +561,7 @@
             {
                 if (((!(this._Str_6414 == null)) && (!(_arg_3 == "-1"))))
                 {
-                    if (_arg_2 != Tabs._Str_5348)
+                    if (_arg_2 != Tabs.SEARCHTYPE_POPULAR_ROOMS)
                     {
                         this._Str_6414.setText(_arg_3, _arg_2);
                     }
@@ -588,7 +588,7 @@
                 case Tabs._Str_8698:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_OFFICIALROOMS));
                     return;
-                case Tabs._Str_5348:
+                case Tabs.SEARCHTYPE_POPULAR_ROOMS:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_POPULAR_ROOMS));
                     return;
                 case Tabs._Str_8473:
@@ -622,7 +622,7 @@
                     return new _Str_12153();
                 case Tabs._Str_4869:
                     return new _Str_9988();
-                case Tabs._Str_5348:
+                case Tabs.SEARCHTYPE_POPULAR_ROOMS:
                     return new _Str_10157(_arg_2, this._navigator.data._Str_6357);
                 case Tabs._Str_8473:
                     return new _Str_10079();

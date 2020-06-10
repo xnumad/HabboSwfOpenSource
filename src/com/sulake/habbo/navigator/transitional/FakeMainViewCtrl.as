@@ -70,7 +70,7 @@
         {
             switch (k)
             {
-                case Tabs._Str_5348:
+                case Tabs.SEARCHTYPE_POPULAR_ROOMS:
                     return "popular";
                 case Tabs._Str_9593:
                     return "highest_score";

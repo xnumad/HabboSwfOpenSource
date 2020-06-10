@@ -92,7 +92,7 @@
             Logger.log(("Room filter changed: " + k));
             if (k == 0)
             {
-                this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs._Str_5348);
+                this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_POPULAR_ROOMS);
             }
             else
             {
@@ -121,7 +121,7 @@
                         }
                         _local_4 = _local_3.nodeId;
                         Logger.log(("Searching with catId: " + _local_4));
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs._Str_5348, ("" + _local_4));
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_POPULAR_ROOMS, ("" + _local_4));
                     }
                 }
             }
