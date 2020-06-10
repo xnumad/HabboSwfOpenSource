@@ -22,7 +22,7 @@
         function get rentable():Boolean;
         function get isWallItem():Boolean;
         function get hasRentPeriodStarted():Boolean;
-        function get _Str_10616():int;
+        function get expirationTimeStamp():int;
         function get creationDay():int;
         function get creationMonth():int;
         function get creationYear():int;

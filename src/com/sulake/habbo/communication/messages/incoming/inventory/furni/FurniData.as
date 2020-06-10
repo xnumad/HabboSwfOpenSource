@@ -153,7 +153,7 @@
             return this._hasRentPeriodStarted;
         }
 
-        public function get _Str_10616():int
+        public function get expirationTimeStamp():int
         {
             return this._expirationTimeStamp;
         }

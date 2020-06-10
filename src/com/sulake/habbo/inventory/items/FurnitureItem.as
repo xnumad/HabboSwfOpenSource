@@ -42,7 +42,7 @@
             this._stuffData = k.stuffData;
             this._extra = k._Str_2794;
             this._secondsToExpiration = k.secondsToExpiration;
-            this._expirationTimeStamp = k._Str_10616;
+            this._expirationTimeStamp = k.expirationTimeStamp;
             this._hasRentPeriodStarted = k.hasRentPeriodStarted;
             this._creationDay = k.creationDay;
             this._creationMonth = k.creationMonth;
@@ -186,7 +186,7 @@
             return this._hasRentPeriodStarted;
         }
 
-        public function get _Str_10616():int
+        public function get expirationTimeStamp():int
         {
             return this._expirationTimeStamp;
         }
@@ -203,7 +203,7 @@
             this._stuffData = k.stuffData;
             this._extra = k._Str_2794;
             this._secondsToExpiration = k.secondsToExpiration;
-            this._expirationTimeStamp = k._Str_10616;
+            this._expirationTimeStamp = k.expirationTimeStamp;
             this._hasRentPeriodStarted = k.hasRentPeriodStarted;
             this._creationDay = k.creationDay;
             this._creationMonth = k.creationMonth;
