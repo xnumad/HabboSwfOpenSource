@@ -64,7 +64,7 @@
         function showHistoryRooms():void;
         function showFrequentRooms():void;
         function get tracking():IHabboTracking;
-        function _Str_10330():void;
+        function goToMainView():void;
         function goToRoom(_arg_1:int, _arg_2:Boolean, _arg_3:String="", _arg_4:int=-1):void;
         function isPerkAllowed(_arg_1:String):Boolean;
         function trackGoogle(_arg_1:String, _arg_2:String, _arg_3:int=-1):void;

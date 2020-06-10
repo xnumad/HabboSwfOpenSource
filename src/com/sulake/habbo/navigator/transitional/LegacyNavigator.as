@@ -245,7 +245,7 @@
             return this._oldNavigator.tracking;
         }
 
-        public function _Str_10330():void
+        public function goToMainView():void
         {
             this._roomCreateViewCtrl.hide();
         }

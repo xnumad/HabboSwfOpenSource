@@ -324,7 +324,7 @@
             this.data.createdFlatId = _local_2.flatId;
             LegacyNavigator(this._navigator.legacyNavigator).goToRoom(_local_2.flatId, true);
             LegacyNavigator(this._navigator.legacyNavigator).mainViewCtrl._Str_8316(Tabs._Str_4869);
-            LegacyNavigator(this._navigator.legacyNavigator)._Str_10330();
+            LegacyNavigator(this._navigator.legacyNavigator).goToMainView();
             LegacyNavigator(this._navigator.legacyNavigator).closeNavigator();
         }
 

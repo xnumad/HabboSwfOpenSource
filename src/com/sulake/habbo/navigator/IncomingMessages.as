@@ -360,7 +360,7 @@
             this.data.createdFlatId = _local_2.flatId;
             this._navigator.goToRoom(_local_2.flatId, true);
             this._navigator.mainViewCtrl._Str_8316(Tabs._Str_4869);
-            this._navigator._Str_10330();
+            this._navigator.goToMainView();
             this._navigator.closeNavigator();
         }
 

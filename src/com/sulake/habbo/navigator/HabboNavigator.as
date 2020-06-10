@@ -718,7 +718,7 @@
             this._mainViewCtrl.close();
         }
 
-        public function _Str_10330():void
+        public function goToMainView():void
         {
             this._roomCreateViewCtrl.hide();
             this._roomInfoViewCtrl.close();

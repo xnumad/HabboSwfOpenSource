@@ -68,7 +68,7 @@
         private function _Str_23296(k:WindowMouseEvent):void
         {
             this._habboNavigator.openNavigator();
-            this._habboNavigator._Str_10330();
+            this._habboNavigator.goToMainView();
             this._Str_8696();
         }
 
