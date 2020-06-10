@@ -119,7 +119,7 @@
             {
                 if (_local_5 == null)
                 {
-                    _local_5 = this._navigator._Str_10781(_local_4, _local_4, null);
+                    _local_5 = this._navigator.getButton(_local_4, _local_4, null);
                     _local_5.setParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, false);
                     k.addChild(_local_5);
                 }

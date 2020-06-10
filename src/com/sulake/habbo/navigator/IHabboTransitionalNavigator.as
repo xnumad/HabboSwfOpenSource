@@ -54,7 +54,7 @@
         function getXmlWindow(_arg_1:String, _arg_2:uint=1):IWindow;
         function getText(_arg_1:String):String;
         function registerParameter(_arg_1:String, _arg_2:String, _arg_3:String):String;
-        function _Str_10781(_arg_1:String, _arg_2:String, _arg_3:Function, _arg_4:int=0, _arg_5:int=0, _arg_6:int=0):IBitmapWrapperWindow;
+        function getButton(_arg_1:String, _arg_2:String, _arg_3:Function, _arg_4:int=0, _arg_5:int=0, _arg_6:int=0):IBitmapWrapperWindow;
         function refreshButton(_arg_1:IWindowContainer, _arg_2:String, _arg_3:Boolean, _arg_4:Function, _arg_5:int, _arg_6:String=null):void;
         function _Str_3122(_arg_1:String, _arg_2:String="_png"):BitmapData;
         function openCatalogClubPage(_arg_1:String):void;

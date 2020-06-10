@@ -200,9 +200,9 @@
             return this._oldNavigator.registerParameter(k, _arg_2, _arg_3);
         }
 
-        public function _Str_10781(k:String, _arg_2:String, _arg_3:Function, _arg_4:int=0, _arg_5:int=0, _arg_6:int=0):IBitmapWrapperWindow
+        public function getButton(k:String, _arg_2:String, _arg_3:Function, _arg_4:int=0, _arg_5:int=0, _arg_6:int=0):IBitmapWrapperWindow
         {
-            return this._oldNavigator._Str_10781(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
+            return this._oldNavigator.getButton(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
         }
 
         public function refreshButton(k:IWindowContainer, _arg_2:String, _arg_3:Boolean, _arg_4:Function, _arg_5:int, _arg_6:String=null):void
