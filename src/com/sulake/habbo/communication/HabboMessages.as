@@ -524,7 +524,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12239;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_17077;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_18849;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4390;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
@@ -1671,7 +1671,7 @@
             OUTGOING_PACKETS[2226] = _Str_11429;
             OUTGOING_PACKETS[2228] = ChangeMottoMessageComposer;
             OUTGOING_PACKETS[223] = _Str_11294;
-            OUTGOING_PACKETS[2230] = _Str_3570;
+            OUTGOING_PACKETS[2230] = GetGuestRoomMessageComposer;
             OUTGOING_PACKETS[2235] = ChangePostureMessageComposer;
             OUTGOING_PACKETS[2248] = _Str_11777;
             OUTGOING_PACKETS[2249] = _Str_7285;

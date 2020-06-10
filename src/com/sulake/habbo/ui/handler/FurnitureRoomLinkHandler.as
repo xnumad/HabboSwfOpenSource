@@ -20,7 +20,7 @@
     import com.sulake.room.object.IRoomObject;
     import com.sulake.room.object.IRoomObjectModel;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
     import flash.events.Event;
     import __AS3__.vec.*;
 
@@ -142,7 +142,7 @@
                                 }
                                 this._link = _local_5;
                                 this._roomIdToEnter = parseInt(_local_5, 10);
-                                this._communicationManager.connection.send(new _Str_3570(this._roomIdToEnter, false, false));
+                                this._communicationManager.connection.send(new GetGuestRoomMessageComposer(this._roomIdToEnter, false, false));
                             }
                             else
                             {

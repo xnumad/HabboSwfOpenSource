@@ -16,7 +16,7 @@
 	import com.sulake.core.window.components.IRegionWindow;
 	import com.sulake.core.window.events.WindowEvent;
 	import com.sulake.core.window.events.WindowMouseEvent;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
 	import flash.display.BitmapData;
 	import flash.geom.Point;
 	import snowwar.SnowWarEngine;
@@ -112,7 +112,7 @@
                 this._snowWarEngine.send(new _SafeStr_3665());
                 if (this._snowWarEngine.rejoinRoom > -1)
                 {
-                    this._snowWarEngine.send(new _Str_3570(this._snowWarEngine.rejoinRoom, false, true));
+                    this._snowWarEngine.send(new GetGuestRoomMessageComposer(this._snowWarEngine.rejoinRoom, false, true));
                 }
                 this._snowWarEngine.disposeGameStartingViewController();
             }

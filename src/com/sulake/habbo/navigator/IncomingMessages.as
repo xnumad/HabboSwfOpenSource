@@ -62,7 +62,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6918;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6280;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.navigator.domain.RoomSessionTags;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
@@ -276,7 +276,7 @@
             this.data.onRoomEnter(_local_2);
             this._Str_20233();
             this._navigator.roomInfoViewCtrl.close();
-            this._navigator.send(new _Str_3570(_local_2.guestRoomId, true, false));
+            this._navigator.send(new GetGuestRoomMessageComposer(_local_2.guestRoomId, true, false));
             Logger.log("Sent get guest room...");
             this._navigator.roomEventInfoCtrl.refresh();
             this._navigator.roomEventViewCtrl.close();
@@ -538,7 +538,7 @@
         {
             var _local_2:_Str_6683 = (k as _Str_5711).getParser();
             Logger.log(("ROOM UPDATED: " + _local_2.flatId));
-            this._navigator.send(new _Str_3570(_local_2.flatId, false, false));
+            this._navigator.send(new GetGuestRoomMessageComposer(_local_2.flatId, false, false));
         }
 
         private function _Str_8561(k:IMessageEvent):void
@@ -719,7 +719,7 @@
 
         private function _Str_14669(k:int):void
         {
-            this._navigator.send(new _Str_3570(k, false, true));
+            this._navigator.send(new GetGuestRoomMessageComposer(k, false, true));
             this._navigator.trackNavigationDataPoint("Room Forward", "go.roomforward", "", k);
         }
 

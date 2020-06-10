@@ -74,7 +74,7 @@
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6506;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_4043;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6683;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6043;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6561;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6355;
@@ -407,7 +407,7 @@
         {
             var _local_2:_Str_6683 = (k as _Str_5711).getParser();
             Logger.log(("ROOM UPDATED: " + _local_2.flatId));
-            LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_3570(_local_2.flatId, false, false));
+            LegacyNavigator(this._navigator.legacyNavigator).send(new GetGuestRoomMessageComposer(_local_2.flatId, false, false));
         }
 
         private function _Str_8561(k:IMessageEvent):void
@@ -525,7 +525,7 @@
 
         private function _Str_14669(k:int):void
         {
-            LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_3570(k, false, true));
+            LegacyNavigator(this._navigator.legacyNavigator).send(new GetGuestRoomMessageComposer(k, false, true));
             LegacyNavigator(this._navigator.legacyNavigator).trackNavigationDataPoint("Room Forward", "go.roomforward", "", k);
         }
 

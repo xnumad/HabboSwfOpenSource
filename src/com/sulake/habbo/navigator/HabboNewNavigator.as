@@ -56,7 +56,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
     import com.sulake.habbo.utils.Base64;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.navigator.domain.NavigatorData;
@@ -492,7 +492,7 @@
 
         public function goToRoom(k:int, _arg_2:String="mainview"):void
         {
-            this.communication.connection.send(new _Str_3570(k, false, true));
+            this.communication.connection.send(new GetGuestRoomMessageComposer(k, false, true));
             this._navigatorView.visible = false;
             var _local_3:String = this._currentResultRoomNameData.getValue(k);
             this.trackEventLog("go", _arg_2, ((_local_3) ? _local_3 : ""), k);

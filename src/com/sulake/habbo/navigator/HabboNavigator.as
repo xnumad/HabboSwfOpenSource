@@ -47,7 +47,7 @@
     import flash.external.ExternalInterface;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11608;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10878;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
@@ -360,7 +360,7 @@
 
         public function goToPrivateRoom(k:int):void
         {
-            this.send(new _Str_3570(k, false, true));
+            this.send(new GetGuestRoomMessageComposer(k, false, true));
         }
 
         public function removeRoomRights(k:int):void
