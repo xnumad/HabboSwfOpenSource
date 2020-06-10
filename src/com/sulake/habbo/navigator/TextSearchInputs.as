@@ -94,25 +94,25 @@
                 switch (this._searchType.selection)
                 {
                     case 0:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_5622, k);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_5622, k);
                         break;
                     case 1:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_9661, k);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_9661, k);
                         break;
                     case 2:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_9523, k);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_9523, k);
                         break;
                     case 3:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_5383, k);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_5383, k);
                         break;
                     case 4:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_8671, k);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_8671, k);
                         break;
                 }
             }
             else
             {
-                this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_5622, k);
+                this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_5622, k);
             }
             this._navigator.trackNavigationDataPoint("Search", "search", k);
         }

@@ -345,7 +345,7 @@
                     }
                     else
                     {
-                        this._navigator.mainViewCtrl._Str_2798(Tabs._Str_3813, Tabs._Str_5383, _local_2.tag);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_5383, _local_2.tag);
                     }
                 }
                 else

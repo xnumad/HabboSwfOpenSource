@@ -18,7 +18,7 @@
         public static const TAB_ROOMS:int = 2;
         public static const TAB_ME:int = 3;
         public static const TAB_OFFICIAL:int = 4;
-        public static const _Str_3813:int = 5;
+        public static const TAB_SEARCH:int = 5;
         public static const _Str_7172:int = 6;
         private static const _Str_5586:Dictionary = new Dictionary();
         public static const _Str_5348:int = 1;
@@ -53,7 +53,7 @@
             _Str_5586["official"] = TAB_OFFICIAL;
             _Str_5586["me"] = TAB_ME;
             _Str_5586["events"] = TAB_EVENTS;
-            _Str_5586["search"] = _Str_3813;
+            _Str_5586["search"] = TAB_SEARCH;
             _Str_5586["categories"] = _Str_7172;
         }
 
@@ -66,7 +66,7 @@
             this._tabs.push(new Tab(this._navigator, TAB_ROOMS, _Str_5348, new RoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, TAB_OFFICIAL, _Str_8698, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
             this._tabs.push(new Tab(this._navigator, TAB_ME, _Str_4869, new MyRoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
-            this._tabs.push(new Tab(this._navigator, _Str_3813, _Str_5622, new SearchTabPageDecorator(this._navigator), MainViewCtrl._Str_14620));
+            this._tabs.push(new Tab(this._navigator, TAB_SEARCH, _Str_5622, new SearchTabPageDecorator(this._navigator), MainViewCtrl._Str_14620));
             this._Str_13005(TAB_EVENTS);
         }
 
