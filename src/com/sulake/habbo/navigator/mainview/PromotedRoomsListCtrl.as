@@ -112,7 +112,7 @@
             k.findChildByName("close_txt").caption = this._navigator.getText("navigator.promotedrooms.hidetopten");
             k.findChildByName("room_name_txt").caption = _arg_2._Str_7144.roomName;
             var _local_4:IWindow = k.findChildByName("leader_name_txt");
-            _local_4.caption = ((_arg_2._Str_7144._Str_6938) ? _arg_2._Str_7144.ownerName : "");
+            _local_4.caption = ((_arg_2._Str_7144.showOwner) ? _arg_2._Str_7144.ownerName : "");
             _local_4.x = this._Str_17813(k, "leader_name_caption_txt", 0);
             k.findChildByName("arrow_down_icon").visible = _arg_2.open;
             k.findChildByName("arrow_right_icon").visible = (!(_arg_2.open));

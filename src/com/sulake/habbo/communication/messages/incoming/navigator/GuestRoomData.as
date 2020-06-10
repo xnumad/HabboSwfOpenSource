@@ -115,7 +115,7 @@
             return this._roomName;
         }
 
-        public function get _Str_6938():Boolean
+        public function get showOwner():Boolean
         {
             return this._showOwner;
         }

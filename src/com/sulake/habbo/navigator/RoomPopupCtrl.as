@@ -65,8 +65,8 @@
             var k:ITextWindow = ITextWindow(this._details.findChildByName("roomowner"));
             var _local_2:IRegionWindow = IRegionWindow(this._details.findChildByName("roomowner_cont"));
             _local_2.procedure = this.onOwnerName;
-            k.caption = ((this._room._Str_6938) ? this._room.ownerName : "");
-            _local_2.visible = (((this._room._Str_6938) && (!(this._room.ownerName == ""))) && (!(this._room.ownerName == "-")));
+            k.caption = ((this._room.showOwner) ? this._room.ownerName : "");
+            _local_2.visible = (((this._room.showOwner) && (!(this._room.ownerName == ""))) && (!(this._room.ownerName == "-")));
             _Str_3521._Str_3927(false, _local_2);
             Util._Str_7173(_local_2, 1000, 10, 2);
         }

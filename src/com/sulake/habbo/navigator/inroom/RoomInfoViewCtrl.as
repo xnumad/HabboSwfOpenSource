@@ -173,7 +173,7 @@
             _local_3.text = k.roomName;
             _local_3.height = (_local_3.textHeight + 5);
             var _local_4:ITextWindow = ITextWindow(this.find("owner_name"));
-            if (((k._Str_6938) && (k.ownerId > 0)))
+            if (((k.showOwner) && (k.ownerId > 0)))
             {
                 this.find("owner_name_cont").visible = true;
                 _local_4.visible = true;
