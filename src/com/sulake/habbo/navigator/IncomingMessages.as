@@ -259,7 +259,7 @@
             Logger.log(("CAN CREATE EVENT: " + _local_2._Str_13420));
             if (_local_2._Str_13420)
             {
-                this._navigator._Str_6939.show();
+                this._navigator.roomEventViewCtrl.show();
             }
             else
             {
@@ -279,7 +279,7 @@
             this._navigator.send(new _Str_3570(_local_2.guestRoomId, true, false));
             Logger.log("Sent get guest room...");
             this._navigator._Str_5048.refresh();
-            this._navigator._Str_6939.close();
+            this._navigator.roomEventViewCtrl.close();
             this._navigator.roomSettingsCtrl.close();
             this._navigator.roomFilterCtrl.close();
             HabboWebTools.closeNews();
@@ -470,7 +470,7 @@
             this.data.onRoomExit();
             this._navigator.roomInfoViewCtrl.close();
             this._navigator._Str_5048.close();
-            this._navigator._Str_6939.close();
+            this._navigator.roomEventViewCtrl.close();
             this._navigator.roomSettingsCtrl.close();
             this._navigator.roomFilterCtrl.close();
             var _local_2:Boolean = this._navigator.getBoolean("news.auto_popup.enabled");

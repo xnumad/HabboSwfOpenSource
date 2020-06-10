@@ -41,7 +41,7 @@
         function get sessionData():ISessionDataManager;
         function get passwordInput():GuestRoomPasswordInput;
         function get doorbell():GuestRoomDoorbell;
-        function get _Str_6939():RoomEventViewCtrl;
+        function get roomEventViewCtrl():RoomEventViewCtrl;
         function get localization():IHabboLocalizationManager;
         function get _Str_7596():OfficialRoomEntryManager;
         function get toolbar():IHabboToolbar;

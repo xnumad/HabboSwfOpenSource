@@ -180,7 +180,7 @@
             return this._doorbell;
         }
 
-        public function get _Str_6939():RoomEventViewCtrl
+        public function get roomEventViewCtrl():RoomEventViewCtrl
         {
             return this._roomEventViewCtrl;
         }

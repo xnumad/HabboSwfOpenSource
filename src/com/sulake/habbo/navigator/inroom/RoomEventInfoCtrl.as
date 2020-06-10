@@ -159,7 +159,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._navigator._Str_6939.show();
+                this._navigator.roomEventViewCtrl.show();
             }
         }
 

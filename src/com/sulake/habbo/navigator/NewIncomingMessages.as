@@ -299,7 +299,7 @@
             Logger.log(("CAN CREATE EVENT: " + _local_2._Str_13420));
             if (_local_2._Str_13420)
             {
-                LegacyNavigator(this._navigator.legacyNavigator)._Str_6939.show();
+                LegacyNavigator(this._navigator.legacyNavigator).roomEventViewCtrl.show();
             }
             else
             {
@@ -339,7 +339,7 @@
             this.data.onRoomExit();
             LegacyNavigator(this._navigator.legacyNavigator).roomInfoViewCtrl.close();
             LegacyNavigator(this._navigator.legacyNavigator)._Str_5048.close();
-            LegacyNavigator(this._navigator.legacyNavigator)._Str_6939.close();
+            LegacyNavigator(this._navigator.legacyNavigator).roomEventViewCtrl.close();
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl.close();
             LegacyNavigator(this._navigator.legacyNavigator).roomFilterCtrl.close();
             var _local_2:Boolean = this._navigator.getBoolean("news.auto_popup.enabled");
