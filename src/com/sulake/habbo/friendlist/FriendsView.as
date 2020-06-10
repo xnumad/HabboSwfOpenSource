@@ -136,7 +136,7 @@
             var _local_4:IContainerButtonWindow = IContainerButtonWindow(_arg_3.findChildByName(("button_" + k)));
             _local_4.procedure = _arg_2;
             var _local_5:IBitmapWrapperWindow = IBitmapWrapperWindow(_local_4.findChildByName("icon"));
-            _local_5.bitmap = this._friendList._Str_3122(k);
+            _local_5.bitmap = this._friendList.getButtonImage(k);
             _local_5.width = _local_5.bitmap.width;
             _local_5.height = _local_5.bitmap.height;
             return _local_4;

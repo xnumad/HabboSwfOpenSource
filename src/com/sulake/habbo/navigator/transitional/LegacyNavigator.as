@@ -210,9 +210,9 @@
             return this._oldNavigator.refreshButton(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
         }
 
-        public function _Str_3122(k:String, _arg_2:String="_png"):BitmapData
+        public function getButtonImage(k:String, _arg_2:String="_png"):BitmapData
         {
-            return this._oldNavigator._Str_3122(k, _arg_2);
+            return this._oldNavigator.getButtonImage(k, _arg_2);
         }
 
         public function openCatalogClubPage(k:String):void

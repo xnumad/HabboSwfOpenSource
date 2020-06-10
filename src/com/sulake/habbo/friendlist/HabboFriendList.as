@@ -375,7 +375,7 @@
 
         public function getButton(k:String, _arg_2:String, _arg_3:Function, _arg_4:int=0, _arg_5:int=0, _arg_6:int=0):IBitmapWrapperWindow
         {
-            var _local_7:BitmapData = this._Str_3122(_arg_2);
+            var _local_7:BitmapData = this.getButtonImage(_arg_2);
             var _local_8:IBitmapWrapperWindow = (this._windowManager.createWindow(k, "", WindowType.WINDOW_TYPE_BITMAP_WRAPPER, _Str_3108.NULL, (WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR | WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT), new Rectangle(_arg_4, _arg_5, _local_7.width, _local_7.height), _arg_3, _arg_6) as IBitmapWrapperWindow);
             _local_8.bitmap = _local_7;
             return _local_8;
@@ -753,13 +753,13 @@
             {
                 return;
             }
-            _local_5.bitmap = this._Str_3122(_arg_2);
+            _local_5.bitmap = this.getButtonImage(_arg_2);
             _local_5.width = _local_5.bitmap.width;
             _local_5.height = _local_5.bitmap.height;
             k.procedure = _arg_3;
         }
 
-        public function _Str_3122(k:String):BitmapData
+        public function getButtonImage(k:String):BitmapData
         {
             var _local_5:BitmapData;
             var _local_2:IAsset = assets.getAssetByName((k + "_png"));

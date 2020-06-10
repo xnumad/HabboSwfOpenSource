@@ -38,7 +38,7 @@
             this._layerIndex = _arg_3;
             this._layerOptions = new BadgeLayerOptions();
             this._layerOptions._Str_3617 = _arg_3;
-            this._partAddBitmap = this._manager._Str_3122("badge_part_add");
+            this._partAddBitmap = this._manager.getButtonImage("badge_part_add");
         }
 
         public function createWindow():void
@@ -51,14 +51,14 @@
             this._layerWindow = (this._manager.getXmlWindow("badge_layer") as IWindowContainer);
             var _local_2:IWindowContainer = (this._layerWindow.findChildByName("preview_container") as IWindowContainer);
             this._partSelectImage = (_local_2.findChildByName("part_preview") as IBitmapWrapperWindow);
-            this._partSelectImage.bitmap = this._manager._Str_3122("badge_part_add");
+            this._partSelectImage.bitmap = this._manager.getButtonImage("badge_part_add");
             this._partSelectButton = (_local_2.findChildByName("part_button") as IButtonWindow);
             this._partSelectButton.procedure = this._Str_24869;
             this._positionContainer = (this._layerWindow.findChildByName("position_container") as IWindowContainer);
             this._positionPicker = (this._positionContainer.findChildByName("position_picker") as IBitmapWrapperWindow);
-            this._positionPicker.bitmap = this._manager._Str_3122("position_picker");
+            this._positionPicker.bitmap = this._manager.getButtonImage("position_picker");
             this._positionGrid = (this._positionContainer.findChildByName("position_grid") as IBitmapWrapperWindow);
-            this._positionGrid.bitmap = this._manager._Str_3122("position_grid");
+            this._positionGrid.bitmap = this._manager.getButtonImage("position_grid");
             if (this._layerIndex == 0)
             {
                 this._positionGrid.visible = false;

@@ -131,7 +131,7 @@
                 _local_4.tags.splice(0, _local_4.tags.length);
                 _local_4.tags.push(("" + _arg_3));
                 _local_5 = (("tag_" + _arg_2) + ((_arg_3) ? "_reactive" : ""));
-                _local_4.bitmap = this._navigator._Str_3122(_local_5);
+                _local_4.bitmap = this._navigator.getButtonImage(_local_5);
                 _local_4.disposesBitmap = false;
                 _local_4.invalidate();
             }

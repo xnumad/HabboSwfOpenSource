@@ -56,7 +56,7 @@
         function registerParameter(_arg_1:String, _arg_2:String, _arg_3:String):String;
         function getButton(_arg_1:String, _arg_2:String, _arg_3:Function, _arg_4:int=0, _arg_5:int=0, _arg_6:int=0):IBitmapWrapperWindow;
         function refreshButton(_arg_1:IWindowContainer, _arg_2:String, _arg_3:Boolean, _arg_4:Function, _arg_5:int, _arg_6:String=null):void;
-        function _Str_3122(_arg_1:String, _arg_2:String="_png"):BitmapData;
+        function getButtonImage(_arg_1:String, _arg_2:String="_png"):BitmapData;
         function openCatalogClubPage(_arg_1:String):void;
         function _Str_12506():void;
         function _Str_14281(_arg_1:String, _arg_2:String, _arg_3:Date, _arg_4:int):void;

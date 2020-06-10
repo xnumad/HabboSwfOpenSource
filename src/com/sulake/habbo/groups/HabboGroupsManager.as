@@ -298,7 +298,7 @@
             return _local_2;
         }
 
-        public function _Str_3122(k:String):BitmapData
+        public function getButtonImage(k:String):BitmapData
         {
             var _local_2:String = k;
             var _local_3:IAsset = assets.getAssetByName(_local_2);

@@ -176,7 +176,7 @@
                 _local_5.bitmap.copyPixels(_local_3, _local_3.rect, new Point());
             }
             var _local_4:IBitmapWrapperWindow = (k.findChildByName("selected") as IBitmapWrapperWindow);
-            _local_4.bitmap = this._manager._Str_3122("badge_part_picker");
+            _local_4.bitmap = this._manager.getButtonImage("badge_part_picker");
             if (_arg_2._Str_3324 == this._layerOptions._Str_3324)
             {
                 _local_4.visible = true;

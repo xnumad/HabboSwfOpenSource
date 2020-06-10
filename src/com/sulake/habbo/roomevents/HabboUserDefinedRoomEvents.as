@@ -170,12 +170,12 @@
             {
                 return;
             }
-            k.bitmap = this._Str_3122(_arg_2);
+            k.bitmap = this.getButtonImage(_arg_2);
             k.width = k.bitmap.width;
             k.height = k.bitmap.height;
         }
 
-        public function _Str_3122(k:String, _arg_2:String="_png"):BitmapData
+        public function getButtonImage(k:String, _arg_2:String="_png"):BitmapData
         {
             var _local_3:String = (k + _arg_2);
             var _local_4:IAsset = assets.getAssetByName(_local_3);

@@ -63,7 +63,7 @@
             var k:BitmapData;
             if (((((this._navigator) && (!(this._navigator.disposed))) && (this._bitmapWrapper)) && (!(this._bitmapWrapper.disposed))))
             {
-                k = this._navigator._Str_3122(this._picRef, "");
+                k = this._navigator.getButtonImage(this._picRef, "");
                 if (k)
                 {
                     this._bitmapWrapper.disposesBitmap = false;

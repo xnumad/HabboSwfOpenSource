@@ -80,7 +80,7 @@
                 _local_3.tags.splice(0, _local_3.tags.length);
                 _local_3.tags.push(_arg_2);
                 _local_4 = ("usercount_fixed_" + _arg_2);
-                _local_3.bitmap = this._navigator._Str_3122(_local_4);
+                _local_3.bitmap = this._navigator.getButtonImage(_local_4);
                 _local_3.disposesBitmap = false;
                 _local_3.invalidate();
             }

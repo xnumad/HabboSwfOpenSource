@@ -50,7 +50,7 @@
             {
                 this._isLoaded = true;
                 this._isStatic = true;
-                this._image = this._manager._Str_3122("badge_part_empty");
+                this._image = this._manager.getButtonImage("badge_part_empty");
             }
             else
             {

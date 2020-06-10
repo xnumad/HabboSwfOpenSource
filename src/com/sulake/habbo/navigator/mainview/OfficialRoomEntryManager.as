@@ -75,13 +75,13 @@
             this._navigator.refreshButton(_local_3, ("rico_rnd_l" + _local_4), true, null, 0);
             this._navigator.refreshButton(_local_3, ("rico_rnd_r" + _local_4), true, null, 0);
             _local_5 = (_local_3.findChildByName("rico_rnd_m") as IBitmapWrapperWindow);
-            _local_5.bitmap = this._navigator._Str_3122("rico_rnd_m");
+            _local_5.bitmap = this._navigator.getButtonImage("rico_rnd_m");
             _local_5.disposesBitmap = false;
             var _local_6:IWindowContainer = IWindowContainer(_local_2.findChildByName("folder_cont"));
             this._navigator.refreshButton(_local_6, ("rico_rnd_l" + _local_4), true, null, 0);
             this._navigator.refreshButton(_local_6, ("rico_rnd_r" + _local_4), true, null, 0);
             _local_5 = (_local_6.findChildByName("rico_rnd_m") as IBitmapWrapperWindow);
-            _local_5.bitmap = this._navigator._Str_3122("rico_rnd_m");
+            _local_5.bitmap = this._navigator.getButtonImage("rico_rnd_m");
             _local_5.disposesBitmap = false;
             _local_2.addEventListener(WindowMouseEvent.OVER, this._Str_22658);
             _local_2.addEventListener(WindowMouseEvent.OUT, this._Str_24237);
@@ -307,7 +307,7 @@
                 _local_5 = IBitmapWrapperWindow(_local_4.findChildByName("enter_room_m"));
                 if (_local_5.bitmap == null)
                 {
-                    _local_5.bitmap = this._navigator._Str_3122("enter_room_m");
+                    _local_5.bitmap = this._navigator.getButtonImage("enter_room_m");
                     _local_5.disposesBitmap = false;
                 }
                 this._navigator.refreshButton(_local_4, "enter_room_a", true, null, 0);

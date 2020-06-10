@@ -119,7 +119,7 @@
             {
                 if (_local_4.bitmap == null)
                 {
-                    _local_4.bitmap = this._habboFriendList._Str_3122(_arg_3);
+                    _local_4.bitmap = this._habboFriendList.getButtonImage(_arg_3);
                     _local_4.height = _local_4.bitmap.height;
                     k.height = _local_4.bitmap.height;
                     _local_4.procedure = this._Str_16089;
