@@ -76,7 +76,7 @@
 
         private function _Str_17806(k:WindowEvent):void
         {
-            this._navigator._Str_12506();
+            this._navigator.openCatalogRoomAdsPage();
         }
 
         private function _Str_2798():void

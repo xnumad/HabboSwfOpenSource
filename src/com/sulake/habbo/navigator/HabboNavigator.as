@@ -551,7 +551,7 @@
             this._catalog.openClubCenter();
         }
 
-        public function _Str_12506():void
+        public function openCatalogRoomAdsPage():void
         {
             if (this._catalog == null)
             {

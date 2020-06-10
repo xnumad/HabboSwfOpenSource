@@ -220,9 +220,9 @@
             return this._oldNavigator.openCatalogClubPage(k);
         }
 
-        public function _Str_12506():void
+        public function openCatalogRoomAdsPage():void
         {
-            return this._oldNavigator._Str_12506();
+            return this._oldNavigator.openCatalogRoomAdsPage();
         }
 
         public function _Str_18427():void

@@ -130,7 +130,7 @@
             }
             else
             {
-                this._navigator._Str_12506();
+                this._navigator.openCatalogRoomAdsPage();
             }
         }
 
