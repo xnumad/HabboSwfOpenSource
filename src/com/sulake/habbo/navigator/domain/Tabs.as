@@ -91,7 +91,7 @@
             var _local_2:Tab = this._Str_9436(k);
             if (_local_2 != null)
             {
-                this._Str_25691();
+                this.clearSelected();
                 _local_2.selected = true;
             }
         }
@@ -109,7 +109,7 @@
             return null;
         }
 
-        private function _Str_25691():void
+        private function clearSelected():void
         {
             var k:Tab;
             for each (k in this._tabs)
