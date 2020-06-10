@@ -4,7 +4,7 @@
     {
         private var _id:int = 0;
         private var _isOldFormat:Boolean = false;
-        private var _Str_21211:int = 0;
+        private var _wallX:int = 0;
         private var _Str_19818:int = 0;
         private var _localX:int = 0;
         private var _localY:int = 0;
@@ -44,14 +44,14 @@
 
         public function get _Str_15139():Number
         {
-            return this._Str_21211;
+            return this._wallX;
         }
 
         public function set _Str_15139(k:Number):void
         {
             if (!this._isReadOnly)
             {
-                this._Str_21211 = k;
+                this._wallX = k;
             }
         }
 
