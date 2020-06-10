@@ -574,7 +574,7 @@
             return this._legacyNavigator.data;
         }
 
-        public function _Str_10331(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:Boolean, _arg_6:int):void
+        public function sendWindowPreferences(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:Boolean, _arg_6:int):void
         {
             this._communication.connection.send(new _Str_11137(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6));
         }

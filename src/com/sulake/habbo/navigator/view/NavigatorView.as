@@ -473,7 +473,7 @@
             }
         }
 
-        private function _Str_10331():void
+        private function sendWindowPreferences():void
         {
             this._Str_4451 = this._window.x;
             this._Str_4599 = this._window.y;
@@ -481,7 +481,7 @@
             this._lastWindowHeight = this._window.height;
             this._Str_11769 = this._window.findChildByName("left_pane").visible;
             this._Str_13838 = getTimer();
-            this._habboNewNavigator._Str_10331(this._Str_4451, this._Str_4599, this._lastWindowWidth, this._lastWindowHeight, this._Str_11769, ResultsModeEnum._Str_6023);
+            this._habboNewNavigator.sendWindowPreferences(this._Str_4451, this._Str_4599, this._lastWindowWidth, this._lastWindowHeight, this._Str_11769, ResultsModeEnum._Str_6023);
             this._habboNewNavigator.trackEventLog("windowsettings", "Interface", ((this._window.width + " x ") + this._window.height));
         }
 
@@ -511,7 +511,7 @@
             var _local_2:uint = getTimer();
             if (((this._Str_25319) && ((_local_2 - this._Str_13838) > 5000)))
             {
-                this._Str_10331();
+                this.sendWindowPreferences();
             }
             this._Str_24575();
             this._Str_13354 = (this._Str_13354 - k);

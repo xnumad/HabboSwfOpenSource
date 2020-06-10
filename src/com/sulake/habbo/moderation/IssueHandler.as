@@ -206,7 +206,7 @@
             this._Str_21255();
         }
 
-        private function _Str_10331():void
+        private function sendWindowPreferences():void
         {
             this._lastWindowX = this._window.x;
             this._lastWindowY = this._window.y;
@@ -242,7 +242,7 @@
             var _local_2:uint = getTimer();
             if (((this._Str_25789()) && ((_local_2 - this._lastWindowPreferencesMessageSentAt) > 5000)))
             {
-                this._Str_10331();
+                this.sendWindowPreferences();
             }
         }
 
