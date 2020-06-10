@@ -419,7 +419,7 @@
                         case Tabs._Str_3866:
                             this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.rooms", String(k), _local_5);
                             return;
-                        case Tabs._Str_6209:
+                        case Tabs.TAB_EVENTS:
                             this.trackNavigationDataPoint("Events", "go.events", String(k), _local_5);
                             return;
                         case Tabs._Str_3813:

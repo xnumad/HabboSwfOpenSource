@@ -86,7 +86,7 @@
             {
                 k = this._Str_22587(this._filter.selection);
             }
-            this._navigator.mainViewCtrl._Str_2798(Tabs._Str_6209, k);
+            this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_EVENTS, k);
         }
 
         private function _Str_22587(k:int):int

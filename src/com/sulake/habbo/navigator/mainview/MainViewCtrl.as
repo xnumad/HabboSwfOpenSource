@@ -302,7 +302,7 @@
                 }
                 for each (_local_6 in _local_5)
                 {
-                    if ((((_local_6.id == Tabs._Str_6209) && (!(k))) || ((_local_6.id == Tabs._Str_7172) && (!(_local_2)))))
+                    if ((((_local_6.id == Tabs.TAB_EVENTS) && (!(k))) || ((_local_6.id == Tabs._Str_7172) && (!(_local_2)))))
                     {
                     }
                     else
@@ -467,7 +467,7 @@
             _local_4._Str_25329();
             switch (_local_4.id)
             {
-                case Tabs._Str_6209:
+                case Tabs.TAB_EVENTS:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_EVENTS));
                     this._navigator.send(new _Str_11858());
                     return;
