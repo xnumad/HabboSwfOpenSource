@@ -28,7 +28,7 @@
         private var _hasRentPeriodStarted:Boolean;
         private var _expirationTimeStamp:int;
         private var _slotId:String = "";
-        private var _Str_2808:int = -1;
+        private var _songId:int = -1;
 
         public function FurniData(k:IMessageDataWrapper)
         {
@@ -130,7 +130,7 @@
 
         public function get _Str_3951():int
         {
-            return this._Str_2808;
+            return this._songId;
         }
 
         public function get _Str_2794():int

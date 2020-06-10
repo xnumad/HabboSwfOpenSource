@@ -22,7 +22,7 @@
         private var _Str_8744:int;
         private var _Str_9700:int;
         private var _isGroupable:Boolean;
-        private var _Str_2808:int;
+        private var _songId:int;
         private var _flatId:int;
         private var _rentable:Boolean;
         private var _hasRentPeriodStarted:Boolean;
