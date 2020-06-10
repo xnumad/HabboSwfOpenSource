@@ -76,7 +76,7 @@
         }
 
 
-        public function _Str_25916():Boolean
+        public function onFrontPage():Boolean
         {
             return this.getSelected().id == TAB_OFFICIAL;
         }
