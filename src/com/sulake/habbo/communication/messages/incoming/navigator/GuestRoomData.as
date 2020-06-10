@@ -200,7 +200,7 @@
             return this._allowPets;
         }
 
-        public function get _Str_24051():Boolean
+        public function get displayRoomEntryAd():Boolean
         {
             return this._displayRoomEntryAd;
         }

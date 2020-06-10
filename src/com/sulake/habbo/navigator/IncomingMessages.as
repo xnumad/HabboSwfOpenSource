@@ -296,7 +296,7 @@
                 this.data.enteredRoom = _local_2.data;
                 this.data._Str_8299 = _local_2._Str_21489;
                 _local_3 = (this.data.createdFlatId == _local_2.data.flatId);
-                if (((!(_local_3)) && (_local_2.data._Str_24051)))
+                if (((!(_local_3)) && (_local_2.data.displayRoomEntryAd)))
                 {
                     this._Str_19492();
                 }
