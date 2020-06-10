@@ -220,7 +220,7 @@
             return this._roomAdExpiresInMin;
         }
 
-        public function get _Str_12127():Boolean
+        public function get allInRoomMuted():Boolean
         {
             return this._allInRoomMuted;
         }
@@ -230,7 +230,7 @@
             return this._officialRoomPicRef;
         }
 
-        public function set _Str_12127(k:Boolean):void
+        public function set allInRoomMuted(k:Boolean):void
         {
             this._allInRoomMuted = k;
         }

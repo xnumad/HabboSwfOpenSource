@@ -211,7 +211,7 @@
             var _local_4:GuestRoomData = this._navigator.data.enteredGuestRoom;
             if (_local_4 != null)
             {
-                _local_4._Str_12127 = _local_3._Str_20186;
+                _local_4.allInRoomMuted = _local_3._Str_20186;
                 if (LegacyNavigator(this._navigator.legacyNavigator)._Str_4012 != null)
                 {
                     LegacyNavigator(this._navigator.legacyNavigator)._Str_4012.refreshButtons(this._navigator.data.enteredGuestRoom);

@@ -32,7 +32,7 @@
             this._isGroupMember = k.readBoolean();
             var _local_2:Boolean = k.readBoolean();
             this._roomModerationSettings = new RoomModerationSettings(k);
-            this._data._Str_12127 = _local_2;
+            this._data.allInRoomMuted = _local_2;
             this._data._Str_16504 = k.readBoolean();
             this._chatSettings = new RoomChatSettings(k);
             return true;

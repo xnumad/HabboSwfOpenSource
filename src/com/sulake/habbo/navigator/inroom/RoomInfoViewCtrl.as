@@ -252,7 +252,7 @@
             this.refreshStaffPick();
             var _local_2:IWindow = this.find("room_muteall_button");
             _local_2.visible = ((this._navigator.data.enteredGuestRoom._Str_16504) && (this._navigator.getBoolean("room_moderation.mute_all.enabled")));
-            var _local_3:Boolean = this._navigator.data.enteredGuestRoom._Str_12127;
+            var _local_3:Boolean = this._navigator.data.enteredGuestRoom.allInRoomMuted;
             _local_2.caption = ((_local_3) ? "${navigator.muteall_on}" : "${navigator.muteall_off}");
             var _local_4:IRoomSession = this._navigator.roomSessionManager.getSession(this._navigator.data.enteredGuestRoom.flatId);
             this.find("floor_plan_editor_button").visible = (_local_4.roomControllerLevel >= RoomControllerLevel.GUEST);
