@@ -32,7 +32,7 @@
             }
         }
 
-        public function get _Str_23650():int
+        public function get costInCredits():int
         {
             return this._costInCredits;
         }

@@ -359,7 +359,7 @@
             this.refresh();
             this._Str_9242();
             this._Str_20884();
-            this._manager.localization.registerParameter("group.create.confirm.buyinfo", "amount", ("" + k._Str_23650));
+            this._manager.localization.registerParameter("group.create.confirm.buyinfo", "amount", ("" + k.costInCredits));
             this._window.visible = true;
             this._window.activate();
         }
