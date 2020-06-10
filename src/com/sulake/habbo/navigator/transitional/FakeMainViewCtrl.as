@@ -106,7 +106,7 @@
                     return "new_ads";
                 case Tabs.SEARCHTYPE_ROOMS_WITH_RIGHTS:
                     return "with_rights";
-                case Tabs._Str_10261:
+                case Tabs.SEARCHTYPE_MY_GUILD_BASES:
                     return "my_groups";
                 case Tabs._Str_9661:
                     return "query";

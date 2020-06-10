@@ -646,7 +646,7 @@
                     return new _Str_11181(this._navigator.data._Str_6357, k);
                 case Tabs.SEARCHTYPE_ROOMS_WITH_RIGHTS:
                     return new _Str_12106();
-                case Tabs._Str_10261:
+                case Tabs.SEARCHTYPE_MY_GUILD_BASES:
                     return new _Str_9844();
                 case Tabs._Str_9661:
                     return new _Str_4390(("owner:" + _arg_2));
