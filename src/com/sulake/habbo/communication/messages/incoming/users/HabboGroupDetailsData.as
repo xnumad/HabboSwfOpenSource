@@ -29,7 +29,7 @@
         private var _isAdmin:Boolean;
         private var _ownerName:String;
         private var _openDetails:Boolean;
-        private var _Str_19985:Boolean;
+        private var _hasBoard:Boolean;
         private var _Str_22088:Boolean;
         private var _Str_21164:int;
 
@@ -53,7 +53,7 @@
             this._openDetails = k.readBoolean();
             this._Str_22088 = k.readBoolean();
             this._Str_21164 = k.readInteger();
-            this._Str_19985 = k.readBoolean();
+            this._hasBoard = k.readBoolean();
         }
 
         public function get groupId():int
@@ -148,7 +148,7 @@
 
         public function get _Str_25156():Boolean
         {
-            return this._Str_19985;
+            return this._hasBoard;
         }
 
         public function get _Str_19430():Boolean
