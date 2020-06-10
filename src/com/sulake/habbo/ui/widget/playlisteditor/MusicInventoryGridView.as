@@ -163,7 +163,7 @@
                         if (this._selectedItem._Str_8343 == MusicInventoryGridItem._Str_8425)
                         {
                             this._selectedItem._Str_8343 = MusicInventoryGridItem._Str_13230;
-                            this._widget._Str_25259(this._selectedItem._Str_3951);
+                            this._widget._Str_25259(this._selectedItem.songId);
                         }
                         else
                         {

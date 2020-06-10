@@ -146,9 +146,9 @@
         {
             if (k.type == RoomWidgetSongUpdateEvent.PLAYING_CHANGED)
             {
-                this._songId = k._Str_3951;
+                this._songId = k.songId;
             }
-            if (k._Str_3951 == this._songId)
+            if (k.songId == this._songId)
             {
                 this._songName = k._Str_10782;
                 this._songAuthor = k._Str_20860;

@@ -17,7 +17,7 @@
             this._songAuthor = _arg_4;
         }
 
-        public function get _Str_3951():int
+        public function get songId():int
         {
             return this._songId;
         }

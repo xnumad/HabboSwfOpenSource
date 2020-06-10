@@ -38,7 +38,7 @@
 
         public function _Str_17571(k:RoomWidgetSongUpdateEvent):void
         {
-            if (((k.type == RoomWidgetSongUpdateEvent.DATA_RECEIVED) && (k._Str_3951 == this._songId)))
+            if (((k.type == RoomWidgetSongUpdateEvent.DATA_RECEIVED) && (k.songId == this._songId)))
             {
                 this._Str_8410 = k._Str_10782;
                 this._Str_6415 = k._Str_20860;

@@ -235,7 +235,7 @@
         {
             if (k.getParser()._Str_25744 == this._officialSongId)
             {
-                this._selectedSongId = k.getParser()._Str_3951;
+                this._selectedSongId = k.getParser().songId;
                 this._Str_2491();
             }
         }

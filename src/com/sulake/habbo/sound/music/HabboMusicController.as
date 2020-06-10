@@ -224,7 +224,7 @@
                 return -1;
             }
             var _local_2:SongStartRequestData = this._songRequestsPerPriority[k];
-            return _local_2._Str_3951;
+            return _local_2.songId;
         }
 
         private function _Str_19565(k:int):int
@@ -531,7 +531,7 @@
                 if (this._songRequestsPerPriority[_local_2] != null)
                 {
                     _local_3 = this._songRequestsPerPriority[_local_2];
-                    _local_4 = this._availableSongs.getValue(_local_3._Str_3951);
+                    _local_4 = this._availableSongs.getValue(_local_3.songId);
                     if (_local_4 != null)
                     {
                         _local_5 = (_local_4._Str_3502 as TraxSequencer);

@@ -17,7 +17,7 @@
         function get secondsToExpiration():int;
         function get flatId():int;
         function get slotId():String;
-        function get _Str_3951():int;
+        function get songId():int;
         function get _Str_2794():int;
         function get rentable():Boolean;
         function get isWallItem():Boolean;

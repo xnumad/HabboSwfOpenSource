@@ -48,7 +48,7 @@
             this._creationMonth = k.creationMonth;
             this._creationYear = k.creationYear;
             this._slotId = k.slotId;
-            this._songId = k._Str_3951;
+            this._songId = k.songId;
             this._flatId = k.flatId;
             this._isRented = k.rentable;
             this._isWallItem = k.isWallItem;
@@ -156,7 +156,7 @@
             return this._slotId;
         }
 
-        public function get _Str_3951():int
+        public function get songId():int
         {
             return this._songId;
         }
@@ -209,7 +209,7 @@
             this._creationMonth = k.creationMonth;
             this._creationYear = k.creationYear;
             this._slotId = k.slotId;
-            this._songId = k._Str_3951;
+            this._songId = k.songId;
             this._flatId = k.flatId;
             this._isRented = k.rentable;
             this._isWallItem = k.isWallItem;
