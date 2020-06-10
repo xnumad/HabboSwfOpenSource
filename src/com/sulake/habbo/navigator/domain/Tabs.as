@@ -23,7 +23,7 @@
         private static const TAB_NAMES:Dictionary = new Dictionary();
         public static const SEARCHTYPE_POPULAR_ROOMS:int = 1;
         public static const SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:int = 2;
-        public static const _Str_9161:int = 3;
+        public static const SEARCHTYPE_MY_FRIENDS_ROOMS:int = 3;
         public static const _Str_8473:int = 4;
         public static const _Str_4869:int = 5;
         public static const _Str_8122:int = 6;

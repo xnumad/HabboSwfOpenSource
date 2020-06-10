@@ -74,7 +74,7 @@
                     return "popular";
                 case Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
                     return "highest_score";
-                case Tabs._Str_9161:
+                case Tabs.SEARCHTYPE_MY_FRIENDS_ROOMS:
                     return "friends_rooms";
                 case Tabs._Str_8473:
                     return "with_friends";
