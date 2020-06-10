@@ -10,7 +10,7 @@
         function get stuffData():IStuffData;
         function get _Str_2794():Number;
         function get category():int;
-        function get _Str_16260():Boolean;
+        function get recyclable():Boolean;
         function get _Str_8386():Boolean;
         function get _Str_13551():Boolean;
         function get sellable():Boolean;

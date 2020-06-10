@@ -94,7 +94,7 @@
             return this._extra;
         }
 
-        public function get _Str_16260():Boolean
+        public function get recyclable():Boolean
         {
             return this._recyclable;
         }

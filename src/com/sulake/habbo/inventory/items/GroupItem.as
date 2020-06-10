@@ -450,7 +450,7 @@
             while (k < this._items.length)
             {
                 _local_2 = this._items.getWithIndex(k);
-                if (((!(_local_2.locked)) && (_local_2._Str_16260)))
+                if (((!(_local_2.locked)) && (_local_2.recyclable)))
                 {
                     this._Str_15750(_local_2.id);
                     return _local_2;
@@ -610,7 +610,7 @@
             while (_local_2 < this._items.length)
             {
                 _local_3 = (this._items.getWithIndex(_local_2) as FurnitureItem);
-                if (((_local_3._Str_16260) && (!(_local_3.locked))))
+                if (((_local_3.recyclable) && (!(_local_3.locked))))
                 {
                     k++;
                 }
