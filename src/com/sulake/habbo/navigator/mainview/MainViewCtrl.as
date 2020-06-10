@@ -302,7 +302,7 @@
                 }
                 for each (_local_6 in _local_5)
                 {
-                    if ((((_local_6.id == Tabs.TAB_EVENTS) && (!(k))) || ((_local_6.id == Tabs._Str_7172) && (!(_local_2)))))
+                    if ((((_local_6.id == Tabs.TAB_EVENTS) && (!(k))) || ((_local_6.id == Tabs.TAB_CATEGORIES) && (!(_local_2)))))
                     {
                     }
                     else
@@ -483,7 +483,7 @@
                 case Tabs.TAB_SEARCH:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCH));
                     return;
-                case Tabs._Str_7172:
+                case Tabs.TAB_CATEGORIES:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_CATEGORIES));
                     return;
             }
