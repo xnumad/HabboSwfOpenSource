@@ -114,7 +114,7 @@
                     return "all_categories";
                 case Tabs.SEARCHTYPE_RECOMMENDED_ROOMS:
                     return "recommended";
-                case Tabs._Str_7094:
+                case Tabs.SEARCHTYPE_FREQUENT_HISTORY:
                     return "history_freq";
                 default:
                     return "query";

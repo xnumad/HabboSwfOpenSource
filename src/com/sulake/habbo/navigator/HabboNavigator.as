@@ -675,7 +675,7 @@
 
         public function showFrequentRooms():void
         {
-            this._Str_18163(Tabs._Str_7094);
+            this._Str_18163(Tabs.SEARCHTYPE_FREQUENT_HISTORY);
         }
 
         private function _Str_18163(k:int):void

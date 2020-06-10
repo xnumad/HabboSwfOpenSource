@@ -43,7 +43,7 @@
         public static const SEARCHTYPE_BY_OWNER:int = 20;
         public static const SEARCHTYPE_CATEGORIES:int = 21;
         public static const SEARCHTYPE_RECOMMENDED_ROOMS:int = 22;
-        public static const _Str_7094:int = 23;
+        public static const SEARCHTYPE_FREQUENT_HISTORY:int = 23;
 
         private var _tabs:Array;
         private var _navigator:HabboNavigator;

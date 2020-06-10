@@ -12,7 +12,7 @@
 
     public class MyRoomsTabPageDecorator implements ITabPageDecorator 
     {
-        private const _Str_8929:Array = [[Tabs.SEARCHTYPE_MY_ROOMS, "navigator.navisel.myrooms"], [Tabs.SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE, "navigator.navisel.wherearemyfriends"], [Tabs.SEARCHTYPE_MY_FRIENDS_ROOMS, "navigator.navisel.myfriendsrooms"], [Tabs.SEARCHTYPE_ROOMS_WITH_RIGHTS, "navigator.navisel.roomswithrights"], [Tabs.SEARCHTYPE_MY_GUILD_BASES, "navigator.navisel.mygroups"], [Tabs.SEARCHTYPE_MY_FAVOURITES, "navigator.navisel.myfavourites"], [Tabs.SEARCHTYPE_MY_HISTORY, "navigator.navisel.visitedrooms"], [Tabs._Str_7094, ""]];
+        private const _Str_8929:Array = [[Tabs.SEARCHTYPE_MY_ROOMS, "navigator.navisel.myrooms"], [Tabs.SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE, "navigator.navisel.wherearemyfriends"], [Tabs.SEARCHTYPE_MY_FRIENDS_ROOMS, "navigator.navisel.myfriendsrooms"], [Tabs.SEARCHTYPE_ROOMS_WITH_RIGHTS, "navigator.navisel.roomswithrights"], [Tabs.SEARCHTYPE_MY_GUILD_BASES, "navigator.navisel.mygroups"], [Tabs.SEARCHTYPE_MY_FAVOURITES, "navigator.navisel.myfavourites"], [Tabs.SEARCHTYPE_MY_HISTORY, "navigator.navisel.visitedrooms"], [Tabs.SEARCHTYPE_FREQUENT_HISTORY, ""]];
 
         private var _navigator:HabboNavigator;
         private var _filter:IDropMenuWindow;

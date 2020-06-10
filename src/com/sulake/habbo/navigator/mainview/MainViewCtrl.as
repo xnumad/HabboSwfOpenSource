@@ -603,7 +603,7 @@
                 case Tabs.SEARCHTYPE_TEXT_SEARCH:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_TEXT_SEARCH));
                     return;
-                case Tabs._Str_7094:
+                case Tabs.SEARCHTYPE_FREQUENT_HISTORY:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_FREQUENT_HISTORY));
                     return;
             }
@@ -652,7 +652,7 @@
                     return new _Str_4390(("owner:" + _arg_2));
                 case Tabs.SEARCHTYPE_RECOMMENDED_ROOMS:
                     return new _Str_9807();
-                case Tabs._Str_7094:
+                case Tabs.SEARCHTYPE_FREQUENT_HISTORY:
                     return new _Str_11269();
             }
             Logger.log(("No message for searchType: " + k));
