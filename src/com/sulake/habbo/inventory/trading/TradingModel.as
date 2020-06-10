@@ -538,7 +538,7 @@
         public function _Str_9836(k:FurnitureItem):BitmapData
         {
             var _local_2:ImageResult;
-            if (!k._Str_2770)
+            if (!k.isWallItem)
             {
                 _local_2 = this._roomEngine.getFurnitureImage(k.type, new Vector3d(180, 0, 0), 64, this, 0, String(k._Str_2794), -1, -1, k.stuffData);
             }

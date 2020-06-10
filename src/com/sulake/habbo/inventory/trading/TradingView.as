@@ -621,7 +621,7 @@
             var _local_2:BitmapData = k._Str_3093;
             if (_local_2 == null)
             {
-                if (k._Str_2770)
+                if (k.isWallItem)
                 {
                     _local_3 = this._roomEngine.getWallItemIcon(k.type, this, k.stuffData.getLegacyString());
                 }
@@ -833,7 +833,7 @@
                     return;
                 }
                 _local_7 = this._tradingModel._Str_9836(_local_5);
-                if (!_local_5._Str_2770)
+                if (!_local_5.isWallItem)
                 {
                     _local_8 = ((("$" + "{roomItem.name.") + _local_5.type) + "}");
                 }

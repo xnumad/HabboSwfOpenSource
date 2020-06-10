@@ -1074,7 +1074,7 @@
                 _local_11 = this._container.roomEngine.getRoomObjectImage(_arg_2, k.id, k.category, new Vector3d(180), 1, null);
             }
             _local_3.image = _local_11.data;
-            _local_3._Str_2770 = (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
+            _local_3.isWallItem = (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             _local_3.isRoomOwner = this._container.roomSession.isRoomOwner;
             _local_3.roomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_3.isGodMode = this._container.sessionDataManager.isAnyRoomController;

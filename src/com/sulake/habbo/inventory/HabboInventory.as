@@ -763,7 +763,7 @@
         {
             var _local_2:int;
             var _local_3:Boolean;
-            if (k._Str_2770)
+            if (k.isWallItem)
             {
                 _local_2 = RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM;
             }
@@ -789,7 +789,7 @@
             for each (_local_2 in this._Str_2834.furniData)
             {
                 _local_3 = _local_2._Str_2990(k);
-                if (((!(_local_3 == null)) && (!(_local_3._Str_2770))))
+                if (((!(_local_3 == null)) && (!(_local_3.isWallItem))))
                 {
                     return _local_3;
                 }
@@ -804,7 +804,7 @@
             for each (_local_2 in this._Str_2834.furniData)
             {
                 _local_3 = _local_2._Str_2990(k);
-                if (((!(_local_3 == null)) && (_local_3._Str_2770)))
+                if (((!(_local_3 == null)) && (_local_3.isWallItem)))
                 {
                     return _local_3;
                 }

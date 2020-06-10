@@ -784,7 +784,7 @@
                     {
                         offerInTradingCount.caption = String(itemIds.length);
                     }
-                    trading._Str_24612(itemIds, coreItem._Str_2770, coreItem.type, coreItem.category, coreItem.groupable, coreItem.stuffData);
+                    trading._Str_24612(itemIds, coreItem.isWallItem, coreItem.type, coreItem.category, coreItem.groupable, coreItem.stuffData);
                 }
                 else
                 {
@@ -1008,7 +1008,7 @@
             {
                 return;
             }
-            var _local_3:IFurnitureData = this._controller.getFurnitureData(_local_2.type, ((_local_2._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
+            var _local_3:IFurnitureData = this._controller.getFurnitureData(_local_2.type, ((_local_2.isWallItem) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
             this._catalog.openRentConfirmationWindow(_local_3, false, -1, _local_2.id);
         }
 
@@ -1024,7 +1024,7 @@
             {
                 return;
             }
-            var _local_3:IFurnitureData = this._controller.getFurnitureData(_local_2.type, ((_local_2._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
+            var _local_3:IFurnitureData = this._controller.getFurnitureData(_local_2.type, ((_local_2.isWallItem) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
             this._catalog.openRentConfirmationWindow(_local_3, true, -1, _local_2.id);
         }
 
@@ -1168,7 +1168,7 @@
             var _local_3:Boolean = this._Str_3613(k);
             for each (_local_5 in this._furniData)
             {
-                if ((((_local_5.type == k.type) && (_local_5._Str_2770 == k._Str_2770)) && (_local_5.isGroupable)))
+                if ((((_local_5.type == k.type) && (_local_5.isWallItem == k.isWallItem)) && (_local_5.isGroupable)))
                 {
                     if (k.category == FurniCategory.POSTER)
                     {
@@ -1232,7 +1232,7 @@
         {
             var _local_2:int;
             var _local_3:Boolean;
-            if (k._Str_2770)
+            if (k.isWallItem)
             {
                 _local_2 = RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM;
             }
@@ -1348,7 +1348,7 @@
             }
             if (this._roomEngine != null)
             {
-                k = ((this._roomItemToSelect._Str_2770) ? RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM : RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
+                k = ((this._roomItemToSelect.isWallItem) ? RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM : RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
                 this._roomEngine._Str_5538(this._roomItemToSelect.flatId, Math.abs(this._roomItemToSelect.id), k);
             }
             this._roomItemToSelect = null;

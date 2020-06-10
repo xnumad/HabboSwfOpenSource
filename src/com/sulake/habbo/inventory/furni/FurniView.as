@@ -262,7 +262,7 @@
                 }
                 else
                 {
-                    if (_local_6._Str_2770)
+                    if (_local_6.isWallItem)
                     {
                         this._roomPreviewer.updateRoomWallsAndFloorVisibility(true, true);
                         this._roomPreviewer.addWallItemIntoRoom(_local_6.type, new Vector3d(90, 0, 0), _local_2.stuffData.getLegacyString());
@@ -418,7 +418,7 @@
                 return;
             }
             var _local_2:FurnitureItem = k._Str_3205();
-            if (_local_2._Str_2770)
+            if (_local_2.isWallItem)
             {
                 this._roomPreviewer.addWallItemIntoRoom(_local_2.type, new Vector3d(90, 0, 0), _local_2.stuffData.getLegacyString());
             }
@@ -527,7 +527,7 @@
             {
                 return;
             }
-            var _local_5:IFurnitureData = this._model.controller.getFurnitureData(_local_4.type, ((_local_4._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
+            var _local_5:IFurnitureData = this._model.controller.getFurnitureData(_local_4.type, ((_local_4.isWallItem) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
             var _local_6:Boolean = ((((((k) && (this._marketplace)) && (this._marketplace.enabled)) && (_local_4.sellable)) && (!(this._model.controller.sessionData.isAccountSafetyLocked()))) && (!(_local_2)));
             var _local_7:Boolean = (((this._model.isPrivateRoom) && (k)) && (((((_local_4.category == FurniCategory.PET_SADDLE) || (_local_4.category == FurniCategory.PET_CUSTOM_PART)) || (_local_4.category == FurniCategory.PET_CUSTOM_PART_SHAMPOO)) || (_local_4.category == FurniCategory.PET_SHAMPOO)) || (_local_4.category == FurniCategory.MONSTERPLANT_REVIVAL)));
             var _local_8:Boolean = true;

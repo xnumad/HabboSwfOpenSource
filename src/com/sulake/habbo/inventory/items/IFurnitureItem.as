@@ -16,6 +16,6 @@
         function get sellable():Boolean;
         function get locked():Boolean;
         function set locked(_arg_1:Boolean):void;
-        function get _Str_2770():Boolean;
+        function get isWallItem():Boolean;
     }
 }

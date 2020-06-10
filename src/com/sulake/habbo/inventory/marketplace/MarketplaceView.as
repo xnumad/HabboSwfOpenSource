@@ -127,7 +127,7 @@
             this._localization.registerParameter("inventory.marketplace.make_offer.min_price", "minprice", this._model.minimumPrice.toString());
             this._localization.registerParameter("inventory.marketplace.make_offer.max_price", "maxprice", this._model.maximumPrice.toString());
             var _local_3:uint = 4293848814;
-            if (!k._Str_2770)
+            if (!k.isWallItem)
             {
                 _local_4 = this._roomEngine.getFurnitureImage(k.type, new Vector3d(90, 0, 0), 64, this, _local_3, String(k._Str_2794));
             }
@@ -141,7 +141,7 @@
             }
             this._furniImageId = _local_4.id;
             this._Str_21651(_local_4.data);
-            if (k._Str_2770)
+            if (k.isWallItem)
             {
                 _local_5 = ("wallItem.name." + k.type);
                 _local_6 = ("wallItem.desc." + k.type);

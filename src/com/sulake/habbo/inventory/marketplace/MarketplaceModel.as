@@ -191,7 +191,7 @@
             {
                 return;
             }
-            var _local_2:int = ((this._item._Str_2770) ? _Str_7610._Str_17086 : _Str_7610._Str_18366);
+            var _local_2:int = ((this._item.isWallItem) ? _Str_7610._Str_17086 : _Str_7610._Str_18366);
             this.send(new _Str_7610(k, _local_2, this._item.ref));
             this._Str_9529();
         }
@@ -202,7 +202,7 @@
             {
                 return;
             }
-            var k:int = ((this._item._Str_2770) ? 2 : 1);
+            var k:int = ((this._item.isWallItem) ? 2 : 1);
             this._statsRequestCategoryId = k;
             this._statsRequestTypeId = this._item.type;
             this.send(new _Str_7890(k, this._item.type));

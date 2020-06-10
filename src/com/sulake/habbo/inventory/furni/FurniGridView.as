@@ -271,11 +271,11 @@
         {
             var _local_2:String;
             var _local_3:String;
-            if (((!(this._showFloorItems)) && (!(k._Str_2770))))
+            if (((!(this._showFloorItems)) && (!(k.isWallItem))))
             {
                 return false;
             }
-            if (((!(this._showWallItems)) && (k._Str_2770)))
+            if (((!(this._showWallItems)) && (k.isWallItem)))
             {
                 return false;
             }

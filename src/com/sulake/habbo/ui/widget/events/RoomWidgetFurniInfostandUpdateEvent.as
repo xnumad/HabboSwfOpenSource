@@ -88,12 +88,12 @@
             return this._image;
         }
 
-        public function set _Str_2770(k:Boolean):void
+        public function set isWallItem(k:Boolean):void
         {
             this._Str_4167 = k;
         }
 
-        public function get _Str_2770():Boolean
+        public function get isWallItem():Boolean
         {
             return this._Str_4167;
         }

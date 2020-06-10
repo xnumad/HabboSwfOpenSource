@@ -496,7 +496,7 @@
             if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k.isOwner)) || (k.isRoomOwner)) || (k.isGodMode)))
             {
                 _local_2 = true;
-                _local_3 = (!(k._Str_2770));
+                _local_3 = (!(k.isWallItem));
             }
             if (k.isGodMode)
             {

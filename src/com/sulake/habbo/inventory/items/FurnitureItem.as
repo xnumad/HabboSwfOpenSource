@@ -176,7 +176,7 @@
             return this._flatId;
         }
 
-        public function get _Str_2770():Boolean
+        public function get isWallItem():Boolean
         {
             return this._isWallItem;
         }

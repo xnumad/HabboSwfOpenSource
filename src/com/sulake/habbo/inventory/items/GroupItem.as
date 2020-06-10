@@ -219,10 +219,10 @@
             return this._alignment;
         }
 
-        public function get _Str_2770():Boolean
+        public function get isWallItem():Boolean
         {
             var k:FurnitureItem = this._Str_5087(0);
-            return (k) ? k._Str_2770 : false;
+            return (k) ? k.isWallItem : false;
         }
 
         public function get flatId():int
@@ -296,7 +296,7 @@
             {
                 return;
             }
-            if (this._Str_2770)
+            if (this.isWallItem)
             {
                 _local_2 = this._roomEngine.getWallItemIcon(this._type, this, this._stuffData.getLegacyString());
             }
@@ -955,7 +955,7 @@
                     this._Str_3255(k);
                     return "";
                 default:
-                    if (this._Str_2770)
+                    if (this.isWallItem)
                     {
                         _local_2 = ("wallItem.name." + k.type);
                     }
@@ -991,7 +991,7 @@
                     this._Str_3255(k);
                     return "";
                 default:
-                    if (this._Str_2770)
+                    if (this.isWallItem)
                     {
                         _local_2 = ("wallItem.desc." + k.type);
                     }
