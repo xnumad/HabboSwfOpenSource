@@ -463,7 +463,7 @@
                 this._ignoreNextTabSelectEvent = false;
                 return;
             }
-            var _local_4:Tab = this._navigator.tabs._Str_9436(_local_3);
+            var _local_4:Tab = this._navigator.tabs.getTab(_local_3);
             _local_4._Str_25329();
             switch (_local_4.id)
             {

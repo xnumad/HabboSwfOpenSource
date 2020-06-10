@@ -88,7 +88,7 @@
 
         public function setSelectedTab(k:int):void
         {
-            var _local_2:Tab = this._Str_9436(k);
+            var _local_2:Tab = this.getTab(k);
             if (_local_2 != null)
             {
                 this.clearSelected();
@@ -118,7 +118,7 @@
             }
         }
 
-        public function _Str_9436(k:int):Tab
+        public function getTab(k:int):Tab
         {
             var _local_2:Tab;
             for each (_local_2 in this._tabs)

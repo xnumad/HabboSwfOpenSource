@@ -660,7 +660,7 @@
                 return;
             }
             this._mainViewCtrl._Str_2798(Tabs.TAB_ME, Tabs.SEARCHTYPE_MY_ROOMS);
-            this._tabs._Str_9436(Tabs.TAB_ME)._Str_5252._Str_6883();
+            this._tabs.getTab(Tabs.TAB_ME)._Str_5252._Str_6883();
         }
 
         public function showFavouriteRooms():void
@@ -685,7 +685,7 @@
                 return;
             }
             this._mainViewCtrl._Str_2798(Tabs.TAB_ME, k);
-            this._tabs._Str_9436(Tabs.TAB_ME)._Str_5252._Str_8025(k);
+            this._tabs.getTab(Tabs.TAB_ME)._Str_5252._Str_8025(k);
         }
 
         public function trackNavigationDataPoint(k:String, _arg_2:String, _arg_3:String="", _arg_4:int=0):void
