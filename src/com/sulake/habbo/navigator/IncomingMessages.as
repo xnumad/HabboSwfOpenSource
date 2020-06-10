@@ -159,7 +159,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837));
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new _Str_5655(this._Str_8351));
-            _local_2.addHabboConnectionMessageEvent(new _Str_7272(this._Str_23354));
+            _local_2.addHabboConnectionMessageEvent(new _Str_7272(this.onConvertedRoomId));
             _local_2.addHabboConnectionMessageEvent(new RoomForwardMessageEvent(this._Str_22797));
         }
 
@@ -383,7 +383,7 @@
             this._Str_14669(_local_2.roomId);
         }
 
-        private function _Str_23354(k:IMessageEvent):void
+        private function onConvertedRoomId(k:IMessageEvent):void
         {
             var _local_2:_Str_5654 = _Str_7272(k).getParser();
             if (this._navigator._Str_25806)
