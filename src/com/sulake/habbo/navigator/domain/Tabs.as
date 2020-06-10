@@ -25,7 +25,7 @@
         public static const SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:int = 2;
         public static const SEARCHTYPE_MY_FRIENDS_ROOMS:int = 3;
         public static const SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE:int = 4;
-        public static const _Str_4869:int = 5;
+        public static const SEARCHTYPE_MY_ROOMS:int = 5;
         public static const _Str_8122:int = 6;
         public static const _Str_8161:int = 7;
         public static const _Str_5622:int = 8;
@@ -65,7 +65,7 @@
             this._tabs.push(new Tab(this._navigator, TAB_CATEGORIES, _Str_10877, new CategoriesTabPageDecorator(this._navigator), MainViewCtrl._Str_13989));
             this._tabs.push(new Tab(this._navigator, TAB_ROOMS, SEARCHTYPE_POPULAR_ROOMS, new RoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, TAB_OFFICIAL, _Str_8698, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
-            this._tabs.push(new Tab(this._navigator, TAB_ME, _Str_4869, new MyRoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
+            this._tabs.push(new Tab(this._navigator, TAB_ME, SEARCHTYPE_MY_ROOMS, new MyRoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, TAB_SEARCH, _Str_5622, new SearchTabPageDecorator(this._navigator), MainViewCtrl._Str_14620));
             this._Str_13005(TAB_EVENTS);
         }

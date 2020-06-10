@@ -582,7 +582,7 @@
                 case Tabs._Str_8161:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_HISTORY));
                     return;
-                case Tabs._Str_4869:
+                case Tabs.SEARCHTYPE_MY_ROOMS:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_ROOMS));
                     return;
                 case Tabs._Str_8698:
@@ -620,7 +620,7 @@
                     return new _Str_9956();
                 case Tabs._Str_8161:
                     return new _Str_12153();
-                case Tabs._Str_4869:
+                case Tabs.SEARCHTYPE_MY_ROOMS:
                     return new _Str_9988();
                 case Tabs.SEARCHTYPE_POPULAR_ROOMS:
                     return new _Str_10157(_arg_2, this._navigator.data._Str_6357);

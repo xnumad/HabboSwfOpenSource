@@ -78,7 +78,7 @@
                     return "friends_rooms";
                 case Tabs.SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE:
                     return "with_friends";
-                case Tabs._Str_4869:
+                case Tabs.SEARCHTYPE_MY_ROOMS:
                     return "my";
                 case Tabs._Str_8122:
                     return "favorites";

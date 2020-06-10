@@ -659,7 +659,7 @@
             {
                 return;
             }
-            this._mainViewCtrl._Str_2798(Tabs.TAB_ME, Tabs._Str_4869);
+            this._mainViewCtrl._Str_2798(Tabs.TAB_ME, Tabs.SEARCHTYPE_MY_ROOMS);
             this._tabs._Str_9436(Tabs.TAB_ME)._Str_5252._Str_6883();
         }
 
