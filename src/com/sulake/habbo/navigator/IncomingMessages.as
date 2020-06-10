@@ -798,7 +798,7 @@
         private function _Str_23463(k:IMessageEvent):void
         {
             var _local_2:_Str_7422 = (k as _Str_8939).getParser();
-            this._navigator._Str_17937.show(_local_2._Str_24716);
+            this._navigator.enforceCategoryCtrl.show(_local_2._Str_24716);
         }
     }
 }

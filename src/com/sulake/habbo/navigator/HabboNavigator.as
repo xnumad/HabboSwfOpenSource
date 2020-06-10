@@ -215,7 +215,7 @@
             return this._roomSessionManager;
         }
 
-        public function get _Str_17937():EnforceCategoryCtrl
+        public function get enforceCategoryCtrl():EnforceCategoryCtrl
         {
             return this._enforceCategoryCtrl;
         }

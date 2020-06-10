@@ -49,7 +49,7 @@
         function get _Str_5048():RoomEventInfoCtrl;
         function get roomFilterCtrl():RoomFilterCtrl;
         function get roomSessionManager():IRoomSessionManager;
-        function get _Str_17937():EnforceCategoryCtrl;
+        function get enforceCategoryCtrl():EnforceCategoryCtrl;
         function send(_arg_1:IMessageComposer, _arg_2:Boolean=false):void;
         function getXmlWindow(_arg_1:String, _arg_2:uint=1):IWindow;
         function getText(_arg_1:String):String;
