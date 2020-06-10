@@ -35,7 +35,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_9492;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5771;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
     import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
@@ -149,7 +149,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_6001(this._Str_17265));
             _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new _Str_4035(this._Str_4132));
-            _local_2.addHabboConnectionMessageEvent(new _Str_9492(this._Str_25812));
+            _local_2.addHabboConnectionMessageEvent(new CanCreateRoomMessageEvent(this._Str_25812));
             _local_2.addHabboConnectionMessageEvent(new _Str_5771(this._Str_8576));
             _local_2.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709));
             _local_2.addHabboConnectionMessageEvent(new _Str_5891(this._Str_18130));
@@ -560,7 +560,7 @@
         private function _Str_25812(k:IMessageEvent):void
         {
             var _local_3:AlertView;
-            var _local_2:CanCreateRoomMessageParser = (k as _Str_9492).getParser();
+            var _local_2:CanCreateRoomMessageParser = (k as CanCreateRoomMessageEvent).getParser();
             Logger.log(((("Can create room: " + _local_2.resultCode) + ", ") + _local_2._Str_20396));
             if (_local_2.resultCode == 0)
             {

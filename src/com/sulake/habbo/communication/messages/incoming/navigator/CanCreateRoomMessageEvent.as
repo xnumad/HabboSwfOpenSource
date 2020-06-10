@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.CanCreateRoomMessageParser;
 
-    public class _Str_9492 extends MessageEvent implements IMessageEvent 
+    public class CanCreateRoomMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9492(k:Function)
+        public function CanCreateRoomMessageEvent(k:Function)
         {
             super(k, CanCreateRoomMessageParser);
         }

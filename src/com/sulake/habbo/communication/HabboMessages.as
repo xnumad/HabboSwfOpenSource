@@ -380,7 +380,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_6109;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_7272;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_8029;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_9492;
+	import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.advertisement.InterstitialMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.advertisement.RoomAdErrorEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_484._Str_4639;
@@ -1356,7 +1356,7 @@
             INCOMING_PACKETS[377] = _Str_8530;
             INCOMING_PACKETS[3770] = PurchaseNotAllowedMessageEvent;
             INCOMING_PACKETS[3776] = ObjectUpdateMessageEvent;
-            INCOMING_PACKETS[378] = _Str_9492;
+            INCOMING_PACKETS[378] = CanCreateRoomMessageEvent;
             INCOMING_PACKETS[3783] = FlatAccessibleMessageEvent;
             INCOMING_PACKETS[3785] = PollOfferEvent;
             INCOMING_PACKETS[3796] = _Str_7837;
