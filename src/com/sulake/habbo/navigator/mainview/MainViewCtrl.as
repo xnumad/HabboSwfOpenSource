@@ -398,7 +398,7 @@
         {
             Util._Str_2930(this._listContent);
             var _local_2:Tab = this._navigator.tabs.getSelected();
-            var _local_3:Boolean = ((this._navigator.data.guestRoomSearchArrived) && (_local_2._Str_22642 == Tabs._Str_6358));
+            var _local_3:Boolean = ((this._navigator.data.guestRoomSearchArrived) && (_local_2._Str_22642 == Tabs.SEARCHTYPE_ROOM_ADS));
             this._Str_25672(k, _local_3);
             this._Str_24977(k, (!(_local_3)));
             this._Str_23623(k, this._navigator.data.popularTagsArrived);
@@ -641,7 +641,7 @@
                 case Tabs.SEARCHTYPE_COMPETITION_ROOMS:
                     _local_3 = this._navigator.data._Str_4079;
                     return new _Str_9911(_local_3.goalId, _local_3.pageIndex);
-                case Tabs._Str_6358:
+                case Tabs.SEARCHTYPE_ROOM_ADS:
                 case Tabs._Str_12070:
                     return new _Str_11181(this._navigator.data._Str_6357, k);
                 case Tabs._Str_12236:

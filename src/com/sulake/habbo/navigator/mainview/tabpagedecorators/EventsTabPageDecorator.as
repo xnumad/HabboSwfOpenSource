@@ -81,7 +81,7 @@
 
         private function _Str_2798():void
         {
-            var k:int = Tabs._Str_6358;
+            var k:int = Tabs.SEARCHTYPE_ROOM_ADS;
             if (((!(this._filter == null)) && (!(this._filter.disposed))))
             {
                 k = this._Str_22587(this._filter.selection);
@@ -94,7 +94,7 @@
             switch (k)
             {
                 case 0:
-                    return Tabs._Str_6358;
+                    return Tabs.SEARCHTYPE_ROOM_ADS;
                 case 1:
                     return Tabs._Str_12070;
             }

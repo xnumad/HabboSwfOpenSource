@@ -36,7 +36,7 @@
         public static const SEARCHTYPE_GROUP_NAME_SEARCH:int = 13;
         public static const SEARCHTYPE_GUILD_BASES:int = 14;
         public static const SEARCHTYPE_COMPETITION_ROOMS:int = 15;
-        public static const _Str_6358:int = 16;
+        public static const SEARCHTYPE_ROOM_ADS:int = 16;
         public static const _Str_12070:int = 17;
         public static const _Str_12236:int = 18;
         public static const _Str_10261:int = 19;
@@ -61,7 +61,7 @@
         {
             this._navigator = k;
             this._tabs = new Array();
-            this._tabs.push(new Tab(this._navigator, TAB_EVENTS, _Str_6358, new EventsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
+            this._tabs.push(new Tab(this._navigator, TAB_EVENTS, SEARCHTYPE_ROOM_ADS, new EventsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, TAB_CATEGORIES, _Str_10877, new CategoriesTabPageDecorator(this._navigator), MainViewCtrl._Str_13989));
             this._tabs.push(new Tab(this._navigator, TAB_ROOMS, SEARCHTYPE_POPULAR_ROOMS, new RoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, TAB_OFFICIAL, SEARCHTYPE_OFFICIALROOMS, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));

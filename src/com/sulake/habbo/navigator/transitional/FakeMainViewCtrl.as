@@ -100,7 +100,7 @@
                     return "groups";
                 case Tabs.SEARCHTYPE_COMPETITION_ROOMS:
                     return "competition";
-                case Tabs._Str_6358:
+                case Tabs.SEARCHTYPE_ROOM_ADS:
                     return "top_promotions";
                 case Tabs._Str_12070:
                     return "new_ads";
