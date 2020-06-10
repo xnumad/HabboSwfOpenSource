@@ -72,7 +72,7 @@
             {
                 case Tabs.SEARCHTYPE_POPULAR_ROOMS:
                     return "popular";
-                case Tabs._Str_9593:
+                case Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
                     return "highest_score";
                 case Tabs._Str_9161:
                     return "friends_rooms";

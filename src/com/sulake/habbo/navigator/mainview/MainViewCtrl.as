@@ -594,7 +594,7 @@
                 case Tabs._Str_8473:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE));
                     return;
-                case Tabs._Str_9593:
+                case Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE));
                     return;
                 case Tabs._Str_5383:
@@ -626,7 +626,7 @@
                     return new _Str_10157(_arg_2, this._navigator.data._Str_6357);
                 case Tabs._Str_8473:
                     return new _Str_10079();
-                case Tabs._Str_9593:
+                case Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
                     return new _Str_9889(this._navigator.data._Str_6357);
                 case Tabs._Str_5383:
                     return new _Str_4390(("tag:" + _arg_2));

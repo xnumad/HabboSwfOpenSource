@@ -98,7 +98,7 @@
             {
                 if (k == 1)
                 {
-                    this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs._Str_9593);
+                    this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE);
                 }
                 else
                 {
