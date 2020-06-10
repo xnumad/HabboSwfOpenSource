@@ -280,7 +280,7 @@
             {
                 k = getProperty("new.identity.navigator.default_tab");
             }
-            this.tabs._Str_13005(Tabs.tabIdFromName(k, Tabs.TAB_ROOMS));
+            this.tabs.setSelectedTab(Tabs.tabIdFromName(k, Tabs.TAB_ROOMS));
             this._roomSettingsCtrl = new RoomSettingsCtrl(this);
             if (ExternalInterface.available)
             {
@@ -805,7 +805,7 @@
                 case "tab":
                     if (_local_2.length > 2)
                     {
-                        this.tabs._Str_13005(Tabs.tabIdFromName(_local_2[2], Tabs.TAB_ROOMS));
+                        this.tabs.setSelectedTab(Tabs.tabIdFromName(_local_2[2], Tabs.TAB_ROOMS));
                         this.openNavigator(null);
                     }
                     return;

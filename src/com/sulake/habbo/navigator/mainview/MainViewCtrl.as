@@ -503,7 +503,7 @@
         public function _Str_2798(k:int, _arg_2:int, _arg_3:String="-1", _arg_4:int=1):void
         {
             var _local_5:Tab = this._navigator.tabs.getSelected();
-            this._navigator.tabs._Str_13005(k);
+            this._navigator.tabs.setSelectedTab(k);
             var _local_6:Tab = this._navigator.tabs.getSelected();
             ErrorReportStorage.addDebugData("StartSearch", ((("Start search " + _local_5.id) + " => ") + _local_6.id));
             if (this._phaseOneNavigator)

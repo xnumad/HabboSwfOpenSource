@@ -67,7 +67,7 @@
             this._tabs.push(new Tab(this._navigator, TAB_OFFICIAL, SEARCHTYPE_OFFICIALROOMS, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
             this._tabs.push(new Tab(this._navigator, TAB_ME, SEARCHTYPE_MY_ROOMS, new MyRoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, TAB_SEARCH, SEARCHTYPE_TEXT_SEARCH, new SearchTabPageDecorator(this._navigator), MainViewCtrl._Str_14620));
-            this._Str_13005(TAB_EVENTS);
+            this.setSelectedTab(TAB_EVENTS);
         }
 
         public static function tabIdFromName(k:String, _arg_2:int):int
@@ -86,7 +86,7 @@
             return this._tabs;
         }
 
-        public function _Str_13005(k:int):void
+        public function setSelectedTab(k:int):void
         {
             var _local_2:Tab = this._Str_9436(k);
             if (_local_2 != null)
