@@ -284,11 +284,11 @@
             this._roomSettingsCtrl = new RoomSettingsCtrl(this);
             if (ExternalInterface.available)
             {
-                ExternalInterface.addCallback(HabboWebTools.OPENROOM, this._Str_17932);
+                ExternalInterface.addCallback(HabboWebTools.OPENROOM, this.enterRoomWebRequest);
             }
         }
 
-        public function _Str_17932(k:String, _arg_2:Boolean=false, _arg_3:String=null):void
+        public function enterRoomWebRequest(k:String, _arg_2:Boolean=false, _arg_3:String=null):void
         {
             this._webRoomReport = _arg_2;
             this._webRoomReportedName = _arg_3;
@@ -812,7 +812,7 @@
                 case "report":
                     if (_local_2.length > 3)
                     {
-                        this._Str_17932(_local_2[2], true, _local_2[3]);
+                        this.enterRoomWebRequest(_local_2[2], true, _local_2[3]);
                     }
                     return;
                 default:

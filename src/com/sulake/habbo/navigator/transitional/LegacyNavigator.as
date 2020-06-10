@@ -252,7 +252,7 @@
 
         public function _Str_24971(k:String, _arg_2:String=null):*
         {
-            this._oldNavigator._Str_17932(k, true, _arg_2);
+            this._oldNavigator.enterRoomWebRequest(k, true, _arg_2);
         }
 
         public function goToRoom(k:int, _arg_2:Boolean, _arg_3:String="", _arg_4:int=-1):void
