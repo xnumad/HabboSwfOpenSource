@@ -160,7 +160,7 @@
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new _Str_5655(this._Str_8351));
             _local_2.addHabboConnectionMessageEvent(new _Str_7272(this.onConvertedRoomId));
-            _local_2.addHabboConnectionMessageEvent(new RoomForwardMessageEvent(this._Str_22797));
+            _local_2.addHabboConnectionMessageEvent(new RoomForwardMessageEvent(this.onRoomForward));
         }
 
         public function get data():NavigatorData
@@ -376,7 +376,7 @@
             this.data.hcMember = (_local_2.daysToPeriodEnd > 0);
         }
 
-        private function _Str_22797(k:IMessageEvent):void
+        private function onRoomForward(k:IMessageEvent):void
         {
             var _local_2:RoomForwardMessageParser = RoomForwardMessageEvent(k).getParser();
             Logger.log(("Got room forward: " + _local_2.roomId));
