@@ -31,7 +31,7 @@
         public static const SEARCHTYPE_TEXT_SEARCH:int = 8;
         public static const SEARCHTYPE_TAG_SEARCH:int = 9;
         public static const SEARCHTYPE_ROOM_NAME_SEARCH:int = 10;
-        public static const _Str_8698:int = 11;
+        public static const SEARCHTYPE_OFFICIALROOMS:int = 11;
         public static const _Str_16397:int = 12;
         public static const _Str_8671:int = 13;
         public static const _Str_10120:int = 14;
@@ -64,7 +64,7 @@
             this._tabs.push(new Tab(this._navigator, TAB_EVENTS, _Str_6358, new EventsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, TAB_CATEGORIES, _Str_10877, new CategoriesTabPageDecorator(this._navigator), MainViewCtrl._Str_13989));
             this._tabs.push(new Tab(this._navigator, TAB_ROOMS, SEARCHTYPE_POPULAR_ROOMS, new RoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
-            this._tabs.push(new Tab(this._navigator, TAB_OFFICIAL, _Str_8698, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
+            this._tabs.push(new Tab(this._navigator, TAB_OFFICIAL, SEARCHTYPE_OFFICIALROOMS, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
             this._tabs.push(new Tab(this._navigator, TAB_ME, SEARCHTYPE_MY_ROOMS, new MyRoomsTabPageDecorator(this._navigator), MainViewCtrl._Str_8485));
             this._tabs.push(new Tab(this._navigator, TAB_SEARCH, SEARCHTYPE_TEXT_SEARCH, new SearchTabPageDecorator(this._navigator), MainViewCtrl._Str_14620));
             this._Str_13005(TAB_EVENTS);

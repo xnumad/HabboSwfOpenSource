@@ -585,7 +585,7 @@
                 case Tabs.SEARCHTYPE_MY_ROOMS:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_ROOMS));
                     return;
-                case Tabs._Str_8698:
+                case Tabs.SEARCHTYPE_OFFICIALROOMS:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_OFFICIALROOMS));
                     return;
                 case Tabs.SEARCHTYPE_POPULAR_ROOMS:

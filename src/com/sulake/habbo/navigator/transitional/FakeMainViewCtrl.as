@@ -90,7 +90,7 @@
                     return "query";
                 case Tabs.SEARCHTYPE_ROOM_NAME_SEARCH:
                     return "query";
-                case Tabs._Str_8698:
+                case Tabs.SEARCHTYPE_OFFICIALROOMS:
                     return "official";
                 case Tabs._Str_16397:
                     return "new_ads";
