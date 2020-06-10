@@ -644,7 +644,7 @@
                 case Tabs.SEARCHTYPE_ROOM_ADS:
                 case Tabs.SEARCHTYPE_NEW_ROOM_ADS:
                     return new _Str_11181(this._navigator.data._Str_6357, k);
-                case Tabs._Str_12236:
+                case Tabs.SEARCHTYPE_ROOMS_WITH_RIGHTS:
                     return new _Str_12106();
                 case Tabs._Str_10261:
                     return new _Str_9844();

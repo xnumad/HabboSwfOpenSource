@@ -104,7 +104,7 @@
                     return "top_promotions";
                 case Tabs.SEARCHTYPE_NEW_ROOM_ADS:
                     return "new_ads";
-                case Tabs._Str_12236:
+                case Tabs.SEARCHTYPE_ROOMS_WITH_RIGHTS:
                     return "with_rights";
                 case Tabs._Str_10261:
                     return "my_groups";
