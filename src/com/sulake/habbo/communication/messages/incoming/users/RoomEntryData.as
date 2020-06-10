@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.users
 {
-    public class _Str_2866 
+    public class RoomEntryData
     {
         private var _roomId:int;
         private var _roomName:String;
         private var _Str_21104:Boolean = false;
 
-        public function _Str_2866(k:int, _arg_2:String, _arg_3:Boolean)
+        public function RoomEntryData(k:int, _arg_2:String, _arg_3:Boolean)
         {
             this._roomId = k;
             this._roomName = _arg_2;

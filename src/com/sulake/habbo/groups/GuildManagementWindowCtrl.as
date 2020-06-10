@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.IGuildData;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2866;
+    import com.sulake.habbo.communication.messages.incoming.users.RoomEntryData;
     import com.sulake.core.window.IWindow;
     import flash.display.BitmapData;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -128,7 +128,7 @@
         {
             if (((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data.exists))))
             {
-                this._data.ownedRooms.splice(0, 0, new _Str_2866(k, _arg_2, false));
+                this._data.ownedRooms.splice(0, 0, new RoomEntryData(k, _arg_2, false));
                 this._Str_20779();
                 this._Str_20262().selection = 0;
             }
@@ -530,7 +530,7 @@
             var k:String;
             var _local_2:String;
             var _local_3:Array;
-            var _local_4:_Str_2866;
+            var _local_4:RoomEntryData;
             switch (this._step)
             {
                 case _Str_7036:
@@ -615,7 +615,7 @@
         {
             var k:String = ITextFieldWindow(this._window.findChildByName("name_txt")).text;
             var _local_2:String = ITextFieldWindow(this._window.findChildByName("desc_txt")).text;
-            var _local_3:_Str_2866 = this._Str_19886();
+            var _local_3:RoomEntryData = this._Str_19886();
             var _local_4:Array = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data.badgeSettings);
             var _local_5:int = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data.primaryColorId);
             var _local_6:int = ((this._secondaryColorCtrl.isInitialized) ? this._secondaryColorCtrl._Str_15044() : this._data.secondaryColorId);
@@ -645,7 +645,7 @@
 
         private function _Str_20779():void
         {
-            var _local_5:_Str_2866;
+            var _local_5:RoomEntryData;
             var k:IDropMenuWindow = this._Str_20262();
             var _local_2:Array = new Array();
             var _local_3:int;
@@ -668,13 +668,13 @@
             }
         }
 
-        private function _Str_19886():_Str_2866
+        private function _Str_19886():RoomEntryData
         {
             var k:IDropMenuWindow = IDropMenuWindow(this._window.findChildByName("base_dropmenu"));
             var _local_2:int = (k.selection - 1);
             if ((((_local_2 >= 0) && (_local_2 < this._data.ownedRooms.length)) && (!(this._data.ownedRooms[_local_2] == null))))
             {
-                return _Str_2866(this._data.ownedRooms[_local_2]);
+                return RoomEntryData(this._data.ownedRooms[_local_2]);
             }
             return null;
         }

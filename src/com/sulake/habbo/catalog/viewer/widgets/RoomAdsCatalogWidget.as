@@ -12,7 +12,7 @@
     import com.sulake.habbo.catalog.purchase.RoomAdPurchaseData;
     import com.sulake.habbo.room.events.RoomEngineEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4253;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2866;
+    import com.sulake.habbo.communication.messages.incoming.users.RoomEntryData;
     import com.sulake.habbo.communication.messages.parser.catalog.RoomAdPurchaseInfoEventParser;
     import com.sulake.habbo.catalog.IPurchasableOffer;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
@@ -113,7 +113,7 @@
 
         private function _Str_19526(k:int, _arg_2:Boolean=false):void
         {
-            var _local_8:_Str_2866;
+            var _local_8:RoomEntryData;
             var _local_9:String;
             var _local_10:RoomAdPurchaseData;
             if (window == null)
@@ -134,7 +134,7 @@
             var _local_6:int;
             while (_local_6 < this._rooms.length)
             {
-                _local_8 = (this._rooms[_local_6] as _Str_2866);
+                _local_8 = (this._rooms[_local_6] as RoomEntryData);
                 if (_arg_2)
                 {
                     if (_local_8.roomName.length > 25)
@@ -161,7 +161,7 @@
                 }
                 _local_3.populate(_local_5);
             }
-            var _local_7:_Str_2866 = (this._rooms[_local_4] as _Str_2866);
+            var _local_7:RoomEntryData = (this._rooms[_local_4] as RoomEntryData);
             if (_local_7 != null)
             {
                 _local_3.selection = _local_4;
@@ -181,13 +181,13 @@
 
         private function _Str_23599():void
         {
-            var _local_2:_Str_2866;
+            var _local_2:RoomEntryData;
             var k:RoomAdPurchaseData = this._catalog._Str_3064;
             if (((!(k == null)) && (k._Str_8314)))
             {
                 window.findChildByName("name_input_text").caption = k.name;
                 window.findChildByName("desc_input_text").caption = k.description;
-                _local_2 = new _Str_2866(k.flatId, k.roomName, false);
+                _local_2 = new RoomEntryData(k.flatId, k.roomName, false);
                 if (this._rooms != null)
                 {
                     this._rooms.push(_local_2);
@@ -276,7 +276,7 @@
         private function _Str_26020(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:int;
-            var _local_4:_Str_2866;
+            var _local_4:RoomEntryData;
             var _local_5:RoomAdPurchaseData;
             var _local_6:int;
             var _local_7:IWindow;
@@ -284,7 +284,7 @@
             if (((k.type == WindowEvent.WINDOW_EVENT_SELECTED) && (this._rooms.length > 0)))
             {
                 _local_3 = IDropMenuWindow(_arg_2).selection;
-                _local_4 = (this._rooms[_local_3] as _Str_2866);
+                _local_4 = (this._rooms[_local_3] as RoomEntryData);
                 _local_5 = this._catalog._Str_3064;
                 if (_local_5)
                 {

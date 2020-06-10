@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.catalog
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2866;
+    import com.sulake.habbo.communication.messages.incoming.users.RoomEntryData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class RoomAdPurchaseInfoEventParser implements IMessageParser
@@ -30,7 +30,7 @@
             var _local_4:int;
             var _local_5:String;
             var _local_6:Boolean;
-            var _local_7:_Str_2866;
+            var _local_7:RoomEntryData;
             this._rooms = new Array();
             this._isVip = k.readBoolean();
             var _local_2:int = k.readInteger();
@@ -40,7 +40,7 @@
                 _local_4 = k.readInteger();
                 _local_5 = k.readString();
                 _local_6 = k.readBoolean();
-                _local_7 = new _Str_2866(_local_4, _local_5, _local_6);
+                _local_7 = new RoomEntryData(_local_4, _local_5, _local_6);
                 this._rooms.push(_local_7);
                 _local_3++;
             }

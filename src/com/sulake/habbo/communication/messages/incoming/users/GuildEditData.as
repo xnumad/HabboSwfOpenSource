@@ -30,7 +30,7 @@
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._ownedRooms.push(new _Str_2866(k.readInteger(), k.readString(), k.readBoolean()));
+                this._ownedRooms.push(new RoomEntryData(k.readInteger(), k.readString(), k.readBoolean()));
                 _local_2++;
             }
             this._isOwner = k.readBoolean();
