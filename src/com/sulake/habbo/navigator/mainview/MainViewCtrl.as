@@ -642,7 +642,7 @@
                     _local_3 = this._navigator.data._Str_4079;
                     return new _Str_9911(_local_3.goalId, _local_3.pageIndex);
                 case Tabs.SEARCHTYPE_ROOM_ADS:
-                case Tabs._Str_12070:
+                case Tabs.SEARCHTYPE_NEW_ROOM_ADS:
                     return new _Str_11181(this._navigator.data._Str_6357, k);
                 case Tabs._Str_12236:
                     return new _Str_12106();

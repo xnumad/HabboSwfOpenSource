@@ -102,7 +102,7 @@
                     return "competition";
                 case Tabs.SEARCHTYPE_ROOM_ADS:
                     return "top_promotions";
-                case Tabs._Str_12070:
+                case Tabs.SEARCHTYPE_NEW_ROOM_ADS:
                     return "new_ads";
                 case Tabs._Str_12236:
                     return "with_rights";

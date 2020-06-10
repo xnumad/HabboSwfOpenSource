@@ -37,7 +37,7 @@
         public static const SEARCHTYPE_GUILD_BASES:int = 14;
         public static const SEARCHTYPE_COMPETITION_ROOMS:int = 15;
         public static const SEARCHTYPE_ROOM_ADS:int = 16;
-        public static const _Str_12070:int = 17;
+        public static const SEARCHTYPE_NEW_ROOM_ADS:int = 17;
         public static const _Str_12236:int = 18;
         public static const _Str_10261:int = 19;
         public static const _Str_9661:int = 20;

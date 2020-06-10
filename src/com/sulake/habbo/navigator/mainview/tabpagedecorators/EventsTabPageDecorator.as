@@ -96,7 +96,7 @@
                 case 0:
                     return Tabs.SEARCHTYPE_ROOM_ADS;
                 case 1:
-                    return Tabs._Str_12070;
+                    return Tabs.SEARCHTYPE_NEW_ROOM_ADS;
             }
             Logger.log(("Invalid index when searching Room ad search type: " + k));
             return 0;
