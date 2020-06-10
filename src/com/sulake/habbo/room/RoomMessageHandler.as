@@ -759,7 +759,7 @@
                 return;
             }
             var _local_4:IVector3d;
-            if (!_arg_2._Str_22379)
+            if (!_arg_2.isOldFormat)
             {
                 _local_4 = _local_3.getLocation(_arg_2._Str_15139, _arg_2._Str_15569, _arg_2.localX, _arg_2.localY, _arg_2.dir);
             }

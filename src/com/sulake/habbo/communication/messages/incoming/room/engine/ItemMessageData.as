@@ -37,7 +37,7 @@
             return this._id;
         }
 
-        public function get _Str_22379():Boolean
+        public function get isOldFormat():Boolean
         {
             return this._isOldFormat;
         }
