@@ -42,12 +42,12 @@
             return this._isOldFormat;
         }
 
-        public function get _Str_15139():Number
+        public function get wallX():Number
         {
             return this._wallX;
         }
 
-        public function set _Str_15139(k:Number):void
+        public function set wallX(k:Number):void
         {
             if (!this._isReadOnly)
             {

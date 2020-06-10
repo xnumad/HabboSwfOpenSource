@@ -729,7 +729,7 @@
             var _local_5:ItemMessageData = _local_3.data;
             if (_local_5 != null)
             {
-                _local_6 = _local_4.getLocation(_local_5._Str_15139, _local_5._Str_15569, _local_5.localX, _local_5.localY, _local_5.dir);
+                _local_6 = _local_4.getLocation(_local_5.wallX, _local_5._Str_15569, _local_5.localX, _local_5.localY, _local_5.dir);
                 _local_7 = new Vector3d(_local_4.getDirection(_local_5.dir));
                 this._roomCreator.updateObjectWallItem(this._currentRoomId, _local_5.id, _local_6, _local_7, _local_5.state, _local_5.data);
                 this._roomCreator.updateObjectWallItemExpiryTime(this._currentRoomId, _local_5.id, _local_5.secondsToExpiration);
@@ -761,7 +761,7 @@
             var _local_4:IVector3d;
             if (!_arg_2.isOldFormat)
             {
-                _local_4 = _local_3.getLocation(_arg_2._Str_15139, _arg_2._Str_15569, _arg_2.localX, _arg_2.localY, _arg_2.dir);
+                _local_4 = _local_3.getLocation(_arg_2.wallX, _arg_2._Str_15569, _arg_2.localX, _arg_2.localY, _arg_2.dir);
             }
             else
             {
