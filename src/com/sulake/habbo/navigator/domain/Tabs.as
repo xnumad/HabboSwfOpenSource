@@ -42,7 +42,7 @@
         public static const SEARCHTYPE_MY_GUILD_BASES:int = 19;
         public static const SEARCHTYPE_BY_OWNER:int = 20;
         public static const SEARCHTYPE_CATEGORIES:int = 21;
-        public static const _Str_9699:int = 22;
+        public static const SEARCHTYPE_RECOMMENDED_ROOMS:int = 22;
         public static const _Str_7094:int = 23;
 
         private var _tabs:Array;

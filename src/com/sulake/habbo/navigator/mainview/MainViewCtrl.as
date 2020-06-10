@@ -650,7 +650,7 @@
                     return new _Str_9844();
                 case Tabs.SEARCHTYPE_BY_OWNER:
                     return new _Str_4390(("owner:" + _arg_2));
-                case Tabs._Str_9699:
+                case Tabs.SEARCHTYPE_RECOMMENDED_ROOMS:
                     return new _Str_9807();
                 case Tabs._Str_7094:
                     return new _Str_11269();

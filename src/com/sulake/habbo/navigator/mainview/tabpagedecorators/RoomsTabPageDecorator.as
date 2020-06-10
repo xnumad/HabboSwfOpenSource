@@ -104,7 +104,7 @@
                 {
                     if (((k == 2) && (this._personalizedRoomsEnabled)))
                     {
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs._Str_9699);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_RECOMMENDED_ROOMS);
                     }
                     else
                     {

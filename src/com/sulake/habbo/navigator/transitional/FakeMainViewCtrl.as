@@ -112,7 +112,7 @@
                     return "query";
                 case Tabs.SEARCHTYPE_CATEGORIES:
                     return "all_categories";
-                case Tabs._Str_9699:
+                case Tabs.SEARCHTYPE_RECOMMENDED_ROOMS:
                     return "recommended";
                 case Tabs._Str_7094:
                     return "history_freq";

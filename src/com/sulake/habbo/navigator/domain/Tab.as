@@ -28,7 +28,7 @@
             var k:Boolean = this._navigator.context.configuration.getBoolean("navigator.2014.personalized.navigator");
             if (((k) && (this.id == Tabs.TAB_ROOMS)))
             {
-                this._defaultSearchType = Tabs._Str_9699;
+                this._defaultSearchType = Tabs.SEARCHTYPE_RECOMMENDED_ROOMS;
             }
             this._navigator.mainViewCtrl._Str_2798(this._id, this._defaultSearchType, "-1", this._searchMsg);
         }
