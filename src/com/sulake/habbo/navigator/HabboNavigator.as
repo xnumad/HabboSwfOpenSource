@@ -613,7 +613,7 @@
             {
                 k = (('"' + k) + '"');
             }
-            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_5383, k);
+            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TAG_SEARCH, k);
             this.trackNavigationDataPoint("Search", "search.tag", k);
             this._mainViewCtrl.mainWindow.activate();
         }

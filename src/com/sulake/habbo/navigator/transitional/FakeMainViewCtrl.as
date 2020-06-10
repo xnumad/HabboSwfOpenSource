@@ -86,7 +86,7 @@
                     return "history";
                 case Tabs.SEARCHTYPE_TEXT_SEARCH:
                     return "query";
-                case Tabs._Str_5383:
+                case Tabs.SEARCHTYPE_TAG_SEARCH:
                     return "query";
                 case Tabs._Str_9523:
                     return "query";

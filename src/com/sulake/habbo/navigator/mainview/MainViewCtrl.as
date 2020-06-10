@@ -510,7 +510,7 @@
             {
                 if (_arg_3.substr(0, 1) == "#")
                 {
-                    _arg_2 = Tabs._Str_5383;
+                    _arg_2 = Tabs.SEARCHTYPE_TAG_SEARCH;
                     _arg_3 = _arg_3.substr(1, (_arg_3.length - 1));
                 }
             }
@@ -597,7 +597,7 @@
                 case Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE));
                     return;
-                case Tabs._Str_5383:
+                case Tabs.SEARCHTYPE_TAG_SEARCH:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_TAG_SEARCH));
                     return;
                 case Tabs.SEARCHTYPE_TEXT_SEARCH:
@@ -628,7 +628,7 @@
                     return new _Str_10079();
                 case Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
                     return new _Str_9889(this._navigator.data._Str_6357);
-                case Tabs._Str_5383:
+                case Tabs.SEARCHTYPE_TAG_SEARCH:
                     return new _Str_4390(("tag:" + _arg_2));
                 case Tabs.SEARCHTYPE_TEXT_SEARCH:
                     return new _Str_4390(_arg_2);

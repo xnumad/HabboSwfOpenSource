@@ -63,7 +63,7 @@
                     case Tabs._Str_9523:
                         this._searchType.selection = 2;
                         return;
-                    case Tabs._Str_5383:
+                    case Tabs.SEARCHTYPE_TAG_SEARCH:
                         this._searchType.selection = 3;
                         return;
                     case Tabs._Str_8671:
@@ -103,7 +103,7 @@
                         this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_9523, k);
                         break;
                     case 3:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_5383, k);
+                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TAG_SEARCH, k);
                         break;
                     case 4:
                         this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_8671, k);
