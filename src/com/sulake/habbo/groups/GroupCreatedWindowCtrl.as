@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
@@ -58,7 +58,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this.close();
-                this._manager.send(new _Str_2863(this._groupId, false));
+                this._manager.send(new GetHabboGroupDetailsMessageComposer(this._groupId, false));
             }
         }
 

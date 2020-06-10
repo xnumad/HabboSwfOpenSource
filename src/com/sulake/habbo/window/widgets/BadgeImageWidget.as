@@ -15,7 +15,7 @@
     import com.sulake.core.window.theme.PropertyKeys;
     import com.sulake.core.window.utils.IBitmapDataContainer;
     import flash.display.BitmapData;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.gamecenter.GameConfigurations;
     import flash.geom.Point;
 
@@ -289,7 +289,7 @@
         {
             if (this._groupId > 0)
             {
-                this._windowManager.communication.connection.send(new _Str_2863(this._groupId, true));
+                this._windowManager.communication.connection.send(new GetHabboGroupDetailsMessageComposer(this._groupId, true));
             }
         }
 

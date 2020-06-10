@@ -31,7 +31,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10302;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
     import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_6216;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
@@ -813,7 +813,7 @@
                     if (_local_3 > 0)
                     {
                         this._expectedGroupID = _local_3;
-                        this._habboTalent.send(new _Str_2863(_local_3, false));
+                        this._habboTalent.send(new GetHabboGroupDetailsMessageComposer(_local_3, false));
                     }
                     return;
                 case _Str_2821._Str_7735:

@@ -49,7 +49,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.communication.messages.parser.help._Str_7534;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.events.WindowEvent;
@@ -586,7 +586,7 @@
                         _local_3 = this._habboHelp.getInteger("guide.help.alpha.groupid", 0);
                         if (_local_3 > 0)
                         {
-                            this._habboHelp.sendMessage(new _Str_2863(_local_3, true));
+                            this._habboHelp.sendMessage(new GetHabboGroupDetailsMessageComposer(_local_3, true));
                             this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_groupProfile"));
                         }
                     }

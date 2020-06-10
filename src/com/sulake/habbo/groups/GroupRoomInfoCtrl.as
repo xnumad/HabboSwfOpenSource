@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
@@ -58,7 +58,7 @@
             if (k.habboGroupId > 0)
             {
                 this._expectedGroupId = k.habboGroupId;
-                this._manager.send(new _Str_2863(k.habboGroupId, false));
+                this._manager.send(new GetHabboGroupDetailsMessageComposer(k.habboGroupId, false));
             }
             else
             {
@@ -167,7 +167,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._manager.trackGoogle("groupRoomInfo", "groupInfo");
-                this._manager.send(new _Str_2863(this._group.groupId, true));
+                this._manager.send(new GetHabboGroupDetailsMessageComposer(this._group.groupId, true));
                 this._manager.toolbar.events.dispatchEvent(new HabboToolbarEvent(HabboToolbarEvent.HTE_GROUP_ROOM_INFO_CLICK));
             }
         }

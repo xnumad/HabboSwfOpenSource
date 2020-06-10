@@ -6,7 +6,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
 
     public class GuildInfoCtrl implements IDisposable 
@@ -57,7 +57,7 @@
 
         private function _Str_23405(k:WindowEvent):void
         {
-            this._navigator.send(new _Str_2863(this._groupId, true));
+            this._navigator.send(new GetHabboGroupDetailsMessageComposer(this._groupId, true));
         }
     }
 }

@@ -61,7 +61,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11137;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_12436;
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_11341;
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_9918;
@@ -581,7 +581,7 @@
 
         public function getGuildInfo(k:int, _arg_2:Boolean=true):void
         {
-            this._communication.connection.send(new _Str_2863(k, _arg_2));
+            this._communication.connection.send(new GetHabboGroupDetailsMessageComposer(k, _arg_2));
         }
 
         public function _Str_23169(k:String):void

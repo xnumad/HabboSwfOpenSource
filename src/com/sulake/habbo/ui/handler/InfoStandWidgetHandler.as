@@ -73,7 +73,7 @@
     import flash.utils.getTimer;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.room.ImageResult;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.ui.widget.events.RoomWidgetSongUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionUserBadgesEvent;
     import flash.events.Event;
@@ -1085,7 +1085,7 @@
             if (_local_12 != 0)
             {
                 _local_3.groupId = _local_12;
-                this.container.connection.send(new _Str_2863(_local_12, false));
+                this.container.connection.send(new GetHabboGroupDetailsMessageComposer(_local_12, false));
             }
             if (this._container.isOwnerOfFurniture(_local_4))
             {

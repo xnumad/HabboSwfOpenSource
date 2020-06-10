@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_10962;
 
@@ -810,7 +810,7 @@
                             }
                             else
                             {
-                                this._messenger.send(new _Str_2863(Math.abs(this._currentConversationId), true));
+                                this._messenger.send(new GetHabboGroupDetailsMessageComposer(Math.abs(this._currentConversationId), true));
                                 this._messenger.trackGoogle("extendedProfile", "messenger_conversation");
                             }
                             break;

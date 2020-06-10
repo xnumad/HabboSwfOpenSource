@@ -54,7 +54,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
@@ -273,7 +273,7 @@
 
         public function openGroupInfo(k:int):void
         {
-            this.send(new _Str_2863(k, true));
+            this.send(new GetHabboGroupDetailsMessageComposer(k, true));
         }
 
         public function send(k:IMessageComposer):void
@@ -351,7 +351,7 @@
             var _local_2:int = GroupDetailsChangedMessageEvent(k).groupId;
             if (((this._detailsWindowCtrl._Str_18808(_local_2)) || (this._groupRoomInfoCtrl._Str_18808(_local_2))))
             {
-                this.send(new _Str_2863(_local_2, false));
+                this.send(new GetHabboGroupDetailsMessageComposer(_local_2, false));
             }
         }
 

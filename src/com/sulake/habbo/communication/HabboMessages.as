@@ -485,7 +485,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12242;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12283;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_5697;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_6006;
@@ -1788,7 +1788,7 @@
             OUTGOING_PACKETS[2959] = _Str_11266;
             OUTGOING_PACKETS[2970] = FollowFriendMessageComposer;
             OUTGOING_PACKETS[2977] = _Str_12037;
-            OUTGOING_PACKETS[2991] = _Str_2863;
+            OUTGOING_PACKETS[2991] = GetHabboGroupDetailsMessageComposer;
             OUTGOING_PACKETS[2996] = AmbassadorAlertMessageComposer;
             OUTGOING_PACKETS[3001] = UpdateRoomFilterMessageComposer;
             OUTGOING_PACKETS[3005] = _Str_5009;

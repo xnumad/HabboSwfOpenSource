@@ -9,7 +9,7 @@
     import com.sulake.habbo.friendlist.RelationshipStatusEnum;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.users._Str_3266;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
@@ -135,7 +135,7 @@
             }
             if (this._selectedGroupId > 0)
             {
-                this._manager.send(new _Str_2863(this._selectedGroupId, false));
+                this._manager.send(new GetHabboGroupDetailsMessageComposer(this._selectedGroupId, false));
             }
             this.refresh();
             this._window.visible = true;
@@ -403,7 +403,7 @@
                 return;
             }
             this._selectedGroupId = _arg_2.id;
-            this._manager.send(new _Str_2863(this._selectedGroupId, false));
+            this._manager.send(new GetHabboGroupDetailsMessageComposer(this._selectedGroupId, false));
             this._manager.send(new EventLogMessageComposer(HabboGroupsManager.HABBOGROUPS, ("" + _arg_2.id), "select"));
             this._Str_20592();
         }
