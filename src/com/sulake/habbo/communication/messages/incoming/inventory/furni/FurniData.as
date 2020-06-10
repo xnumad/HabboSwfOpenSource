@@ -158,7 +158,7 @@
             return this._expirationTimeStamp;
         }
 
-        public function get _Str_8932():int
+        public function get creationDay():int
         {
             return 0;
         }

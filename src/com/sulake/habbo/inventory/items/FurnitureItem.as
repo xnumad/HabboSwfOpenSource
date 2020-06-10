@@ -44,7 +44,7 @@
             this._secondsToExpiration = k.secondsToExpiration;
             this._expirationTimeStamp = k._Str_10616;
             this._hasRentPeriodStarted = k.hasRentPeriodStarted;
-            this._creationDay = k._Str_8932;
+            this._creationDay = k.creationDay;
             this._creationMonth = k.creationMonth;
             this._creationYear = k.creationYear;
             this._slotId = k.slotId;
@@ -136,7 +136,7 @@
             return k;
         }
 
-        public function get _Str_8932():int
+        public function get creationDay():int
         {
             return this._creationDay;
         }
@@ -205,7 +205,7 @@
             this._secondsToExpiration = k.secondsToExpiration;
             this._expirationTimeStamp = k._Str_10616;
             this._hasRentPeriodStarted = k.hasRentPeriodStarted;
-            this._creationDay = k._Str_8932;
+            this._creationDay = k.creationDay;
             this._creationMonth = k.creationMonth;
             this._creationYear = k.creationYear;
             this._slotId = k.slotId;

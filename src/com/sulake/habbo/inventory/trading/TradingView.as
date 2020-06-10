@@ -848,7 +848,7 @@
                 if (_local_5.category == FurniCategory.ECOTRON_BOX)
                 {
                     _local_9 = (_local_5 as FurnitureItem);
-                    _local_10 = new Date(_local_9.creationYear, (_local_9.creationMonth - 1), _local_9._Str_8932);
+                    _local_10 = new Date(_local_9.creationYear, (_local_9.creationMonth - 1), _local_9.creationDay);
                     _local_8 = ((this._localization.getLocalization(("roomItem.name." + _local_5.type)) + " ") + _local_10.toLocaleDateString());
                 }
                 if (_local_5.category == FurniCategory.TRAX_SONG)
