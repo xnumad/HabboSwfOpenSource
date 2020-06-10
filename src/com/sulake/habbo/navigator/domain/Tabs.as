@@ -35,7 +35,7 @@
         public static const SEARCHTYPE_LATEST_EVENTS:int = 12;
         public static const SEARCHTYPE_GROUP_NAME_SEARCH:int = 13;
         public static const SEARCHTYPE_GUILD_BASES:int = 14;
-        public static const _Str_9891:int = 15;
+        public static const SEARCHTYPE_COMPETITION_ROOMS:int = 15;
         public static const _Str_6358:int = 16;
         public static const _Str_12070:int = 17;
         public static const _Str_12236:int = 18;

@@ -98,7 +98,7 @@
                     return "groups";
                 case Tabs.SEARCHTYPE_GUILD_BASES:
                     return "groups";
-                case Tabs._Str_9891:
+                case Tabs.SEARCHTYPE_COMPETITION_ROOMS:
                     return "competition";
                 case Tabs._Str_6358:
                     return "top_promotions";

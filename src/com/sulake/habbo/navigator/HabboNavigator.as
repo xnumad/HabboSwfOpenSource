@@ -637,7 +637,7 @@
                 return;
             }
             this._data._Str_4079 = new _Str_4374(null, k, _arg_2);
-            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs._Str_9891, "");
+            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_COMPETITION_ROOMS, "");
             this._mainViewCtrl.mainWindow.activate();
             this._mainViewCtrl._Str_6414._Str_17634.setText("");
         }

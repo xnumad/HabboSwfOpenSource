@@ -638,7 +638,7 @@
                     return new _Str_4390(("roomname:" + _arg_2));
                 case Tabs.SEARCHTYPE_GUILD_BASES:
                     return new _Str_10574(this._navigator.data._Str_6357);
-                case Tabs._Str_9891:
+                case Tabs.SEARCHTYPE_COMPETITION_ROOMS:
                     _local_3 = this._navigator.data._Str_4079;
                     return new _Str_9911(_local_3.goalId, _local_3.pageIndex);
                 case Tabs._Str_6358:
