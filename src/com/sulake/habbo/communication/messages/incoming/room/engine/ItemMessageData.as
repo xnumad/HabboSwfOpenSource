@@ -55,12 +55,12 @@
             }
         }
 
-        public function get _Str_15569():Number
+        public function get wallY():Number
         {
             return this._wallY;
         }
 
-        public function set _Str_15569(k:Number):void
+        public function set wallY(k:Number):void
         {
             if (!this._isReadOnly)
             {

@@ -67,7 +67,7 @@
                                 _local_18 = int(_local_12[0]);
                                 _local_19 = int(_local_12[1]);
                                 _local_11.wallX = _local_16;
-                                _local_11._Str_15569 = _local_17;
+                                _local_11.wallY = _local_17;
                                 _local_11.localX = _local_18;
                                 _local_11.localY = _local_19;
                                 _local_11.dir = _local_13;
