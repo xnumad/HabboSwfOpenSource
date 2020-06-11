@@ -5,11 +5,11 @@
 
     public class _Str_10287 implements IMessageComposer, IPreEncryptionMessage 
     {
-        private var _Str_11445:String;
+        private var _publicKey:String;
 
         public function _Str_10287(k:String)
         {
-            this._Str_11445 = k;
+            this._publicKey = k;
         }
 
         public function dispose():void
@@ -18,7 +18,7 @@
 
         public function getMessageArray():Array
         {
-            return [this._Str_11445];
+            return [this._publicKey];
         }
     }
 }
