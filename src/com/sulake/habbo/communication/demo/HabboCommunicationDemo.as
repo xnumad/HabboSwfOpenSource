@@ -211,7 +211,7 @@
                     if (((false) || (false)))
                     {
                         this._view = new HabboLoginDemoView(this);
-                        this._view.addEventListener(HabboLoginDemoView.INITCONNECTION, this._Str_24041);
+                        this._view.addEventListener(HabboLoginDemoView.INITCONNECTION, this.onInitConnection);
                     }
                     else
                     {
@@ -631,7 +631,7 @@
             this._logoutInProgress = true;
         }
 
-        private function _Str_24041(k:Event=null):void
+        private function onInitConnection(k:Event=null):void
         {
             this.dispatchLoginStepEvent(HabboCommunicationEvent.INIT);
             this._communication.mode = HabboConnectionType.NORMAL_MODE;
