@@ -12,7 +12,7 @@
         public static const _Str_20283:int = 3;
         public static const _Str_22132:int = 4;
         public static const _Str_19412:int = 5;
-        public static const _Str_18786:int = 10;
+        public static const STILL_BANNED:int = 10;
         public static const _Str_19302:int = 11;
         public static const _Str_19311:int = 12;
         public static const _Str_19501:int = 13;
@@ -65,7 +65,7 @@
             switch (this.reason)
             {
                 case JUST_BANNED:
-                case _Str_18786:
+                case STILL_BANNED:
                     return "banned";
                 case CONCURRENT_LOGIN:
                     return "concurrentlogin";
