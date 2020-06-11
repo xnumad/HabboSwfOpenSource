@@ -56,7 +56,7 @@
     import com.sulake.habbo.communication.messages.parser.handshake.GenericErrorParser;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9307;
+    import com.sulake.habbo.communication.messages.outgoing.handshake.PongMessageComposer;
     import com.sulake.habbo.communication.messages.parser.error.ErrorReportMessageParser;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
@@ -455,7 +455,7 @@
         {
             var _local_2:IConnection = k.connection;
             var _local_3:PingMessageEvent = (k as PingMessageEvent);
-            var _local_4:_Str_9307 = new _Str_9307();
+            var _local_4:PongMessageComposer = new PongMessageComposer();
             _local_2.send(_local_4);
         }
 

@@ -884,7 +884,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.handshake.VersionCheckMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_7957;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_8322;
-	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9307;
+	import com.sulake.habbo.communication.messages.outgoing.handshake.PongMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9636;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9939;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79.ChangePostureMessageComposer;
@@ -1731,7 +1731,7 @@
             OUTGOING_PACKETS[2587] = _Str_7731;
             OUTGOING_PACKETS[2594] = _Str_11905;
             OUTGOING_PACKETS[2595] = _Str_4038;
-            OUTGOING_PACKETS[2596] = _Str_9307;
+            OUTGOING_PACKETS[2596] = PongMessageComposer;
             OUTGOING_PACKETS[2597] = _Str_7525;
             OUTGOING_PACKETS[2624] = _Str_3365;
             OUTGOING_PACKETS[2638] = _Str_12374;
