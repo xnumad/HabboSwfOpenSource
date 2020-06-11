@@ -255,14 +255,14 @@
                             this.poolWindow(this._answerWindows[_local_2].name);
                             return;
                         }
-                        this._Str_24189(_local_3);
+                        this.handleSignWindowVisibility(_local_3);
                     }
                 }
                 _local_2++;
             }
         }
 
-        private function _Str_24189(k:IWindowContainer):void
+        private function handleSignWindowVisibility(k:IWindowContainer):void
         {
             var _local_4:Number;
             var _local_5:int;
