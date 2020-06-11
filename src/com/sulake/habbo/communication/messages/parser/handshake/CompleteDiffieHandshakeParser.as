@@ -5,7 +5,7 @@
 
     public class CompleteDiffieHandshakeParser implements IMessageParser 
     {
-        private var _Str_20319:String;
+        private var _encryptedPublicKey:String;
         private var _Str_19896:Boolean = false;
 
 
@@ -16,7 +16,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_20319 = k.readString();
+            this._encryptedPublicKey = k.readString();
             if (k.bytesAvailable)
             {
                 this._Str_19896 = k.readBoolean();
@@ -26,7 +26,7 @@
 
         public function get _Str_16514():String
         {
-            return this._Str_20319;
+            return this._encryptedPublicKey;
         }
 
         public function get _Str_17893():Boolean
