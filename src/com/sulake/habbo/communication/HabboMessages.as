@@ -886,7 +886,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.handshake.InfoRetrieveMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.PongMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.DisconnectMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9939;
+	import com.sulake.habbo.communication.messages.outgoing.handshake.InitDiffieHandshakeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79.ChangePostureMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10187;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10602;
@@ -1805,7 +1805,7 @@
             OUTGOING_PACKETS[3095] = _Str_10323;
             OUTGOING_PACKETS[31] = _Str_11384;
             OUTGOING_PACKETS[3107] = _Str_8008;
-            OUTGOING_PACKETS[3110] = _Str_9939;
+            OUTGOING_PACKETS[3110] = InitDiffieHandshakeMessageComposer;
             OUTGOING_PACKETS[3115] = CreditFurniRedeemMessageComposer;
             OUTGOING_PACKETS[312] = _Str_5612;
             OUTGOING_PACKETS[3129] = _Str_7484;
