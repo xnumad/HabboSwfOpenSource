@@ -70,7 +70,7 @@
             }
         }
 
-        public function get _Str_23157():Boolean
+        public function get useSSOTicket():Boolean
         {
             var k:ISelectableWindow = (this._window.findChildByName("useTicket") as ISelectableWindow);
             if (k != null)
@@ -370,7 +370,7 @@
             {
                 Logger.log(("Could not store developer credentials to SharedObject: " + e));
             }
-            if (this._Str_23157)
+            if (this.useSSOTicket)
             {
                 this.initSSOTicket(this.useExistingSession);
             }
