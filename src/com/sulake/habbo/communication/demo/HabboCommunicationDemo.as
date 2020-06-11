@@ -184,7 +184,7 @@
             }
             this._communication.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onGenericError));
             this._communication.addHabboConnectionMessageEvent(new PingMessageEvent(this.onPing));
-            this._communication.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this._Str_22456));
+            this._communication.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this.onAuthenticationOK));
             this._communication.addHabboConnectionMessageEvent(new ErrorReportEvent(this.onErrorReport));
             this._communication.addHabboConnectionMessageEvent(new UniqueMachineIDEvent(this.onUniqueMachineId));
             this._communication.addHabboConnectionMessageEvent(new InitDiffieHandshakeEvent(this._Str_22382));
@@ -414,7 +414,7 @@
             }
         }
 
-        private function _Str_22456(k:IMessageEvent):void
+        private function onAuthenticationOK(k:IMessageEvent):void
         {
             var _local_2:IConnection = k.connection;
             var _local_3:AuthenticationOKMessageEvent = (k as AuthenticationOKMessageEvent);
