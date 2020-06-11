@@ -19,7 +19,7 @@
         public static const STATE_QUESTION:int = 0;
         public static const STATE_RESULT:int = 1;
         private static const CONTAINER_IN_BOTTOM:Boolean = false;
-        private static var _Str_18458:int;
+        private static var _displayResultDuration:int;
 
         private var _widget:WordQuizWidget;
         private var _mainWindow:IWindowContainer;
@@ -29,7 +29,7 @@
         public function WordQuizView(k:WordQuizWidget)
         {
             this._widget = k;
-            _Str_18458 = (this._widget.handler.container.config.getInteger("poll.word.quiz.result.view.seconds", 4) * 1000);
+            _displayResultDuration = (this._widget.handler.container.config.getInteger("poll.word.quiz.result.view.seconds", 4) * 1000);
             if (CONTAINER_IN_BOTTOM)
             {
                 this._mainWindow = (this._widget.windowManager.createWindow("wordquiz_container", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, (WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN), new Rectangle(0, 0, 2, 2), null, 0, 2) as IWindowContainer);
@@ -187,7 +187,7 @@
         {
             this.createWindow(WordQuizView.STATE_RESULT);
             this._Str_19343(k);
-            this._Str_3891 = new Timer(_Str_18458);
+            this._Str_3891 = new Timer(_displayResultDuration);
             this._Str_3891.addEventListener(TimerEvent.TIMER, this._Str_12609);
             this._Str_3891.start();
         }
