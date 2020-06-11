@@ -89,7 +89,7 @@
             k.events.addEventListener(Event.UNLOAD, this.unloading);
         }
 
-        private static function _Str_20552():String
+        private static function generateFingerprint():String
         {
             var userAgent:String;
             var plugins:String;
@@ -407,7 +407,7 @@
             {
             }
             var _local_3:Array = Capabilities.version.split(" ");
-            k.send(new _Str_10368(_local_2, _Str_20552(), _local_3.join("/")));
+            k.send(new _Str_10368(_local_2, generateFingerprint(), _local_3.join("/")));
             if (((this._ssoTicket) && (this._ssoTicket.length > 0)))
             {
                 k.send(new _Str_7957(this._ssoTicket));
