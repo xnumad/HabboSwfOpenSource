@@ -109,7 +109,7 @@
             _local_4 = this._mainWindow.findChildByName("button_dislike");
             if (_local_4)
             {
-                _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_24275);
+                _local_4.addEventListener(WindowMouseEvent.CLICK, this.onDislike);
             }
             if (_arg_2 != null)
             {
@@ -202,7 +202,7 @@
             this._widget.sendAnswer(1);
         }
 
-        private function _Str_24275(k:WindowMouseEvent):void
+        private function onDislike(k:WindowMouseEvent):void
         {
             this._widget.sendAnswer(0);
         }
