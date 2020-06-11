@@ -194,7 +194,7 @@
             this._host = _local_6;
         }
 
-        public function _Str_23491():void
+        public function renewSocket():void
         {
             if (this._dummyTimer)
             {

@@ -15,7 +15,7 @@
         function get port():int;
         function updateHostParameters():void;
         function initConnection(_arg_1:String):void;
-        function _Str_23491():void;
+        function renewSocket():void;
         function addHabboConnectionMessageEvent(_arg_1:IMessageEvent):IMessageEvent;
         function removeHabboConnectionMessageEvent(_arg_1:IMessageEvent):void;
         function habboWebLogin(_arg_1:String, _arg_2:String):IHabboWebLogin;
