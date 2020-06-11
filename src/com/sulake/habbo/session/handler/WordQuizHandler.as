@@ -8,7 +8,7 @@
     import com.sulake.habbo.session.events.RoomSessionWordQuizEvent;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.communication.messages.parser.poll.QuestionParser;
-    import com.sulake.habbo.communication.messages.parser.poll._Str_7466;
+    import com.sulake.habbo.communication.messages.parser.poll.QuestionAnsweredParser;
     import com.sulake.habbo.communication.messages.parser.poll.SimplePollResultsMessageParser;
 
     public class WordQuizHandler extends BaseHandler 
@@ -59,7 +59,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7466 = k.getParser();
+            var _local_3:QuestionAnsweredParser = k.getParser();
             _local_4 = new RoomSessionWordQuizEvent(RoomSessionWordQuizEvent.RWPUW_QUESTION_ANSWERED, _local_2, _local_3.userId);
             _local_4.value = _local_3.value;
             _local_4.userId = _local_3.userId;
