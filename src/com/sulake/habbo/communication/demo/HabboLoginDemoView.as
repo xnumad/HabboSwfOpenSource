@@ -109,7 +109,7 @@
             var _local_3:ITextFieldWindow = (this._window.findChildByName("pwd_field") as ITextFieldWindow);
             if (k != null)
             {
-                k.addEventListener(WindowMouseEvent.CLICK, this._Str_15685);
+                k.addEventListener(WindowMouseEvent.CLICK, this.windowEventProcessor);
             }
             else
             {
@@ -126,7 +126,7 @@
                 }
                 _local_2.focus();
                 _local_2.setSelection(_local_2.text.length, _local_2.text.length);
-                _local_2.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this._Str_15685);
+                _local_2.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this.windowEventProcessor);
             }
             if (_local_3 != null)
             {
@@ -136,7 +136,7 @@
                 {
                     _local_3.text = _local_4.data.password;
                 }
-                _local_3.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this._Str_15685);
+                _local_3.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this.windowEventProcessor);
             }
             var _local_5:ISelectableWindow = (this._window.findChildByName("useTicket") as ISelectableWindow);
             if (_local_5)
@@ -155,7 +155,7 @@
             {
                 this._firstTryUsingExistingSession = true;
                 this._window.visible = false;
-                this._Str_15685(WindowEvent.allocate(WindowEvent.WINDOW_EVENT_OK, this._window, null, false));
+                this.windowEventProcessor(WindowEvent.allocate(WindowEvent.WINDOW_EVENT_OK, this._window, null, false));
             }
             var _local_7:IItemListWindow = (this._window.findChildByName("list") as IItemListWindow);
             this._userListItem = _local_7.removeListItemAt(0);
@@ -338,7 +338,7 @@
             }
         }
 
-        private function _Str_15685(event:WindowEvent=null, window:IWindow=null):void
+        private function windowEventProcessor(event:WindowEvent=null, window:IWindow=null):void
         {
             var so:SharedObject;
             if (event.type == WindowKeyboardEvent.WINDOW_EVENT_KEY_UP)
