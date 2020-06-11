@@ -183,11 +183,11 @@
                 this._environmentList.selection = _local_9.indexOf(_local_10);
                 this._environmentList.procedure = this.dropMenuEventHandler;
                 this._testEnvironmentIndex = -1;
-                this._Str_25164(false);
+                this.testEnvironmentAvailable(false);
             }
         }
 
-        private function _Str_25164(k:Boolean):void
+        private function testEnvironmentAvailable(k:Boolean):void
         {
         }
 
