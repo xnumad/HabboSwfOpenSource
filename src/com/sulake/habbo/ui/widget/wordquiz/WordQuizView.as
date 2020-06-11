@@ -183,7 +183,7 @@
             }
         }
 
-        public function _Str_21186(k:Map):void
+        public function displayResults(k:Map):void
         {
             this.createWindow(WordQuizView.STATE_RESULT);
             this.updateResults(k);

@@ -292,7 +292,7 @@
             _local_3.dispose();
         }
 
-        public function _Str_21186(k:String):void
+        public function displayResults(k:String):void
         {
             var _local_2:ITextWindow = (this._window.findChildByName("text002") as ITextWindow);
             if (_local_2 != null)

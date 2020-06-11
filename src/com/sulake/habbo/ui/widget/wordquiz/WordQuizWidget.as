@@ -166,7 +166,7 @@
             this.clearTimers();
             if ((((this._view) && (this._question)) && (this._question.id == k.questionId)))
             {
-                this._view._Str_21186(k._Str_4036);
+                this._view.displayResults(k._Str_4036);
             }
             var _local_2:int;
             while (_local_2 < this._answerWindows.length)
