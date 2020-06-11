@@ -218,7 +218,7 @@
             if (!this._moveTimer)
             {
                 this._moveTimer = new Timer(UPDATE_FREQUENCY);
-                this._moveTimer.addEventListener(TimerEvent.TIMER, this._Str_19365);
+                this._moveTimer.addEventListener(TimerEvent.TIMER, this.onLocationTimer);
                 this._moveTimer.start();
             }
             var _local_9:IBorderWindow = (_local_7.getChildByName("colored") as IBorderWindow);
@@ -228,7 +228,7 @@
             }
         }
 
-        private function _Str_19365(k:TimerEvent):void
+        private function onLocationTimer(k:TimerEvent):void
         {
             var _local_3:IWindowContainer;
             var _local_4:Array;
@@ -354,7 +354,7 @@
                 this._countdownDownTimer.addEventListener(TimerEvent.TIMER, this._Str_22603);
                 this._countdownDownTimer.start();
                 this._moveTimer = new Timer(UPDATE_FREQUENCY);
-                this._moveTimer.addEventListener(TimerEvent.TIMER, this._Str_19365);
+                this._moveTimer.addEventListener(TimerEvent.TIMER, this.onLocationTimer);
                 this._moveTimer.start();
                 this._view._Str_6423(String(this._countdown));
             }
