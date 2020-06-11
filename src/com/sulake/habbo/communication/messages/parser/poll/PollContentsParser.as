@@ -7,7 +7,7 @@
     {
         private var _id:int = -1;
         private var _Str_5879:String = "";
-        private var _Str_4781:String = "";
+        private var _endMessage:String = "";
         private var _numQuestions:int = 0;
         private var _Str_5432:Array = null;
         private var _Str_4353:Boolean = false;
@@ -25,7 +25,7 @@
 
         public function get _Str_5838():String
         {
-            return this._Str_4781;
+            return this._endMessage;
         }
 
         public function get numQuestions():int
@@ -47,7 +47,7 @@
         {
             this._id = -1;
             this._Str_5879 = "";
-            this._Str_4781 = "";
+            this._endMessage = "";
             this._numQuestions = 0;
             this._Str_5432 = null;
             return true;
@@ -60,7 +60,7 @@
             var _local_5:int;
             this._id = k.readInteger();
             this._Str_5879 = k.readString();
-            this._Str_4781 = k.readString();
+            this._endMessage = k.readString();
             this._numQuestions = k.readInteger();
             this._Str_5432 = new Array();
             var _local_2:int;

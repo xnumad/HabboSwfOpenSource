@@ -10,7 +10,7 @@
         private var _roomPollWidget:RoomPollWidget;
         private var _pollDialog:IPollDialog;
         private var _pollContentDialog:IPollDialog;
-        private var _Str_4781:String = "";
+        private var _endMessage:String = "";
         private var _disposed:Boolean = false;
 
         public function PollSession(k:int, _arg_2:RoomPollWidget)
@@ -73,7 +73,7 @@
         {
             this._Str_22133();
             this._Str_25482();
-            this._Str_4781 = _arg_2;
+            this._endMessage = _arg_2;
             this._pollContentDialog = new PollContentDialog(this._id, k, _arg_3, this._roomPollWidget, _arg_4);
             this._pollContentDialog.start();
         }
@@ -92,7 +92,7 @@
 
         public function _Str_24541():void
         {
-            this._roomPollWidget.windowManager.alert("${poll_thanks_title}", this._Str_4781, 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
+            this._roomPollWidget.windowManager.alert("${poll_thanks_title}", this._endMessage, 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
             });
