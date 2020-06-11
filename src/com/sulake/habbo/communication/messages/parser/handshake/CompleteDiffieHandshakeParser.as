@@ -6,7 +6,7 @@
     public class CompleteDiffieHandshakeParser implements IMessageParser 
     {
         private var _encryptedPublicKey:String;
-        private var _Str_19896:Boolean = false;
+        private var _serverClientEncryption:Boolean = false;
 
 
         public function flush():Boolean
@@ -19,7 +19,7 @@
             this._encryptedPublicKey = k.readString();
             if (k.bytesAvailable)
             {
-                this._Str_19896 = k.readBoolean();
+                this._serverClientEncryption = k.readBoolean();
             }
             return true;
         }
@@ -31,7 +31,7 @@
 
         public function get _Str_17893():Boolean
         {
-            return this._Str_19896;
+            return this._serverClientEncryption;
         }
     }
 }
