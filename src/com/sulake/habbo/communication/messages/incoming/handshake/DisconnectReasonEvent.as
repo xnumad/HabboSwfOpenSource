@@ -20,7 +20,7 @@
         public static const _Str_21228:int = 17;
         public static const _Str_19828:int = 18;
         public static const _Str_21797:int = 19;
-        public static const _Str_18184:int = 20;
+        public static const INCORRECT_PASSWORD:int = 20;
         public static const _Str_20306:int = 22;
         public static const _Str_21693:int = 23;
         public static const _Str_19587:int = 24;
@@ -69,7 +69,7 @@
                     return "banned";
                 case CONCURRENT_LOGIN:
                     return "concurrentlogin";
-                case _Str_18184:
+                case INCORRECT_PASSWORD:
                     return "incorrectpassword";
                 default:
                     return "logout";
