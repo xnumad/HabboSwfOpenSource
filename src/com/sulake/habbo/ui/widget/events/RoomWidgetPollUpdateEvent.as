@@ -1,47 +1,110 @@
-package com.sulake.habbo.ui.widget.events 
+﻿package com.sulake.habbo.ui.widget.events
 {
-	public class RoomWidgetPollUpdateEvent extends RoomWidgetUpdateEvent
-	{
-		
-		public static const VOTE_QUESTION:String = "RWPUE_VOTE_QUESTION"; //_SafeStr_4171
-        public static const VOTE_RESULT:String = "RWPUE_VOTE_RESULT"; //_SafeStr_4172
+    public class RoomWidgetPollUpdateEvent extends RoomWidgetUpdateEvent
+    {
+        public static const RWPUW_OFFER:String = "RWPUW_OFFER";
+        public static const ERROR:String = "RWPUW_ERROR";
+        public static const RWPUW_CONTENT:String = "RWPUW_CONTENT";
 
-        private var _question:String;
-        private var _choices:Array;
-        private var _SafeStr_7651:Array;
-        private var _SafeStr_7654:int;
+        private var _id:int = -1;
+        private var _summary:String;
+        private var _headline:String;
+        private var _numQuestions:int = 0;
+        private var _Str_5879:String = "";
+        private var _endMessage:String = "";
+        private var _Str_5432:Array = null;
+        private var _pollType:String = "";
+        private var _Str_4353:Boolean = false;
 
-        public function RoomWidgetPollUpdateEvent(_arg_1:String, _arg_2:String, _arg_3:Array, _arg_4:Array=null, _arg_5:int=0, _arg_6:Boolean=false, _arg_7:Boolean=false)
+        public function RoomWidgetPollUpdateEvent(k:int, _arg_2:String, _arg_3:Boolean=false, _arg_4:Boolean=false)
         {
-            super(_arg_1, _arg_6, _arg_7);
-            this._question = _arg_2;
-            this._choices = _arg_3;
-            this._SafeStr_7651 = _arg_4;
-            if (this._SafeStr_7651 == null)
-            {
-                this._SafeStr_7651 = [];
-            }
-            this._SafeStr_7654 = _arg_5;
+            this._id = k;
+            super(_arg_2, _arg_3, _arg_4);
         }
 
-        public function get question():String
+        public function get id():int
         {
-            return this._question;
+            return this._id;
         }
 
-        public function get choices():Array
+        public function get summary():String
         {
-            return this._choices.slice();
+            return this._summary;
         }
 
-        public function get _SafeStr_4173():Array
+        public function set summary(k:String):void
         {
-            return (this._SafeStr_7651.slice()); //Results?
+            this._summary = k;
         }
 
-        public function get _SafeStr_4174():int
+        public function get headline():String
         {
-            return (this._SafeStr_7654); //Timer?
+            return this._headline;
         }
-	}
+
+        public function set headline(k:String):void
+        {
+            this._headline = k;
+        }
+
+        public function get numQuestions():int
+        {
+            return this._numQuestions;
+        }
+
+        public function set numQuestions(k:int):void
+        {
+            this._numQuestions = k;
+        }
+
+        public function get _Str_6013():String
+        {
+            return this._Str_5879;
+        }
+
+        public function set _Str_6013(k:String):void
+        {
+            this._Str_5879 = k;
+        }
+
+        public function get _Str_5838():String
+        {
+            return this._endMessage;
+        }
+
+        public function set _Str_5838(k:String):void
+        {
+            this._endMessage = k;
+        }
+
+        public function get _Str_5643():Array
+        {
+            return this._Str_5432;
+        }
+
+        public function set _Str_5643(k:Array):void
+        {
+            this._Str_5432 = k;
+        }
+
+        public function get pollType():String
+        {
+            return this._pollType;
+        }
+
+        public function set pollType(k:String):void
+        {
+            this._pollType = k;
+        }
+
+        public function get _Str_6196():Boolean
+        {
+            return this._Str_4353;
+        }
+
+        public function set _Str_6196(k:Boolean):void
+        {
+            this._Str_4353 = k;
+        }
+    }
 }

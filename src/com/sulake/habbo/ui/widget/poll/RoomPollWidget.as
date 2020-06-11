@@ -6,7 +6,7 @@
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
-    import com.sulake.habbo.ui.widget.events._Str_2888;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetPollUpdateEvent;
     import flash.events.IEventDispatcher;
     import flash.events.Event;
     import com.sulake.habbo.window.utils.IAlertDialog;
@@ -56,9 +56,9 @@
             {
                 return;
             }
-            k.addEventListener(_Str_2888.RWPUW_OFFER, this._Str_21632);
-            k.addEventListener(_Str_2888.ERROR, this._Str_21733);
-            k.addEventListener(_Str_2888.RWPUW_CONTENT, this._Str_21584);
+            k.addEventListener(RoomWidgetPollUpdateEvent.RWPUW_OFFER, this._Str_21632);
+            k.addEventListener(RoomWidgetPollUpdateEvent.ERROR, this._Str_21733);
+            k.addEventListener(RoomWidgetPollUpdateEvent.RWPUW_CONTENT, this._Str_21584);
             super.registerUpdateEvents(k);
         }
 
@@ -68,17 +68,17 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_2888.RWPUW_OFFER, this._Str_21632);
-            k.removeEventListener(_Str_2888.ERROR, this._Str_21733);
-            k.removeEventListener(_Str_2888.RWPUW_CONTENT, this._Str_21584);
+            k.removeEventListener(RoomWidgetPollUpdateEvent.RWPUW_OFFER, this._Str_21632);
+            k.removeEventListener(RoomWidgetPollUpdateEvent.ERROR, this._Str_21733);
+            k.removeEventListener(RoomWidgetPollUpdateEvent.RWPUW_CONTENT, this._Str_21584);
         }
 
         private function _Str_21632(k:Event):void
         {
-            var _local_2:int = _Str_2888(k).id;
+            var _local_2:int = RoomWidgetPollUpdateEvent(k).id;
             var _local_3:PollSession = (this._Str_4484.getValue(_local_2) as PollSession);
-            var _local_4:String = _Str_2888(k).summary;
-            var _local_5:String = _Str_2888(k).headline;
+            var _local_4:String = RoomWidgetPollUpdateEvent(k).summary;
+            var _local_5:String = RoomWidgetPollUpdateEvent(k).headline;
             if (!_local_3)
             {
                 _local_3 = new PollSession(_local_2, this);
@@ -94,7 +94,7 @@
 
         private function _Str_21733(e:Event):void
         {
-            windowManager.alert("${win_error}", _Str_2888(e).summary, 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
+            windowManager.alert("${win_error}", RoomWidgetPollUpdateEvent(e).summary, 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
             });
@@ -104,7 +104,7 @@
         {
             var _local_3:int;
             var _local_4:PollSession;
-            var _local_2:_Str_2888 = (k as _Str_2888);
+            var _local_2:RoomWidgetPollUpdateEvent = (k as RoomWidgetPollUpdateEvent);
             if (_local_2 != null)
             {
                 _local_3 = _local_2.id;

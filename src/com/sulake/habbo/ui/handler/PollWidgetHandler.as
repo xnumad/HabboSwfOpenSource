@@ -7,7 +7,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionPollEvent;
-    import com.sulake.habbo.ui.widget.events._Str_2888;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetPollUpdateEvent;
     import flash.events.Event;
 
     public class PollWidgetHandler implements IRoomWidgetHandler 
@@ -75,7 +75,7 @@
 
         public function processEvent(k:Event):void
         {
-            var _local_3:_Str_2888;
+            var _local_3:RoomWidgetPollUpdateEvent;
             if (((this._container == null) || (this._container.events == null)))
             {
                 return;
@@ -88,17 +88,17 @@
             switch (k.type)
             {
                 case RoomSessionPollEvent.RSPE_POLL_OFFER:
-                    _local_3 = new _Str_2888(_local_2.id, _Str_2888.RWPUW_OFFER);
+                    _local_3 = new RoomWidgetPollUpdateEvent(_local_2.id, RoomWidgetPollUpdateEvent.RWPUW_OFFER);
                     _local_3.summary = _local_2.summary;
                     _local_3.headline = _local_2.headline;
                     break;
                 case RoomSessionPollEvent.ERROR:
-                    _local_3 = new _Str_2888(_local_2.id, _Str_2888.ERROR);
+                    _local_3 = new RoomWidgetPollUpdateEvent(_local_2.id, RoomWidgetPollUpdateEvent.ERROR);
                     _local_3.summary = _local_2.summary;
                     _local_3.headline = _local_2.headline;
                     break;
                 case RoomSessionPollEvent.RSPE_POLL_CONTENT:
-                    _local_3 = new _Str_2888(_local_2.id, _Str_2888.RWPUW_CONTENT);
+                    _local_3 = new RoomWidgetPollUpdateEvent(_local_2.id, RoomWidgetPollUpdateEvent.RWPUW_CONTENT);
                     _local_3._Str_6013 = _local_2._Str_6013;
                     _local_3._Str_5838 = _local_2._Str_5838;
                     _local_3.numQuestions = _local_2.numQuestions;

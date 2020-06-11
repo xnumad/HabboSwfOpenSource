@@ -1,6 +1,6 @@
 package com.sulake.habbo.ui.widget.infobuspolls 
 {
-	import com.sulake.habbo.ui.widget.events.RoomWidgetPollUpdateEvent;
+	import com.sulake.habbo.ui.widget.events.RoomWidgetVoteUpdateEvent;
 	import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
 	import com.sulake.habbo.ui.IRoomWidgetHandler;
 	import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
@@ -70,7 +70,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
 
         public function processEvent(_arg_1:Event):void
         {
-            var _local_3:RoomWidgetPollUpdateEvent;
+            var _local_3:RoomWidgetVoteUpdateEvent;
             if (((this._container == null) || (this._container.events == null)))
             {
                 return;
@@ -83,10 +83,10 @@ package com.sulake.habbo.ui.widget.infobuspolls
             switch (_arg_1.type)
             {
                 case RoomSessionVoteEvent.VOTE_QUESTION:
-                    _local_3 = new RoomWidgetPollUpdateEvent(RoomWidgetPollUpdateEvent.VOTE_QUESTION, _local_2.question, _local_2.choices);
+                    _local_3 = new RoomWidgetVoteUpdateEvent(RoomWidgetVoteUpdateEvent.VOTE_QUESTION, _local_2.question, _local_2.choices);
                     break;
                 case RoomSessionVoteEvent.VOTE_RESULT:
-                    _local_3 = new RoomWidgetPollUpdateEvent(RoomWidgetPollUpdateEvent.VOTE_RESULT, _local_2.question, _local_2.choices, _local_2._SafeStr_4173, _local_2._SafeStr_4174);
+                    _local_3 = new RoomWidgetVoteUpdateEvent(RoomWidgetVoteUpdateEvent.VOTE_RESULT, _local_2.question, _local_2.choices, _local_2._SafeStr_4173, _local_2._SafeStr_4174);
                     break;
             }
             if (_local_3 == null)

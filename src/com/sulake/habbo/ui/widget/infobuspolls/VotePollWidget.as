@@ -21,7 +21,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
 	import flash.geom.Rectangle;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
-	import com.sulake.habbo.ui.widget.events.RoomWidgetPollUpdateEvent;
+	import com.sulake.habbo.ui.widget.events.RoomWidgetVoteUpdateEvent;
 	import com.sulake.habbo.ui.IRoomWidgetHandler;
 	import com.sulake.core.window.IWindow;
 	import flash.geom.Point;
@@ -62,8 +62,8 @@ package com.sulake.habbo.ui.widget.infobuspolls
             {
                 return;
             }
-            eventDispatcher.addEventListener(RoomWidgetPollUpdateEvent.VOTE_QUESTION, this.voteQuestionHandler);
-            eventDispatcher.addEventListener(RoomWidgetPollUpdateEvent.VOTE_RESULT, this.voteResultHandler);
+            eventDispatcher.addEventListener(RoomWidgetVoteUpdateEvent.VOTE_QUESTION, this.voteQuestionHandler);
+            eventDispatcher.addEventListener(RoomWidgetVoteUpdateEvent.VOTE_RESULT, this.voteResultHandler);
             super.registerUpdateEvents(eventDispatcher);
         }
 
@@ -73,11 +73,11 @@ package com.sulake.habbo.ui.widget.infobuspolls
             {
                 return;
             }
-            eventDispatcher.removeEventListener(RoomWidgetPollUpdateEvent.VOTE_QUESTION, this.voteQuestionHandler);
-            eventDispatcher.removeEventListener(RoomWidgetPollUpdateEvent.VOTE_RESULT, this.voteResultHandler);
+            eventDispatcher.removeEventListener(RoomWidgetVoteUpdateEvent.VOTE_QUESTION, this.voteQuestionHandler);
+            eventDispatcher.removeEventListener(RoomWidgetVoteUpdateEvent.VOTE_RESULT, this.voteResultHandler);
         }
 
-        private function voteQuestionHandler(updateEvent:RoomWidgetPollUpdateEvent):void
+        private function voteQuestionHandler(updateEvent:RoomWidgetVoteUpdateEvent):void
         {
             var _local_6:IWindow;
             var _local_12:Point;
@@ -320,7 +320,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
             this._SafeStr_13957();
         }
 
-        private function voteResultHandler(_arg_1:RoomWidgetPollUpdateEvent):void
+        private function voteResultHandler(_arg_1:RoomWidgetVoteUpdateEvent):void
         {
             var _local_2:IWindow;
             var _local_4:IWindowContainer;
