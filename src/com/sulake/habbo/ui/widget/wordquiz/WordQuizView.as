@@ -23,7 +23,7 @@
 
         private var _widget:WordQuizWidget;
         private var _mainWindow:IWindowContainer;
-        private var _Str_3891:Timer;
+        private var _waitTimer:Timer;
         private var _Str_17234:String;
 
         public function WordQuizView(k:WordQuizWidget)
@@ -138,10 +138,10 @@
                 this._mainWindow.dispose();
                 this._mainWindow = null;
             }
-            if (this._Str_3891)
+            if (this._waitTimer)
             {
-                this._Str_3891.reset();
-                this._Str_3891 = null;
+                this._waitTimer.reset();
+                this._waitTimer = null;
             }
         }
 
@@ -187,9 +187,9 @@
         {
             this.createWindow(WordQuizView.STATE_RESULT);
             this._Str_19343(k);
-            this._Str_3891 = new Timer(_displayResultDuration);
-            this._Str_3891.addEventListener(TimerEvent.TIMER, this._Str_12609);
-            this._Str_3891.start();
+            this._waitTimer = new Timer(_displayResultDuration);
+            this._waitTimer.addEventListener(TimerEvent.TIMER, this._Str_12609);
+            this._waitTimer.start();
         }
 
         private function _Str_12609(k:TimerEvent):void
