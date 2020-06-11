@@ -269,7 +269,7 @@
             event.stopImmediatePropagation();
         }
 
-        public function _Str_13771(k:Map):void
+        public function populateUserList(k:Map):void
         {
             var _local_4:IWindow;
             var _local_2:IItemListWindow = (this._window.findChildByName("list") as IItemListWindow);

@@ -497,7 +497,7 @@
             {
                 if (this._view)
                 {
-                    this._view._Str_13771(k.getParser()._Str_20644);
+                    this._view.populateUserList(k.getParser()._Str_20644);
                 }
             }
         }

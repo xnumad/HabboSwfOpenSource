@@ -311,7 +311,7 @@
                     this._Str_13189(false, false);
                     return;
                 case HabboHelp._Str_15144:
-                    this._Str_13771();
+                    this.populateUserList();
                     return;
             }
         }
@@ -339,7 +339,7 @@
             }
             if (k)
             {
-                this._Str_13771();
+                this.populateUserList();
             }
             if (!_local_5)
             {
@@ -347,7 +347,7 @@
             }
         }
 
-        private function _Str_13771():void
+        private function populateUserList():void
         {
             var _local_4:UserRegistryItem;
             var _local_5:IWindowContainer;
