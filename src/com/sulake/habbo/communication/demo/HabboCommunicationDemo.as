@@ -302,7 +302,7 @@
             var _local_3:InitDiffieHandshakeEvent = (k as InitDiffieHandshakeEvent);
             var _local_4:ByteArray = new ByteArray();
             var _local_5:ByteArray = new ByteArray();
-            _local_4.writeBytes(CryptoTools.hexStringToByteArray(_local_3._Str_16332));
+            _local_4.writeBytes(CryptoTools.hexStringToByteArray(_local_3.encryptedPrime));
             _local_5.writeBytes(CryptoTools.hexStringToByteArray(_local_3._Str_16524));
             var _local_6:ByteArray = new ByteArray();
             var _local_7:ByteArray = new ByteArray();

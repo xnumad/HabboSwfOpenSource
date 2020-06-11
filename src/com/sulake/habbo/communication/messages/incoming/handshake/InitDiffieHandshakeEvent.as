@@ -11,9 +11,9 @@
             super(k, InitDiffieHandshakeParser);
         }
 
-        public function get _Str_16332():String
+        public function get encryptedPrime():String
         {
-            return (this._parser as InitDiffieHandshakeParser)._Str_16332;
+            return (this._parser as InitDiffieHandshakeParser).encryptedPrime;
         }
 
         public function get _Str_16524():String

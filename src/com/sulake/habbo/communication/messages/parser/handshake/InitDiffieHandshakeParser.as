@@ -21,7 +21,7 @@
             return true;
         }
 
-        public function get _Str_16332():String
+        public function get encryptedPrime():String
         {
             return this._Str_21611;
         }
