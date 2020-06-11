@@ -7,7 +7,7 @@
     public class DisconnectReasonEvent extends MessageEvent implements IMessageEvent 
     {
         public static const _Str_21403:int = 0;
-        public static const _Str_18158:int = 1;
+        public static const JUST_BANNED:int = 1;
         public static const _Str_18496:int = 2;
         public static const _Str_20283:int = 3;
         public static const _Str_22132:int = 4;
@@ -64,7 +64,7 @@
         {
             switch (this.reason)
             {
-                case _Str_18158:
+                case JUST_BANNED:
                 case _Str_18786:
                     return "banned";
                 case _Str_18496:
