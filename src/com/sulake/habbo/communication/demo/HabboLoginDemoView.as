@@ -372,7 +372,7 @@
             }
             if (this._Str_23157)
             {
-                this._Str_23540(this.useExistingSession);
+                this.initSSOTicket(this.useExistingSession);
             }
             else
             {
@@ -390,7 +390,7 @@
             this._habboLogin.sendTryLogin(this.name, this.password, _arg_2.id);
         }
 
-        private function _Str_23540(k:Boolean):void
+        private function initSSOTicket(k:Boolean):void
         {
             if (this._parsedTicket != null)
             {
