@@ -181,7 +181,7 @@
                     this._environmentList.addMenuItem(_local_15);
                 }
                 this._environmentList.selection = _local_9.indexOf(_local_10);
-                this._environmentList.procedure = this._Str_25559;
+                this._environmentList.procedure = this.dropMenuEventHandler;
                 this._testEnvironmentIndex = -1;
                 this._Str_25164(false);
             }
@@ -211,7 +211,7 @@
             return _local_2;
         }
 
-        private function _Str_25559(event:WindowEvent, target:IWindow):void
+        private function dropMenuEventHandler(event:WindowEvent, target:IWindow):void
         {
             var so:SharedObject;
             var originalKeys:Array;
