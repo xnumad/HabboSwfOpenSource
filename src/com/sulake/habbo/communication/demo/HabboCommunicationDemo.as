@@ -179,7 +179,7 @@
             var k:IConnection = this._communication.connection;
             if (k != null)
             {
-                k.addEventListener(Event.CONNECT, this._Str_25793);
+                k.addEventListener(Event.CONNECT, this.onConnectionEstablished);
                 k.addEventListener(Event.CLOSE, this.onConnectionDisconnected);
             }
             this._communication.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onGenericError));
@@ -281,7 +281,7 @@
             return window;
         }
 
-        private function _Str_25793(k:Event=null):void
+        private function onConnectionEstablished(k:Event=null):void
         {
             var _local_2:IConnection = this._communication.connection;
             if (_local_2 != null)
