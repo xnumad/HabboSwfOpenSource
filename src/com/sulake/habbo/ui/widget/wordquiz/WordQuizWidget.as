@@ -343,7 +343,7 @@
             {
                 return;
             }
-            this._view.createWindow(WordQuizView._Str_10936, k.content);
+            this._view.createWindow(WordQuizView.STATE_QUESTION, k.content);
             this._textIndex++;
             this._countdown = 4;
             this._currentQuestionId = k.id;

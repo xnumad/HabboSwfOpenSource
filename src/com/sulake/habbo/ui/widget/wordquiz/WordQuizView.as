@@ -16,7 +16,7 @@
 
     public class WordQuizView 
     {
-        public static const _Str_10936:int = 0;
+        public static const STATE_QUESTION:int = 0;
         public static const _Str_14885:int = 1;
         private static const _Str_12004:Boolean = false;
         private static var _Str_18458:int;
@@ -57,7 +57,7 @@
         {
             var _local_3:String;
             var _local_4:IWindowContainer;
-            if (k == _Str_10936)
+            if (k == STATE_QUESTION)
             {
                 _local_3 = "wordquiz_question_xml";
             }
@@ -81,7 +81,7 @@
         {
             var _local_3:String;
             this.removeWindow();
-            if (k == _Str_10936)
+            if (k == STATE_QUESTION)
             {
                 _local_3 = "wordquiz_question_xml";
             }
