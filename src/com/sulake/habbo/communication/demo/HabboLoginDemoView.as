@@ -420,7 +420,7 @@
                 this._habboLogin.setProperty("facebook.user", "1");
             }
             this._habboLogin.flashClientUrl = this._parsedTicket.flashClientUrl;
-            this._habboLogin._Str_25272 = this._parsedTicket.ticket;
+            this._habboLogin.setSSOTicket = this._parsedTicket.ticket;
             this._parsedTicket.removeEventListener(SSOTicket.SUCCESS, this._Str_14732);
             this._parsedTicket.removeEventListener(SSOTicket.FAILURE, this._Str_15342);
             this._parsedTicket = null;

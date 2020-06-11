@@ -164,7 +164,7 @@
             return this._windowManager;
         }
 
-        public function set _Str_25272(k:String):void
+        public function set setSSOTicket(k:String):void
         {
             this._ssoTicket = k;
         }
