@@ -40,7 +40,7 @@
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.habbo.communication.enum.HabboCommunicationEvent;
-    import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10198;
+    import com.sulake.habbo.communication.messages.outgoing.handshake.ClientHelloMessageComposer;
     import com.sulake.core.communication.encryption.CryptoTools;
     import com.sulake.habbo.communication.demo.utils.KeyObfuscator;
     import com.hurlant.math.BigInteger;
@@ -290,7 +290,7 @@
                 this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_ESTABLISHED);
                 this._handshakeInProgress = true;
                 this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKING);
-                _local_2.sendUnencrypted(new _Str_10198());
+                _local_2.sendUnencrypted(new ClientHelloMessageComposer());
                 // this.sendConnectionParameters(_local_2);
             }
         }

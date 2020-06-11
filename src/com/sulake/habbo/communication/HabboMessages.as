@@ -878,7 +878,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7484;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_9786;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.*;
-	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10198;
+	import com.sulake.habbo.communication.messages.outgoing.handshake.ClientHelloMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.CompleteDiffieHandshakeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10368;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_11513;
@@ -1924,7 +1924,7 @@
             OUTGOING_PACKETS[398] = _Str_11776;
             OUTGOING_PACKETS[3991] = _Str_9806;
             OUTGOING_PACKETS[3997] = _Str_4348;
-            OUTGOING_PACKETS[4000] = _Str_10198;
+            OUTGOING_PACKETS[4000] = ClientHelloMessageComposer;
             OUTGOING_PACKETS[410] = _Str_9801;
             OUTGOING_PACKETS[412] = RequestCatalogPage;
             OUTGOING_PACKETS[418] = _Str_12034;

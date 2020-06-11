@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.enum.ClientPlatform;
     import com.sulake.habbo.communication.enum.ClientDeviceCategory;
 
-    public class _Str_10198 implements IMessageComposer, IPreEncryptionMessage 
+    public class ClientHelloMessageComposer implements IMessageComposer, IPreEncryptionMessage
     {
         private var _Str_24809:String = "FLASH";
 
