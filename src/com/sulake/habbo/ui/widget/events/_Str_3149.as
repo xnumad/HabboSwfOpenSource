@@ -12,7 +12,7 @@
         private var _id:int = -1;
         private var _Str_5702:String = null;
         private var _pollId:int = -1;
-        private var _Str_3128:int = -1;
+        private var _questionId:int = -1;
         private var _duration:int = -1;
         private var _question:Dictionary = null;
         private var _userId:int = -1;
@@ -52,12 +52,12 @@
 
         public function get _Str_3218():int
         {
-            return this._Str_3128;
+            return this._questionId;
         }
 
         public function set _Str_3218(k:int):void
         {
-            this._Str_3128 = k;
+            this._questionId = k;
         }
 
         public function get duration():int
