@@ -395,7 +395,7 @@
             if (this._parsedTicket != null)
             {
                 this._parsedTicket.removeEventListener(SSOTicket.SUCCESS, this._Str_14732);
-                this._parsedTicket.removeEventListener(SSOTicket.FAILURE, this._Str_15342);
+                this._parsedTicket.removeEventListener(SSOTicket.FAILURE, this.onParsedTicketFailure);
                 this._parsedTicket = null;
             }
             var _local_2:String = "";
@@ -408,7 +408,7 @@
             var _local_3:IHabboWebLogin = this._habboLogin.communication.habboWebLogin(this.name, this.password);
             this._parsedTicket = new SSOTicket(this._habboLogin.assets, _local_3, _local_2, k);
             this._parsedTicket.addEventListener(SSOTicket.SUCCESS, this._Str_14732);
-            this._parsedTicket.addEventListener(SSOTicket.FAILURE, this._Str_15342);
+            this._parsedTicket.addEventListener(SSOTicket.FAILURE, this.onParsedTicketFailure);
         }
 
         private function _Str_14732(k:Event):void
@@ -422,16 +422,16 @@
             this._habboLogin.flashClientUrl = this._parsedTicket.flashClientUrl;
             this._habboLogin.setSSOTicket = this._parsedTicket.ticket;
             this._parsedTicket.removeEventListener(SSOTicket.SUCCESS, this._Str_14732);
-            this._parsedTicket.removeEventListener(SSOTicket.FAILURE, this._Str_15342);
+            this._parsedTicket.removeEventListener(SSOTicket.FAILURE, this.onParsedTicketFailure);
             this._parsedTicket = null;
             dispatchEvent(new Event(INITCONNECTION));
         }
 
-        private function _Str_15342(k:Event):void
+        private function onParsedTicketFailure(k:Event):void
         {
             Logger.log("Could not get a ticket! ");
             this._parsedTicket.removeEventListener(SSOTicket.SUCCESS, this._Str_14732);
-            this._parsedTicket.removeEventListener(SSOTicket.FAILURE, this._Str_15342);
+            this._parsedTicket.removeEventListener(SSOTicket.FAILURE, this.onParsedTicketFailure);
             this._parsedTicket = null;
             if (this._firstTryUsingExistingSession)
             {
