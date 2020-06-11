@@ -73,7 +73,7 @@
                 return;
             }
             k.addEventListener(_Str_3149.RWPUW_NEW_QUESTION, this.newQuestion);
-            k.addEventListener(_Str_3149.RWPUW_QUESTION_ANSWERED, this._Str_21808);
+            k.addEventListener(_Str_3149.RWPUW_QUESTION_ANSWERED, this.answeredQuestion);
             k.addEventListener(_Str_3149.RWPUW_QUESION_FINSIHED, this.questionFinished);
             super.registerUpdateEvents(k);
         }
@@ -85,7 +85,7 @@
                 return;
             }
             k.removeEventListener(RoomSessionWordQuizEvent.RWPUW_NEW_QUESTION, this.newQuestion);
-            k.removeEventListener(RoomSessionWordQuizEvent.RWPUW_QUESTION_ANSWERED, this._Str_21808);
+            k.removeEventListener(RoomSessionWordQuizEvent.RWPUW_QUESTION_ANSWERED, this.answeredQuestion);
             k.removeEventListener(RoomSessionWordQuizEvent.RWPUW_QUESION_FINSIHED, this.questionFinished);
             super.unregisterUpdateEvents(k);
         }
@@ -186,7 +186,7 @@
             windowManager.removeWindow(k);
         }
 
-        private function _Str_21808(k:_Str_3149):void
+        private function answeredQuestion(k:_Str_3149):void
         {
             var _local_7:IWindowContainer;
             if (this._view)
