@@ -322,7 +322,7 @@
             return null;
         }
 
-        private function _Str_22603(k:TimerEvent):void
+        private function onCountdownDownTimer(k:TimerEvent):void
         {
             if (this._countdownDownTimer == null)
             {
@@ -351,7 +351,7 @@
             {
                 this._countdownDownTimer = new Timer(1000);
                 this._countdown = (_arg_2 / 1000);
-                this._countdownDownTimer.addEventListener(TimerEvent.TIMER, this._Str_22603);
+                this._countdownDownTimer.addEventListener(TimerEvent.TIMER, this.onCountdownDownTimer);
                 this._countdownDownTimer.start();
                 this._moveTimer = new Timer(UPDATE_FREQUENCY);
                 this._moveTimer.addEventListener(TimerEvent.TIMER, this.onLocationTimer);
