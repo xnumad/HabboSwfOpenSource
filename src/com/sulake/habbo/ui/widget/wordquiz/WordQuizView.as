@@ -118,7 +118,7 @@
             this._mainWindow.findChildByName("quiz_topic").caption = this._quizTopic;
             this._mainWindow.findChildByName("quiz_topic").width = Math.min(660, (this.getCorrectTextWidth(k, this._quizTopic) + 6));
             this._mainWindow.findChildByName("quiz_topic").y = 3;
-            this._Str_15735();
+            this.positionWindow();
             this._mainWindow.desktop.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
         }
 
@@ -209,10 +209,10 @@
 
         private function onDesktopResized(k:WindowEvent):void
         {
-            this._Str_15735();
+            this.positionWindow();
         }
 
-        private function _Str_15735():void
+        private function positionWindow():void
         {
             if (((!(this._mainWindow)) || (this._mainWindow.numChildren == 0)))
             {

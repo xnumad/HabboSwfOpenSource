@@ -32,7 +32,7 @@
                 return;
             }
             this._window.procedure = this.onInput;
-            this._Str_15735(_arg_4);
+            this.positionWindow(_arg_4);
             this.setElementText("info_creditsspent", this.getLocalization("hccenter.breakdown.creditsspent").replace("%credits%", this._data.totalCreditsSpent));
             var _local_5:int = int((this._data.kickbackPercentage * 100));
             this.setElementText("info_factor", this.getLocalization("hccenter.breakdown.paydayfactor").replace("%percent%", _local_5).replace("%multiplier%", this._data.kickbackPercentage));
@@ -107,7 +107,7 @@
             }
         }
 
-        private function _Str_15735(k:IWindow):void
+        private function positionWindow(k:IWindow):void
         {
             if (((((!(k)) || (!(this._window))) || (!(this._controller))) || (!(this._controller.stage))))
             {
