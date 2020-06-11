@@ -180,7 +180,7 @@
             if (k != null)
             {
                 k.addEventListener(Event.CONNECT, this._Str_25793);
-                k.addEventListener(Event.CLOSE, this.onParsedTicketSuccess);
+                k.addEventListener(Event.CLOSE, this.onConnectionDisconnected);
             }
             this._communication.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onGenericError));
             this._communication.addHabboConnectionMessageEvent(new PingMessageEvent(this._Str_24721));
@@ -638,7 +638,7 @@
             this._communication.initConnection(HabboConnectionType.HABBO_MAIN);
         }
 
-        private function onParsedTicketSuccess(k:Event):void
+        private function onConnectionDisconnected(k:Event):void
         {
             var _local_2:String;
             if (this.isRoomViewerMode)
