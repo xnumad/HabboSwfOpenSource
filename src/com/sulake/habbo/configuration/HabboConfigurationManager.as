@@ -25,7 +25,7 @@
     {
         private static const INTERPOLATION_DEPTH_LIMIT:int = 3;
         private static const _environmentId:String = "%";
-        private static const FUSELOGIN:String = "fuselogin";
+        private static const SOL_ID:String = "fuselogin";
 
         private var _skipExternalConfigurations:Boolean = false;
         private var _skipLocalizations:Boolean = false;
