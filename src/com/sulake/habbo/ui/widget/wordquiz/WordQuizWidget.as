@@ -30,7 +30,7 @@
         private static const SIGN_FADE_IN_TIME:int = 750;
         private static const SIGN_FADE_OUT_TIME:int = 750;
         private static const UPDATE_FREQUENCY:int = 40;
-        public static const _Str_13786:String = "0";
+        public static const VALUE_KEY_DISLIKE:String = "0";
         public static const _Str_9438:String = "1";
 
         private var _view:WordQuizView;

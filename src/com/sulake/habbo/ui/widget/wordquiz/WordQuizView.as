@@ -169,7 +169,7 @@
             {
                 return;
             }
-            var _local_2:int = ((k[WordQuizWidget._Str_13786] != null) ? k.getValue(WordQuizWidget._Str_13786) : 0);
+            var _local_2:int = ((k[WordQuizWidget.VALUE_KEY_DISLIKE] != null) ? k.getValue(WordQuizWidget.VALUE_KEY_DISLIKE) : 0);
             var _local_3:ILabelWindow = (this._mainWindow.findChildByName("lbl_dislike_count") as ILabelWindow);
             if (_local_3)
             {
