@@ -28,7 +28,7 @@
         private static const WORDQUIZ_LIKE_XML:String = "wordquiz_like_xml";
         private static const WORDQUIZ_UNLIKE_XML:String = "wordquiz_unlike_xml";
         private static const SIGN_FADE_IN_TIME:int = 750;
-        private static const _Str_7039:int = 750;
+        private static const SIGN_FADE_OUT_TIME:int = 750;
         private static const _Str_7307:int = 40;
         public static const _Str_13786:String = "0";
         public static const _Str_9438:String = "1";
@@ -208,7 +208,7 @@
             }
             _local_7.name = _local_6;
             this._answerWindows.push(_local_7);
-            this._showSignCounters[_local_6] = ((this._showResultTime + SIGN_FADE_IN_TIME) + _Str_7039);
+            this._showSignCounters[_local_6] = ((this._showResultTime + SIGN_FADE_IN_TIME) + SIGN_FADE_OUT_TIME);
             var _local_8:Rectangle = this._Str_19158(_local_2);
             if (_local_8)
             {
@@ -273,7 +273,7 @@
                 _local_5 = this._showSignCounters[k.name];
                 _local_5 = (_local_5 - _Str_7307);
                 this._showSignCounters[k.name] = _local_5;
-                if (_local_5 > (this._showResultTime + _Str_7039))
+                if (_local_5 > (this._showResultTime + SIGN_FADE_OUT_TIME))
                 {
                     _local_4 = ((SIGN_FADE_IN_TIME / _Str_7307) * 0.01);
                     _local_2.blend = (_local_2.blend + _local_4);
@@ -281,16 +281,16 @@
                 }
                 else
                 {
-                    if (_local_5 > _Str_7039)
+                    if (_local_5 > SIGN_FADE_OUT_TIME)
                     {
                         _local_2.blend = 1;
                         _local_3.blend = 1;
                     }
                     else
                     {
-                        if (((_local_5 < _Str_7039) && (_local_5 > 0)))
+                        if (((_local_5 < SIGN_FADE_OUT_TIME) && (_local_5 > 0)))
                         {
-                            _local_4 = (_Str_7039 / _Str_7307);
+                            _local_4 = (SIGN_FADE_OUT_TIME / _Str_7307);
                             k.blend = (k.blend - (_local_4 * 0.01));
                             k.y = (k.y - (20 + (70 - (k.blend * 120))));
                         }
