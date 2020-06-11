@@ -16,9 +16,9 @@
             return (this._parser as InitDiffieHandshakeParser).encryptedPrime;
         }
 
-        public function get _Str_16524():String
+        public function get encryptedGenerator():String
         {
-            return (this._parser as InitDiffieHandshakeParser)._Str_16524;
+            return (this._parser as InitDiffieHandshakeParser).encryptedGenerator;
         }
     }
 }

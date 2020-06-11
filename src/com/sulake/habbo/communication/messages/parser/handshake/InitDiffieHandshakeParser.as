@@ -26,7 +26,7 @@
             return this._Str_21611;
         }
 
-        public function get _Str_16524():String
+        public function get encryptedGenerator():String
         {
             return this._Str_22105;
         }

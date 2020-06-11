@@ -303,7 +303,7 @@
             var _local_4:ByteArray = new ByteArray();
             var _local_5:ByteArray = new ByteArray();
             _local_4.writeBytes(CryptoTools.hexStringToByteArray(_local_3.encryptedPrime));
-            _local_5.writeBytes(CryptoTools.hexStringToByteArray(_local_3._Str_16524));
+            _local_5.writeBytes(CryptoTools.hexStringToByteArray(_local_3.encryptedGenerator));
             var _local_6:ByteArray = new ByteArray();
             var _local_7:ByteArray = new ByteArray();
             this._rsa = RSAKey.parsePublicKey("86851DD364D5C5CECE3C883171CC6DDC5760779B992482BD1E20DD296888DF91B33B936A7B93F06D29E8870F703A216257DEC7C81DE0058FEA4CC5116F75E6EFC4E9113513E45357DC3FD43D4EFAB5963EF178B78BD61E81A14C603B24C8BCCE0A12230B320045498EDC29282FF0603BC7B7DAE8FC1B05B52B2F301A9DC783B7", "3");
