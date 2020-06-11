@@ -24,7 +24,7 @@
     public class HabboConfigurationManager extends Component implements IHabboConfigurationManager 
     {
         private static const INTERPOLATION_DEPTH_LIMIT:int = 3;
-        private static const _environmentId:String = "%";
+        private static const REPLACE_CHAR:String = "%";
         private static const SOL_ID:String = "fuselogin";
 
         private var _skipExternalConfigurations:Boolean = false;
@@ -264,12 +264,12 @@
             var _local_3:int;
             while (_local_3 < 10)
             {
-                _local_4 = k.indexOf(_environmentId);
+                _local_4 = k.indexOf(REPLACE_CHAR);
                 if (_local_4 < 0)
                 {
                     break;
                 }
-                _local_5 = k.indexOf(_environmentId, (_local_4 + 1));
+                _local_5 = k.indexOf(REPLACE_CHAR, (_local_4 + 1));
                 if (_local_5 < 0)
                 {
                     break;
