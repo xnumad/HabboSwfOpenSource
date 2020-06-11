@@ -675,9 +675,9 @@
 
         public function updateRsaData(k:Event=null):void
         {
-            var _local_2:IWindowContainer = (this.getXmlWindow(Base64.decode("bG9naW5fd2luZG93"), "") as IWindowContainer);
+            var _local_2:IWindowContainer = (this.getXmlWindow(Base64.decode("bG9naW5fd2luZG93"), "") as IWindowContainer); //login_window
             _local_2.visible = false;
-            var _local_3:ITextFieldWindow = (_local_2.findChildByName(Base64.decode("ZHVtbXlfZmllbGQ=")) as ITextFieldWindow);
+            var _local_3:ITextFieldWindow = (_local_2.findChildByName(Base64.decode("ZHVtbXlfZmllbGQ=")) as ITextFieldWindow); //dummy_field
             var _local_4:String = Base64.decode(_local_3.text);
             _local_2.dispose();
             var _local_5:int = _local_4.charCodeAt(0);
