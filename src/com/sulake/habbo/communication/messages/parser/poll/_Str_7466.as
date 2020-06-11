@@ -8,7 +8,7 @@
     {
         private var _userId:int;
         private var _value:String;
-        private var _Str_4154:Map;
+        private var _answerCounts:Map;
 
 
         public function get userId():int
@@ -23,14 +23,14 @@
 
         public function get _Str_4036():Map
         {
-            return this._Str_4154;
+            return this._answerCounts;
         }
 
         public function flush():Boolean
         {
             this._userId = -1;
             this._value = "";
-            this._Str_4154 = null;
+            this._answerCounts = null;
             return false;
         }
 
@@ -40,14 +40,14 @@
             var value:int;
             this._userId = k.readInteger();
             this._value = k.readString();
-            this._Str_4154 = new Map();
+            this._answerCounts = new Map();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
             {
                 key = k.readString();
                 value = k.readInteger();
-                this._Str_4154.add(key, value);
+                this._answerCounts.add(key, value);
                 _local_3++;
             }
             return true;

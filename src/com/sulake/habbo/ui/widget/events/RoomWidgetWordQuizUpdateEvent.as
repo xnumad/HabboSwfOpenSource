@@ -17,7 +17,7 @@
         private var _question:Dictionary = null;
         private var _userId:int = -1;
         private var _value:String;
-        private var _Str_4154:Map;
+        private var _answerCounts:Map;
 
         public function RoomWidgetWordQuizUpdateEvent(k:int, _arg_2:String, _arg_3:Boolean=false, _arg_4:Boolean=false)
         {
@@ -102,12 +102,12 @@
 
         public function get _Str_4036():Map
         {
-            return this._Str_4154;
+            return this._answerCounts;
         }
 
         public function set _Str_4036(k:Map):void
         {
-            this._Str_4154 = k;
+            this._answerCounts = k;
         }
     }
 }
