@@ -24,7 +24,7 @@
         private var _widget:WordQuizWidget;
         private var _mainWindow:IWindowContainer;
         private var _waitTimer:Timer;
-        private var _Str_17234:String;
+        private var _quizTopic:String;
 
         public function WordQuizView(k:WordQuizWidget)
         {
@@ -113,10 +113,10 @@
             }
             if (_arg_2 != null)
             {
-                this._Str_17234 = _arg_2;
+                this._quizTopic = _arg_2;
             }
-            this._mainWindow.findChildByName("quiz_topic").caption = this._Str_17234;
-            this._mainWindow.findChildByName("quiz_topic").width = Math.min(660, (this._Str_23335(k, this._Str_17234) + 6));
+            this._mainWindow.findChildByName("quiz_topic").caption = this._quizTopic;
+            this._mainWindow.findChildByName("quiz_topic").width = Math.min(660, (this._Str_23335(k, this._quizTopic) + 6));
             this._mainWindow.findChildByName("quiz_topic").y = 3;
             this._Str_15735();
             this._mainWindow.desktop.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
