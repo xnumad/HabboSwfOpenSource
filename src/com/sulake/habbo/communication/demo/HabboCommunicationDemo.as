@@ -188,7 +188,7 @@
             this._communication.addHabboConnectionMessageEvent(new ErrorReportEvent(this.onErrorReport));
             this._communication.addHabboConnectionMessageEvent(new UniqueMachineIDEvent(this._Str_22966));
             this._communication.addHabboConnectionMessageEvent(new InitDiffieHandshakeEvent(this._Str_22382));
-            this._communication.addHabboConnectionMessageEvent(new IdentityAccountsEvent(this._Str_23715));
+            this._communication.addHabboConnectionMessageEvent(new IdentityAccountsEvent(this.onIdentityAccounts));
             this._communication.addHabboConnectionMessageEvent(new CompleteDiffieHandshakeEvent(this._Str_25330));
             this._communication.addHabboConnectionMessageEvent(new DisconnectReasonEvent(this.onDisconnectReason));
             var _local_2:Stage = context.displayObjectContainer.stage;
@@ -477,7 +477,7 @@
             }
         }
 
-        private function _Str_23715(k:IdentityAccountsEvent):void
+        private function onIdentityAccounts(k:IdentityAccountsEvent):void
         {
             var _local_2:String;
             var _local_3:String;
