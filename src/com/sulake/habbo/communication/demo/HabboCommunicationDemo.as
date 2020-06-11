@@ -49,7 +49,7 @@
     import com.sulake.core.communication.encryption.IEncryption;
     import flash.net.SharedObject;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_7957;
-    import com.sulake.habbo.communication.messages.outgoing.handshake._Str_11513;
+    import com.sulake.habbo.communication.messages.outgoing.handshake.VersionCheckMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10368;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_8322;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
@@ -393,7 +393,7 @@
         {
             var _local_4:SharedObject;
             var _local_5:_Str_7957;
-            k.send(new _Str_11513(401, this._flashClientUrl, this._externalVariablesUrl));
+            k.send(new VersionCheckMessageComposer(401, this._flashClientUrl, this._externalVariablesUrl));
             var _local_2:String = "";
             try
             {

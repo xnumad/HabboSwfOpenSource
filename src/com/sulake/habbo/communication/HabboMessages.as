@@ -881,7 +881,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.handshake.ClientHelloMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.CompleteDiffieHandshakeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10368;
-	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_11513;
+	import com.sulake.habbo.communication.messages.outgoing.handshake.VersionCheckMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_7957;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_8322;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9307;
@@ -1521,7 +1521,7 @@
             OUTGOING_PACKETS[105] = _Str_3719;
             OUTGOING_PACKETS[1051] = _Str_12382;
             OUTGOING_PACKETS[1052] = _Str_7364;
-            OUTGOING_PACKETS[1053] = _Str_11513;
+            OUTGOING_PACKETS[1053] = VersionCheckMessageComposer;
             OUTGOING_PACKETS[1054] = _Str_11560;
             OUTGOING_PACKETS[1071] = _Str_9998;
             OUTGOING_PACKETS[1075] = _Str_10589;
