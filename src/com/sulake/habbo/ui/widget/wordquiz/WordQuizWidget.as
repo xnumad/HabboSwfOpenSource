@@ -171,13 +171,13 @@
             var _local_2:int;
             while (_local_2 < this._answerWindows.length)
             {
-                this._Str_17059(this._answerWindows[_local_2].name);
+                this.poolWindow(this._answerWindows[_local_2].name);
                 _local_2++;
             }
             this._answerWindows.length = 0;
         }
 
-        private function _Str_17059(k:String):void
+        private function poolWindow(k:String):void
         {
             if (windowManager == null)
             {
@@ -252,7 +252,7 @@
                         }
                         else
                         {
-                            this._Str_17059(this._answerWindows[_local_2].name);
+                            this.poolWindow(this._answerWindows[_local_2].name);
                             return;
                         }
                         this._Str_24189(_local_3);
@@ -299,7 +299,7 @@
                             if (_local_5 < 0)
                             {
                                 k.y = (k.y - (20 + (70 - (k.blend * 120))));
-                                this._Str_17059(k.name);
+                                this.poolWindow(k.name);
                             }
                         }
                     }
