@@ -51,7 +51,7 @@
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_7957;
     import com.sulake.habbo.communication.messages.outgoing.handshake.VersionCheckMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10368;
-    import com.sulake.habbo.communication.messages.outgoing.handshake._Str_8322;
+    import com.sulake.habbo.communication.messages.outgoing.handshake.InfoRetrieveMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.parser.handshake.GenericErrorParser;
     import com.sulake.habbo.window.utils.IAlertDialog;
@@ -419,7 +419,7 @@
             var _local_2:IConnection = k.connection;
             var _local_3:AuthenticationOKMessageEvent = (k as AuthenticationOKMessageEvent);
             this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_AUTHENTICATED);
-            var _local_4:_Str_8322 = new _Str_8322();
+            var _local_4:InfoRetrieveMessageComposer = new InfoRetrieveMessageComposer();
             _local_2.send(_local_4);
             var _local_5:EventLogMessageComposer = new EventLogMessageComposer("Login", "socket", "client.auth_ok");
             _local_2.send(_local_5);

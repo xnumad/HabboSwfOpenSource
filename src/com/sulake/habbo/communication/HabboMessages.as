@@ -883,7 +883,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10368;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.VersionCheckMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_7957;
-	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_8322;
+	import com.sulake.habbo.communication.messages.outgoing.handshake.InfoRetrieveMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.PongMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9636;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9939;
@@ -1876,7 +1876,7 @@
             OUTGOING_PACKETS[3558] = PresentOpenMessageComposer;
             OUTGOING_PACKETS[3559] = _Str_8089;
             OUTGOING_PACKETS[3567] = _Str_10962;
-            OUTGOING_PACKETS[357] = _Str_8322;
+            OUTGOING_PACKETS[357] = InfoRetrieveMessageComposer;
             OUTGOING_PACKETS[3582] = _Str_12239;
             OUTGOING_PACKETS[359] = _Str_4406;
             OUTGOING_PACKETS[3591] = _Str_12393;
