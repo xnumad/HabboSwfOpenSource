@@ -199,12 +199,12 @@
 
         private function _Str_23518(k:WindowMouseEvent):void
         {
-            this._widget._Str_20809(1);
+            this._widget.sendAnswer(1);
         }
 
         private function _Str_24275(k:WindowMouseEvent):void
         {
-            this._widget._Str_20809(0);
+            this._widget.sendAnswer(0);
         }
 
         private function onDesktopResized(k:WindowEvent):void

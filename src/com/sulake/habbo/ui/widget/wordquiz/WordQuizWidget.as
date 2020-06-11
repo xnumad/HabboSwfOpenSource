@@ -374,7 +374,7 @@
             }
         }
 
-        public function _Str_20809(k:int):void
+        public function sendAnswer(k:int):void
         {
             this._view.removeWindow();
             if (this._answerSent)
