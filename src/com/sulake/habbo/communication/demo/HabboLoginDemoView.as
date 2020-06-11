@@ -301,7 +301,7 @@
             }
         }
 
-        private function _Str_23981(k:WindowKeyboardEvent):void
+        private function handleKeyUp(k:WindowKeyboardEvent):void
         {
             var _local_3:int;
             var _local_4:String;
@@ -343,7 +343,7 @@
             var so:SharedObject;
             if (event.type == WindowKeyboardEvent.WINDOW_EVENT_KEY_UP)
             {
-                this._Str_23981((event as WindowKeyboardEvent));
+                this.handleKeyUp((event as WindowKeyboardEvent));
                 if ((event as WindowKeyboardEvent).keyCode != 13)
                 {
                     return;
