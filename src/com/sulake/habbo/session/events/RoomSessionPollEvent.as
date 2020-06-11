@@ -15,7 +15,7 @@
         private var _startMessage:String = "";
         private var _endMessage:String = "";
         private var _questionArray:Array = null;
-        private var _Str_4353:Boolean = false;
+        private var _npsPoll:Boolean = false;
 
         public function RoomSessionPollEvent(k:String, _arg_2:IRoomSession, _arg_3:int)
         {
@@ -90,12 +90,12 @@
 
         public function get _Str_6196():Boolean
         {
-            return this._Str_4353;
+            return this._npsPoll;
         }
 
         public function set _Str_6196(k:Boolean):void
         {
-            this._Str_4353 = k;
+            this._npsPoll = k;
         }
     }
 }

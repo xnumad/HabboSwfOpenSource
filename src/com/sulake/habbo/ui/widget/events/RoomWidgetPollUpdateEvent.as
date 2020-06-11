@@ -14,7 +14,7 @@
         private var _endMessage:String = "";
         private var _questionArray:Array = null;
         private var _pollType:String = "";
-        private var _Str_4353:Boolean = false;
+        private var _npsPoll:Boolean = false;
 
         public function RoomWidgetPollUpdateEvent(k:int, _arg_2:String, _arg_3:Boolean=false, _arg_4:Boolean=false)
         {
@@ -99,12 +99,12 @@
 
         public function get _Str_6196():Boolean
         {
-            return this._Str_4353;
+            return this._npsPoll;
         }
 
         public function set _Str_6196(k:Boolean):void
         {
-            this._Str_4353 = k;
+            this._npsPoll = k;
         }
     }
 }

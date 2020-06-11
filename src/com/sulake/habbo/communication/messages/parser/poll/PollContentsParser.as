@@ -10,7 +10,7 @@
         private var _endMessage:String = "";
         private var _numQuestions:int = 0;
         private var _questionArray:Array = null;
-        private var _Str_4353:Boolean = false;
+        private var _npsPoll:Boolean = false;
 
 
         public function get id():int
@@ -40,7 +40,7 @@
 
         public function get _Str_6196():Boolean
         {
-            return this._Str_4353;
+            return this._npsPoll;
         }
 
         public function flush():Boolean
@@ -77,7 +77,7 @@
                 this._questionArray.push(_local_3);
                 _local_2++;
             }
-            this._Str_4353 = k.readBoolean();
+            this._npsPoll = k.readBoolean();
             return true;
         }
 
