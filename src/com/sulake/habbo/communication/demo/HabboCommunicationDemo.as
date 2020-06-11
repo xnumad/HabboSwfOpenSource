@@ -183,7 +183,7 @@
                 k.addEventListener(Event.CLOSE, this.onConnectionDisconnected);
             }
             this._communication.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onGenericError));
-            this._communication.addHabboConnectionMessageEvent(new PingMessageEvent(this._Str_24721));
+            this._communication.addHabboConnectionMessageEvent(new PingMessageEvent(this.onPing));
             this._communication.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this._Str_22456));
             this._communication.addHabboConnectionMessageEvent(new ErrorReportEvent(this.onErrorReport));
             this._communication.addHabboConnectionMessageEvent(new UniqueMachineIDEvent(this.onUniqueMachineId));
@@ -451,7 +451,7 @@
             }
         }
 
-        private function _Str_24721(k:IMessageEvent):void
+        private function onPing(k:IMessageEvent):void
         {
             var _local_2:IConnection = k.connection;
             var _local_3:PingMessageEvent = (k as PingMessageEvent);
