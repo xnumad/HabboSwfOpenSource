@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_11396;
+    import com.sulake.habbo.communication.messages.parser.handshake.DisconnectReasonParser;
 
     public class DisconnectReasonEvent extends MessageEvent implements IMessageEvent 
     {
@@ -52,12 +52,12 @@
 
         public function DisconnectReasonEvent(k:Function)
         {
-            super(k, _Str_11396);
+            super(k, DisconnectReasonParser);
         }
 
         public function get reason():int
         {
-            return (this._parser as _Str_11396).reason;
+            return (this._parser as DisconnectReasonParser).reason;
         }
 
         public function get reasonString():String

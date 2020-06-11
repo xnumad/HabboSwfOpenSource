@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_11396 implements IMessageParser 
+    public class DisconnectReasonParser implements IMessageParser
     {
         private var _reason:int;
 
-        public function _Str_11396()
+        public function DisconnectReasonParser()
         {
             this._reason = -1;
         }
