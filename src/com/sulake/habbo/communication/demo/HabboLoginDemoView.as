@@ -443,7 +443,7 @@
             }
         }
 
-        public function _Str_23906(k:int, _arg_2:int, _arg_3:String):void
+        public function showError(k:int, _arg_2:int, _arg_3:String):void
         {
             this._window.findChildByName("users_info").caption = ((("Received error: " + k) + " regarding message: ") + _arg_2);
             this._window.findChildByName("login_btn").enable();

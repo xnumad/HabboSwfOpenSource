@@ -510,7 +510,7 @@
             var time:String = parser.timestamp;
             if (this._view)
             {
-                this._view._Str_23906(errorCode, messageId, time);
+                this._view.showError(errorCode, messageId, time);
             }
             switch (errorCode)
             {
