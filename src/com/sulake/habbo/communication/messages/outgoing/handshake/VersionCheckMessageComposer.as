@@ -5,13 +5,13 @@
     public class VersionCheckMessageComposer implements IMessageComposer
     {
         private var _clientID:int;
-        private var _Str_9320:String;
+        private var _clientURL:String;
         private var _Str_20206:String;
 
         public function VersionCheckMessageComposer(k:int, _arg_2:String, _arg_3:String)
         {
             this._clientID = k;
-            this._Str_9320 = _arg_2;
+            this._clientURL = _arg_2;
             this._Str_20206 = _arg_3;
         }
 
@@ -21,7 +21,7 @@
 
         public function getMessageArray():Array
         {
-            return [this._clientID, this._Str_9320, this._Str_20206];
+            return [this._clientID, this._clientURL, this._Str_20206];
         }
     }
 }
