@@ -6,14 +6,14 @@
     {
         private var _data:Array;
 
-        public function PollAnswerComposer(k:int, _arg_2:int, _arg_3:Array)
+        public function PollAnswerComposer(pollId:int, questionId:int, answers:Array)
         {
-            this._data = [k, _arg_2];
-            this._data.push(_arg_3.length);
+            this._data = [pollId, questionId];
+            this._data.push(answers.length);
             var _local_4:int;
-            while (_local_4 < _arg_3.length)
+            while (_local_4 < answers.length)
             {
-                this._data.push(String(_arg_3[_local_4]));
+                this._data.push(String(answers[_local_4]));
                 _local_4++;
             }
         }
