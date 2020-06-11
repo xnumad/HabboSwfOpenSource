@@ -158,7 +158,7 @@
             this._question = k.question;
             this._answerSent = false;
             this._showSignCounters = new Dictionary();
-            this._Str_23919(this._question, k.duration);
+            this.showNewQuestion(this._question, k.duration);
         }
 
         private function questionFinished(k:_Str_3149):void
@@ -337,7 +337,7 @@
             }
         }
 
-        private function _Str_23919(k:Dictionary, _arg_2:int):void
+        private function showNewQuestion(k:Dictionary, _arg_2:int):void
         {
             if (!k)
             {
