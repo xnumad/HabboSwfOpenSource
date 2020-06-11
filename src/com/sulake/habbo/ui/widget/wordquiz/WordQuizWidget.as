@@ -191,7 +191,7 @@
             var _local_7:IWindowContainer;
             if (this._view)
             {
-                this._view._Str_19343(k._Str_4036);
+                this._view.updateResults(k._Str_4036);
             }
             var _local_2:int = k.userId;
             var _local_3:String = k.value;

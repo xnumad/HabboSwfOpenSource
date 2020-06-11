@@ -163,7 +163,7 @@
             this._mainWindow.findChildByName("countdown").caption = k;
         }
 
-        public function _Str_19343(k:Map):void
+        public function updateResults(k:Map):void
         {
             if (((!(this._mainWindow)) || (!(k))))
             {
@@ -186,7 +186,7 @@
         public function _Str_21186(k:Map):void
         {
             this.createWindow(WordQuizView.STATE_RESULT);
-            this._Str_19343(k);
+            this.updateResults(k);
             this._waitTimer = new Timer(_displayResultDuration);
             this._waitTimer.addEventListener(TimerEvent.TIMER, this._Str_12609);
             this._waitTimer.start();
