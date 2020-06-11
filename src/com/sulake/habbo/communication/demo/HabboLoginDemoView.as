@@ -166,7 +166,7 @@
                 this._environmentList = (this._window.findChildByName("environment_list") as IDropListWindow);
                 _local_9 = this._habboLogin.getProperty("environment.list").split("/");
                 _local_10 = ((_local_4.data.environment == null) ? "d63" : _local_4.data.environment);
-                _local_11 = this._Str_25432(_local_9);
+                _local_11 = this.getEnvironmentNames(_local_9);
                 _local_12 = this._environmentList.numMenuItems;
                 _local_13 = 0;
                 while (_local_13 < _local_12)
@@ -191,7 +191,7 @@
         {
         }
 
-        private function _Str_25432(k:Array):Array
+        private function getEnvironmentNames(k:Array):Array
         {
             var _local_3:String;
             var _local_4:String;
