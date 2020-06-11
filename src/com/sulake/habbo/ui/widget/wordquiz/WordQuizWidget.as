@@ -72,7 +72,7 @@
             {
                 return;
             }
-            k.addEventListener(_Str_3149.RWPUW_NEW_QUESTION, this._Str_20603);
+            k.addEventListener(_Str_3149.RWPUW_NEW_QUESTION, this.newQuestion);
             k.addEventListener(_Str_3149.RWPUW_QUESTION_ANSWERED, this._Str_21808);
             k.addEventListener(_Str_3149.RWPUW_QUESION_FINSIHED, this._Str_21218);
             super.registerUpdateEvents(k);
@@ -84,7 +84,7 @@
             {
                 return;
             }
-            k.removeEventListener(RoomSessionWordQuizEvent.RWPUW_NEW_QUESTION, this._Str_20603);
+            k.removeEventListener(RoomSessionWordQuizEvent.RWPUW_NEW_QUESTION, this.newQuestion);
             k.removeEventListener(RoomSessionWordQuizEvent.RWPUW_QUESTION_ANSWERED, this._Str_21808);
             k.removeEventListener(RoomSessionWordQuizEvent.RWPUW_QUESION_FINSIHED, this._Str_21218);
             super.unregisterUpdateEvents(k);
@@ -152,7 +152,7 @@
             super.dispose();
         }
 
-        private function _Str_20603(k:_Str_3149):void
+        private function newQuestion(k:_Str_3149):void
         {
             this._pollId = k.id;
             this._question = k.question;
