@@ -189,7 +189,7 @@
             this._communication.addHabboConnectionMessageEvent(new UniqueMachineIDEvent(this.onUniqueMachineId));
             this._communication.addHabboConnectionMessageEvent(new InitDiffieHandshakeEvent(this._Str_22382));
             this._communication.addHabboConnectionMessageEvent(new IdentityAccountsEvent(this.onIdentityAccounts));
-            this._communication.addHabboConnectionMessageEvent(new CompleteDiffieHandshakeEvent(this._Str_25330));
+            this._communication.addHabboConnectionMessageEvent(new CompleteDiffieHandshakeEvent(this.onCompleteDiffieHandshake));
             this._communication.addHabboConnectionMessageEvent(new DisconnectReasonEvent(this.onDisconnectReason));
             var _local_2:Stage = context.displayObjectContainer.stage;
             if (_local_2 != null)
@@ -358,7 +358,7 @@
             _local_2.sendUnencrypted(new _Str_10287(CryptoTools.byteArrayToHexString(_local_15)));
         }
 
-        private function _Str_25330(k:IMessageEvent):void
+        private function onCompleteDiffieHandshake(k:IMessageEvent):void
         {
             var _local_9:IEncryption;
             var _local_2:IConnection = k.connection;
