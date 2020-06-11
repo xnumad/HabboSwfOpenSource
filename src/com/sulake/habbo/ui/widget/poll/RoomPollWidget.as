@@ -26,7 +26,7 @@
         {
             var k:int;
             var _local_2:int;
-            var _local_3:_Str_3703;
+            var _local_3:PollSession;
             if (disposed)
             {
                 return;
@@ -37,7 +37,7 @@
                 _local_2 = 0;
                 while (_local_2 < k)
                 {
-                    _local_3 = (this._Str_4484.getWithIndex(0) as _Str_3703);
+                    _local_3 = (this._Str_4484.getWithIndex(0) as PollSession);
                     if (_local_3 != null)
                     {
                         _local_3.dispose();
@@ -76,12 +76,12 @@
         private function _Str_21632(k:Event):void
         {
             var _local_2:int = _Str_2888(k).id;
-            var _local_3:_Str_3703 = (this._Str_4484.getValue(_local_2) as _Str_3703);
+            var _local_3:PollSession = (this._Str_4484.getValue(_local_2) as PollSession);
             var _local_4:String = _Str_2888(k).summary;
             var _local_5:String = _Str_2888(k).headline;
             if (!_local_3)
             {
-                _local_3 = new _Str_3703(_local_2, this);
+                _local_3 = new PollSession(_local_2, this);
                 this._Str_4484.add(_local_2, _local_3);
                 _local_3._Str_6059(_local_5, _local_4);
             }
@@ -103,12 +103,12 @@
         private function _Str_21584(k:Event):void
         {
             var _local_3:int;
-            var _local_4:_Str_3703;
+            var _local_4:PollSession;
             var _local_2:_Str_2888 = (k as _Str_2888);
             if (_local_2 != null)
             {
                 _local_3 = _local_2.id;
-                _local_4 = (this._Str_4484.getValue(_local_3) as _Str_3703);
+                _local_4 = (this._Str_4484.getValue(_local_3) as PollSession);
                 if (_local_4 != null)
                 {
                     _local_4._Str_24948(_local_2._Str_6013, _local_2._Str_5838, _local_2._Str_5643, _local_2._Str_6196);
@@ -118,7 +118,7 @@
 
         public function _Str_24255(k:int):void
         {
-            var _local_2:_Str_3703 = (this._Str_4484.getValue(k) as _Str_3703);
+            var _local_2:PollSession = (this._Str_4484.getValue(k) as PollSession);
             if (_local_2 != null)
             {
                 _local_2._Str_24541();
@@ -129,7 +129,7 @@
 
         public function _Str_12823(k:int):void
         {
-            var _local_2:_Str_3703 = (this._Str_4484.getValue(k) as _Str_3703);
+            var _local_2:PollSession = (this._Str_4484.getValue(k) as PollSession);
             if (_local_2 != null)
             {
                 _local_2.dispose();

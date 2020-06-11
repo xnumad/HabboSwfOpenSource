@@ -4,7 +4,7 @@
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
 
-    public class _Str_3703 implements IDisposable 
+    public class PollSession implements IDisposable
     {
         private var _id:int = -1;
         private var _roomPollWidget:RoomPollWidget;
@@ -13,7 +13,7 @@
         private var _Str_4781:String = "";
         private var _disposed:Boolean = false;
 
-        public function _Str_3703(k:int, _arg_2:RoomPollWidget)
+        public function PollSession(k:int, _arg_2:RoomPollWidget)
         {
             this._id = k;
             this._roomPollWidget = _arg_2;
