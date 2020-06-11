@@ -50,7 +50,7 @@
     import flash.net.SharedObject;
     import com.sulake.habbo.communication.messages.outgoing.handshake.SSOTicketMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.handshake.VersionCheckMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10368;
+    import com.sulake.habbo.communication.messages.outgoing.handshake.UniqueIDMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.handshake.InfoRetrieveMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.parser.handshake.GenericErrorParser;
@@ -407,7 +407,7 @@
             {
             }
             var _local_3:Array = Capabilities.version.split(" ");
-            k.send(new _Str_10368(_local_2, generateFingerprint(), _local_3.join("/")));
+            k.send(new UniqueIDMessageComposer(_local_2, generateFingerprint(), _local_3.join("/")));
             if (((this._ssoTicket) && (this._ssoTicket.length > 0)))
             {
                 k.send(new SSOTicketMessageComposer(this._ssoTicket));

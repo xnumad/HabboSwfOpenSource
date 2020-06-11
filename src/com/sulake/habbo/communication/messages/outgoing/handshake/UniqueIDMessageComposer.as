@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10368 implements IMessageComposer 
+    public class UniqueIDMessageComposer implements IMessageComposer
     {
         private var _Str_8149:String;
         private var _Str_21916:String;
         private var _Str_9609:String;
 
-        public function _Str_10368(k:String, _arg_2:String, _arg_3:String)
+        public function UniqueIDMessageComposer(k:String, _arg_2:String, _arg_3:String)
         {
             this._Str_8149 = k;
             this._Str_21916 = _arg_2;
