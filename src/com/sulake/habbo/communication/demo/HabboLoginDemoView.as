@@ -25,7 +25,7 @@
     {
         public static const INITCONNECTION:String = "InitConnection";
 
-        private const _Str_4939:String = "fuselogin";
+        private const SOL_ID:String = "fuselogin";
 
         private var _habboLogin:HabboCommunicationDemo;
         private var _dialog:IModalDialog;
@@ -115,7 +115,7 @@
             {
                 Logger.log("Could not find the button");
             }
-            var _local_4:SharedObject = SharedObject.getLocal(this._Str_4939, "/");
+            var _local_4:SharedObject = SharedObject.getLocal(this.SOL_ID, "/");
             if (_local_2 != null)
             {
                 _local_2.textBackground = true;
@@ -226,7 +226,7 @@
             var environment:String = environments[index];
             try
             {
-                so = SharedObject.getLocal(this._Str_4939, "/");
+                so = SharedObject.getLocal(this.SOL_ID, "/");
                 so.data.environment = environment;
                 so.flush();
             }
@@ -361,7 +361,7 @@
             }
             try
             {
-                so = SharedObject.getLocal(this._Str_4939, "/");
+                so = SharedObject.getLocal(this.SOL_ID, "/");
                 so.data.login = this.name;
                 so.data.password = this.password;
                 so.flush();

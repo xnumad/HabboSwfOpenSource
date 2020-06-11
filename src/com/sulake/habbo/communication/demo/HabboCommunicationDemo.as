@@ -69,7 +69,7 @@
 
     public class HabboCommunicationDemo extends Component 
     {
-        private static const FUSELOGIN:String = "fuselogin";
+        private static const SOL_ID:String = "fuselogin";
 
         private var _view:HabboLoginDemoView;
         private var _logoutInProgress:Boolean;
@@ -397,7 +397,7 @@
             var _local_2:String = "";
             try
             {
-                _local_4 = SharedObject.getLocal(FUSELOGIN, "/");
+                _local_4 = SharedObject.getLocal(SOL_ID, "/");
                 if (_local_4.data.machineid != null)
                 {
                     _local_2 = _local_4.data.machineid;
@@ -468,7 +468,7 @@
             }
             try
             {
-                _local_2 = SharedObject.getLocal(FUSELOGIN, "/");
+                _local_2 = SharedObject.getLocal(SOL_ID, "/");
                 _local_2.data.machineid = k.machineID;
                 _local_2.flush();
             }
