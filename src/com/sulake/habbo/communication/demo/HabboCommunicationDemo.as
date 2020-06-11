@@ -328,7 +328,7 @@
             var _local_13:String;
             while (_local_12 > 0)
             {
-                _local_13 = this._Str_24975(30);
+                _local_13 = this.generateRandomHexString(30);
                 this._keyExchange.init(_local_13);
                 _local_16 = this._keyExchange.getPublicKey(10);
                 if (_local_16.length < 64)
@@ -612,7 +612,7 @@
             Component(context).events.dispatchEvent(new Event(k));
         }
 
-        private function _Str_24975(k:uint=16):String
+        private function generateRandomHexString(k:uint=16):String
         {
             var _local_4:uint;
             var _local_2:String = "";
