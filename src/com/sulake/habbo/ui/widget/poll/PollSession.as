@@ -9,7 +9,7 @@
         private var _id:int = -1;
         private var _roomPollWidget:RoomPollWidget;
         private var _pollDialog:IPollDialog;
-        private var _Str_5663:IPollDialog;
+        private var _pollContentDialog:IPollDialog;
         private var _Str_4781:String = "";
         private var _disposed:Boolean = false;
 
@@ -41,10 +41,10 @@
                 this._pollDialog.dispose();
                 this._pollDialog = null;
             }
-            if (this._Str_5663 != null)
+            if (this._pollContentDialog != null)
             {
-                this._Str_5663.dispose();
-                this._Str_5663 = null;
+                this._pollContentDialog.dispose();
+                this._pollContentDialog = null;
             }
             this._roomPollWidget = null;
             this._disposed = true;
@@ -74,19 +74,19 @@
             this._Str_22133();
             this._Str_25482();
             this._Str_4781 = _arg_2;
-            this._Str_5663 = new PollContentDialog(this._id, k, _arg_3, this._roomPollWidget, _arg_4);
-            this._Str_5663.start();
+            this._pollContentDialog = new PollContentDialog(this._id, k, _arg_3, this._roomPollWidget, _arg_4);
+            this._pollContentDialog.start();
         }
 
         public function _Str_25482():void
         {
-            if ((this._Str_5663 is PollContentDialog))
+            if ((this._pollContentDialog is PollContentDialog))
             {
-                if (!this._Str_5663.disposed)
+                if (!this._pollContentDialog.disposed)
                 {
-                    this._Str_5663.dispose();
+                    this._pollContentDialog.dispose();
                 }
-                this._Str_5663 = null;
+                this._pollContentDialog = null;
             }
         }
 
