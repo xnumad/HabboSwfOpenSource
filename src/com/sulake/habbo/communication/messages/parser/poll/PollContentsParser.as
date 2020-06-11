@@ -9,7 +9,7 @@
         private var _startMessage:String = "";
         private var _endMessage:String = "";
         private var _numQuestions:int = 0;
-        private var _Str_5432:Array = null;
+        private var _questionArray:Array = null;
         private var _Str_4353:Boolean = false;
 
 
@@ -35,7 +35,7 @@
 
         public function get _Str_5643():Array
         {
-            return this._Str_5432;
+            return this._questionArray;
         }
 
         public function get _Str_6196():Boolean
@@ -49,7 +49,7 @@
             this._startMessage = "";
             this._endMessage = "";
             this._numQuestions = 0;
-            this._Str_5432 = null;
+            this._questionArray = null;
             return true;
         }
 
@@ -62,7 +62,7 @@
             this._startMessage = k.readString();
             this._endMessage = k.readString();
             this._numQuestions = k.readInteger();
-            this._Str_5432 = new Array();
+            this._questionArray = new Array();
             var _local_2:int;
             while (_local_2 < this._numQuestions)
             {
@@ -74,7 +74,7 @@
                     _local_3.children.push(this.parsePollQuestion(k));
                     _local_5++;
                 }
-                this._Str_5432.push(_local_3);
+                this._questionArray.push(_local_3);
                 _local_2++;
             }
             this._Str_4353 = k.readBoolean();

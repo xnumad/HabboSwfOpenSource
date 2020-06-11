@@ -12,7 +12,7 @@
         private var _numQuestions:int = 0;
         private var _startMessage:String = "";
         private var _endMessage:String = "";
-        private var _Str_5432:Array = null;
+        private var _questionArray:Array = null;
         private var _pollType:String = "";
         private var _Str_4353:Boolean = false;
 
@@ -79,12 +79,12 @@
 
         public function get _Str_5643():Array
         {
-            return this._Str_5432;
+            return this._questionArray;
         }
 
         public function set _Str_5643(k:Array):void
         {
-            this._Str_5432 = k;
+            this._questionArray = k;
         }
 
         public function get pollType():String
