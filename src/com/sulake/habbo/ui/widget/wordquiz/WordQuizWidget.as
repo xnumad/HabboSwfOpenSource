@@ -329,7 +329,7 @@
                 return;
             }
             this._countdown--;
-            this._view._Str_6423(String(this._countdown));
+            this._view.updateCounter(String(this._countdown));
             if (this._countdown == 0)
             {
                 this.clearTimers();
@@ -356,7 +356,7 @@
                 this._moveTimer = new Timer(UPDATE_FREQUENCY);
                 this._moveTimer.addEventListener(TimerEvent.TIMER, this.onLocationTimer);
                 this._moveTimer.start();
-                this._view._Str_6423(String(this._countdown));
+                this._view.updateCounter(String(this._countdown));
             }
         }
 

@@ -150,7 +150,7 @@
             return this._mainWindow;
         }
 
-        public function _Str_6423(k:String):void
+        public function updateCounter(k:String):void
         {
             if (((!(this._mainWindow)) || (!(this._mainWindow.findChildByName("countdown")))))
             {
