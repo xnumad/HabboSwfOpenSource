@@ -19,7 +19,7 @@
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetPollMessage;
 
-    public class PollContentDialog implements _Str_7707 
+    public class PollContentDialog implements IPollDialog
     {
         private var _id:int = -1;
         private var _disposed:Boolean = false;

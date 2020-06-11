@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
 
-    public interface _Str_7707 extends IDisposable 
+    public interface IPollDialog extends IDisposable
     {
         function start():void;
     }

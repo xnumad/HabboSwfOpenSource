@@ -8,8 +8,8 @@
     {
         private var _id:int = -1;
         private var _roomPollWidget:RoomPollWidget;
-        private var _Str_6080:_Str_7707;
-        private var _Str_5663:_Str_7707;
+        private var _Str_6080:IPollDialog;
+        private var _Str_5663:IPollDialog;
         private var _Str_4781:String = "";
         private var _disposed:Boolean = false;
 
