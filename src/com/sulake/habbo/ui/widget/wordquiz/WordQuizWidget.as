@@ -29,7 +29,7 @@
         private static const WORDQUIZ_UNLIKE_XML:String = "wordquiz_unlike_xml";
         private static const SIGN_FADE_IN_TIME:int = 750;
         private static const SIGN_FADE_OUT_TIME:int = 750;
-        private static const _Str_7307:int = 40;
+        private static const UPDATE_FREQUENCY:int = 40;
         public static const _Str_13786:String = "0";
         public static const _Str_9438:String = "1";
 
@@ -217,7 +217,7 @@
             }
             if (!this._moveTimer)
             {
-                this._moveTimer = new Timer(_Str_7307);
+                this._moveTimer = new Timer(UPDATE_FREQUENCY);
                 this._moveTimer.addEventListener(TimerEvent.TIMER, this._Str_19365);
                 this._moveTimer.start();
             }
@@ -271,11 +271,11 @@
             if ((((this._showSignCounters.hasOwnProperty(k.name)) && (_local_2)) && (_local_3)))
             {
                 _local_5 = this._showSignCounters[k.name];
-                _local_5 = (_local_5 - _Str_7307);
+                _local_5 = (_local_5 - UPDATE_FREQUENCY);
                 this._showSignCounters[k.name] = _local_5;
                 if (_local_5 > (this._showResultTime + SIGN_FADE_OUT_TIME))
                 {
-                    _local_4 = ((SIGN_FADE_IN_TIME / _Str_7307) * 0.01);
+                    _local_4 = ((SIGN_FADE_IN_TIME / UPDATE_FREQUENCY) * 0.01);
                     _local_2.blend = (_local_2.blend + _local_4);
                     _local_3.blend = _local_2.blend;
                 }
@@ -290,7 +290,7 @@
                     {
                         if (((_local_5 < SIGN_FADE_OUT_TIME) && (_local_5 > 0)))
                         {
-                            _local_4 = (SIGN_FADE_OUT_TIME / _Str_7307);
+                            _local_4 = (SIGN_FADE_OUT_TIME / UPDATE_FREQUENCY);
                             k.blend = (k.blend - (_local_4 * 0.01));
                             k.y = (k.y - (20 + (70 - (k.blend * 120))));
                         }
@@ -353,7 +353,7 @@
                 this._countdown = (_arg_2 / 1000);
                 this._countdownDownTimer.addEventListener(TimerEvent.TIMER, this._Str_22603);
                 this._countdownDownTimer.start();
-                this._moveTimer = new Timer(_Str_7307);
+                this._moveTimer = new Timer(UPDATE_FREQUENCY);
                 this._moveTimer.addEventListener(TimerEvent.TIMER, this._Str_19365);
                 this._moveTimer.start();
                 this._view._Str_6423(String(this._countdown));
