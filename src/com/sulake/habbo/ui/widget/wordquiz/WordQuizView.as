@@ -53,7 +53,7 @@
             }
         }
 
-        private function _Str_23335(k:int, _arg_2:String=null):int
+        private function getCorrectTextWidth(k:int, _arg_2:String=null):int
         {
             var _local_3:String;
             var _local_4:IWindowContainer;
@@ -116,7 +116,7 @@
                 this._quizTopic = _arg_2;
             }
             this._mainWindow.findChildByName("quiz_topic").caption = this._quizTopic;
-            this._mainWindow.findChildByName("quiz_topic").width = Math.min(660, (this._Str_23335(k, this._quizTopic) + 6));
+            this._mainWindow.findChildByName("quiz_topic").width = Math.min(660, (this.getCorrectTextWidth(k, this._quizTopic) + 6));
             this._mainWindow.findChildByName("quiz_topic").y = 3;
             this._Str_15735();
             this._mainWindow.desktop.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
