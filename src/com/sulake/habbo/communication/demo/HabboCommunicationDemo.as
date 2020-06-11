@@ -190,7 +190,7 @@
             this._communication.addHabboConnectionMessageEvent(new InitDiffieHandshakeEvent(this._Str_22382));
             this._communication.addHabboConnectionMessageEvent(new IdentityAccountsEvent(this._Str_23715));
             this._communication.addHabboConnectionMessageEvent(new CompleteDiffieHandshakeEvent(this._Str_25330));
-            this._communication.addHabboConnectionMessageEvent(new DisconnectReasonEvent(this._Str_23126));
+            this._communication.addHabboConnectionMessageEvent(new DisconnectReasonEvent(this.onDisconnectReason));
             var _local_2:Stage = context.displayObjectContainer.stage;
             if (_local_2 != null)
             {
@@ -557,7 +557,7 @@
             }
         }
 
-        private function _Str_23126(k:DisconnectReasonEvent):void
+        private function onDisconnectReason(k:DisconnectReasonEvent):void
         {
             if (this.isRoomViewerMode)
             {
