@@ -166,7 +166,7 @@
             this.clearTimers();
             if ((((this._view) && (this._question)) && (this._question.id == k.questionId)))
             {
-                this._view.displayResults(k._Str_4036);
+                this._view.displayResults(k.answerCounts);
             }
             var _local_2:int;
             while (_local_2 < this._answerWindows.length)
@@ -191,7 +191,7 @@
             var _local_7:IWindowContainer;
             if (this._view)
             {
-                this._view.updateResults(k._Str_4036);
+                this._view.updateResults(k.answerCounts);
             }
             var _local_2:int = k.userId;
             var _local_3:String = k.value;

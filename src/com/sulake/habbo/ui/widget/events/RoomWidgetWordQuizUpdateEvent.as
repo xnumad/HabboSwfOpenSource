@@ -100,12 +100,12 @@
             this._value = k;
         }
 
-        public function get _Str_4036():Map
+        public function get answerCounts():Map
         {
             return this._answerCounts;
         }
 
-        public function set _Str_4036(k:Map):void
+        public function set answerCounts(k:Map):void
         {
             this._answerCounts = k;
         }

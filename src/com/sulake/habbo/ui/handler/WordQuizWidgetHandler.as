@@ -94,7 +94,7 @@
                     _local_3 = new RoomWidgetWordQuizUpdateEvent(_local_2.id, RoomWidgetWordQuizUpdateEvent.RWPUW_QUESTION_ANSWERED);
                     _local_3.value = _local_2.value;
                     _local_3.userId = _local_2.userId;
-                    _local_3._Str_4036 = _local_2._Str_4036;
+                    _local_3.answerCounts = _local_2.answerCounts;
                     _local_4 = this._container.roomSession.userDataManager.getUserData(_local_2.userId);
                     if (!_local_4)
                     {
@@ -113,7 +113,7 @@
                     _local_3 = new RoomWidgetWordQuizUpdateEvent(_local_2.id, RoomWidgetWordQuizUpdateEvent.RWPUW_QUESION_FINSIHED);
                     _local_3.pollId = _local_2.pollId;
                     _local_3.questionId = _local_2.questionId;
-                    _local_3._Str_4036 = _local_2._Str_4036;
+                    _local_3.answerCounts = _local_2.answerCounts;
                     break;
                 case RoomSessionWordQuizEvent.RWPUW_NEW_QUESTION:
                     _local_3 = new RoomWidgetWordQuizUpdateEvent(_local_2.id, RoomWidgetWordQuizUpdateEvent.RWPUW_NEW_QUESTION);

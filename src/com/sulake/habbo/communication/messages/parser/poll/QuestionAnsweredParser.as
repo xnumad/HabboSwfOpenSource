@@ -21,7 +21,7 @@
             return this._value;
         }
 
-        public function get _Str_4036():Map
+        public function get answerCounts():Map
         {
             return this._answerCounts;
         }
