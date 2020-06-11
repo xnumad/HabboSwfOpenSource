@@ -186,11 +186,11 @@
                 this._view.dispose();
                 this._view = null;
             }
-            this._Str_11788();
+            this.removeBreakdown();
             this._dataPending = false;
         }
 
-        public function _Str_11788():void
+        public function removeBreakdown():void
         {
             if (this._breakdownView)
             {
@@ -331,7 +331,7 @@
         {
             if (this._breakdownView)
             {
-                this._Str_11788();
+                this.removeBreakdown();
                 return;
             }
             this._breakdownView = new ClubSpecialInfoBubbleView(this, this._windowManager, this._data, this._view._Str_23883());

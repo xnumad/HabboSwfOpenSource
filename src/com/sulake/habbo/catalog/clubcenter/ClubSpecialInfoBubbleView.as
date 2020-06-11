@@ -96,14 +96,14 @@
                     this._controller._Str_21087();
                     break;
             }
-            this._controller._Str_11788();
+            this._controller.removeBreakdown();
         }
 
         private function _Str_19523(k:MouseEvent):void
         {
             if (this._controller)
             {
-                this._controller._Str_11788();
+                this._controller.removeBreakdown();
             }
         }
 

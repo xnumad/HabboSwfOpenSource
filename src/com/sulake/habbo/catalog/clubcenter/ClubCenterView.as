@@ -208,7 +208,7 @@
 
         private function _Str_19257(k:WindowEvent):void
         {
-            this._controller._Str_11788();
+            this._controller.removeBreakdown();
         }
 
         private function get container():IWindowContainer
