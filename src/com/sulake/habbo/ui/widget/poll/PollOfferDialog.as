@@ -9,7 +9,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetPollMessage;
     import com.sulake.core.window.events.WindowEvent;
 
-    public class _Str_9350 implements _Str_7707 
+    public class PollOfferDialog implements _Str_7707
     {
         public static const OK:String = "POLL_OFFER_STATE_OK";
         public static const POLL_OFFER_STATE_CANCEL:String = "POLL_OFFER_STATE_CANCEL";
@@ -21,7 +21,7 @@
         private var _roomPollWidget:RoomPollWidget;
         private var _id:int = -1;
 
-        public function _Str_9350(k:int, _arg_2:String, _arg_3:String, _arg_4:RoomPollWidget)
+        public function PollOfferDialog(k:int, _arg_2:String, _arg_3:String, _arg_4:RoomPollWidget)
         {
             var _local_6:IWindow;
             var _local_7:IWindow;

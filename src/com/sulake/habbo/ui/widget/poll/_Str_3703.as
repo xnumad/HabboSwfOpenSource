@@ -53,13 +53,13 @@
         public function _Str_6059(k:String, _arg_2:String):void
         {
             this._Str_22133();
-            this._Str_6080 = new _Str_9350(this._id, k, _arg_2, this._roomPollWidget);
+            this._Str_6080 = new PollOfferDialog(this._id, k, _arg_2, this._roomPollWidget);
             this._Str_6080.start();
         }
 
         public function _Str_22133():void
         {
-            if ((this._Str_6080 is _Str_9350))
+            if ((this._Str_6080 is PollOfferDialog))
             {
                 if (!this._Str_6080.disposed)
                 {
