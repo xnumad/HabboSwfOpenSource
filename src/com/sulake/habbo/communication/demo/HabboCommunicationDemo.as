@@ -286,7 +286,7 @@
             var _local_2:IConnection = this._communication.connection;
             if (_local_2 != null)
             {
-                this._Str_25592();
+                this.updateRsaData();
                 this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_ESTABLISHED);
                 this._handshakeInProgress = true;
                 this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKING);
@@ -673,7 +673,7 @@
             return HabboComponentFlags.isRoomViewerMode(flags);
         }
 
-        public function _Str_25592(k:Event=null):void
+        public function updateRsaData(k:Event=null):void
         {
             var _local_2:IWindowContainer = (this.getXmlWindow(Base64.decode("bG9naW5fd2luZG93"), "") as IWindowContainer);
             _local_2.visible = false;
