@@ -5,7 +5,7 @@
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.room.IRoomEngine;
-    import com.sulake.habbo.ui.widget.events._Str_3149;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetWordQuizUpdateEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionWordQuizEvent;
@@ -57,7 +57,7 @@
 
         public function getWidgetMessages():Array
         {
-            return [_Str_3149.RWPUW_QUESTION_ANSWERED, _Str_3149.RWPUW_QUESION_FINSIHED, _Str_3149.RWPUW_NEW_QUESTION];
+            return [RoomWidgetWordQuizUpdateEvent.RWPUW_QUESTION_ANSWERED, RoomWidgetWordQuizUpdateEvent.RWPUW_QUESION_FINSIHED, RoomWidgetWordQuizUpdateEvent.RWPUW_NEW_QUESTION];
         }
 
         public function processWidgetMessage(k:RoomWidgetMessage):RoomWidgetUpdateEvent
@@ -77,7 +77,7 @@
         public function processEvent(k:Event):void
         {
             var _local_2:RoomSessionWordQuizEvent;
-            var _local_3:_Str_3149;
+            var _local_3:RoomWidgetWordQuizUpdateEvent;
             var _local_4:RoomUserData;
             if ((((this._container == null) || (this._container.events == null)) || (this._container.roomSession == null)))
             {
@@ -91,7 +91,7 @@
             switch (k.type)
             {
                 case RoomSessionWordQuizEvent.RWPUW_QUESTION_ANSWERED:
-                    _local_3 = new _Str_3149(_local_2.id, _Str_3149.RWPUW_QUESTION_ANSWERED);
+                    _local_3 = new RoomWidgetWordQuizUpdateEvent(_local_2.id, RoomWidgetWordQuizUpdateEvent.RWPUW_QUESTION_ANSWERED);
                     _local_3.value = _local_2.value;
                     _local_3.userId = _local_2.userId;
                     _local_3._Str_4036 = _local_2._Str_4036;
@@ -110,13 +110,13 @@
                     }
                     break;
                 case RoomSessionWordQuizEvent.RWPUW_QUESION_FINSIHED:
-                    _local_3 = new _Str_3149(_local_2.id, _Str_3149.RWPUW_QUESION_FINSIHED);
+                    _local_3 = new RoomWidgetWordQuizUpdateEvent(_local_2.id, RoomWidgetWordQuizUpdateEvent.RWPUW_QUESION_FINSIHED);
                     _local_3.pollId = _local_2.pollId;
                     _local_3.questionId = _local_2.questionId;
                     _local_3._Str_4036 = _local_2._Str_4036;
                     break;
                 case RoomSessionWordQuizEvent.RWPUW_NEW_QUESTION:
-                    _local_3 = new _Str_3149(_local_2.id, _Str_3149.RWPUW_NEW_QUESTION);
+                    _local_3 = new RoomWidgetWordQuizUpdateEvent(_local_2.id, RoomWidgetWordQuizUpdateEvent.RWPUW_NEW_QUESTION);
                     _local_3.question = _local_2.question;
                     _local_3.duration = _local_2.duration;
                     _local_3.pollType = _local_2.pollType;

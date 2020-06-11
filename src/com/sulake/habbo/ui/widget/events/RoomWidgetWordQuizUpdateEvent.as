@@ -3,7 +3,7 @@
     import flash.utils.Dictionary;
     import com.sulake.core.utils.Map;
 
-    public class _Str_3149 extends RoomWidgetUpdateEvent 
+    public class RoomWidgetWordQuizUpdateEvent extends RoomWidgetUpdateEvent
     {
         public static const RWPUW_NEW_QUESTION:String = "RWPUW_NEW_QUESTION";
         public static const RWPUW_QUESION_FINSIHED:String = "RWPUW_QUESION_FINSIHED";
@@ -19,7 +19,7 @@
         private var _value:String;
         private var _Str_4154:Map;
 
-        public function _Str_3149(k:int, _arg_2:String, _arg_3:Boolean=false, _arg_4:Boolean=false)
+        public function RoomWidgetWordQuizUpdateEvent(k:int, _arg_2:String, _arg_3:Boolean=false, _arg_4:Boolean=false)
         {
             this._id = k;
             super(_arg_2, _arg_3, _arg_4);

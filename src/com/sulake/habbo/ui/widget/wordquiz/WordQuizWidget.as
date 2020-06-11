@@ -10,7 +10,7 @@
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.ui.widget.events._Str_3149;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetWordQuizUpdateEvent;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.session.events.RoomSessionWordQuizEvent;
     import com.sulake.habbo.ui.handler.WordQuizWidgetHandler;
@@ -72,9 +72,9 @@
             {
                 return;
             }
-            k.addEventListener(_Str_3149.RWPUW_NEW_QUESTION, this.newQuestion);
-            k.addEventListener(_Str_3149.RWPUW_QUESTION_ANSWERED, this.answeredQuestion);
-            k.addEventListener(_Str_3149.RWPUW_QUESION_FINSIHED, this.questionFinished);
+            k.addEventListener(RoomWidgetWordQuizUpdateEvent.RWPUW_NEW_QUESTION, this.newQuestion);
+            k.addEventListener(RoomWidgetWordQuizUpdateEvent.RWPUW_QUESTION_ANSWERED, this.answeredQuestion);
+            k.addEventListener(RoomWidgetWordQuizUpdateEvent.RWPUW_QUESION_FINSIHED, this.questionFinished);
             super.registerUpdateEvents(k);
         }
 
@@ -152,7 +152,7 @@
             super.dispose();
         }
 
-        private function newQuestion(k:_Str_3149):void
+        private function newQuestion(k:RoomWidgetWordQuizUpdateEvent):void
         {
             this._pollId = k.id;
             this._question = k.question;
@@ -161,7 +161,7 @@
             this.showNewQuestion(this._question, k.duration);
         }
 
-        private function questionFinished(k:_Str_3149):void
+        private function questionFinished(k:RoomWidgetWordQuizUpdateEvent):void
         {
             this.clearTimers();
             if ((((this._view) && (this._question)) && (this._question.id == k.questionId)))
@@ -186,7 +186,7 @@
             windowManager.removeWindow(k);
         }
 
-        private function answeredQuestion(k:_Str_3149):void
+        private function answeredQuestion(k:RoomWidgetWordQuizUpdateEvent):void
         {
             var _local_7:IWindowContainer;
             if (this._view)
