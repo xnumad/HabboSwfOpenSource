@@ -61,7 +61,7 @@
             this._defaultPropertyValues = null;
         }
 
-        public function _Str_25535():void
+        public function closeLoginWindow():void
         {
             if (this._dialog)
             {

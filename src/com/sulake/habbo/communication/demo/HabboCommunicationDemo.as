@@ -425,7 +425,7 @@
             _local_2.send(_local_5);
             if (this._view != null)
             {
-                this._view._Str_25535();
+                this._view.closeLoginWindow();
                 this._view.dispose();
                 this._view = null;
             }
