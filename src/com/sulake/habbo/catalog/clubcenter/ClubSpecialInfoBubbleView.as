@@ -57,7 +57,7 @@
             this._activateTimer.start();
             if (this._controller.stage)
             {
-                this._controller.stage.addEventListener(MouseEvent.CLICK, this._Str_19523);
+                this._controller.stage.addEventListener(MouseEvent.CLICK, this.onStageClick);
             }
         }
 
@@ -73,7 +73,7 @@
         {
             if (((this._controller) && (this._controller.stage)))
             {
-                this._controller.stage.removeEventListener(MouseEvent.CLICK, this._Str_19523);
+                this._controller.stage.removeEventListener(MouseEvent.CLICK, this.onStageClick);
             }
             if (this._window)
             {
@@ -99,7 +99,7 @@
             this._controller.removeBreakdown();
         }
 
-        private function _Str_19523(k:MouseEvent):void
+        private function onStageClick(k:MouseEvent):void
         {
             if (this._controller)
             {
