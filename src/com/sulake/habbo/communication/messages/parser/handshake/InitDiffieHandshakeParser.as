@@ -6,7 +6,7 @@
     public class InitDiffieHandshakeParser implements IMessageParser 
     {
         private var _encryptedPrime:String;
-        private var _Str_22105:String;
+        private var _encryptedGenerator:String;
 
 
         public function flush():Boolean
@@ -17,7 +17,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._encryptedPrime = k.readString();
-            this._Str_22105 = k.readString();
+            this._encryptedGenerator = k.readString();
             return true;
         }
 
@@ -28,7 +28,7 @@
 
         public function get encryptedGenerator():String
         {
-            return this._Str_22105;
+            return this._encryptedGenerator;
         }
     }
 }
