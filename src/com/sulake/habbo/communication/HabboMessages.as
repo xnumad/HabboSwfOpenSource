@@ -882,7 +882,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.handshake.CompleteDiffieHandshakeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10368;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.VersionCheckMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_7957;
+	import com.sulake.habbo.communication.messages.outgoing.handshake.SSOTicketMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.InfoRetrieveMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.PongMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9636;
@@ -1703,7 +1703,7 @@
             OUTGOING_PACKETS[2408] = PurchasePhotoMessageComposer;
             OUTGOING_PACKETS[2412] = _Str_11792;
             OUTGOING_PACKETS[2415] = _Str_18615;
-            OUTGOING_PACKETS[2419] = _Str_7957;
+            OUTGOING_PACKETS[2419] = SSOTicketMessageComposer;
             OUTGOING_PACKETS[2436] = _Str_18298;
             OUTGOING_PACKETS[2445] = _Str_9636;
             OUTGOING_PACKETS[2448] = _Str_11750;

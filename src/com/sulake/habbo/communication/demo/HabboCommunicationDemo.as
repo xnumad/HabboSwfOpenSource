@@ -48,7 +48,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.communication.encryption.IEncryption;
     import flash.net.SharedObject;
-    import com.sulake.habbo.communication.messages.outgoing.handshake._Str_7957;
+    import com.sulake.habbo.communication.messages.outgoing.handshake.SSOTicketMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.handshake.VersionCheckMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10368;
     import com.sulake.habbo.communication.messages.outgoing.handshake.InfoRetrieveMessageComposer;
@@ -392,7 +392,7 @@
         private function sendConnectionParameters(k:IConnection):void
         {
             var _local_4:SharedObject;
-            var _local_5:_Str_7957;
+            var _local_5:SSOTicketMessageComposer;
             k.send(new VersionCheckMessageComposer(401, this._flashClientUrl, this._externalVariablesUrl));
             var _local_2:String = "";
             try
@@ -410,7 +410,7 @@
             k.send(new _Str_10368(_local_2, generateFingerprint(), _local_3.join("/")));
             if (((this._ssoTicket) && (this._ssoTicket.length > 0)))
             {
-                k.send(new _Str_7957(this._ssoTicket));
+                k.send(new SSOTicketMessageComposer(this._ssoTicket));
             }
         }
 
