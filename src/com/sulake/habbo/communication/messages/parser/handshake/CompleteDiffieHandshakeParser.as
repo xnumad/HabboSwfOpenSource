@@ -24,7 +24,7 @@
             return true;
         }
 
-        public function get _Str_16514():String
+        public function get encryptedPublicKey():String
         {
             return this._encryptedPublicKey;
         }

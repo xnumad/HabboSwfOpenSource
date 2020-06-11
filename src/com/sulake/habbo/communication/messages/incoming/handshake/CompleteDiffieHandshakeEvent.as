@@ -11,9 +11,9 @@
             super(k, CompleteDiffieHandshakeParser);
         }
 
-        public function get _Str_16514():String
+        public function get encryptedPublicKey():String
         {
-            return (this._parser as CompleteDiffieHandshakeParser)._Str_16514;
+            return (this._parser as CompleteDiffieHandshakeParser).encryptedPublicKey;
         }
 
         public function get _Str_17893():Boolean

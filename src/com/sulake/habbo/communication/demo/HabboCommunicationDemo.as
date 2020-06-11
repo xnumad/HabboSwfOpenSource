@@ -365,7 +365,7 @@
             var _local_3:CompleteDiffieHandshakeEvent = (k as CompleteDiffieHandshakeEvent);
             var _local_4:ByteArray = new ByteArray();
             var _local_5:ByteArray = new ByteArray();
-            _local_4.writeBytes(CryptoTools.hexStringToByteArray(_local_3._Str_16514));
+            _local_4.writeBytes(CryptoTools.hexStringToByteArray(_local_3.encryptedPublicKey));
             this._rsa.verify(_local_4, _local_5, _local_4.length);
             this._rsa.dispose();
             this._keyExchange.generateSharedKey(_local_5.toString(), 10);
