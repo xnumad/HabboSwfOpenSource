@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.communication.messages.IPreEncryptionMessage;
 
-    public class _Str_10287 implements IMessageComposer, IPreEncryptionMessage 
+    public class CompleteDiffieHandshakeMessageComposer implements IMessageComposer, IPreEncryptionMessage
     {
         private var _publicKey:String;
 
-        public function _Str_10287(k:String)
+        public function CompleteDiffieHandshakeMessageComposer(k:String)
         {
             this._publicKey = k;
         }

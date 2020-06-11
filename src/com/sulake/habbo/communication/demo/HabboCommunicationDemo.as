@@ -44,7 +44,7 @@
     import com.sulake.core.communication.encryption.CryptoTools;
     import com.sulake.habbo.communication.demo.utils.KeyObfuscator;
     import com.hurlant.math.BigInteger;
-    import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10287;
+    import com.sulake.habbo.communication.messages.outgoing.handshake.CompleteDiffieHandshakeMessageComposer;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.communication.encryption.IEncryption;
     import flash.net.SharedObject;
@@ -355,7 +355,7 @@
             var _local_15:ByteArray = new ByteArray();
             _local_14.writeMultiByte(_local_11, "iso-8859-1");
             this._rsa.encrypt(_local_14, _local_15, _local_14.length);
-            _local_2.sendUnencrypted(new _Str_10287(CryptoTools.byteArrayToHexString(_local_15)));
+            _local_2.sendUnencrypted(new CompleteDiffieHandshakeMessageComposer(CryptoTools.byteArrayToHexString(_local_15)));
         }
 
         private function onCompleteDiffieHandshake(k:IMessageEvent):void

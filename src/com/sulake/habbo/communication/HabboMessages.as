@@ -879,7 +879,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_9786;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.*;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10198;
-	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10287;
+	import com.sulake.habbo.communication.messages.outgoing.handshake.CompleteDiffieHandshakeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10368;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_11513;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_7957;
@@ -1956,7 +1956,7 @@
             OUTGOING_PACKETS[749] = _Str_7251;
             OUTGOING_PACKETS[753] = _Str_11152;
             OUTGOING_PACKETS[0x0300] = OpenMessageComposer;
-            OUTGOING_PACKETS[773] = _Str_10287;
+            OUTGOING_PACKETS[773] = CompleteDiffieHandshakeMessageComposer;
             OUTGOING_PACKETS[777] = _Str_10613;
             OUTGOING_PACKETS[790] = _Str_9957;
             OUTGOING_PACKETS[793] = _Str_4916;
