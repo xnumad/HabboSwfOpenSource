@@ -104,7 +104,7 @@
             var _local_4:IWindow = this._mainWindow.findChildByName("button_like");
             if (_local_4)
             {
-                _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_23518);
+                _local_4.addEventListener(WindowMouseEvent.CLICK, this.onLike);
             }
             _local_4 = this._mainWindow.findChildByName("button_dislike");
             if (_local_4)
@@ -197,7 +197,7 @@
             this.removeWindow();
         }
 
-        private function _Str_23518(k:WindowMouseEvent):void
+        private function onLike(k:WindowMouseEvent):void
         {
             this._widget.sendAnswer(1);
         }
