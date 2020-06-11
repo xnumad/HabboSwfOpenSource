@@ -163,7 +163,7 @@
 
         private function questionFinished(k:_Str_3149):void
         {
-            this._Str_19108();
+            this.clearTimers();
             if ((((this._view) && (this._question)) && (this._question.id == k.questionId)))
             {
                 this._view._Str_21186(k._Str_4036);
@@ -332,7 +332,7 @@
             this._view._Str_6423(String(this._countdown));
             if (this._countdown == 0)
             {
-                this._Str_19108();
+                this.clearTimers();
                 this._view.removeWindow();
             }
         }
@@ -360,7 +360,7 @@
             }
         }
 
-        private function _Str_19108():void
+        private function clearTimers():void
         {
             if (this._countdownDownTimer)
             {
