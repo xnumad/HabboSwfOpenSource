@@ -209,7 +209,7 @@
             _local_7.name = _local_6;
             this._answerWindows.push(_local_7);
             this._showSignCounters[_local_6] = ((this._showResultTime + SIGN_FADE_IN_TIME) + SIGN_FADE_OUT_TIME);
-            var _local_8:Rectangle = this._Str_19158(_local_2);
+            var _local_8:Rectangle = this.getAvatarRect(_local_2);
             if (_local_8)
             {
                 _local_7.x = (_local_8.left + 20);
@@ -244,7 +244,7 @@
                     if (_local_4.length > 1)
                     {
                         _local_5 = int(_local_4[1]);
-                        _local_6 = this._Str_19158(_local_5);
+                        _local_6 = this.getAvatarRect(_local_5);
                         if (_local_6)
                         {
                             _local_3.x = (_local_6.left + 29);
@@ -307,7 +307,7 @@
             }
         }
 
-        private function _Str_19158(k:int):Rectangle
+        private function getAvatarRect(k:int):Rectangle
         {
             if (((((!(this.handler)) || (!(this.handler.container))) || (!(this.handler.container.roomSession))) || (!(this.handler.container.roomEngine))))
             {
