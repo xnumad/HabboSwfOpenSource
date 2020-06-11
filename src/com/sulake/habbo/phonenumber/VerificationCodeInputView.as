@@ -123,13 +123,13 @@
         {
             this._window.findChildByName("did_not_receive_code_link").visible = false;
             this._window.findChildByName("retry_wait_label").visible = true;
-            this._Str_12609();
+            this.onWaitTimer();
             this._waitTimer = new Timer(1000);
-            this._waitTimer.addEventListener(TimerEvent.TIMER, this._Str_12609);
+            this._waitTimer.addEventListener(TimerEvent.TIMER, this.onWaitTimer);
             this._waitTimer.start();
         }
 
-        private function _Str_12609(k:TimerEvent=null):void
+        private function onWaitTimer(k:TimerEvent=null):void
         {
             var _local_2:String = this._component.localizationManager.getLocalization("phone.number.verify.wait.remaining", "");
             var _local_3:int = Math.max(0, ((this._component._Str_20480 - getTimer()) / 1000));

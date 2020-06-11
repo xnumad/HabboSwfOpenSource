@@ -188,11 +188,11 @@
             this.createWindow(WordQuizView.STATE_RESULT);
             this.updateResults(k);
             this._waitTimer = new Timer(_displayResultDuration);
-            this._waitTimer.addEventListener(TimerEvent.TIMER, this._Str_12609);
+            this._waitTimer.addEventListener(TimerEvent.TIMER, this.onWaitTimer);
             this._waitTimer.start();
         }
 
-        private function _Str_12609(k:TimerEvent):void
+        private function onWaitTimer(k:TimerEvent):void
         {
             this.removeWindow();
         }
