@@ -29,7 +29,7 @@
     import com.hurlant.math.BigInteger;
     import com.sulake.core.communication.handshake.IKeyExchange;
     import flash.events.TimerEvent;
-    import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9636;
+    import com.sulake.habbo.communication.messages.outgoing.handshake.DisconnectMessageComposer;
     import com.sulake.iid.*;
 
     public class HabboCommunicationManager extends Component implements IHabboCommunicationManager, IConnectionStateListener 
@@ -422,7 +422,7 @@
         {
             if (this._connection)
             {
-                this._connection.send(new _Str_9636());
+                this._connection.send(new DisconnectMessageComposer());
             }
         }
 

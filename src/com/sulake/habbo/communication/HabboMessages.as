@@ -885,7 +885,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.handshake.SSOTicketMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.InfoRetrieveMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.PongMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9636;
+	import com.sulake.habbo.communication.messages.outgoing.handshake.DisconnectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9939;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79.ChangePostureMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10187;
@@ -1705,7 +1705,7 @@
             OUTGOING_PACKETS[2415] = _Str_18615;
             OUTGOING_PACKETS[2419] = SSOTicketMessageComposer;
             OUTGOING_PACKETS[2436] = _Str_18298;
-            OUTGOING_PACKETS[2445] = _Str_9636;
+            OUTGOING_PACKETS[2445] = DisconnectMessageComposer;
             OUTGOING_PACKETS[2448] = _Str_11750;
             OUTGOING_PACKETS[2455] = _Str_6216;
             OUTGOING_PACKETS[2456] = AvatarExpressionMessageComposer;
