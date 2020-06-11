@@ -185,7 +185,7 @@
             this._communication.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onGenericError));
             this._communication.addHabboConnectionMessageEvent(new PingMessageEvent(this._Str_24721));
             this._communication.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this._Str_22456));
-            this._communication.addHabboConnectionMessageEvent(new ErrorReportEvent(this._Str_24454));
+            this._communication.addHabboConnectionMessageEvent(new ErrorReportEvent(this.onErrorReport));
             this._communication.addHabboConnectionMessageEvent(new UniqueMachineIDEvent(this._Str_22966));
             this._communication.addHabboConnectionMessageEvent(new InitDiffieHandshakeEvent(this._Str_22382));
             this._communication.addHabboConnectionMessageEvent(new IdentityAccountsEvent(this._Str_23715));
@@ -502,7 +502,7 @@
             }
         }
 
-        private function _Str_24454(event:IMessageEvent):void
+        private function onErrorReport(event:IMessageEvent):void
         {
             var parser:ErrorReportMessageParser = (event as ErrorReportEvent).getParser();
             var errorCode:int = parser.errorCode;
