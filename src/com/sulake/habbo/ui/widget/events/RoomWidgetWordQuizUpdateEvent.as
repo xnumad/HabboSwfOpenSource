@@ -10,7 +10,7 @@
         public static const RWPUW_QUESTION_ANSWERED:String = "RWPUW_QUESTION_ANSWERED";
 
         private var _id:int = -1;
-        private var _Str_5702:String = null;
+        private var _pollType:String = null;
         private var _pollId:int = -1;
         private var _questionId:int = -1;
         private var _duration:int = -1;
@@ -32,12 +32,12 @@
 
         public function get pollType():String
         {
-            return this._Str_5702;
+            return this._pollType;
         }
 
         public function set pollType(k:String):void
         {
-            this._Str_5702 = k;
+            this._pollType = k;
         }
 
         public function get pollId():int
