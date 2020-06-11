@@ -587,7 +587,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_15943;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_16318;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_16470;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_16999;
+	import com.sulake.habbo.communication.messages.outgoing.help.GetFaqTextMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_18219;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_4434;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_4553;
@@ -1621,7 +1621,7 @@
             OUTGOING_PACKETS[1827] = GetPromoArticlesComposer;
             OUTGOING_PACKETS[1834] = _Str_12436;
             OUTGOING_PACKETS[1840] = _Str_7103;
-            OUTGOING_PACKETS[1849] = _Str_16999;
+            OUTGOING_PACKETS[1849] = GetFaqTextMessageComposer;
             OUTGOING_PACKETS[1855] = UpdateForumReadMarkerMessageComposer;
             OUTGOING_PACKETS[1859] = _Str_16422;
             OUTGOING_PACKETS[186] = _Str_10983;
