@@ -29,7 +29,7 @@
             return this._encryptedPublicKey;
         }
 
-        public function get _Str_17893():Boolean
+        public function get serverClientEncryption():Boolean
         {
             return this._serverClientEncryption;
         }

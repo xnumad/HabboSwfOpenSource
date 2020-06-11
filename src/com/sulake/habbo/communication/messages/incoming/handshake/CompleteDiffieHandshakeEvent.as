@@ -16,9 +16,9 @@
             return (this._parser as CompleteDiffieHandshakeParser).encryptedPublicKey;
         }
 
-        public function get _Str_17893():Boolean
+        public function get serverClientEncryption():Boolean
         {
-            return (this._parser as CompleteDiffieHandshakeParser)._Str_17893;
+            return (this._parser as CompleteDiffieHandshakeParser).serverClientEncryption;
         }
     }
 }

@@ -378,7 +378,7 @@
             _local_7.position = 0;
             var _local_8:IEncryption = this._communication.initializeEncryption();
             _local_8.init(_local_7);
-            if (_local_3._Str_17893)
+            if (_local_3.serverClientEncryption)
             {
                 _local_9 = this._communication.initializeEncryption();
                 _local_9.init(_local_7);
