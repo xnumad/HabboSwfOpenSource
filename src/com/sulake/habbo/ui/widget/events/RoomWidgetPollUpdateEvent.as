@@ -10,7 +10,7 @@
         private var _summary:String;
         private var _headline:String;
         private var _numQuestions:int = 0;
-        private var _Str_5879:String = "";
+        private var _startMessage:String = "";
         private var _endMessage:String = "";
         private var _Str_5432:Array = null;
         private var _pollType:String = "";
@@ -59,12 +59,12 @@
 
         public function get _Str_6013():String
         {
-            return this._Str_5879;
+            return this._startMessage;
         }
 
         public function set _Str_6013(k:String):void
         {
-            this._Str_5879 = k;
+            this._startMessage = k;
         }
 
         public function get _Str_5838():String

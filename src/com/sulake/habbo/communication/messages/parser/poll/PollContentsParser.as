@@ -6,7 +6,7 @@
     public class PollContentsParser implements IMessageParser 
     {
         private var _id:int = -1;
-        private var _Str_5879:String = "";
+        private var _startMessage:String = "";
         private var _endMessage:String = "";
         private var _numQuestions:int = 0;
         private var _Str_5432:Array = null;
@@ -20,7 +20,7 @@
 
         public function get _Str_6013():String
         {
-            return this._Str_5879;
+            return this._startMessage;
         }
 
         public function get _Str_5838():String
@@ -46,7 +46,7 @@
         public function flush():Boolean
         {
             this._id = -1;
-            this._Str_5879 = "";
+            this._startMessage = "";
             this._endMessage = "";
             this._numQuestions = 0;
             this._Str_5432 = null;
@@ -59,7 +59,7 @@
             var _local_4:int;
             var _local_5:int;
             this._id = k.readInteger();
-            this._Str_5879 = k.readString();
+            this._startMessage = k.readString();
             this._endMessage = k.readString();
             this._numQuestions = k.readInteger();
             this._Str_5432 = new Array();
