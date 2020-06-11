@@ -175,7 +175,7 @@
             {
                 _local_3.text = _local_2.toString();
             }
-            _local_2 = ((k[WordQuizWidget._Str_9438] != null) ? k.getValue(WordQuizWidget._Str_9438) : 0);
+            _local_2 = ((k[WordQuizWidget.VALUE_KEY_LIKE] != null) ? k.getValue(WordQuizWidget.VALUE_KEY_LIKE) : 0);
             _local_3 = (this._mainWindow.findChildByName("lbl_like_count") as ILabelWindow);
             if (_local_3)
             {

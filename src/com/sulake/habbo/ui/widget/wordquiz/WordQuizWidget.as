@@ -31,7 +31,7 @@
         private static const SIGN_FADE_OUT_TIME:int = 750;
         private static const UPDATE_FREQUENCY:int = 40;
         public static const VALUE_KEY_DISLIKE:String = "0";
-        public static const _Str_9438:String = "1";
+        public static const VALUE_KEY_LIKE:String = "1";
 
         private var _view:WordQuizView;
         private var _countdownUpTimer:Timer;
@@ -195,8 +195,8 @@
             }
             var _local_2:int = k.userId;
             var _local_3:String = k.value;
-            var _local_4:Vector.<IWindowContainer> = ((_local_3 == _Str_9438) ? this._yesWindowPool : this._noWindowPool);
-            var _local_5:String = ((_local_3 == _Str_9438) ? WORDQUIZ_LIKE_XML : WORDQUIZ_UNLIKE_XML);
+            var _local_4:Vector.<IWindowContainer> = ((_local_3 == VALUE_KEY_LIKE) ? this._yesWindowPool : this._noWindowPool);
+            var _local_5:String = ((_local_3 == VALUE_KEY_LIKE) ? WORDQUIZ_LIKE_XML : WORDQUIZ_UNLIKE_XML);
             var _local_6:String = ((((this._pollId + "_") + _local_2) + "_") + _local_5);
             if (_local_4.length)
             {
