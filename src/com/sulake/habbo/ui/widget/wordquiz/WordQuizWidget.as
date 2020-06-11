@@ -388,7 +388,7 @@
             _local_2.answers = _local_3;
             messageListener.processWidgetMessage(_local_2);
             this._answerSent = true;
-            this._view.createWindow(WordQuizView._Str_14885);
+            this._view.createWindow(WordQuizView.STATE_RESULT);
         }
     }
 }

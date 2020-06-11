@@ -17,7 +17,7 @@
     public class WordQuizView 
     {
         public static const STATE_QUESTION:int = 0;
-        public static const _Str_14885:int = 1;
+        public static const STATE_RESULT:int = 1;
         private static const _Str_12004:Boolean = false;
         private static var _Str_18458:int;
 
@@ -185,7 +185,7 @@
 
         public function _Str_21186(k:Map):void
         {
-            this.createWindow(WordQuizView._Str_14885);
+            this.createWindow(WordQuizView.STATE_RESULT);
             this._Str_19343(k);
             this._Str_3891 = new Timer(_Str_18458);
             this._Str_3891.addEventListener(TimerEvent.TIMER, this._Str_12609);
