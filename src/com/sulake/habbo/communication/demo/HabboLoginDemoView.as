@@ -279,7 +279,7 @@
             }
             this._window.findChildByName("users_info").visible = false;
             var _local_3:IWindow = this._userListItem.clone();
-            _local_3.procedure = this._Str_24864;
+            _local_3.procedure = this.listEventHandler;
             var _local_5:int;
             while (_local_5 < k.length)
             {
@@ -381,7 +381,7 @@
             this._window.findChildByName("login_btn").disable();
         }
 
-        private function _Str_24864(k:WindowEvent, _arg_2:IWindow):void
+        private function listEventHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
