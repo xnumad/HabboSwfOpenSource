@@ -208,7 +208,7 @@
             return window;
         }
 
-        public function _Str_4804(name:String):IModalDialog
+        public function getModalXmlWindow(name:String):IModalDialog
         {
             var asset:IAsset;
             var xmlAsset:XmlAsset;

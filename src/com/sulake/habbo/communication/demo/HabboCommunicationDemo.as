@@ -262,7 +262,7 @@
             return window;
         }
 
-        public function _Str_4804(name:String, appendix:String="_xml"):IModalDialog
+        public function getModalXmlWindow(name:String, appendix:String="_xml"):IModalDialog
         {
             var asset:IAsset;
             var xmlAsset:XmlAsset;

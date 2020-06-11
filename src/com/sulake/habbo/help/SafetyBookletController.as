@@ -47,7 +47,7 @@
         public function _Str_24968():void
         {
             this.closeWindow();
-            this._dialog = this._habboHelp._Str_4804("safety_booklet");
+            this._dialog = this._habboHelp.getModalXmlWindow("safety_booklet");
             this._window = IWindowContainer(this._dialog.rootWindow);
             this._window.procedure = this.onWindowEvent;
             this._Str_7910(this._Str_7835);

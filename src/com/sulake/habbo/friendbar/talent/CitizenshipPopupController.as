@@ -58,7 +58,7 @@
         public function show():void
         {
             this.hide();
-            this._dialog = this._habboTalent._Str_4804("citizenship_welcome");
+            this._dialog = this._habboTalent.getModalXmlWindow("citizenship_welcome");
             this._dialog.rootWindow.procedure = this.onWindowEvent;
             IWindowContainer(this._dialog.rootWindow).findChildByName("header_button_close").visible = false;
         }

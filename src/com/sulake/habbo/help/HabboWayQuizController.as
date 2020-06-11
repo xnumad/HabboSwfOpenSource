@@ -111,7 +111,7 @@
         private function _Str_3360(k:String, _arg_2:Array):void
         {
             this.closeWindow();
-            this._dialog = this._habboHelp._Str_4804("habbo_way_quiz");
+            this._dialog = this._habboHelp.getModalXmlWindow("habbo_way_quiz");
             this._window = IWindowContainer(this._dialog.rootWindow);
             this._window.procedure = this.onWindowEvent;
             this._questionPane = IWindowContainer(this._window.findChildByName("question_pane"));

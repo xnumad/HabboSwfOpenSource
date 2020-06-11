@@ -44,7 +44,7 @@
         {
             this._habboLogin = k;
             this._defaultPropertyValues = new Dictionary();
-            this._dialog = this._habboLogin._Str_4804("login_window", "");
+            this._dialog = this._habboLogin.getModalXmlWindow("login_window", "");
             this._window = (this._dialog.rootWindow as IWindowContainer);
             this.createWindow();
         }

@@ -56,7 +56,7 @@
         {
             if (((this._helpDialog == null) && (!(this.disposed))))
             {
-                this._helpDialog = this._guideHelp.habboHelp._Str_4804("main_help");
+                this._helpDialog = this._guideHelp.habboHelp.getModalXmlWindow("main_help");
                 this._helpDialog.rootWindow.procedure = this._Str_18394;
             }
         }

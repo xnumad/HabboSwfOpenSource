@@ -150,7 +150,7 @@
             var _local_4:String;
             var _local_7:IWindowContainer;
             this.destroyWindow();
-            this._dialog = this._habboTalent._Str_4804("talent_track");
+            this._dialog = this._habboTalent.getModalXmlWindow("talent_track");
             this._window = IWindowContainer(this._dialog.rootWindow);
             this._window.procedure = this.onWindowEvent;
             this._dialog.background.procedure = this._Str_22317;
@@ -696,7 +696,7 @@
                 this._Str_23046();
                 return;
             }
-            this._taskProgressPopup = this._habboTalent._Str_4804("task_progress_dialog");
+            this._taskProgressPopup = this._habboTalent.getModalXmlWindow("task_progress_dialog");
             this._taskProgressPopup.rootWindow.procedure = this._Str_22508;
             this._taskProgressPopup.background.procedure = this._Str_22368;
             var _local_3:IWindowContainer = IWindowContainer(this._taskProgressPopup.rootWindow);
@@ -841,7 +841,7 @@
 
         private function _Str_23046():void
         {
-            this._taskProgressPopup = this._habboTalent._Str_4804("tour_task_progress_dialog");
+            this._taskProgressPopup = this._habboTalent.getModalXmlWindow("tour_task_progress_dialog");
             var k:IWindowContainer = IWindowContainer(this._taskProgressPopup.rootWindow);
             k.findChildByName("take_tour_button").procedure = this._Str_23407;
             k.findChildByName("decline_tour_region").procedure = this._Str_23494;
