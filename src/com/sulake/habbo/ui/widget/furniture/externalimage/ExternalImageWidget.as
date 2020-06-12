@@ -79,7 +79,7 @@
         private var _nameCopyField:TextField;
         private var _creationDateText:ILabelWindow;
         private var _bitmapLoader:BitmapFileLoader;
-        private var _Str_13302:Bitmap;
+        private var _currentImage:Bitmap;
         private var _inventory:IHabboInventory;
         private var _Str_8722:int;
         private var _Str_8942:String;
@@ -360,7 +360,7 @@
 
         private function _Str_19771(k:Bitmap):void
         {
-            this._Str_13302 = k;
+            this._currentImage = k;
             this._imageContainer.bitmap = new BitmapData(this._imageContainer.width, this._imageContainer.height, true, 0);
             this._window.visible = true;
             var _local_2:IWindow = this._window.findChildByName("previousButton");
@@ -477,14 +477,14 @@
 
         private function _Str_20964():void
         {
-            if (!this._Str_13302)
+            if (!this._currentImage)
             {
                 this._window.center();
                 return;
             }
             var k:Stage = this._Str_2296.context.displayObjectContainer.stage;
-            var _local_2:Number = ((k.stageWidth - 100) / this._Str_13302.width);
-            var _local_3:Number = ((k.stageHeight - 200) / this._Str_13302.height);
+            var _local_2:Number = ((k.stageWidth - 100) / this._currentImage.width);
+            var _local_3:Number = ((k.stageHeight - 200) / this._currentImage.height);
             if (_local_2 < 1)
             {
                 this._window.x = 50;
