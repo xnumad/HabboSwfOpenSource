@@ -202,7 +202,7 @@
             }
         }
 
-        private function _Str_23066():void
+        private function showPrevious():void
         {
             var k:Vector.<IRoomObject> = this._Str_15905();
             if (k.length > 0)
@@ -588,7 +588,7 @@
                     this.showNext();
                     return;
                 case "previousButton":
-                    this._Str_23066();
+                    this.showPrevious();
                     return;
             }
         }
