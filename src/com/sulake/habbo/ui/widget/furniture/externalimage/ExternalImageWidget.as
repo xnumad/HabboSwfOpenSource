@@ -66,7 +66,7 @@
 
         private var _window:IWindowContainer;
         private var _imageContainer:IBitmapWrapperWindow;
-        private var _Str_11003:IHTMLTextWindow;
+        private var _moderationText:IHTMLTextWindow;
         private var _Str_19406:IWindow;
         private var _Str_2728:IWindow;
         private var _Str_13852:IWindowContainer;
@@ -104,8 +104,8 @@
             this._Str_2844.widget = this;
             this._Str_2728 = (this._window.findChildByName("closebutton") as IWindow);
             this._imageContainer = (this._window.findChildByName("imageLoader") as IBitmapWrapperWindow);
-            this._Str_11003 = (this._window.findChildByName("moderationText") as IHTMLTextWindow);
-            this._Str_11003.addEventListener(WindowLinkEvent.WINDOW_EVENT_LINK, this._Str_23468);
+            this._moderationText = (this._window.findChildByName("moderationText") as IHTMLTextWindow);
+            this._moderationText.addEventListener(WindowLinkEvent.WINDOW_EVENT_LINK, this._Str_23468);
             this._Str_12629 = (this._window.findChildByName("shareArea") as IWindowContainer);
             this._Str_13852 = (this._window.findChildByName("removeButtonContainer") as IWindowContainer);
             this._Str_19406 = (this._window.findChildByName("makeOwnButton") as IWindow);
@@ -243,7 +243,7 @@
             this._Str_7334.text = "";
             this._Str_9997.caption = "";
             this._Str_7653 = null;
-            this._Str_11003.visible = false;
+            this._moderationText.visible = false;
             this._Str_19771(new Bitmap(new BitmapData((this._imageContainer.width - 2), (this._imageContainer.height - 2), false, 0)));
         }
 
@@ -418,13 +418,13 @@
         {
             if (((k.status == 403) && (this._Str_2844._Str_19701())))
             {
-                this._Str_11003.visible = true;
+                this._moderationText.visible = true;
             }
         }
 
         private function _Str_23656(k:Event):void
         {
-            if (!this._Str_11003.visible)
+            if (!this._moderationText.visible)
             {
                 Logger.log(("Extra data loading failed: " + k.toString()));
             }
