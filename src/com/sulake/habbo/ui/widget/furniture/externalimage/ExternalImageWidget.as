@@ -86,7 +86,7 @@
         private var _caption:String;
         private var _senderId:int;
         private var _shareUrl:String;
-        private var _Str_15263:IWindowContainer;
+        private var _reportImagebutton:IWindowContainer;
         private var _Str_6733:String;
         private var _Str_26327:IBitmapWrapperWindow;
         private var _help:IHabboHelp;
@@ -126,7 +126,7 @@
             this._inventory = _arg_5;
             this._help = _arg_6;
             this._roomEngine = _arg_7;
-            this._Str_15263 = (this._window.findChildByName("reportButtonContainer") as IWindowContainer);
+            this._reportImagebutton = (this._window.findChildByName("reportButtonContainer") as IWindowContainer);
             this._window.procedure = this.onWindowEvent;
             this._window.center();
             this._shareArea.visible = false;
@@ -147,11 +147,11 @@
             this._deleteButton.visible = this._Str_2844._Str_19701();
             if (this.getType() == PHOTO_POSTER)
             {
-                this._Str_15263.visible = true;
+                this._reportImagebutton.visible = true;
             }
             else
             {
-                this._Str_15263.visible = this._Str_2844._Str_25770();
+                this._reportImagebutton.visible = this._Str_2844._Str_25770();
             }
             this.show(k.getModel().getString("furniture_data"));
             var _local_2:Vector.<IRoomObject> = this._Str_15905();
@@ -170,7 +170,7 @@
                 this._Str_6733 = this._roomEngine.getWallItemType(_local_2.type);
                 this._Str_16159 = true;
                 this._deleteButton.visible = false;
-                this._Str_15263.visible = false;
+                this._reportImagebutton.visible = false;
                 this.show(_local_2.stuffData.getLegacyString());
             }
         }
