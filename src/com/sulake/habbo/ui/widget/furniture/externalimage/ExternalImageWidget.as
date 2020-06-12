@@ -91,7 +91,7 @@
         private var _Str_26327:IBitmapWrapperWindow;
         private var _help:IHabboHelp;
         private var _roomEngine:IRoomEngine;
-        private var _Str_8403:IWindowContainer;
+        private var _reportImageContainer:IWindowContainer;
         private var _Str_5182:int = 0;
         private var _Str_16159:Boolean = false;
         private var _Str_2296:Component;
@@ -464,9 +464,9 @@
             this._window.dispose();
             this._Str_2296 = null;
             super.dispose();
-            if (this._Str_8403)
+            if (this._reportImageContainer)
             {
-                this._Str_8403.destroy();
+                this._reportImageContainer.destroy();
             }
         }
 
@@ -635,11 +635,11 @@
             switch (_arg_2.name)
             {
                 case "header_button_close":
-                    this._Str_8403.destroy();
+                    this._reportImageContainer.destroy();
                     return;
                 case "report_confirm":
                     _local_3 = 0;
-                    _local_4 = this._Str_8403.findChildByName("reporting_reason");
+                    _local_4 = this._reportImageContainer.findChildByName("reporting_reason");
                     if (_local_4 != null)
                     {
                         _local_8 = ISelectorWindow(_local_4).getSelected();
@@ -649,7 +649,7 @@
                         }
                     }
                     _local_5 = null;
-                    _local_6 = this._Str_8403.findChildByName("input_widget");
+                    _local_6 = this._reportImageContainer.findChildByName("input_widget");
                     if (_local_6 != null)
                     {
                         _local_9 = ((_local_6 as IWidgetWindow).widget as _Str_2789);
@@ -669,7 +669,7 @@
                     }
                     if (_local_7)
                     {
-                        this._Str_8403.destroy();
+                        this._reportImageContainer.destroy();
                     }
                     return;
             }
