@@ -46,10 +46,10 @@
         {
             super(k, _arg_2, _arg_3, _arg_4);
             this._habboTracking = _arg_5;
-            this._Str_2844.widget = this;
+            this.ownHandler.widget = this;
         }
 
-        private function get _Str_2844():FurnitureYoutubeDisplayWidgetHandler
+        private function get ownHandler():FurnitureYoutubeDisplayWidgetHandler
         {
             return _handler as FurnitureYoutubeDisplayWidgetHandler;
         }
@@ -128,13 +128,13 @@
                 {
                     if (this._player.getPlayerState() == YoutubeVideoPlaybackStateEnum._Str_5825)
                     {
-                        this._Str_2844.pauseVideo(this._roomObject.getId());
+                        this.ownHandler.pauseVideo(this._roomObject.getId());
                     }
                     else
                     {
                         if (this._player.getPlayerState() == YoutubeVideoPlaybackStateEnum._Str_6168)
                         {
-                            this._Str_2844._Str_25279(this._roomObject.getId());
+                            this.ownHandler._Str_25279(this._roomObject.getId());
                         }
                     }
                 }
@@ -238,10 +238,10 @@
                             this.hide(this._roomObject);
                             break;
                         case "playlist_prev":
-                            this._Str_2844._Str_23793(this._roomObject.getId());
+                            this.ownHandler._Str_23793(this._roomObject.getId());
                             break;
                         case "playlist_next":
-                            this._Str_2844._Str_23211(this._roomObject.getId());
+                            this.ownHandler._Str_23211(this._roomObject.getId());
                             break;
                         default:
                             if ((_arg_2 is IRegionWindow))
@@ -253,13 +253,13 @@
                                 if (this._selectedItem == _arg_2)
                                 {
                                     this._selectedItem = null;
-                                    this._Str_2844._Str_19594(this._roomObject.getId(), "");
+                                    this.ownHandler._Str_19594(this._roomObject.getId(), "");
                                 }
                                 else
                                 {
                                     this._selectedItem = (_arg_2 as IWindowContainer);
                                     this._selectedItem.findChildByName("item_background").color = _Str_13698;
-                                    this._Str_2844._Str_19594(this._roomObject.getId(), this._selectedItem.name);
+                                    this.ownHandler._Str_19594(this._roomObject.getId(), this._selectedItem.name);
                                 }
                                 this._Str_2771();
                             }

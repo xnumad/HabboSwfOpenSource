@@ -28,10 +28,10 @@
         public function VimeoDisplayWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary, _arg_4:IHabboLocalizationManager)
         {
             super(k, _arg_2, _arg_3, _arg_4);
-            this._Str_2844.widget = this;
+            this.ownHandler.widget = this;
         }
 
-        private function get _Str_2844():FurnitureVimeoDisplayWidgetHandler
+        private function get ownHandler():FurnitureVimeoDisplayWidgetHandler
         {
             return _handler as FurnitureVimeoDisplayWidgetHandler;
         }
@@ -102,7 +102,7 @@
                     if (WindowKeyboardEvent(k).charCode == 13)
                     {
                         _local_3 = int(this._window.findChildByName("video_id").caption);
-                        this._Str_2844._Str_18970(this._roomObject, _local_3);
+                        this.ownHandler._Str_18970(this._roomObject, _local_3);
                         this._window.findChildByName("video_wrapper").visible = (_local_3 > 0);
                         this._player.loadVideo(_local_3);
                     }

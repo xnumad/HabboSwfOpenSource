@@ -39,10 +39,10 @@
         public function RentableSpaceDisplayWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary, _arg_4:IHabboLocalizationManager)
         {
             super(k, _arg_2, _arg_3, _arg_4);
-            this._Str_2844.widget = this;
+            this.ownHandler.widget = this;
         }
 
-        private function get _Str_2844():FurnitureRentableSpaceWidgetHandler
+        private function get ownHandler():FurnitureRentableSpaceWidgetHandler
         {
             return _handler as FurnitureRentableSpaceWidgetHandler;
         }
@@ -108,10 +108,10 @@
                             this.hide(this._roomObject);
                             break;
                         case "rent_button":
-                            this._Str_2844._Str_24022(this._roomObject.getId());
+                            this.ownHandler._Str_24022(this._roomObject.getId());
                             break;
                         case "cancel_rent_button":
-                            this._Str_2844._Str_24966(this._roomObject.getId());
+                            this.ownHandler._Str_24966(this._roomObject.getId());
                             break;
                     }
             }
@@ -123,7 +123,7 @@
             {
                 return;
             }
-            this._Str_2844._Str_25642(this._roomObject.getId());
+            this.ownHandler._Str_25642(this._roomObject.getId());
         }
 
         public function _Str_23885(k:Boolean, _arg_2:Boolean, _arg_3:int, _arg_4:int, _arg_5:String, _arg_6:int, _arg_7:int):void
@@ -140,8 +140,8 @@
                 this._window.findChildByName("error_view").visible = false;
                 this._window.findChildByName("rented_view").visible = true;
                 this._window.findChildByName("renter_name").caption = _arg_5;
-                this._window.findChildByName("time_remaining_label").caption = FriendlyTime.format(this._Str_2844.container.localization, _arg_6);
-                this._window.findChildByName("cancel_rent_button").visible = ((this._Str_2844.container.isOwnerOfFurniture(this._roomObject)) || (this._Str_2844.container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR)));
+                this._window.findChildByName("time_remaining_label").caption = FriendlyTime.format(this.ownHandler.container.localization, _arg_6);
+                this._window.findChildByName("cancel_rent_button").visible = ((this.ownHandler.container.isOwnerOfFurniture(this._roomObject)) || (this.ownHandler.container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR)));
                 IItemListWindow(this._window.findChildByName("rented_view")).arrangeListItems();
             }
             else
@@ -150,7 +150,7 @@
                 this._window.findChildByName("error_view").visible = false;
                 this._window.findChildByName("rent_view").visible = true;
                 this._window.findChildByName("price_label").caption = (_arg_7.toString() + " x");
-                _local_8 = (_arg_7 <= this._Str_2844._Str_23322());
+                _local_8 = (_arg_7 <= this.ownHandler._Str_23322());
                 if (!_arg_2)
                 {
                     this._window.findChildByName("cant_rent_error").caption = _Str_4003[_arg_3];

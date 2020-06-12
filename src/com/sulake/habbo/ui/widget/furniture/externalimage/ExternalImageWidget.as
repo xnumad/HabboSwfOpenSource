@@ -101,7 +101,7 @@
             var _local_9:IDisplayObjectWrapper;
             super(k, _arg_2, _arg_3, _arg_4);
             this._window = (_arg_2.buildFromXML((_arg_3.getAssetByName("stories_image_widget_xml").content as XML)) as IWindowContainer);
-            this._Str_2844.widget = this;
+            this.ownHandler.widget = this;
             this._closeButton = (this._window.findChildByName("closebutton") as IWindow);
             this._imageContainer = (this._window.findChildByName("imageLoader") as IBitmapWrapperWindow);
             this._moderationText = (this._window.findChildByName("moderationText") as IHTMLTextWindow);
@@ -114,7 +114,7 @@
             this._senderNameButton = (this._window.findChildByName("senderNameButton") as IRegionWindow);
             this._senderNameText = (this._window.findChildByName("senderName") as ILabelWindow);
             this._nameCopyField = new TextField();
-            if (this._Str_2844.container.roomSession.roomControllerLevel == RoomControllerLevel.MODERATOR)
+            if (this.ownHandler.container.roomSession.roomControllerLevel == RoomControllerLevel.MODERATOR)
             {
                 _local_9 = (this._window.findChildByName("name_copy_wrapper") as IDisplayObjectWrapper);
                 this._nameCopyField.textColor = 10061943;
@@ -134,7 +134,7 @@
             this.hide();
         }
 
-        private function get _Str_2844():ExternalImageWidgetHandler
+        private function get ownHandler():ExternalImageWidgetHandler
         {
             return _handler as ExternalImageWidgetHandler;
         }
@@ -144,14 +144,14 @@
             this._roomObjectID = k.getId();
             this._roomObjectType = k.getType();
             this._openedFromInventory = false;
-            this._deleteButton.visible = this._Str_2844._Str_19701();
+            this._deleteButton.visible = this.ownHandler._Str_19701();
             if (this.getType() == PHOTO_POSTER)
             {
                 this._reportImagebutton.visible = true;
             }
             else
             {
-                this._reportImagebutton.visible = this._Str_2844._Str_25770();
+                this._reportImagebutton.visible = this.ownHandler._Str_25770();
             }
             this.show(k.getModel().getString("furniture_data"));
             var _local_2:Vector.<IRoomObject> = this._Str_15905();
@@ -177,7 +177,7 @@
 
         private function show(k:String):void
         {
-            if (this._Str_2844._Str_19276 == "disabled")
+            if (this.ownHandler._Str_19276 == "disabled")
             {
                 return;
             }
@@ -279,7 +279,7 @@
                 {
                     _local_2 = (_local_2 + ".png");
                 }
-                _local_2 = ((this._Str_2844._Str_19276 + _local_3) + _local_2);
+                _local_2 = ((this.ownHandler._Str_19276 + _local_3) + _local_2);
             }
             return _local_2;
         }
@@ -317,10 +317,10 @@
                 this._senderId = int(senderId);
                 this._creationDateText.caption = ((((creationDate.date + "-") + (creationDate.month + 1)) + "-") + creationDate.fullYear);
             }
-            if (((this._Str_2844._Str_18355) && (this._Str_2844._Str_18355.length > 4)))
+            if (((this.ownHandler._Str_18355) && (this.ownHandler._Str_18355.length > 4)))
             {
                 shareUrlText = (this._window.findChildByName("urlField") as IWindow);
-                finalUrl = this._Str_2844._Str_18355.replace("%id%", uniqueId);
+                finalUrl = this.ownHandler._Str_18355.replace("%id%", uniqueId);
                 shareUrlText.caption = finalUrl;
                 this._shareUrl = finalUrl;
             }
@@ -407,7 +407,7 @@
 
         private function _Str_25873():void
         {
-            var k:String = (this._Str_2844._Str_23183 + this._extraDataID);
+            var k:String = (this.ownHandler._Str_23183 + this._extraDataID);
             var _local_2:URLLoader = new URLLoader(new URLRequest(k));
             _local_2.addEventListener(HTTPStatusEvent.HTTP_STATUS, this._Str_23258);
             _local_2.addEventListener(Event.COMPLETE, this._Str_22927);
@@ -416,7 +416,7 @@
 
         private function _Str_23258(k:HTTPStatusEvent):void
         {
-            if (((k.status == 403) && (this._Str_2844._Str_19701())))
+            if (((k.status == 403) && (this.ownHandler._Str_19701())))
             {
                 this._moderationText.visible = true;
             }
@@ -546,7 +546,7 @@
                     {
                         _local_5 = new HabboToolbarEvent(HabboToolbarEvent.HTE_ICON_CAMERA);
                         _local_5._Str_4856 = HabboToolbarEvent.IMAGEWIDGETMAKEOWN;
-                        this._Str_2844.container.toolbar.events.dispatchEvent(_local_5);
+                        this.ownHandler.container.toolbar.events.dispatchEvent(_local_5);
                         this.hide();
                     }
                     else
@@ -574,7 +574,7 @@
                     HabboTracking.getInstance().trackEventLog("Stories", "facebook", "stories.share.clicked", this._roomObjectType);
                     return;
                 case "senderNameButton":
-                    this._Str_2844.sendMessage(new GetExtendedProfileMessageComposer(this._senderId));
+                    this.ownHandler.sendMessage(new GetExtendedProfileMessageComposer(this._senderId));
                     return;
                 case "urlField":
                     _local_4 = (this._window.findChildByName("urlField") as ITextFieldWindow);
@@ -680,7 +680,7 @@
             k.dispose();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
-                this._Str_2844._Str_25405(this._roomObjectID);
+                this.ownHandler._Str_25405(this._roomObjectID);
             }
         }
     }
