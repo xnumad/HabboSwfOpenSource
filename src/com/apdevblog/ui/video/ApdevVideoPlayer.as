@@ -7,7 +7,7 @@
     import flash.utils.Timer;
     import com.apdevblog.model.vo.VideoMetadataVo;
     import flash.display.DisplayObjectContainer;
-    import com.apdevblog.ui.video.controls._Str_11881;
+    import com.apdevblog.ui.video.controls.ImageOverlay;
     import com.apdevblog.ui.video.controls.VideoControlsEvent;
     import com.apdevblog.utils._Str_3771;
     import flash.events.TimerEvent;
@@ -64,7 +64,7 @@
         private var _Str_12093:Timer;
         private var _Str_19802:int;
         private var _Str_8247:*;
-        private var _image:_Str_11881;
+        private var _image:ImageOverlay;
         private var _Str_18114:Boolean;
 
         public function ApdevVideoPlayer(k:int, _arg_2:int)
@@ -198,7 +198,7 @@
             this._Str_3319 = new _Str_8021(this._Str_9635);
             this._Str_14540 = false;
             addChild(this._Str_3319);
-            this._image = new _Str_11881(this._Str_9635, this._Str_5932);
+            this._image = new ImageOverlay(this._Str_9635, this._Str_5932);
             this._image.visible = false;
             addChild(this._image);
         }

@@ -9,14 +9,14 @@
     import flash.events.Event;
     import com.apdevblog.ui.video.controls.VideoControlsEvent;
 
-    public class _Str_11881 extends Sprite 
+    public class ImageOverlay extends Sprite
     {
         private var _Str_2835:Loader;
         private var _Str_8321:_Str_9370;
         private var _Str_4901:Number;
         private var _Str_4960:Number;
 
-        public function _Str_11881(k:Number, _arg_2:Number)
+        public function ImageOverlay(k:Number, _arg_2:Number)
         {
             this._Str_1400(k, _arg_2);
         }
