@@ -391,7 +391,7 @@
             {
                 _local_4 = this._widget.handler.container.roomSession.roomId;
                 _local_5 = RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
-                this._widget.handler.container.roomEngine._Str_5538(_local_4, _local_3.getId(), _local_5);
+                this._widget.handler.container.roomEngine.selectRoomObject(_local_4, _local_3.getId(), _local_5);
                 return true;
             }
             return false;

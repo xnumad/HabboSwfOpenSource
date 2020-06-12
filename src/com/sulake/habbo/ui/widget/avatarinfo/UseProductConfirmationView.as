@@ -488,7 +488,7 @@
             if (_local_3 != null)
             {
                 _local_4 = this._widget.handler.container.roomSession.roomId;
-                this._widget.handler.container.roomEngine._Str_5538(_local_4, _local_3.getId(), _arg_2);
+                this._widget.handler.container.roomEngine.selectRoomObject(_local_4, _local_3.getId(), _arg_2);
                 return true;
             }
             return false;

@@ -1349,7 +1349,7 @@
             if (this._roomEngine != null)
             {
                 k = ((this._roomItemToSelect.isWallItem) ? RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM : RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
-                this._roomEngine._Str_5538(this._roomItemToSelect.flatId, Math.abs(this._roomItemToSelect.id), k);
+                this._roomEngine.selectRoomObject(this._roomItemToSelect.flatId, Math.abs(this._roomItemToSelect.id), k);
             }
             this._roomItemToSelect = null;
         }

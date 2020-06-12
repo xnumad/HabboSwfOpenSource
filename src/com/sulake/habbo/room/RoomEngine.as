@@ -2652,7 +2652,7 @@
             var _local_9:ISelectedRoomObjectData = this.getPlacedObjectData(k);
             if ((((_local_9) && (Math.abs(_local_9.id) == _arg_2)) && (_local_9.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)))
             {
-                this._Str_5538(k, _arg_2, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
+                this.selectRoomObject(k, _arg_2, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
             }
             if (((_local_8.isInitialized()) && (_arg_3.synchronized)))
             {
@@ -2905,7 +2905,7 @@
             var _local_9:ISelectedRoomObjectData = this.getPlacedObjectData(k);
             if ((((_local_9) && (_local_9.id == _arg_2)) && (_local_9.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)))
             {
-                this._Str_5538(k, _arg_2, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
+                this.selectRoomObject(k, _arg_2, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             }
             return true;
         }
@@ -4074,7 +4074,7 @@
             return -1;
         }
 
-        public function _Str_5538(k:int, _arg_2:int, _arg_3:int):void
+        public function selectRoomObject(k:int, _arg_2:int, _arg_3:int):void
         {
             if (this._roomObjectEventHandler == null)
             {

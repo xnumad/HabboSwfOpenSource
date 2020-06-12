@@ -54,7 +54,7 @@
         function initializeRoomObjectInsert(_arg_1:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:String=null, _arg_6:IStuffData=null, _arg_7:int=-1, _arg_8:int=-1, _arg_9:String=null):Boolean;
         function cancelRoomObjectInsert():void;
         function selectAvatar(_arg_1:int, _arg_2:int):void;
-        function _Str_5538(_arg_1:int, _arg_2:int, _arg_3:int):void;
+        function selectRoomObject(_arg_1:int, _arg_2:int, _arg_3:int):void;
         function getWorldType(_arg_1:int):String;
         function getSelectedObjectData(_arg_1:int):ISelectedRoomObjectData;
         function getSelectedAvatarId():int;

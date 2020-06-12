@@ -70,7 +70,7 @@
                     }
                     if (((_local_2.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) || (_local_2.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)))
                     {
-                        this._container.roomEngine._Str_5538(this._container.roomSession.roomId, _local_2.id, _local_2.category);
+                        this._container.roomEngine.selectRoomObject(this._container.roomSession.roomId, _local_2.id, _local_2.category);
                     }
                     break;
             }
