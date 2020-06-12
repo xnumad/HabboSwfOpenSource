@@ -77,7 +77,7 @@
         private var _senderNameButton:IRegionWindow;
         private var _senderNameText:ILabelWindow;
         private var _nameCopyField:TextField;
-        private var _Str_9997:ILabelWindow;
+        private var _creationDateText:ILabelWindow;
         private var _Str_10424:BitmapFileLoader;
         private var _Str_13302:Bitmap;
         private var _inventory:IHabboInventory;
@@ -121,7 +121,7 @@
                 this._nameCopyField.text = "";
                 _local_9.setDisplayObject(this._nameCopyField);
             }
-            this._Str_9997 = (this._window.findChildByName("creationDate") as ILabelWindow);
+            this._creationDateText = (this._window.findChildByName("creationDate") as ILabelWindow);
             this._buttonContainer = (this._window.findChildByName("buttonContainer") as IWindowContainer);
             this._inventory = _arg_5;
             this._help = _arg_6;
@@ -241,7 +241,7 @@
             this._Str_3017 = 0;
             this._senderNameText.caption = "";
             this._nameCopyField.text = "";
-            this._Str_9997.caption = "";
+            this._creationDateText.caption = "";
             this._Str_7653 = null;
             this._moderationText.visible = false;
             this._Str_19771(new Bitmap(new BitmapData((this._imageContainer.width - 2), (this._imageContainer.height - 2), false, 0)));
@@ -315,7 +315,7 @@
                 this._senderNameButton.visible = true;
                 this._nameCopyField.text = senderName;
                 this._Str_3017 = int(senderId);
-                this._Str_9997.caption = ((((creationDate.date + "-") + (creationDate.month + 1)) + "-") + creationDate.fullYear);
+                this._creationDateText.caption = ((((creationDate.date + "-") + (creationDate.month + 1)) + "-") + creationDate.fullYear);
             }
             if (((this._Str_2844._Str_18355) && (this._Str_2844._Str_18355.length > 4)))
             {
@@ -373,8 +373,8 @@
             this._bgBorder.width = (this._window.width = ((this._imageContainer.width + (HORIZONTAL_ITEM_SPACING * 4)) + (_local_2.width * 2)));
             this._senderNameButton.x = ((this._imageContainer.right - this._senderNameButton.width) - 3);
             this._senderNameButton.y = (this._imageContainer.bottom + 3);
-            this._Str_9997.x = (this._imageContainer.x + 3);
-            this._Str_9997.y = (this._senderNameButton.y = this._imageContainer.bottom);
+            this._creationDateText.x = (this._imageContainer.x + 3);
+            this._creationDateText.y = (this._senderNameButton.y = this._imageContainer.bottom);
             this._buttonContainer.y = 0;
             this._buttonContainer.x = (this._bgBorder.right - this._buttonContainer.width);
             _local_3.x = (this._imageContainer.right + HORIZONTAL_ITEM_SPACING);
