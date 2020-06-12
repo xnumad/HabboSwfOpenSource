@@ -139,7 +139,7 @@
             return _handler as ExternalImageWidgetHandler;
         }
 
-        public function _Str_16946(k:IRoomObject):void
+        public function showWithRoomObject(k:IRoomObject):void
         {
             this._roomObjectID = k.getId();
             this._roomObjectType = k.getType();
@@ -198,7 +198,7 @@
                 {
                     this._currentRoomObjectListIndex = 0;
                 }
-                this._Str_16946(k[this._currentRoomObjectListIndex]);
+                this.showWithRoomObject(k[this._currentRoomObjectListIndex]);
             }
         }
 
@@ -212,7 +212,7 @@
                 {
                     this._currentRoomObjectListIndex = (k.length - 1);
                 }
-                this._Str_16946(k[this._currentRoomObjectListIndex]);
+                this.showWithRoomObject(k[this._currentRoomObjectListIndex]);
             }
         }
 

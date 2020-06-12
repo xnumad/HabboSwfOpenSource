@@ -77,7 +77,7 @@
                 case RoomEngineTriggerWidgetEvent.OPEN_WIDGET:
                     if (_local_3 != null)
                     {
-                        this._widget._Str_16946(_local_3);
+                        this._widget.showWithRoomObject(_local_3);
                     }
                     return;
                 case RoomEngineTriggerWidgetEvent.CLOSE_WIDGET:
