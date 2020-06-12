@@ -16,7 +16,7 @@
         private static var _baseUrl:String;
 
         private var _loader:Loader;
-        private var _Str_21277:Boolean = false;
+        private var _preloadFinished:Boolean = false;
 
         public function CameraFxPreloader()
         {
@@ -39,7 +39,7 @@
 
         public static function _Str_25462():Boolean
         {
-            return (instance != null) ? instance._Str_21277 : false;
+            return (instance != null) ? instance._preloadFinished : false;
         }
 
         public static function getImage(k:String):BitmapData
@@ -58,7 +58,7 @@
             }
             else
             {
-                this._Str_21277 = true;
+                this._preloadFinished = true;
             }
         }
 
