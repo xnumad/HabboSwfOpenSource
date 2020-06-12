@@ -67,7 +67,7 @@
         private var _window:IWindowContainer;
         private var _imageContainer:IBitmapWrapperWindow;
         private var _moderationText:IHTMLTextWindow;
-        private var _Str_19406:IWindow;
+        private var _makeOwnButton:IWindow;
         private var _Str_2728:IWindow;
         private var _Str_13852:IWindowContainer;
         private var _Str_6057:IWindow;
@@ -108,7 +108,7 @@
             this._moderationText.addEventListener(WindowLinkEvent.WINDOW_EVENT_LINK, this._Str_23468);
             this._Str_12629 = (this._window.findChildByName("shareArea") as IWindowContainer);
             this._Str_13852 = (this._window.findChildByName("removeButtonContainer") as IWindowContainer);
-            this._Str_19406 = (this._window.findChildByName("makeOwnButton") as IWindow);
+            this._makeOwnButton = (this._window.findChildByName("makeOwnButton") as IWindow);
             this._Str_25745 = (this._window.findChildByName("shareButtonContainer") as IWindow);
             this._Str_6057 = (this._window.findChildByName("bgBorder") as IWindow);
             this._Str_6600 = (this._window.findChildByName("senderNameButton") as IRegionWindow);
@@ -449,7 +449,7 @@
             this._imageContainer = null;
             this._Str_2728 = null;
             this._Str_6057 = null;
-            this._Str_19406 = null;
+            this._makeOwnButton = null;
             this._Str_13852 = null;
             this._Str_10424 = null;
             this._inventory = null;
