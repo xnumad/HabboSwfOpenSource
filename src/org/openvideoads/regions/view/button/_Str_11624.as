@@ -8,7 +8,7 @@
     import flash.text.TextFieldAutoSize;
     import flash.text.AntiAliasType;
 
-    public class _Str_11624 extends _Str_4474 
+    public class _Str_11624 extends CloseButton
     {
         protected var _color:String = "#FFFFFF";
 

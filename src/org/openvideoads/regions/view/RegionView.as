@@ -5,7 +5,7 @@
     import org.openvideoads.regions.config.RegionViewConfig;
     import org.openvideoads.util.Display;
     import flash.text.TextField;
-    import org.openvideoads.regions.view.button._Str_4474;
+    import org.openvideoads.regions.view.button.CloseButton;
     import flash.display.Loader;
     import flash.display.Shape;
     import flash.display.Bitmap;
@@ -38,7 +38,7 @@
         protected var _Str_5857:_Str_5987 = null;
         protected var _text:TextField;
         protected var _Str_9713:Sprite;
-        protected var _closeButton:_Str_4474 = null;
+        protected var _closeButton:CloseButton = null;
         protected var _Str_7726:Boolean = true;
         protected var _Str_2450:Loader = null;
         protected var _border:Sprite;

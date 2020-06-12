@@ -4,14 +4,14 @@
     import org.openvideoads.regions.view.RegionView;
     import flash.events.MouseEvent;
 
-    public class _Str_4474 extends Sprite 
+    public class CloseButton extends Sprite
     {
         private var _id:String;
         private var _Str_16355:RegionView = null;
         protected var _Str_16578:int = 0;
         protected var _Str_16974:int = 0;
 
-        public function _Str_4474(k:String=null, _arg_2:RegionView=null, _arg_3:int=0, _arg_4:int=0)
+        public function CloseButton(k:String=null, _arg_2:RegionView=null, _arg_3:int=0, _arg_4:int=0)
         {
             this._id = k;
             this._Str_16355 = _arg_2;

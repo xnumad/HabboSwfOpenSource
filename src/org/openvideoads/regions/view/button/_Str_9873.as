@@ -5,7 +5,7 @@
     import org.openvideoads.regions.view.RegionView;
     import org.openvideoads.regions.config.CloseButtonConfig;
 
-    public class _Str_9873 extends _Str_4474 
+    public class _Str_9873 extends CloseButton
     {
         public function _Str_9873(k:String=null, _arg_2:RegionView=null, _arg_3:CloseButtonConfig=null)
         {

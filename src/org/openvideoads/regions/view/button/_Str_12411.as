@@ -2,7 +2,7 @@
 {
     import org.openvideoads.regions.view.RegionView;
 
-    public class _Str_12411 extends _Str_4474 
+    public class _Str_12411 extends CloseButton
     {
         public function _Str_12411(k:String=null, _arg_2:RegionView=null)
         {
