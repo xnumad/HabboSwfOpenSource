@@ -22,7 +22,7 @@
 
         public function FurnitureExternalImageVisualization():void
         {
-            _Str_20445 = true;
+            hasOutline = true;
         }
 
         override public function setExternalBaseUrls(k:String, _arg_2:String, _arg_3:Boolean):void

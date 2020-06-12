@@ -19,7 +19,7 @@
         private var _thumbnailChanged:Boolean;
 
 
-        public function set _Str_20445(k:Boolean):void
+        public function set hasOutline(k:Boolean):void
         {
             this._hasOutline = k;
         }
