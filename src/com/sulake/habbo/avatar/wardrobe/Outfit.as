@@ -15,13 +15,13 @@
         private var _controller:HabboAvatarEditor;
         private var _figure:String;
         private var _gender:String;
-        private var _view:_Str_7647;
+        private var _view:OutfitView;
         private var _isDisposed:Boolean;
 
         public function Outfit(k:HabboAvatarEditor, _arg_2:String, _arg_3:String)
         {
             this._controller = k;
-            this._view = new _Str_7647(k.manager.windowManager, k.manager.assets, (!(_arg_2 == "")));
+            this._view = new OutfitView(k.manager.windowManager, k.manager.assets, (!(_arg_2 == "")));
             switch (_arg_3)
             {
                 case FigureData.M:
@@ -85,7 +85,7 @@
             return this._gender;
         }
 
-        public function get view():_Str_7647
+        public function get view():OutfitView
         {
             return this._view;
         }

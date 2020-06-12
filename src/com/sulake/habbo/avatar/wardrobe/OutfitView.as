@@ -11,14 +11,14 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
-    public class _Str_7647 
+    public class OutfitView
     {
         private var _windowManager:IHabboWindowManager;
         private var _assetLibrary:IAssetLibrary;
         private var _window:IWindowContainer;
         private var _imageContainer:IBitmapWrapperWindow;
 
-        public function _Str_7647(k:IHabboWindowManager, _arg_2:IAssetLibrary, _arg_3:Boolean)
+        public function OutfitView(k:IHabboWindowManager, _arg_2:IAssetLibrary, _arg_3:Boolean)
         {
             this._windowManager = k;
             this._assetLibrary = _arg_2;
