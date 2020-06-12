@@ -99,7 +99,7 @@
             return this._container.roomSession.isRoomOwner;
         }
 
-        public function _Str_19701():Boolean
+        public function hasRightsToRemove():Boolean
         {
             return this._container.roomSession.roomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
         }

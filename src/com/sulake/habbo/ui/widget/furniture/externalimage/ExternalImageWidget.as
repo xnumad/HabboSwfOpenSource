@@ -144,7 +144,7 @@
             this._roomObjectID = k.getId();
             this._roomObjectType = k.getType();
             this._openedFromInventory = false;
-            this._deleteButton.visible = this.ownHandler._Str_19701();
+            this._deleteButton.visible = this.ownHandler.hasRightsToRemove();
             if (this.getType() == PHOTO_POSTER)
             {
                 this._reportImagebutton.visible = true;
@@ -416,7 +416,7 @@
 
         private function _Str_23258(k:HTTPStatusEvent):void
         {
-            if (((k.status == 403) && (this.ownHandler._Str_19701())))
+            if (((k.status == 403) && (this.ownHandler.hasRightsToRemove())))
             {
                 this._moderationText.visible = true;
             }
