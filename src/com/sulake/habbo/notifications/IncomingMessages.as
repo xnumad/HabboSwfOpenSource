@@ -252,7 +252,7 @@
                 _local_3 = new GenericNotificationItemData();
                 _local_3.title = _local_2.message;
                 _local_3._Str_15192 = _local_2.url;
-                _local_3._Str_5167 = _local_2.url;
+                _local_3.buttonCaption = _local_2.url;
                 _local_3.timeStamp = getTimer();
                 this._notifications.feedController.addFeedItem(FeedSettings._Str_9534, _local_3);
             }
@@ -275,7 +275,7 @@
                 _local_3 = new GenericNotificationItemData();
                 _local_3.title = _local_2.message;
                 _local_3._Str_15192 = _local_2.url;
-                _local_3._Str_5167 = _local_2.url;
+                _local_3.buttonCaption = _local_2.url;
                 _local_3.timeStamp = getTimer();
                 this._notifications.feedController.addFeedItem(FeedSettings._Str_9534, _local_3);
             }

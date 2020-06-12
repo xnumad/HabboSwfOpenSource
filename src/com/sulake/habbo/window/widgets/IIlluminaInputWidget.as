@@ -8,8 +8,8 @@
         function set message(_arg_1:String):void;
         function get submitHandler():IIlluminaInputHandler;
         function set submitHandler(_arg_1:IIlluminaInputHandler):void;
-        function get _Str_5167():String;
-        function set _Str_5167(_arg_1:String):void;
+        function get buttonCaption():String;
+        function set buttonCaption(_arg_1:String):void;
         function get _Str_6307():String;
         function set _Str_6307(_arg_1:String):void;
         function get multiline():Boolean;

@@ -43,7 +43,7 @@
             return this._buttonAction;
         }
 
-        public function get _Str_5167():String
+        public function get buttonCaption():String
         {
             return this._buttonCaption;
         }
@@ -78,7 +78,7 @@
             this._buttonAction = k;
         }
 
-        public function set _Str_5167(k:String):void
+        public function set buttonCaption(k:String):void
         {
             this._buttonCaption = k;
         }

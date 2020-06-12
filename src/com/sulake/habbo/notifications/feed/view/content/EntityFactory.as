@@ -26,7 +26,7 @@
             _local_2._Str_19059 = (((k.timeStamp - getTimer()) / 1000) / 60);
             _local_2.message = k.description;
             _local_2.decoration = k._Str_22203;
-            _local_2._Str_24362(k._Str_15192, k._Str_5167);
+            _local_2._Str_24362(k._Str_15192, k.buttonCaption);
             _local_2._Str_21184();
             return _local_2;
         }

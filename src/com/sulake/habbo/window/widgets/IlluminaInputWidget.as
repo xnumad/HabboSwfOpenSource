@@ -46,7 +46,7 @@
             this._submitButton = (this._root.findChildByName("submit") as IButtonWindow);
             this._inputField = (this._root.findChildByName("input") as ITextFieldWindow);
             this._emptyMessageLabel = (this._root.findChildByName("empty_message") as ILabelWindow);
-            this._Str_5167 = String(_Str_15732.value);
+            this.buttonCaption = String(_Str_15732.value);
             this._Str_6307 = String(_Str_15686.value);
             this.multiline = Boolean(_Str_13245.value);
             this.maxChars = int(_Str_14030.value);
@@ -97,7 +97,7 @@
             {
                 return k;
             }
-            k.push(_Str_15732.withValue(this._Str_5167));
+            k.push(_Str_15732.withValue(this.buttonCaption));
             k.push(_Str_15686.withValue(this._Str_6307));
             k.push(_Str_13245.withValue(this.multiline));
             k.push(_Str_14030.withValue(this.maxChars));
@@ -116,7 +116,7 @@
                 switch (_local_2.key)
                 {
                     case _Str_14384:
-                        this._Str_5167 = String(_local_2.value);
+                        this.buttonCaption = String(_local_2.value);
                         break;
                     case _Str_15741:
                         this._Str_6307 = String(_local_2.value);
@@ -131,12 +131,12 @@
             }
         }
 
-        public function get _Str_5167():String
+        public function get buttonCaption():String
         {
             return this._submitButton.caption;
         }
 
-        public function set _Str_5167(k:String):void
+        public function set buttonCaption(k:String):void
         {
             this._submitButton.caption = k;
             this._submitButton.visible = ((!(k == null)) && (k.length > 0));
