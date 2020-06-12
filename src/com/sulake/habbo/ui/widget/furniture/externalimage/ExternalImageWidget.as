@@ -61,7 +61,7 @@
         private static const PHOTO_POSTER:String = "photo_poster";
         private static const SELFIE:String = "selfie";
         private static const LEGACY:String = "legacy";
-        private static const _Str_9120:int = 10;
+        private static const HORIZONTAL_ITEM_SPACING:int = 10;
         private static const _Str_15604:int = 71;
 
         private var _window:IWindowContainer;
@@ -365,19 +365,19 @@
             this._window.visible = true;
             var _local_2:IWindow = this._window.findChildByName("previousButton");
             var _local_3:IWindow = this._window.findChildByName("nextButton");
-            _local_2.x = _Str_9120;
+            _local_2.x = HORIZONTAL_ITEM_SPACING;
             this._bgBorder.y = (this._bgBorder.x = 0);
-            this._imageContainer.x = ((_Str_9120 * 2) + _local_2.width);
+            this._imageContainer.x = ((HORIZONTAL_ITEM_SPACING * 2) + _local_2.width);
             this._imageContainer.y = _Str_15604;
             this._bgBorder.height = (this._window.height = (this._imageContainer.height + (_Str_15604 * 2)));
-            this._bgBorder.width = (this._window.width = ((this._imageContainer.width + (_Str_9120 * 4)) + (_local_2.width * 2)));
+            this._bgBorder.width = (this._window.width = ((this._imageContainer.width + (HORIZONTAL_ITEM_SPACING * 4)) + (_local_2.width * 2)));
             this._Str_6600.x = ((this._imageContainer.right - this._Str_6600.width) - 3);
             this._Str_6600.y = (this._imageContainer.bottom + 3);
             this._Str_9997.x = (this._imageContainer.x + 3);
             this._Str_9997.y = (this._Str_6600.y = this._imageContainer.bottom);
             this._Str_6501.y = 0;
             this._Str_6501.x = (this._bgBorder.right - this._Str_6501.width);
-            _local_3.x = (this._imageContainer.right + _Str_9120);
+            _local_3.x = (this._imageContainer.right + HORIZONTAL_ITEM_SPACING);
             if (this._Str_16159)
             {
                 _local_3.visible = (_local_2.visible = false);
