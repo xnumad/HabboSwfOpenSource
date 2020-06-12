@@ -14,7 +14,7 @@
     public class ExtraDataManager 
     {
         public static const REJECTED:String = "REJECTED";
-        private static const _Str_18816:int = 50;
+        private static const BATCH_MAX_QUERY_AMOUNT:int = 50;
         private static var _Str_1644:ExtraDataManager;
 
         private var _Str_5833:Vector.<FurnitureExternalImageVisualization>;
@@ -76,7 +76,7 @@
             }
             var _local_2:Array = [];
             var _local_3:int;
-            while (_local_3 < _Str_18816)
+            while (_local_3 < BATCH_MAX_QUERY_AMOUNT)
             {
                 if (this._Str_5833.length > 0)
                 {
