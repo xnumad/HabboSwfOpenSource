@@ -84,7 +84,7 @@
         private var _roomObjectID:int;
         private var _extraDataID:String;
         private var _caption:String;
-        private var _Str_3017:int;
+        private var _senderId:int;
         private var _Str_7653:String;
         private var _Str_15263:IWindowContainer;
         private var _Str_6733:String;
@@ -238,7 +238,7 @@
             var k:ITextWindow = (this._window.findChildByName("captionText") as ITextWindow);
             k.text = "";
             this._senderNameButton.visible = false;
-            this._Str_3017 = 0;
+            this._senderId = 0;
             this._senderNameText.caption = "";
             this._nameCopyField.text = "";
             this._creationDateText.caption = "";
@@ -314,7 +314,7 @@
                 this._senderNameText.caption = senderName;
                 this._senderNameButton.visible = true;
                 this._nameCopyField.text = senderName;
-                this._Str_3017 = int(senderId);
+                this._senderId = int(senderId);
                 this._creationDateText.caption = ((((creationDate.date + "-") + (creationDate.month + 1)) + "-") + creationDate.fullYear);
             }
             if (((this._Str_2844._Str_18355) && (this._Str_2844._Str_18355.length > 4)))
@@ -455,7 +455,7 @@
             this._inventory = null;
             this._help = null;
             this._roomEngine = null;
-            this._Str_3017 = 0;
+            this._senderId = 0;
             this._senderNameButton = null;
             this._nameCopyField = null;
             this._buttonContainer = null;
@@ -574,7 +574,7 @@
                     HabboTracking.getInstance().trackEventLog("Stories", "facebook", "stories.share.clicked", this._Str_6733);
                     return;
                 case "senderNameButton":
-                    this._Str_2844.sendMessage(new GetExtendedProfileMessageComposer(this._Str_3017));
+                    this._Str_2844.sendMessage(new GetExtendedProfileMessageComposer(this._senderId));
                     return;
                 case "urlField":
                     _local_4 = (this._window.findChildByName("urlField") as ITextFieldWindow);
@@ -603,7 +603,7 @@
 
         private function _Str_24813():void
         {
-            this._help._Str_21718(this._Str_3017, this._senderNameText.caption, this._extraDataID, this._roomObjectID);
+            this._help._Str_21718(this._senderId, this._senderNameText.caption, this._extraDataID, this._roomObjectID);
         }
 
         private function getType():String
@@ -661,11 +661,11 @@
                     }
                     if (this.getType() == PHOTO_POSTER)
                     {
-                        _local_7 = this._help._Str_14206(this._extraDataID, _local_3, this._roomEngine.activeRoomId, this._Str_3017, this._roomObjectID);
+                        _local_7 = this._help._Str_14206(this._extraDataID, _local_3, this._roomEngine.activeRoomId, this._senderId, this._roomObjectID);
                     }
                     else
                     {
-                        _local_7 = this._help._Str_12812(this._Str_7653, _local_5, this._roomEngine.activeRoomId, this._Str_3017, this._roomObjectID);
+                        _local_7 = this._help._Str_12812(this._Str_7653, _local_5, this._roomEngine.activeRoomId, this._senderId, this._roomObjectID);
                     }
                     if (_local_7)
                     {
