@@ -471,7 +471,7 @@
             }
         }
 
-        public function _Str_9972():RenderRoomMessageComposer
+        public function getRenderRoomMessage():RenderRoomMessageComposer
         {
             return _Str_15112[this._Str_3290];
         }

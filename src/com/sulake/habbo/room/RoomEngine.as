@@ -4381,7 +4381,7 @@
             return this._windowManager;
         }
 
-        public function _Str_9972(k:Rectangle, _arg_2:uint, _arg_3:Boolean=false, _arg_4:Boolean=true, _arg_5:Boolean=false, _arg_6:int=-1):IMessageComposer
+        public function getRenderRoomMessage(k:Rectangle, _arg_2:uint, _arg_3:Boolean=false, _arg_4:Boolean=true, _arg_5:Boolean=false, _arg_6:int=-1):IMessageComposer
         {
             var _local_7:IRoomRenderingCanvas;
             if (_arg_6 > -1)

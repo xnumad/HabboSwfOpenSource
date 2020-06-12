@@ -231,7 +231,7 @@
 
         public function _Str_18593():RenderRoomMessageComposer
         {
-            return this._roomDesktop.roomEngine._Str_9972(this._widget._Str_14786(), this._roomDesktop.roomBackgroundColor) as RenderRoomMessageComposer;
+            return this._roomDesktop.roomEngine.getRenderRoomMessage(this._widget._Str_14786(), this._roomDesktop.roomBackgroundColor) as RenderRoomMessageComposer;
         }
 
         public function _Str_11986(k:RenderRoomMessageComposer):void

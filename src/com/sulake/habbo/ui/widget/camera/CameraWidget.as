@@ -236,7 +236,7 @@
 
         public function _Str_11986():Boolean
         {
-            var k:RenderRoomMessageComposer = this._viewFinder._Str_9972();
+            var k:RenderRoomMessageComposer = this._viewFinder.getRenderRoomMessage();
             if (this._photoLab)
             {
                 k._Str_23815(this._photoLab._Str_22711());

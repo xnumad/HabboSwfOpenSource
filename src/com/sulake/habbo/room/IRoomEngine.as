@@ -103,7 +103,7 @@
         function set mouseEventsDisabledAboveY(_arg_1:int):void;
         function get mouseEventsDisabledLeftToX():int;
         function set mouseEventsDisabledLeftToX(_arg_1:int):void;
-        function _Str_9972(_arg_1:Rectangle, _arg_2:uint, _arg_3:Boolean=false, _arg_4:Boolean=true, _arg_5:Boolean=false, _arg_6:int=-1):IMessageComposer;
+        function getRenderRoomMessage(_arg_1:Rectangle, _arg_2:uint, _arg_3:Boolean=false, _arg_4:Boolean=true, _arg_5:Boolean=false, _arg_6:int=-1):IMessageComposer;
         function _Str_19272(_arg_1:int, _arg_2:int, _arg_3:String):void;
 		
 		function _SafeStr_7811(k:int, _arg_2:int, _arg_3:IVector3d, _arg_4:int):Boolean;

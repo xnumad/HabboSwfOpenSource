@@ -90,7 +90,7 @@
 
         public function _Str_18593():RenderRoomThumbnailMessageComposer
         {
-            return RenderRoomThumbnailMessageComposer(this._roomDesktop.roomEngine._Str_9972(this._widget._Str_5924, this._roomDesktop.roomBackgroundColor, true));
+            return RenderRoomThumbnailMessageComposer(this._roomDesktop.roomEngine.getRenderRoomMessage(this._widget._Str_5924, this._roomDesktop.roomBackgroundColor, true));
         }
 
         public function _Str_11986(k:RenderRoomThumbnailMessageComposer):void
