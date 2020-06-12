@@ -86,7 +86,7 @@
                     _local_5 = getAsset(_local_4, _local_3);
                     if (_local_5 != null)
                     {
-                        _local_6 = this._Str_25562(k, _local_5);
+                        _local_6 = this.generateTransformedThumbnail(k, _local_5);
                         _local_7 = this._Str_15493(_arg_2);
                         assetCollection.disposeAsset(_local_7);
                         assetCollection.addAsset(_local_7, _local_6, true, _local_5.offsetX, _local_5.offsetY);
@@ -97,7 +97,7 @@
             }
         }
 
-        private function _Str_25562(k:BitmapData, _arg_2:IGraphicAsset):BitmapData
+        private function generateTransformedThumbnail(k:BitmapData, _arg_2:IGraphicAsset):BitmapData
         {
             var _local_6:BitmapData;
             var _local_7:Bitmap;
