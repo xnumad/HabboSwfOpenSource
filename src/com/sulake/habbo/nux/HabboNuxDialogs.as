@@ -43,7 +43,7 @@
         protected var _navigator:IHabboNavigator;
         protected var _windowManager:IHabboWindowManager;
         protected var _localizationManager:IHabboLocalizationManager;
-        protected var _Str_2276:IHabboCatalog;
+        protected var _catalog:IHabboCatalog;
         protected var _sessionDataManager:ISessionDataManager;
         protected var _Str_2422:IRoomSessionManager;
         private var _Str_2310:IConnection;
@@ -73,7 +73,7 @@
                 _localizationManager = k;
             }), new ComponentDependency(new IIDHabboCatalog(), function (k:IHabboCatalog):void
             {
-                _Str_2276 = k;
+                _catalog = k;
             }), new ComponentDependency(new IIDSessionDataManager(), function (k:ISessionDataManager):void
             {
                 _sessionDataManager = k;
@@ -221,7 +221,7 @@
 
         public function get catalog():IHabboCatalog
         {
-            return this._Str_2276;
+            return this._catalog;
         }
 
         private function createNuxOfferView():void

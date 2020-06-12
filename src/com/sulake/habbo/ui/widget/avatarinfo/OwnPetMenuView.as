@@ -36,7 +36,7 @@
         private var _Str_1069:int;
         private var _Str_11220:IFurnitureData;
         private var _Str_18260:IFurnitureData;
-        protected var _Str_2276:IHabboCatalog;
+        protected var _catalog:IHabboCatalog;
         protected var _Str_2421:IHabboTracking;
 
         public function OwnPetMenuView(k:AvatarInfoWidget, _arg_2:IHabboCatalog)
@@ -44,7 +44,7 @@
             super(k);
             _Str_3403 = false;
             this._Str_2421 = HabboTracking.getInstance();
-            this._Str_2276 = _arg_2;
+            this._catalog = _arg_2;
         }
 
         public static function setup(k:OwnPetMenuView, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:PetInfoData):void
@@ -83,7 +83,7 @@
             this._data = null;
             this._Str_11220 = null;
             this._Str_18260 = null;
-            this._Str_2276 = null;
+            this._catalog = null;
             this._Str_2421 = null;
             super.dispose();
         }
@@ -279,11 +279,11 @@
 
         private function openCatalogPage(k:IFurnitureData):Boolean
         {
-            if ((((this._Str_2276 == null) || (k == null)) || (k.purchaseOfferId < 0)))
+            if ((((this._catalog == null) || (k == null)) || (k.purchaseOfferId < 0)))
             {
                 return false;
             }
-            this._Str_2276.openCatalogPageByOfferId(k.purchaseOfferId, CatalogType.NORMAL);
+            this._catalog.openCatalogPageByOfferId(k.purchaseOfferId, CatalogType.NORMAL);
             if (((this._Str_2421) && (!(this._Str_2421.disposed))))
             {
                 this._Str_2421.trackGoogle("infostandCatalogButton", "offer", k.purchaseOfferId);

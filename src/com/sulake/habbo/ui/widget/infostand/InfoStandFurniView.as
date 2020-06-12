@@ -52,7 +52,7 @@
         protected var _customVarsItemTemplate:IWindow;
         protected var _border:IBorderWindow;
         protected var _buttons:IItemListWindow;
-        protected var _Str_2276:IHabboCatalog;
+        protected var _catalog:IHabboCatalog;
         protected var _Str_2421:IHabboTracking;
         protected var _Str_3793:IWindow;
         protected var _Str_3823:IWindow;
@@ -68,14 +68,14 @@
             this._Str_5729 = this.PICKUP_MODE_NONE;
             super();
             this._widget = k;
-            this._Str_2276 = _arg_3;
+            this._catalog = _arg_3;
             this._Str_2421 = HabboTracking.getInstance();
             this.createWindow(_arg_2);
         }
 
         public function dispose():void
         {
-            this._Str_2276 = null;
+            this._catalog = null;
             this._widget = null;
             this._window.dispose();
             this._window = null;
@@ -194,12 +194,12 @@
         protected function _Str_15887(k:WindowMouseEvent):void
         {
             var _local_2:IFurnitureData;
-            if ((((!(this._Str_2276 == null)) && (this._widget)) && (this._widget.furniData)))
+            if ((((!(this._catalog == null)) && (this._widget)) && (this._widget.furniData)))
             {
                 _local_2 = this.getFurnitureData(this._widget.furniData);
                 if (_local_2)
                 {
-                    this._Str_2276.openRentConfirmationWindow(_local_2, true, this._widget.furniData.id);
+                    this._catalog.openRentConfirmationWindow(_local_2, true, this._widget.furniData.id);
                 }
             }
         }
@@ -207,12 +207,12 @@
         protected function _Str_15302(k:WindowMouseEvent):void
         {
             var _local_2:IFurnitureData;
-            if ((((!(this._Str_2276 == null)) && (this._widget)) && (this._widget.furniData)))
+            if ((((!(this._catalog == null)) && (this._widget)) && (this._widget.furniData)))
             {
                 _local_2 = this.getFurnitureData(this._widget.furniData);
                 if (_local_2)
                 {
-                    this._Str_2276.openRentConfirmationWindow(_local_2, false, this._widget.furniData.id);
+                    this._catalog.openRentConfirmationWindow(_local_2, false, this._widget.furniData.id);
                 }
             }
         }
@@ -251,9 +251,9 @@
 
         protected function _Str_12518(k:WindowMouseEvent):void
         {
-            if (this._Str_2276 != null)
+            if (this._catalog != null)
             {
-                this._Str_2276.openCatalogPageByOfferId(this._widget.furniData.rentOfferId, CatalogType.NORMAL);
+                this._catalog.openCatalogPageByOfferId(this._widget.furniData.rentOfferId, CatalogType.NORMAL);
             }
         }
 
@@ -416,9 +416,9 @@
 
         protected function _Str_12960(k:WindowMouseEvent):void
         {
-            if (this._Str_2276 != null)
+            if (this._catalog != null)
             {
-                this._Str_2276.openCatalogPageByOfferId(this._widget.furniData.purchaseOfferId, CatalogType.NORMAL);
+                this._catalog.openCatalogPageByOfferId(this._widget.furniData.purchaseOfferId, CatalogType.NORMAL);
                 if (((this._Str_2421) && (!(this._Str_2421.disposed))))
                 {
                     this._Str_2421.trackGoogle("infostandCatalogButton", "offer", this._widget.furniData.purchaseOfferId);
