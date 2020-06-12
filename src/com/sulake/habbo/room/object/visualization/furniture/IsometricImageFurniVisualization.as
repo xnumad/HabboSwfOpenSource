@@ -59,8 +59,8 @@
             }
             if (this._thumbnailImageNormal != null)
             {
-                this._Str_20857(this._thumbnailImageNormal, 64);
-                this._Str_20857(this._thumbnailImageSmall, 32);
+                this.addThumbnailAsset(this._thumbnailImageNormal, 64);
+                this.addThumbnailAsset(this._thumbnailImageSmall, 32);
             }
             else
             {
@@ -71,7 +71,7 @@
             this._thumbnailDirection = direction;
         }
 
-        private function _Str_20857(k:BitmapData, _arg_2:int):void
+        private function addThumbnailAsset(k:BitmapData, _arg_2:int):void
         {
             var _local_4:String;
             var _local_5:IGraphicAsset;
