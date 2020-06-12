@@ -18,12 +18,12 @@
         protected var _id:String = null;
         protected var _Str_577:String = null;
         protected var _Str_2230:String = null;
-        protected var _Str_582:URLLoader;
+        protected var _loader:URLLoader;
         protected var _Str_2850:Timer = null;
 
         public function NetworkResource(k:String=null, _arg_2:String=null, _arg_3:String=null)
         {
-            this._Str_582 = new URLLoader();
+            this._loader = new URLLoader();
             super();
             this._id = k;
             this.url = _arg_2;
@@ -114,12 +114,12 @@
 
         public function close():void
         {
-            if (this._Str_582 != null)
+            if (this._loader != null)
             {
                 try
                 {
-                    this._Str_582.close();
-                    this._Str_582 = null;
+                    this._loader.close();
+                    this._loader = null;
                 }
                 catch(e:Error)
                 {
@@ -234,7 +234,7 @@
 
         public function get data():String
         {
-            return this._Str_582.data;
+            return this._loader.data;
         }
 
         public function _Str_11386():Boolean
@@ -358,17 +358,17 @@
             {
                 if (StringUtils.trim(this._Str_577).length > 0)
                 {
-                    this._Str_582 = new URLLoader();
-                    this._Str_582.addEventListener(Event.COMPLETE, this._Str_23054);
-                    this._Str_582.addEventListener(ErrorEvent.ERROR, this.errorHandler);
-                    this._Str_582.addEventListener(AsyncErrorEvent.ASYNC_ERROR, this.errorHandler);
-                    this._Str_582.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this.errorHandler);
-                    this._Str_582.addEventListener(IOErrorEvent.IO_ERROR, this.errorHandler);
+                    this._loader = new URLLoader();
+                    this._loader.addEventListener(Event.COMPLETE, this._Str_23054);
+                    this._loader.addEventListener(ErrorEvent.ERROR, this.errorHandler);
+                    this._loader.addEventListener(AsyncErrorEvent.ASYNC_ERROR, this.errorHandler);
+                    this._loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this.errorHandler);
+                    this._loader.addEventListener(IOErrorEvent.IO_ERROR, this.errorHandler);
                     if (k > 0)
                     {
                         this._Str_8612((k * 1000));
                     }
-                    this._Str_582.load(new URLRequest(this._Str_577));
+                    this._loader.load(new URLRequest(this._Str_577));
                 }
             }
         }
@@ -404,9 +404,9 @@
 
         protected function _Str_23054(k:Event):void
         {
-            if (this._Str_582 != null)
+            if (this._loader != null)
             {
-                this.loadComplete(this._Str_582.data);
+                this.loadComplete(this._loader.data);
             }
         }
 

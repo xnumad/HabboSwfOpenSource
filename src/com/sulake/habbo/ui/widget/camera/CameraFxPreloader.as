@@ -15,14 +15,14 @@
         private static var _urls:Array;
         private static var _baseUrl:String;
 
-        private var _Str_582:Loader;
+        private var _loader:Loader;
         private var _Str_21277:Boolean = false;
 
         public function CameraFxPreloader()
         {
-            this._Str_582 = new Loader();
-            this._Str_582.contentLoaderInfo.addEventListener(Event.COMPLETE, this._Str_22779);
-            this._Str_582.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this._Str_22357);
+            this._loader = new Loader();
+            this._loader.contentLoaderInfo.addEventListener(Event.COMPLETE, this._Str_22779);
+            this._loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this._Str_22357);
             this._Str_17534();
         }
 
@@ -54,7 +54,7 @@
             if (_urls.length > 0)
             {
                 k = (((_baseUrl + "Habbo-Stories/") + _urls[0]) + ".png");
-                this._Str_582.load(new URLRequest(k));
+                this._loader.load(new URLRequest(k));
             }
             else
             {
@@ -64,13 +64,13 @@
 
         private function _Str_22779(k:Event):void
         {
-            ASSETS[_urls.shift()] = Bitmap(this._Str_582.content).bitmapData.clone();
+            ASSETS[_urls.shift()] = Bitmap(this._loader.content).bitmapData.clone();
             this._Str_17534();
         }
 
         private function _Str_22357(k:Event):void
         {
-            Logger.log(("Camera Fx preloading failed for " + this._Str_582.contentLoaderInfo.loaderURL));
+            Logger.log(("Camera Fx preloading failed for " + this._loader.contentLoaderInfo.loaderURL));
             _urls.shift();
             this._Str_17534();
         }
