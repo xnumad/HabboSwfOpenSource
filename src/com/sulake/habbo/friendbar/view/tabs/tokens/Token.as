@@ -19,7 +19,7 @@
     public class Token implements IDisposable 
     {
         protected static var _Str_12043:IHabboWindowManager;
-        protected static var _Str_18375:IAssetLibrary;
+        protected static var _ASSET_LIBRARY:IAssetLibrary;
         protected static var _Str_9155:IHabboGameManager;
         protected static const TITLE:String = "title";
         protected static const MESSAGE:String = "message";
@@ -42,7 +42,7 @@
 
         public static function set ASSETS(k:IAssetLibrary):void
         {
-            _Str_18375 = k;
+            _ASSET_LIBRARY = k;
         }
 
         public static function set GAMES(k:IHabboGameManager):void
@@ -99,7 +99,7 @@
 
         protected function prepare(k:String, _arg_2:String, _arg_3:String, _arg_4:String):void
         {
-            this.window = (_Str_12043.buildFromXML((_Str_18375.getAssetByName(_arg_3).content as XML)) as IWindowContainer);
+            this.window = (_Str_12043.buildFromXML((_ASSET_LIBRARY.getAssetByName(_arg_3).content as XML)) as IWindowContainer);
             this.window.findChildByName(TITLE).caption = k;
             this.window.findChildByName(MESSAGE).caption = ((_arg_2) ? _arg_2 : "");
             this._icon = (_Str_12043.create(("ICON_" + this._Str_3293), WindowType.WINDOW_TYPE_REGION, WindowStyle.WINDOW_STYLE_DEFAULT, WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, Token.ICON_RECTANGLE) as IRegionWindow);
