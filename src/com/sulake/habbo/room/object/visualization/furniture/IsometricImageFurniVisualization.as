@@ -171,13 +171,13 @@
         {
             if (this._thumbnailAssetNameSmall == null)
             {
-                this._thumbnailAssetNameSmall = this._Str_12961(object.getId(), 32);
-                this._thumbnailAssetNameNormal = this._Str_12961(object.getId(), 64);
+                this._thumbnailAssetNameSmall = this.getFullThumbnailAssetName(object.getId(), 32);
+                this._thumbnailAssetNameNormal = this.getFullThumbnailAssetName(object.getId(), 64);
             }
             return (k == 32) ? this._thumbnailAssetNameSmall : this._thumbnailAssetNameNormal;
         }
 
-        protected function _Str_12961(k:int, _arg_2:int):String
+        protected function getFullThumbnailAssetName(k:int, _arg_2:int):String
         {
             return [type, k, "thumb", _arg_2].join("_");
         }

@@ -169,7 +169,7 @@
             {
                 return new BitmapData(1, 1, true, 0);
             }
-            var _local_3:String = _Str_12961(_arg_2, 32);
+            var _local_3:String = getFullThumbnailAssetName(_arg_2, 32);
             if (((assetCollection.getAsset(_local_3) == null) && (object)))
             {
                 _local_3 = (object.getType() + "_icon_a");
