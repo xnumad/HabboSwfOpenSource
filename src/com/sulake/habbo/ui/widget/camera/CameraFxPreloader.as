@@ -11,7 +11,7 @@
     public class CameraFxPreloader 
     {
         private static var _Str_2787:Dictionary;
-        private static var _Str_1644:CameraFxPreloader;
+        private static var instance:CameraFxPreloader;
         private static var _Str_3518:Array;
         private static var _Str_4567:String;
 
@@ -28,18 +28,18 @@
 
         public static function init(k:String, _arg_2:Array):void
         {
-            if (!_Str_1644)
+            if (!instance)
             {
                 _Str_2787 = new Dictionary();
                 _Str_4567 = k;
                 _Str_3518 = _arg_2;
-                _Str_1644 = new (CameraFxPreloader)();
+                instance = new (CameraFxPreloader)();
             }
         }
 
         public static function _Str_25462():Boolean
         {
-            return (_Str_1644 != null) ? _Str_1644._Str_21277 : false;
+            return (instance != null) ? instance._Str_21277 : false;
         }
 
         public static function getImage(k:String):BitmapData

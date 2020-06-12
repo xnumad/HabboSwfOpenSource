@@ -15,7 +15,7 @@
     {
         public static const REJECTED:String = "REJECTED";
         private static const BATCH_MAX_QUERY_AMOUNT:int = 50;
-        private static var _Str_1644:ExtraDataManager;
+        private static var instance:ExtraDataManager;
 
         private var _Str_5833:Vector.<FurnitureExternalImageVisualization>;
         private var _Str_9149:Vector.<FurnitureExternalImageVisualization>;
@@ -30,11 +30,11 @@
 
         private static function getInstance():ExtraDataManager
         {
-            if (!_Str_1644)
+            if (!instance)
             {
-                _Str_1644 = new (ExtraDataManager)();
+                instance = new (ExtraDataManager)();
             }
-            return _Str_1644;
+            return instance;
         }
 
         public static function _Str_23593(k:FurnitureExternalImageVisualization):void
