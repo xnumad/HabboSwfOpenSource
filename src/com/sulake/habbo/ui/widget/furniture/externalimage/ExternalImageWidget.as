@@ -68,7 +68,7 @@
         private var _imageContainer:IBitmapWrapperWindow;
         private var _moderationText:IHTMLTextWindow;
         private var _makeOwnButton:IWindow;
-        private var _Str_2728:IWindow;
+        private var _closeButton:IWindow;
         private var _Str_13852:IWindowContainer;
         private var _Str_6057:IWindow;
         private var _Str_6501:IWindowContainer;
@@ -102,7 +102,7 @@
             super(k, _arg_2, _arg_3, _arg_4);
             this._window = (_arg_2.buildFromXML((_arg_3.getAssetByName("stories_image_widget_xml").content as XML)) as IWindowContainer);
             this._Str_2844.widget = this;
-            this._Str_2728 = (this._window.findChildByName("closebutton") as IWindow);
+            this._closeButton = (this._window.findChildByName("closebutton") as IWindow);
             this._imageContainer = (this._window.findChildByName("imageLoader") as IBitmapWrapperWindow);
             this._moderationText = (this._window.findChildByName("moderationText") as IHTMLTextWindow);
             this._moderationText.addEventListener(WindowLinkEvent.WINDOW_EVENT_LINK, this._Str_23468);
@@ -447,7 +447,7 @@
                 return;
             }
             this._imageContainer = null;
-            this._Str_2728 = null;
+            this._closeButton = null;
             this._Str_6057 = null;
             this._makeOwnButton = null;
             this._Str_13852 = null;

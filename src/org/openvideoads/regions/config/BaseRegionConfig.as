@@ -21,7 +21,7 @@
         protected var _Str_17542:String = null;
         protected var _backgroundColor:String = null;
         protected var _Str_20596:String = null;
-        protected var _Str_2728:CloseButtonConfig;
+        protected var _closeButton:CloseButtonConfig;
         protected var _Str_11028:Number = -1;
         protected var _Str_20720:String = "5 5 5 5";
         protected var _Str_12703:Number = 1;
@@ -31,7 +31,7 @@
 
         public function BaseRegionConfig(k:Object=null)
         {
-            this._Str_2728 = new CloseButtonConfig();
+            this._closeButton = new CloseButtonConfig();
             super();
             this.setup(k);
         }
@@ -92,11 +92,11 @@
                 {
                     if ((k.closeButton is CloseButtonConfig))
                     {
-                        this._Str_2728 = k.closeButton;
+                        this._closeButton = k.closeButton;
                     }
                     else
                     {
-                        this._Str_2728 = new CloseButtonConfig(k.closeButton);
+                        this._closeButton = new CloseButtonConfig(k.closeButton);
                     }
                 }
                 if (k.padding != undefined)
@@ -419,17 +419,17 @@
 
         public function set closeButton(k:CloseButtonConfig):void
         {
-            this._Str_2728 = k;
+            this._closeButton = k;
         }
 
         public function get closeButton():CloseButtonConfig
         {
-            return this._Str_2728;
+            return this._closeButton;
         }
 
         public function _Str_16602():Boolean
         {
-            return (this._Str_2728 != null) ? this._Str_2728.enabled : true;
+            return (this._closeButton != null) ? this._closeButton.enabled : true;
         }
     }
 }

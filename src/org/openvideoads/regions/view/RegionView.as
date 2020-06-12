@@ -38,7 +38,7 @@
         protected var _Str_5857:_Str_5987 = null;
         protected var _text:TextField;
         protected var _Str_9713:Sprite;
-        protected var _Str_2728:_Str_4474 = null;
+        protected var _closeButton:_Str_4474 = null;
         protected var _Str_7726:Boolean = true;
         protected var _Str_2450:Loader = null;
         protected var _border:Sprite;
@@ -124,18 +124,18 @@
             switch (this._Str_2297.closeButton.type)
             {
                 case "STANDARD":
-                    this._Str_2728 = new _Str_12411(null, this);
+                    this._closeButton = new _Str_12411(null, this);
                     break;
                 case "CROSSHAIR":
-                    this._Str_2728 = new _Str_11624(null, this, this._Str_2297.closeButton);
+                    this._closeButton = new _Str_11624(null, this, this._Str_2297.closeButton);
                     break;
                 case "CUSTOM":
-                    this._Str_2728 = new _Str_9873(null, this, this._Str_2297.closeButton);
+                    this._closeButton = new _Str_9873(null, this, this._Str_2297.closeButton);
                     break;
                 case "SKINNED":
                     break;
             }
-            addChild(this._Str_2728);
+            addChild(this._closeButton);
         }
 
         override public function get width():Number
@@ -462,9 +462,9 @@
 
         public function _Str_19536():void
         {
-            if (this._Str_2728 != null)
+            if (this._closeButton != null)
             {
-                this._Str_2728.visible = false;
+                this._closeButton.visible = false;
             }
         }
 
@@ -1124,12 +1124,12 @@
 
         private function _Str_8978():void
         {
-            if (this._Str_2728)
+            if (this._closeButton)
             {
-                this._Str_2728.calculateLayoutPosition(this.width, this.borderRadius);
+                this._closeButton.calculateLayoutPosition(this.width, this.borderRadius);
                 if (numChildren > 0)
                 {
-                    setChildIndex(this._Str_2728, (numChildren - 1));
+                    setChildIndex(this._closeButton, (numChildren - 1));
                 }
             }
         }

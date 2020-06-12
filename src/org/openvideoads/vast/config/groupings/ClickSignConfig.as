@@ -22,7 +22,7 @@
             _style = ".smalltext { font-size:12; }";
             _Str_4544 = '<p class="smalltext" align="center">CLICK FOR MORE INFORMATION</p>';
             _Str_12703 = 0.75;
-            _Str_2728 = new org.openvideoads.regions.config.CloseButtonConfig({"enabled":false});
+            _closeButton = new org.openvideoads.regions.config.CloseButtonConfig({"enabled":false});
             setup(k);
             if (k != null)
             {
@@ -30,11 +30,11 @@
                 {
                     if ((k.closeButton is org.openvideoads.regions.config.CloseButtonConfig))
                     {
-                        _Str_2728 = k.closeButton;
+                        _closeButton = k.closeButton;
                     }
                     else
                     {
-                        _Str_2728 = new org.openvideoads.regions.config.CloseButtonConfig(k.closeButton);
+                        _closeButton = new org.openvideoads.regions.config.CloseButtonConfig(k.closeButton);
                     }
                 }
                 if (k.enabled != undefined)
