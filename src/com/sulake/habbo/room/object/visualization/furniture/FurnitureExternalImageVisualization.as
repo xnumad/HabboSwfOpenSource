@@ -10,7 +10,7 @@
     import com.sulake.room.object.visualization.utils.IGraphicAsset;
     import com.sulake.room.object.visualization.IRoomObjectSprite;
 
-    public class FurnitureExternalImageVisualization extends FurnitureDynamicThumbnailVisualization 
+    public class FurnitureExternalImageVisualization extends ExternalIsometricImageFurniVisualization
     {
         private var _batchesEnabled:Boolean;
         private var _baseUrl:String;

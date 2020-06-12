@@ -4,7 +4,7 @@
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
     import com.sulake.core.utils.Map;
 
-    public class FurnitureYoutubeVisualization extends FurnitureDynamicThumbnailVisualization 
+    public class FurnitureYoutubeVisualization extends ExternalIsometricImageFurniVisualization
     {
         protected static const THUMBNAIL_URL:String = "THUMBNAIL_URL";
 

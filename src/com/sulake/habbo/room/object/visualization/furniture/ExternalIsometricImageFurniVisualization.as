@@ -11,7 +11,7 @@
     import flash.display.LoaderInfo;
     import flash.display.Bitmap;
 
-    public class FurnitureDynamicThumbnailVisualization extends IsometricImageFurniVisualization
+    public class ExternalIsometricImageFurniVisualization extends IsometricImageFurniVisualization
     {
         private var _Str_6145:String = null;
 
