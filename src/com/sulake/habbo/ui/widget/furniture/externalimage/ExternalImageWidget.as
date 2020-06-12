@@ -410,7 +410,7 @@
             var k:String = (this.ownHandler.extraDataServiceUrl + this._extraDataID);
             var _local_2:URLLoader = new URLLoader(new URLRequest(k));
             _local_2.addEventListener(HTTPStatusEvent.HTTP_STATUS, this.onExternalDataHttpStatus);
-            _local_2.addEventListener(Event.COMPLETE, this._Str_22927);
+            _local_2.addEventListener(Event.COMPLETE, this.onExternalDataLoaded);
             _local_2.addEventListener(IOErrorEvent.IO_ERROR, this.onExternalDataError);
         }
 
@@ -430,7 +430,7 @@
             }
         }
 
-        private function _Str_22927(k:Event):void
+        private function onExternalDataLoaded(k:Event):void
         {
             var _local_2:String = URLLoader(k.target).data;
             if (_local_2.length == 0)
