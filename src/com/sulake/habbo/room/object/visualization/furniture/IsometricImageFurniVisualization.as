@@ -13,7 +13,7 @@
         private var _thumbnailAssetNameSmall:String = null;
         private var _thumbnailAssetNameNormal:String = null;
         private var _hasOutline:Boolean = false;
-        private var _Str_20721:BitmapData;
+        private var _thumbnailImageSmall:BitmapData;
         private var _Str_10040:BitmapData;
         private var _Str_21698:int;
         private var _Str_16232:Boolean;
@@ -32,7 +32,7 @@
         public function _Str_6645(k:BitmapData, _arg_2:BitmapData=null):void
         {
             this._Str_10040 = k;
-            this._Str_20721 = ((_arg_2 != null) ? _arg_2 : k);
+            this._thumbnailImageSmall = ((_arg_2 != null) ? _arg_2 : k);
             this._Str_16232 = true;
         }
 
@@ -60,7 +60,7 @@
             if (this._Str_10040 != null)
             {
                 this._Str_20857(this._Str_10040, 64);
-                this._Str_20857(this._Str_20721, 32);
+                this._Str_20857(this._thumbnailImageSmall, 32);
             }
             else
             {
