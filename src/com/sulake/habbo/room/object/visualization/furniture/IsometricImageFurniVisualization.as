@@ -10,7 +10,7 @@
     {
         protected static const THUMBNAIL:String = "THUMBNAIL";
 
-        private var _Str_17030:String = null;
+        private var _thumbnailAssetNameSmall:String = null;
         private var _Str_22237:String = null;
         private var _Str_21351:Boolean = false;
         private var _Str_20721:BitmapData;
@@ -169,12 +169,12 @@
 
         protected function _Str_15493(k:int):String
         {
-            if (this._Str_17030 == null)
+            if (this._thumbnailAssetNameSmall == null)
             {
-                this._Str_17030 = this._Str_12961(object.getId(), 32);
+                this._thumbnailAssetNameSmall = this._Str_12961(object.getId(), 32);
                 this._Str_22237 = this._Str_12961(object.getId(), 64);
             }
-            return (k == 32) ? this._Str_17030 : this._Str_22237;
+            return (k == 32) ? this._thumbnailAssetNameSmall : this._Str_22237;
         }
 
         protected function _Str_12961(k:int, _arg_2:int):String
