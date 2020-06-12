@@ -102,7 +102,7 @@
             var _local_6:URLLoader = new URLLoader(_local_4);
             _local_6.dataFormat = URLLoaderDataFormat.TEXT;
             _local_6.addEventListener(Event.COMPLETE, this._Str_12417);
-            _local_6.addEventListener(IOErrorEvent.IO_ERROR, this._Str_17464);
+            _local_6.addEventListener(IOErrorEvent.IO_ERROR, this.onExternalDataError);
         }
 
         private function _Str_12417(event:Event):void
@@ -144,7 +144,7 @@
             }
         }
 
-        private function _Str_17464(k:IOErrorEvent):void
+        private function onExternalDataError(k:IOErrorEvent):void
         {
             Logger.log(("Failed to load ExtraData batch " + k.toString()));
         }

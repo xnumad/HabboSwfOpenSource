@@ -127,11 +127,11 @@
             var _local_2:String = (this._extraDataUrl + k);
             var _local_3:URLLoader = new URLLoader(new URLRequest(_local_2));
             _local_3.addEventListener(Event.COMPLETE, this._Str_12417);
-            _local_3.addEventListener(IOErrorEvent.IO_ERROR, this._Str_17464);
+            _local_3.addEventListener(IOErrorEvent.IO_ERROR, this.onExternalDataError);
             this._extraDataLoading = true;
         }
 
-        private function _Str_17464(k:Event):void
+        private function onExternalDataError(k:Event):void
         {
             Logger.log(("Extra data failed to load " + k.toString()));
         }
