@@ -619,7 +619,7 @@
             return LEGACY;
         }
 
-        private function _Str_21772(k:WindowEvent, _arg_2:IWindow):void
+        private function onReportWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:int;
             var _local_4:IWindow;

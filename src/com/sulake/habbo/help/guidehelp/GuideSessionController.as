@@ -1448,7 +1448,7 @@
             }
             var k:IDesktopWindow = this._habboHelp.windowManager.getDesktop(0);
             this._reportWindow = IWindowContainer(this._habboHelp.getXmlWindow("report_window"));
-            this._reportWindow.procedure = this._Str_21772;
+            this._reportWindow.procedure = this.onReportWindowEvent;
             this._reportWindow.x = Math.max(0, Math.min((k.width - this._reportWindow.width), ((this._window.x + this._window.width) + 10)));
             this._reportWindow.y = Math.max(0, this._window.y);
         }
@@ -1462,7 +1462,7 @@
             }
         }
 
-        private function _Str_21772(k:WindowEvent, _arg_2:IWindow):void
+        private function onReportWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:String;
             if (((((this.disposed) || (!(this._reportWindow))) || (this._reportWindow.disposed)) || (!(k.type == WindowMouseEvent.CLICK))))
