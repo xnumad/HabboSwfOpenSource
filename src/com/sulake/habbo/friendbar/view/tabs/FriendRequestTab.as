@@ -136,7 +136,7 @@
         private function _Str_17362():IWindowContainer
         {
             var _local_7:BitmapDataAsset;
-            var k:IWindowContainer = (_Str_3684.buildFromXML((_Str_2787.getAssetByName(FRIEND_REQUEST_TAB_XML).content as XML)) as IWindowContainer);
+            var k:IWindowContainer = (_Str_3684.buildFromXML((ASSETS.getAssetByName(FRIEND_REQUEST_TAB_XML).content as XML)) as IWindowContainer);
             var _local_2:IBitmapWrapperWindow = IBitmapWrapperWindow(k.findChildByName(CANVAS));
             var _local_3:IRegionWindow = IRegionWindow(k.findChildByName(HEADER));
             var _local_4:IRegionWindow = IRegionWindow(k.findChildByName(REGION_PROFILE));
@@ -165,7 +165,7 @@
             _local_8.mouseThreshold = 0;
             var _local_9:IBitmapWrapperWindow = (_Str_3684.create("BITMAP", WindowType.WINDOW_TYPE_BITMAP_WRAPPER, WindowStyle.WINDOW_STYLE_DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle(0, 0, 25, 25)) as IBitmapWrapperWindow);
             _local_9.disposesBitmap = false;
-            _local_7 = (_Str_2787.getAssetByName("plus_friend_icon_png") as BitmapDataAsset);
+            _local_7 = (ASSETS.getAssetByName("plus_friend_icon_png") as BitmapDataAsset);
             if (_local_7)
             {
                 _local_9.bitmap = (_local_7.content as BitmapData);

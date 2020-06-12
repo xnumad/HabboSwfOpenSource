@@ -177,7 +177,7 @@
                 _local_5 = false;
                 if (((!(this.friend.realName == null)) && (!(this.friend.realName == ""))))
                 {
-                    _local_3 = (_Str_3684.buildFromXML((_Str_2787.getAssetByName(FACEBOOK_PIECE_XML).content as XML)) as IWindowContainer);
+                    _local_3 = (_Str_3684.buildFromXML((ASSETS.getAssetByName(FACEBOOK_PIECE_XML).content as XML)) as IWindowContainer);
                     _local_3.name = FACEBOOK;
                     _local_6 = (_local_3.getChildByName(NAME) as ITextWindow);
                     _local_6.caption = this.friend.realName;
@@ -186,7 +186,7 @@
                         _Str_9890.crop(_local_6);
                     }
                     _local_4 = IBitmapWrapperWindow(_local_3.getChildByName(ICON));
-                    _local_4.bitmap = (_Str_2787.getAssetByName(_local_4.bitmapAssetName).content as BitmapData);
+                    _local_4.bitmap = (ASSETS.getAssetByName(_local_4.bitmapAssetName).content as BitmapData);
                     _local_4.width = _local_4.bitmap.width;
                     _local_4.height = _local_4.bitmap.height;
                     _local_2.addListItem(_local_3);
@@ -202,7 +202,7 @@
                 }
                 if (this.friend.online)
                 {
-                    _local_3 = (_Str_3684.buildFromXML((_Str_2787.getAssetByName(NEW_CONTROLS_PIECE_XML).content as XML)) as IWindowContainer);
+                    _local_3 = (_Str_3684.buildFromXML((ASSETS.getAssetByName(NEW_CONTROLS_PIECE_XML).content as XML)) as IWindowContainer);
                     _local_3.name = CONTROLS;
                     _local_8 = _local_3.getChildByName(MESSAGE);
                     if (_local_8)
@@ -361,7 +361,7 @@
 
         private function _Str_16688():IWindowContainer
         {
-            var k:IWindowContainer = ((_Str_4561.length > 0) ? _Str_4561.pop() : (_Str_3684.buildFromXML((_Str_2787.getAssetByName(NEW_FRIEND_ENTITY_XML).content as XML)) as IWindowContainer));
+            var k:IWindowContainer = ((_Str_4561.length > 0) ? _Str_4561.pop() : (_Str_3684.buildFromXML((ASSETS.getAssetByName(NEW_FRIEND_ENTITY_XML).content as XML)) as IWindowContainer));
             var _local_2:IBitmapWrapperWindow = IBitmapWrapperWindow(k.findChildByName(CANVAS));
             var _local_3:IRegionWindow = IRegionWindow(k.findChildByName(HEADER));
             var _local_4:IRegionWindow = IRegionWindow(k.findChildByName(REGION_PROFILE));

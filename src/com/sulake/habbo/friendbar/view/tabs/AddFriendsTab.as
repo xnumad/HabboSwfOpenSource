@@ -40,7 +40,7 @@
 
         public function _Str_18310():IWindowContainer
         {
-            var k:IWindowContainer = ((_Str_4440.length > 0) ? _Str_4440.pop() : (_Str_3684.buildFromXML((_Str_2787.getAssetByName(ADD_FRIENDS_TAB_XML).content as XML)) as IWindowContainer));
+            var k:IWindowContainer = ((_Str_4440.length > 0) ? _Str_4440.pop() : (_Str_3684.buildFromXML((ASSETS.getAssetByName(ADD_FRIENDS_TAB_XML).content as XML)) as IWindowContainer));
             var _local_2:IRegionWindow = IRegionWindow(k.findChildByName(HEADER));
             k.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
             k.addEventListener(WindowMouseEvent.OVER, onMouseOver);
@@ -55,9 +55,9 @@
             k.height = HEIGHT;
             var _local_3:IBitmapWrapperWindow = (k.findChildByName(ICON) as IBitmapWrapperWindow);
             _local_3.disposesBitmap = false;
-            if (_Str_2787.getAssetByName(FIND_FRIENDS_ICON_PNG) != null)
+            if (ASSETS.getAssetByName(FIND_FRIENDS_ICON_PNG) != null)
             {
-                _local_3.bitmap = (_Str_2787.getAssetByName(FIND_FRIENDS_ICON_PNG).content as BitmapData);
+                _local_3.bitmap = (ASSETS.getAssetByName(FIND_FRIENDS_ICON_PNG).content as BitmapData);
             }
             var _local_4:IWindow = k.findChildByName(BUTTON);
             _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_3369);

@@ -10,7 +10,7 @@
 
     public class CameraFxPreloader 
     {
-        private static var _Str_2787:Dictionary;
+        private static var ASSETS:Dictionary;
         private static var instance:CameraFxPreloader;
         private static var _Str_3518:Array;
         private static var _Str_4567:String;
@@ -30,7 +30,7 @@
         {
             if (!instance)
             {
-                _Str_2787 = new Dictionary();
+                ASSETS = new Dictionary();
                 _Str_4567 = k;
                 _Str_3518 = _arg_2;
                 instance = new (CameraFxPreloader)();
@@ -44,7 +44,7 @@
 
         public static function getImage(k:String):BitmapData
         {
-            return (_Str_2787 != null) ? _Str_2787[k] : null;
+            return (ASSETS != null) ? ASSETS[k] : null;
         }
 
 
@@ -64,7 +64,7 @@
 
         private function _Str_22779(k:Event):void
         {
-            _Str_2787[_Str_3518.shift()] = Bitmap(this._Str_582.content).bitmapData.clone();
+            ASSETS[_Str_3518.shift()] = Bitmap(this._Str_582.content).bitmapData.clone();
             this._Str_17534();
         }
 

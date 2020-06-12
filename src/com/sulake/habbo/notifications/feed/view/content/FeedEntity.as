@@ -24,7 +24,7 @@
     {
         public static var _Str_4669:IWindowContainer;
         public static var _Str_11723:IHabboLocalizationManager;
-        public static var _Str_2787:IAssetLibrary;
+        public static var ASSETS:IAssetLibrary;
         public static var _Str_11726:NotificationController;
         private static const _POOL:Vector.<FeedEntity> = new Vector.<FeedEntity>();
         protected static const CONTENT_LIST:String = "content_list";
@@ -56,7 +56,7 @@
         public static function _Str_23222(k:IHabboWindowManager, _arg_2:IAssetLibrary, _arg_3:IHabboLocalizationManager, _arg_4:NotificationController):void
         {
             _Str_4669 = (k.buildFromXML((_arg_2.getAssetByName("feed_entity_xml").content as XML)) as IWindowContainer);
-            _Str_2787 = _arg_2;
+            ASSETS = _arg_2;
             _Str_11723 = _arg_3;
             _Str_11726 = _arg_4;
         }
@@ -68,7 +68,7 @@
                 _Str_4669.dispose();
                 _Str_4669 = null;
             }
-            _Str_2787 = null;
+            ASSETS = null;
             _Str_11723 = null;
             _Str_11726 = null;
         }
@@ -141,7 +141,7 @@
             if (k != this._Str_10954)
             {
                 this._Str_10954 = k;
-                _local_2 = _Str_2787.getAssetByName(k);
+                _local_2 = ASSETS.getAssetByName(k);
                 if (_local_2)
                 {
                     this.icon = (_local_2.content as BitmapData);
@@ -163,7 +163,7 @@
             if (k != this._Str_8852)
             {
                 this._Str_8852 = k;
-                _local_2 = _Str_2787.getAssetByName(k);
+                _local_2 = ASSETS.getAssetByName(k);
                 if (_local_2)
                 {
                     this.decoration = (_local_2.content as BitmapData);
@@ -314,7 +314,7 @@
 
         private function _Str_20851(k:String):void
         {
-            var _local_2:AssetLoaderStruct = _Str_2787.loadAssetFromFile(k, new URLRequest(k));
+            var _local_2:AssetLoaderStruct = ASSETS.loadAssetFromFile(k, new URLRequest(k));
             _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_20557);
             _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_20557);
         }
@@ -328,7 +328,7 @@
                 _local_2 = (k.target as AssetLoaderStruct);
                 if (_local_2.assetName == this._Str_8852)
                 {
-                    _local_3 = _Str_2787.getAssetByName(this._Str_8852);
+                    _local_3 = ASSETS.getAssetByName(this._Str_8852);
                     if (_local_3)
                     {
                         this.decoration = (_local_3.content as BitmapData);
@@ -338,7 +338,7 @@
                 {
                     if (_local_2.assetName == this._Str_10954)
                     {
-                        _local_3 = _Str_2787.getAssetByName(this._Str_10954);
+                        _local_3 = ASSETS.getAssetByName(this._Str_10954);
                         if (_local_3)
                         {
                             this.icon = (_local_3.content as BitmapData);

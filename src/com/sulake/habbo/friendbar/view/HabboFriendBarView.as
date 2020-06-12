@@ -485,13 +485,13 @@
             Tab.GAMES = this._gameManager;
             Tab.FRIENDS = this._friendsList;
             Tab._Str_3553 = this;
-            Tab._Str_2787 = assets;
+            Tab.ASSETS = assets;
             Tab._Str_3684 = _windowManager;
             Tab._Str_3840 = _localizationManager;
             Tab._Str_9890 = this._Str_15295;
             Tab._Str_4533 = _tracking;
             Token._Str_3684 = _windowManager;
-            Token._Str_2787 = assets;
+            Token.ASSETS = assets;
             Token.GAMES = this._gameManager;
             var k:IAsset = assets.getAssetByName(NEW_BAR_XML);
             this._friendBarWindow = (_windowManager.buildFromXML((k.content as XML), WINDOW_LAYER_INDEX) as IWindowContainer);

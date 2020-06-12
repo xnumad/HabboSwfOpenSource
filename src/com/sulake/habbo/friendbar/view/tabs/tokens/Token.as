@@ -40,7 +40,7 @@
             _Str_12043 = k;
         }
 
-        public static function set _Str_2787(k:IAssetLibrary):void
+        public static function set ASSETS(k:IAssetLibrary):void
         {
             _Str_18375 = k;
         }

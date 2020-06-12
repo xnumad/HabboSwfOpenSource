@@ -27,7 +27,7 @@
 
         public function _Str_18310():IWindowContainer
         {
-            var k:IWindowContainer = ((_Str_4440.length > 0) ? _Str_4440.pop() : (_Str_3684.buildFromXML((_Str_2787.getAssetByName(NEW_OPEN_MESSENGER_TAB_XML).content as XML)) as IWindowContainer));
+            var k:IWindowContainer = ((_Str_4440.length > 0) ? _Str_4440.pop() : (_Str_3684.buildFromXML((ASSETS.getAssetByName(NEW_OPEN_MESSENGER_TAB_XML).content as XML)) as IWindowContainer));
             k.addEventListener(WindowMouseEvent.CLICK, this._Str_3369);
             k.addEventListener(WindowMouseEvent.OVER, onMouseOver);
             k.addEventListener(WindowMouseEvent.OUT, onMouseOut);

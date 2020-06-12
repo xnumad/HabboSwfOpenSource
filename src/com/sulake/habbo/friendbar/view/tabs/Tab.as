@@ -21,7 +21,7 @@
         public static var FRIENDS:IHabboFriendsList;
         public static var GAMES:IHabboGameManager;
         public static var _Str_3553:IHabboFriendBarView;
-        public static var _Str_2787:IAssetLibrary;
+        public static var ASSETS:IAssetLibrary;
         public static var _Str_3684:IHabboWindowManager;
         public static var _Str_3840:IHabboLocalizationManager;
         public static var _Str_4533:IHabboTracking;
