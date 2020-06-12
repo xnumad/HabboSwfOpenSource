@@ -25,7 +25,7 @@
                 _local_5 = object.getModel().getString(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_ASSET_NAME);
                 if (_local_5 != null)
                 {
-                    _Str_6645(this.safeGetBitmapAsset(_local_5), this.safeGetBitmapAsset((_local_5 + "_32")));
+                    setThumbnailImages(this.safeGetBitmapAsset(_local_5), this.safeGetBitmapAsset((_local_5 + "_32")));
                 }
             }
             var _local_3:Number = object.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_COLOR_1);

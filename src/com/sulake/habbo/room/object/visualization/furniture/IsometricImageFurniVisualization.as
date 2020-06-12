@@ -29,7 +29,7 @@
             return !(this._thumbnailImageNormal == null);
         }
 
-        public function _Str_6645(k:BitmapData, _arg_2:BitmapData=null):void
+        public function setThumbnailImages(k:BitmapData, _arg_2:BitmapData=null):void
         {
             this._thumbnailImageNormal = k;
             this._thumbnailImageSmall = ((_arg_2 != null) ? _arg_2 : k);

@@ -46,7 +46,7 @@
                     }
                     else
                     {
-                        _Str_6645(null);
+                        setThumbnailImages(null);
                     }
                 }
             }
@@ -64,11 +64,11 @@
             var _local_3:Bitmap = (_local_2.content as Bitmap);
             if (_local_3 != null)
             {
-                _Str_6645(_local_3.bitmapData);
+                setThumbnailImages(_local_3.bitmapData);
             }
             else
             {
-                _Str_6645(null);
+                setThumbnailImages(null);
             }
         }
     }
