@@ -17,12 +17,12 @@
         private static const BATCH_MAX_QUERY_AMOUNT:int = 50;
         private static var instance:ExtraDataManager;
 
-        private var _Str_5833:Vector.<FurnitureExternalImageVisualization>;
+        private var inputVisualizationQueue:Vector.<FurnitureExternalImageVisualization>;
         private var _Str_9149:Vector.<FurnitureExternalImageVisualization>;
 
         public function ExtraDataManager()
         {
-            this._Str_5833 = new Vector.<FurnitureExternalImageVisualization>();
+            this.inputVisualizationQueue = new Vector.<FurnitureExternalImageVisualization>();
             this._Str_9149 = new Vector.<FurnitureExternalImageVisualization>();
             super();
             this._Str_22566();
@@ -39,7 +39,7 @@
 
         public static function requestExtraDataUrl(k:FurnitureExternalImageVisualization):void
         {
-            getInstance()._Str_5833.push(k);
+            getInstance().inputVisualizationQueue.push(k);
         }
 
         public static function furnitureDisposed(k:FurnitureExternalImageVisualization):void
@@ -55,9 +55,9 @@
 
         private function _Str_22217(k:FurnitureExternalImageVisualization):void
         {
-            if (this._Str_5833.indexOf(k) != -1)
+            if (this.inputVisualizationQueue.indexOf(k) != -1)
             {
-                this._Str_5833.splice(this._Str_5833.indexOf(k), 1);
+                this.inputVisualizationQueue.splice(this.inputVisualizationQueue.indexOf(k), 1);
             }
             if (this._Str_9149.indexOf(k) != -1)
             {
@@ -70,7 +70,7 @@
             var k:String;
             var _local_7:FurnitureExternalImageVisualization;
             var _local_8:String;
-            if (this._Str_5833.length == 0)
+            if (this.inputVisualizationQueue.length == 0)
             {
                 return;
             }
@@ -78,14 +78,14 @@
             var _local_3:int;
             while (_local_3 < BATCH_MAX_QUERY_AMOUNT)
             {
-                if (this._Str_5833.length > 0)
+                if (this.inputVisualizationQueue.length > 0)
                 {
-                    _local_7 = this._Str_5833[0];
+                    _local_7 = this.inputVisualizationQueue[0];
                     _local_8 = _local_7.getExternalImageUUID();
                     _local_2.push(_local_8);
                     k = _local_7.getExtraDataUrl();
                     this._Str_9149.push(_local_7);
-                    this._Str_5833.splice(0, 1);
+                    this.inputVisualizationQueue.splice(0, 1);
                 }
                 _local_3++;
             }
