@@ -70,7 +70,7 @@
         private var _makeOwnButton:IWindow;
         private var _closeButton:IWindow;
         private var _deleteButton:IWindowContainer;
-        private var _Str_6057:IWindow;
+        private var _bgBorder:IWindow;
         private var _Str_6501:IWindowContainer;
         private var _Str_12629:IWindowContainer;
         private var _Str_25745:IWindow;
@@ -110,7 +110,7 @@
             this._deleteButton = (this._window.findChildByName("removeButtonContainer") as IWindowContainer);
             this._makeOwnButton = (this._window.findChildByName("makeOwnButton") as IWindow);
             this._Str_25745 = (this._window.findChildByName("shareButtonContainer") as IWindow);
-            this._Str_6057 = (this._window.findChildByName("bgBorder") as IWindow);
+            this._bgBorder = (this._window.findChildByName("bgBorder") as IWindow);
             this._Str_6600 = (this._window.findChildByName("senderNameButton") as IRegionWindow);
             this._Str_14612 = (this._window.findChildByName("senderName") as ILabelWindow);
             this._Str_7334 = new TextField();
@@ -366,17 +366,17 @@
             var _local_2:IWindow = this._window.findChildByName("previousButton");
             var _local_3:IWindow = this._window.findChildByName("nextButton");
             _local_2.x = _Str_9120;
-            this._Str_6057.y = (this._Str_6057.x = 0);
+            this._bgBorder.y = (this._bgBorder.x = 0);
             this._imageContainer.x = ((_Str_9120 * 2) + _local_2.width);
             this._imageContainer.y = _Str_15604;
-            this._Str_6057.height = (this._window.height = (this._imageContainer.height + (_Str_15604 * 2)));
-            this._Str_6057.width = (this._window.width = ((this._imageContainer.width + (_Str_9120 * 4)) + (_local_2.width * 2)));
+            this._bgBorder.height = (this._window.height = (this._imageContainer.height + (_Str_15604 * 2)));
+            this._bgBorder.width = (this._window.width = ((this._imageContainer.width + (_Str_9120 * 4)) + (_local_2.width * 2)));
             this._Str_6600.x = ((this._imageContainer.right - this._Str_6600.width) - 3);
             this._Str_6600.y = (this._imageContainer.bottom + 3);
             this._Str_9997.x = (this._imageContainer.x + 3);
             this._Str_9997.y = (this._Str_6600.y = this._imageContainer.bottom);
             this._Str_6501.y = 0;
-            this._Str_6501.x = (this._Str_6057.right - this._Str_6501.width);
+            this._Str_6501.x = (this._bgBorder.right - this._Str_6501.width);
             _local_3.x = (this._imageContainer.right + _Str_9120);
             if (this._Str_16159)
             {
@@ -448,7 +448,7 @@
             }
             this._imageContainer = null;
             this._closeButton = null;
-            this._Str_6057 = null;
+            this._bgBorder = null;
             this._makeOwnButton = null;
             this._deleteButton = null;
             this._Str_10424 = null;
@@ -504,13 +504,13 @@
             var _local_4:IWindow = this._window.findChildByName("previousButton");
             var _local_5:IWindow = this._window.findChildByName("nextButton");
             var _local_6:int = this._Str_2296.context.displayObjectContainer.stage.stageHeight;
-            if (this._Str_6057.height > _local_6)
+            if (this._bgBorder.height > _local_6)
             {
                 _local_4.y = (_local_5.y = ((_local_6 / 2) - (_local_4.height / 2)));
             }
             else
             {
-                _local_4.y = (_local_5.y = ((this._Str_6057.height / 2) - (_local_4.height / 2)));
+                _local_4.y = (_local_5.y = ((this._bgBorder.height / 2) - (_local_4.height / 2)));
             }
         }
 
