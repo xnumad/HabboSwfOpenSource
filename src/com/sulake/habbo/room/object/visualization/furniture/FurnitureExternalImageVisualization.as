@@ -159,7 +159,7 @@
 
         override public function dispose():void
         {
-            ExtraDataManager._Str_22536(this);
+            ExtraDataManager.furnitureDisposed(this);
             super.dispose();
         }
 

@@ -42,7 +42,7 @@
             getInstance()._Str_5833.push(k);
         }
 
-        public static function _Str_22536(k:FurnitureExternalImageVisualization):void
+        public static function furnitureDisposed(k:FurnitureExternalImageVisualization):void
         {
             getInstance()._Str_22217(k);
         }
