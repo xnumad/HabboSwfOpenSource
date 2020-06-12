@@ -82,7 +82,7 @@
         private var _currentImage:Bitmap;
         private var _inventory:IHabboInventory;
         private var _roomObjectID:int;
-        private var _Str_8942:String;
+        private var _extraDataID:String;
         private var _Str_622:String;
         private var _Str_3017:int;
         private var _Str_7653:String;
@@ -233,7 +233,7 @@
 
         private function _Str_22893():void
         {
-            this._Str_8942 = null;
+            this._extraDataID = null;
             this._Str_622 = "";
             var k:ITextWindow = (this._window.findChildByName("captionText") as ITextWindow);
             k.text = "";
@@ -251,8 +251,8 @@
         {
             try
             {
-                this._Str_8942 = new JSONDecoder(k, false).getValue().id;
-                if (this._Str_8942)
+                this._extraDataID = new JSONDecoder(k, false).getValue().id;
+                if (this._extraDataID)
                 {
                     this._Str_25873();
                     return;
@@ -407,7 +407,7 @@
 
         private function _Str_25873():void
         {
-            var k:String = (this._Str_2844._Str_23183 + this._Str_8942);
+            var k:String = (this._Str_2844._Str_23183 + this._extraDataID);
             var _local_2:URLLoader = new URLLoader(new URLRequest(k));
             _local_2.addEventListener(HTTPStatusEvent.HTTP_STATUS, this._Str_23258);
             _local_2.addEventListener(Event.COMPLETE, this._Str_22927);
@@ -603,7 +603,7 @@
 
         private function _Str_24813():void
         {
-            this._help._Str_21718(this._Str_3017, this._senderNameText.caption, this._Str_8942, this._roomObjectID);
+            this._help._Str_21718(this._Str_3017, this._senderNameText.caption, this._extraDataID, this._roomObjectID);
         }
 
         private function getType():String
@@ -661,7 +661,7 @@
                     }
                     if (this.getType() == PHOTO_POSTER)
                     {
-                        _local_7 = this._help._Str_14206(this._Str_8942, _local_3, this._roomEngine.activeRoomId, this._Str_3017, this._roomObjectID);
+                        _local_7 = this._help._Str_14206(this._extraDataID, _local_3, this._roomEngine.activeRoomId, this._Str_3017, this._roomObjectID);
                     }
                     else
                     {
