@@ -407,7 +407,7 @@
 
         private function _Str_25873():void
         {
-            var k:String = (this.ownHandler._Str_23183 + this._extraDataID);
+            var k:String = (this.ownHandler.extraDataServiceUrl + this._extraDataID);
             var _local_2:URLLoader = new URLLoader(new URLRequest(k));
             _local_2.addEventListener(HTTPStatusEvent.HTTP_STATUS, this._Str_23258);
             _local_2.addEventListener(Event.COMPLETE, this._Str_22927);

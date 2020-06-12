@@ -139,7 +139,7 @@
             return this._container.config.getProperty("stories.image.sharing_url_base");
         }
 
-        public function get _Str_23183():String
+        public function get extraDataServiceUrl():String
         {
             return this._container.config.getProperty("extra_data_service_url");
         }
