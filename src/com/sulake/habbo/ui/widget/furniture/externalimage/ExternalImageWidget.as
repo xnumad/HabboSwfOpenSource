@@ -85,7 +85,7 @@
         private var _extraDataID:String;
         private var _caption:String;
         private var _senderId:int;
-        private var _Str_7653:String;
+        private var _shareUrl:String;
         private var _Str_15263:IWindowContainer;
         private var _Str_6733:String;
         private var _Str_26327:IBitmapWrapperWindow;
@@ -242,7 +242,7 @@
             this._senderNameText.caption = "";
             this._nameCopyField.text = "";
             this._creationDateText.caption = "";
-            this._Str_7653 = null;
+            this._shareUrl = null;
             this._moderationText.visible = false;
             this._Str_19771(new Bitmap(new BitmapData((this._imageContainer.width - 2), (this._imageContainer.height - 2), false, 0)));
         }
@@ -322,7 +322,7 @@
                 shareUrlText = (this._window.findChildByName("urlField") as IWindow);
                 finalUrl = this._Str_2844._Str_18355.replace("%id%", uniqueId);
                 shareUrlText.caption = finalUrl;
-                this._Str_7653 = finalUrl;
+                this._shareUrl = finalUrl;
             }
             this._caption = this._Str_5427(jsonObject, "m", "caption");
             if (this._caption)
@@ -566,11 +566,11 @@
                     HabboTracking.getInstance().trackEventLog("Stories", "shareopened", "stories.share.clicked", this._Str_6733);
                     return;
                 case "twitterShare":
-                    navigateToURL(new URLRequest(("http://www.twitter.com/share?url=" + this._Str_7653)), "_blank");
+                    navigateToURL(new URLRequest(("http://www.twitter.com/share?url=" + this._shareUrl)), "_blank");
                     HabboTracking.getInstance().trackEventLog("Stories", "twitter", "stories.share.clicked", this._Str_6733);
                     return;
                 case "fbShare":
-                    navigateToURL(new URLRequest(("https://www.facebook.com/sharer/sharer.php?u=" + this._Str_7653)), "_blank");
+                    navigateToURL(new URLRequest(("https://www.facebook.com/sharer/sharer.php?u=" + this._shareUrl)), "_blank");
                     HabboTracking.getInstance().trackEventLog("Stories", "facebook", "stories.share.clicked", this._Str_6733);
                     return;
                 case "senderNameButton":
@@ -655,9 +655,9 @@
                         _local_9 = ((_local_6 as IWidgetWindow).widget as _Str_2789);
                         _local_5 = _local_9.message;
                     }
-                    if (!this._Str_7653)
+                    if (!this._shareUrl)
                     {
-                        this._Str_7653 = "url not available";
+                        this._shareUrl = "url not available";
                     }
                     if (this.getType() == PHOTO_POSTER)
                     {
@@ -665,7 +665,7 @@
                     }
                     else
                     {
-                        _local_7 = this._help._Str_12812(this._Str_7653, _local_5, this._roomEngine.activeRoomId, this._senderId, this._roomObjectID);
+                        _local_7 = this._help._Str_12812(this._shareUrl, _local_5, this._roomEngine.activeRoomId, this._senderId, this._roomObjectID);
                     }
                     if (_local_7)
                     {
