@@ -74,7 +74,7 @@
         private var _buttonContainer:IWindowContainer;
         private var _shareArea:IWindowContainer;
         private var _shareButton:IWindow;
-        private var _Str_6600:IRegionWindow;
+        private var _senderNameButton:IRegionWindow;
         private var _Str_14612:ILabelWindow;
         private var _Str_7334:TextField;
         private var _Str_9997:ILabelWindow;
@@ -111,7 +111,7 @@
             this._makeOwnButton = (this._window.findChildByName("makeOwnButton") as IWindow);
             this._shareButton = (this._window.findChildByName("shareButtonContainer") as IWindow);
             this._bgBorder = (this._window.findChildByName("bgBorder") as IWindow);
-            this._Str_6600 = (this._window.findChildByName("senderNameButton") as IRegionWindow);
+            this._senderNameButton = (this._window.findChildByName("senderNameButton") as IRegionWindow);
             this._Str_14612 = (this._window.findChildByName("senderName") as ILabelWindow);
             this._Str_7334 = new TextField();
             if (this._Str_2844.container.roomSession.roomControllerLevel == RoomControllerLevel.MODERATOR)
@@ -237,7 +237,7 @@
             this._Str_622 = "";
             var k:ITextWindow = (this._window.findChildByName("captionText") as ITextWindow);
             k.text = "";
-            this._Str_6600.visible = false;
+            this._senderNameButton.visible = false;
             this._Str_3017 = 0;
             this._Str_14612.caption = "";
             this._Str_7334.text = "";
@@ -312,7 +312,7 @@
             if (senderName)
             {
                 this._Str_14612.caption = senderName;
-                this._Str_6600.visible = true;
+                this._senderNameButton.visible = true;
                 this._Str_7334.text = senderName;
                 this._Str_3017 = int(senderId);
                 this._Str_9997.caption = ((((creationDate.date + "-") + (creationDate.month + 1)) + "-") + creationDate.fullYear);
@@ -371,10 +371,10 @@
             this._imageContainer.y = VERTICAL_SPACE;
             this._bgBorder.height = (this._window.height = (this._imageContainer.height + (VERTICAL_SPACE * 2)));
             this._bgBorder.width = (this._window.width = ((this._imageContainer.width + (HORIZONTAL_ITEM_SPACING * 4)) + (_local_2.width * 2)));
-            this._Str_6600.x = ((this._imageContainer.right - this._Str_6600.width) - 3);
-            this._Str_6600.y = (this._imageContainer.bottom + 3);
+            this._senderNameButton.x = ((this._imageContainer.right - this._senderNameButton.width) - 3);
+            this._senderNameButton.y = (this._imageContainer.bottom + 3);
             this._Str_9997.x = (this._imageContainer.x + 3);
-            this._Str_9997.y = (this._Str_6600.y = this._imageContainer.bottom);
+            this._Str_9997.y = (this._senderNameButton.y = this._imageContainer.bottom);
             this._buttonContainer.y = 0;
             this._buttonContainer.x = (this._bgBorder.right - this._buttonContainer.width);
             _local_3.x = (this._imageContainer.right + HORIZONTAL_ITEM_SPACING);
@@ -456,7 +456,7 @@
             this._help = null;
             this._roomEngine = null;
             this._Str_3017 = 0;
-            this._Str_6600 = null;
+            this._senderNameButton = null;
             this._Str_7334 = null;
             this._buttonContainer = null;
             this._shareArea = null;
