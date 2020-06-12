@@ -49,7 +49,7 @@
 
         protected var _window:IItemListWindow;
         protected var _customVarsWindow:IWindowContainer;
-        protected var _Str_21812:IWindow;
+        protected var _customVarsItemTemplate:IWindow;
         protected var _border:IBorderWindow;
         protected var _buttons:IItemListWindow;
         protected var _Str_2276:IHabboCatalog;
@@ -107,7 +107,7 @@
             if (this._customVarsWindow != null)
             {
                 this._customVarsWindow.procedure = this._Str_25802;
-                this._Str_21812 = IItemListWindow(this._customVarsWindow.findChildByName("variable_list")).removeListItemAt(0);
+                this._customVarsItemTemplate = IItemListWindow(this._customVarsWindow.findChildByName("variable_list")).removeListItemAt(0);
             }
             if (this._border != null)
             {
@@ -545,7 +545,7 @@
             var _local_4:Map = k.getModel().getStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA);
             for each (_local_5 in _local_2)
             {
-                _local_6 = (this._Str_21812.clone() as IWindowContainer);
+                _local_6 = (this._customVarsItemTemplate.clone() as IWindowContainer);
                 _local_6.name = _local_5;
                 _local_6.findChildByName("name").caption = _local_5;
                 _local_6.findChildByName("value").caption = _local_4[_local_5];
