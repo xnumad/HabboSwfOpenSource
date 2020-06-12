@@ -37,7 +37,7 @@
                     {
                         _local_3 = new Loader();
                         _local_3.name = _local_2;
-                        _local_3.contentLoaderInfo.addEventListener(Event.COMPLETE, this._Str_25282);
+                        _local_3.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onThumbnailLoaded);
                         _local_3.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onThumbnailError);
                         _local_3.contentLoaderInfo.addEventListener(SecurityErrorEvent.SECURITY_ERROR, onThumbnailError);
                         _local_4 = new LoaderContext(true);
@@ -58,7 +58,7 @@
             throw (new Exception("This method must be overridden!"));
         }
 
-        private function _Str_25282(k:Event):void
+        private function onThumbnailLoaded(k:Event):void
         {
             var _local_2:LoaderInfo = (k.target as LoaderInfo);
             var _local_3:Bitmap = (_local_2.content as Bitmap);
