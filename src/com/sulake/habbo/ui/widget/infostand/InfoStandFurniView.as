@@ -41,7 +41,7 @@
 
     public class InfoStandFurniView 
     {
-        private static const _Str_12261:int = -12345678;
+        private static const BCW_OWNER_ID:int = -12345678;
 
         private const PICKUP_MODE_NONE:int = 0;
         private const PICKUP_MODE_EJECT:int = 1;
@@ -327,7 +327,7 @@
                 _local_4 = (_local_3.findChildByName("owner_name") as ITextWindow);
                 _local_5 = _local_3.findChildByName("owner_link");
                 _local_6 = _local_3.findChildByName("bcw_icon");
-                if (this._ownerId != _Str_12261)
+                if (this._ownerId != BCW_OWNER_ID)
                 {
                     _local_4.text = _arg_2;
                     _local_3.toolTipCaption = this._widget.localizations.getLocalization("infostand.profile.link.tooltip", "");
@@ -430,7 +430,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                if (this._ownerId == _Str_12261)
+                if (this._ownerId == BCW_OWNER_ID)
                 {
                     this._widget.handler.container.catalog.toggleToBuildersClub();
                 }
@@ -488,7 +488,7 @@
             this.description = k.description;
             this._Str_24341 = k.image;
             this.expiration = k.expiration;
-            this._Str_25318(((_Str_6093._Str_7070(k.id)) ? _Str_12261 : k.ownerId), k.ownerName);
+            this._Str_25318(((_Str_6093._Str_7070(k.id)) ? BCW_OWNER_ID : k.ownerId), k.ownerName);
             var _local_2:Boolean;
             var _local_3:Boolean;
             var _local_4:Boolean;
