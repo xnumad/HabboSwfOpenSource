@@ -48,7 +48,7 @@
         private const PICKUP_MODE_FULL:int = 2;
 
         protected var _window:IItemListWindow;
-        protected var _Str_4258:IWindowContainer;
+        protected var _customVarsWindow:IWindowContainer;
         protected var _Str_21812:IWindow;
         protected var _border:IBorderWindow;
         protected var _buttons:IItemListWindow;
@@ -98,16 +98,16 @@
             }
             this._border = (this._window.getListItemByName("info_border") as IBorderWindow);
             this._buttons = (this._window.getListItemByName("button_list") as IItemListWindow);
-            this._Str_4258 = (this._window.getListItemByName("custom_variables") as IWindowContainer);
+            this._customVarsWindow = (this._window.getListItemByName("custom_variables") as IWindowContainer);
             if (!this._widget.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))
             {
-                this._Str_4258.dispose();
-                this._Str_4258 = null;
+                this._customVarsWindow.dispose();
+                this._customVarsWindow = null;
             }
-            if (this._Str_4258 != null)
+            if (this._customVarsWindow != null)
             {
-                this._Str_4258.procedure = this._Str_25802;
-                this._Str_21812 = IItemListWindow(this._Str_4258.findChildByName("variable_list")).removeListItemAt(0);
+                this._customVarsWindow.procedure = this._Str_25802;
+                this._Str_21812 = IItemListWindow(this._customVarsWindow.findChildByName("variable_list")).removeListItemAt(0);
             }
             if (this._border != null)
             {
@@ -170,7 +170,7 @@
             var _local_4:IItemListWindow;
             var _local_5:int;
             var _local_6:IWindowContainer;
-            if (((!(k.type == WindowMouseEvent.CLICK)) || (!(!(this._Str_4258 == null)))))
+            if (((!(k.type == WindowMouseEvent.CLICK)) || (!(!(this._customVarsWindow == null)))))
             {
                 return;
             }
@@ -178,7 +178,7 @@
             {
                 case "set_values":
                     _local_3 = new Map();
-                    _local_4 = (this._Str_4258.findChildByName("variable_list") as IItemListWindow);
+                    _local_4 = (this._customVarsWindow.findChildByName("variable_list") as IItemListWindow);
                     _local_5 = 0;
                     while (_local_5 < _local_4.numListItems)
                     {
@@ -471,9 +471,9 @@
                 this._buttons.x = (this._window.width - this._buttons.width);
                 this._border.x = 0;
             }
-            if (this._Str_4258 != null)
+            if (this._customVarsWindow != null)
             {
-                this._Str_4258.x = this._border.x;
+                this._customVarsWindow.x = this._border.x;
             }
             this._widget._Str_10301();
         }
@@ -525,7 +525,7 @@
         {
             var _local_5:String;
             var _local_6:IWindowContainer;
-            if (((this._Str_4258 == null) || (this._widget.furniData == null)))
+            if (((this._customVarsWindow == null) || (this._widget.furniData == null)))
             {
                 return;
             }
@@ -535,12 +535,12 @@
                 return;
             }
             var _local_2:Array = k.getModel().getStringArray(RoomObjectVariableEnum.FURNITURE_CUSTOM_VARIABLES);
-            this._Str_4258.visible = ((!(_local_2 == null)) && (_local_2.length > 0));
-            if (!this._Str_4258.visible)
+            this._customVarsWindow.visible = ((!(_local_2 == null)) && (_local_2.length > 0));
+            if (!this._customVarsWindow.visible)
             {
                 return;
             }
-            var _local_3:IItemListWindow = (this._Str_4258.findChildByName("variable_list") as IItemListWindow);
+            var _local_3:IItemListWindow = (this._customVarsWindow.findChildByName("variable_list") as IItemListWindow);
             _local_3.destroyListItems();
             var _local_4:Map = k.getModel().getStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA);
             for each (_local_5 in _local_2)
