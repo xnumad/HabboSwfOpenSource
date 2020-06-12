@@ -24,7 +24,7 @@
             this._hasOutline = k;
         }
 
-        public function get _Str_23660():Boolean
+        public function get hasThumbnailImage():Boolean
         {
             return !(this._thumbnailImageNormal == null);
         }

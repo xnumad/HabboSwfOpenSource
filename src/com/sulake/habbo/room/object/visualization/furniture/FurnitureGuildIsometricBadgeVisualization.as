@@ -20,7 +20,7 @@
         {
             var _local_5:String;
             var _local_2:Boolean = super.updateModel(k);
-            if (!_Str_23660)
+            if (!hasThumbnailImage)
             {
                 _local_5 = object.getModel().getString(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_ASSET_NAME);
                 if (_local_5 != null)
