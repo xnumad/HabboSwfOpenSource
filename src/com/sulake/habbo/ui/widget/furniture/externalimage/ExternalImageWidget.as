@@ -93,7 +93,7 @@
         private var _roomEngine:IRoomEngine;
         private var _reportImageContainer:IWindowContainer;
         private var _currentRoomObjectListIndex:int = 0;
-        private var _Str_16159:Boolean = false;
+        private var _openedFromInventory:Boolean = false;
         private var _Str_2296:Component;
 
         public function ExternalImageWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary, _arg_4:IHabboLocalizationManager, _arg_5:IHabboInventory, _arg_6:IHabboHelp, _arg_7:IRoomEngine, _arg_8:Component)
@@ -143,7 +143,7 @@
         {
             this._roomObjectID = k.getId();
             this._roomObjectType = k.getType();
-            this._Str_16159 = false;
+            this._openedFromInventory = false;
             this._deleteButton.visible = this._Str_2844._Str_19701();
             if (this.getType() == PHOTO_POSTER)
             {
@@ -168,7 +168,7 @@
             {
                 this._roomObjectID = k;
                 this._roomObjectType = this._roomEngine.getWallItemType(_local_2.type);
-                this._Str_16159 = true;
+                this._openedFromInventory = true;
                 this._deleteButton.visible = false;
                 this._reportImagebutton.visible = false;
                 this.show(_local_2.stuffData.getLegacyString());
@@ -378,7 +378,7 @@
             this._buttonContainer.y = 0;
             this._buttonContainer.x = (this._bgBorder.right - this._buttonContainer.width);
             _local_3.x = (this._imageContainer.right + HORIZONTAL_ITEM_SPACING);
-            if (this._Str_16159)
+            if (this._openedFromInventory)
             {
                 _local_3.visible = (_local_2.visible = false);
             }
