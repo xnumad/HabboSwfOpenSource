@@ -62,7 +62,7 @@
         private static const SELFIE:String = "selfie";
         private static const LEGACY:String = "legacy";
         private static const HORIZONTAL_ITEM_SPACING:int = 10;
-        private static const _Str_15604:int = 71;
+        private static const VERTICAL_SPACE:int = 71;
 
         private var _window:IWindowContainer;
         private var _imageContainer:IBitmapWrapperWindow;
@@ -368,8 +368,8 @@
             _local_2.x = HORIZONTAL_ITEM_SPACING;
             this._bgBorder.y = (this._bgBorder.x = 0);
             this._imageContainer.x = ((HORIZONTAL_ITEM_SPACING * 2) + _local_2.width);
-            this._imageContainer.y = _Str_15604;
-            this._bgBorder.height = (this._window.height = (this._imageContainer.height + (_Str_15604 * 2)));
+            this._imageContainer.y = VERTICAL_SPACE;
+            this._bgBorder.height = (this._window.height = (this._imageContainer.height + (VERTICAL_SPACE * 2)));
             this._bgBorder.width = (this._window.width = ((this._imageContainer.width + (HORIZONTAL_ITEM_SPACING * 4)) + (_local_2.width * 2)));
             this._Str_6600.x = ((this._imageContainer.right - this._Str_6600.width) - 3);
             this._Str_6600.y = (this._imageContainer.bottom + 3);
