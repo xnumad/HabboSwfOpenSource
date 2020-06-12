@@ -1744,7 +1744,7 @@
             }
         }
 
-        public function _Str_5151(k:int=-1000, _arg_2:int=-1):Number
+        public function getRoomCanvasScale(k:int=-1000, _arg_2:int=-1):Number
         {
             if (k == -1000)
             {

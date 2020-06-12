@@ -95,7 +95,7 @@
 
         public function _Str_10821():void
         {
-            if (((this.roomEngine) && (!(this.roomEngine._Str_5151() == 1))))
+            if (((this.roomEngine) && (!(this.roomEngine.getRoomCanvasScale() == 1))))
             {
                 windowManager.alert("Camera only works on normal zoom!", "Return to normal zoom level and try again!", 0, null);
                 return;
@@ -143,7 +143,7 @@
 
         private function _Str_16937(k:RoomEngineEvent):void
         {
-            if (((this.roomEngine) && (!(this.roomEngine._Str_5151() == 1))))
+            if (((this.roomEngine) && (!(this.roomEngine.getRoomCanvasScale() == 1))))
             {
                 this.destroy();
             }

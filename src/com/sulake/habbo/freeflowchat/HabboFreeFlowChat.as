@@ -390,7 +390,7 @@
             }
             var _local_3:int = ((HabboComponentFlags.isRoomViewerMode(flags)) ? 1 : -1);
             var _local_4:IRoomGeometry = this.roomEngine.getRoomCanvasGeometry(k, _local_3);
-            var _local_5:Number = this.roomEngine._Str_5151(k);
+            var _local_5:Number = this.roomEngine.getRoomCanvasScale(k);
             var _local_6:Number = ((this._chatFlowViewer._Str_5128.stage.stageWidth * _local_5) / 2);
             var _local_7:Number = ((this._chatFlowViewer._Str_5128.stage.stageHeight * _local_5) / 2);
             if (((!(_local_4 == null)) && (!(_arg_2 == null))))

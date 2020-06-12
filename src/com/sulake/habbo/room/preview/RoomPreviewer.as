@@ -348,7 +348,7 @@
                 {
                     if ((this._roomEngine as Component).getBoolean("zoom.enabled"))
                     {
-                        if (this._roomEngine._Str_5151(this._previewRoomId, PREVIEW_CANVAS_ID) != 0.5)
+                        if (this._roomEngine.getRoomCanvasScale(this._previewRoomId, PREVIEW_CANVAS_ID) != 0.5)
                         {
                             this._roomEngine.setRoomCanvasScale(this._previewRoomId, PREVIEW_CANVAS_ID, 0.5, null, null, false, false, true);
                             this._currentPreviewScale = SCALE_SMALL;
@@ -383,7 +383,7 @@
                     {
                         if ((this._roomEngine as Component).getBoolean("zoom.enabled"))
                         {
-                            if (((!(this._roomEngine._Str_5151(this._previewRoomId, PREVIEW_CANVAS_ID) == 1)) && (!(this._currentPreviewNeedsZoomOut))))
+                            if (((!(this._roomEngine.getRoomCanvasScale(this._previewRoomId, PREVIEW_CANVAS_ID) == 1)) && (!(this._currentPreviewNeedsZoomOut))))
                             {
                                 this._roomEngine.setRoomCanvasScale(this._previewRoomId, PREVIEW_CANVAS_ID, 1, null, null, false, false, true);
                                 this._currentPreviewScale = SCALE_NORMAL;

@@ -1724,7 +1724,7 @@
             {
                 if ((this._roomEngine as Component).getBoolean("zoom.enabled"))
                 {
-                    k = this._roomEngine._Str_5151(this._roomEngine.activeRoomId);
+                    k = this._roomEngine.getRoomCanvasScale(this._roomEngine.activeRoomId);
                     _local_2 = ((k == 1) ? 0.5 : 1);
                     this._roomEngine.setRoomCanvasScale(this._roomEngine.activeRoomId, this.getFirstCanvasId(), _local_2);
                 }
@@ -1764,7 +1764,7 @@
             }
             if (Math.abs(this._mouseWheelSpeed) > 0.01)
             {
-                k = this._roomEngine._Str_5151(this._roomEngine.activeRoomId);
+                k = this._roomEngine.getRoomCanvasScale(this._roomEngine.activeRoomId);
                 _local_5 = this.hibit(k);
                 _local_6 = (((_local_5 > 1) ? (_local_5 << 1) : 1) / 10);
                 _local_7 = ((this._mouseWheelSpeed > 0) ? (k - _local_6) : (k + _local_6));
@@ -1778,7 +1778,7 @@
                 if (this._shouldSmartScale)
                 {
                     this._shouldSmartScale = false;
-                    k = this._roomEngine._Str_5151(this._roomEngine.activeRoomId);
+                    k = this._roomEngine.getRoomCanvasScale(this._roomEngine.activeRoomId);
                     if (k < 0.75)
                     {
                         this._roomEngine.setRoomCanvasScale(this._session.roomId, this.getFirstCanvasId(), 0.5, this._pivot, null, false, true);

@@ -98,7 +98,7 @@
 
         public function _Str_10821(k:String):void
         {
-            if (((this.roomEngine) && (!(this.roomEngine._Str_5151() == 1))))
+            if (((this.roomEngine) && (!(this.roomEngine.getRoomCanvasScale() == 1))))
             {
                 windowManager.alert(_localizations.getLocalization("camera.zoom.missing.header"), _localizations.getLocalization("camera.zoom.missing.body"), 0, null);
                 return;
@@ -145,7 +145,7 @@
 
         private function _Str_16937(k:RoomEngineEvent):void
         {
-            if (((this.roomEngine) && (!(this.roomEngine._Str_5151() == 1))))
+            if (((this.roomEngine) && (!(this.roomEngine.getRoomCanvasScale() == 1))))
             {
                 this.hide();
             }

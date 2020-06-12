@@ -26,7 +26,7 @@
         function getRoomCanvasGeometry(_arg_1:int, _arg_2:int=-1):IRoomGeometry;
         function getRoomCanvasScreenOffset(_arg_1:int, _arg_2:int=-1):Point;
         function setRoomCanvasScreenOffset(_arg_1:int, _arg_2:int, _arg_3:Point):Boolean;
-        function _Str_5151(_arg_1:int=-1000, _arg_2:int=-1):Number;
+        function getRoomCanvasScale(_arg_1:int=-1000, _arg_2:int=-1):Number;
         function handleRoomCanvasMouseEvent(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:Boolean, _arg_6:Boolean, _arg_7:Boolean, _arg_8:Boolean):void;
         function setActiveRoom(_arg_1:int):void;
         function getRoomNumberValue(_arg_1:int, _arg_2:String):Number;
