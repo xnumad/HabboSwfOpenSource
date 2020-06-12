@@ -16,7 +16,7 @@
         private var _Str_21073:Boolean = false;
         private var _Str_7750:Boolean = false;
         private var _roomControllerLevel:int = 0;
-        private var _Str_10043:Boolean = false;
+        private var _isAnyRoomController:Boolean = false;
         private var _expiration:int = -1;
         private var _Str_25890:int = -1;
         private var _Str_6693:int = -1;
@@ -130,12 +130,12 @@
 
         public function set isAnyRoomController(k:Boolean):void
         {
-            this._Str_10043 = k;
+            this._isAnyRoomController = k;
         }
 
         public function get isAnyRoomController():Boolean
         {
-            return this._Str_10043;
+            return this._isAnyRoomController;
         }
 
         public function set expiration(k:int):void

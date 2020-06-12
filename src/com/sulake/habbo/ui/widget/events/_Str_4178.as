@@ -6,13 +6,13 @@
         public static const RWCCE_FURNI_CHOOSER_CONTENT:String = "RWCCE_FURNI_CHOOSER_CONTENT";
 
         private var _items:Array;
-        private var _Str_10043:Boolean;
+        private var _isAnyRoomController:Boolean;
 
         public function _Str_4178(k:String, _arg_2:Array, _arg_3:Boolean=false, _arg_4:Boolean=false, _arg_5:Boolean=false)
         {
             super(k, _arg_4, _arg_5);
             this._items = _arg_2.slice();
-            this._Str_10043 = _arg_3;
+            this._isAnyRoomController = _arg_3;
         }
 
         public function get items():Array
@@ -22,7 +22,7 @@
 
         public function get isAnyRoomController():Boolean
         {
-            return this._Str_10043;
+            return this._isAnyRoomController;
         }
     }
 }
