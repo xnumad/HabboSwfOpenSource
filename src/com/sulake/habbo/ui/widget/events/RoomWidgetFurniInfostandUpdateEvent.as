@@ -128,12 +128,12 @@
             return this._roomControllerLevel;
         }
 
-        public function set isGodMode(k:Boolean):void
+        public function set isAnyRoomController(k:Boolean):void
         {
             this._Str_10043 = k;
         }
 
-        public function get isGodMode():Boolean
+        public function get isAnyRoomController():Boolean
         {
             return this._Str_10043;
         }

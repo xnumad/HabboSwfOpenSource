@@ -1077,7 +1077,7 @@
             _local_3.isWallItem = (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             _local_3.isRoomOwner = this._container.roomSession.isRoomOwner;
             _local_3.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_3.isGodMode = this._container.sessionDataManager.isAnyRoomController;
+            _local_3.isAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             _local_3.ownerId = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_OWNER_ID);
             _local_3.ownerName = _local_5.getString(RoomObjectVariableEnum.FURNITURE_OWNER_NAME);
             _local_3.usagePolicy = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_USAGE_POLICY);

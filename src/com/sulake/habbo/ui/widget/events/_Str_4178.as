@@ -20,7 +20,7 @@
             return this._items;
         }
 
-        public function get isGodMode():Boolean
+        public function get isAnyRoomController():Boolean
         {
             return this._Str_10043;
         }

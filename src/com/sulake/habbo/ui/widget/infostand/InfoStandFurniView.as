@@ -493,12 +493,12 @@
             var _local_3:Boolean;
             var _local_4:Boolean;
             var _local_5:Boolean;
-            if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k.isOwner)) || (k.isRoomOwner)) || (k.isGodMode)))
+            if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k.isOwner)) || (k.isRoomOwner)) || (k.isAnyRoomController)))
             {
                 _local_2 = true;
                 _local_3 = (!(k.isWallItem));
             }
-            if (k.isGodMode)
+            if (k.isAnyRoomController)
             {
                 _local_4 = true;
             }
@@ -556,7 +556,7 @@
         private function _Str_25151(k:RoomWidgetFurniInfostandUpdateEvent):void
         {
             this._Str_5729 = this._Str_9953;
-            if (((k.isOwner) || (k.isGodMode)))
+            if (((k.isOwner) || (k.isAnyRoomController)))
             {
                 this._Str_5729 = this._Str_22051;
             }

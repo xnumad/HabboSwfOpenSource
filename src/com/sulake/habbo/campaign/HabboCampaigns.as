@@ -197,7 +197,7 @@
             return this._calendarData;
         }
 
-        public function get isGodMode():Boolean
+        public function get isAnyRoomController():Boolean
         {
             return this._sessionDataManager.isAnyRoomController;
         }
