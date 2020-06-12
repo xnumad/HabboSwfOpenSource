@@ -87,7 +87,7 @@
         private var _senderId:int;
         private var _shareUrl:String;
         private var _reportImagebutton:IWindowContainer;
-        private var _Str_6733:String;
+        private var _roomObjectType:String;
         private var _Str_26327:IBitmapWrapperWindow;
         private var _help:IHabboHelp;
         private var _roomEngine:IRoomEngine;
@@ -142,7 +142,7 @@
         public function _Str_16946(k:IRoomObject):void
         {
             this._roomObjectID = k.getId();
-            this._Str_6733 = k.getType();
+            this._roomObjectType = k.getType();
             this._Str_16159 = false;
             this._deleteButton.visible = this._Str_2844._Str_19701();
             if (this.getType() == PHOTO_POSTER)
@@ -167,7 +167,7 @@
             if (_local_2)
             {
                 this._roomObjectID = k;
-                this._Str_6733 = this._roomEngine.getWallItemType(_local_2.type);
+                this._roomObjectType = this._roomEngine.getWallItemType(_local_2.type);
                 this._Str_16159 = true;
                 this._deleteButton.visible = false;
                 this._reportImagebutton.visible = false;
@@ -223,7 +223,7 @@
             var _local_2:Array = this._roomEngine._Str_22003(RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             for each (_local_3 in _local_2)
             {
-                if (_local_3.getType() == this._Str_6733)
+                if (_local_3.getType() == this._roomObjectType)
                 {
                     k.push(_local_3);
                 }
@@ -563,15 +563,15 @@
                     return;
                 case "shareButton":
                     this._shareArea.visible = true;
-                    HabboTracking.getInstance().trackEventLog("Stories", "shareopened", "stories.share.clicked", this._Str_6733);
+                    HabboTracking.getInstance().trackEventLog("Stories", "shareopened", "stories.share.clicked", this._roomObjectType);
                     return;
                 case "twitterShare":
                     navigateToURL(new URLRequest(("http://www.twitter.com/share?url=" + this._shareUrl)), "_blank");
-                    HabboTracking.getInstance().trackEventLog("Stories", "twitter", "stories.share.clicked", this._Str_6733);
+                    HabboTracking.getInstance().trackEventLog("Stories", "twitter", "stories.share.clicked", this._roomObjectType);
                     return;
                 case "fbShare":
                     navigateToURL(new URLRequest(("https://www.facebook.com/sharer/sharer.php?u=" + this._shareUrl)), "_blank");
-                    HabboTracking.getInstance().trackEventLog("Stories", "facebook", "stories.share.clicked", this._Str_6733);
+                    HabboTracking.getInstance().trackEventLog("Stories", "facebook", "stories.share.clicked", this._roomObjectType);
                     return;
                 case "senderNameButton":
                     this._Str_2844.sendMessage(new GetExtendedProfileMessageComposer(this._senderId));
@@ -579,7 +579,7 @@
                 case "urlField":
                     _local_4 = (this._window.findChildByName("urlField") as ITextFieldWindow);
                     _local_4.setSelection(0, _local_4.length);
-                    HabboTracking.getInstance().trackEventLog("Stories", "fieldselected", "stories.share.clicked", this._Str_6733);
+                    HabboTracking.getInstance().trackEventLog("Stories", "fieldselected", "stories.share.clicked", this._roomObjectType);
                     return;
                 case "reportButton":
                     this._Str_24813();
@@ -608,7 +608,7 @@
 
         private function getType():String
         {
-            switch (this._Str_6733)
+            switch (this._roomObjectType)
             {
                 case "external_image_wallitem_poster":
                 case "external_image_wallitem_poster_small":
