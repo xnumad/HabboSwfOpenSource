@@ -409,12 +409,12 @@
         {
             var k:String = (this.ownHandler.extraDataServiceUrl + this._extraDataID);
             var _local_2:URLLoader = new URLLoader(new URLRequest(k));
-            _local_2.addEventListener(HTTPStatusEvent.HTTP_STATUS, this._Str_23258);
+            _local_2.addEventListener(HTTPStatusEvent.HTTP_STATUS, this.onExternalDataHttpStatus);
             _local_2.addEventListener(Event.COMPLETE, this._Str_22927);
             _local_2.addEventListener(IOErrorEvent.IO_ERROR, this._Str_23656);
         }
 
-        private function _Str_23258(k:HTTPStatusEvent):void
+        private function onExternalDataHttpStatus(k:HTTPStatusEvent):void
         {
             if (((k.status == 403) && (this.ownHandler.hasRightsToRemove())))
             {
