@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWidget;
 
-    public interface _Str_2789 extends IWidget 
+    public interface IIlluminaInputWidget extends IWidget
     {
         function get message():String;
         function set message(_arg_1:String):void;

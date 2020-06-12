@@ -15,7 +15,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;
 
-    public class IlluminaInputWidget implements _Str_2789 
+    public class IlluminaInputWidget implements IIlluminaInputWidget
     {
         public static const ILLUMINA_INPUT:String = "illumina_input";
         private static const _Str_14384:String = (ILLUMINA_INPUT + ":button_caption");

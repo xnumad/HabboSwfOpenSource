@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help._Str_11879;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7640;
     import com.sulake.core.window.components.ISelectableWindow;
-    import com.sulake.habbo.window.widgets._Str_2789;
+    import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.ISelectorWindow;
@@ -276,7 +276,7 @@
             {
                 this._window = (this._habboHelp.getXmlWindow("emergency_help_request") as IWindowContainer);
                 this._window.procedure = this._Str_22328;
-                _Str_2789(IWidgetWindow(this._window.findChildByName("help_message")).widget).maxChars = _Str_5003;
+                IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("help_message")).widget).maxChars = _Str_5003;
             }
             this._window.center();
             var _local_2:IItemListWindow = (this._window.findChildByName("user_panel") as IItemListWindow);
@@ -562,7 +562,7 @@
             {
                 return false;
             }
-            this._message = _Str_2789(IWidgetWindow(this._window.findChildByName("help_message")).widget).message;
+            this._message = IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("help_message")).widget).message;
             if (((this._message == null) || (this._message == "")))
             {
                 this._habboHelp.windowManager.alert("${generic.alert.title}", "${help.cfh.error.nomsg}", 0, null);

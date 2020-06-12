@@ -8,7 +8,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import flash.utils.Timer;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
-    import com.sulake.habbo.window.widgets._Str_2789;
+    import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendlist.IFriend;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
@@ -83,7 +83,7 @@
             this._chatInvitationTemplate = (this._conversationList.getListItemByName("msg_invitation") as IWindowContainer);
             this._chatInfoTemplate = (this._conversationList.getListItemByName("msg_info") as IWindowContainer);
             this._conversationList.removeListItems();
-            _Str_2789(IWidgetWindow(this._frame.findChildByName("input_widget")).widget).submitHandler = this;
+            IIlluminaInputWidget(IWidgetWindow(this._frame.findChildByName("input_widget")).widget).submitHandler = this;
             this._pendingMessages = new Array();
         }
 
@@ -828,7 +828,7 @@
         public function onInput(k:IWidgetWindow, _arg_2:String):void
         {
             this._messenger.send(new _Str_10962(this._currentConversationId, _arg_2));
-            _Str_2789(k.widget).message = "";
+            IIlluminaInputWidget(k.widget).message = "";
             var _local_3:Array = this._chatEntries[this._currentConversationId];
             if (((_local_3.length == 0) || ((_local_3.length == 1) && (ChatEntry(_local_3[0]).type == ChatEntry._Str_10130))))
             {

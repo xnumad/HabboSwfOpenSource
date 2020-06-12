@@ -51,7 +51,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import org.openvideoads.util.StringUtils;
     import com.sulake.core.window.components.ISelectableWindow;
-    import com.sulake.habbo.window.widgets._Str_2789;
+    import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
     import com.sulake.core.window.components.ISelectorWindow;
     import com.sulake.core.window.components.IWidgetWindow;
     import __AS3__.vec.*;
@@ -627,7 +627,7 @@
             var _local_6:IWindow;
             var _local_7:Boolean;
             var _local_8:ISelectableWindow;
-            var _local_9:_Str_2789;
+            var _local_9:IIlluminaInputWidget;
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -652,7 +652,7 @@
                     _local_6 = this._reportImageContainer.findChildByName("input_widget");
                     if (_local_6 != null)
                     {
-                        _local_9 = ((_local_6 as IWidgetWindow).widget as _Str_2789);
+                        _local_9 = ((_local_6 as IWidgetWindow).widget as IIlluminaInputWidget);
                         _local_5 = _local_9.message;
                     }
                     if (!this._shareUrl)

@@ -60,7 +60,7 @@
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import com.sulake.habbo.window.widgets._Str_2961;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
-    import com.sulake.habbo.window.widgets._Str_2789;
+    import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7364;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_10522;
@@ -723,7 +723,7 @@
             this.openWindow(this._Str_23050, false);
             this._Str_5863(this._sessionData.userId, this._sessionData.userName, this._sessionData._Str_7586, this._sessionData._Str_8937, true, _Str_7012);
             this._window.caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.title", "", "name", this._sessionData.userName);
-            var inputWidget:_Str_2789 = _Str_2789(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
+            var inputWidget:IIlluminaInputWidget = IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
             inputWidget.submitHandler = this;
             inputWidget._Str_6307 = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.input.empty", "", "name", this._sessionData.userName);
             inputWidget.maxChars = this._habboHelp.getInteger("guide.help.request.max.chat.message.length", 150);
@@ -822,7 +822,7 @@
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_CREATE;
             this._sessionData._Str_3989 = k;
             this.openWindow(this._Str_24366, true);
-            var _local_3:_Str_2789 = _Str_2789(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
+            var _local_3:IIlluminaInputWidget = IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
             _local_3.maxChars = this._habboHelp.getInteger("guide.help.request.max.description.length", 0xFF);
             if (_arg_2)
             {
@@ -840,7 +840,7 @@
             switch (_arg_2.name)
             {
                 case "create_button":
-                    _local_3 = StringUtil.trim(_Str_2789(IWidgetWindow(this._window.findChildByName("input_widget")).widget).message);
+                    _local_3 = StringUtil.trim(IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("input_widget")).widget).message);
                     if (_local_3.length < this._habboHelp.getInteger("guide.help.request.min.description.length", 15))
                     {
                         this._window.findChildByName("create_error").visible = true;
@@ -913,7 +913,7 @@
             }
             this._window.caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.title", "", "name", this._sessionData.guideName);
             this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
-            var k:_Str_2789 = _Str_2789(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
+            var k:IIlluminaInputWidget = IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
             k.submitHandler = this;
             k._Str_6307 = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.input.help", "", "name", this._sessionData.guideName);
             k.maxChars = this._habboHelp.getInteger("guide.help.request.max.chat.message.length", 150);
@@ -1479,7 +1479,7 @@
                 case "urgent_help_link":
                     return;
                 case "submit_button":
-                    _local_3 = _Str_2789(IWidgetWindow(this._reportWindow.findChildByName("input_widget")).widget).message;
+                    _local_3 = IIlluminaInputWidget(IWidgetWindow(this._reportWindow.findChildByName("input_widget")).widget).message;
                     if (_local_3.length == 0)
                     {
                         this._reportWindow.findChildByName("report_error").visible = true;
@@ -1649,7 +1649,7 @@
             if (_arg_2.length > 0)
             {
                 this._habboHelp.sendMessage(new _Str_11187(_arg_2));
-                _Str_2789(k.widget).message = "";
+                IIlluminaInputWidget(k.widget).message = "";
                 this._Str_21639();
             }
         }
@@ -1685,7 +1685,7 @@
                 return 0;
             }
             var k:IWidgetWindow = (this._window.findChildByName("input_widget") as IWidgetWindow);
-            return (k != null) ? _Str_2789(k.widget).message.length : 0;
+            return (k != null) ? IIlluminaInputWidget(k.widget).message.length : 0;
         }
 
         private function _Str_23506(k:TimerEvent):void

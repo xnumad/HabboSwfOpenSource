@@ -6,7 +6,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_3509;
-    import com.sulake.habbo.window.widgets._Str_2789;
+    import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.utils.HabboWebTools;
@@ -158,7 +158,7 @@
                 this._usersList.removeListItems();
                 this._reasonsList.removeListItems();
                 this._chatList.removeListItems();
-                _Str_2789(IWidgetWindow(this._view.findChildByName("help_message")).widget).maxChars = _Str_5003;
+                IIlluminaInputWidget(IWidgetWindow(this._view.findChildByName("help_message")).widget).maxChars = _Str_5003;
                 this._Str_14598();
             }
         }
@@ -248,7 +248,7 @@
 
         private function _Str_25494():Boolean
         {
-            this._message = _Str_2789(IWidgetWindow(this._view.findChildByName("help_message")).widget).message;
+            this._message = IIlluminaInputWidget(IWidgetWindow(this._view.findChildByName("help_message")).widget).message;
             if (((this._message == null) || (this._message == "")))
             {
                 this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.nomsg}", 0, null);
