@@ -1719,7 +1719,7 @@
             return _local_10;
         }
 
-        public function _Str_5041(k:int, _arg_2:int, _arg_3:Number, _arg_4:Point=null, _arg_5:Point=null, _arg_6:Boolean=false, _arg_7:Boolean=false, _arg_8:Boolean=false):void
+        public function setRoomCanvasScale(k:int, _arg_2:int, _arg_3:Number, _arg_4:Point=null, _arg_5:Point=null, _arg_6:Boolean=false, _arg_7:Boolean=false, _arg_8:Boolean=false):void
         {
             var _local_10:RoomInstanceData;
             var _local_11:RoomCamera;
@@ -1996,7 +1996,7 @@
                 if (((((this._sessionDataManager.isPerkAllowed(PerkEnum.MOUSE_ZOOM)) && (_arg_4 == MouseEvent.CLICK)) && (_arg_6)) && (_arg_5)))
                 {
                     _local_12 = ((_arg_7) ? (_local_9.scale >> 1) : ((_local_9.scale < 1) ? 1 : (_local_9.scale << 1)));
-                    this._Str_5041(this.activeRoomId, this._activeRoomActiveCanvas, _local_12, new Point(_arg_2, _arg_3));
+                    this.setRoomCanvasScale(this.activeRoomId, this._activeRoomActiveCanvas, _local_12, new Point(_arg_2, _arg_3));
                     return;
                 }
                 _local_10 = this.getOverlaySprite(_local_9);

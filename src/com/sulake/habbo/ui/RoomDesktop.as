@@ -1726,7 +1726,7 @@
                 {
                     k = this._roomEngine._Str_5151(this._roomEngine.activeRoomId);
                     _local_2 = ((k == 1) ? 0.5 : 1);
-                    this._roomEngine._Str_5041(this._roomEngine.activeRoomId, this.getFirstCanvasId(), _local_2);
+                    this._roomEngine.setRoomCanvasScale(this._roomEngine.activeRoomId, this.getFirstCanvasId(), _local_2);
                 }
                 else
                 {
@@ -1771,7 +1771,7 @@
                 _local_7 = Math.max(0.5, _local_7);
                 this._shouldSmartScale = true;
                 this._mouseWheelSpeed = (this._mouseWheelSpeed * 0.05);
-                this._roomEngine._Str_5041(this._session.roomId, this.getFirstCanvasId(), _local_7, this._pivot, null, false, true);
+                this._roomEngine.setRoomCanvasScale(this._session.roomId, this.getFirstCanvasId(), _local_7, this._pivot, null, false, true);
             }
             else
             {
@@ -1781,11 +1781,11 @@
                     k = this._roomEngine._Str_5151(this._roomEngine.activeRoomId);
                     if (k < 0.75)
                     {
-                        this._roomEngine._Str_5041(this._session.roomId, this.getFirstCanvasId(), 0.5, this._pivot, null, false, true);
+                        this._roomEngine.setRoomCanvasScale(this._session.roomId, this.getFirstCanvasId(), 0.5, this._pivot, null, false, true);
                     }
                     else
                     {
-                        this._roomEngine._Str_5041(this._session.roomId, this.getFirstCanvasId(), Math.round(k), this._pivot, null, false, true);
+                        this._roomEngine.setRoomCanvasScale(this._session.roomId, this.getFirstCanvasId(), Math.round(k), this._pivot, null, false, true);
                     }
                 }
             }

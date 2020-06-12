@@ -350,7 +350,7 @@
                     {
                         if (this._roomEngine._Str_5151(this._previewRoomId, PREVIEW_CANVAS_ID) != 0.5)
                         {
-                            this._roomEngine._Str_5041(this._previewRoomId, PREVIEW_CANVAS_ID, 0.5, null, null, false, false, true);
+                            this._roomEngine.setRoomCanvasScale(this._previewRoomId, PREVIEW_CANVAS_ID, 0.5, null, null, false, false, true);
                             this._currentPreviewScale = SCALE_SMALL;
                             this._currentPreviewNeedsZoomOut = true;
                             k.x = (k.x >> 1);
@@ -385,7 +385,7 @@
                         {
                             if (((!(this._roomEngine._Str_5151(this._previewRoomId, PREVIEW_CANVAS_ID) == 1)) && (!(this._currentPreviewNeedsZoomOut))))
                             {
-                                this._roomEngine._Str_5041(this._previewRoomId, PREVIEW_CANVAS_ID, 1, null, null, false, false, true);
+                                this._roomEngine.setRoomCanvasScale(this._previewRoomId, PREVIEW_CANVAS_ID, 1, null, null, false, false, true);
                                 this._currentPreviewScale = SCALE_NORMAL;
                                 k.x = (k.x << 1);
                                 k.y = (k.y << 1);
@@ -414,7 +414,7 @@
             {
                 if ((this._roomEngine as Component).getBoolean("zoom.enabled"))
                 {
-                    this._roomEngine._Str_5041(this._previewRoomId, PREVIEW_CANVAS_ID, 1);
+                    this._roomEngine.setRoomCanvasScale(this._previewRoomId, PREVIEW_CANVAS_ID, 1);
                 }
                 k = this._roomEngine.getRoomCanvasGeometry(this._previewRoomId, PREVIEW_CANVAS_ID);
                 k.performZoomIn();
@@ -429,7 +429,7 @@
             {
                 if ((this._roomEngine as Component).getBoolean("zoom.enabled"))
                 {
-                    this._roomEngine._Str_5041(this._previewRoomId, PREVIEW_CANVAS_ID, 0.5);
+                    this._roomEngine.setRoomCanvasScale(this._previewRoomId, PREVIEW_CANVAS_ID, 0.5);
                 }
                 else
                 {

@@ -1025,7 +1025,7 @@
                     {
                         return;
                     }
-                    this._roomEngine._Str_5041(this._roomEngine.activeRoomId, this.getActiveCanvasId(this._roomEngine.activeRoomId), ((_local_6.level < 1) ? 0.5 : (1 << (Math.floor(_local_6.level) - 1))), null, null, _local_6._Str_25423);
+                    this._roomEngine.setRoomCanvasScale(this._roomEngine.activeRoomId, this.getActiveCanvasId(this._roomEngine.activeRoomId), ((_local_6.level < 1) ? 0.5 : (1 << (Math.floor(_local_6.level) - 1))), null, null, _local_6._Str_25423);
                     return;
                 case RoomEngineDimmerStateEvent.REDSE_ROOM_COLOR:
                     _local_3.processEvent(k);

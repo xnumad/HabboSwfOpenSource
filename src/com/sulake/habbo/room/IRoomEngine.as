@@ -19,7 +19,7 @@
         function get isInitialized():Boolean;
         function get activeRoomId():int;
         function createRoomCanvas(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):DisplayObject;
-        function _Str_5041(_arg_1:int, _arg_2:int, _arg_3:Number, _arg_4:Point=null, _arg_5:Point=null, _arg_6:Boolean=false, _arg_7:Boolean=false, _arg_8:Boolean=false):void;
+        function setRoomCanvasScale(_arg_1:int, _arg_2:int, _arg_3:Number, _arg_4:Point=null, _arg_5:Point=null, _arg_6:Boolean=false, _arg_7:Boolean=false, _arg_8:Boolean=false):void;
         function modifyRoomCanvas(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:int):Boolean;
         function _Str_22003(_arg_1:int):Array;
         function setRoomCanvasMask(_arg_1:int, _arg_2:int, _arg_3:Boolean):void;
