@@ -73,7 +73,7 @@
         private var _bgBorder:IWindow;
         private var _buttonContainer:IWindowContainer;
         private var _shareArea:IWindowContainer;
-        private var _Str_25745:IWindow;
+        private var _shareButton:IWindow;
         private var _Str_6600:IRegionWindow;
         private var _Str_14612:ILabelWindow;
         private var _Str_7334:TextField;
@@ -109,7 +109,7 @@
             this._shareArea = (this._window.findChildByName("shareArea") as IWindowContainer);
             this._deleteButton = (this._window.findChildByName("removeButtonContainer") as IWindowContainer);
             this._makeOwnButton = (this._window.findChildByName("makeOwnButton") as IWindow);
-            this._Str_25745 = (this._window.findChildByName("shareButtonContainer") as IWindow);
+            this._shareButton = (this._window.findChildByName("shareButtonContainer") as IWindow);
             this._bgBorder = (this._window.findChildByName("bgBorder") as IWindow);
             this._Str_6600 = (this._window.findChildByName("senderNameButton") as IRegionWindow);
             this._Str_14612 = (this._window.findChildByName("senderName") as ILabelWindow);
