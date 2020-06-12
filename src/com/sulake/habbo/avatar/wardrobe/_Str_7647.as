@@ -16,7 +16,7 @@
         private var _windowManager:IHabboWindowManager;
         private var _assetLibrary:IAssetLibrary;
         private var _window:IWindowContainer;
-        private var _Str_2840:IBitmapWrapperWindow;
+        private var _imageContainer:IBitmapWrapperWindow;
 
         public function _Str_7647(k:IHabboWindowManager, _arg_2:IAssetLibrary, _arg_3:Boolean)
         {
@@ -26,7 +26,7 @@
             this._window = IWindowContainer(this._windowManager.buildFromXML((_local_4.content as XML)));
             if (this._window != null)
             {
-                this._Str_2840 = (this._window.findChildByName("bitmap") as IBitmapWrapperWindow);
+                this._imageContainer = (this._window.findChildByName("bitmap") as IBitmapWrapperWindow);
             }
             if (!_arg_3)
             {
@@ -43,19 +43,19 @@
                 this._window.dispose();
             }
             this._window = null;
-            if (this._Str_2840)
+            if (this._imageContainer)
             {
-                this._Str_2840.dispose();
+                this._imageContainer.dispose();
             }
-            this._Str_2840 = null;
+            this._imageContainer = null;
         }
 
         public function _Str_25268(k:BitmapData):void
         {
-            this._Str_2840.bitmap = new BitmapData(this._Str_2840.width, this._Str_2840.height, true, 0xFFFFFF);
-            var _local_2:int = ((this._Str_2840.width - k.width) / 2);
-            var _local_3:int = (this._Str_2840.height - k.height);
-            this._Str_2840.bitmap.copyPixels(k, k.rect, new Point(_local_2, _local_3));
+            this._imageContainer.bitmap = new BitmapData(this._imageContainer.width, this._imageContainer.height, true, 0xFFFFFF);
+            var _local_2:int = ((this._imageContainer.width - k.width) / 2);
+            var _local_3:int = (this._imageContainer.height - k.height);
+            this._imageContainer.bitmap.copyPixels(k, k.rect, new Point(_local_2, _local_3));
         }
 
         public function get window():IWindowContainer

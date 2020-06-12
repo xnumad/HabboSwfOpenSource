@@ -65,7 +65,7 @@
         private static const _Str_15604:int = 71;
 
         private var _window:IWindowContainer;
-        private var _Str_2840:IBitmapWrapperWindow;
+        private var _imageContainer:IBitmapWrapperWindow;
         private var _Str_11003:IHTMLTextWindow;
         private var _Str_19406:IWindow;
         private var _Str_2728:IWindow;
@@ -103,7 +103,7 @@
             this._window = (_arg_2.buildFromXML((_arg_3.getAssetByName("stories_image_widget_xml").content as XML)) as IWindowContainer);
             this._Str_2844.widget = this;
             this._Str_2728 = (this._window.findChildByName("closebutton") as IWindow);
-            this._Str_2840 = (this._window.findChildByName("imageLoader") as IBitmapWrapperWindow);
+            this._imageContainer = (this._window.findChildByName("imageLoader") as IBitmapWrapperWindow);
             this._Str_11003 = (this._window.findChildByName("moderationText") as IHTMLTextWindow);
             this._Str_11003.addEventListener(WindowLinkEvent.WINDOW_EVENT_LINK, this._Str_23468);
             this._Str_12629 = (this._window.findChildByName("shareArea") as IWindowContainer);
@@ -244,7 +244,7 @@
             this._Str_9997.caption = "";
             this._Str_7653 = null;
             this._Str_11003.visible = false;
-            this._Str_19771(new Bitmap(new BitmapData((this._Str_2840.width - 2), (this._Str_2840.height - 2), false, 0)));
+            this._Str_19771(new Bitmap(new BitmapData((this._imageContainer.width - 2), (this._imageContainer.height - 2), false, 0)));
         }
 
         private function _Str_24417(k:String):void
@@ -351,8 +351,8 @@
                 _local_2 = (this._Str_10424.content as Bitmap);
                 if (_local_2)
                 {
-                    this._Str_2840.width = (_local_2.width + 2);
-                    this._Str_2840.height = (_local_2.height + 2);
+                    this._imageContainer.width = (_local_2.width + 2);
+                    this._imageContainer.height = (_local_2.height + 2);
                     this._Str_19771(_local_2);
                 }
             }
@@ -361,23 +361,23 @@
         private function _Str_19771(k:Bitmap):void
         {
             this._Str_13302 = k;
-            this._Str_2840.bitmap = new BitmapData(this._Str_2840.width, this._Str_2840.height, true, 0);
+            this._imageContainer.bitmap = new BitmapData(this._imageContainer.width, this._imageContainer.height, true, 0);
             this._window.visible = true;
             var _local_2:IWindow = this._window.findChildByName("previousButton");
             var _local_3:IWindow = this._window.findChildByName("nextButton");
             _local_2.x = _Str_9120;
             this._Str_6057.y = (this._Str_6057.x = 0);
-            this._Str_2840.x = ((_Str_9120 * 2) + _local_2.width);
-            this._Str_2840.y = _Str_15604;
-            this._Str_6057.height = (this._window.height = (this._Str_2840.height + (_Str_15604 * 2)));
-            this._Str_6057.width = (this._window.width = ((this._Str_2840.width + (_Str_9120 * 4)) + (_local_2.width * 2)));
-            this._Str_6600.x = ((this._Str_2840.right - this._Str_6600.width) - 3);
-            this._Str_6600.y = (this._Str_2840.bottom + 3);
-            this._Str_9997.x = (this._Str_2840.x + 3);
-            this._Str_9997.y = (this._Str_6600.y = this._Str_2840.bottom);
+            this._imageContainer.x = ((_Str_9120 * 2) + _local_2.width);
+            this._imageContainer.y = _Str_15604;
+            this._Str_6057.height = (this._window.height = (this._imageContainer.height + (_Str_15604 * 2)));
+            this._Str_6057.width = (this._window.width = ((this._imageContainer.width + (_Str_9120 * 4)) + (_local_2.width * 2)));
+            this._Str_6600.x = ((this._imageContainer.right - this._Str_6600.width) - 3);
+            this._Str_6600.y = (this._imageContainer.bottom + 3);
+            this._Str_9997.x = (this._imageContainer.x + 3);
+            this._Str_9997.y = (this._Str_6600.y = this._imageContainer.bottom);
             this._Str_6501.y = 0;
             this._Str_6501.x = (this._Str_6057.right - this._Str_6501.width);
-            _local_3.x = (this._Str_2840.right + _Str_9120);
+            _local_3.x = (this._imageContainer.right + _Str_9120);
             if (this._Str_16159)
             {
                 _local_3.visible = (_local_2.visible = false);
@@ -390,17 +390,17 @@
             var _local_5:ColorTransform = new ColorTransform();
             _local_5.color = 0;
             _local_4.ty = (_local_4.ty + 1);
-            this._Str_2840.bitmap.draw(k, _local_4, _local_5);
+            this._imageContainer.bitmap.draw(k, _local_4, _local_5);
             _local_4.tx = (_local_4.tx + 1);
             _local_4.ty--;
-            this._Str_2840.bitmap.draw(k, _local_4, _local_5);
+            this._imageContainer.bitmap.draw(k, _local_4, _local_5);
             _local_4.ty = (_local_4.ty + 2);
-            this._Str_2840.bitmap.draw(k, _local_4, _local_5);
+            this._imageContainer.bitmap.draw(k, _local_4, _local_5);
             _local_4.ty--;
             _local_4.tx = (_local_4.tx + 1);
-            this._Str_2840.bitmap.draw(k, _local_4, _local_5);
+            this._imageContainer.bitmap.draw(k, _local_4, _local_5);
             _local_4.tx--;
-            this._Str_2840.bitmap.draw(k, _local_4);
+            this._imageContainer.bitmap.draw(k, _local_4);
             this._window.activate();
             this._Str_20964();
         }
@@ -446,7 +446,7 @@
             {
                 return;
             }
-            this._Str_2840 = null;
+            this._imageContainer = null;
             this._Str_2728 = null;
             this._Str_6057 = null;
             this._Str_19406 = null;
