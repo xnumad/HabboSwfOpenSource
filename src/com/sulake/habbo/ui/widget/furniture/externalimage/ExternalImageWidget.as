@@ -181,7 +181,7 @@
             {
                 return;
             }
-            this._Str_22893();
+            this.clearImage();
             if (k != null)
             {
                 this._Str_24417(k);
@@ -231,7 +231,7 @@
             return k;
         }
 
-        private function _Str_22893():void
+        private function clearImage():void
         {
             this._extraDataID = null;
             this._caption = "";
