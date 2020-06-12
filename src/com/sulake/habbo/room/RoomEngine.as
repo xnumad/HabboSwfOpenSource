@@ -3397,7 +3397,7 @@
             }
         }
 
-        public function _Str_24060(k:int):String
+        public function getFurnitureIconUrl(k:int):String
         {
             var _local_2:String;
             var _local_3:String = "";

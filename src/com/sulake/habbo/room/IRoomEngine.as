@@ -31,7 +31,7 @@
         function setActiveRoom(_arg_1:int):void;
         function getRoomNumberValue(_arg_1:int, _arg_2:String):Number;
         function getRoomStringValue(_arg_1:int, _arg_2:String):String;
-        function _Str_24060(_arg_1:int):String;
+        function getFurnitureIconUrl(_arg_1:int):String;
         function getFurnitureIcon(_arg_1:int, _arg_2:IGetImageListener, _arg_3:String=null, _arg_4:IStuffData=null):ImageResult;
         function _Str_22347(_arg_1:int, _arg_2:String=null):String;
         function getWallItemIcon(_arg_1:int, _arg_2:IGetImageListener, _arg_3:String=null):ImageResult;
