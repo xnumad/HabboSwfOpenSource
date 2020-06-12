@@ -105,7 +105,7 @@
             this._closeButton = (this._window.findChildByName("closebutton") as IWindow);
             this._imageContainer = (this._window.findChildByName("imageLoader") as IBitmapWrapperWindow);
             this._moderationText = (this._window.findChildByName("moderationText") as IHTMLTextWindow);
-            this._moderationText.addEventListener(WindowLinkEvent.WINDOW_EVENT_LINK, this._Str_23468);
+            this._moderationText.addEventListener(WindowLinkEvent.WINDOW_EVENT_LINK, this.onClickModerationInfoLink);
             this._shareArea = (this._window.findChildByName("shareArea") as IWindowContainer);
             this._deleteButton = (this._window.findChildByName("removeButtonContainer") as IWindowContainer);
             this._makeOwnButton = (this._window.findChildByName("makeOwnButton") as IWindow);
@@ -593,7 +593,7 @@
             }
         }
 
-        private function _Str_23468(k:WindowLinkEvent):void
+        private function onClickModerationInfoLink(k:WindowLinkEvent):void
         {
             if (((!(k == null)) && (!(StringUtils.isEmpty(k.link)))))
             {
