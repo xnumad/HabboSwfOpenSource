@@ -76,7 +76,7 @@
         private var _shareButton:IWindow;
         private var _senderNameButton:IRegionWindow;
         private var _senderNameText:ILabelWindow;
-        private var _Str_7334:TextField;
+        private var _nameCopyField:TextField;
         private var _Str_9997:ILabelWindow;
         private var _Str_10424:BitmapFileLoader;
         private var _Str_13302:Bitmap;
@@ -113,13 +113,13 @@
             this._bgBorder = (this._window.findChildByName("bgBorder") as IWindow);
             this._senderNameButton = (this._window.findChildByName("senderNameButton") as IRegionWindow);
             this._senderNameText = (this._window.findChildByName("senderName") as ILabelWindow);
-            this._Str_7334 = new TextField();
+            this._nameCopyField = new TextField();
             if (this._Str_2844.container.roomSession.roomControllerLevel == RoomControllerLevel.MODERATOR)
             {
                 _local_9 = (this._window.findChildByName("name_copy_wrapper") as IDisplayObjectWrapper);
-                this._Str_7334.textColor = 10061943;
-                this._Str_7334.text = "";
-                _local_9.setDisplayObject(this._Str_7334);
+                this._nameCopyField.textColor = 10061943;
+                this._nameCopyField.text = "";
+                _local_9.setDisplayObject(this._nameCopyField);
             }
             this._Str_9997 = (this._window.findChildByName("creationDate") as ILabelWindow);
             this._buttonContainer = (this._window.findChildByName("buttonContainer") as IWindowContainer);
@@ -240,7 +240,7 @@
             this._senderNameButton.visible = false;
             this._Str_3017 = 0;
             this._senderNameText.caption = "";
-            this._Str_7334.text = "";
+            this._nameCopyField.text = "";
             this._Str_9997.caption = "";
             this._Str_7653 = null;
             this._moderationText.visible = false;
@@ -313,7 +313,7 @@
             {
                 this._senderNameText.caption = senderName;
                 this._senderNameButton.visible = true;
-                this._Str_7334.text = senderName;
+                this._nameCopyField.text = senderName;
                 this._Str_3017 = int(senderId);
                 this._Str_9997.caption = ((((creationDate.date + "-") + (creationDate.month + 1)) + "-") + creationDate.fullYear);
             }
@@ -457,7 +457,7 @@
             this._roomEngine = null;
             this._Str_3017 = 0;
             this._senderNameButton = null;
-            this._Str_7334 = null;
+            this._nameCopyField = null;
             this._buttonContainer = null;
             this._shareArea = null;
             this._window.procedure = null;
