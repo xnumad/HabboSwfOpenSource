@@ -81,7 +81,7 @@
                 if (this._Str_5833.length > 0)
                 {
                     _local_7 = this._Str_5833[0];
-                    _local_8 = _local_7._Str_20894();
+                    _local_8 = _local_7.getExternalImageUUID();
                     _local_2.push(_local_8);
                     k = _local_7.getExtraDataUrl();
                     this._Str_9149.push(_local_7);
@@ -122,7 +122,7 @@
                         id = obj.id;
                         for each (visualization in this._Str_9149)
                         {
-                            if (visualization._Str_20894() == id)
+                            if (visualization.getExternalImageUUID() == id)
                             {
                                 if (((obj.status) && (obj.status == REJECTED)))
                                 {

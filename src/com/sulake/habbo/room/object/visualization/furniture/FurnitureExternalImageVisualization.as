@@ -88,7 +88,7 @@
             return url;
         }
 
-        public function _Str_20894():String
+        public function getExternalImageUUID():String
         {
             return this._externalImageUUID;
         }
