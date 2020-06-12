@@ -16,7 +16,7 @@
         private var _thumbnailUrl:String = null;
 
 
-        private static function _Str_19697(k:ErrorEvent):void
+        private static function onThumbnailError(k:ErrorEvent):void
         {
             Logger.log(("External Image thumbnail download error: " + k.toString()));
         }
@@ -38,8 +38,8 @@
                         _local_3 = new Loader();
                         _local_3.name = _local_2;
                         _local_3.contentLoaderInfo.addEventListener(Event.COMPLETE, this._Str_25282);
-                        _local_3.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, _Str_19697);
-                        _local_3.contentLoaderInfo.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _Str_19697);
+                        _local_3.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onThumbnailError);
+                        _local_3.contentLoaderInfo.addEventListener(SecurityErrorEvent.SECURITY_ERROR, onThumbnailError);
                         _local_4 = new LoaderContext(true);
                         _local_4.checkPolicyFile = true;
                         _local_3.load(new URLRequest(_local_2), _local_4);
