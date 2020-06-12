@@ -411,7 +411,7 @@
             var _local_2:URLLoader = new URLLoader(new URLRequest(k));
             _local_2.addEventListener(HTTPStatusEvent.HTTP_STATUS, this.onExternalDataHttpStatus);
             _local_2.addEventListener(Event.COMPLETE, this._Str_22927);
-            _local_2.addEventListener(IOErrorEvent.IO_ERROR, this._Str_23656);
+            _local_2.addEventListener(IOErrorEvent.IO_ERROR, this.onExternalDataError);
         }
 
         private function onExternalDataHttpStatus(k:HTTPStatusEvent):void
@@ -422,7 +422,7 @@
             }
         }
 
-        private function _Str_23656(k:Event):void
+        private function onExternalDataError(k:Event):void
         {
             if (!this._moderationText.visible)
             {
