@@ -142,7 +142,7 @@
                         _local_11 = _arg_4.getJSONValue("id");
                         if (!StringUtils.isEmpty(_local_11))
                         {
-                            this._Str_17989(_local_11);
+                            this.loadExtraData(_local_11);
                         }
                         else
                         {
@@ -176,7 +176,7 @@
             }
         }
 
-        private function _Str_17989(k:String):void
+        private function loadExtraData(k:String):void
         {
             var _local_2:String = (this._tradingModel._Str_8308().getProperty("extra_data_service_url") + k);
             var _local_3:URLLoader = new URLLoader(new URLRequest(_local_2));

@@ -72,7 +72,7 @@
                         }
                         else
                         {
-                            this._Str_17989(uuid);
+                            this.loadExtraData(uuid);
                         }
                     }
                     return null;
@@ -122,7 +122,7 @@
             return _local_5;
         }
 
-        private function _Str_17989(k:String):void
+        private function loadExtraData(k:String):void
         {
             var _local_2:String = (this._extraDataUrl + k);
             var _local_3:URLLoader = new URLLoader(new URLRequest(_local_2));
