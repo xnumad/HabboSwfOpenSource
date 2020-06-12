@@ -161,7 +161,7 @@
             }
         }
 
-        public function _Str_24496(k:int):void
+        public function showWithFurniID(k:int):void
         {
             var _local_2:IFurnitureItem = this._inventory._Str_14082(k);
             if (_local_2)
