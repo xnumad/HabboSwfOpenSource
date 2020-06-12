@@ -92,7 +92,7 @@
         function showUseProductSelection(_arg_1:int, _arg_2:int, _arg_3:int=-1):void;
         function placeSelectedObject(_arg_1:int):void;
         function setTileCursorState(_arg_1:int, _arg_2:int):void;
-        function _Str_21042(_arg_1:int, _arg_2:Boolean):void;
+        function toggleTileCursorVisibility(_arg_1:int, _arg_2:Boolean):void;
         function addObjectUpdateCategory(_arg_1:int):void;
         function removeObjectUpdateCategory(_arg_1:int):void;
         function _Str_16420(_arg_1:int, _arg_2:int, _arg_3:BitmapData, _arg_4:Matrix, _arg_5:Boolean):Boolean;

@@ -2553,7 +2553,7 @@
             }
         }
 
-        public function _Str_21042(k:int, _arg_2:Boolean):void
+        public function toggleTileCursorVisibility(k:int, _arg_2:Boolean):void
         {
             var _local_4:RoomObjectTileCursorUpdateMessage;
             var _local_3:IRoomObjectController = this.getTileCursor(k);

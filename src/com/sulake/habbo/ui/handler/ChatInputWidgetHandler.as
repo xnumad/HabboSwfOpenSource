@@ -383,7 +383,7 @@
                                             Mouse.show();
                                             this._container.roomEngine.setTileCursorState(this._container.roomEngine.activeRoomId, 1);
                                         }
-                                        this._container.roomEngine._Str_21042(this._container.roomEngine.activeRoomId, (!(this._mouseToggle)));
+                                        this._container.roomEngine.toggleTileCursorVisibility(this._container.roomEngine.activeRoomId, (!(this._mouseToggle)));
                                         this._mouseToggle = (!(this._mouseToggle));
                                         return null;
 									case ":modtools":
