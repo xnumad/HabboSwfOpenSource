@@ -47,11 +47,11 @@
             {
                 return _local_2;
             }
-            this._Str_25236();
+            this.refreshThumbnail();
             return true;
         }
 
-        private function _Str_25236():void
+        private function refreshThumbnail():void
         {
             if (assetCollection == null)
             {
