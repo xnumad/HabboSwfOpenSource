@@ -18,12 +18,12 @@
         private static var instance:ExtraDataManager;
 
         private var inputVisualizationQueue:Vector.<FurnitureExternalImageVisualization>;
-        private var _Str_9149:Vector.<FurnitureExternalImageVisualization>;
+        private var outputVisualizationQueue:Vector.<FurnitureExternalImageVisualization>;
 
         public function ExtraDataManager()
         {
             this.inputVisualizationQueue = new Vector.<FurnitureExternalImageVisualization>();
-            this._Str_9149 = new Vector.<FurnitureExternalImageVisualization>();
+            this.outputVisualizationQueue = new Vector.<FurnitureExternalImageVisualization>();
             super();
             this._Str_22566();
         }
@@ -59,9 +59,9 @@
             {
                 this.inputVisualizationQueue.splice(this.inputVisualizationQueue.indexOf(k), 1);
             }
-            if (this._Str_9149.indexOf(k) != -1)
+            if (this.outputVisualizationQueue.indexOf(k) != -1)
             {
-                this._Str_9149.splice(this._Str_9149.indexOf(k), 1);
+                this.outputVisualizationQueue.splice(this.outputVisualizationQueue.indexOf(k), 1);
             }
         }
 
@@ -84,7 +84,7 @@
                     _local_8 = _local_7.getExternalImageUUID();
                     _local_2.push(_local_8);
                     k = _local_7.getExtraDataUrl();
-                    this._Str_9149.push(_local_7);
+                    this.outputVisualizationQueue.push(_local_7);
                     this.inputVisualizationQueue.splice(0, 1);
                 }
                 _local_3++;
@@ -120,7 +120,7 @@
                     for each (obj in result)
                     {
                         id = obj.id;
-                        for each (visualization in this._Str_9149)
+                        for each (visualization in this.outputVisualizationQueue)
                         {
                             if (visualization.getExternalImageUUID() == id)
                             {
