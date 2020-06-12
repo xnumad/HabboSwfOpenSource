@@ -257,7 +257,7 @@
                     this._Str_25873();
                     return;
                 }
-                this._Str_20605(k, this.getImageUrl(new JSONDecoder(k, false).getValue()));
+                this.loadPhoto(k, this.getImageUrl(new JSONDecoder(k, false).getValue()));
             }
             catch(error:Error)
             {
@@ -284,7 +284,7 @@
             return _local_2;
         }
 
-        private function _Str_20605(photoJsonString:String, imageUrl:String):void
+        private function loadPhoto(photoJsonString:String, imageUrl:String):void
         {
             var jsonObject:Object;
             var shareUrlText:IWindow;
@@ -437,7 +437,7 @@
             {
                 return;
             }
-            this._Str_20605(_local_2, null);
+            this.loadPhoto(_local_2, null);
         }
 
         override public function dispose():void
