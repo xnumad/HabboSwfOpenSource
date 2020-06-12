@@ -582,7 +582,7 @@
                     HabboTracking.getInstance().trackEventLog("Stories", "fieldselected", "stories.share.clicked", this._roomObjectType);
                     return;
                 case "reportButton":
-                    this._Str_24813();
+                    this.openReportImage();
                     return;
                 case "nextButton":
                     this.showNext();
@@ -601,7 +601,7 @@
             }
         }
 
-        private function _Str_24813():void
+        private function openReportImage():void
         {
             this._help._Str_21718(this._senderId, this._senderNameText.caption, this._extraDataID, this._roomObjectID);
         }
