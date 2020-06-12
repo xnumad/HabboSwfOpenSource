@@ -267,7 +267,7 @@
         private function getImageUrl(k:Object):String
         {
             var _local_3:String;
-            var _local_2:String = this._Str_5427(k, "w", "url");
+            var _local_2:String = this.getJsonValue(k, "w", "url");
             if (_local_2.indexOf("http") != 0)
             {
                 _local_3 = "postcards/selfie/";
@@ -304,10 +304,10 @@
             }
             this._bitmapLoader = new BitmapFileLoader("image/png", new URLRequest(imageUrl));
             this._bitmapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_10931);
-            var senderName:String = this._Str_5427(jsonObject, "n", "creator_name");
-            var senderId:String = this._Str_5427(jsonObject, "s", "creator_id");
-            var uniqueId:String = this._Str_5427(jsonObject, "u", "unique_id");
-            var creationTime:String = this._Str_5427(jsonObject, "t", "time");
+            var senderName:String = this.getJsonValue(jsonObject, "n", "creator_name");
+            var senderId:String = this.getJsonValue(jsonObject, "s", "creator_id");
+            var uniqueId:String = this.getJsonValue(jsonObject, "u", "unique_id");
+            var creationTime:String = this.getJsonValue(jsonObject, "t", "time");
             var creationDate:Date = new Date(Number(creationTime));
             if (senderName)
             {
@@ -324,7 +324,7 @@
                 shareUrlText.caption = finalUrl;
                 this._shareUrl = finalUrl;
             }
-            this._caption = this._Str_5427(jsonObject, "m", "caption");
+            this._caption = this.getJsonValue(jsonObject, "m", "caption");
             if (this._caption)
             {
                 captionText = (this._window.findChildByName("captionText") as ITextWindow);
@@ -332,7 +332,7 @@
             }
         }
 
-        private function _Str_5427(k:Object, _arg_2:String, _arg_3:String=null):String
+        private function getJsonValue(k:Object, _arg_2:String, _arg_3:String=null):String
         {
             var _local_4:String;
             _local_4 = k[_arg_2];

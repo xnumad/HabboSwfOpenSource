@@ -59,7 +59,7 @@
                 {
                     this._typePrefix = "postcards/selfie/";
                 }
-                uuid = this._Str_5427(jsonString, "id", null);
+                uuid = this.getJsonValue(jsonString, "id", null);
                 if (((uuid) && (uuid.length > 0)))
                 {
                     if (!this._extraDataLoading)
@@ -77,7 +77,7 @@
                     }
                     return null;
                 }
-                url = this._Str_5427(jsonString, "w", "url");
+                url = this.getJsonValue(jsonString, "w", "url");
                 url = this._Str_18056(url, this._typePrefix);
             }
             catch(error:Error)
@@ -111,7 +111,7 @@
             return k;
         }
 
-        private function _Str_5427(k:String, _arg_2:String, _arg_3:String):String
+        private function getJsonValue(k:String, _arg_2:String, _arg_3:String):String
         {
             var _local_4:Object = new JSONDecoder(k, false).getValue();
             var _local_5:String = _local_4[_arg_2];
@@ -143,7 +143,7 @@
             {
                 return;
             }
-            var _local_3:String = this._Str_5427(_local_2, "w", "url");
+            var _local_3:String = this.getJsonValue(_local_2, "w", "url");
             this._url = this._Str_18056(_local_3, this._typePrefix);
         }
 
