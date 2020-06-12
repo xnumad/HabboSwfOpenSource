@@ -134,7 +134,7 @@
             return this._container.config.getProperty("stories.image_url_base");
         }
 
-        public function get _Str_18355():String
+        public function get storiesImageShareUrl():String
         {
             return this._container.config.getProperty("stories.image.sharing_url_base");
         }

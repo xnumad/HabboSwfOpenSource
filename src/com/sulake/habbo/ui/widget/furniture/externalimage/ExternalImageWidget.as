@@ -317,10 +317,10 @@
                 this._senderId = int(senderId);
                 this._creationDateText.caption = ((((creationDate.date + "-") + (creationDate.month + 1)) + "-") + creationDate.fullYear);
             }
-            if (((this.ownHandler._Str_18355) && (this.ownHandler._Str_18355.length > 4)))
+            if (((this.ownHandler.storiesImageShareUrl) && (this.ownHandler.storiesImageShareUrl.length > 4)))
             {
                 shareUrlText = (this._window.findChildByName("urlField") as IWindow);
-                finalUrl = this.ownHandler._Str_18355.replace("%id%", uniqueId);
+                finalUrl = this.ownHandler.storiesImageShareUrl.replace("%id%", uniqueId);
                 shareUrlText.caption = finalUrl;
                 this._shareUrl = finalUrl;
             }
