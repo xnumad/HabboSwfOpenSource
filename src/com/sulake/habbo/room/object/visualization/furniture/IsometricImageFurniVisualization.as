@@ -16,7 +16,7 @@
         private var _thumbnailImageSmall:BitmapData;
         private var _thumbnailImageNormal:BitmapData;
         private var _thumbnailDirection:int;
-        private var _Str_16232:Boolean;
+        private var _thumbnailChanged:Boolean;
 
 
         public function set _Str_20445(k:Boolean):void
@@ -33,7 +33,7 @@
         {
             this._thumbnailImageNormal = k;
             this._thumbnailImageSmall = ((_arg_2 != null) ? _arg_2 : k);
-            this._Str_16232 = true;
+            this._thumbnailChanged = true;
         }
 
         override protected function updateModel(k:Number):Boolean
@@ -43,7 +43,7 @@
             {
                 return _local_2;
             }
-            if (((!(this._Str_16232)) && (this._thumbnailDirection == direction)))
+            if (((!(this._thumbnailChanged)) && (this._thumbnailDirection == direction)))
             {
                 return _local_2;
             }
@@ -67,7 +67,7 @@
                 assetCollection.disposeAsset(this._Str_15493(64));
                 assetCollection.disposeAsset(this._Str_15493(32));
             }
-            this._Str_16232 = false;
+            this._thumbnailChanged = false;
             this._thumbnailDirection = direction;
         }
 
