@@ -81,7 +81,7 @@
         private var _bitmapLoader:BitmapFileLoader;
         private var _currentImage:Bitmap;
         private var _inventory:IHabboInventory;
-        private var _Str_8722:int;
+        private var _roomObjectID:int;
         private var _Str_8942:String;
         private var _Str_622:String;
         private var _Str_3017:int;
@@ -141,7 +141,7 @@
 
         public function _Str_16946(k:IRoomObject):void
         {
-            this._Str_8722 = k.getId();
+            this._roomObjectID = k.getId();
             this._Str_6733 = k.getType();
             this._Str_16159 = false;
             this._deleteButton.visible = this._Str_2844._Str_19701();
@@ -166,7 +166,7 @@
             var _local_2:IFurnitureItem = this._inventory._Str_14082(k);
             if (_local_2)
             {
-                this._Str_8722 = k;
+                this._roomObjectID = k;
                 this._Str_6733 = this._roomEngine.getWallItemType(_local_2.type);
                 this._Str_16159 = true;
                 this._deleteButton.visible = false;
@@ -603,7 +603,7 @@
 
         private function _Str_24813():void
         {
-            this._help._Str_21718(this._Str_3017, this._senderNameText.caption, this._Str_8942, this._Str_8722);
+            this._help._Str_21718(this._Str_3017, this._senderNameText.caption, this._Str_8942, this._roomObjectID);
         }
 
         private function getType():String
@@ -661,11 +661,11 @@
                     }
                     if (this.getType() == PHOTO_POSTER)
                     {
-                        _local_7 = this._help._Str_14206(this._Str_8942, _local_3, this._roomEngine.activeRoomId, this._Str_3017, this._Str_8722);
+                        _local_7 = this._help._Str_14206(this._Str_8942, _local_3, this._roomEngine.activeRoomId, this._Str_3017, this._roomObjectID);
                     }
                     else
                     {
-                        _local_7 = this._help._Str_12812(this._Str_7653, _local_5, this._roomEngine.activeRoomId, this._Str_3017, this._Str_8722);
+                        _local_7 = this._help._Str_12812(this._Str_7653, _local_5, this._roomEngine.activeRoomId, this._Str_3017, this._roomObjectID);
                     }
                     if (_local_7)
                     {
@@ -680,7 +680,7 @@
             k.dispose();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
-                this._Str_2844._Str_25405(this._Str_8722);
+                this._Str_2844._Str_25405(this._roomObjectID);
             }
         }
     }
