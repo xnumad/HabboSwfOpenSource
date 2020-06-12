@@ -43,7 +43,7 @@
     {
         private static const _Str_12261:int = -12345678;
 
-        private const _Str_9953:int = 0;
+        private const PICKUP_MODE_NONE:int = 0;
         private const _Str_20473:int = 1;
         private const _Str_22051:int = 2;
 
@@ -65,7 +65,7 @@
 
         public function InfoStandFurniView(k:InfoStandWidget, _arg_2:String, _arg_3:IHabboCatalog)
         {
-            this._Str_5729 = this._Str_9953;
+            this._Str_5729 = this.PICKUP_MODE_NONE;
             super();
             this._widget = k;
             this._Str_2276 = _arg_3;
@@ -516,7 +516,7 @@
             this._Str_22377(k.isOwner, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout);
             this._Str_22365((k.stuffData.uniqueSerialNumber > 0), k.stuffData);
             this._Str_16559((k.stuffData.rarityLevel >= 0), k.stuffData);
-            this._buttons.visible = ((((_local_2) || (_local_3)) || (!(this._Str_5729 == this._Str_9953))) || (_local_5));
+            this._buttons.visible = ((((_local_2) || (_local_3)) || (!(this._Str_5729 == this.PICKUP_MODE_NONE))) || (_local_5));
             this._Str_25743();
             this.updateWindow();
         }
@@ -555,7 +555,7 @@
 
         private function _Str_25151(k:RoomWidgetFurniInfostandUpdateEvent):void
         {
-            this._Str_5729 = this._Str_9953;
+            this._Str_5729 = this.PICKUP_MODE_NONE;
             if (((k.isOwner) || (k.isAnyRoomController)))
             {
                 this._Str_5729 = this._Str_22051;
@@ -569,9 +569,9 @@
             }
             if (k._Str_17541)
             {
-                this._Str_5729 = this._Str_9953;
+                this._Str_5729 = this.PICKUP_MODE_NONE;
             }
-            this.showButton("pickup", (!(this._Str_5729 == this._Str_9953)));
+            this.showButton("pickup", (!(this._Str_5729 == this.PICKUP_MODE_NONE)));
             this._Str_25214(this._Str_5729);
         }
 
