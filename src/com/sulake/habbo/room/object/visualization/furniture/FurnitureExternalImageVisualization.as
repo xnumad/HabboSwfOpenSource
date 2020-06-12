@@ -147,7 +147,7 @@
             this._url = this._Str_18056(_local_3, this._typePrefix);
         }
 
-        public function _Str_19371(k:String):void
+        public function onUrlFromExtraDataService(k:String):void
         {
             this._url = this._Str_18056(k, this._typePrefix);
         }

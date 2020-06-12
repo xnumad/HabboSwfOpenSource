@@ -126,11 +126,11 @@
                             {
                                 if (((obj.status) && (obj.status == REJECTED)))
                                 {
-                                    visualization._Str_19371(REJECTED);
+                                    visualization.onUrlFromExtraDataService(REJECTED);
                                 }
                                 else
                                 {
-                                    visualization._Str_19371(obj.url);
+                                    visualization.onUrlFromExtraDataService(obj.url);
                                 }
                                 this._Str_22217(visualization);
                             }
