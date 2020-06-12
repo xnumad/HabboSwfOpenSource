@@ -12,7 +12,7 @@
     {
         private static var ASSETS:Dictionary;
         private static var instance:CameraFxPreloader;
-        private static var _Str_3518:Array;
+        private static var _urls:Array;
         private static var _Str_4567:String;
 
         private var _Str_582:Loader;
@@ -32,7 +32,7 @@
             {
                 ASSETS = new Dictionary();
                 _Str_4567 = k;
-                _Str_3518 = _arg_2;
+                _urls = _arg_2;
                 instance = new (CameraFxPreloader)();
             }
         }
@@ -51,9 +51,9 @@
         private function _Str_17534():void
         {
             var k:String;
-            if (_Str_3518.length > 0)
+            if (_urls.length > 0)
             {
-                k = (((_Str_4567 + "Habbo-Stories/") + _Str_3518[0]) + ".png");
+                k = (((_Str_4567 + "Habbo-Stories/") + _urls[0]) + ".png");
                 this._Str_582.load(new URLRequest(k));
             }
             else
@@ -64,14 +64,14 @@
 
         private function _Str_22779(k:Event):void
         {
-            ASSETS[_Str_3518.shift()] = Bitmap(this._Str_582.content).bitmapData.clone();
+            ASSETS[_urls.shift()] = Bitmap(this._Str_582.content).bitmapData.clone();
             this._Str_17534();
         }
 
         private function _Str_22357(k:Event):void
         {
             Logger.log(("Camera Fx preloading failed for " + this._Str_582.contentLoaderInfo.loaderURL));
-            _Str_3518.shift();
+            _urls.shift();
             this._Str_17534();
         }
     }
