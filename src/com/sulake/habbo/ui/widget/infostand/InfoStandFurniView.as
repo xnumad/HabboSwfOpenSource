@@ -45,7 +45,7 @@
 
         private const PICKUP_MODE_NONE:int = 0;
         private const PICKUP_MODE_EJECT:int = 1;
-        private const _Str_22051:int = 2;
+        private const PICKUP_MODE_FULL:int = 2;
 
         protected var _window:IItemListWindow;
         protected var _Str_4258:IWindowContainer;
@@ -381,7 +381,7 @@
                     _local_3 = RoomWidgetFurniActionMessage.RWFAM_MOVE;
                     break;
                 case "pickup":
-                    if (this._Str_5729 == this._Str_22051)
+                    if (this._Str_5729 == this.PICKUP_MODE_FULL)
                     {
                         _local_3 = RoomWidgetFurniActionMessage.RWFAM_PICKUP;
                     }
@@ -558,7 +558,7 @@
             this._Str_5729 = this.PICKUP_MODE_NONE;
             if (((k.isOwner) || (k.isAnyRoomController)))
             {
-                this._Str_5729 = this._Str_22051;
+                this._Str_5729 = this.PICKUP_MODE_FULL;
             }
             else
             {
