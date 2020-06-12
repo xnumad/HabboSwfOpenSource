@@ -14,7 +14,7 @@
         private var _thumbnailAssetNameNormal:String = null;
         private var _hasOutline:Boolean = false;
         private var _thumbnailImageSmall:BitmapData;
-        private var _Str_10040:BitmapData;
+        private var _thumbnailImageNormal:BitmapData;
         private var _Str_21698:int;
         private var _Str_16232:Boolean;
 
@@ -26,12 +26,12 @@
 
         public function get _Str_23660():Boolean
         {
-            return !(this._Str_10040 == null);
+            return !(this._thumbnailImageNormal == null);
         }
 
         public function _Str_6645(k:BitmapData, _arg_2:BitmapData=null):void
         {
-            this._Str_10040 = k;
+            this._thumbnailImageNormal = k;
             this._thumbnailImageSmall = ((_arg_2 != null) ? _arg_2 : k);
             this._Str_16232 = true;
         }
@@ -57,9 +57,9 @@
             {
                 return;
             }
-            if (this._Str_10040 != null)
+            if (this._thumbnailImageNormal != null)
             {
-                this._Str_20857(this._Str_10040, 64);
+                this._Str_20857(this._thumbnailImageNormal, 64);
                 this._Str_20857(this._thumbnailImageSmall, 32);
             }
             else
@@ -160,7 +160,7 @@
 
         override protected function getSpriteAssetName(k:int, _arg_2:int):String
         {
-            if (((this._Str_10040 == null) || (!(getSpriteTag(k, direction, _arg_2) == THUMBNAIL))))
+            if (((this._thumbnailImageNormal == null) || (!(getSpriteTag(k, direction, _arg_2) == THUMBNAIL))))
             {
                 return super.getSpriteAssetName(k, _arg_2);
             }
