@@ -71,7 +71,7 @@
         private var _closeButton:IWindow;
         private var _deleteButton:IWindowContainer;
         private var _bgBorder:IWindow;
-        private var _Str_6501:IWindowContainer;
+        private var _buttonContainer:IWindowContainer;
         private var _Str_12629:IWindowContainer;
         private var _Str_25745:IWindow;
         private var _Str_6600:IRegionWindow;
@@ -122,7 +122,7 @@
                 _local_9.setDisplayObject(this._Str_7334);
             }
             this._Str_9997 = (this._window.findChildByName("creationDate") as ILabelWindow);
-            this._Str_6501 = (this._window.findChildByName("buttonContainer") as IWindowContainer);
+            this._buttonContainer = (this._window.findChildByName("buttonContainer") as IWindowContainer);
             this._inventory = _arg_5;
             this._help = _arg_6;
             this._roomEngine = _arg_7;
@@ -375,8 +375,8 @@
             this._Str_6600.y = (this._imageContainer.bottom + 3);
             this._Str_9997.x = (this._imageContainer.x + 3);
             this._Str_9997.y = (this._Str_6600.y = this._imageContainer.bottom);
-            this._Str_6501.y = 0;
-            this._Str_6501.x = (this._bgBorder.right - this._Str_6501.width);
+            this._buttonContainer.y = 0;
+            this._buttonContainer.x = (this._bgBorder.right - this._buttonContainer.width);
             _local_3.x = (this._imageContainer.right + HORIZONTAL_ITEM_SPACING);
             if (this._Str_16159)
             {
@@ -458,7 +458,7 @@
             this._Str_3017 = 0;
             this._Str_6600 = null;
             this._Str_7334 = null;
-            this._Str_6501 = null;
+            this._buttonContainer = null;
             this._Str_12629 = null;
             this._window.procedure = null;
             this._window.dispose();
