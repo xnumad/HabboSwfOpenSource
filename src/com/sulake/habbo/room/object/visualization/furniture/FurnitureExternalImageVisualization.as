@@ -78,7 +78,7 @@
                     return null;
                 }
                 url = this.getJsonValue(jsonString, "w", "url");
-                url = this._Str_18056(url, this._typePrefix);
+                url = this.buildThumbnailUrl(url, this._typePrefix);
             }
             catch(error:Error)
             {
@@ -93,7 +93,7 @@
             return this._externalImageUUID;
         }
 
-        private function _Str_18056(k:String, _arg_2:String):String
+        private function buildThumbnailUrl(k:String, _arg_2:String):String
         {
             if (k == ExtraDataManager.REJECTED)
             {
@@ -144,12 +144,12 @@
                 return;
             }
             var _local_3:String = this.getJsonValue(_local_2, "w", "url");
-            this._url = this._Str_18056(_local_3, this._typePrefix);
+            this._url = this.buildThumbnailUrl(_local_3, this._typePrefix);
         }
 
         public function onUrlFromExtraDataService(k:String):void
         {
-            this._url = this._Str_18056(k, this._typePrefix);
+            this._url = this.buildThumbnailUrl(k, this._typePrefix);
         }
 
         public function getExtraDataUrl():String
