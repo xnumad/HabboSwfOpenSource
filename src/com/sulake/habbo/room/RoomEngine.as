@@ -3361,7 +3361,7 @@
             return null;
         }
 
-        public function _Str_19272(roomId:int, canvasId:int, fileName:String):void
+        public function createScreenShot(roomId:int, canvasId:int, fileName:String):void
         {
             var encoded:ByteArray;
             var file:FileReference;

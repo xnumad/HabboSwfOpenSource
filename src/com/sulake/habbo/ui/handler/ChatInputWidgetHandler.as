@@ -367,7 +367,7 @@
                                             _local_23 = (([_local_22.getFullYear(), _local_22.getMonth(), _local_22.getDate()].join("-") + " ") + [_local_22.getHours(), _local_22.getMinutes(), _local_22.getSeconds()].join("."));
                                             _local_16 = ("Habbo " + _local_23);
                                         }
-                                        this._container.roomEngine._Str_19272(this._container.roomSession.roomId, this._container.getFirstCanvasId(), (_local_16 + ".png"));
+                                        this._container.roomEngine.createScreenShot(this._container.roomSession.roomId, this._container.getFirstCanvasId(), (_local_16 + ".png"));
                                         return null;
                                     case ":iddqd":
                                         this._container.roomEngine.events.dispatchEvent(new RoomZoomEvent(this._container.roomEngine.activeRoomId, -1, true));
