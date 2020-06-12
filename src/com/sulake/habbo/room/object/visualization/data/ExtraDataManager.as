@@ -83,7 +83,7 @@
                     _local_7 = this._Str_5833[0];
                     _local_8 = _local_7._Str_20894();
                     _local_2.push(_local_8);
-                    k = _local_7._Str_22277();
+                    k = _local_7.getExtraDataUrl();
                     this._Str_9149.push(_local_7);
                     this._Str_5833.splice(0, 1);
                 }

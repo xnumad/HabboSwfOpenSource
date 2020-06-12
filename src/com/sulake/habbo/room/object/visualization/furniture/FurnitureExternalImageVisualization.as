@@ -152,7 +152,7 @@
             this._url = this._Str_18056(k, this._typePrefix);
         }
 
-        public function _Str_22277():String
+        public function getExtraDataUrl():String
         {
             return this._extraDataUrl;
         }
