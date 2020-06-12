@@ -83,7 +83,7 @@
         private var _inventory:IHabboInventory;
         private var _roomObjectID:int;
         private var _extraDataID:String;
-        private var _Str_622:String;
+        private var _caption:String;
         private var _Str_3017:int;
         private var _Str_7653:String;
         private var _Str_15263:IWindowContainer;
@@ -234,7 +234,7 @@
         private function _Str_22893():void
         {
             this._extraDataID = null;
-            this._Str_622 = "";
+            this._caption = "";
             var k:ITextWindow = (this._window.findChildByName("captionText") as ITextWindow);
             k.text = "";
             this._senderNameButton.visible = false;
@@ -324,11 +324,11 @@
                 shareUrlText.caption = finalUrl;
                 this._Str_7653 = finalUrl;
             }
-            this._Str_622 = this._Str_5427(jsonObject, "m", "caption");
-            if (this._Str_622)
+            this._caption = this._Str_5427(jsonObject, "m", "caption");
+            if (this._caption)
             {
                 captionText = (this._window.findChildByName("captionText") as ITextWindow);
-                captionText.text = this._Str_622;
+                captionText.text = this._caption;
             }
         }
 
