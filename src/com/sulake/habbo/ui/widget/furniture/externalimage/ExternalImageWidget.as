@@ -78,7 +78,7 @@
         private var _senderNameText:ILabelWindow;
         private var _nameCopyField:TextField;
         private var _creationDateText:ILabelWindow;
-        private var _Str_10424:BitmapFileLoader;
+        private var _bitmapLoader:BitmapFileLoader;
         private var _Str_13302:Bitmap;
         private var _inventory:IHabboInventory;
         private var _Str_8722:int;
@@ -302,8 +302,8 @@
             {
                 imageUrl = this._Str_21278(jsonObject);
             }
-            this._Str_10424 = new BitmapFileLoader("image/png", new URLRequest(imageUrl));
-            this._Str_10424.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_10931);
+            this._bitmapLoader = new BitmapFileLoader("image/png", new URLRequest(imageUrl));
+            this._bitmapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_10931);
             var senderName:String = this._Str_5427(jsonObject, "n", "creator_name");
             var senderId:String = this._Str_5427(jsonObject, "s", "creator_id");
             var uniqueId:String = this._Str_5427(jsonObject, "u", "unique_id");
@@ -346,9 +346,9 @@
         private function _Str_10931(k:AssetLoaderEvent):void
         {
             var _local_2:Bitmap;
-            if (this._Str_10424)
+            if (this._bitmapLoader)
             {
-                _local_2 = (this._Str_10424.content as Bitmap);
+                _local_2 = (this._bitmapLoader.content as Bitmap);
                 if (_local_2)
                 {
                     this._imageContainer.width = (_local_2.width + 2);
@@ -451,7 +451,7 @@
             this._bgBorder = null;
             this._makeOwnButton = null;
             this._deleteButton = null;
-            this._Str_10424 = null;
+            this._bitmapLoader = null;
             this._inventory = null;
             this._help = null;
             this._roomEngine = null;
