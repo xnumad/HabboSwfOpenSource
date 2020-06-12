@@ -69,7 +69,7 @@
         private var _moderationText:IHTMLTextWindow;
         private var _makeOwnButton:IWindow;
         private var _closeButton:IWindow;
-        private var _Str_13852:IWindowContainer;
+        private var _deleteButton:IWindowContainer;
         private var _Str_6057:IWindow;
         private var _Str_6501:IWindowContainer;
         private var _Str_12629:IWindowContainer;
@@ -107,7 +107,7 @@
             this._moderationText = (this._window.findChildByName("moderationText") as IHTMLTextWindow);
             this._moderationText.addEventListener(WindowLinkEvent.WINDOW_EVENT_LINK, this._Str_23468);
             this._Str_12629 = (this._window.findChildByName("shareArea") as IWindowContainer);
-            this._Str_13852 = (this._window.findChildByName("removeButtonContainer") as IWindowContainer);
+            this._deleteButton = (this._window.findChildByName("removeButtonContainer") as IWindowContainer);
             this._makeOwnButton = (this._window.findChildByName("makeOwnButton") as IWindow);
             this._Str_25745 = (this._window.findChildByName("shareButtonContainer") as IWindow);
             this._Str_6057 = (this._window.findChildByName("bgBorder") as IWindow);
@@ -144,7 +144,7 @@
             this._Str_8722 = k.getId();
             this._Str_6733 = k.getType();
             this._Str_16159 = false;
-            this._Str_13852.visible = this._Str_2844._Str_19701();
+            this._deleteButton.visible = this._Str_2844._Str_19701();
             if (this.getType() == PHOTO_POSTER)
             {
                 this._Str_15263.visible = true;
@@ -169,7 +169,7 @@
                 this._Str_8722 = k;
                 this._Str_6733 = this._roomEngine.getWallItemType(_local_2.type);
                 this._Str_16159 = true;
-                this._Str_13852.visible = false;
+                this._deleteButton.visible = false;
                 this._Str_15263.visible = false;
                 this.show(_local_2.stuffData.getLegacyString());
             }
@@ -450,7 +450,7 @@
             this._closeButton = null;
             this._Str_6057 = null;
             this._makeOwnButton = null;
-            this._Str_13852 = null;
+            this._deleteButton = null;
             this._Str_10424 = null;
             this._inventory = null;
             this._help = null;
