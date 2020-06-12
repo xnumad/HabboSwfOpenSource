@@ -92,7 +92,7 @@
         private var _help:IHabboHelp;
         private var _roomEngine:IRoomEngine;
         private var _reportImageContainer:IWindowContainer;
-        private var _Str_5182:int = 0;
+        private var _currentRoomObjectListIndex:int = 0;
         private var _Str_16159:Boolean = false;
         private var _Str_2296:Component;
 
@@ -157,7 +157,7 @@
             var _local_2:Vector.<IRoomObject> = this._Str_15905();
             if (_local_2.indexOf(k) != -1)
             {
-                this._Str_5182 = _local_2.indexOf(k);
+                this._currentRoomObjectListIndex = _local_2.indexOf(k);
             }
         }
 
@@ -193,12 +193,12 @@
             var k:Vector.<IRoomObject> = this._Str_15905();
             if (k.length > 0)
             {
-                this._Str_5182++;
-                if (this._Str_5182 > (k.length - 1))
+                this._currentRoomObjectListIndex++;
+                if (this._currentRoomObjectListIndex > (k.length - 1))
                 {
-                    this._Str_5182 = 0;
+                    this._currentRoomObjectListIndex = 0;
                 }
-                this._Str_16946(k[this._Str_5182]);
+                this._Str_16946(k[this._currentRoomObjectListIndex]);
             }
         }
 
@@ -207,12 +207,12 @@
             var k:Vector.<IRoomObject> = this._Str_15905();
             if (k.length > 0)
             {
-                this._Str_5182--;
-                if (this._Str_5182 < 0)
+                this._currentRoomObjectListIndex--;
+                if (this._currentRoomObjectListIndex < 0)
                 {
-                    this._Str_5182 = (k.length - 1);
+                    this._currentRoomObjectListIndex = (k.length - 1);
                 }
-                this._Str_16946(k[this._Str_5182]);
+                this._Str_16946(k[this._currentRoomObjectListIndex]);
             }
         }
 
