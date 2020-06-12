@@ -33,7 +33,7 @@
         function getRoomStringValue(_arg_1:int, _arg_2:String):String;
         function getFurnitureIconUrl(_arg_1:int):String;
         function getFurnitureIcon(_arg_1:int, _arg_2:IGetImageListener, _arg_3:String=null, _arg_4:IStuffData=null):ImageResult;
-        function _Str_22347(_arg_1:int, _arg_2:String=null):String;
+        function getWallItemIconUrl(_arg_1:int, _arg_2:String=null):String;
         function getWallItemIcon(_arg_1:int, _arg_2:IGetImageListener, _arg_3:String=null):ImageResult;
         function getFurnitureImage(_arg_1:int, _arg_2:IVector3d, _arg_3:int, _arg_4:IGetImageListener, _arg_5:uint=0, _arg_6:String=null, _arg_7:int=-1, _arg_8:int=-1, _arg_9:IStuffData=null):ImageResult;
         function getGenericRoomObjectImage(_arg_1:String, _arg_2:String, _arg_3:IVector3d, _arg_4:int, _arg_5:IGetImageListener, _arg_6:uint=0, _arg_7:String=null, _arg_8:IStuffData=null, _arg_9:int=-1, _arg_10:int=-1, _arg_11:String=null, _arg_12:int=-1):ImageResult;

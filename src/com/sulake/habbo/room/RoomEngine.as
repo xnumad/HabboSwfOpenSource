@@ -3414,7 +3414,7 @@
             return this.getFurnitureImage(k, new Vector3d(), 1, _arg_2, 0, _arg_3, -1, -1, _arg_4);
         }
 
-        public function _Str_22347(k:int, _arg_2:String=null):String
+        public function getWallItemIconUrl(k:int, _arg_2:String=null):String
         {
             var _local_3:String;
             var _local_4:String = "";
