@@ -101,11 +101,11 @@
             _local_4.url = k;
             var _local_6:URLLoader = new URLLoader(_local_4);
             _local_6.dataFormat = URLLoaderDataFormat.TEXT;
-            _local_6.addEventListener(Event.COMPLETE, this.onImageLoaded);
+            _local_6.addEventListener(Event.COMPLETE, this.onExtraDataLoaded);
             _local_6.addEventListener(IOErrorEvent.IO_ERROR, this.onExternalDataError);
         }
 
-        private function onImageLoaded(event:Event):void
+        private function onExtraDataLoaded(event:Event):void
         {
             var result:Array;
             var obj:Object;
