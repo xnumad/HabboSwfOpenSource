@@ -402,7 +402,7 @@
             _local_4.tx--;
             this._imageContainer.bitmap.draw(k, _local_4);
             this._window.activate();
-            this._Str_20964();
+            this.updateWindowPosition();
         }
 
         private function loadExternalData():void
@@ -475,7 +475,7 @@
             this._window.visible = false;
         }
 
-        private function _Str_20964():void
+        private function updateWindowPosition():void
         {
             if (!this._currentImage)
             {
@@ -524,7 +524,7 @@
                 switch (k.type)
                 {
                     case WindowEvent.WINDOW_EVENT_PARENT_RESIZED:
-                        this._Str_20964();
+                        this.updateWindowPosition();
                         break;
                 }
             }
