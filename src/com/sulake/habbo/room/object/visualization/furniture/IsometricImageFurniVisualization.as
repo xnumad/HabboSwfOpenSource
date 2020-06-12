@@ -12,7 +12,7 @@
 
         private var _thumbnailAssetNameSmall:String = null;
         private var _thumbnailAssetNameNormal:String = null;
-        private var _Str_21351:Boolean = false;
+        private var _hasOutline:Boolean = false;
         private var _Str_20721:BitmapData;
         private var _Str_10040:BitmapData;
         private var _Str_21698:int;
@@ -21,7 +21,7 @@
 
         public function set _Str_20445(k:Boolean):void
         {
-            this._Str_21351 = k;
+            this._hasOutline = k;
         }
 
         public function get _Str_23660():Boolean
@@ -132,7 +132,7 @@
                     _local_4.tx = 0;
                     _local_4.ty = 0;
             }
-            if (this._Str_21351)
+            if (this._hasOutline)
             {
                 _local_6 = new BitmapData((_arg_2.width + 2), (_arg_2.height + 2), true, 0);
                 _local_7 = new Bitmap(k);
