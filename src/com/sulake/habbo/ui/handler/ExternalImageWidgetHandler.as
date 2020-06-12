@@ -86,7 +86,7 @@
             }
         }
 
-        public function _Str_25405(k:int):void
+        public function deleteCard(k:int):void
         {
             if (((!(this._container == null)) && (!(this._container.roomEngine == null))))
             {
