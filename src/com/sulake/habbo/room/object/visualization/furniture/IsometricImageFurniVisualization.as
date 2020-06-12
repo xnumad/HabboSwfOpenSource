@@ -15,7 +15,7 @@
         private var _hasOutline:Boolean = false;
         private var _thumbnailImageSmall:BitmapData;
         private var _thumbnailImageNormal:BitmapData;
-        private var _Str_21698:int;
+        private var _thumbnailDirection:int;
         private var _Str_16232:Boolean;
 
 
@@ -43,7 +43,7 @@
             {
                 return _local_2;
             }
-            if (((!(this._Str_16232)) && (this._Str_21698 == direction)))
+            if (((!(this._Str_16232)) && (this._thumbnailDirection == direction)))
             {
                 return _local_2;
             }
@@ -68,7 +68,7 @@
                 assetCollection.disposeAsset(this._Str_15493(32));
             }
             this._Str_16232 = false;
-            this._Str_21698 = direction;
+            this._thumbnailDirection = direction;
         }
 
         private function _Str_20857(k:BitmapData, _arg_2:int):void
