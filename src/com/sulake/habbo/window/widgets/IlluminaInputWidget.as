@@ -47,7 +47,7 @@
             this._inputField = (this._root.findChildByName("input") as ITextFieldWindow);
             this._emptyMessageLabel = (this._root.findChildByName("empty_message") as ILabelWindow);
             this.buttonCaption = String(_Str_15732.value);
-            this._Str_6307 = String(_Str_15686.value);
+            this.emptyMessage = String(_Str_15686.value);
             this.multiline = Boolean(_Str_13245.value);
             this.maxChars = int(_Str_14030.value);
             this.refresh();
@@ -98,7 +98,7 @@
                 return k;
             }
             k.push(_Str_15732.withValue(this.buttonCaption));
-            k.push(_Str_15686.withValue(this._Str_6307));
+            k.push(_Str_15686.withValue(this.emptyMessage));
             k.push(_Str_13245.withValue(this.multiline));
             k.push(_Str_14030.withValue(this.maxChars));
             return k;
@@ -119,7 +119,7 @@
                         this.buttonCaption = String(_local_2.value);
                         break;
                     case _Str_15741:
-                        this._Str_6307 = String(_local_2.value);
+                        this.emptyMessage = String(_local_2.value);
                         break;
                     case _Str_15046:
                         this.multiline = Boolean(_local_2.value);
@@ -143,12 +143,12 @@
             this.refresh();
         }
 
-        public function get _Str_6307():String
+        public function get emptyMessage():String
         {
             return this._emptyMessageLabel.caption;
         }
 
-        public function set _Str_6307(k:String):void
+        public function set emptyMessage(k:String):void
         {
             this._emptyMessageLabel.caption = k;
         }

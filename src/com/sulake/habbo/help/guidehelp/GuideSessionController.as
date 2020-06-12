@@ -725,7 +725,7 @@
             this._window.caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.title", "", "name", this._sessionData.userName);
             var inputWidget:IIlluminaInputWidget = IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
             inputWidget.submitHandler = this;
-            inputWidget._Str_6307 = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.input.empty", "", "name", this._sessionData.userName);
+            inputWidget.emptyMessage = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.input.empty", "", "name", this._sessionData.userName);
             inputWidget.maxChars = this._habboHelp.getInteger("guide.help.request.max.chat.message.length", 150);
             if (((this._sessionData._Str_3989 == _Str_2849._Str_4749) || (this._sessionData._Str_3989 == _Str_2849._Str_4268)))
             {
@@ -915,7 +915,7 @@
             this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
             var k:IIlluminaInputWidget = IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
             k.submitHandler = this;
-            k._Str_6307 = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.input.help", "", "name", this._sessionData.guideName);
+            k.emptyMessage = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.input.help", "", "name", this._sessionData.guideName);
             k.maxChars = this._habboHelp.getInteger("guide.help.request.max.chat.message.length", 150);
         }
 
