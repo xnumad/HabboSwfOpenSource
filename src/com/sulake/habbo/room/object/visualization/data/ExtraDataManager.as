@@ -50,7 +50,7 @@
 
         private function setTimedBatchCheck():void
         {
-            setInterval(this._Str_25544, 200);
+            setInterval(this.handleBatch, 200);
         }
 
         private function removeFurniFromManager(k:FurnitureExternalImageVisualization):void
@@ -65,7 +65,7 @@
             }
         }
 
-        private function _Str_25544():void
+        private function handleBatch():void
         {
             var k:String;
             var _local_7:FurnitureExternalImageVisualization;
