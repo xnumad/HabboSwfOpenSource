@@ -151,7 +151,7 @@
             }
             else
             {
-                this._reportImagebutton.visible = this.ownHandler._Str_25770();
+                this._reportImagebutton.visible = this.ownHandler.isSelfieReportingEnabled();
             }
             this.show(k.getModel().getString("furniture_data"));
             var _local_2:Vector.<IRoomObject> = this.getWallItemsOfCurrentTypeInRoom();

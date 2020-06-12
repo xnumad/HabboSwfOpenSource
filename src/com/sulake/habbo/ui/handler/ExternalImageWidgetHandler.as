@@ -144,7 +144,7 @@
             return this._container.config.getProperty("extra_data_service_url");
         }
 
-        public function _Str_25770():Boolean
+        public function isSelfieReportingEnabled():Boolean
         {
             return this._container.config.getProperty("stories.report.selfie.enabled") == "true";
         }
