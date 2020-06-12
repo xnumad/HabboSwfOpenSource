@@ -5,7 +5,7 @@
     import flash.display.BitmapData;
     import com.sulake.room.object.visualization.IRoomObjectSprite;
 
-    public class FurnitureGuildIsometricBadgeVisualization extends FurnitureThumbnailVisualization 
+    public class FurnitureGuildIsometricBadgeVisualization extends IsometricImageFurniVisualization
     {
         private static const PRIMARY_COLOUR_SPRITE_TAG:String = "COLOR1";
         private static const SECONDARY_COLOUR_SPRITE_TAG:String = "COLOR2";

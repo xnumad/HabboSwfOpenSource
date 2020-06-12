@@ -6,7 +6,7 @@
     import flash.geom.ColorTransform;
     import flash.geom.Matrix;
 
-    public class FurnitureThumbnailVisualization extends FurnitureAnimatedVisualization 
+    public class IsometricImageFurniVisualization extends FurnitureAnimatedVisualization
     {
         protected static const THUMBNAIL:String = "THUMBNAIL";
 
