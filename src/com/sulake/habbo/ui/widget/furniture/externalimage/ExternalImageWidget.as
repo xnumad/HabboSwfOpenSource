@@ -184,7 +184,7 @@
             this.clearImage();
             if (k != null)
             {
-                this._Str_24417(k);
+                this.readFurniJson(k);
             }
         }
 
@@ -247,7 +247,7 @@
             this._Str_19771(new Bitmap(new BitmapData((this._imageContainer.width - 2), (this._imageContainer.height - 2), false, 0)));
         }
 
-        private function _Str_24417(k:String):void
+        private function readFurniJson(k:String):void
         {
             try
             {
