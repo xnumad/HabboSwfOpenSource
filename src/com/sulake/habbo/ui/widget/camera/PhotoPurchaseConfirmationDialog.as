@@ -260,7 +260,7 @@
             {
                 k = (this._widget.component.context.configuration.getProperty("stories.upload_image.url") + k + ".png");
                 _local_2 = new BitmapFileLoader("image/png", new URLRequest(k));
-                _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_10931);
+                _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onImageLoaded);
             }
             else
             {
@@ -269,7 +269,7 @@
             }
         }
 
-        private function _Str_10931(k:AssetLoaderEvent):void
+        private function onImageLoaded(k:AssetLoaderEvent):void
         {
             if (!this._window)
             {

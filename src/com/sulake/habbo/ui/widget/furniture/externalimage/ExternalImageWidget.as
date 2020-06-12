@@ -303,7 +303,7 @@
                 imageUrl = this.getImageUrl(jsonObject);
             }
             this._bitmapLoader = new BitmapFileLoader("image/png", new URLRequest(imageUrl));
-            this._bitmapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_10931);
+            this._bitmapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onImageLoaded);
             var senderName:String = this.getJsonValue(jsonObject, "n", "creator_name");
             var senderId:String = this.getJsonValue(jsonObject, "s", "creator_id");
             var uniqueId:String = this.getJsonValue(jsonObject, "u", "unique_id");
@@ -343,7 +343,7 @@
             return _local_4;
         }
 
-        private function _Str_10931(k:AssetLoaderEvent):void
+        private function onImageLoaded(k:AssetLoaderEvent):void
         {
             var _local_2:Bitmap;
             if (this._bitmapLoader)

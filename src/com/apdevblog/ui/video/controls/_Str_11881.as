@@ -52,7 +52,7 @@
             addEventListener(MouseEvent.MOUSE_OVER, this._Str_23190, false, 0, true);
             addEventListener(MouseEvent.MOUSE_OUT, this._Str_24680, false, 0, true);
             addEventListener(MouseEvent.CLICK, this._Str_24204, false, 0, true);
-            this._Str_2835.contentLoaderInfo.addEventListener(Event.COMPLETE, this._Str_10931, false, 0, true);
+            this._Str_2835.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onImageLoaded, false, 0, true);
         }
 
         private function _Str_24204(k:MouseEvent):void
@@ -60,7 +60,7 @@
             dispatchEvent(new VideoControlsEvent(VideoControlsEvent.TOGGLEPLAYPAUSE, true, true));
         }
 
-        private function _Str_10931(k:Event):void
+        private function onImageLoaded(k:Event):void
         {
             var _local_2:Number;
             var _local_3:Number;
