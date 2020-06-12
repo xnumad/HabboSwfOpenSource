@@ -75,7 +75,7 @@
         private var _shareArea:IWindowContainer;
         private var _shareButton:IWindow;
         private var _senderNameButton:IRegionWindow;
-        private var _Str_14612:ILabelWindow;
+        private var _senderNameText:ILabelWindow;
         private var _Str_7334:TextField;
         private var _Str_9997:ILabelWindow;
         private var _Str_10424:BitmapFileLoader;
@@ -112,7 +112,7 @@
             this._shareButton = (this._window.findChildByName("shareButtonContainer") as IWindow);
             this._bgBorder = (this._window.findChildByName("bgBorder") as IWindow);
             this._senderNameButton = (this._window.findChildByName("senderNameButton") as IRegionWindow);
-            this._Str_14612 = (this._window.findChildByName("senderName") as ILabelWindow);
+            this._senderNameText = (this._window.findChildByName("senderName") as ILabelWindow);
             this._Str_7334 = new TextField();
             if (this._Str_2844.container.roomSession.roomControllerLevel == RoomControllerLevel.MODERATOR)
             {
@@ -239,7 +239,7 @@
             k.text = "";
             this._senderNameButton.visible = false;
             this._Str_3017 = 0;
-            this._Str_14612.caption = "";
+            this._senderNameText.caption = "";
             this._Str_7334.text = "";
             this._Str_9997.caption = "";
             this._Str_7653 = null;
@@ -311,7 +311,7 @@
             var creationDate:Date = new Date(Number(creationTime));
             if (senderName)
             {
-                this._Str_14612.caption = senderName;
+                this._senderNameText.caption = senderName;
                 this._senderNameButton.visible = true;
                 this._Str_7334.text = senderName;
                 this._Str_3017 = int(senderId);
@@ -603,7 +603,7 @@
 
         private function _Str_24813():void
         {
-            this._help._Str_21718(this._Str_3017, this._Str_14612.caption, this._Str_8942, this._Str_8722);
+            this._help._Str_21718(this._Str_3017, this._senderNameText.caption, this._Str_8942, this._Str_8722);
         }
 
         private function getType():String
