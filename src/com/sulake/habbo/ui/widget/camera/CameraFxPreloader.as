@@ -13,7 +13,7 @@
         private static var ASSETS:Dictionary;
         private static var instance:CameraFxPreloader;
         private static var _urls:Array;
-        private static var _Str_4567:String;
+        private static var _baseUrl:String;
 
         private var _Str_582:Loader;
         private var _Str_21277:Boolean = false;
@@ -31,7 +31,7 @@
             if (!instance)
             {
                 ASSETS = new Dictionary();
-                _Str_4567 = k;
+                _baseUrl = k;
                 _urls = _arg_2;
                 instance = new (CameraFxPreloader)();
             }
@@ -53,7 +53,7 @@
             var k:String;
             if (_urls.length > 0)
             {
-                k = (((_Str_4567 + "Habbo-Stories/") + _urls[0]) + ".png");
+                k = (((_baseUrl + "Habbo-Stories/") + _urls[0]) + ".png");
                 this._Str_582.load(new URLRequest(k));
             }
             else

@@ -66,7 +66,7 @@
         private var _Str_11471:int;
         private var _Str_20565:int = 0;
         private var _Str_7136:Number = 1;
-        private var _Str_4567:String;
+        private var _baseUrl:String;
         private var _Str_7184:Number = 1;
         private var _Str_16304:Number = 0;
         private var _Str_7165:Point;
@@ -127,7 +127,7 @@
             this._Str_3454.clipping = false;
             this._Str_4396.addListItem(this._Str_3454);
             this._Str_2701 = new RoomChatHistoryViewer(this, _arg_2, this._Str_2496, _arg_3);
-            this._Str_4567 = _arg_5.getProperty("site.url");
+            this._baseUrl = _arg_5.getProperty("site.url");
             this._Str_19219 = _arg_5.getInteger("chat.history.item.max.count", 150);
             var _local_9:Boolean = ((_arg_5.getBoolean("chat.history.disabled")) || (this.isGameSession));
             if (this._Str_2701 != null)
@@ -265,14 +265,14 @@
             {
                 return;
             }
-            var _local_2:RoomChatItem = new RoomChatItem(this, windowManager, assets, this._Str_22070(), localizations, this._Str_4567);
+            var _local_2:RoomChatItem = new RoomChatItem(this, windowManager, assets, this._Str_22070(), localizations, this._baseUrl);
             _local_2._Str_13182(k);
             this._Str_21167(_local_2);
         }
 
         public function _Str_5863(k:String, _arg_2:String, _arg_3:int, _arg_4:BitmapData, _arg_5:uint, _arg_6:Boolean):void
         {
-            var _local_7:RoomChatItem = new RoomChatItem(this, windowManager, assets, this._Str_22070(), localizations, this._Str_4567);
+            var _local_7:RoomChatItem = new RoomChatItem(this, windowManager, assets, this._Str_22070(), localizations, this._baseUrl);
             _local_7.message = k;
             _local_7.senderName = _arg_2;
             _local_7._Str_7368 = _arg_3;
