@@ -25,7 +25,7 @@
             this.inputVisualizationQueue = new Vector.<FurnitureExternalImageVisualization>();
             this.outputVisualizationQueue = new Vector.<FurnitureExternalImageVisualization>();
             super();
-            this._Str_22566();
+            this.setTimedBatchCheck();
         }
 
         private static function getInstance():ExtraDataManager
@@ -48,7 +48,7 @@
         }
 
 
-        private function _Str_22566():void
+        private function setTimedBatchCheck():void
         {
             setInterval(this._Str_25544, 200);
         }
