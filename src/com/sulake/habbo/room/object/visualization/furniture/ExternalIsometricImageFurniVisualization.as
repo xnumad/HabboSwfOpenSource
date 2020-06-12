@@ -13,7 +13,7 @@
 
     public class ExternalIsometricImageFurniVisualization extends IsometricImageFurniVisualization
     {
-        private var _Str_6145:String = null;
+        private var _thumbnailUrl:String = null;
 
 
         private static function _Str_19697(k:ErrorEvent):void
@@ -30,10 +30,10 @@
             if (object != null)
             {
                 _local_2 = this.getThumbnailURL();
-                if (this._Str_6145 != _local_2)
+                if (this._thumbnailUrl != _local_2)
                 {
-                    this._Str_6145 = _local_2;
-                    if (((!(this._Str_6145 == null)) && (!(this._Str_6145 == ""))))
+                    this._thumbnailUrl = _local_2;
+                    if (((!(this._thumbnailUrl == null)) && (!(this._thumbnailUrl == ""))))
                     {
                         _local_3 = new Loader();
                         _local_3.name = _local_2;
