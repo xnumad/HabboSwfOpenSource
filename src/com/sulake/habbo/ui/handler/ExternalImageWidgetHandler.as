@@ -129,7 +129,7 @@
             return RoomWidgetEnum.EXTERNAL_IMAGE;
         }
 
-        public function get _Str_19276():String
+        public function get storiesImageUrlBase():String
         {
             return this._container.config.getProperty("stories.image_url_base");
         }

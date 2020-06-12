@@ -177,7 +177,7 @@
 
         private function show(k:String):void
         {
-            if (this.ownHandler._Str_19276 == "disabled")
+            if (this.ownHandler.storiesImageUrlBase == "disabled")
             {
                 return;
             }
@@ -279,7 +279,7 @@
                 {
                     _local_2 = (_local_2 + ".png");
                 }
-                _local_2 = ((this.ownHandler._Str_19276 + _local_3) + _local_2);
+                _local_2 = ((this.ownHandler.storiesImageUrlBase + _local_3) + _local_2);
             }
             return _local_2;
         }
