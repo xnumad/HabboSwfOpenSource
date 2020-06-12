@@ -64,8 +64,8 @@
             }
             else
             {
-                assetCollection.disposeAsset(this._Str_15493(64));
-                assetCollection.disposeAsset(this._Str_15493(32));
+                assetCollection.disposeAsset(this.getThumbnailAssetName(64));
+                assetCollection.disposeAsset(this.getThumbnailAssetName(32));
             }
             this._thumbnailChanged = false;
             this._thumbnailDirection = direction;
@@ -87,7 +87,7 @@
                     if (_local_5 != null)
                     {
                         _local_6 = this.generateTransformedThumbnail(k, _local_5);
-                        _local_7 = this._Str_15493(_arg_2);
+                        _local_7 = this.getThumbnailAssetName(_arg_2);
                         assetCollection.disposeAsset(_local_7);
                         assetCollection.addAsset(_local_7, _local_6, true, _local_5.offsetX, _local_5.offsetY);
                     }
@@ -164,10 +164,10 @@
             {
                 return super.getSpriteAssetName(k, _arg_2);
             }
-            return this._Str_15493(k);
+            return this.getThumbnailAssetName(k);
         }
 
-        protected function _Str_15493(k:int):String
+        protected function getThumbnailAssetName(k:int):String
         {
             if (this._thumbnailAssetNameSmall == null)
             {
