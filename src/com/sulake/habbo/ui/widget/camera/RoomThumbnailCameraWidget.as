@@ -88,7 +88,7 @@
                 _local_3 = new Matrix();
                 _local_3.translate(-(_local_2.x), -(_local_2.y));
                 _local_4 = this.container.roomSession;
-                this.roomEngine._Str_16420(_local_4.roomId, this.container.getFirstCanvasId(), this._imageWindow.bitmap, _local_3, false);
+                this.roomEngine.snapshotRoomCanvasToBitmap(_local_4.roomId, this.container.getFirstCanvasId(), this._imageWindow.bitmap, _local_3, false);
                 this._imageWindow.invalidate();
             }
         }

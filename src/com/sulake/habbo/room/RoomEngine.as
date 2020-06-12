@@ -1850,7 +1850,7 @@
             return true;
         }
 
-        public function _Str_16420(k:int, _arg_2:int, _arg_3:BitmapData, _arg_4:Matrix, _arg_5:Boolean):Boolean
+        public function snapshotRoomCanvasToBitmap(k:int, _arg_2:int, _arg_3:BitmapData, _arg_4:Matrix, _arg_5:Boolean):Boolean
         {
             var _local_6:IRoomRenderingCanvas = this.getRoomCanvas(k, _arg_2);
             if (!_local_6)

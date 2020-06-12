@@ -166,7 +166,7 @@
         public function _Str_23027(k:BitmapData, _arg_2:Matrix, _arg_3:Boolean):Boolean
         {
             var _local_4:IRoomSession = this.container.roomSession;
-            return this.roomEngine._Str_16420(_local_4.roomId, this.container.getFirstCanvasId(), k, _arg_2, _arg_3);
+            return this.roomEngine.snapshotRoomCanvasToBitmap(_local_4.roomId, this.container.getFirstCanvasId(), k, _arg_2, _arg_3);
         }
 
         public function _Str_23751():void
