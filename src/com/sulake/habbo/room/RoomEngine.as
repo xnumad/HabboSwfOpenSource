@@ -2261,7 +2261,7 @@
             return this.getObject(_local_4, _arg_2, _arg_3);
         }
 
-        public function _Str_22003(k:int):Array
+        public function getObjectsByCategory(k:int):Array
         {
             var _local_2:IRoomInstance;
             if (this._roomManager != null)

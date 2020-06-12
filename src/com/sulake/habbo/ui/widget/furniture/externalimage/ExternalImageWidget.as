@@ -220,7 +220,7 @@
         {
             var _local_3:IRoomObject;
             var k:Vector.<IRoomObject> = new Vector.<IRoomObject>();
-            var _local_2:Array = this._roomEngine._Str_22003(RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
+            var _local_2:Array = this._roomEngine.getObjectsByCategory(RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             for each (_local_3 in _local_2)
             {
                 if (_local_3.getType() == this._roomObjectType)
