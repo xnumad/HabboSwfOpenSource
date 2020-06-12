@@ -58,14 +58,14 @@
         protected var _Str_3823:IWindow;
         protected var _Str_3747:IWindow;
         protected var _Str_3810:IWindow;
-        private var _Str_5729:int;
+        private var _pickupMode:int;
         private var _ownerId:int = 0;
         protected var _widget:InfoStandWidget;
         protected var _infoElements:IItemListWindow;
 
         public function InfoStandFurniView(k:InfoStandWidget, _arg_2:String, _arg_3:IHabboCatalog)
         {
-            this._Str_5729 = this.PICKUP_MODE_NONE;
+            this._pickupMode = this.PICKUP_MODE_NONE;
             super();
             this._widget = k;
             this._catalog = _arg_3;
@@ -381,7 +381,7 @@
                     _local_3 = RoomWidgetFurniActionMessage.RWFAM_MOVE;
                     break;
                 case "pickup":
-                    if (this._Str_5729 == this.PICKUP_MODE_FULL)
+                    if (this._pickupMode == this.PICKUP_MODE_FULL)
                     {
                         _local_3 = RoomWidgetFurniActionMessage.RWFAM_PICKUP;
                     }
@@ -516,7 +516,7 @@
             this._Str_22377(k.isOwner, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout);
             this._Str_22365((k.stuffData.uniqueSerialNumber > 0), k.stuffData);
             this._Str_16559((k.stuffData.rarityLevel >= 0), k.stuffData);
-            this._buttons.visible = ((((_local_2) || (_local_3)) || (!(this._Str_5729 == this.PICKUP_MODE_NONE))) || (_local_5));
+            this._buttons.visible = ((((_local_2) || (_local_3)) || (!(this._pickupMode == this.PICKUP_MODE_NONE))) || (_local_5));
             this._Str_25743();
             this.updateWindow();
         }
@@ -555,24 +555,24 @@
 
         private function _Str_25151(k:RoomWidgetFurniInfostandUpdateEvent):void
         {
-            this._Str_5729 = this.PICKUP_MODE_NONE;
+            this._pickupMode = this.PICKUP_MODE_NONE;
             if (((k.isOwner) || (k.isAnyRoomController)))
             {
-                this._Str_5729 = this.PICKUP_MODE_FULL;
+                this._pickupMode = this.PICKUP_MODE_FULL;
             }
             else
             {
                 if (((k.isRoomOwner) || (k.roomControllerLevel >= RoomControllerLevel.GUILD_ADMIN)))
                 {
-                    this._Str_5729 = this.PICKUP_MODE_EJECT;
+                    this._pickupMode = this.PICKUP_MODE_EJECT;
                 }
             }
             if (k._Str_17541)
             {
-                this._Str_5729 = this.PICKUP_MODE_NONE;
+                this._pickupMode = this.PICKUP_MODE_NONE;
             }
-            this.showButton("pickup", (!(this._Str_5729 == this.PICKUP_MODE_NONE)));
-            this._Str_25214(this._Str_5729);
+            this.showButton("pickup", (!(this._pickupMode == this.PICKUP_MODE_NONE)));
+            this._Str_25214(this._pickupMode);
         }
 
         private function _Str_25214(k:int):void
