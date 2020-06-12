@@ -180,10 +180,10 @@
         {
             var _local_2:String = (this._tradingModel._Str_8308().getProperty("extra_data_service_url") + k);
             var _local_3:URLLoader = new URLLoader(new URLRequest(_local_2));
-            _local_3.addEventListener(Event.COMPLETE, this._Str_12417);
+            _local_3.addEventListener(Event.COMPLETE, this.onImageLoaded);
         }
 
-        private function _Str_12417(k:Event):void
+        private function onImageLoaded(k:Event):void
         {
             var _local_3:Object;
             var _local_2:String = URLLoader(k.target).data;

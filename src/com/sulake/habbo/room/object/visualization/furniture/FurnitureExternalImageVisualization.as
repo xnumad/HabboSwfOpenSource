@@ -126,7 +126,7 @@
         {
             var _local_2:String = (this._extraDataUrl + k);
             var _local_3:URLLoader = new URLLoader(new URLRequest(_local_2));
-            _local_3.addEventListener(Event.COMPLETE, this._Str_12417);
+            _local_3.addEventListener(Event.COMPLETE, this.onImageLoaded);
             _local_3.addEventListener(IOErrorEvent.IO_ERROR, this.onExternalDataError);
             this._extraDataLoading = true;
         }
@@ -136,7 +136,7 @@
             Logger.log(("Extra data failed to load " + k.toString()));
         }
 
-        private function _Str_12417(k:Event):void
+        private function onImageLoaded(k:Event):void
         {
             var _local_2:String = URLLoader(k.target).data;
             if (_local_2.length == 0)
