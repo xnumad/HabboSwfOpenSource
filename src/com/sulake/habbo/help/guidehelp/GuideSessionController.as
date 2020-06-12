@@ -724,7 +724,7 @@
             this._Str_5863(this._sessionData.userId, this._sessionData.userName, this._sessionData._Str_7586, this._sessionData._Str_8937, true, _Str_7012);
             this._window.caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.title", "", "name", this._sessionData.userName);
             var inputWidget:_Str_2789 = _Str_2789(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
-            inputWidget._Str_8859 = this;
+            inputWidget.submitHandler = this;
             inputWidget._Str_6307 = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.input.empty", "", "name", this._sessionData.userName);
             inputWidget.maxChars = this._habboHelp.getInteger("guide.help.request.max.chat.message.length", 150);
             if (((this._sessionData._Str_3989 == _Str_2849._Str_4749) || (this._sessionData._Str_3989 == _Str_2849._Str_4268)))
@@ -914,7 +914,7 @@
             this._window.caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.title", "", "name", this._sessionData.guideName);
             this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
             var k:_Str_2789 = _Str_2789(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
-            k._Str_8859 = this;
+            k.submitHandler = this;
             k._Str_6307 = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.input.help", "", "name", this._sessionData.guideName);
             k.maxChars = this._habboHelp.getInteger("guide.help.request.max.chat.message.length", 150);
         }

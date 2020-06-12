@@ -83,7 +83,7 @@
             this._chatInvitationTemplate = (this._conversationList.getListItemByName("msg_invitation") as IWindowContainer);
             this._chatInfoTemplate = (this._conversationList.getListItemByName("msg_info") as IWindowContainer);
             this._conversationList.removeListItems();
-            _Str_2789(IWidgetWindow(this._frame.findChildByName("input_widget")).widget)._Str_8859 = this;
+            _Str_2789(IWidgetWindow(this._frame.findChildByName("input_widget")).widget).submitHandler = this;
             this._pendingMessages = new Array();
         }
 

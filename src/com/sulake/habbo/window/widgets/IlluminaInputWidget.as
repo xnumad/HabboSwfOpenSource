@@ -186,12 +186,12 @@
             this.refresh();
         }
 
-        public function get _Str_8859():IIlluminaInputHandler
+        public function get submitHandler():IIlluminaInputHandler
         {
             return this._submitHandler;
         }
 
-        public function set _Str_8859(k:IIlluminaInputHandler):void
+        public function set submitHandler(k:IIlluminaInputHandler):void
         {
             this._submitHandler = k;
         }
