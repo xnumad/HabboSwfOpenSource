@@ -72,7 +72,7 @@
         private var _deleteButton:IWindowContainer;
         private var _bgBorder:IWindow;
         private var _buttonContainer:IWindowContainer;
-        private var _Str_12629:IWindowContainer;
+        private var _shareArea:IWindowContainer;
         private var _Str_25745:IWindow;
         private var _Str_6600:IRegionWindow;
         private var _Str_14612:ILabelWindow;
@@ -106,7 +106,7 @@
             this._imageContainer = (this._window.findChildByName("imageLoader") as IBitmapWrapperWindow);
             this._moderationText = (this._window.findChildByName("moderationText") as IHTMLTextWindow);
             this._moderationText.addEventListener(WindowLinkEvent.WINDOW_EVENT_LINK, this._Str_23468);
-            this._Str_12629 = (this._window.findChildByName("shareArea") as IWindowContainer);
+            this._shareArea = (this._window.findChildByName("shareArea") as IWindowContainer);
             this._deleteButton = (this._window.findChildByName("removeButtonContainer") as IWindowContainer);
             this._makeOwnButton = (this._window.findChildByName("makeOwnButton") as IWindow);
             this._Str_25745 = (this._window.findChildByName("shareButtonContainer") as IWindow);
@@ -129,7 +129,7 @@
             this._Str_15263 = (this._window.findChildByName("reportButtonContainer") as IWindowContainer);
             this._window.procedure = this.onWindowEvent;
             this._window.center();
-            this._Str_12629.visible = false;
+            this._shareArea.visible = false;
             this._Str_2296 = _arg_8;
             this.hide();
         }
@@ -459,7 +459,7 @@
             this._Str_6600 = null;
             this._Str_7334 = null;
             this._buttonContainer = null;
-            this._Str_12629 = null;
+            this._shareArea = null;
             this._window.procedure = null;
             this._window.dispose();
             this._Str_2296 = null;
@@ -562,7 +562,7 @@
                     }
                     return;
                 case "shareButton":
-                    this._Str_12629.visible = true;
+                    this._shareArea.visible = true;
                     HabboTracking.getInstance().trackEventLog("Stories", "shareopened", "stories.share.clicked", this._Str_6733);
                     return;
                 case "twitterShare":
