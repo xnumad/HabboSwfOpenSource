@@ -44,7 +44,7 @@
 
         public static function furnitureDisposed(k:FurnitureExternalImageVisualization):void
         {
-            getInstance()._Str_22217(k);
+            getInstance().removeFurniFromManager(k);
         }
 
 
@@ -53,7 +53,7 @@
             setInterval(this._Str_25544, 200);
         }
 
-        private function _Str_22217(k:FurnitureExternalImageVisualization):void
+        private function removeFurniFromManager(k:FurnitureExternalImageVisualization):void
         {
             if (this.inputVisualizationQueue.indexOf(k) != -1)
             {
@@ -132,7 +132,7 @@
                                 {
                                     visualization.onUrlFromExtraDataService(obj.url);
                                 }
-                                this._Str_22217(visualization);
+                                this.removeFurniFromManager(visualization);
                             }
                         }
                     }
