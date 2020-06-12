@@ -94,7 +94,7 @@
         private var _reportImageContainer:IWindowContainer;
         private var _currentRoomObjectListIndex:int = 0;
         private var _openedFromInventory:Boolean = false;
-        private var _Str_2296:Component;
+        private var _component:Component;
 
         public function ExternalImageWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary, _arg_4:IHabboLocalizationManager, _arg_5:IHabboInventory, _arg_6:IHabboHelp, _arg_7:IRoomEngine, _arg_8:Component)
         {
@@ -130,7 +130,7 @@
             this._window.procedure = this.onWindowEvent;
             this._window.center();
             this._shareArea.visible = false;
-            this._Str_2296 = _arg_8;
+            this._component = _arg_8;
             this.hide();
         }
 
@@ -462,7 +462,7 @@
             this._shareArea = null;
             this._window.procedure = null;
             this._window.dispose();
-            this._Str_2296 = null;
+            this._component = null;
             super.dispose();
             if (this._reportImageContainer)
             {
@@ -482,7 +482,7 @@
                 this._window.center();
                 return;
             }
-            var k:Stage = this._Str_2296.context.displayObjectContainer.stage;
+            var k:Stage = this._component.context.displayObjectContainer.stage;
             var _local_2:Number = ((k.stageWidth - 100) / this._currentImage.width);
             var _local_3:Number = ((k.stageHeight - 200) / this._currentImage.height);
             if (_local_2 < 1)
@@ -503,7 +503,7 @@
             }
             var _local_4:IWindow = this._window.findChildByName("previousButton");
             var _local_5:IWindow = this._window.findChildByName("nextButton");
-            var _local_6:int = this._Str_2296.context.displayObjectContainer.stage.stageHeight;
+            var _local_6:int = this._component.context.displayObjectContainer.stage.stageHeight;
             if (this._bgBorder.height > _local_6)
             {
                 _local_4.y = (_local_5.y = ((_local_6 / 2) - (_local_4.height / 2)));
@@ -551,13 +551,13 @@
                     }
                     else
                     {
-                        if (this._Str_2296.getInteger("spaweb", 0) == 1)
+                        if (this._component.getInteger("spaweb", 0) == 1)
                         {
                             HabboWebTools.openPage("/stories/cards/selfie/edit");
                         }
                         else
                         {
-                            this._Str_2296.context.createLinkEvent("games/play/elisa_habbo_stories?ref=btn_selfie_myo");
+                            this._component.context.createLinkEvent("games/play/elisa_habbo_stories?ref=btn_selfie_myo");
                         }
                     }
                     return;
