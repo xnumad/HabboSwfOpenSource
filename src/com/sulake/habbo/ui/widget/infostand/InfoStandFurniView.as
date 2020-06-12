@@ -44,7 +44,7 @@
         private static const _Str_12261:int = -12345678;
 
         private const PICKUP_MODE_NONE:int = 0;
-        private const _Str_20473:int = 1;
+        private const PICKUP_MODE_EJECT:int = 1;
         private const _Str_22051:int = 2;
 
         protected var _window:IItemListWindow;
@@ -564,7 +564,7 @@
             {
                 if (((k.isRoomOwner) || (k.roomControllerLevel >= RoomControllerLevel.GUILD_ADMIN)))
                 {
-                    this._Str_5729 = this._Str_20473;
+                    this._Str_5729 = this.PICKUP_MODE_EJECT;
                 }
             }
             if (k._Str_17541)
@@ -584,7 +584,7 @@
             var _local_2:IWindow = this._buttons.getListItemByName("pickup");
             if (_local_2 != null)
             {
-                if (k == this._Str_20473)
+                if (k == this.PICKUP_MODE_EJECT)
                 {
                     _local_2.caption = "${infostand.button.eject}";
                 }
