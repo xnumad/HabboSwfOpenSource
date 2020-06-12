@@ -37,7 +37,7 @@
             return instance;
         }
 
-        public static function _Str_23593(k:FurnitureExternalImageVisualization):void
+        public static function requestExtraDataUrl(k:FurnitureExternalImageVisualization):void
         {
             getInstance()._Str_5833.push(k);
         }

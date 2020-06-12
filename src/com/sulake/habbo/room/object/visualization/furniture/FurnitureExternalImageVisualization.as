@@ -68,7 +68,7 @@
                         this._extraDataLoading = true;
                         if (this._batchesEnabled)
                         {
-                            ExtraDataManager._Str_23593(this);
+                            ExtraDataManager.requestExtraDataUrl(this);
                         }
                         else
                         {
