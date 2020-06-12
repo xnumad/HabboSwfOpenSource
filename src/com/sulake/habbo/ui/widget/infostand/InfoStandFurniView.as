@@ -53,7 +53,7 @@
         protected var _border:IBorderWindow;
         protected var _buttons:IItemListWindow;
         protected var _catalog:IHabboCatalog;
-        protected var _Str_2421:IHabboTracking;
+        protected var _habboTracking:IHabboTracking;
         protected var _Str_3793:IWindow;
         protected var _Str_3823:IWindow;
         protected var _Str_3747:IWindow;
@@ -69,7 +69,7 @@
             super();
             this._widget = k;
             this._catalog = _arg_3;
-            this._Str_2421 = HabboTracking.getInstance();
+            this._habboTracking = HabboTracking.getInstance();
             this.createWindow(_arg_2);
         }
 
@@ -419,9 +419,9 @@
             if (this._catalog != null)
             {
                 this._catalog.openCatalogPageByOfferId(this._widget.furniData.purchaseOfferId, CatalogType.NORMAL);
-                if (((this._Str_2421) && (!(this._Str_2421.disposed))))
+                if (((this._habboTracking) && (!(this._habboTracking.disposed))))
                 {
-                    this._Str_2421.trackGoogle("infostandCatalogButton", "offer", this._widget.furniData.purchaseOfferId);
+                    this._habboTracking.trackGoogle("infostandCatalogButton", "offer", this._widget.furniData.purchaseOfferId);
                 }
             }
         }

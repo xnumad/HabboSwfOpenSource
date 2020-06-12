@@ -37,13 +37,13 @@
         private var _Str_11220:IFurnitureData;
         private var _Str_18260:IFurnitureData;
         protected var _catalog:IHabboCatalog;
-        protected var _Str_2421:IHabboTracking;
+        protected var _habboTracking:IHabboTracking;
 
         public function OwnPetMenuView(k:AvatarInfoWidget, _arg_2:IHabboCatalog)
         {
             super(k);
             _Str_3403 = false;
-            this._Str_2421 = HabboTracking.getInstance();
+            this._habboTracking = HabboTracking.getInstance();
             this._catalog = _arg_2;
         }
 
@@ -84,7 +84,7 @@
             this._Str_11220 = null;
             this._Str_18260 = null;
             this._catalog = null;
-            this._Str_2421 = null;
+            this._habboTracking = null;
             super.dispose();
         }
 
@@ -284,9 +284,9 @@
                 return false;
             }
             this._catalog.openCatalogPageByOfferId(k.purchaseOfferId, CatalogType.NORMAL);
-            if (((this._Str_2421) && (!(this._Str_2421.disposed))))
+            if (((this._habboTracking) && (!(this._habboTracking.disposed))))
             {
-                this._Str_2421.trackGoogle("infostandCatalogButton", "offer", k.purchaseOfferId);
+                this._habboTracking.trackGoogle("infostandCatalogButton", "offer", k.purchaseOfferId);
             }
             return true;
         }
