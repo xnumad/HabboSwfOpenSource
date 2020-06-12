@@ -538,7 +538,7 @@
                     this.hide();
                     return;
                 case "removebutton":
-                    _local_3 = windowManager.confirm(_localizations.getLocalization("inventory.remove.external_image_wallitem_header"), _localizations.getLocalization("inventory.remove.external_image_wallitem_body"), 0, this._Str_25380);
+                    _local_3 = windowManager.confirm(_localizations.getLocalization("inventory.remove.external_image_wallitem_header"), _localizations.getLocalization("inventory.remove.external_image_wallitem_body"), 0, this.onDeleteConfirm);
                     _local_3.setButtonCaption(_Str_3023.BUTTON_OK, new AlertDialogCaption(_localizations.getLocalization("inventory.remove.external_image_wallitem_delete"), "", true));
                     return;
                 case "makeOwnButton":
@@ -675,7 +675,7 @@
             }
         }
 
-        private function _Str_25380(k:IConfirmDialog, _arg_2:WindowEvent):void
+        private function onDeleteConfirm(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
