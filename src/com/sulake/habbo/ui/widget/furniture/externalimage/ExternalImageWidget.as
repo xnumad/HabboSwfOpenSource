@@ -154,7 +154,7 @@
                 this._reportImagebutton.visible = this.ownHandler._Str_25770();
             }
             this.show(k.getModel().getString("furniture_data"));
-            var _local_2:Vector.<IRoomObject> = this._Str_15905();
+            var _local_2:Vector.<IRoomObject> = this.getWallItemsOfCurrentTypeInRoom();
             if (_local_2.indexOf(k) != -1)
             {
                 this._currentRoomObjectListIndex = _local_2.indexOf(k);
@@ -190,7 +190,7 @@
 
         private function showNext():void
         {
-            var k:Vector.<IRoomObject> = this._Str_15905();
+            var k:Vector.<IRoomObject> = this.getWallItemsOfCurrentTypeInRoom();
             if (k.length > 0)
             {
                 this._currentRoomObjectListIndex++;
@@ -204,7 +204,7 @@
 
         private function showPrevious():void
         {
-            var k:Vector.<IRoomObject> = this._Str_15905();
+            var k:Vector.<IRoomObject> = this.getWallItemsOfCurrentTypeInRoom();
             if (k.length > 0)
             {
                 this._currentRoomObjectListIndex--;
@@ -216,7 +216,7 @@
             }
         }
 
-        private function _Str_15905():Vector.<IRoomObject>
+        private function getWallItemsOfCurrentTypeInRoom():Vector.<IRoomObject>
         {
             var _local_3:IRoomObject;
             var k:Vector.<IRoomObject> = new Vector.<IRoomObject>();
@@ -384,7 +384,7 @@
             }
             else
             {
-                _local_3.visible = (_local_2.visible = (this._Str_15905().length > 1));
+                _local_3.visible = (_local_2.visible = (this.getWallItemsOfCurrentTypeInRoom().length > 1));
             }
             var _local_4:Matrix = new Matrix();
             var _local_5:ColorTransform = new ColorTransform();
