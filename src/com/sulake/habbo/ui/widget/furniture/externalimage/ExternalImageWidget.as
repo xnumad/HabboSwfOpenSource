@@ -254,7 +254,7 @@
                 this._extraDataID = new JSONDecoder(k, false).getValue().id;
                 if (this._extraDataID)
                 {
-                    this._Str_25873();
+                    this.loadExternalData();
                     return;
                 }
                 this.loadPhoto(k, this.getImageUrl(new JSONDecoder(k, false).getValue()));
@@ -405,7 +405,7 @@
             this._Str_20964();
         }
 
-        private function _Str_25873():void
+        private function loadExternalData():void
         {
             var k:String = (this.ownHandler.extraDataServiceUrl + this._extraDataID);
             var _local_2:URLLoader = new URLLoader(new URLRequest(k));
