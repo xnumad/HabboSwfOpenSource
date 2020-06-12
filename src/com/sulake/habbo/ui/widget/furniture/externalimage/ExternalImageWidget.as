@@ -244,7 +244,7 @@
             this._creationDateText.caption = "";
             this._shareUrl = null;
             this._moderationText.visible = false;
-            this._Str_19771(new Bitmap(new BitmapData((this._imageContainer.width - 2), (this._imageContainer.height - 2), false, 0)));
+            this.drawImage(new Bitmap(new BitmapData((this._imageContainer.width - 2), (this._imageContainer.height - 2), false, 0)));
         }
 
         private function readFurniJson(k:String):void
@@ -353,12 +353,12 @@
                 {
                     this._imageContainer.width = (_local_2.width + 2);
                     this._imageContainer.height = (_local_2.height + 2);
-                    this._Str_19771(_local_2);
+                    this.drawImage(_local_2);
                 }
             }
         }
 
-        private function _Str_19771(k:Bitmap):void
+        private function drawImage(k:Bitmap):void
         {
             this._currentImage = k;
             this._imageContainer.bitmap = new BitmapData(this._imageContainer.width, this._imageContainer.height, true, 0);
