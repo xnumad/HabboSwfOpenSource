@@ -257,14 +257,14 @@
                     this._Str_25873();
                     return;
                 }
-                this._Str_20605(k, this._Str_21278(new JSONDecoder(k, false).getValue()));
+                this._Str_20605(k, this.getImageUrl(new JSONDecoder(k, false).getValue()));
             }
             catch(error:Error)
             {
             }
         }
 
-        private function _Str_21278(k:Object):String
+        private function getImageUrl(k:Object):String
         {
             var _local_3:String;
             var _local_2:String = this._Str_5427(k, "w", "url");
@@ -300,7 +300,7 @@
             }
             if (!imageUrl)
             {
-                imageUrl = this._Str_21278(jsonObject);
+                imageUrl = this.getImageUrl(jsonObject);
             }
             this._bitmapLoader = new BitmapFileLoader("image/png", new URLRequest(imageUrl));
             this._bitmapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_10931);
