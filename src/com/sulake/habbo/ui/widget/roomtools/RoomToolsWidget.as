@@ -22,7 +22,7 @@
 
     public class RoomToolsWidget extends RoomWidgetBase
     {
-        private static const _Str_18581:int = 10;
+        private static const ROOM_HISTORY_MAX_LENGTH:int = 10;
         private static var _Str_4498:Vector.<GuestRoomData> = new Vector.<GuestRoomData>();
         private static var _Str_7037:int;
 
@@ -94,7 +94,7 @@
                 }
             }
             _Str_4498.push(k);
-            if (_Str_4498.length > _Str_18581)
+            if (_Str_4498.length > ROOM_HISTORY_MAX_LENGTH)
             {
                 _Str_4498.shift();
             }
