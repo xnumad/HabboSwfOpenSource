@@ -31,7 +31,7 @@
         private var _roomToolsInfoCtrl:RoomToolsInfoCtrl;
         private var _desktop:IRoomDesktop;
         private var _freeFlowChat:IHabboFreeFlowChat;
-        private var _Str_6811:Timer;
+        private var _roomButtonTimer:Timer;
 
         public function RoomToolsWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary, _arg_4:RoomUI)
         {
@@ -51,10 +51,10 @@
 
         override public function dispose():void
         {
-            if (this._Str_6811)
+            if (this._roomButtonTimer)
             {
-                this._Str_6811.stop();
-                this._Str_6811 = null;
+                this._roomButtonTimer.stop();
+                this._roomButtonTimer = null;
             }
             if (this._toolbarView)
             {
@@ -132,13 +132,13 @@
                 _local_2++;
             }
             this._toolbarView._Str_18755();
-            if (this._Str_6811 != null)
+            if (this._roomButtonTimer != null)
             {
-                this._Str_6811.stop();
+                this._roomButtonTimer.stop();
             }
-            this._Str_6811 = new Timer(2000, 1);
-            this._Str_6811.addEventListener(TimerEvent.TIMER, this._Str_21420);
-            this._Str_6811.start();
+            this._roomButtonTimer = new Timer(2000, 1);
+            this._roomButtonTimer.addEventListener(TimerEvent.TIMER, this._Str_21420);
+            this._roomButtonTimer.start();
             this._roomToolsInfoCtrl.setElementVisible("tags", true);
         }
 
