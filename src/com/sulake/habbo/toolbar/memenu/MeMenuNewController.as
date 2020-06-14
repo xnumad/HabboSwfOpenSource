@@ -26,7 +26,7 @@
         private var _toolbarView:ToolbarView;
         private var _window:IWindowContainer;
         private var _meMenuIconLoader:MeMenuNewIconLoader;
-        private var _Str_21344:Boolean;
+        private var _newUiEnabled:Boolean;
         private var _settingsMenuView:MeMenuSettingsMenuView;
         private var _unseenItemCounters:Map;
 
@@ -110,7 +110,7 @@
 
         private function onToolbarClick(k:HabboToolbarEvent):void
         {
-            if (this._Str_21344)
+            if (this._newUiEnabled)
             {
                 return;
             }
@@ -235,7 +235,7 @@
 
         public function set _Str_22759(k:Boolean):void
         {
-            this._Str_21344 = k;
+            this._newUiEnabled = k;
         }
 
         public function _Str_4168(k:String, _arg_2:int):void
