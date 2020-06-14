@@ -71,7 +71,7 @@
             super.dispose();
         }
 
-        public function _Str_23062(k:GuestRoomData):void
+        public function updateRoomData(k:GuestRoomData):void
         {
             var _local_2:GuestRoomData;
             for each (_local_2 in _visitedRooms)

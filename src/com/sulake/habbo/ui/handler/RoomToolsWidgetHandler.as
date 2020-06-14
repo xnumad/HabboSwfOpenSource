@@ -47,7 +47,7 @@
             var _local_3:GuestRoomData = _local_2.data;
             if (_local_3)
             {
-                this._widget._Str_23062(_local_3);
+                this._widget.updateRoomData(_local_3);
             }
             if (_local_2._Str_15487)
             {
