@@ -23,7 +23,7 @@
     public class RoomToolsWidget extends RoomWidgetBase
     {
         private static const ROOM_HISTORY_MAX_LENGTH:int = 10;
-        private static var _Str_4498:Vector.<GuestRoomData> = new Vector.<GuestRoomData>();
+        private static var _visitedRooms:Vector.<GuestRoomData> = new Vector.<GuestRoomData>();
         private static var _Str_7037:int;
 
         private var _Str_19410:String = "";
@@ -74,7 +74,7 @@
         public function _Str_23062(k:GuestRoomData):void
         {
             var _local_2:GuestRoomData;
-            for each (_local_2 in _Str_4498)
+            for each (_local_2 in _visitedRooms)
             {
                 if (_local_2.flatId == k.flatId)
                 {
@@ -86,19 +86,19 @@
         public function _Str_22970(k:GuestRoomData):void
         {
             var _local_2:GuestRoomData;
-            for each (_local_2 in _Str_4498)
+            for each (_local_2 in _visitedRooms)
             {
                 if (_local_2.flatId == k.flatId)
                 {
                     return;
                 }
             }
-            _Str_4498.push(k);
-            if (_Str_4498.length > ROOM_HISTORY_MAX_LENGTH)
+            _visitedRooms.push(k);
+            if (_visitedRooms.length > ROOM_HISTORY_MAX_LENGTH)
             {
-                _Str_4498.shift();
+                _visitedRooms.shift();
             }
-            _Str_7037 = (_Str_4498.length - 1);
+            _Str_7037 = (_visitedRooms.length - 1);
             if (this._toolbarView)
             {
                 this._toolbarView._Str_21132(this.handler._Str_5090);
@@ -123,7 +123,7 @@
                 return;
             }
             var _local_2:int;
-            for each (_local_3 in _Str_4498)
+            for each (_local_3 in _visitedRooms)
             {
                 if (_local_3.flatId == k)
                 {
@@ -206,12 +206,12 @@
         public function goToNextRoom():void
         {
             var k:int = (_Str_7037 + 1);
-            var _local_2:int = _Str_4498.length;
+            var _local_2:int = _visitedRooms.length;
             if (k > _local_2)
             {
                 k = _local_2;
             }
-            this.handler.goToPrivateRoom(_Str_4498[k].flatId);
+            this.handler.goToPrivateRoom(_visitedRooms[k].flatId);
             this._toolbarView._Str_18755();
         }
 
@@ -222,7 +222,7 @@
             {
                 k = 0;
             }
-            this.handler.goToPrivateRoom(_Str_4498[k].flatId);
+            this.handler.goToPrivateRoom(_visitedRooms[k].flatId);
             this._toolbarView._Str_18755();
         }
 
@@ -233,7 +233,7 @@
 
         public function get visitedRooms():Vector.<GuestRoomData>
         {
-            return _Str_4498;
+            return _visitedRooms;
         }
 
         public function get currentRoomIndex():int
