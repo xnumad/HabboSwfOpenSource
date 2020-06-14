@@ -115,7 +115,7 @@
             this._roomToolsInfoCtrl.showRoomInfo(k, _arg_2, _arg_3, _arg_4);
         }
 
-        public function _Str_23696(k:int):void
+        public function enterNewRoom(k:int):void
         {
             var _local_3:GuestRoomData;
             if (((!(this._toolbarView)) || (!(this._roomToolsInfoCtrl))))

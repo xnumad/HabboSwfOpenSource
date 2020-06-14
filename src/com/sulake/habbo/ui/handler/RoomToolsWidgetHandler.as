@@ -56,7 +56,7 @@
                     _local_4 = ((_local_3.showOwner) ? ((this._widget.localizations.getLocalizationWithParams("room.tool.room.owner.prefix", "By") + " ") + _local_3.ownerName) : this._widget.localizations.getLocalizationWithParams("room.tool.public.room", "Public room"));
                     this._widget.showRoomInfo(true, _local_3.roomName, _local_4, _local_3.tags);
                     this._widget.storeRoomData(_local_3);
-                    this._widget._Str_23696(_local_3.flatId);
+                    this._widget.enterNewRoom(_local_3.flatId);
                 }
             }
         }
