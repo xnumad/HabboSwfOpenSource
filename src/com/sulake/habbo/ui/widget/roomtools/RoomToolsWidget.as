@@ -26,7 +26,7 @@
         private static var _visitedRooms:Vector.<GuestRoomData> = new Vector.<GuestRoomData>();
         private static var _currentRoomIndex:int;
 
-        private var _Str_19410:String = "";
+        private var _currentRoomName:String = "";
         private var _toolbarView:RoomToolsToolbarCtrl;
         private var _roomToolsInfoCtrl:RoomToolsInfoCtrl;
         private var _desktop:IRoomDesktop;
@@ -111,7 +111,7 @@
             {
                 return;
             }
-            this._Str_19410 = _arg_2;
+            this._currentRoomName = _arg_2;
             this._roomToolsInfoCtrl.showRoomInfo(k, _arg_2, _arg_3, _arg_4);
         }
 
@@ -243,7 +243,7 @@
 
         public function get _Str_26110():String
         {
-            return this._Str_19410;
+            return this._currentRoomName;
         }
     }
 }
