@@ -83,7 +83,7 @@
             }
         }
 
-        public function _Str_22970(k:GuestRoomData):void
+        public function storeRoomData(k:GuestRoomData):void
         {
             var _local_2:GuestRoomData;
             for each (_local_2 in _visitedRooms)
