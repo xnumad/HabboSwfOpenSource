@@ -25,7 +25,7 @@
         public static const USE_GUIDE_TOOL:String = "USE_GUIDE_TOOL";
 
         private var _habboToolbar:HabboToolbar;
-        private var _Str_2617:BottomBarLeft;
+        private var _toolbarView:BottomBarLeft;
         private var _window:IWindowContainer;
         private var _meMenuIconLoader:MeMenuIconLoader;
         private var _Str_3357:MeMenuSettingsMenuView;
@@ -35,7 +35,7 @@
         {
             this._Str_3359 = new Map();
             this._habboToolbar = k;
-            this._Str_2617 = _arg_2;
+            this._toolbarView = _arg_2;
             this._habboToolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
             var _local_3:XmlAsset = (this._habboToolbar.assets.getAssetByName("me_menu_new_view_xml") as XmlAsset);
             this._window = (this._habboToolbar.windowManager.buildFromXML((_local_3.content as XML), 2) as IWindowContainer);
@@ -188,7 +188,7 @@
             this._meMenuIconLoader.dispose();
             this._meMenuIconLoader = null;
             this._habboToolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
-            this._Str_2617 = null;
+            this._toolbarView = null;
             this._habboToolbar = null;
         }
 
@@ -210,7 +210,7 @@
         public function reposition():void
         {
             this._window.x = 3;
-            this._window.y = (this._Str_2617.window.top - this._window.height);
+            this._window.y = (this._toolbarView.window.top - this._window.height);
         }
 
         public function _Str_23094(k:String):Rectangle

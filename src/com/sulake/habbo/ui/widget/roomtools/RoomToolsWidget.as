@@ -27,7 +27,7 @@
         private static var _Str_7037:int;
 
         private var _Str_19410:String = "";
-        private var _Str_2617:RoomToolsToolbarCtrl;
+        private var _toolbarView:RoomToolsToolbarCtrl;
         private var _roomToolsInfoCtrl:RoomToolsInfoCtrl;
         private var _desktop:IRoomDesktop;
         private var _freeFlowChat:IHabboFreeFlowChat;
@@ -40,13 +40,13 @@
             this._desktop = _arg_4.getDesktop("hard_coded_room_id");
             this._freeFlowChat = _arg_4.freeFlowChat;
             this._roomToolsInfoCtrl = new RoomToolsInfoCtrl(this, _arg_2, _arg_3);
-            this._Str_2617 = new RoomToolsToolbarCtrl(this, _arg_2, _arg_3);
-            this._Str_2617._Str_20713();
-            this._Str_2617._Str_24545(((!(this._freeFlowChat)) || (!(this._freeFlowChat.isDisabledInPreferences))));
+            this._toolbarView = new RoomToolsToolbarCtrl(this, _arg_2, _arg_3);
+            this._toolbarView._Str_20713();
+            this._toolbarView._Str_24545(((!(this._freeFlowChat)) || (!(this._freeFlowChat.isDisabledInPreferences))));
             var _local_5:String = _arg_4.getProperty("camera.launch.ui.position");
-            this._Str_2617._Str_23347(((this.handler.container.sessionDataManager.isPerkAllowed(PerkEnum.CAMERA)) && ((StringUtils.isEmpty(_local_5)) || (_local_5 == "room-menu"))));
-            this._Str_2617._Str_21132(this.handler._Str_5090);
-            this._Str_2617.setCollapsed(((this.handler.sessionDataManager.isNoob) || (!(this.handler.sessionDataManager.uiFlags & UIFlags.ROOM_TOOLS_OPEN))));
+            this._toolbarView._Str_23347(((this.handler.container.sessionDataManager.isPerkAllowed(PerkEnum.CAMERA)) && ((StringUtils.isEmpty(_local_5)) || (_local_5 == "room-menu"))));
+            this._toolbarView._Str_21132(this.handler._Str_5090);
+            this._toolbarView.setCollapsed(((this.handler.sessionDataManager.isNoob) || (!(this.handler.sessionDataManager.uiFlags & UIFlags.ROOM_TOOLS_OPEN))));
         }
 
         override public function dispose():void
@@ -56,10 +56,10 @@
                 this._Str_6811.stop();
                 this._Str_6811 = null;
             }
-            if (this._Str_2617)
+            if (this._toolbarView)
             {
-                this._Str_2617.dispose();
-                this._Str_2617 = null;
+                this._toolbarView.dispose();
+                this._toolbarView = null;
             }
             if (this._roomToolsInfoCtrl)
             {
@@ -99,9 +99,9 @@
                 _Str_4498.shift();
             }
             _Str_7037 = (_Str_4498.length - 1);
-            if (this._Str_2617)
+            if (this._toolbarView)
             {
-                this._Str_2617._Str_21132(this.handler._Str_5090);
+                this._toolbarView._Str_21132(this.handler._Str_5090);
             }
         }
 
@@ -118,7 +118,7 @@
         public function _Str_23696(k:int):void
         {
             var _local_3:GuestRoomData;
-            if (((!(this._Str_2617)) || (!(this._roomToolsInfoCtrl))))
+            if (((!(this._toolbarView)) || (!(this._roomToolsInfoCtrl))))
             {
                 return;
             }
@@ -131,7 +131,7 @@
                 }
                 _local_2++;
             }
-            this._Str_2617._Str_18755();
+            this._toolbarView._Str_18755();
             if (this._Str_6811 != null)
             {
                 this._Str_6811.stop();
@@ -150,17 +150,17 @@
                 _local_2.stop();
                 _local_2.removeEventListener(TimerEvent.TIMER, this._Str_21420);
             }
-            if (this._Str_2617)
+            if (this._toolbarView)
             {
-                this._Str_2617._Str_20713();
+                this._toolbarView._Str_20713();
             }
         }
 
         public function setCollapsed(k:Boolean):void
         {
-            if (this._Str_2617)
+            if (this._toolbarView)
             {
-                this._Str_2617.setCollapsed(k);
+                this._toolbarView.setCollapsed(k);
             }
             if (this._roomToolsInfoCtrl)
             {
@@ -175,13 +175,13 @@
 
         public function getIconLocation(k:String):IWindow
         {
-            var _local_2:IWindow = this._Str_2617.window.findChildByName(k);
+            var _local_2:IWindow = this._toolbarView.window.findChildByName(k);
             return _local_2;
         }
 
         public function _Str_24850():int
         {
-            return (this._Str_2617) ? this._Str_2617.right : 0;
+            return (this._toolbarView) ? this._toolbarView.right : 0;
         }
 
         public function getChatInputY():int
@@ -200,7 +200,7 @@
 
         public function getRoomToolbarRight():int
         {
-            return (this._Str_2617) ? this._Str_2617.right : 0;
+            return (this._toolbarView) ? this._toolbarView.right : 0;
         }
 
         public function goToNextRoom():void
@@ -212,7 +212,7 @@
                 k = _local_2;
             }
             this.handler.goToPrivateRoom(_Str_4498[k].flatId);
-            this._Str_2617._Str_18755();
+            this._toolbarView._Str_18755();
         }
 
         public function goToPreviousRoom():void
@@ -223,7 +223,7 @@
                 k = 0;
             }
             this.handler.goToPrivateRoom(_Str_4498[k].flatId);
-            this._Str_2617._Str_18755();
+            this._toolbarView._Str_18755();
         }
 
         public function get freeFlowChat():IHabboFreeFlowChat
