@@ -137,18 +137,18 @@
                 this._roomButtonTimer.stop();
             }
             this._roomButtonTimer = new Timer(2000, 1);
-            this._roomButtonTimer.addEventListener(TimerEvent.TIMER, this._Str_21420);
+            this._roomButtonTimer.addEventListener(TimerEvent.TIMER, this.roomButtonTimerEventHandler);
             this._roomButtonTimer.start();
             this._roomToolsInfoCtrl.setElementVisible("tags", true);
         }
 
-        private function _Str_21420(k:TimerEvent):void
+        private function roomButtonTimerEventHandler(k:TimerEvent):void
         {
             var _local_2:Timer = (k.target as Timer);
             if (_local_2)
             {
                 _local_2.stop();
-                _local_2.removeEventListener(TimerEvent.TIMER, this._Str_21420);
+                _local_2.removeEventListener(TimerEvent.TIMER, this.roomButtonTimerEventHandler);
             }
             if (this._toolbarView)
             {
