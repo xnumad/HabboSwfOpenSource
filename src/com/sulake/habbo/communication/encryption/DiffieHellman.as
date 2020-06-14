@@ -14,13 +14,13 @@
         private var _minimumPublicKey:BigInteger;
         private var _minimumSharedSecret:BigInteger;
 
-        public function DiffieHellman(k:BigInteger, _arg_2:BigInteger)
+        public function DiffieHellman(prime:BigInteger, generator:BigInteger)
         {
             this._minimumPublicKey = BigInteger.nbv(2);
             this._minimumSharedSecret = BigInteger.nbv(2);
             super();
-            this._prime = k;
-            this._generator = _arg_2;
+            this._prime = prime;
+            this._generator = generator;
         }
 
         public function init(k:String, _arg_2:uint=16):Boolean

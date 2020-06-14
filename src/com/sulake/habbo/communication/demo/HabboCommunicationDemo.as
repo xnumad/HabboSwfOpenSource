@@ -297,96 +297,96 @@
 
         private function onInitDiffieHandshake(k:IMessageEvent):void
         {
-            var _local_16:String;
-            var _local_2:IConnection = k.connection;
-            var _local_3:InitDiffieHandshakeEvent = (k as InitDiffieHandshakeEvent);
-            var _local_4:ByteArray = new ByteArray();
-            var _local_5:ByteArray = new ByteArray();
-            _local_4.writeBytes(CryptoTools.hexStringToByteArray(_local_3.encryptedPrime));
-            _local_5.writeBytes(CryptoTools.hexStringToByteArray(_local_3.encryptedGenerator));
-            var _local_6:ByteArray = new ByteArray();
-            var _local_7:ByteArray = new ByteArray();
+            var testingClientPublicKey:String;
+            var connection:IConnection = k.connection;
+            var event:InitDiffieHandshakeEvent = (k as InitDiffieHandshakeEvent);
+            var encryptedPrime:ByteArray = new ByteArray();
+            var encryptedGenerator:ByteArray = new ByteArray();
+            encryptedPrime.writeBytes(CryptoTools.hexStringToByteArray(event.encryptedPrime));
+            encryptedGenerator.writeBytes(CryptoTools.hexStringToByteArray(event.encryptedGenerator));
+            var primeBytes:ByteArray = new ByteArray();
+            var generatorBytes:ByteArray = new ByteArray();
             this._rsa = RSAKey.parsePublicKey("86851DD364D5C5CECE3C883171CC6DDC5760779B992482BD1E20DD296888DF91B33B936A7B93F06D29E8870F703A216257DEC7C81DE0058FEA4CC5116F75E6EFC4E9113513E45357DC3FD43D4EFAB5963EF178B78BD61E81A14C603B24C8BCCE0A12230B320045498EDC29282FF0603BC7B7DAE8FC1B05B52B2F301A9DC783B7", "3"); //RSAKey.parsePublicKey(KeyObfuscator.getCleanKeyModulus(), KeyObfuscator.getCleanKeyExponent());
-            this._rsa.verify(_local_4, _local_6, _local_4.length);
-            this._rsa.verify(_local_5, _local_7, _local_5.length);
-            var _local_8:BigInteger = new BigInteger(_local_6.toString(), 10);
-            var _local_9:BigInteger = new BigInteger(_local_7.toString(), 10);
-            var _local_10:BigInteger = BigInteger.nbv(2);
-            if (((_local_8.compareTo(_local_10) <= 0) || (_local_9.compareTo(_local_8) >= 0)))
+            this._rsa.verify(encryptedPrime, primeBytes, encryptedPrime.length);
+            this._rsa.verify(encryptedGenerator, generatorBytes, encryptedGenerator.length);
+            var prime:BigInteger = new BigInteger(primeBytes.toString(), 10);
+            var generator:BigInteger = new BigInteger(generatorBytes.toString(), 10);
+            var minimumPrime:BigInteger = BigInteger.nbv(2);
+            if (((prime.compareTo(minimumPrime) <= 0) || (generator.compareTo(prime) >= 0)))
             {
                 Core.crash("Invalid DH prime and generator", Core.ERROR_CATEGORY_COMMMUNICATION_INIT);
                 return;
             }
-            if (_local_8.equals(_local_9))
+            if (prime.equals(generator))
             {
                 Core.crash("Invalid DH prime and generator", Core.ERROR_CATEGORY_COMMMUNICATION_INIT);
                 return;
             }
-            this._keyExchange = this._communication.initializeKeyExchange(_local_8, _local_9);
-            var _local_11:String;
+            this._keyExchange = this._communication.initializeKeyExchange(prime, generator);
+            var ClientPublicKey:String;
             var _local_12:int = 10;
-            var _local_13:String;
+            var testingClientPrivateKey:String;
             while (_local_12 > 0)
             {
-                _local_13 = this.generateRandomHexString(30);
-                this._keyExchange.init(_local_13);
-                _local_16 = this._keyExchange.getPublicKey(10);
-                if (_local_16.length < 64)
+                testingClientPrivateKey = this.generateRandomHexString(30);
+                this._keyExchange.init(testingClientPrivateKey);
+                testingClientPublicKey = this._keyExchange.getPublicKey(10);
+                if (testingClientPublicKey.length < 64) //too short
                 {
-                    if (((_local_11 == null) || (_local_16.length > _local_11.length)))
+                    if (((ClientPublicKey == null) || (testingClientPublicKey.length > ClientPublicKey.length)))
                     {
-                        _local_11 = _local_16;
-                        this._privateKey = _local_13;
+                        ClientPublicKey = testingClientPublicKey;
+                        this._privateKey = testingClientPrivateKey;
                     }
                 }
-                else
+                else //valid
                 {
-                    _local_11 = _local_16;
-                    this._privateKey = _local_13;
+                    ClientPublicKey = testingClientPublicKey;
+                    this._privateKey = testingClientPrivateKey;
                     break;
                 }
                 _local_12--;
             }
-            if (_local_13 != this._privateKey)
+            if (testingClientPrivateKey != this._privateKey)
             {
                 this._keyExchange.init(this._privateKey);
             }
-            var _local_14:ByteArray = new ByteArray();
-            var _local_15:ByteArray = new ByteArray();
-            _local_14.writeMultiByte(_local_11, "iso-8859-1");
-            this._rsa.encrypt(_local_14, _local_15, _local_14.length);
-            _local_2.sendUnencrypted(new CompleteDiffieHandshakeMessageComposer(CryptoTools.byteArrayToHexString(_local_15)));
+            var ClientPublicKeyEncoded:ByteArray = new ByteArray();
+            var ClientPublicKeyEncodedEncryted:ByteArray = new ByteArray();
+            ClientPublicKeyEncoded.writeMultiByte(ClientPublicKey, "iso-8859-1");
+            this._rsa.encrypt(ClientPublicKeyEncoded, ClientPublicKeyEncodedEncryted, ClientPublicKeyEncoded.length);
+            connection.sendUnencrypted(new CompleteDiffieHandshakeMessageComposer(CryptoTools.byteArrayToHexString(ClientPublicKeyEncodedEncryted)));
         }
 
         private function onCompleteDiffieHandshake(k:IMessageEvent):void
         {
-            var _local_9:IEncryption;
-            var _local_2:IConnection = k.connection;
-            var _local_3:CompleteDiffieHandshakeEvent = (k as CompleteDiffieHandshakeEvent);
-            var _local_4:ByteArray = new ByteArray();
-            var _local_5:ByteArray = new ByteArray();
-            _local_4.writeBytes(CryptoTools.hexStringToByteArray(_local_3.encryptedPublicKey));
-            this._rsa.verify(_local_4, _local_5, _local_4.length);
+            var incomingEncryption:IEncryption;
+            var connection:IConnection = k.connection;
+            var event:CompleteDiffieHandshakeEvent = (k as CompleteDiffieHandshakeEvent);
+            var ServerPublicKeyEncryptedBytes:ByteArray = new ByteArray();
+            var ServerPublicKey:ByteArray = new ByteArray();
+            ServerPublicKeyEncryptedBytes.writeBytes(CryptoTools.hexStringToByteArray(event.encryptedPublicKey));
+            this._rsa.verify(ServerPublicKeyEncryptedBytes, ServerPublicKey, ServerPublicKeyEncryptedBytes.length);
             this._rsa.dispose();
-            this._keyExchange.generateSharedKey(_local_5.toString(), 10);
-            var _local_6:String = this._keyExchange.getSharedKey(16).toUpperCase();
+            this._keyExchange.generateSharedKey(ServerPublicKey.toString(), 10);
+            var sharedKey:String = this._keyExchange.getSharedKey(16).toUpperCase();
             if (((!(this._keyExchange.isValidServerPublicKey())) || (!(this._keyExchange.isValidSharedKey()))))
             {
                 return;
             }
-            var _local_7:ByteArray = CryptoTools.hexStringToByteArray(_local_6);
-            _local_7.position = 0;
-            var _local_8:IEncryption = this._communication.initializeEncryption();
-            _local_8.init(_local_7);
-            if (_local_3.serverClientEncryption)
+            var sharedKeyBytes:ByteArray = CryptoTools.hexStringToByteArray(sharedKey);
+            sharedKeyBytes.position = 0;
+            var outgoingEncryption:IEncryption = this._communication.initializeEncryption();
+            outgoingEncryption.init(sharedKeyBytes);
+            if (event.serverClientEncryption)
             {
-                _local_9 = this._communication.initializeEncryption();
-                _local_9.init(_local_7);
+                incomingEncryption = this._communication.initializeEncryption();
+                incomingEncryption.init(sharedKeyBytes);
             }
-            _local_2.setEncryption(_local_8, _local_9);
+            connection.setEncryption(outgoingEncryption, incomingEncryption);
             this._handshakeInProgress = false;
             this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKED);
-            this.sendConnectionParameters(_local_2);
+            this.sendConnectionParameters(connection);
         }
 
         private function sendConnectionParameters(k:IConnection):void
@@ -612,12 +612,12 @@
             Component(context).events.dispatchEvent(new Event(k));
         }
 
-        private function generateRandomHexString(k:uint=16):String
+        private function generateRandomHexString(length:uint=16):String
         {
             var _local_4:uint;
             var _local_2:String = "";
             var _local_3:int;
-            while (_local_3 < k)
+            while (_local_3 < length)
             {
                 _local_4 = uint(uint((Math.random() * 0xFF)));
                 _local_2 = (_local_2 + _local_4.toString(16));

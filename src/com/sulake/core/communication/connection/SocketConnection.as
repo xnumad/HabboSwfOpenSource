@@ -276,10 +276,10 @@
             return true;
         }
 
-        public function setEncryption(k:IEncryption, _arg_2:IEncryption):void
+        public function setEncryption(outgoing:IEncryption, incoming:IEncryption):void
         {
-            this._clientToServerEncryption = k;
-            this._serverToClientEncryption = _arg_2;
+            this._clientToServerEncryption = outgoing;
+            this._serverToClientEncryption = incoming;
         }
 
         public function registerMessageClasses(k:IMessageConfiguration):void

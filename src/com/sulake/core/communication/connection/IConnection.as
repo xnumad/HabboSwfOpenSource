@@ -14,7 +14,7 @@
         function set timeout(_arg_1:int):void;
         function send(_arg_1:IMessageComposer):Boolean;
         function sendUnencrypted(_arg_1:IMessageComposer):Boolean;
-        function setEncryption(_arg_1:IEncryption, _arg_2:IEncryption):void;
+        function setEncryption(outgoing:IEncryption, incoming:IEncryption):void;
         function getServerToClientEncryption():IEncryption;
         function registerMessageClasses(_arg_1:IMessageConfiguration):void;
         function addMessageEvent(_arg_1:IMessageEvent):void;

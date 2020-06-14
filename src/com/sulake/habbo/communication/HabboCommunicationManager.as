@@ -311,9 +311,9 @@
             return new ArcFour();
         }
 
-        public function initializeKeyExchange(k:BigInteger, _arg_2:BigInteger):IKeyExchange
+        public function initializeKeyExchange(prime:BigInteger, generator:BigInteger):IKeyExchange
         {
-            return new DiffieHellman(k, _arg_2);
+            return new DiffieHellman(prime, generator);
         }
 
         private function getKeyValue(k:Array, _arg_2:int):String
