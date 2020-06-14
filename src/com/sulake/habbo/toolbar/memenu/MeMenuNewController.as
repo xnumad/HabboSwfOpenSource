@@ -25,20 +25,20 @@
         private var _habboToolbar:HabboToolbar;
         private var _toolbarView:ToolbarView;
         private var _window:IWindowContainer;
-        private var _Str_7348:MeMenuNewIconLoader;
+        private var _meMenuIconLoader:MeMenuNewIconLoader;
         private var _Str_21344:Boolean;
         private var _settingsMenuView:MeMenuSettingsMenuView;
-        private var _Str_3359:Map;
+        private var _unseenItemCounters:Map;
 
         public function MeMenuNewController(k:HabboToolbar, _arg_2:ToolbarView)
         {
-            this._Str_3359 = new Map();
+            this._unseenItemCounters = new Map();
             this._habboToolbar = k;
             this._toolbarView = _arg_2;
             this._habboToolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
             var _local_3:XmlAsset = (this._habboToolbar.assets.getAssetByName("me_menu_view_xml") as XmlAsset);
             this._window = (this._habboToolbar.windowManager.buildFromXML((_local_3.content as XML), 2) as IWindowContainer);
-            this._Str_7348 = new MeMenuNewIconLoader(this._habboToolbar);
+            this._meMenuIconLoader = new MeMenuNewIconLoader(this._habboToolbar);
             this._window.visible = false;
             this._window.procedure = this.windowProcedure;
         }
@@ -171,8 +171,8 @@
                 this._settingsMenuView.dispose();
                 this._settingsMenuView = null;
             }
-            this._Str_7348.dispose();
-            this._Str_7348 = null;
+            this._meMenuIconLoader.dispose();
+            this._meMenuIconLoader = null;
             this._habboToolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
             this._toolbarView = null;
             this._habboToolbar = null;
@@ -207,7 +207,7 @@
             {
                 Logger.log(("[Toolbar] Unknown icon type for unseen item counter for iconId: " + k));
             }
-            var _local_3:IWindowContainer = (this._Str_3359.getValue(k) as IWindowContainer);
+            var _local_3:IWindowContainer = (this._unseenItemCounters.getValue(k) as IWindowContainer);
             if (!_local_3)
             {
                 _local_3 = this._habboToolbar.windowManager.createUnseenItemCounter();
@@ -217,7 +217,7 @@
                     _local_4.addChild(_local_3);
                     _local_3.x = ((_local_4.width - _local_3.width) - 5);
                     _local_3.y = 5;
-                    this._Str_3359.add(k, _local_3);
+                    this._unseenItemCounters.add(k, _local_3);
                 }
             }
             return _local_3;
