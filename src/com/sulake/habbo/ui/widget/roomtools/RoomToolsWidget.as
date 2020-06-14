@@ -24,7 +24,7 @@
     {
         private static const ROOM_HISTORY_MAX_LENGTH:int = 10;
         private static var _visitedRooms:Vector.<GuestRoomData> = new Vector.<GuestRoomData>();
-        private static var _Str_7037:int;
+        private static var _currentRoomIndex:int;
 
         private var _Str_19410:String = "";
         private var _toolbarView:RoomToolsToolbarCtrl;
@@ -98,7 +98,7 @@
             {
                 _visitedRooms.shift();
             }
-            _Str_7037 = (_visitedRooms.length - 1);
+            _currentRoomIndex = (_visitedRooms.length - 1);
             if (this._toolbarView)
             {
                 this._toolbarView._Str_21132(this.handler._Str_5090);
@@ -127,7 +127,7 @@
             {
                 if (_local_3.flatId == k)
                 {
-                    _Str_7037 = _local_2;
+                    _currentRoomIndex = _local_2;
                 }
                 _local_2++;
             }
@@ -205,7 +205,7 @@
 
         public function goToNextRoom():void
         {
-            var k:int = (_Str_7037 + 1);
+            var k:int = (_currentRoomIndex + 1);
             var _local_2:int = _visitedRooms.length;
             if (k > _local_2)
             {
@@ -217,7 +217,7 @@
 
         public function goToPreviousRoom():void
         {
-            var k:int = (_Str_7037 - 1);
+            var k:int = (_currentRoomIndex - 1);
             if (k < 0)
             {
                 k = 0;
@@ -238,7 +238,7 @@
 
         public function get currentRoomIndex():int
         {
-            return _Str_7037;
+            return _currentRoomIndex;
         }
 
         public function get _Str_26110():String
