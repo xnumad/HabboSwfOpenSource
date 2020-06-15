@@ -11,7 +11,7 @@
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.components.IBoxSizerWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
-    import com.sulake.habbo.toolbar.memenu.MeMenuNewView;
+    import com.sulake.habbo.toolbar.memenu.MeMenuNewController;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.events.WindowEvent;
@@ -73,7 +73,7 @@
         private var _unseenAchievementCount:int;
         private var _unseenForumsCount:int;
         private var _collapsed:Boolean = false;
-        private var _memenu:MeMenuNewView;
+        private var _memenu:MeMenuNewController;
 
         public function BottomBarLeft(k:HabboToolbar, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary, _arg_4:IEventDispatcher)
         {
@@ -85,7 +85,7 @@
             this._windowManager = _arg_2;
             this._assets = _arg_3;
             this._events = _arg_4;
-            this._memenu = new MeMenuNewView(this._toolbar, this);
+            this._memenu = new MeMenuNewController(this._toolbar, this);
             this._unseenItemCounters = new Map();
             var _local_5:XmlAsset = (_arg_3.getAssetByName("bottom_bar_left_xml") as XmlAsset);
             this._window = (_arg_2.buildFromXML((_local_5.content as XML)) as IWindowContainer);
@@ -754,7 +754,7 @@
             return (this._unseenMiniMailMessageCount + this._unseenAchievementCount) + this._unseenForumsCount;
         }
 
-        public function get memenu():MeMenuNewView
+        public function get memenu():MeMenuNewController
         {
             return this._memenu;
         }

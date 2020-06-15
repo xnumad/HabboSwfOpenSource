@@ -20,7 +20,7 @@
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import flash.geom.Rectangle;
 
-    public class MeMenuNewView implements IDisposable 
+    public class MeMenuNewController implements IDisposable
     {
         public static const USE_GUIDE_TOOL:String = "USE_GUIDE_TOOL";
 
@@ -31,7 +31,7 @@
         private var _Str_3357:MeMenuSettingsMenuView;
         private var _Str_3359:Map;
 
-        public function MeMenuNewView(k:HabboToolbar, _arg_2:BottomBarLeft)
+        public function MeMenuNewController(k:HabboToolbar, _arg_2:BottomBarLeft)
         {
             this._Str_3359 = new Map();
             this._habboToolbar = k;
