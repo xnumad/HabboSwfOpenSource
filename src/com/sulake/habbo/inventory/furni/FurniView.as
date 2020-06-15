@@ -496,7 +496,7 @@
             this._offerInTradingButton = (this._buttonList.removeListItem(this._buttonList.getListItemByName("offertotrade_btn")) as IButtonWindow);
             this._sellInMarketplaceButton = (this._buttonList.removeListItem(this._buttonList.getListItemByName("sell_btn")) as IButtonWindow);
             var _local_3:IRoomPreviewerWidget = ((this._view.findChildByName("furni_preview_widget") as IWidgetWindow).widget as IRoomPreviewerWidget);
-            this._roomPreviewer = _local_3._Str_26451;
+            this._roomPreviewer = _local_3.roomPreviewer;
             this._model.controller.registerUpdateReceiver(this, 1);
             this._Str_7636();
             this._isInitialized = true;
@@ -506,7 +506,7 @@
         {
             var k:IWidgetWindow = (this._view.findChildByName("furni_preview_widget") as IWidgetWindow);
             var _local_2:IRoomPreviewerWidget = ((this._view.findChildByName("furni_preview_widget") as IWidgetWindow).widget as IRoomPreviewerWidget);
-            _local_2._Str_26451.modifyRoomCanvas(k.width, k.height);
+            _local_2.roomPreviewer.modifyRoomCanvas(k.width, k.height);
         }
 
         private function _Str_20866(k:Boolean):void

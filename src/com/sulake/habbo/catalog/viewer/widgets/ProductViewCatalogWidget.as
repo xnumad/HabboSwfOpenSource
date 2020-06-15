@@ -154,7 +154,7 @@
             {
                 this._Str_3864.visible = false;
                 this._Str_3605 = (this._Str_3864.findChildByName("room_canvas") as IDisplayObjectWrapper);
-                _local_3 = (page.viewer.catalog as HabboCatalog)._Str_26451;
+                _local_3 = (page.viewer.catalog as HabboCatalog).roomPreviewer;
                 if (((!(this._Str_3605 == null)) && (!(_local_3 == null))))
                 {
                     this._Str_3864.procedure = this._Str_25549;
@@ -194,9 +194,9 @@
             switch (k.type)
             {
                 case WindowMouseEvent.CLICK:
-                    if (this._habboCatalog._Str_26451 != null)
+                    if (this._habboCatalog.roomPreviewer != null)
                     {
-                        this._habboCatalog._Str_26451._Str_15499();
+                        this._habboCatalog.roomPreviewer._Str_15499();
                     }
                     return;
                 case WindowMouseEvent.UP:
@@ -321,7 +321,7 @@
             else
             {
                 _local_5 = new Point(0, 0);
-                _local_6 = this._habboCatalog._Str_26451;
+                _local_6 = this._habboCatalog.roomPreviewer;
                 switch (_local_3.pricingModel)
                 {
                     case Offer.PRICING_MODEL_BUNDLE:
@@ -755,7 +755,7 @@
             this._Str_17045 = k.stuffData;
             if (this._Str_10575 != null)
             {
-                _local_2 = (page.viewer.catalog as HabboCatalog)._Str_26451;
+                _local_2 = (page.viewer.catalog as HabboCatalog).roomPreviewer;
                 if (_local_2 != null)
                 {
                     _local_2.reset(false);
@@ -784,7 +784,7 @@
 
         override public function closed():void
         {
-            var k:RoomPreviewer = (page.viewer.catalog as HabboCatalog)._Str_26451;
+            var k:RoomPreviewer = (page.viewer.catalog as HabboCatalog).roomPreviewer;
             if (k)
             {
                 k.disableUpdate = true;

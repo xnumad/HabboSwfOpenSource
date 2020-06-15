@@ -436,7 +436,7 @@
             return this._soundManager;
         }
 
-        public function get _Str_26451():RoomPreviewer
+        public function get roomPreviewer():RoomPreviewer
         {
             if (this._roomPreviewer == null)
             {

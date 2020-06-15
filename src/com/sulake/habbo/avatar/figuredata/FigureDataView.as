@@ -22,7 +22,7 @@
         {
             this._model = k;
             this._widget = (k.avatarEditor.view._Str_25244().widget as IRoomPreviewerWidget);
-            this._roomPreviewer = this._widget._Str_26451;
+            this._roomPreviewer = this._widget.roomPreviewer;
             this._roomPreviewer.updateRoomWallsAndFloorVisibility(false, false);
         }
 

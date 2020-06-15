@@ -224,7 +224,7 @@
             this._roomPreviewer._Str_15499();
         }
 
-        public function get _Str_26451():RoomPreviewer
+        public function get roomPreviewer():RoomPreviewer
         {
             return this._roomPreviewer;
         }
