@@ -28,7 +28,7 @@
         private var _toolbarView:BottomBarLeft;
         private var _window:IWindowContainer;
         private var _meMenuIconLoader:MeMenuIconLoader;
-        private var _Str_3357:MeMenuSettingsMenuView;
+        private var _meMenuSettings:MeMenuSettingsMenuView;
         private var _unseenItemCounters:Map;
 
         public function MeMenuNewController(k:HabboToolbar, _arg_2:BottomBarLeft)
@@ -135,10 +135,10 @@
             else
             {
                 this._window.visible = false;
-                if (this._Str_3357 != null)
+                if (this._meMenuSettings != null)
                 {
-                    this._Str_3357.dispose();
-                    this._Str_3357 = null;
+                    this._meMenuSettings.dispose();
+                    this._meMenuSettings = null;
                 }
             }
         }
@@ -152,10 +152,10 @@
         public function toggleVisibility():void
         {
             var k:Boolean;
-            if (this._Str_3357 != null)
+            if (this._meMenuSettings != null)
             {
-                this._Str_3357.dispose();
-                this._Str_3357 = null;
+                this._meMenuSettings.dispose();
+                this._meMenuSettings = null;
             }
             this._window.visible = (!(this._window.visible));
             if (this._window.visible)
@@ -180,10 +180,10 @@
             {
                 return;
             }
-            if (this._Str_3357 != null)
+            if (this._meMenuSettings != null)
             {
-                this._Str_3357.dispose();
-                this._Str_3357 = null;
+                this._meMenuSettings.dispose();
+                this._meMenuSettings = null;
             }
             this._meMenuIconLoader.dispose();
             this._meMenuIconLoader = null;
