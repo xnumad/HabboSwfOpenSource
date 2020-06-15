@@ -40,7 +40,7 @@
             else
             {
                 _local_4 = this._model.avatarEditor.manager.avatarRenderManager.createAvatarImage(k, AvatarScaleType.LARGE, null, this);
-                this._widget._Str_9202(_local_4._Str_818(AvatarSetType.FULL));
+                this._widget.showPreview(_local_4._Str_818(AvatarSetType.FULL));
             }
         }
 
@@ -50,7 +50,7 @@
             if (k == this._figureString)
             {
                 _local_2 = this._model.avatarEditor.manager.avatarRenderManager.createAvatarImage(this._figureString, AvatarScaleType.LARGE, null, this);
-                this._widget._Str_9202(_local_2._Str_818(AvatarSetType.FULL));
+                this._widget.showPreview(_local_2._Str_818(AvatarSetType.FULL));
             }
         }
 

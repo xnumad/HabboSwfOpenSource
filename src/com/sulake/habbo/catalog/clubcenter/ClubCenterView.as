@@ -60,7 +60,7 @@
             if (_local_4)
             {
                 _local_4.setDirection(AvatarSetType.FULL, 4);
-                this._widget._Str_9202(_local_4._Str_818(AvatarSetType.FULL));
+                this._widget.showPreview(_local_4._Str_818(AvatarSetType.FULL));
             }
             this.container.procedure = this.onInput;
         }
@@ -161,7 +161,7 @@
             {
                 _local_2 = this._controller.avatarRenderManager.createAvatarImage(this._figure, AvatarScaleType.LARGE, null, this);
                 _local_2.setDirection(AvatarSetType.FULL, 4);
-                this._widget._Str_9202(_local_2._Str_818(AvatarSetType.FULL));
+                this._widget.showPreview(_local_2._Str_818(AvatarSetType.FULL));
             }
         }
 

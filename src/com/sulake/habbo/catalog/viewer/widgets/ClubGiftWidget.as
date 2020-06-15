@@ -373,7 +373,7 @@
             }
         }
 
-        private function _Str_9202(k:Offer, _arg_2:Rectangle):void
+        private function showPreview(k:Offer, _arg_2:Rectangle):void
         {
             var _local_5:ImageResult;
             if (((!(k)) || (!(k.productContainer))))

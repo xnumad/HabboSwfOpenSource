@@ -229,7 +229,7 @@
             return this._roomPreviewer;
         }
 
-        public function _Str_9202(k:BitmapData):void
+        public function showPreview(k:BitmapData):void
         {
             var _local_2:Bitmap = new Bitmap(k);
             _local_2.scaleX = 2;

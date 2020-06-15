@@ -9,7 +9,7 @@
         function get scale():int;
         function set scale(_arg_1:int):void;
         function get roomPreviewer():RoomPreviewer;
-        function _Str_9202(_arg_1:BitmapData):void;
+        function showPreview(_arg_1:BitmapData):void;
         function get offsetX():int;
         function set offsetX(_arg_1:int):void;
         function get offsetY():int;
