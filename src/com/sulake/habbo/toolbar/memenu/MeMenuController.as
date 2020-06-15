@@ -18,7 +18,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
 
-    public class MeMenuNewController implements IDisposable 
+    public class MeMenuController implements IDisposable
     {
         public static const USE_GUIDE_TOOL:String = "USE_GUIDE_TOOL";
 
@@ -30,7 +30,7 @@
         private var _settingsMenuView:MeMenuSettingsMenuView;
         private var _unseenItemCounters:Map;
 
-        public function MeMenuNewController(k:HabboToolbar, _arg_2:ToolbarView)
+        public function MeMenuController(k:HabboToolbar, _arg_2:ToolbarView)
         {
             this._unseenItemCounters = new Map();
             this._habboToolbar = k;

@@ -8,7 +8,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.toolbar.memenu.MeMenuNewController;
+    import com.sulake.habbo.toolbar.memenu.MeMenuController;
 
     public class MeMenuSoundSettingsView 
     {
@@ -180,7 +180,7 @@
             return this._window.findChildByName("trax_volume_container") as IWindowContainer;
         }
 
-        public function get widget():MeMenuNewController
+        public function get widget():MeMenuController
         {
             return this._widget.widget;
         }

@@ -13,14 +13,14 @@
 
     public class MeMenuSettingsMenuView 
     {
-        private var _widget:MeMenuNewController;
+        private var _widget:MeMenuController;
         private var _window:IWindowContainer;
         private var _toolbarView:ToolbarView;
         private var _meMenuSoundSettings:MeMenuSoundSettingsView;
         private var _memenuChatSettings:MeMenuChatSettingsView;
 
 
-        public function init(k:MeMenuNewController, _arg_2:ToolbarView):void
+        public function init(k:MeMenuController, _arg_2:ToolbarView):void
         {
             this._toolbarView = _arg_2;
             this._widget = k;
@@ -108,7 +108,7 @@
         {
         }
 
-        public function get widget():MeMenuNewController
+        public function get widget():MeMenuController
         {
             return this._widget;
         }

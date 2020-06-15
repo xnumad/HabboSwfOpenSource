@@ -9,7 +9,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.session.ISessionDataManager;
     import flash.display.BitmapData;
-    import com.sulake.habbo.toolbar.memenu.MeMenuNewController;
+    import com.sulake.habbo.toolbar.memenu.MeMenuController;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.utils.IBitmapDataContainer;
     import com.sulake.core.assets.XmlAsset;
@@ -67,7 +67,7 @@
         private var _meMenuHoverBitmap:BitmapData;
         private var _unseenMiniMailMessageCount:int;
         private var _unseenAchievementCount:int;
-        private var _memenu:MeMenuNewController;
+        private var _memenu:MeMenuController;
 
         public function ToolbarView(toolbar:HabboToolbar, windowManager:IHabboWindowManager, assetLibrary:IAssetLibrary, eventDispatcher:IEventDispatcher, sessionDataManager:ISessionDataManager)
         {
@@ -80,7 +80,7 @@
             this._assets = assetLibrary;
             this._events = eventDispatcher;
             this._sessionDataManager = sessionDataManager;
-            this._memenu = new MeMenuNewController(this._toolbar, this);
+            this._memenu = new MeMenuController(this._toolbar, this);
             this._memenu._Str_22759 = true;
             this._unseenItemCounters = new Map();
             var _local_6:XmlAsset = (assetLibrary.getAssetByName("toolbar_view_xml") as XmlAsset);
@@ -696,7 +696,7 @@
             this._unseenMiniMailMessageCount = k;
         }
 
-        public function get memenu():MeMenuNewController
+        public function get memenu():MeMenuController
         {
             return this._memenu;
         }
