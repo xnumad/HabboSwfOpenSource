@@ -29,11 +29,11 @@
         private var _window:IWindowContainer;
         private var _meMenuIconLoader:MeMenuIconLoader;
         private var _Str_3357:MeMenuSettingsMenuView;
-        private var _Str_3359:Map;
+        private var _unseenItemCounters:Map;
 
         public function MeMenuNewController(k:HabboToolbar, _arg_2:BottomBarLeft)
         {
-            this._Str_3359 = new Map();
+            this._unseenItemCounters = new Map();
             this._habboToolbar = k;
             this._toolbarView = _arg_2;
             this._habboToolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
@@ -245,7 +245,7 @@
             {
                 Logger.log(("[Toolbar] Unknown icon type for unseen item counter for iconId: " + k));
             }
-            var _local_3:IWindowContainer = (this._Str_3359.getValue(k) as IWindowContainer);
+            var _local_3:IWindowContainer = (this._unseenItemCounters.getValue(k) as IWindowContainer);
             if (!_local_3)
             {
                 _local_3 = this._habboToolbar.windowManager.createUnseenItemCounter();
@@ -255,7 +255,7 @@
                     _local_4.addChild(_local_3);
                     _local_3.x = ((_local_4.width - _local_3.width) - 5);
                     _local_3.y = 5;
-                    this._Str_3359.add(k, _local_3);
+                    this._unseenItemCounters.add(k, _local_3);
                 }
             }
             return _local_3;
