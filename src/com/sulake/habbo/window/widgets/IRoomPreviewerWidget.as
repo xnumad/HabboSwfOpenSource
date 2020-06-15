@@ -4,7 +4,7 @@
     import com.sulake.habbo.room.preview.RoomPreviewer;
     import flash.display.BitmapData;
 
-    public interface _Str_4709 extends IWidget 
+    public interface IRoomPreviewerWidget extends IWidget
     {
         function get scale():int;
         function set scale(_arg_1:int):void;

@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.avatar.IAvatarImageListener;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.window.widgets._Str_4709;
+    import com.sulake.habbo.window.widgets.IRoomPreviewerWidget;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
@@ -24,7 +24,7 @@
     {
         private var _controller:HabboClubCenter;
         private var _window:IWindowContainer;
-        private var _widget:_Str_4709;
+        private var _widget:IRoomPreviewerWidget;
         private var _figure:String;
 
         public function ClubCenterView(k:HabboClubCenter, _arg_2:IHabboWindowManager, _arg_3:String)
@@ -55,7 +55,7 @@
             this._window.center();
             this._window.addEventListener(WindowEvent.WINDOW_EVENT_RELOCATE, this._Str_19257);
             this._figure = _arg_3;
-            this._widget = (IWidgetWindow(this._window.findChildByName("avatar")).widget as _Str_4709);
+            this._widget = (IWidgetWindow(this._window.findChildByName("avatar")).widget as IRoomPreviewerWidget);
             var _local_4:IAvatarImage = this._controller.avatarRenderManager.createAvatarImage(_arg_3, AvatarScaleType.LARGE, null, this);
             if (_local_4)
             {

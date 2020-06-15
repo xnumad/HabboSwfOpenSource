@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.avatar.figuredata
 {
     import com.sulake.habbo.avatar.IAvatarImageListener;
-    import com.sulake.habbo.window.widgets._Str_4709;
+    import com.sulake.habbo.window.widgets.IRoomPreviewerWidget;
     import com.sulake.habbo.room.preview.RoomPreviewer;
     import com.sulake.habbo.avatar.IAvatarImage;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
@@ -12,7 +12,7 @@
     {
         public static const _Str_9887:int = 4;
 
-        private var _widget:_Str_4709;
+        private var _widget:IRoomPreviewerWidget;
         private var _roomPreviewer:RoomPreviewer;
         private var _model:FigureData;
         private var _figureString:String;
@@ -21,7 +21,7 @@
         public function FigureDataView(k:FigureData)
         {
             this._model = k;
-            this._widget = (k.avatarEditor.view._Str_25244().widget as _Str_4709);
+            this._widget = (k.avatarEditor.view._Str_25244().widget as IRoomPreviewerWidget);
             this._roomPreviewer = this._widget._Str_26451;
             this._roomPreviewer.updateRoomWallsAndFloorVisibility(false, false);
         }

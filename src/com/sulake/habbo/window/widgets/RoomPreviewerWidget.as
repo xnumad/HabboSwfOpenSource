@@ -16,7 +16,7 @@
     import flash.display.Bitmap;
     import flash.display.BitmapData;
 
-    public class RoomPreviewerWidget implements _Str_4709 
+    public class RoomPreviewerWidget implements IRoomPreviewerWidget
     {
         public static const ROOM_PREVIEWER:String = "room_previewer";
         private static const ROOM_PREVIEWER_SCALE:String = (ROOM_PREVIEWER + ":scale");

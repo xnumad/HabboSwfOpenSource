@@ -30,7 +30,7 @@
     import com.sulake.core.window.components.IDropMenuWindow;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import com.sulake.core.window.components.IItemGridWindow;
-    import com.sulake.habbo.window.widgets._Str_4709;
+    import com.sulake.habbo.window.widgets.IRoomPreviewerWidget;
     import com.sulake.core.window.components.IInteractiveWindow;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.core.window.events.WindowKeyboardEvent;
@@ -495,7 +495,7 @@
             this._offerInTradingCountButton = (this._buttonList.removeListItem(this._buttonList.getListItemByName("offertotrade_cnt")) as ITextFieldWindow);
             this._offerInTradingButton = (this._buttonList.removeListItem(this._buttonList.getListItemByName("offertotrade_btn")) as IButtonWindow);
             this._sellInMarketplaceButton = (this._buttonList.removeListItem(this._buttonList.getListItemByName("sell_btn")) as IButtonWindow);
-            var _local_3:_Str_4709 = ((this._view.findChildByName("furni_preview_widget") as IWidgetWindow).widget as _Str_4709);
+            var _local_3:IRoomPreviewerWidget = ((this._view.findChildByName("furni_preview_widget") as IWidgetWindow).widget as IRoomPreviewerWidget);
             this._roomPreviewer = _local_3._Str_26451;
             this._model.controller.registerUpdateReceiver(this, 1);
             this._Str_7636();
@@ -505,7 +505,7 @@
         private function _Str_24626():void
         {
             var k:IWidgetWindow = (this._view.findChildByName("furni_preview_widget") as IWidgetWindow);
-            var _local_2:_Str_4709 = ((this._view.findChildByName("furni_preview_widget") as IWidgetWindow).widget as _Str_4709);
+            var _local_2:IRoomPreviewerWidget = ((this._view.findChildByName("furni_preview_widget") as IWidgetWindow).widget as IRoomPreviewerWidget);
             _local_2._Str_26451.modifyRoomCanvas(k.width, k.height);
         }
 
