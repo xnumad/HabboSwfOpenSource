@@ -464,7 +464,7 @@
                 return;
             }
             var _local_4:Tab = this._navigator.tabs.getTab(_local_3);
-            _local_4._Str_25329();
+            _local_4.sendSearchRequest();
             switch (_local_4.id)
             {
                 case Tabs.TAB_EVENTS:

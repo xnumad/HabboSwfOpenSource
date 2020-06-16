@@ -23,7 +23,7 @@
             this._searchMsg = _arg_5;
         }
 
-        public function _Str_25329():void
+        public function sendSearchRequest():void
         {
             var k:Boolean = this._navigator.context.configuration.getBoolean("navigator.2014.personalized.navigator");
             if (((k) && (this.id == Tabs.TAB_ROOMS)))
