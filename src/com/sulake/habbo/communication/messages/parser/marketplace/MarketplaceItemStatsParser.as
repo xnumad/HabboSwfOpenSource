@@ -7,7 +7,7 @@
     {
         private var _averagePrice:int;
         private var _currentOfferCount:int;
-        private var _Str_10803:int;
+        private var _historyLength:int;
         private var _Str_8270:Array;
         private var _Str_9670:Array;
         private var _Str_8961:Array;
@@ -27,7 +27,7 @@
 
         public function get _Str_10461():int
         {
-            return this._Str_10803;
+            return this._historyLength;
         }
 
         public function get _Str_9174():Array
@@ -64,7 +64,7 @@
         {
             this._averagePrice = k.readInteger();
             this._currentOfferCount = k.readInteger();
-            this._Str_10803 = k.readInteger();
+            this._historyLength = k.readInteger();
             var _local_2:int = k.readInteger();
             this._Str_8270 = [];
             this._Str_9670 = [];
