@@ -12,7 +12,7 @@
     {
         public static const FURNITYPE_STUFF:int = 1;
         public static const FURNITYPE_WALL:int = 2;
-        public static const _Str_14245:int = 3;
+        public static const FAKE_FURNITYPE_UNIQUE:int = 3;
 
         private const MAX_LIST_LENGTH:int = 500;
 
@@ -62,7 +62,7 @@
                     }
                     else
                     {
-                        if (_local_4 == _Str_14245)
+                        if (_local_4 == FAKE_FURNITYPE_UNIQUE)
                         {
                             _local_5 = k.readInteger();
                             _local_7 = StuffDataFactory.getStuffDataWrapperForType(LegacyStuffData.FORMAT_KEY);

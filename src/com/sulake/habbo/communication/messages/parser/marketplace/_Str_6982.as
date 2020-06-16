@@ -57,7 +57,7 @@
                     }
                     else
                     {
-                        if (_local_4 == _Str_4738._Str_14245)
+                        if (_local_4 == _Str_4738.FAKE_FURNITYPE_UNIQUE)
                         {
                             _local_5 = k.readInteger();
                             _local_7 = StuffDataFactory.getStuffDataWrapperForType(LegacyStuffData.FORMAT_KEY);
