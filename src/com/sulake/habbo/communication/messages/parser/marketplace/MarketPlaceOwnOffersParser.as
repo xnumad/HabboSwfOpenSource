@@ -13,7 +13,7 @@
         private const MAX_LIST_LENGTH:int = 500;
 
         private var _offers:Array;
-        private var _Str_11581:int;
+        private var _creditsWaiting:int;
 
 
         public function flush():Boolean
@@ -35,7 +35,7 @@
             var _local_13:_Str_4192;
             this._offers = new Array();
             var _local_6:String = "";
-            this._Str_11581 = k.readInteger();
+            this._creditsWaiting = k.readInteger();
             var _local_11:int = k.readInteger();
             var _local_12:int;
             while (_local_12 < _local_11)
@@ -87,7 +87,7 @@
 
         public function get creditsWaiting():int
         {
-            return this._Str_11581;
+            return this._creditsWaiting;
         }
     }
 }
