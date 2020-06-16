@@ -130,9 +130,9 @@
         {
         }
 
-        public function get _Str_6414():TextSearchInputs
+        public function get searchInput():TextSearchInputs
         {
-            return this._oldNavigator.mainViewCtrl._Str_6414;
+            return this._oldNavigator.mainViewCtrl.searchInput;
         }
 
         public function openAtPosition(k:Point):void

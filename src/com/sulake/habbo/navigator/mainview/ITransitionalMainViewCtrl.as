@@ -17,7 +17,7 @@
         function _Str_8316(_arg_1:int):Boolean;
         function _Str_2798(_arg_1:int, _arg_2:int, _arg_3:String="-1", _arg_4:int=1):void;
         function update(_arg_1:uint):void;
-        function get _Str_6414():TextSearchInputs;
+        function get searchInput():TextSearchInputs;
         function openAtPosition(_arg_1:Point):void;
         function get isPhaseOneNavigator():Boolean;
     }

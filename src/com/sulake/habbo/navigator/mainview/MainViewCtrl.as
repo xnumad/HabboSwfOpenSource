@@ -559,11 +559,11 @@
             this._navigator.data._Str_4079 = null;
             if (this._phaseOneNavigator)
             {
-                if (((!(this._Str_6414 == null)) && (!(_arg_3 == "-1"))))
+                if (((!(this.searchInput == null)) && (!(_arg_3 == "-1"))))
                 {
                     if (_arg_2 != Tabs.SEARCHTYPE_POPULAR_ROOMS)
                     {
-                        this._Str_6414.setText(_arg_3, _arg_2);
+                        this.searchInput.setText(_arg_3, _arg_2);
                     }
                 }
             }
@@ -739,7 +739,7 @@
             }
         }
 
-        public function get _Str_6414():TextSearchInputs
+        public function get searchInput():TextSearchInputs
         {
             return this._searchInput;
         }

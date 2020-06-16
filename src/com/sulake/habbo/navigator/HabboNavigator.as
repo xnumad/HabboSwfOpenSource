@@ -627,7 +627,7 @@
             this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
             this.trackNavigationDataPoint("Search", "search", k);
             this._mainViewCtrl.mainWindow.activate();
-            this._mainViewCtrl._Str_6414._Str_17634.setText(k);
+            this._mainViewCtrl.searchInput._Str_17634.setText(k);
         }
 
         public function performCompetitionRoomsSearch(k:int, _arg_2:int):void
@@ -639,7 +639,7 @@
             this._data._Str_4079 = new _Str_4374(null, k, _arg_2);
             this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_COMPETITION_ROOMS, "");
             this._mainViewCtrl.mainWindow.activate();
-            this._mainViewCtrl._Str_6414._Str_17634.setText("");
+            this._mainViewCtrl.searchInput._Str_17634.setText("");
         }
 
         public function performGuildBaseSearch():void
@@ -650,7 +650,7 @@
             }
             this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_GUILD_BASES, "");
             this._mainViewCtrl.mainWindow.activate();
-            this._mainViewCtrl._Str_6414._Str_17634.setText("");
+            this._mainViewCtrl.searchInput._Str_17634.setText("");
         }
 
         public function showOwnRooms():void
