@@ -208,7 +208,7 @@
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerStatusMessageParser;
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser;
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerPrizesMessageParser;
-    import com.sulake.habbo.communication.messages.parser.marketplace._Str_6774;
+    import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceItemStatsParser;
     import com.sulake.habbo.catalog.marketplace.MarketplaceItemStats;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceConfigurationMessageParser;
     import com.sulake.habbo.communication.messages.parser.marketplace._Str_6596;
@@ -2190,7 +2190,7 @@
             {
                 return;
             }
-            var _local_2:_Str_6774 = k.getParser();
+            var _local_2:MarketplaceItemStatsParser = k.getParser();
             if (!_local_2)
             {
                 return;

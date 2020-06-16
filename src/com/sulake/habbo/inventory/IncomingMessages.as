@@ -107,7 +107,7 @@
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceConfigurationMessageParser;
     import com.sulake.habbo.communication.messages.parser.marketplace._Str_7065;
     import com.sulake.habbo.communication.messages.parser.marketplace._Str_6596;
-    import com.sulake.habbo.communication.messages.parser.marketplace._Str_6774;
+    import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceItemStatsParser;
     import __AS3__.vec.*;
 
     public class IncomingMessages 
@@ -930,7 +930,7 @@
             {
                 return;
             }
-            var _local_3:_Str_6774 = k.getParser();
+            var _local_3:MarketplaceItemStatsParser = k.getParser();
             _local_2._Str_22836(_local_3._Str_9431, _local_3._Str_8798, _local_3._Str_3925);
         }
 
