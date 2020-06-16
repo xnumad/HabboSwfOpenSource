@@ -6,7 +6,7 @@
     public class MarketplaceItemStatsParser implements IMessageParser
     {
         private var _averagePrice:int;
-        private var _Str_10039:int;
+        private var _currentOfferCount:int;
         private var _Str_10803:int;
         private var _Str_8270:Array;
         private var _Str_9670:Array;
@@ -22,7 +22,7 @@
 
         public function get _Str_4121():int
         {
-            return this._Str_10039;
+            return this._currentOfferCount;
         }
 
         public function get _Str_10461():int
@@ -63,7 +63,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._averagePrice = k.readInteger();
-            this._Str_10039 = k.readInteger();
+            this._currentOfferCount = k.readInteger();
             this._Str_10803 = k.readInteger();
             var _local_2:int = k.readInteger();
             this._Str_8270 = [];
