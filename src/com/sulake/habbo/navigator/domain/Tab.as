@@ -58,7 +58,7 @@
             return this._tabPageDecorator;
         }
 
-        public function get _Str_26289():int
+        public function get searchMsg():int
         {
             return this._searchMsg;
         }
