@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.room.IStuffData;
 
-    public class _Str_4192 
+    public class MarketPlaceOffer
     {
         private var _Str_2507:int;
         private var _furniId:int;
@@ -15,7 +15,7 @@
         private var _Str_5049:int;
         private var _Str_4620:int;
 
-        public function _Str_4192(k:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:IStuffData, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:int, _arg_10:int=-1)
+        public function MarketPlaceOffer(k:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:IStuffData, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:int, _arg_10:int=-1)
         {
             this._Str_2507 = k;
             this._furniId = _arg_2;

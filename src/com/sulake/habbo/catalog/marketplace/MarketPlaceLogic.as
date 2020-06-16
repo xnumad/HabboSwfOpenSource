@@ -6,7 +6,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_4192;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffer;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketPlaceOffersParser;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -247,7 +247,7 @@
 
         public function onOffers(k:IMessageEvent):void
         {
-            var _local_4:_Str_4192;
+            var _local_4:MarketPlaceOffer;
             var _local_5:MarketPlaceOfferData;
             var _local_2:MarketPlaceOffersEvent = (k as MarketPlaceOffersEvent);
             if (_local_2 == null)
@@ -276,7 +276,7 @@
 
         public function onOwnOffers(k:IMessageEvent):void
         {
-            var _local_4:_Str_4192;
+            var _local_4:MarketPlaceOffer;
             var _local_5:MarketPlaceOfferData;
             var _local_2:MarketPlaceOwnOffersEvent = (k as MarketPlaceOwnOffersEvent);
             if (_local_2 == null)

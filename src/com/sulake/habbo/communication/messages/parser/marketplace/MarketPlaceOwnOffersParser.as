@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.habbo.room.IStuffData;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_4192;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffer;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectDataParser;
     import com.sulake.habbo.room.object.data.StuffDataFactory;
     import com.sulake.habbo.room.object.data.LegacyStuffData;
@@ -32,7 +32,7 @@
             var _local_8:int;
             var _local_9:int;
             var _local_10:int;
-            var _local_13:_Str_4192;
+            var _local_13:MarketPlaceOffer;
             this._offers = new Array();
             var _local_6:String = "";
             this._creditsWaiting = k.readInteger();
@@ -70,7 +70,7 @@
                 _local_8 = k.readInteger();
                 _local_9 = k.readInteger();
                 _local_10 = k.readInteger();
-                _local_13 = new _Str_4192(_local_2, _local_5, _local_4, _local_6, _local_7, _local_8, _local_3, _local_9, _local_10);
+                _local_13 = new MarketPlaceOffer(_local_2, _local_5, _local_4, _local_6, _local_7, _local_8, _local_3, _local_9, _local_10);
                 if (_local_12 < this.MAX_LIST_LENGTH)
                 {
                     this._offers.push(_local_13);
