@@ -35,7 +35,7 @@
             return this._Str_8270;
         }
 
-        public function get _Str_11365():Array
+        public function get averagePrices():Array
         {
             return this._Str_9670;
         }

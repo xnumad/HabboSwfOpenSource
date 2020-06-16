@@ -32,7 +32,7 @@
             return this._dayOffsets;
         }
 
-        public function get _Str_11365():Array
+        public function get averagePrices():Array
         {
             return this._averagePrices;
         }
@@ -72,7 +72,7 @@
             this._dayOffsets = k.slice();
         }
 
-        public function set _Str_11365(k:Array):void
+        public function set averagePrices(k:Array):void
         {
             this._averagePrices = k.slice();
         }
