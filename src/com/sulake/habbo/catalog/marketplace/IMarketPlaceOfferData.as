@@ -11,7 +11,7 @@
         function get extraData():String;
         function get stuffData():IStuffData;
         function get price():int;
-        function get _Str_3925():int;
+        function get averagePrice():int;
         function get image():BitmapData;
         function set image(_arg_1:BitmapData):void;
         function set _Str_4774(_arg_1:int):void;

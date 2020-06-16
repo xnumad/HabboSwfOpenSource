@@ -69,7 +69,7 @@
             return this._Str_12399;
         }
 
-        public function get _Str_3925():int
+        public function get averagePrice():int
         {
             return this._Str_5049;
         }

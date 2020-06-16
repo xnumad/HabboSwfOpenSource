@@ -107,7 +107,7 @@
                 {
                     _local_4 = _local_5.raw;
                     _local_4 = _local_4.replace("%days%", this._marketplace._Str_5014.toString());
-                    _local_6 = ((this._offer._Str_3925 == 0) ? " - " : this._offer._Str_3925.toString());
+                    _local_6 = ((this._offer.averagePrice == 0) ? " - " : this._offer.averagePrice.toString());
                     _local_4 = _local_4.replace("%average%", _local_6);
                     _local_3.text = _local_4;
                 }

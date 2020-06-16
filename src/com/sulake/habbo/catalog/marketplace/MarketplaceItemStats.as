@@ -12,7 +12,7 @@
         private var _furniCategoryId:int;
 
 
-        public function get _Str_3925():int
+        public function get averagePrice():int
         {
             return this._averagePrice;
         }
@@ -52,7 +52,7 @@
             return this._furniCategoryId;
         }
 
-        public function set _Str_3925(k:int):void
+        public function set averagePrice(k:int):void
         {
             this._averagePrice = k;
         }

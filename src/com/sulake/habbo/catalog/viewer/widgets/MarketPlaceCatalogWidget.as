@@ -415,7 +415,7 @@
             {
                 _local_7 = this.marketPlace.localization.getLocalization("catalog.marketplace.offer.price_public_item");
                 _local_7 = _local_7.replace("%price%", k.price);
-                _local_7 = _local_7.replace("%average%", ((k._Str_3925 != 0) ? k._Str_3925.toString() : " - "));
+                _local_7 = _local_7.replace("%average%", ((k.averagePrice != 0) ? k.averagePrice.toString() : " - "));
                 _local_5.caption = _local_7;
             }
             var _local_6:IWindow = _local_2.findChildByName("offer_count");
@@ -616,7 +616,7 @@
             }
             _local_2.registerParameter("catalog.marketplace.offer_details.price", "price", k.price.toString());
             _local_2.registerParameter("catalog.marketplace.offer_details.average_price", "days", this.marketPlace._Str_5014.toString());
-            var _local_5:String = ((k._Str_3925 == 0) ? " - " : k._Str_3925.toString());
+            var _local_5:String = ((k.averagePrice == 0) ? " - " : k.averagePrice.toString());
             _local_2.registerParameter("catalog.marketplace.offer_details.average_price", "average", _local_5);
             if (k.image == null)
             {
