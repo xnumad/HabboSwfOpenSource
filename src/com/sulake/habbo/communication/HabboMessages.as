@@ -104,7 +104,7 @@
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7169;
-	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7697;
+	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10594;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10650;
@@ -1420,7 +1420,7 @@
             INCOMING_PACKETS[66] = AchievementResolutionsMessageEvent;
             INCOMING_PACKETS[662] = PollErrorEvent;
             INCOMING_PACKETS[673] = GuideSessionErrorEvent;
-            INCOMING_PACKETS[680] = _Str_7697;
+            INCOMING_PACKETS[680] = MarketPlaceOffersEvent;
             INCOMING_PACKETS[687] = GetGuestRoomResultEvent;
             INCOMING_PACKETS[69] = BotSkillListUpdateEvent;
             INCOMING_PACKETS[714] = _Str_8418;

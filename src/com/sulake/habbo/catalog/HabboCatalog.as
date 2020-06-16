@@ -97,7 +97,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7288;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPagesListEvent;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7697;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
@@ -559,7 +559,7 @@
             this.addMessageEvent(new PurchaseErrorMessageEvent(this.onPurchaseError));
             this.addMessageEvent(new _Str_7288(this.onBundleDiscountRulesetMessageEvent));
             this.addMessageEvent(new CatalogPagesListEvent(this._Str_25188));
-            this.addMessageEvent(new _Str_7697(this._Str_25346));
+            this.addMessageEvent(new MarketPlaceOffersEvent(this._Str_25346));
             this.addMessageEvent(new _Str_8504(this._Str_11267));
             this.addMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
