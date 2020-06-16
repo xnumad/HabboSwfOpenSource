@@ -8,7 +8,7 @@
     import com.sulake.habbo.room.object.data.LegacyStuffData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6982 implements IMessageParser 
+    public class MarketPlaceOwnOffersParser implements IMessageParser
     {
         private const MAX_LIST_LENGTH:int = 500;
 

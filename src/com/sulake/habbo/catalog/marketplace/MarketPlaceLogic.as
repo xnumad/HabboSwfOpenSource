@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketPlaceOffersParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7169;
-    import com.sulake.habbo.communication.messages.parser.marketplace._Str_6982;
+    import com.sulake.habbo.communication.messages.parser.marketplace.MarketPlaceOwnOffersParser;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
     import com.sulake.habbo.communication.messages.parser.marketplace._Str_6144;
     import com.sulake.habbo.window.utils.IAlertDialog;
@@ -283,7 +283,7 @@
             {
                 return;
             }
-            var _local_3:_Str_6982 = (_local_2.getParser() as _Str_6982);
+            var _local_3:MarketPlaceOwnOffersParser = (_local_2.getParser() as MarketPlaceOwnOffersParser);
             if (_local_3 == null)
             {
                 return;
