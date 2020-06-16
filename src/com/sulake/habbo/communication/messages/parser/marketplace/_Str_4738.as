@@ -10,7 +10,7 @@
 
     public class _Str_4738 implements IMessageParser 
     {
-        public static const _Str_8964:int = 1;
+        public static const FURNITYPE_STUFF:int = 1;
         public static const _Str_13000:int = 2;
         public static const _Str_14245:int = 3;
 
@@ -48,7 +48,7 @@
                 _local_2 = k.readInteger();
                 _local_3 = k.readInteger();
                 _local_4 = k.readInteger();
-                if (_local_4 == _Str_8964)
+                if (_local_4 == FURNITYPE_STUFF)
                 {
                     _local_5 = k.readInteger();
                     _local_7 = ObjectDataParser.parseStuffData(k);
@@ -68,7 +68,7 @@
                             _local_7 = StuffDataFactory.getStuffDataWrapperForType(LegacyStuffData.FORMAT_KEY);
                             _local_7.uniqueSerialNumber = k.readInteger();
                             _local_7.uniqueSeriesSize = k.readInteger();
-                            _local_4 = _Str_8964;
+                            _local_4 = FURNITYPE_STUFF;
                         }
                     }
                 }

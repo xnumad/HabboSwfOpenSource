@@ -43,7 +43,7 @@
                 _local_2 = k.readInteger();
                 _local_3 = k.readInteger();
                 _local_4 = k.readInteger();
-                if (_local_4 == _Str_4738._Str_8964)
+                if (_local_4 == _Str_4738.FURNITYPE_STUFF)
                 {
                     _local_5 = k.readInteger();
                     _local_7 = ObjectDataParser.parseStuffData(k);
@@ -63,7 +63,7 @@
                             _local_7 = StuffDataFactory.getStuffDataWrapperForType(LegacyStuffData.FORMAT_KEY);
                             _local_7.uniqueSerialNumber = k.readInteger();
                             _local_7.uniqueSeriesSize = k.readInteger();
-                            _local_4 = _Str_4738._Str_8964;
+                            _local_4 = _Str_4738.FURNITYPE_STUFF;
                         }
                     }
                 }
