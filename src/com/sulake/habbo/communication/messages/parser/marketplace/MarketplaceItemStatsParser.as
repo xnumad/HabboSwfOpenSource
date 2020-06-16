@@ -10,7 +10,7 @@
         private var _historyLength:int;
         private var _dayOffsets:Array;
         private var _averagePrices:Array;
-        private var _Str_8961:Array;
+        private var _soldAmounts:Array;
         private var _Str_10894:int;
         private var _Str_10644:int;
 
@@ -42,7 +42,7 @@
 
         public function get _Str_11956():Array
         {
-            return this._Str_8961;
+            return this._soldAmounts;
         }
 
         public function get _Str_8798():int
@@ -68,13 +68,13 @@
             var _local_2:int = k.readInteger();
             this._dayOffsets = [];
             this._averagePrices = [];
-            this._Str_8961 = [];
+            this._soldAmounts = [];
             var _local_3:int;
             while (_local_3 < _local_2)
             {
                 this._dayOffsets.push(k.readInteger());
                 this._averagePrices.push(k.readInteger());
-                this._Str_8961.push(k.readInteger());
+                this._soldAmounts.push(k.readInteger());
                 _local_3++;
             }
             this._Str_10644 = k.readInteger();
