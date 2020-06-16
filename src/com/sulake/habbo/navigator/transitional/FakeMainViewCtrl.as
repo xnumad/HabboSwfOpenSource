@@ -140,9 +140,9 @@
             return this._newNavigator.open();
         }
 
-        public function get _Str_13071():Boolean
+        public function get isPhaseOneNavigator():Boolean
         {
-            return this._oldNavigator.mainViewCtrl._Str_13071;
+            return this._oldNavigator.mainViewCtrl.isPhaseOneNavigator;
         }
     }
 }

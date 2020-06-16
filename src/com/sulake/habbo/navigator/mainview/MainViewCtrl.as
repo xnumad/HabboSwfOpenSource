@@ -760,7 +760,7 @@
             }
         }
 
-        public function get _Str_13071():Boolean
+        public function get isPhaseOneNavigator():Boolean
         {
             return this._phaseOneNavigator;
         }

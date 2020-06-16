@@ -824,7 +824,7 @@
         {
             if (!this._sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_PHASE_TWO_2014))
             {
-                if (((this._mainViewCtrl) && (!(this._mainViewCtrl._Str_13071 == this.isPerkAllowed("NAVIGATOR_PHASE_ONE_2014")))))
+                if (((this._mainViewCtrl) && (!(this._mainViewCtrl.isPhaseOneNavigator == this.isPerkAllowed("NAVIGATOR_PHASE_ONE_2014")))))
                 {
                     this._mainViewCtrl.close();
                 }

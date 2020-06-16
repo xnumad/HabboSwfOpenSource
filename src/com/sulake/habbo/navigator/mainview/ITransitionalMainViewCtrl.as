@@ -19,6 +19,6 @@
         function update(_arg_1:uint):void;
         function get _Str_6414():TextSearchInputs;
         function _Str_20903(_arg_1:Point):void;
-        function get _Str_13071():Boolean;
+        function get isPhaseOneNavigator():Boolean;
     }
 }
