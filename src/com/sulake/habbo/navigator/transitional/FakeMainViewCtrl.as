@@ -60,7 +60,7 @@
             this._newNavigator.refresh();
         }
 
-        public function _Str_8316(k:int):Boolean
+        public function reloadRoomList(k:int):Boolean
         {
             this._newNavigator.refresh();
             return true;

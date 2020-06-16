@@ -489,7 +489,7 @@
             }
         }
 
-        public function _Str_8316(k:int):Boolean
+        public function reloadRoomList(k:int):Boolean
         {
             ErrorReportStorage.addDebugData("MainViewCtrl", "Reloading RoomList");
             if ((((this.isOpen()) && (!(this._navigator.data.guestRoomSearchResults == null))) && (this._navigator.data.guestRoomSearchResults.searchType == k)))
