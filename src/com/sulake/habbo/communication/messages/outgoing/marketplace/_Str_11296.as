@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_307
+﻿package com.sulake.habbo.communication.messages.outgoing.marketplace
 {
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;

@@ -5,7 +5,7 @@
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
-    import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7525;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_4192;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketPlaceOffersParser;

@@ -1,18 +1,17 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_307
+﻿package com.sulake.habbo.communication.messages.outgoing.marketplace
 {
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class GetMarketplaceItemStatsComposer implements IMessageComposer, IDisposable
+    public class _Str_11685 implements IMessageComposer, IDisposable 
     {
         private var _array:Array;
 
-        public function GetMarketplaceItemStatsComposer(k:int, _arg_2:int)
+        public function _Str_11685(k:int)
         {
             this._array = new Array();
             super();
             this._array.push(k);
-            this._array.push(_arg_2);
         }
 
         public function getMessageArray():Array

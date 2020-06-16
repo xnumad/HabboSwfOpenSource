@@ -10,11 +10,11 @@
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import com.sulake.habbo.inventory.furni.FurniModel;
-    import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_11938;
-    import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_9793;
-    import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7610;
-    import com.sulake.habbo.communication.messages.outgoing._Str_307.GetMarketplaceItemStatsComposer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7525;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11938;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_9793;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7610;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.communication.messages.IMessageComposer;

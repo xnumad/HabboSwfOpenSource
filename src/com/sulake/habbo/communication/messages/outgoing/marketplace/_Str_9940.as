@@ -1,13 +1,13 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_307
+﻿package com.sulake.habbo.communication.messages.outgoing.marketplace
 {
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_12361 implements IMessageComposer, IDisposable 
+    public class _Str_9940 implements IMessageComposer, IDisposable 
     {
         private var _array:Array;
 
-        public function _Str_12361()
+        public function _Str_9940()
         {
             this._array = new Array();
             super();
