@@ -1101,7 +1101,7 @@
             if (this._navigator.data.guestRoomSearchResults != null)
             {
                 k = this._navigator.data.guestRoomSearchResults;
-                this._navigator.mainViewCtrl._Str_2798(this._navigator.tabs.getSelected().id, k.searchType, k._Str_25185);
+                this._navigator.mainViewCtrl.startSearch(this._navigator.tabs.getSelected().id, k.searchType, k._Str_25185);
             }
         }
 

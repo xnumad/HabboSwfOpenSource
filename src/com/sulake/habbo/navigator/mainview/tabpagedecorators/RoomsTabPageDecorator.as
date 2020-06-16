@@ -75,15 +75,15 @@
 
         public function _Str_8146():void
         {
-            this._Str_2798();
+            this.startSearch();
         }
 
         private function _Str_5118(k:WindowEvent):void
         {
-            this._Str_2798();
+            this.startSearch();
         }
 
-        private function _Str_2798():void
+        private function startSearch():void
         {
             var _local_2:int;
             var _local_3:FlatCategory;
@@ -92,19 +92,19 @@
             Logger.log(("Room filter changed: " + k));
             if (k == 0)
             {
-                this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_POPULAR_ROOMS);
+                this._navigator.mainViewCtrl.startSearch(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_POPULAR_ROOMS);
             }
             else
             {
                 if (k == 1)
                 {
-                    this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE);
+                    this._navigator.mainViewCtrl.startSearch(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE);
                 }
                 else
                 {
                     if (((k == 2) && (this._personalizedRoomsEnabled)))
                     {
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_RECOMMENDED_ROOMS);
+                        this._navigator.mainViewCtrl.startSearch(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_RECOMMENDED_ROOMS);
                     }
                     else
                     {
@@ -121,7 +121,7 @@
                         }
                         _local_4 = _local_3.nodeId;
                         Logger.log(("Searching with catId: " + _local_4));
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_POPULAR_ROOMS, ("" + _local_4));
+                        this._navigator.mainViewCtrl.startSearch(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_POPULAR_ROOMS, ("" + _local_4));
                     }
                 }
             }

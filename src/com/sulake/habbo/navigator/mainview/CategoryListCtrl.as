@@ -101,7 +101,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this._navigator.data.allCategories[_arg_2.id];
-                this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_POPULAR_ROOMS, ("" + _local_3.nodeId));
+                this._navigator.mainViewCtrl.startSearch(Tabs.TAB_ROOMS, Tabs.SEARCHTYPE_POPULAR_ROOMS, ("" + _local_3.nodeId));
             }
         }
 

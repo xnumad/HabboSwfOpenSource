@@ -53,7 +53,7 @@
 
         public function _Str_8146():void
         {
-            this._Str_2798();
+            this.startSearch();
         }
 
         private function _Str_22411():void
@@ -71,7 +71,7 @@
 
         private function _Str_5118(k:WindowEvent):void
         {
-            this._Str_2798();
+            this.startSearch();
         }
 
         private function _Str_17806(k:WindowEvent):void
@@ -79,14 +79,14 @@
             this._navigator.openCatalogRoomAdsPage();
         }
 
-        private function _Str_2798():void
+        private function startSearch():void
         {
             var k:int = Tabs.SEARCHTYPE_ROOM_ADS;
             if (((!(this._filter == null)) && (!(this._filter.disposed))))
             {
                 k = this._Str_22587(this._filter.selection);
             }
-            this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_EVENTS, k);
+            this._navigator.mainViewCtrl.startSearch(Tabs.TAB_EVENTS, k);
         }
 
         private function _Str_22587(k:int):int

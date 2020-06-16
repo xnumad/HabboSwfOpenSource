@@ -30,7 +30,7 @@
             {
                 this._defaultSearchType = Tabs.SEARCHTYPE_RECOMMENDED_ROOMS;
             }
-            this._navigator.mainViewCtrl._Str_2798(this._id, this._defaultSearchType, "-1", this._searchMsg);
+            this._navigator.mainViewCtrl.startSearch(this._id, this._defaultSearchType, "-1", this._searchMsg);
         }
 
         public function set selected(k:Boolean):void

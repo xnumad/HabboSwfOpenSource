@@ -59,7 +59,7 @@
 
         public function _Str_8146():void
         {
-            this._Str_2798();
+            this.startSearch();
         }
 
         private function _Str_18652(k:WindowEvent):void
@@ -85,7 +85,7 @@
 
         private function _Str_5118(k:WindowEvent):void
         {
-            this._Str_2798();
+            this.startSearch();
             var _local_2:IWindow = k.target;
             if ((_local_2 is IDropMenuWindow))
             {
@@ -93,10 +93,10 @@
             }
         }
 
-        private function _Str_2798():void
+        private function startSearch():void
         {
             var k:int = (((this._filter == null) || (this._filter.disposed)) ? 0 : this._filter.selection);
-            this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_ME, this._Str_24302(k));
+            this._navigator.mainViewCtrl.startSearch(Tabs.TAB_ME, this._Str_24302(k));
         }
 
         private function _Str_24302(k:int):int

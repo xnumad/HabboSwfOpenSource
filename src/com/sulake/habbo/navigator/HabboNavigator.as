@@ -613,7 +613,7 @@
             {
                 k = (('"' + k) + '"');
             }
-            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TAG_SEARCH, k);
+            this._mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TAG_SEARCH, k);
             this.trackNavigationDataPoint("Search", "search.tag", k);
             this._mainViewCtrl.mainWindow.activate();
         }
@@ -624,7 +624,7 @@
             {
                 return;
             }
-            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
+            this._mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
             this.trackNavigationDataPoint("Search", "search", k);
             this._mainViewCtrl.mainWindow.activate();
             this._mainViewCtrl.searchInput._Str_17634.setText(k);
@@ -637,7 +637,7 @@
                 return;
             }
             this._data._Str_4079 = new _Str_4374(null, k, _arg_2);
-            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_COMPETITION_ROOMS, "");
+            this._mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_COMPETITION_ROOMS, "");
             this._mainViewCtrl.mainWindow.activate();
             this._mainViewCtrl.searchInput._Str_17634.setText("");
         }
@@ -648,7 +648,7 @@
             {
                 return;
             }
-            this._mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_GUILD_BASES, "");
+            this._mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_GUILD_BASES, "");
             this._mainViewCtrl.mainWindow.activate();
             this._mainViewCtrl.searchInput._Str_17634.setText("");
         }
@@ -659,7 +659,7 @@
             {
                 return;
             }
-            this._mainViewCtrl._Str_2798(Tabs.TAB_ME, Tabs.SEARCHTYPE_MY_ROOMS);
+            this._mainViewCtrl.startSearch(Tabs.TAB_ME, Tabs.SEARCHTYPE_MY_ROOMS);
             this._tabs.getTab(Tabs.TAB_ME)._Str_5252._Str_6883();
         }
 
@@ -684,7 +684,7 @@
             {
                 return;
             }
-            this._mainViewCtrl._Str_2798(Tabs.TAB_ME, k);
+            this._mainViewCtrl.startSearch(Tabs.TAB_ME, k);
             this._tabs.getTab(Tabs.TAB_ME)._Str_5252._Str_8025(k);
         }
 

@@ -345,7 +345,7 @@
                     }
                     else
                     {
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TAG_SEARCH, _local_2.tag);
+                        this._navigator.mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TAG_SEARCH, _local_2.tag);
                     }
                 }
                 else

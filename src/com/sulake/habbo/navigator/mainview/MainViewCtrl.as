@@ -494,13 +494,13 @@
             ErrorReportStorage.addDebugData("MainViewCtrl", "Reloading RoomList");
             if ((((this.isOpen()) && (!(this._navigator.data.guestRoomSearchResults == null))) && (this._navigator.data.guestRoomSearchResults.searchType == k)))
             {
-                this._Str_2798(this._navigator.tabs.getSelected().id, k, "");
+                this.startSearch(this._navigator.tabs.getSelected().id, k, "");
                 return true;
             }
             return false;
         }
 
-        public function _Str_2798(k:int, _arg_2:int, _arg_3:String="-1", _arg_4:int=1):void
+        public function startSearch(k:int, _arg_2:int, _arg_3:String="-1", _arg_4:int=1):void
         {
             var _local_5:Tab = this._navigator.tabs.getSelected();
             this._navigator.tabs.setSelectedTab(k);

@@ -29,7 +29,7 @@
 
         public function _Str_8146():void
         {
-            this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_OFFICIAL, Tabs.SEARCHTYPE_OFFICIALROOMS, "-1", MainViewCtrl._Str_15148);
+            this._navigator.mainViewCtrl.startSearch(Tabs.TAB_OFFICIAL, Tabs.SEARCHTYPE_OFFICIALROOMS, "-1", MainViewCtrl._Str_15148);
         }
 
         public function get _Str_5960():String

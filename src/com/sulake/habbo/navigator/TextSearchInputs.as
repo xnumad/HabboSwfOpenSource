@@ -94,25 +94,25 @@
                 switch (this._searchType.selection)
                 {
                     case 0:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
+                        this._navigator.mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
                         break;
                     case 1:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_BY_OWNER, k);
+                        this._navigator.mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_BY_OWNER, k);
                         break;
                     case 2:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_ROOM_NAME_SEARCH, k);
+                        this._navigator.mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_ROOM_NAME_SEARCH, k);
                         break;
                     case 3:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TAG_SEARCH, k);
+                        this._navigator.mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TAG_SEARCH, k);
                         break;
                     case 4:
-                        this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_GROUP_NAME_SEARCH, k);
+                        this._navigator.mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_GROUP_NAME_SEARCH, k);
                         break;
                 }
             }
             else
             {
-                this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
+                this._navigator.mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_TEXT_SEARCH, k);
             }
             this._navigator.trackNavigationDataPoint("Search", "search", k);
         }

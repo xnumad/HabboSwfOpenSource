@@ -23,7 +23,7 @@
 
         public function _Str_8146():void
         {
-            this._navigator.mainViewCtrl._Str_2798(Tabs.TAB_CATEGORIES, Tabs.SEARCHTYPE_CATEGORIES);
+            this._navigator.mainViewCtrl.startSearch(Tabs.TAB_CATEGORIES, Tabs.SEARCHTYPE_CATEGORIES);
         }
 
         public function _Str_5920(k:IWindowContainer):void
