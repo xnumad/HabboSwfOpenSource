@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketPlaceOwnOffersParser;
 
-    public class _Str_7169 extends MessageEvent implements IMessageEvent 
+    public class MarketPlaceOwnOffersEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7169(k:Function)
+        public function MarketPlaceOwnOffersEvent(k:Function)
         {
             super(k, MarketPlaceOwnOffersParser);
         }

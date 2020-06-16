@@ -102,7 +102,7 @@
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.SellablePetPalettesMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7169;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
     import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
@@ -564,7 +564,7 @@
             this.addMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             this.addMessageEvent(new SellablePetPalettesMessageEvent(this._Str_23837));
-            this.addMessageEvent(new _Str_7169(this._Str_25537));
+            this.addMessageEvent(new MarketPlaceOwnOffersEvent(this._Str_25537));
             this.addMessageEvent(new _Str_5417(this._Str_24973));
             this.addMessageEvent(new _Str_6344(this._Str_23861));
             this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));

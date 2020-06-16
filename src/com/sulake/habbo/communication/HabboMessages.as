@@ -103,7 +103,7 @@
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6022;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
-	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7169;
+	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10594;
@@ -1369,7 +1369,7 @@
             INCOMING_PACKETS[3863] = _Str_18906;
             INCOMING_PACKETS[3870] = _Str_4696;
             INCOMING_PACKETS[3878] = InitCameraMessageEvent;
-            INCOMING_PACKETS[3884] = _Str_7169;
+            INCOMING_PACKETS[3884] = MarketPlaceOwnOffersEvent;
             INCOMING_PACKETS[3885] = CompleteDiffieHandshakeEvent;
             INCOMING_PACKETS[3896] = _Str_8939;
             INCOMING_PACKETS[3898] = ExtendedProfileMessageEvent;
