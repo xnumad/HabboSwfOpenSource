@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_11938;
     import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_9793;
     import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7610;
-    import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7890;
+    import com.sulake.habbo.communication.messages.outgoing._Str_307.GetMarketplaceItemStatsComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7525;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.core.window.IWindowContainer;
@@ -205,7 +205,7 @@
             var k:int = ((this._item.isWallItem) ? 2 : 1);
             this._statsRequestCategoryId = k;
             this._statsRequestTypeId = this._item.type;
-            this.send(new _Str_7890(k, this._item.type));
+            this.send(new GetMarketplaceItemStatsComposer(k, this._item.type));
         }
 
         public function _Str_23766(k:int, _arg_2:int):void

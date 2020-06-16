@@ -137,7 +137,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_12361;
 	import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7525;
 	import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7610;
-	import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7890;
+	import com.sulake.habbo.communication.messages.outgoing._Str_307.GetMarketplaceItemStatsComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_9793;
 	import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_9940;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
@@ -1835,7 +1835,7 @@
             OUTGOING_PACKETS[3267] = _Str_10695;
             OUTGOING_PACKETS[3283] = _Str_8167;
             OUTGOING_PACKETS[3285] = _Str_10337;
-            OUTGOING_PACKETS[3288] = _Str_7890;
+            OUTGOING_PACKETS[3288] = GetMarketplaceItemStatsComposer;
             OUTGOING_PACKETS[3295] = _Str_7074;
             OUTGOING_PACKETS[3301] = _Str_10602;
             OUTGOING_PACKETS[3305] = _Str_8348;
