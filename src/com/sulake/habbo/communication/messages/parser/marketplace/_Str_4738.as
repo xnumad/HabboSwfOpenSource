@@ -17,7 +17,7 @@
         private const _Str_18070:int = 500;
 
         private var _offers:Array;
-        private var _Str_11687:int;
+        private var _totalItemsFound:int;
 
 
         public function flush():Boolean
@@ -83,7 +83,7 @@
                 }
                 _local_13++;
             }
-            this._Str_11687 = k.readInteger();
+            this._totalItemsFound = k.readInteger();
             return true;
         }
 
@@ -94,7 +94,7 @@
 
         public function get totalItemsFound():int
         {
-            return this._Str_11687;
+            return this._totalItemsFound;
         }
     }
 }
