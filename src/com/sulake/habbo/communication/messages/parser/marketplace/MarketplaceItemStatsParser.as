@@ -11,7 +11,7 @@
         private var _dayOffsets:Array;
         private var _averagePrices:Array;
         private var _soldAmounts:Array;
-        private var _Str_10894:int;
+        private var _furniTypeId:int;
         private var _Str_10644:int;
 
 
@@ -47,7 +47,7 @@
 
         public function get _Str_8798():int
         {
-            return this._Str_10894;
+            return this._furniTypeId;
         }
 
         public function get _Str_9431():int
@@ -78,7 +78,7 @@
                 _local_3++;
             }
             this._Str_10644 = k.readInteger();
-            this._Str_10894 = k.readInteger();
+            this._furniTypeId = k.readInteger();
             return true;
         }
     }
