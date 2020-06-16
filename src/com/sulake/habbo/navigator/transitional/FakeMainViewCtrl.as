@@ -135,7 +135,7 @@
             return this._oldNavigator.mainViewCtrl._Str_6414;
         }
 
-        public function _Str_20903(k:Point):void
+        public function openAtPosition(k:Point):void
         {
             return this._newNavigator.open();
         }

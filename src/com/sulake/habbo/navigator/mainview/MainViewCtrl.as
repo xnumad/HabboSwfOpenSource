@@ -744,7 +744,7 @@
             return this._searchInput;
         }
 
-        public function _Str_20903(k:Point):void
+        public function openAtPosition(k:Point):void
         {
             this._Str_19017();
             if (k != null)
