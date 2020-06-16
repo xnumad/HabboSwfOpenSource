@@ -10,7 +10,7 @@
 
     public class _Str_6982 implements IMessageParser 
     {
-        private const _Str_18070:int = 500;
+        private const MAX_LIST_LENGTH:int = 500;
 
         private var _offers:Array;
         private var _Str_11581:int;
@@ -71,7 +71,7 @@
                 _local_9 = k.readInteger();
                 _local_10 = k.readInteger();
                 _local_13 = new _Str_4192(_local_2, _local_5, _local_4, _local_6, _local_7, _local_8, _local_3, _local_9, _local_10);
-                if (_local_12 < this._Str_18070)
+                if (_local_12 < this.MAX_LIST_LENGTH)
                 {
                     this._offers.push(_local_13);
                 }
