@@ -398,7 +398,7 @@
         {
             Util._Str_2930(this._listContent);
             var _local_2:Tab = this._navigator.tabs.getSelected();
-            var _local_3:Boolean = ((this._navigator.data.guestRoomSearchArrived) && (_local_2._Str_22642 == Tabs.SEARCHTYPE_ROOM_ADS));
+            var _local_3:Boolean = ((this._navigator.data.guestRoomSearchArrived) && (_local_2.defaultSearchType == Tabs.SEARCHTYPE_ROOM_ADS));
             this._Str_25672(k, _local_3);
             this._Str_24977(k, (!(_local_3)));
             this._Str_23623(k, this._navigator.data.popularTagsArrived);

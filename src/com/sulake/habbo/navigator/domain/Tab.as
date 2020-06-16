@@ -43,7 +43,7 @@
             return this._id;
         }
 
-        public function get _Str_22642():int
+        public function get defaultSearchType():int
         {
             return this._defaultSearchType;
         }
