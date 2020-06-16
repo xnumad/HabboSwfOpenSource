@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7525;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_4192;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7697;
-    import com.sulake.habbo.communication.messages.parser.marketplace._Str_4738;
+    import com.sulake.habbo.communication.messages.parser.marketplace.MarketPlaceOffersParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7169;
     import com.sulake.habbo.communication.messages.parser.marketplace._Str_6982;
@@ -254,7 +254,7 @@
             {
                 return;
             }
-            var _local_3:_Str_4738 = (_local_2.getParser() as _Str_4738);
+            var _local_3:MarketPlaceOffersParser = (_local_2.getParser() as MarketPlaceOffersParser);
             if (_local_3 == null)
             {
                 return;

@@ -8,7 +8,7 @@
     import com.sulake.habbo.room.object.data.LegacyStuffData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4738 implements IMessageParser 
+    public class MarketPlaceOffersParser implements IMessageParser
     {
         public static const FURNITYPE_STUFF:int = 1;
         public static const FURNITYPE_WALL:int = 2;

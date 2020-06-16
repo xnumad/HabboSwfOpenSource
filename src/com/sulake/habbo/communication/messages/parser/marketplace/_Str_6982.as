@@ -43,27 +43,27 @@
                 _local_2 = k.readInteger();
                 _local_3 = k.readInteger();
                 _local_4 = k.readInteger();
-                if (_local_4 == _Str_4738.FURNITYPE_STUFF)
+                if (_local_4 == MarketPlaceOffersParser.FURNITYPE_STUFF)
                 {
                     _local_5 = k.readInteger();
                     _local_7 = ObjectDataParser.parseStuffData(k);
                 }
                 else
                 {
-                    if (_local_4 == _Str_4738.FURNITYPE_WALL)
+                    if (_local_4 == MarketPlaceOffersParser.FURNITYPE_WALL)
                     {
                         _local_5 = k.readInteger();
                         _local_6 = k.readString();
                     }
                     else
                     {
-                        if (_local_4 == _Str_4738.FAKE_FURNITYPE_UNIQUE)
+                        if (_local_4 == MarketPlaceOffersParser.FAKE_FURNITYPE_UNIQUE)
                         {
                             _local_5 = k.readInteger();
                             _local_7 = StuffDataFactory.getStuffDataWrapperForType(LegacyStuffData.FORMAT_KEY);
                             _local_7.uniqueSerialNumber = k.readInteger();
                             _local_7.uniqueSeriesSize = k.readInteger();
-                            _local_4 = _Str_4738.FURNITYPE_STUFF;
+                            _local_4 = MarketPlaceOffersParser.FURNITYPE_STUFF;
                         }
                     }
                 }
