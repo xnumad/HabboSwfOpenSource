@@ -50,7 +50,7 @@
                 }
                 else
                 {
-                    if (_local_4 == _Str_4738._Str_13000)
+                    if (_local_4 == _Str_4738.FURNITYPE_WALL)
                     {
                         _local_5 = k.readInteger();
                         _local_6 = k.readString();

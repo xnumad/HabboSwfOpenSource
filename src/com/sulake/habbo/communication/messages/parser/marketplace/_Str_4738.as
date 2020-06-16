@@ -11,7 +11,7 @@
     public class _Str_4738 implements IMessageParser 
     {
         public static const FURNITYPE_STUFF:int = 1;
-        public static const _Str_13000:int = 2;
+        public static const FURNITYPE_WALL:int = 2;
         public static const _Str_14245:int = 3;
 
         private const MAX_LIST_LENGTH:int = 500;
@@ -55,7 +55,7 @@
                 }
                 else
                 {
-                    if (_local_4 == _Str_13000)
+                    if (_local_4 == FURNITYPE_WALL)
                     {
                         _local_5 = k.readInteger();
                         _local_6 = k.readString();
