@@ -12,7 +12,7 @@
         private var _averagePrices:Array;
         private var _soldAmounts:Array;
         private var _furniTypeId:int;
-        private var _Str_10644:int;
+        private var _furniCategoryId:int;
 
 
         public function get averagePrice():int
@@ -52,7 +52,7 @@
 
         public function get _Str_9431():int
         {
-            return this._Str_10644;
+            return this._furniCategoryId;
         }
 
         public function flush():Boolean
@@ -77,7 +77,7 @@
                 this._soldAmounts.push(k.readInteger());
                 _local_3++;
             }
-            this._Str_10644 = k.readInteger();
+            this._furniCategoryId = k.readInteger();
             this._furniTypeId = k.readInteger();
             return true;
         }
