@@ -76,7 +76,7 @@
             this._tokensBatchSize = k;
         }
 
-        public function set minimumPrice(k:int):void
+        public function set offerMinPrice(k:int):void
         {
             this._offerMinPrice = k;
         }
@@ -116,7 +116,7 @@
             return this._tokensBatchSize;
         }
 
-        public function get minimumPrice():int
+        public function get offerMinPrice():int
         {
             return this._offerMinPrice;
         }

@@ -124,7 +124,7 @@
             }
             this._Str_19629();
             this._localization.registerParameter("inventory.marketplace.make_offer.expiration_info", "time", this._model.offerTime.toString());
-            this._localization.registerParameter("inventory.marketplace.make_offer.min_price", "minprice", this._model.minimumPrice.toString());
+            this._localization.registerParameter("inventory.marketplace.make_offer.min_price", "minprice", this._model.offerMinPrice.toString());
             this._localization.registerParameter("inventory.marketplace.make_offer.max_price", "maxprice", this._model.maximumPrice.toString());
             var _local_3:uint = 4293848814;
             if (!k.isWallItem)
@@ -347,7 +347,7 @@
             }
             this._localization.registerParameter("inventory.marketplace.make_offer.final_price", "commission", _local_3.toString());
             this._localization.registerParameter("inventory.marketplace.make_offer.final_price", "finalprice", _local_4.toString());
-            if (_local_2 < this._model.minimumPrice)
+            if (_local_2 < this._model.offerMinPrice)
             {
                 _local_6.text = ("$" + "{inventory.marketplace.make_offer.min_price}");
                 _local_5.disable();
