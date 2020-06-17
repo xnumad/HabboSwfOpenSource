@@ -13,7 +13,7 @@
         private var _status:int;
         private var _timeLeftMinutes:int = -1;
         private var _averagePrice:int;
-        private var _Str_4620:int;
+        private var _offerCount:int;
 
         public function MarketPlaceOffer(k:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:IStuffData, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:int, _arg_10:int=-1)
         {
@@ -26,7 +26,7 @@
             this._status = _arg_7;
             this._timeLeftMinutes = _arg_8;
             this._averagePrice = _arg_9;
-            this._Str_4620 = _arg_10;
+            this._offerCount = _arg_10;
         }
 
         public function get offerId():int
@@ -76,7 +76,7 @@
 
         public function get _Str_4121():int
         {
-            return this._Str_4620;
+            return this._offerCount;
         }
     }
 }
