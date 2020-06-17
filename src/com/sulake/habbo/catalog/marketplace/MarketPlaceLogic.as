@@ -453,12 +453,12 @@
             return this._creditsWaiting;
         }
 
-        public function get _Str_5014():int
+        public function get averagePricePeriod():int
         {
             return this._averagePricePeriod;
         }
 
-        public function set _Str_5014(k:int):void
+        public function set averagePricePeriod(k:int):void
         {
             this._averagePricePeriod = k;
         }

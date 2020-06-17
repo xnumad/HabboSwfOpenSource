@@ -615,7 +615,7 @@
                 _local_4.visible = false;
             }
             _local_2.registerParameter("catalog.marketplace.offer_details.price", "price", k.price.toString());
-            _local_2.registerParameter("catalog.marketplace.offer_details.average_price", "days", this.marketPlace._Str_5014.toString());
+            _local_2.registerParameter("catalog.marketplace.offer_details.average_price", "days", this.marketPlace.averagePricePeriod.toString());
             var _local_5:String = ((k.averagePrice == 0) ? " - " : k.averagePrice.toString());
             _local_2.registerParameter("catalog.marketplace.offer_details.average_price", "average", _local_5);
             if (k.image == null)

@@ -2218,7 +2218,7 @@
             {
                 return;
             }
-            this._marketplace._Str_5014 = _local_2.displayTime;
+            this._marketplace.averagePricePeriod = _local_2.displayTime;
         }
 
         private function _Str_16181(k:_Str_6022):void
