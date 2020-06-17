@@ -27,7 +27,7 @@
             return this._historyLength;
         }
 
-        public function get _Str_9174():Array
+        public function get dayOffsets():Array
         {
             return this._dayOffsets;
         }
@@ -67,7 +67,7 @@
             this._historyLength = k;
         }
 
-        public function set _Str_9174(k:Array):void
+        public function set dayOffsets(k:Array):void
         {
             this._dayOffsets = k.slice();
         }

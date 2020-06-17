@@ -30,7 +30,7 @@
             return this._historyLength;
         }
 
-        public function get _Str_9174():Array
+        public function get dayOffsets():Array
         {
             return this._dayOffsets;
         }

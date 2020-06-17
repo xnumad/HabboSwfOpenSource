@@ -130,10 +130,10 @@
             switch (_local_5.name)
             {
                 case "price_development":
-                    _local_6 = new MarketplaceChart(k._Str_9174, k.averagePrices);
+                    _local_6 = new MarketplaceChart(k.dayOffsets, k.averagePrices);
                     break;
                 case "trade_volume":
-                    _local_6 = new MarketplaceChart(k._Str_9174, k.soldAmounts);
+                    _local_6 = new MarketplaceChart(k.dayOffsets, k.soldAmounts);
                     break;
                 default:
                     return;
