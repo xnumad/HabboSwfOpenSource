@@ -66,7 +66,7 @@
             this._commission = k;
         }
 
-        public function set credits(k:int):void
+        public function set tokenBatchPrice(k:int):void
         {
             this._tokenBatchPrice = k;
         }
@@ -106,7 +106,7 @@
             return this._commission;
         }
 
-        public function get credits():int
+        public function get tokenBatchPrice():int
         {
             return this._tokenBatchPrice;
         }
