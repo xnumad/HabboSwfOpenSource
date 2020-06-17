@@ -148,7 +148,7 @@
             this._com.addHabboConnectionMessageEvent(new FurniListRemoveEvent(this._Str_25700));
             this._com.addHabboConnectionMessageEvent(new _Str_5720(this._Str_17365));
             this._com.addHabboConnectionMessageEvent(new TradingCloseEvent(this._Str_25275, TradingCloseParser));
-            this._com.addHabboConnectionMessageEvent(new NotEnoughBalanceMessageEvent(this._Str_16520));
+            this._com.addHabboConnectionMessageEvent(new NotEnoughBalanceMessageEvent(this.onNotEnoughCredits));
             this._com.addHabboConnectionMessageEvent(new _Str_8892(this._Str_23929));
             this._com.addHabboConnectionMessageEvent(new PostItPlacedEvent(this._Str_23887));
             this._com.addHabboConnectionMessageEvent(new TradingOpenFailedEvent(this._Str_23502, TradingOpenFailedEventParser));
@@ -934,7 +934,7 @@
             _local_2.setAveragePrice(_local_3.furniCategoryId, _local_3.furniTypeId, _local_3.averagePrice);
         }
 
-        private function _Str_16520(k:NotEnoughBalanceMessageEvent):void
+        private function onNotEnoughCredits(k:NotEnoughBalanceMessageEvent):void
         {
             if (((!(k)) || (!(this._inventory))))
             {
@@ -945,7 +945,7 @@
             {
                 return;
             }
-            _local_2._Str_16520();
+            _local_2.onNotEnoughCredits();
         }
 
         private function onUserRights(k:IMessageEvent):void

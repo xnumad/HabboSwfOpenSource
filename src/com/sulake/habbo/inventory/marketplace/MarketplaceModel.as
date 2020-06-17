@@ -255,7 +255,7 @@
             this._view._Str_25456(_arg_3, this._averagePricePeriod);
         }
 
-        public function _Str_16520():void
+        public function onNotEnoughCredits():void
         {
             if (this._isBuyingTokens)
             {
