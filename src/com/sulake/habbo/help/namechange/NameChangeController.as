@@ -66,7 +66,7 @@
         {
             if (!this._disposed)
             {
-                this._Str_4782();
+                this.disposeView();
                 if (this._habboHelp)
                 {
                     this._habboHelp = null;
@@ -108,7 +108,7 @@
         {
         }
 
-        public function _Str_4782():void
+        public function disposeView():void
         {
             if (this._nameChangeView != null)
             {
@@ -131,7 +131,7 @@
         {
             if (k == false)
             {
-                this._Str_4782();
+                this.disposeView();
             }
         }
 
@@ -151,7 +151,7 @@
                 case WindowMouseEvent.CLICK:
                     if (_arg_2.name == "header_button_close")
                     {
-                        this._Str_4782();
+                        this.disposeView();
                     }
                     return;
             }

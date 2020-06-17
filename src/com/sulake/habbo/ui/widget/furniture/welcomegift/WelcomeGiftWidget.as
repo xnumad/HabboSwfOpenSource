@@ -90,7 +90,7 @@
             return windowManager.buildFromXML((_local_2.content as XML));
         }
 
-        private function _Str_4782():void
+        private function disposeView():void
         {
             if (this._view)
             {
@@ -206,7 +206,7 @@
 
         private function close(k:WindowMouseEvent):void
         {
-            this._Str_4782();
+            this.disposeView();
         }
 
         private function _Str_23358(k:WindowMouseEvent):void
@@ -217,7 +217,7 @@
         private function _Str_23940(k:WindowMouseEvent):void
         {
             messageListener.processWidgetMessage(new RoomWidgetFurniActionMessage(RoomWidgetFurniActionMessage.RWFAM_OPEN_WELCOME_GIFT, this._Str_2502, 0));
-            this._Str_4782();
+            this.disposeView();
         }
 
         private function _Str_23425(k:WindowMouseEvent):void

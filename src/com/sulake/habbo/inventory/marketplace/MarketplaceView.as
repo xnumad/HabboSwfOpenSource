@@ -67,12 +67,12 @@
                 this._windowManager = null;
                 this._roomEngine = null;
                 this._localization = null;
-                this._Str_4782();
+                this.disposeView();
                 this._disposed = true;
             }
         }
 
-        private function _Str_4782():void
+        private function disposeView():void
         {
             if (this._view != null)
             {
@@ -281,14 +281,14 @@
                 {
                     case "buy_tokens_button":
                         this._model.buyMarketplaceTokens();
-                        this._Str_4782();
+                        this.disposeView();
                         break;
                     case "cancel_buy_tokens_button":
                     case "cancel_make_offer_button":
                     case "cancel_no_credits_button":
                     case "header_button_close":
                         this._model.releaseItem();
-                        this._Str_4782();
+                        this.disposeView();
                         break;
                     case "make_offer_button":
                         _local_3 = (this._view.findChildByName("price_input") as ITextFieldWindow);
@@ -297,12 +297,12 @@
                             this._askingPrice = parseInt(_local_3.text);
                             this.showConfirmation();
                         }
-                        this._Str_4782();
+                        this.disposeView();
                         break;
                     case "get_credits_button":
                         this._model.releaseItem();
                         this._Str_24200();
-                        this._Str_4782();
+                        this.disposeView();
                         break;
                 }
             }
