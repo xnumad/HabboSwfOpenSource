@@ -42,7 +42,7 @@
             return this._soldAmounts;
         }
 
-        public function get _Str_8798():int
+        public function get furniTypeId():int
         {
             return this._furniTypeId;
         }
@@ -82,7 +82,7 @@
             this._soldAmounts = k.slice();
         }
 
-        public function set _Str_8798(k:int):void
+        public function set furniTypeId(k:int):void
         {
             this._furniTypeId = k;
         }

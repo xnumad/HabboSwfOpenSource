@@ -2203,7 +2203,7 @@
             _local_3.averagePrices = _local_2.averagePrices;
             _local_3._Str_11956 = _local_2._Str_11956;
             _local_3.furniCategoryId = _local_2.furniCategoryId;
-            _local_3._Str_8798 = _local_2._Str_8798;
+            _local_3.furniTypeId = _local_2.furniTypeId;
             this._marketplace.itemStats = _local_3;
         }
 

@@ -432,7 +432,7 @@
 
         public function set itemStats(k:MarketplaceItemStats):void
         {
-            if (((!(k.furniCategoryId == this._statsRequestCategoryId)) || (!(k._Str_8798 == this._statsRequestTypeId))))
+            if (((!(k.furniCategoryId == this._statsRequestCategoryId)) || (!(k.furniTypeId == this._statsRequestTypeId))))
             {
                 return;
             }

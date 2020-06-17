@@ -45,7 +45,7 @@
             return this._soldAmounts;
         }
 
-        public function get _Str_8798():int
+        public function get furniTypeId():int
         {
             return this._furniTypeId;
         }
