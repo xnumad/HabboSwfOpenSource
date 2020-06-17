@@ -1038,7 +1038,7 @@
 
         public function openCreditsHabblet():void
         {
-            HabboWebTools.openWebPageAndMinimizeClient(getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
+            HabboWebTools.openWebPageAndMinimizeClient(getProperty(ExternalVariables.WEB_SHOP_RELATIVE_URL));
         }
 
         public function setupInventoryForRecycler(k:Boolean):void
@@ -2301,7 +2301,7 @@
             this._Str_4663();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
-                HabboWebTools.openWebPageAndMinimizeClient(getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
+                HabboWebTools.openWebPageAndMinimizeClient(getProperty(ExternalVariables.WEB_SHOP_RELATIVE_URL));
             }
         }
 

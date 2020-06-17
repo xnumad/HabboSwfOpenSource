@@ -36,7 +36,7 @@
                         _local_3 = _local_2[2];
                         if (_local_3 == "credits")
                         {
-                            HabboWebTools.openWebPageAndMinimizeClient(this._windowManager.getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
+                            HabboWebTools.openWebPageAndMinimizeClient(this._windowManager.getProperty(ExternalVariables.WEB_SHOP_RELATIVE_URL));
                         }
                         else
                         {

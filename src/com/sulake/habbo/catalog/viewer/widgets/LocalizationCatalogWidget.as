@@ -121,7 +121,7 @@
                                 {
                                     if (_local_5 == CatalogPageName.CREDITS)
                                     {
-                                        HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
+                                        HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(ExternalVariables.WEB_SHOP_RELATIVE_URL));
                                     }
                                     else
                                     {
@@ -148,7 +148,7 @@
                     switch (_local_4)
                     {
                         case "ctlg_text_5":
-                            HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
+                            HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(ExternalVariables.WEB_SHOP_RELATIVE_URL));
                             break;
                         case "ctlg_text_7":
                             _local_5 = page.localization.getTextElementContent(7);

@@ -357,7 +357,7 @@
                     }
                     break;
                 case "credits":
-                    HabboWebTools.openWebPageAndMinimizeClient(this._config.getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
+                    HabboWebTools.openWebPageAndMinimizeClient(this._config.getProperty(ExternalVariables.WEB_SHOP_RELATIVE_URL));
                     this._widget.hide();
                     break;
                 case "profile":

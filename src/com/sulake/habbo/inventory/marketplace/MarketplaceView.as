@@ -317,7 +317,7 @@
 
         private function openCreditsPage():void
         {
-            HabboWebTools.openWebPageAndMinimizeClient(this._habboInventory.getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
+            HabboWebTools.openWebPageAndMinimizeClient(this._habboInventory.getProperty(ExternalVariables.WEB_SHOP_RELATIVE_URL));
         }
 
         private function checkPrice():void
