@@ -179,7 +179,7 @@
             this.send(new _Str_11938());
         }
 
-        public function _Str_25069():void
+        public function buyMarketplaceTokens():void
         {
             this.send(new _Str_9793());
             this._isBuyingTokens = true;

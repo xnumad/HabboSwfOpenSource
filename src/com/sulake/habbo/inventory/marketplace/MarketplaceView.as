@@ -280,7 +280,7 @@
                 switch (_arg_2.name)
                 {
                     case "buy_tokens_button":
-                        this._model._Str_25069();
+                        this._model.buyMarketplaceTokens();
                         this._Str_4782();
                         break;
                     case "cancel_buy_tokens_button":
