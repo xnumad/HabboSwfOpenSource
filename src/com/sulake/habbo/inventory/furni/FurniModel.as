@@ -850,7 +850,7 @@
             {
                 return;
             }
-            _local_3._Str_24075(_local_2);
+            _local_3.startOfferMaking(_local_2);
         }
 
         public function _Str_15313():IFurnitureItem

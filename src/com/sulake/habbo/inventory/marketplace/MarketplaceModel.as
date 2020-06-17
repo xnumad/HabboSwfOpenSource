@@ -159,7 +159,7 @@
             }
         }
 
-        public function _Str_24075(k:FurnitureItem):void
+        public function startOfferMaking(k:FurnitureItem):void
         {
             if (((!(this._item == null)) || (k == null)))
             {
