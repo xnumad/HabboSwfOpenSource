@@ -253,7 +253,7 @@
             }
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
-                this._model._Str_23093(this._askingPrice);
+                this._model.makeOffer(this._askingPrice);
             }
             this._model.releaseItem();
         }

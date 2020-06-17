@@ -185,7 +185,7 @@
             this._isBuyingTokens = true;
         }
 
-        public function _Str_23093(k:int):void
+        public function makeOffer(k:int):void
         {
             if (this._item == null)
             {
