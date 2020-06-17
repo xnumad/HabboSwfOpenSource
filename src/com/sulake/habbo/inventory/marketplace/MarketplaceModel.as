@@ -56,7 +56,7 @@
             return InventoryCategory.MARKETPLACE;
         }
 
-        public function set enabled(k:Boolean):void
+        public function set isEnabled(k:Boolean):void
         {
             this._isEnabled = k;
         }
@@ -96,7 +96,7 @@
             this._averagePricePeriod = k;
         }
 
-        public function get enabled():Boolean
+        public function get isEnabled():Boolean
         {
             return this._isEnabled;
         }

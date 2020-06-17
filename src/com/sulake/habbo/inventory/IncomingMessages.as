@@ -873,7 +873,7 @@
                 return;
             }
             var _local_3:MarketplaceConfigurationMessageParser = k.getParser();
-            _local_2.enabled = _local_3.enabled;
+            _local_2.isEnabled = _local_3.enabled;
             _local_2.commission = _local_3.commission;
             _local_2.credits = _local_3.credits;
             _local_2.advertisements = _local_3.advertisements;
