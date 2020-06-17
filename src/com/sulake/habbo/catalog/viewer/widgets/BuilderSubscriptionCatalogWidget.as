@@ -92,7 +92,7 @@
             {
                 case "subscribe_button_big":
                 case "subscribe_button":
-                    HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(ExternalVariables.WEB_SHOP_SUBSCRIPTION_RELATIVEURL));
+                    HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(ExternalVariables.WEB_SHOP_SUBSCRIPTION_RELATIVE_URL));
                     return;
                 case "subscribe_button_sms":
                     HabboWebTools.openWebPageAndMinimizeClient(this._optionalSubscribeUrl);
