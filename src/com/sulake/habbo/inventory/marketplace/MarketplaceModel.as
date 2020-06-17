@@ -71,7 +71,7 @@
             this._tokenBatchPrice = k;
         }
 
-        public function set advertisements(k:int):void
+        public function set tokenBatchSize(k:int):void
         {
             this._tokensBatchSize = k;
         }
@@ -111,7 +111,7 @@
             return this._tokenBatchPrice;
         }
 
-        public function get advertisements():int
+        public function get tokenBatchSize():int
         {
             return this._tokensBatchSize;
         }
