@@ -494,13 +494,13 @@
                 }
                 else
                 {
-                    if (k.furniType == MarketPlaceOfferData.TYPE_LANDSCAPE)
+                    if (k.furniType == MarketPlaceOfferData.TYPE_FLOOR)
                     {
                         _local_2 = ("roomItem.name." + k.furniId);
                     }
                     else
                     {
-                        if (k.furniType == MarketPlaceOfferData.TYPE_FLOOR)
+                        if (k.furniType == MarketPlaceOfferData.TYPE_WALL)
                         {
                             _local_2 = ("wallItem.name." + k.furniId);
                         }
@@ -521,13 +521,13 @@
                 }
                 else
                 {
-                    if (k.furniType == MarketPlaceOfferData.TYPE_LANDSCAPE)
+                    if (k.furniType == MarketPlaceOfferData.TYPE_FLOOR)
                     {
                         _local_2 = ("roomItem.desc." + k.furniId);
                     }
                     else
                     {
-                        if (k.furniType == MarketPlaceOfferData.TYPE_FLOOR)
+                        if (k.furniType == MarketPlaceOfferData.TYPE_WALL)
                         {
                             _local_2 = ("wallItem.desc." + k.furniId);
                         }

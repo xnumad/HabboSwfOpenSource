@@ -5,8 +5,8 @@
 
     public class MarketPlaceOfferData implements IMarketPlaceOfferData 
     {
-        public static const TYPE_LANDSCAPE:int = 1;
-        public static const TYPE_FLOOR:int = 2;
+        public static const TYPE_FLOOR:int = 1;
+        public static const TYPE_WALL:int = 2;
 
         private var _offerId:int;
         private var _furniId:int;
