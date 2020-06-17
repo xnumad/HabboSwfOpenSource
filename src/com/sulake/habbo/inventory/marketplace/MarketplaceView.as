@@ -237,10 +237,10 @@
             this._localization.registerParameter("inventory.marketplace.confirm_offer.info", "price", this._askingPrice.toString());
             var k:String = ("$" + "{inventory.marketplace.confirm_offer.title}");
             var _local_2:String = ("$" + "{inventory.marketplace.confirm_offer.info}");
-            this._windowManager.confirm(k, _local_2, 0, this._Str_22733);
+            this._windowManager.confirm(k, _local_2, 0, this.confirmationCallback);
         }
 
-        private function _Str_22733(k:IConfirmDialog, _arg_2:WindowEvent):void
+        private function confirmationCallback(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             if (((k == null) || (_arg_2 == null)))
             {
