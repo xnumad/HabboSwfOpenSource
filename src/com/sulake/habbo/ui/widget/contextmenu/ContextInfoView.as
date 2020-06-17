@@ -133,7 +133,7 @@
         {
         }
 
-        protected function _Str_4612(k:WindowMouseEvent):void
+        protected function clickHandler(k:WindowMouseEvent):void
         {
             this._widget.messageListener.processWidgetMessage(new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_START_NAME_CHANGE));
             this._widget.removeView(this, false);

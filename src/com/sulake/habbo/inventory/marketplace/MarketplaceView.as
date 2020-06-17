@@ -95,7 +95,7 @@
             {
                 return;
             }
-            this._view.procedure = this._Str_4612;
+            this._view.procedure = this.clickHandler;
             this._view.center();
         }
 
@@ -159,7 +159,7 @@
             this._furniName = this._localization.getLocalization(_local_5);
             this.setText("furni_name", ((("$" + "{") + _local_5) + "}"));
             this.setText("furni_desc", ((("$" + "{") + _local_6) + "}"));
-            this._view.procedure = this._Str_4612;
+            this._view.procedure = this.clickHandler;
             this._view.center();
             var _local_7:ITextWindow = (this._view.findChildByName("average_price") as ITextWindow);
             if (_local_7)
@@ -227,7 +227,7 @@
             {
                 return;
             }
-            this._view.procedure = this._Str_4612;
+            this._view.procedure = this.clickHandler;
             this._view.center();
         }
 
@@ -272,7 +272,7 @@
             return this._windowManager.buildFromXML((_local_2.content as XML));
         }
 
-        private function _Str_4612(k:WindowEvent, _arg_2:IWindow):void
+        private function clickHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:ITextFieldWindow;
             if (k.type == WindowMouseEvent.CLICK)

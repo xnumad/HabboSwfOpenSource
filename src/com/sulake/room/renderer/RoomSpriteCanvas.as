@@ -106,8 +106,8 @@
             this._master.addChild(this._display);
             this._display.mouseEnabled = true;
             this._display.doubleClickEnabled = true;
-            this._display.addEventListener(MouseEvent.CLICK, this._Str_4612);
-            this._display.addEventListener(MouseEvent.DOUBLE_CLICK, this._Str_4612);
+            this._display.addEventListener(MouseEvent.CLICK, this.clickHandler);
+            this._display.addEventListener(MouseEvent.DOUBLE_CLICK, this.clickHandler);
             this._geometry = new RoomGeometry(_arg_5, new Vector3d(-135, 30, 0), new Vector3d(11, 11, 5), new Vector3d(-135, 0.5, 0));
             this._bitmapDataCache = new BitmapDataCache(16, 32, 1);
             var _local_6:String;
@@ -1229,7 +1229,7 @@
             this._eventId++;
         }
 
-        private function _Str_4612(k:MouseEvent):void
+        private function clickHandler(k:MouseEvent):void
         {
             var _local_2:Boolean;
             if (((k.type == MouseEvent.CLICK) || (k.type == MouseEvent.DOUBLE_CLICK)))

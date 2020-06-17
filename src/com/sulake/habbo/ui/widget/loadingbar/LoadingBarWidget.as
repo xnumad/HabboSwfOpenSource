@@ -75,7 +75,7 @@
         {
             if (this._adSprite != null)
             {
-                this._adSprite.removeEventListener(MouseEvent.CLICK, this._Str_4612);
+                this._adSprite.removeEventListener(MouseEvent.CLICK, this.clickHandler);
                 this._adSprite = null;
             }
             if (this._image != null)
@@ -397,7 +397,7 @@
             this._videoState = k.data;
         }
 
-        private function _Str_4612(k:Event):void
+        private function clickHandler(k:Event):void
         {
             if (this._clickUrl != "")
             {

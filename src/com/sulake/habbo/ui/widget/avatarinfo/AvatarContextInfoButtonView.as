@@ -89,7 +89,7 @@
                 _local_3 = _window.findChildByName("change_name_container");
                 _local_3.visible = true;
                 _window.height = (39 + _local_3.height);
-                addMouseClickListener(_window.findChildByName("change_name_container"), _Str_4612);
+                addMouseClickListener(_window.findChildByName("change_name_container"), clickHandler);
             }
             activeView = _window;
 			_window.color = RelationshipStatusEnum.relationshipColor(_widget.friendList.getRelationshipStatus(this.userId));

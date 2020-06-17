@@ -229,7 +229,7 @@
             {
                 return null;
             }
-            _local_3.procedure = this._Str_4612;
+            _local_3.procedure = this.clickHandler;
             var _local_4:IProduct = k.product;
             if (!_local_4)
             {
@@ -324,7 +324,7 @@
             k.caption = _arg_2;
         }
 
-        private function _Str_4612(k:WindowEvent, _arg_2:IWindow):void
+        private function clickHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((((!(k)) || (!(_arg_2))) || (!(this._offers))) || (!(this._controller))))
             {
