@@ -140,7 +140,7 @@
                 return;
             }
             this._furniImageId = _local_4.id;
-            this._Str_21651(_local_4.data);
+            this.setFurniImage(_local_4.data);
             if (k.isWallItem)
             {
                 _local_5 = ("wallItem.name." + k.type);
@@ -184,7 +184,7 @@
             this._model.getItemStats();
         }
 
-        private function _Str_21651(k:BitmapData):void
+        private function setFurniImage(k:BitmapData):void
         {
             if (((k == null) || (this._view == null)))
             {
@@ -388,7 +388,7 @@
         {
             if (this._furniImageId == k)
             {
-                this._Str_21651(_arg_2);
+                this.setFurniImage(_arg_2);
             }
         }
 
