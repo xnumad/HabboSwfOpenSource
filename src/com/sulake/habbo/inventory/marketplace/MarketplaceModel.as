@@ -208,7 +208,7 @@
             this.send(new GetMarketplaceItemStatsComposer(k, this._item.type));
         }
 
-        public function _Str_23766(k:int, _arg_2:int):void
+        public function proceedOfferMaking(k:int, _arg_2:int):void
         {
             this._isBuyingTokens = false;
             switch (k)
