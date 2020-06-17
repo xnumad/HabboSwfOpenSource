@@ -255,7 +255,7 @@
             {
                 this._model._Str_23093(this._askingPrice);
             }
-            this._model._Str_9529();
+            this._model.releaseItem();
         }
 
         private function createWindow(k:String):IWindow
@@ -287,7 +287,7 @@
                     case "cancel_make_offer_button":
                     case "cancel_no_credits_button":
                     case "header_button_close":
-                        this._model._Str_9529();
+                        this._model.releaseItem();
                         this._Str_4782();
                         break;
                     case "make_offer_button":
@@ -300,7 +300,7 @@
                         this._Str_4782();
                         break;
                     case "get_credits_button":
-                        this._model._Str_9529();
+                        this._model.releaseItem();
                         this._Str_24200();
                         this._Str_4782();
                         break;
@@ -380,7 +380,7 @@
             {
                 return;
             }
-            this._model._Str_9529();
+            this._model.releaseItem();
             k.dispose();
         }
 

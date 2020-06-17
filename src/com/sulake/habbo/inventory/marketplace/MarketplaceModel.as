@@ -150,7 +150,7 @@
             this._roomEngine = null;
         }
 
-        public function _Str_9529():void
+        public function releaseItem():void
         {
             if ((((!(this._controller == null)) && (!(this._controller._Str_2834 == null))) && (!(this._item == null))))
             {
@@ -193,7 +193,7 @@
             }
             var _local_2:int = ((this._item.isWallItem) ? _Str_7610._Str_17086 : _Str_7610._Str_18366);
             this.send(new _Str_7610(k, _local_2, this._item.ref));
-            this._Str_9529();
+            this.releaseItem();
         }
 
         public function _Str_23516():void
@@ -260,7 +260,7 @@
             if (this._isBuyingTokens)
             {
                 this._isBuyingTokens = false;
-                this._Str_9529();
+                this.releaseItem();
             }
         }
 
