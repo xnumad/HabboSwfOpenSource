@@ -2201,7 +2201,7 @@
             _local_3._Str_10461 = _local_2._Str_10461;
             _local_3._Str_9174 = _local_2._Str_9174;
             _local_3.averagePrices = _local_2.averagePrices;
-            _local_3._Str_11956 = _local_2._Str_11956;
+            _local_3.soldAmounts = _local_2.soldAmounts;
             _local_3.furniCategoryId = _local_2.furniCategoryId;
             _local_3.furniTypeId = _local_2.furniTypeId;
             this._marketplace.itemStats = _local_3;

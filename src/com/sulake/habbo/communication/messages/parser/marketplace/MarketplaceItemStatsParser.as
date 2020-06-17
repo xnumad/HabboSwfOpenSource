@@ -40,7 +40,7 @@
             return this._averagePrices;
         }
 
-        public function get _Str_11956():Array
+        public function get soldAmounts():Array
         {
             return this._soldAmounts;
         }

@@ -37,7 +37,7 @@
             return this._averagePrices;
         }
 
-        public function get _Str_11956():Array
+        public function get soldAmounts():Array
         {
             return this._soldAmounts;
         }
@@ -77,7 +77,7 @@
             this._averagePrices = k.slice();
         }
 
-        public function set _Str_11956(k:Array):void
+        public function set soldAmounts(k:Array):void
         {
             this._soldAmounts = k.slice();
         }

@@ -133,7 +133,7 @@
                     _local_6 = new MarketplaceChart(k._Str_9174, k.averagePrices);
                     break;
                 case "trade_volume":
-                    _local_6 = new MarketplaceChart(k._Str_9174, k._Str_11956);
+                    _local_6 = new MarketplaceChart(k._Str_9174, k.soldAmounts);
                     break;
                 default:
                     return;
