@@ -233,7 +233,7 @@
             }
         }
 
-        public function _Str_24514(k:int):void
+        public function endOfferMaking(k:int):void
         {
             if (!this._view)
             {

@@ -916,7 +916,7 @@
                 return;
             }
             var _local_3:_Str_6596 = k.getParser();
-            _local_2._Str_24514(_local_3.result);
+            _local_2.endOfferMaking(_local_3.result);
         }
 
         private function _Str_16617(k:_Str_5946):void
