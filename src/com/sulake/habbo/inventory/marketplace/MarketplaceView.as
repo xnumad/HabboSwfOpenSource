@@ -301,7 +301,7 @@
                         break;
                     case "get_credits_button":
                         this._model.releaseItem();
-                        this._Str_24200();
+                        this.openCreditsPage();
                         this.disposeView();
                         break;
                 }
@@ -315,7 +315,7 @@
             }
         }
 
-        private function _Str_24200():void
+        private function openCreditsPage():void
         {
             HabboWebTools.openWebPageAndMinimizeClient(this._habboInventory.getProperty(_Str_5079.WEB_SHOP_RELATIVEURL));
         }
