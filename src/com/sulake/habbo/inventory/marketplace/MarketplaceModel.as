@@ -223,7 +223,7 @@
                     this._view.alert(("$" + "{inventory.marketplace.no_trading_pass.title}"), ("$" + "{inventory.marketplace.no_trading_pass.info}"));
                     return;
                 case 4:
-                    this._view._Str_25195(this._tokenBatchPrice, this._tokensBatchSize);
+                    this._view.showBuyTokens(this._tokenBatchPrice, this._tokensBatchSize);
                     return;
                 case 5:
                     return;

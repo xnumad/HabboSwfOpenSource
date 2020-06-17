@@ -81,7 +81,7 @@
             }
         }
 
-        public function _Str_25195(k:int, _arg_2:int):void
+        public function showBuyTokens(k:int, _arg_2:int):void
         {
             if (this._localization)
             {
