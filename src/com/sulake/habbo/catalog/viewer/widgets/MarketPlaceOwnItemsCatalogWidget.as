@@ -59,7 +59,7 @@
             }
             this.displayMainView();
             var _local_2:IItemListWindow = (_window.findChildByName("item_list") as IItemListWindow);
-            this._itemTemplates.add(MarketPlaceOfferState._Str_15376, _local_2.removeListItem(_local_2.getListItemByName("ongoing_item")));
+            this._itemTemplates.add(MarketPlaceOfferState.ONGOING_OWN, _local_2.removeListItem(_local_2.getListItemByName("ongoing_item")));
             this._itemTemplates.add(MarketPlaceOfferState._Str_8295, _local_2.removeListItem(_local_2.getListItemByName("sold_item")));
             this._itemTemplates.add(MarketPlaceOfferState._Str_6495, _local_2.removeListItem(_local_2.getListItemByName("expired_item")));
             this.marketPlace.registerVisualization(this);
@@ -220,7 +220,7 @@
                             _local_16 = _local_16.replace("%price%", _local_11.price);
                             _local_15.caption = _local_16;
                         }
-                        if (_local_11.status == MarketPlaceOfferState._Str_15376)
+                        if (_local_11.status == MarketPlaceOfferState.ONGOING_OWN)
                         {
                             _local_17 = _local_12.findChildByName("item_time");
                             if (_local_17 != null)
