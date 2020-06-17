@@ -123,7 +123,7 @@
                 _local_2.restrict = "0-9";
             }
             this._Str_19629();
-            this._localization.registerParameter("inventory.marketplace.make_offer.expiration_info", "time", this._model.offerTime.toString());
+            this._localization.registerParameter("inventory.marketplace.make_offer.expiration_info", "time", this._model.expirationHours.toString());
             this._localization.registerParameter("inventory.marketplace.make_offer.min_price", "minprice", this._model.offerMinPrice.toString());
             this._localization.registerParameter("inventory.marketplace.make_offer.max_price", "maxprice", this._model.offerMaxPrice.toString());
             var _local_3:uint = 4293848814;

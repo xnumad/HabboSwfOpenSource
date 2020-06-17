@@ -86,7 +86,7 @@
             this._offerMaxPrice = k;
         }
 
-        public function set offerTime(k:int):void
+        public function set expirationHours(k:int):void
         {
             this._expirationHours = k;
         }
@@ -126,7 +126,7 @@
             return this._offerMaxPrice;
         }
 
-        public function get offerTime():int
+        public function get expirationHours():int
         {
             return this._expirationHours;
         }
