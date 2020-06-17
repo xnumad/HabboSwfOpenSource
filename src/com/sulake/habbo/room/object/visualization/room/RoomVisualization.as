@@ -28,16 +28,16 @@
 
     public class RoomVisualization extends RoomObjectSpriteVisualization implements IPlaneVisualization 
     {
-        public static const FLOOR_COLOR_LEFT:int = 0xFFFFFF;
-        public static const FLOOR_COLOR_RIGHT:int = 0xDDDDDD;
-        public static const WALL_COLOR_TOP:int = 0xBBBBBB;
-        private static const WALL_COLOR_SIDE:int = 0xFFFFFF;
-        private static const WALL_COLOR_BOTTOM:int = 0xCCCCCC;
+        public static const FLOOR_COLOR:int = 0xFFFFFF;
+        public static const FLOOR_COLOR_LEFT:int = 0xDDDDDD;
+        public static const FLOOR_COLOR_RIGHT:int = 0xBBBBBB;
+        private static const WALL_COLOR_TOP:int = 0xFFFFFF;
+        private static const WALL_COLOR_SIDE:int = 0xCCCCCC;
+        private static const WALL_COLOR_BOTTOM:int = 0x999999;
         private static const WALL_COLOR_BORDER:int = 0x999999;
-        private static const LANDSCAPE_COLOR_TOP:int = 0x999999;
-        public static const LANDSCAPE_COLOR_SIDE:int = 0xFFFFFF;
-        public static const LANDSCAPE_COLOR_BOTTOM:int = 0xCCCCCC;
-        public static const _Str_18370:int = 0x999999;
+        public static const LANDSCAPE_COLOR_TOP:int = 0xFFFFFF;
+        public static const LANDSCAPE_COLOR_SIDE:int = 0xCCCCCC;
+        public static const LANDSCAPE_COLOR_BOTTOM:int = 0x999999;
         private static const ROOM_DEPTH_OFFSET:Number = 1000;
 
         private const _Str_9654:int = 250;
@@ -313,11 +313,11 @@
                         _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_FLOOR, true, _local_11, _local_6, -(_local_17), -(_local_18));
                         if (_local_14.z != 0)
                         {
-                            _local_13.color = FLOOR_COLOR_LEFT;
+                            _local_13.color = FLOOR_COLOR;
                         }
                         else
                         {
-                            _local_13.color = ((_local_14.x != 0) ? WALL_COLOR_TOP : FLOOR_COLOR_RIGHT);
+                            _local_13.color = ((_local_14.x != 0) ? FLOOR_COLOR_RIGHT : FLOOR_COLOR_LEFT);
                         }
                         if (this._data != null)
                         {
@@ -335,23 +335,23 @@
                             }
                             if (((_local_14.x == 0) && (_local_14.y == 0)))
                             {
-                                _local_13.color = LANDSCAPE_COLOR_TOP;
+                                _local_13.color = WALL_COLOR_BORDER;
                             }
                             else
                             {
                                 if (_local_14.y > 0)
                                 {
-                                    _local_13.color = WALL_COLOR_SIDE;
+                                    _local_13.color = WALL_COLOR_TOP;
                                 }
                                 else
                                 {
                                     if (_local_14.y == 0)
                                     {
-                                        _local_13.color = WALL_COLOR_BOTTOM;
+                                        _local_13.color = WALL_COLOR_SIDE;
                                     }
                                     else
                                     {
-                                        _local_13.color = WALL_COLOR_BORDER;
+                                        _local_13.color = WALL_COLOR_BOTTOM;
                                     }
                                 }
                             }
@@ -367,17 +367,17 @@
                                 _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_LANDSCAPE, true, _local_11, _local_6, _local_5, 0, _local_3, _local_4);
                                 if (_local_14.y > 0)
                                 {
-                                    _local_13.color = LANDSCAPE_COLOR_SIDE;
+                                    _local_13.color = LANDSCAPE_COLOR_TOP;
                                 }
                                 else
                                 {
                                     if (_local_14.y == 0)
                                     {
-                                        _local_13.color = LANDSCAPE_COLOR_BOTTOM;
+                                        _local_13.color = LANDSCAPE_COLOR_SIDE;
                                     }
                                     else
                                     {
-                                        _local_13.color = _Str_18370;
+                                        _local_13.color = LANDSCAPE_COLOR_BOTTOM;
                                     }
                                 }
                                 if (this._data != null)
@@ -397,23 +397,23 @@
                                     }
                                     if (((_local_14.x == 0) && (_local_14.y == 0)))
                                     {
-                                        _local_13.color = LANDSCAPE_COLOR_TOP;
+                                        _local_13.color = WALL_COLOR_BORDER;
                                     }
                                     else
                                     {
                                         if (_local_14.y > 0)
                                         {
-                                            _local_13.color = WALL_COLOR_SIDE;
+                                            _local_13.color = WALL_COLOR_TOP;
                                         }
                                         else
                                         {
                                             if (_local_14.y == 0)
                                             {
-                                                _local_13.color = WALL_COLOR_BOTTOM;
+                                                _local_13.color = WALL_COLOR_SIDE;
                                             }
                                             else
                                             {
-                                                _local_13.color = WALL_COLOR_BORDER;
+                                                _local_13.color = WALL_COLOR_BOTTOM;
                                             }
                                         }
                                     }
