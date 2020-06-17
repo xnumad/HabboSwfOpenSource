@@ -23,7 +23,7 @@
 
         public function get _Str_16264():Boolean
         {
-            return this.getParser().unknownBoolean;
+            return this.getParser().newAdditionsAvailable;
         }
 
         public function get catalogType():String

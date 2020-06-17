@@ -7,7 +7,7 @@
     public class CatalogIndexMessageParser implements IMessageParser
     {
         private var _root:NodeData;
-        private var _unknownBoolean:Boolean;
+        private var _newAdditionsAvailable:Boolean;
         private var _catalogType:String;
 
 
@@ -16,9 +16,9 @@
             return this._root;
         }
 
-        public function get unknownBoolean():Boolean
+        public function get newAdditionsAvailable():Boolean
         {
-            return this._unknownBoolean;
+            return this._newAdditionsAvailable;
         }
 
         public function get catalogType():String
@@ -35,7 +35,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._root = new NodeData(k);
-            this._unknownBoolean = k.readBoolean();
+            this._newAdditionsAvailable = k.readBoolean();
             this._catalogType = k.readString();
             return true;
         }
