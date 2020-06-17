@@ -5,7 +5,7 @@
 
     public class _Str_5775 implements IMessageParser 
     {
-        private var _Str_2507:int;
+        private var _offerId:int;
         private var _success:Boolean;
 
 
@@ -16,7 +16,7 @@
 
         public function get offerId():int
         {
-            return this._Str_2507;
+            return this._offerId;
         }
 
         public function flush():Boolean
@@ -26,7 +26,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2507 = k.readInteger();
+            this._offerId = k.readInteger();
             this._success = k.readBoolean();
             return true;
         }

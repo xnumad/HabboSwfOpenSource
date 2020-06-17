@@ -5,7 +5,7 @@
 
     public class _Str_8483 implements IMessageParser 
     {
-        private var _Str_2507:int;
+        private var _offerId:int;
         private var _Str_21271:Boolean;
 
 
@@ -16,14 +16,14 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2507 = k.readInteger();
+            this._offerId = k.readInteger();
             this._Str_21271 = k.readBoolean();
             return true;
         }
 
         public function get offerId():int
         {
-            return this._Str_2507;
+            return this._offerId;
         }
 
         public function get _Str_18028():Boolean

@@ -7,7 +7,7 @@
     {
         private var _Str_6800:int;
         private var _pageId:int;
-        private var _Str_2507:int;
+        private var _offerId:int;
         private var _productType:String;
 
 
@@ -15,7 +15,7 @@
         {
             this._Str_6800 = -1;
             this._pageId = -1;
-            this._Str_2507 = -1;
+            this._offerId = -1;
             this._productType = "";
             return true;
         }
@@ -24,7 +24,7 @@
         {
             this._Str_6800 = k.readInteger();
             this._pageId = k.readInteger();
-            this._Str_2507 = k.readInteger();
+            this._offerId = k.readInteger();
             this._productType = k.readString();
             return true;
         }
@@ -41,7 +41,7 @@
 
         public function get offerId():int
         {
-            return this._Str_2507;
+            return this._offerId;
         }
 
         public function get productType():String

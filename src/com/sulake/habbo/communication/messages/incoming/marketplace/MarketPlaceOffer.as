@@ -4,7 +4,7 @@
 
     public class MarketPlaceOffer
     {
-        private var _Str_2507:int;
+        private var _offerId:int;
         private var _furniId:int;
         private var _Str_11835:int;
         private var _extraData:String;
@@ -17,7 +17,7 @@
 
         public function MarketPlaceOffer(k:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:IStuffData, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:int, _arg_10:int=-1)
         {
-            this._Str_2507 = k;
+            this._offerId = k;
             this._furniId = _arg_2;
             this._Str_11835 = _arg_3;
             this._extraData = _arg_4;
@@ -31,7 +31,7 @@
 
         public function get offerId():int
         {
-            return this._Str_2507;
+            return this._offerId;
         }
 
         public function get furniId():int

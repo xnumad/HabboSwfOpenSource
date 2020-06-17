@@ -4,7 +4,7 @@
 
     public class ClubOfferData
     {
-        private var _Str_2507:int;
+        private var _offerId:int;
         private var _productCode:String;
         private var _priceCredits:int;
         private var _priceActivityPoints:int;
@@ -20,7 +20,7 @@
 
         public function ClubOfferData(k:IMessageDataWrapper)
         {
-            this._Str_2507 = k.readInteger();
+            this._offerId = k.readInteger();
             this._productCode = k.readString();
             k.readBoolean();
             this._priceCredits = k.readInteger();
@@ -38,7 +38,7 @@
 
         public function get offerId():int
         {
-            return this._Str_2507;
+            return this._offerId;
         }
 
         public function get productCode():String
