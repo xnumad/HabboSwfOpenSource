@@ -12,7 +12,7 @@
     import com.sulake.core.runtime.IHabboConfigurationManager;
     import com.sulake.habbo.catalog.enum.CatalogPageName;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habboclient._Str_5079;
+    import com.sulake.habboclient.ExternalVariables;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -121,7 +121,7 @@
                                 {
                                     if (_local_5 == CatalogPageName.CREDITS)
                                     {
-                                        HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(_Str_5079.WEB_SHOP_RELATIVEURL));
+                                        HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
                                     }
                                     else
                                     {
@@ -148,7 +148,7 @@
                     switch (_local_4)
                     {
                         case "ctlg_text_5":
-                            HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(_Str_5079.WEB_SHOP_RELATIVEURL));
+                            HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
                             break;
                         case "ctlg_text_7":
                             _local_5 = page.localization.getTextElementContent(7);

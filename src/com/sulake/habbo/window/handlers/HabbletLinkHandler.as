@@ -4,7 +4,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.window.HabboWindowManagerComponent;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habboclient._Str_5079;
+    import com.sulake.habboclient.ExternalVariables;
 
     public class HabbletLinkHandler implements ILinkEventTracker, IDisposable 
     {
@@ -36,7 +36,7 @@
                         _local_3 = _local_2[2];
                         if (_local_3 == "credits")
                         {
-                            HabboWebTools.openWebPageAndMinimizeClient(this._windowManager.getProperty(_Str_5079.WEB_SHOP_RELATIVEURL));
+                            HabboWebTools.openWebPageAndMinimizeClient(this._windowManager.getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
                         }
                         else
                         {

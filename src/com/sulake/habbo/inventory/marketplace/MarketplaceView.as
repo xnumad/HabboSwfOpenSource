@@ -25,7 +25,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habboclient._Str_5079;
+    import com.sulake.habboclient.ExternalVariables;
     import com.sulake.core.window.components.IButtonWindow;
     import com.sulake.habbo.window.utils.IAlertDialog;
 
@@ -317,7 +317,7 @@
 
         private function openCreditsPage():void
         {
-            HabboWebTools.openWebPageAndMinimizeClient(this._habboInventory.getProperty(_Str_5079.WEB_SHOP_RELATIVEURL));
+            HabboWebTools.openWebPageAndMinimizeClient(this._habboInventory.getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
         }
 
         private function checkPrice():void

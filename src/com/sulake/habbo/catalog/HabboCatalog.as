@@ -145,7 +145,7 @@
     import com.sulake.habbo.catalog.enum.CatalogPageName;
     import com.sulake.habbo.room.IStuffData;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habboclient._Str_5079;
+    import com.sulake.habboclient.ExternalVariables;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
     import com.sulake.habbo.catalog.purse.IPurse;
@@ -1038,7 +1038,7 @@
 
         public function openCreditsHabblet():void
         {
-            HabboWebTools.openWebPageAndMinimizeClient(getProperty(_Str_5079.WEB_SHOP_RELATIVEURL));
+            HabboWebTools.openWebPageAndMinimizeClient(getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
         }
 
         public function setupInventoryForRecycler(k:Boolean):void
@@ -2301,7 +2301,7 @@
             this._Str_4663();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
-                HabboWebTools.openWebPageAndMinimizeClient(getProperty(_Str_5079.WEB_SHOP_RELATIVEURL));
+                HabboWebTools.openWebPageAndMinimizeClient(getProperty(ExternalVariables.WEB_SHOP_RELATIVEURL));
             }
         }
 

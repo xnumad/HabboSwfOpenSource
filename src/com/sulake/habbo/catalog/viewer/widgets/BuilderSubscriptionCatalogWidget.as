@@ -9,7 +9,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetBuilderSubscriptionUpdatedEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habboclient._Str_5079;
+    import com.sulake.habboclient.ExternalVariables;
     import com.sulake.core.window.events.WindowEvent;
 
     public class BuilderSubscriptionCatalogWidget extends CatalogWidget implements IDisposable 
@@ -92,7 +92,7 @@
             {
                 case "subscribe_button_big":
                 case "subscribe_button":
-                    HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(_Str_5079.WEB_SHOP_SUBSCRIPTION_RELATIVEURL));
+                    HabboWebTools.openWebPageAndMinimizeClient(this._catalog.getProperty(ExternalVariables.WEB_SHOP_SUBSCRIPTION_RELATIVEURL));
                     return;
                 case "subscribe_button_sms":
                     HabboWebTools.openWebPageAndMinimizeClient(this._optionalSubscribeUrl);
