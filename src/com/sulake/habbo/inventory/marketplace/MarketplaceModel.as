@@ -217,10 +217,10 @@
                     this._view.showMakeOffer(this._item);
                     return;
                 case 2:
-                    this._view.alert(("$" + "{inventory.marketplace.no_trading_privilege.title}"), ("$" + "{inventory.marketplace.no_trading_privilege.info}"));
+                    this._view.showAlert(("$" + "{inventory.marketplace.no_trading_privilege.title}"), ("$" + "{inventory.marketplace.no_trading_privilege.info}"));
                     return;
                 case 3:
-                    this._view.alert(("$" + "{inventory.marketplace.no_trading_pass.title}"), ("$" + "{inventory.marketplace.no_trading_pass.info}"));
+                    this._view.showAlert(("$" + "{inventory.marketplace.no_trading_pass.title}"), ("$" + "{inventory.marketplace.no_trading_pass.info}"));
                     return;
                 case 4:
                     this._view.showBuyTokens(this._tokenBatchPrice, this._tokensBatchSize);
@@ -228,7 +228,7 @@
                 case 5:
                     return;
                 case 6:
-                    this._view.alert(("$" + "{inventory.marketplace.trading_lock.title}"), ("$" + "{inventory.marketplace.trading_lock.info}"));
+                    this._view.showAlert(("$" + "{inventory.marketplace.trading_lock.title}"), ("$" + "{inventory.marketplace.trading_lock.info}"));
                     return;
             }
         }

@@ -396,7 +396,7 @@
         {
         }
 
-        public function alert(k:String, _arg_2:String):void
+        public function showAlert(k:String, _arg_2:String):void
         {
             this._windowManager.alert(k, _arg_2, 0, this.closeAlert);
         }
