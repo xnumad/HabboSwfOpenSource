@@ -7,12 +7,12 @@
     {
         private var _array:Array;
 
-        public function GetMarketplaceItemStatsComposer(k:int, _arg_2:int)
+        public function GetMarketplaceItemStatsComposer(itemType:int, itemId:int)
         {
             this._array = new Array();
             super();
-            this._array.push(k);
-            this._array.push(_arg_2);
+            this._array.push(itemType);
+            this._array.push(itemId);
         }
 
         public function getMessageArray():Array
