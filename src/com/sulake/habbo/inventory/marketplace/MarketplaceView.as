@@ -216,7 +216,7 @@
             _local_3.text = _arg_2;
         }
 
-        public function _Str_25914(k:int):void
+        public function showNoCredits(k:int):void
         {
             if (this._localization)
             {
