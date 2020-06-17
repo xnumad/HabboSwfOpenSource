@@ -60,7 +60,7 @@
             this.displayMainView();
             var _local_2:IItemListWindow = (_window.findChildByName("item_list") as IItemListWindow);
             this._itemTemplates.add(MarketPlaceOfferState.ONGOING_OWN, _local_2.removeListItem(_local_2.getListItemByName("ongoing_item")));
-            this._itemTemplates.add(MarketPlaceOfferState._Str_8295, _local_2.removeListItem(_local_2.getListItemByName("sold_item")));
+            this._itemTemplates.add(MarketPlaceOfferState.SOLD, _local_2.removeListItem(_local_2.getListItemByName("sold_item")));
             this._itemTemplates.add(MarketPlaceOfferState._Str_6495, _local_2.removeListItem(_local_2.getListItemByName("expired_item")));
             this.marketPlace.registerVisualization(this);
             this.marketPlace.requestOwnItems();
@@ -193,7 +193,7 @@
             {
                 _local_10 = _local_6[_local_7];
                 _local_11 = (k.getValue(_local_10) as MarketPlaceOfferData);
-                if (_local_11.status == MarketPlaceOfferState._Str_8295)
+                if (_local_11.status == MarketPlaceOfferState.SOLD)
                 {
                     _local_5++;
                 }
@@ -238,7 +238,7 @@
                                 _local_17.caption = _local_22;
                             }
                         }
-                        if (_local_11.status == MarketPlaceOfferState._Str_8295)
+                        if (_local_11.status == MarketPlaceOfferState.SOLD)
                         {
                             _local_23 = _local_12.findChildByName("item_sold");
                             if (_local_23 != null)

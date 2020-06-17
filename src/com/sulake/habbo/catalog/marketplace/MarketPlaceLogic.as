@@ -213,7 +213,7 @@
             for each (_local_2 in k)
             {
                 _local_3 = this._latestOwnOffers.getValue(_local_2);
-                if (_local_3.status == MarketPlaceOfferState._Str_8295)
+                if (_local_3.status == MarketPlaceOfferState.SOLD)
                 {
                     this._latestOwnOffers.remove(_local_2);
                     _local_3.dispose();
