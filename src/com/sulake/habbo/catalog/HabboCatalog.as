@@ -2204,7 +2204,7 @@
             _local_3._Str_11956 = _local_2._Str_11956;
             _local_3._Str_9431 = _local_2._Str_9431;
             _local_3._Str_8798 = _local_2._Str_8798;
-            this._marketplace._Str_10038 = _local_3;
+            this._marketplace.itemStats = _local_3;
         }
 
         private function _Str_16010(k:MarketplaceConfigurationEvent):void

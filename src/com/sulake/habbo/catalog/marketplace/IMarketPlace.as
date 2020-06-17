@@ -26,8 +26,8 @@
         function latestOffers():Map;
         function latestOwnOffers():Map;
         function totalItemsFound():int;
-        function set _Str_10038(_arg_1:MarketplaceItemStats):void;
-        function get _Str_10038():MarketplaceItemStats;
+        function set itemStats(_arg_1:MarketplaceItemStats):void;
+        function get itemStats():MarketplaceItemStats;
         function get creditsWaiting():int;
         function get _Str_5014():int;
         function set _Str_5014(_arg_1:int):void;

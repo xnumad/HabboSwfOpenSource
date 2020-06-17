@@ -101,7 +101,7 @@
             {
                 return;
             }
-            var k:MarketplaceItemStats = this.marketPlace._Str_10038;
+            var k:MarketplaceItemStats = this.marketPlace.itemStats;
             if (!k)
             {
                 return;

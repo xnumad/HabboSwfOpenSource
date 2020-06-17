@@ -430,7 +430,7 @@
             return this._totalItemsFound;
         }
 
-        public function set _Str_10038(k:MarketplaceItemStats):void
+        public function set itemStats(k:MarketplaceItemStats):void
         {
             if (((!(k._Str_9431 == this._statsRequestCategoryId)) || (!(k._Str_8798 == this._statsRequestTypeId))))
             {
@@ -443,7 +443,7 @@
             }
         }
 
-        public function get _Str_10038():MarketplaceItemStats
+        public function get itemStats():MarketplaceItemStats
         {
             return this._itemStats;
         }
