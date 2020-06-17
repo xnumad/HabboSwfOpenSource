@@ -82,10 +82,10 @@
             this._assetLibrary = new AssetLibrary("room visualization");
             this._roomPlaneParser = new RoomPlaneParser();
             this._roomPlaneBitmapMaskParser = new RoomPlaneBitmapMaskParser();
-            this._planeTypeVisibilities[RoomPlane.TYPE_WALL] = false;
-            this._planeTypeVisibilities[RoomPlane.TYPE_LANDSCAPE] = true;
+            this._planeTypeVisibilities[RoomPlane.TYPE_UNDEFINED] = false;
             this._planeTypeVisibilities[RoomPlane.TYPE_FLOOR] = true;
-            this._planeTypeVisibilities[RoomPlane._Str_3272] = true;
+            this._planeTypeVisibilities[RoomPlane.TYPE_WALL] = true;
+            this._planeTypeVisibilities[RoomPlane.TYPE_LANDSCAPE] = true;
         }
 
         public function get floorRelativeDepth():Number
@@ -217,7 +217,7 @@
                 _local_4 = getSprite(_local_2);
                 if (((((!(_local_4 == null)) && (!(_local_3 == null))) && (!(_local_3._Str_5424 == null))) && (!(_local_3._Str_4968 == null))))
                 {
-                    if (((_local_3.type == RoomPlane.TYPE_FLOOR) && ((_local_3._Str_5424.length < 1) || (_local_3._Str_4968.length < 1))))
+                    if (((_local_3.type == RoomPlane.TYPE_WALL) && ((_local_3._Str_5424.length < 1) || (_local_3._Str_4968.length < 1))))
                     {
                         _local_4._Str_4023 = AlphaTolerance.MATCH_NOTHING;
                     }
@@ -225,13 +225,13 @@
                     {
                         _local_4._Str_4023 = AlphaTolerance.MATCH_OPAQUE_PIXELS;
                     }
-                    if (_local_3.type == RoomPlane.TYPE_FLOOR)
+                    if (_local_3.type == RoomPlane.TYPE_WALL)
                     {
                         _local_4.tag = ("plane.wall@" + (_local_2 + 1));
                     }
                     else
                     {
-                        if (_local_3.type == RoomPlane.TYPE_LANDSCAPE)
+                        if (_local_3.type == RoomPlane.TYPE_FLOOR)
                         {
                             _local_4.tag = ("plane.floor@" + (_local_2 + 1));
                         }
@@ -310,7 +310,7 @@
                         _local_16 = ((_local_8.y + _local_10.y) + 0.5);
                         _local_17 = (int(_local_15) - _local_15);
                         _local_18 = (int(_local_16) - _local_16);
-                        _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_LANDSCAPE, true, _local_11, _local_6, -(_local_17), -(_local_18));
+                        _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_FLOOR, true, _local_11, _local_6, -(_local_17), -(_local_18));
                         if (_local_14.z != 0)
                         {
                             _local_13.color = FLOOR_COLOR_LEFT;
@@ -328,7 +328,7 @@
                     {
                         if (_local_12 == RoomPlaneData.PLANE_WALL)
                         {
-                            _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_FLOOR, true, _local_11, _local_6);
+                            _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_WALL, true, _local_11, _local_6);
                             if (((_local_9.length < 1) || (_local_10.length < 1)))
                             {
                                 _local_13._Str_18448 = false;
@@ -364,7 +364,7 @@
                         {
                             if (_local_12 == RoomPlaneData.PLANE_LANDSCAPE)
                             {
-                                _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane._Str_3272, true, _local_11, _local_6, _local_5, 0, _local_3, _local_4);
+                                _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_LANDSCAPE, true, _local_11, _local_6, _local_5, 0, _local_3, _local_4);
                                 if (_local_14.y > 0)
                                 {
                                     _local_13.color = LANDSCAPE_COLOR_SIDE;
@@ -390,7 +390,7 @@
                             {
                                 if (_local_12 == RoomPlaneData.PLANE_BILLBOARD)
                                 {
-                                    _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_FLOOR, true, _local_11, _local_6);
+                                    _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_WALL, true, _local_11, _local_6);
                                     if (((_local_9.length < 1) || (_local_10.length < 1)))
                                     {
                                         _local_13._Str_18448 = false;
@@ -550,7 +550,7 @@
                     _local_11 = this._visiblePlaneSpriteNumbers[_local_10];
                     _local_12 = getSprite(_local_11);
                     _local_13 = (this._visiblePlanes[_local_10] as RoomPlane);
-                    if ((((!(_local_12 == null)) && (!(_local_13 == null))) && (!(_local_13.type == RoomPlane._Str_3272))))
+                    if ((((!(_local_12 == null)) && (!(_local_13 == null))) && (!(_local_13.type == RoomPlane.TYPE_LANDSCAPE))))
                     {
                         if (this._colorizeBgOnly)
                         {
@@ -725,19 +725,19 @@
                 _local_5 = (this._planes[_local_4] as RoomPlane);
                 if (_local_5 != null)
                 {
-                    if (((_local_5.type == RoomPlane.TYPE_LANDSCAPE) && (!(k == null))))
+                    if (((_local_5.type == RoomPlane.TYPE_FLOOR) && (!(k == null))))
                     {
                         _local_5.id = k;
                     }
                     else
                     {
-                        if (((_local_5.type == RoomPlane.TYPE_FLOOR) && (!(_arg_2 == null))))
+                        if (((_local_5.type == RoomPlane.TYPE_WALL) && (!(_arg_2 == null))))
                         {
                             _local_5.id = _arg_2;
                         }
                         else
                         {
-                            if (((_local_5.type == RoomPlane._Str_3272) && (!(_arg_3 == null))))
+                            if (((_local_5.type == RoomPlane.TYPE_LANDSCAPE) && (!(_arg_3 == null))))
                             {
                                 _local_5.id = _arg_3;
                             }
@@ -751,11 +751,11 @@
 
         private function updatePlaneTypeVisibilities(k:Boolean, _arg_2:Boolean, _arg_3:Boolean):void
         {
-            if ((((!(k == this._planeTypeVisibilities[RoomPlane.TYPE_LANDSCAPE])) || (!(_arg_2 == this._planeTypeVisibilities[RoomPlane.TYPE_FLOOR]))) || (!(_arg_3 == this._planeTypeVisibilities[RoomPlane._Str_3272]))))
+            if ((((!(k == this._planeTypeVisibilities[RoomPlane.TYPE_FLOOR])) || (!(_arg_2 == this._planeTypeVisibilities[RoomPlane.TYPE_WALL]))) || (!(_arg_3 == this._planeTypeVisibilities[RoomPlane.TYPE_LANDSCAPE]))))
             {
-                this._planeTypeVisibilities[RoomPlane.TYPE_LANDSCAPE] = k;
-                this._planeTypeVisibilities[RoomPlane.TYPE_FLOOR] = _arg_2;
-                this._planeTypeVisibilities[RoomPlane._Str_3272] = _arg_3;
+                this._planeTypeVisibilities[RoomPlane.TYPE_FLOOR] = k;
+                this._planeTypeVisibilities[RoomPlane.TYPE_WALL] = _arg_2;
+                this._planeTypeVisibilities[RoomPlane.TYPE_LANDSCAPE] = _arg_3;
                 this._visiblePlanes = [];
                 this._visiblePlaneSpriteNumbers = [];
             }
@@ -811,7 +811,7 @@
                             if (_local_12.visible)
                             {
                                 _local_13 = ((_local_12.relativeDepth + this.floorRelativeDepth) + (Number(_local_10) / 1000));
-                                if (_local_12.type != RoomPlane.TYPE_LANDSCAPE)
+                                if (_local_12.type != RoomPlane.TYPE_FLOOR)
                                 {
                                     _local_13 = ((_local_12.relativeDepth + this.wallRelativeDepth) + (Number(_local_10) / 1000));
                                     if (((_local_12._Str_5424.length < 1) || (_local_12._Str_4968.length < 1)))
@@ -920,7 +920,7 @@
                 if (_local_3 != null)
                 {
                     _local_3.resetBitmapMasks();
-                    if (_local_3.type == RoomPlane._Str_3272)
+                    if (_local_3.type == RoomPlane.TYPE_LANDSCAPE)
                     {
                         _local_4.push(_local_7);
                     }
@@ -939,7 +939,7 @@
                     while (_local_13 < this._planes.length)
                     {
                         _local_3 = (this._planes[_local_13] as RoomPlane);
-                        if (((_local_3.type == RoomPlane.TYPE_FLOOR) || (_local_3.type == RoomPlane._Str_3272)))
+                        if (((_local_3.type == RoomPlane.TYPE_WALL) || (_local_3.type == RoomPlane.TYPE_LANDSCAPE)))
                         {
                             if ((((!(_local_3 == null)) && (!(_local_3.location == null))) && (!(_local_3.normal == null))))
                             {
@@ -951,13 +951,13 @@
                                     {
                                         _local_16 = Vector3d.scalarProjection(_local_14, _local_3._Str_5424);
                                         _local_17 = Vector3d.scalarProjection(_local_14, _local_3._Str_4968);
-                                        if (((_local_3.type == RoomPlane.TYPE_FLOOR) || ((_local_3.type == RoomPlane._Str_3272) && (_local_12 == RoomPlaneBitmapMaskData.HOLE))))
+                                        if (((_local_3.type == RoomPlane.TYPE_WALL) || ((_local_3.type == RoomPlane.TYPE_LANDSCAPE) && (_local_12 == RoomPlaneBitmapMaskData.HOLE))))
                                         {
                                             _local_3.addBitmapMask(_local_10, _local_16, _local_17);
                                         }
                                         else
                                         {
-                                            if (_local_3.type == RoomPlane._Str_3272)
+                                            if (_local_3.type == RoomPlane.TYPE_LANDSCAPE)
                                             {
                                                 if (!_local_3._Str_14801)
                                                 {

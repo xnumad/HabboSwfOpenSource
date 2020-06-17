@@ -26,10 +26,10 @@
     public class RoomPlane implements IRoomPlane 
     {
         private static const ZERO_POINT:Point = new Point(0, 0);
-        public static const TYPE_WALL:int = 0;
-        public static const TYPE_FLOOR:int = 1;
-        public static const TYPE_LANDSCAPE:int = 2;
-        public static const _Str_3272:int = 3;
+        public static const TYPE_UNDEFINED:int = 0;
+        public static const TYPE_WALL:int = 1;
+        public static const TYPE_FLOOR:int = 2;
+        public static const TYPE_LANDSCAPE:int = 3;
         private static var _Str_10032:int = 1;
 
         private var _disposed:Boolean = false;
@@ -662,11 +662,11 @@
                 originPos = geometry.getScreenPosition(this._origin);
                 originZ = originPos.z;
                 relativeDepth = (Math.max(this._cornerA.z, this._cornerB.z, this._cornerC.z, this._cornerD.z) - originZ);
-                if (this._type == TYPE_LANDSCAPE)
+                if (this._type == TYPE_FLOOR)
                 {
                     relativeDepth = (relativeDepth - ((this._location.z + Math.min(0, this._leftSide.z, this._rightSide.z)) * 8));
                 }
-                if (this._type == _Str_3272)
+                if (this._type == TYPE_LANDSCAPE)
                 {
                     relativeDepth = (relativeDepth + 0.02);
                 }
@@ -778,7 +778,7 @@
             var _local_4:Number = (this._cornerD.y - this._cornerC.y);
             var _local_5:Number = (this._cornerB.x - this._cornerC.x);
             var _local_6:Number = (this._cornerB.y - this._cornerC.y);
-            if (((this._type == TYPE_FLOOR) || (this._type == _Str_3272)))
+            if (((this._type == TYPE_WALL) || (this._type == TYPE_LANDSCAPE)))
             {
                 if (Math.abs((_local_5 - _arg_2.width)) <= 1)
                 {
@@ -819,7 +819,7 @@
             var _local_7:int;
             if (this._bitmapData != null)
             {
-                if (((((((_arg_2.a == 1) && (_arg_2.d == 1)) && (_arg_2.c == 0)) && (!(_arg_2.b == 0))) && (Math.abs(_arg_2.b) <= 1)) && ((this._type == TYPE_FLOOR) || (this._type == _Str_3272))))
+                if (((((((_arg_2.a == 1) && (_arg_2.d == 1)) && (_arg_2.c == 0)) && (!(_arg_2.b == 0))) && (Math.abs(_arg_2.b) <= 1)) && ((this._type == TYPE_WALL) || (this._type == TYPE_LANDSCAPE))))
                 {
                     _local_3 = 0;
                     _local_4 = 0;
