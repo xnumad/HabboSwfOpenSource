@@ -11,7 +11,7 @@
         private var _stuffData:IStuffData;
         private var _price:int;
         private var _status:int;
-        private var _Str_12399:int = -1;
+        private var _timeLeftMinutes:int = -1;
         private var _averagePrice:int;
         private var _Str_4620:int;
 
@@ -24,7 +24,7 @@
             this._stuffData = _arg_5;
             this._price = _arg_6;
             this._status = _arg_7;
-            this._Str_12399 = _arg_8;
+            this._timeLeftMinutes = _arg_8;
             this._averagePrice = _arg_9;
             this._Str_4620 = _arg_10;
         }
@@ -66,7 +66,7 @@
 
         public function get _Str_5853():int
         {
-            return this._Str_12399;
+            return this._timeLeftMinutes;
         }
 
         public function get averagePrice():int
