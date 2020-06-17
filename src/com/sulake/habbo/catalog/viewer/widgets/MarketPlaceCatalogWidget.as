@@ -157,7 +157,7 @@
                 if (_local_6.available)
                 {
                     _local_10 = ("catalog.marketplace.offer_details.chart_title." + _local_5.name);
-                    this.marketPlace.localization.registerParameter(_local_10, "days", k._Str_10461.toString());
+                    this.marketPlace.localization.registerParameter(_local_10, "days", k.historyLength.toString());
                 }
                 else
                 {

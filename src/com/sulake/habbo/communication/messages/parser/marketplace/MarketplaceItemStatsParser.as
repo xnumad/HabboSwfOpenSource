@@ -25,7 +25,7 @@
             return this._currentOfferCount;
         }
 
-        public function get _Str_10461():int
+        public function get historyLength():int
         {
             return this._historyLength;
         }

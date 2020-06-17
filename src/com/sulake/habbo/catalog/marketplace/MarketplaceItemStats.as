@@ -22,7 +22,7 @@
             return this._currentOfferCount;
         }
 
-        public function get _Str_10461():int
+        public function get historyLength():int
         {
             return this._historyLength;
         }
@@ -62,7 +62,7 @@
             this._currentOfferCount = k;
         }
 
-        public function set _Str_10461(k:int):void
+        public function set historyLength(k:int):void
         {
             this._historyLength = k;
         }
