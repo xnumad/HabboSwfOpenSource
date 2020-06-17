@@ -269,7 +269,7 @@
             this.send(new _Str_7525());
         }
 
-        public function _Str_19036():IFurnitureItem
+        public function getOfferItem():IFurnitureItem
         {
             return this._item;
         }

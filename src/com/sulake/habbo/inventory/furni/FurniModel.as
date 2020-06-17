@@ -414,9 +414,9 @@
                 k = k.concat(_local_3._Str_23744());
             }
             var _local_4:MarketplaceModel = this._controller._Str_6398;
-            if (((!(_local_4 == null)) && (!(_local_4._Str_19036() == null))))
+            if (((!(_local_4 == null)) && (!(_local_4.getOfferItem() == null))))
             {
-                k = k.concat([_local_4._Str_19036().ref]);
+                k = k.concat([_local_4.getOfferItem().ref]);
             }
             if (k.length == 0)
             {
