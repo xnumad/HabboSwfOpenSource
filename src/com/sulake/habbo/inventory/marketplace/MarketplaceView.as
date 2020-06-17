@@ -371,10 +371,10 @@
                 _local_2 = ("$" + "{inventory.marketplace.result.title.failure}");
             }
             var _local_3:* = ((("$" + "{inventory.marketplace.result.") + k) + "}");
-            this._windowManager.alert(_local_2, _local_3, 0, this._Str_21629);
+            this._windowManager.alert(_local_2, _local_3, 0, this.closeAlert);
         }
 
-        private function _Str_21629(k:IAlertDialog, _arg_2:WindowEvent):void
+        private function closeAlert(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             if (k == null)
             {
@@ -398,7 +398,7 @@
 
         public function alert(k:String, _arg_2:String):void
         {
-            this._windowManager.alert(k, _arg_2, 0, this._Str_21629);
+            this._windowManager.alert(k, _arg_2, 0, this.closeAlert);
         }
 
         public function _Str_25456(k:int, _arg_2:int):void
