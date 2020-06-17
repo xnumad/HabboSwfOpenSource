@@ -138,7 +138,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7610;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
-	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_9793;
+	import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceTokensMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_9940;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7734;
@@ -1625,7 +1625,7 @@
             OUTGOING_PACKETS[1855] = UpdateForumReadMarkerMessageComposer;
             OUTGOING_PACKETS[1859] = _Str_16422;
             OUTGOING_PACKETS[186] = _Str_10983;
-            OUTGOING_PACKETS[1866] = _Str_9793;
+            OUTGOING_PACKETS[1866] = BuyMarketplaceTokensMessageComposer;
             OUTGOING_PACKETS[1894] = _Str_11096;
             OUTGOING_PACKETS[1911] = _Str_7286;
             OUTGOING_PACKETS[1918] = _Str_11662;

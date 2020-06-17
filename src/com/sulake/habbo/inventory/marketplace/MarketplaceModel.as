@@ -11,7 +11,7 @@
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import com.sulake.habbo.inventory.furni.FurniModel;
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11938;
-    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_9793;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceTokensMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7610;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
@@ -181,7 +181,7 @@
 
         public function buyMarketplaceTokens():void
         {
-            this.send(new _Str_9793());
+            this.send(new BuyMarketplaceTokensMessageComposer());
             this._isBuyingTokens = true;
         }
 

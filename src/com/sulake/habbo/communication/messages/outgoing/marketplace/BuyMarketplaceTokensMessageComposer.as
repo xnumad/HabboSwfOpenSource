@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_9793 implements IMessageComposer 
+    public class BuyMarketplaceTokensMessageComposer implements IMessageComposer
     {
 
 
