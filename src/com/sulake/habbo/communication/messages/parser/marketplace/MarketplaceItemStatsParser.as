@@ -50,7 +50,7 @@
             return this._furniTypeId;
         }
 
-        public function get _Str_9431():int
+        public function get furniCategoryId():int
         {
             return this._furniCategoryId;
         }

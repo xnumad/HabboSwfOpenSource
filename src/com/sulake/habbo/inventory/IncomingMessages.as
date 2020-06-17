@@ -931,7 +931,7 @@
                 return;
             }
             var _local_3:MarketplaceItemStatsParser = k.getParser();
-            _local_2._Str_22836(_local_3._Str_9431, _local_3._Str_8798, _local_3.averagePrice);
+            _local_2._Str_22836(_local_3.furniCategoryId, _local_3._Str_8798, _local_3.averagePrice);
         }
 
         private function _Str_16520(k:NotEnoughBalanceMessageEvent):void

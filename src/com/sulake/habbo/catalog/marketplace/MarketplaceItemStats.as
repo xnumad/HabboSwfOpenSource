@@ -47,7 +47,7 @@
             return this._furniTypeId;
         }
 
-        public function get _Str_9431():int
+        public function get furniCategoryId():int
         {
             return this._furniCategoryId;
         }
@@ -87,7 +87,7 @@
             this._furniTypeId = k;
         }
 
-        public function set _Str_9431(k:int):void
+        public function set furniCategoryId(k:int):void
         {
             this._furniCategoryId = k;
         }
