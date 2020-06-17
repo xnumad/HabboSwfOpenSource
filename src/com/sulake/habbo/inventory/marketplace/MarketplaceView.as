@@ -122,7 +122,7 @@
             {
                 _local_2.restrict = "0-9";
             }
-            this._Str_19629();
+            this.checkPrice();
             this._localization.registerParameter("inventory.marketplace.make_offer.expiration_info", "time", this._model.expirationHours.toString());
             this._localization.registerParameter("inventory.marketplace.make_offer.min_price", "minprice", this._model.offerMinPrice.toString());
             this._localization.registerParameter("inventory.marketplace.make_offer.max_price", "maxprice", this._model.offerMaxPrice.toString());
@@ -310,7 +310,7 @@
             {
                 if (_arg_2.name == "price_input")
                 {
-                    this._Str_19629();
+                    this.checkPrice();
                 }
             }
         }
@@ -320,7 +320,7 @@
             HabboWebTools.openWebPageAndMinimizeClient(this._habboInventory.getProperty(_Str_5079.WEB_SHOP_RELATIVEURL));
         }
 
-        private function _Str_19629():void
+        private function checkPrice():void
         {
             if (this._view == null)
             {
