@@ -114,7 +114,7 @@
             var _local_3:IWindow = _local_2.findChildByName("offer_count");
             if (_local_3)
             {
-                this.marketPlace.localization.registerParameter("catalog.marketplace.offer_details.offer_count", "count", k._Str_4121.toString());
+                this.marketPlace.localization.registerParameter("catalog.marketplace.offer_details.offer_count", "count", k.offerCount.toString());
                 _local_3.visible = true;
             }
             var _local_4:ISelectorWindow = (_local_2.findChildByName("chart_selector") as ISelectorWindow);
@@ -422,7 +422,7 @@
             if (_local_6)
             {
                 _local_8 = this.marketPlace.localization.getLocalization("catalog.marketplace.offer_count");
-                _local_8 = _local_8.replace("%count%", k._Str_4121);
+                _local_8 = _local_8.replace("%count%", k.offerCount);
                 _local_6.caption = _local_8;
             }
             if (k.image == null)

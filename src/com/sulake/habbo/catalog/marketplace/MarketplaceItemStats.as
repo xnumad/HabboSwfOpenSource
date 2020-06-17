@@ -17,7 +17,7 @@
             return this._averagePrice;
         }
 
-        public function get _Str_4121():int
+        public function get offerCount():int
         {
             return this._currentOfferCount;
         }
@@ -57,7 +57,7 @@
             this._averagePrice = k;
         }
 
-        public function set _Str_4121(k:int):void
+        public function set offerCount(k:int):void
         {
             this._currentOfferCount = k;
         }

@@ -123,7 +123,7 @@
                 if (_local_5)
                 {
                     _local_4 = _local_5.raw;
-                    _local_4 = _local_4.replace("%count%", this._offer._Str_4121);
+                    _local_4 = _local_4.replace("%count%", this._offer.offerCount);
                     _local_3.text = _local_4;
                 }
                 else

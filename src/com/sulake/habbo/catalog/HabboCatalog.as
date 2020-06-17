@@ -2197,7 +2197,7 @@
             }
             var _local_3:MarketplaceItemStats = new MarketplaceItemStats();
             _local_3.averagePrice = _local_2.averagePrice;
-            _local_3._Str_4121 = _local_2._Str_4121;
+            _local_3.offerCount = _local_2.offerCount;
             _local_3._Str_10461 = _local_2._Str_10461;
             _local_3._Str_9174 = _local_2._Str_9174;
             _local_3.averagePrices = _local_2.averagePrices;

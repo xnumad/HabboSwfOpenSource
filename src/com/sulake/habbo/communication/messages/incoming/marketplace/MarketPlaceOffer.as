@@ -74,7 +74,7 @@
             return this._averagePrice;
         }
 
-        public function get _Str_4121():int
+        public function get offerCount():int
         {
             return this._offerCount;
         }

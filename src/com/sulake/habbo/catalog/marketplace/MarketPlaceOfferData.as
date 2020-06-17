@@ -131,12 +131,12 @@
             this._offerId = k;
         }
 
-        public function get _Str_4121():int
+        public function get offerCount():int
         {
             return this._offerCount;
         }
 
-        public function set _Str_4121(k:int):void
+        public function set offerCount(k:int):void
         {
             this._offerCount = k;
         }

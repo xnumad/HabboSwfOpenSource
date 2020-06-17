@@ -263,7 +263,7 @@
             this._latestOffers = new Map();
             for each (_local_4 in _local_3.offers)
             {
-                _local_5 = new MarketPlaceOfferData(_local_4.offerId, _local_4.furniId, _local_4.furniType, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4.averagePrice, _local_4._Str_4121);
+                _local_5 = new MarketPlaceOfferData(_local_4.offerId, _local_4.furniId, _local_4.furniType, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4.averagePrice, _local_4.offerCount);
                 _local_5.timeLeftMinutes = _local_4.timeLeftMinutes;
                 this._latestOffers.add(_local_4.offerId, _local_5);
             }
@@ -351,7 +351,7 @@
                         {
                             updateItem.offerId = parser.offerId;
                             updateItem.price = parser._Str_24839;
-                            updateItem._Str_4121--;
+                            updateItem.offerCount--;
                             this._latestOffers.add(parser.offerId, updateItem);
                         }
                         this._latestOffers.remove(parser._Str_7501);
