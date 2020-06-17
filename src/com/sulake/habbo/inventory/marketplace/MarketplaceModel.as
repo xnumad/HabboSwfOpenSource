@@ -214,7 +214,7 @@
             switch (k)
             {
                 case 1:
-                    this._view._Str_24597(this._item);
+                    this._view.showMakeOffer(this._item);
                     return;
                 case 2:
                     this._view.alert(("$" + "{inventory.marketplace.no_trading_privilege.title}"), ("$" + "{inventory.marketplace.no_trading_privilege.info}"));

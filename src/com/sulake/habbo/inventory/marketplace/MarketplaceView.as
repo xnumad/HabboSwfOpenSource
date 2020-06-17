@@ -99,7 +99,7 @@
             this._view.center();
         }
 
-        public function _Str_24597(k:FurnitureItem):void
+        public function showMakeOffer(k:FurnitureItem):void
         {
             var _local_4:ImageResult;
             var _local_5:String;
