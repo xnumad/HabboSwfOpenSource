@@ -401,7 +401,7 @@
             this._windowManager.alert(k, _arg_2, 0, this.closeAlert);
         }
 
-        public function _Str_25456(k:int, _arg_2:int):void
+        public function updateAveragePrice(k:int, _arg_2:int):void
         {
             if ((((!(this._view)) || (!(this._localization))) || (!(this._model))))
             {

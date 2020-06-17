@@ -252,7 +252,7 @@
             {
                 return;
             }
-            this._view._Str_25456(_arg_3, this._averagePricePeriod);
+            this._view.updateAveragePrice(_arg_3, this._averagePricePeriod);
         }
 
         public function onNotEnoughCredits():void
