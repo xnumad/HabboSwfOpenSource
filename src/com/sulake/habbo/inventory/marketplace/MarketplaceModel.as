@@ -239,7 +239,7 @@
             {
                 return;
             }
-            this._view._Str_22694(k);
+            this._view.showResult(k);
         }
 
         public function setAveragePrice(k:int, _arg_2:int, _arg_3:int):void

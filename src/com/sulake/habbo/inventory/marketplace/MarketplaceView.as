@@ -359,7 +359,7 @@
             }
         }
 
-        public function _Str_22694(k:int):void
+        public function showResult(k:int):void
         {
             var _local_2:String;
             if (k == 1)
