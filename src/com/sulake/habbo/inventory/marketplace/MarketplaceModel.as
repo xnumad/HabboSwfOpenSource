@@ -242,7 +242,7 @@
             this._view._Str_22694(k);
         }
 
-        public function _Str_22836(k:int, _arg_2:int, _arg_3:int):void
+        public function setAveragePrice(k:int, _arg_2:int, _arg_3:int):void
         {
             if (((!(k == this._statsRequestCategoryId)) || (!(_arg_2 == this._statsRequestTypeId))))
             {
