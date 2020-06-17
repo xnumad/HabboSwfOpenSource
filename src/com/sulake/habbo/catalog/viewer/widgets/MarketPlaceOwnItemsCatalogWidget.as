@@ -61,7 +61,7 @@
             var _local_2:IItemListWindow = (_window.findChildByName("item_list") as IItemListWindow);
             this._itemTemplates.add(MarketPlaceOfferState.ONGOING_OWN, _local_2.removeListItem(_local_2.getListItemByName("ongoing_item")));
             this._itemTemplates.add(MarketPlaceOfferState.SOLD, _local_2.removeListItem(_local_2.getListItemByName("sold_item")));
-            this._itemTemplates.add(MarketPlaceOfferState._Str_6495, _local_2.removeListItem(_local_2.getListItemByName("expired_item")));
+            this._itemTemplates.add(MarketPlaceOfferState.EXPIRED, _local_2.removeListItem(_local_2.getListItemByName("expired_item")));
             this.marketPlace.registerVisualization(this);
             this.marketPlace.requestOwnItems();
             this._Str_10239(this._Str_11360);
@@ -246,7 +246,7 @@
                                 _local_23.caption = _local_2.getLocalization("catalog.marketplace.offer.sold");
                             }
                         }
-                        if (_local_11.status == MarketPlaceOfferState._Str_6495)
+                        if (_local_11.status == MarketPlaceOfferState.EXPIRED)
                         {
                             _local_24 = _local_12.findChildByName("item_expired");
                             if (_local_24 != null)
