@@ -181,7 +181,7 @@
                 _local_11 = _Str_3083(_local_10.widget);
                 _local_11.rarityLevel = k.stuffData.rarityLevel;
             }
-            this._model._Str_23516();
+            this._model.getItemStats();
         }
 
         private function _Str_21651(k:BitmapData):void

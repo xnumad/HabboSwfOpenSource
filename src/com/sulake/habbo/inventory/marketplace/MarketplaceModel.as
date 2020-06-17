@@ -196,7 +196,7 @@
             this.releaseItem();
         }
 
-        public function _Str_23516():void
+        public function getItemStats():void
         {
             if (this._item == null)
             {
