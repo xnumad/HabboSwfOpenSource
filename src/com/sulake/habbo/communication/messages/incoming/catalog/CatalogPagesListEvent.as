@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.catalog.CatalogPagesListMessageParser;
+    import com.sulake.habbo.communication.messages.parser.catalog.CatalogIndexMessageParser;
 
     public class CatalogPagesListEvent extends MessageEvent implements IMessageEvent 
     {
         public function CatalogPagesListEvent(k:Function)
         {
-            super(k, CatalogPagesListMessageParser);
+            super(k, CatalogIndexMessageParser);
         }
 
-        public function getParser():CatalogPagesListMessageParser
+        public function getParser():CatalogIndexMessageParser
         {
-            return this._parser as CatalogPagesListMessageParser;
+            return this._parser as CatalogIndexMessageParser;
         }
 
         public function get root():NodeData

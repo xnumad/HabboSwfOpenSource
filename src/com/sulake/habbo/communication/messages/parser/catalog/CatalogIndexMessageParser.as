@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.NodeData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class CatalogPagesListMessageParser implements IMessageParser 
+    public class CatalogIndexMessageParser implements IMessageParser
     {
         private var _root:NodeData;
         private var _unknownBoolean:Boolean;
