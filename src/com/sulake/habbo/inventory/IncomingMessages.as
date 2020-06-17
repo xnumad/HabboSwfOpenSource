@@ -880,7 +880,7 @@
             _local_2.offerMinPrice = _local_3.minimumPrice;
             _local_2.offerMaxPrice = _local_3.maximumPrice;
             _local_2.expirationHours = _local_3.offerTime;
-            _local_2.displayTime = _local_3.displayTime;
+            _local_2.averagePricePeriod = _local_3.displayTime;
             this._inventory._Str_5943(InventoryCategory.MARKETPLACE);
             var _local_4:FurniModel = this._inventory._Str_2834;
             if (_local_4 != null)

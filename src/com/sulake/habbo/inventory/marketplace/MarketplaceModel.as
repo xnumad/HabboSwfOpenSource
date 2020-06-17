@@ -91,7 +91,7 @@
             this._expirationHours = k;
         }
 
-        public function set displayTime(k:int):void
+        public function set averagePricePeriod(k:int):void
         {
             this._averagePricePeriod = k;
         }
