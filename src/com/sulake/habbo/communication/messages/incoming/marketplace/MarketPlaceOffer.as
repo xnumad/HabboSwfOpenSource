@@ -6,7 +6,7 @@
     {
         private var _offerId:int;
         private var _furniId:int;
-        private var _Str_11835:int;
+        private var _furniType:int;
         private var _extraData:String;
         private var _stuffData:IStuffData;
         private var _price:int;
@@ -19,7 +19,7 @@
         {
             this._offerId = k;
             this._furniId = _arg_2;
-            this._Str_11835 = _arg_3;
+            this._furniType = _arg_3;
             this._extraData = _arg_4;
             this._stuffData = _arg_5;
             this._price = _arg_6;
@@ -41,7 +41,7 @@
 
         public function get furniType():int
         {
-            return this._Str_11835;
+            return this._furniType;
         }
 
         public function get extraData():String
