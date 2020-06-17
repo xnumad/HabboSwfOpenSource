@@ -186,7 +186,7 @@
                 if (((k) && (k.data)))
                 {
                     this._offer.image = (k.data as BitmapData);
-                    this._offer._Str_4774 = k.id;
+                    this._offer.imageCallback = k.id;
                 }
             }
             if (this._offer.image != null)
@@ -242,7 +242,7 @@
 
         public function imageReady(k:int, _arg_2:BitmapData):void
         {
-            if (((this._offer) && (this._offer._Str_4774 == k)))
+            if (((this._offer) && (this._offer.imageCallback == k)))
             {
                 this._offer.image = _arg_2;
                 this._Str_3523();

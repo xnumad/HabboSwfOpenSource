@@ -431,7 +431,7 @@
                 if (((!(_local_9 == null)) && (!(_local_9.data == null))))
                 {
                     k.image = (_local_9.data as BitmapData);
-                    k._Str_4774 = _local_9.id;
+                    k.imageCallback = _local_9.id;
                 }
                 _local_2.id = _local_9.id;
             }
@@ -507,9 +507,9 @@
             }
             for each (_local_5 in this._offers)
             {
-                if (_local_5._Str_4774 == k)
+                if (_local_5.imageCallback == k)
                 {
-                    _local_5._Str_4774 = 0;
+                    _local_5.imageCallback = 0;
                     _local_5.image = _arg_2;
                 }
             }
@@ -624,7 +624,7 @@
                 if (((!(_local_10 == null)) && (!(_local_10.data == null))))
                 {
                     k.image = (_local_10.data as BitmapData);
-                    k._Str_4774 = _local_10.id;
+                    k.imageCallback = _local_10.id;
                 }
             }
             if (k.image != null)

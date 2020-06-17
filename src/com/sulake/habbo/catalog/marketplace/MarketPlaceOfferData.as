@@ -96,12 +96,12 @@
             this._image = k;
         }
 
-        public function set _Str_4774(k:int):void
+        public function set imageCallback(k:int):void
         {
             this._imageCallback = k;
         }
 
-        public function get _Str_4774():int
+        public function get imageCallback():int
         {
             return this._imageCallback;
         }

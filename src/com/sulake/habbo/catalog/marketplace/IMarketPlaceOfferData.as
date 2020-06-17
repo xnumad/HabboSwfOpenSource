@@ -14,8 +14,8 @@
         function get averagePrice():int;
         function get image():BitmapData;
         function set image(_arg_1:BitmapData):void;
-        function set _Str_4774(_arg_1:int):void;
-        function get _Str_4774():int;
+        function set imageCallback(_arg_1:int):void;
+        function get imageCallback():int;
         function get status():int;
         function get timeLeftMinutes():int;
         function set timeLeftMinutes(_arg_1:int):void;

@@ -260,7 +260,7 @@
                             if (((!(_local_25 == null)) && (!(_local_25.data == null))))
                             {
                                 _local_11.image = (_local_25.data as BitmapData);
-                                _local_11._Str_4774 = _local_25.id;
+                                _local_11.imageCallback = _local_25.id;
                                 _local_12.id = _local_25.id;
                             }
                         }
@@ -357,9 +357,9 @@
             }
             for each (_local_5 in this._offers)
             {
-                if (_local_5._Str_4774 == k)
+                if (_local_5.imageCallback == k)
                 {
-                    _local_5._Str_4774 = 0;
+                    _local_5.imageCallback = 0;
                     _local_5.image = _arg_2;
                 }
             }
