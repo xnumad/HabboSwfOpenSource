@@ -264,7 +264,7 @@
             for each (_local_4 in _local_3.offers)
             {
                 _local_5 = new MarketPlaceOfferData(_local_4.offerId, _local_4.furniId, _local_4.furniType, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4.averagePrice, _local_4._Str_4121);
-                _local_5._Str_5853 = _local_4._Str_5853;
+                _local_5.timeLeftMinutes = _local_4.timeLeftMinutes;
                 this._latestOffers.add(_local_4.offerId, _local_5);
             }
             this._totalItemsFound = _local_3.totalItemsFound;
@@ -294,7 +294,7 @@
             for each (_local_4 in _local_3.offers)
             {
                 _local_5 = new MarketPlaceOfferData(_local_4.offerId, _local_4.furniId, _local_4.furniType, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4.averagePrice);
-                _local_5._Str_5853 = _local_4._Str_5853;
+                _local_5.timeLeftMinutes = _local_4.timeLeftMinutes;
                 this._latestOwnOffers.add(_local_4.offerId, _local_5);
             }
             if (this._visualization != null)

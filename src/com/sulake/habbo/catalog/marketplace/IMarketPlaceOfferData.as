@@ -17,8 +17,8 @@
         function set _Str_4774(_arg_1:int):void;
         function get _Str_4774():int;
         function get status():int;
-        function get _Str_5853():int;
-        function set _Str_5853(_arg_1:int):void;
+        function get timeLeftMinutes():int;
+        function set timeLeftMinutes(_arg_1:int):void;
         function set price(_arg_1:int):void;
         function set offerId(_arg_1:int):void;
         function get _Str_4121():int;

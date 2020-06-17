@@ -225,7 +225,7 @@
                             _local_17 = _local_12.findChildByName("item_time");
                             if (_local_17 != null)
                             {
-                                _local_18 = Math.max(1, _local_11._Str_5853);
+                                _local_18 = Math.max(1, _local_11.timeLeftMinutes);
                                 _local_19 = Math.floor((_local_18 / 60));
                                 _local_20 = (_local_18 - (_local_19 * 60));
                                 _local_21 = ((_local_20 + " ") + _local_2.getLocalization("catalog.marketplace.offer.minutes"));

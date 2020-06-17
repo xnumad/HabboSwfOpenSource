@@ -111,12 +111,12 @@
             return this._status;
         }
 
-        public function get _Str_5853():int
+        public function get timeLeftMinutes():int
         {
             return this._timeLeftMinutes;
         }
 
-        public function set _Str_5853(k:int):void
+        public function set timeLeftMinutes(k:int):void
         {
             this._timeLeftMinutes = k;
         }

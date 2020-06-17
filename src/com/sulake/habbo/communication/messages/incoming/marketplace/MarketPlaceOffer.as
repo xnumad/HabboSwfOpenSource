@@ -64,7 +64,7 @@
             return this._status;
         }
 
-        public function get _Str_5853():int
+        public function get timeLeftMinutes():int
         {
             return this._timeLeftMinutes;
         }
