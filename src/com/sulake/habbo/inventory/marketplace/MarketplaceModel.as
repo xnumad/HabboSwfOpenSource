@@ -81,7 +81,7 @@
             this._offerMinPrice = k;
         }
 
-        public function set maximumPrice(k:int):void
+        public function set offerMaxPrice(k:int):void
         {
             this._offerMaxPrice = k;
         }
@@ -121,7 +121,7 @@
             return this._offerMinPrice;
         }
 
-        public function get maximumPrice():int
+        public function get offerMaxPrice():int
         {
             return this._offerMaxPrice;
         }

@@ -125,7 +125,7 @@
             this._Str_19629();
             this._localization.registerParameter("inventory.marketplace.make_offer.expiration_info", "time", this._model.offerTime.toString());
             this._localization.registerParameter("inventory.marketplace.make_offer.min_price", "minprice", this._model.offerMinPrice.toString());
-            this._localization.registerParameter("inventory.marketplace.make_offer.max_price", "maxprice", this._model.maximumPrice.toString());
+            this._localization.registerParameter("inventory.marketplace.make_offer.max_price", "maxprice", this._model.offerMaxPrice.toString());
             var _local_3:uint = 4293848814;
             if (!k.isWallItem)
             {
@@ -332,10 +332,10 @@
                 return;
             }
             var _local_2:int = parseInt(k.text);
-            if (_local_2 > this._model.maximumPrice)
+            if (_local_2 > this._model.offerMaxPrice)
             {
-                k.text = this._model.maximumPrice.toString();
-                _local_2 = this._model.maximumPrice;
+                k.text = this._model.offerMaxPrice.toString();
+                _local_2 = this._model.offerMaxPrice;
             }
             var _local_3:int = Math.max(Math.ceil(((this._model.commission * 0.01) * _local_2)), 1);
             var _local_4:int = (_local_2 + _local_3);

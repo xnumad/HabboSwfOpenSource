@@ -878,7 +878,7 @@
             _local_2.tokenBatchPrice = _local_3.credits;
             _local_2.tokenBatchSize = _local_3.advertisements;
             _local_2.offerMinPrice = _local_3.minimumPrice;
-            _local_2.maximumPrice = _local_3.maximumPrice;
+            _local_2.offerMaxPrice = _local_3.maximumPrice;
             _local_2.offerTime = _local_3.offerTime;
             _local_2.displayTime = _local_3.displayTime;
             this._inventory._Str_5943(InventoryCategory.MARKETPLACE);
