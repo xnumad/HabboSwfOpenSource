@@ -88,7 +88,7 @@
             return this._realName;
         }
 
-        public function get _Str_25876():String
+        public function get facebookId():String
         {
             return this._facebookId;
         }
