@@ -62,7 +62,7 @@
             return true;
         }
 
-        public function get _Str_22635():Array
+        public function get cats():Array
         {
             return this._cats;
         }

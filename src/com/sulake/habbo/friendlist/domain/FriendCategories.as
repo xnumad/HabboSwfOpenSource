@@ -117,7 +117,7 @@
             {
                 p = (event as _Str_4035).getParser();
                 status = 1;
-                this._Str_22561(p._Str_22635);
+                this._Str_22561(p.cats);
                 status = 2;
                 for each (removedFriendId in p._Str_12515)
                 {
