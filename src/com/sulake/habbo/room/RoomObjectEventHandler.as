@@ -74,7 +74,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8042;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8136;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11777;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_6790;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10710;
@@ -2315,7 +2315,7 @@
                                 }
                                 else
                                 {
-                                    this._roomEngine.connection.send(new _Str_6790(_local_5, _local_6, _local_8, int(_local_9), int(_local_10), _local_12));
+                                    this._roomEngine.connection.send(new PlaceObjectMessageComposer(_local_5, _local_6, _local_8, int(_local_9), int(_local_10), _local_12));
                                 }
                             }
                         }

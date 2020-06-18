@@ -237,7 +237,7 @@
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_5270;
     import com.sulake.habbo.inventory.enum.FurniCategory;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_6790;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
     import flash.net.URLRequest;
     import com.sulake.core.assets.AssetLoaderStruct;
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
@@ -2754,7 +2754,7 @@
                             }
                             break;
                         default:
-                            this.send(new _Str_6790(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7));
+                            this.send(new PlaceObjectMessageComposer(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7));
                     }
                     this._Str_4663();
                 }

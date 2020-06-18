@@ -622,7 +622,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5686;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_6790;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7684;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7691;
@@ -1545,7 +1545,7 @@
             OUTGOING_PACKETS[1229] = GetOfficialRoomsMessageComposer;
             OUTGOING_PACKETS[1232] = _Str_18426;
             OUTGOING_PACKETS[1251] = CraftSecretComposer;
-            OUTGOING_PACKETS[1258] = _Str_6790;
+            OUTGOING_PACKETS[1258] = PlaceObjectMessageComposer;
             OUTGOING_PACKETS[1262] = _Str_10312;
             OUTGOING_PACKETS[1263] = _Str_10352;
             OUTGOING_PACKETS[1265] = UpdateRoomCategoryAndTradeSettingsComposer;
