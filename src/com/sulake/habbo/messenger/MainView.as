@@ -590,7 +590,7 @@
                     _local_3.figure = this._messenger.sessionDataManager.figure;
                     _local_3.userName = this._messenger.sessionDataManager.userName;
                     _local_8 = this._messenger.getFriend(this._currentConversationId);
-                    if ((((!(_local_8 == null)) && (!(_local_8.online))) && ((_local_8._Str_9624) || (_local_8.pocketHabboUser))))
+                    if ((((!(_local_8 == null)) && (!(_local_8.online))) && ((_local_8.persistedMessageUser) || (_local_8.pocketHabboUser))))
                     {
                         _local_3._Str_21245 = false;
                     }

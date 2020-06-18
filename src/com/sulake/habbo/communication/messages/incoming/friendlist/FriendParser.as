@@ -93,7 +93,7 @@
             return this._facebookId;
         }
 
-        public function get _Str_9624():Boolean
+        public function get persistedMessageUser():Boolean
         {
             return this._persistedMessageUser;
         }

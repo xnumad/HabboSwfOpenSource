@@ -9,7 +9,7 @@
         function get followingAllowed():Boolean;
         function get figure():String;
         function get realName():String;
-        function get _Str_9624():Boolean;
+        function get persistedMessageUser():Boolean;
         function get pocketHabboUser():Boolean;
         function get _Str_10060():int;
     }

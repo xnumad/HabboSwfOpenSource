@@ -46,7 +46,7 @@
             this._lastAccess = k.lastAccess;
             this._categoryId = k.categoryId;
             this._realName = k.realName;
-            this._persistedMessageUser = k._Str_9624;
+            this._persistedMessageUser = k.persistedMessageUser;
             this._vipMember = k._Str_17677;
             this._pocketHabboUser = k.pocketHabboUser;
             this._relationshipStatus = k._Str_10060;
@@ -138,7 +138,7 @@
             return this._realName;
         }
 
-        public function get _Str_9624():Boolean
+        public function get persistedMessageUser():Boolean
         {
             return this._persistedMessageUser;
         }
@@ -223,7 +223,7 @@
             this._realName = k;
         }
 
-        public function set _Str_9624(k:Boolean):void
+        public function set persistedMessageUser(k:Boolean):void
         {
             this._persistedMessageUser = k;
         }
