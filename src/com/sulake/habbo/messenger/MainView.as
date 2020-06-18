@@ -376,7 +376,7 @@
 
         private function recordInfoMessage(k:int, _arg_2:String, _arg_3:Boolean=false):void
         {
-            this.recordChatEntry(k, new ChatEntry(ChatEntry._Str_12682, 0, _arg_2, 0), _arg_3);
+            this.recordChatEntry(k, new ChatEntry(ChatEntry.TYPE_INFO, 0, _arg_2, 0), _arg_3);
         }
 
         private function recordInvitationMessage(k:int, _arg_2:String, _arg_3:Boolean=false):void
@@ -531,7 +531,7 @@
             var _local_10:Boolean;
             switch (k.type)
             {
-                case ChatEntry._Str_12682:
+                case ChatEntry.TYPE_INFO:
                     _local_4 = (this._chatInfoTemplate.clone() as IWindowContainer);
                     _local_5 = _local_4.findChildByName("content");
                     _local_5.limits.minWidth = this.conversationItemWidth;
