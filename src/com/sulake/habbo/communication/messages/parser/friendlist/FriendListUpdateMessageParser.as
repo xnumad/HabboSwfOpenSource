@@ -7,7 +7,7 @@
 
     public class FriendListUpdateMessageParser implements IMessageParser
     {
-        private var _Str_16042:Array;
+        private var _cats:Array;
         private var _Str_17911:Array;
         private var _Str_17508:Array;
         private var _Str_18357:Array;
@@ -15,7 +15,7 @@
 
         public function flush():Boolean
         {
-            this._Str_16042 = new Array();
+            this._cats = new Array();
             this._Str_17911 = new Array();
             this._Str_17508 = new Array();
             this._Str_18357 = new Array();
@@ -30,7 +30,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_16042.push(new _Str_5148(k));
+                this._cats.push(new _Str_5148(k));
                 _local_3++;
             }
             var _local_4:int = k.readInteger();
@@ -64,7 +64,7 @@
 
         public function get _Str_22635():Array
         {
-            return this._Str_16042;
+            return this._cats;
         }
 
         public function get _Str_12515():Array
