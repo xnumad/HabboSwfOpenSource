@@ -23,11 +23,11 @@
         private static const FLIPPED_KEY:String = (ILLUMINA_CHAT_BUBBLE + ":flipped");
         private static const USER_NAME_KEY:String = (ILLUMINA_CHAT_BUBBLE + ":user_name");
         private static const FIGURE_KEY:String = (ILLUMINA_CHAT_BUBBLE + ":figure");
-        private static const _Str_15458:String = (ILLUMINA_CHAT_BUBBLE + ":message");
+        private static const MESSAGE_KEY:String = (ILLUMINA_CHAT_BUBBLE + ":message");
         private static const _Str_13641:PropertyStruct = new PropertyStruct(FLIPPED_KEY, false, PropertyStruct.BOOLEAN);
         private static const _Str_13288:PropertyStruct = new PropertyStruct(USER_NAME_KEY, "", PropertyStruct.STRING);
         private static const _Str_3804:PropertyStruct = new PropertyStruct(FIGURE_KEY, "", PropertyStruct.STRING);
-        private static const _Str_13034:PropertyStruct = new PropertyStruct(_Str_15458, "", PropertyStruct.STRING);
+        private static const _Str_13034:PropertyStruct = new PropertyStruct(MESSAGE_KEY, "", PropertyStruct.STRING);
 
         private var _disposed:Boolean;
         private var _widgetWindow:IWidgetWindow;
@@ -134,7 +134,7 @@
                     case FIGURE_KEY:
                         this.figure = String(_local_2.value);
                         break;
-                    case _Str_15458:
+                    case MESSAGE_KEY:
                         this.message = String(_local_2.value);
                         break;
                 }
