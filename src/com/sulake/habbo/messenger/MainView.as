@@ -592,7 +592,7 @@
                     _local_8 = this._messenger.getFriend(this._currentConversationId);
                     if ((((!(_local_8 == null)) && (!(_local_8.online))) && ((_local_8.persistedMessageUser) || (_local_8.pocketHabboUser))))
                     {
-                        _local_3._Str_21245 = false;
+                        _local_3.friendOnlineStatus = false;
                     }
                     return _local_2;
             }

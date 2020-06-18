@@ -202,7 +202,7 @@
             this._postTime.timeStamp = k;
         }
 
-        public function set _Str_21245(k:Boolean):void
+        public function set friendOnlineStatus(k:Boolean):void
         {
             this._offline.height = ((k) ? 0 : 16);
         }

@@ -16,6 +16,6 @@
         function set message(_arg_1:String):void;
         function get timeStamp():Number;
         function set timeStamp(_arg_1:Number):void;
-        function set _Str_21245(_arg_1:Boolean):void;
+        function set friendOnlineStatus(_arg_1:Boolean):void;
     }
 }
