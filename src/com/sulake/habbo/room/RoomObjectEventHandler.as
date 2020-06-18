@@ -82,7 +82,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11935;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11639;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12182;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10136;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.GetItemDataMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10097;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10640;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveItemMessageComposer;
@@ -2380,7 +2380,7 @@
                         this._roomEngine.connection.send(new _Str_12182(_arg_2));
                         return;
                     case RoomObjectFurnitureActionEvent.STICKIE:
-                        this._roomEngine.connection.send(new _Str_10136(_arg_2));
+                        this._roomEngine.connection.send(new GetItemDataMessageComposer(_arg_2));
                         return;
                     case RoomObjectFurnitureActionEvent.ENTER_ONEWAYDOOR:
                         this._roomEngine.connection.send(new _Str_10097(_arg_2));

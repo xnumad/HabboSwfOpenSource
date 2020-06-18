@@ -607,7 +607,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_8147;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10067;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10136;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetItemDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10528;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10547;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10596;
@@ -1918,7 +1918,7 @@
             OUTGOING_PACKETS[3950] = _Str_7887;
             OUTGOING_PACKETS[3959] = PhotoCompetitionMessageComposer;
             OUTGOING_PACKETS[3961] = _Str_5876;
-            OUTGOING_PACKETS[3964] = _Str_10136;
+            OUTGOING_PACKETS[3964] = GetItemDataMessageComposer;
             OUTGOING_PACKETS[3965] = _Str_10577;
             OUTGOING_PACKETS[3969] = _Str_11135;
             OUTGOING_PACKETS[398] = _Str_11776;
