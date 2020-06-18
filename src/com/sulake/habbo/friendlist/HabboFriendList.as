@@ -934,7 +934,7 @@
             var _local_2:Friend = this._categories._Str_13534(k);
             if (_local_2)
             {
-                return _local_2._Str_10060;
+                return _local_2.relationshipStatus;
             }
             return RelationshipStatusEnum.NONE;
         }

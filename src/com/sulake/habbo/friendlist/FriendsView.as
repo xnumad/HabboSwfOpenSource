@@ -233,7 +233,7 @@
             var _local_6:Boolean = ((this._friendList._Str_21131()) && ((_arg_2.persistedMessageUser) || (_arg_2.pocketHabboUser)));
             this._friendList.refreshButton(_local_4, "start_chat", ((_arg_2.online) || (_local_6)), this._Str_18658, _arg_2.id);
             this._friendList.refreshButton(_local_4, "follow_friend", _arg_2.followingAllowed, this._Str_23763, _arg_2.id);
-            this._friendList._Str_25274(_local_4, "relationship_status", _arg_2._Str_10060, this._Str_24109, _arg_2.id);
+            this._friendList._Str_25274(_local_4, "relationship_status", _arg_2.relationshipStatus, this._Str_24109, _arg_2.id);
             this._Str_16823(_local_4, _arg_2);
             _local_4.findChildByName("user_info_region").visible = true;
             _local_4.findChildByName("user_info_region").id = _arg_2.id;

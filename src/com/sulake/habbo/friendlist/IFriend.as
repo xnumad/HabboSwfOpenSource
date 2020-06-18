@@ -11,6 +11,6 @@
         function get realName():String;
         function get persistedMessageUser():Boolean;
         function get pocketHabboUser():Boolean;
-        function get _Str_10060():int;
+        function get relationshipStatus():int;
     }
 }

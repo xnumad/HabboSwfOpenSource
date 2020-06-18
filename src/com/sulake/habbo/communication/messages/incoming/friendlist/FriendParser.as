@@ -108,7 +108,7 @@
             return this._pocketHabboUser;
         }
 
-        public function get _Str_10060():int
+        public function get relationshipStatus():int
         {
             return this._relationshipStatus;
         }

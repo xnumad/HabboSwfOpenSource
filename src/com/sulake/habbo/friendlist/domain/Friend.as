@@ -49,7 +49,7 @@
             this._persistedMessageUser = k.persistedMessageUser;
             this._vipMember = k.vipMember;
             this._pocketHabboUser = k.pocketHabboUser;
-            this._relationshipStatus = k._Str_10060;
+            this._relationshipStatus = k.relationshipStatus;
             Logger.log(((((((((((((("Creating friend: " + this.id) + ", ") + this.name) + ", ") + this.gender) + ", ") + this.online) + ", ") + this.followingAllowed) + ", ") + this.figure) + ", ") + this.categoryId));
         }
 
@@ -148,7 +148,7 @@
             return this._pocketHabboUser;
         }
 
-        public function get _Str_10060():int
+        public function get relationshipStatus():int
         {
             return this._relationshipStatus;
         }
