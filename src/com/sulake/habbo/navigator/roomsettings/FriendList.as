@@ -42,11 +42,11 @@
             {
                 this._namesById[_local_3] = null;
             }
-            for each (_local_4 in _local_2._Str_14430)
+            for each (_local_4 in _local_2.addedFriends)
             {
                 this._namesById[_local_4.id] = _local_4.name;
             }
-            this._list = (((_local_2.removedFriendIds.length > 0) || (_local_2._Str_14430.length > 0)) ? null : this._list);
+            this._list = (((_local_2.removedFriendIds.length > 0) || (_local_2.addedFriends.length > 0)) ? null : this._list);
         }
 
         public function get list():Array

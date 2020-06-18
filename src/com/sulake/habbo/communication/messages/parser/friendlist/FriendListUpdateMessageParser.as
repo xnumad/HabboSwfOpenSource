@@ -72,7 +72,7 @@
             return this._removedFriendIds;
         }
 
-        public function get _Str_14430():Array
+        public function get addedFriends():Array
         {
             return this._addedFriends;
         }

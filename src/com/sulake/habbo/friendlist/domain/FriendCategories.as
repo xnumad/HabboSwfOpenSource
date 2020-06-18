@@ -144,7 +144,7 @@
                     this._Str_11247(friend);
                 }
                 status = 4;
-                for each (addedFriend in p._Str_14430)
+                for each (addedFriend in p.addedFriends)
                 {
                     Logger.log(((("Got INSERT: " + addedFriend.id) + ", ") + addedFriend.name));
                     this._Str_8793(addedFriend.id, true);
