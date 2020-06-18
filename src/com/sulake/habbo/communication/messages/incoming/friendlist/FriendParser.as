@@ -98,7 +98,7 @@
             return this._persistedMessageUser;
         }
 
-        public function get _Str_17677():Boolean
+        public function get vipMember():Boolean
         {
             return this._vipMember;
         }

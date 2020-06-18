@@ -47,7 +47,7 @@
             this._categoryId = k.categoryId;
             this._realName = k.realName;
             this._persistedMessageUser = k.persistedMessageUser;
-            this._vipMember = k._Str_17677;
+            this._vipMember = k.vipMember;
             this._pocketHabboUser = k.pocketHabboUser;
             this._relationshipStatus = k._Str_10060;
             Logger.log(((((((((((((("Creating friend: " + this.id) + ", ") + this.name) + ", ") + this.gender) + ", ") + this.online) + ", ") + this.followingAllowed) + ", ") + this.figure) + ", ") + this.categoryId));
@@ -153,7 +153,7 @@
             return this._relationshipStatus;
         }
 
-        public function get _Str_17677():Boolean
+        public function get vipMember():Boolean
         {
             return this._vipMember;
         }
@@ -233,7 +233,7 @@
             this._pocketHabboUser = k;
         }
 
-        public function set _Str_17677(k:Boolean):void
+        public function set vipMember(k:Boolean):void
         {
             this._vipMember = k;
         }
