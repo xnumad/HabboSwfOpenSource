@@ -56,7 +56,7 @@
     {
         private static const SHOW_OFFLINE_FRIENDS:Boolean = false;
         private static const SORT_ALPHABETICALLY:Boolean = false;
-        private static const NAVIGATION:String = "Navigation";
+        private static const TRACKING_EVENT_CATEGORY:String = "Navigation";
         private static const FRIEND_BAR:String = "Friend Bar";
         private static const GO_FRIENDBAR:String = "go.friendbar";
         private static const CHAT_BTN_CLICK:String = "chat_btn_click";
@@ -307,7 +307,7 @@
             if (this._habboCommunicationManager)
             {
                 this._habboCommunicationManager.connection.send(new _Str_4348(k));
-                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(NAVIGATION, FRIEND_BAR, GO_FRIENDBAR));
+                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, FRIEND_BAR, GO_FRIENDBAR));
             }
         }
 
@@ -319,7 +319,7 @@
                 events.dispatchEvent(new NewMessageEvent(false, k));
                 if (this._habboCommunicationManager)
                 {
-                    this._habboCommunicationManager.connection.send(new EventLogMessageComposer(NAVIGATION, FRIEND_BAR, CHAT_BTN_CLICK));
+                    this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, FRIEND_BAR, CHAT_BTN_CLICK));
                 }
             }
         }
@@ -329,7 +329,7 @@
             if (this._habboCommunicationManager)
             {
                 this._habboCommunicationManager.connection.send(new _Str_11815());
-                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(NAVIGATION, FRIEND_BAR, FIND_FRIENDS_BTN_CLICK));
+                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, FRIEND_BAR, FIND_FRIENDS_BTN_CLICK));
             }
         }
 		
@@ -347,7 +347,7 @@
         {
             if (this._habboCommunicationManager)
             {
-                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(NAVIGATION, FRIEND_BAR, k, _arg_2, this._Str_7830));
+                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, FRIEND_BAR, k, _arg_2, this._Str_7830));
             }
         }
 
@@ -367,7 +367,7 @@
         {
             if (this._habboCommunicationManager)
             {
-                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(NAVIGATION, FRIEND_BAR, k, _arg_2, this._Str_7830));
+                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, FRIEND_BAR, k, _arg_2, this._Str_7830));
             }
         }
 
