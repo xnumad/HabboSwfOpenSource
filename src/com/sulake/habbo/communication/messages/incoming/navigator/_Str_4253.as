@@ -4,20 +4,20 @@
 
     public class _Str_4253 
     {
-        private var _Str_2629:int;
+        private var _categoryId:int;
         private var _Str_19340:String;
         private var _visible:Boolean;
 
         public function _Str_4253(k:IMessageDataWrapper)
         {
-            this._Str_2629 = k.readInteger();
+            this._categoryId = k.readInteger();
             this._Str_19340 = k.readString();
             this._visible = k.readBoolean();
         }
 
         public function get categoryId():int
         {
-            return this._Str_2629;
+            return this._categoryId;
         }
 
         public function get _Str_26101():String

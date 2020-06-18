@@ -10,7 +10,7 @@
         private var _online:Boolean;
         private var _followingAllowed:Boolean;
         private var _figure:String;
-        private var _Str_2629:int;
+        private var _categoryId:int;
         private var _motto:String;
         private var _Str_6103:String;
         private var _realName:String;
@@ -28,7 +28,7 @@
             this._online = k.readBoolean();
             this._followingAllowed = k.readBoolean();
             this._figure = k.readString();
-            this._Str_2629 = k.readInteger();
+            this._categoryId = k.readInteger();
             this._motto = k.readString();
             this._realName = k.readString();
             this._Str_21677 = k.readString();
@@ -70,7 +70,7 @@
 
         public function get categoryId():int
         {
-            return this._Str_2629;
+            return this._categoryId;
         }
 
         public function get motto():String

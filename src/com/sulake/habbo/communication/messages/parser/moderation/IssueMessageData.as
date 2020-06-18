@@ -11,7 +11,7 @@
 
         private var _Str_6036:int;
         private var _state:int;
-        private var _Str_2629:int;
+        private var _categoryId:int;
         private var _Str_21044:int;
         private var _issueAgeInMilliseconds:Number;
         private var _priority:int;
@@ -32,7 +32,7 @@
         {
             this._Str_6036 = k;
             this._state = _arg_2;
-            this._Str_2629 = _arg_3;
+            this._categoryId = _arg_3;
             this._Str_21044 = _arg_4;
             this._issueAgeInMilliseconds = _arg_5;
             this._priority = _arg_6;
@@ -61,7 +61,7 @@
 
         public function get categoryId():int
         {
-            return this._Str_2629;
+            return this._categoryId;
         }
 
         public function get _Str_7437():int

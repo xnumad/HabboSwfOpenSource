@@ -6,14 +6,14 @@
 
     public class _Str_8595 implements IMessageParser 
     {
-        private var _Str_2629:int;
+        private var _categoryId:int;
         private var _description:String;
         private var _data:Map;
 
 
         public function get categoryId():int
         {
-            return this._Str_2629;
+            return this._categoryId;
         }
 
         public function get description():String
@@ -33,7 +33,7 @@
                 this._data.dispose();
             }
             this._data = null;
-            this._Str_2629 = -1;
+            this._categoryId = -1;
             this._description = null;
             return true;
         }
@@ -43,7 +43,7 @@
             var _local_3:int;
             var _local_4:String;
             this._data = new Map();
-            this._Str_2629 = k.readInteger();
+            this._categoryId = k.readInteger();
             this._description = k.readString();
             var _local_2:int = k.readInteger();
             var _local_5:int;

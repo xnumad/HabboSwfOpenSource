@@ -9,7 +9,7 @@
         private var _Str_21450:int;
         private var _Str_20782:String;
         private var _flatId:int;
-        private var _Str_2629:int;
+        private var _categoryId:int;
         private var _eventType:int;
         private var _eventName:String;
         private var _eventDescription:String;
@@ -38,7 +38,7 @@
             var _local_9:Number = ((_local_3 * 60) * 1000);
             _local_8 = (_local_8 + _local_9);
             this._Str_20383 = new Date(_local_8);
-            this._Str_2629 = k.readInteger();
+            this._categoryId = k.readInteger();
         }
 
         public function dispose():void
@@ -77,7 +77,7 @@
 
         public function get categoryId():int
         {
-            return this._Str_2629;
+            return this._categoryId;
         }
 
         public function get eventType():int

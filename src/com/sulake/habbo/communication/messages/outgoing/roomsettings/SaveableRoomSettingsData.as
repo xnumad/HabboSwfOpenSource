@@ -7,7 +7,7 @@
         private var _description:String;
         private var _Str_4321:int;
         private var _password:String;
-        private var _Str_2629:int;
+        private var _categoryId:int;
         private var _Str_10633:int;
         private var _tags:Array;
         private var _Str_8850:Array;
@@ -151,12 +151,12 @@
 
         public function get categoryId():int
         {
-            return this._Str_2629;
+            return this._categoryId;
         }
 
         public function set categoryId(k:int):void
         {
-            this._Str_2629 = k;
+            this._categoryId = k;
         }
 
         public function get _Str_5552():int
