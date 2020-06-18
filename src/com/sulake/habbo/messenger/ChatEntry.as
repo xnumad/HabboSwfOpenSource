@@ -4,7 +4,7 @@
 
     public class ChatEntry 
     {
-        public static const _Str_9544:int = 1;
+        public static const TYPE_OWN_CHAT:int = 1;
         public static const _Str_8431:int = 2;
         public static const _Str_10130:int = 3;
         public static const _Str_12682:int = 4;

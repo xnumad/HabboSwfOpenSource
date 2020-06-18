@@ -365,7 +365,7 @@
             }
             else
             {
-                this.recordChatEntry(k, new ChatEntry(ChatEntry._Str_9544, 0, _arg_2, _arg_4));
+                this.recordChatEntry(k, new ChatEntry(ChatEntry.TYPE_OWN_CHAT, 0, _arg_2, _arg_4));
             }
         }
 
@@ -415,7 +415,7 @@
                 _local_6 = _local_4[(_local_4.length - 1)];
                 if (k > 0)
                 {
-                    if (((_arg_2.type == _local_6.type) && ((_arg_2.type == ChatEntry._Str_9544) || (_arg_2.type == ChatEntry._Str_8431))))
+                    if (((_arg_2.type == _local_6.type) && ((_arg_2.type == ChatEntry.TYPE_OWN_CHAT) || (_arg_2.type == ChatEntry._Str_8431))))
                     {
                         _local_4.pop();
                         _arg_2._Str_19910(_local_6.message);
@@ -441,7 +441,7 @@
                             _local_7 = (_local_8 == _local_9);
                         }
                     }
-                    if (((_arg_2.type == _local_6.type) && ((_arg_2.type == ChatEntry._Str_9544) || (_local_7))))
+                    if (((_arg_2.type == _local_6.type) && ((_arg_2.type == ChatEntry.TYPE_OWN_CHAT) || (_local_7))))
                     {
                         _local_4.pop();
                         _arg_2._Str_19910(_local_6.message);
@@ -580,7 +580,7 @@
                         }
                     }
                     return _local_2;
-                case ChatEntry._Str_9544:
+                case ChatEntry.TYPE_OWN_CHAT:
                     _local_2 = (this._chatMessageTemplate.clone() as IWidgetWindow);
                     _local_2.width = this.conversationItemWidth;
                     _local_3 = (_local_2.widget as IIlluminaChatBubbleWidget);
