@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5078;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5546;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4253;
+    import com.sulake.habbo.communication.messages.incoming.navigator.EventCategory;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6043;
     import com.sulake.habbo.communication.messages.incoming.navigator.*;
     import com.sulake.habbo.navigator.*;
@@ -399,7 +399,7 @@
 
         public function set _Str_10701(k:Array):void
         {
-            var _local_2:_Str_4253;
+            var _local_2:EventCategory;
             this._allEventCategories = k;
             this._visibleEventCategories = new Array();
             for each (_local_2 in this._allEventCategories)
@@ -421,9 +421,9 @@
             return this._visibleEventCategories;
         }
 
-        public function _Str_26114(k:int):_Str_4253
+        public function _Str_26114(k:int):EventCategory
         {
-            var _local_2:_Str_4253;
+            var _local_2:EventCategory;
             for each (_local_2 in this._allCategories)
             {
                 if (_local_2.categoryId == k)

@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4253 
+    public class EventCategory
     {
         private var _categoryId:int;
         private var _Str_19340:String;
         private var _visible:Boolean;
 
-        public function _Str_4253(k:IMessageDataWrapper)
+        public function EventCategory(k:IMessageDataWrapper)
         {
             this._categoryId = k.readInteger();
             this._Str_19340 = k.readString();

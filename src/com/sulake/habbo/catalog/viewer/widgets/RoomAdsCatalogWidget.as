@@ -11,7 +11,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
     import com.sulake.habbo.catalog.purchase.RoomAdPurchaseData;
     import com.sulake.habbo.room.events.RoomEngineEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4253;
+    import com.sulake.habbo.communication.messages.incoming.navigator.EventCategory;
     import com.sulake.habbo.communication.messages.incoming.users.RoomEntryData;
     import com.sulake.habbo.communication.messages.parser.catalog.RoomAdPurchaseInfoEventParser;
     import com.sulake.habbo.catalog.IPurchasableOffer;
@@ -86,7 +86,7 @@
 
         private function _Str_20930():void
         {
-            var _local_2:_Str_4253;
+            var _local_2:EventCategory;
             if (window == null)
             {
                 return;
@@ -305,7 +305,7 @@
 
         private function _Str_23736(k:WindowEvent):void
         {
-            var _local_5:_Str_4253;
+            var _local_5:EventCategory;
             var _local_6:RoomAdPurchaseData;
             var _local_2:int;
             var _local_3:int = -1;
