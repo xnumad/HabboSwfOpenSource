@@ -20,12 +20,12 @@
     public class PetImageWidget implements _Str_18605, IGetImageListener 
     {
         public static const PET_IMAGE:String = "pet_image";
-        private static const _Str_4305:String = (PET_IMAGE + ":figure");
+        private static const FIGURE_KEY:String = (PET_IMAGE + ":figure");
         private static const _Str_3540:String = (PET_IMAGE + ":scale");
         private static const _Str_4259:String = (PET_IMAGE + ":direction");
         private static const _Str_3257:Array = ["northeast", "east", "southeast", "south", "southwest", "west", "northwest", "north"];
         private static const _Str_7546:Array = [32, 64];
-        private static const _Str_3804:PropertyStruct = new PropertyStruct(_Str_4305, "1 0 ffffff", PropertyStruct.STRING);
+        private static const _Str_3804:PropertyStruct = new PropertyStruct(FIGURE_KEY, "1 0 ffffff", PropertyStruct.STRING);
         private static const _Str_3527:PropertyStruct = new PropertyStruct(_Str_3540, 64, PropertyStruct.INT, false, _Str_7546);
         private static const _Str_4346:PropertyStruct = new PropertyStruct(_Str_4259, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
 
@@ -115,7 +115,7 @@
             {
                 switch (_local_2.key)
                 {
-                    case _Str_4305:
+                    case FIGURE_KEY:
                         this.figure = String(_local_2.value);
                         break;
                     case _Str_3540:

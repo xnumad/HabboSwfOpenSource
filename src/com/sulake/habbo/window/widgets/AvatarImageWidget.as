@@ -22,13 +22,13 @@
     public class AvatarImageWidget implements IAvatarImageWidget, IAvatarImageListener
     {
         public static const AVATAR_IMAGE:String = "avatar_image";
-        private static const _Str_4305:String = (AVATAR_IMAGE + ":figure");
+        private static const FIGURE_KEY:String = (AVATAR_IMAGE + ":figure");
         private static const _Str_3540:String = (AVATAR_IMAGE + ":scale");
         private static const _Str_15149:String = (AVATAR_IMAGE + ":only_head");
         private static const _Str_13883:String = (AVATAR_IMAGE + ":cropped");
         private static const _Str_4259:String = (AVATAR_IMAGE + ":direction");
         private static const _Str_3257:Array = ["northeast", "east", "southeast", "south", "southwest", "west", "northwest", "north"];
-        private static const _Str_3804:PropertyStruct = new PropertyStruct(_Str_4305, "hd-180-1.ch-210-66.lg-270-82.sh-290-81", PropertyStruct.STRING);
+        private static const _Str_3804:PropertyStruct = new PropertyStruct(FIGURE_KEY, "hd-180-1.ch-210-66.lg-270-82.sh-290-81", PropertyStruct.STRING);
         private static const _Str_3527:PropertyStruct = new PropertyStruct(_Str_3540, AvatarScaleType.LARGE, PropertyStruct.STRING, false, [AvatarScaleType.SMALL, AvatarScaleType.LARGE]);
         private static const _Str_15271:PropertyStruct = new PropertyStruct(_Str_15149, false, PropertyStruct.BOOLEAN);
         private static const _Str_13004:PropertyStruct = new PropertyStruct(_Str_13883, false, PropertyStruct.BOOLEAN);
@@ -129,7 +129,7 @@
             {
                 switch (_local_2.key)
                 {
-                    case _Str_4305:
+                    case FIGURE_KEY:
                         this.figure = String(_local_2.value);
                         break;
                     case _Str_3540:
