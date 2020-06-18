@@ -18,7 +18,7 @@
         private var _persistedMessageUser:Boolean;
         private var _vipMember:Boolean;
         private var _pocketHabboUser:Boolean;
-        private var _Str_11104:int;
+        private var _relationshipStatus:int;
 
         public function FriendParser(k:IMessageDataWrapper)
         {
@@ -35,7 +35,7 @@
             this._persistedMessageUser = k.readBoolean();
             this._vipMember = k.readBoolean();
             this._pocketHabboUser = k.readBoolean();
-            this._Str_11104 = k.readShort();
+            this._relationshipStatus = k.readShort();
         }
 
         public function get id():int
@@ -110,7 +110,7 @@
 
         public function get _Str_10060():int
         {
-            return this._Str_11104;
+            return this._relationshipStatus;
         }
     }
 }
