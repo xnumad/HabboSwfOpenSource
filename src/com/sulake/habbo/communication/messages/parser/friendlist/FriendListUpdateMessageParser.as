@@ -8,7 +8,7 @@
     public class FriendListUpdateMessageParser implements IMessageParser
     {
         private var _cats:Array;
-        private var _Str_17911:Array;
+        private var _removedFriendIds:Array;
         private var _Str_17508:Array;
         private var _Str_18357:Array;
 
@@ -16,7 +16,7 @@
         public function flush():Boolean
         {
             this._cats = new Array();
-            this._Str_17911 = new Array();
+            this._removedFriendIds = new Array();
             this._Str_17508 = new Array();
             this._Str_18357 = new Array();
             return true;
@@ -41,7 +41,7 @@
                 if (_local_5 == -1)
                 {
                     _local_6 = k.readInteger();
-                    this._Str_17911.push(_local_6);
+                    this._removedFriendIds.push(_local_6);
                 }
                 else
                 {
@@ -69,7 +69,7 @@
 
         public function get _Str_12515():Array
         {
-            return this._Str_17911;
+            return this._removedFriendIds;
         }
 
         public function get _Str_14430():Array
