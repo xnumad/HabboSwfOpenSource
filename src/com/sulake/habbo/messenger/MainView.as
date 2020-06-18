@@ -361,7 +361,7 @@
         {
             if (_arg_3)
             {
-                this.recordChatEntry(k, new ChatEntry(ChatEntry._Str_8431, k, _arg_2, _arg_4, _arg_5), true);
+                this.recordChatEntry(k, new ChatEntry(ChatEntry.TYPE_OTHER_CHAT, k, _arg_2, _arg_4, _arg_5), true);
             }
             else
             {
@@ -415,7 +415,7 @@
                 _local_6 = _local_4[(_local_4.length - 1)];
                 if (k > 0)
                 {
-                    if (((_arg_2.type == _local_6.type) && ((_arg_2.type == ChatEntry.TYPE_OWN_CHAT) || (_arg_2.type == ChatEntry._Str_8431))))
+                    if (((_arg_2.type == _local_6.type) && ((_arg_2.type == ChatEntry.TYPE_OWN_CHAT) || (_arg_2.type == ChatEntry.TYPE_OTHER_CHAT))))
                     {
                         _local_4.pop();
                         _arg_2._Str_19910(_local_6.message);
@@ -428,7 +428,7 @@
                 else
                 {
                     _local_7 = false;
-                    if (_arg_2.type == ChatEntry._Str_8431)
+                    if (_arg_2.type == ChatEntry.TYPE_OTHER_CHAT)
                     {
                         if (((_local_6.extraData == null) || (_arg_2.extraData == null)))
                         {
@@ -548,7 +548,7 @@
                     _local_7.findChildByName("content").width = (this.conversationItemWidth - NOTIFICATION_ICON_WIDTH);
                     _local_7.findChildByName("content").caption = k.message;
                     return _local_7;
-                case ChatEntry._Str_8431:
+                case ChatEntry.TYPE_OTHER_CHAT:
                     _local_2 = (this._chatMessageTemplate.clone() as IWidgetWindow);
                     _local_2.width = this.conversationItemWidth;
                     _local_3 = (_local_2.widget as IIlluminaChatBubbleWidget);
