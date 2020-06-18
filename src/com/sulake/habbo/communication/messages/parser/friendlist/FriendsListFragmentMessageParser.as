@@ -8,7 +8,7 @@
     {
         protected var _totalFragments:int;
         protected var _fragmentNo:int;
-        private var _Str_14849:Array;
+        private var _friendFragment:Array;
 
 
         public function get totalFragments():int
@@ -23,19 +23,19 @@
 
         public function get _Str_16756():Array
         {
-            return this._Str_14849;
+            return this._friendFragment;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._totalFragments = k.readInteger();
             this._fragmentNo = k.readInteger();
-            this._Str_14849 = new Array();
+            this._friendFragment = new Array();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_14849.push(new FriendParser(k));
+                this._friendFragment.push(new FriendParser(k));
                 _local_3++;
             }
             return true;
@@ -43,7 +43,7 @@
 
         public function flush():Boolean
         {
-            this._Str_14849 = new Array();
+            this._friendFragment = new Array();
             return true;
         }
     }
