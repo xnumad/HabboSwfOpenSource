@@ -55,7 +55,7 @@
     public class HabboFriendBarData extends Component implements IHabboFriendBarData 
     {
         private static const SHOW_OFFLINE_FRIENDS:Boolean = false;
-        private static const _Str_12913:Boolean = false;
+        private static const SORT_ALPHABETICALLY:Boolean = false;
         private static const NAVIGATION:String = "Navigation";
         private static const FRIEND_BAR:String = "Friend Bar";
         private static const GO_FRIENDBAR:String = "go.friendbar";
@@ -669,7 +669,7 @@
 
         private function _Str_21818(k:Array):Array
         {
-            if (_Str_12913)
+            if (SORT_ALPHABETICALLY)
             {
                 k.sortOn("name", [Array.CASEINSENSITIVE]);
             }
@@ -694,7 +694,7 @@
                     _local_3.push(_local_4);
                 }
             }
-            if (_Str_12913)
+            if (SORT_ALPHABETICALLY)
             {
                 _local_2.sortOn("name", [Array.CASEINSENSITIVE]);
                 _local_3.sortOn("name", [(Array.CASEINSENSITIVE | Array.DESCENDING)]);
