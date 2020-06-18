@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5148 
+    public class FriendCategoryData
     {
         private var _id:int;
         private var _name:String;
 
-        public function _Str_5148(k:IMessageDataWrapper)
+        public function FriendCategoryData(k:IMessageDataWrapper)
         {
             this._id = k.readInteger();
             this._name = k.readString();

@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5148;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendCategoryData;
     import com.sulake.habbo.friendlist.Util;
     import com.sulake.habbo.friendlist._Str_6567;
     import com.sulake.habbo.communication.messages.incoming.friendlist.*;
@@ -163,7 +163,7 @@
 
         private function _Str_22561(k:Array):void
         {
-            var _local_2:_Str_5148;
+            var _local_2:FriendCategoryData;
             var _local_3:_Str_2591;
             var _local_4:_Str_2591;
             var _local_5:_Str_2591;

@@ -59,7 +59,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendParser;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_6720;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5148;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendCategoryData;
     import com.sulake.habbo.friendlist.domain._Str_2591;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7185;
     import com.sulake.habbo.friendlist.domain._Str_11887;
@@ -467,7 +467,7 @@
 
         private function onMessengerInit(k:IMessageEvent):void
         {
-            var _local_3:_Str_5148;
+            var _local_3:FriendCategoryData;
             var _local_4:_Str_2591;
             this._view = new FriendListView(this);
             var _local_2:_Str_7185 = (k as _Str_5567).getParser();

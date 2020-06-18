@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.friendlist
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5148;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendCategoryData;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
@@ -30,7 +30,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._cats.push(new _Str_5148(k));
+                this._cats.push(new FriendCategoryData(k));
                 _local_3++;
             }
             var _local_4:int = k.readInteger();

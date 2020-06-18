@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.friendlist
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5148;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendCategoryData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_7185 implements IMessageParser 
@@ -27,7 +27,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._categories.push(new _Str_5148(k));
+                this._categories.push(new FriendCategoryData(k));
                 _local_3++;
             }
             return true;
