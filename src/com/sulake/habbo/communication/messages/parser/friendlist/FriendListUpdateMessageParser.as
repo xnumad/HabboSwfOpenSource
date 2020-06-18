@@ -9,7 +9,7 @@
     {
         private var _cats:Array;
         private var _removedFriendIds:Array;
-        private var _Str_17508:Array;
+        private var _addedFriends:Array;
         private var _Str_18357:Array;
 
 
@@ -17,7 +17,7 @@
         {
             this._cats = new Array();
             this._removedFriendIds = new Array();
-            this._Str_17508 = new Array();
+            this._addedFriends = new Array();
             this._Str_18357 = new Array();
             return true;
         }
@@ -53,7 +53,7 @@
                     {
                         if (_local_5 == 1)
                         {
-                            this._Str_17508.push(new FriendParser(k));
+                            this._addedFriends.push(new FriendParser(k));
                         }
                     }
                 }
@@ -74,7 +74,7 @@
 
         public function get _Str_14430():Array
         {
-            return this._Str_17508;
+            return this._addedFriends;
         }
 
         public function get _Str_20668():Array
