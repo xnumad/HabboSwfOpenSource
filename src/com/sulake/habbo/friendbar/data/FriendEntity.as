@@ -5,7 +5,7 @@
 
     public class FriendEntity implements IFriendEntity 
     {
-        private static var _Str_12131:int = 0;
+        private static var ROLLING_LOG_EVENT_ID:int = 0;
 
         private var _id:int;
         private var _name:String;
@@ -150,7 +150,7 @@
 
         public function getNextLogEventId():int
         {
-            return ++_Str_12131;
+            return ++ROLLING_LOG_EVENT_ID;
         }
     }
 }
