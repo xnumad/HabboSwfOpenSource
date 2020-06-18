@@ -58,7 +58,7 @@
         private static const SORT_ALPHABETICALLY:Boolean = false;
         private static const TRACKING_EVENT_CATEGORY:String = "Navigation";
         private static const TRACKING_EVENT_TYPE:String = "Friend Bar";
-        private static const GO_FRIENDBAR:String = "go.friendbar";
+        private static const TRACKING_EVENT_ACTION_VISIT:String = "go.friendbar";
         private static const CHAT_BTN_CLICK:String = "chat_btn_click";
         private static const FIND_FRIENDS_BTN_CLICK:String = "find_friends_btn_click";
 		
@@ -307,7 +307,7 @@
             if (this._habboCommunicationManager)
             {
                 this._habboCommunicationManager.connection.send(new _Str_4348(k));
-                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, TRACKING_EVENT_TYPE, GO_FRIENDBAR));
+                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, TRACKING_EVENT_TYPE, TRACKING_EVENT_ACTION_VISIT));
             }
         }
 
