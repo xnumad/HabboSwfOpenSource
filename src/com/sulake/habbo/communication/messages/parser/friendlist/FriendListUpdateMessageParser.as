@@ -67,7 +67,7 @@
             return this._cats;
         }
 
-        public function get _Str_12515():Array
+        public function get removedFriendIds():Array
         {
             return this._removedFriendIds;
         }

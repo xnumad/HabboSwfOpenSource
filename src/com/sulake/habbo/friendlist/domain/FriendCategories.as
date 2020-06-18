@@ -119,7 +119,7 @@
                 status = 1;
                 this._Str_22561(p.cats);
                 status = 2;
-                for each (removedFriendId in p._Str_12515)
+                for each (removedFriendId in p.removedFriendIds)
                 {
                     this._Str_8793(removedFriendId, true);
                 }

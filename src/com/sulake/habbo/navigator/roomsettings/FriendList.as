@@ -38,7 +38,7 @@
             var _local_3:int;
             var _local_4:FriendParser;
             var _local_2:FriendListUpdateMessageParser = (k as _Str_4035).getParser();
-            for each (_local_3 in _local_2._Str_12515)
+            for each (_local_3 in _local_2.removedFriendIds)
             {
                 this._namesById[_local_3] = null;
             }
@@ -46,7 +46,7 @@
             {
                 this._namesById[_local_4.id] = _local_4.name;
             }
-            this._list = (((_local_2._Str_12515.length > 0) || (_local_2._Str_14430.length > 0)) ? null : this._list);
+            this._list = (((_local_2.removedFriendIds.length > 0) || (_local_2._Str_14430.length > 0)) ? null : this._list);
         }
 
         public function get list():Array
