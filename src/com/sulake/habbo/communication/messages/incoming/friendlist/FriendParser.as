@@ -12,7 +12,7 @@
         private var _figure:String;
         private var _categoryId:int;
         private var _motto:String;
-        private var _Str_6103:String;
+        private var _lastAccess:String;
         private var _realName:String;
         private var _Str_21677:String;
         private var _Str_9637:Boolean;
@@ -80,7 +80,7 @@
 
         public function get _Str_5261():String
         {
-            return this._Str_6103;
+            return this._lastAccess;
         }
 
         public function get realName():String
