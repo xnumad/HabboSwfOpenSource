@@ -14,7 +14,7 @@
         private var _motto:String;
         private var _lastAccess:String;
         private var _realName:String;
-        private var _Str_21677:String;
+        private var _facebookId:String;
         private var _Str_9637:Boolean;
         private var _Str_9279:Boolean;
         private var _pocketHabboUser:Boolean;
@@ -31,7 +31,7 @@
             this._categoryId = k.readInteger();
             this._motto = k.readString();
             this._realName = k.readString();
-            this._Str_21677 = k.readString();
+            this._facebookId = k.readString();
             this._Str_9637 = k.readBoolean();
             this._Str_9279 = k.readBoolean();
             this._pocketHabboUser = k.readBoolean();
@@ -90,7 +90,7 @@
 
         public function get _Str_25876():String
         {
-            return this._Str_21677;
+            return this._facebookId;
         }
 
         public function get _Str_9624():Boolean
