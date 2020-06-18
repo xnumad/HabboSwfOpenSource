@@ -431,7 +431,7 @@
         {
             var _local_3:FriendParser;
             var _local_2:FriendsListFragmentMessageParser = (k as _Str_3873).getParser();
-            for each (_local_3 in _local_2._Str_16756)
+            for each (_local_3 in _local_2.friendFragment)
             {
                 this._Str_5982.push(_local_3);
             }

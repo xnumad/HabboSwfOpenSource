@@ -27,7 +27,7 @@
             {
                 return;
             }
-            for each (_local_3 in _local_2._Str_16756)
+            for each (_local_3 in _local_2.friendFragment)
             {
                 this._namesById[_local_3.id] = _local_3.name;
             }

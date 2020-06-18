@@ -432,7 +432,7 @@
 
         private function _Str_5276(k:IMessageEvent):void
         {
-            this._Str_25150(_Str_3873(k).getParser()._Str_16756);
+            this._Str_25150(_Str_3873(k).getParser().friendFragment);
         }
 
         private function _Str_4132(k:IMessageEvent):void

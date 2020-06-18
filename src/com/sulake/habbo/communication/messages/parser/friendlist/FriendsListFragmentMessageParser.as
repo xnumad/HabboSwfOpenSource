@@ -21,7 +21,7 @@
             return this._fragmentNo;
         }
 
-        public function get _Str_16756():Array
+        public function get friendFragment():Array
         {
             return this._friendFragment;
         }
