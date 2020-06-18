@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.friendlist.domain
 {
     import flash.utils.Dictionary;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_4925;
+    import com.sulake.habbo.communication.messages.parser.friendlist.FriendListUpdateMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
     import com.sulake.core.utils.ErrorReportStorage;
@@ -104,7 +104,7 @@
         public function _Str_4132(event:IMessageEvent):void
         {
             var status:int;
-            var p:_Str_4925;
+            var p:FriendListUpdateMessageParser;
             var removedFriendId:int;
             var updatedFriend:FriendParser;
             var addedFriend:FriendParser;

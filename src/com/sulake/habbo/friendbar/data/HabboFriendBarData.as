@@ -41,7 +41,7 @@
     import com.sulake.habbo.messenger.events.ActiveConversationEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendParser;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_4925;
+    import com.sulake.habbo.communication.messages.parser.friendlist.FriendListUpdateMessageParser;
     import com.sulake.habbo.friendbar.events.FindFriendsNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestData;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_6189;
@@ -440,7 +440,7 @@
             var _local_3:FriendEntity;
             var _local_4:FriendParser;
             var _local_8:int;
-            var _local_2:_Str_4925 = _Str_4035(k).getParser();
+            var _local_2:FriendListUpdateMessageParser = _Str_4035(k).getParser();
             var _local_5:Array = _local_2._Str_12515;
             var _local_6:Array = _local_2._Str_20668;
             var _local_7:Array = _local_2._Str_14430;
