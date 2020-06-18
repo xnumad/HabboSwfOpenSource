@@ -21,11 +21,11 @@
     {
         public static const ILLUMINA_CHAT_BUBBLE:String = "illumina_chat_bubble";
         private static const FLIPPED_KEY:String = (ILLUMINA_CHAT_BUBBLE + ":flipped");
-        private static const _Str_15777:String = (ILLUMINA_CHAT_BUBBLE + ":user_name");
+        private static const USER_NAME_KEY:String = (ILLUMINA_CHAT_BUBBLE + ":user_name");
         private static const _Str_4305:String = (ILLUMINA_CHAT_BUBBLE + ":figure");
         private static const _Str_15458:String = (ILLUMINA_CHAT_BUBBLE + ":message");
         private static const _Str_13641:PropertyStruct = new PropertyStruct(FLIPPED_KEY, false, PropertyStruct.BOOLEAN);
-        private static const _Str_13288:PropertyStruct = new PropertyStruct(_Str_15777, "", PropertyStruct.STRING);
+        private static const _Str_13288:PropertyStruct = new PropertyStruct(USER_NAME_KEY, "", PropertyStruct.STRING);
         private static const _Str_3804:PropertyStruct = new PropertyStruct(_Str_4305, "", PropertyStruct.STRING);
         private static const _Str_13034:PropertyStruct = new PropertyStruct(_Str_15458, "", PropertyStruct.STRING);
 
@@ -128,7 +128,7 @@
                     case FLIPPED_KEY:
                         this.flipped = Boolean(_local_2.value);
                         break;
-                    case _Str_15777:
+                    case USER_NAME_KEY:
                         this.userName = String(_local_2.value);
                         break;
                     case _Str_4305:
