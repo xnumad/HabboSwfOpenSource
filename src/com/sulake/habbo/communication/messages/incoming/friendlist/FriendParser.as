@@ -78,7 +78,7 @@
             return this._motto;
         }
 
-        public function get _Str_5261():String
+        public function get lastAccess():String
         {
             return this._lastAccess;
         }

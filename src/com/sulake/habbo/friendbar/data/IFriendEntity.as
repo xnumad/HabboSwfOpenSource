@@ -12,7 +12,7 @@
         function get figure():String;
         function get categoryId():int;
         function get motto():String;
-        function get _Str_5261():String;
+        function get lastAccess():String;
         function get realName():String;
         function get notifications():Vector.<IFriendNotification>;
         function get logEventId():int;

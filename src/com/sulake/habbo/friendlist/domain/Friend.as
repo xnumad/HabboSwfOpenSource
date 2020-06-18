@@ -43,7 +43,7 @@
             this._followingAllowed = ((k.followingAllowed) && (k.online));
             this._figure = k.figure;
             this._motto = k.motto;
-            this._lastAccess = k._Str_5261;
+            this._lastAccess = k.lastAccess;
             this._categoryId = k.categoryId;
             this._realName = k.realName;
             this._persistedMessageUser = k._Str_9624;
@@ -108,7 +108,7 @@
             return this._motto;
         }
 
-        public function get _Str_5261():String
+        public function get lastAccess():String
         {
             return this._lastAccess;
         }
@@ -193,7 +193,7 @@
             this._motto = k;
         }
 
-        public function set _Str_5261(k:String):void
+        public function set lastAccess(k:String):void
         {
             this._lastAccess = k;
         }
