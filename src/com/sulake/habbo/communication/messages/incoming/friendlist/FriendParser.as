@@ -16,7 +16,7 @@
         private var _realName:String;
         private var _facebookId:String;
         private var _persistedMessageUser:Boolean;
-        private var _Str_9279:Boolean;
+        private var _vipMember:Boolean;
         private var _pocketHabboUser:Boolean;
         private var _Str_11104:int;
 
@@ -33,7 +33,7 @@
             this._realName = k.readString();
             this._facebookId = k.readString();
             this._persistedMessageUser = k.readBoolean();
-            this._Str_9279 = k.readBoolean();
+            this._vipMember = k.readBoolean();
             this._pocketHabboUser = k.readBoolean();
             this._Str_11104 = k.readShort();
         }
@@ -100,7 +100,7 @@
 
         public function get _Str_17677():Boolean
         {
-            return this._Str_9279;
+            return this._vipMember;
         }
 
         public function get pocketHabboUser():Boolean
