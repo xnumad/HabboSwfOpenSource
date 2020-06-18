@@ -10,7 +10,7 @@
         private var _cats:Array;
         private var _removedFriendIds:Array;
         private var _addedFriends:Array;
-        private var _Str_18357:Array;
+        private var _updatedFriends:Array;
 
 
         public function flush():Boolean
@@ -18,7 +18,7 @@
             this._cats = new Array();
             this._removedFriendIds = new Array();
             this._addedFriends = new Array();
-            this._Str_18357 = new Array();
+            this._updatedFriends = new Array();
             return true;
         }
 
@@ -47,7 +47,7 @@
                 {
                     if (_local_5 == 0)
                     {
-                        this._Str_18357.push(new FriendParser(k));
+                        this._updatedFriends.push(new FriendParser(k));
                     }
                     else
                     {
@@ -79,7 +79,7 @@
 
         public function get _Str_20668():Array
         {
-            return this._Str_18357;
+            return this._updatedFriends;
         }
     }
 }
