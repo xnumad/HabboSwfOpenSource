@@ -68,7 +68,7 @@
         private static const LEGACY_TRACKING_EVENT_CATEGORY:String = "Toolbar";
         private static const LEGACY_TRACKING_EVENT_ACTION_OPEN:String = "open";
         private static const LEGACY_TRACKING_EVENT_ACTION_CLOSE:String = "close";
-        private static const FRIENDLIST:String = "FRIENDLIST";
+        private static const LEGACY_TRACKING_EVENT_TYPE_FRIENDLIST:String = "FRIENDLIST";
         private static const MESSENGER:String = "MESSENGER";
 
         private var _habboCommunicationManager:IHabboCommunicationManager;
@@ -401,7 +401,7 @@
                     }
                     if (this._habboCommunicationManager)
                     {
-                        this._habboCommunicationManager.connection.send(new EventLogMessageComposer(LEGACY_TRACKING_EVENT_CATEGORY, FRIENDLIST, ((this._habboFriendListComponent.isOpen()) ? LEGACY_TRACKING_EVENT_ACTION_OPEN : LEGACY_TRACKING_EVENT_ACTION_CLOSE)));
+                        this._habboCommunicationManager.connection.send(new EventLogMessageComposer(LEGACY_TRACKING_EVENT_CATEGORY, LEGACY_TRACKING_EVENT_TYPE_FRIENDLIST, ((this._habboFriendListComponent.isOpen()) ? LEGACY_TRACKING_EVENT_ACTION_OPEN : LEGACY_TRACKING_EVENT_ACTION_CLOSE)));
                     }
                 }
             }
