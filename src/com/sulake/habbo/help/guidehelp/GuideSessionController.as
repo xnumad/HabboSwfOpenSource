@@ -1560,7 +1560,7 @@
                 _local_8.name = ("chat_msg_" + _arg_6);
                 _local_9 = IIlluminaChatBubbleWidget(_local_8.widget);
                 _local_9.figure = _arg_3;
-                _local_9._Str_6764 = _arg_5;
+                _local_9.flipped = _arg_5;
                 _local_9.message = _arg_4;
                 _local_9.userName = _arg_2;
                 _local_9.userId = k;

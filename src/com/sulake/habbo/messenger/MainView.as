@@ -554,7 +554,7 @@
                     _local_3 = (_local_2.widget as IIlluminaChatBubbleWidget);
                     _local_3.message = k.message;
                     _local_3.timeStamp = k._Str_22172();
-                    _local_3._Str_6764 = true;
+                    _local_3.flipped = true;
                     for each (_local_9 in this._avatarList.iterator)
                     {
                         _local_10 = ((!(_local_9 == null)) && (_local_9.id == this._currentConversationId));
@@ -586,7 +586,7 @@
                     _local_3 = (_local_2.widget as IIlluminaChatBubbleWidget);
                     _local_3.message = k.message;
                     _local_3.timeStamp = k._Str_22172();
-                    _local_3._Str_6764 = false;
+                    _local_3.flipped = false;
                     _local_3.figure = this._messenger.sessionDataManager.figure;
                     _local_3.userName = this._messenger.sessionDataManager.userName;
                     _local_8 = this._messenger.getFriend(this._currentConversationId);

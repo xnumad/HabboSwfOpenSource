@@ -107,7 +107,7 @@
             {
                 return k;
             }
-            k.push(_Str_13641.withValue(this._Str_6764));
+            k.push(_Str_13641.withValue(this.flipped));
             k.push(_Str_13288.withValue(this.userName));
             k.push(_Str_3804.withValue(this.figure));
             k.push(_Str_13034.withValue(this.message));
@@ -126,7 +126,7 @@
                 switch (_local_2.key)
                 {
                     case _Str_14688:
-                        this._Str_6764 = Boolean(_local_2.value);
+                        this.flipped = Boolean(_local_2.value);
                         break;
                     case _Str_15777:
                         this.userName = String(_local_2.value);
@@ -141,12 +141,12 @@
             }
         }
 
-        public function get _Str_6764():Boolean
+        public function get flipped():Boolean
         {
             return this._flipped;
         }
 
-        public function set _Str_6764(k:Boolean):void
+        public function set flipped(k:Boolean):void
         {
             this._flipped = k;
             this.refresh();

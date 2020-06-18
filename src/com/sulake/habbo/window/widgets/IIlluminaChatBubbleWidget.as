@@ -4,8 +4,8 @@
 
     public interface IIlluminaChatBubbleWidget extends IWidget
     {
-        function get _Str_6764():Boolean;
-        function set _Str_6764(_arg_1:Boolean):void;
+        function get flipped():Boolean;
+        function set flipped(_arg_1:Boolean):void;
         function get userName():String;
         function set userName(_arg_1:String):void;
         function get userId():int;
