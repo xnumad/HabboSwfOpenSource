@@ -640,7 +640,7 @@
                     }
                     if (_local_7.logEventId < 0)
                     {
-                        _local_7.logEventId = _local_7._Str_20577();
+                        _local_7.logEventId = _local_7.getNextLogEventId();
                     }
                     if (this._tracking)
                     {

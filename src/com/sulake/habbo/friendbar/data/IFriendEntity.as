@@ -17,6 +17,6 @@
         function get notifications():Vector.<IFriendNotification>;
         function get logEventId():int;
         function set logEventId(_arg_1:int):void;
-        function _Str_20577():int;
+        function getNextLogEventId():int;
     }
 }

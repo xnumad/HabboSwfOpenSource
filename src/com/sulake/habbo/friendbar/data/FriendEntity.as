@@ -148,7 +148,7 @@
             this._logEventId = k;
         }
 
-        public function _Str_20577():int
+        public function getNextLogEventId():int
         {
             return ++_Str_12131;
         }
