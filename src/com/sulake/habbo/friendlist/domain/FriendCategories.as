@@ -126,8 +126,8 @@
                 status = 3;
                 for each (updatedFriend in p.updatedFriends)
                 {
-                    Logger.log(((((((("Got UPDATE: " + updatedFriend.id) + ", ") + updatedFriend.online) + ", ") + updatedFriend.name) + ", ") + updatedFriend._Str_4501));
-                    this._deps.messenger.setFollowingAllowed(updatedFriend.id, ((updatedFriend._Str_4501) && (updatedFriend.online)));
+                    Logger.log(((((((("Got UPDATE: " + updatedFriend.id) + ", ") + updatedFriend.online) + ", ") + updatedFriend.name) + ", ") + updatedFriend.followingAllowed));
+                    this._deps.messenger.setFollowingAllowed(updatedFriend.id, ((updatedFriend.followingAllowed) && (updatedFriend.online)));
                     currentlyOnline = this._Str_25874(updatedFriend.id);
                     if (((currentlyOnline) && (!(updatedFriend.online))))
                     {

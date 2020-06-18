@@ -58,7 +58,7 @@
             return this._online;
         }
 
-        public function get _Str_4501():Boolean
+        public function get followingAllowed():Boolean
         {
             return this._followingAllowed;
         }

@@ -40,7 +40,7 @@
             this._name = k.name;
             this._gender = k.gender;
             this._online = k.online;
-            this._followingAllowed = ((k._Str_4501) && (k.online));
+            this._followingAllowed = ((k.followingAllowed) && (k.online));
             this._figure = k.figure;
             this._motto = k.motto;
             this._lastAccess = k._Str_5261;
@@ -50,7 +50,7 @@
             this._vipMember = k._Str_17677;
             this._pocketHabboUser = k.pocketHabboUser;
             this._relationshipStatus = k._Str_10060;
-            Logger.log(((((((((((((("Creating friend: " + this.id) + ", ") + this.name) + ", ") + this.gender) + ", ") + this.online) + ", ") + this._Str_4501) + ", ") + this.figure) + ", ") + this.categoryId));
+            Logger.log(((((((((((((("Creating friend: " + this.id) + ", ") + this.name) + ", ") + this.gender) + ", ") + this.online) + ", ") + this.followingAllowed) + ", ") + this.figure) + ", ") + this.categoryId));
         }
 
         public function dispose():void
@@ -93,7 +93,7 @@
             return this._online;
         }
 
-        public function get _Str_4501():Boolean
+        public function get followingAllowed():Boolean
         {
             return this._followingAllowed;
         }
@@ -178,7 +178,7 @@
             this._online = k;
         }
 
-        public function set _Str_4501(k:Boolean):void
+        public function set followingAllowed(k:Boolean):void
         {
             this._followingAllowed = k;
         }

@@ -76,7 +76,7 @@
             var _local_3:int;
             for each (_local_4 in this._friends)
             {
-                if ((((!(k)) || (_local_4.online)) && ((!(_arg_2)) || (_local_4._Str_4501))))
+                if ((((!(k)) || (_local_4.online)) && ((!(_arg_2)) || (_local_4.followingAllowed))))
                 {
                     _local_3 = (_local_3 + 1);
                 }

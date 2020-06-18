@@ -6,7 +6,7 @@
         function get name():String;
         function get gender():int;
         function get online():Boolean;
-        function get _Str_4501():Boolean;
+        function get followingAllowed():Boolean;
         function get figure():String;
         function get realName():String;
         function get _Str_9624():Boolean;
