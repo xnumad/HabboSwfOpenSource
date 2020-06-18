@@ -8,7 +8,7 @@
         private var _name:String;
         private var _gender:int;
         private var _online:Boolean;
-        private var _Str_9110:Boolean;
+        private var _followingAllowed:Boolean;
         private var _figure:String;
         private var _Str_2629:int;
         private var _motto:String;
@@ -26,7 +26,7 @@
             this._name = k.readString();
             this._gender = k.readInteger();
             this._online = k.readBoolean();
-            this._Str_9110 = k.readBoolean();
+            this._followingAllowed = k.readBoolean();
             this._figure = k.readString();
             this._Str_2629 = k.readInteger();
             this._motto = k.readString();
@@ -60,7 +60,7 @@
 
         public function get _Str_4501():Boolean
         {
-            return this._Str_9110;
+            return this._followingAllowed;
         }
 
         public function get figure():String
