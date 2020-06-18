@@ -371,7 +371,7 @@
 
         private function recordNotificationMessage(k:int, _arg_2:String):void
         {
-            this.recordChatEntry(k, new ChatEntry(ChatEntry._Str_10130, 0, _arg_2, 0));
+            this.recordChatEntry(k, new ChatEntry(ChatEntry.TYPE_NOTIFICATION, 0, _arg_2, 0));
         }
 
         private function recordInfoMessage(k:int, _arg_2:String, _arg_3:Boolean=false):void
@@ -538,7 +538,7 @@
                     _local_5.limits.maxWidth = this.conversationItemWidth;
                     _local_5.caption = k.message;
                     return _local_4;
-                case ChatEntry._Str_10130:
+                case ChatEntry.TYPE_NOTIFICATION:
                     _local_6 = (this._chatNotificationTemplate.clone() as IWindowContainer);
                     _local_6.findChildByName("content").width = (this.conversationItemWidth - NOTIFICATION_ICON_WIDTH);
                     _local_6.findChildByName("content").caption = k.message;
@@ -830,7 +830,7 @@
             this._messenger.send(new _Str_10962(this._currentConversationId, _arg_2));
             IIlluminaInputWidget(k.widget).message = "";
             var _local_3:Array = this._chatEntries[this._currentConversationId];
-            if (((_local_3.length == 0) || ((_local_3.length == 1) && (ChatEntry(_local_3[0]).type == ChatEntry._Str_10130))))
+            if (((_local_3.length == 0) || ((_local_3.length == 1) && (ChatEntry(_local_3[0]).type == ChatEntry.TYPE_NOTIFICATION))))
             {
                 this._messenger.playSendSound();
             }
