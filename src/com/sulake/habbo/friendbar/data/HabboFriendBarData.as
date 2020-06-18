@@ -65,7 +65,7 @@
         public static const PLAY_SNOWSTORM_TAB_CLICK:String = "play_snowstorm_tab_click";
         public static const PLAY_SNOWSTORM_BTN_CLICK:String = "play_snowstorm_btn_click";
 		
-        private static const TOOLBAR:String = "Toolbar";
+        private static const LEGACY_TRACKING_EVENT_CATEGORY:String = "Toolbar";
         private static const OPEN:String = "open";
         private static const CLOSE:String = "close";
         private static const FRIENDLIST:String = "FRIENDLIST";
@@ -401,7 +401,7 @@
                     }
                     if (this._habboCommunicationManager)
                     {
-                        this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TOOLBAR, FRIENDLIST, ((this._habboFriendListComponent.isOpen()) ? OPEN : CLOSE)));
+                        this._habboCommunicationManager.connection.send(new EventLogMessageComposer(LEGACY_TRACKING_EVENT_CATEGORY, FRIENDLIST, ((this._habboFriendListComponent.isOpen()) ? OPEN : CLOSE)));
                     }
                 }
             }
@@ -416,7 +416,7 @@
                     this._habboMessengerComponent.toggleMessenger();
                     if (this._habboCommunicationManager)
                     {
-                        this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TOOLBAR, MESSENGER, ((this._habboMessengerComponent.isOpen()) ? OPEN : CLOSE)));
+                        this._habboCommunicationManager.connection.send(new EventLogMessageComposer(LEGACY_TRACKING_EVENT_CATEGORY, MESSENGER, ((this._habboMessengerComponent.isOpen()) ? OPEN : CLOSE)));
                     }
                 }
             }
