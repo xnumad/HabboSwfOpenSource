@@ -58,7 +58,7 @@
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendParser;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_6720;
+    import com.sulake.habbo.communication.messages.parser.friendlist.FriendsListFragmentMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendCategoryData;
     import com.sulake.habbo.friendlist.domain._Str_2591;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7185;
@@ -430,7 +430,7 @@
         private function _Str_5276(k:IMessageEvent):void
         {
             var _local_3:FriendParser;
-            var _local_2:_Str_6720 = (k as _Str_3873).getParser();
+            var _local_2:FriendsListFragmentMessageParser = (k as _Str_3873).getParser();
             for each (_local_3 in _local_2._Str_16756)
             {
                 this._Str_5982.push(_local_3);
