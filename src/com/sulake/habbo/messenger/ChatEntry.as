@@ -8,7 +8,7 @@
         public static const TYPE_OTHER_CHAT:int = 2;
         public static const TYPE_NOTIFICATION:int = 3;
         public static const TYPE_INFO:int = 4;
-        public static const _Str_15691:int = 5;
+        public static const TYPE_INVITATION:int = 5;
 
         private var _type:int;
         private var _senderId:int;

@@ -381,7 +381,7 @@
 
         private function recordInvitationMessage(k:int, _arg_2:String, _arg_3:Boolean=false):void
         {
-            this.recordChatEntry(k, new ChatEntry(ChatEntry._Str_15691, 0, _arg_2, 0), _arg_3);
+            this.recordChatEntry(k, new ChatEntry(ChatEntry.TYPE_INVITATION, 0, _arg_2, 0), _arg_3);
         }
 
         private function recordChatEntry(k:int, _arg_2:ChatEntry, _arg_3:Boolean=false):void
@@ -543,7 +543,7 @@
                     _local_6.findChildByName("content").width = (this.conversationItemWidth - NOTIFICATION_ICON_WIDTH);
                     _local_6.findChildByName("content").caption = k.message;
                     return _local_6;
-                case ChatEntry._Str_15691:
+                case ChatEntry.TYPE_INVITATION:
                     _local_7 = (this._chatInvitationTemplate.clone() as IWindowContainer);
                     _local_7.findChildByName("content").width = (this.conversationItemWidth - NOTIFICATION_ICON_WIDTH);
                     _local_7.findChildByName("content").caption = k.message;
