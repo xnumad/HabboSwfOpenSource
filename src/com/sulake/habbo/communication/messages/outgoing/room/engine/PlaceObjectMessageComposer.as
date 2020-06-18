@@ -7,7 +7,7 @@
     {
         private var _objectId:int;
         private var _objectCategory:int;
-        private var _Str_5995:String;
+        private var _wallLocation:String;
         private var _x:int = 0;
         private var _y:int = 0;
         private var _dir:int = 0;
@@ -16,7 +16,7 @@
         {
             this._objectId = k;
             this._objectCategory = _arg_2;
-            this._Str_5995 = _arg_3;
+            this._wallLocation = _arg_3;
             this._x = _arg_4;
             this._y = _arg_5;
             this._dir = _arg_6;
@@ -33,7 +33,7 @@
                 case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
                     return [((((((this._objectId + " ") + this._x) + " ") + this._y) + " ") + this._dir)];
                 case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
-                    return [((this._objectId + " ") + this._Str_5995)];
+                    return [((this._objectId + " ") + this._wallLocation)];
                 default:
                     return [];
             }
