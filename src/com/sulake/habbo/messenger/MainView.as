@@ -17,7 +17,7 @@
     import com.sulake.core.window.components.IRegionWindow;
     import flash.events.TimerEvent;
     import com.sulake.habbo.messenger.events.NewMessageEvent;
-    import com.sulake.habbo.window.widgets._Str_3904;
+    import com.sulake.habbo.window.widgets.IIlluminaChatBubbleWidget;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
@@ -521,7 +521,7 @@
         private function createChatItem(k:ChatEntry):IWindow
         {
             var _local_2:IWidgetWindow;
-            var _local_3:_Str_3904;
+            var _local_3:IIlluminaChatBubbleWidget;
             var _local_4:IWindowContainer;
             var _local_5:IWindow;
             var _local_6:IWindowContainer;
@@ -551,7 +551,7 @@
                 case ChatEntry._Str_8431:
                     _local_2 = (this._chatMessageTemplate.clone() as IWidgetWindow);
                     _local_2.width = this.conversationItemWidth;
-                    _local_3 = (_local_2.widget as _Str_3904);
+                    _local_3 = (_local_2.widget as IIlluminaChatBubbleWidget);
                     _local_3.message = k.message;
                     _local_3.timeStamp = k._Str_22172();
                     _local_3._Str_6764 = true;
@@ -583,7 +583,7 @@
                 case ChatEntry._Str_9544:
                     _local_2 = (this._chatMessageTemplate.clone() as IWidgetWindow);
                     _local_2.width = this.conversationItemWidth;
-                    _local_3 = (_local_2.widget as _Str_3904);
+                    _local_3 = (_local_2.widget as IIlluminaChatBubbleWidget);
                     _local_3.message = k.message;
                     _local_3.timeStamp = k._Str_22172();
                     _local_3._Str_6764 = false;

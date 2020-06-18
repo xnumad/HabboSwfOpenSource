@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
 
-    public class IlluminaChatBubbleWidget implements _Str_3904 
+    public class IlluminaChatBubbleWidget implements IIlluminaChatBubbleWidget
     {
         public static const ILLUMINA_CHAT_BUBBLE:String = "illumina_chat_bubble";
         private static const _Str_14688:String = (ILLUMINA_CHAT_BUBBLE + ":flipped");

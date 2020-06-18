@@ -79,7 +79,7 @@
     import com.sulake.core.window.enum.WindowType;
     import com.sulake.core.window.components.IDesktopWindow;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_11135;
-    import com.sulake.habbo.window.widgets._Str_3904;
+    import com.sulake.habbo.window.widgets.IIlluminaChatBubbleWidget;
     import com.sulake.core.window.enum.WindowParam;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_11187;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_11748;
@@ -1542,12 +1542,12 @@
         private function _Str_5863(k:int, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:Boolean, _arg_6:int=0, _arg_7:*=null):void
         {
             var _local_8:IWidgetWindow;
-            var _local_9:_Str_3904;
+            var _local_9:IIlluminaChatBubbleWidget;
             var _local_10:IWindowContainer;
             _local_8 = this._Str_23250();
-            if ((((!(_local_8 == null)) && (!(null == (_local_8.widget as _Str_3904)))) && (_local_8.name == ("chat_msg_" + _Str_13522))))
+            if ((((!(_local_8 == null)) && (!(null == (_local_8.widget as IIlluminaChatBubbleWidget)))) && (_local_8.name == ("chat_msg_" + _Str_13522))))
             {
-                _local_9 = _Str_3904(_local_8.widget);
+                _local_9 = IIlluminaChatBubbleWidget(_local_8.widget);
             }
             if ((((_local_9) && (_local_9.userId == k)) && (_arg_6 == _Str_13522)))
             {
@@ -1558,7 +1558,7 @@
             {
                 _local_8 = IWidgetWindow(this._chatMsg.clone());
                 _local_8.name = ("chat_msg_" + _arg_6);
-                _local_9 = _Str_3904(_local_8.widget);
+                _local_9 = IIlluminaChatBubbleWidget(_local_8.widget);
                 _local_9.figure = _arg_3;
                 _local_9._Str_6764 = _arg_5;
                 _local_9.message = _arg_4;

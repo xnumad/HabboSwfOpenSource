@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWidget;
 
-    public interface _Str_3904 extends IWidget 
+    public interface IIlluminaChatBubbleWidget extends IWidget
     {
         function get _Str_6764():Boolean;
         function set _Str_6764(_arg_1:Boolean):void;
