@@ -59,7 +59,7 @@
         private static const TRACKING_EVENT_CATEGORY:String = "Navigation";
         private static const TRACKING_EVENT_TYPE:String = "Friend Bar";
         private static const TRACKING_EVENT_ACTION_VISIT:String = "go.friendbar";
-        private static const CHAT_BTN_CLICK:String = "chat_btn_click";
+        private static const TRACKING_EVENT_ACTION_CHAT:String = "chat_btn_click";
         private static const FIND_FRIENDS_BTN_CLICK:String = "find_friends_btn_click";
 		
         public static const PLAY_SNOWSTORM_TAB_CLICK:String = "play_snowstorm_tab_click";
@@ -319,7 +319,7 @@
                 events.dispatchEvent(new NewMessageEvent(false, k));
                 if (this._habboCommunicationManager)
                 {
-                    this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, TRACKING_EVENT_TYPE, CHAT_BTN_CLICK));
+                    this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, TRACKING_EVENT_TYPE, TRACKING_EVENT_ACTION_CHAT));
                 }
             }
         }
