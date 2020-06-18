@@ -442,7 +442,7 @@
             var _local_8:int;
             var _local_2:FriendListUpdateMessageParser = _Str_4035(k).getParser();
             var _local_5:Array = _local_2.removedFriendIds;
-            var _local_6:Array = _local_2._Str_20668;
+            var _local_6:Array = _local_2.updatedFriends;
             var _local_7:Array = _local_2.addedFriends;
             for each (_local_8 in _local_5)
             {

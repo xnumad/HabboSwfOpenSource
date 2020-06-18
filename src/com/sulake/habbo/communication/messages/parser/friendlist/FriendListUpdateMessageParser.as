@@ -77,7 +77,7 @@
             return this._addedFriends;
         }
 
-        public function get _Str_20668():Array
+        public function get updatedFriends():Array
         {
             return this._updatedFriends;
         }

@@ -124,7 +124,7 @@
                     this._Str_8793(removedFriendId, true);
                 }
                 status = 3;
-                for each (updatedFriend in p._Str_20668)
+                for each (updatedFriend in p.updatedFriends)
                 {
                     Logger.log(((((((("Got UPDATE: " + updatedFriend.id) + ", ") + updatedFriend.online) + ", ") + updatedFriend.name) + ", ") + updatedFriend._Str_4501));
                     this._deps.messenger.setFollowingAllowed(updatedFriend.id, ((updatedFriend._Str_4501) && (updatedFriend.online)));
