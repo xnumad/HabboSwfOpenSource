@@ -54,7 +54,7 @@
 
     public class HabboFriendBarData extends Component implements IHabboFriendBarData 
     {
-        private static const _Str_6664:Boolean = false;
+        private static const SHOW_OFFLINE_FRIENDS:Boolean = false;
         private static const _Str_12913:Boolean = false;
         private static const NAVIGATION:String = "Navigation";
         private static const FRIEND_BAR:String = "Friend Bar";
@@ -459,7 +459,7 @@
                 _local_3 = this._friendMappedByID.getValue(_local_4.id);
                 if (_local_3)
                 {
-                    if (((_local_4.online) || (_Str_6664)))
+                    if (((_local_4.online) || (SHOW_OFFLINE_FRIENDS)))
                     {
                         _local_3.name = _local_4.name;
                         _local_3.realName = _local_4.realName;
@@ -479,7 +479,7 @@
                 }
                 else
                 {
-                    if (((_local_4.online) || (_Str_6664)))
+                    if (((_local_4.online) || (SHOW_OFFLINE_FRIENDS)))
                     {
                         _local_3 = new FriendEntity(_local_4.id, _local_4.name, _local_4.realName, _local_4.motto, _local_4.gender, _local_4.online, _local_4.followingAllowed, _local_4.figure, _local_4.categoryId, _local_4.lastAccess);
                         this._friendEntityList.splice(0, 0, _local_3);
@@ -489,7 +489,7 @@
             }
             for each (_local_4 in _local_7)
             {
-                if (((_local_4.online) || (_Str_6664)))
+                if (((_local_4.online) || (SHOW_OFFLINE_FRIENDS)))
                 {
                     if (this._friendMappedByID.getValue(_local_4.id) == null)
                     {
@@ -502,7 +502,7 @@
             }
             if (((_local_7.length > 0) || (_local_6.length > 0)))
             {
-                this._friendEntityList = ((_Str_6664) ? this._Str_19624(this._friendEntityList) : this._Str_21818(this._friendEntityList));
+                this._friendEntityList = ((SHOW_OFFLINE_FRIENDS) ? this._Str_19624(this._friendEntityList) : this._Str_21818(this._friendEntityList));
             }
             events.dispatchEvent(new FriendBarUpdateEvent());
         }
@@ -656,14 +656,14 @@
             var _local_3:FriendEntity;
             for each (_local_2 in k)
             {
-                if (((_local_2.online) || (_Str_6664)))
+                if (((_local_2.online) || (SHOW_OFFLINE_FRIENDS)))
                 {
                     _local_3 = new FriendEntity(_local_2.id, _local_2.name, _local_2.realName, _local_2.motto, _local_2.gender, _local_2.online, _local_2.followingAllowed, _local_2.figure, _local_2.categoryId, _local_2.lastAccess);
                     this._friendEntityList.push(_local_3);
                     this._friendMappedByID.add(_local_3.id, _local_3);
                 }
             }
-            this._friendEntityList = ((_Str_6664) ? this._Str_19624(this._friendEntityList) : this._Str_21818(this._friendEntityList));
+            this._friendEntityList = ((SHOW_OFFLINE_FRIENDS) ? this._Str_19624(this._friendEntityList) : this._Str_21818(this._friendEntityList));
             events.dispatchEvent(new FriendBarUpdateEvent());
         }
 
