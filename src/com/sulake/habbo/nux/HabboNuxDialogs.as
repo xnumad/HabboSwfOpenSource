@@ -29,8 +29,8 @@
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.window.utils.IConfirmDialog;
-    import com.sulake.habbo.communication.messages.outgoing._Str_428.NewUserExperienceGetGiftsMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_4584;
+    import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceGetGiftsMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.nux._Str_4584;
     import com.sulake.habbo.communication.messages.parser.nux.NewUserExperienceGiftOfferParser;
     import flash.events.TimerEvent;
     import com.sulake.core.runtime.IHabboConfigurationManager;

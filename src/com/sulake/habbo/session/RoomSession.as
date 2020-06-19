@@ -51,7 +51,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10067;
     import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_10642;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
-    import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_10856;
+    import com.sulake.habbo.communication.messages.outgoing.nux._Str_10856;
     import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
     import com.sulake.habbo.communication.messages.outgoing.room.session.ChangeQueueMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8017;

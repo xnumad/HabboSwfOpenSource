@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_428
+﻿package com.sulake.habbo.communication.messages.outgoing.nux
 {
     public class _Str_4584 
     {

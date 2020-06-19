@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOptions;
-    import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_4584;
+    import com.sulake.habbo.communication.messages.outgoing.nux._Str_4584;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGift;
