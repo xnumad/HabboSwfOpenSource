@@ -29,7 +29,7 @@
 
     public class HabboPhoneNumber extends Component 
     {
-        protected var _Str_2355:IHabboCommunicationManager;
+        protected var _communicationManager:IHabboCommunicationManager;
         protected var _localizationManager:IHabboLocalizationManager;
         protected var _sessionDataManager:ISessionDataManager;
         protected var _Str_2290:IHabboToolbar;
@@ -50,7 +50,7 @@
         {
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (k:IHabboCommunicationManager):void
             {
-                _Str_2355 = k;
+                _communicationManager = k;
             }, true), new ComponentDependency(new IIDSessionDataManager(), function (k:ISessionDataManager):void
             {
                 _sessionDataManager = k;
@@ -70,7 +70,7 @@
         {
             if (getBoolean("sms.identity.verification.enabled"))
             {
-                this._Str_2310 = this._Str_2355.connection;
+                this._Str_2310 = this._communicationManager.connection;
                 this._Str_2310.addMessageEvent(new PhoneCollectionStateMessageEvent(this._Str_24899));
                 this._Str_2310.addMessageEvent(new TryPhoneNumberResultMessageEvent(this._Str_23318));
                 this._Str_2310.addMessageEvent(new TryVerificationCodeResultMessageEvent(this._Str_22688));

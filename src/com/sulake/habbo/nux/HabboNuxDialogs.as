@@ -39,7 +39,7 @@
 
     public class HabboNuxDialogs extends Component implements ILinkEventTracker 
     {
-        protected var _Str_2355:IHabboCommunicationManager;
+        protected var _communicationManager:IHabboCommunicationManager;
         protected var _navigator:IHabboNavigator;
         protected var _windowManager:IHabboWindowManager;
         protected var _localizationManager:IHabboLocalizationManager;
@@ -61,7 +61,7 @@
         {
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboCommunicationManager(), function (k:IHabboCommunicationManager):void
             {
-                _Str_2355 = k;
+                _communicationManager = k;
             }, true), new ComponentDependency(new IIDHabboWindowManager(), function (k:IHabboWindowManager):void
             {
                 _windowManager = k;
@@ -104,7 +104,7 @@
 
         override protected function initComponent():void
         {
-            this._Str_2310 = this._Str_2355.connection;
+            this._Str_2310 = this._communicationManager.connection;
             if (this._Str_2310)
             {
                 this._Str_2310.addMessageEvent(new NewUserExperienceNotCompleteEvent(this.onNewUserExperienceNotCompleteMessage));
