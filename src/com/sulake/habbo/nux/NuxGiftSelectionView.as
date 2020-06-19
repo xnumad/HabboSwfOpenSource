@@ -86,10 +86,10 @@
             {
                 _local_2.visible = false;
             }
-            this._Str_24433();
+            this.populateStep();
         }
 
-        private function _Str_24433():void
+        private function populateStep():void
         {
             var _local_5:NewUserExperienceGift;
             var _local_6:IWindowContainer;
