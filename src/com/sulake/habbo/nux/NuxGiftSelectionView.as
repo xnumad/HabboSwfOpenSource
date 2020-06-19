@@ -164,7 +164,7 @@
                 }
                 _local_7.text = _local_11;
                 _local_8.name = _local_4.toString();
-                _local_8.procedure = this._Str_24885;
+                _local_8.procedure = this.onSelectOption;
                 _local_2.addListItem(_local_6);
                 _local_4++;
             }
@@ -176,7 +176,7 @@
             this._frame.center();
         }
 
-        private function _Str_24885(k:WindowEvent, _arg_2:IWindow):void
+        private function onSelectOption(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:NewUserExperienceGiftOptions;
             var _local_4:IItemListWindow;
