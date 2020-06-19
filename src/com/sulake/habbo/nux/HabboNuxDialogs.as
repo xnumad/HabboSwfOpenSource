@@ -45,7 +45,7 @@
         protected var _localizationManager:IHabboLocalizationManager;
         protected var _catalog:IHabboCatalog;
         protected var _sessionDataManager:ISessionDataManager;
-        protected var _Str_2422:IRoomSessionManager;
+        protected var _roomSessionManager:IRoomSessionManager;
         private var _Str_2310:IConnection;
         private var _Str_14050:NuxOfferOldUserView;
         private var _Str_13375:NuxGiftSelectionView;
@@ -79,7 +79,7 @@
                 _sessionDataManager = k;
             }), new ComponentDependency(new IIDHabboRoomSessionManager(), function (k:IRoomSessionManager):void
             {
-                _Str_2422 = k;
+                _roomSessionManager = k;
             }, false, [{
                 "type":RoomSessionEvent.STARTED,
                 "callback":this.onRoomSessionEvent
