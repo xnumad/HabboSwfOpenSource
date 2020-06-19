@@ -284,7 +284,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.bots.BotErrorEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_12054;
 	import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_3365;
-	import com.sulake.habbo.communication.messages.outgoing.nux._Str_10856;
+	import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceScriptProceedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceGetGiftsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.purse.GetCreditsInfoComposer;
 	import com.sulake.habbo.communication.messages.incoming.bots._Str_16597;
@@ -1551,7 +1551,7 @@
             OUTGOING_PACKETS[1265] = UpdateRoomCategoryAndTradeSettingsComposer;
             OUTGOING_PACKETS[1276] = SendRoomInviteMessageComposer;
             OUTGOING_PACKETS[1296] = _Str_8147;
-            OUTGOING_PACKETS[1299] = _Str_10856;
+            OUTGOING_PACKETS[1299] = NewUserExperienceScriptProceedComposer;
             OUTGOING_PACKETS[1314] = _Str_7738;
             OUTGOING_PACKETS[1320] = RoomUserKickMessageComposer;
             OUTGOING_PACKETS[1325] = _Str_11631;
