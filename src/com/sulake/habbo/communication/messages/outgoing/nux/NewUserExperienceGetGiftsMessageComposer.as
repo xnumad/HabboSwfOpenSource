@@ -8,13 +8,13 @@
     {
         private var _array:Array;
 
-        public function NewUserExperienceGetGiftsMessageComposer(k:Vector.<NewUserExperienceGetGiftsSelection>)
+        public function NewUserExperienceGetGiftsMessageComposer(selectedItems:Vector.<NewUserExperienceGetGiftsSelection>)
         {
             var _local_2:NewUserExperienceGetGiftsSelection;
             this._array = new Array();
             super();
-            this._array.push((k.length * 3));
-            for each (_local_2 in k)
+            this._array.push((selectedItems.length * 3));
+            for each (_local_2 in selectedItems)
             {
                 this._array.push(_local_2.dayIndex);
                 this._array.push(_local_2.stepIndex);
