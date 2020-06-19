@@ -34,7 +34,7 @@
         protected var _sessionDataManager:ISessionDataManager;
         protected var _Str_2290:IHabboToolbar;
         protected var _windowManager:IHabboWindowManager;
-        private var _Str_2310:IConnection;
+        private var _connection:IConnection;
         private var _Str_9469:PhoneNumberCollectView;
         private var _Str_7950:PhoneNumberCollectMinimizedView;
         private var _Str_9578:VerificationCodeInputView;
@@ -70,16 +70,16 @@
         {
             if (getBoolean("sms.identity.verification.enabled"))
             {
-                this._Str_2310 = this._communicationManager.connection;
-                this._Str_2310.addMessageEvent(new PhoneCollectionStateMessageEvent(this._Str_24899));
-                this._Str_2310.addMessageEvent(new TryPhoneNumberResultMessageEvent(this._Str_23318));
-                this._Str_2310.addMessageEvent(new TryVerificationCodeResultMessageEvent(this._Str_22688));
+                this._connection = this._communicationManager.connection;
+                this._connection.addMessageEvent(new PhoneCollectionStateMessageEvent(this._Str_24899));
+                this._connection.addMessageEvent(new TryPhoneNumberResultMessageEvent(this._Str_23318));
+                this._connection.addMessageEvent(new TryVerificationCodeResultMessageEvent(this._Str_22688));
             }
         }
 
         public function _Str_22965(k:String, _arg_2:String):void
         {
-            this._Str_2310.send(new _Str_9957(k, _arg_2));
+            this._connection.send(new _Str_9957(k, _arg_2));
         }
 
         public function _Str_24369(k:String):void
@@ -89,12 +89,12 @@
                 return;
             }
             k = k.toUpperCase();
-            this._Str_2310.send(new _Str_10410(k));
+            this._connection.send(new _Str_10410(k));
         }
 
         public function _Str_23711():void
         {
-            this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
+            this._connection.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
             this._Str_7383();
         }
 
@@ -129,7 +129,7 @@
         public function _Str_24068():void
         {
             this._Str_9778();
-            this._Str_2310.send(new _Str_7498());
+            this._connection.send(new _Str_7498());
         }
 
         private function _Str_23318(k:TryPhoneNumberResultMessageEvent):void

@@ -19,13 +19,13 @@
         private var _habboCatalog:HabboCatalog;
         private var _Str_2397:Array;
         private var _Str_2635:ClubBuyConfirmationDialog;
-        private var _Str_2310:IConnection;
+        private var _connection:IConnection;
         private var _disposed:Boolean = false;
 
         public function ClubOfferHandler(k:HabboCatalog, _arg_2:IConnection)
         {
             this._habboCatalog = k;
-            this._Str_2310 = _arg_2;
+            this._connection = _arg_2;
         }
 
         public function dispose():void

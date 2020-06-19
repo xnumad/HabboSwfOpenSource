@@ -46,7 +46,7 @@
         protected var _catalog:IHabboCatalog;
         protected var _sessionDataManager:ISessionDataManager;
         protected var _roomSessionManager:IRoomSessionManager;
-        private var _Str_2310:IConnection;
+        private var _connection:IConnection;
         private var _Str_14050:NuxOfferOldUserView;
         private var _Str_13375:NuxGiftSelectionView;
         private var _Str_13625:NuxNoobRoomOfferView;
@@ -104,11 +104,11 @@
 
         override protected function initComponent():void
         {
-            this._Str_2310 = this._communicationManager.connection;
-            if (this._Str_2310)
+            this._connection = this._communicationManager.connection;
+            if (this._connection)
             {
-                this._Str_2310.addMessageEvent(new NewUserExperienceNotCompleteEvent(this.onNewUserExperienceNotCompleteMessage));
-                this._Str_2310.addMessageEvent(new NewUserExperienceGiftOfferEvent(this.onNewUserExperienceGiftOfferMessage));
+                this._connection.addMessageEvent(new NewUserExperienceNotCompleteEvent(this.onNewUserExperienceNotCompleteMessage));
+                this._connection.addMessageEvent(new NewUserExperienceGiftOfferEvent(this.onNewUserExperienceGiftOfferMessage));
             }
             context.addLinkEventTracker(this);
         }
@@ -144,7 +144,7 @@
 
         public function onVerify():void
         {
-            this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NON_EXISTING));
+            this._connection.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NON_EXISTING));
         }
 
         public function onReject():void
@@ -155,17 +155,17 @@
         private function onNeverAgainConfirmClose(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
-            if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) && (this._Str_2310)))
+            if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) && (this._connection)))
             {
                 this.destroyNuxOfferView();
-                this._Str_2310.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
+                this._connection.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
             }
         }
 
         public function onSendGetGifts(k:Vector.<NewUserExperienceGetGiftsSelection>):void
         {
             this.destroyGiftSelectionView();
-            this._Str_2310.send(new NewUserExperienceGetGiftsMessageComposer(k));
+            this._connection.send(new NewUserExperienceGetGiftsMessageComposer(k));
         }
 
         private function onNewUserExperienceNotCompleteMessage(k:NewUserExperienceNotCompleteEvent):void
@@ -266,7 +266,7 @@
             }
             this.destroyNoobRoomOfferView();
             this._Str_13625 = new NuxNoobRoomOfferView(this);
-            this._Str_2310.send(new EventLogMessageComposer("NewNavigator", "nux.offer.lobby", "nux.offer.lobby"));
+            this._connection.send(new EventLogMessageComposer("NewNavigator", "nux.offer.lobby", "nux.offer.lobby"));
         }
 
         public function destroyNoobRoomOfferView():void
