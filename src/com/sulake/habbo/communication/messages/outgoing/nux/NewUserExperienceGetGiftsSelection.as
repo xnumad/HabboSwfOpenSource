@@ -23,7 +23,7 @@
             return this._stepIndex;
         }
 
-        public function get _Str_22800():int
+        public function get giftIndex():int
         {
             return this._giftIndex;
         }
