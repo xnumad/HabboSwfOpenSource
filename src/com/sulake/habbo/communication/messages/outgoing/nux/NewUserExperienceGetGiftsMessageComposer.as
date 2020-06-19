@@ -8,9 +8,9 @@
     {
         private var _array:Array;
 
-        public function NewUserExperienceGetGiftsMessageComposer(k:Vector.<_Str_4584>)
+        public function NewUserExperienceGetGiftsMessageComposer(k:Vector.<NewUserExperienceGetGiftsSelection>)
         {
-            var _local_2:_Str_4584;
+            var _local_2:NewUserExperienceGetGiftsSelection;
             this._array = new Array();
             super();
             this._array.push((k.length * 3));

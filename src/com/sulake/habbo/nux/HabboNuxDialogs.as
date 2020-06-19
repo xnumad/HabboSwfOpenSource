@@ -30,7 +30,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceGetGiftsMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.nux._Str_4584;
+    import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceGetGiftsSelection;
     import com.sulake.habbo.communication.messages.parser.nux.NewUserExperienceGiftOfferParser;
     import flash.events.TimerEvent;
     import com.sulake.core.runtime.IHabboConfigurationManager;
@@ -162,7 +162,7 @@
             }
         }
 
-        public function onSendGetGifts(k:Vector.<_Str_4584>):void
+        public function onSendGetGifts(k:Vector.<NewUserExperienceGetGiftsSelection>):void
         {
             this.destroyGiftSelectionView();
             this._Str_2310.send(new NewUserExperienceGetGiftsMessageComposer(k));

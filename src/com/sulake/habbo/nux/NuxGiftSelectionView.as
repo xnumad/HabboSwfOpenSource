@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOptions;
-    import com.sulake.habbo.communication.messages.outgoing.nux._Str_4584;
+    import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceGetGiftsSelection;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGift;
@@ -26,14 +26,14 @@
         private var _optionTemplate:IWindowContainer;
         private var _giftOptions:Vector.<NewUserExperienceGiftOptions>;
         private var _currentIndex:int;
-        private var _selectedOptions:Vector.<_Str_4584>;
+        private var _selectedOptions:Vector.<NewUserExperienceGetGiftsSelection>;
 
         public function NuxGiftSelectionView(k:HabboNuxDialogs, _arg_2:Vector.<NewUserExperienceGiftOptions>)
         {
             this._component = k;
             this._giftOptions = _arg_2;
             this._currentIndex = 0;
-            this._selectedOptions = new Vector.<_Str_4584>();
+            this._selectedOptions = new Vector.<NewUserExperienceGetGiftsSelection>();
             if (((this._component.sessionDataManager) && (this._component.sessionDataManager.loadProductData(this))))
             {
                 this.show();
@@ -181,7 +181,7 @@
             var _local_3:NewUserExperienceGiftOptions;
             var _local_4:IItemListWindow;
             var _local_5:int;
-            var _local_6:_Str_4584;
+            var _local_6:NewUserExperienceGetGiftsSelection;
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this._giftOptions[this._currentIndex];
@@ -191,7 +191,7 @@
                 {
                     return;
                 }
-                _local_6 = new _Str_4584(_local_3.dayIndex, _local_3.stepIndex, _local_5);
+                _local_6 = new NewUserExperienceGetGiftsSelection(_local_3.dayIndex, _local_3.stepIndex, _local_5);
                 this._selectedOptions.push(_local_6);
                 this._currentIndex++;
                 if (this._currentIndex == this._giftOptions.length)
