@@ -8,11 +8,11 @@
         private var _clientURL:String;
         private var _externalVariablesURL:String;
 
-        public function VersionCheckMessageComposer(k:int, _arg_2:String, _arg_3:String)
+        public function VersionCheckMessageComposer(clientID:int, clientURL:String, externalVariablesURL:String)
         {
-            this._clientID = k;
-            this._clientURL = _arg_2;
-            this._externalVariablesURL = _arg_3;
+            this._clientID = clientID;
+            this._clientURL = clientURL;
+            this._externalVariablesURL = externalVariablesURL;
         }
 
         public function dispose():void
