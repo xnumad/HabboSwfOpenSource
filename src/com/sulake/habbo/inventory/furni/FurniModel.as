@@ -387,7 +387,7 @@
 
         public function getWindowContainer():IWindowContainer
         {
-            this._controller._Str_11401(InventoryCategory.MARKETPLACE);
+            this._controller.checkCategoryInitilization(InventoryCategory.MARKETPLACE);
             return this._view.getWindowContainer();
         }
 

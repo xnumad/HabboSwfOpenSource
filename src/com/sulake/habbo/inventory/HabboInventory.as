@@ -730,7 +730,7 @@
             return this._initedInventoryCategories.indexOf(k) >= 0;
         }
 
-        public function _Str_11401(k:String):Boolean
+        public function checkCategoryInitilization(k:String):Boolean
         {
             if (this._Str_18826(k))
             {

@@ -469,7 +469,7 @@
             {
                 this._Str_10034.visible = false;
             }
-            this._controller._Str_11401(k);
+            this._controller.checkCategoryInitilization(k);
             if (this.mainContainer == null)
             {
                 return;
@@ -536,7 +536,7 @@
             {
                 return;
             }
-            this._controller._Str_11401(k);
+            this._controller.checkCategoryInitilization(k);
             var _local_2:IWindowContainer = (this._mainWindow.findChildByName("subContentArea") as IWindowContainer);
             while (_local_2.numChildren > 0)
             {

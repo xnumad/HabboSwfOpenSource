@@ -106,7 +106,7 @@
                 return;
             }
             this._waitingForInitialData = true;
-            if (this._container.inventory._Str_11401(InventoryCategory.FURNI))
+            if (this._container.inventory.checkCategoryInitilization(InventoryCategory.FURNI))
             {
                 this._Str_19499();
             }
