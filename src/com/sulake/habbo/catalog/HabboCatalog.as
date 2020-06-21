@@ -301,7 +301,7 @@
         private var _clubGiftController:ClubGiftController;
         private var _clubOfferHandler:ClubOfferHandler;
         private var _clubExtendController:ClubExtendController;
-        private var _Str_7969:Map;
+        private var _sellablePetPalettes:Map;
         private var _Str_4151:Boolean = false;
         private var _purchasableOffer:IPurchasableOffer;
         private var _Str_8970:_Str_4431;
@@ -340,7 +340,7 @@
 
         public function HabboCatalog(k:IContext, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
-            this._Str_7969 = new Map();
+            this._sellablePetPalettes = new Map();
             super(k, _arg_2, _arg_3);
             this._purse = new Purse();
             this._utils = new HabboCatalogUtils(this);
@@ -648,10 +648,10 @@
                 this._clubExtendController.dispose();
                 this._clubExtendController = null;
             }
-            if (this._Str_7969 != null)
+            if (this._sellablePetPalettes != null)
             {
-                this._Str_7969.dispose();
-                this._Str_7969 = null;
+                this._sellablePetPalettes.dispose();
+                this._sellablePetPalettes = null;
             }
             this._roomSession = null;
             if (this._rentConfirmationWindow != null)
@@ -1220,7 +1220,7 @@
 
         public function _Str_20009(k:String):Array
         {
-            var _local_2:Array = this._Str_7969.getValue(k);
+            var _local_2:Array = this._sellablePetPalettes.getValue(k);
             if (_local_2 != null)
             {
                 return _local_2.slice();
@@ -2266,11 +2266,11 @@
         private function _Str_23837(k:SellablePetPalettesMessageEvent):void
         {
             var _local_2:SellablePetPalettesParser = k.getParser();
-            this._Str_7969.remove(_local_2.productCode);
+            this._sellablePetPalettes.remove(_local_2.productCode);
             var _local_3:Array = _local_2._Str_13588;
             if (_local_3 != null)
             {
-                this._Str_7969.add(_local_2.productCode, _local_3.slice());
+                this._sellablePetPalettes.add(_local_2.productCode, _local_3.slice());
                 this._catalogViewer.dispatchWidgetEvent(new CatalogWidgetSellablePetPalettesEvent(_local_2.productCode, _local_3.slice()));
             }
         }
