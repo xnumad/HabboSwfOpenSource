@@ -156,7 +156,7 @@
             this._com.addHabboConnectionMessageEvent(new TradingOpenEvent(this._Str_22556, TradingOpenParser));
             this._com.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             this._com.addHabboConnectionMessageEvent(new BadgeReceivedEvent(this._Str_23620));
-            this._com.addHabboConnectionMessageEvent(new _Str_5946(this._Str_16617));
+            this._com.addHabboConnectionMessageEvent(new _Str_5946(this.onMarketplaceItemStats));
             this._com.addHabboConnectionMessageEvent(new _Str_6450(this.onAvatarEffects));
             this._com.addHabboConnectionMessageEvent(new _Str_9259(this._Str_24135));
             this._com.addHabboConnectionMessageEvent(new FurniListAddOrUpdateEvent(this._Str_23121));
@@ -919,7 +919,7 @@
             _local_2.endOfferMaking(_local_3.result);
         }
 
-        private function _Str_16617(k:_Str_5946):void
+        private function onMarketplaceItemStats(k:_Str_5946):void
         {
             if (((k == null) || (this._inventory == null)))
             {

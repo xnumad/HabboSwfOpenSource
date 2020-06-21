@@ -579,7 +579,7 @@
             this.addMessageEvent(new _Str_6345(this.onMarketPlaceCancelResult));
             this.addMessageEvent(new RecyclerStatusEvent(this._Str_24950));
             this.addMessageEvent(new RecyclerPrizesEvent(this._Str_23749));
-            this.addMessageEvent(new _Str_5946(this._Str_16617));
+            this.addMessageEvent(new _Str_5946(this.onMarketplaceItemStats));
             this.addMessageEvent(new NotEnoughBalanceMessageEvent(this.onNotEnoughBalance));
             this.addMessageEvent(new _Str_6375(this._Str_23226));
             this.addMessageEvent(new BuildersClubFurniCountMessageEvent(this._Str_23753));
@@ -2184,7 +2184,7 @@
             this._giftWrappingConfiguration = new GiftWrappingConfiguration(k);
         }
 
-        private function _Str_16617(k:_Str_5946):void
+        private function onMarketplaceItemStats(k:_Str_5946):void
         {
             if (((!(k)) || (!(this._marketplace))))
             {
