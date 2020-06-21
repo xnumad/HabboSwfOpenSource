@@ -2455,7 +2455,7 @@
             }
             if (((k.type == RoomEngineObjectEvent.SELECTED) && (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)))
             {
-                _local_2 = this._Str_22062(k);
+                _local_2 = this.getUserDataForEvent(k);
                 if (_local_2 != null)
                 {
                     events.dispatchEvent(new CatalogUserEvent(CatalogEvent.CATALOG_USER_SELECTED, _local_2.id, _local_2.name));
@@ -2488,7 +2488,7 @@
             }
         }
 
-        private function _Str_22062(k:RoomEngineObjectEvent):RoomUserData
+        private function getUserDataForEvent(k:RoomEngineObjectEvent):RoomUserData
         {
             var _local_3:IRoomSession;
             var _local_2:RoomUserData;
@@ -2517,7 +2517,7 @@
                     return;
                 }
                 _local_2 = null;
-                _local_3 = this._Str_22062(k);
+                _local_3 = this.getUserDataForEvent(k);
                 if (_local_3 != null)
                 {
                     _local_2 = _local_3.name;
