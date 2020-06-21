@@ -12,8 +12,8 @@
     import com.sulake.habbo.game.WindowUtils;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_8022;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
-    import com.sulake.habbo.communication.messages.outgoing._Str_356._Str_5198;
-    import com.sulake.habbo.communication.messages.outgoing._Str_356._Str_11321;
+    import com.sulake.habbo.communication.messages.outgoing.game.score._Str_5198;
+    import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11321;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.game.score._Str_3326;
     import com.sulake.habbo.communication.messages.parser.game.score.Game2WeeklyLeaderboardParser;

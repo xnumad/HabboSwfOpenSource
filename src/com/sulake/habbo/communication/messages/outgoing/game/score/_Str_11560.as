@@ -1,17 +1,16 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_356
+﻿package com.sulake.habbo.communication.messages.outgoing.game.score
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11321 implements IMessageComposer 
+    public class _Str_11560 implements IMessageComposer 
     {
         private var _data:Array;
 
-        public function _Str_11321(k:int, _arg_2:int)
+        public function _Str_11560(k:int)
         {
             this._data = [];
             super();
             this._data.push(k);
-            this._data.push(_arg_2);
         }
 
         public function getMessageArray():Array
