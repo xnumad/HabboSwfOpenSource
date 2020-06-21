@@ -2355,7 +2355,7 @@
             {
                 return BuilderFurniPlaceableStatus._Str_12543;
             }
-            if (((this._Str_20960 < 0) || (this._Str_20960 >= this.builderFurniLimit)))
+            if (((this.builderFurniCount < 0) || (this.builderFurniCount >= this.builderFurniLimit)))
             {
                 return BuilderFurniPlaceableStatus._Str_14564;
             }
@@ -3194,7 +3194,7 @@
             return this._Str_16097;
         }
 
-        public function get _Str_20960():int
+        public function get builderFurniCount():int
         {
             return this._Str_18106;
         }
