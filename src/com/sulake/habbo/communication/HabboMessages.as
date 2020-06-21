@@ -453,7 +453,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemRemoveMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectDataUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_540._Str_10971;
-	import com.sulake.habbo.communication.messages.outgoing._Str_541._Str_11402;
+	import com.sulake.habbo.communication.messages.outgoing.mysterybox._Str_11402;
 	import com.sulake.habbo.communication.messages.outgoing.friendfurni.FriendFurniConfirmLockMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomdirectory.RoomNetworkOpenConnectionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.landingview.votes.CommunityGoalVoteMessageComposer;

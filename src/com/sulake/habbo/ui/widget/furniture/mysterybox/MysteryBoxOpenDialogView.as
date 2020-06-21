@@ -13,7 +13,7 @@
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_541._Str_11402;
+    import com.sulake.habbo.communication.messages.outgoing.mysterybox._Str_11402;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.room.ImageResult;
