@@ -1814,7 +1814,7 @@
                 else
                 {
                     _local_15 = new Offer(_local_11.offerId, _local_11.localizationId, _local_11.isRent, _local_11.priceInCredits, _local_11.priceInActivityPoints, _local_11.activityPointType, _local_11.giftable, _local_11.clubLevel, _local_12, _local_11.bundlePurchaseAllowed, this);
-                    if (((!(_local_15.productContainer == null)) && (this._Str_19704(_local_15))))
+                    if (((!(_local_15.productContainer == null)) && (this.isOfferCompatibleWithCurrentMode(_local_15))))
                     {
                         _local_10.push(_local_15);
                     }
@@ -1835,7 +1835,7 @@
             this.isBusy = false;
         }
 
-        private function _Str_19704(k:Offer):Boolean
+        private function isOfferCompatibleWithCurrentMode(k:Offer):Boolean
         {
             return (this._catalogType == CatalogType.NORMAL) || ((!(k.pricingModel == Offer.PRICING_MODEL_BUNDLE)) && (!(k.pricingModel == Offer.PRICING_MODEL_MULTI)));
         }
@@ -2981,7 +2981,7 @@
                 _local_5.push(new Product(_local_4.productType, _local_4.furniClassId, _local_4.extraParam, _local_4.productCount, _local_6, _local_8, this, _local_4.uniqueLimitedItem, _local_4.uniqueLimitedItemSeriesSize, _local_4.uniqueLimitedItemsLeft));
             }
             _local_7 = new Offer(_local_3.offerId, _local_3.localizationId, _local_3.isRent, _local_3.priceInCredits, _local_3.priceInActivityPoints, _local_3.activityPointType, _local_3.giftable, _local_3.clubLevel, _local_5, _local_3.bundlePurchaseAllowed, this);
-            if (!this._Str_19704(_local_7))
+            if (!this.isOfferCompatibleWithCurrentMode(_local_7))
             {
                 _local_7.dispose();
                 return;
