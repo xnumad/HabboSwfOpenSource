@@ -201,7 +201,7 @@
                 k.addMessageEvent(new ItemRemoveMessageEvent(this.onItemRemove));
                 k.addMessageEvent(new ItemUpdateMessageEvent(this.onItemUpdate));
                 k.addMessageEvent(new ItemDataUpdateMessageEvent(this.onItemDataUpdate));
-                k.addMessageEvent(new UsersEvent(this._Str_10523));
+                k.addMessageEvent(new UsersEvent(this.onUsers));
                 k.addMessageEvent(new UserUpdateEvent(this.onUserUpdate));
                 k.addMessageEvent(new UserRemoveMessageEvent(this.onUserRemove));
                 k.addMessageEvent(new UserChangeMessageEvent(this.onUserChange));
@@ -771,7 +771,7 @@
             this._roomCreator.addObjectWallItem(k, _arg_2.id, _arg_2.type, _local_4, _local_5, _arg_2.state, _arg_2.data, _arg_2.usagePolicy, _arg_2.ownerId, _arg_2.ownerName, _arg_2.secondsToExpiration);
         }
 
-        private function _Str_10523(k:IMessageEvent):void
+        private function onUsers(k:IMessageEvent):void
         {
             var _local_5:UserMessageData;
             var _local_6:IVector3d;

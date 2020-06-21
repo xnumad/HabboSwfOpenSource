@@ -429,7 +429,7 @@
         override protected function initComponent():void
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new UsersEvent(this._Str_10523));
+            this.addMessageEvent(new UsersEvent(this.onUsers));
             this.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
             this.addMessageEvent(new GetGuestRoomResultEvent(this._Str_24404));
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this._Str_23679));
@@ -709,7 +709,7 @@
             }
         }
 
-        private function _Str_10523(k:IMessageEvent):void
+        private function onUsers(k:IMessageEvent):void
         {
             var _local_4:UserMessageData;
             var _local_2:UsersMessageParser = UsersEvent(k).getParser();

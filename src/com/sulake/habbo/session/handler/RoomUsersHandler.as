@@ -75,7 +75,7 @@
             {
                 return;
             }
-            k.addMessageEvent(new UsersEvent(this._Str_10523));
+            k.addMessageEvent(new UsersEvent(this.onUsers));
             k.addMessageEvent(new UserRemoveMessageEvent(this.onUserRemove));
             k.addMessageEvent(new UserBadgesEvent(this.onUserBadges));
             k.addMessageEvent(new _Str_4129(this.onDoorbell));
@@ -121,7 +121,7 @@
             }
         }
 
-        private function _Str_10523(k:IMessageEvent):void
+        private function onUsers(k:IMessageEvent):void
         {
             var _local_7:UserMessageData;
             var _local_8:RoomUserData;
