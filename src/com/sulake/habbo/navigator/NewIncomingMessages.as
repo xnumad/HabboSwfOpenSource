@@ -146,7 +146,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorMetaDataEvent(this._Str_25034)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5767(this._Str_26467)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5767(this.onCompetitionData)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3992(this._Str_7358)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_8029(this._Str_15955)));
@@ -518,7 +518,7 @@
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_4132();
         }
 
-        private function _Str_26467(k:_Str_5767):void
+        private function onCompetitionData(k:_Str_5767):void
         {
             this.data._Str_4079 = k.getParser().data;
         }

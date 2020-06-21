@@ -141,7 +141,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_8939(this._Str_23463));
             _local_2.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484));
             _local_2.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5767(this._Str_26467));
+            _local_2.addHabboConnectionMessageEvent(new _Str_5767(this.onCompetitionData));
             _local_2.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199));
             _local_2.addHabboConnectionMessageEvent(new _Str_3992(this._Str_7358));
             _local_2.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485));
@@ -712,7 +712,7 @@
             this._navigator.roomSettingsCtrl._Str_4132();
         }
 
-        private function _Str_26467(k:_Str_5767):void
+        private function onCompetitionData(k:_Str_5767):void
         {
             this._navigator.data._Str_4079 = k.getParser().data;
         }
