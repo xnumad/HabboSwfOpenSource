@@ -423,7 +423,7 @@
                     this._roomSession = null;
                     if (this._isInitialized)
                     {
-                        this._Str_12575();
+                        this.deselectAllEffects();
                     }
                     return;
                 case RoomSessionPropertyUpdateEvent.RSDUE_ALLOW_PETS:
@@ -523,7 +523,7 @@
             this._Str_7796();
         }
 
-        public function _Str_12575(k:Boolean=false):void
+        public function deselectAllEffects(k:Boolean=false):void
         {
             var _local_2:EffectsModel = this._Str_3994;
             if (_local_2 == null)

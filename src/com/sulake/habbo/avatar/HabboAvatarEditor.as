@@ -323,7 +323,7 @@
                     }
                     else
                     {
-                        this._manager.inventory._Str_12575(true);
+                        this._manager.inventory.deselectAllEffects(true);
                     }
                 }
                 this._avatarEffectChanged = false;

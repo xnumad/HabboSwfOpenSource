@@ -315,7 +315,7 @@
                     Logger.log("STOP ALL EFFECTS");
                     if (this._inventory != null)
                     {
-                        this._inventory._Str_12575(true);
+                        this._inventory.deselectAllEffects(true);
                     }
                     break;
                 case RoomWidgetNavigateToRoomMessage.RWGOI_MESSAGE_NAVIGATE_HOME:

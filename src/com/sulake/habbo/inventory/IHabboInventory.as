@@ -28,7 +28,7 @@
         function setEffectSelected(_arg_1:int):void;
         function getLastActivatedEffect():int;
         function setEffectDeselected(_arg_1:int):void;
-        function _Str_12575(_arg_1:Boolean=false):void;
+        function deselectAllEffects(_arg_1:Boolean=false):void;
         function _Str_22856(_arg_1:int):IAvatarEffect;
         function _Str_20389(_arg_1:int, _arg_2:String):void;
         function _Str_4511(_arg_1:String, _arg_2:String=null, _arg_3:Boolean=false):void;
