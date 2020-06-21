@@ -9,7 +9,7 @@
     import com.sulake.room.object.IRoomObject;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.inventory.enum.FurniCategory;
-    import com.sulake.habbo.communication.messages.outgoing._Str_484._Str_4639;
+    import com.sulake.habbo.communication.messages.outgoing.register._Str_4639;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.window.components.IWidgetWindow;

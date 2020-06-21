@@ -20,7 +20,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing._Str_484._Str_4639;
+    import com.sulake.habbo.communication.messages.outgoing.register._Str_4639;
     import com.sulake.habbo.avatar.events.AvatarUpdateEvent;
     import com.sulake.habbo.avatar.structure.figure.IFigurePartSet;
     import com.sulake.habbo.avatar.common.AvatarEditorGridPartItem;

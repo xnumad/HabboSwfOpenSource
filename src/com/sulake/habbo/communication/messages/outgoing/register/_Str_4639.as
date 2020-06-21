@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_484
+﻿package com.sulake.habbo.communication.messages.outgoing.register
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 

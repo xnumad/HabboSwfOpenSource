@@ -383,7 +383,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.advertisement.InterstitialMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.advertisement.RoomAdErrorEvent;
-	import com.sulake.habbo.communication.messages.outgoing._Str_484._Str_4639;
+	import com.sulake.habbo.communication.messages.outgoing.register._Str_4639;
 	import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9884;
 	import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9928;
 	import com.sulake.habbo.communication.messages.outgoing._Str_497._Str_16208;
