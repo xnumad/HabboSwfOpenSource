@@ -1539,7 +1539,7 @@
             }
             if (k.target.caption.length >= 3)
             {
-                this._keyUpSearchTimer.addEventListener(TimerEvent.TIMER, this._Str_24381);
+                this._keyUpSearchTimer.addEventListener(TimerEvent.TIMER, this.onKeyUpSearchTimer);
                 this._keyUpSearchTimer.start();
             }
             var _local_2:IWindow = this._mainContainer.findChildByName("search.helper");
@@ -1559,7 +1559,7 @@
             }
         }
 
-        private function _Str_24381(k:TimerEvent):void
+        private function onKeyUpSearchTimer(k:TimerEvent):void
         {
             var _local_2:ITextFieldWindow = (this._mainContainer.findChildByName("search.input") as ITextFieldWindow);
             this.performSearch(_local_2.caption);
