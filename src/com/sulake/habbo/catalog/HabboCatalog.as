@@ -570,7 +570,7 @@
             this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
             this.addMessageEvent(new _Str_5264(this.onCatalogPublished));
             this.addMessageEvent(new CreditBalanceEvent(this.onCreditBalance));
-            this.addMessageEvent(new GuildMembershipsMessageEvent(this._Str_24089));
+            this.addMessageEvent(new GuildMembershipsMessageEvent(this.onGuildMemberships));
             this.addMessageEvent(new ClubGiftInfoEvent(this.onClubGiftInfo));
             this.addMessageEvent(new HabboClubOffersMessageEvent(this.onHabboClubOffers));
             this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
@@ -2858,7 +2858,7 @@
             }
         }
 
-        public function _Str_24089(k:GuildMembershipsMessageEvent):void
+        public function onGuildMemberships(k:GuildMembershipsMessageEvent):void
         {
             if (this._guildMembershipsController)
             {
