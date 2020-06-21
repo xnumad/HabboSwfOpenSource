@@ -1339,7 +1339,7 @@
             {
                 if (!_Str_3942._Str_9211(this._mainContainer))
                 {
-                    this._Str_15729();
+                    this.hideMainWindow();
                 }
             }
             if (this._Str_11577())
@@ -1459,7 +1459,7 @@
             this._mainContainer = (this._windowManager.buildFromXML((_local_2.content as XML), DESKTOP_WINDOW_LAYER) as IWindowContainer);
             this._mainContainer.tags.push("habbo_catalog");
             this._mainContainer.position = DEFAULT_VIEW_LOCATION_LARGE;
-            this._Str_15729();
+            this.hideMainWindow();
             var _local_3:IWindow = this._mainContainer.findChildByName("titlebar_close_button");
             if (_local_3 == null)
             {
@@ -1729,7 +1729,7 @@
             {
                 return;
             }
-            this._Str_15729();
+            this.hideMainWindow();
             if (this._catalogViewer != null)
             {
                 this._catalogViewer._Str_20980();
@@ -2435,7 +2435,7 @@
             {
                 this._purchasableOffer = _arg_2;
                 this._Str_8970 = k;
-                this._Str_15729();
+                this.hideMainWindow();
                 this._isObjectMoverRequested = true;
                 this._placeMultipleObjects = _arg_3;
             }
@@ -2816,7 +2816,7 @@
             }
         }
 
-        private function _Str_15729():void
+        private function hideMainWindow():void
         {
             var k:IDesktopWindow;
             if ((((!(this._windowManager == null)) && (!(this._mainContainer == null))) && (!(this._mainContainer.parent == null))))
