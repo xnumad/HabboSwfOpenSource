@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7089;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageOfferData;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_3920;
+    import com.sulake.habbo.communication.messages.incoming.catalog.FrontPageItem;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
     import __AS3__.vec.*;
 
@@ -17,7 +17,7 @@
         private var _offers:Vector.<CatalogPageMessageOfferData>;
         private var _offerId:int;
         private var _acceptSeasonCurrencyAsCredits:Boolean;
-        private var _frontPageItems:Vector.<_Str_3920>;
+        private var _frontPageItems:Vector.<FrontPageItem>;
 
 
         public function get pageId():int
@@ -55,7 +55,7 @@
             return this._acceptSeasonCurrencyAsCredits;
         }
 
-        public function get _Str_5320():Vector.<_Str_3920>
+        public function get _Str_5320():Vector.<FrontPageItem>
         {
             return this._frontPageItems;
         }
@@ -90,12 +90,12 @@
             this._acceptSeasonCurrencyAsCredits = k.readBoolean();
             if (k.bytesAvailable)
             {
-                this._frontPageItems = new Vector.<_Str_3920>(0);
+                this._frontPageItems = new Vector.<FrontPageItem>(0);
                 _local_2 = k.readInteger();
                 _local_3 = 0;
                 while (_local_3 < _local_2)
                 {
-                    this._frontPageItems.push(new _Str_3920(k));
+                    this._frontPageItems.push(new FrontPageItem(k));
                     _local_3++;
                 }
             }

@@ -3,7 +3,7 @@
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_3920;
+    import com.sulake.habbo.communication.messages.incoming.catalog.FrontPageItem;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.IWindow;
@@ -61,12 +61,12 @@
             return true;
         }
 
-        private function _Str_23881(k:_Str_3920):IWindowContainer
+        private function _Str_23881(k:FrontPageItem):IWindowContainer
         {
             return this._Str_15147(k, (this._template.clone() as IWindowContainer));
         }
 
-        private function _Str_15147(k:_Str_3920, _arg_2:IWindowContainer):IWindowContainer
+        private function _Str_15147(k:FrontPageItem, _arg_2:IWindowContainer):IWindowContainer
         {
             var _local_5:String;
             var _local_6:IStaticBitmapWrapperWindow;
@@ -89,7 +89,7 @@
         private function _Str_5162(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:int;
-            var _local_4:_Str_3920;
+            var _local_4:FrontPageItem;
             if (k.type == WindowMouseEvent.DOWN)
             {
                 _local_3 = this._itemListWindow.getListItemIndex(_arg_2.parent);
@@ -97,7 +97,7 @@
                 _local_4 = this._catalog._Str_5320[_local_3];
                 switch (_local_4.type)
                 {
-                    case _Str_3920._Str_13638:
+                    case FrontPageItem._Str_13638:
                         if (_local_4._Str_17029 == CatalogPageName.ROOM_BUNDLES_MOBILE)
                         {
                             return this._catalog.openCatalogPage(CatalogPageName.ROOM_BUNDLES, CatalogType.NORMAL);
@@ -108,7 +108,7 @@
                         }
                         this._catalog.openCatalogPage(_local_4._Str_17029, CatalogType.NORMAL);
                         return;
-                    case _Str_3920._Str_15225:
+                    case FrontPageItem._Str_15225:
                         this._catalog.openCatalogPageByOfferId(_local_4._Str_24645, CatalogType.NORMAL);
                         return;
                 }

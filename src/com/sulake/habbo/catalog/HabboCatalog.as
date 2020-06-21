@@ -48,7 +48,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.session.furniture.IFurnitureData;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_3920;
+    import com.sulake.habbo.communication.messages.incoming.catalog.FrontPageItem;
     import flash.utils.Timer;
     import com.sulake.habbo.catalog.offers.OfferCenter;
     import com.sulake.habbo.catalog.clubcenter.HabboClubCenter;
@@ -322,7 +322,7 @@
         private var _messageEvents:Vector.<IMessageEvent>;
         private var _catalogType:String = "NORMAL";
         private var _furnitureData:Vector.<IFurnitureData>;
-        private var _frontPageItems:Vector.<_Str_3920>;
+        private var _frontPageItems:Vector.<FrontPageItem>;
         private var _Str_6911:Timer;
         private var _Str_19956:Dictionary;
         private var _Str_21515:Boolean;
@@ -465,7 +465,7 @@
             return this._videoOfferManager;
         }
 
-        public function get _Str_5320():Vector.<_Str_3920>
+        public function get _Str_5320():Vector.<FrontPageItem>
         {
             return this._frontPageItems;
         }

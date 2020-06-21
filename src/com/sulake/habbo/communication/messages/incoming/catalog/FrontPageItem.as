@@ -3,7 +3,7 @@
     import flash.utils.getTimer;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3920 
+    public class FrontPageItem
     {
         public static const _Str_13638:int = 0;
         public static const _Str_15225:int = 1;
@@ -18,7 +18,7 @@
         private var _Str_19890:int;
         private var _Str_4678:int;
 
-        public function _Str_3920(k:IMessageDataWrapper)
+        public function FrontPageItem(k:IMessageDataWrapper)
         {
             if (!k)
             {
