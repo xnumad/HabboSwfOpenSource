@@ -120,7 +120,7 @@
             return this._page.layoutCode;
         }
 
-        public function get _Str_3854():ICatalogPage
+        public function get currentPage():ICatalogPage
         {
             return this._page;
         }

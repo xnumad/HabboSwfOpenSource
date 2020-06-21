@@ -854,7 +854,7 @@
             this._Str_18873("cancel_button");
             this._Str_18873("publish_check");
             this._catalog.purchaseProduct(this._pageId, this._offerId, this._extraParameter, this._quantity);
-            var _local_2:ICatalogPage = this._catalog._Str_3854;
+            var _local_2:ICatalogPage = this._catalog.currentPage;
             if (_local_2 != null)
             {
                 _local_2.dispatchWidgetEvent(new _Str_3308(CatalogWidgetEvent.PURCHASE));

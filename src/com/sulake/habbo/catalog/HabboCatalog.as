@@ -1661,9 +1661,9 @@
                     }
                     break;
             }
-            if (this._Str_3854 != null)
+            if (this.currentPage != null)
             {
-                this._Str_3854.dispatchWidgetEvent(new CatalogWidgetRoomChangedEvent());
+                this.currentPage.dispatchWidgetEvent(new CatalogWidgetRoomChangedEvent());
             }
         }
 
@@ -2342,7 +2342,7 @@
 
         public function isDraggable(k:IPurchasableOffer):Boolean
         {
-            return ((((((((getBoolean("catalog.drag_and_drop")) && (!(this._roomSession == null))) && ((this._catalogViewer._Str_3854 == null) || (this._catalogViewer._Str_3854._Str_21031))) && (((this._catalogType == CatalogType.NORMAL) && ((this._roomSession.isRoomOwner) || ((this._roomSession.isGuildRoom) && (this._roomSession.roomControllerLevel >= RoomControllerLevel.GUILD_MEMBER)))) || ((this._catalogType == CatalogType.BUILDER) && (this.getBuilderFurniPlaceableStatus(k) == BuilderFurniPlaceableStatus.OKAY)))) && (!(k.pricingModel == Offer.PRICING_MODEL_BUNDLE))) && (!(k.pricingModel == Offer.PRICING_MODEL_MULTI))) && (!(k.product == null))) && (!(k.product.productType == ProductTypeEnum.EFFECT))) && (!(k.product.productType == ProductTypeEnum.HABBO_CLUB));
+            return ((((((((getBoolean("catalog.drag_and_drop")) && (!(this._roomSession == null))) && ((this._catalogViewer.currentPage == null) || (this._catalogViewer.currentPage._Str_21031))) && (((this._catalogType == CatalogType.NORMAL) && ((this._roomSession.isRoomOwner) || ((this._roomSession.isGuildRoom) && (this._roomSession.roomControllerLevel >= RoomControllerLevel.GUILD_MEMBER)))) || ((this._catalogType == CatalogType.BUILDER) && (this.getBuilderFurniPlaceableStatus(k) == BuilderFurniPlaceableStatus.OKAY)))) && (!(k.pricingModel == Offer.PRICING_MODEL_BUNDLE))) && (!(k.pricingModel == Offer.PRICING_MODEL_MULTI))) && (!(k.product == null))) && (!(k.product.productType == ProductTypeEnum.EFFECT))) && (!(k.product.productType == ProductTypeEnum.HABBO_CLUB));
         }
 
         public function getBuilderFurniPlaceableStatus(k:IPurchasableOffer):int
@@ -2971,7 +2971,7 @@
             var _local_4:CatalogPageMessageProductData = _local_3.products[0];
             if (_local_4.uniqueLimitedItem)
             {
-                this._catalogViewer._Str_3854._Str_19621(_local_3.offerId, _local_4.uniqueLimitedItemsLeft);
+                this._catalogViewer.currentPage._Str_19621(_local_3.offerId, _local_4.uniqueLimitedItemsLeft);
             }
             var _local_5:Vector.<IProduct> = new Vector.<IProduct>(0);
             var _local_6:IProductData = this.getProductData(_local_3.localizationId);
@@ -2986,13 +2986,13 @@
                 _local_7.dispose();
                 return;
             }
-            if (((this._catalogViewer) && (this._catalogViewer._Str_3854)))
+            if (((this._catalogViewer) && (this._catalogViewer.currentPage)))
             {
-                _local_7.page = this._catalogViewer._Str_3854;
-                this._catalogViewer._Str_3854.dispatchWidgetEvent(new SelectProductEvent(_local_7));
+                _local_7.page = this._catalogViewer.currentPage;
+                this._catalogViewer.currentPage.dispatchWidgetEvent(new SelectProductEvent(_local_7));
                 if (((_local_7.product) && (_local_7.product.productType == ProductTypeEnum.WALL)))
                 {
-                    this._catalogViewer._Str_3854.dispatchWidgetEvent(new SetExtraPurchaseParameterEvent(_local_7.product.extraParam));
+                    this._catalogViewer.currentPage.dispatchWidgetEvent(new SetExtraPurchaseParameterEvent(_local_7.product.extraParam));
                 }
                 if (((this._isObjectMoverRequested) && (this._purchasableOffer)))
                 {
@@ -3013,9 +3013,9 @@
             {
                 ExternalInterface.call("FlashExternalInterface.updateBuildersClub", (this._builderMembershipSecondsLeft > 0));
             }
-            if (this._Str_3854 != null)
+            if (this.currentPage != null)
             {
-                this._Str_3854.dispatchWidgetEvent(new CatalogWidgetBuilderSubscriptionUpdatedEvent());
+                this.currentPage.dispatchWidgetEvent(new CatalogWidgetBuilderSubscriptionUpdatedEvent());
             }
             this.refreshBuilderStatus();
         }
@@ -3023,9 +3023,9 @@
         private function onBuildersClubFurniCount(k:BuildersClubFurniCountMessageEvent):void
         {
             this._builderFurniCount = k.getParser().furniCount;
-            if (this._Str_3854 != null)
+            if (this.currentPage != null)
             {
-                this._Str_3854.dispatchWidgetEvent(new CatalogWidgetBuilderSubscriptionUpdatedEvent());
+                this.currentPage.dispatchWidgetEvent(new CatalogWidgetBuilderSubscriptionUpdatedEvent());
             }
             this.refreshBuilderStatus();
         }
@@ -3093,9 +3093,9 @@
             }
         }
 
-        public function get _Str_3854():ICatalogPage
+        public function get currentPage():ICatalogPage
         {
-            return (this._catalogViewer == null) ? null : this._catalogViewer._Str_3854;
+            return (this._catalogViewer == null) ? null : this._catalogViewer.currentPage;
         }
 
         public function displayProductIcon(k:String, _arg_2:int, _arg_3:IBitmapWrapperWindow):void
