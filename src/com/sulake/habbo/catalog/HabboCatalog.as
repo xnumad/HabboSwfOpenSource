@@ -2389,7 +2389,7 @@
             return BuilderFurniPlaceableStatus.OKAY;
         }
 
-        private function _Str_21839(k:String, _arg_2:String):void
+        private function updateRoom(k:String, _arg_2:String):void
         {
             var _local_3:String = this._roomEngine.getRoomStringValue(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_WALL_TYPE);
             var _local_4:String = this._roomEngine.getRoomStringValue(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
@@ -2596,7 +2596,7 @@
                                     case "floor":
                                     case "wallpaper":
                                     case "landscape":
-                                        this._Str_21839(_local_3.furnitureData.className, _local_3.extraParam);
+                                        this.updateRoom(_local_3.furnitureData.className, _local_3.extraParam);
                                         break;
                                     default:
                                         this._roomEngine.addObjectWallItem(k.roomId, k.objectId, _local_3.productClassId, new Vector3d(k.x, k.y, k.z), new Vector3d((k.direction * 45), 0, 0), 0, k._Str_4766, 0);
@@ -2683,7 +2683,7 @@
                             case "floor":
                             case "wallpaper":
                             case "landscape":
-                                this._Str_21839("reset", "");
+                                this.updateRoom("reset", "");
                                 break;
                             default:
                                 this._roomEngine.disposeObjectWallItem(this._placedObjectPurchaseData.roomId, this._placedObjectPurchaseData.objectId);
