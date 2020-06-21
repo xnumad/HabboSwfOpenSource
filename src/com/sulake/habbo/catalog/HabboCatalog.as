@@ -1193,7 +1193,7 @@
             this.send(new GetMarketplaceItemStatsComposer(k, _arg_2));
         }
 
-        public function _Str_16509():GuildMembershipsController
+        public function getGroupMembershipsController():GuildMembershipsController
         {
             return this._guildMembershipsController;
         }

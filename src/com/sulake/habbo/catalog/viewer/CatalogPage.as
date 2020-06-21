@@ -421,13 +421,13 @@
                     this._widgets.push(new BuyGuildCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.GUILD_BADGE_VIEW:
-                    this._widgets.push(new GuildBadgeViewCatalogWidget(k, this._habboCatalog._Str_16509()));
+                    this._widgets.push(new GuildBadgeViewCatalogWidget(k, this._habboCatalog.getGroupMembershipsController()));
                     return;
                 case CatalogWidgetEnum.GUILD_SELECTOR:
-                    this._widgets.push(new GuildSelectorCatalogWidget(k, this._habboCatalog._Str_16509()));
+                    this._widgets.push(new GuildSelectorCatalogWidget(k, this._habboCatalog.getGroupMembershipsController()));
                     return;
                 case CatalogWidgetEnum.GUILD_FORUM_SELECTOR:
-                    this._widgets.push(new GuildForumSelectorCatalogWidget(k, this._habboCatalog._Str_16509()));
+                    this._widgets.push(new GuildForumSelectorCatalogWidget(k, this._habboCatalog.getGroupMembershipsController()));
                     return;
                 case CatalogWidgetEnum.PET_PREVIEW:
                     this._widgets.push(new PetPreviewCatalogWidget(k, this._habboCatalog));
