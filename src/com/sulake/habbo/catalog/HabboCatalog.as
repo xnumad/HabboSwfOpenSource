@@ -326,7 +326,7 @@
         private var _keyUpSearchTimer:Timer;
         private var _pagesVisibleInBuilderMode:Dictionary;
         private var _placeMultipleObjects:Boolean;
-        private var _Str_18106:int = -1;
+        private var _builderFurniCount:int = -1;
         private var _Str_16097:int;
         private var _Str_19671:int;
         private var _Str_14644:int;
@@ -3022,7 +3022,7 @@
 
         private function _Str_23753(k:BuildersClubFurniCountMessageEvent):void
         {
-            this._Str_18106 = k.getParser().furniCount;
+            this._builderFurniCount = k.getParser().furniCount;
             if (this._Str_3854 != null)
             {
                 this._Str_3854.dispatchWidgetEvent(new CatalogWidgetBuilderSubscriptionUpdatedEvent());
@@ -3052,7 +3052,7 @@
             this._localization.registerParameter("builder.header.title", "bcstatus", _local_4);
             var _local_5:String = ((this._Str_12983) ? FriendlyTime.format(this._localization, k) : ((this._Str_13454) ? FriendlyTime.format(this._localization, _local_2) : _local_4));
             this._localization.registerParameter("builder.header.status.membership", "duration", (('<font color="#ff8d00"><b>' + _local_5) + "</b></font>"));
-            this._localization.registerParameter("builder.header.status.limit", "count", (('<font color="#ff8d00"><b>' + this._Str_18106) + "</b></font>"));
+            this._localization.registerParameter("builder.header.status.limit", "count", (('<font color="#ff8d00"><b>' + this._builderFurniCount) + "</b></font>"));
             this._localization.registerParameter("builder.header.status.limit", "limit", (('<font color="#ff8d00"><b>' + this._Str_16097) + "</b></font>"));
             this._Str_19072 = getTimer();
         }
@@ -3196,7 +3196,7 @@
 
         public function get builderFurniCount():int
         {
-            return this._Str_18106;
+            return this._builderFurniCount;
         }
 
         public function get builderMaxFurniLimit():int
