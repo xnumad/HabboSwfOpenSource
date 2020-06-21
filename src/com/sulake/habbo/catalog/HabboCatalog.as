@@ -801,7 +801,7 @@
             }
         }
 
-        public function _Str_23708(k:int):void
+        public function purchaseVipMembershipExtension(k:int):void
         {
             this.send(new _Str_9862(k));
         }

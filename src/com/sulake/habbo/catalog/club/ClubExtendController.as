@@ -85,7 +85,7 @@
             }
             if (this._offer.vip)
             {
-                this._catalog._Str_23708(this._offer.offerId);
+                this._catalog.purchaseVipMembershipExtension(this._offer.offerId);
             }
             else
             {
