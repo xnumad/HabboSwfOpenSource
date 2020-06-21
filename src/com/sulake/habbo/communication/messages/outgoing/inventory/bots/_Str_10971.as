@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_540
+﻿package com.sulake.habbo.communication.messages.outgoing.inventory.bots
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
