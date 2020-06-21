@@ -55,7 +55,7 @@
             }
             this._offers = [];
             _Str_2819(CatalogWidgetEnum.CLUB_BUY);
-            this._controller = (page.viewer.catalog as HabboCatalog)._Str_18172();
+            this._controller = (page.viewer.catalog as HabboCatalog).getClubBuyController();
             this._controller.registerVisualization(this);
             this._controller.requestOffers(ClubOfferRequestSource._Str_15734);
             return true;

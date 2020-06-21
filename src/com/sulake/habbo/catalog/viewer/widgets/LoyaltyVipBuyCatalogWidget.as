@@ -53,7 +53,7 @@
                 return false;
             }
             this._offers = [];
-            this._controller = this._catalog._Str_18172();
+            this._controller = this._catalog.getClubBuyController();
             this._controller.registerVisualization(this);
             this._controller.requestOffers(ClubOfferRequestSource._Str_15727);
             return true;

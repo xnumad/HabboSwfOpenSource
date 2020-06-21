@@ -1139,7 +1139,7 @@
             return this._clubGiftController;
         }
 
-        public function _Str_18172():ClubOfferHandler
+        public function getClubBuyController():ClubOfferHandler
         {
             return this._clubOfferHandler;
         }

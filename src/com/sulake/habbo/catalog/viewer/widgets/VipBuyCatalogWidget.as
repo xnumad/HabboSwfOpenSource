@@ -56,7 +56,7 @@
                 return false;
             }
             this._offers = [];
-            this._controller = this._catalog._Str_18172();
+            this._controller = this._catalog.getClubBuyController();
             this._controller.registerVisualization(this);
             this._controller.requestOffers(((this._isGift) ? ClubOfferRequestSource._Str_15001 : ClubOfferRequestSource._Str_12589));
             return true;
