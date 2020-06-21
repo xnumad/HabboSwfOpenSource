@@ -4420,7 +4420,7 @@
             return new RenderRoomMessageComposer(_local_12, _local_10, _local_11, this._activeRoomId, this._sessionDataManager.topSecurityLevel);
         }
 
-        public function get _Str_22413():RoomContentLoader
+        public function get roomContentLoader():RoomContentLoader
         {
             return this._roomContentLoader;
         }

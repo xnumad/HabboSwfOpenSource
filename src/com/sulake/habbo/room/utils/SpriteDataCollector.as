@@ -233,7 +233,7 @@
             }
             if (((_local_7) && (k.objectType)))
             {
-                _local_10 = _arg_4._Str_22413.getGraphicAssetCollection(k.objectType);
+                _local_10 = _arg_4.roomContentLoader.getGraphicAssetCollection(k.objectType);
                 if (_local_10 != null)
                 {
                     _local_11 = _local_10._Str_17888(_local_7);
