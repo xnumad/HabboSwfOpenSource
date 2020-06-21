@@ -2342,10 +2342,10 @@
 
         public function isDraggable(k:IPurchasableOffer):Boolean
         {
-            return ((((((((getBoolean("catalog.drag_and_drop")) && (!(this._roomSession == null))) && ((this._catalogViewer._Str_3854 == null) || (this._catalogViewer._Str_3854._Str_21031))) && (((this._catalogType == CatalogType.NORMAL) && ((this._roomSession.isRoomOwner) || ((this._roomSession.isGuildRoom) && (this._roomSession.roomControllerLevel >= RoomControllerLevel.GUILD_MEMBER)))) || ((this._catalogType == CatalogType.BUILDER) && (this._Str_19136(k) == BuilderFurniPlaceableStatus._Str_8891)))) && (!(k.pricingModel == Offer.PRICING_MODEL_BUNDLE))) && (!(k.pricingModel == Offer.PRICING_MODEL_MULTI))) && (!(k.product == null))) && (!(k.product.productType == ProductTypeEnum.EFFECT))) && (!(k.product.productType == ProductTypeEnum.HABBO_CLUB));
+            return ((((((((getBoolean("catalog.drag_and_drop")) && (!(this._roomSession == null))) && ((this._catalogViewer._Str_3854 == null) || (this._catalogViewer._Str_3854._Str_21031))) && (((this._catalogType == CatalogType.NORMAL) && ((this._roomSession.isRoomOwner) || ((this._roomSession.isGuildRoom) && (this._roomSession.roomControllerLevel >= RoomControllerLevel.GUILD_MEMBER)))) || ((this._catalogType == CatalogType.BUILDER) && (this.getBuilderFurniPlaceableStatus(k) == BuilderFurniPlaceableStatus._Str_8891)))) && (!(k.pricingModel == Offer.PRICING_MODEL_BUNDLE))) && (!(k.pricingModel == Offer.PRICING_MODEL_MULTI))) && (!(k.product == null))) && (!(k.product.productType == ProductTypeEnum.EFFECT))) && (!(k.product.productType == ProductTypeEnum.HABBO_CLUB));
         }
 
-        public function _Str_19136(k:IPurchasableOffer):int
+        public function getBuilderFurniPlaceableStatus(k:IPurchasableOffer):int
         {
             var _local_2:int;
             var _local_3:int;

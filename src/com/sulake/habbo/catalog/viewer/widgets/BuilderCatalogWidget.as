@@ -110,7 +110,7 @@
             {
                 return;
             }
-            var _local_2:int = this._catalog._Str_19136(this._offer);
+            var _local_2:int = this._catalog.getBuilderFurniPlaceableStatus(this._offer);
             if (((_local_2 == BuilderFurniPlaceableStatus._Str_10467) && (k)))
             {
                 _local_2 = BuilderFurniPlaceableStatus._Str_8891;
