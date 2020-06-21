@@ -146,7 +146,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_3992(this._Str_7358));
             _local_2.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485));
             _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this._Str_18891));
-            _local_2.addHabboConnectionMessageEvent(new _Str_6001(this._Str_17265));
+            _local_2.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating));
             _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new _Str_4035(this._Str_4132));
             _local_2.addHabboConnectionMessageEvent(new CanCreateRoomMessageEvent(this._Str_25812));
@@ -683,7 +683,7 @@
             }
         }
 
-        private function _Str_17265(k:IMessageEvent):void
+        private function onRoomRating(k:IMessageEvent):void
         {
             var _local_2:_Str_6990 = (k as _Str_6001).getParser();
             Logger.log(("Received room rating: " + _local_2.rating));

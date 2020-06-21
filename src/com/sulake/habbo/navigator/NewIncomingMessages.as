@@ -116,7 +116,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592)));
             this._messageListeners.push(k.connection.addMessageEvent(new _Str_8763(this._Str_23882)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6030(this._Str_8265)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6001(this._Str_17265)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5891(this._Str_18130)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorLiftedRoomsEvent(this._Str_23664)));
@@ -489,7 +489,7 @@
             }
         }
 
-        private function _Str_17265(k:IMessageEvent):void
+        private function onRoomRating(k:IMessageEvent):void
         {
             var _local_2:_Str_6990 = (k as _Str_6001).getParser();
             Logger.log(("Received room rating: " + _local_2.rating));
