@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_79
+﻿package com.sulake.habbo.communication.messages.outgoing.room.avatar
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 

@@ -15,7 +15,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11024;
+    import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_11024;
     import __AS3__.vec.*;
 
     public class PurchasableClothingConfirmationView implements IDisposable 

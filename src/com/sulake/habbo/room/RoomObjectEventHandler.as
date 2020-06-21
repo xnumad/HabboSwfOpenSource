@@ -56,7 +56,7 @@
     import com.sulake.room.messages.RoomObjectUpdateMessage;
     import com.sulake.habbo.room.utils.LegacyWallGeometry;
     import com.sulake.habbo.room.messages.RoomObjectAvatarSelectedMessage;
-    import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10602;
+    import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10602;
     import com.sulake.habbo.room.messages.RoomObjectVisibilityUpdateMessage;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5686;
     import com.sulake.habbo.session.IRoomSession;
