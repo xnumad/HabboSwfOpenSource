@@ -581,7 +581,7 @@
             this.addMessageEvent(new RecyclerPrizesEvent(this._Str_23749));
             this.addMessageEvent(new _Str_5946(this.onMarketplaceItemStats));
             this.addMessageEvent(new NotEnoughBalanceMessageEvent(this.onNotEnoughBalance));
-            this.addMessageEvent(new _Str_6375(this._Str_23226));
+            this.addMessageEvent(new _Str_6375(this.onHabboClubExtendOffer));
             this.addMessageEvent(new BuildersClubFurniCountMessageEvent(this._Str_23753));
             this.addMessageEvent(new _Str_8418(this.onVoucherRedeemError));
 			this.addMessageEvent(new FireworkChargeDataEvent(this.onFireworkChargeHandler));
@@ -2247,7 +2247,7 @@
             }
         }
 
-        private function _Str_23226(k:_Str_6375):void
+        private function onHabboClubExtendOffer(k:_Str_6375):void
         {
             if (!this._initialized)
             {
