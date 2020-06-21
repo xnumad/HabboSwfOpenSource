@@ -489,7 +489,7 @@
                 _roomEngine = k;
             }, false, [{
                 "type":RoomEngineObjectEvent.PLACED,
-                "callback":this._Str_22513
+                "callback":this.onObjectPlacedInRoom
             }, {
                 "type":RoomEngineObjectEvent.PLACED_ON_USER,
                 "callback":this.onObjectPlaceOnUser
@@ -2532,7 +2532,7 @@
             }
         }
 
-        private function _Str_22513(k:RoomEngineObjectPlacedEvent):void
+        private function onObjectPlacedInRoom(k:RoomEngineObjectPlacedEvent):void
         {
             var _local_2:int;
             var _local_3:IProduct;
