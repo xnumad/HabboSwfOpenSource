@@ -1033,7 +1033,7 @@
             {
                 return;
             }
-            this._inventory._Str_4511(k);
+            this._inventory.toggleInventoryPage(k);
         }
 
         public function openCreditsHabblet():void

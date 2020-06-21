@@ -316,7 +316,7 @@
                 if (_local_3 != this._lastViewId)
                 {
                     this._Str_25305(this._lastViewId);
-                    this._controller._Str_4511(_local_3);
+                    this._controller.toggleInventoryPage(_local_3);
                 }
             }
             else
@@ -675,7 +675,7 @@
                                 {
                                     if (this._controller != null)
                                     {
-                                        this._controller._Str_4511(InventoryCategory.FURNI);
+                                        this._controller.toggleInventoryPage(InventoryCategory.FURNI);
                                     }
                                 }
                             }

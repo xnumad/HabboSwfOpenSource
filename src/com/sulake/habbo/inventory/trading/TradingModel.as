@@ -218,7 +218,7 @@
             this._tradingView._Str_9059(this._otherUserIndex);
             this._tradingView._Str_11244();
             this._tradingView._Str_24697();
-            this._inventory._Str_4511(InventoryCategory.FURNI);
+            this._inventory.toggleInventoryPage(InventoryCategory.FURNI);
             this._inventory.events.dispatchEvent(new Event(HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_TRADING));
         }
 
@@ -665,7 +665,7 @@
 
         public function _Str_24199():void
         {
-            this._inventory._Str_4511(InventoryCategory.FURNI);
+            this._inventory.toggleInventoryPage(InventoryCategory.FURNI);
         }
 
         public function _Str_24442(k:int):void

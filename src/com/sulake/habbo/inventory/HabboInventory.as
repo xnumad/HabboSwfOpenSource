@@ -564,12 +564,12 @@
         {
             if (this._view)
             {
-                this._Str_4511(InventoryCategory.FURNI);
+                this.toggleInventoryPage(InventoryCategory.FURNI);
                 this._view._Str_15430();
             }
         }
 
-        public function _Str_4511(k:String, _arg_2:String=null, _arg_3:Boolean=false):void
+        public function toggleInventoryPage(k:String, _arg_2:String=null, _arg_3:Boolean=false):void
         {
             this._currentCategoryId = k;
             var _local_4:Boolean = this._view._Str_5985(k, false, _arg_3);
@@ -935,19 +935,19 @@
                 case "open":
                     if (_local_2.length == 2)
                     {
-                        this._Str_4511(InventoryCategory.FURNI);
+                        this.toggleInventoryPage(InventoryCategory.FURNI);
                     }
                     else
                     {
                         if (_local_2.length == 3)
                         {
-                            this._Str_4511(_local_2[2]);
+                            this.toggleInventoryPage(_local_2[2]);
                         }
                         else
                         {
                             if (_local_2.length == 4)
                             {
-                                this._Str_4511(_local_2[2], _local_2[3]);
+                                this.toggleInventoryPage(_local_2[2], _local_2[3]);
                             }
                         }
                     }

@@ -383,7 +383,7 @@
             var _local_2:IFurnitureItem = this._Str_17630(k);
             if (_local_2 != null)
             {
-                this._widget.handler.container.inventory._Str_4511(InventoryCategory.FURNI);
+                this._widget.handler.container.inventory.toggleInventoryPage(InventoryCategory.FURNI);
                 return true;
             }
             var _local_3:IRoomObject = this._Str_8946(k);

@@ -298,10 +298,10 @@
                                 this._catalog.openCatalogPage(CatalogPageName.AVATAR_EFFECTS);
                                 break;
                             case RoomWidgetOpenInventoryMessage.INVENTORY_BADGES:
-                                this._inventory._Str_4511(InventoryCategory.BADGES);
+                                this._inventory.toggleInventoryPage(InventoryCategory.BADGES);
                                 break;
                             case RoomWidgetOpenInventoryMessage.INVENTORY_FURNITURE:
-                                this._inventory._Str_4511(InventoryCategory.FURNI);
+                                this._inventory.toggleInventoryPage(InventoryCategory.FURNI);
                                 break;
                             case RoomWidgetOpenInventoryMessage.INVENTORY_CLOTHES:
                                 break;
