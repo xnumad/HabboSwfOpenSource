@@ -246,7 +246,7 @@
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12467;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11294;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11905;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7779;
+    import com.sulake.habbo.communication.messages.parser.catalog.BundleDiscountRulesetMessageParser;
     import com.sulake.habbo.communication.messages.parser.catalog.CatalogSearchResultParser;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events.SetExtraPurchaseParameterEvent;
@@ -2943,7 +2943,7 @@
 
         private function onBundleDiscountRulesetMessageEvent(k:_Str_7288):void
         {
-            var _local_2:_Str_7779 = k.getParser();
+            var _local_2:BundleDiscountRulesetMessageParser = k.getParser();
             this._Str_9586 = _local_2.bundleDiscountRuleset;
             this._utils._Str_24024();
         }

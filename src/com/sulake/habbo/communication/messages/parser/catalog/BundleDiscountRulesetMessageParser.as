@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_4615;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7779 implements IMessageParser 
+    public class BundleDiscountRulesetMessageParser implements IMessageParser
     {
         private var _Str_9586:_Str_4615;
 
