@@ -32,7 +32,7 @@
         function getAvatarEffect(_arg_1:int):IAvatarEffect;
         function setupTrading(_arg_1:int, _arg_2:String):void;
         function toggleInventoryPage(_arg_1:String, _arg_2:String=null, _arg_3:Boolean=false):void;
-        function _Str_16351(_arg_1:String):void;
+        function toggleInventorySubPage(_arg_1:String):void;
         function _Str_20251(_arg_1:Boolean):void;
         function _Str_15313():int;
         function returnInventoryFurniFromRecycler(_arg_1:int):Boolean;

@@ -526,7 +526,7 @@
                 ErrorReportStorage.addDebugData("IncomingEvent", "Trading open - roomSession not available!");
                 return;
             }
-            this._inventory._Str_16351(InventorySubCategory.TRADING);
+            this._inventory.toggleInventorySubPage(InventorySubCategory.TRADING);
             var _local_4:TradingOpenEvent = (k as TradingOpenEvent);
             if (!_local_4)
             {

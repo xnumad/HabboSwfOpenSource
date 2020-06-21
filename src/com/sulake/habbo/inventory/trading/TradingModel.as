@@ -232,7 +232,7 @@
                     this.state = TradingModel.TRADING_STATE_CANCELLED;
                 }
                 this.state = TRADING_STATE_READY;
-                this._inventory._Str_16351(InventorySubCategory.EMPTY);
+                this._inventory.toggleInventorySubPage(InventorySubCategory.EMPTY);
                 this._running = false;
             }
             this._tradingView._Str_5129(false);

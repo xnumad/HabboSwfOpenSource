@@ -587,7 +587,7 @@
             }
         }
 
-        public function _Str_16351(k:String):void
+        public function toggleInventorySubPage(k:String):void
         {
             var _local_3:IInventoryModel;
             this._view._Str_24934(k, false);
