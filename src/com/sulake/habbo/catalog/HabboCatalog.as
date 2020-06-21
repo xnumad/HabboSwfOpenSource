@@ -2918,7 +2918,7 @@
             this._doNotCloseAfterVipPurchase = false;
         }
 
-        public function _Str_22294():void
+        public function doNotCloseAfterVipPurchase():void
         {
             this._doNotCloseAfterVipPurchase = (!(this._pageToOpenAfterVipPurchase == null));
         }

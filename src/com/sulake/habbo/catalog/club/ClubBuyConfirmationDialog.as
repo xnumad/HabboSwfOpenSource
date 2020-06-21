@@ -107,7 +107,7 @@
                     this._Str_3515(ICheckBoxWindow(_arg_2).Selected);
                     return;
                 case "select_button":
-                    this._controller.catalog._Str_22294();
+                    this._controller.catalog.doNotCloseAfterVipPurchase();
                     this._controller._Str_11237(this._offer, this._pageId);
                     return;
                 case "header_button_close":
