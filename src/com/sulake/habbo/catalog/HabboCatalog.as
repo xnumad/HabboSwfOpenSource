@@ -552,7 +552,7 @@
             this.addMessageEvent(new HabboActivityPointNotificationMessageEvent(this.onActivityPointNotification));
             this.addMessageEvent(new VoucherRedeemOkMessageEvent(this._Str_25682));
             this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
-            this.addMessageEvent(new _Str_8409(this._Str_23986));
+            this.addMessageEvent(new _Str_8409(this.onGiftReceiverNotFound));
             this.addMessageEvent(new _Str_8530(this.onLimitedEditionSoldOut));
             this.addMessageEvent(new PurchaseNotAllowedMessageEvent(this.onPurchaseNotAllowed));
             this.addMessageEvent(new GiftWrappingConfigurationEvent(this._Str_23158));
@@ -1916,7 +1916,7 @@
             this._purchaseConfirmationDialog = null;
         }
 
-        private function _Str_23986(k:_Str_8409):void
+        private function onGiftReceiverNotFound(k:_Str_8409):void
         {
             if (this._purchaseConfirmationDialog != null)
             {
