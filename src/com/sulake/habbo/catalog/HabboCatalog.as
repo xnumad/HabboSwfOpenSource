@@ -701,7 +701,7 @@
                 this._Str_24043();
                 this.createMarketPlace();
                 this.createClubGiftController();
-                this._Str_25752();
+                this.getGiftWrappingConfiguration();
                 this.createClubBuyController();
                 this.createClubExtendController();
                 this.createGroupMembershipsController();
@@ -1713,7 +1713,7 @@
             }
         }
 
-        private function _Str_25752():void
+        private function getGiftWrappingConfiguration():void
         {
             this.send(new _Str_12034());
         }
