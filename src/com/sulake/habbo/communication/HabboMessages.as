@@ -956,7 +956,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreControllerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreNotControllerMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_11327;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_5270;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestRoomPropertySet;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_7844;
 	import com.sulake.habbo.communication.messages.outgoing.poll.*;
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
@@ -1949,7 +1949,7 @@
             OUTGOING_PACKETS[66] = _Str_9855;
             OUTGOING_PACKETS[685] = _Str_10646;
             OUTGOING_PACKETS[707] = _Str_12129;
-            OUTGOING_PACKETS[711] = _Str_5270;
+            OUTGOING_PACKETS[711] = RequestRoomPropertySet;
             OUTGOING_PACKETS[722] = _Str_10517;
             OUTGOING_PACKETS[741] = _Str_7312;
             OUTGOING_PACKETS[742] = _Str_17987;

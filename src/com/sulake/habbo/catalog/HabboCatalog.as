@@ -235,7 +235,7 @@
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12382;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11648;
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedEvent;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_5270;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestRoomPropertySet;
     import com.sulake.habbo.inventory.enum.FurniCategory;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
     import flash.net.URLRequest;
@@ -2736,21 +2736,21 @@
                             _local_8 = this._roomEngine.getRoomStringValue(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
                             if (this._placedObjectPurchaseData.extraParameter != _local_8)
                             {
-                                this.send(new _Str_5270(_local_2));
+                                this.send(new RequestRoomPropertySet(_local_2));
                             }
                             break;
                         case FurniCategory.WALL_PAPER:
                             _local_9 = this._roomEngine.getRoomStringValue(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_WALL_TYPE);
                             if (this._placedObjectPurchaseData.extraParameter != _local_9)
                             {
-                                this.send(new _Str_5270(_local_2));
+                                this.send(new RequestRoomPropertySet(_local_2));
                             }
                             break;
                         case FurniCategory.LANDSCAPE:
                             _local_10 = this._roomEngine.getRoomStringValue(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_LANDSCAPE_TYPE);
                             if (this._placedObjectPurchaseData.extraParameter != _local_10)
                             {
-                                this.send(new _Str_5270(_local_2));
+                                this.send(new RequestRoomPropertySet(_local_2));
                             }
                             break;
                         default:

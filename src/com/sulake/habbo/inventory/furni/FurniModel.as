@@ -38,7 +38,7 @@
     import com.sulake.habbo.inventory.enum.UnseenItemCategoryEnum;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.habbo.room.object.data.LegacyStuffData;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_5270;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestRoomPropertySet;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.ITextFieldWindow;
@@ -736,7 +736,7 @@
                 {
                     return false;
                 }
-                this._communication.connection.send(new _Str_5270(_local_3.id));
+                this._communication.connection.send(new RequestRoomPropertySet(_local_3.id));
             }
             else
             {
