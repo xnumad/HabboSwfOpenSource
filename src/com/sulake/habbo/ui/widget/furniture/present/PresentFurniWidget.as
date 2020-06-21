@@ -503,7 +503,7 @@
                         }
                         break;
                     case ProductTypeEnum.WALL:
-                        _local_3 = this._inventory._Str_14082(this._placedItemId);
+                        _local_3 = this._inventory.getWallItemById(this._placedItemId);
                         if (this._Str_5337(_local_3))
                         {
                             this._inventory.getItemWithStripId(this._placedItemId);

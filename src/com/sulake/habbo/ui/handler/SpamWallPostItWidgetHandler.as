@@ -69,7 +69,7 @@
             var _local_6:IFurnitureItem;
             if (this._container.inventory != null)
             {
-                _local_6 = this._container.inventory._Str_14082(_local_3);
+                _local_6 = this._container.inventory.getWallItemById(_local_3);
             }
             if (((!(_local_6 == null)) && (!(this._container.roomEngine == null))))
             {

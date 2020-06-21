@@ -163,7 +163,7 @@
 
         public function showWithFurniID(k:int):void
         {
-            var _local_2:IFurnitureItem = this._inventory._Str_14082(k);
+            var _local_2:IFurnitureItem = this._inventory.getWallItemById(k);
             if (_local_2)
             {
                 this._roomObjectID = k;
