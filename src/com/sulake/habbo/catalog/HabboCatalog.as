@@ -558,7 +558,7 @@
             this.addMessageEvent(new GiftWrappingConfigurationEvent(this._Str_23158));
             this.addMessageEvent(new PurchaseErrorMessageEvent(this.onPurchaseError));
             this.addMessageEvent(new _Str_7288(this.onBundleDiscountRulesetMessageEvent));
-            this.addMessageEvent(new CatalogPagesListEvent(this._Str_25188));
+            this.addMessageEvent(new CatalogPagesListEvent(this.onCatalogIndex));
             this.addMessageEvent(new MarketPlaceOffersEvent(this._Str_25346));
             this.addMessageEvent(new _Str_8504(this._Str_11267));
             this.addMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
@@ -1741,7 +1741,7 @@
             }
         }
 
-        private function _Str_25188(k:CatalogPagesListEvent):void
+        private function onCatalogIndex(k:CatalogPagesListEvent):void
         {
             var _local_2:ICatalogNavigator = this.getCatalogNavigator(k.catalogType);
             if (_local_2 == null)
