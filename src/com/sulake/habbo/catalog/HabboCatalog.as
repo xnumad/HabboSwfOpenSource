@@ -563,7 +563,7 @@
             this.addMessageEvent(new _Str_8504(this.onCatalogPage));
             this.addMessageEvent(new MarketplaceConfigurationEvent(this.onMarketplaceConfiguration));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
-            this.addMessageEvent(new SellablePetPalettesMessageEvent(this._Str_23837));
+            this.addMessageEvent(new SellablePetPalettesMessageEvent(this.onSellablePalettes));
             this.addMessageEvent(new MarketPlaceOwnOffersEvent(this.onMarketPlaceOwnOffers));
             this.addMessageEvent(new _Str_5417(this._Str_24973));
             this.addMessageEvent(new _Str_6344(this.onMarketPlaceBuyResult));
@@ -2263,7 +2263,7 @@
         {
         }
 
-        private function _Str_23837(k:SellablePetPalettesMessageEvent):void
+        private function onSellablePalettes(k:SellablePetPalettesMessageEvent):void
         {
             var _local_2:SellablePetPalettesParser = k.getParser();
             this._sellablePetPalettes.remove(_local_2.productCode);
