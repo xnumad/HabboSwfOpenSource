@@ -659,7 +659,7 @@
                 this._rentConfirmationWindow.dispose();
                 this._rentConfirmationWindow = null;
             }
-            this._Str_4663();
+            this.resetPlacedOfferData();
             this._isObjectMoverRequested = false;
             this._Str_8970 = null;
             if (this._roomPreviewer != null)
@@ -2292,13 +2292,13 @@
         private function alertDialogEventProcessor(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
-            this._Str_4663();
+            this.resetPlacedOfferData();
         }
 
         private function noCreditsConfirmDialogEventProcessor(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
-            this._Str_4663();
+            this.resetPlacedOfferData();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
                 HabboWebTools.openWebPageAndMinimizeClient(getProperty(ExternalVariables.WEB_SHOP_RELATIVE_URL));
@@ -2309,7 +2309,7 @@
         {
             var _local_3:String;
             k.dispose();
-            this._Str_4663();
+            this.resetPlacedOfferData();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
                 _local_3 = getProperty("link.format.duckets");
@@ -2470,7 +2470,7 @@
             var _local_4:_Str_4431;
             if (((this._isObjectMoverRequested) && (k.type == FriendBarSelectionEvent.FBVE_FRIEND_SELECTED)))
             {
-                this._Str_4663(true);
+                this.resetPlacedOfferData(true);
                 if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
                 {
                     this.resetObjectMover();
@@ -2510,7 +2510,7 @@
             var _local_4:_Str_4431;
             if (((this._isObjectMoverRequested) && (k.type == RoomEngineObjectEvent.PLACED_ON_USER)))
             {
-                this._Str_4663(true);
+                this.resetPlacedOfferData(true);
                 if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
                 {
                     this.resetObjectMover();
@@ -2543,7 +2543,7 @@
             var _local_8:Vector.<ICatalogNode>;
             if (((this._isObjectMoverRequested) && (k.type == RoomEngineObjectEvent.PLACED)))
             {
-                this._Str_4663(true);
+                this.resetPlacedOfferData(true);
                 if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
                 {
                     this.resetObjectMover();
@@ -2657,12 +2657,12 @@
             {
                 if (this._placedObjectPurchaseData.offerId != k.offerId)
                 {
-                    this._Str_4663();
+                    this.resetPlacedOfferData();
                 }
             }
         }
 
-        public function _Str_4663(k:Boolean=false):void
+        public function resetPlacedOfferData(k:Boolean=false):void
         {
             if (!k)
             {
@@ -2756,7 +2756,7 @@
                         default:
                             this.send(new PlaceObjectMessageComposer(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7));
                     }
-                    this._Str_4663();
+                    this.resetPlacedOfferData();
                 }
             }
         }

@@ -869,7 +869,7 @@
 
         private function onClose(k:WindowEvent):void
         {
-            this._catalog._Str_4663();
+            this._catalog.resetPlacedOfferData();
             this.dispose();
         }
 
@@ -878,12 +878,12 @@
             this._Str_24635();
             this._Str_4401(false);
             this._catalog.giftReceiver = null;
-            this._catalog._Str_4663();
+            this._catalog.resetPlacedOfferData();
         }
 
         private function _Str_21578(k:WindowEvent):void
         {
-            this._catalog._Str_4663();
+            this._catalog.resetPlacedOfferData();
             this.dispose();
         }
 
