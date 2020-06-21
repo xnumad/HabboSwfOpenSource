@@ -16,7 +16,7 @@
         function get citizenshipVipIsExpiring():Boolean;
         function get clubMinutesUntilExpiration():int;
         function get tradingActive():Boolean;
-        function get _Str_25019():Boolean;
+        function get hasRoomSession():Boolean;
         function get _Str_3455():IUnseenItemTracker;
         function _Str_15524(_arg_1:Array):Array;
         function _Str_21652():Array;

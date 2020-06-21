@@ -353,7 +353,7 @@
             return HabboClubLevelEnum.CLUB;
         }
 
-        public function get _Str_25019():Boolean
+        public function get hasRoomSession():Boolean
         {
             return !(this._roomSession == null);
         }
