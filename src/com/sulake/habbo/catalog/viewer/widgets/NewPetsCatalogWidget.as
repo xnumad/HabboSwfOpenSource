@@ -213,7 +213,7 @@
             }
             var _local_2:String = this._inputField.caption;
             this._nameApprovalPending = true;
-            this._catalog._Str_19478(_local_2, 1);
+            this._catalog.approveName(_local_2, 1);
         }
 
         private function _Str_3115(k:SelectProductEvent):void

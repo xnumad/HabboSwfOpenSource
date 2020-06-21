@@ -826,7 +826,7 @@
             this._roomAdPurchaseData = k;
         }
 
-        public function _Str_19478(k:String, _arg_2:int):void
+        public function approveName(k:String, _arg_2:int):void
         {
             this.send(new _Str_12242(k, _arg_2));
         }

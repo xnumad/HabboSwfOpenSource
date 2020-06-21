@@ -193,7 +193,7 @@
                 return;
             }
             this._nameApprovalPending = true;
-            this._catalog._Str_19478(this._inputField.caption, 1);
+            this._catalog.approveName(this._inputField.caption, 1);
         }
 
         public function _Str_22748(k:WindowEvent, _arg_2:IWindow):void
