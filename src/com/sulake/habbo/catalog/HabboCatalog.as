@@ -1846,7 +1846,7 @@
             this.reset();
             if (_local_2)
             {
-                this._windowManager.alert("${catalog.alert.published.title}", "${catalog.alert.published.description}", 0, this._Str_7211);
+                this._windowManager.alert("${catalog.alert.published.title}", "${catalog.alert.published.description}", 0, this.alertDialogEventProcessor);
             }
         }
 
@@ -1856,7 +1856,7 @@
             var _local_3:PurchaseErrorMessageParser = _local_2.getParser();
             var _local_4:int = _local_3.errorCode;
             var _local_5:String = ((_local_4 > 0) ? (("${catalog.alert.purchaseerror.description." + _local_4) + "}") : "${catalog.alert.purchaseerror.description}");
-            this._windowManager.alert("${catalog.alert.purchaseerror.title}", _local_5, 0, this._Str_7211);
+            this._windowManager.alert("${catalog.alert.purchaseerror.title}", _local_5, 0, this.alertDialogEventProcessor);
             if (this._purchaseConfirmationDialog != null)
             {
                 this._purchaseConfirmationDialog.dispose();
@@ -1878,7 +1878,7 @@
                 default:
                     _local_5 = "${catalog.alert.purchasenotallowed.unknown.description}";
             }
-            this._windowManager.alert("${catalog.alert.purchasenotallowed.title}", _local_5, 0, this._Str_7211);
+            this._windowManager.alert("${catalog.alert.purchasenotallowed.title}", _local_5, 0, this.alertDialogEventProcessor);
         }
 
         private function onPurchaseOK(k:IMessageEvent):void
@@ -1982,7 +1982,7 @@
             }
             else
             {
-                this._windowManager.alert(this.localization.getLocalization(_local_2), this.localization.getLocalization(_local_3), 0, this._Str_7211);
+                this._windowManager.alert(this.localization.getLocalization(_local_2), this.localization.getLocalization(_local_3), 0, this.alertDialogEventProcessor);
             }
         }
 
@@ -2000,7 +2000,7 @@
                 this._localization.registerParameter(_local_2, "productDescription", k.productDescription);
                 _local_2 = (("${" + _local_2) + "}");
             }
-            this._windowManager.alert("${catalog.alert.voucherredeem.ok.title}", _local_2, 0, this._Str_7211);
+            this._windowManager.alert("${catalog.alert.voucherredeem.ok.title}", _local_2, 0, this.alertDialogEventProcessor);
         }
 
         private function onVoucherRedeemError(k:_Str_8418):void
@@ -2011,7 +2011,7 @@
             }
             var _local_2:String = "${catalog.alert.voucherredeem.error.title}";
             var _local_3:* = (("${catalog.alert.voucherredeem.error.description." + k.errorCode) + "}");
-            this._windowManager.alert(_local_2, _local_3, 0, this._Str_7211);
+            this._windowManager.alert(_local_2, _local_3, 0, this.alertDialogEventProcessor);
         }
 
         private function onApproveNameResult(k:ApproveNameMessageEvent):void
@@ -2289,7 +2289,7 @@
             }
         }
 
-        private function _Str_7211(k:IAlertDialog, _arg_2:WindowEvent):void
+        private function alertDialogEventProcessor(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             this._Str_4663();
@@ -2950,7 +2950,7 @@
 
         private function onLimitedEditionSoldOut(k:_Str_8530):void
         {
-            this._windowManager.alert("${catalog.alert.limited_edition_sold_out.title}", "${catalog.alert.limited_edition_sold_out.message}", 0, this._Str_7211);
+            this._windowManager.alert("${catalog.alert.limited_edition_sold_out.title}", "${catalog.alert.limited_edition_sold_out.message}", 0, this.alertDialogEventProcessor);
             if (this._purchaseConfirmationDialog != null)
             {
                 this._purchaseConfirmationDialog.dispose();
