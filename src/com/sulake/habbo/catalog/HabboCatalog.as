@@ -323,7 +323,7 @@
         private var _catalogType:String = "NORMAL";
         private var _furnitureData:Vector.<IFurnitureData>;
         private var _frontPageItems:Vector.<FrontPageItem>;
-        private var _Str_6911:Timer;
+        private var _keyUpSearchTimer:Timer;
         private var _Str_19956:Dictionary;
         private var _Str_21515:Boolean;
         private var _Str_18106:int = -1;
@@ -1527,20 +1527,20 @@
         {
             if (k.type == WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN)
             {
-                if (this._Str_6911)
+                if (this._keyUpSearchTimer)
                 {
-                    this._Str_6911.stop();
+                    this._keyUpSearchTimer.stop();
                 }
                 return;
             }
-            if (this._Str_6911 == null)
+            if (this._keyUpSearchTimer == null)
             {
-                this._Str_6911 = new Timer(50, 1);
+                this._keyUpSearchTimer = new Timer(50, 1);
             }
             if (k.target.caption.length >= 3)
             {
-                this._Str_6911.addEventListener(TimerEvent.TIMER, this._Str_24381);
-                this._Str_6911.start();
+                this._keyUpSearchTimer.addEventListener(TimerEvent.TIMER, this._Str_24381);
+                this._keyUpSearchTimer.start();
             }
             var _local_2:IWindow = this._mainContainer.findChildByName("search.helper");
             _local_2.visible = (k.target.caption.length == 0);
@@ -1571,9 +1571,9 @@
             var _local_6:String;
             var _local_7:Vector.<ICatalogNode>;
             var _local_8:Vector.<ICatalogNode>;
-            if (this._Str_6911)
+            if (this._keyUpSearchTimer)
             {
-                this._Str_6911.stop();
+                this._keyUpSearchTimer.stop();
             }
             if ((((this._furnitureData == null) || (k == null)) || (k.length == 0)))
             {
