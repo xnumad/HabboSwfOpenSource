@@ -32,7 +32,7 @@
             this._catalog.connection.send(new _Str_7664());
         }
 
-        public function _Str_24420(k:GuildSelectorCatalogWidget):void
+        public function unregisterGuildSelectorWidget(k:GuildSelectorCatalogWidget):void
         {
             if (this._guildSelectorWidget == k)
             {

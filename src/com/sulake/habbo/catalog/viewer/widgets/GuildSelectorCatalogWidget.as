@@ -58,7 +58,7 @@
                 this._Str_15746 = null;
                 if (this._Str_5363)
                 {
-                    this._Str_5363._Str_24420(this);
+                    this._Str_5363.unregisterGuildSelectorWidget(this);
                     this._Str_5363 = null;
                 }
                 super.dispose();
