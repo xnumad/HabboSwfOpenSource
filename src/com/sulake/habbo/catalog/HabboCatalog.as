@@ -1333,7 +1333,7 @@
                     events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_NEW_ITEMS_HIDE));
                     this.markNewAdditionPageOpened();
                 }
-                this._Str_20975();
+                this.showMainWindow();
             }
             else
             {
@@ -2645,7 +2645,7 @@
         {
             if (((k) && (this._isObjectMoverRequested)))
             {
-                this._Str_20975();
+                this.showMainWindow();
             }
             this._isObjectMoverRequested = false;
             this._Str_8970 = null;
@@ -2803,7 +2803,7 @@
             }
         }
 
-        private function _Str_20975():void
+        private function showMainWindow():void
         {
             var k:IDesktopWindow;
             if ((((!(this._windowManager == null)) && (!(this._mainContainer == null))) && (this._mainContainer.parent == null)))
