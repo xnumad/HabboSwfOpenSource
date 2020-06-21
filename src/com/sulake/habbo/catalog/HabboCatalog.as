@@ -313,7 +313,7 @@
         private var _offerController:OfferController;
         private var _utils:HabboCatalogUtils;
         private var _doNotCloseAfterVipPurchase:Boolean = false;
-        private var _Str_8001:String = null;
+        private var _pageToOpenAfterVipPurchase:String = null;
         private var _bundleDiscountRuleset:BundleDiscountRuleset = null;
         private var _requestedPage:RequestedPage;
         private var _pageId:int;
@@ -2091,10 +2091,10 @@
             if (_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_PURCHASE)
             {
                 this.reset();
-                if (this._Str_8001 != null)
+                if (this._pageToOpenAfterVipPurchase != null)
                 {
-                    this.openCatalogPage(this._Str_8001);
-                    this._Str_8001 = null;
+                    this.openCatalogPage(this._pageToOpenAfterVipPurchase);
+                    this._pageToOpenAfterVipPurchase = null;
                 }
             }
         }
@@ -2904,23 +2904,23 @@
             var _local_2:ICatalogNode = this.currentCatalogNavigator.getNodeById(k);
             if (_local_2)
             {
-                this._Str_8001 = _local_2.pageName;
+                this._pageToOpenAfterVipPurchase = _local_2.pageName;
             }
             else
             {
-                this._Str_8001 = "frontpage";
+                this._pageToOpenAfterVipPurchase = "frontpage";
             }
         }
 
         public function _Str_23687():void
         {
-            this._Str_8001 = null;
+            this._pageToOpenAfterVipPurchase = null;
             this._doNotCloseAfterVipPurchase = false;
         }
 
         public function _Str_22294():void
         {
-            this._doNotCloseAfterVipPurchase = (!(this._Str_8001 == null));
+            this._doNotCloseAfterVipPurchase = (!(this._pageToOpenAfterVipPurchase == null));
         }
 
         private function _Str_25130():void
