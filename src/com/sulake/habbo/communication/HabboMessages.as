@@ -282,8 +282,8 @@
 	import com.sulake.habbo.communication.messages.incoming.room.bots.BotForceOpenContextMenuEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.bots.BotCommandConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.bots.BotErrorEvent;
-	import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_12054;
-	import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_3365;
+	import com.sulake.habbo.communication.messages.outgoing.room.bots._Str_12054;
+	import com.sulake.habbo.communication.messages.outgoing.room.bots._Str_3365;
 	import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceScriptProceedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceGetGiftsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.purse.GetCreditsInfoComposer;

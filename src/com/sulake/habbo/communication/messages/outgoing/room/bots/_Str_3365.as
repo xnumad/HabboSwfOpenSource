@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_416
+﻿package com.sulake.habbo.communication.messages.outgoing.room.bots
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
