@@ -857,7 +857,7 @@
             return _local_2;
         }
 
-        public function _Str_21312(k:int):Boolean
+        public function removeUnseenFurniCounter(k:int):Boolean
         {
             var _local_2:Boolean = this._Str_4524._Str_7938(k);
             if (_local_2)

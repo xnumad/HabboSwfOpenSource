@@ -37,7 +37,7 @@
         function _Str_15313():int;
         function returnInventoryFurniFromRecycler(_arg_1:int):Boolean;
         function getItemWithStripId(_arg_1:int):Boolean;
-        function _Str_21312(_arg_1:int):Boolean;
+        function removeUnseenFurniCounter(_arg_1:int):Boolean;
         function hasFigureSetIdInInventory(_arg_1:int):Boolean;
         function hasBoundFigureSetFurniture(_arg_1:String):Boolean;
         function checkCategoryInitilization(_arg_1:String):Boolean;

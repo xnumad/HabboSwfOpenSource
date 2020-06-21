@@ -512,7 +512,7 @@
                     case ProductTypeEnum.PET:
                         if (this._inventory.placePetToRoom(this._placedItemId, false))
                         {
-                            this._inventory._Str_21312(this._placedItemId);
+                            this._inventory.removeUnseenFurniCounter(this._placedItemId);
                         }
                         break;
                 }
