@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.incoming.crafting.CraftingResultObjectParser;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListInvalidateEvent;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_7844;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestFurniInventoryComposer;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
@@ -219,7 +219,7 @@
 
         private function _Str_18656(k:FurniListInvalidateEvent):void
         {
-            this._container.connection.send(new _Str_7844());
+            this._container.connection.send(new RequestFurniInventoryComposer());
             this._container.connection.send(new _Str_7271(this._gizmoFurnitureId));
             this._Str_15726();
         }

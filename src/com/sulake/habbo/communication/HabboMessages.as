@@ -957,7 +957,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreNotControllerMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestFurniInventoryWhenNotInRoomComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestRoomPropertySet;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_7844;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestFurniInventoryComposer;
 	import com.sulake.habbo.communication.messages.outgoing.poll.*;
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
 	import com.sulake.habbo.communication.messages.outgoing.poll._Str_11290;
@@ -1815,7 +1815,7 @@
             OUTGOING_PACKETS[314] = _Str_11608;
             OUTGOING_PACKETS[3144] = _Str_9826;
             OUTGOING_PACKETS[3149] = GetThreadsMessageComposer;
-            OUTGOING_PACKETS[3150] = _Str_7844;
+            OUTGOING_PACKETS[3150] = RequestFurniInventoryComposer;
             OUTGOING_PACKETS[3157] = _Str_11418;
             OUTGOING_PACKETS[3159] = _Str_11137;
             OUTGOING_PACKETS[3166] = ScrGetUserInfoMessageComposer;

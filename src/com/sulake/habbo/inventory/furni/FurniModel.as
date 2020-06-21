@@ -30,7 +30,7 @@
     import com.sulake.habbo.room.IStuffData;
     import com.sulake.habbo.inventory.items.CreditTradingItem;
     import com.sulake.core.communication.connection.IConnection;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_7844;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestFurniInventoryComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestFurniInventoryWhenNotInRoomComposer;
     import com.sulake.habbo.inventory.trading.TradingModel;
     import com.sulake.habbo.inventory.recycler.RecyclerModel;
@@ -357,7 +357,7 @@
             {
                 if (this._isInRoom)
                 {
-                    k.send(new _Str_7844());
+                    k.send(new RequestFurniInventoryComposer());
                 }
                 else
                 {
