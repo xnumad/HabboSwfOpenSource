@@ -2357,7 +2357,7 @@
             }
             if (((this.builderFurniCount < 0) || (this.builderFurniCount >= this.builderFurniLimit)))
             {
-                return BuilderFurniPlaceableStatus._Str_14564;
+                return BuilderFurniPlaceableStatus.FURNI_LIMIT_REACHED;
             }
             if (this.roomSession == null)
             {

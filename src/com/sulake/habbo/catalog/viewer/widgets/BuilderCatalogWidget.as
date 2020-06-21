@@ -133,7 +133,7 @@
                     case BuilderFurniPlaceableStatus.MISSING_OFFER:
                         _window.findChildByName("error_container").visible = false;
                         return;
-                    case BuilderFurniPlaceableStatus._Str_14564:
+                    case BuilderFurniPlaceableStatus.FURNI_LIMIT_REACHED:
                         _local_3.assetUri = "icons_builder_error_furnilimit";
                         _local_4.caption = "${builder.placement_widget.error.limit_reached}";
                         return;
