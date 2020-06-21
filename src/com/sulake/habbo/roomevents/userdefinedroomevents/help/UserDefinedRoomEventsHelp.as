@@ -252,7 +252,7 @@
             var _local_2:BitmapDataAsset = (this._roomEvents.assets.getAssetByName(k) as BitmapDataAsset);
             if (_local_2 == null)
             {
-                this._Str_7078(k);
+                this.retrievePreviewAsset(k);
                 return;
             }
             var _local_3:IBitmapWrapperWindow = (this.find(this._window, "help_image") as IBitmapWrapperWindow);
@@ -262,7 +262,7 @@
             }
         }
 
-        private function _Str_7078(k:String):void
+        private function retrievePreviewAsset(k:String):void
         {
             if ((((!(k)) || (!(this._roomEvents))) || (!(this._roomEvents.assets))))
             {

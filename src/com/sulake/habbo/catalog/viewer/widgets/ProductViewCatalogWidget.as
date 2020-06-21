@@ -712,13 +712,13 @@
             var _local_2:BitmapDataAsset = (page.viewer.catalog.assets.getAssetByName(k) as BitmapDataAsset);
             if (_local_2 == null)
             {
-                this._Str_7078(k);
+                this.retrievePreviewAsset(k);
                 return;
             }
             this._Str_3234((_local_2.content as BitmapData), false);
         }
 
-        private function _Str_7078(k:String):void
+        private function retrievePreviewAsset(k:String):void
         {
             if (((((!(k)) || (!(page))) || (!(page.viewer))) || (!(page.viewer.catalog))))
             {

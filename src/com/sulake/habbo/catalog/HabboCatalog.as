@@ -2770,7 +2770,7 @@
             var _local_4:BitmapDataAsset = (assets.getAssetByName(_arg_2) as BitmapDataAsset);
             if (_local_4 == null)
             {
-                this._Str_7078(_arg_2, _arg_3);
+                this.retrievePreviewAsset(_arg_2, _arg_3);
                 return;
             }
             if (k)
@@ -2784,7 +2784,7 @@
             return getProperty("image.library.catalogue.url");
         }
 
-        private function _Str_7078(k:String, _arg_2:Function):void
+        private function retrievePreviewAsset(k:String, _arg_2:Function):void
         {
             if (((!(k)) || (!(assets))))
             {
