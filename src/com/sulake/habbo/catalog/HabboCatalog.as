@@ -1978,7 +1978,7 @@
             var _local_3:String = ("catalog.alert.notenough.activitypoints.description." + k);
             if (k == ActivityPointTypeEnum.DUCKET)
             {
-                this._windowManager.confirm(this.localization.getLocalization(_local_2), this.localization.getLocalization(_local_3), 0, this._Str_22501);
+                this._windowManager.confirm(this.localization.getLocalization(_local_2), this.localization.getLocalization(_local_3), 0, this.noDucketsConfirmDialogEventProcessor);
             }
             else
             {
@@ -2305,7 +2305,7 @@
             }
         }
 
-        private function _Str_22501(k:IConfirmDialog, _arg_2:WindowEvent):void
+        private function noDucketsConfirmDialogEventProcessor(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             var _local_3:String;
             k.dispose();
