@@ -1436,7 +1436,7 @@
                 case RoomObjectRoomAdEvent.RORAE_ROOM_AD_LOAD_IMAGE:
                     if (_local_7 != null)
                     {
-                        this._roomEngine._Str_20364(_arg_2, _local_3, _local_5, _local_7.imageUrl, _local_7.clickUrl);
+                        this._roomEngine.requestRoomAdImage(_arg_2, _local_3, _local_5, _local_7.imageUrl, _local_7.clickUrl);
                     }
                     break;
             }

@@ -4118,7 +4118,7 @@
             }
         }
 
-        public function _Str_20364(k:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:String):void
+        public function requestRoomAdImage(k:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:String):void
         {
             if (this._adManager != null)
             {

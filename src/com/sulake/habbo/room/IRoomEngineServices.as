@@ -43,7 +43,7 @@
         function getTileCursor(_arg_1:int):IRoomObjectController;
         function getIsPlayingGame(_arg_1:int):Boolean;
         function getActiveRoomIsPlayingGame():Boolean;
-        function _Str_20364(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:String):void;
+        function requestRoomAdImage(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:String):void;
         function requestMouseCursor(_arg_1:String, _arg_2:int, _arg_3:String):void;
         function addFloorHole(_arg_1:int, _arg_2:int):void;
         function removeFloorHole(_arg_1:int, _arg_2:int):void;
