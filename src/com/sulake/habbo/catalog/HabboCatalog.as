@@ -2361,7 +2361,7 @@
             }
             if (this.roomSession == null)
             {
-                return BuilderFurniPlaceableStatus._Str_13563;
+                return BuilderFurniPlaceableStatus.NOT_IN_ROOM;
             }
             if (!this.roomSession.isRoomOwner)
             {

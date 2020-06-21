@@ -137,7 +137,7 @@
                         _local_3.assetUri = "icons_builder_error_furnilimit";
                         _local_4.caption = "${builder.placement_widget.error.limit_reached}";
                         return;
-                    case BuilderFurniPlaceableStatus._Str_13563:
+                    case BuilderFurniPlaceableStatus.NOT_IN_ROOM:
                         _local_3.assetUri = "icons_builder_error_notroom";
                         _local_4.caption = "${builder.placement_widget.error.not_in_room}";
                         return;
