@@ -547,7 +547,7 @@
         override protected function initComponent():void
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new ApproveNameMessageEvent(this._Str_11705));
+            this.addMessageEvent(new ApproveNameMessageEvent(this.onApproveNameResult));
             this.addMessageEvent(new PurchaseOKMessageEvent(this.onPurchaseOK));
             this.addMessageEvent(new HabboActivityPointNotificationMessageEvent(this.onActivityPointNotification));
             this.addMessageEvent(new VoucherRedeemOkMessageEvent(this.onVoucherRedeemOk));
@@ -2014,7 +2014,7 @@
             this._windowManager.alert(_local_2, _local_3, 0, this._Str_7211);
         }
 
-        private function _Str_11705(k:ApproveNameMessageEvent):void
+        private function onApproveNameResult(k:ApproveNameMessageEvent):void
         {
             if (((k == null) || (this._catalogViewer == null)))
             {

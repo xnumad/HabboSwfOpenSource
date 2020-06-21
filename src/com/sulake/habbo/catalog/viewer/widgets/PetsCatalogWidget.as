@@ -97,7 +97,7 @@
             this._offers.add(this._selectedTypeIndex, _local_2);
             events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
             events.addEventListener(CatalogWidgetEvent.COLOUR_INDEX, this._Str_7756);
-            events.addEventListener(CatalogWidgetEvent.APPROVE_RESULT, this._Str_11705);
+            events.addEventListener(CatalogWidgetEvent.APPROVE_RESULT, this.onApproveNameResult);
             events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
             events.addEventListener(CatalogWidgetEvent.SELLABLE_PET_PALETTES, this._Str_18999);
             return true;
@@ -234,7 +234,7 @@
             this._Str_4497();
         }
 
-        private function _Str_11705(event:CatalogWidgetApproveNameResultEvent):void
+        private function onApproveNameResult(event:CatalogWidgetApproveNameResultEvent):void
         {
             if (((event == null) || (!(this._nameApprovalPending))))
             {
