@@ -1159,7 +1159,7 @@
             this.send(new _Str_10589());
         }
 
-        public function _Str_24759():void
+        public function sendRoomAdPurchaseInitiatedEvent():void
         {
             this.send(new _Str_12488());
         }

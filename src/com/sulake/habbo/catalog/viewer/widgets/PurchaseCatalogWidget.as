@@ -85,7 +85,7 @@
             this._noGiftOption = false;
             if (window.tags.indexOf("ROOM_INITIATE_PURCHASE") > -1)
             {
-                this._catalog._Str_24759();
+                this._catalog.sendRoomAdPurchaseInitiatedEvent();
             }
             _window.findChildByName("buy_button").addEventListener(WindowMouseEvent.CLICK, this._Str_8396);
             var k:IButtonWindow = (_window.findChildByName("gift_button") as IButtonWindow);
