@@ -397,7 +397,7 @@
                     this._widgets.push(new MarketPlaceOwnItemsCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.CLUB_GIFT:
-                    this._widgets.push(new ClubGiftWidget(k, this._habboCatalog._Str_24953(), this._habboCatalog));
+                    this._widgets.push(new ClubGiftWidget(k, this._habboCatalog.getClubGiftController(), this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.CLUB_BUY:
                     this._widgets.push(new ClubBuyCatalogWidget(k));

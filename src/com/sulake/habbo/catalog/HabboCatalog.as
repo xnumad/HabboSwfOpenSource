@@ -1134,7 +1134,7 @@
             return this._marketplace;
         }
 
-        public function _Str_24953():ClubGiftController
+        public function getClubGiftController():ClubGiftController
         {
             return this._clubGiftController;
         }
