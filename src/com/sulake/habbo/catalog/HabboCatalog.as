@@ -3199,7 +3199,7 @@
             return this._Str_18106;
         }
 
-        public function get _Str_26280():int
+        public function get builderMaxFurniLimit():int
         {
             return this._Str_19671;
         }
