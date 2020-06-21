@@ -492,7 +492,7 @@
                 "callback":this._Str_22513
             }, {
                 "type":RoomEngineObjectEvent.PLACED_ON_USER,
-                "callback":this._Str_23698
+                "callback":this.onObjectPlaceOnUser
             }, {
                 "type":RoomEngineObjectEvent.SELECTED,
                 "callback":this.onObjectSelected
@@ -2503,7 +2503,7 @@
             return _local_2;
         }
 
-        private function _Str_23698(k:RoomEngineObjectPlacedOnUserEvent):void
+        private function onObjectPlaceOnUser(k:RoomEngineObjectPlacedOnUserEvent):void
         {
             var _local_2:String;
             var _local_3:RoomUserData;
