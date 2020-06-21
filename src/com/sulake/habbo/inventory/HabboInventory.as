@@ -315,9 +315,9 @@
             return this._purse.clubPeriods;
         }
 
-        public function get _Str_9487():int
+        public function get clubPastPeriods():int
         {
-            return this._purse._Str_9487;
+            return this._purse.clubPastPeriods;
         }
 
         public function get _Str_11984():Boolean

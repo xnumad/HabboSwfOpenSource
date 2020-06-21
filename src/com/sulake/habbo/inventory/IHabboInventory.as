@@ -9,7 +9,7 @@
         function get events():IEventDispatcher;
         function get clubDays():int;
         function get clubPeriods():int;
-        function get _Str_9487():int;
+        function get clubPastPeriods():int;
         function get clubLevel():int;
         function get _Str_11984():Boolean;
         function get _Str_6682():Boolean;

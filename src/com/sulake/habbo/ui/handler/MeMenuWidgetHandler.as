@@ -344,7 +344,7 @@
                         {
                             _local_12 = (this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum.CLUB);
                         }
-                        this._container.events.dispatchEvent(new _Str_5907(this._inventory.clubDays, this._inventory.clubPeriods, this._inventory._Str_9487, _local_12, this._inventory.clubLevel));
+                        this._container.events.dispatchEvent(new _Str_5907(this._inventory.clubDays, this._inventory.clubPeriods, this._inventory.clubPastPeriods, _local_12, this._inventory.clubLevel));
                     }
                     if (((!(this._catalog == null)) && (!(this._catalog.getPurse() == null))))
                     {
@@ -455,7 +455,7 @@
                 {
                     _local_2 = (this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum.CLUB);
                 }
-                this._container.events.dispatchEvent(new _Str_5907(this._inventory.clubDays, this._inventory.clubPeriods, this._inventory._Str_9487, _local_2, this._inventory.clubLevel));
+                this._container.events.dispatchEvent(new _Str_5907(this._inventory.clubDays, this._inventory.clubPeriods, this._inventory.clubPastPeriods, _local_2, this._inventory.clubLevel));
             }
         }
 

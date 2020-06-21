@@ -38,12 +38,12 @@
             this._clubPeriods = Math.max(0, k);
         }
 
-        public function get _Str_9487():int
+        public function get clubPastPeriods():int
         {
             return this._clubPastPeriods;
         }
 
-        public function set _Str_9487(k:int):void
+        public function set clubPastPeriods(k:int):void
         {
             this._lastUpdated = getTimer();
             this._clubPastPeriods = Math.max(0, k);
