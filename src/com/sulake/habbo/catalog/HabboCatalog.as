@@ -970,13 +970,13 @@
 
         public function openCatalog():void
         {
-            this._Str_5298();
+            this.cancelFurniInMover();
             this.toggleCatalog(CatalogType.NORMAL, true);
         }
 
         public function openCatalogPage(k:String, _arg_2:String=null):void
         {
-            this._Str_5298();
+            this.cancelFurniInMover();
             this.toggleCatalog(((_arg_2 == null) ? CatalogType.NORMAL : _arg_2), true, false);
             if ((((!(this._initialized)) || (this._catalogNavigators == null)) || (!(this.currentCatalogNavigator.initialized))))
             {
@@ -1313,7 +1313,7 @@
             }
             var _local_4:* = (!(k == this._catalogType));
             this._catalogType = k;
-            this._Str_5298();
+            this.cancelFurniInMover();
             if (this._mainContainer == null)
             {
                 if (this.init() == false)
@@ -2484,7 +2484,7 @@
                     _local_4._Str_8347(true, _local_3);
                 }
                 this.resetObjectMover(false);
-                this._Str_5298();
+                this.cancelFurniInMover();
             }
         }
 
@@ -2528,7 +2528,7 @@
                     _local_4._Str_8347(true, _local_2);
                 }
                 this.resetObjectMover(false);
-                this._Str_5298();
+                this.cancelFurniInMover();
             }
         }
 
@@ -2699,7 +2699,7 @@
             }
         }
 
-        public function _Str_5298():void
+        public function cancelFurniInMover():void
         {
             if (this._purchasableOffer != null)
             {

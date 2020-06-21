@@ -737,7 +737,7 @@
                         this._Str_7221();
                         break;
                     default:
-                        this._model._Str_5298();
+                        this._model.cancelFurniInMover();
                 }
             }
             else

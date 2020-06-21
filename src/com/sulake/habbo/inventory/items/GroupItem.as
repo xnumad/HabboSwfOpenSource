@@ -864,7 +864,7 @@
             {
                 case WindowMouseEvent.UP:
                     this._Str_8894 = false;
-                    this._model._Str_5298();
+                    this._model.cancelFurniInMover();
                     return;
                 case WindowMouseEvent.DOWN:
                     this._model._Str_19669();

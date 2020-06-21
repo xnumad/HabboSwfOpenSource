@@ -571,7 +571,7 @@
                 {
                     if (this._itemIdInFurniPlacing == _local_5.ref)
                     {
-                        this._Str_5298();
+                        this.cancelFurniInMover();
                         if (!this._Str_5337())
                         {
                             this._controller._Str_4731();
@@ -688,7 +688,7 @@
             }
         }
 
-        public function _Str_5298():void
+        public function cancelFurniInMover():void
         {
             if (this._itemIdInFurniPlacing > -1)
             {
@@ -905,7 +905,7 @@
             switch (k)
             {
                 case InventorySubCategory.TRADING:
-                    this._Str_5298();
+                    this.cancelFurniInMover();
                     if (this._view != null)
                     {
                         this._view._Str_2944();
