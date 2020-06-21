@@ -501,7 +501,7 @@
             this._roomCreator.initializeRoom(this._currentRoomId, _local_15);
             if (this._tempViralHolder.objectData)
             {
-                this._Str_18595(this._currentRoomId, this._tempViralHolder.objectData);
+                this.addActiveObject(this._currentRoomId, this._tempViralHolder.objectData);
                 this._tempViralHolder.objectData = null;
             }
             else
@@ -524,7 +524,7 @@
             while (_local_5 < _local_4)
             {
                 _local_6 = _local_3.getObject(_local_5);
-                this._Str_18595(this._currentRoomId, _local_6);
+                this.addActiveObject(this._currentRoomId, _local_6);
                 _local_5++;
             }
         }
@@ -538,7 +538,7 @@
             }
             var _local_3:ObjectAddMessageParser = _local_2.getParser();
             var _local_4:ObjectMessageData = _local_3.data;
-            this._Str_18595(this._currentRoomId, _local_4);
+            this.addActiveObject(this._currentRoomId, _local_4);
         }
 
         private function onObjectUpdate(k:IMessageEvent):void
@@ -644,7 +644,7 @@
             }
         }
 
-        private function _Str_18595(k:int, _arg_2:ObjectMessageData):void
+        private function addActiveObject(k:int, _arg_2:ObjectMessageData):void
         {
             if (((_arg_2 == null) || (this._roomCreator == null)))
             {
