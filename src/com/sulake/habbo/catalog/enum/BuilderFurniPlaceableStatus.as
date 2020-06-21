@@ -3,7 +3,7 @@
     public class BuilderFurniPlaceableStatus 
     {
         public static const OKAY:int = 0;
-        public static const _Str_12543:int = 1;
+        public static const MISSING_OFFER:int = 1;
         public static const _Str_14564:int = 2;
         public static const _Str_13563:int = 3;
         public static const _Str_10467:int = 4;

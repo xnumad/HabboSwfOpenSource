@@ -2353,7 +2353,7 @@
             var _local_5:RoomUserData;
             if (k == null)
             {
-                return BuilderFurniPlaceableStatus._Str_12543;
+                return BuilderFurniPlaceableStatus.MISSING_OFFER;
             }
             if (((this.builderFurniCount < 0) || (this.builderFurniCount >= this.builderFurniLimit)))
             {

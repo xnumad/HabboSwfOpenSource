@@ -130,7 +130,7 @@
                 _local_4 = _window.findChildByName("error_message");
                 switch (_local_2)
                 {
-                    case BuilderFurniPlaceableStatus._Str_12543:
+                    case BuilderFurniPlaceableStatus.MISSING_OFFER:
                         _window.findChildByName("error_container").visible = false;
                         return;
                     case BuilderFurniPlaceableStatus._Str_14564:
