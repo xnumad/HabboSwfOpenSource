@@ -851,7 +851,7 @@
             this._Str_17309 = k;
         }
 
-        public function _Str_19095():int
+        public function getSeasonalCurrencyActivityPointType():int
         {
             return getInteger("seasonalcurrencyindicator.currency", 1);
         }

@@ -196,7 +196,7 @@
             if (k.priceInCredits > 0)
             {
                 _local_5 = this._Str_4488(k.bundlePurchaseAllowed, k.priceInCredits, _arg_2);
-                _local_4 = ((_arg_3) ? this._habboCatalog._Str_19095() : -1);
+                _local_4 = ((_arg_3) ? this._habboCatalog.getSeasonalCurrencyActivityPointType() : -1);
                 _local_6.push({
                     "amount":_local_5,
                     "unit":_local_4

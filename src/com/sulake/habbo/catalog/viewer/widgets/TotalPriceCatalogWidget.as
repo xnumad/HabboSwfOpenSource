@@ -172,7 +172,7 @@
                 }
                 if (page.acceptSeasonCurrencyAsCredits)
                 {
-                    k.style = ActivityPointTypeEnum.getIconStyleFor(this._habboCatalog._Str_19095(), this._habboCatalog, true, true);
+                    k.style = ActivityPointTypeEnum.getIconStyleFor(this._habboCatalog.getSeasonalCurrencyActivityPointType(), this._habboCatalog, true, true);
                     k.width = 53;
                 }
                 else
