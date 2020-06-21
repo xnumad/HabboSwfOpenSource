@@ -1,12 +1,12 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_301
+﻿package com.sulake.habbo.communication.messages.outgoing.competition
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_5974 implements IMessageComposer 
+    public class _Str_10525 implements IMessageComposer 
     {
         private var _data:Array;
 
-        public function _Str_5974(k:String)
+        public function _Str_10525(k:String)
         {
             this._data = [];
             super();

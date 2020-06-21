@@ -6,7 +6,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_5974;
+    import com.sulake.habbo.communication.messages.outgoing.competition._Str_5974;
     import flash.geom.Point;
     import com.sulake.core.window.IWindow;
     import flash.geom.Rectangle;

@@ -4,8 +4,8 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
-    import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_10525;
-    import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_12123;
+    import com.sulake.habbo.communication.messages.outgoing.competition._Str_10525;
+    import com.sulake.habbo.communication.messages.outgoing.competition._Str_12123;
 
     public class SubmitCompetitionRoomElementHandler extends AbstractButtonElementHandler 
     {
