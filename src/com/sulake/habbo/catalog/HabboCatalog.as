@@ -2413,7 +2413,7 @@
             }
         }
 
-        public function _Str_8289(k:_Str_4431, _arg_2:IPurchasableOffer, _arg_3:Boolean=false):void
+        public function requestSelectedItemToMover(k:_Str_4431, _arg_2:IPurchasableOffer, _arg_3:Boolean=false):void
         {
             var _local_5:int;
             if (!this.isDraggable(_arg_2))
@@ -2630,7 +2630,7 @@
                         }
                         if (this._placeMultipleObjects)
                         {
-                            this._Str_8289(_local_5, this._purchasableOffer, true);
+                            this.requestSelectedItemToMover(_local_5, this._purchasableOffer, true);
                         }
                         else
                         {

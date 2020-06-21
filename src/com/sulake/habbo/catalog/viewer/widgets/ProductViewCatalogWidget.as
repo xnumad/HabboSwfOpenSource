@@ -211,7 +211,7 @@
                     {
                         if (this._habboCatalog.isDraggable(this._offer))
                         {
-                            this._habboCatalog._Str_8289(this, this._offer);
+                            this._habboCatalog.requestSelectedItemToMover(this, this._offer);
                         }
                     }
                     this._Str_14556 = false;

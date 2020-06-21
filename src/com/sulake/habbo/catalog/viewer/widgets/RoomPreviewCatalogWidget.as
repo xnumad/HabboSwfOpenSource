@@ -92,7 +92,7 @@
                     {
                         if (this._offer)
                         {
-                            (page.viewer.catalog as HabboCatalog)._Str_8289(this, this._offer);
+                            (page.viewer.catalog as HabboCatalog).requestSelectedItemToMover(this, this._offer);
                             this._lastTargetMouseDown = null;
                         }
                     }

@@ -159,7 +159,7 @@
             {
                 if (this._Str_2720.clubLevel >= _local_2.clubLevel)
                 {
-                    (page.viewer.catalog as HabboCatalog)._Str_8289(this, _local_2);
+                    (page.viewer.catalog as HabboCatalog).requestSelectedItemToMover(this, _local_2);
                 }
             }
             return true;

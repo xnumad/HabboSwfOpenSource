@@ -88,10 +88,10 @@
             switch (_arg_2.name)
             {
                 case "place_one":
-                    this._catalog._Str_8289(null, this._offer);
+                    this._catalog.requestSelectedItemToMover(null, this._offer);
                     return;
                 case "place_many":
-                    this._catalog._Str_8289(null, this._offer, true);
+                    this._catalog.requestSelectedItemToMover(null, this._offer, true);
                     return;
             }
         }
