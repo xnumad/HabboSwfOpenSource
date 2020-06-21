@@ -60,7 +60,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.ui.widget.events.ConfirmPetBreedingPetData;
     import com.sulake.habbo.avatar.pets.PetTypeEnum;
-    import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_4844;
+    import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_4844;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotSkillsEnum;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotChatterMarkovConfiguration;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotChangeNameConfiguration;

@@ -252,11 +252,11 @@
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11774;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_12096;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetUIFlagsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_10642;
-	import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_11301;
-	import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_11731;
-	import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_4844;
-	import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_8184;
+	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_10642;
+	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_11301;
+	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_11731;
+	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_4844;
+	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_8184;
 	import com.sulake.core.communication.messages.IMessageConfiguration;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_10410;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_18298;

@@ -49,7 +49,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10547;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10852;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10067;
-    import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_10642;
+    import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_10642;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
     import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceScriptProceedComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;

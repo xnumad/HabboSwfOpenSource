@@ -40,7 +40,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10187;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
     import com.sulake.habbo.ui.widget.enums.PetSupplementEnum;
-    import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_8184;
+    import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_8184;
     import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10794;
     import com.sulake.habbo.room.object.RoomObjectOperationEnum;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
@@ -55,7 +55,7 @@
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.habbo.ui.widget.events._Str_3735;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
-    import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_11301;
+    import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_11301;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRentableBotInfoUpdateEvent;
     import com.sulake.habbo.friendlist.IFriend;

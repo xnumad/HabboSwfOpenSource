@@ -59,7 +59,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10714;
-    import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_8184;
+    import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_8184;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
