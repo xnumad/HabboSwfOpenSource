@@ -869,7 +869,7 @@
 			//TODO: Snowstorm. Possibly related to buying game tokens.
         }
 
-        public function _Str_5649(k:IPurchasableOffer, _arg_2:int, _arg_3:String="", _arg_4:int=1, _arg_5:IStuffData=null, _arg_6:String=null, _arg_7:Boolean=true, _arg_8:BitmapData=null):void
+        public function showPurchaseConfirmation(k:IPurchasableOffer, _arg_2:int, _arg_3:String="", _arg_4:int=1, _arg_5:IStuffData=null, _arg_6:String=null, _arg_7:Boolean=true, _arg_8:BitmapData=null):void
         {
             var _local_11:Vector.<ICatalogNode>;
             var _local_12:Array;

@@ -271,7 +271,7 @@
                             return;
                         }
                     }
-                    this._catalog._Str_5649(this._offer, page.pageId, this._additionalParameters, this._quantity, this._previewStuffData, null, true, null);
+                    this._catalog.showPurchaseConfirmation(this._offer, page.pageId, this._additionalParameters, this._quantity, this._previewStuffData, null, true, null);
                 }
             }
             else
@@ -290,7 +290,7 @@
         {
             if (this._offer != null)
             {
-                this._catalog._Str_5649(this._offer, page.pageId, this._additionalParameters, this._quantity, this._previewStuffData, null, true, null);
+                this._catalog.showPurchaseConfirmation(this._offer, page.pageId, this._additionalParameters, this._quantity, this._previewStuffData, null, true, null);
             }
         }
 

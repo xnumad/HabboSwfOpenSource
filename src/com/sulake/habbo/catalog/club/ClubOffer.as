@@ -66,13 +66,13 @@
         private function _Str_12134(k:WindowMouseEvent):void
         {
             this._habboCatalog._Str_8986(false);
-            this._habboCatalog._Str_5649(this._offer, ((this._offer.page == null) ? -1 : this._offer.page.pageId));
+            this._habboCatalog.showPurchaseConfirmation(this._offer, ((this._offer.page == null) ? -1 : this._offer.page.pageId));
         }
 
         private function _Str_18825(k:WindowMouseEvent):void
         {
             this._habboCatalog._Str_8986(true);
-            this._habboCatalog._Str_5649(this._offer, ((this._offer.page == null) ? -1 : this._offer.page.pageId));
+            this._habboCatalog.showPurchaseConfirmation(this._offer, ((this._offer.page == null) ? -1 : this._offer.page.pageId));
         }
 
         public function get window():IWindow

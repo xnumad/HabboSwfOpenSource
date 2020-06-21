@@ -65,7 +65,7 @@
             }
             if (_arg_2.name == "item_buy")
             {
-                this._catalog._Str_5649(page.offers[_arg_2.id], page.pageId);
+                this._catalog.showPurchaseConfirmation(page.offers[_arg_2.id], page.pageId);
             }
         }
     }

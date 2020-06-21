@@ -280,7 +280,7 @@
                 return;
             }
             Logger.log(("* Will buy pet as " + extraParameter));
-            this._catalog._Str_5649(this._offers.getWithIndex(0), page.pageId, extraParameter, 1, null, null, true, this.getPetImage());
+            this._catalog.showPurchaseConfirmation(this._offers.getWithIndex(0), page.pageId, extraParameter, 1, null, null, true, this.getPetImage());
         }
 
         private function _Str_4902(k:String, _arg_2:String):String
