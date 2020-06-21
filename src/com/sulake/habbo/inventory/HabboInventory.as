@@ -534,7 +534,7 @@
             this._Str_7796();
         }
 
-        public function _Str_22856(k:int):IAvatarEffect
+        public function getAvatarEffect(k:int):IAvatarEffect
         {
             return (this._Str_3994 == null) ? null : this._Str_3994._Str_23964(k);
         }
