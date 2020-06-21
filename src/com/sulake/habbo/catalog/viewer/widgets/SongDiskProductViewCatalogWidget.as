@@ -14,7 +14,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
     import com.sulake.habbo.sound.ISongInfo;
     import com.sulake.habbo.catalog.viewer.IProduct;
-    import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10944;
+    import com.sulake.habbo.communication.messages.outgoing.sound._Str_10944;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
 

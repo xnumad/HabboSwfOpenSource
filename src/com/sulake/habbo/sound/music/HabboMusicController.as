@@ -18,9 +18,9 @@
     import com.sulake.habbo.sound.events.NowPlayingEvent;
     import com.sulake.habbo.sound.IHabboSound;
     import com.sulake.habbo.sound.ISongInfo;
-    import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_11654;
+    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11654;
     import com.sulake.habbo.sound.trax.TraxSequencer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_11484;
+    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11484;
     import com.sulake.habbo.communication.messages.incoming.sound._Str_5724;
     import com.sulake.habbo.communication.messages.parser.sound._Str_6929;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
@@ -28,7 +28,7 @@
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.parser.sound._Str_6477;
     import flash.events.Event;
-    import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_11631;
+    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11631;
     import com.sulake.habbo.sound.*;
 
     public class HabboMusicController implements IHabboMusicController, IDisposable 

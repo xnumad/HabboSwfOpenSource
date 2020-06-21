@@ -13,7 +13,7 @@
     import com.sulake.habbo.sound.HabboMusicPrioritiesEnum;
     import flash.events.Event;
     import com.sulake.habbo.sound.ISongInfo;
-    import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_11141;
+    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11141;
     import com.sulake.habbo.communication.messages.incoming.sound.SongEntry;
     import com.sulake.habbo.communication.messages.parser.sound._Str_6369;
     import com.sulake.habbo.sound.events.PlayListStatusEvent;

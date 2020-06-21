@@ -19,8 +19,8 @@
     import com.sulake.habbo.ui.widget.events._Str_2693;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
-    import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_11152;
-    import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_11834;
+    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11152;
+    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11834;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.room.events.RoomObjectSoundMachineEvent;

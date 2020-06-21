@@ -12,7 +12,7 @@
     import com.sulake.habbo.sound.events.SoundControllerEvent;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
     import com.sulake.habbo.sound.HabboMusicPrioritiesEnum;
-    import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10817;
+    import com.sulake.habbo.communication.messages.outgoing.sound._Str_10817;
     import com.sulake.habbo.sound.ISongInfo;
     import com.sulake.habbo.communication.messages.parser.sound._Str_6377;
     import com.sulake.habbo.sound.events.NowPlayingEvent;
