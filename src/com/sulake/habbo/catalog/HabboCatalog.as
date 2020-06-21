@@ -531,7 +531,7 @@
                 _newNavigator = k;
             }, false), new ComponentDependency(new IIDHabboFriendBar(), null, false, [{
                 "type":FriendBarSelectionEvent.FBVE_FRIEND_SELECTED,
-                "callback":this._Str_24434
+                "callback":this.onFriendBarSelectionEvent
             }]), new ComponentDependency(new IIDHabboGroupsManager(), null, false, [{
                 "type":GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED,
                 "callback":this._Str_15960
@@ -2463,7 +2463,7 @@
             }
         }
 
-        private function _Str_24434(k:FriendBarSelectionEvent):void
+        private function onFriendBarSelectionEvent(k:FriendBarSelectionEvent):void
         {
             var _local_2:int;
             var _local_3:String;
