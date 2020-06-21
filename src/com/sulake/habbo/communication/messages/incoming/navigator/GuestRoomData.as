@@ -30,7 +30,7 @@
         private var _groupName:String = "";
         private var _groupBadgeCode:String = "";
         private var _tags:Array;
-        private var _thumbnail:_Str_5224;
+        private var _thumbnail:RoomThumbnailData;
         private var _allowPets:Boolean;
         private var _displayRoomEntryAd:Boolean;
         private var _roomAdName:String = "";
@@ -86,7 +86,7 @@
             this._showOwner = ((_local_4 & this.SHOWOWNER_BITMASK) > 0);
             this._allowPets = ((_local_4 & this.ALLOWPETS_BITMASK) > 0);
             this._displayRoomEntryAd = ((_local_4 & this.DISPLAYROOMENTRYAD_BITMASK) > 0);
-            this._thumbnail = new _Str_5224(null);
+            this._thumbnail = new RoomThumbnailData(null);
             this._thumbnail.setDefaults();
         }
 
@@ -190,7 +190,7 @@
             return this._tags;
         }
 
-        public function get thumbnail():_Str_5224
+        public function get thumbnail():RoomThumbnailData
         {
             return this._thumbnail;
         }

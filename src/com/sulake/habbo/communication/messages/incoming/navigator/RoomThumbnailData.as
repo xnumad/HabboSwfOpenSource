@@ -3,14 +3,14 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5224 implements IDisposable 
+    public class RoomThumbnailData implements IDisposable
     {
         private var _Str_6284:int;
         private var _Str_7862:int;
         private var _Str_2549:Array;
         private var _disposed:Boolean;
 
-        public function _Str_5224(k:IMessageDataWrapper)
+        public function RoomThumbnailData(k:IMessageDataWrapper)
         {
             var _local_4:_Str_3666;
             this._Str_2549 = new Array();
@@ -47,10 +47,10 @@
             this._Str_2549.push(k);
         }
 
-        public function _Str_20539():_Str_5224
+        public function _Str_20539():RoomThumbnailData
         {
             var _local_2:_Str_3666;
-            var k:_Str_5224 = new _Str_5224(null);
+            var k:RoomThumbnailData = new RoomThumbnailData(null);
             k._Str_6284 = this._Str_6284;
             k._Str_7862 = this._Str_7862;
             for each (_local_2 in this._Str_2549)
