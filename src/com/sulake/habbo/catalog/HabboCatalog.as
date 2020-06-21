@@ -704,7 +704,7 @@
                 this._Str_25752();
                 this.createClubBuyController();
                 this.createClubExtendController();
-                this._Str_25337();
+                this.createGroupMembershipsController();
                 this._Str_25130();
                 events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_INITIALIZED));
                 this.send(new _Str_12000());
@@ -1705,7 +1705,7 @@
             }
         }
 
-        private function _Str_25337():void
+        private function createGroupMembershipsController():void
         {
             if (this._guildMembershipsController == null)
             {
