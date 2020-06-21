@@ -68,7 +68,7 @@
             var _local_2:String;
             this._itemGrid.destroyGridItems();
             var k:int;
-            for each (_local_2 in this._catalog.inventory._Str_15524(this._excludedBadges))
+            for each (_local_2 in this._catalog.inventory.getAllMyBadgeIds(this._excludedBadges))
             {
                 this._itemGrid.addGridItem(this._Str_7360(_local_2, k++));
             }
@@ -126,7 +126,7 @@
                     this._Str_21961(this._selectedBadgeIndex, false);
                 }
                 this._selectedBadgeIndex = _arg_2.id;
-                if (this._selectedBadgeIndex < this._catalog.inventory._Str_15524(this._excludedBadges).length)
+                if (this._selectedBadgeIndex < this._catalog.inventory.getAllMyBadgeIds(this._excludedBadges).length)
                 {
                     this._Str_21961(this._selectedBadgeIndex, true);
                     events.dispatchEvent(new SetExtraPurchaseParameterEvent(this._Str_22817(this._selectedBadgeIndex)));
@@ -139,7 +139,7 @@
         {
             var k:Array = new Array();
             k.push("0");
-            k.push(this._catalog.inventory._Str_15524(this._excludedBadges)[this._selectedBadgeIndex]);
+            k.push(this._catalog.inventory.getAllMyBadgeIds(this._excludedBadges)[this._selectedBadgeIndex]);
             k.push("");
             k.push("");
             var _local_2:StringArrayStuffData = new StringArrayStuffData();

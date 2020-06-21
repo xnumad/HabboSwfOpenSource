@@ -957,7 +957,7 @@
             }
         }
 
-        public function _Str_15524(k:Array):Array
+        public function getAllMyBadgeIds(k:Array):Array
         {
             var _local_4:Badge;
             var _local_2:BadgesModel = this._inventories.getValue(InventoryCategory.BADGES);
