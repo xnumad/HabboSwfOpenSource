@@ -322,7 +322,7 @@
         private var _messageEvents:Vector.<IMessageEvent>;
         private var _catalogType:String = "NORMAL";
         private var _furnitureData:Vector.<IFurnitureData>;
-        private var _Str_8752:Vector.<_Str_3920>;
+        private var _frontPageItems:Vector.<_Str_3920>;
         private var _Str_6911:Timer;
         private var _Str_19956:Dictionary;
         private var _Str_21515:Boolean;
@@ -467,7 +467,7 @@
 
         public function get _Str_5320():Vector.<_Str_3920>
         {
-            return this._Str_8752;
+            return this._frontPageItems;
         }
 
         override protected function get dependencies():Vector.<ComponentDependency>
@@ -1826,7 +1826,7 @@
             }
             if (((!(_local_2._Str_5320 == null)) && (_local_2._Str_5320.length > 0)))
             {
-                this._Str_8752 = _local_2._Str_5320;
+                this._frontPageItems = _local_2._Str_5320;
             }
             if (((!(this._catalogViewer == null)) && (this._pageId == _local_3)))
             {
