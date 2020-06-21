@@ -11,7 +11,7 @@
     import flash.events.TimerEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.quest.events.UnseenAchievementsCountUpdateEvent;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.achievements.RequestAchievementsMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.achievements.GetAchievementsComposer;
     import __AS3__.vec.Vector;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -209,7 +209,7 @@
         {
             if (this._categories == null)
             {
-                this._questEngine.send(new RequestAchievementsMessageComposer());
+                this._questEngine.send(new GetAchievementsComposer());
             }
         }
 
@@ -217,7 +217,7 @@
         {
             if (this._categories == null)
             {
-                this._questEngine.send(new RequestAchievementsMessageComposer());
+                this._questEngine.send(new GetAchievementsComposer());
                 this._requestedShowAchievements = true;
             }
             else

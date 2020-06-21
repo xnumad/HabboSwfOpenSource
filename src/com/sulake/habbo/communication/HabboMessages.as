@@ -974,7 +974,7 @@
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingRecipesAvailableEvent;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.CreditBalanceEvent;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.achievements.RequestAchievementsMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.achievements.GetAchievementsComposer;
 	import snowwar._Str_448.*;
 	import snowwar._Str_477.*;
 	import snowwar._Str_400.*;
@@ -1665,7 +1665,7 @@
             OUTGOING_PACKETS[2150] = _Str_11580;
             OUTGOING_PACKETS[2161] = _Str_10067;
             OUTGOING_PACKETS[2167] = _Str_11298;
-            OUTGOING_PACKETS[219] = RequestAchievementsMessageComposer;
+            OUTGOING_PACKETS[219] = GetAchievementsComposer;
             OUTGOING_PACKETS[2209] = _Str_10762;
             OUTGOING_PACKETS[2214] = UpdateForumSettingsMessageComposer;
             OUTGOING_PACKETS[2226] = _Str_11429;
