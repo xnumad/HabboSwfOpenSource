@@ -287,7 +287,7 @@
         private var _initialized:Boolean = false;
         private var _productDataReady:Boolean = false;
         private var _catalogViewer:CatalogViewer;
-        private var _Str_5309:Dictionary;
+        private var _catalogNavigators:Dictionary;
         private var _purse:Purse;
         private var _recyclerLogic:RecyclerLogic;
         private var _marketplace:IMarketPlace;
@@ -723,13 +723,13 @@
                 this._catalogViewer.dispose();
                 this._catalogViewer = null;
             }
-            if (this._Str_5309 != null)
+            if (this._catalogNavigators != null)
             {
-                for each (_local_2 in this._Str_5309)
+                for each (_local_2 in this._catalogNavigators)
                 {
                     _local_2.dispose();
                 }
-                this._Str_5309 = null;
+                this._catalogNavigators = null;
             }
             if (this._mainContainer != null)
             {
@@ -978,7 +978,7 @@
         {
             this._Str_5298();
             this.toggleCatalog(((_arg_2 == null) ? CatalogType.NORMAL : _arg_2), true, false);
-            if ((((!(this._initialized)) || (this._Str_5309 == null)) || (!(this._Str_3361.initialized))))
+            if ((((!(this._initialized)) || (this._catalogNavigators == null)) || (!(this._Str_3361.initialized))))
             {
                 this._requestedPage._Str_23666 = k;
                 return;
@@ -1013,7 +1013,7 @@
 
         public function openCatalogPageById(k:int, _arg_2:int, _arg_3:String):void
         {
-            if ((((this._initialized) && (!(this._Str_5309 == null))) && (this.getCatalogNavigator(_arg_3).initialized)))
+            if ((((this._initialized) && (!(this._catalogNavigators == null))) && (this.getCatalogNavigator(_arg_3).initialized)))
             {
                 this.toggleCatalog(_arg_3, true, false);
                 this._catalogViewer._Str_21608();
@@ -1426,9 +1426,9 @@
 
         private function _Str_25270():void
         {
-            this._Str_5309 = new Dictionary();
-            this._Str_5309[CatalogType.NORMAL] = new CatalogNavigator(this, this._mainContainer, CatalogType.NORMAL);
-            this._Str_5309[CatalogType.BUILDER] = new CatalogNavigator(this, this._mainContainer, CatalogType.BUILDER);
+            this._catalogNavigators = new Dictionary();
+            this._catalogNavigators[CatalogType.NORMAL] = new CatalogNavigator(this, this._mainContainer, CatalogType.NORMAL);
+            this._catalogNavigators[CatalogType.BUILDER] = new CatalogNavigator(this, this._mainContainer, CatalogType.BUILDER);
             var k:BitmapDataAsset = (assets.getAssetByName("purse_coins_small") as BitmapDataAsset);
             this.setElementImage("creditsIcon", (k.content as BitmapData));
             var _local_2:BitmapDataAsset = (assets.getAssetByName("purse_pixels_small") as BitmapDataAsset);
@@ -3181,7 +3181,7 @@
 
         public function getCatalogNavigator(k:String):ICatalogNavigator
         {
-            return (this._Str_5309 != null) ? this._Str_5309[k] : null;
+            return (this._catalogNavigators != null) ? this._catalogNavigators[k] : null;
         }
 
         public function get _Str_3361():ICatalogNavigator
