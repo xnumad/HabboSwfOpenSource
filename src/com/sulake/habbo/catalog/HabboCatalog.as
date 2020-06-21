@@ -293,7 +293,7 @@
         private var _marketplace:IMarketPlace;
         private var _mainContainer:IWindowContainer;
         private var _purchaseConfirmationDialog:PurchaseConfirmationDialog;
-        private var _Str_17309:String;
+        private var _giftReceiver:String;
         private var _Str_14119:Boolean;
         private var _Str_19689:Boolean = true;
         private var _Str_17838:Boolean = false;
@@ -848,7 +848,7 @@
 
         public function set giftReceiver(k:String):void
         {
-            this._Str_17309 = k;
+            this._giftReceiver = k;
         }
 
         public function getSeasonalCurrencyActivityPointType():int
@@ -915,9 +915,9 @@
                 _local_13 = _arg_6;
                 if (_local_13 == null)
                 {
-                    if (this._Str_17309 != null)
+                    if (this._giftReceiver != null)
                     {
-                        _local_13 = this._Str_17309;
+                        _local_13 = this._giftReceiver;
                     }
                 }
                 this._purchaseConfirmationDialog._Str_6059(this, this._roomEngine, k, _arg_2, _arg_3, _arg_4, _arg_5, _local_12, _local_13, _arg_8);
