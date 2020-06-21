@@ -26,7 +26,7 @@
             return this._catalog;
         }
 
-        public function _Str_24019(k:GuildSelectorCatalogWidget):void
+        public function registerGuildSelectorWidget(k:GuildSelectorCatalogWidget):void
         {
             this._guildSelectorWidget = k;
             this._catalog.connection.send(new _Str_7664());

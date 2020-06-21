@@ -96,7 +96,7 @@
 
         private function _Str_3393(k:_Str_3308):void
         {
-            this._Str_5363._Str_24019(this);
+            this._Str_5363.registerGuildSelectorWidget(this);
             events.dispatchEvent(new _Str_3308(CatalogWidgetEvent.EXTRA_PARAM_REQUIRED_FOR_BUY));
         }
 
