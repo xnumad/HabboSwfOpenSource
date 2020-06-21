@@ -700,7 +700,7 @@
                 this.updatePurse();
                 this._Str_24043();
                 this.createMarketPlace();
-                this._Str_22724();
+                this.createClubGiftController();
                 this._Str_25752();
                 this._Str_23448();
                 this._Str_23722();
@@ -1681,7 +1681,7 @@
             }
         }
 
-        private function _Str_22724():void
+        private function createClubGiftController():void
         {
             if (this._clubGiftController == null)
             {
