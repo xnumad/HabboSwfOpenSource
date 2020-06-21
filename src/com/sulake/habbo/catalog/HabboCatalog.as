@@ -697,7 +697,7 @@
                 this._Str_25270();
                 this._Str_22909();
                 this._initialized = true;
-                this._Str_12017();
+                this.updatePurse();
                 this._Str_24043();
                 this._Str_24591();
                 this._Str_22724();
@@ -1229,7 +1229,7 @@
             return null;
         }
 
-        private function _Str_12017():void
+        private function updatePurse():void
         {
             var _local_2:String;
             if (this._mainContainer == null)
@@ -2029,7 +2029,7 @@
             var _local_2:CreditBalanceEvent = (k as CreditBalanceEvent);
             var _local_3:CreditBalanceParser = _local_2.getParser();
             this._purse.credits = _local_3.balance;
-            this._Str_12017();
+            this.updatePurse();
             if (((!(this._firstBalanceCredits)) && (!(this._soundManager == null))))
             {
                 this._soundManager.playSound(HabboSoundTypesEnum.PURCHASE);
@@ -2043,7 +2043,7 @@
         {
             var _local_2:HabboActivityPointNotificationMessageEvent = (k as HabboActivityPointNotificationMessageEvent);
             this._purse.activityPoints[_local_2.type] = _local_2.amount;
-            this._Str_12017();
+            this.updatePurse();
             if (((!(this._soundManager == null)) && (_local_2.type == ActivityPointTypeEnum.DUCKET)))
             {
                 this._soundManager.playSound(HabboSoundTypesEnum.PIXELS);
@@ -2058,7 +2058,7 @@
             var _local_4:int;
             var _local_2:ActivityPointsEvent = (k as ActivityPointsEvent);
             this._purse.activityPoints = _local_2.points;
-            this._Str_12017();
+            this.updatePurse();
             for (_local_3 in _local_2.points)
             {
                 _local_4 = int(_local_3);
@@ -2087,7 +2087,7 @@
                     ExternalInterface.call("FlashExternalInterface.subscriptionUpdated", _local_3);
                 }
             }
-            this._Str_12017();
+            this.updatePurse();
             if (_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_PURCHASE)
             {
                 this.reset();
