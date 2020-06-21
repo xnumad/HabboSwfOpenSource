@@ -49,12 +49,12 @@
             this._clubPastPeriods = Math.max(0, k);
         }
 
-        public function get _Str_11984():Boolean
+        public function get clubHasEverBeenMember():Boolean
         {
             return this._clubHasEverBeenMember;
         }
 
-        public function set _Str_11984(k:Boolean):void
+        public function set clubHasEverBeenMember(k:Boolean):void
         {
             this._lastUpdated = getTimer();
             this._clubHasEverBeenMember = k;

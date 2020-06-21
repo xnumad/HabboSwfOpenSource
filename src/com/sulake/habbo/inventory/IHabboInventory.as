@@ -11,7 +11,7 @@
         function get clubPeriods():int;
         function get clubPastPeriods():int;
         function get clubLevel():int;
-        function get _Str_11984():Boolean;
+        function get clubHasEverBeenMember():Boolean;
         function get _Str_6682():Boolean;
         function get _Str_8836():Boolean;
         function get _Str_6338():int;

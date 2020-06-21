@@ -320,9 +320,9 @@
             return this._purse.clubPastPeriods;
         }
 
-        public function get _Str_11984():Boolean
+        public function get clubHasEverBeenMember():Boolean
         {
-            return this._purse._Str_11984;
+            return this._purse.clubHasEverBeenMember;
         }
 
         public function get _Str_6682():Boolean
@@ -367,7 +367,7 @@
         {
             this._purse.clubPeriods = k;
             this._purse.clubDays = _arg_2;
-            this._purse._Str_11984 = _arg_3;
+            this._purse.clubHasEverBeenMember = _arg_3;
             this._purse.isVIP = _arg_4;
             this._purse._Str_6682 = _arg_5;
             this._purse._Str_8836 = _arg_6;
