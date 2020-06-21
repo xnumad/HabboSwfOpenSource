@@ -235,7 +235,7 @@
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12382;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11648;
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_5270;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_5270;
     import com.sulake.habbo.inventory.enum.FurniCategory;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
     import flash.net.URLRequest;

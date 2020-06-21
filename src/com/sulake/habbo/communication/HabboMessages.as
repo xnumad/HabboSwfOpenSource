@@ -955,9 +955,9 @@
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreOwnerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreControllerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreNotControllerMessageEvent;
-	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_11327;
-	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_5270;
-	import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_7844;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_11327;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_5270;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_7844;
 	import com.sulake.habbo.communication.messages.outgoing.poll.*;
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
 	import com.sulake.habbo.communication.messages.outgoing.poll._Str_11290;

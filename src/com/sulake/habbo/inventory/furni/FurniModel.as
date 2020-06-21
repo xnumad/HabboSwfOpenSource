@@ -30,15 +30,15 @@
     import com.sulake.habbo.room.IStuffData;
     import com.sulake.habbo.inventory.items.CreditTradingItem;
     import com.sulake.core.communication.connection.IConnection;
-    import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_7844;
-    import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_11327;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_7844;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_11327;
     import com.sulake.habbo.inventory.trading.TradingModel;
     import com.sulake.habbo.inventory.recycler.RecyclerModel;
     import com.sulake.habbo.inventory.IUnseenItemTracker;
     import com.sulake.habbo.inventory.enum.UnseenItemCategoryEnum;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.habbo.room.object.data.LegacyStuffData;
-    import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_5270;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_5270;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.ITextFieldWindow;
