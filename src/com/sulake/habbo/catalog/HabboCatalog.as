@@ -321,7 +321,7 @@
         private var _rentConfirmationWindow:RentConfirmationWindow;
         private var _messageEvents:Vector.<IMessageEvent>;
         private var _catalogType:String = "NORMAL";
-        private var _Str_2509:Vector.<IFurnitureData>;
+        private var _furnitureData:Vector.<IFurnitureData>;
         private var _Str_8752:Vector.<_Str_3920>;
         private var _Str_6911:Timer;
         private var _Str_19956:Dictionary;
@@ -590,7 +590,7 @@
             this._Str_19190 = this._Str_10258();
             this._videoOfferManager = new VideoOfferManager(this);
             this._offerController = new OfferController(this);
-            this._Str_2509 = this._sessionDataManager.getFurniData(this);
+            this._furnitureData = this._sessionDataManager.getFurniData(this);
             this._Str_19956 = null;
         }
 
@@ -1575,14 +1575,14 @@
             {
                 this._Str_6911.stop();
             }
-            if ((((this._Str_2509 == null) || (k == null)) || (k.length == 0)))
+            if ((((this._furnitureData == null) || (k == null)) || (k.length == 0)))
             {
                 return;
             }
             var _local_2:Array = [];
             var _local_3:Vector.<IFurnitureData> = new Vector.<IFurnitureData>(0);
             var _local_4:String = k.toLowerCase().replace(" ", "");
-            for each (_local_5 in this._Str_2509)
+            for each (_local_5 in this._furnitureData)
             {
                 if (((this._catalogType == CatalogType.BUILDER) && (!(_local_5.availableForBuildersClub))))
                 {
@@ -1636,7 +1636,7 @@
 
         public function furniDataReady():void
         {
-            this._Str_2509 = this._sessionDataManager.getFurniData(this);
+            this._furnitureData = this._sessionDataManager.getFurniData(this);
             this._Str_19956 = null;
         }
 

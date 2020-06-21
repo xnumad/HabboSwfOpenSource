@@ -9,7 +9,7 @@
         private var _Str_6780:String;
         private var _Str_6222:int;
         private var _Str_21793:int;
-        private var _Str_2509:IFurnitureData;
+        private var _furnitureData:IFurnitureData;
         private var _gridItem:PrizeItemContainer;
 
         public function _Str_3903(k:String, _arg_2:int, _arg_3:IFurnitureData, _arg_4:int, _arg_5:HabboCatalog)
@@ -17,17 +17,17 @@
             super(_arg_5);
             this._Str_6780 = k;
             this._Str_6222 = _arg_2;
-            this._Str_2509 = _arg_3;
+            this._furnitureData = _arg_3;
             this._Str_21793 = _arg_4;
         }
 
         public function setIcon(k:IRoomEngine):void
         {
-            if (((k == null) || (this._Str_2509 == null)))
+            if (((k == null) || (this._furnitureData == null)))
             {
                 return;
             }
-            initProductIcon(k, this._Str_2509.type, this._Str_6222);
+            initProductIcon(k, this._furnitureData.type, this._Str_6222);
         }
 
         public function get _Str_7585():String
@@ -52,11 +52,11 @@
 
         public function get title():String
         {
-            if (this._Str_2509 == null)
+            if (this._furnitureData == null)
             {
                 return "";
             }
-            return this._Str_2509.localizedName;
+            return this._furnitureData.localizedName;
         }
     }
 }
