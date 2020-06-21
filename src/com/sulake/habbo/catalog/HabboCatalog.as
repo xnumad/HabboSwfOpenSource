@@ -1969,7 +1969,7 @@
             {
                 return;
             }
-            this._windowManager.confirm("${catalog.alert.notenough.title}", "${catalog.alert.notenough.credits.description}", 0, this._Str_23433);
+            this._windowManager.confirm("${catalog.alert.notenough.title}", "${catalog.alert.notenough.credits.description}", 0, this.noCreditsConfirmDialogEventProcessor);
         }
 
         public function showNotEnoughActivityPointsAlert(k:int):void
@@ -2295,7 +2295,7 @@
             this._Str_4663();
         }
 
-        private function _Str_23433(k:IConfirmDialog, _arg_2:WindowEvent):void
+        private function noCreditsConfirmDialogEventProcessor(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             this._Str_4663();
