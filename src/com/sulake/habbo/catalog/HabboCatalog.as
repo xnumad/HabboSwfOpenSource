@@ -587,7 +587,7 @@
 			this.addMessageEvent(new FireworkChargeDataEvent(this.onFireworkChargeHandler));
             context.addLinkEventTracker(this);
             this._sessionDataManager.loadProductData(this);
-            this._Str_19190 = this._Str_10258();
+            this._Str_19190 = this.isNewItemsNotificationEnabled();
             this._videoOfferManager = new VideoOfferManager(this);
             this._offerController = new OfferController(this);
             this._furnitureData = this._sessionDataManager.getFurniData(this);
@@ -963,7 +963,7 @@
             }
         }
 
-        private function _Str_10258():Boolean
+        private function isNewItemsNotificationEnabled():Boolean
         {
             return getBoolean("toolbar.new_additions.notification.enabled");
         }

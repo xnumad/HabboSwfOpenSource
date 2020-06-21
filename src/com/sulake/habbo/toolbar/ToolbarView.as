@@ -147,7 +147,7 @@
             this._newItemsNotification.visible = false;
             this._newItemsNotification.x = ((_local_12.width - this._newItemsNotification.width) - _Str_3504);
             this._newItemsNotification.y = _Str_3504;
-            this._newItemsNotificationEnabled = this._Str_10258();
+            this._newItemsNotificationEnabled = this.isNewItemsNotificationEnabled();
             this._Str_5532();
             (this._toolbar as Component).context.addLinkEventTracker(this);
         }
@@ -597,7 +597,7 @@
             return _local_3;
         }
 
-        public function _Str_10258():Boolean
+        public function isNewItemsNotificationEnabled():Boolean
         {
             return this._toolbar.getBoolean("toolbar.new_additions.notification.enabled");
         }
