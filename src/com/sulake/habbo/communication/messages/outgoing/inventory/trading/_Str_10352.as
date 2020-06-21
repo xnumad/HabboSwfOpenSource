@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_81
+﻿package com.sulake.habbo.communication.messages.outgoing.inventory.trading
 {
     import com.sulake.core.communication.messages.IMessageComposer;
     import __AS3__.vec.Vector;

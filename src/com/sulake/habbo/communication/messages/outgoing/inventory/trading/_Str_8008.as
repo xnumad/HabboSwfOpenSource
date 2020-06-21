@@ -1,12 +1,12 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_81
+﻿package com.sulake.habbo.communication.messages.outgoing.inventory.trading
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12206 implements IMessageComposer 
+    public class _Str_8008 implements IMessageComposer 
     {
         private var _Str_12122:int;
 
-        public function _Str_12206(k:int)
+        public function _Str_8008(k:int)
         {
             this._Str_12122 = k;
         }

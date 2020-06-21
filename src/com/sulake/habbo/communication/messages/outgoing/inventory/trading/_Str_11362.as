@@ -1,8 +1,8 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_81
+﻿package com.sulake.habbo.communication.messages.outgoing.inventory.trading
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10862 implements IMessageComposer 
+    public class _Str_11362 implements IMessageComposer 
     {
         public function dispose():void
         {
