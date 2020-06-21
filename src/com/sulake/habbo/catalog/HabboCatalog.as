@@ -2894,7 +2894,7 @@
             return this._avatarEditor;
         }
 
-        public function _Str_26111(k:IPurchasableOffer):void
+        public function checkGiftable(k:IPurchasableOffer):void
         {
             this.send(new _Str_12467(k.offerId));
         }
