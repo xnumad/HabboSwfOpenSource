@@ -1368,7 +1368,7 @@
                 this._mainContainer.findChildByName("catalog.header.background.body").color = ((k == CatalogType.NORMAL) ? 4279123794 : 4281149220);
                 this._mainContainer.findChildByName("catalog.mode.header").visible = (k == CatalogType.NORMAL);
                 this._mainContainer.findChildByName("builder.mode.header").visible = (k == CatalogType.BUILDER);
-                this._Str_15371();
+                this.refreshBuilderStatus();
             }
             if (this.mainWindowVisible())
             {
@@ -2853,7 +2853,7 @@
                 _local_3 = this.builderSecondsLeftWithGrace;
                 if ((((_local_2 > -3) && (_local_2 < 200)) || ((_local_3 > -3) && (_local_3 < 200))))
                 {
-                    this._Str_15371();
+                    this.refreshBuilderStatus();
                 }
             }
         }
@@ -3017,7 +3017,7 @@
             {
                 this._Str_3854.dispatchWidgetEvent(new CatalogWidgetBuilderSubscriptionUpdatedEvent());
             }
-            this._Str_15371();
+            this.refreshBuilderStatus();
         }
 
         private function onBuildersClubFurniCount(k:BuildersClubFurniCountMessageEvent):void
@@ -3027,10 +3027,10 @@
             {
                 this._Str_3854.dispatchWidgetEvent(new CatalogWidgetBuilderSubscriptionUpdatedEvent());
             }
-            this._Str_15371();
+            this.refreshBuilderStatus();
         }
 
-        private function _Str_15371():void
+        private function refreshBuilderStatus():void
         {
             var k:Number = (this._builderMembershipSecondsLeft - ((getTimer() - this._builderMembershipUpdateTime) / 1000));
             var _local_2:Number = (this._builderMembershipSecondsLeftWithGrace - ((getTimer() - this._builderMembershipUpdateTime) / 1000));
