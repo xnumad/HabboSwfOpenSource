@@ -547,9 +547,9 @@
                 events.dispatchEvent(new CatalogWidgetSpinnerEvent(CatalogWidgetSpinnerEvent.CWSE_RESET, 1));
             }
             events.dispatchEvent(new CatalogWidgetSpinnerEvent(CatalogWidgetSpinnerEvent.CWSE_SHOW));
-            if (this._habboCatalog._Str_5195 != null)
+            if (this._habboCatalog.bundleDiscountRuleset != null)
             {
-                events.dispatchEvent(new CatalogWidgetSpinnerEvent(CatalogWidgetSpinnerEvent.CWSE_SET_MAX, this._habboCatalog._Str_5195._Str_22802));
+                events.dispatchEvent(new CatalogWidgetSpinnerEvent(CatalogWidgetSpinnerEvent.CWSE_SET_MAX, this._habboCatalog.bundleDiscountRuleset._Str_22802));
             }
             events.dispatchEvent(new CatalogWidgetSpinnerEvent(CatalogWidgetSpinnerEvent.CWSE_SET_MIN, 1));
         }

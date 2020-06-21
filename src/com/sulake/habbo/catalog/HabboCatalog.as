@@ -2944,7 +2944,7 @@
         private function onBundleDiscountRulesetMessageEvent(k:_Str_7288):void
         {
             var _local_2:_Str_7779 = k.getParser();
-            this._Str_9586 = _local_2._Str_5195;
+            this._Str_9586 = _local_2.bundleDiscountRuleset;
             this._utils._Str_24024();
         }
 
@@ -3062,7 +3062,7 @@
             return (getBoolean("bundle.dynamic.discounts.enabled")) && (!(this._catalogType == CatalogType.BUILDER));
         }
 
-        public function get _Str_5195():_Str_4615
+        public function get bundleDiscountRuleset():_Str_4615
         {
             return this._Str_9586;
         }

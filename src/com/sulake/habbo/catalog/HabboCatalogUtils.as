@@ -401,7 +401,7 @@
 
         public function _Str_4488(k:Boolean, _arg_2:int, _arg_3:int):int
         {
-            if ((((this._habboCatalog.discountEnabled) && (k)) && (!(this._habboCatalog._Str_5195 == null))))
+            if ((((this._habboCatalog.discountEnabled) && (k)) && (!(this._habboCatalog.bundleDiscountRuleset == null))))
             {
                 return _arg_2 * (_arg_3 - this._Str_20487(_arg_3));
             }
@@ -418,7 +418,7 @@
 
         private function _Str_23707(k:int):int
         {
-            var _local_2:_Str_4615 = this._habboCatalog._Str_5195;
+            var _local_2:_Str_4615 = this._habboCatalog.bundleDiscountRuleset;
             var _local_3:int = (k / _local_2._Str_9227);
             return _local_3 * _local_2._Str_23802;
         }
@@ -427,7 +427,7 @@
         {
             var _local_5:int;
             var _local_2:int;
-            var _local_3:_Str_4615 = this._habboCatalog._Str_5195;
+            var _local_3:_Str_4615 = this._habboCatalog.bundleDiscountRuleset;
             var _local_4:int = (k / _local_3._Str_9227);
             if (_local_4 >= _local_3._Str_21500)
             {
@@ -445,7 +445,7 @@
         {
             var _local_4:int;
             var _local_2:int;
-            var _local_3:_Str_4615 = this._habboCatalog._Str_5195;
+            var _local_3:_Str_4615 = this._habboCatalog.bundleDiscountRuleset;
             for each (_local_4 in _local_3._Str_25155)
             {
                 if (k >= _local_4)

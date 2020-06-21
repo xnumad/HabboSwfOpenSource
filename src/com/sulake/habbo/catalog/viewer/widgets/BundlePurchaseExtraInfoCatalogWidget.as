@@ -170,7 +170,7 @@
             {
                 return;
             }
-            if (!this._habboCatalog._Str_5195)
+            if (!this._habboCatalog.bundleDiscountRuleset)
             {
                 return;
             }
@@ -178,13 +178,13 @@
             {
                 if (k.value != this._Str_11260)
                 {
-                    if (((k.value >= this._habboCatalog._Str_5195._Str_9227) && (this._Str_6832 == -1)))
+                    if (((k.value >= this._habboCatalog.bundleDiscountRuleset._Str_9227) && (this._Str_6832 == -1)))
                     {
                         this._Str_22355();
                     }
                     else
                     {
-                        if (k.value < this._habboCatalog._Str_5195._Str_9227)
+                        if (k.value < this._habboCatalog.bundleDiscountRuleset._Str_9227)
                         {
                             this._Str_24383();
                         }
