@@ -331,7 +331,7 @@
         private var _builderMaxFurniLimit:int;
         private var _builderMembershipSecondsLeft:int;
         private var _builderMembershipSecondsLeftWithGrace:int;
-        private var _Str_12490:int;
+        private var _builderMembershipUpdateTime:int;
         private var _Str_19072:int;
         private var _Str_12983:Boolean;
         private var _Str_13454:Boolean;
@@ -3007,7 +3007,7 @@
             this._builderFurniLimit = _local_2._Str_15864;
             this._builderMaxFurniLimit = _local_2._Str_24094;
             this._builderMembershipSecondsLeft = _local_2._Str_3709;
-            this._Str_12490 = getTimer();
+            this._builderMembershipUpdateTime = getTimer();
             this._builderMembershipSecondsLeftWithGrace = _local_2._Str_24379;
             if (ExternalInterface.available)
             {
@@ -3032,8 +3032,8 @@
 
         private function _Str_15371():void
         {
-            var k:Number = (this._builderMembershipSecondsLeft - ((getTimer() - this._Str_12490) / 1000));
-            var _local_2:Number = (this._builderMembershipSecondsLeftWithGrace - ((getTimer() - this._Str_12490) / 1000));
+            var k:Number = (this._builderMembershipSecondsLeft - ((getTimer() - this._builderMembershipUpdateTime) / 1000));
+            var _local_2:Number = (this._builderMembershipSecondsLeftWithGrace - ((getTimer() - this._builderMembershipUpdateTime) / 1000));
             if ((((this._Str_12983) && (k <= 0)) && (_local_2 > 0)))
             {
                 events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_BUILDER_MEMBERSHIP_IN_GRACE));
@@ -3206,12 +3206,12 @@
 
         public function get builderSecondsLeft():Number
         {
-            return this._builderMembershipSecondsLeft - ((getTimer() - this._Str_12490) / 1000);
+            return this._builderMembershipSecondsLeft - ((getTimer() - this._builderMembershipUpdateTime) / 1000);
         }
 
         public function get builderSecondsLeftWithGrace():Number
         {
-            return this._builderMembershipSecondsLeftWithGrace - ((getTimer() - this._Str_12490) / 1000);
+            return this._builderMembershipSecondsLeftWithGrace - ((getTimer() - this._builderMembershipUpdateTime) / 1000);
         }
 
         public function get isDoorModeOverriddenInCurrentRoom():Boolean
