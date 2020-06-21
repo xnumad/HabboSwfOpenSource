@@ -22,7 +22,7 @@
         function getActivatedAvatarEffects():Array;
         function getAvatarEffects():Array;
         function requestSelectedFurniToMover(_arg_1:IFurnitureItem):Boolean;
-        function _Str_18856(_arg_1:int):IFurnitureItem;
+        function getFloorItemById(_arg_1:int):IFurnitureItem;
         function _Str_14082(_arg_1:int):IFurnitureItem;
         function _Str_6675(_arg_1:int, _arg_2:Boolean=false):Boolean;
         function setEffectSelected(_arg_1:int):void;

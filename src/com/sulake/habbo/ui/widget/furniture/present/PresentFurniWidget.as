@@ -496,7 +496,7 @@
                 switch (this._placedItemType)
                 {
                     case ProductTypeEnum.FLOOR:
-                        _local_3 = this._inventory._Str_18856(-(this._placedItemId));
+                        _local_3 = this._inventory.getFloorItemById(-(this._placedItemId));
                         if (this._Str_5337(_local_3))
                         {
                             this._inventory.getItemWithStripId(this._placedItemId);

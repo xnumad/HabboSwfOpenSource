@@ -782,7 +782,7 @@
             return _local_3;
         }
 
-        public function _Str_18856(k:int):IFurnitureItem
+        public function getFloorItemById(k:int):IFurnitureItem
         {
             var _local_2:GroupItem;
             var _local_3:IFurnitureItem;

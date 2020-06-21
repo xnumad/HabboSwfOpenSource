@@ -433,7 +433,7 @@
             {
                 return null;
             }
-            var _local_3:IFurnitureItem = _local_2._Str_18856(-(k));
+            var _local_3:IFurnitureItem = _local_2.getFloorItemById(-(k));
             return _local_3;
         }
 
