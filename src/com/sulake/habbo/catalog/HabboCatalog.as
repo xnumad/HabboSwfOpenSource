@@ -330,7 +330,7 @@
         private var _builderFurniLimit:int;
         private var _builderMaxFurniLimit:int;
         private var _builderMembershipSecondsLeft:int;
-        private var _Str_16084:int;
+        private var _builderMembershipSecondsLeftWithGrace:int;
         private var _Str_12490:int;
         private var _Str_19072:int;
         private var _Str_12983:Boolean;
@@ -3008,7 +3008,7 @@
             this._builderMaxFurniLimit = _local_2._Str_24094;
             this._builderMembershipSecondsLeft = _local_2._Str_3709;
             this._Str_12490 = getTimer();
-            this._Str_16084 = _local_2._Str_24379;
+            this._builderMembershipSecondsLeftWithGrace = _local_2._Str_24379;
             if (ExternalInterface.available)
             {
                 ExternalInterface.call("FlashExternalInterface.updateBuildersClub", (this._builderMembershipSecondsLeft > 0));
@@ -3033,7 +3033,7 @@
         private function _Str_15371():void
         {
             var k:Number = (this._builderMembershipSecondsLeft - ((getTimer() - this._Str_12490) / 1000));
-            var _local_2:Number = (this._Str_16084 - ((getTimer() - this._Str_12490) / 1000));
+            var _local_2:Number = (this._builderMembershipSecondsLeftWithGrace - ((getTimer() - this._Str_12490) / 1000));
             if ((((this._Str_12983) && (k <= 0)) && (_local_2 > 0)))
             {
                 events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_BUILDER_MEMBERSHIP_IN_GRACE));
@@ -3211,7 +3211,7 @@
 
         public function get builderSecondsLeftWithGrace():Number
         {
-            return this._Str_16084 - ((getTimer() - this._Str_12490) / 1000);
+            return this._builderMembershipSecondsLeftWithGrace - ((getTimer() - this._Str_12490) / 1000);
         }
 
         public function get isDoorModeOverriddenInCurrentRoom():Boolean
