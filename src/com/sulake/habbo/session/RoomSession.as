@@ -31,8 +31,8 @@
     import com.sulake.habbo.communication.messages.outgoing.poll._Str_11290;
     import com.sulake.habbo.communication.messages.outgoing.poll._Str_12165;
     import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9884;
-    import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9928;
+    import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9884;
+    import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9928;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.FollowFriendMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.AmbassadorAlertMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserKickMessageComposer;

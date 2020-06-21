@@ -1,12 +1,12 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_495
+﻿package com.sulake.habbo.communication.messages.outgoing.userclassification
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_9928 implements IMessageComposer 
+    public class _Str_9884 implements IMessageComposer 
     {
         private var _Str_7397:String;
 
-        public function _Str_9928(k:String)
+        public function _Str_9884(k:String)
         {
             this._Str_7397 = k;
         }
