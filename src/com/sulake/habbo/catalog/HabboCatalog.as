@@ -1286,7 +1286,7 @@
             }
         }
 
-        private function _Str_26417(k:String, _arg_2:int):void
+        private function setElementColour(k:String, _arg_2:int):void
         {
             if (this._mainContainer == null)
             {
