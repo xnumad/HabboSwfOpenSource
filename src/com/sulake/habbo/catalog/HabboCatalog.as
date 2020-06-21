@@ -312,7 +312,7 @@
         private var _guildMembershipsController:GuildMembershipsController;
         private var _offerController:OfferController;
         private var _utils:HabboCatalogUtils;
-        private var _Str_13637:Boolean = false;
+        private var _doNotCloseAfterVipPurchase:Boolean = false;
         private var _Str_8001:String = null;
         private var _bundleDiscountRuleset:BundleDiscountRuleset = null;
         private var _requestedPage:RequestedPage;
@@ -2822,7 +2822,7 @@
             if ((((!(this._windowManager == null)) && (!(this._mainContainer == null))) && (!(this._mainContainer.parent == null))))
             {
                 k = this._windowManager.getDesktop(DESKTOP_WINDOW_LAYER);
-                if (((!(k == null)) && (!(this._Str_13637))))
+                if (((!(k == null)) && (!(this._doNotCloseAfterVipPurchase))))
                 {
                     k.removeChild(this._mainContainer);
                     if (this._catalogViewer != null)
@@ -2830,7 +2830,7 @@
                         this._catalogViewer._Str_20980();
                     }
                 }
-                this._Str_13637 = false;
+                this._doNotCloseAfterVipPurchase = false;
             }
         }
 
@@ -2915,12 +2915,12 @@
         public function _Str_23687():void
         {
             this._Str_8001 = null;
-            this._Str_13637 = false;
+            this._doNotCloseAfterVipPurchase = false;
         }
 
         public function _Str_22294():void
         {
-            this._Str_13637 = (!(this._Str_8001 == null));
+            this._doNotCloseAfterVipPurchase = (!(this._Str_8001 == null));
         }
 
         private function _Str_25130():void
