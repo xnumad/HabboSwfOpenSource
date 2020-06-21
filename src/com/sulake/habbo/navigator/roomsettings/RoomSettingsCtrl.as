@@ -263,7 +263,7 @@
             }
         }
 
-        public function _Str_8351(k:int, _arg_2:int):void
+        public function onUserUnbannedFromRoom(k:int, _arg_2:int):void
         {
             if (this._Str_20138(k))
             {

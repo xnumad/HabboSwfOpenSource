@@ -158,7 +158,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972));
             _local_2.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837));
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5655(this._Str_8351));
+            _local_2.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom));
             _local_2.addHabboConnectionMessageEvent(new _Str_7272(this.onConvertedRoomId));
             _local_2.addHabboConnectionMessageEvent(new RoomForwardMessageEvent(this.onRoomForward));
         }
@@ -609,11 +609,11 @@
             this._navigator.roomSettingsCtrl._Str_8907(_local_2.roomId, _local_2._Str_14901);
         }
 
-        private function _Str_8351(k:IMessageEvent):void
+        private function onUserUnbannedFromRoom(k:IMessageEvent):void
         {
             var _local_2:_Str_6587 = (k as _Str_5655).getParser();
             Logger.log(((("User was unbanned from room. User Id: " + _local_2.userId) + " Room Id: ") + _local_2.roomId));
-            this._navigator.roomSettingsCtrl._Str_8351(_local_2.roomId, _local_2.userId);
+            this._navigator.roomSettingsCtrl.onUserUnbannedFromRoom(_local_2.roomId, _local_2.userId);
         }
 
         private function onError(event:IMessageEvent):void

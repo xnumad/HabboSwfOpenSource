@@ -122,7 +122,7 @@
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorLiftedRoomsEvent(this._Str_23664)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSavedSearchesEvent(this._Str_11632)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this._Str_16100)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5655(this._Str_8351)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4187(this.onFlatAccessDenied)));
@@ -454,11 +454,11 @@
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_8907(_local_2.roomId, _local_2._Str_14901);
         }
 
-        private function _Str_8351(k:IMessageEvent):void
+        private function onUserUnbannedFromRoom(k:IMessageEvent):void
         {
             var _local_2:_Str_6587 = (k as _Str_5655).getParser();
             Logger.log(((("User was unbanned from room. User Id: " + _local_2.userId) + " Room Id: ") + _local_2.roomId));
-            LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_8351(_local_2.roomId, _local_2.userId);
+            LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl.onUserUnbannedFromRoom(_local_2.roomId, _local_2.userId);
         }
 
         private function onDoorbell(k:IMessageEvent):void
