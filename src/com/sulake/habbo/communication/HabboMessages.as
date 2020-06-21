@@ -974,7 +974,7 @@
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingRecipesAvailableEvent;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.CreditBalanceEvent;
-	import com.sulake.habbo.communication.messages.outgoing.achievements.RequestAchievementsMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.achievements.RequestAchievementsMessageComposer;
 	import snowwar._Str_448.*;
 	import snowwar._Str_477.*;
 	import snowwar._Str_400.*;

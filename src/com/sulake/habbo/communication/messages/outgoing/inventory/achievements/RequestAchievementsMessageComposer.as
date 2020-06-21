@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing.achievements
+﻿package com.sulake.habbo.communication.messages.outgoing.inventory.achievements
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
