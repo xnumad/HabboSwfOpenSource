@@ -560,7 +560,7 @@
             this.addMessageEvent(new _Str_7288(this.onBundleDiscountRulesetMessageEvent));
             this.addMessageEvent(new CatalogPagesListEvent(this.onCatalogIndex));
             this.addMessageEvent(new MarketPlaceOffersEvent(this._Str_25346));
-            this.addMessageEvent(new _Str_8504(this._Str_11267));
+            this.addMessageEvent(new _Str_8504(this.onCatalogPage));
             this.addMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             this.addMessageEvent(new SellablePetPalettesMessageEvent(this._Str_23837));
@@ -1778,7 +1778,7 @@
             }
         }
 
-        private function _Str_11267(k:_Str_8504):void
+        private function onCatalogPage(k:_Str_8504):void
         {
             var _local_11:CatalogPageMessageOfferData;
             var _local_12:Vector.<IProduct>;

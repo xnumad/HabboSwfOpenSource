@@ -49,7 +49,7 @@
             this._container = IWindowContainer(this._landingView.getXmlWindow("expiring_catalog_page"));
             this._container.findChildByName("open_catalog_button").procedure = this._Str_9063;
             this._container.visible = false;
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CatalogPageWithEarliestExpiryMessageEvent(this._Str_11267));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CatalogPageWithEarliestExpiryMessageEvent(this.onCatalogPage));
             HabboLandingView._Str_9079(this._container, "page_expiry_title", "hdr_line");
         }
 
@@ -109,7 +109,7 @@
             return this._landingView == null;
         }
 
-        private function _Str_11267(k:IMessageEvent):void
+        private function onCatalogPage(k:IMessageEvent):void
         {
             var _local_2:CatalogPageWithEarliestExpiryMessageParser = CatalogPageWithEarliestExpiryMessageParser(k.parser);
             this._pageName = _local_2.pageName;
