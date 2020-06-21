@@ -2371,7 +2371,7 @@
             {
                 return BuilderFurniPlaceableStatus._Str_14160;
             }
-            if (this._Str_10140 <= 0)
+            if (this.builderSecondsLeft <= 0)
             {
                 _local_2 = this.roomEngine.getRoomObjectCount(this.roomSession.roomId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                 _local_3 = 0;
@@ -2849,7 +2849,7 @@
             }
             if ((getTimer() - this._Str_19072) > 500)
             {
-                _local_2 = this._Str_10140;
+                _local_2 = this.builderSecondsLeft;
                 _local_3 = this._Str_23332;
                 if ((((_local_2 > -3) && (_local_2 < 200)) || ((_local_3 > -3) && (_local_3 < 200))))
                 {
@@ -3204,7 +3204,7 @@
             return this._Str_19671;
         }
 
-        public function get _Str_10140():Number
+        public function get builderSecondsLeft():Number
         {
             return this._Str_14644 - ((getTimer() - this._Str_12490) / 1000);
         }
@@ -3219,7 +3219,7 @@
             var k:int;
             var _local_4:IRoomObject;
             var _local_5:IRoomObject;
-            if (((!(this.buildersClubEnabled)) || (this._Str_10140 > 0)))
+            if (((!(this.buildersClubEnabled)) || (this.builderSecondsLeft > 0)))
             {
                 return false;
             }

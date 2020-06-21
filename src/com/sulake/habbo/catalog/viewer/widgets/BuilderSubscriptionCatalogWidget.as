@@ -38,7 +38,7 @@
 
         private function _Str_19488():void
         {
-            var k:Number = this._catalog._Str_10140;
+            var k:Number = this._catalog.builderSecondsLeft;
             var _local_2:IWindow = _window.findChildByName("subscribe_button");
             var _local_3:IWindow = _window.findChildByName("subscribe_button_sms");
             var _local_4:IWindow = _window.findChildByName("subscribe_button_big");

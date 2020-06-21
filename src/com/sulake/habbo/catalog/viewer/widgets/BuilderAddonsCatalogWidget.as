@@ -32,7 +32,7 @@
             var k:IItemListWindow = (_window.findChildByName("addons_list") as IItemListWindow);
             var _local_2:IWindow = k.removeListItemAt(0);
             var _local_3:int;
-            var _local_4:* = (this._catalog._Str_10140 > 0);
+            var _local_4:* = (this._catalog.builderSecondsLeft > 0);
             _window.findChildByName("trial_warning").visible = (!(_local_4));
             for each (_local_5 in page.offers)
             {
