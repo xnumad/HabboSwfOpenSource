@@ -1276,10 +1276,10 @@
                 {
                     case 1:
                     case 2:
-                        this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3._Str_2713, RoomObjectVariableEnum.FIGURE_IS_MUTED, 1);
+                        this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3.roomObjectId, RoomObjectVariableEnum.FIGURE_IS_MUTED, 1);
                         return;
                     case 3:
-                        this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3._Str_2713, RoomObjectVariableEnum.FIGURE_IS_MUTED, 0);
+                        this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3.roomObjectId, RoomObjectVariableEnum.FIGURE_IS_MUTED, 0);
                         return;
                 }
             }
@@ -1332,7 +1332,7 @@
             var _local_4:RoomUserData = _local_3.userDataManager.getUserDataByType(k, RoomObjectTypeEnum.HABBO);
             if (_local_4 != null)
             {
-                this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_4._Str_2713, RoomObjectVariableEnum.FIGURE_GUIDE_STATUS, _arg_2);
+                this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_4.roomObjectId, RoomObjectVariableEnum.FIGURE_GUIDE_STATUS, _arg_2);
             }
         }
     }

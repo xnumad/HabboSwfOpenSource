@@ -359,7 +359,7 @@
                             return null;
                         }
                         _local_15 = 0;
-                        this._container.roomEngine.selectAvatar(_local_15, _local_14._Str_2713);
+                        this._container.roomEngine.selectAvatar(_local_15, _local_14.roomObjectId);
                     }
                     break;
                 case RoomWidgetAvatarEditorMessage.RWCM_OPEN_AVATAR_EDITOR:

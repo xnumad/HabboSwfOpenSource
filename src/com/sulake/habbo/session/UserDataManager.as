@@ -94,7 +94,7 @@
             {
                 return;
             }
-            this.removeUserDataByRoomIndex(k._Str_2713);
+            this.removeUserDataByRoomIndex(k.roomObjectId);
             var _local_2:Map = this._userDataByType.getValue(k.type);
             if (_local_2 == null)
             {
@@ -102,7 +102,7 @@
                 this._userDataByType.add(k.type, _local_2);
             }
             _local_2.add(k.id, k);
-            this._userDataByRoomIndex.add(k._Str_2713, k);
+            this._userDataByRoomIndex.add(k.roomObjectId, k);
         }
 
         public function removeUserDataByRoomIndex(k:int):void

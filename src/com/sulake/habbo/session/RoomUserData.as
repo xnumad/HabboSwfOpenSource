@@ -32,7 +32,7 @@
             this._roomObjectId = k;
         }
 
-        public function get _Str_2713():int
+        public function get roomObjectId():int
         {
             return this._roomObjectId;
         }

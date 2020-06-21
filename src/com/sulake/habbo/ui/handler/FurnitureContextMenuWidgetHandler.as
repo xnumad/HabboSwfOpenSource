@@ -160,7 +160,7 @@
                     _local_2 = (k as RoomWidgetUseProductMessage);
                     if (_local_2)
                     {
-                        this._container.roomSession.plantSeed(_local_2._Str_2713);
+                        this._container.roomSession.plantSeed(_local_2.roomObjectId);
                     }
                     break;
             }

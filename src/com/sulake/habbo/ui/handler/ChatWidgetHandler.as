@@ -251,7 +251,7 @@
                                     switch (_local_20)
                                     {
                                         case RoomObjectTypeEnum.PET:
-                                            _local_26 = this._Str_13861(_local_10._Str_2713);
+                                            _local_26 = this._Str_13861(_local_10.roomObjectId);
                                             if (_local_26 != null)
                                             {
                                                 _local_17 = _local_26.getModel().getString(RoomObjectVariableEnum.FIGURE_POSTURE);

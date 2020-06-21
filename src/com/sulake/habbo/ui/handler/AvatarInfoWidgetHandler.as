@@ -215,7 +215,7 @@
                     Logger.log((("Could not find pet with the id: " + k.petId) + " given by petStatusUpdate"));
                     return;
                 }
-                _local_7 = new _Str_4828(_local_6._Str_2713, _local_2, _local_3, _local_4, _local_5);
+                _local_7 = new _Str_4828(_local_6.roomObjectId, _local_2, _local_3, _local_4, _local_5);
                 this._container.events.dispatchEvent(_local_7);
             }
         }
@@ -229,7 +229,7 @@
             {
                 _local_2 = k.level;
                 _local_3 = this._Str_19958(k.petId);
-                _local_4 = new _Str_4818(_local_3._Str_2713, _local_2);
+                _local_4 = new _Str_4818(_local_3.roomObjectId, _local_2);
                 this._container.events.dispatchEvent(_local_4);
             }
         }
@@ -242,7 +242,7 @@
             var _local_4:RoomUserData = this._container.roomSession.userDataManager.getUserData(k);
             if (_local_4)
             {
-                this._container.events.dispatchEvent(new _Str_5393(k, _local_2, _local_4.type, _local_4._Str_2713, _local_3));
+                this._container.events.dispatchEvent(new _Str_5393(k, _local_2, _local_4.type, _local_4.roomObjectId, _local_3));
             }
         }
 
@@ -301,7 +301,7 @@
                     useProductMessage = (message as RoomWidgetUseProductMessage);
                     if (useProductMessage)
                     {
-                        this._container.roomSession.useProductForPet(useProductMessage._Str_2713, useProductMessage.petId);
+                        this._container.roomSession.useProductForPet(useProductMessage.roomObjectId, useProductMessage.petId);
                     }
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_HARVEST_PET:
@@ -342,7 +342,7 @@
                     {
                         if (this.friendList.getFriendNames().indexOf(_local_3.name) > -1)
                         {
-                            this._widget._Str_21156(_local_3, _local_3._Str_2713);
+                            this._widget._Str_21156(_local_3, _local_3.roomObjectId);
                         }
                     }
                     return;
@@ -351,7 +351,7 @@
                     if ((((((_local_2) && (this._widget)) && (this.container)) && (this.container.roomSession)) && (this.container.roomSession.userDataManager)))
                     {
                         _local_4 = this.container.roomSession.userDataManager.getUserData(this.container.sessionDataManager.userId);
-                        if (((_local_4) && (_local_2.userId == _local_4._Str_2713)))
+                        if (((_local_4) && (_local_2.userId == _local_4.roomObjectId)))
                         {
                             this._widget._Str_4107 = (!(_local_2._Str_8263 == 0));
                         }
@@ -386,7 +386,7 @@
             }
             var _local_5:Array = _local_4.figure.split(" ");
             var _local_6:int = ((_local_5.length > 0) ? _local_5[0] : -1);
-            this._Str_25028(_local_2, k, _local_6, _local_4._Str_2713, _local_3);
+            this._Str_25028(_local_2, k, _local_6, _local_4.roomObjectId, _local_3);
         }
 
         public function update():void
@@ -519,7 +519,7 @@
                                     continue;
                                 }
                             }
-                            _local_7.push(new _Str_3858(_local_12._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_12.name, _arg_2, _local_8.getId(), _arg_6, _local_13));
+                            _local_7.push(new _Str_3858(_local_12.roomObjectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_12.name, _arg_2, _local_8.getId(), _arg_6, _local_13));
                         }
                     }
                 }
@@ -564,9 +564,9 @@
                             {
                                 _local_12 = _local_10.figure.split(" ");
                                 _local_13 = ((_local_12.length > 0) ? _local_12[0] : -1);
-                                if (((_local_13 == _arg_3) && (!(_local_10._Str_2713 == _arg_4))))
+                                if (((_local_13 == _arg_3) && (!(_local_10.roomObjectId == _arg_4))))
                                 {
-                                    _local_6.push(new _Str_3858(_local_10._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_10.name, _arg_4, _local_7.getId()));
+                                    _local_6.push(new _Str_3858(_local_10.roomObjectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_10.name, _arg_4, _local_7.getId()));
                                 }
                             }
                         }

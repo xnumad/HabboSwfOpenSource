@@ -365,7 +365,7 @@
                     if (this._petData != null)
                     {
                         _local_19 = "rip";
-                        _local_22 = this._Str_13861(this._petData._Str_2713);
+                        _local_22 = this._Str_13861(this._petData.roomObjectId);
                         if (_local_22 != null)
                         {
                             _local_19 = _local_22.getModel().getString(RoomObjectVariableEnum.FIGURE_POSTURE);
@@ -445,7 +445,7 @@
                 case PREVIEW_IMAGE_REGION:
                     if (this._petData != null)
                     {
-                        this._Str_22884(this._petData._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
+                        this._Str_22884(this._petData.roomObjectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                     }
                     break;
                 case HEADER_BUTTON_CLOSE:

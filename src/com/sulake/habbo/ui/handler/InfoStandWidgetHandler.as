@@ -413,7 +413,7 @@
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_START_TRADING:
                     _local_9 = this._container.roomSession.userDataManager.getUserData(_local_4.userId);
-                    this._container.inventory.setupTrading(_local_9._Str_2713, _local_9.name);
+                    this._container.inventory.setupTrading(_local_9.roomObjectId, _local_9.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_OPEN_HOME_PAGE:
                     this._container.sessionDataManager.openHabboHomePage(_local_3.id, _local_3.name);
@@ -692,7 +692,7 @@
                     }
                     _local_3 = _local_9.name;
                     _local_4 = _local_9.type;
-                    _local_5 = _local_9._Str_2713;
+                    _local_5 = _local_9.roomObjectId;
                     _local_6 = _local_9.id;
                     break;
             }
@@ -1236,7 +1236,7 @@
             if (((!(this._container == null)) && (!(this._container.events == null))))
             {
                 _local_10 = (_local_2.ownerId == this._container.sessionDataManager.userId);
-                _local_11 = new RoomWidgetPetInfostandUpdateEvent(_local_5, _local_6, _local_3.name, _local_2.id, _local_9, _local_10, _local_2.ownerId, _local_2.ownerName, _local_3._Str_2713, _local_2.rarityLevel);
+                _local_11 = new RoomWidgetPetInfostandUpdateEvent(_local_5, _local_6, _local_3.name, _local_2.id, _local_9, _local_10, _local_2.ownerId, _local_2.ownerName, _local_3.roomObjectId, _local_2.rarityLevel);
                 _local_11.level = _local_2.level;
                 _local_11.maximumLevel = _local_2.maximumLevel;
                 _local_11.experience = _local_2.experience;

@@ -15,7 +15,7 @@
             this._petId = _arg_3;
         }
 
-        public function get _Str_2713():int
+        public function get roomObjectId():int
         {
             return this._roomObjectId;
         }

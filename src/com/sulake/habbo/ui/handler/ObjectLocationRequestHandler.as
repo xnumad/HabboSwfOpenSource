@@ -76,8 +76,8 @@
                     _local_7 = _local_3.userDataManager.getUserDataByType(_local_2.objectId, _local_2.objectType);
                     if (_local_7)
                     {
-                        _local_4 = this._container.roomEngine.getRoomObjectBoundingRectangle(_local_3.roomId, _local_7._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, this._container.getFirstCanvasId());
-                        _local_5 = this._container.roomEngine.getRoomObjectScreenLocation(_local_3.roomId, _local_7._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, this._container.getFirstCanvasId());
+                        _local_4 = this._container.roomEngine.getRoomObjectBoundingRectangle(_local_3.roomId, _local_7.roomObjectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, this._container.getFirstCanvasId());
+                        _local_5 = this._container.roomEngine.getRoomObjectScreenLocation(_local_3.roomId, _local_7.roomObjectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, this._container.getFirstCanvasId());
                         _local_6 = this._container.getRoomViewRect();
                         if ((((_local_4) && (_local_6)) && (_local_5)))
                         {

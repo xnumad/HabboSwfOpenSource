@@ -94,7 +94,7 @@
                     return;
                 }
                 _local_7 = "";
-                listener.events.dispatchEvent(new RoomSessionChatEvent(_local_4, _local_3, _local_6._Str_2713, _local_7, _local_5, SystemChatStyleEnum.GENERIC));
+                listener.events.dispatchEvent(new RoomSessionChatEvent(_local_4, _local_3, _local_6.roomObjectId, _local_7, _local_5, SystemChatStyleEnum.GENERIC));
             }
         }
 
@@ -125,7 +125,7 @@
             {
                 return;
             }
-            listener.events.dispatchEvent(new RoomSessionChatEvent(_local_4, _local_3, _local_6._Str_2713, "", _local_5, SystemChatStyleEnum.GENERIC));
+            listener.events.dispatchEvent(new RoomSessionChatEvent(_local_4, _local_3, _local_6.roomObjectId, "", _local_5, SystemChatStyleEnum.GENERIC));
         }
 
         private function _Str_23073(k:PetSupplementedNotificationEvent):void
@@ -167,9 +167,9 @@
             var _local_8:RoomUserData = _local_3.userDataManager.getUserData(_local_2.userId);
             if (_local_8 != null)
             {
-                _local_7 = _local_8._Str_2713;
+                _local_7 = _local_8.roomObjectId;
             }
-            listener.events.dispatchEvent(new RoomSessionChatEvent(_local_4, _local_3, _local_6._Str_2713, "", _local_5, SystemChatStyleEnum.GENERIC, null, _local_7));
+            listener.events.dispatchEvent(new RoomSessionChatEvent(_local_4, _local_3, _local_6.roomObjectId, "", _local_5, SystemChatStyleEnum.GENERIC, null, _local_7));
         }
 
         private function _Str_23267(k:HandItemReceivedMessageEvent):void

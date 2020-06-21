@@ -112,7 +112,7 @@
                 _local_6 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_3.getId());
                 if (_local_6 != null)
                 {
-                    _local_2.push(new _Str_3405(_local_6._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_6.name));
+                    _local_2.push(new _Str_3405(_local_6.roomObjectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_6.name));
                 }
                 _local_5++;
             }

@@ -881,7 +881,7 @@
                         _local_5 = (_handler as FurniturePresentWidgetHandler).container.roomSession.userDataManager.getUserDataByIndex(_local_4.getId());
                         if (((!(_local_5 == null)) && (_local_5.id == this._placedItemId)))
                         {
-                            this._roomEngine.selectRoomObject(k, _local_5._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
+                            this._roomEngine.selectRoomObject(k, _local_5.roomObjectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                             break;
                         }
                         _local_3++;
