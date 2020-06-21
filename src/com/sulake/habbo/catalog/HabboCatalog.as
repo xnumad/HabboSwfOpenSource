@@ -1498,7 +1498,7 @@
             }
         }
 
-        private function _Str_26143(k:WindowMouseEvent):void
+        private function onSelectSearch(k:WindowMouseEvent):void
         {
             var _local_2:ITextFieldWindow = (k.target as ITextFieldWindow);
             if (_local_2)
