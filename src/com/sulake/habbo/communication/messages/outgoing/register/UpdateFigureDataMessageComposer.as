@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_4639 implements IMessageComposer 
+    public class UpdateFigureDataMessageComposer implements IMessageComposer
     {
         private var _data:Array;
 
-        public function _Str_4639(k:String, _arg_2:String)
+        public function UpdateFigureDataMessageComposer(k:String, _arg_2:String)
         {
             this._data = [];
             super();

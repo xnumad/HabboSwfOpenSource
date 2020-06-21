@@ -383,7 +383,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.advertisement.InterstitialMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.advertisement.RoomAdErrorEvent;
-	import com.sulake.habbo.communication.messages.outgoing.register._Str_4639;
+	import com.sulake.habbo.communication.messages.outgoing.register.UpdateFigureDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9884;
 	import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9928;
 	import com.sulake.habbo.communication.messages.outgoing._Str_497._Str_16208;
@@ -1749,7 +1749,7 @@
             OUTGOING_PACKETS[2721] = _Str_10410;
             OUTGOING_PACKETS[2725] = _Str_11893;
             OUTGOING_PACKETS[273] = GetCreditsInfoComposer;
-            OUTGOING_PACKETS[2730] = _Str_4639;
+            OUTGOING_PACKETS[2730] = UpdateFigureDataMessageComposer;
             OUTGOING_PACKETS[2735] = _Str_10123;
             OUTGOING_PACKETS[2741] = _Str_7498;
             OUTGOING_PACKETS[2742] = _Str_7827;

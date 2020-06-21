@@ -20,7 +20,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing.register._Str_4639;
+    import com.sulake.habbo.communication.messages.outgoing.register.UpdateFigureDataMessageComposer;
     import com.sulake.habbo.avatar.events.AvatarUpdateEvent;
     import com.sulake.habbo.avatar.structure.figure.IFigurePartSet;
     import com.sulake.habbo.avatar.common.AvatarEditorGridPartItem;
@@ -301,7 +301,7 @@
 
         public function saveCurrentSelection():void
         {
-            var _local_3:_Str_4639;
+            var _local_3:UpdateFigureDataMessageComposer;
             var k:String = this.figureData.getFigureString();
             var _local_2:String = this.figureData.gender;
             if (this._editorSaver != null)
@@ -310,7 +310,7 @@
             }
             else
             {
-                _local_3 = new _Str_4639(k, _local_2);
+                _local_3 = new UpdateFigureDataMessageComposer(k, _local_2);
                 this._manager.communication.connection.send(_local_3);
                 this._manager.events.dispatchEvent(new AvatarUpdateEvent(k));
                 _local_3.dispose();

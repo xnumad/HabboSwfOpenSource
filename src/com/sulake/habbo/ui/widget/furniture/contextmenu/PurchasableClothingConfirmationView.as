@@ -9,7 +9,7 @@
     import com.sulake.room.object.IRoomObject;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.inventory.enum.FurniCategory;
-    import com.sulake.habbo.communication.messages.outgoing.register._Str_4639;
+    import com.sulake.habbo.communication.messages.outgoing.register.UpdateFigureDataMessageComposer;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.window.components.IWidgetWindow;
@@ -90,7 +90,7 @@
             this._newFigureString = this._widget.handler.container.avatarRenderManager.getFigureStringWithFigureIds(this._widget.handler.container.sessionDataManager.figure, this._widget.handler.container.sessionDataManager.gender, _local_5);
             if (this._widget.handler.container.inventory.hasBoundFigureSetFurniture(this._furnitureData.className))
             {
-                this._widget.handler.container.connection.send(new _Str_4639(this._newFigureString, this._widget.handler.container.sessionDataManager.gender));
+                this._widget.handler.container.connection.send(new UpdateFigureDataMessageComposer(this._newFigureString, this._widget.handler.container.sessionDataManager.gender));
             }
             else
             {
@@ -176,7 +176,7 @@
                     return;
                 case SAVE_BUTTON:
                     this._widget.handler.container.connection.send(new _Str_11024(this._requestObjectId));
-                    this._widget.handler.container.connection.send(new _Str_4639(this._newFigureString, this._widget.handler.container.sessionDataManager.gender));
+                    this._widget.handler.container.connection.send(new UpdateFigureDataMessageComposer(this._newFigureString, this._widget.handler.container.sessionDataManager.gender));
                     this.close();
                     return;
             }
