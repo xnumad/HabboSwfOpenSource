@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_463
+﻿package com.sulake.habbo.communication.messages.outgoing.recycler
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 

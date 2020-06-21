@@ -136,9 +136,9 @@
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10231;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_12242;
-    import com.sulake.habbo.communication.messages.outgoing._Str_463._Str_11638;
-    import com.sulake.habbo.communication.messages.outgoing._Str_463._Str_11776;
-    import com.sulake.habbo.communication.messages.outgoing._Str_463._Str_12504;
+    import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11638;
+    import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11776;
+    import com.sulake.habbo.communication.messages.outgoing.recycler._Str_12504;
     import com.sulake.habbo.catalog.navigation.CatalogNavigator;
     import com.sulake.habbo.catalog.viewer.Offer;
     import com.sulake.habbo.catalog.club.ClubBuyOfferData;
