@@ -379,7 +379,7 @@
             }
             var _local_2:int = this._container.roomSession.roomId;
             var _local_3:int = this._container.sessionDataManager.userId;
-            var _local_4:RoomUserData = this._container.roomSession.userDataManager._Str_6958(k, RoomObjectTypeEnum.PET);
+            var _local_4:RoomUserData = this._container.roomSession.userDataManager.getUserDataByType(k, RoomObjectTypeEnum.PET);
             if (_local_4 == null)
             {
                 return;

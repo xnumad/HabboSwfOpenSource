@@ -73,7 +73,7 @@
                     {
                         return null;
                     }
-                    _local_7 = _local_3.userDataManager._Str_6958(_local_2.objectId, _local_2.objectType);
+                    _local_7 = _local_3.userDataManager.getUserDataByType(_local_2.objectId, _local_2.objectType);
                     if (_local_7)
                     {
                         _local_4 = this._container.roomEngine.getRoomObjectBoundingRectangle(_local_3.roomId, _local_7._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, this._container.getFirstCanvasId());

@@ -753,7 +753,7 @@
                     else
                     {
                         _local_24 = this.handler.container.roomEngine.activeRoomId;
-                        _local_25 = this.handler.container.roomSessionManager.getSession(_local_24).userDataManager._Str_6958(_local_19.botId, 4);
+                        _local_25 = this.handler.container.roomSessionManager.getSession(_local_24).userDataManager.getUserDataByType(_local_19.botId, 4);
                         messageListener.processWidgetMessage(new RoomWidgetRoomObjectMessage(RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_INFO, _local_25._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER));
                         this.handler.container.roomEngine.selectAvatar(_local_24, _local_25._Str_2713);
                     }

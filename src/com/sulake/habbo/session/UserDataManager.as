@@ -42,10 +42,10 @@
 
         public function getUserData(k:int):RoomUserData
         {
-            return this._Str_6958(k, TYPE_USER);
+            return this.getUserDataByType(k, TYPE_USER);
         }
 
-        public function _Str_6958(k:int, _arg_2:int):RoomUserData
+        public function getUserDataByType(k:int, _arg_2:int):RoomUserData
         {
             var _local_3:RoomUserData;
             var _local_4:Map = this._userDataByType.getValue(_arg_2);
@@ -191,12 +191,12 @@
 
         public function _Str_8631(k:int):RoomUserData
         {
-            return this._Str_6958(k, TYPE_PET);
+            return this.getUserDataByType(k, TYPE_PET);
         }
 
         public function _Str_17237(k:int):RoomUserData
         {
-            return this._Str_6958(k, TYPE_RENTABLE_BOT);
+            return this.getUserDataByType(k, TYPE_RENTABLE_BOT);
         }
 
         public function requestPetInfo(k:int):void

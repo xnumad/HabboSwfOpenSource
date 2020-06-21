@@ -1329,7 +1329,7 @@
             {
                 return;
             }
-            var _local_4:RoomUserData = _local_3.userDataManager._Str_6958(k, RoomObjectTypeEnum.HABBO);
+            var _local_4:RoomUserData = _local_3.userDataManager.getUserDataByType(k, RoomObjectTypeEnum.HABBO);
             if (_local_4 != null)
             {
                 this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_4._Str_2713, RoomObjectVariableEnum.FIGURE_GUIDE_STATUS, _arg_2);
