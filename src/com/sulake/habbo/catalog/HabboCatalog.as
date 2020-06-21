@@ -2862,7 +2862,7 @@
         {
             if (this._guildMembershipsController)
             {
-                this._guildMembershipsController._Str_23306(k);
+                this._guildMembershipsController.onGuildMembershipsMessageEvent(k);
             }
         }
 

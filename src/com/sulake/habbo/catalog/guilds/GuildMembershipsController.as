@@ -44,7 +44,7 @@
             }
         }
 
-        public function _Str_23306(k:GuildMembershipsMessageEvent):void
+        public function onGuildMembershipsMessageEvent(k:GuildMembershipsMessageEvent):void
         {
             var _local_2:Array = k.guilds.slice(0, k.guilds.length);
             if (((this._guildSelectorWidget) && (!(this._guildSelectorWidget.disposed))))
