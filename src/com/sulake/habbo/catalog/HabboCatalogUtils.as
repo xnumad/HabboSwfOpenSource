@@ -24,7 +24,7 @@
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_4615;
+    import com.sulake.habbo.communication.messages.incoming.catalog.BundleDiscountRuleset;
     import com.sulake.habbo.tracking.HabboTracking;
     import com.sulake.habbo.room.ImageResult;
     import __AS3__.vec.Vector;
@@ -418,7 +418,7 @@
 
         private function _Str_23707(k:int):int
         {
-            var _local_2:_Str_4615 = this._habboCatalog.bundleDiscountRuleset;
+            var _local_2:BundleDiscountRuleset = this._habboCatalog.bundleDiscountRuleset;
             var _local_3:int = (k / _local_2._Str_9227);
             return _local_3 * _local_2._Str_23802;
         }
@@ -427,7 +427,7 @@
         {
             var _local_5:int;
             var _local_2:int;
-            var _local_3:_Str_4615 = this._habboCatalog.bundleDiscountRuleset;
+            var _local_3:BundleDiscountRuleset = this._habboCatalog.bundleDiscountRuleset;
             var _local_4:int = (k / _local_3._Str_9227);
             if (_local_4 >= _local_3._Str_21500)
             {
@@ -445,7 +445,7 @@
         {
             var _local_4:int;
             var _local_2:int;
-            var _local_3:_Str_4615 = this._habboCatalog.bundleDiscountRuleset;
+            var _local_3:BundleDiscountRuleset = this._habboCatalog.bundleDiscountRuleset;
             for each (_local_4 in _local_3._Str_25155)
             {
                 if (k >= _local_4)

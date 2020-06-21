@@ -41,7 +41,7 @@
     import com.sulake.habbo.room.preview.RoomPreviewer;
     import com.sulake.habbo.catalog.guilds.GuildMembershipsController;
     import com.sulake.habbo.catalog.targetedoffers.OfferController;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_4615;
+    import com.sulake.habbo.communication.messages.incoming.catalog.BundleDiscountRuleset;
     import com.sulake.habbo.catalog.navigation.RequestedPage;
     import com.sulake.habbo.catalog.purchase.RoomAdPurchaseData;
     import com.sulake.habbo.catalog.purchase.RentConfirmationWindow;
@@ -314,7 +314,7 @@
         private var _utils:HabboCatalogUtils;
         private var _Str_13637:Boolean = false;
         private var _Str_8001:String = null;
-        private var _bundleDiscountRuleset:_Str_4615 = null;
+        private var _bundleDiscountRuleset:BundleDiscountRuleset = null;
         private var _requestedPage:RequestedPage;
         private var _pageId:int;
         private var _roomAdPurchaseData:RoomAdPurchaseData;
@@ -3062,7 +3062,7 @@
             return (getBoolean("bundle.dynamic.discounts.enabled")) && (!(this._catalogType == CatalogType.BUILDER));
         }
 
-        public function get bundleDiscountRuleset():_Str_4615
+        public function get bundleDiscountRuleset():BundleDiscountRuleset
         {
             return this._bundleDiscountRuleset;
         }

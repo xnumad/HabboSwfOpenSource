@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4615 
+    public class BundleDiscountRuleset
     {
         private var _Str_20535:int;
         private var _Str_19937:int;
@@ -10,7 +10,7 @@
         private var _Str_20460:int;
         private var _Str_16144:Array;
 
-        public function _Str_4615(k:IMessageDataWrapper)
+        public function BundleDiscountRuleset(k:IMessageDataWrapper)
         {
             var _local_3:int;
             super();
