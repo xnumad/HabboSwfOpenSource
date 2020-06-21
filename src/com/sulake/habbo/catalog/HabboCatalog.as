@@ -694,7 +694,7 @@
             if (((!(this._initialized)) && (this._productDataReady)))
             {
                 this._Str_7718();
-                this._Str_25270();
+                this.createCatalogNavigators();
                 this._Str_22909();
                 this._initialized = true;
                 this.updatePurse();
@@ -1424,7 +1424,7 @@
             this.send(new _Str_11580());
         }
 
-        private function _Str_25270():void
+        private function createCatalogNavigators():void
         {
             this._catalogNavigators = new Dictionary();
             this._catalogNavigators[CatalogType.NORMAL] = new CatalogNavigator(this, this._mainContainer, CatalogType.NORMAL);
