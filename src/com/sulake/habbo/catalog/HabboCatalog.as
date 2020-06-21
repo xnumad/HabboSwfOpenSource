@@ -325,7 +325,7 @@
         private var _frontPageItems:Vector.<FrontPageItem>;
         private var _keyUpSearchTimer:Timer;
         private var _pagesVisibleInBuilderMode:Dictionary;
-        private var _Str_21515:Boolean;
+        private var _placeMultipleObjects:Boolean;
         private var _Str_18106:int = -1;
         private var _Str_16097:int;
         private var _Str_19671:int;
@@ -2437,7 +2437,7 @@
                 this._Str_8970 = k;
                 this._Str_15729();
                 this._isObjectMoverRequested = true;
-                this._Str_21515 = _arg_3;
+                this._placeMultipleObjects = _arg_3;
             }
         }
 
@@ -2628,7 +2628,7 @@
                                 this.send(new _Str_11648(_local_7, this._purchasableOffer.offerId, _local_3.extraParam, k._Str_7031));
                                 break;
                         }
-                        if (this._Str_21515)
+                        if (this._placeMultipleObjects)
                         {
                             this._Str_8289(_local_5, this._purchasableOffer, true);
                         }
