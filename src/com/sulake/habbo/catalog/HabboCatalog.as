@@ -2899,7 +2899,7 @@
             this.send(new _Str_12467(k.offerId));
         }
 
-        public function _Str_24636(k:int):void
+        public function rememberPageDuringVipPurchase(k:int):void
         {
             var _local_2:ICatalogNode = this.currentCatalogNavigator.getNodeById(k);
             if (_local_2)

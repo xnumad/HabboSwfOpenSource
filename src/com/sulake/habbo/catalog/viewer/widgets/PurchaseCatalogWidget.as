@@ -296,7 +296,7 @@
 
         private function _Str_25989(k:WindowMouseEvent):void
         {
-            this._catalog._Str_24636(page.pageId);
+            this._catalog.rememberPageDuringVipPurchase(page.pageId);
             this._catalog.openClubCenter();
             HabboTracking.getInstance().trackEventLog("Catalog", "click", "BUY_CLUB");
         }
