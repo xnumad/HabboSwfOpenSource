@@ -324,7 +324,7 @@
         private var _furnitureData:Vector.<IFurnitureData>;
         private var _frontPageItems:Vector.<FrontPageItem>;
         private var _keyUpSearchTimer:Timer;
-        private var _Str_19956:Dictionary;
+        private var _pagesVisibleInBuilderMode:Dictionary;
         private var _Str_21515:Boolean;
         private var _Str_18106:int = -1;
         private var _Str_16097:int;
@@ -591,7 +591,7 @@
             this._videoOfferManager = new VideoOfferManager(this);
             this._offerController = new OfferController(this);
             this._furnitureData = this._sessionDataManager.getFurniData(this);
-            this._Str_19956 = null;
+            this._pagesVisibleInBuilderMode = null;
         }
 
         private function addMessageEvent(k:IMessageEvent):void
@@ -1637,7 +1637,7 @@
         public function furniDataReady():void
         {
             this._furnitureData = this._sessionDataManager.getFurniData(this);
-            this._Str_19956 = null;
+            this._pagesVisibleInBuilderMode = null;
         }
 
         private function onRoomSessionEvent(k:RoomSessionEvent):void
