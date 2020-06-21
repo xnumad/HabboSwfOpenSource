@@ -296,7 +296,7 @@
         private var _giftReceiver:String;
         private var _skipToGifting:Boolean;
         private var _firstBalanceCredits:Boolean = true;
-        private var _Str_17838:Boolean = false;
+        private var _privateRoomSessionActive:Boolean = false;
         private var _giftWrappingConfiguration:GiftWrappingConfiguration;
         private var _clubGiftController:ClubGiftController;
         private var _clubOfferHandler:ClubOfferHandler;
@@ -1052,7 +1052,7 @@
 
         public function get privateRoomSessionActive():Boolean
         {
-            return this._Str_17838;
+            return this._privateRoomSessionActive;
         }
 
         public function get tradingActive():Boolean
@@ -1645,7 +1645,7 @@
             switch (k.type)
             {
                 case RoomSessionEvent.STARTED:
-                    this._Str_17838 = k.session.isPrivateRoom;
+                    this._privateRoomSessionActive = k.session.isPrivateRoom;
                     this._roomSession = k.session;
                     if (this._recyclerLogic != null)
                     {
@@ -1653,7 +1653,7 @@
                     }
                     break;
                 case RoomSessionEvent.ENDED:
-                    this._Str_17838 = false;
+                    this._privateRoomSessionActive = false;
                     this._roomSession = null;
                     if (this._recyclerLogic != null)
                     {
