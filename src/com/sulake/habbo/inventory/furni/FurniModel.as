@@ -97,7 +97,7 @@
             this._categorySelection = new Dictionary();
             this._categorySelection[InventoryCategory.FURNI] = null;
             this._categorySelection[InventoryCategory.RENTABLES] = null;
-            this._Str_22374();
+            this.removeUnseenFurniCounter();
             this._view = new FurniView(this, _arg_2, this._windowManager, this._assets, this._roomEngine);
         }
 
@@ -460,7 +460,7 @@
             this._view._Str_2944();
         }
 
-        public function _Str_22374():void
+        public function removeUnseenFurniCounter():void
         {
             this._furniData = new Vector.<GroupItem>(0);
             if (this._view != null)
