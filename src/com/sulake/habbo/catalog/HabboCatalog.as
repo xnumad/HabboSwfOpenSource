@@ -2369,7 +2369,7 @@
             }
             if (((this.roomSession.isGuildRoom) && (!(getBoolean("builders.club.furniture.placement.group.room.enabled")))))
             {
-                return BuilderFurniPlaceableStatus._Str_14160;
+                return BuilderFurniPlaceableStatus.GUILD_ROOM;
             }
             if (this.builderSecondsLeft <= 0)
             {

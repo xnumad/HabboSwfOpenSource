@@ -145,7 +145,7 @@
                         _local_3.assetUri = "icons_builder_error_room";
                         _local_4.caption = "${builder.placement_widget.error.not_room_owner}";
                         return;
-                    case BuilderFurniPlaceableStatus._Str_14160:
+                    case BuilderFurniPlaceableStatus.GUILD_ROOM:
                         _local_3.assetUri = "icons_builder_error_grouproom";
                         _local_4.caption = "${builder.placement_widget.error.group_room}";
                         return;
