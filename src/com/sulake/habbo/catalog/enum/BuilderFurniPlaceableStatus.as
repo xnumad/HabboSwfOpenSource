@@ -8,6 +8,6 @@
         public static const NOT_IN_ROOM:int = 3;
         public static const NOT_ROOM_OWNER:int = 4;
         public static const GUILD_ROOM:int = 5;
-        public static const _Str_14774:int = 6;
+        public static const VISITORS_IN_ROOM:int = 6;
     }
 }

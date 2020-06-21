@@ -149,7 +149,7 @@
                         _local_3.assetUri = "icons_builder_error_grouproom";
                         _local_4.caption = "${builder.placement_widget.error.group_room}";
                         return;
-                    case BuilderFurniPlaceableStatus._Str_14774:
+                    case BuilderFurniPlaceableStatus.VISITORS_IN_ROOM:
                         _local_3.assetUri = "icons_builder_error_userinroom";
                         _local_4.caption = "${builder.placement_widget.error.visitors}";
                         return;

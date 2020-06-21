@@ -2381,7 +2381,7 @@
                     _local_5 = this.roomSession.userDataManager.getUserDataByIndex(_local_4.getId());
                     if (((((!(_local_5 == null)) && (_local_5.type == RoomObjectTypeEnum.HABBO)) && (!(_local_5.roomObjectId == this.roomSession.ownUserRoomId))) && (!(_local_5.isModerator))))
                     {
-                        return BuilderFurniPlaceableStatus._Str_14774;
+                        return BuilderFurniPlaceableStatus.VISITORS_IN_ROOM;
                     }
                     _local_3++;
                 }
