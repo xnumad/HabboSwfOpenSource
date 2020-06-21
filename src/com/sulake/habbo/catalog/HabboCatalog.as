@@ -705,7 +705,7 @@
                 this.createClubBuyController();
                 this.createClubExtendController();
                 this.createGroupMembershipsController();
-                this._Str_25130();
+                this.initBundleDiscounts();
                 events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_INITIALIZED));
                 this.send(new _Str_12000());
                 return true;
@@ -2923,7 +2923,7 @@
             this._doNotCloseAfterVipPurchase = (!(this._pageToOpenAfterVipPurchase == null));
         }
 
-        private function _Str_25130():void
+        private function initBundleDiscounts():void
         {
             if (getBoolean("bundle.dynamic.discounts.enabled"))
             {
