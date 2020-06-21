@@ -145,7 +145,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199));
             _local_2.addHabboConnectionMessageEvent(new _Str_3992(this._Str_7358));
             _local_2.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485));
-            _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this._Str_18891));
+            _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect));
             _local_2.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating));
             _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new _Str_4035(this._Str_4132));
@@ -766,7 +766,7 @@
             }
         }
 
-        private function _Str_18891(k:IMessageEvent):void
+        private function onCantConnect(k:IMessageEvent):void
         {
             var _local_3:SimpleAlertView;
             var _local_2:CantConnectMessageParser = (k as CantConnectMessageEvent).getParser();

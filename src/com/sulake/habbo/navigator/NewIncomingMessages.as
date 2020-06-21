@@ -141,7 +141,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_7883(this._Str_17243)));
             this._messageListeners.push(k.connection.addMessageEvent(new CollapsedCategoriesEvent(this._Str_18969)));
             this._messageListeners.push(k.connection.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this._Str_18891)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorMetaDataEvent(this._Str_25034)));
@@ -572,7 +572,7 @@
             }
         }
 
-        private function _Str_18891(k:IMessageEvent):void
+        private function onCantConnect(k:IMessageEvent):void
         {
             var _local_3:SimpleAlertView;
             var _local_2:CantConnectMessageParser = (k as CantConnectMessageEvent).getParser();
