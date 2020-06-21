@@ -113,9 +113,9 @@
             var _local_2:int = this._catalog.getBuilderFurniPlaceableStatus(this._offer);
             if (((_local_2 == BuilderFurniPlaceableStatus._Str_10467) && (k)))
             {
-                _local_2 = BuilderFurniPlaceableStatus._Str_8891;
+                _local_2 = BuilderFurniPlaceableStatus.OKAY;
             }
-            if (_local_2 == BuilderFurniPlaceableStatus._Str_8891)
+            if (_local_2 == BuilderFurniPlaceableStatus.OKAY)
             {
                 IButtonWindow(_window.findChildByName("place_one")).enable();
                 IButtonWindow(_window.findChildByName("place_many")).enable();
