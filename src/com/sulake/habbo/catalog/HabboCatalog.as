@@ -327,7 +327,7 @@
         private var _pagesVisibleInBuilderMode:Dictionary;
         private var _placeMultipleObjects:Boolean;
         private var _builderFurniCount:int = -1;
-        private var _Str_16097:int;
+        private var _builderFurniLimit:int;
         private var _Str_19671:int;
         private var _Str_14644:int;
         private var _Str_16084:int;
@@ -3004,7 +3004,7 @@
         private function _Str_24973(k:_Str_5417):void
         {
             var _local_2:_Str_6732 = k.getParser();
-            this._Str_16097 = _local_2._Str_15864;
+            this._builderFurniLimit = _local_2._Str_15864;
             this._Str_19671 = _local_2._Str_24094;
             this._Str_14644 = _local_2._Str_3709;
             this._Str_12490 = getTimer();
@@ -3053,7 +3053,7 @@
             var _local_5:String = ((this._Str_12983) ? FriendlyTime.format(this._localization, k) : ((this._Str_13454) ? FriendlyTime.format(this._localization, _local_2) : _local_4));
             this._localization.registerParameter("builder.header.status.membership", "duration", (('<font color="#ff8d00"><b>' + _local_5) + "</b></font>"));
             this._localization.registerParameter("builder.header.status.limit", "count", (('<font color="#ff8d00"><b>' + this._builderFurniCount) + "</b></font>"));
-            this._localization.registerParameter("builder.header.status.limit", "limit", (('<font color="#ff8d00"><b>' + this._Str_16097) + "</b></font>"));
+            this._localization.registerParameter("builder.header.status.limit", "limit", (('<font color="#ff8d00"><b>' + this._builderFurniLimit) + "</b></font>"));
             this._Str_19072 = getTimer();
         }
 
@@ -3191,7 +3191,7 @@
 
         public function get builderFurniLimit():int
         {
-            return this._Str_16097;
+            return this._builderFurniLimit;
         }
 
         public function get builderFurniCount():int
