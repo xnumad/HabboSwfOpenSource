@@ -141,7 +141,7 @@
             }
             if (_local_3.getActivityPointsForType(ActivityPointTypeEnum.DUCKET) < _arg_2)
             {
-                this._widget.catalog.getHabboClubOffers(ActivityPointTypeEnum.DUCKET);
+                this._widget.catalog.showNotEnoughActivityPointsAlert(ActivityPointTypeEnum.DUCKET);
                 return false;
             }
             return true;

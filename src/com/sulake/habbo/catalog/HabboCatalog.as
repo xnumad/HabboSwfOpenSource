@@ -898,7 +898,7 @@
             }
             if (((_local_10 > 0) && (_local_10 > this._purse.getActivityPointsForType(k.activityPointType))))
             {
-                this.getHabboClubOffers(k.activityPointType);
+                this.showNotEnoughActivityPointsAlert(k.activityPointType);
                 return;
             }
             if (((k is Offer) || (this._Str_14119)))
@@ -1936,7 +1936,7 @@
             {
                 if (_local_3._Str_24352)
                 {
-                    this.getHabboClubOffers(_local_3.activityPointType);
+                    this.showNotEnoughActivityPointsAlert(_local_3.activityPointType);
                 }
             }
             if (this._purchaseConfirmationDialog != null)
@@ -1972,7 +1972,7 @@
             this._windowManager.confirm("${catalog.alert.notenough.title}", "${catalog.alert.notenough.credits.description}", 0, this._Str_23433);
         }
 
-        public function getHabboClubOffers(k:int):void
+        public function showNotEnoughActivityPointsAlert(k:int):void
         {
             var _local_2:String = ("catalog.alert.notenough.activitypoints.title." + k);
             var _local_3:String = ("catalog.alert.notenough.activitypoints.description." + k);
