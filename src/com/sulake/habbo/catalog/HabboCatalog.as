@@ -2927,11 +2927,11 @@
         {
             if (getBoolean("bundle.dynamic.discounts.enabled"))
             {
-                this._Str_25131();
+                this.sendGetBundleDiscountRuleset();
             }
         }
 
-        private function _Str_25131():void
+        private function sendGetBundleDiscountRuleset():void
         {
             this.send(new _Str_11294());
         }
