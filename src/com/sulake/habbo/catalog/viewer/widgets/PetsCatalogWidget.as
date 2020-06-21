@@ -244,7 +244,7 @@
             var nameValidationInfo:String = event.nameValidationInfo;
             if (event.result != 0)
             {
-                this._catalog._Str_8986(false);
+                this._catalog.purchaseWillBeGift(false);
             }
             switch (event.result)
             {

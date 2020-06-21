@@ -947,7 +947,7 @@
             }
         }
 
-        public function _Str_8986(k:Boolean):void
+        public function purchaseWillBeGift(k:Boolean):void
         {
             this._Str_14119 = k;
         }

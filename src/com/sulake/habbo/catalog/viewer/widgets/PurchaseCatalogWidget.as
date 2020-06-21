@@ -143,7 +143,7 @@
             _window.findChildByName("selection_information").visible = false;
             _window.findChildByName("default_buttons").visible = true;
             this._Str_24516(this._offer);
-            this._catalog._Str_8986(false);
+            this._catalog.purchaseWillBeGift(false);
             if (this._stub == null)
             {
                 this._Str_10113(this._Str_7923);
@@ -247,7 +247,7 @@
                 this._catalog.openClubCenter();
                 return;
             }
-            this._catalog._Str_8986(isGift);
+            this._catalog.purchaseWillBeGift(isGift);
             if (this._purchaseCallback == null)
             {
                 if (this._offer != null)
