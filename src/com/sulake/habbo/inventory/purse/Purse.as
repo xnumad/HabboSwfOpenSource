@@ -84,12 +84,12 @@
             this._minutesUntilExpiration = k;
         }
 
-        public function get _Str_6682():Boolean
+        public function get clubIsExpiring():Boolean
         {
             return this._isExpiring;
         }
 
-        public function set _Str_6682(k:Boolean):void
+        public function set clubIsExpiring(k:Boolean):void
         {
             this._isExpiring = k;
         }

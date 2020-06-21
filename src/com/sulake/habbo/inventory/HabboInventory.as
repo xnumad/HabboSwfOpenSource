@@ -325,9 +325,9 @@
             return this._purse.clubHasEverBeenMember;
         }
 
-        public function get _Str_6682():Boolean
+        public function get clubIsExpiring():Boolean
         {
-            return this._purse._Str_6682;
+            return this._purse.clubIsExpiring;
         }
 
         public function get _Str_8836():Boolean
@@ -369,7 +369,7 @@
             this._purse.clubDays = _arg_2;
             this._purse.clubHasEverBeenMember = _arg_3;
             this._purse.isVIP = _arg_4;
-            this._purse._Str_6682 = _arg_5;
+            this._purse.clubIsExpiring = _arg_5;
             this._purse._Str_8836 = _arg_6;
             this._purse.minutesUntilExpiration = _arg_7;
             this._purse.minutesSinceLastModified = _arg_8;

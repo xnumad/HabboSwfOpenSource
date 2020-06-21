@@ -136,7 +136,7 @@
 
         public function _Str_5219(k:HabboInventoryHabboClubEvent):void
         {
-            if ((((this._toolbar.inventory._Str_6682) && (!(this._view))) && (this._Str_17305())))
+            if ((((this._toolbar.inventory.clubIsExpiring) && (!(this._view))) && (this._Str_17305())))
             {
                 this._view = this.createWindow();
                 if (this._expirationTimer != null)

@@ -45,7 +45,7 @@
 
         public function _Str_5219(k:HabboInventoryHabboClubEvent):void
         {
-            if ((((this._toolbar.inventory._Str_6682) && (!(this._view))) && (this._Str_20377())))
+            if ((((this._toolbar.inventory.clubIsExpiring) && (!(this._view))) && (this._Str_20377())))
             {
                 this._toolbar.extensionView.detachExtension(VIDEO_OFFER);
                 this.destroyWindow();
@@ -68,7 +68,7 @@
             {
                 return;
             }
-            if ((((k <= 0) || (this._promoClosed)) || ((this._toolbar.inventory._Str_6682) && (this._Str_20377()))))
+            if ((((k <= 0) || (this._promoClosed)) || ((this._toolbar.inventory.clubIsExpiring) && (this._Str_20377()))))
             {
                 if (this._view)
                 {
