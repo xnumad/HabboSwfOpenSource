@@ -94,12 +94,12 @@
             this._isExpiring = k;
         }
 
-        public function get _Str_8836():Boolean
+        public function get citizenshipVipIsExpiring():Boolean
         {
             return this._isCitizenshipVipExpiring;
         }
 
-        public function set _Str_8836(k:Boolean):void
+        public function set citizenshipVipIsExpiring(k:Boolean):void
         {
             this._isCitizenshipVipExpiring = k;
         }

@@ -13,7 +13,7 @@
         function get clubLevel():int;
         function get clubHasEverBeenMember():Boolean;
         function get clubIsExpiring():Boolean;
-        function get _Str_8836():Boolean;
+        function get citizenshipVipIsExpiring():Boolean;
         function get _Str_6338():int;
         function get tradingActive():Boolean;
         function get _Str_25019():Boolean;
