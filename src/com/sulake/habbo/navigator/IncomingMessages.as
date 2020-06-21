@@ -152,7 +152,7 @@
             _local_2.addHabboConnectionMessageEvent(new CanCreateRoomMessageEvent(this._Str_25812));
             _local_2.addHabboConnectionMessageEvent(new _Str_5771(this._Str_8576));
             _local_2.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5891(this._Str_18130));
+            _local_2.addHabboConnectionMessageEvent(new _Str_5891(this.onNoOwnedRoomsAlert));
             _local_2.addHabboConnectionMessageEvent(new _Str_7883(this._Str_17243));
             _local_2.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947));
             _local_2.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972));
@@ -723,7 +723,7 @@
             this._navigator.trackNavigationDataPoint("Room Forward", "go.roomforward", "", k);
         }
 
-        private function _Str_18130(k:_Str_5891):void
+        private function onNoOwnedRoomsAlert(k:_Str_5891):void
         {
             this._navigator.startRoomCreation();
         }

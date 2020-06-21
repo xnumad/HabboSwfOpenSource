@@ -118,7 +118,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6030(this._Str_8265)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5891(this._Str_18130)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5891(this.onNoOwnedRoomsAlert)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorLiftedRoomsEvent(this._Str_23664)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSavedSearchesEvent(this._Str_11632)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened)));
@@ -529,7 +529,7 @@
             LegacyNavigator(this._navigator.legacyNavigator).trackNavigationDataPoint("Room Forward", "go.roomforward", "", k);
         }
 
-        private function _Str_18130(k:_Str_5891):void
+        private function onNoOwnedRoomsAlert(k:_Str_5891):void
         {
             LegacyNavigator(this._navigator.legacyNavigator).startRoomCreation();
         }
