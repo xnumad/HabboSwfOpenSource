@@ -2473,7 +2473,7 @@
                 this._Str_4663(true);
                 if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
                 {
-                    this._Str_7529();
+                    this.resetObjectMover();
                     return;
                 }
                 _local_2 = k._Str_9566;
@@ -2483,7 +2483,7 @@
                 {
                     _local_4._Str_8347(true, _local_3);
                 }
-                this._Str_7529(false);
+                this.resetObjectMover(false);
                 this._Str_5298();
             }
         }
@@ -2513,7 +2513,7 @@
                 this._Str_4663(true);
                 if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
                 {
-                    this._Str_7529();
+                    this.resetObjectMover();
                     return;
                 }
                 _local_2 = null;
@@ -2527,7 +2527,7 @@
                 {
                     _local_4._Str_8347(true, _local_2);
                 }
-                this._Str_7529(false);
+                this.resetObjectMover(false);
                 this._Str_5298();
             }
         }
@@ -2546,7 +2546,7 @@
                 this._Str_4663(true);
                 if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
                 {
-                    this._Str_7529();
+                    this.resetObjectMover();
                     return;
                 }
                 _local_2 = k.category;
@@ -2571,7 +2571,7 @@
                 }
                 if (!_local_4)
                 {
-                    this._Str_7529();
+                    this.resetObjectMover();
                     return;
                 }
                 this._placedObjectPurchaseData = new PlacedObjectPurchaseData(k.roomId, k.objectId, k.category, k._Str_7031, k.x, k.y, k.direction, this._purchasableOffer);
@@ -2641,7 +2641,7 @@
             }
         }
 
-        private function _Str_7529(k:Boolean=true):void
+        private function resetObjectMover(k:Boolean=true):void
         {
             if (((k) && (this._isObjectMoverRequested)))
             {
@@ -2666,7 +2666,7 @@
         {
             if (!k)
             {
-                this._Str_7529();
+                this.resetObjectMover();
             }
             if (this._placedObjectPurchaseData != null)
             {
