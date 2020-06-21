@@ -111,7 +111,7 @@
                 return;
             }
             var _local_2:int = this._catalog.getBuilderFurniPlaceableStatus(this._offer);
-            if (((_local_2 == BuilderFurniPlaceableStatus._Str_10467) && (k)))
+            if (((_local_2 == BuilderFurniPlaceableStatus.NOT_ROOM_OWNER) && (k)))
             {
                 _local_2 = BuilderFurniPlaceableStatus.OKAY;
             }
@@ -141,7 +141,7 @@
                         _local_3.assetUri = "icons_builder_error_notroom";
                         _local_4.caption = "${builder.placement_widget.error.not_in_room}";
                         return;
-                    case BuilderFurniPlaceableStatus._Str_10467:
+                    case BuilderFurniPlaceableStatus.NOT_ROOM_OWNER:
                         _local_3.assetUri = "icons_builder_error_room";
                         _local_4.caption = "${builder.placement_widget.error.not_room_owner}";
                         return;

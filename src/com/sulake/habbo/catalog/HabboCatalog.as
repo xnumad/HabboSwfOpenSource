@@ -2365,7 +2365,7 @@
             }
             if (!this.roomSession.isRoomOwner)
             {
-                return BuilderFurniPlaceableStatus._Str_10467;
+                return BuilderFurniPlaceableStatus.NOT_ROOM_OWNER;
             }
             if (((this.roomSession.isGuildRoom) && (!(getBoolean("builders.club.furniture.placement.group.room.enabled")))))
             {
