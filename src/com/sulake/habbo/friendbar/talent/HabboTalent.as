@@ -29,7 +29,7 @@
     import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.habbo.communication.messages.parser.talent.TalentTrackLevel;
     import com.sulake.habbo.session.talent.TalentEnum;
-    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
 
     public class HabboTalent extends AbstractView implements IHabboTalent, ILinkEventTracker 
     {

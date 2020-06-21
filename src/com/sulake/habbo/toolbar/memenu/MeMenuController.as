@@ -13,7 +13,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;

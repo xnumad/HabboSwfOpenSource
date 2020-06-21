@@ -53,7 +53,7 @@
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_10695;
-    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_6216;
+    import com.sulake.habbo.communication.messages.outgoing.talent._Str_6216;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_12273;
     import com.sulake.habbo.communication.messages.parser.help.CallForHelpPendingCallsMessageParser;
     import com.sulake.habbo.communication.messages.parser.help._Str_5731;

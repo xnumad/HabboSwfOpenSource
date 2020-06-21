@@ -235,9 +235,9 @@
 	import com.sulake.habbo.communication.messages.incoming.availability._Str_17595;
 	import com.sulake.habbo.communication.messages.incoming.availability._Str_6521;
 	import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
-	import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_10709;
-	import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
-	import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_6216;
+	import com.sulake.habbo.communication.messages.outgoing.talent._Str_10709;
+	import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+	import com.sulake.habbo.communication.messages.outgoing.talent._Str_6216;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_10484;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11341;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;

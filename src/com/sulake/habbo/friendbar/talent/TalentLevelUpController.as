@@ -14,7 +14,7 @@
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
     import com.sulake.core.window.events.WindowEvent;
 
     public class TalentLevelUpController implements IDisposable 

@@ -54,7 +54,7 @@
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.session.talent.TalentEnum;
-    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;

@@ -26,7 +26,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
-    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
     import com.sulake.habbo.communication.messages.outgoing.competition._Str_10126;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IItemGridWindow;
