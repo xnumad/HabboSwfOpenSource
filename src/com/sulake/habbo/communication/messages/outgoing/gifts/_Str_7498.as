@@ -1,19 +1,16 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_391
+﻿package com.sulake.habbo.communication.messages.outgoing.gifts
 {
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_6202 implements IMessageComposer, IDisposable 
+    public class _Str_7498 implements IMessageComposer, IDisposable 
     {
-        public static const _Str_2979:int = -1;
-
         private var _array:Array;
 
-        public function _Str_6202(k:int)
+        public function _Str_7498()
         {
             this._array = new Array();
             super();
-            this._array.push(k);
         }
 
         public function getMessageArray():Array

@@ -258,11 +258,11 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_4844;
 	import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_8184;
 	import com.sulake.core.communication.messages.IMessageConfiguration;
-	import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_10410;
-	import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_18298;
-	import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_6202;
-	import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_7498;
-	import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_9957;
+	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_10410;
+	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_18298;
+	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_6202;
+	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
+	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_9957;
 	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7433;
 	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7564;
 	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7599;

@@ -19,10 +19,10 @@
     import com.sulake.habbo.communication.messages.incoming.gifts.PhoneCollectionStateMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_9957;
-    import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_10410;
-    import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_6202;
-    import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_7498;
+    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_9957;
+    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_10410;
+    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_6202;
+    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
     import flash.utils.getTimer;
     import com.sulake.habbo.toolbar.ToolbarDisplayExtensionIds;
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;

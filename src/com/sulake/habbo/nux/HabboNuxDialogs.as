@@ -25,7 +25,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.nux._Str_8454;
     import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOfferEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_6202;
+    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_6202;
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.window.utils._Str_2910;
