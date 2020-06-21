@@ -1348,7 +1348,7 @@
         public function get _Str_4878():Boolean
         {
             var _local_2:IWidgetAvatarEffect;
-            var k:Array = this.handler.container.inventory._Str_21652();
+            var k:Array = this.handler.container.inventory.getActivatedAvatarEffects();
             for each (_local_2 in k)
             {
                 if (_local_2._Str_3222)

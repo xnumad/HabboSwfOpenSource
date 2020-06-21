@@ -19,7 +19,7 @@
         function get hasRoomSession():Boolean;
         function get _Str_3455():IUnseenItemTracker;
         function getAllMyBadgeIds(_arg_1:Array):Array;
-        function _Str_21652():Array;
+        function getActivatedAvatarEffects():Array;
         function getAvatarEffects():Array;
         function _Str_12029(_arg_1:IFurnitureItem):Boolean;
         function _Str_18856(_arg_1:int):IFurnitureItem;

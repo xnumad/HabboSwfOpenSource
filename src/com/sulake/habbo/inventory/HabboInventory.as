@@ -491,7 +491,7 @@
             return (_local_2 == null) ? null : _local_2.getWindowContainer();
         }
 
-        public function _Str_21652():Array
+        public function getActivatedAvatarEffects():Array
         {
             return (this._Str_3994 == null) ? [] : this._Str_3994._Str_6532(EffectsModel._Str_14844);
         }
