@@ -131,9 +131,9 @@
             }
         }
 
-        public function _Str_6675(k:int, _arg_2:Boolean=false):void
+        public function placePetToRoom(k:int, _arg_2:Boolean=false):void
         {
-            this._model._Str_6675(k, _arg_2);
+            this._model.placePetToRoom(k, _arg_2);
         }
 
         public function getWindowContainer():IWindowContainer
@@ -321,7 +321,7 @@
             {
                 return;
             }
-            this._Str_6675(_local_2.id);
+            this.placePetToRoom(_local_2.id);
         }
 
         private function _Str_6511():void

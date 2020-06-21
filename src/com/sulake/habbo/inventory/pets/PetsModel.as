@@ -190,7 +190,7 @@
         {
         }
 
-        public function _Str_6675(k:int, _arg_2:Boolean=false):Boolean
+        public function placePetToRoom(k:int, _arg_2:Boolean=false):Boolean
         {
             var _local_5:int;
             var _local_3:Pet = this._Str_22756(k);

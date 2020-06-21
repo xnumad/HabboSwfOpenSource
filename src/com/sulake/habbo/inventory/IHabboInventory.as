@@ -24,7 +24,7 @@
         function requestSelectedFurniToMover(_arg_1:IFurnitureItem):Boolean;
         function getFloorItemById(_arg_1:int):IFurnitureItem;
         function getWallItemById(_arg_1:int):IFurnitureItem;
-        function _Str_6675(_arg_1:int, _arg_2:Boolean=false):Boolean;
+        function placePetToRoom(_arg_1:int, _arg_2:Boolean=false):Boolean;
         function setEffectSelected(_arg_1:int):void;
         function _Str_19470():int;
         function setEffectDeselected(_arg_1:int):void;

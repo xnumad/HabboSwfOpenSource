@@ -827,9 +827,9 @@
             return _local_4._Str_25304();
         }
 
-        public function _Str_6675(k:int, _arg_2:Boolean=false):Boolean
+        public function placePetToRoom(k:int, _arg_2:Boolean=false):Boolean
         {
-            return this._Str_4524._Str_6675(k, _arg_2);
+            return this._Str_4524.placePetToRoom(k, _arg_2);
         }
 
         public function _Str_6956():void

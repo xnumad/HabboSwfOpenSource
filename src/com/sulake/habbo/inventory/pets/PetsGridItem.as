@@ -115,7 +115,7 @@
                     if (this._isMouseDown)
                     {
                         this._isMouseDown = false;
-                        this._petsView._Str_6675(this._petData.id, true);
+                        this._petsView.placePetToRoom(this._petData.id, true);
                     }
                     return;
             }
