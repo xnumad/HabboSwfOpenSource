@@ -132,7 +132,7 @@
                 }
             }
             this._Str_22636(_arg_3, _arg_10);
-            this._catalog._Str_24178(_arg_3);
+            this._catalog.syncPlacedOfferWithPurchase(_arg_3);
         }
 
         public function dispose():void

@@ -2651,7 +2651,7 @@
             this._Str_8970 = null;
         }
 
-        public function _Str_24178(k:IPurchasableOffer):void
+        public function syncPlacedOfferWithPurchase(k:IPurchasableOffer):void
         {
             if (this._placedObjectPurchaseData)
             {
