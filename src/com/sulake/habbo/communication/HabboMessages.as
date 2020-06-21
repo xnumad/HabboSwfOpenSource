@@ -294,9 +294,9 @@
 	import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
-	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7023;
-	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7289;
-	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_8089;
+	import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_7023;
+	import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_7289;
+	import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_8089;
 	import com.sulake.habbo.communication.messages.incoming.landingview.PromoArticlesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.layout.RoomEntryTileMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.layout.RoomOccupiedTilesMessageEvent;

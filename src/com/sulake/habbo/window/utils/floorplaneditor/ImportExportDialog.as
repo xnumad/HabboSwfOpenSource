@@ -3,7 +3,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7289;
+    import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_7289;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
