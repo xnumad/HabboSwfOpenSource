@@ -349,7 +349,7 @@
             k.attachComponent(new HabboClubCenter(k, 0, _arg_3), [new IIDHabboClubCenter()]);
         }
 
-        public static function _Str_25557(k:IWindow, _arg_2:BitmapData, _arg_3:int=0):void
+        public static function setElementImageCentered(k:IWindow, _arg_2:BitmapData, _arg_3:int=0):void
         {
             var _local_7:IBitmapWrapperWindow;
             var _local_8:IDisplayObjectWrapper;
@@ -2775,7 +2775,7 @@
             }
             if (k)
             {
-                HabboCatalog._Str_25557(k, (_local_4.content as BitmapData));
+                HabboCatalog.setElementImageCentered(k, (_local_4.content as BitmapData));
             }
         }
 
