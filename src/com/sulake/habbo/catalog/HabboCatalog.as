@@ -566,7 +566,7 @@
             this.addMessageEvent(new SellablePetPalettesMessageEvent(this._Str_23837));
             this.addMessageEvent(new MarketPlaceOwnOffersEvent(this.onMarketPlaceOwnOffers));
             this.addMessageEvent(new _Str_5417(this._Str_24973));
-            this.addMessageEvent(new _Str_6344(this._Str_23861));
+            this.addMessageEvent(new _Str_6344(this.onMarketPlaceBuyResult));
             this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
             this.addMessageEvent(new _Str_5264(this.onCatalogPublished));
             this.addMessageEvent(new CreditBalanceEvent(this.onCreditBalance));
@@ -2159,7 +2159,7 @@
             }
         }
 
-        private function _Str_23861(k:IMessageEvent):void
+        private function onMarketPlaceBuyResult(k:IMessageEvent):void
         {
             if (this._marketplace != null)
             {
