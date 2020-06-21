@@ -36,7 +36,7 @@
             }
             k.addMessageEvent(new OpenConnectionMessageEvent(this.onRoomConnected));
             k.addMessageEvent(new FlatAccessibleMessageEvent(this._Str_24463));
-            k.addMessageEvent(new RoomReadyMessageEvent(this._Str_5963));
+            k.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
             k.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomDisconnected));
             k.addMessageEvent(new _Str_4187(this._Str_12114));
             k.addMessageEvent(new RoomQueueStatusMessageEvent(this._Str_23914));
@@ -79,7 +79,7 @@
             }
         }
 
-        private function _Str_5963(k:IMessageEvent):void
+        private function onRoomReady(k:IMessageEvent):void
         {
             var _local_5:RoomReadyMessageParser;
             var _local_2:int = _xxxRoomId;

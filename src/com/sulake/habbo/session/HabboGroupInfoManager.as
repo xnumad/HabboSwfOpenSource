@@ -20,7 +20,7 @@
             this._badges = new Map();
             if (this._sessionDataManager.communication)
             {
-                this._roomReadyMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new RoomReadyMessageEvent(this._Str_5963));
+                this._roomReadyMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
                 this._habboGroupBadgesMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new HabboGroupBadgesMessageEvent(this._Str_18218));
             }
         }
@@ -45,7 +45,7 @@
             this._sessionDataManager = null;
         }
 
-        private function _Str_5963(k:IMessageEvent):void
+        private function onRoomReady(k:IMessageEvent):void
         {
             this._sessionDataManager.send(new _Str_10770());
         }

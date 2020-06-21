@@ -430,7 +430,7 @@
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new UsersEvent(this._Str_10523));
-            this.addMessageEvent(new RoomReadyMessageEvent(this._Str_5963));
+            this.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
             this.addMessageEvent(new GetGuestRoomResultEvent(this._Str_24404));
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this._Str_23679));
             this.addMessageEvent(new _Str_11155(this._Str_24610));
@@ -725,7 +725,7 @@
             }
         }
 
-        private function _Str_5963(k:IMessageEvent):void
+        private function onRoomReady(k:IMessageEvent):void
         {
             var _local_2:RoomReadyMessageParser = RoomReadyMessageEvent(k).getParser();
             this._userRegistry._Str_19528(_local_2.roomId, "");

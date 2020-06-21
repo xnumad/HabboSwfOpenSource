@@ -182,7 +182,7 @@
             {
                 this._connection = k;
                 k.addMessageEvent(new UserObjectEvent(this.onOwnUserEvent));
-                k.addMessageEvent(new RoomReadyMessageEvent(this._Str_5963));
+                k.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
                 k.addMessageEvent(new RoomPropertyMessageEvent(this.onRoomProperty));
                 k.addMessageEvent(new RoomEntryTileMessageEvent(this.onEntryTileData));
                 k.addMessageEvent(new FloorHeightMapEvent(this.onFloorHeightMap));
@@ -243,7 +243,7 @@
             }
         }
 
-        private function _Str_5963(k:IMessageEvent):void
+        private function onRoomReady(k:IMessageEvent):void
         {
             var _local_2:RoomReadyMessageEvent = (k as RoomReadyMessageEvent);
             if ((((_local_2 == null) || (_local_2.getParser() == null)) || (k.connection == null)))
