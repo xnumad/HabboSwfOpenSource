@@ -3070,7 +3070,7 @@
             {
                 _local_8 = this.getPetType(_arg_7);
             }
-            var _local_9:IRoomObjectController = this._Str_25379(k, _arg_2, _local_8);
+            var _local_9:IRoomObjectController = this.createObjectUser(k, _arg_2, _local_8);
             if (_local_9 == null)
             {
                 return false;
@@ -3257,7 +3257,7 @@
             return true;
         }
 
-        private function _Str_25379(k:int, _arg_2:int, _arg_3:String, _arg_4:int=RoomObjectCategoryEnum.OBJECT_CATEGORY_USER):IRoomObjectController
+        private function createObjectUser(k:int, _arg_2:int, _arg_3:String, _arg_4:int=RoomObjectCategoryEnum.OBJECT_CATEGORY_USER):IRoomObjectController
         {
             var _local_5:IRoomObjectController = this.createObject(this.getRoomIdentifier(k), _arg_2, _arg_3, _arg_4);
             return _local_5;
@@ -4440,7 +4440,7 @@
                     _local_5 = RoomObjectLogicEnum.GAME_SNOWSPLASH;
                 }
             }
-            var _local_6:IRoomObjectController = this._Str_25379(k, _arg_2, _local_5, _arg_4);
+            var _local_6:IRoomObjectController = this.createObjectUser(k, _arg_2, _local_5, _arg_4);
             if (!_local_6)
             {
                 return false;
