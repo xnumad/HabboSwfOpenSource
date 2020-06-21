@@ -269,10 +269,10 @@
 	import com.sulake.habbo.communication.messages.incoming.mysterybox.MysteryBoxKeysMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.perk._Str_12157;
 	import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
-	import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_12037;
-	import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7177;
-	import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7827;
-	import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7887;
+	import com.sulake.habbo.communication.messages.outgoing.avatar._Str_12037;
+	import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7177;
+	import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7827;
+	import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7887;
 	import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.OpenMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.ApplySnapshotMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.UpdateConditionMessageComposer;

@@ -1,12 +1,12 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_411
+﻿package com.sulake.habbo.communication.messages.outgoing.avatar
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12037 implements IMessageComposer 
+    public class _Str_7887 implements IMessageComposer 
     {
         private var _data:Array;
 
-        public function _Str_12037(k:String)
+        public function _Str_7887(k:String)
         {
             this._data = new Array();
             this._data.push(k);
