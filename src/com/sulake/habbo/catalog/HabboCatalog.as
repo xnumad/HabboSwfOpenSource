@@ -440,7 +440,7 @@
         {
             if (this._roomPreviewer == null)
             {
-                this._Str_22913();
+                this.initializeRoomPreviewer();
             }
             return this._roomPreviewer;
         }
@@ -952,7 +952,7 @@
             this._skipToGifting = k;
         }
 
-        private function _Str_22913():void
+        private function initializeRoomPreviewer():void
         {
             if ((((!(this._roomEngine == null)) && (this._roomEngine.isInitialized)) && (getBoolean("catalog.furniture.animation"))))
             {
