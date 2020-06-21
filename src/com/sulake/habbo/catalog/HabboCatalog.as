@@ -1331,7 +1331,7 @@
                 {
                     this._Str_7793 = false;
                     events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_NEW_ITEMS_HIDE));
-                    this._Str_24130();
+                    this.markNewAdditionPageOpened();
                 }
                 this._Str_20975();
             }
@@ -1419,7 +1419,7 @@
             this.send(new _Str_11178(k));
         }
 
-        private function _Str_24130():void
+        private function markNewAdditionPageOpened():void
         {
             this.send(new _Str_11580());
         }
