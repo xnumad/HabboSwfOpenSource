@@ -19,7 +19,7 @@
             super();
         }
 
-        public function _Str_5276(k:IMessageEvent):void
+        public function onFriendsListFragment(k:IMessageEvent):void
         {
             var _local_3:FriendParser;
             var _local_2:FriendsListFragmentMessageParser = (k as _Str_3873).getParser();

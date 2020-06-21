@@ -120,7 +120,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226));
             _local_2.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch));
             _local_2.addHabboConnectionMessageEvent(new _Str_4187(this.onFlatAccessDenied));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
+            _local_2.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
             _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             _local_2.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344));
             _local_2.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened));
@@ -701,9 +701,9 @@
             }
         }
 
-        private function _Str_5276(k:IMessageEvent):void
+        private function onFriendsListFragment(k:IMessageEvent):void
         {
-            this._navigator.data.friendList._Str_5276(k);
+            this._navigator.data.friendList.onFriendsListFragment(k);
         }
 
         private function _Str_4132(k:IMessageEvent):void

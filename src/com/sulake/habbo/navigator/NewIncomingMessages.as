@@ -148,7 +148,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5767(this._Str_26467)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3992(this._Str_7358)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_8029(this._Str_15955)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5212(this._Str_17011)));
         }
@@ -507,9 +507,9 @@
             }
         }
 
-        private function _Str_5276(k:IMessageEvent):void
+        private function onFriendsListFragment(k:IMessageEvent):void
         {
-            this.data.friendList._Str_5276(k);
+            this.data.friendList.onFriendsListFragment(k);
         }
 
         private function _Str_4132(k:IMessageEvent):void

@@ -168,7 +168,7 @@
         {
             this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_5567(this.onMessengerInit));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
+            this._communicationManager.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
             context.addLinkEventTracker(this);
             this.send(new _Str_9977());
         }
@@ -427,7 +427,7 @@
             this._Str_3764 = int(_local_2.id);
         }
 
-        private function _Str_5276(k:IMessageEvent):void
+        private function onFriendsListFragment(k:IMessageEvent):void
         {
             var _local_3:FriendParser;
             var _local_2:FriendsListFragmentMessageParser = (k as _Str_3873).getParser();
