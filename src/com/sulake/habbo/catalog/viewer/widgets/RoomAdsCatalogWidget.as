@@ -55,7 +55,7 @@
                 this._messageListener = new RoomAdPurchaseInfoEvent(this._Str_22552);
                 k.addMessageEvent(this._messageListener);
             }
-            this._catalog._Str_15954();
+            this._catalog.getRoomAdsPurchaseInfo();
             window.findChildByName("name_input_text").addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_24912);
             window.findChildByName("desc_input_text").addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_24087);
             events.addEventListener(CatalogWidgetEvent.PURCHASE, this._Str_24262);
@@ -236,7 +236,7 @@
 
         private function _Str_24262(k:_Str_3308):void
         {
-            this._catalog._Str_15954();
+            this._catalog.getRoomAdsPurchaseInfo();
             window.findChildByName("name_input_text").caption = "";
             window.findChildByName("desc_input_text").caption = "";
             if (this._catalog._Str_3064)

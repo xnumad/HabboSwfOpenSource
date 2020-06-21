@@ -1002,7 +1002,7 @@
             var _local_8:ICatalogNode = this._Str_3361.getNodeByName(k);
             if (((!(_local_8 == null)) && (_local_8.pageId == _local_7)))
             {
-                this._Str_15954();
+                this.getRoomAdsPurchaseInfo();
             }
         }
 
@@ -1154,7 +1154,7 @@
             this.send(new _Str_11584(k, _arg_2, _arg_3, _arg_4));
         }
 
-        public function _Str_15954():void
+        public function getRoomAdsPurchaseInfo():void
         {
             this.send(new _Str_10589());
         }
