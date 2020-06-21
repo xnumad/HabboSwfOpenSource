@@ -402,7 +402,7 @@
             if (((!(_local_3 == null)) && (_local_3.partSet)))
             {
                 _local_4 = _local_3.partSet;
-                if ((((!(_local_4 == null)) && (_local_4.isSellable)) && (!(k._Str_14439(_local_4.id)))))
+                if ((((!(_local_4 == null)) && (_local_4.isSellable)) && (!(k.hasFigureSetIdInInventory(_local_4.id)))))
                 {
                     _local_2 = true;
                 }
@@ -481,7 +481,7 @@
             if (((_local_2) && (_local_2.partSet)))
             {
                 _local_3 = _local_2.partSet;
-                if (((_local_3.isSellable) && (!(k._Str_14439(_local_3.id)))))
+                if (((_local_3.isSellable) && (!(k.hasFigureSetIdInInventory(_local_3.id)))))
                 {
                     _local_4 = this._Str_8066(0);
                     if (((!(_local_4 == null)) && (_local_4.partSet == null)))

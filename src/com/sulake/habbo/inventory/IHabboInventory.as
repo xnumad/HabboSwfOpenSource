@@ -38,7 +38,7 @@
         function returnInventoryFurniFromRecycler(_arg_1:int):Boolean;
         function getItemWithStripId(_arg_1:int):Boolean;
         function _Str_21312(_arg_1:int):Boolean;
-        function _Str_14439(_arg_1:int):Boolean;
+        function hasFigureSetIdInInventory(_arg_1:int):Boolean;
         function hasBoundFigureSetFurniture(_arg_1:String):Boolean;
         function checkCategoryInitilization(_arg_1:String):Boolean;
         function getNonRentedInventoryIds(_arg_1:String, _arg_2:int):Array;

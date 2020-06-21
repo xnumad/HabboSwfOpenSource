@@ -977,7 +977,7 @@
             return _local_3;
         }
 
-        public function _Str_14439(k:int):Boolean
+        public function hasFigureSetIdInInventory(k:int):Boolean
         {
             return this._figureSetIds.indexOf(k) > -1;
         }

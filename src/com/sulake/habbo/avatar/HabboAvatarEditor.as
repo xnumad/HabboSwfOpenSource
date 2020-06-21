@@ -468,7 +468,7 @@
                         _local_30 = true;
                         if (_local_6.isSellable)
                         {
-                            _local_30 = (((this.manager.inventory) && (this._manager.inventory._Str_14439(_local_6.id))) || (this.isDevelopmentEditor()));
+                            _local_30 = (((this.manager.inventory) && (this._manager.inventory.hasFigureSetIdInInventory(_local_6.id))) || (this.isDevelopmentEditor()));
                         }
                         if (_local_30)
                         {
