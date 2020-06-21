@@ -34,7 +34,7 @@
             var _local_6:ITextWindow = (_window.findChildByName("quantity") as ITextWindow);
             if (_local_6 != null)
             {
-                if (((k.catalog._Str_7593) && (this._quantity > 1)))
+                if (((k.catalog.multiplePurchaseEnabled) && (this._quantity > 1)))
                 {
                     _local_6.text = ("X " + this._quantity);
                 }

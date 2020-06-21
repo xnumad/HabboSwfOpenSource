@@ -57,7 +57,7 @@
             }
             _Str_2819(CatalogWidgetEnum.TOTAL_PRICE);
             window.visible = false;
-            if (!this._habboCatalog._Str_7593)
+            if (!this._habboCatalog.multiplePurchaseEnabled)
             {
                 return true;
             }

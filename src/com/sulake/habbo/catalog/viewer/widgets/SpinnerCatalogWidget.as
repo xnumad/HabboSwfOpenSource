@@ -61,7 +61,7 @@
             }
             _Str_2819(CatalogWidgetEnum.SPINNER);
             window.visible = false;
-            if (!this._catalog._Str_7593)
+            if (!this._catalog.multiplePurchaseEnabled)
             {
                 return true;
             }

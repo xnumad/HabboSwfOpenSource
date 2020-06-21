@@ -886,7 +886,7 @@
             Logger.log(("buy: " + [_arg_4, k.offerId, _arg_3]));
             var _local_9:int = k.priceInCredits;
             var _local_10:int = k.priceInActivityPoints;
-            if (this._Str_7593)
+            if (this.multiplePurchaseEnabled)
             {
                 _local_9 = this._utils._Str_4488(true, k.priceInCredits, _arg_4);
                 _local_10 = this._utils._Str_4488(true, k.priceInActivityPoints, _arg_4);
@@ -3067,7 +3067,7 @@
             return this._bundleDiscountRuleset;
         }
 
-        public function get _Str_7593():Boolean
+        public function get multiplePurchaseEnabled():Boolean
         {
             return (getBoolean("catalog.multiple.purchase.enabled")) && (!(this._catalogType == CatalogType.BUILDER));
         }

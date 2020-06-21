@@ -270,7 +270,7 @@
             this._Str_3160.caption = _local_3.localizationName;
             this._Str_3938.caption = _local_3.localizationDescription;
             this._Str_3938.y = (this._Str_3160.y + this._Str_3160.height);
-            if ((((this._habboCatalog._Str_7593) && (_local_3.bundlePurchaseAllowed)) && (this._Str_21871)))
+            if ((((this._habboCatalog.multiplePurchaseEnabled) && (_local_3.bundlePurchaseAllowed)) && (this._Str_21871)))
             {
                 this._Str_24064();
                 this._Str_25636(_local_3);

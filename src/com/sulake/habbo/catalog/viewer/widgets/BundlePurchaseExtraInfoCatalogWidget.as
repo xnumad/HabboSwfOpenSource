@@ -53,7 +53,7 @@
 
         override public function init():Boolean
         {
-            if (!((this._habboCatalog._Str_7593) && (this._habboCatalog.discountEnabled)))
+            if (!((this._habboCatalog.multiplePurchaseEnabled) && (this._habboCatalog.discountEnabled)))
             {
                 return true;
             }
