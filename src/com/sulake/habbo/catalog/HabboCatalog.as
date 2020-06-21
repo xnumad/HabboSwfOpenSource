@@ -504,7 +504,7 @@
                 _inventory = k;
             }, false, [{
                 "type":HabboInventoryItemAddedEvent.HABBO_INVENTORY_ITEM_ADDED,
-                "callback":this._Str_25495
+                "callback":this.onItemAddedToInventory
             }]), new ComponentDependency(new IIDSessionDataManager(), function (k:ISessionDataManager):void
             {
                 _sessionDataManager = k;
@@ -2709,7 +2709,7 @@
             }
         }
 
-        private function _Str_25495(k:HabboInventoryItemAddedEvent):void
+        private function onItemAddedToInventory(k:HabboInventoryItemAddedEvent):void
         {
             var _local_2:int;
             var _local_3:int;
