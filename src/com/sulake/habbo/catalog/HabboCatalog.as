@@ -334,7 +334,7 @@
         private var _builderMembershipUpdateTime:int;
         private var _builderMembershipDisplayUpdateTime:int;
         private var _builderMembershipActiveSoFar:Boolean;
-        private var _Str_13454:Boolean;
+        private var _builderMembershipActiveWithGrace:Boolean;
         private var _offerCenter:OfferCenter;
 		private var _fireworkChargeDialog:FireworksChargeConfirmationDialog;
 
@@ -3040,17 +3040,17 @@
             }
             else
             {
-                if (((this._Str_13454) && (_local_2 <= 0)))
+                if (((this._builderMembershipActiveWithGrace) && (_local_2 <= 0)))
                 {
                     events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_BUILDER_MEMBERSHIP_EXPIRED));
                 }
             }
             this._builderMembershipActiveSoFar = (k > 0);
-            this._Str_13454 = (_local_2 > 0);
-            var _local_3:String = ("builder.header.status." + ((this._builderMembershipActiveSoFar) ? "member" : ((this._Str_13454) ? "grace" : "trial")));
+            this._builderMembershipActiveWithGrace = (_local_2 > 0);
+            var _local_3:String = ("builder.header.status." + ((this._builderMembershipActiveSoFar) ? "member" : ((this._builderMembershipActiveWithGrace) ? "grace" : "trial")));
             var _local_4:String = this._localization.getLocalization(_local_3);
             this._localization.registerParameter("builder.header.title", "bcstatus", _local_4);
-            var _local_5:String = ((this._builderMembershipActiveSoFar) ? FriendlyTime.format(this._localization, k) : ((this._Str_13454) ? FriendlyTime.format(this._localization, _local_2) : _local_4));
+            var _local_5:String = ((this._builderMembershipActiveSoFar) ? FriendlyTime.format(this._localization, k) : ((this._builderMembershipActiveWithGrace) ? FriendlyTime.format(this._localization, _local_2) : _local_4));
             this._localization.registerParameter("builder.header.status.membership", "duration", (('<font color="#ff8d00"><b>' + _local_5) + "</b></font>"));
             this._localization.registerParameter("builder.header.status.limit", "count", (('<font color="#ff8d00"><b>' + this._builderFurniCount) + "</b></font>"));
             this._localization.registerParameter("builder.header.status.limit", "limit", (('<font color="#ff8d00"><b>' + this._builderFurniLimit) + "</b></font>"));
