@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_566
+﻿package com.sulake.habbo.communication.messages.outgoing.game.ingame
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
