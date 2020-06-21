@@ -219,7 +219,7 @@
                 k.addMessageEvent(new _Str_8183(this.onDiceValue));
                 k.addMessageEvent(new _Str_7657(this.onOneWayDoorStatus));
                 k.addMessageEvent(new PetExperienceEvent(this.onPetExperience));
-                k.addMessageEvent(new YouArePlayingGameMessageEvent(this._Str_24325));
+                k.addMessageEvent(new YouArePlayingGameMessageEvent(this.onPlayingGame));
                 k.addMessageEvent(new GamePlayerValueMessageEvent(this.onGamePlayerNumberValue));
                 k.addMessageEvent(new PetFigureUpdateEvent(this.onPetFigureUpdate));
                 k.addMessageEvent(new IgnoreResultMessageEvent(this.onIgnoreResult));
@@ -1235,7 +1235,7 @@
             this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_4, null, null, _local_5, _local_6);
         }
 
-        private function _Str_24325(k:YouArePlayingGameMessageEvent):void
+        private function onPlayingGame(k:YouArePlayingGameMessageEvent):void
         {
             if (k == null)
             {
