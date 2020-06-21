@@ -380,7 +380,7 @@
         {
             var _local_2:RoomForwardMessageParser = RoomForwardMessageEvent(k).getParser();
             Logger.log(("Got room forward: " + _local_2.roomId));
-            this._Str_14669(_local_2.roomId);
+            this.forwardToRoom(_local_2.roomId);
         }
 
         private function onConvertedRoomId(k:IMessageEvent):void
@@ -393,7 +393,7 @@
             else
             {
                 Logger.log(((("Got converted room ID for " + _local_2._Str_17914) + ", forward to room ") + _local_2._Str_12434));
-                this._Str_14669(_local_2._Str_12434);
+                this.forwardToRoom(_local_2._Str_12434);
             }
         }
 
@@ -429,7 +429,7 @@
                 if (_local_4 == 2)
                 {
                     Logger.log(("Guest room forward on enter: " + _local_5));
-                    this._Str_14669(_local_5);
+                    this.forwardToRoom(_local_5);
                 }
                 else
                 {
@@ -717,7 +717,7 @@
             this._navigator.data._Str_4079 = k.getParser().data;
         }
 
-        private function _Str_14669(k:int):void
+        private function forwardToRoom(k:int):void
         {
             this._navigator.send(new GetGuestRoomMessageComposer(k, false, true));
             this._navigator.trackNavigationDataPoint("Room Forward", "go.roomforward", "", k);

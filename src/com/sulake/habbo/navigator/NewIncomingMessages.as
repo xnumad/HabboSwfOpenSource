@@ -523,7 +523,7 @@
             this.data._Str_4079 = k.getParser().data;
         }
 
-        private function _Str_14669(k:int):void
+        private function forwardToRoom(k:int):void
         {
             LegacyNavigator(this._navigator.legacyNavigator).send(new GetGuestRoomMessageComposer(k, false, true));
             LegacyNavigator(this._navigator.legacyNavigator).trackNavigationDataPoint("Room Forward", "go.roomforward", "", k);
