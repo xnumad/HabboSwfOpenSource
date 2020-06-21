@@ -201,12 +201,12 @@
         {
             if (k != "")
             {
-                this._manager.windowManager.alert("${catalog.alert.external.link.title}", "${catalog.alert.external.link.desc}", 0, this._Str_7790);
+                this._manager.windowManager.alert("${catalog.alert.external.link.title}", "${catalog.alert.external.link.desc}", 0, this.onExternalLink);
                 HabboWebTools.navigateToURL(k, "_empty");
             }
         }
 
-        private function _Str_7790(k:IAlertDialog, _arg_2:WindowEvent):void
+        private function onExternalLink(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }
