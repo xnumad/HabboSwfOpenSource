@@ -89,7 +89,7 @@
             }
             else
             {
-                this._catalog._Str_24571(this._offer.offerId);
+                this._catalog.purchaseBasicMembershipExtension(this._offer.offerId);
             }
             this._Str_4504();
         }

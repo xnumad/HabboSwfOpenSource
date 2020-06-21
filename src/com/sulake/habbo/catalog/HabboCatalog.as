@@ -806,7 +806,7 @@
             this.send(new _Str_9862(k));
         }
 
-        public function _Str_24571(k:int):void
+        public function purchaseBasicMembershipExtension(k:int):void
         {
             this.send(new _Str_10123(k));
         }
