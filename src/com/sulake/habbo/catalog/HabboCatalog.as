@@ -1218,7 +1218,7 @@
             return new BitmapData(1, 1, true, 0xFFFFFF);
         }
 
-        public function _Str_20009(k:String):Array
+        public function getSellablePetPalettes(k:String):Array
         {
             var _local_2:Array = this._sellablePetPalettes.getValue(k);
             if (_local_2 != null)

@@ -505,7 +505,7 @@
             var _local_2:Array;
             if (this._availablePalettes == null)
             {
-                _local_2 = this._catalog._Str_20009(k);
+                _local_2 = this._catalog.getSellablePetPalettes(k);
                 this._availablePalettes = this._Str_11449(_local_2);
                 this._selectedPaletteIndex = 0;
                 if (this._availablePalettes != null)
