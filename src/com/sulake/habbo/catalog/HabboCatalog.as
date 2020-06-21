@@ -295,7 +295,7 @@
         private var _purchaseConfirmationDialog:PurchaseConfirmationDialog;
         private var _giftReceiver:String;
         private var _skipToGifting:Boolean;
-        private var _Str_19689:Boolean = true;
+        private var _firstBalanceCredits:Boolean = true;
         private var _Str_17838:Boolean = false;
         private var _giftWrappingConfiguration:GiftWrappingConfiguration;
         private var _clubGiftController:ClubGiftController;
@@ -2030,11 +2030,11 @@
             var _local_3:CreditBalanceParser = _local_2.getParser();
             this._purse.credits = _local_3.balance;
             this._Str_12017();
-            if (((!(this._Str_19689)) && (!(this._soundManager == null))))
+            if (((!(this._firstBalanceCredits)) && (!(this._soundManager == null))))
             {
                 this._soundManager.playSound(HabboSoundTypesEnum.PURCHASE);
             }
-            this._Str_19689 = false;
+            this._firstBalanceCredits = false;
             events.dispatchEvent(new PurseEvent(PurseEvent.CATALOG_PURSE_CREDIT_BALANCE, this._purse.credits, 0));
             events.dispatchEvent(new PurseUpdateEvent());
         }
