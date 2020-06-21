@@ -1325,7 +1325,7 @@
             {
                 this.refreshCatalogIndex(this._catalogType);
             }
-            if ((((!(this._Str_11577())) || (_arg_2)) || (_local_4)))
+            if ((((!(this.mainWindowVisible())) || (_arg_2)) || (_local_4)))
             {
                 if (this._Str_7793)
                 {
@@ -1342,7 +1342,7 @@
                     this.hideMainWindow();
                 }
             }
-            if (this._Str_11577())
+            if (this.mainWindowVisible())
             {
                 if (this._mainContainer != null)
                 {
@@ -1370,7 +1370,7 @@
                 this._mainContainer.findChildByName("builder.mode.header").visible = (k == CatalogType.BUILDER);
                 this._Str_15371();
             }
-            if (this._Str_11577())
+            if (this.mainWindowVisible())
             {
                 events.dispatchEvent(new Event(HabboCatalogTrackingEvent.HABBO_CATALOG_TRACKING_EVENT_OPEN));
                 if (((!(this._recyclerLogic == null)) && (this.getCurrentLayoutCode() == "recycler")))
@@ -1388,7 +1388,7 @@
             }
             if (this._recyclerLogic != null)
             {
-                this.setupInventoryForRecycler(((this._recyclerLogic.active) && (this._Str_11577())));
+                this.setupInventoryForRecycler(((this._recyclerLogic.active) && (this.mainWindowVisible())));
             }
             if (((_local_4) && (!(this.currentCatalogNavigator == null))))
             {
@@ -1842,7 +1842,7 @@
 
         private function onCatalogPublished(k:IMessageEvent):void
         {
-            var _local_2:Boolean = this._Str_11577();
+            var _local_2:Boolean = this.mainWindowVisible();
             this.reset();
             if (_local_2)
             {
@@ -2834,7 +2834,7 @@
             }
         }
 
-        private function _Str_11577():Boolean
+        private function mainWindowVisible():Boolean
         {
             return ((!(this._windowManager == null)) && (!(this._mainContainer == null))) && (!(this._mainContainer.parent == null));
         }
