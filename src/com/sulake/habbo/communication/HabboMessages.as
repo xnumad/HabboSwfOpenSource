@@ -955,7 +955,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreOwnerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreControllerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreNotControllerMessageEvent;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_11327;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestFurniInventoryWhenNotInRoomComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestRoomPropertySet;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_7844;
 	import com.sulake.habbo.communication.messages.outgoing.poll.*;
@@ -1867,7 +1867,7 @@
             OUTGOING_PACKETS[3492] = _Str_11783;
             OUTGOING_PACKETS[3493] = ResetUnseenItemIdsComposer;
             OUTGOING_PACKETS[3498] = _Str_11141;
-            OUTGOING_PACKETS[3500] = _Str_11327;
+            OUTGOING_PACKETS[3500] = RequestFurniInventoryWhenNotInRoomComposer;
             OUTGOING_PACKETS[3505] = PollAnswerComposer;
             OUTGOING_PACKETS[3526] = _Str_10092;
             OUTGOING_PACKETS[3529] = PostMessageMessageComposer;

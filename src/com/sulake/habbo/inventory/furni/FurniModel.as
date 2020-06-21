@@ -31,7 +31,7 @@
     import com.sulake.habbo.inventory.items.CreditTradingItem;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_7844;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.furni._Str_11327;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestFurniInventoryWhenNotInRoomComposer;
     import com.sulake.habbo.inventory.trading.TradingModel;
     import com.sulake.habbo.inventory.recycler.RecyclerModel;
     import com.sulake.habbo.inventory.IUnseenItemTracker;
@@ -361,7 +361,7 @@
                 }
                 else
                 {
-                    k.send(new _Str_11327());
+                    k.send(new RequestFurniInventoryWhenNotInRoomComposer());
                 }
             }
         }
