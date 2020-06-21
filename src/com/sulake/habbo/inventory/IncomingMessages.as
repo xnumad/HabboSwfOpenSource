@@ -629,7 +629,7 @@
             }
             if (((this._inventory.getBoolean("trading.warning.enabled")) && (_local_2.secondUserNumCredits > 0)))
             {
-                _local_8 = this._inventory._Str_2834._Str_23876(_local_2.secondUserNumCredits);
+                _local_8 = this._inventory._Str_2834.createCreditGroupItem(_local_2.secondUserNumCredits);
                 _local_4.add(CREDIT_GROUPITEM_TYPE_ID, _local_8);
             }
             this._Str_21714(_local_2.firstUserItemArray, _local_3, (_local_2.firstUserID == _local_5));

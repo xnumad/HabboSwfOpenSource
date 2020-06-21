@@ -345,7 +345,7 @@
             return new GroupItem(this, k, _arg_2, this._roomEngine, this._controller._Str_5568.running, _arg_3, _arg_4, _local_6, _arg_5, _local_8);
         }
 
-        public function _Str_23876(k:int):GroupItem
+        public function createCreditGroupItem(k:int):GroupItem
         {
             return new CreditTradingItem(this, this._windowManager.assets, this._roomEngine, k);
         }
