@@ -20,7 +20,7 @@
         function setFurniStackingHeightMap(_arg_1:int, _arg_2:FurniStackingHeightMap):void;
         function getFurniStackingHeightMap(_arg_1:int):FurniStackingHeightMap;
         function getLegacyGeometry(_arg_1:int):LegacyWallGeometry;
-        function _Str_15934(_arg_1:int):TileObjectMap;
+        function getTileObjectMap(_arg_1:int):TileObjectMap;
         function getRoomNumberValue(_arg_1:int, _arg_2:String):Number;
         function getRoomStringValue(_arg_1:int, _arg_2:String):String;
         function setIsPlayingGame(_arg_1:int, _arg_2:Boolean):void;

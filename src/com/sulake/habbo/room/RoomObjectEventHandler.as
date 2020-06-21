@@ -772,7 +772,7 @@
                 _local_7 = this._roomEngine.getRoom(_arg_2);
                 if (_local_7 != null)
                 {
-                    _local_8 = this._roomEngine._Str_15934(_arg_2);
+                    _local_8 = this._roomEngine.getTileObjectMap(_arg_2);
                     if (_local_8)
                     {
                         _local_9 = _local_8.getObjectInTile(_local_4, _local_5);

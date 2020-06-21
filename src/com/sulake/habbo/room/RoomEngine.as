@@ -531,7 +531,7 @@
             return null;
         }
 
-        public function _Str_15934(k:int):TileObjectMap
+        public function getTileObjectMap(k:int):TileObjectMap
         {
             var _local_2:RoomInstanceData = this.getRoomInstanceData(k);
             if (_local_2 != null)

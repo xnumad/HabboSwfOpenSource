@@ -38,7 +38,7 @@
         function get gameEngine():IHabboGameManager;
         function getLegacyGeometry(_arg_1:int):LegacyWallGeometry;
         function getFurniStackingHeightMap(_arg_1:int):FurniStackingHeightMap;
-        function _Str_15934(_arg_1:int):TileObjectMap;
+        function getTileObjectMap(_arg_1:int):TileObjectMap;
         function getSelectionArrow(_arg_1:int):IRoomObjectController;
         function getTileCursor(_arg_1:int):IRoomObjectController;
         function getIsPlayingGame(_arg_1:int):Boolean;
