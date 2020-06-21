@@ -2,7 +2,7 @@
 {
     public class RoomUserData
     {
-        private var _Str_11596:int = -1;
+        private var _roomObjectId:int = -1;
         private var _name:String = "";
         private var _type:int = 0;
         private var _sex:String = "";
@@ -29,12 +29,12 @@
 
         public function RoomUserData(k:int)
         {
-            this._Str_11596 = k;
+            this._roomObjectId = k;
         }
 
         public function get _Str_2713():int
         {
-            return this._Str_11596;
+            return this._roomObjectId;
         }
 
         public function get activityPoints():int
