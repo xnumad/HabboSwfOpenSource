@@ -771,7 +771,7 @@
             this.send(new RequestCatalogPage(k, _arg_2, _arg_3));
         }
 
-        public function _Str_22641(k:int, _arg_2:String="", _arg_3:int=1):void
+        public function purchaseOffer(k:int, _arg_2:String="", _arg_3:int=1):void
         {
             var _local_5:Vector.<ICatalogNode>;
             var _local_4:ICatalogNavigator = this.getCatalogNavigator(CatalogType.NORMAL);

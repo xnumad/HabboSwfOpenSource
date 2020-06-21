@@ -174,7 +174,7 @@
                             this._catalog.connection.send(new _Str_12348(this._stripId, this._isBuyout));
                             break;
                         case _Str_15768:
-                            this._catalog._Str_22641(this._furniData.rentOfferId);
+                            this._catalog.purchaseOffer(this._furniData.rentOfferId);
                             break;
                     }
                     this.close();
