@@ -6,23 +6,23 @@
 
     public class BundleDiscountRulesetMessageParser implements IMessageParser
     {
-        private var _Str_9586:_Str_4615;
+        private var _bundleDiscountRuleset:_Str_4615;
 
 
         public function get bundleDiscountRuleset():_Str_4615
         {
-            return this._Str_9586;
+            return this._bundleDiscountRuleset;
         }
 
         public function flush():Boolean
         {
-            this._Str_9586 = null;
+            this._bundleDiscountRuleset = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_9586 = new _Str_4615(k);
+            this._bundleDiscountRuleset = new _Str_4615(k);
             return true;
         }
     }

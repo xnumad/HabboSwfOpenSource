@@ -314,7 +314,7 @@
         private var _utils:HabboCatalogUtils;
         private var _Str_13637:Boolean = false;
         private var _Str_8001:String = null;
-        private var _Str_9586:_Str_4615 = null;
+        private var _bundleDiscountRuleset:_Str_4615 = null;
         private var _requestedPage:RequestedPage;
         private var _pageId:int;
         private var _roomAdPurchaseData:RoomAdPurchaseData;
@@ -2944,7 +2944,7 @@
         private function onBundleDiscountRulesetMessageEvent(k:_Str_7288):void
         {
             var _local_2:BundleDiscountRulesetMessageParser = k.getParser();
-            this._Str_9586 = _local_2.bundleDiscountRuleset;
+            this._bundleDiscountRuleset = _local_2.bundleDiscountRuleset;
             this._utils._Str_24024();
         }
 
@@ -3064,7 +3064,7 @@
 
         public function get bundleDiscountRuleset():_Str_4615
         {
-            return this._Str_9586;
+            return this._bundleDiscountRuleset;
         }
 
         public function get _Str_7593():Boolean
