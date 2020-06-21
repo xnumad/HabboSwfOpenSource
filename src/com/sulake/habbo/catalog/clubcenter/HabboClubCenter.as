@@ -101,7 +101,7 @@
         override protected function initComponent():void
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new ClubGiftInfoEvent(this._Str_18504));
+            this.addMessageEvent(new ClubGiftInfoEvent(this.onClubGiftInfo));
             this.addMessageEvent(new ScrSendKickbackInfoMessageEvent(this._Str_22489));
             this.addMessageEvent(new BadgesEvent(this.onBadges));
             context.addLinkEventTracker(this);
@@ -217,7 +217,7 @@
             this.populate();
         }
 
-        private function _Str_18504(k:ClubGiftInfoEvent):void
+        private function onClubGiftInfo(k:ClubGiftInfoEvent):void
         {
             this._giftsAvailable = k.getParser()._Str_7574;
             this.populate();
