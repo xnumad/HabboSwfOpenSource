@@ -501,7 +501,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9952;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9979;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
-	import com.sulake.habbo.communication.messages.outgoing.game.ingame._Str_16121;
+	import com.sulake.habbo.communication.messages.outgoing.game.ingame.Game2RequestFullStatusUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.camera.CameraSnapshotMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10079;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10157;
@@ -1593,7 +1593,7 @@
             OUTGOING_PACKETS[1581] = _Str_10764;
             OUTGOING_PACKETS[1592] = _Str_8136;
             OUTGOING_PACKETS[1597] = StartTypingMessageComposer;
-            OUTGOING_PACKETS[1598] = _Str_16121;
+            OUTGOING_PACKETS[1598] = Game2RequestFullStatusUpdateMessageComposer;
             OUTGOING_PACKETS[1603] = _Str_11685;
             OUTGOING_PACKETS[1638] = _Str_4844;
             OUTGOING_PACKETS[1644] = _Str_10476;
