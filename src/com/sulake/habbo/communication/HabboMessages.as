@@ -312,10 +312,10 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_463._Str_11638;
 	import com.sulake.habbo.communication.messages.outgoing._Str_463._Str_11776;
 	import com.sulake.habbo.communication.messages.outgoing._Str_463._Str_12504;
-	import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_12300;
-	import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_17897;
-	import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_18615;
-	import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_18745;
+	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_12300;
+	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_17897;
+	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_18615;
+	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_18745;
 	import com.sulake.habbo.communication.messages.incoming.users.*;
 	import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;

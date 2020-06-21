@@ -9,7 +9,7 @@
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.session.enum.RoomTradingLevelEnum;
     import com.sulake.habbo.communication.messages.outgoing.room.session._Str_5756;
-    import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_12300;
+    import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_12300;
     import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.outgoing.room.avatar.ChangeMottoMessageComposer;
