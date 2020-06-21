@@ -213,7 +213,7 @@
             }
             this._Str_9680._Str_22850(k.filteringData, _arg_2);
             this._habboNewNavigator.newResultsRendered = true;
-            this._Str_9330 = false;
+            this.isBusy = false;
             if (this._roomInfoPopup)
             {
                 this._roomInfoPopup.show(false);
@@ -271,7 +271,7 @@
             return this._window as IFrameWindow;
         }
 
-        public function set _Str_9330(k:Boolean):void
+        public function set isBusy(k:Boolean):void
         {
             if (this._window)
             {
@@ -281,7 +281,7 @@
             this._Str_16928 = k;
         }
 
-        public function get _Str_9330():Boolean
+        public function get isBusy():Boolean
         {
             return this._Str_16928;
         }

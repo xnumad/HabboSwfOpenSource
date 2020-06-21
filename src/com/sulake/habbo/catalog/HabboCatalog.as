@@ -766,7 +766,7 @@
 
         public function loadCatalogPage(k:int, _arg_2:int, _arg_3:String):void
         {
-            this._Str_9330 = true;
+            this.isBusy = true;
             this._pageId = k;
             this.send(new RequestCatalogPage(k, _arg_2, _arg_3));
         }
@@ -1484,7 +1484,7 @@
             }
         }
 
-        public function set _Str_9330(k:Boolean):void
+        public function set isBusy(k:Boolean):void
         {
             var _local_2:IWindow;
             if (this._mainContainer)
@@ -1832,7 +1832,7 @@
             {
                 this._catalogViewer._Str_19388(_local_3, _local_4, _local_7, _local_10, _local_8, _local_9);
             }
-            this._Str_9330 = false;
+            this.isBusy = false;
         }
 
         private function _Str_19704(k:Offer):Boolean

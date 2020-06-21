@@ -324,7 +324,7 @@
 
         public function performSearch(k:String, _arg_2:String="", _arg_3:String=""):void
         {
-            this._navigatorView._Str_9330 = true;
+            this._navigatorView.isBusy = true;
             this._previousFilterInput = _arg_3;
             var _local_4:SearchResultContainer = this._navigatorCache._Str_4666(((k + "/") + _arg_2));
             if (_local_4 != null)
