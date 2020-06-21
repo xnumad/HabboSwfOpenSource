@@ -41,12 +41,12 @@
             var _local_2:IWindow = this._container.findChildByName("clear_search_button");
             if (_local_2)
             {
-                _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_15242);
+                _local_2.addEventListener(WindowMouseEvent.CLICK, this.onClearSearch);
             }
             this.clear();
         }
 
-        private function _Str_15242(k:WindowMouseEvent=null):void
+        private function onClearSearch(k:WindowMouseEvent=null):void
         {
             this._inputField.focus();
             this._inputField.caption = "";

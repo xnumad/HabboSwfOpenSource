@@ -1479,7 +1479,7 @@
                 _local_5 = this._mainContainer.findChildByName("clear_search_button");
                 if (_local_5)
                 {
-                    _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_15242);
+                    _local_5.addEventListener(WindowMouseEvent.CLICK, this.onClearSearch);
                 }
             }
         }
@@ -1508,7 +1508,7 @@
             }
         }
 
-        private function _Str_15242(k:WindowMouseEvent=null):void
+        private function onClearSearch(k:WindowMouseEvent=null):void
         {
             var _local_2:ITextFieldWindow = (this._mainContainer.findChildByName("search.input") as ITextFieldWindow);
             _local_2.caption = "";
@@ -1548,7 +1548,7 @@
             _local_3.assetUri = ((k.target.caption.length > 0) ? "icons_close" : "common_small_pen");
             if (k.target.caption.length == 0)
             {
-                this._Str_15242();
+                this.onClearSearch();
             }
             else
             {
