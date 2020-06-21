@@ -37,7 +37,7 @@
     import com.sulake.iid.IIDAvatarRenderManager;
     import com.sulake.iid.IIDHabboHelp;
     import com.sulake.iid.IIDHabboNavigator;
-    import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_10484;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_10484;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorMetaDataParser;
     import com.sulake.habbo.navigator.context.SearchContext;
@@ -49,9 +49,9 @@
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SavedSearch;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorSavedSearchesParser;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
-    import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_11428;
-    import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_11429;
-    import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_9950;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11429;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9950;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
     import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
     import com.sulake.habbo.utils.Base64;
@@ -62,9 +62,9 @@
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11137;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_12436;
-    import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_11341;
-    import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_9918;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_12436;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11341;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9918;
     import __AS3__.vec.*;
 
     public class HabboNewNavigator extends Component implements IHabboNewNavigator, ILinkEventTracker 

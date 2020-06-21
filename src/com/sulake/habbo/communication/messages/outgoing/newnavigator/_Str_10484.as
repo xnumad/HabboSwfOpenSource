@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_369
+﻿package com.sulake.habbo.communication.messages.outgoing.newnavigator
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
