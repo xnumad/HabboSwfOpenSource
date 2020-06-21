@@ -1757,7 +1757,7 @@
             switch (this._requestedPage._Str_3989)
             {
                 case RequestedPage._Str_10657:
-                    if (((((this._Str_7793) && (this._Str_19190)) && (!(this._Str_25184))) && (k.catalogType == CatalogType.NORMAL)))
+                    if (((((this._Str_7793) && (this._Str_19190)) && (!(this.newAdditionsPageOpenDisabled))) && (k.catalogType == CatalogType.NORMAL)))
                     {
                         events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_NEW_ITEMS_SHOW));
                         this.openCatalogPage(CatalogPageName.NEW_ADDITIONS);
@@ -3072,7 +3072,7 @@
             return (getBoolean("catalog.multiple.purchase.enabled")) && (!(this._catalogType == CatalogType.BUILDER));
         }
 
-        public function get _Str_25184():Boolean
+        public function get newAdditionsPageOpenDisabled():Boolean
         {
             return getBoolean("catalog.new.additions.page.open.disabled");
         }
