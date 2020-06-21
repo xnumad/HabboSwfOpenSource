@@ -54,7 +54,7 @@
             }
         }
 
-        public function _Str_15960(k:int):void
+        public function onGuildVisualSettingsChanged(k:int):void
         {
             if (this._guildSelectorWidget != null)
             {

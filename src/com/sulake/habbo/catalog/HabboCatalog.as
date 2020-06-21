@@ -534,7 +534,7 @@
                 "callback":this.onFriendBarSelectionEvent
             }]), new ComponentDependency(new IIDHabboGroupsManager(), null, false, [{
                 "type":GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED,
-                "callback":this._Str_15960
+                "callback":this.onGuildVisualSettingsChanged
             }]), new ComponentDependency(new IIDHabboAvatarEditor(), function (k:IHabboAvatarEditor):void
             {
                 _avatarEditor = k;
@@ -2881,11 +2881,11 @@
             context.createLinkEvent("habboUI/open/hccenter");
         }
 
-        private function _Str_15960(k:GuildSettingsChangedInManageEvent):void
+        private function onGuildVisualSettingsChanged(k:GuildSettingsChangedInManageEvent):void
         {
             if (this._guildMembershipsController)
             {
-                this._guildMembershipsController._Str_15960(k.guildId);
+                this._guildMembershipsController.onGuildVisualSettingsChanged(k.guildId);
             }
         }
 
