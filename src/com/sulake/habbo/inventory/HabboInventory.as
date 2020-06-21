@@ -900,7 +900,7 @@
             return _local_3;
         }
 
-        public function _Str_18225(k:String, _arg_2:String, _arg_3:int=0):IFurnitureData
+        public function getFurnitureDataByName(k:String, _arg_2:String, _arg_3:int=0):IFurnitureData
         {
             var _local_4:IFurnitureData;
             if (this._sessionDataManager == null)

@@ -256,7 +256,7 @@
                     this._roomPreviewer.updateObjectRoom(_local_16, _local_17, _local_18);
                     if (_local_2.category == FurniCategory.LANDSCAPE)
                     {
-                        _local_19 = this._model.controller._Str_18225("ads_twi_windw", ProductTypeEnum.WALL);
+                        _local_19 = this._model.controller.getFurnitureDataByName("ads_twi_windw", ProductTypeEnum.WALL);
                         this._roomPreviewer.addWallItemIntoRoom(_local_19.id, new Vector3d(90, 0, 0), _local_19.customParams);
                     }
                 }

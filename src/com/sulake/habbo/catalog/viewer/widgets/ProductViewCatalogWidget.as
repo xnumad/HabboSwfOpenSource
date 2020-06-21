@@ -409,7 +409,7 @@
                                     _local_6.updateObjectRoom(_local_18, _local_19, _local_20);
                                     if (_local_7.furnitureData.category == LANDSCAPE)
                                     {
-                                        _local_21 = this._habboCatalog._Str_18225("ads_twi_windw", ProductTypeEnum.WALL);
+                                        _local_21 = this._habboCatalog.getFurnitureDataByName("ads_twi_windw", ProductTypeEnum.WALL);
                                         _local_6.addWallItemIntoRoom(_local_21.id, new Vector3d(90, 0, 0), _local_21.customParams);
                                     }
                                 }
