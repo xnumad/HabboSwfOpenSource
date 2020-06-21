@@ -602,7 +602,7 @@
             {
                 this._window.dispose();
             }
-            var k:GiftWrappingConfiguration = this._catalog._Str_22272;
+            var k:GiftWrappingConfiguration = this._catalog.giftWrappingConfiguration;
             this._window = (this._catalog.utils.createWindow("gift_wrapping") as IFrameWindow);
             if (this._window == null)
             {

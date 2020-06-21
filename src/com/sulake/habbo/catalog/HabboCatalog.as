@@ -421,7 +421,7 @@
             return this._toolbar;
         }
 
-        public function get _Str_22272():GiftWrappingConfiguration
+        public function get giftWrappingConfiguration():GiftWrappingConfiguration
         {
             return this._giftWrappingConfiguration;
         }
