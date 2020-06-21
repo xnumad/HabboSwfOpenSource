@@ -576,7 +576,7 @@
             this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             this.addMessageEvent(new _Str_6022(this._Str_16181));
             this.addMessageEvent(new _Str_9560(this.onProductOffer));
-            this.addMessageEvent(new _Str_6345(this._Str_24794));
+            this.addMessageEvent(new _Str_6345(this.onMarketPlaceCancelResult));
             this.addMessageEvent(new RecyclerStatusEvent(this._Str_24950));
             this.addMessageEvent(new RecyclerPrizesEvent(this._Str_23749));
             this.addMessageEvent(new _Str_5946(this._Str_16617));
@@ -2167,7 +2167,7 @@
             }
         }
 
-        private function _Str_24794(k:IMessageEvent):void
+        private function onMarketPlaceCancelResult(k:IMessageEvent):void
         {
             if (this._marketplace != null)
             {
