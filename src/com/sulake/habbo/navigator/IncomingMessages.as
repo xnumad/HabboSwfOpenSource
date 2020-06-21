@@ -148,7 +148,7 @@
             _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect));
             _local_2.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating));
             _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
-            _local_2.addHabboConnectionMessageEvent(new _Str_4035(this._Str_4132));
+            _local_2.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
             _local_2.addHabboConnectionMessageEvent(new CanCreateRoomMessageEvent(this._Str_25812));
             _local_2.addHabboConnectionMessageEvent(new _Str_5771(this._Str_8576));
             _local_2.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709));
@@ -706,10 +706,10 @@
             this._navigator.data.friendList.onFriendsListFragment(k);
         }
 
-        private function _Str_4132(k:IMessageEvent):void
+        private function onFriendListUpdate(k:IMessageEvent):void
         {
-            this._navigator.data.friendList._Str_4132(k);
-            this._navigator.roomSettingsCtrl._Str_4132();
+            this._navigator.data.friendList.onFriendListUpdate(k);
+            this._navigator.roomSettingsCtrl.onFriendListUpdate();
         }
 
         private function onCompetitionData(k:_Str_5767):void

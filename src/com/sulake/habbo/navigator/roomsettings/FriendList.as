@@ -33,7 +33,7 @@
             }
         }
 
-        public function _Str_4132(k:IMessageEvent):void
+        public function onFriendListUpdate(k:IMessageEvent):void
         {
             var _local_3:int;
             var _local_4:FriendParser;

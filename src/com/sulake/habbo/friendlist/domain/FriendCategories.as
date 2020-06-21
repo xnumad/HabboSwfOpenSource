@@ -101,7 +101,7 @@
             return null;
         }
 
-        public function _Str_4132(event:IMessageEvent):void
+        public function onFriendListUpdate(event:IMessageEvent):void
         {
             var status:int;
             var p:FriendListUpdateMessageParser;

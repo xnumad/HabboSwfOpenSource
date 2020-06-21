@@ -527,7 +527,7 @@
         private function _Str_22421():void
         {
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8333(this._Str_24032));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_4035(this._Str_4132));
+            this._communicationManager.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_5641(this._Str_24954));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_4841(this._Str_16886));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_7759(this._Str_22373));
@@ -630,9 +630,9 @@
             this.simpleAlert("${friendlist.alert.title}", _local_3);
         }
 
-        private function _Str_4132(k:IMessageEvent):void
+        private function onFriendListUpdate(k:IMessageEvent):void
         {
-            this._categories._Str_4132(k);
+            this._categories.onFriendListUpdate(k);
             this._view.refresh("friendListUpdate");
         }
 

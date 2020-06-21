@@ -107,7 +107,7 @@
 
         override protected function initComponent():void
         {
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4035(this._Str_4132));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_5641(this._Str_22480));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_8800(this._Str_24044));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4696(this.onRoomInvite));
@@ -435,7 +435,7 @@
             this._Str_25150(_Str_3873(k).getParser().friendFragment);
         }
 
-        private function _Str_4132(k:IMessageEvent):void
+        private function onFriendListUpdate(k:IMessageEvent):void
         {
             var _local_3:FriendEntity;
             var _local_4:FriendParser;

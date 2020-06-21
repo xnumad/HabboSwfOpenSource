@@ -111,7 +111,7 @@
             var k:IHabboCommunicationManager = this._navigator.communication;
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5771(this._Str_8576)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4035(this._Str_4132)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5134(this._Str_16321)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592)));
             this._messageListeners.push(k.connection.addMessageEvent(new _Str_8763(this._Str_23882)));
@@ -512,10 +512,10 @@
             this.data.friendList.onFriendsListFragment(k);
         }
 
-        private function _Str_4132(k:IMessageEvent):void
+        private function onFriendListUpdate(k:IMessageEvent):void
         {
-            this.data.friendList._Str_4132(k);
-            LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_4132();
+            this.data.friendList.onFriendListUpdate(k);
+            LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl.onFriendListUpdate();
         }
 
         private function onCompetitionData(k:_Str_5767):void

@@ -272,7 +272,7 @@
             }
         }
 
-        public function _Str_4132():void
+        public function onFriendListUpdate():void
         {
             this._Str_14177();
         }
