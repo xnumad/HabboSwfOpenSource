@@ -112,7 +112,7 @@
                     return;
                 case "header_button_close":
                 case "cancel_button":
-                    this._controller.catalog._Str_23687();
+                    this._controller.catalog.forgetPageDuringVipPurchase();
                     this._controller._Str_4504();
                     return;
             }

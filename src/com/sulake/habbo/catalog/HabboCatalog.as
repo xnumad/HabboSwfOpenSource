@@ -2912,7 +2912,7 @@
             }
         }
 
-        public function _Str_23687():void
+        public function forgetPageDuringVipPurchase():void
         {
             this._pageToOpenAfterVipPurchase = null;
             this._doNotCloseAfterVipPurchase = false;
