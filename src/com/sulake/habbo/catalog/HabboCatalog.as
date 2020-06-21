@@ -3248,7 +3248,7 @@
             return false;
         }
 
-        public function _Str_17606(k:IOfferExtension):IOfferCenter
+        public function getOfferCenter(k:IOfferExtension):IOfferCenter
         {
             if (this._offerCenter == null)
             {

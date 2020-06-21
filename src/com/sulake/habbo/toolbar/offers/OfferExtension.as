@@ -30,7 +30,7 @@
             this._window.procedure = this.windowProcedure;
             this._window.visible = false;
             this._list = (this._window.findChildByName("list") as IItemListWindow);
-            this._offerCenter = _arg_4._Str_17606(this);
+            this._offerCenter = _arg_4.getOfferCenter(this);
             k.extensionView.attachExtension(ToolbarDisplayExtensionIds.VIDEO_OFFERS, this.window, ExtensionFixedSlotsEnum._Str_17982);
             this.refresh();
         }

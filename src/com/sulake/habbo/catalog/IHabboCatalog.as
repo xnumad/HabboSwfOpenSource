@@ -74,6 +74,6 @@
         function get catalogType():String;
         function getCatalogNavigator(_arg_1:String):ICatalogNavigator;
         function get isDoorModeOverriddenInCurrentRoom():Boolean;
-        function _Str_17606(_arg_1:IOfferExtension):IOfferCenter;
+        function getOfferCenter(_arg_1:IOfferExtension):IOfferCenter;
     }
 }

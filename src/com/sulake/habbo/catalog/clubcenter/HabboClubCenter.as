@@ -107,7 +107,7 @@
             context.addLinkEventTracker(this);
             if (((getBoolean("offers.enabled")) && (getBoolean("offers.habboclub.enabled"))))
             {
-                this._offerCenter = this.catalog._Str_17606(this);
+                this._offerCenter = this.catalog.getOfferCenter(this);
             }
         }
 
