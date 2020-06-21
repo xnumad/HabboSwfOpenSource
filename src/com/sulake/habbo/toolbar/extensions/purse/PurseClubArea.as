@@ -84,7 +84,7 @@
                 return;
             }
             var _local_2:int = ((this._toolbar.inventory.clubPeriods * 31) + this._toolbar.inventory.clubDays);
-            var _local_3:int = this._toolbar.inventory._Str_6338;
+            var _local_3:int = this._toolbar.inventory.clubMinutesUntilExpiration;
             if (((!(this._clubDays == -1)) && (!(this._toolbar.inventory.clubLevel == HabboClubLevelEnum.NO_CLUB))))
             {
                 this.setAmount(_local_2, _local_3);

@@ -101,9 +101,9 @@
                 {
                     this.destroyExpirationTimer();
                 }
-                if (((this._toolbar.inventory._Str_6338 < 1440) && (this._toolbar.inventory._Str_6338 > 0)))
+                if (((this._toolbar.inventory.clubMinutesUntilExpiration < 1440) && (this._toolbar.inventory.clubMinutesUntilExpiration > 0)))
                 {
-                    this._expirationTimer = new Timer(((this._toolbar.inventory._Str_6338 * 60) * 1000), 1);
+                    this._expirationTimer = new Timer(((this._toolbar.inventory.clubMinutesUntilExpiration * 60) * 1000), 1);
                     this._expirationTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onTimerComplete);
                     this._expirationTimer.start();
                 }

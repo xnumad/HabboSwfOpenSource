@@ -335,7 +335,7 @@
             return this._purse.citizenshipVipIsExpiring;
         }
 
-        public function get _Str_6338():int
+        public function get clubMinutesUntilExpiration():int
         {
             return this._purse.minutesUntilExpiration;
         }

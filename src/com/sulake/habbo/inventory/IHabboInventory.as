@@ -14,7 +14,7 @@
         function get clubHasEverBeenMember():Boolean;
         function get clubIsExpiring():Boolean;
         function get citizenshipVipIsExpiring():Boolean;
-        function get _Str_6338():int;
+        function get clubMinutesUntilExpiration():int;
         function get tradingActive():Boolean;
         function get _Str_25019():Boolean;
         function get _Str_3455():IUnseenItemTracker;
