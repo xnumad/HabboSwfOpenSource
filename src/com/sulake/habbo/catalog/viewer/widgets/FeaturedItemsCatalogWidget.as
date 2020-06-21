@@ -46,16 +46,16 @@
             this._itemListWindow = (window.findChildByName("itemlist_featured") as IItemListWindow);
             this._template = (this._itemListWindow.getListItemByName("featured_item_template") as IWindowContainer);
             this._itemListWindow.removeListItems();
-            if (((this._catalog._Str_5320 == null) || (this._catalog._Str_5320.length == 0)))
+            if (((this._catalog.frontPageItems == null) || (this._catalog.frontPageItems.length == 0)))
             {
                 return true;
             }
             var k:IWindowContainer = (_window.findChildByName("firstitem") as IWindowContainer);
-            this._Str_15147(this._catalog._Str_5320[0], k);
+            this._Str_15147(this._catalog.frontPageItems[0], k);
             var _local_2:int = 1;
-            while (_local_2 < Math.min(4, this._catalog._Str_5320.length))
+            while (_local_2 < Math.min(4, this._catalog.frontPageItems.length))
             {
-                this._itemListWindow.addListItem(this._Str_23881(this._catalog._Str_5320[_local_2]));
+                this._itemListWindow.addListItem(this._Str_23881(this._catalog.frontPageItems[_local_2]));
                 _local_2++;
             }
             return true;
@@ -94,7 +94,7 @@
             {
                 _local_3 = this._itemListWindow.getListItemIndex(_arg_2.parent);
                 _local_3 = ((_local_3 < 0) ? 0 : (_local_3 + 1));
-                _local_4 = this._catalog._Str_5320[_local_3];
+                _local_4 = this._catalog.frontPageItems[_local_3];
                 switch (_local_4.type)
                 {
                     case FrontPageItem._Str_13638:

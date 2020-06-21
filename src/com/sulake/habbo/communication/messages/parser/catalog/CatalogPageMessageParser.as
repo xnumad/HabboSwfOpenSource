@@ -55,7 +55,7 @@
             return this._acceptSeasonCurrencyAsCredits;
         }
 
-        public function get _Str_5320():Vector.<FrontPageItem>
+        public function get frontPageItems():Vector.<FrontPageItem>
         {
             return this._frontPageItems;
         }

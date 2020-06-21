@@ -465,7 +465,7 @@
             return this._videoOfferManager;
         }
 
-        public function get _Str_5320():Vector.<FrontPageItem>
+        public function get frontPageItems():Vector.<FrontPageItem>
         {
             return this._frontPageItems;
         }
@@ -1824,9 +1824,9 @@
                     }
                 }
             }
-            if (((!(_local_2._Str_5320 == null)) && (_local_2._Str_5320.length > 0)))
+            if (((!(_local_2.frontPageItems == null)) && (_local_2.frontPageItems.length > 0)))
             {
-                this._frontPageItems = _local_2._Str_5320;
+                this._frontPageItems = _local_2.frontPageItems;
             }
             if (((!(this._catalogViewer == null)) && (this._pageId == _local_3)))
             {
