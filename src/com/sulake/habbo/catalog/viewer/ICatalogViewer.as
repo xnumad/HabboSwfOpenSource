@@ -13,7 +13,7 @@
         function get catalog():IHabboCatalog;
         function get roomEngine():IRoomEngine;
         function dispose():void;
-        function _Str_9089():String;
+        function getCurrentLayoutCode():String;
         function get _Str_20991():Array;
     }
 }

@@ -111,7 +111,7 @@
             return this._page.dispatchWidgetEvent(k);
         }
 
-        public function _Str_9089():String
+        public function getCurrentLayoutCode():String
         {
             if (this._page == null)
             {

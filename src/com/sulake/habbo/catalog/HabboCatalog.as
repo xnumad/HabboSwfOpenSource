@@ -1373,7 +1373,7 @@
             if (this._Str_11577())
             {
                 events.dispatchEvent(new Event(HabboCatalogTrackingEvent.HABBO_CATALOG_TRACKING_EVENT_OPEN));
-                if (((!(this._recyclerLogic == null)) && (this._Str_9089() == "recycler")))
+                if (((!(this._recyclerLogic == null)) && (this.getCurrentLayoutCode() == "recycler")))
                 {
                     this._recyclerLogic.activate();
                 }
@@ -1381,7 +1381,7 @@
             else
             {
                 events.dispatchEvent(new Event(HabboCatalogTrackingEvent.HABBO_CATALOG_TRACKING_EVENT_CLOSE));
-                if (((!(this._recyclerLogic == null)) && (this._Str_9089() == "recycler")))
+                if (((!(this._recyclerLogic == null)) && (this.getCurrentLayoutCode() == "recycler")))
                 {
                     this._recyclerLogic.cancel();
                 }
@@ -1405,13 +1405,13 @@
             }
         }
 
-        private function _Str_9089():String
+        private function getCurrentLayoutCode():String
         {
             if (this._catalogViewer == null)
             {
                 return "";
             }
-            return this._catalogViewer._Str_9089();
+            return this._catalogViewer.getCurrentLayoutCode();
         }
 
         private function _Str_16894(k:String):void
@@ -1734,7 +1734,7 @@
             {
                 this._catalogViewer._Str_20980();
             }
-            if (((!(this._recyclerLogic == null)) && (this._Str_9089() == "recycler")))
+            if (((!(this._recyclerLogic == null)) && (this.getCurrentLayoutCode() == "recycler")))
             {
                 this._recyclerLogic.cancel();
                 this.setupInventoryForRecycler(false);
