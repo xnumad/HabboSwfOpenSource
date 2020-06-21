@@ -693,7 +693,7 @@
         {
             if (((!(this._initialized)) && (this._productDataReady)))
             {
-                this._Str_7718();
+                this.createMainWindow();
                 this.createCatalogNavigators();
                 this.createCatalogViewer();
                 this._initialized = true;
@@ -1443,7 +1443,7 @@
             this._catalogViewer = new CatalogViewer(this, k);
         }
 
-        private function _Str_7718():void
+        private function createMainWindow():void
         {
             var k:String;
             var _local_5:IWindow;

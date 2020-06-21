@@ -40,7 +40,7 @@
             }
             if (this._frame == null)
             {
-                this._Str_7718();
+                this.createMainWindow();
             }
             this._frame.visible = true;
             if (this._list != null)
@@ -101,7 +101,7 @@
             }
         }
 
-        private function _Str_7718():void
+        private function createMainWindow():void
         {
             if (this._frame != null)
             {

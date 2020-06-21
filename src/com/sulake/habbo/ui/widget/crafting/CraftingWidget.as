@@ -109,7 +109,7 @@
             }
         }
 
-        private function _Str_7718():void
+        private function createMainWindow():void
         {
             if (this.window != null)
             {
@@ -184,7 +184,7 @@
             {
                 return;
             }
-            this._Str_7718();
+            this.createMainWindow();
             this._Str_5311("");
             this.setInfoState(CraftingViewStateEnum._Str_15900);
         }

@@ -87,7 +87,7 @@
                 this._Str_25106();
                 if (this._window == null)
                 {
-                    this._Str_7718();
+                    this.createMainWindow();
                     this._habboNewNavigator.registerUpdateReceiver(this, 1000);
                     this._Str_8068._Str_22170(this._habboNewNavigator._Str_7014._Str_8597);
                 }
@@ -286,7 +286,7 @@
             return this._Str_16928;
         }
 
-        private function _Str_7718():void
+        private function createMainWindow():void
         {
             var k:IWindowContainer = IWindowContainer(this._habboNewNavigator.windowManager.buildFromXML(XML(this._habboNewNavigator.assets.getAssetByName("navigator_frame_2_xml").content)));
             IScrollableListWindow(k.findChildByName("block_results")).autoHideScrollBar = false;
