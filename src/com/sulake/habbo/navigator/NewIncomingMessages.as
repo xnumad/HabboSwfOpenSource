@@ -534,7 +534,7 @@
             LegacyNavigator(this._navigator.legacyNavigator).startRoomCreation();
         }
 
-        private function _Str_20233():void
+        private function closeOpenCantConnectAlerts():void
         {
             var k:Array;
             var _local_2:IWindowContext;

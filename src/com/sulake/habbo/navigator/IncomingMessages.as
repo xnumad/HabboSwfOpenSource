@@ -274,7 +274,7 @@
             var _local_2:RoomEntryInfoMessageParser = RoomEntryInfoMessageEvent(k).getParser();
             Logger.log("Navigator: entering room");
             this.data.onRoomEnter(_local_2);
-            this._Str_20233();
+            this.closeOpenCantConnectAlerts();
             this._navigator.roomInfoViewCtrl.close();
             this._navigator.send(new GetGuestRoomMessageComposer(_local_2.guestRoomId, true, false));
             Logger.log("Sent get guest room...");
@@ -728,7 +728,7 @@
             this._navigator.startRoomCreation();
         }
 
-        private function _Str_20233():void
+        private function closeOpenCantConnectAlerts():void
         {
             var k:Array;
             var _local_2:IWindowContext;
