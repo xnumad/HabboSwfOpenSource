@@ -695,7 +695,7 @@
             {
                 this._Str_7718();
                 this.createCatalogNavigators();
-                this._Str_22909();
+                this.createCatalogViewer();
                 this._initialized = true;
                 this.updatePurse();
                 this._Str_24043();
@@ -1437,7 +1437,7 @@
             this.setElementImage("clubIcon", (_local_3.content as BitmapData));
         }
 
-        private function _Str_22909():void
+        private function createCatalogViewer():void
         {
             var k:IWindowContainer = (this._mainContainer.findChildByName("layoutContainer") as IWindowContainer);
             this._catalogViewer = new CatalogViewer(this, k);
