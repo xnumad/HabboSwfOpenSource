@@ -676,7 +676,7 @@
             while (_local_5 < _local_4)
             {
                 _local_6 = _local_3._Str_2990(_local_5);
-                this._Str_19994(this._currentRoomId, _local_6);
+                this.addWallItem(this._currentRoomId, _local_6);
                 _local_5++;
             }
         }
@@ -692,7 +692,7 @@
             var _local_4:ItemMessageData = _local_3.data;
             if (_local_4 != null)
             {
-                this._Str_19994(this._currentRoomId, _local_4);
+                this.addWallItem(this._currentRoomId, _local_4);
             }
         }
 
@@ -747,7 +747,7 @@
             this._roomCreator.updateObjectUserFlatControl(this._currentRoomId, _local_3.id, _local_3.itemData);
         }
 
-        private function _Str_19994(k:int, _arg_2:ItemMessageData):void
+        private function addWallItem(k:int, _arg_2:ItemMessageData):void
         {
             if (((_arg_2 == null) || (this._roomCreator == null)))
             {
