@@ -66,8 +66,8 @@
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotChangeNameConfiguration;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotSkillConfigurationView;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_10953;
-    import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_12104;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10953;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_12104;
     import com.sulake.habbo.friendlist.IHabboFriendsList;
 
     public class AvatarInfoWidget extends RoomWidgetBase implements IUpdateReceiver, IContextMenuParentWidget

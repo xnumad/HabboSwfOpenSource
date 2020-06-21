@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_461
+﻿package com.sulake.habbo.communication.messages.outgoing.inventory.pets
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
