@@ -583,7 +583,7 @@
             this.addMessageEvent(new NotEnoughBalanceMessageEvent(this.onNotEnoughBalance));
             this.addMessageEvent(new _Str_6375(this._Str_23226));
             this.addMessageEvent(new BuildersClubFurniCountMessageEvent(this._Str_23753));
-            this.addMessageEvent(new _Str_8418(this._Str_25811));
+            this.addMessageEvent(new _Str_8418(this.onVoucherRedeemError));
 			this.addMessageEvent(new FireworkChargeDataEvent(this.onFireworkChargeHandler));
             context.addLinkEventTracker(this);
             this._sessionDataManager.loadProductData(this);
@@ -2003,7 +2003,7 @@
             this._windowManager.alert("${catalog.alert.voucherredeem.ok.title}", _local_2, 0, this._Str_7211);
         }
 
-        private function _Str_25811(k:_Str_8418):void
+        private function onVoucherRedeemError(k:_Str_8418):void
         {
             if (k == null)
             {
