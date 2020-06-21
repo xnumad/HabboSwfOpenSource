@@ -702,7 +702,7 @@
                 this.createMarketPlace();
                 this.createClubGiftController();
                 this._Str_25752();
-                this._Str_23448();
+                this.createClubBuyController();
                 this._Str_23722();
                 this._Str_25337();
                 this._Str_25130();
@@ -1689,7 +1689,7 @@
             }
         }
 
-        private function _Str_23448():void
+        private function createClubBuyController():void
         {
             if (this._clubOfferHandler == null)
             {
