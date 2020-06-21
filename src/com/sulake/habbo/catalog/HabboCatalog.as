@@ -332,7 +332,7 @@
         private var _builderMembershipSecondsLeft:int;
         private var _builderMembershipSecondsLeftWithGrace:int;
         private var _builderMembershipUpdateTime:int;
-        private var _Str_19072:int;
+        private var _builderMembershipDisplayUpdateTime:int;
         private var _Str_12983:Boolean;
         private var _Str_13454:Boolean;
         private var _offerCenter:OfferCenter;
@@ -2847,7 +2847,7 @@
             {
                 this._roomPreviewer.updatePreviewRoomView();
             }
-            if ((getTimer() - this._Str_19072) > 500)
+            if ((getTimer() - this._builderMembershipDisplayUpdateTime) > 500)
             {
                 _local_2 = this.builderSecondsLeft;
                 _local_3 = this.builderSecondsLeftWithGrace;
@@ -3054,7 +3054,7 @@
             this._localization.registerParameter("builder.header.status.membership", "duration", (('<font color="#ff8d00"><b>' + _local_5) + "</b></font>"));
             this._localization.registerParameter("builder.header.status.limit", "count", (('<font color="#ff8d00"><b>' + this._builderFurniCount) + "</b></font>"));
             this._localization.registerParameter("builder.header.status.limit", "limit", (('<font color="#ff8d00"><b>' + this._builderFurniLimit) + "</b></font>"));
-            this._Str_19072 = getTimer();
+            this._builderMembershipDisplayUpdateTime = getTimer();
         }
 
         public function get discountEnabled():Boolean
