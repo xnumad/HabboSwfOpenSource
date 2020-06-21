@@ -2355,7 +2355,7 @@
             {
                 return BuilderFurniPlaceableStatus._Str_12543;
             }
-            if (((this._Str_20960 < 0) || (this._Str_20960 >= this._Str_24159)))
+            if (((this._Str_20960 < 0) || (this._Str_20960 >= this.builderFurniLimit)))
             {
                 return BuilderFurniPlaceableStatus._Str_14564;
             }
@@ -3189,7 +3189,7 @@
             return this.getCatalogNavigator(this._catalogType);
         }
 
-        public function get _Str_24159():int
+        public function get builderFurniLimit():int
         {
             return this._Str_16097;
         }
