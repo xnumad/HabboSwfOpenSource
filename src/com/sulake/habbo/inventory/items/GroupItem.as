@@ -648,7 +648,7 @@
             return null;
         }
 
-        public function _Str_2990(k:int):FurnitureItem
+        public function getItem(k:int):FurnitureItem
         {
             var _local_2:FurnitureItem = this._items.getValue(k);
             return _local_2;

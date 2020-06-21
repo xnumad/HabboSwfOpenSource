@@ -21,7 +21,7 @@
             this._items.push(k);
         }
 
-        public function _Str_2990(k:int):TraxChannelItem
+        public function getItem(k:int):TraxChannelItem
         {
             return this._items[k] as TraxChannelItem;
         }

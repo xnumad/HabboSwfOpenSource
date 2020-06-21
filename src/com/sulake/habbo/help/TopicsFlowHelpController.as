@@ -665,7 +665,7 @@
                     _local_3 = _arg_2.parent.id;
                     _local_4 = (_arg_2 as ICheckBoxWindow);
                 }
-                _local_5 = this._habboHelp._Str_3531._Str_2990(_local_3);
+                _local_5 = this._habboHelp._Str_3531.getItem(_local_3);
                 if (!_local_5)
                 {
                     return;
@@ -720,7 +720,7 @@
                         _local_4 = (_arg_2 as ICheckBoxWindow);
                     }
                 }
-                _local_5 = this._habboHelp._Str_3977._Str_2990(this._habboHelp.reportedUserId, _local_3);
+                _local_5 = this._habboHelp._Str_3977.getItem(this._habboHelp.reportedUserId, _local_3);
                 if (_local_5)
                 {
                     _local_5.selected = (!(_local_5.selected));

@@ -675,7 +675,7 @@
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                _local_6 = _local_3._Str_2990(_local_5);
+                _local_6 = _local_3.getItem(_local_5);
                 this.addWallItem(this._currentRoomId, _local_6);
                 _local_5++;
             }

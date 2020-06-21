@@ -788,7 +788,7 @@
             var _local_3:IFurnitureItem;
             for each (_local_2 in this._Str_2834.furniData)
             {
-                _local_3 = _local_2._Str_2990(k);
+                _local_3 = _local_2.getItem(k);
                 if (((!(_local_3 == null)) && (!(_local_3.isWallItem))))
                 {
                     return _local_3;
@@ -803,7 +803,7 @@
             var _local_3:IFurnitureItem;
             for each (_local_2 in this._Str_2834.furniData)
             {
-                _local_3 = _local_2._Str_2990(k);
+                _local_3 = _local_2.getItem(k);
                 if (((!(_local_3 == null)) && (_local_3.isWallItem)))
                 {
                     return _local_3;

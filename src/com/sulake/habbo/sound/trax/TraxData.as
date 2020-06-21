@@ -89,7 +89,7 @@
                 _local_4 = 0;
                 while (_local_4 < _local_3._Str_11307)
                 {
-                    _local_5 = _local_3._Str_2990(_local_4);
+                    _local_5 = _local_3.getItem(_local_4);
                     if (k.indexOf(_local_5.id) == -1)
                     {
                         k.push(_local_5.id);

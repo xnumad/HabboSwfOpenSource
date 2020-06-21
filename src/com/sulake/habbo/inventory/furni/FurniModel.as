@@ -509,7 +509,7 @@
             var _local_3:IFurnitureItem;
             for each (_local_2 in this._furniData)
             {
-                _local_3 = _local_2._Str_2990(k);
+                _local_3 = _local_2.getItem(k);
                 if (_local_3)
                 {
                     return _local_2;
@@ -609,7 +609,7 @@
             var _local_5:LegacyStuffData;
             for each (_local_3 in this._furniData)
             {
-                _local_4 = (_local_3._Str_2990(k) as FurnitureItem);
+                _local_4 = (_local_3.getItem(k) as FurnitureItem);
                 if (_local_4 != null)
                 {
                     _local_5 = (_local_4.stuffData as LegacyStuffData);
@@ -1101,7 +1101,7 @@
             var _local_2:GroupItem;
             for each (_local_2 in this._furniData)
             {
-                if (_local_2._Str_2990(k) !== null)
+                if (_local_2.getItem(k) !== null)
                 {
                     return _local_2;
                 }
@@ -1137,7 +1137,7 @@
             }
             for each (_local_3 in _local_4)
             {
-                if (_local_3._Str_2990(k.id) != null)
+                if (_local_3.getItem(k.id) != null)
                 {
                     return _local_3;
                 }

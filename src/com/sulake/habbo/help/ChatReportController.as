@@ -207,7 +207,7 @@
             var _local_3:ChatRegistryItem;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = this._habboHelp._Str_3531._Str_2990(_arg_2.id);
+                _local_3 = this._habboHelp._Str_3531.getItem(_arg_2.id);
                 if (!_local_3)
                 {
                     return;
@@ -227,7 +227,7 @@
             var _local_3:InstantMessageRegistryItem;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = this._habboHelp._Str_3977._Str_2990(this._reportedUserId, _arg_2.id);
+                _local_3 = this._habboHelp._Str_3977.getItem(this._reportedUserId, _arg_2.id);
                 if (!_local_3)
                 {
                     return;
@@ -284,7 +284,7 @@
                 while (_local_5 < _local_4.numListItems)
                 {
                     _local_6 = (_local_4.getListItemAt(_local_5) as IWindow);
-                    _local_7 = this._habboHelp._Str_3531._Str_2990(_local_6.id);
+                    _local_7 = this._habboHelp._Str_3531.getItem(_local_6.id);
                     if (_local_7)
                     {
                         _local_6.color = ((_local_7.selected) ? _Str_9415 : _Str_6492);
@@ -312,7 +312,7 @@
                 while (_local_5 < _local_4.numListItems)
                 {
                     _local_6 = (_local_4.getListItemAt(_local_5) as IWindow);
-                    _local_7 = this._habboHelp._Str_3977._Str_2990(this._reportedUserId, _local_6.id);
+                    _local_7 = this._habboHelp._Str_3977.getItem(this._reportedUserId, _local_6.id);
                     if (_local_7)
                     {
                         _local_6.color = ((_local_7.selected) ? _Str_9415 : _Str_6492);

@@ -73,7 +73,7 @@
             this._registry = this._registry.concat(k);
         }
 
-        public function _Str_2990(k:uint):ChatRegistryItem
+        public function getItem(k:uint):ChatRegistryItem
         {
             var _local_2:int;
             while (_local_2 < this._registry.length)

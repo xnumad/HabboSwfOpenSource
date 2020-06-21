@@ -117,7 +117,7 @@
             return this._registry;
         }
 
-        public function _Str_2990(k:int, _arg_2:uint):InstantMessageRegistryItem
+        public function getItem(k:int, _arg_2:uint):InstantMessageRegistryItem
         {
             var _local_3:Vector.<InstantMessageRegistryItem> = this._Str_5150(k);
             var _local_4:int;

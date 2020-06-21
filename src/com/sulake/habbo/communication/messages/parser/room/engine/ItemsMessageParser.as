@@ -26,7 +26,7 @@
             return this._items.length;
         }
 
-        public function _Str_2990(k:int):ItemMessageData
+        public function getItem(k:int):ItemMessageData
         {
             if (((k < 0) || (k >= this.getItemCount())))
             {

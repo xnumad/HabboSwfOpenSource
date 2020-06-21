@@ -110,7 +110,7 @@
 
         public function removeItem(k:int):void
         {
-            var _local_2:ExtraInfoListItem = this._Str_2990(k);
+            var _local_2:ExtraInfoListItem = this.getItem(k);
             if (_local_2)
             {
                 _local_2._Str_14104 = this._secondsElapsed;
@@ -122,14 +122,14 @@
             }
         }
 
-        public function _Str_2990(k:int):ExtraInfoListItem
+        public function getItem(k:int):ExtraInfoListItem
         {
             return ExtraInfoListItem(this._items.getValue(k));
         }
 
         private function _Str_20572(k:int):void
         {
-            var _local_2:ExtraInfoListItem = this._Str_2990(k);
+            var _local_2:ExtraInfoListItem = this.getItem(k);
             this._widget.window.removeChild(_local_2.getRenderedWindow());
             this._items.remove(k);
         }

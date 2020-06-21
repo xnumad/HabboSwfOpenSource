@@ -230,13 +230,13 @@
                 _local_7 = 0;
                 while (_local_7 < _local_4._Str_11307)
                 {
-                    _local_8 = _local_4._Str_2990(_local_7).id;
+                    _local_8 = _local_4.getItem(_local_7).id;
                     _local_9 = (this._samples.getValue(_local_8) as TraxSample);
                     _local_9._Str_21520(this._songId, k);
                     if (_local_9 != null)
                     {
                         _local_10 = this._Str_20071(_local_9.length);
-                        _local_11 = (_local_4._Str_2990(_local_7).length / _local_10);
+                        _local_11 = (_local_4.getItem(_local_7).length / _local_10);
                         _local_12 = 0;
                         while (_local_12 < _local_11)
                         {
@@ -297,7 +297,7 @@
                 _local_8 = 0;
                 while (_local_8 < _local_4._Str_11307)
                 {
-                    _local_9 = _local_4._Str_2990(_local_8).id;
+                    _local_9 = _local_4.getItem(_local_8).id;
                     _local_10 = (this._samples.getValue(_local_9) as TraxSample);
                     _local_10._Str_21520(this._songId, k);
                     if (_local_10 != null)
@@ -305,7 +305,7 @@
                         _local_11 = _local_6;
                         _local_12 = _local_5;
                         _local_13 = this._Str_20071(_local_10.length);
-                        _local_14 = _local_4._Str_2990(_local_8).length;
+                        _local_14 = _local_4.getItem(_local_8).length;
                         while (_local_11 < (_local_6 + _local_14))
                         {
                             if (((!(_local_9 == 0)) || (_local_7)))
@@ -320,7 +320,7 @@
                                 _local_7 = true;
                             }
                         }
-                        _local_6 = (_local_6 + _local_4._Str_2990(_local_8).length);
+                        _local_6 = (_local_6 + _local_4.getItem(_local_8).length);
                         _local_5 = (_local_6 * _Str_10958);
                     }
                     else

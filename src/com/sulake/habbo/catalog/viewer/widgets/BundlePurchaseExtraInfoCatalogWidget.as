@@ -80,7 +80,7 @@
             var _local_3:ExtraInfoItemData;
             if (this._Str_6878 != -1)
             {
-                _local_2 = UpdateableExtraInfoListItem(this._Str_4613._Str_2990(this._Str_6878));
+                _local_2 = UpdateableExtraInfoListItem(this._Str_4613.getItem(this._Str_6878));
                 _local_3 = _local_2.data;
                 _local_3.quantity = k;
                 _local_2.update(_local_3);
@@ -113,7 +113,7 @@
             var _local_3:ExtraInfoItemData;
             if (this._Str_6832 != -1)
             {
-                _local_2 = UpdateableExtraInfoListItem(this._Str_4613._Str_2990(this._Str_6832));
+                _local_2 = UpdateableExtraInfoListItem(this._Str_4613.getItem(this._Str_6832));
                 _local_3 = _local_2.data;
                 _local_3.quantity = k;
                 _local_3.discountPriceCredits = this._habboCatalog.utils._Str_4488(true, this._Str_6654, k);

@@ -229,7 +229,7 @@
                 _local_7 = _local_3._Str_25496(_local_6.itemId);
                 if (_local_7)
                 {
-                    _local_5 = _local_7._Str_2990(_local_6.itemId);
+                    _local_5 = _local_7.getItem(_local_6.itemId);
                     if (_local_5)
                     {
                         _local_5.update(_local_6);
