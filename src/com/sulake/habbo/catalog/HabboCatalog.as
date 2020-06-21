@@ -555,7 +555,7 @@
             this.addMessageEvent(new _Str_8409(this.onGiftReceiverNotFound));
             this.addMessageEvent(new _Str_8530(this.onLimitedEditionSoldOut));
             this.addMessageEvent(new PurchaseNotAllowedMessageEvent(this.onPurchaseNotAllowed));
-            this.addMessageEvent(new GiftWrappingConfigurationEvent(this._Str_23158));
+            this.addMessageEvent(new GiftWrappingConfigurationEvent(this.onGiftWrappingConfiguration));
             this.addMessageEvent(new PurchaseErrorMessageEvent(this.onPurchaseError));
             this.addMessageEvent(new _Str_7288(this.onBundleDiscountRulesetMessageEvent));
             this.addMessageEvent(new CatalogPagesListEvent(this.onCatalogIndex));
@@ -2175,7 +2175,7 @@
             }
         }
 
-        private function _Str_23158(k:GiftWrappingConfigurationEvent):void
+        private function onGiftWrappingConfiguration(k:GiftWrappingConfigurationEvent):void
         {
             if (k == null)
             {
