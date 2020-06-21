@@ -327,7 +327,7 @@
                 }
                 k++;
             }
-            var _local_4:ICatalogNode = this._catalog._Str_3361.getNodeById(page.pageId);
+            var _local_4:ICatalogNode = this._catalog.currentCatalogNavigator.getNodeById(page.pageId);
             var _local_5:IWindow = this._catalog.mainContainer.findChildByName(PageLocalization.CATALOG_HEADER_TITLE);
             var _local_6:IStaticBitmapWrapperWindow = (this._catalog.mainContainer.findChildByName(PageLocalization.CATALOG_HEADER_ICON) as IStaticBitmapWrapperWindow);
             if (_local_5 != null)

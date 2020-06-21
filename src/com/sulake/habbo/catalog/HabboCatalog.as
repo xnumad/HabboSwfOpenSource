@@ -877,7 +877,7 @@
             var _local_14:ICatalogNode;
             if (_arg_2 == CatalogNavigator._Str_5778)
             {
-                _local_11 = this._Str_3361._Str_5719(k.offerId, true);
+                _local_11 = this.currentCatalogNavigator._Str_5719(k.offerId, true);
                 if (_local_11 != null)
                 {
                     _arg_2 = _local_11[0].pageId;
@@ -928,7 +928,7 @@
                 {
                     if (_arg_2 == -1)
                     {
-                        _local_14 = this._Str_3361.getNodeByName(CatalogPageName.HC_MEMBERSHIP);
+                        _local_14 = this.currentCatalogNavigator.getNodeByName(CatalogPageName.HC_MEMBERSHIP);
                         if (_local_14 != null)
                         {
                             _arg_2 = _local_14.pageId;
@@ -978,12 +978,12 @@
         {
             this._Str_5298();
             this.toggleCatalog(((_arg_2 == null) ? CatalogType.NORMAL : _arg_2), true, false);
-            if ((((!(this._initialized)) || (this._catalogNavigators == null)) || (!(this._Str_3361.initialized))))
+            if ((((!(this._initialized)) || (this._catalogNavigators == null)) || (!(this.currentCatalogNavigator.initialized))))
             {
                 this._requestedPage._Str_23666 = k;
                 return;
             }
-            this._Str_3361.openPage(k);
+            this.currentCatalogNavigator.openPage(k);
         }
 
         public function openRoomAdCatalogPageInExtendedMode(k:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:Date, _arg_6:int):void
@@ -999,7 +999,7 @@
             this._roomAdPurchaseData.expirationTime = _arg_5;
             this._roomAdPurchaseData.categoryId = _arg_6;
             this.openCatalogPage(k);
-            var _local_8:ICatalogNode = this._Str_3361.getNodeByName(k);
+            var _local_8:ICatalogNode = this.currentCatalogNavigator.getNodeByName(k);
             if (((!(_local_8 == null)) && (_local_8.pageId == _local_7)))
             {
                 this.getRoomAdsPurchaseInfo();
@@ -1017,7 +1017,7 @@
             {
                 this.toggleCatalog(_arg_3, true, false);
                 this._catalogViewer._Str_21608();
-                this._Str_3361.openPageById(k, _arg_2);
+                this.currentCatalogNavigator.openPageById(k, _arg_2);
             }
             else
             {
@@ -1321,7 +1321,7 @@
                     return;
                 }
             }
-            if (((this._Str_3361 == null) || (!(this._Str_3361.initialized))))
+            if (((this.currentCatalogNavigator == null) || (!(this.currentCatalogNavigator.initialized))))
             {
                 this._Str_16894(this._catalogType);
             }
@@ -1390,14 +1390,14 @@
             {
                 this.setupInventoryForRecycler(((this._recyclerLogic.active) && (this._Str_11577())));
             }
-            if (((_local_4) && (!(this._Str_3361 == null))))
+            if (((_local_4) && (!(this.currentCatalogNavigator == null))))
             {
                 if (_arg_3)
                 {
-                    this._Str_3361.deactivateCurrentNode();
-                    this._Str_3361.loadFrontPage();
+                    this.currentCatalogNavigator.deactivateCurrentNode();
+                    this.currentCatalogNavigator.loadFrontPage();
                 }
-                this._Str_3361.showIndex();
+                this.currentCatalogNavigator.showIndex();
                 if (this._catalogViewer != null)
                 {
                     this._catalogViewer._Str_21608();
@@ -1518,7 +1518,7 @@
             _local_3.assetUri = "common_small_pen";
             if (this._catalogViewer._Str_20548 > 0)
             {
-                this._Str_3361.openPageById(this._catalogViewer._Str_20548, -1);
+                this.currentCatalogNavigator.openPageById(this._catalogViewer._Str_20548, -1);
             }
             this._mainContainer.findChildByName("search.helper").visible = true;
         }
@@ -1609,8 +1609,8 @@
                         }
                         else
                         {
-                            _local_7 = this._Str_3361._Str_5719(_local_5.purchaseOfferId, true);
-                            _local_8 = this._Str_3361._Str_5719(_local_5.rentOfferId, true);
+                            _local_7 = this.currentCatalogNavigator._Str_5719(_local_5.purchaseOfferId, true);
+                            _local_8 = this.currentCatalogNavigator._Str_5719(_local_5.rentOfferId, true);
                             if (((!(_local_7 == null)) || ((this._catalogType == CatalogType.NORMAL) && (!(_local_8 == null)))))
                             {
                                 if (_local_6.indexOf(_local_4) >= 0)
@@ -1629,9 +1629,9 @@
             this.localization.registerParameter("catalog.search.results", "count", _local_3.length.toString());
             this.localization.registerParameter("catalog.search.results", "needle", k);
             this._mainContainer.findChildByName(PageLocalization.CATALOG_HEADER_TITLE).caption = "${catalog.search.header}";
-            this._Str_3361.deactivateCurrentNode();
+            this.currentCatalogNavigator.deactivateCurrentNode();
             this._catalogViewer._Str_22433(_local_3);
-            this._Str_3361.filter(_local_4, _local_2);
+            this.currentCatalogNavigator.filter(_local_4, _local_2);
         }
 
         public function furniDataReady():void
@@ -2613,7 +2613,7 @@
                         _local_7 = this._purchasableOffer.page.pageId;
                         if (_local_7 == CatalogNavigator._Str_5778)
                         {
-                            _local_8 = this._Str_3361._Str_5719(this._purchasableOffer.offerId, true);
+                            _local_8 = this.currentCatalogNavigator._Str_5719(this._purchasableOffer.offerId, true);
                             if (_local_8 != null)
                             {
                                 _local_7 = _local_8[0].pageId;
@@ -2901,7 +2901,7 @@
 
         public function _Str_24636(k:int):void
         {
-            var _local_2:ICatalogNode = this._Str_3361.getNodeById(k);
+            var _local_2:ICatalogNode = this.currentCatalogNavigator.getNodeById(k);
             if (_local_2)
             {
                 this._Str_8001 = _local_2.pageName;
@@ -3184,7 +3184,7 @@
             return (this._catalogNavigators != null) ? this._catalogNavigators[k] : null;
         }
 
-        public function get _Str_3361():ICatalogNavigator
+        public function get currentCatalogNavigator():ICatalogNavigator
         {
             return this.getCatalogNavigator(this._catalogType);
         }
