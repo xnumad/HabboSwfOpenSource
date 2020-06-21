@@ -3234,7 +3234,7 @@
             return true;
         }
 
-        public function _Str_19224(k:int, _arg_2:int, _arg_3:String):Boolean
+        public function updateObjectPetGesture(k:int, _arg_2:int, _arg_3:String):Boolean
         {
             var _local_4:IRoomObjectController = this.getObjectUser(k, _arg_2);
             if (((_local_4 == null) || (_local_4.getEventHandler() == null)))

@@ -897,7 +897,7 @@
                                 {
                                     _local_12 = false;
                                 }
-                                this._roomCreator._Str_19224(this._currentRoomId, _local_7.id, _local_19.actionParameter);
+                                this._roomCreator.updateObjectPetGesture(this._currentRoomId, _local_7.id, _local_19.actionParameter);
                                 break;
                             case "wav":
                             case "mv":

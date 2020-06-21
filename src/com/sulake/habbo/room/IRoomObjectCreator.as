@@ -25,7 +25,7 @@
         function updateObjectUserAction(_arg_1:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:String=null):Boolean;
         function updateObjectUserPosture(_arg_1:int, _arg_2:int, _arg_3:String, _arg_4:String=""):Boolean;
         function updateObjectUserGesture(_arg_1:int, _arg_2:int, _arg_3:int):Boolean;
-        function _Str_19224(_arg_1:int, _arg_2:int, _arg_3:String):Boolean;
+        function updateObjectPetGesture(_arg_1:int, _arg_2:int, _arg_3:String):Boolean;
         function updateObjectUserEffect(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:int=0):Boolean;
         function disposeObjectUser(_arg_1:int, _arg_2:int):void;
         function updateObjectRoom(_arg_1:int, _arg_2:String=null, _arg_3:String=null, _arg_4:String=null, _arg_5:Boolean=false):Boolean;
