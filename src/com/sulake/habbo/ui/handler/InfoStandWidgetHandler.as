@@ -413,7 +413,7 @@
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_START_TRADING:
                     _local_9 = this._container.roomSession.userDataManager.getUserData(_local_4.userId);
-                    this._container.inventory._Str_20389(_local_9._Str_2713, _local_9.name);
+                    this._container.inventory.setupTrading(_local_9._Str_2713, _local_9.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_OPEN_HOME_PAGE:
                     this._container.sessionDataManager.openHabboHomePage(_local_3.id, _local_3.name);

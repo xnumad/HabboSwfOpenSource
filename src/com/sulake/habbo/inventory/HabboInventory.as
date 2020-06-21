@@ -648,7 +648,7 @@
             }
         }
 
-        public function _Str_20389(k:int, _arg_2:String):void
+        public function setupTrading(k:int, _arg_2:String):void
         {
             if (!this._isInitialized)
             {

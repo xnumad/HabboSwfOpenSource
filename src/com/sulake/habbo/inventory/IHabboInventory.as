@@ -30,7 +30,7 @@
         function setEffectDeselected(_arg_1:int):void;
         function deselectAllEffects(_arg_1:Boolean=false):void;
         function getAvatarEffect(_arg_1:int):IAvatarEffect;
-        function _Str_20389(_arg_1:int, _arg_2:String):void;
+        function setupTrading(_arg_1:int, _arg_2:String):void;
         function _Str_4511(_arg_1:String, _arg_2:String=null, _arg_3:Boolean=false):void;
         function _Str_16351(_arg_1:String):void;
         function _Str_20251(_arg_1:Boolean):void;
