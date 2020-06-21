@@ -780,12 +780,12 @@
                 _local_5 = _local_4._Str_5719(k, true);
                 if (_local_5 != null)
                 {
-                    this._Str_18074(_local_5[0].pageId, k, _arg_2, _arg_3);
+                    this.purchaseProduct(_local_5[0].pageId, k, _arg_2, _arg_3);
                 }
             }
         }
 
-        public function _Str_18074(k:int, _arg_2:int, _arg_3:String="", _arg_4:int=1):void
+        public function purchaseProduct(k:int, _arg_2:int, _arg_3:String="", _arg_4:int=1):void
         {
             if (((this.roomAdPurchaseData == null) || (!(this.roomAdPurchaseData.offerId == _arg_2))))
             {

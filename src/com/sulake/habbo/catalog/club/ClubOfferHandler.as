@@ -174,7 +174,7 @@
             {
                 return;
             }
-            this._habboCatalog._Str_18074(_arg_2, k.offerId);
+            this._habboCatalog.purchaseProduct(_arg_2, k.offerId);
             this._Str_4504();
         }
 

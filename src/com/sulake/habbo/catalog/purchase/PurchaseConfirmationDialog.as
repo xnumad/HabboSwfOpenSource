@@ -853,7 +853,7 @@
             this._Str_18873("buy_button");
             this._Str_18873("cancel_button");
             this._Str_18873("publish_check");
-            this._catalog._Str_18074(this._pageId, this._offerId, this._extraParameter, this._quantity);
+            this._catalog.purchaseProduct(this._pageId, this._offerId, this._extraParameter, this._quantity);
             var _local_2:ICatalogPage = this._catalog._Str_3854;
             if (_local_2 != null)
             {
