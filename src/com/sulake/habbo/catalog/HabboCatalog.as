@@ -559,7 +559,7 @@
             this.addMessageEvent(new PurchaseErrorMessageEvent(this.onPurchaseError));
             this.addMessageEvent(new _Str_7288(this.onBundleDiscountRulesetMessageEvent));
             this.addMessageEvent(new CatalogPagesListEvent(this.onCatalogIndex));
-            this.addMessageEvent(new MarketPlaceOffersEvent(this._Str_25346));
+            this.addMessageEvent(new MarketPlaceOffersEvent(this.onMarketPlaceOffers));
             this.addMessageEvent(new _Str_8504(this.onCatalogPage));
             this.addMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
@@ -2143,7 +2143,7 @@
             this._recyclerLogic._Str_22273(_local_2.prizeLevels);
         }
 
-        private function _Str_25346(k:IMessageEvent):void
+        private function onMarketPlaceOffers(k:IMessageEvent):void
         {
             if (this._marketplace != null)
             {
