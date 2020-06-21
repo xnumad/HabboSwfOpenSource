@@ -45,7 +45,7 @@
     import com.sulake.habbo.room.events.RoomEngineTriggerWidgetEvent;
     import com.sulake.habbo.room.events.RoomEngineUseProductEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10477;
-    import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_4406;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_4406;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.room.events.RoomEngineRoomAdEvent;
     import com.sulake.habbo.room.events.RoomObjectSoundMachineEvent;

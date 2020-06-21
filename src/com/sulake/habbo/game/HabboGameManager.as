@@ -27,12 +27,12 @@
 	import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
 	import com.sulake.habbo.help.enum.WelcomeNotificationAlignment;
 	import com.sulake.core.assets.IAssetLibrary;
-	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10650;
-	import com.sulake.habbo.communication.messages.outgoing._Str_295.JoinPlayerQueueMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing._Str_295.AcceptGameInviteMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_7312;
-	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_8040;
-	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_8138;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_10650;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.JoinPlayerQueueMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.AcceptGameInviteMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8138;
 	import com.sulake.habbo.room.events.RoomObjectTileMouseEvent;
 	import snowwar._Str_400._SafeStr_2513;
 	import com.sulake.core.utils.PlayerVersionCheck;

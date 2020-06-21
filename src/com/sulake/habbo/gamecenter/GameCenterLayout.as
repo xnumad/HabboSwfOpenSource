@@ -27,10 +27,10 @@
     import com.sulake.habbo.game.GameAssetEnum;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.utils.IRectLimiter;
-    import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_12437;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_12437;
     import com.sulake.habbo.communication.messages.outgoing._Str_356._Str_11951;
     import com.sulake.habbo.communication.messages.outgoing._Str_356._Str_5198;
-    import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10594;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_10594;
     import com.sulake.habbo.communication.messages.outgoing._Str_497._Str_7123;
     import com.sulake.habbo.communication.messages.outgoing._Str_356._Str_11560;
     import flash.display.BitmapData;

@@ -1,8 +1,8 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_295
+﻿package com.sulake.habbo.communication.messages.outgoing.game.lobby
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_8040 implements IMessageComposer 
+    public class _Str_7312 implements IMessageComposer 
     {
 
 

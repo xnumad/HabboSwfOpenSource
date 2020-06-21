@@ -1,16 +1,17 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_295
+﻿package com.sulake.habbo.communication.messages.outgoing.game.lobby
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10650 implements IMessageComposer 
+    public class AcceptGameInviteMessageComposer implements IMessageComposer 
     {
         private var _data:Array;
 
-        public function _Str_10650(k:int)
+        public function AcceptGameInviteMessageComposer(k:int, _arg_2:int)
         {
             this._data = [];
             super();
             this._data.push(k);
+            this._data.push(_arg_2);
         }
 
         public function getMessageArray():Array

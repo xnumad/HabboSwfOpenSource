@@ -5,11 +5,11 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementResolution;
     import com.sulake.core.window.components.IItemGridWindow;
-    import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_4406;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_4406;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_6768;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.Achievement;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_9826;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_9826;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets._Str_2961;
