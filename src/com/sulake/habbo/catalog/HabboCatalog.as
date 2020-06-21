@@ -1323,7 +1323,7 @@
             }
             if (((this.currentCatalogNavigator == null) || (!(this.currentCatalogNavigator.initialized))))
             {
-                this._Str_16894(this._catalogType);
+                this.refreshCatalogIndex(this._catalogType);
             }
             if ((((!(this._Str_11577())) || (_arg_2)) || (_local_4)))
             {
@@ -1414,7 +1414,7 @@
             return this._catalogViewer.getCurrentLayoutCode();
         }
 
-        private function _Str_16894(k:String):void
+        private function refreshCatalogIndex(k:String):void
         {
             this.send(new _Str_11178(k));
         }
@@ -2451,7 +2451,7 @@
             if (((this.buildersClubEnabled) && ((!(this._initialized)) || (!(this.getCatalogNavigator(CatalogType.BUILDER).initialized)))))
             {
                 this.init();
-                this._Str_16894(CatalogType.BUILDER);
+                this.refreshCatalogIndex(CatalogType.BUILDER);
             }
             if (((k.type == RoomEngineObjectEvent.SELECTED) && (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)))
             {
@@ -3087,7 +3087,7 @@
             {
                 if (!this.getCatalogNavigator(CatalogType.NORMAL).initialized)
                 {
-                    this._Str_16894(CatalogType.NORMAL);
+                    this.refreshCatalogIndex(CatalogType.NORMAL);
                 }
                 this._utils.showVipBenefits();
             }
