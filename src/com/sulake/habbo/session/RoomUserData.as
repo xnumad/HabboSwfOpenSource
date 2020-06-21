@@ -247,12 +247,12 @@
             this._botSkills = k;
         }
 
-        public function get _Str_7594():Array
+        public function get botSkillData():Array
         {
             return this._botSkillData;
         }
 
-        public function set _Str_7594(k:Array):void
+        public function set botSkillData(k:Array):void
         {
             this._botSkillData = k;
         }

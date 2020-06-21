@@ -728,10 +728,10 @@
                     {
                         return;
                     }
-                    this._botSkillsWithCommandsMap[_local_15.id.toString()] = _local_17._Str_7594;
-                    if (((this._rentableBotInfoData) && (_local_17._Str_7594)))
+                    this._botSkillsWithCommandsMap[_local_15.id.toString()] = _local_17.botSkillData;
+                    if (((this._rentableBotInfoData) && (_local_17.botSkillData)))
                     {
-                        this._rentableBotInfoData._Str_19891(_local_17._Str_7594);
+                        this._rentableBotInfoData._Str_19891(_local_17.botSkillData);
                     }
                     this._Str_16991(_local_15.id, _local_15.name, _local_15.userRoomId, this._rentableBotInfoData);
                     break;

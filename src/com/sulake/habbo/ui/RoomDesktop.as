@@ -671,7 +671,7 @@
             if (this._session != null)
             {
                 _local_3 = this._session.userDataManager._Str_17237(_local_2.botId);
-                _local_3._Str_7594 = k.getParser().skillList.concat();
+                _local_3.botSkillData = k.getParser().skillList.concat();
             }
             this.events.dispatchEvent(new _Str_5375(_local_2.botId, _local_2.skillList));
         }
