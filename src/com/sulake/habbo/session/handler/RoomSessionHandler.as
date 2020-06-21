@@ -39,7 +39,7 @@
             k.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
             k.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomDisconnected));
             k.addMessageEvent(new _Str_4187(this.onFlatAccessDenied));
-            k.addMessageEvent(new RoomQueueStatusMessageEvent(this._Str_23914));
+            k.addMessageEvent(new RoomQueueStatusMessageEvent(this.onRoomQueueStatus));
             k.addMessageEvent(new YouAreSpectatorMessageEvent(this._Str_22437));
         }
 
@@ -141,7 +141,7 @@
             }
         }
 
-        private function _Str_23914(k:RoomQueueStatusMessageEvent):void
+        private function onRoomQueueStatus(k:RoomQueueStatusMessageEvent):void
         {
             var _local_4:RoomQueueSet;
             var _local_5:RoomSessionQueueEvent;
