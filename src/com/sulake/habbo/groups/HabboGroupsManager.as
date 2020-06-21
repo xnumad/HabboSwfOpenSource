@@ -71,7 +71,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.groups.events.HabboGroupsEditorData;
     import com.sulake.habbo.communication.messages.parser.users._Str_8165;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_4139;
+    import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5936;
     import com.sulake.habbo.communication.messages.incoming.users._Str_2891;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberData;
@@ -430,7 +430,7 @@
 
         private function _Str_3241(k:IMessageEvent):void
         {
-            var _local_2:_Str_4139 = UserObjectEvent(k).getParser();
+            var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
             this._avatarId = _local_2.id;
         }
 

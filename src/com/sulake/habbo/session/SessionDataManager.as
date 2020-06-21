@@ -39,7 +39,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_5948;
     import com.sulake.habbo.session.furniture.IFurniDataListener;
     import com.sulake.habbo.communication.enum.NoobnessLevelEnum;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_4139;
+    import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.communication.messages.parser.users._Str_5856;
     import com.sulake.habbo.session.events.UserNameUpdateEvent;
@@ -322,7 +322,7 @@
         private function _Str_3241(k:IMessageEvent):void
         {
             var _local_2:UserObjectEvent = (k as UserObjectEvent);
-            var _local_3:_Str_4139 = _local_2.getParser();
+            var _local_3:UserObjectMessageParser = _local_2.getParser();
             this._userId = _local_3.id;
             this._name = _local_3.name;
             this._Str_7278 = _local_3._Str_10295;

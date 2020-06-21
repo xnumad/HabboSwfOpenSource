@@ -55,7 +55,7 @@
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
     import com.sulake.habbo.avatar.IAvatarImage;
     import com.sulake.habbo.avatar.enum.AvatarSetType;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_4139;
+    import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendParser;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_6720;
@@ -423,7 +423,7 @@
 
         private function _Str_3241(k:IMessageEvent):void
         {
-            var _local_2:_Str_4139 = (k as UserObjectEvent).getParser();
+            var _local_2:UserObjectMessageParser = (k as UserObjectEvent).getParser();
             this._Str_3764 = int(_local_2.id);
         }
 

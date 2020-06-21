@@ -50,7 +50,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
     import com.sulake.habbo.navigator.transitional.LegacyNavigator;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_4139;
+    import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_8102;
     import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_7413;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
@@ -225,7 +225,7 @@
 
         private function _Str_3241(k:IMessageEvent):void
         {
-            var _local_2:_Str_4139 = UserObjectEvent(k).getParser();
+            var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
             this._navigator.data._Str_3251 = _local_2.id;
             LegacyNavigator(this._navigator._Str_2559).send(new _Str_8102());
             LegacyNavigator(this._navigator._Str_2559).send(new _Str_7413());

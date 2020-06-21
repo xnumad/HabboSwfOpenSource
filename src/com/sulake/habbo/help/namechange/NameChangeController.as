@@ -19,7 +19,7 @@
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6553;
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6537;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_4139;
+    import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users._Str_5856;
 
@@ -226,7 +226,7 @@
 
         private function _Str_3241(k:IMessageEvent):void
         {
-            var _local_2:_Str_4139 = UserObjectEvent(k).getParser();
+            var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
             this._ownUserId = _local_2.id;
             this._ownUserName = _local_2.name;
         }

@@ -61,7 +61,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.habbo.communication.messages.parser.notifications._Str_7739;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_4139;
+    import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.users._Str_5768;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_8077;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_2853;
@@ -450,7 +450,7 @@
 
         private function _Str_3241(k:UserObjectEvent):void
         {
-            var _local_2:_Str_4139 = k.getParser();
+            var _local_2:UserObjectMessageParser = k.getParser();
             if (_local_2._Str_21338)
             {
                 this._notifications._Str_3069._Str_24299(_local_2.id);

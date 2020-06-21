@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredTriggerDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredEffectDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredConditionDataMessageParser;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_4139;
+    import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_5317;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents._Str_7138;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents._Str_7758;
@@ -78,7 +78,7 @@
 
         private function _Str_3241(k:IMessageEvent):void
         {
-            var _local_2:_Str_4139 = (k as UserObjectEvent).getParser();
+            var _local_2:UserObjectMessageParser = (k as UserObjectEvent).getParser();
             this._roomEvents.userName = _local_2.name;
         }
 
