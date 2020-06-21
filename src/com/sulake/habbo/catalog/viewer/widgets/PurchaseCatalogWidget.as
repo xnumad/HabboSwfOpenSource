@@ -252,9 +252,9 @@
             {
                 if (this._offer != null)
                 {
-                    if (((!(this._catalog._Str_3064 == null)) && (this._catalog._Str_3064.offerId == this._offer.offerId)))
+                    if (((!(this._catalog.roomAdPurchaseData == null)) && (this._catalog.roomAdPurchaseData.offerId == this._offer.offerId)))
                     {
-                        if (this._catalog._Str_3064.flatId == 0)
+                        if (this._catalog.roomAdPurchaseData.flatId == 0)
                         {
                             this._catalog.windowManager.alert("${roomad.error.title}", "${roomad.alert.no.available.room}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                             {
@@ -262,7 +262,7 @@
                             });
                             return;
                         }
-                        if ((((this._catalog._Str_3064.name == null) || (this._catalog._Str_3064.name.length < 5)) || (this._catalog._Str_3064.name.substr(0, 1) == " ")))
+                        if ((((this._catalog.roomAdPurchaseData.name == null) || (this._catalog.roomAdPurchaseData.name.length < 5)) || (this._catalog.roomAdPurchaseData.name.substr(0, 1) == " ")))
                         {
                             this._catalog.windowManager.alert("${roomad.error.title}", "${roomad.alert.name.empty}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                             {

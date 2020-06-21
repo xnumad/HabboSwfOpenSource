@@ -59,7 +59,7 @@
             window.findChildByName("name_input_text").addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_24912);
             window.findChildByName("desc_input_text").addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_24087);
             events.addEventListener(CatalogWidgetEvent.PURCHASE, this._Str_24262);
-            var _local_2:RoomAdPurchaseData = this._catalog._Str_3064;
+            var _local_2:RoomAdPurchaseData = this._catalog.roomAdPurchaseData;
             var _local_3:int = this._catalog.getInteger("room_ad.duration.minutes", 120);
             var _local_4:int = this._Str_21550(_local_2, _local_3);
             this._catalog.localization.registerParameter("roomad.catalog_text", "duration", String(_local_4));
@@ -165,11 +165,11 @@
             if (_local_7 != null)
             {
                 _local_3.selection = _local_4;
-                _local_10 = this._catalog._Str_3064;
+                _local_10 = this._catalog.roomAdPurchaseData;
                 if (_local_10 == null)
                 {
                     _local_10 = new RoomAdPurchaseData();
-                    this._catalog._Str_3064 = _local_10;
+                    this._catalog.roomAdPurchaseData = _local_10;
                 }
                 _local_10.flatId = _local_7.roomId;
             }
@@ -182,7 +182,7 @@
         private function _Str_23599():void
         {
             var _local_2:RoomEntryData;
-            var k:RoomAdPurchaseData = this._catalog._Str_3064;
+            var k:RoomAdPurchaseData = this._catalog.roomAdPurchaseData;
             if (((!(k == null)) && (k._Str_8314)))
             {
                 window.findChildByName("name_input_text").caption = k.name;
@@ -221,14 +221,14 @@
             if (_local_6 != null)
             {
                 events.dispatchEvent(new SelectProductEvent(_local_6));
-                _local_7 = this._catalog._Str_3064;
+                _local_7 = this._catalog.roomAdPurchaseData;
                 if (_local_7 == null)
                 {
                     _local_7 = new RoomAdPurchaseData();
-                    this._catalog._Str_3064 = _local_7;
+                    this._catalog.roomAdPurchaseData = _local_7;
                 }
                 _local_7.offerId = _local_6.offerId;
-                this._catalog._Str_3064 = _local_7;
+                this._catalog.roomAdPurchaseData = _local_7;
                 _local_8 = (window.findChildByName("price_container") as IWindowContainer);
                 this._catalog.utils._Str_6455(_local_8, _local_6);
             }
@@ -239,9 +239,9 @@
             this._catalog.getRoomAdsPurchaseInfo();
             window.findChildByName("name_input_text").caption = "";
             window.findChildByName("desc_input_text").caption = "";
-            if (this._catalog._Str_3064)
+            if (this._catalog.roomAdPurchaseData)
             {
-                this._catalog._Str_3064.clear();
+                this._catalog.roomAdPurchaseData.clear();
             }
         }
 
@@ -252,7 +252,7 @@
             {
                 return;
             }
-            var _local_3:RoomAdPurchaseData = this._catalog._Str_3064;
+            var _local_3:RoomAdPurchaseData = this._catalog.roomAdPurchaseData;
             if (_local_3 != null)
             {
                 _local_3.name = _local_2.text;
@@ -266,7 +266,7 @@
             {
                 return;
             }
-            var _local_3:RoomAdPurchaseData = this._catalog._Str_3064;
+            var _local_3:RoomAdPurchaseData = this._catalog.roomAdPurchaseData;
             if (_local_3 != null)
             {
                 _local_3.description = _local_2.text;
@@ -285,7 +285,7 @@
             {
                 _local_3 = IDropMenuWindow(_arg_2).selection;
                 _local_4 = (this._rooms[_local_3] as RoomEntryData);
-                _local_5 = this._catalog._Str_3064;
+                _local_5 = this._catalog.roomAdPurchaseData;
                 if (_local_5)
                 {
                     _local_5.flatId = _local_4.roomId;
@@ -322,7 +322,7 @@
                     _local_2++;
                 }
             }
-            _local_6 = this._catalog._Str_3064;
+            _local_6 = this._catalog.roomAdPurchaseData;
             if (_local_6)
             {
                 _local_6.categoryId = _local_3;

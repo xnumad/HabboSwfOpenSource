@@ -787,7 +787,7 @@
 
         public function _Str_18074(k:int, _arg_2:int, _arg_3:String="", _arg_4:int=1):void
         {
-            if (((this._Str_3064 == null) || (!(this._Str_3064.offerId == _arg_2))))
+            if (((this.roomAdPurchaseData == null) || (!(this.roomAdPurchaseData.offerId == _arg_2))))
             {
                 this.send(new _Str_11783(k, _arg_2, _arg_3, _arg_4));
             }
@@ -797,7 +797,7 @@
                 {
                     this._roomAdPurchaseData._Str_8314 = false;
                 }
-                this.send(new _Str_10613(k, _arg_2, this._Str_3064.flatId, this._Str_3064.name, this._Str_3064._Str_8314, this._Str_3064.description, this._Str_3064.categoryId));
+                this.send(new _Str_10613(k, _arg_2, this.roomAdPurchaseData.flatId, this.roomAdPurchaseData.name, this.roomAdPurchaseData._Str_8314, this.roomAdPurchaseData.description, this.roomAdPurchaseData.categoryId));
             }
         }
 
@@ -816,12 +816,12 @@
             this.send(new _Str_10231(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9));
         }
 
-        public function get _Str_3064():RoomAdPurchaseData
+        public function get roomAdPurchaseData():RoomAdPurchaseData
         {
             return this._roomAdPurchaseData;
         }
 
-        public function set _Str_3064(k:RoomAdPurchaseData):void
+        public function set roomAdPurchaseData(k:RoomAdPurchaseData):void
         {
             this._roomAdPurchaseData = k;
         }
