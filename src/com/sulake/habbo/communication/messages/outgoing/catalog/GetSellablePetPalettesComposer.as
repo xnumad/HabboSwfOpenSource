@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12442 implements IMessageComposer 
+    public class GetSellablePetPalettesComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_12442(k:String)
+        public function GetSellablePetPalettesComposer(k:String)
         {
             this._array = [];
             super();

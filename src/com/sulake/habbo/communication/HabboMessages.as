@@ -652,7 +652,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12068;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12290;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12382;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12442;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSellablePetPalettesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12467;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12488;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17078;
@@ -1610,7 +1610,7 @@
             OUTGOING_PACKETS[172] = _Str_11657;
             OUTGOING_PACKETS[1740] = _Str_7911;
             OUTGOING_PACKETS[1752] = _Str_5945;
-            OUTGOING_PACKETS[1756] = _Str_12442;
+            OUTGOING_PACKETS[1756] = GetSellablePetPalettesComposer;
             OUTGOING_PACKETS[1764] = _Str_11165;
             OUTGOING_PACKETS[1773] = _Str_12165;
             OUTGOING_PACKETS[1782] = _Str_7413;

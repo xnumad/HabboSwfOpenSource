@@ -159,7 +159,7 @@
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11296;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
     import com.sulake.core.assets.BitmapDataAsset;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12442;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetSellablePetPalettesComposer;
     import com.sulake.habbo.catalog.purse.ActivityPointTypeEnum;
     import com.sulake.habbo.window.enum._Str_8057;
     import com.sulake.core.window.components.IIconWindow;
@@ -1225,7 +1225,7 @@
             {
                 return _local_2.slice();
             }
-            this.send(new _Str_12442(k));
+            this.send(new GetSellablePetPalettesComposer(k));
             return null;
         }
 
