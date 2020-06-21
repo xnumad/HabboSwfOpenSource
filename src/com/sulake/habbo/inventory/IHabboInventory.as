@@ -21,7 +21,7 @@
         function getAllMyBadgeIds(_arg_1:Array):Array;
         function getActivatedAvatarEffects():Array;
         function getAvatarEffects():Array;
-        function _Str_12029(_arg_1:IFurnitureItem):Boolean;
+        function requestSelectedFurniToMover(_arg_1:IFurnitureItem):Boolean;
         function _Str_18856(_arg_1:int):IFurnitureItem;
         function _Str_14082(_arg_1:int):IFurnitureItem;
         function _Str_6675(_arg_1:int, _arg_2:Boolean=false):Boolean;

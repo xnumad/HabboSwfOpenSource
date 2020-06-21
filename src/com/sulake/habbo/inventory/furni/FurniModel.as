@@ -740,7 +740,7 @@
             }
             else
             {
-                this._Str_12029(_local_3);
+                this.requestSelectedFurniToMover(_local_3);
             }
             this._view._Str_2944();
             return true;
@@ -1228,7 +1228,7 @@
             return _local_5;
         }
 
-        private function _Str_12029(k:FurnitureItem):void
+        private function requestSelectedFurniToMover(k:FurnitureItem):void
         {
             var _local_2:int;
             var _local_3:Boolean;

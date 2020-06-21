@@ -759,7 +759,7 @@
             return this._localization;
         }
 
-        public function _Str_12029(k:IFurnitureItem):Boolean
+        public function requestSelectedFurniToMover(k:IFurnitureItem):Boolean
         {
             var _local_2:int;
             var _local_3:Boolean;

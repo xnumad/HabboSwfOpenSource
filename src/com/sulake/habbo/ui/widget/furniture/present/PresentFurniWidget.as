@@ -533,7 +533,7 @@
             }
             else
             {
-                _local_2 = this._inventory._Str_12029(k);
+                _local_2 = this._inventory.requestSelectedFurniToMover(k);
             }
             return _local_2;
         }
