@@ -353,7 +353,7 @@
                 this._communication.connection.send(new _Str_11429(k, _arg_2));
             }
             this.trackEventLog("savedsearch.add", "SavedSearch", _Str_6560(k, _arg_2));
-            this._navigatorView._Str_6496(true);
+            this._navigatorView.setLeftPaneVisibility(true);
         }
 
         public function _Str_25285(k:int):void

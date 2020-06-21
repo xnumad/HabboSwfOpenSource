@@ -130,7 +130,7 @@
         {
             if (this._window)
             {
-                this._Str_6496((!(_arg_4)));
+                this.setLeftPaneVisibility((!(_arg_4)));
                 this._window.x = k;
                 this._window.y = _arg_2;
                 this._window.height = _arg_3;
@@ -339,7 +339,7 @@
             this._Str_3380 = k.findChildByName("right_pane");
             this._Str_17392 = this._Str_3380.x;
             this._window = k;
-            this._Str_6496(false);
+            this.setLeftPaneVisibility(false);
             if (((this._Str_4451 == -1) && (this._Str_4599 == -1)))
             {
                 this._Str_4451 = this._window.x;
@@ -351,7 +351,7 @@
             {
                 if (this._Str_11769)
                 {
-                    this._Str_6496(true);
+                    this.setLeftPaneVisibility(true);
                 }
                 this._window.x = this._Str_4451;
                 this._window.y = this._Str_4599;
@@ -422,7 +422,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this._window.findChildByName("left_pane");
-                this._Str_6496((!(_local_3.visible)));
+                this.setLeftPaneVisibility((!(_local_3.visible)));
                 if (this._roomInfoPopup)
                 {
                     this._roomInfoPopup.show(false);
@@ -430,7 +430,7 @@
             }
         }
 
-        public function _Str_6496(k:Boolean):void
+        public function setLeftPaneVisibility(k:Boolean):void
         {
             var _local_5:int;
             var _local_2:IWindow = this._window.findChildByName("left_pane");

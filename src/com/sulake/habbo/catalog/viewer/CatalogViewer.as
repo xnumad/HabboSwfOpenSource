@@ -72,11 +72,11 @@
                 this._container.x = ((this._container.parent.width - this._container.width) - 8);
                 if (this._container.x < 130)
                 {
-                    this._catalog._Str_6496(false);
+                    this._catalog.setLeftPaneVisibility(false);
                 }
                 else
                 {
-                    this._catalog._Str_6496(true);
+                    this._catalog.setLeftPaneVisibility(true);
                 }
             }
             else

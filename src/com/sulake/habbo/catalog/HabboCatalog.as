@@ -1945,7 +1945,7 @@
             }
         }
 
-        public function _Str_6496(k:Boolean):void
+        public function setLeftPaneVisibility(k:Boolean):void
         {
             if (!this._mainContainer)
             {
