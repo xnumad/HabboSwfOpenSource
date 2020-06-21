@@ -328,7 +328,7 @@
         private var _placeMultipleObjects:Boolean;
         private var _builderFurniCount:int = -1;
         private var _builderFurniLimit:int;
-        private var _Str_19671:int;
+        private var _builderMaxFurniLimit:int;
         private var _Str_14644:int;
         private var _Str_16084:int;
         private var _Str_12490:int;
@@ -3005,7 +3005,7 @@
         {
             var _local_2:_Str_6732 = k.getParser();
             this._builderFurniLimit = _local_2._Str_15864;
-            this._Str_19671 = _local_2._Str_24094;
+            this._builderMaxFurniLimit = _local_2._Str_24094;
             this._Str_14644 = _local_2._Str_3709;
             this._Str_12490 = getTimer();
             this._Str_16084 = _local_2._Str_24379;
@@ -3201,7 +3201,7 @@
 
         public function get builderMaxFurniLimit():int
         {
-            return this._Str_19671;
+            return this._builderMaxFurniLimit;
         }
 
         public function get builderSecondsLeft():Number
