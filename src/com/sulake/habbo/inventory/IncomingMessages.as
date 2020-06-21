@@ -160,7 +160,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_6450(this.onAvatarEffects));
             this._com.addHabboConnectionMessageEvent(new _Str_9259(this._Str_24135));
             this._com.addHabboConnectionMessageEvent(new FurniListAddOrUpdateEvent(this._Str_23121));
-            this._com.addHabboConnectionMessageEvent(new _Str_6022(this._Str_16181));
+            this._com.addHabboConnectionMessageEvent(new _Str_6022(this.onMarketplaceMakeOfferResult));
             this._com.addHabboConnectionMessageEvent(new _Str_3660(this._Str_25294));
             this._com.addHabboConnectionMessageEvent(new _Str_8524(this._Str_25173));
             this._com.addHabboConnectionMessageEvent(new _Str_5345(this._Str_17996));
@@ -904,7 +904,7 @@
             _local_2.proceedOfferMaking(_local_3.resultCode, _local_3._Str_24601);
         }
 
-        private function _Str_16181(k:_Str_6022):void
+        private function onMarketplaceMakeOfferResult(k:_Str_6022):void
         {
             if (((k == null) || (this._inventory == null)))
             {

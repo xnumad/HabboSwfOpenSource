@@ -574,7 +574,7 @@
             this.addMessageEvent(new ClubGiftInfoEvent(this.onClubGiftInfo));
             this.addMessageEvent(new HabboClubOffersMessageEvent(this._Str_23194));
             this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
-            this.addMessageEvent(new _Str_6022(this._Str_16181));
+            this.addMessageEvent(new _Str_6022(this.onMarketplaceMakeOfferResult));
             this.addMessageEvent(new _Str_9560(this.onProductOffer));
             this.addMessageEvent(new _Str_6345(this.onMarketPlaceCancelResult));
             this.addMessageEvent(new RecyclerStatusEvent(this._Str_24950));
@@ -2221,7 +2221,7 @@
             this._marketplace.averagePricePeriod = _local_2.displayTime;
         }
 
-        private function _Str_16181(k:_Str_6022):void
+        private function onMarketplaceMakeOfferResult(k:_Str_6022):void
         {
             if (((!(k)) || (!(this._marketplace))))
             {
