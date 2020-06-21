@@ -178,7 +178,7 @@
             {
                 return;
             }
-            _local_2.figureData.avatarEffectType = this.inventory._Str_19470();
+            _local_2.figureData.avatarEffectType = this.inventory.getLastActivatedEffect();
             switch (k)
             {
                 case AvatarEditorInstanceId.OWN_AVATAR_EDITOR:

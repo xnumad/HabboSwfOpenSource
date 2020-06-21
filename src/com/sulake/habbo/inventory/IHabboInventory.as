@@ -26,7 +26,7 @@
         function getWallItemById(_arg_1:int):IFurnitureItem;
         function placePetToRoom(_arg_1:int, _arg_2:Boolean=false):Boolean;
         function setEffectSelected(_arg_1:int):void;
-        function _Str_19470():int;
+        function getLastActivatedEffect():int;
         function setEffectDeselected(_arg_1:int):void;
         function _Str_12575(_arg_1:Boolean=false):void;
         function _Str_22856(_arg_1:int):IAvatarEffect;

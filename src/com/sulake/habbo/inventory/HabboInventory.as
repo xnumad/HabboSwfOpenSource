@@ -993,7 +993,7 @@
             this._boundFurnitureNames = _arg_2;
         }
 
-        public function _Str_19470():int
+        public function getLastActivatedEffect():int
         {
             return this._Str_3994._Str_24332;
         }
