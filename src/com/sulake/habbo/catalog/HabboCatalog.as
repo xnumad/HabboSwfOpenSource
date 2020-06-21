@@ -294,7 +294,7 @@
         private var _mainContainer:IWindowContainer;
         private var _purchaseConfirmationDialog:PurchaseConfirmationDialog;
         private var _giftReceiver:String;
-        private var _Str_14119:Boolean;
+        private var _skipToGifting:Boolean;
         private var _Str_19689:Boolean = true;
         private var _Str_17838:Boolean = false;
         private var _giftWrappingConfiguration:GiftWrappingConfiguration;
@@ -901,7 +901,7 @@
                 this.showNotEnoughActivityPointsAlert(k.activityPointType);
                 return;
             }
-            if (((k is Offer) || (this._Str_14119)))
+            if (((k is Offer) || (this._skipToGifting)))
             {
                 if (((this._purchaseConfirmationDialog == null) || (this._purchaseConfirmationDialog.disposed)))
                 {
@@ -940,16 +940,16 @@
                     }
                 }
             }
-            if (this._Str_14119)
+            if (this._skipToGifting)
             {
-                this._Str_14119 = false;
+                this._skipToGifting = false;
                 this._purchaseConfirmationDialog._Str_25849();
             }
         }
 
         public function purchaseWillBeGift(k:Boolean):void
         {
-            this._Str_14119 = k;
+            this._skipToGifting = k;
         }
 
         private function _Str_22913():void
