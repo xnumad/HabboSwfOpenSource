@@ -580,7 +580,7 @@
             this.addMessageEvent(new RecyclerStatusEvent(this._Str_24950));
             this.addMessageEvent(new RecyclerPrizesEvent(this._Str_23749));
             this.addMessageEvent(new _Str_5946(this._Str_16617));
-            this.addMessageEvent(new NotEnoughBalanceMessageEvent(this._Str_24443));
+            this.addMessageEvent(new NotEnoughBalanceMessageEvent(this.onNotEnoughBalance));
             this.addMessageEvent(new _Str_6375(this._Str_23226));
             this.addMessageEvent(new BuildersClubFurniCountMessageEvent(this._Str_23753));
             this.addMessageEvent(new _Str_8418(this._Str_25811));
@@ -1924,7 +1924,7 @@
             }
         }
 
-        private function _Str_24443(k:IMessageEvent):void
+        private function onNotEnoughBalance(k:IMessageEvent):void
         {
             var _local_2:NotEnoughBalanceMessageEvent = (k as NotEnoughBalanceMessageEvent);
             var _local_3:NotEnoughBalanceMessageParser = _local_2.getParser();
