@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.parser.game.lobby.LoadGameUrlMessageParser;
     import com.sulake.habbo.communication.messages.parser.game.lobby.UnloadGameMessageParser;
     import com.sulake.habbo.communication.messages.parser.game.directory.Game2AccountGameStatusMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing._Str_497._Str_7123;
+    import com.sulake.habbo.communication.messages.outgoing.game.directory._Str_7123;
     import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
     import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
     import com.sulake.core.communication.messages.IMessageEvent;
