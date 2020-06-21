@@ -131,7 +131,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell));
             _local_2.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346));
             _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
-            _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this._Str_11640));
+            _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907));
             _local_2.addHabboConnectionMessageEvent(new _Str_5633(this.onNavigatorSettings));
             _local_2.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647));
@@ -369,7 +369,7 @@
             this._navigator.mainViewCtrl.close();
         }
 
-        private function _Str_11640(k:IMessageEvent):void
+        private function onSubscriptionInfo(k:IMessageEvent):void
         {
             var _local_2:ScrSendUserInfoMessageParser = ScrSendUserInfoEvent(k).getParser();
             Logger.log(((((((((("Got subscription info: " + _local_2.productName) + ", ") + _local_2.daysToPeriodEnd) + ", ") + _local_2.memberPeriods) + ", ") + _local_2.periodsSubscribedAhead) + ", ") + _local_2.responseType));

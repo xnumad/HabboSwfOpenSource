@@ -186,7 +186,7 @@
             this.addMessageEvent(new GuildEditInfoMessageEvent(this._Str_18072));
             this.addMessageEvent(new GuildMembershipUpdatedMessageEvent(this._guildMembersWindowCtrl._Str_25762));
             this.addMessageEvent(new ExtendedProfileChangedMessageEvent(this._Str_23512));
-            this.addMessageEvent(new ScrSendUserInfoEvent(this._Str_11640));
+            this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             this.addMessageEvent(new UserBadgesEvent(this._Str_24382));
             context.addLinkEventTracker(this);
         }
@@ -507,7 +507,7 @@
             this._kickData = null;
         }
 
-        private function _Str_11640(k:IMessageEvent):void
+        private function onSubscriptionInfo(k:IMessageEvent):void
         {
             var _local_2:ScrSendUserInfoMessageParser = ScrSendUserInfoEvent(k).getParser();
             this._hasVip = ((_local_2.isVIP) && (_local_2.minutesUntilExpiration > 0));

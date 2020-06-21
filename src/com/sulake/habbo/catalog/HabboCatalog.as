@@ -573,7 +573,7 @@
             this.addMessageEvent(new GuildMembershipsMessageEvent(this._Str_24089));
             this.addMessageEvent(new ClubGiftInfoEvent(this._Str_18504));
             this.addMessageEvent(new HabboClubOffersMessageEvent(this._Str_23194));
-            this.addMessageEvent(new ScrSendUserInfoEvent(this._Str_11640));
+            this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             this.addMessageEvent(new _Str_6022(this._Str_16181));
             this.addMessageEvent(new _Str_9560(this.onProductOffer));
             this.addMessageEvent(new _Str_6345(this._Str_24794));
@@ -2067,7 +2067,7 @@
             events.dispatchEvent(new PurseUpdateEvent());
         }
 
-        private function _Str_11640(k:IMessageEvent):void
+        private function onSubscriptionInfo(k:IMessageEvent):void
         {
             var _local_3:Boolean;
             var _local_2:ScrSendUserInfoMessageParser = (k as ScrSendUserInfoEvent).getParser();
