@@ -168,7 +168,7 @@
         {
             if (this._communicationManager)
             {
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_5264(this._Str_12366));
+                this._communicationManager.addHabboConnectionMessageEvent(new _Str_5264(this.onCatalogPublished));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
                 this._communicationManager.addHabboConnectionMessageEvent(new FigureUpdateEvent(this.onFigureUpdate));
@@ -974,7 +974,7 @@
             return this._gender;
         }
 
-        private function _Str_12366(k:IMessageEvent):void
+        private function onCatalogPublished(k:IMessageEvent):void
         {
             var _local_3:int;
             var _local_4:int;

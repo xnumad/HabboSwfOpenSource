@@ -96,7 +96,7 @@
             if (this._connection != null)
             {
                 this._dailyOfferListener = new SeasonalCalendarDailyOfferMessageEvent(this._Str_22066);
-                this._catalogPublishedListener = new _Str_5264(this._Str_12366);
+                this._catalogPublishedListener = new _Str_5264(this.onCatalogPublished);
                 this._connection.addMessageEvent(this._dailyOfferListener);
                 this._connection.addMessageEvent(this._catalogPublishedListener);
                 this._connection.send(new _Str_7426());
@@ -217,7 +217,7 @@
             _local_2.bitmap = _local_3;
         }
 
-        private function _Str_12366(k:IMessageEvent):void
+        private function onCatalogPublished(k:IMessageEvent):void
         {
             if (this._connection != null)
             {

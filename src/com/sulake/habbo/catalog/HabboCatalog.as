@@ -568,7 +568,7 @@
             this.addMessageEvent(new _Str_5417(this._Str_24973));
             this.addMessageEvent(new _Str_6344(this._Str_23861));
             this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
-            this.addMessageEvent(new _Str_5264(this._Str_12366));
+            this.addMessageEvent(new _Str_5264(this.onCatalogPublished));
             this.addMessageEvent(new CreditBalanceEvent(this.onCreditBalance));
             this.addMessageEvent(new GuildMembershipsMessageEvent(this._Str_24089));
             this.addMessageEvent(new ClubGiftInfoEvent(this._Str_18504));
@@ -1840,7 +1840,7 @@
             return (this._catalogType == CatalogType.NORMAL) || ((!(k.pricingModel == Offer.PRICING_MODEL_BUNDLE)) && (!(k.pricingModel == Offer.PRICING_MODEL_MULTI)));
         }
 
-        private function _Str_12366(k:IMessageEvent):void
+        private function onCatalogPublished(k:IMessageEvent):void
         {
             var _local_2:Boolean = this._Str_11577();
             this.reset();
