@@ -4,11 +4,11 @@
 
     public class RequestRoomPropertySet implements IMessageComposer
     {
-        private var _Str_6913:int = 0;
+        private var _stripId:int = 0;
 
         public function RequestRoomPropertySet(k:int)
         {
-            this._Str_6913 = k;
+            this._stripId = k;
         }
 
         public function dispose():void
@@ -18,7 +18,7 @@
         public function getMessageArray():Array
         {
             var k:Array = new Array();
-            k.push(this._Str_6913);
+            k.push(this._stripId);
             return k;
         }
     }
