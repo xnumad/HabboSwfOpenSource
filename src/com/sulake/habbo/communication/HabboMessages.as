@@ -390,8 +390,8 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_497._Str_7123;
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemIdsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemsComposer;
-	import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_10855;
-	import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_11497;
+	import com.sulake.habbo.communication.messages.outgoing.advertisement._Str_10855;
+	import com.sulake.habbo.communication.messages.outgoing.advertisement._Str_11497;
 	import com.sulake.habbo.communication.messages.incoming.tracking.LatencyPingResponseMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.userclassification.UserClassificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.*;

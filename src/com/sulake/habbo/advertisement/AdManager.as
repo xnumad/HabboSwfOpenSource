@@ -21,7 +21,7 @@
     import flash.system.Security;
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import flash.external.ExternalInterface;
-    import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_10855;
+    import com.sulake.habbo.communication.messages.outgoing.advertisement._Str_10855;
     import com.sulake.habbo.communication.messages.parser.advertisement.InterstitialMessageParser;
     import com.sulake.habbo.advertisement.events.InterstitialEvent;
     import flash.display.Bitmap;
