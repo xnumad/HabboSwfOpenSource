@@ -135,7 +135,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_9129(this._Str_23613));
             this._com.addHabboConnectionMessageEvent(new BadgesEvent(this.onBadges));
             this._com.addHabboConnectionMessageEvent(new UserBadgesEvent(this.onUserBadges));
-            this._com.addHabboConnectionMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
+            this._com.addHabboConnectionMessageEvent(new MarketplaceConfigurationEvent(this.onMarketplaceConfiguration));
             this._com.addHabboConnectionMessageEvent(new OpenConnectionMessageEvent(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new _Str_9517(this._Str_25747));
             this._com.addHabboConnectionMessageEvent(new TradingOtherNotAllowedEvent(this._Str_22530, TradingOtherNotAllowedParser));
@@ -861,7 +861,7 @@
             _local_2.addItem(_local_3.item);
         }
 
-        private function _Str_16010(k:MarketplaceConfigurationEvent):void
+        private function onMarketplaceConfiguration(k:MarketplaceConfigurationEvent):void
         {
             if (((k == null) || (this._inventory == null)))
             {
