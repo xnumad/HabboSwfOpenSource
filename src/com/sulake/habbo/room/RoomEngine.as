@@ -3442,7 +3442,7 @@
             }
             if (((_arg_3 == 1) && (!(_arg_4 == null))))
             {
-                return this._Str_22095(_local_10, _local_11, _arg_4, _arg_6, _arg_9);
+                return this.getGenericRoomObjectThumbnail(_local_10, _local_11, _arg_4, _arg_6, _arg_9);
             }
             return this.getGenericRoomObjectImage(_local_10, _local_11, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_9, _arg_7, _arg_8);
         }
@@ -3482,7 +3482,7 @@
             }
             if (((_arg_3 == 1) && (!(_arg_4 == null))))
             {
-                return this._Str_22095(_local_9, _local_10, _arg_4, _arg_6, null);
+                return this.getGenericRoomObjectThumbnail(_local_9, _local_10, _arg_4, _arg_6, null);
             }
             return this.getGenericRoomObjectImage(_local_9, _local_10, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, null, _arg_7, _arg_8);
         }
@@ -3606,7 +3606,7 @@
             }
         }
 
-        public function _Str_22095(type:String, param:String, listener:IGetImageListener, extraData:String=null, stuffData:IStuffData=null):ImageResult
+        public function getGenericRoomObjectThumbnail(type:String, param:String, listener:IGetImageListener, extraData:String=null, stuffData:IStuffData=null):ImageResult
         {
             var assetName:String;
             var imageListeners:Vector.<IGetImageListener>;
