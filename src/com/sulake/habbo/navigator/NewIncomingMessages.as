@@ -121,7 +121,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5891(this._Str_18130)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorLiftedRoomsEvent(this._Str_23664)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSavedSearchesEvent(this._Str_11632)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this._Str_16100)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837)));
@@ -475,7 +475,7 @@
             LegacyNavigator(this._navigator.legacyNavigator).doorbell._Str_19346();
         }
 
-        private function _Str_16100(k:IMessageEvent):void
+        private function onDoorOpened(k:IMessageEvent):void
         {
             var _local_2:FlatAccessibleMessageEvent = (k as FlatAccessibleMessageEvent);
             if (_local_2 == null)

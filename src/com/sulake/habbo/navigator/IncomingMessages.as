@@ -123,7 +123,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
             _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             _local_2.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344));
-            _local_2.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this._Str_16100));
+            _local_2.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened));
             _local_2.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             _local_2.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561));
             _local_2.addHabboConnectionMessageEvent(new _Str_8029(this._Str_15955));
@@ -669,7 +669,7 @@
             this._navigator.doorbell._Str_19346();
         }
 
-        private function _Str_16100(k:IMessageEvent):void
+        private function onDoorOpened(k:IMessageEvent):void
         {
             var _local_2:FlatAccessibleMessageEvent = (k as FlatAccessibleMessageEvent);
             if (_local_2 == null)
