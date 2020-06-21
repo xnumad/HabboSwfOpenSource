@@ -2850,7 +2850,7 @@
             if ((getTimer() - this._Str_19072) > 500)
             {
                 _local_2 = this.builderSecondsLeft;
-                _local_3 = this._Str_23332;
+                _local_3 = this.builderSecondsLeftWithGrace;
                 if ((((_local_2 > -3) && (_local_2 < 200)) || ((_local_3 > -3) && (_local_3 < 200))))
                 {
                     this._Str_15371();
@@ -3209,7 +3209,7 @@
             return this._Str_14644 - ((getTimer() - this._Str_12490) / 1000);
         }
 
-        public function get _Str_23332():Number
+        public function get builderSecondsLeftWithGrace():Number
         {
             return this._Str_16084 - ((getTimer() - this._Str_12490) / 1000);
         }
