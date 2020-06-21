@@ -302,7 +302,7 @@
         private var _clubOfferHandler:ClubOfferHandler;
         private var _clubExtendController:ClubExtendController;
         private var _sellablePetPalettes:Map;
-        private var _Str_4151:Boolean = false;
+        private var _isObjectMoverRequested:Boolean = false;
         private var _purchasableOffer:IPurchasableOffer;
         private var _Str_8970:_Str_4431;
         private var _placedObjectPurchaseData:PlacedObjectPurchaseData;
@@ -660,7 +660,7 @@
                 this._rentConfirmationWindow = null;
             }
             this._Str_4663();
-            this._Str_4151 = false;
+            this._isObjectMoverRequested = false;
             this._Str_8970 = null;
             if (this._roomPreviewer != null)
             {
@@ -1892,7 +1892,7 @@
             events.dispatchEvent(new CatalogFurniPurchaseEvent(_local_3.offer.localizationId));
             if (this._purchaseConfirmationDialog != null)
             {
-                if (((!(this._Str_4151)) && (!(this._purchaseConfirmationDialog._Str_23564()))))
+                if (((!(this._isObjectMoverRequested)) && (!(this._purchaseConfirmationDialog._Str_23564()))))
                 {
                     _local_4 = this._purchaseConfirmationDialog._Str_23480();
                     if (_local_4)
@@ -2436,7 +2436,7 @@
                 this._purchasableOffer = _arg_2;
                 this._Str_8970 = k;
                 this._Str_15729();
-                this._Str_4151 = true;
+                this._isObjectMoverRequested = true;
                 this._Str_21515 = _arg_3;
             }
         }
@@ -2468,7 +2468,7 @@
             var _local_2:int;
             var _local_3:String;
             var _local_4:_Str_4431;
-            if (((this._Str_4151) && (k.type == FriendBarSelectionEvent.FBVE_FRIEND_SELECTED)))
+            if (((this._isObjectMoverRequested) && (k.type == FriendBarSelectionEvent.FBVE_FRIEND_SELECTED)))
             {
                 this._Str_4663(true);
                 if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
@@ -2508,7 +2508,7 @@
             var _local_2:String;
             var _local_3:RoomUserData;
             var _local_4:_Str_4431;
-            if (((this._Str_4151) && (k.type == RoomEngineObjectEvent.PLACED_ON_USER)))
+            if (((this._isObjectMoverRequested) && (k.type == RoomEngineObjectEvent.PLACED_ON_USER)))
             {
                 this._Str_4663(true);
                 if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
@@ -2541,7 +2541,7 @@
             var _local_6:IRoomObjectController;
             var _local_7:int;
             var _local_8:Vector.<ICatalogNode>;
-            if (((this._Str_4151) && (k.type == RoomEngineObjectEvent.PLACED)))
+            if (((this._isObjectMoverRequested) && (k.type == RoomEngineObjectEvent.PLACED)))
             {
                 this._Str_4663(true);
                 if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
@@ -2643,11 +2643,11 @@
 
         private function _Str_7529(k:Boolean=true):void
         {
-            if (((k) && (this._Str_4151)))
+            if (((k) && (this._isObjectMoverRequested)))
             {
                 this._Str_20975();
             }
-            this._Str_4151 = false;
+            this._isObjectMoverRequested = false;
             this._Str_8970 = null;
         }
 
@@ -2704,7 +2704,7 @@
             if (this._purchasableOffer != null)
             {
                 this._roomEngine.cancelRoomObjectInsert();
-                this._Str_4151 = false;
+                this._isObjectMoverRequested = false;
                 this._purchasableOffer = null;
             }
         }
@@ -2994,7 +2994,7 @@
                 {
                     this._catalogViewer._Str_3854.dispatchWidgetEvent(new SetExtraPurchaseParameterEvent(_local_7.product.extraParam));
                 }
-                if (((this._Str_4151) && (this._purchasableOffer)))
+                if (((this._isObjectMoverRequested) && (this._purchasableOffer)))
                 {
                     this._purchasableOffer = _local_7;
                 }
