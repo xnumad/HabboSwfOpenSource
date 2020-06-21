@@ -564,7 +564,7 @@
             this.addMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             this.addMessageEvent(new SellablePetPalettesMessageEvent(this._Str_23837));
-            this.addMessageEvent(new MarketPlaceOwnOffersEvent(this._Str_25537));
+            this.addMessageEvent(new MarketPlaceOwnOffersEvent(this.onMarketPlaceOwnOffers));
             this.addMessageEvent(new _Str_5417(this._Str_24973));
             this.addMessageEvent(new _Str_6344(this._Str_23861));
             this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
@@ -2151,7 +2151,7 @@
             }
         }
 
-        private function _Str_25537(k:IMessageEvent):void
+        private function onMarketPlaceOwnOffers(k:IMessageEvent):void
         {
             if (this._marketplace != null)
             {
