@@ -469,7 +469,7 @@
             }
         }
 
-        public function _Str_7938(k:int):Boolean
+        public function getItemWithStripId(k:int):Boolean
         {
             var _local_2:Boolean;
             var _local_3:int;

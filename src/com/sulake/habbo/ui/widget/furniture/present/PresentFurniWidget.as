@@ -499,14 +499,14 @@
                         _local_3 = this._inventory._Str_18856(-(this._placedItemId));
                         if (this._Str_5337(_local_3))
                         {
-                            this._inventory._Str_7938(this._placedItemId);
+                            this._inventory.getItemWithStripId(this._placedItemId);
                         }
                         break;
                     case ProductTypeEnum.WALL:
                         _local_3 = this._inventory._Str_14082(this._placedItemId);
                         if (this._Str_5337(_local_3))
                         {
-                            this._inventory._Str_7938(this._placedItemId);
+                            this._inventory.getItemWithStripId(this._placedItemId);
                         }
                         break;
                     case ProductTypeEnum.PET:

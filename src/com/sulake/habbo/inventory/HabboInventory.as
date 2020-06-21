@@ -847,9 +847,9 @@
             this._view._Str_24185(_local_4);
         }
 
-        public function _Str_7938(k:int):Boolean
+        public function getItemWithStripId(k:int):Boolean
         {
-            var _local_2:Boolean = this._Str_2834._Str_7938(k);
+            var _local_2:Boolean = this._Str_2834.getItemWithStripId(k);
             if (_local_2)
             {
                 this._Str_6956();
