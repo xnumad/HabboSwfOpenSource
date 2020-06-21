@@ -302,7 +302,7 @@
             }
         }
 
-        public function _Str_18196(k:int, _arg_2:int, _arg_3:IStuffData, _arg_4:Number=NaN, _arg_5:Boolean=false):GroupItem
+        public function createGroupItem(k:int, _arg_2:int, _arg_3:IStuffData, _arg_4:Number=NaN, _arg_5:Boolean=false):GroupItem
         {
             var _local_6:BitmapData;
             var _local_7:IAsset;
@@ -1143,7 +1143,7 @@
                 }
             }
             _local_5 = this._Str_3613(k);
-            _local_3 = this._Str_18196(k.type, k.category, k.stuffData, k._Str_2794, _arg_2);
+            _local_3 = this.createGroupItem(k.type, k.category, k.stuffData, k._Str_2794, _arg_2);
             _local_3.push(k, _local_5);
             if (_local_5)
             {
@@ -1210,7 +1210,7 @@
                 }
                 return _local_4;
             }
-            _local_5 = this._Str_18196(k.type, k.category, k.stuffData, k._Str_2794, _arg_2);
+            _local_5 = this.createGroupItem(k.type, k.category, k.stuffData, k._Str_2794, _arg_2);
             _local_5.push(k, _local_3);
             if (_local_3)
             {

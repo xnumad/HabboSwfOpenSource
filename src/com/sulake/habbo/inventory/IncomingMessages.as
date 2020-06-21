@@ -675,7 +675,7 @@
                 _local_5 = (((_local_9.isGroupable) && (!(this._Str_20661(_local_9.spriteId)))) ? (_arg_2.getValue(_local_8) as GroupItem) : null);
                 if (_local_5 == null)
                 {
-                    _local_5 = this._inventory._Str_2834._Str_18196(_local_6, _local_7, _local_9.stuffData);
+                    _local_5 = this._inventory._Str_2834.createGroupItem(_local_6, _local_7, _local_9.stuffData);
                     _arg_2.add(_local_8, _local_5);
                 }
                 _local_5.push(new FurnitureItem(_local_9));
