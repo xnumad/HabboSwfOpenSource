@@ -60,7 +60,7 @@
         function getMarketplaceItemStats(_arg_1:int, _arg_2:int):void;
         function showNotEnoughCreditsAlert():void;
         function showNotEnoughActivityPointsAlert(_arg_1:int):void;
-        function _Str_17905(_arg_1:int):void;
+        function getHabboClubOffers(_arg_1:int):void;
         function openClubCenter():void;
         function verifyClubLevel(_arg_1:int=1):Boolean;
         function set giftReceiver(_arg_1:String):void;

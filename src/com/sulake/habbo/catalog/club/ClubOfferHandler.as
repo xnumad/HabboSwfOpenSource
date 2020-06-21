@@ -159,7 +159,7 @@
 
         public function requestOffers(k:int):void
         {
-            this._habboCatalog._Str_17905(k);
+            this._habboCatalog.getHabboClubOffers(k);
         }
 
         public function showConfirmation(k:ClubBuyOfferData, _arg_2:int):void

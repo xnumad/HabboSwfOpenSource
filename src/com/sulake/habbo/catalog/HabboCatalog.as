@@ -1718,7 +1718,7 @@
             this.send(new _Str_12034());
         }
 
-        public function _Str_17905(k:int):void
+        public function getHabboClubOffers(k:int):void
         {
             this.send(new _Str_10337(k));
         }

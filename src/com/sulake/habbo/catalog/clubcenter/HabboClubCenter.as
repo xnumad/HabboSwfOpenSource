@@ -369,7 +369,7 @@
 
         public function _Str_16489():void
         {
-            this._catalog._Str_17905(ClubOfferRequestSource._Str_19022);
+            this._catalog.getHabboClubOffers(ClubOfferRequestSource._Str_19022);
         }
 
         public function get _Str_19407():IOfferCenter
