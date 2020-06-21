@@ -62,7 +62,7 @@
         function getHabboClubOffers(_arg_1:int):void;
         function _Str_17905(_arg_1:int):void;
         function openClubCenter():void;
-        function _Str_10922(_arg_1:int=1):Boolean;
+        function verifyClubLevel(_arg_1:int=1):Boolean;
         function set giftReceiver(_arg_1:String):void;
         function buySnowWarTokensOffer():void; //Added Snowstorm Client
         function get imageGalleryHost():String;

@@ -2866,7 +2866,7 @@
             }
         }
 
-        public function _Str_10922(k:int=1):Boolean
+        public function verifyClubLevel(k:int=1):Boolean
         {
             if (this._sessionDataManager.clubLevel >= k)
             {

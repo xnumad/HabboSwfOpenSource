@@ -725,7 +725,7 @@
 
         public function verifyClubLevel():Boolean
         {
-            return this._manager.catalog._Str_10922();
+            return this._manager.catalog.verifyClubLevel();
         }
 
         private function get showClubItemsFirst():Boolean

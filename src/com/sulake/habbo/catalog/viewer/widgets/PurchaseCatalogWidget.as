@@ -242,7 +242,7 @@
 
         private function _Str_8396(event:WindowMouseEvent, isGift:Boolean=false):void
         {
-            if (!this._catalog._Str_10922(this._offer.clubLevel))
+            if (!this._catalog.verifyClubLevel(this._offer.clubLevel))
             {
                 this._catalog.openClubCenter();
                 return;
