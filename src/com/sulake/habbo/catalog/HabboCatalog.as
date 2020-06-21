@@ -565,7 +565,7 @@
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             this.addMessageEvent(new SellablePetPalettesMessageEvent(this.onSellablePalettes));
             this.addMessageEvent(new MarketPlaceOwnOffersEvent(this.onMarketPlaceOwnOffers));
-            this.addMessageEvent(new _Str_5417(this._Str_24973));
+            this.addMessageEvent(new _Str_5417(this.onBuildersClubSubscriptionStatus));
             this.addMessageEvent(new _Str_6344(this.onMarketPlaceBuyResult));
             this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
             this.addMessageEvent(new _Str_5264(this.onCatalogPublished));
@@ -3001,7 +3001,7 @@
             }
         }
 
-        private function _Str_24973(k:_Str_5417):void
+        private function onBuildersClubSubscriptionStatus(k:_Str_5417):void
         {
             var _local_2:_Str_6732 = k.getParser();
             this._builderFurniLimit = _local_2._Str_15864;
