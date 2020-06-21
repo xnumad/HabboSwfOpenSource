@@ -1472,8 +1472,8 @@
             var _local_4:ITextFieldWindow = (this._mainContainer.findChildByName("search.input") as ITextFieldWindow);
             if (_local_4)
             {
-                _local_4.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_21398);
-                _local_4.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this._Str_21398);
+                _local_4.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this.onSearchInputEvent);
+                _local_4.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this.onSearchInputEvent);
                 _local_4.setSelection(0, _local_4.text.length);
                 _local_4.focus();
                 _local_5 = this._mainContainer.findChildByName("clear_search_button");
@@ -1523,7 +1523,7 @@
             this._mainContainer.findChildByName("search.helper").visible = true;
         }
 
-        private function _Str_21398(k:WindowKeyboardEvent):void
+        private function onSearchInputEvent(k:WindowKeyboardEvent):void
         {
             if (k.type == WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN)
             {
