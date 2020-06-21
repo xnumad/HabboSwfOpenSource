@@ -119,7 +119,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5212(this._Str_17011));
             _local_2.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226));
             _local_2.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch));
-            _local_2.addHabboConnectionMessageEvent(new _Str_4187(this._Str_12114));
+            _local_2.addHabboConnectionMessageEvent(new _Str_4187(this.onFlatAccessDenied));
             _local_2.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
             _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             _local_2.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344));
@@ -692,7 +692,7 @@
             this._navigator.roomInfoViewCtrl.reload();
         }
 
-        private function _Str_12114(k:IMessageEvent):void
+        private function onFlatAccessDenied(k:IMessageEvent):void
         {
             var _local_2:_Str_5700 = (k as _Str_4187).getParser();
             if (((_local_2.userName == null) || (_local_2.userName == "")))

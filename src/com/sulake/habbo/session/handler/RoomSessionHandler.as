@@ -38,7 +38,7 @@
             k.addMessageEvent(new FlatAccessibleMessageEvent(this.onFlatAccessible));
             k.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
             k.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomDisconnected));
-            k.addMessageEvent(new _Str_4187(this._Str_12114));
+            k.addMessageEvent(new _Str_4187(this.onFlatAccessDenied));
             k.addMessageEvent(new RoomQueueStatusMessageEvent(this._Str_23914));
             k.addMessageEvent(new YouAreSpectatorMessageEvent(this._Str_22437));
         }
@@ -101,7 +101,7 @@
             }
         }
 
-        private function _Str_12114(k:_Str_4187):void
+        private function onFlatAccessDenied(k:_Str_4187):void
         {
             var _local_5:IRoomSession;
             var _local_2:int = _xxxRoomId;

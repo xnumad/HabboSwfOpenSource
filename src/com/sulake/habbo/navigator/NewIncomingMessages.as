@@ -125,7 +125,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5655(this._Str_8351)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4187(this._Str_12114)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4187(this.onFlatAccessDenied)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell)));
@@ -498,7 +498,7 @@
             LegacyNavigator(this._navigator.legacyNavigator).roomInfoViewCtrl.reload();
         }
 
-        private function _Str_12114(k:IMessageEvent):void
+        private function onFlatAccessDenied(k:IMessageEvent):void
         {
             var _local_2:_Str_5700 = (k as _Str_4187).getParser();
             if (((_local_2.userName == null) || (_local_2.userName == "")))
