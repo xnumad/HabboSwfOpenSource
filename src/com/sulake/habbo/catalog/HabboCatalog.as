@@ -1144,7 +1144,7 @@
             return this._clubOfferHandler;
         }
 
-        public function _Str_25905():ClubExtendController
+        public function getClubExtendController():ClubExtendController
         {
             return this._clubExtendController;
         }
