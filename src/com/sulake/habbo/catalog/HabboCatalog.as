@@ -495,7 +495,7 @@
                 "callback":this._Str_23698
             }, {
                 "type":RoomEngineObjectEvent.SELECTED,
-                "callback":this._Str_23336
+                "callback":this.onObjectSelected
             }]), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
                 _localization = k;
@@ -2441,7 +2441,7 @@
             }
         }
 
-        private function _Str_23336(k:RoomEngineObjectEvent):void
+        private function onObjectSelected(k:RoomEngineObjectEvent):void
         {
             var _local_2:RoomUserData;
             if (k == null)
