@@ -572,7 +572,7 @@
             this.addMessageEvent(new CreditBalanceEvent(this.onCreditBalance));
             this.addMessageEvent(new GuildMembershipsMessageEvent(this._Str_24089));
             this.addMessageEvent(new ClubGiftInfoEvent(this.onClubGiftInfo));
-            this.addMessageEvent(new HabboClubOffersMessageEvent(this._Str_23194));
+            this.addMessageEvent(new HabboClubOffersMessageEvent(this.onHabboClubOffers));
             this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             this.addMessageEvent(new _Str_6022(this.onMarketplaceMakeOfferResult));
             this.addMessageEvent(new _Str_9560(this.onProductOffer));
@@ -2238,7 +2238,7 @@
             }
         }
 
-        private function _Str_23194(k:HabboClubOffersMessageEvent):void
+        private function onHabboClubOffers(k:HabboClubOffersMessageEvent):void
         {
             var _local_2:HabboClubOffersMessageParser = k.getParser();
             if (((!(this._clubOfferHandler == null)) && ((((_local_2.source == ClubOfferRequestSource._Str_15734) || (_local_2.source == ClubOfferRequestSource._Str_12589)) || (_local_2.source == ClubOfferRequestSource._Str_15001)) || (_local_2.source == ClubOfferRequestSource._Str_15727))))
