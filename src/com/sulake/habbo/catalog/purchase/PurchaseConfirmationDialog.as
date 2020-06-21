@@ -827,7 +827,7 @@
             var _local_7:int = ((_local_5) ? 0 : this._boxTypes[this._boxIndex]);
             var _local_8:int = ((_local_5) ? 0 : this._ribbonTypes[this._ribbonIndex]);
             var _local_9:Boolean = this._Str_23569();
-            this._catalog._Str_22436(this._pageId, this._offerId, this._extraParameter, _local_2, _local_4, _local_6, _local_7, _local_8, _local_9);
+            this._catalog.purchaseProductAsGift(this._pageId, this._offerId, this._extraParameter, _local_2, _local_4, _local_6, _local_7, _local_8, _local_9);
         }
 
         private function _Str_18873(k:String):void
