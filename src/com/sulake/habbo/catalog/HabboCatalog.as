@@ -699,7 +699,7 @@
                 this._initialized = true;
                 this.updatePurse();
                 this._Str_24043();
-                this._Str_24591();
+                this.createMarketPlace();
                 this._Str_22724();
                 this._Str_25752();
                 this._Str_23448();
@@ -1673,7 +1673,7 @@
             this.getRecyclerPrizes();
         }
 
-        private function _Str_24591():void
+        private function createMarketPlace():void
         {
             if (this._marketplace == null)
             {
