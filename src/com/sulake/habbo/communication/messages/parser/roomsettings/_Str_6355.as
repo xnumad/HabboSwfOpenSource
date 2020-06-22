@@ -7,7 +7,7 @@
     public class _Str_6355 implements IMessageParser 
     {
         private var _roomId:int;
-        private var _Str_8850:Array;
+        private var _controllers:Array;
 
 
         public function parse(k:IMessageDataWrapper):Boolean
@@ -17,7 +17,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_8850.push(new _Str_4114(k));
+                this._controllers.push(new _Str_4114(k));
                 _local_3++;
             }
             return true;
@@ -25,7 +25,7 @@
 
         public function flush():Boolean
         {
-            this._Str_8850 = [];
+            this._controllers = [];
             return true;
         }
 
@@ -36,7 +36,7 @@
 
         public function get _Str_8349():Array
         {
-            return this._Str_8850;
+            return this._controllers;
         }
     }
 }

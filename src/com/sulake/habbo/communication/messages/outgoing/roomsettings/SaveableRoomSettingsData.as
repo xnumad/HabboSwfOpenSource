@@ -10,7 +10,7 @@
         private var _categoryId:int;
         private var _maximumVisitors:int;
         private var _tags:Array;
-        private var _Str_8850:Array;
+        private var _controllers:Array;
         private var _Str_4667:int;
         private var _Str_6656:Boolean;
         private var _Str_11128:Boolean;
@@ -181,12 +181,12 @@
 
         public function get _Str_8349():Array
         {
-            return this._Str_8850;
+            return this._controllers;
         }
 
         public function set _Str_8349(k:Array):void
         {
-            this._Str_8850 = k;
+            this._controllers = k;
         }
 
         public function get whoCanMute():int
