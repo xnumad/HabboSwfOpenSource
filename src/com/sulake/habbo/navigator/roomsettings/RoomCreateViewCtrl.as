@@ -165,7 +165,7 @@
             this._content = IWindowContainer(this._navigator.getXmlWindow("roc_create_room"));
             this._list = IItemListWindow(this._content.findChildByName("layout_item_list"));
             this._Str_19409();
-            var k:IButtonWindow = this._Str_24078();
+            var k:IButtonWindow = this.getCreateButton();
             addMouseClickListener(k, this._Str_23902);
             var _local_2:IButtonWindow = this._Str_25310();
             addMouseClickListener(_local_2, this._Str_4604);
@@ -377,7 +377,7 @@
             return k;
         }
 
-        private function _Str_24078():IButtonWindow
+        private function getCreateButton():IButtonWindow
         {
             return IButtonWindow(this._content.findChildByName("create_button"));
         }
