@@ -15,7 +15,7 @@
         private var _type:String;
         private var _name:String;
         private var _description:String;
-        private var _Str_21429:Boolean;
+        private var _showOwnerName:Boolean;
         private var _Str_21731:Boolean;
         private var _Str_20586:Boolean;
         private var _password:String;
@@ -58,7 +58,7 @@
 
         public function get _Str_23228():Boolean
         {
-            return this._Str_21429;
+            return this._showOwnerName;
         }
 
         public function get _Str_24512():Boolean
@@ -113,7 +113,7 @@
 
         public function set _Str_23228(k:Boolean):void
         {
-            this._Str_21429 = k;
+            this._showOwnerName = k;
         }
 
         public function set _Str_24512(k:Boolean):void
