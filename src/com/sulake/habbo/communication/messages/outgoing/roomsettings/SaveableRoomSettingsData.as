@@ -23,7 +23,7 @@
         private var _whoCanKick:int;
         private var _whoCanBan:int;
         private var _chatMode:int;
-        private var _Str_21851:int;
+        private var _chatBubbleSize:int;
         private var _Str_20461:int;
         private var _Str_22118:int;
         private var _Str_19561:int;
@@ -231,12 +231,12 @@
 
         public function get _Str_16726():int
         {
-            return this._Str_21851;
+            return this._chatBubbleSize;
         }
 
         public function set _Str_16726(k:int):void
         {
-            this._Str_21851 = k;
+            this._chatBubbleSize = k;
         }
 
         public function get _Str_17830():int
