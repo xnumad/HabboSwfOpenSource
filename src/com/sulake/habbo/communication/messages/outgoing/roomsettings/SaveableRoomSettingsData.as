@@ -16,7 +16,7 @@
         private var _allowFoodConsume:Boolean;
         private var _allowWalkThrough:Boolean;
         private var _allowNavigatorDynCats:Boolean;
-        private var _Str_5413:Boolean;
+        private var _hideWalls:Boolean;
         private var _Str_5084:int;
         private var _Str_5119:int;
         private var _whoCanMute:int;
@@ -71,12 +71,12 @@
 
         public function get _Str_7455():Boolean
         {
-            return this._Str_5413;
+            return this._hideWalls;
         }
 
         public function set _Str_7455(k:Boolean):void
         {
-            this._Str_5413 = k;
+            this._hideWalls = k;
         }
 
         public function get _Str_5962():int
