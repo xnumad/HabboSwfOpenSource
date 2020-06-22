@@ -14,7 +14,7 @@
         private var _tradeMode:int;
         private var _allowPets:Boolean;
         private var _allowFoodConsume:Boolean;
-        private var _Str_10197:Boolean;
+        private var _allowWalkThrough:Boolean;
         private var _Str_22248:Boolean;
         private var _Str_5413:Boolean;
         private var _Str_5084:int;
@@ -61,12 +61,12 @@
 
         public function get _Str_7273():Boolean
         {
-            return this._Str_10197;
+            return this._allowWalkThrough;
         }
 
         public function set _Str_7273(k:Boolean):void
         {
-            this._Str_10197 = k;
+            this._allowWalkThrough = k;
         }
 
         public function get _Str_7455():Boolean
