@@ -173,7 +173,7 @@
             addMouseClickListener(_local_3, this._Str_4604);
             this._roomNameInput = new TextFieldManager(this._navigator, ITextFieldWindow(this._content.findChildByName("room_name_input")), 25, null, this._navigator.getText("navigator.createroom.roomnameinfo"));
             this._roomDescInput = new TextFieldManager(this._navigator, ITextFieldWindow(this._content.findChildByName("room_desc_input")), 128, null, this._navigator.getText("navigator.createroom.roomdescinfo"));
-            this._Str_23605();
+            this.prepareCategorySelection();
             this._Str_23465();
             this._Str_10439(50);
             var _local_4:Rectangle = Util._Str_10228(this._content.desktop, this._content.width, this._content.height);
@@ -181,7 +181,7 @@
             this._content.y = _local_4.y;
         }
 
-        private function _Str_23605():void
+        private function prepareCategorySelection():void
         {
             var _local_2:FlatCategory;
             this._categoryMenu = (this._content.findChildByName("categories_list") as IDropMenuWindow);
