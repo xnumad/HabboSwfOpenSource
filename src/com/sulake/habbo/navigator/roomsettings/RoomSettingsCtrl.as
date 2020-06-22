@@ -754,7 +754,7 @@
             }
             if (this._Str_5830)
             {
-                if (k._Str_7455)
+                if (k.hideWalls)
                 {
                     this._Str_5830.select();
                 }
@@ -978,7 +978,7 @@
             k._Str_7595 = this._Str_7429.Selected;
             k._Str_7273 = this._Str_5537.Selected;
             k._Str_18547 = this._Str_6233.Selected;
-            k._Str_7455 = this._Str_5830.Selected;
+            k.hideWalls = this._Str_5830.Selected;
             k.wallThickness = (this._Str_6424.selection - 2);
             k.floorThickness = (this._Str_6508.selection - 2);
             k.tags = new Array();

@@ -33,7 +33,7 @@
             this._roomSettingsData.allowPets = (k.readInteger() == 1);
             this._roomSettingsData._Str_7595 = (k.readInteger() == 1);
             this._roomSettingsData._Str_7273 = (k.readInteger() == 1);
-            this._roomSettingsData._Str_7455 = (k.readInteger() == 1);
+            this._roomSettingsData.hideWalls = (k.readInteger() == 1);
             this._roomSettingsData.wallThickness = k.readInteger();
             this._roomSettingsData.floorThickness = k.readInteger();
             this._roomSettingsData.chatSettings = new RoomChatSettings(k);

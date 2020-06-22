@@ -97,12 +97,12 @@
             this._allowWalkThrough = k;
         }
 
-        public function get _Str_7455():Boolean
+        public function get hideWalls():Boolean
         {
             return this._hideWalls;
         }
 
-        public function set _Str_7455(k:Boolean):void
+        public function set hideWalls(k:Boolean):void
         {
             this._hideWalls = k;
         }

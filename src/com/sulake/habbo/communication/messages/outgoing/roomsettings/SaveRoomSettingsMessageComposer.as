@@ -45,7 +45,7 @@
             this.messageArray.push(k.allowPets);
             this.messageArray.push(k._Str_7595);
             this.messageArray.push(k._Str_7273);
-            this.messageArray.push(k._Str_7455);
+            this.messageArray.push(k.hideWalls);
             this.messageArray.push(k.wallThickness);
             this.messageArray.push(k.floorThickness);
             this.messageArray.push(k.whoCanMute);
