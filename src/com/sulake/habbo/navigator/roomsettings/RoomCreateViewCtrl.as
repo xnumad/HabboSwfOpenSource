@@ -166,7 +166,7 @@
             this._list = IItemListWindow(this._content.findChildByName("layout_item_list"));
             this._Str_19409();
             var k:IButtonWindow = this.getCreateButton();
-            addMouseClickListener(k, this._Str_23902);
+            addMouseClickListener(k, this.onCreateButtonClick);
             var _local_2:IButtonWindow = this._Str_25310();
             addMouseClickListener(_local_2, this._Str_4604);
             var _local_3:IWindow = this._content.findChildByTag("close");
@@ -437,7 +437,7 @@
             this._navigator.openCatalogClubPage("RoomCreateViewCtrl");
         }
 
-        private function _Str_23902(k:WindowEvent):void
+        private function onCreateButtonClick(k:WindowEvent):void
         {
             var _flatCategory:FlatCategory;
             var roomTradeSetting:int;
