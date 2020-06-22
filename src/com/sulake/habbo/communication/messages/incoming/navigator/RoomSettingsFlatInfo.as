@@ -8,7 +8,7 @@
         public static const DOORMODE_INVISIBLE:int = 3;
         public static const DOORMODE_NOOBS_ONLY:int = 4;
 
-        private var _Str_21354:Boolean;
+        private var _allowFurniMoving:Boolean;
         private var _doorMode:int;
         private var _id:int;
         private var _ownerName:String;
@@ -23,7 +23,7 @@
 
         public function get _Str_24220():Boolean
         {
-            return this._Str_21354;
+            return this._allowFurniMoving;
         }
 
         public function get doorMode():int
@@ -78,7 +78,7 @@
 
         public function set _Str_24220(k:Boolean):void
         {
-            this._Str_21354 = k;
+            this._allowFurniMoving = k;
         }
 
         public function set doorMode(k:int):void
