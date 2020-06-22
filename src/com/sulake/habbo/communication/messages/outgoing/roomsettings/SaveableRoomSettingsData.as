@@ -24,7 +24,7 @@
         private var _whoCanBan:int;
         private var _chatMode:int;
         private var _chatBubbleSize:int;
-        private var _Str_20461:int;
+        private var _chatScrollUpFrequency:int;
         private var _Str_22118:int;
         private var _Str_19561:int;
 
@@ -241,12 +241,12 @@
 
         public function get _Str_17830():int
         {
-            return this._Str_20461;
+            return this._chatScrollUpFrequency;
         }
 
         public function set _Str_17830(k:int):void
         {
-            this._Str_20461 = k;
+            this._chatScrollUpFrequency = k;
         }
 
         public function get _Str_18410():int
