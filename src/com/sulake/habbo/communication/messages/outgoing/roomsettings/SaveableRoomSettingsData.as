@@ -22,7 +22,7 @@
         private var _whoCanMute:int;
         private var _whoCanKick:int;
         private var _whoCanBan:int;
-        private var _Str_20703:int;
+        private var _chatMode:int;
         private var _Str_21851:int;
         private var _Str_20461:int;
         private var _Str_22118:int;
@@ -221,12 +221,12 @@
 
         public function get _Str_18654():int
         {
-            return this._Str_20703;
+            return this._chatMode;
         }
 
         public function set _Str_18654(k:int):void
         {
-            this._Str_20703 = k;
+            this._chatMode = k;
         }
 
         public function get _Str_16726():int
