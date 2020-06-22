@@ -13,7 +13,7 @@
         private var _controllers:Array;
         private var _tradeMode:int;
         private var _allowPets:Boolean;
-        private var _Str_11128:Boolean;
+        private var _allowFoodConsume:Boolean;
         private var _Str_10197:Boolean;
         private var _Str_22248:Boolean;
         private var _Str_5413:Boolean;
@@ -51,12 +51,12 @@
 
         public function get _Str_7595():Boolean
         {
-            return this._Str_11128;
+            return this._allowFoodConsume;
         }
 
         public function set _Str_7595(k:Boolean):void
         {
-            this._Str_11128 = k;
+            this._allowFoodConsume = k;
         }
 
         public function get _Str_7273():Boolean
