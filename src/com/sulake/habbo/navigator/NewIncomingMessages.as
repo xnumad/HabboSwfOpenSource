@@ -77,7 +77,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6043;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6561;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6355;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllersMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6824;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6887;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6752;
@@ -428,7 +428,7 @@
 
         private function _Str_8576(k:IMessageEvent):void
         {
-            var _local_2:_Str_6355 = (k as _Str_5771).getParser();
+            var _local_2:FlatControllersMessageParser = (k as _Str_5771).getParser();
             Logger.log(((("Got flat controllers: " + _local_2.roomId) + ", ") + _local_2._Str_8349.length));
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_8576(_local_2.roomId, _local_2._Str_8349);
         }
