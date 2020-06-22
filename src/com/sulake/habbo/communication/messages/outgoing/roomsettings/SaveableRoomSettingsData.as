@@ -239,12 +239,12 @@
             this._chatBubbleSize = k;
         }
 
-        public function get _Str_17830():int
+        public function get chatScrollUpFrequency():int
         {
             return this._chatScrollUpFrequency;
         }
 
-        public function set _Str_17830(k:int):void
+        public function set chatScrollUpFrequency(k:int):void
         {
             this._chatScrollUpFrequency = k;
         }

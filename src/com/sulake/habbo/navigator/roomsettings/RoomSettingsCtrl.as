@@ -987,7 +987,7 @@
             this._Str_24511(k);
             k._Str_18654 = this._Str_15306.selection;
             k._Str_16726 = this._Str_6283.selection;
-            k._Str_17830 = this._Str_10492.selection;
+            k.chatScrollUpFrequency = this._Str_10492.selection;
             k.chatFullHearRange = int(this._Str_14650.getText());
             k.chatFloodSensitivity = this._Str_6390.selection;
             this.clearErrors();
