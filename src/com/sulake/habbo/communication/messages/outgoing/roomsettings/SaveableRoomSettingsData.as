@@ -219,12 +219,12 @@
             this._whoCanBan = k;
         }
 
-        public function get _Str_18654():int
+        public function get chatMode():int
         {
             return this._chatMode;
         }
 
-        public function set _Str_18654(k:int):void
+        public function set chatMode(k:int):void
         {
             this._chatMode = k;
         }

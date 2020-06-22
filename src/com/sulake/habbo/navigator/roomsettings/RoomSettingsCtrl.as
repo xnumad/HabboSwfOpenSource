@@ -985,7 +985,7 @@
             this._Str_21352(this._tag1Input, k.tags);
             this._Str_21352(this._tag2Input, k.tags);
             this._Str_24511(k);
-            k._Str_18654 = this._Str_15306.selection;
+            k.chatMode = this._Str_15306.selection;
             k.chatBubbleSize = this._Str_6283.selection;
             k.chatScrollUpFrequency = this._Str_10492.selection;
             k.chatFullHearRange = int(this._Str_14650.getText());
