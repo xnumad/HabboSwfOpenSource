@@ -305,7 +305,7 @@
                 {
                     if (_local_2 == 0)
                     {
-                        _local_3 = this._Str_25424();
+                        _local_3 = this.getRow();
                         this._list.addListItem(_local_3);
                     }
                     this.addThumbnail(_local_3, this._layouts[_local_4], ((_local_2 % 2) == 0));
@@ -366,7 +366,7 @@
             }
         }
 
-        private function _Str_25424():IWindowContainer
+        private function getRow():IWindowContainer
         {
             return IWindowContainer(this._navigator.windowManager.createWindow("", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle(0, 0, 100, 300)));
         }
