@@ -718,7 +718,7 @@
             }
             if (this._Str_5537)
             {
-                if (k._Str_7273)
+                if (k.allowWalkThrough)
                 {
                     this._Str_5537.select();
                 }
@@ -976,7 +976,7 @@
             k.maximumVisitors = _local_7.items()[_local_7.selection];
             k.allowPets = this._Str_7157.Selected;
             k._Str_7595 = this._Str_7429.Selected;
-            k._Str_7273 = this._Str_5537.Selected;
+            k.allowWalkThrough = this._Str_5537.Selected;
             k._Str_18547 = this._Str_6233.Selected;
             k.hideWalls = this._Str_5830.Selected;
             k.wallThickness = (this._Str_6424.selection - 2);

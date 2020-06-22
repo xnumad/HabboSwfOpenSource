@@ -87,12 +87,12 @@
             this._allowFoodConsume = k;
         }
 
-        public function get _Str_7273():Boolean
+        public function get allowWalkThrough():Boolean
         {
             return this._allowWalkThrough;
         }
 
-        public function set _Str_7273(k:Boolean):void
+        public function set allowWalkThrough(k:Boolean):void
         {
             this._allowWalkThrough = k;
         }
