@@ -25,7 +25,7 @@
         private var _chatMode:int;
         private var _chatBubbleSize:int;
         private var _chatScrollUpFrequency:int;
-        private var _Str_22118:int;
+        private var _chatFullHearRange:int;
         private var _Str_19561:int;
 
 
@@ -251,12 +251,12 @@
 
         public function get _Str_18410():int
         {
-            return this._Str_22118;
+            return this._chatFullHearRange;
         }
 
         public function set _Str_18410(k:int):void
         {
-            this._Str_22118 = k;
+            this._chatFullHearRange = k;
         }
 
         public function get _Str_16006():int
