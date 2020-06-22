@@ -325,7 +325,7 @@
                 if (_local_8)
                 {
                     _local_9 = _local_8.findChildByName("link");
-                    addMouseClickListener(_local_9, this._Str_22826);
+                    addMouseClickListener(_local_9, this.onHcMoreClick);
                     this._list.addListItem(_local_8);
                 }
             }
@@ -431,7 +431,7 @@
             this.close();
         }
 
-        private function _Str_22826(k:WindowEvent):void
+        private function onHcMoreClick(k:WindowEvent):void
         {
             Logger.log("HC LINK CLICKED");
             this._navigator.openCatalogClubPage("RoomCreateViewCtrl");
