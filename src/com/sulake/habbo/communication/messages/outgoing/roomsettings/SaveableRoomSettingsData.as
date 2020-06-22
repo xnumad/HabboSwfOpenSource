@@ -18,7 +18,7 @@
         private var _allowNavigatorDynCats:Boolean;
         private var _hideWalls:Boolean;
         private var _wallThickness:int;
-        private var _Str_5119:int;
+        private var _floorThickness:int;
         private var _whoCanMute:int;
         private var _whoCanKick:int;
         private var _whoCanBan:int;
@@ -91,12 +91,12 @@
 
         public function get _Str_6205():int
         {
-            return this._Str_5119;
+            return this._floorThickness;
         }
 
         public function set _Str_6205(k:int):void
         {
-            this._Str_5119 = k;
+            this._floorThickness = k;
         }
 
         public function get roomId():int
