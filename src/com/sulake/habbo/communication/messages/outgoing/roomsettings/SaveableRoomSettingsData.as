@@ -15,7 +15,7 @@
         private var _allowPets:Boolean;
         private var _allowFoodConsume:Boolean;
         private var _allowWalkThrough:Boolean;
-        private var _Str_22248:Boolean;
+        private var _allowNavigatorDynCats:Boolean;
         private var _Str_5413:Boolean;
         private var _Str_5084:int;
         private var _Str_5119:int;
@@ -271,12 +271,12 @@
 
         public function get _Str_18547():Boolean
         {
-            return this._Str_22248;
+            return this._allowNavigatorDynCats;
         }
 
         public function set _Str_18547(k:Boolean):void
         {
-            this._Str_22248 = k;
+            this._allowNavigatorDynCats = k;
         }
     }
 }
