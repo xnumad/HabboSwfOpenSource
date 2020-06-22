@@ -61,7 +61,7 @@
             return this._showOwnerName;
         }
 
-        public function get _Str_24512():Boolean
+        public function get allowTrading():Boolean
         {
             return this._allowTrading;
         }
@@ -116,7 +116,7 @@
             this._showOwnerName = k;
         }
 
-        public function set _Str_24512(k:Boolean):void
+        public function set allowTrading(k:Boolean):void
         {
             this._allowTrading = k;
         }
