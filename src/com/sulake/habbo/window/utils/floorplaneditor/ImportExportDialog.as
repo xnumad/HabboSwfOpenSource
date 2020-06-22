@@ -69,7 +69,7 @@
                         this._window.findChildByName("data").caption = this._bcFloorPlanEditor._Str_24411;
                         return;
                     case "save":
-                        this._bcFloorPlanEditor.windowManager.communication.connection.send(new _Str_7289(this._window.findChildByName("data").caption, this._bcFloorPlanEditor._Str_4134._Str_7642.x, this._bcFloorPlanEditor._Str_4134._Str_7642.y, this._bcFloorPlanEditor._Str_4134._Str_6184, BCFloorPlanEditor._Str_8298(this._bcFloorPlanEditor._Str_5962), BCFloorPlanEditor._Str_8298(this._bcFloorPlanEditor.floorThickness)));
+                        this._bcFloorPlanEditor.windowManager.communication.connection.send(new _Str_7289(this._window.findChildByName("data").caption, this._bcFloorPlanEditor._Str_4134._Str_7642.x, this._bcFloorPlanEditor._Str_4134._Str_7642.y, this._bcFloorPlanEditor._Str_4134._Str_6184, BCFloorPlanEditor._Str_8298(this._bcFloorPlanEditor.wallThickness), BCFloorPlanEditor._Str_8298(this._bcFloorPlanEditor.floorThickness)));
                         return;
                 }
             }

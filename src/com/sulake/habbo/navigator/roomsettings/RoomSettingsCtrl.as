@@ -770,7 +770,7 @@
             this._Str_6390.selection = k.chatSettings.floodSensitivity;
             if (this._Str_6424)
             {
-                this._Str_6424.selection = this._Str_10107(k._Str_5962);
+                this._Str_6424.selection = this._Str_10107(k.wallThickness);
             }
             if (this._Str_6508)
             {
@@ -979,7 +979,7 @@
             k._Str_7273 = this._Str_5537.Selected;
             k._Str_18547 = this._Str_6233.Selected;
             k._Str_7455 = this._Str_5830.Selected;
-            k._Str_5962 = (this._Str_6424.selection - 2);
+            k.wallThickness = (this._Str_6424.selection - 2);
             k.floorThickness = (this._Str_6508.selection - 2);
             k.tags = new Array();
             this._Str_21352(this._tag1Input, k.tags);

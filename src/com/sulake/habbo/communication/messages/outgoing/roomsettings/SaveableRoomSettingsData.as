@@ -79,12 +79,12 @@
             this._hideWalls = k;
         }
 
-        public function get _Str_5962():int
+        public function get wallThickness():int
         {
             return this._wallThickness;
         }
 
-        public function set _Str_5962(k:int):void
+        public function set wallThickness(k:int):void
         {
             this._wallThickness = k;
         }

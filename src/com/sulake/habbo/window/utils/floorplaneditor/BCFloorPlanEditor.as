@@ -648,7 +648,7 @@
             return this._floorThickness;
         }
 
-        public function get _Str_5962():int
+        public function get wallThickness():int
         {
             return this._wallThickness;
         }
