@@ -17,7 +17,7 @@
         private var _description:String;
         private var _showOwnerName:Boolean;
         private var _allowTrading:Boolean;
-        private var _Str_20586:Boolean;
+        private var _categoryAlertKey:Boolean;
         private var _password:String;
 
 
@@ -68,7 +68,7 @@
 
         public function get _Str_23565():Boolean
         {
-            return this._Str_20586;
+            return this._categoryAlertKey;
         }
 
         public function get password():String
@@ -123,7 +123,7 @@
 
         public function set _Str_23565(k:Boolean):void
         {
-            this._Str_20586 = k;
+            this._categoryAlertKey = k;
         }
 
         public function set password(k:String):void
