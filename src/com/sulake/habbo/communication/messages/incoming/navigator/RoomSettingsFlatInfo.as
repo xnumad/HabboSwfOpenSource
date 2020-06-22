@@ -66,7 +66,7 @@
             return this._allowTrading;
         }
 
-        public function get _Str_23565():Boolean
+        public function get categoryAlertKey():Boolean
         {
             return this._categoryAlertKey;
         }
@@ -121,7 +121,7 @@
             this._allowTrading = k;
         }
 
-        public function set _Str_23565(k:Boolean):void
+        public function set categoryAlertKey(k:Boolean):void
         {
             this._categoryAlertKey = k;
         }
