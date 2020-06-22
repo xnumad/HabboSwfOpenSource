@@ -89,12 +89,12 @@
             this._wallThickness = k;
         }
 
-        public function get _Str_6205():int
+        public function get floorThickness():int
         {
             return this._floorThickness;
         }
 
-        public function set _Str_6205(k:int):void
+        public function set floorThickness(k:int):void
         {
             this._floorThickness = k;
         }

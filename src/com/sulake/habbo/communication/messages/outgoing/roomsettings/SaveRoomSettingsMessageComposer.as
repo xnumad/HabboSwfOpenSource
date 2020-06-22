@@ -47,7 +47,7 @@
             this.messageArray.push(k._Str_7273);
             this.messageArray.push(k._Str_7455);
             this.messageArray.push(k._Str_5962);
-            this.messageArray.push(k._Str_6205);
+            this.messageArray.push(k.floorThickness);
             this.messageArray.push(k.whoCanMute);
             this.messageArray.push(k.whoCanKick);
             this.messageArray.push(k.whoCanBan);

@@ -774,7 +774,7 @@
             }
             if (this._Str_6508)
             {
-                this._Str_6508.selection = this._Str_10107(k._Str_6205);
+                this._Str_6508.selection = this._Str_10107(k.floorThickness);
             }
             this._Str_22581(k);
             this.clearErrors();
@@ -980,7 +980,7 @@
             k._Str_18547 = this._Str_6233.Selected;
             k._Str_7455 = this._Str_5830.Selected;
             k._Str_5962 = (this._Str_6424.selection - 2);
-            k._Str_6205 = (this._Str_6508.selection - 2);
+            k.floorThickness = (this._Str_6508.selection - 2);
             k.tags = new Array();
             this._Str_21352(this._tag1Input, k.tags);
             this._Str_21352(this._tag2Input, k.tags);

@@ -643,7 +643,7 @@
             return "";
         }
 
-        public function get _Str_6205():int
+        public function get floorThickness():int
         {
             return this._floorThickness;
         }

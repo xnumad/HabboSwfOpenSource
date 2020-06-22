@@ -35,7 +35,7 @@
             this._roomSettingsData._Str_7273 = (k.readInteger() == 1);
             this._roomSettingsData._Str_7455 = (k.readInteger() == 1);
             this._roomSettingsData._Str_5962 = k.readInteger();
-            this._roomSettingsData._Str_6205 = k.readInteger();
+            this._roomSettingsData.floorThickness = k.readInteger();
             this._roomSettingsData.chatSettings = new RoomChatSettings(k);
             this._roomSettingsData._Str_17884 = k.readBoolean();
             this._roomSettingsData.roomModerationSettings = new RoomModerationSettings(k);
