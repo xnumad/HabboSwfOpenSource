@@ -26,7 +26,7 @@
         private var _chatBubbleSize:int;
         private var _chatScrollUpFrequency:int;
         private var _chatFullHearRange:int;
-        private var _Str_19561:int;
+        private var _chatFloodSensitivity:int;
 
 
         public function get tradeMode():int
@@ -261,12 +261,12 @@
 
         public function get _Str_16006():int
         {
-            return this._Str_19561;
+            return this._chatFloodSensitivity;
         }
 
         public function set _Str_16006(k:int):void
         {
-            this._Str_19561 = k;
+            this._chatFloodSensitivity = k;
         }
 
         public function get _Str_18547():Boolean
