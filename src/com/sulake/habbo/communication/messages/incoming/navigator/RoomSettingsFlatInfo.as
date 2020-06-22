@@ -21,7 +21,7 @@
         private var _password:String;
 
 
-        public function get _Str_24220():Boolean
+        public function get allowFurniMoving():Boolean
         {
             return this._allowFurniMoving;
         }
@@ -76,7 +76,7 @@
             return this._password;
         }
 
-        public function set _Str_24220(k:Boolean):void
+        public function set allowFurniMoving(k:Boolean):void
         {
             this._allowFurniMoving = k;
         }
