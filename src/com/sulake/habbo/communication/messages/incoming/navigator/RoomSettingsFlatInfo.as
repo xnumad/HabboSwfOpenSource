@@ -56,7 +56,7 @@
             return this._description;
         }
 
-        public function get _Str_23228():Boolean
+        public function get showOwnerName():Boolean
         {
             return this._showOwnerName;
         }
@@ -111,7 +111,7 @@
             this._description = k;
         }
 
-        public function set _Str_23228(k:Boolean):void
+        public function set showOwnerName(k:Boolean):void
         {
             this._showOwnerName = k;
         }
