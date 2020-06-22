@@ -371,7 +371,7 @@
             return IWindowContainer(this._navigator.windowManager.createWindow("", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle(0, 0, 100, 300)));
         }
 
-        private function _Str_17505():Boolean
+        private function isMandatoryFieldsFilled():Boolean
         {
             var k:Boolean = this._roomNameInput.checkMandatory(this._navigator.getText("navigator.createroom.nameerr"));
             return k;
@@ -457,7 +457,7 @@
                 i++;
             }
             roomTradeSetting = this._tradeSettings.selection;
-            if (!this._Str_17505())
+            if (!this.isMandatoryFieldsFilled())
             {
                 return;
             }

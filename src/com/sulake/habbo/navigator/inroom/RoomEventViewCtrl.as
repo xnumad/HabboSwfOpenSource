@@ -94,7 +94,7 @@
             var k:int = this._navigator.data.roomEventData.adId;
             var _local_2:String = this._Str_5340.getText();
             var _local_3:String = this._Str_5951.getText();
-            if (!this._Str_17505())
+            if (!this.isMandatoryFieldsFilled())
             {
                 return;
             }
@@ -140,7 +140,7 @@
             }
         }
 
-        private function _Str_17505():Boolean
+        private function isMandatoryFieldsFilled():Boolean
         {
             this.clearErrors();
             if (!this._Str_5340.checkMandatory(this._navigator.getText("navigator.eventsettings.nameerr")))
