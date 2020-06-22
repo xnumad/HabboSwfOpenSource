@@ -174,7 +174,7 @@
             this._roomNameInput = new TextFieldManager(this._navigator, ITextFieldWindow(this._content.findChildByName("room_name_input")), 25, null, this._navigator.getText("navigator.createroom.roomnameinfo"));
             this._roomDescInput = new TextFieldManager(this._navigator, ITextFieldWindow(this._content.findChildByName("room_desc_input")), 128, null, this._navigator.getText("navigator.createroom.roomdescinfo"));
             this.prepareCategorySelection();
-            this._Str_23465();
+            this.prepareTradeModeSelection();
             this._Str_10439(50);
             var _local_4:Rectangle = Util._Str_10228(this._content.desktop, this._content.width, this._content.height);
             this._content.x = _local_4.x;
@@ -199,7 +199,7 @@
             this._categoryMenu.selection = 0;
         }
 
-        private function _Str_23465():void
+        private function prepareTradeModeSelection():void
         {
             this._tradeSettings = (this._content.findChildByName("trade_settings_list") as IDropMenuWindow);
             var k:Array = new Array();
