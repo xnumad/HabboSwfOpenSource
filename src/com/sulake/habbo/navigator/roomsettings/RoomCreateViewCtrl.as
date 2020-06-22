@@ -32,7 +32,7 @@
 
     public class RoomCreateViewCtrl 
     {
-        private static const _Str_18545:int = 75;
+        private static const ROOM_LIMIT_HC:int = 75;
         private static const _Str_17355:int = 50;
 
         private var _navigator:IHabboTransitionalNavigator;
@@ -222,7 +222,7 @@
             this._Str_19409();
             if (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum.VIP)
             {
-                this._Str_10439(_Str_18545);
+                this._Str_10439(ROOM_LIMIT_HC);
             }
             else
             {
