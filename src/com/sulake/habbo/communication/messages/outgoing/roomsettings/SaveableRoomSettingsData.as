@@ -229,12 +229,12 @@
             this._chatMode = k;
         }
 
-        public function get _Str_16726():int
+        public function get chatBubbleSize():int
         {
             return this._chatBubbleSize;
         }
 
-        public function set _Str_16726(k:int):void
+        public function set chatBubbleSize(k:int):void
         {
             this._chatBubbleSize = k;
         }
