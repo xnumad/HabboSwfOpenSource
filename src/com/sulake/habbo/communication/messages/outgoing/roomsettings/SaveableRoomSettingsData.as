@@ -8,7 +8,7 @@
         private var _doorMode:int;
         private var _password:String;
         private var _categoryId:int;
-        private var _Str_10633:int;
+        private var _maximumVisitors:int;
         private var _tags:Array;
         private var _Str_8850:Array;
         private var _Str_4667:int;
@@ -161,12 +161,12 @@
 
         public function get _Str_5552():int
         {
-            return this._Str_10633;
+            return this._maximumVisitors;
         }
 
         public function set _Str_5552(k:int):void
         {
-            this._Str_10633 = k;
+            this._maximumVisitors = k;
         }
 
         public function get tags():Array
