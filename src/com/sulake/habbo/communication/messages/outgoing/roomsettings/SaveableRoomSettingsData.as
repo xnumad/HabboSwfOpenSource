@@ -11,7 +11,7 @@
         private var _maximumVisitors:int;
         private var _tags:Array;
         private var _controllers:Array;
-        private var _Str_4667:int;
+        private var _tradeMode:int;
         private var _Str_6656:Boolean;
         private var _Str_11128:Boolean;
         private var _Str_10197:Boolean;
@@ -31,12 +31,12 @@
 
         public function get tradeMode():int
         {
-            return this._Str_4667;
+            return this._tradeMode;
         }
 
         public function set tradeMode(k:int):void
         {
-            this._Str_4667 = k;
+            this._tradeMode = k;
         }
 
         public function get allowPets():Boolean
