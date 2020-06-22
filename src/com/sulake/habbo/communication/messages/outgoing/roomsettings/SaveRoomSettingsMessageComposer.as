@@ -19,7 +19,7 @@
             this.messageArray.push(k.description);
             this.messageArray.push(k.doorMode);
             this.messageArray.push(((k.password !== null) ? k.password : ""));
-            this.messageArray.push(k._Str_5552);
+            this.messageArray.push(k.maximumVisitors);
             this.messageArray.push(k.categoryId);
             if (k.tags)
             {

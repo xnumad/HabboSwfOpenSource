@@ -177,12 +177,12 @@
             this._categoryId = k;
         }
 
-        public function get _Str_5552():int
+        public function get maximumVisitors():int
         {
             return this._maximumVisitors;
         }
 
-        public function set _Str_5552(k:int):void
+        public function set maximumVisitors(k:int):void
         {
             this._maximumVisitors = k;
         }

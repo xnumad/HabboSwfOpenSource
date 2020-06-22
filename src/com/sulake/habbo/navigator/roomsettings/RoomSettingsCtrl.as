@@ -834,14 +834,14 @@
             while (_local_6 <= _local_5)
             {
                 _local_2.push(("" + _local_6));
-                if (_local_6 == k._Str_5552)
+                if (_local_6 == k.maximumVisitors)
                 {
                     _local_3 = _local_4;
                 }
                 _local_4++;
                 _local_6 = (_local_6 + 5);
             }
-            if (k._Str_5552 > _local_5)
+            if (k.maximumVisitors > _local_5)
             {
                 _local_2.push(("" + _local_5));
                 _local_3 = _local_4;
@@ -973,7 +973,7 @@
             var _local_6:IDropMenuWindow = (this._window.findChildByName("tradesettings") as IDropMenuWindow);
             k.tradeMode = _local_6.selection;
             var _local_7:IDropMenuWindow = (this._window.findChildByName("maxvisitors") as IDropMenuWindow);
-            k._Str_5552 = _local_7.items()[_local_7.selection];
+            k.maximumVisitors = _local_7.items()[_local_7.selection];
             k.allowPets = this._Str_7157.Selected;
             k._Str_7595 = this._Str_7429.Selected;
             k._Str_7273 = this._Str_5537.Selected;

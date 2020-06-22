@@ -19,7 +19,7 @@
             this._roomSettingsData.description = k.readString();
             this._roomSettingsData.doorMode = k.readInteger();
             this._roomSettingsData.categoryId = k.readInteger();
-            this._roomSettingsData._Str_5552 = k.readInteger();
+            this._roomSettingsData.maximumVisitors = k.readInteger();
             this._roomSettingsData._Str_13128 = k.readInteger();
             this._roomSettingsData.tags = [];
             var _local_2:int = k.readInteger();

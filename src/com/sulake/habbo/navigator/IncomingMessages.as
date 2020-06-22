@@ -501,7 +501,7 @@
             {
                 parser = (event as _Str_5993).getParser();
                 this._navigator.roomSettingsCtrl.onRoomSettings(parser.data);
-                Logger.log(((((("GOT ROOM SETTINGS DATA: " + parser.data.name) + ", ") + parser.data._Str_5552) + ", ") + parser.data._Str_13128));
+                Logger.log(((((("GOT ROOM SETTINGS DATA: " + parser.data.name) + ", ") + parser.data.maximumVisitors) + ", ") + parser.data._Str_13128));
             }
             catch(e:Error)
             {
