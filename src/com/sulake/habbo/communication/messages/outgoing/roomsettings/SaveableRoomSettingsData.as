@@ -5,7 +5,7 @@
         private var _roomId:int;
         private var _name:String;
         private var _description:String;
-        private var _Str_4321:int;
+        private var _doorMode:int;
         private var _password:String;
         private var _categoryId:int;
         private var _Str_10633:int;
@@ -131,12 +131,12 @@
 
         public function get doorMode():int
         {
-            return this._Str_4321;
+            return this._doorMode;
         }
 
         public function set doorMode(k:int):void
         {
-            this._Str_4321 = k;
+            this._doorMode = k;
         }
 
         public function get password():String

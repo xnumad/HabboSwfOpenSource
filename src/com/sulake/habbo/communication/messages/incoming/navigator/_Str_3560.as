@@ -9,7 +9,7 @@
         public static const DOORMODE_NOOBS_ONLY:int = 4;
 
         private var _Str_21354:Boolean;
-        private var _Str_4321:int;
+        private var _doorMode:int;
         private var _id:int;
         private var _ownerName:String;
         private var _type:String;
@@ -28,7 +28,7 @@
 
         public function get doorMode():int
         {
-            return this._Str_4321;
+            return this._doorMode;
         }
 
         public function get id():int
@@ -83,7 +83,7 @@
 
         public function set doorMode(k:int):void
         {
-            this._Str_4321 = k;
+            this._doorMode = k;
         }
 
         public function set id(k:int):void
