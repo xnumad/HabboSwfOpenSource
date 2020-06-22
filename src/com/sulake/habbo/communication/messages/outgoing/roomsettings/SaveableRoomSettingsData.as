@@ -12,7 +12,7 @@
         private var _tags:Array;
         private var _controllers:Array;
         private var _tradeMode:int;
-        private var _Str_6656:Boolean;
+        private var _allowPets:Boolean;
         private var _Str_11128:Boolean;
         private var _Str_10197:Boolean;
         private var _Str_22248:Boolean;
@@ -41,12 +41,12 @@
 
         public function get allowPets():Boolean
         {
-            return this._Str_6656;
+            return this._allowPets;
         }
 
         public function set allowPets(k:Boolean):void
         {
-            this._Str_6656 = k;
+            this._allowPets = k;
         }
 
         public function get _Str_7595():Boolean
