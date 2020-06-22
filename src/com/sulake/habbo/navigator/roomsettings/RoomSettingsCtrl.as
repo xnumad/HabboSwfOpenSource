@@ -989,7 +989,7 @@
             k._Str_16726 = this._Str_6283.selection;
             k._Str_17830 = this._Str_10492.selection;
             k._Str_18410 = int(this._Str_14650.getText());
-            k._Str_16006 = this._Str_6390.selection;
+            k.chatFloodSensitivity = this._Str_6390.selection;
             this.clearErrors();
             this._Str_15710 = k.roomId;
             this._navigator.send(new SaveRoomSettingsMessageComposer(k));

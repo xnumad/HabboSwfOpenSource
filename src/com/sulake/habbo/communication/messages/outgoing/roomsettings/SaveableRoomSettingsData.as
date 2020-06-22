@@ -259,12 +259,12 @@
             this._chatFullHearRange = k;
         }
 
-        public function get _Str_16006():int
+        public function get chatFloodSensitivity():int
         {
             return this._chatFloodSensitivity;
         }
 
-        public function set _Str_16006(k:int):void
+        public function set chatFloodSensitivity(k:int):void
         {
             this._chatFloodSensitivity = k;
         }
