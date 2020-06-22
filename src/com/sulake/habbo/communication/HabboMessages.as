@@ -565,7 +565,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5771;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6030;
@@ -1030,7 +1030,7 @@
             INCOMING_PACKETS[1254] = TradingOtherNotAllowedEvent;
             INCOMING_PACKETS[1255] = _Str_8527;
             INCOMING_PACKETS[126] = IgnoredUsersMessageEvent;
-            INCOMING_PACKETS[1284] = _Str_5771;
+            INCOMING_PACKETS[1284] = FlatControllersEvent;
             INCOMING_PACKETS[1301] = FloorHeightMapEvent;
             INCOMING_PACKETS[1304] = _Str_3992;
             INCOMING_PACKETS[1327] = _Str_5683;

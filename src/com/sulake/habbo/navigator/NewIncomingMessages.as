@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.navigator
 {
     import com.sulake.habbo.communication.IHabboCommunicationManager;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5771;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
@@ -109,7 +109,7 @@
         public function _Str_21575():void
         {
             var k:IHabboCommunicationManager = this._navigator.communication;
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5771(this._Str_8576)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5134(this._Str_16321)));
@@ -428,7 +428,7 @@
 
         private function _Str_8576(k:IMessageEvent):void
         {
-            var _local_2:FlatControllersMessageParser = (k as _Str_5771).getParser();
+            var _local_2:FlatControllersMessageParser = (k as FlatControllersEvent).getParser();
             Logger.log(((("Got flat controllers: " + _local_2.roomId) + ", ") + _local_2._Str_8349.length));
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_8576(_local_2.roomId, _local_2._Str_8349);
         }

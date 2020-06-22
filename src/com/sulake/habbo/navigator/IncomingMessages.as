@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
     import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5771;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
     import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_7883;
@@ -150,7 +150,7 @@
             _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
             _local_2.addHabboConnectionMessageEvent(new CanCreateRoomMessageEvent(this._Str_25812));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5771(this._Str_8576));
+            _local_2.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576));
             _local_2.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709));
             _local_2.addHabboConnectionMessageEvent(new _Str_5891(this.onNoOwnedRoomsAlert));
             _local_2.addHabboConnectionMessageEvent(new _Str_7883(this._Str_17243));
@@ -583,7 +583,7 @@
 
         private function _Str_8576(k:IMessageEvent):void
         {
-            var _local_2:FlatControllersMessageParser = (k as _Str_5771).getParser();
+            var _local_2:FlatControllersMessageParser = (k as FlatControllersEvent).getParser();
             Logger.log(((("Got flat controllers: " + _local_2.roomId) + ", ") + _local_2._Str_8349.length));
             this._navigator.roomSettingsCtrl._Str_8576(_local_2.roomId, _local_2._Str_8349);
         }
