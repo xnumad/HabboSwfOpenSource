@@ -17,7 +17,7 @@
         private var _allowWalkThrough:Boolean;
         private var _allowNavigatorDynCats:Boolean;
         private var _hideWalls:Boolean;
-        private var _Str_5084:int;
+        private var _wallThickness:int;
         private var _Str_5119:int;
         private var _whoCanMute:int;
         private var _whoCanKick:int;
@@ -81,12 +81,12 @@
 
         public function get _Str_5962():int
         {
-            return this._Str_5084;
+            return this._wallThickness;
         }
 
         public function set _Str_5962(k:int):void
         {
-            this._Str_5084 = k;
+            this._wallThickness = k;
         }
 
         public function get _Str_6205():int
