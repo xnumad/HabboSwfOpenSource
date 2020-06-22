@@ -56,7 +56,7 @@
             this.messageArray.push(k.chatScrollUpFrequency);
             this.messageArray.push(k.chatFullHearRange);
             this.messageArray.push(k.chatFloodSensitivity);
-            this.messageArray.push(k._Str_18547);
+            this.messageArray.push(k.allowNavigatorDynCats);
         }
 
         public function getMessageArray():Array

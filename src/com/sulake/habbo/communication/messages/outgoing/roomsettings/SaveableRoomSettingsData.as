@@ -269,12 +269,12 @@
             this._chatFloodSensitivity = k;
         }
 
-        public function get _Str_18547():Boolean
+        public function get allowNavigatorDynCats():Boolean
         {
             return this._allowNavigatorDynCats;
         }
 
-        public function set _Str_18547(k:Boolean):void
+        public function set allowNavigatorDynCats(k:Boolean):void
         {
             this._allowNavigatorDynCats = k;
         }
