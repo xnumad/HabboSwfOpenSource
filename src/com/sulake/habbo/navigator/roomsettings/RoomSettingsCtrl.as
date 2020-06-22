@@ -707,7 +707,7 @@
             }
             if (this._Str_7429)
             {
-                if (k._Str_7595)
+                if (k.allowFoodConsume)
                 {
                     this._Str_7429.select();
                 }
@@ -975,7 +975,7 @@
             var _local_7:IDropMenuWindow = (this._window.findChildByName("maxvisitors") as IDropMenuWindow);
             k.maximumVisitors = _local_7.items()[_local_7.selection];
             k.allowPets = this._Str_7157.Selected;
-            k._Str_7595 = this._Str_7429.Selected;
+            k.allowFoodConsume = this._Str_7429.Selected;
             k.allowWalkThrough = this._Str_5537.Selected;
             k._Str_18547 = this._Str_6233.Selected;
             k.hideWalls = this._Str_5830.Selected;

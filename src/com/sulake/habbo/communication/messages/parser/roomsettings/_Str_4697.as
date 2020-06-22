@@ -31,7 +31,7 @@
             }
             this._roomSettingsData.tradeMode = k.readInteger();
             this._roomSettingsData.allowPets = (k.readInteger() == 1);
-            this._roomSettingsData._Str_7595 = (k.readInteger() == 1);
+            this._roomSettingsData.allowFoodConsume = (k.readInteger() == 1);
             this._roomSettingsData.allowWalkThrough = (k.readInteger() == 1);
             this._roomSettingsData.hideWalls = (k.readInteger() == 1);
             this._roomSettingsData.wallThickness = k.readInteger();

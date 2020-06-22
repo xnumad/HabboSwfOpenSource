@@ -77,12 +77,12 @@
             this._allowPets = k;
         }
 
-        public function get _Str_7595():Boolean
+        public function get allowFoodConsume():Boolean
         {
             return this._allowFoodConsume;
         }
 
-        public function set _Str_7595(k:Boolean):void
+        public function set allowFoodConsume(k:Boolean):void
         {
             this._allowFoodConsume = k;
         }
