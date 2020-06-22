@@ -12,7 +12,7 @@
     import flash.display.BitmapData;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3560;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomSettingsFlatInfo;
     import com.sulake.habbo.navigator.domain.Tabs;
 
     public class OfficialRoomEntryManager implements IDisposable 
@@ -325,7 +325,7 @@
             if (_local_2._Str_5019 != null)
             {
                 Logger.log(("ENTERING ROOM: " + _local_2._Str_5019.flatId));
-                if (_local_2._Str_5019.doorMode == _Str_3560.DOORMODE_PASSWORD)
+                if (_local_2._Str_5019.doorMode == RoomSettingsFlatInfo.DOORMODE_PASSWORD)
                 {
                     this._navigator.passwordInput.show(_local_2._Str_5019);
                 }

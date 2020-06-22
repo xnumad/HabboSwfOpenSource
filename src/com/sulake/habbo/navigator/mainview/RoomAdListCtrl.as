@@ -6,7 +6,7 @@
     import com.sulake.core.window.enum.WindowParam;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.navigator.Util;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3560;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomSettingsFlatInfo;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11792;
@@ -40,9 +40,9 @@
             var _local_3:ITextWindow = ITextWindow(k.getChildByName("adname"));
             _local_3.visible = true;
             Util._Str_21212(_local_3, _arg_2.roomAdName, k.width);
-            _navigator.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
-            _navigator.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
-            _navigator.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
+            _navigator.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_CLOSED), null, 0);
+            _navigator.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_PASSWORD), null, 0);
+            _navigator.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_INVISIBLE), null, 0);
             _userCountRenderer.refreshUserCount(_arg_2.maxUserCount, k, _arg_2.userCount, "${navigator.usercounttooltip.users}", 308, 2);
         }
 

@@ -11,7 +11,7 @@
     import com.sulake.core.window.enum.WindowParam;
     import com.sulake.habbo.navigator.Util;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3560;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomSettingsFlatInfo;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -192,12 +192,12 @@
             k.visible = true;
             Util._Str_2930(k);
             this.refreshFavouriteIcon(k, _arg_2);
-            var _local_3:String = ((((_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED) || (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD)) || (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE)) ? "group_base_icon" : "group_base_icon_no_doormode");
+            var _local_3:String = ((((_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_CLOSED) || (_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_PASSWORD)) || (_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_INVISIBLE)) ? "group_base_icon" : "group_base_icon_no_doormode");
             this._navigator.refreshButton(k, _local_3, (_arg_2.habboGroupId > 0), null, 0, "group_base_icon");
             this._navigator.refreshButton(k, "home", this.isHome(_arg_2), null, 0);
-            this._navigator.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
-            this._navigator.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
-            this._navigator.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
+            this._navigator.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_CLOSED), null, 0);
+            this._navigator.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_PASSWORD), null, 0);
+            this._navigator.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_INVISIBLE), null, 0);
             if (this._showRoomNumbers)
             {
                 k.findChildByName("room_number").visible = true;
@@ -281,10 +281,10 @@
                 _local_5 = new Point((k as WindowMouseEvent).stageX, (k as WindowMouseEvent).stageY);
                 switch (_local_4.doorMode)
                 {
-                    case _Str_3560.DOORMODE_PASSWORD:
+                    case RoomSettingsFlatInfo.DOORMODE_PASSWORD:
                         this._navigator.passwordInput.show(_local_4, _local_5);
                         return;
-                    case _Str_3560.DOORMODE_CLOSED:
+                    case RoomSettingsFlatInfo.DOORMODE_CLOSED:
                         this._navigator.doorbell.show(_local_4, _local_5);
                         return;
                 }

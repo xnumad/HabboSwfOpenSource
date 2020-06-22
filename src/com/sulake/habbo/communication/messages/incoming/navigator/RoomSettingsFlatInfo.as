@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.navigator
 {
-    public class _Str_3560 
+    public class RoomSettingsFlatInfo
     {
         public static const DOORMODE_OPEN:int = 0;
         public static const DOORMODE_CLOSED:int = 1;

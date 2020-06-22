@@ -32,7 +32,7 @@
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveableRoomSettingsData;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3560;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomSettingsFlatInfo;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveRoomSettingsMessageComposer;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.window.utils.IAlertDialog;
@@ -939,19 +939,19 @@
                 switch (_local_3.name)
                 {
                     case "doormode_doorbell":
-                        k.doorMode = _Str_3560.DOORMODE_CLOSED;
+                        k.doorMode = RoomSettingsFlatInfo.DOORMODE_CLOSED;
                         break;
                     case "doormode_password":
-                        k.doorMode = _Str_3560.DOORMODE_PASSWORD;
+                        k.doorMode = RoomSettingsFlatInfo.DOORMODE_PASSWORD;
                         break;
                     case "doormode_invisible":
-                        k.doorMode = _Str_3560.DOORMODE_INVISIBLE;
+                        k.doorMode = RoomSettingsFlatInfo.DOORMODE_INVISIBLE;
                         break;
                     default:
-                        k.doorMode = _Str_3560.DOORMODE_OPEN;
+                        k.doorMode = RoomSettingsFlatInfo.DOORMODE_OPEN;
                 }
             }
-            if (k.doorMode == _Str_3560.DOORMODE_PASSWORD)
+            if (k.doorMode == RoomSettingsFlatInfo.DOORMODE_PASSWORD)
             {
                 _local_8 = this._Str_4194.getText();
                 _local_9 = this._Str_7349.getText();
