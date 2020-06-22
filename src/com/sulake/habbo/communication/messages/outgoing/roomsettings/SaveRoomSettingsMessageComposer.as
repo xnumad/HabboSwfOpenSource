@@ -54,7 +54,7 @@
             this.messageArray.push(k._Str_18654);
             this.messageArray.push(k._Str_16726);
             this.messageArray.push(k._Str_17830);
-            this.messageArray.push(k._Str_18410);
+            this.messageArray.push(k.chatFullHearRange);
             this.messageArray.push(k.chatFloodSensitivity);
             this.messageArray.push(k._Str_18547);
         }

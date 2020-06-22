@@ -249,12 +249,12 @@
             this._chatScrollUpFrequency = k;
         }
 
-        public function get _Str_18410():int
+        public function get chatFullHearRange():int
         {
             return this._chatFullHearRange;
         }
 
-        public function set _Str_18410(k:int):void
+        public function set chatFullHearRange(k:int):void
         {
             this._chatFullHearRange = k;
         }

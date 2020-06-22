@@ -988,7 +988,7 @@
             k._Str_18654 = this._Str_15306.selection;
             k._Str_16726 = this._Str_6283.selection;
             k._Str_17830 = this._Str_10492.selection;
-            k._Str_18410 = int(this._Str_14650.getText());
+            k.chatFullHearRange = int(this._Str_14650.getText());
             k.chatFloodSensitivity = this._Str_6390.selection;
             this.clearErrors();
             this._Str_15710 = k.roomId;
