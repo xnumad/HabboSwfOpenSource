@@ -584,8 +584,8 @@
         private function _Str_8576(k:IMessageEvent):void
         {
             var _local_2:FlatControllersMessageParser = (k as FlatControllersEvent).getParser();
-            Logger.log(((("Got flat controllers: " + _local_2.roomId) + ", ") + _local_2._Str_8349.length));
-            this._navigator.roomSettingsCtrl._Str_8576(_local_2.roomId, _local_2._Str_8349);
+            Logger.log(((("Got flat controllers: " + _local_2.roomId) + ", ") + _local_2.controllers.length));
+            this._navigator.roomSettingsCtrl._Str_8576(_local_2.roomId, _local_2.controllers);
         }
 
         private function _Str_9346(k:IMessageEvent):void

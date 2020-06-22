@@ -34,7 +34,7 @@
             return this._roomId;
         }
 
-        public function get _Str_8349():Array
+        public function get controllers():Array
         {
             return this._controllers;
         }

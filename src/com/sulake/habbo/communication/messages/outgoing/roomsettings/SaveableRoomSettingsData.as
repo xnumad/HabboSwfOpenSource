@@ -179,12 +179,12 @@
             this._tags = k;
         }
 
-        public function get _Str_8349():Array
+        public function get controllers():Array
         {
             return this._controllers;
         }
 
-        public function set _Str_8349(k:Array):void
+        public function set controllers(k:Array):void
         {
             this._controllers = k;
         }
