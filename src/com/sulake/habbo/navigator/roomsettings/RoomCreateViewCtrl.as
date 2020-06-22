@@ -33,7 +33,7 @@
     public class RoomCreateViewCtrl 
     {
         private static const ROOM_LIMIT_HC:int = 75;
-        private static const _Str_17355:int = 50;
+        private static const ROOM_LIMIT_NON_SUBSCRIBER:int = 50;
 
         private var _navigator:IHabboTransitionalNavigator;
         private var _content:IWindowContainer;
@@ -226,7 +226,7 @@
             }
             else
             {
-                this._Str_10439(_Str_17355);
+                this._Str_10439(ROOM_LIMIT_NON_SUBSCRIBER);
             }
             this._Str_16163();
         }
