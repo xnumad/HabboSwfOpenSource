@@ -570,7 +570,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6030;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_7883;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_8939;
 	import com.sulake.habbo.communication.messages.outgoing.help.*;
 	import com.sulake.habbo.communication.messages.outgoing.help.PostQuizAnswersComposer;
@@ -1441,7 +1441,7 @@
             INCOMING_PACKETS[806] = _Str_3660;
             INCOMING_PACKETS[818] = GuildMemberMgmtFailedMessageEvent;
             INCOMING_PACKETS[826] = RemainingMutePeriodEvent;
-            INCOMING_PACKETS[84] = _Str_7883;
+            INCOMING_PACKETS[84] = NoSuchFlatEvent;
             INCOMING_PACKETS[841] = GuideSessionEvent;
             INCOMING_PACKETS[859] = PetLevelNotificationEvent;
             INCOMING_PACKETS[869] = PurchaseOKMessageEvent;
