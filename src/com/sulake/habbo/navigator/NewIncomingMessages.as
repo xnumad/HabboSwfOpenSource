@@ -503,7 +503,7 @@
             var _local_2:FlatAccessDeniedMessageParser = (k as FlatAccessDeniedMessageEvent).getParser();
             if (((_local_2.userName == null) || (_local_2.userName == "")))
             {
-                LegacyNavigator(this._navigator.legacyNavigator).doorbell._Str_20293();
+                LegacyNavigator(this._navigator.legacyNavigator).doorbell.showNoAnswer();
             }
         }
 

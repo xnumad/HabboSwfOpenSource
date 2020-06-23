@@ -697,7 +697,7 @@
             var _local_2:FlatAccessDeniedMessageParser = (k as FlatAccessDeniedMessageEvent).getParser();
             if (((_local_2.userName == null) || (_local_2.userName == "")))
             {
-                this._navigator.doorbell._Str_20293();
+                this._navigator.doorbell.showNoAnswer();
             }
         }
 

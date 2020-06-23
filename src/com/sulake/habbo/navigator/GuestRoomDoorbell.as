@@ -66,7 +66,7 @@
             this.show(this._roomData, null, true);
         }
 
-        public function _Str_20293():void
+        public function showNoAnswer():void
         {
             if (this._window == null)
             {
