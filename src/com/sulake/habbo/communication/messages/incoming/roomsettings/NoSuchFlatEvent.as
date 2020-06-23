@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_8394;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.NoSuchFlatMessageParser;
 
     public class NoSuchFlatEvent extends MessageEvent implements IMessageEvent
     {
         public function NoSuchFlatEvent(k:Function)
         {
-            super(k, _Str_8394);
+            super(k, NoSuchFlatMessageParser);
         }
 
-        public function getParser():_Str_8394
+        public function getParser():NoSuchFlatMessageParser
         {
-            return this._parser as _Str_8394;
+            return this._parser as NoSuchFlatMessageParser;
         }
     }
 }
