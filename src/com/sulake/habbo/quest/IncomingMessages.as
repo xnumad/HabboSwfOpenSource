@@ -69,7 +69,7 @@
             _local_2.addHabboConnectionMessageEvent(new AchievementsScoreEvent(this._Str_18065));
             _local_2.addHabboConnectionMessageEvent(new QuestsMessageEvent(this._Str_8212));
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionUserInfoEvent));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
+            _local_2.addHabboConnectionMessageEvent(new _Str_5081(this.onRoomSettingsSaved));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionCompletedMessageEvent(this._Str_24464));
             _local_2.addHabboConnectionMessageEvent(new _Str_3660(this.onLevelUp));
             _local_2.addHabboConnectionMessageEvent(new HabboActivityPointNotificationMessageEvent(this._Str_24427));
@@ -157,7 +157,7 @@
             this._questEngine._Str_8189._Str_21523();
         }
 
-        private function _Str_12021(k:IMessageEvent):void
+        private function onRoomSettingsSaved(k:IMessageEvent):void
         {
             this._questEngine._Str_8189._Str_21523();
         }

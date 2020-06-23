@@ -130,7 +130,7 @@
             _local_2.addHabboConnectionMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell));
             _local_2.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
+            _local_2.addHabboConnectionMessageEvent(new _Str_5081(this.onRoomSettingsSaved));
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907));
             _local_2.addHabboConnectionMessageEvent(new _Str_5633(this.onNavigatorSettings));
@@ -521,7 +521,7 @@
             var _local_2:_Str_6295 = (k as _Str_5752).getParser();
         }
 
-        private function _Str_12021(k:IMessageEvent):void
+        private function onRoomSettingsSaved(k:IMessageEvent):void
         {
             var _local_2:_Str_6506 = (k as _Str_5081).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ("Room settings saved: " + _local_2.roomId));

@@ -131,7 +131,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSearchResultBlocksEvent(this.onNavigatorSearchResultBlocks)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5081(this.onRoomSettingsSaved)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5711(this._Str_18125)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit)));
@@ -390,7 +390,7 @@
             var _local_2:_Str_6295 = (k as _Str_5752).getParser();
         }
 
-        private function _Str_12021(k:IMessageEvent):void
+        private function onRoomSettingsSaved(k:IMessageEvent):void
         {
             var _local_2:_Str_6506 = (k as _Str_5081).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ("Room settings saved: " + _local_2.roomId));
