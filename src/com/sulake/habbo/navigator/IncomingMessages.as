@@ -105,7 +105,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_7422;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.ShowEnforceRoomCategoryDialogParser;
 
     public class IncomingMessages 
     {
@@ -797,7 +797,7 @@
 
         private function onEnforceRoomCategorySelection(k:IMessageEvent):void
         {
-            var _local_2:_Str_7422 = (k as ShowEnforceRoomCategoryDialogEvent).getParser();
+            var _local_2:ShowEnforceRoomCategoryDialogParser = (k as ShowEnforceRoomCategoryDialogEvent).getParser();
             this._navigator.enforceCategoryCtrl.show(_local_2._Str_24716);
         }
     }

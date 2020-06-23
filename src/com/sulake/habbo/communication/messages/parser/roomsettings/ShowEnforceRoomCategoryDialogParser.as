@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7422 implements IMessageParser 
+    public class ShowEnforceRoomCategoryDialogParser implements IMessageParser
     {
         private var _Str_21617:int;
 
