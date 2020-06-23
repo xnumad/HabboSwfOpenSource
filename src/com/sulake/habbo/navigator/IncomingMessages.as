@@ -153,7 +153,7 @@
             _local_2.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576));
             _local_2.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709));
             _local_2.addHabboConnectionMessageEvent(new _Str_5891(this.onNoOwnedRoomsAlert));
-            _local_2.addHabboConnectionMessageEvent(new _Str_7883(this._Str_17243));
+            _local_2.addHabboConnectionMessageEvent(new _Str_7883(this.onNoSuchFlat));
             _local_2.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947));
             _local_2.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972));
             _local_2.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837));
@@ -183,7 +183,7 @@
             }
         }
 
-        private function _Str_17243(k:IMessageEvent):void
+        private function onNoSuchFlat(k:IMessageEvent):void
         {
         }
 
