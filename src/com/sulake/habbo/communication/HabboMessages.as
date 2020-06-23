@@ -929,7 +929,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.session.ChangeQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.session._Str_10646;
 	import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
-	import com.sulake.habbo.communication.messages.outgoing.room.session._Str_5756;
+	import com.sulake.habbo.communication.messages.outgoing.room.session.OpenFlatConnectionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.*;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.SetActivatedBadgesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.RequestABadgeComposer;
@@ -1689,7 +1689,7 @@
             OUTGOING_PACKETS[230] = CreateGuildMessageComposer;
             OUTGOING_PACKETS[2300] = _Str_7716;
             OUTGOING_PACKETS[0x0900] = _Str_11654;
-            OUTGOING_PACKETS[2312] = _Str_5756;
+            OUTGOING_PACKETS[2312] = OpenFlatConnectionMessageComposer;
             OUTGOING_PACKETS[0x0909] = SetUIFlagsMessageComposer;
             OUTGOING_PACKETS[232] = _Str_9983;
             OUTGOING_PACKETS[234] = _Str_10522;

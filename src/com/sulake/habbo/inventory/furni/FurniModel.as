@@ -42,7 +42,7 @@
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.ITextFieldWindow;
-    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_5756;
+    import com.sulake.habbo.communication.messages.outgoing.room.session.OpenFlatConnectionMessageComposer;
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
@@ -829,7 +829,7 @@
             {
                 return;
             }
-            _local_3.send(new _Str_5756(_local_2.flatId));
+            _local_3.send(new OpenFlatConnectionMessageComposer(_local_2.flatId));
             this._roomItemToSelect = _local_2;
         }
 

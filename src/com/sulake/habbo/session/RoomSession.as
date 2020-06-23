@@ -8,7 +8,7 @@
     import com.sulake.habbo.session.events.RoomSessionEvent;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.session.enum.RoomTradingLevelEnum;
-    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_5756;
+    import com.sulake.habbo.communication.messages.outgoing.room.session.OpenFlatConnectionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_12300;
     import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
     import flash.utils.getTimer;
@@ -236,7 +236,7 @@
             {
                 return false;
             }
-            this._connection.send(new _Str_5756(this._roomId, this._password));
+            this._connection.send(new OpenFlatConnectionMessageComposer(this._roomId, this._password));
             return true;
         }
 
@@ -397,7 +397,7 @@
 
         public function sendVisitFlatMessage(k:int):void
         {
-            this._connection.send(new _Str_5756(k));
+            this._connection.send(new OpenFlatConnectionMessageComposer(k));
         }
 
         public function sendVisitUserMessage(k:String):void
