@@ -103,7 +103,7 @@
             var _local_2:IButtonWindow = (this._window.findChildByName("ring") as IButtonWindow);
             if (_local_2 != null)
             {
-                _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_23149);
+                _local_2.addEventListener(WindowMouseEvent.CLICK, this.ringDoorbell);
             }
             var _local_3:IWindow = this._window.findChildByName("cancel_region");
             if (_local_3 != null)
@@ -142,7 +142,7 @@
             this._roomData = null;
         }
 
-        private function _Str_23149(k:WindowMouseEvent):void
+        private function ringDoorbell(k:WindowMouseEvent):void
         {
             this._navigator.goToRoom(this._roomData.flatId, true);
             this.hide();
