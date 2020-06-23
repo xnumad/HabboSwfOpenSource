@@ -472,7 +472,7 @@
             {
                 return;
             }
-            LegacyNavigator(this._navigator.legacyNavigator).doorbell._Str_19346();
+            LegacyNavigator(this._navigator.legacyNavigator).doorbell.showWaiting();
         }
 
         private function onDoorOpened(k:IMessageEvent):void

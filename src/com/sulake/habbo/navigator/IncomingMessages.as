@@ -666,7 +666,7 @@
             {
                 return;
             }
-            this._navigator.doorbell._Str_19346();
+            this._navigator.doorbell.showWaiting();
         }
 
         private function onDoorOpened(k:IMessageEvent):void

@@ -61,7 +61,7 @@
             }
         }
 
-        public function _Str_19346():void
+        public function showWaiting():void
         {
             this.show(this._roomData, null, true);
         }
