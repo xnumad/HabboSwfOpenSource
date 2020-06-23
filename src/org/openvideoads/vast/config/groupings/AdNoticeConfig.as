@@ -10,7 +10,7 @@
         public static var _Str_18131:String = "<p class='_textclass_' align='right'>This advertisement runs for _countdown_ seconds</p>";
 
         protected var _Str_20745:Boolean = true;
-        protected var _Str_1518:String = null;
+        protected var _message:String = null;
         protected var _Str_2442:String = "reserved-system-message";
         protected var _Str_15582:String;
         protected var _type:String = "STATIC";
@@ -71,7 +71,7 @@
 
         public function _Str_23309():Boolean
         {
-            return this._Str_1518.indexOf("_countdown_") > -1;
+            return this._message.indexOf("_countdown_") > -1;
         }
 
         public function isStatic():Boolean
@@ -91,24 +91,24 @@
 
         public function set message(k:String):void
         {
-            this._Str_1518 = k;
+            this._message = k;
         }
 
         public function get message():String
         {
-            if (this._Str_1518 == null)
+            if (this._message == null)
             {
                 if (this._type == "STATIC")
                 {
-                    this._Str_1518 = _Str_19027;
+                    this._message = _Str_19027;
                 }
                 else
                 {
-                    this._Str_1518 = _Str_18131;
+                    this._message = _Str_18131;
                 }
             }
             var k:RegExp = new RegExp("_textclass_", "g");
-            return this._Str_1518.replace(k, this._Str_15582);
+            return this._message.replace(k, this._Str_15582);
         }
 
         public function get textStyle():String

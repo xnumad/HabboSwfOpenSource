@@ -4,21 +4,21 @@
 
     public class OpenFlatConnectionMessageComposer implements IMessageComposer
     {
-        private var _Str_1518:Array;
+        private var _message:Array;
 
         public function OpenFlatConnectionMessageComposer(k:int, _arg_2:String="", _arg_3:int=-1)
         {
-            this._Str_1518 = [k, _arg_2, _arg_3];
+            this._message = [k, _arg_2, _arg_3];
         }
 
         public function dispose():void
         {
-            this._Str_1518 = null;
+            this._message = null;
         }
 
         public function getMessageArray():Array
         {
-            return this._Str_1518;
+            return this._message;
         }
     }
 }

@@ -5,13 +5,13 @@
 
     public class SSOTicketMessageComposer implements IMessageComposer
     {
-        private var _Str_1518:Array;
+        private var _message:Array;
 
         public function SSOTicketMessageComposer(k:String)
         {
-            this._Str_1518 = new Array();
-            this._Str_1518.push(k);
-            this._Str_1518.push(getTimer());
+            this._message = new Array();
+            this._message.push(k);
+            this._message.push(getTimer());
         }
 
         public function dispose():void
@@ -20,7 +20,7 @@
 
         public function getMessageArray():Array
         {
-            return this._Str_1518;
+            return this._message;
         }
     }
 }
