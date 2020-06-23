@@ -138,7 +138,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_6030(this._Str_8265));
             _local_2.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onError));
             _local_2.addHabboConnectionMessageEvent(new _Str_5134(this._Str_16321));
-            _local_2.addHabboConnectionMessageEvent(new _Str_8939(this._Str_23463));
+            _local_2.addHabboConnectionMessageEvent(new _Str_8939(this.onEnforceRoomCategorySelection));
             _local_2.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484));
             _local_2.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592));
             _local_2.addHabboConnectionMessageEvent(new _Str_5767(this.onCompetitionData));
@@ -795,7 +795,7 @@
             this._navigator.toolbar.events.dispatchEvent(_local_4);
         }
 
-        private function _Str_23463(k:IMessageEvent):void
+        private function onEnforceRoomCategorySelection(k:IMessageEvent):void
         {
             var _local_2:_Str_7422 = (k as _Str_8939).getParser();
             this._navigator.enforceCategoryCtrl.show(_local_2._Str_24716);
