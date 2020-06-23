@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.incoming.bots.BotRemovedFromInventoryEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListInvalidateEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.clothes.FigureSetIdsEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.bots._Str_9129;
     import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
@@ -131,7 +131,7 @@
             this._com.addHabboConnectionMessageEvent(new BotRemovedFromInventoryEvent(this._Str_24595));
             this._com.addHabboConnectionMessageEvent(new FurniListInvalidateEvent(this._Str_18656));
             this._com.addHabboConnectionMessageEvent(new FigureSetIdsEvent(this._Str_25862));
-            this._com.addHabboConnectionMessageEvent(new _Str_4187(this._Str_15910));
+            this._com.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new _Str_9129(this._Str_23613));
             this._com.addHabboConnectionMessageEvent(new BadgesEvent(this.onBadges));
             this._com.addHabboConnectionMessageEvent(new UserBadgesEvent(this.onUserBadges));

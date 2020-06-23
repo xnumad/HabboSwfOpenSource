@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
@@ -125,7 +125,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4187(this.onFlatAccessDenied)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell)));
@@ -500,7 +500,7 @@
 
         private function onFlatAccessDenied(k:IMessageEvent):void
         {
-            var _local_2:_Str_5700 = (k as _Str_4187).getParser();
+            var _local_2:_Str_5700 = (k as FlatAccessDeniedMessageEvent).getParser();
             if (((_local_2.userName == null) || (_local_2.userName == "")))
             {
                 LegacyNavigator(this._navigator.legacyNavigator).doorbell._Str_20293();

@@ -363,7 +363,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
+	import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
@@ -1447,7 +1447,7 @@
             INCOMING_PACKETS[869] = PurchaseOKMessageEvent;
             INCOMING_PACKETS[872] = _Str_16892;
             INCOMING_PACKETS[876] = ExtendedProfileChangedMessageEvent;
-            INCOMING_PACKETS[878] = _Str_4187;
+            INCOMING_PACKETS[878] = FlatAccessDeniedMessageEvent;
             INCOMING_PACKETS[892] = _Str_8535;
             INCOMING_PACKETS[896] = _Str_7759;
             INCOMING_PACKETS[899] = CantConnectMessageEvent;

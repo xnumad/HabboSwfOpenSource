@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session.FlatAccessibleMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomQueueStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.YouAreSpectatorMessageEvent;
     import com.sulake.core.communication.connection.IConnection;
@@ -38,7 +38,7 @@
             k.addMessageEvent(new FlatAccessibleMessageEvent(this.onFlatAccessible));
             k.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
             k.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomDisconnected));
-            k.addMessageEvent(new _Str_4187(this.onFlatAccessDenied));
+            k.addMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied));
             k.addMessageEvent(new RoomQueueStatusMessageEvent(this.onRoomQueueStatus));
             k.addMessageEvent(new YouAreSpectatorMessageEvent(this.onYouAreSpectator));
         }
@@ -101,7 +101,7 @@
             }
         }
 
-        private function onFlatAccessDenied(k:_Str_4187):void
+        private function onFlatAccessDenied(k:FlatAccessDeniedMessageEvent):void
         {
             var _local_5:IRoomSession;
             var _local_2:int = _xxxRoomId;
