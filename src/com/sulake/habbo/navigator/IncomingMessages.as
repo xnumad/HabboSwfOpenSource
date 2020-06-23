@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5081;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5633;
@@ -130,7 +130,7 @@
             _local_2.addHabboConnectionMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell));
             _local_2.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5081(this.onRoomSettingsSaved));
+            _local_2.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved));
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907));
             _local_2.addHabboConnectionMessageEvent(new _Str_5633(this.onNavigatorSettings));
@@ -523,7 +523,7 @@
 
         private function onRoomSettingsSaved(k:IMessageEvent):void
         {
-            var _local_2:_Str_6506 = (k as _Str_5081).getParser();
+            var _local_2:_Str_6506 = (k as RoomSettingsSavedEvent).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ("Room settings saved: " + _local_2.roomId));
             this._navigator.mainViewCtrl.reloadRoomList(Tabs.SEARCHTYPE_MY_ROOMS);
         }

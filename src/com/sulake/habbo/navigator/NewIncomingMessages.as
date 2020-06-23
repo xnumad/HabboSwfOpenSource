@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5081;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5711;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
@@ -131,7 +131,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSearchResultBlocksEvent(this.onNavigatorSearchResultBlocks)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5081(this.onRoomSettingsSaved)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5711(this._Str_18125)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit)));
@@ -392,7 +392,7 @@
 
         private function onRoomSettingsSaved(k:IMessageEvent):void
         {
-            var _local_2:_Str_6506 = (k as _Str_5081).getParser();
+            var _local_2:_Str_6506 = (k as RoomSettingsSavedEvent).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ("Room settings saved: " + _local_2.roomId));
             LegacyNavigator(this._navigator.legacyNavigator).mainViewCtrl.reloadRoomList(Tabs.SEARCHTYPE_MY_ROOMS);
         }

@@ -561,7 +561,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_9229;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.*;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5081;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
@@ -1455,7 +1455,7 @@
             INCOMING_PACKETS[909] = _Str_6132;
             INCOMING_PACKETS[91] = TryVerificationCodeResultMessageEvent;
             INCOMING_PACKETS[934] = _Str_8337;
-            INCOMING_PACKETS[948] = _Str_5081;
+            INCOMING_PACKETS[948] = RoomSettingsSavedEvent;
             INCOMING_PACKETS[949] = QuestCompletedMessageEvent;
             INCOMING_PACKETS[954] = ScrSendUserInfoEvent;
             INCOMING_PACKETS[966] = UserClassificationMessageEvent;

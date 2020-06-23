@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementsScoreEvent;
     import com.sulake.habbo.communication.messages.incoming.quest.QuestsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5081;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.AchievementResolutionCompletedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
@@ -69,7 +69,7 @@
             _local_2.addHabboConnectionMessageEvent(new AchievementsScoreEvent(this._Str_18065));
             _local_2.addHabboConnectionMessageEvent(new QuestsMessageEvent(this._Str_8212));
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionUserInfoEvent));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5081(this.onRoomSettingsSaved));
+            _local_2.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionCompletedMessageEvent(this._Str_24464));
             _local_2.addHabboConnectionMessageEvent(new _Str_3660(this.onLevelUp));
             _local_2.addHabboConnectionMessageEvent(new HabboActivityPointNotificationMessageEvent(this._Str_24427));
