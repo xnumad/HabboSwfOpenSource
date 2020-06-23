@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6506;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsSavedMessageParser;
 
     public class RoomSettingsSavedEvent extends MessageEvent implements IMessageEvent
     {
         public function RoomSettingsSavedEvent(k:Function)
         {
-            super(k, _Str_6506);
+            super(k, RoomSettingsSavedMessageParser);
         }
 
-        public function getParser():_Str_6506
+        public function getParser():RoomSettingsSavedMessageParser
         {
-            return this._parser as _Str_6506;
+            return this._parser as RoomSettingsSavedMessageParser;
         }
     }
 }

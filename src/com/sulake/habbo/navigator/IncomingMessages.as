@@ -82,7 +82,7 @@
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_4697;
     import com.sulake.habbo.communication.messages.parser.room.chat.RoomFilterSettingsMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6295;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6506;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsSavedMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_4043;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6683;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6043;
@@ -523,7 +523,7 @@
 
         private function onRoomSettingsSaved(k:IMessageEvent):void
         {
-            var _local_2:_Str_6506 = (k as RoomSettingsSavedEvent).getParser();
+            var _local_2:RoomSettingsSavedMessageParser = (k as RoomSettingsSavedEvent).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ("Room settings saved: " + _local_2.roomId));
             this._navigator.mainViewCtrl.reloadRoomList(Tabs.SEARCHTYPE_MY_ROOMS);
         }
