@@ -5,7 +5,7 @@
 
     public class ShowEnforceRoomCategoryDialogParser implements IMessageParser
     {
-        private var _Str_21617:int;
+        private var _selectionType:int;
 
 
         public function flush():Boolean
@@ -15,13 +15,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_21617 = k.readInteger();
+            this._selectionType = k.readInteger();
             return true;
         }
 
         public function get _Str_24716():int
         {
-            return this._Str_21617;
+            return this._selectionType;
         }
     }
 }
