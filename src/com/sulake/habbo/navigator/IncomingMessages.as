@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6030;
     import com.sulake.habbo.communication.messages.incoming.handshake.GenericErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_8939;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.ShowEnforceRoomCategoryDialogEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
@@ -138,7 +138,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_6030(this._Str_8265));
             _local_2.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onError));
             _local_2.addHabboConnectionMessageEvent(new _Str_5134(this._Str_16321));
-            _local_2.addHabboConnectionMessageEvent(new _Str_8939(this.onEnforceRoomCategorySelection));
+            _local_2.addHabboConnectionMessageEvent(new ShowEnforceRoomCategoryDialogEvent(this.onEnforceRoomCategorySelection));
             _local_2.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484));
             _local_2.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592));
             _local_2.addHabboConnectionMessageEvent(new _Str_5767(this.onCompetitionData));
@@ -797,7 +797,7 @@
 
         private function onEnforceRoomCategorySelection(k:IMessageEvent):void
         {
-            var _local_2:_Str_7422 = (k as _Str_8939).getParser();
+            var _local_2:_Str_7422 = (k as ShowEnforceRoomCategoryDialogEvent).getParser();
             this._navigator.enforceCategoryCtrl.show(_local_2._Str_24716);
         }
     }

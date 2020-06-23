@@ -571,7 +571,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6030;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_8939;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.ShowEnforceRoomCategoryDialogEvent;
 	import com.sulake.habbo.communication.messages.outgoing.help.*;
 	import com.sulake.habbo.communication.messages.outgoing.help.PostQuizAnswersComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_10003;
@@ -1371,7 +1371,7 @@
             INCOMING_PACKETS[3878] = InitCameraMessageEvent;
             INCOMING_PACKETS[3884] = MarketPlaceOwnOffersEvent;
             INCOMING_PACKETS[3885] = CompleteDiffieHandshakeEvent;
-            INCOMING_PACKETS[3896] = _Str_8939;
+            INCOMING_PACKETS[3896] = ShowEnforceRoomCategoryDialogEvent;
             INCOMING_PACKETS[3898] = ExtendedProfileMessageEvent;
             INCOMING_PACKETS[3914] = NotEnoughBalanceMessageEvent;
             INCOMING_PACKETS[3915] = _Str_15952;
