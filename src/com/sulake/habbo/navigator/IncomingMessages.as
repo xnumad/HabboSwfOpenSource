@@ -98,7 +98,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6990;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_5700;
+    import com.sulake.habbo.communication.messages.parser.navigator.FlatAccessDeniedMessageParser;
     import com.sulake.core.window.IWindowContext;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.parser.room.session.CantConnectMessageParser;
@@ -694,7 +694,7 @@
 
         private function onFlatAccessDenied(k:IMessageEvent):void
         {
-            var _local_2:_Str_5700 = (k as FlatAccessDeniedMessageEvent).getParser();
+            var _local_2:FlatAccessDeniedMessageParser = (k as FlatAccessDeniedMessageEvent).getParser();
             if (((_local_2.userName == null) || (_local_2.userName == "")))
             {
                 this._navigator.doorbell._Str_20293();

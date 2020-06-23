@@ -16,7 +16,7 @@
     import com.sulake.habbo.session.events.RoomSessionDoorbellEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
     import com.sulake.core.utils.ErrorReportStorage;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_5700;
+    import com.sulake.habbo.communication.messages.parser.navigator.FlatAccessDeniedMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomQueueSet;
     import com.sulake.habbo.session.events.RoomSessionQueueEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomQueueStatusMessageParser;
@@ -105,7 +105,7 @@
         {
             var _local_5:IRoomSession;
             var _local_2:int = _xxxRoomId;
-            var _local_3:_Str_5700 = k.getParser();
+            var _local_3:FlatAccessDeniedMessageParser = k.getParser();
             if (_local_3 == null)
             {
                 return;
