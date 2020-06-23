@@ -798,7 +798,7 @@
         private function onEnforceRoomCategorySelection(k:IMessageEvent):void
         {
             var _local_2:ShowEnforceRoomCategoryDialogParser = (k as ShowEnforceRoomCategoryDialogEvent).getParser();
-            this._navigator.enforceCategoryCtrl.show(_local_2._Str_24716);
+            this._navigator.enforceCategoryCtrl.show(_local_2.selectionType);
         }
     }
 }

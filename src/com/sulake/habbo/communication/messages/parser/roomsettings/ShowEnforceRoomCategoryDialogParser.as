@@ -19,7 +19,7 @@
             return true;
         }
 
-        public function get _Str_24716():int
+        public function get selectionType():int
         {
             return this._selectionType;
         }
