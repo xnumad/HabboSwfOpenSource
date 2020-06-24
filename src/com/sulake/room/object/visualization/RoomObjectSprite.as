@@ -12,7 +12,7 @@
         private var _asset:BitmapData = null;
         private var _assetName:String = "";
         private var _libraryAssetName:String = "";
-        private var _Str_20770:String = null;
+        private var _assetPosture:String = null;
         private var _Str_20092:String = null;
         private var _visible:Boolean = true;
         private var _tag:String = "";
@@ -64,12 +64,12 @@
 
         public function get _Str_8401():String
         {
-            return this._Str_20770;
+            return this._assetPosture;
         }
 
         public function set _Str_8401(k:String):void
         {
-            this._Str_20770 = k;
+            this._assetPosture = k;
         }
 
         public function get _Str_22618():String
