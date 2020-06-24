@@ -114,7 +114,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5134(this._Str_16321)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592)));
-            this._messageListeners.push(k.connection.addMessageEvent(new _Str_8763(this._Str_23882)));
+            this._messageListeners.push(k.connection.addMessageEvent(new _Str_8763(this.onNavigatorPreferences)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6030(this._Str_8265)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709)));
@@ -179,7 +179,7 @@
             this._navigator._Str_23125(k.getParser());
         }
 
-        private function _Str_23882(k:_Str_8763):void
+        private function onNavigatorPreferences(k:_Str_8763):void
         {
             this._navigator._Str_23415(k.getParser());
         }
