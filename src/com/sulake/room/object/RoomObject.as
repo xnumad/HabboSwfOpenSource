@@ -16,7 +16,7 @@
         private var _loc:Vector3d;
         private var _dir:Vector3d;
         private var _locVisible:Vector3d;
-        private var _Str_18908:Vector3d;
+        private var _dirVisible:Vector3d;
         private var _Str_6775:Array;
         private var _roomObjectModel:RoomObjectModel;
         private var _visualization:IRoomObjectVisualization;
@@ -31,7 +31,7 @@
             this._loc = new Vector3d();
             this._dir = new Vector3d();
             this._locVisible = new Vector3d();
-            this._Str_18908 = new Vector3d();
+            this._dirVisible = new Vector3d();
             this._Str_6775 = new Array(_arg_2);
             var _local_4:Number = (_arg_2 - 1);
             while (_local_4 >= 0)
@@ -94,8 +94,8 @@
 
         public function getDirection():IVector3d
         {
-            this._Str_18908.assign(this._dir);
-            return this._Str_18908;
+            this._dirVisible.assign(this._dir);
+            return this._dirVisible;
         }
 
         public function getModel():IRoomObjectModel
