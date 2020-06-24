@@ -84,7 +84,7 @@
                 {
                     this._Str_4787 = new CategoryElementFactory(this._habboNewNavigator, this._Str_4128);
                 }
-                this._Str_25106();
+                this.onGroupDetails();
                 if (this._window == null)
                 {
                     this.createMainWindow();
@@ -152,7 +152,7 @@
             }
         }
 
-        private function _Str_25106():void
+        private function onGroupDetails():void
         {
             if (this._Str_3208 == null)
             {
