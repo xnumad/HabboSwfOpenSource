@@ -272,10 +272,10 @@
             this._navigatorView._Str_23074(k._Str_17736, k._Str_18137, k._Str_17903, k._Str_25666, k._Str_23289);
         }
 
-        public function _Str_11632(k:NavigatorSavedSearchesParser):void
+        public function onSavedSearches(k:NavigatorSavedSearchesParser):void
         {
             this._contextContainer._Str_8597 = k._Str_8597.concat(new Vector.<SavedSearch>(0));
-            this._navigatorView._Str_11632(this._contextContainer._Str_8597);
+            this._navigatorView.onSavedSearches(this._contextContainer._Str_8597);
         }
 
         public function onGroupDetails(k:HabboGroupDetailsData):void

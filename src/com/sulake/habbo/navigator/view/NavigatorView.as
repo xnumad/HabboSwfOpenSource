@@ -144,7 +144,7 @@
             }
         }
 
-        public function _Str_11632(k:Vector.<SavedSearch>):void
+        public function onSavedSearches(k:Vector.<SavedSearch>):void
         {
             if (this._Str_8068)
             {
