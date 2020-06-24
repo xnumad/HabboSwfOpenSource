@@ -5,7 +5,7 @@
 
     public class _Str_3169 implements IDisposable 
     {
-        private var _Str_22209:Boolean;
+        private var _exists:Boolean;
         private var _name:String;
         private var _desc:String;
         private var _tags:Array;
@@ -15,7 +15,7 @@
         {
             this._tags = new Array();
             super();
-            this._Str_22209 = k.readBoolean();
+            this._exists = k.readBoolean();
             if (!this.exists)
             {
                 return;
@@ -63,7 +63,7 @@
 
         public function get exists():Boolean
         {
-            return this._Str_22209;
+            return this._exists;
         }
     }
 }
