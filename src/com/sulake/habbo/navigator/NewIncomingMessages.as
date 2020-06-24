@@ -153,7 +153,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5212(this._Str_17011)));
         }
 
-        public function _Str_23421():void
+        public function removeLegacyMessageListeners():void
         {
             var _local_2:IMessageEvent;
             var k:IHabboCommunicationManager = this._navigator.communication;

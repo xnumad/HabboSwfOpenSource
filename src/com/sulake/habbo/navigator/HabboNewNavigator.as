@@ -369,7 +369,7 @@
                 context.removeLinkEventTracker(this);
                 if (this._initialized)
                 {
-                    this._incomingMessages._Str_23421();
+                    this._incomingMessages.removeLegacyMessageListeners();
                     this.close();
                 }
                 return;
