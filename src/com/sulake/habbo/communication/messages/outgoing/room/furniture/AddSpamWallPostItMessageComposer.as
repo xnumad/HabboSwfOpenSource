@@ -2,14 +2,14 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_8167 implements IMessageComposer 
+    public class AddSpamWallPostItMessageComposer implements IMessageComposer
     {
         private var _itemId:int;
         private var _location:String;
         private var _message:String;
         private var _colorHex:String;
 
-        public function _Str_8167(k:int, _arg_2:String, _arg_3:String, _arg_4:String)
+        public function AddSpamWallPostItMessageComposer(k:int, _arg_2:String, _arg_3:String, _arg_4:String)
         {
             this._itemId = k;
             this._location = _arg_2;

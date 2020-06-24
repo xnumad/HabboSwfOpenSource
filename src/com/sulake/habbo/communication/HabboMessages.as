@@ -726,7 +726,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12509;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_5009;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_7290;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_8167;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.AddSpamWallPostItMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9716;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9899;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9987;
@@ -1833,7 +1833,7 @@
             OUTGOING_PACKETS[3260] = _Str_12412;
             OUTGOING_PACKETS[3265] = GetExtendedProfileMessageComposer;
             OUTGOING_PACKETS[3267] = _Str_10695;
-            OUTGOING_PACKETS[3283] = _Str_8167;
+            OUTGOING_PACKETS[3283] = AddSpamWallPostItMessageComposer;
             OUTGOING_PACKETS[3285] = _Str_10337;
             OUTGOING_PACKETS[3288] = GetMarketplaceItemStatsComposer;
             OUTGOING_PACKETS[3295] = _Str_7074;

@@ -10,7 +10,7 @@
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.habbo.ui.widget.events.RoomWidgetSpamWallPostItEditEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetSpamWallPostItFinishEditingMessage;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_8167;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.AddSpamWallPostItMessageComposer;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import flash.events.Event;
@@ -96,7 +96,7 @@
         public function processWidgetMessage(k:RoomWidgetMessage):RoomWidgetUpdateEvent
         {
             var _local_2:RoomWidgetSpamWallPostItFinishEditingMessage;
-            var _local_3:_Str_8167;
+            var _local_3:AddSpamWallPostItMessageComposer;
             switch (k.type)
             {
                 case RoomWidgetSpamWallPostItFinishEditingMessage.RWSWPFEE_SEND_POSTIT_DATA:
@@ -105,7 +105,7 @@
                     {
                         if (this._connection != null)
                         {
-                            _local_3 = new _Str_8167(_local_2.objectId, _local_2.location, _local_2._Str_10471, _local_2.text);
+                            _local_3 = new AddSpamWallPostItMessageComposer(_local_2.objectId, _local_2.location, _local_2._Str_10471, _local_2.text);
                             this._connection.send(_local_3);
                         }
                     }
