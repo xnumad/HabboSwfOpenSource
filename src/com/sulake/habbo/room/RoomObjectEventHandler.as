@@ -84,7 +84,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12182;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.GetItemDataMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10097;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10640;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.SetItemDataMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveItemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10596;
 
@@ -2395,7 +2395,7 @@
             {
                 return false;
             }
-            this._roomEngine.connection.send(new _Str_10640(_arg_2, _arg_3, _arg_4));
+            this._roomEngine.connection.send(new SetItemDataMessageComposer(_arg_2, _arg_3, _arg_4));
             return true;
         }
 

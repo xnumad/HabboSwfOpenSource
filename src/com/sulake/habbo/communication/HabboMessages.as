@@ -611,7 +611,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10528;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10547;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10596;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10640;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetItemDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10764;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10852;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10983;
@@ -1887,7 +1887,7 @@
             OUTGOING_PACKETS[3617] = _Str_10710;
             OUTGOING_PACKETS[3632] = _Str_16470;
             OUTGOING_PACKETS[3637] = MuteAllInRoomComposer;
-            OUTGOING_PACKETS[3666] = _Str_10640;
+            OUTGOING_PACKETS[3666] = SetItemDataMessageComposer;
             OUTGOING_PACKETS[367] = _Str_7664;
             OUTGOING_PACKETS[3698] = OpenPetPackageMessageComposer;
             OUTGOING_PACKETS[3720] = PostQuizAnswersComposer;
