@@ -382,7 +382,7 @@
             {
                 if (this._sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_PHASE_TWO_2014))
                 {
-                    this._incomingMessages._Str_21575();
+                    this._incomingMessages.addMessageListeners();
                 }
             }
         }

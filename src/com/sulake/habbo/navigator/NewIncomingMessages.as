@@ -103,10 +103,10 @@
             super();
             this._navigator = k;
             var _local_2:IHabboCommunicationManager = this._navigator.communication;
-            this._Str_21575();
+            this.addMessageListeners();
         }
 
-        public function _Str_21575():void
+        public function addMessageListeners():void
         {
             var k:IHabboCommunicationManager = this._navigator.communication;
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576)));
