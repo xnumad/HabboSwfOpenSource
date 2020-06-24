@@ -198,7 +198,7 @@
             this._changeNameCb = ICheckBoxWindow(this._frame.findChildByName("changename_check"));
             this.refreshRoomData(this._data.room, "room_cont");
             this.setTxt("owner_name_txt", this._data.ownerName);
-            this.setTxt("owner_in_room_txt", ((this._data._Str_24479) ? "Yes" : "No"));
+            this.setTxt("owner_in_room_txt", ((this._data.ownerInRoom) ? "Yes" : "No"));
             this.setTxt("user_count_txt", ("" + this._data.userCount));
             this._frame.findChildByName("enter_room_but").procedure = this.onEnterRoom;
             this._frame.findChildByName("chatlog_but").procedure = this.onChatlog;

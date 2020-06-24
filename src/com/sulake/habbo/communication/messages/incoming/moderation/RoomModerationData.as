@@ -52,7 +52,7 @@
             return this._userCount;
         }
 
-        public function get _Str_24479():Boolean
+        public function get ownerInRoom():Boolean
         {
             return this._ownerInRoom;
         }
