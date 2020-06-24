@@ -14,7 +14,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.IButtonWindow;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_3169;
+    import com.sulake.habbo.communication.messages.incoming.moderation.RoomData;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7731;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_5691;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12412;
@@ -226,7 +226,7 @@
             }
         }
 
-        private function refreshRoomData(k:_Str_3169, _arg_2:String):void
+        private function refreshRoomData(k:RoomData, _arg_2:String):void
         {
             var _local_3:IWindowContainer = IWindowContainer(this._list.getListItemByName(_arg_2));
             var _local_4:IWindowContainer = IWindowContainer(_local_3.findChildByName("room_data"));

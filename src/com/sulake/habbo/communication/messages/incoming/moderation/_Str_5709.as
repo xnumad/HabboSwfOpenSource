@@ -10,7 +10,7 @@
         private var _Str_21059:Boolean;
         private var _ownerId:int;
         private var _ownerName:String;
-        private var _room:_Str_3169;
+        private var _room:RoomData;
         private var _disposed:Boolean;
 
         public function _Str_5709(k:IMessageDataWrapper)
@@ -20,7 +20,7 @@
             this._Str_21059 = k.readBoolean();
             this._ownerId = k.readInteger();
             this._ownerName = k.readString();
-            this._room = new _Str_3169(k);
+            this._room = new RoomData(k);
         }
 
         public function get disposed():Boolean
@@ -67,7 +67,7 @@
             return this._ownerName;
         }
 
-        public function get room():_Str_3169
+        public function get room():RoomData
         {
             return this._room;
         }
