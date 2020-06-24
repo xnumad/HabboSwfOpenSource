@@ -7,7 +7,7 @@
     {
         private var _flatId:int;
         private var _userCount:int;
-        private var _Str_21059:Boolean;
+        private var _ownerInRoom:Boolean;
         private var _ownerId:int;
         private var _ownerName:String;
         private var _room:RoomData;
@@ -17,7 +17,7 @@
         {
             this._flatId = k.readInteger();
             this._userCount = k.readInteger();
-            this._Str_21059 = k.readBoolean();
+            this._ownerInRoom = k.readBoolean();
             this._ownerId = k.readInteger();
             this._ownerName = k.readString();
             this._room = new RoomData(k);
@@ -54,7 +54,7 @@
 
         public function get _Str_24479():Boolean
         {
-            return this._Str_21059;
+            return this._ownerInRoom;
         }
 
         public function get ownerId():int
