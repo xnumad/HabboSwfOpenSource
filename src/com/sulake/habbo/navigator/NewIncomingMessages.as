@@ -144,7 +144,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947)));
-            this._messageListeners.push(k.connection.addMessageEvent(new NavigatorMetaDataEvent(this._Str_25034)));
+            this._messageListeners.push(k.connection.addMessageEvent(new NavigatorMetaDataEvent(this.onNavigatorMetaData)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5767(this.onCompetitionData)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3992(this._Str_7358)));
@@ -164,7 +164,7 @@
             this._messageListeners = [];
         }
 
-        private function _Str_25034(k:NavigatorMetaDataEvent):void
+        private function onNavigatorMetaData(k:NavigatorMetaDataEvent):void
         {
             this._navigator.initialize(k.getParser());
         }
