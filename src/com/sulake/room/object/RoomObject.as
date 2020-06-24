@@ -17,7 +17,7 @@
         private var _dir:Vector3d;
         private var _locVisible:Vector3d;
         private var _dirVisible:Vector3d;
-        private var _Str_6775:Array;
+        private var _stateList:Array;
         private var _roomObjectModel:RoomObjectModel;
         private var _visualization:IRoomObjectVisualization;
         private var _roomObjectLogic:IRoomObjectEventHandler;
@@ -32,11 +32,11 @@
             this._dir = new Vector3d();
             this._locVisible = new Vector3d();
             this._dirVisible = new Vector3d();
-            this._Str_6775 = new Array(_arg_2);
+            this._stateList = new Array(_arg_2);
             var _local_4:Number = (_arg_2 - 1);
             while (_local_4 >= 0)
             {
-                this._Str_6775[_local_4] = 0;
+                this._stateList[_local_4] = 0;
                 _local_4--;
             }
             this._type = _arg_3;
@@ -51,7 +51,7 @@
         {
             this._loc = null;
             this._dir = null;
-            this._Str_6775 = null;
+            this._stateList = null;
             this.setVisualization(null);
             this.setEventHandler(null);
             if (this._roomObjectModel != null)
@@ -110,9 +110,9 @@
 
         public function getState(k:int):int
         {
-            if (((k >= 0) && (k < this._Str_6775.length)))
+            if (((k >= 0) && (k < this._stateList.length)))
             {
-                return this._Str_6775[k];
+                return this._stateList[k];
             }
             return -1;
         }
@@ -154,11 +154,11 @@
 
         public function setState(k:int, _arg_2:int):Boolean
         {
-            if (((_arg_2 >= 0) && (_arg_2 < this._Str_6775.length)))
+            if (((_arg_2 >= 0) && (_arg_2 < this._stateList.length)))
             {
-                if (this._Str_6775[_arg_2] != k)
+                if (this._stateList[_arg_2] != k)
                 {
-                    this._Str_6775[_arg_2] = k;
+                    this._stateList[_arg_2] = k;
                     this._updateID++;
                 }
                 return true;
