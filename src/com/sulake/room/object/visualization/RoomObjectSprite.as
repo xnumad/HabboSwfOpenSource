@@ -7,7 +7,7 @@
 
     public final class RoomObjectSprite implements IRoomObjectSprite 
     {
-        private static var _Str_3822:int = 0;
+        private static var _globalInstanceId:int = 0;
 
         private var _asset:BitmapData = null;
         private var _assetName:String = "";
@@ -42,7 +42,7 @@
             this._Str_13928 = AlphaTolerance.MATCH_OPAQUE_PIXELS;
             this._Str_17033 = RoomObjectSpriteType.DEFAULT;
             super();
-            this._instanceId = _Str_3822++;
+            this._instanceId = _globalInstanceId++;
         }
 
         public function dispose():void

@@ -9,7 +9,7 @@
 
     public class RoomObject implements IRoomObjectController 
     {
-        private static var _Str_3822:int = 0;
+        private static var _globalInstanceId:int = 0;
 
         private var _id:int;
         private var _type:String = "";
@@ -44,7 +44,7 @@
             this._visualization = null;
             this._roomObjectLogic = null;
             this._updateID = 0;
-            this._instanceId = _Str_3822++;
+            this._instanceId = _globalInstanceId++;
         }
 
         public function dispose():void

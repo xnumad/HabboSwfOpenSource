@@ -12,7 +12,7 @@
 
     public class RoomObjectSpriteVisualization implements IRoomObjectSpriteVisualization 
     {
-        private static var _Str_3822:int = 0;
+        private static var _globalInstanceId:int = 0;
 
         private var _layersInUse:Array;
         private var _object:IRoomObject;
@@ -25,7 +25,7 @@
 
         public function RoomObjectSpriteVisualization()
         {
-            this._instanceId = _Str_3822++;
+            this._instanceId = _globalInstanceId++;
             this._layersInUse = [];
             this._object = null;
             this._assetCollection = null;
