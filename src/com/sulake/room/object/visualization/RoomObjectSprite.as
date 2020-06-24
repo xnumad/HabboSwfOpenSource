@@ -33,14 +33,14 @@
         private var _updateID:int = 0;
         private var _instanceId:int = 0;
         private var _filters:Array = null;
-        protected var _Str_17033:int;
+        protected var _spriteType:int;
         private var _Str_3796:String;
 
         public function RoomObjectSprite()
         {
             this._offset = new Point(0, 0);
             this._Str_13928 = AlphaTolerance.MATCH_OPAQUE_PIXELS;
-            this._Str_17033 = RoomObjectSpriteType.DEFAULT;
+            this._spriteType = RoomObjectSpriteType.DEFAULT;
             super();
             this._instanceId = _globalInstanceId++;
         }
@@ -174,7 +174,7 @@
 
         public function get _Str_4918():int
         {
-            return this._Str_17033;
+            return this._spriteType;
         }
 
         public function get objectType():String
@@ -199,7 +199,7 @@
 
         public function set _Str_4918(k:int):void
         {
-            this._Str_17033 = k;
+            this._spriteType = k;
         }
 
         public function set asset(k:BitmapData):void
