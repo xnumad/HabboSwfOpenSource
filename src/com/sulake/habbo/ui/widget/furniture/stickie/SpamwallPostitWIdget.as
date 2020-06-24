@@ -49,7 +49,7 @@
             _Str_2718(false);
             _objectId = k.objectId;
             this._location = k.location;
-            _Str_3796 = k.objectType;
+            _objectType = k.objectType;
             _text = "";
             _Str_3062 = "FFFF33";
             _controller = true;

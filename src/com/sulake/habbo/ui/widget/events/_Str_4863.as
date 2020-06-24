@@ -5,7 +5,7 @@
         public static const RWSDUE_STICKIE_DATA:String = "RWSDUE_STICKIE_DATA";
 
         private var _objectId:int = -1;
-        private var _Str_3796:String;
+        private var _objectType:String;
         private var _text:String;
         private var _Str_3062:String;
         private var _controller:Boolean;
@@ -14,7 +14,7 @@
         {
             super(k, _arg_7, _arg_8);
             this._objectId = _arg_2;
-            this._Str_3796 = _arg_3;
+            this._objectType = _arg_3;
             this._text = _arg_4;
             this._Str_3062 = _arg_5;
             this._controller = _arg_6;
@@ -27,7 +27,7 @@
 
         public function get objectType():String
         {
-            return this._Str_3796;
+            return this._objectType;
         }
 
         public function get text():String

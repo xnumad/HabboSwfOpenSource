@@ -32,7 +32,7 @@
 
         private var _window:IWindowContainer;
         protected var _objectId:int = -1;
-        protected var _Str_3796:String;
+        protected var _objectType:String;
         protected var _text:String;
         protected var _Str_3062:String;
         protected var _controller:Boolean;
@@ -86,7 +86,7 @@
         {
             this._Str_2718(false);
             this._objectId = k.objectId;
-            this._Str_3796 = k.objectType;
+            this._objectType = k.objectType;
             this._text = k.text;
             this._Str_3062 = k._Str_10471;
             this._controller = k.controller;
@@ -128,7 +128,7 @@
             _local_6 = (this._window.findChildByTag("bg") as IBitmapWrapperWindow);
             if (_local_6 != null)
             {
-                _local_7 = this._Str_3796.replace("post_it", "stickie");
+                _local_7 = this._objectType.replace("post_it", "stickie");
                 if (((assets.hasAsset(_local_7)) && (assets.getAssetByName(_local_7) is BitmapDataAsset)))
                 {
                     _local_4 = (assets.getAssetByName(_local_7) as BitmapDataAsset);
@@ -164,7 +164,7 @@
                 _local_6.bitmap.copyPixels(_local_5, _local_5.rect, new Point(0, 0));
                 _local_6.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
-            this._Str_22258(((this._controller) && (this._Str_3796 == "post_it")));
+            this._Str_22258(((this._controller) && (this._objectType == "post_it")));
         }
 
         protected function _Str_2718(k:Boolean=true):void

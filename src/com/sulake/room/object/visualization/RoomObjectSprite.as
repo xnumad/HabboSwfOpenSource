@@ -34,7 +34,7 @@
         private var _instanceId:int = 0;
         private var _filters:Array = null;
         protected var _spriteType:int;
-        private var _Str_3796:String;
+        private var _objectType:String;
 
         public function RoomObjectSprite()
         {
@@ -179,12 +179,12 @@
 
         public function get objectType():String
         {
-            return this._Str_3796;
+            return this._objectType;
         }
 
         public function set objectType(k:String):void
         {
-            this._Str_3796 = k;
+            this._objectType = k;
         }
 
         public function get spriteType():int
