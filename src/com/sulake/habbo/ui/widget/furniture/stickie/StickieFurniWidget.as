@@ -34,7 +34,7 @@
         protected var _objectId:int = -1;
         protected var _objectType:String;
         protected var _text:String;
-        protected var _Str_3062:String;
+        protected var _colorHex:String;
         protected var _controller:Boolean;
         private var _Str_14561:BitmapData;
         protected var _Str_18958:String = "stickieui_container";
@@ -88,7 +88,7 @@
             this._objectId = k.objectId;
             this._objectType = k.objectType;
             this._text = k.text;
-            this._Str_3062 = k._Str_10471;
+            this._colorHex = k._Str_10471;
             this._controller = k.controller;
             this.showInterface();
         }
@@ -136,7 +136,7 @@
                 else
                 {
                     _local_4 = (assets.getAssetByName("stickie_blanco") as BitmapDataAsset);
-                    _local_6.color = uint(("0xFF" + this._Str_3062));
+                    _local_6.color = uint(("0xFF" + this._colorHex));
                 }
                 _local_5 = (_local_4.content as BitmapData);
                 if (this._Str_14561)
@@ -235,7 +235,7 @@
             }
             if (messageListener != null)
             {
-                k = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_UPDATE, this._objectId, this._text, this._Str_3062);
+                k = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_UPDATE, this._objectId, this._text, this._colorHex);
                 messageListener.processWidgetMessage(k);
             }
         }
@@ -253,14 +253,14 @@
             {
                 _local_2 = _local_2.slice((_local_2.length - 6), _local_2.length);
             }
-            if (_local_2 == this._Str_3062)
+            if (_local_2 == this._colorHex)
             {
                 return;
             }
-            this._Str_3062 = _local_2;
+            this._colorHex = _local_2;
             if (messageListener != null)
             {
-                _local_3 = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_UPDATE, this._objectId, this._text, this._Str_3062);
+                _local_3 = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_UPDATE, this._objectId, this._text, this._colorHex);
                 messageListener.processWidgetMessage(_local_3);
             }
             this.showInterface();

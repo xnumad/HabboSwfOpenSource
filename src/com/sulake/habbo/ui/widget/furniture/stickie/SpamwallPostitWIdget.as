@@ -51,7 +51,7 @@
             this._location = k.location;
             _objectType = k.objectType;
             _text = "";
-            _Str_3062 = "FFFF33";
+            _colorHex = "FFFF33";
             _controller = true;
             showInterface();
         }
@@ -65,7 +65,7 @@
                 Logger.log("Spamwall Post-It Widget Send Update");
                 if (messageListener != null)
                 {
-                    k = new RoomWidgetSpamWallPostItFinishEditingMessage(RoomWidgetSpamWallPostItFinishEditingMessage.RWSWPFEE_SEND_POSTIT_DATA, _objectId, this._location, _text, _Str_3062);
+                    k = new RoomWidgetSpamWallPostItFinishEditingMessage(RoomWidgetSpamWallPostItFinishEditingMessage.RWSWPFEE_SEND_POSTIT_DATA, _objectId, this._location, _text, _colorHex);
                     messageListener.processWidgetMessage(k);
                 }
                 _Str_2718(false);
@@ -80,11 +80,11 @@
             {
                 _local_2 = _local_2.slice((_local_2.length - 6), _local_2.length);
             }
-            if (_local_2 == _Str_3062)
+            if (_local_2 == _colorHex)
             {
                 return;
             }
-            _Str_3062 = _local_2;
+            _colorHex = _local_2;
             showInterface();
         }
 

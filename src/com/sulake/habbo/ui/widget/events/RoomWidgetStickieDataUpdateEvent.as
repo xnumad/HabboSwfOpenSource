@@ -7,7 +7,7 @@
         private var _objectId:int = -1;
         private var _objectType:String;
         private var _text:String;
-        private var _Str_3062:String;
+        private var _colorHex:String;
         private var _controller:Boolean;
 
         public function RoomWidgetStickieDataUpdateEvent(k:String, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:Boolean, _arg_7:Boolean=false, _arg_8:Boolean=false)
@@ -16,7 +16,7 @@
             this._objectId = _arg_2;
             this._objectType = _arg_3;
             this._text = _arg_4;
-            this._Str_3062 = _arg_5;
+            this._colorHex = _arg_5;
             this._controller = _arg_6;
         }
 
@@ -37,7 +37,7 @@
 
         public function get _Str_10471():String
         {
-            return this._Str_3062;
+            return this._colorHex;
         }
 
         public function get controller():Boolean
