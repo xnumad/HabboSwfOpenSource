@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.moderation
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_5709;
+    import com.sulake.habbo.communication.messages.incoming.moderation.RoomModerationData;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.IDropMenuWindow;
@@ -24,7 +24,7 @@
     {
         private var _main:ModerationManager;
         private var _flatId:int;
-        private var _data:_Str_5709;
+        private var _data:RoomModerationData;
         private var _frame:IFrameWindow;
         private var _list:IItemListWindow;
         private var _disposed:Boolean;
@@ -164,7 +164,7 @@
             }
         }
 
-        public function onRoomInfo(k:_Str_5709):void
+        public function onRoomInfo(k:RoomModerationData):void
         {
             if (this._disposed)
             {
