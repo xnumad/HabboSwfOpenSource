@@ -119,7 +119,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5891(this.onNoOwnedRoomsAlert)));
-            this._messageListeners.push(k.connection.addMessageEvent(new NavigatorLiftedRoomsEvent(this._Str_23664)));
+            this._messageListeners.push(k.connection.addMessageEvent(new NavigatorLiftedRoomsEvent(this.onNavigatorLiftedRooms)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSavedSearchesEvent(this._Str_11632)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom)));
@@ -174,7 +174,7 @@
             this._navigator.onSearchResult(new SearchResultContainer(k.getParser().searchResult));
         }
 
-        private function _Str_23664(k:NavigatorLiftedRoomsEvent):void
+        private function onNavigatorLiftedRooms(k:NavigatorLiftedRoomsEvent):void
         {
             this._navigator._Str_23125(k.getParser());
         }
