@@ -13,7 +13,7 @@
         private var _assetName:String = "";
         private var _libraryAssetName:String = "";
         private var _assetPosture:String = null;
-        private var _Str_20092:String = null;
+        private var _assetGesture:String = null;
         private var _visible:Boolean = true;
         private var _tag:String = "";
         private var _alpha:int = 0xFF;
@@ -74,12 +74,12 @@
 
         public function get _Str_22618():String
         {
-            return this._Str_20092;
+            return this._assetGesture;
         }
 
         public function set _Str_22618(k:String):void
         {
-            this._Str_20092 = k;
+            this._assetGesture = k;
         }
 
         public function get visible():Boolean
