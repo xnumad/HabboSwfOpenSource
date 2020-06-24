@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.events
 {
-    public class _Str_4863 extends RoomWidgetUpdateEvent 
+    public class RoomWidgetStickieDataUpdateEvent extends RoomWidgetUpdateEvent
     {
         public static const RWSDUE_STICKIE_DATA:String = "RWSDUE_STICKIE_DATA";
 
@@ -10,7 +10,7 @@
         private var _Str_3062:String;
         private var _controller:Boolean;
 
-        public function _Str_4863(k:String, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:Boolean, _arg_7:Boolean=false, _arg_8:Boolean=false)
+        public function RoomWidgetStickieDataUpdateEvent(k:String, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:Boolean, _arg_7:Boolean=false, _arg_8:Boolean=false)
         {
             super(k, _arg_7, _arg_8);
             this._objectId = _arg_2;

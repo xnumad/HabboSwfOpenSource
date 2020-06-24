@@ -5,7 +5,7 @@
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.ui.widget.events.RoomWidgetSpamWallPostItEditEvent;
     import flash.events.IEventDispatcher;
-    import com.sulake.habbo.ui.widget.events._Str_4863;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetStickieDataUpdateEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetSpamWallPostItFinishEditingMessage;
 
     public class SpamwallPostitWIdget extends StickieFurniWidget 
@@ -40,7 +40,7 @@
             k.removeEventListener(RoomWidgetSpamWallPostItEditEvent.RWSWPUE_OPEN_EDITOR, this._Str_22050);
         }
 
-        override protected function onObjectUpdate(k:_Str_4863):void
+        override protected function onObjectUpdate(k:RoomWidgetStickieDataUpdateEvent):void
         {
         }
 

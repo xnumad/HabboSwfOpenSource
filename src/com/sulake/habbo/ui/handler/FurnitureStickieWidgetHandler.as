@@ -7,7 +7,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetStickieSendUpdateMessage;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.room.object.IRoomObjectModel;
-    import com.sulake.habbo.ui.widget.events._Str_4863;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetStickieDataUpdateEvent;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
@@ -57,7 +57,7 @@
             var _local_8:String;
             var _local_9:String;
             var _local_10:Boolean;
-            var _local_11:_Str_4863;
+            var _local_11:RoomWidgetStickieDataUpdateEvent;
             switch (k.type)
             {
                 case RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_STICKIE:
@@ -84,7 +84,7 @@
                                 _local_8 = _local_7;
                             }
                             _local_10 = ((this._container.roomSession.isRoomOwner) || (this._container.sessionDataManager.isAnyRoomController));
-                            _local_11 = new _Str_4863(_Str_4863.RWSDUE_STICKIE_DATA, _local_2.id, _local_3.getType(), _local_9, _local_8, _local_10);
+                            _local_11 = new RoomWidgetStickieDataUpdateEvent(RoomWidgetStickieDataUpdateEvent.RWSDUE_STICKIE_DATA, _local_2.id, _local_3.getType(), _local_9, _local_8, _local_10);
                             this._container.events.dispatchEvent(_local_11);
                         }
                     }

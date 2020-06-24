@@ -6,7 +6,7 @@
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
-    import com.sulake.habbo.ui.widget.events._Str_4863;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetStickieDataUpdateEvent;
     import flash.events.IEventDispatcher;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.assets.BitmapDataAsset;
@@ -69,7 +69,7 @@
             {
                 return;
             }
-            k.addEventListener(_Str_4863.RWSDUE_STICKIE_DATA, this.onObjectUpdate);
+            k.addEventListener(RoomWidgetStickieDataUpdateEvent.RWSDUE_STICKIE_DATA, this.onObjectUpdate);
             super.registerUpdateEvents(k);
         }
 
@@ -79,10 +79,10 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_4863.RWSDUE_STICKIE_DATA, this.onObjectUpdate);
+            k.removeEventListener(RoomWidgetStickieDataUpdateEvent.RWSDUE_STICKIE_DATA, this.onObjectUpdate);
         }
 
-        protected function onObjectUpdate(k:_Str_4863):void
+        protected function onObjectUpdate(k:RoomWidgetStickieDataUpdateEvent):void
         {
             this._Str_2718(false);
             this._objectId = k.objectId;
