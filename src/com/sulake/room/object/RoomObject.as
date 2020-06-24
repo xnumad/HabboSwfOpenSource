@@ -15,7 +15,7 @@
         private var _type:String = "";
         private var _loc:Vector3d;
         private var _dir:Vector3d;
-        private var _Str_17023:Vector3d;
+        private var _locVisible:Vector3d;
         private var _Str_18908:Vector3d;
         private var _Str_6775:Array;
         private var _roomObjectModel:RoomObjectModel;
@@ -30,7 +30,7 @@
             this._id = k;
             this._loc = new Vector3d();
             this._dir = new Vector3d();
-            this._Str_17023 = new Vector3d();
+            this._locVisible = new Vector3d();
             this._Str_18908 = new Vector3d();
             this._Str_6775 = new Array(_arg_2);
             var _local_4:Number = (_arg_2 - 1);
@@ -88,8 +88,8 @@
 
         public function getLocation():IVector3d
         {
-            this._Str_17023.assign(this._loc);
-            return this._Str_17023;
+            this._locVisible.assign(this._loc);
+            return this._locVisible;
         }
 
         public function getDirection():IVector3d
