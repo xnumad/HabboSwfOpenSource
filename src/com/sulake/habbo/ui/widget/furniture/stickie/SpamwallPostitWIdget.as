@@ -3,7 +3,7 @@
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
-    import com.sulake.habbo.ui.widget.events._Str_5436;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetSpamWallPostItEditEvent;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.events._Str_4863;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetSpamWallPostItFinishEditingMessage;
@@ -27,7 +27,7 @@
 
         override public function registerUpdateEvents(k:IEventDispatcher):void
         {
-            k.addEventListener(_Str_5436.RWSWPUE_OPEN_EDITOR, this._Str_22050);
+            k.addEventListener(RoomWidgetSpamWallPostItEditEvent.RWSWPUE_OPEN_EDITOR, this._Str_22050);
             super.registerUpdateEvents(k);
         }
 
@@ -37,14 +37,14 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_5436.RWSWPUE_OPEN_EDITOR, this._Str_22050);
+            k.removeEventListener(RoomWidgetSpamWallPostItEditEvent.RWSWPUE_OPEN_EDITOR, this._Str_22050);
         }
 
         override protected function onObjectUpdate(k:_Str_4863):void
         {
         }
 
-        private function _Str_22050(k:_Str_5436):void
+        private function _Str_22050(k:RoomWidgetSpamWallPostItEditEvent):void
         {
             _Str_2718(false);
             _objectId = k.objectId;

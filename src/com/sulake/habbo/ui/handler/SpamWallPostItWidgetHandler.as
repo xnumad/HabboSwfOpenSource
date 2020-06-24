@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9687;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7128;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
-    import com.sulake.habbo.ui.widget.events._Str_5436;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetSpamWallPostItEditEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetSpamWallPostItFinishEditingMessage;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_8167;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
@@ -83,14 +83,14 @@
             {
                 if (this._container.events != null)
                 {
-                    this._container.events.dispatchEvent(new _Str_5436(_Str_5436.RWSWPUE_OPEN_EDITOR, _local_3, _local_4, _local_5));
+                    this._container.events.dispatchEvent(new RoomWidgetSpamWallPostItEditEvent(RoomWidgetSpamWallPostItEditEvent.RWSWPUE_OPEN_EDITOR, _local_3, _local_4, _local_5));
                 }
             }
         }
 
         public function getWidgetMessages():Array
         {
-            return [_Str_5436.RWSWPUE_OPEN_EDITOR, RoomWidgetSpamWallPostItFinishEditingMessage.RWSWPFEE_SEND_POSTIT_DATA];
+            return [RoomWidgetSpamWallPostItEditEvent.RWSWPUE_OPEN_EDITOR, RoomWidgetSpamWallPostItFinishEditingMessage.RWSWPFEE_SEND_POSTIT_DATA];
         }
 
         public function processWidgetMessage(k:RoomWidgetMessage):RoomWidgetUpdateEvent
