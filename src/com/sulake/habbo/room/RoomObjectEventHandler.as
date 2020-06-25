@@ -781,8 +781,8 @@
                         {
                             if ((((_local_9) && (_local_9.getModel())) && (_local_9.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_IS_VARIABLE_HEIGHT) > 0)))
                             {
-                                _local_11 = _local_10._Str_2754(_local_4, _local_5);
-                                _local_12 = this._roomEngine.getLegacyGeometry(_arg_2)._Str_2754(_local_4, _local_5);
+                                _local_11 = _local_10.getTileHeight(_local_4, _local_5);
+                                _local_12 = this._roomEngine.getLegacyGeometry(_arg_2).getTileHeight(_local_4, _local_5);
                                 return new RoomObjectTileCursorUpdateMessage(new Vector3d(_local_4, _local_5, _local_6), (_local_11 - _local_12), true, k.eventId);
                             }
                             return new RoomObjectTileCursorUpdateMessage(new Vector3d(_local_4, _local_5, _local_6), 0, true, k.eventId);
@@ -1757,7 +1757,7 @@
             {
                 return false;
             }
-            k.setLocation(new Vector3d(_arg_2, _arg_3, _arg_4._Str_2754(_arg_2, _arg_3)));
+            k.setLocation(new Vector3d(_arg_2, _arg_3, _arg_4.getTileHeight(_arg_2, _arg_3)));
             return true;
         }
 
@@ -1877,7 +1877,7 @@
                 stackable = (k.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_ALWAYS_STACKABLE) == 1);
                 if (_arg_5.validateLocation(_arg_2.x, _arg_2.y, sizeX, sizeY, _local_9, _local_10, _local_11, _local_12, stackable))
                 {
-                    return new Vector3d(_arg_2.x, _arg_2.y, _arg_5._Str_2754(_arg_2.x, _arg_2.y));
+                    return new Vector3d(_arg_2.x, _arg_2.y, _arg_5.getTileHeight(_arg_2.x, _arg_2.y));
                 }
                 return null;
             }

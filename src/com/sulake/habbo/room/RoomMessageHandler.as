@@ -328,7 +328,7 @@
                 _local_8 = 0;
                 while (_local_8 < _local_4)
                 {
-                    _local_9 = _local_3._Str_2754(_local_8, _local_7);
+                    _local_9 = _local_3.getTileHeight(_local_8, _local_7);
                     _local_10 = _local_3.getStackingBlocked(_local_8, _local_7);
                     _local_11 = _local_3.isRoomTile(_local_8, _local_7);
                     _local_6._Str_3982(_local_8, _local_7, _local_9);
@@ -456,17 +456,17 @@
                 _local_17 = 0;
                 while (_local_17 < _local_5)
                 {
-                    _local_18 = _local_3._Str_2754(_local_17, _local_13);
+                    _local_18 = _local_3.getTileHeight(_local_17, _local_13);
                     if ((((((_local_13 > 0) && (_local_13 < (_local_6 - 1))) || ((_local_17 > 0) && (_local_17 < (_local_5 - 1)))) && (!(_local_18 == RoomPlaneParser.TILE_BLOCKED))) && ((_local_11 == null) || ((_local_17 == _local_11.x) && (_local_13 == _local_11.y)))))
                     {
-                        if ((((_local_3._Str_2754(_local_17, (_local_13 - 1)) == RoomPlaneParser.TILE_BLOCKED) && (_local_3._Str_2754((_local_17 - 1), _local_13) == RoomPlaneParser.TILE_BLOCKED)) && (_local_3._Str_2754(_local_17, (_local_13 + 1)) == RoomPlaneParser.TILE_BLOCKED)))
+                        if ((((_local_3.getTileHeight(_local_17, (_local_13 - 1)) == RoomPlaneParser.TILE_BLOCKED) && (_local_3.getTileHeight((_local_17 - 1), _local_13) == RoomPlaneParser.TILE_BLOCKED)) && (_local_3.getTileHeight(_local_17, (_local_13 + 1)) == RoomPlaneParser.TILE_BLOCKED)))
                         {
                             _local_7 = (_local_17 + 0.5);
                             _local_8 = _local_13;
                             _local_9 = _local_18;
                             _local_10 = 90;
                         }
-                        if ((((_local_3._Str_2754(_local_17, (_local_13 - 1)) == RoomPlaneParser.TILE_BLOCKED) && (_local_3._Str_2754((_local_17 - 1), _local_13) == RoomPlaneParser.TILE_BLOCKED)) && (_local_3._Str_2754((_local_17 + 1), _local_13) == RoomPlaneParser.TILE_BLOCKED)))
+                        if ((((_local_3.getTileHeight(_local_17, (_local_13 - 1)) == RoomPlaneParser.TILE_BLOCKED) && (_local_3.getTileHeight((_local_17 - 1), _local_13) == RoomPlaneParser.TILE_BLOCKED)) && (_local_3.getTileHeight((_local_17 + 1), _local_13) == RoomPlaneParser.TILE_BLOCKED)))
                         {
                             _local_7 = _local_17;
                             _local_8 = (_local_13 + 0.5);
@@ -490,7 +490,7 @@
                 _local_19 = (_local_3.width - 1);
                 while (_local_19 >= 0)
                 {
-                    _local_4._Str_3982(_local_19, _local_14, this._planeParser._Str_2754(_local_19, _local_14));
+                    _local_4._Str_3982(_local_19, _local_14, this._planeParser.getTileHeight(_local_19, _local_14));
                     _local_19--;
                 }
                 _local_14--;

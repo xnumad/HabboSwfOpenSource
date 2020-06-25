@@ -4362,8 +4362,8 @@
                 return _arg_2;
             }
             var _local_5:Number = _arg_2.z;
-            var _local_6:Number = _local_3._Str_2754(_arg_2.x, _arg_2.y);
-            var _local_7:Number = _local_4._Str_2754(_arg_2.x, _arg_2.y);
+            var _local_6:Number = _local_3.getTileHeight(_arg_2.x, _arg_2.y);
+            var _local_7:Number = _local_4.getTileHeight(_arg_2.x, _arg_2.y);
             if (((Math.abs((_local_5 - _local_6)) < 0.1) && (Math.abs((_local_6 - _local_7)) < 0.1)))
             {
                 _local_5 = _local_4.getFloorAltitude(_arg_2.x, _arg_2.y);

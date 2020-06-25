@@ -44,7 +44,7 @@
             return (((k >= 0) && (k < this._width)) && (_arg_2 >= 0)) && (_arg_2 < this._height);
         }
 
-        public function _Str_2754(k:int, _arg_2:int):Number
+        public function getTileHeight(k:int, _arg_2:int):Number
         {
             return (this.validPosition(k, _arg_2)) ? this._heightMap[((_arg_2 * this._width) + k)] : 0;
         }
@@ -93,7 +93,7 @@
             _arg_8 = Math.min(_arg_8, (this._height - _arg_6));
             if (_arg_10 == -1)
             {
-                _arg_10 = this._Str_2754(k, _arg_2);
+                _arg_10 = this.getTileHeight(k, _arg_2);
             }
             var _local_11:int = _arg_2;
             while (_local_11 < (_arg_2 + _arg_4))

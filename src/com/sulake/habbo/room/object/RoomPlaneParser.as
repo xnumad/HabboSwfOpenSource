@@ -521,7 +521,7 @@
                         _local_8 = this._minX;
                         while (_local_8 < this._maxX)
                         {
-                            if (this._Str_2754(_local_8, _arg_2) >= 0)
+                            if (this.getTileHeight(_local_8, _arg_2) >= 0)
                             {
                                 _local_7 = true;
                                 break;
@@ -546,7 +546,7 @@
             return false;
         }
 
-        public function _Str_2754(k:int, _arg_2:int):Number
+        public function getTileHeight(k:int, _arg_2:int):Number
         {
             if (((((k < 0) || (k >= this._width)) || (_arg_2 < 0)) || (_arg_2 >= this._height)))
             {
@@ -621,7 +621,7 @@
             var _local_2:int;
             if (k != null)
             {
-                _local_2 = this._Str_2754(k.x, k.y);
+                _local_2 = this.getTileHeight(k.x, k.y);
                 this._Str_3982(k.x, k.y, TILE_BLOCKED);
             }
             this._floorHeight = getFloorHeight(this._tileMatrix);

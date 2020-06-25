@@ -41,7 +41,7 @@
             return this._height;
         }
 
-        public function _Str_2754(k:int, _arg_2:int):Number
+        public function getTileHeight(k:int, _arg_2:int):Number
         {
             if (((((k < 0) || (k >= this._width)) || (_arg_2 < 0)) || (_arg_2 >= this._height)))
             {

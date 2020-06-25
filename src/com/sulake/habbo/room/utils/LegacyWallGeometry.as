@@ -104,7 +104,7 @@
             return false;
         }
 
-        public function _Str_2754(k:int, _arg_2:int):Number
+        public function getTileHeight(k:int, _arg_2:int):Number
         {
             if (((((k < 0) || (k >= this._width)) || (_arg_2 < 0)) || (_arg_2 >= this._height)))
             {
@@ -136,7 +136,7 @@
                         _local_6 = 1;
                         while (_local_6 < this._height)
                         {
-                            if (this._Str_2754(_local_7, _local_6) <= this._floorHeight)
+                            if (this.getTileHeight(_local_7, _local_6) <= this._floorHeight)
                             {
                                 if ((_local_6 - 1) < _arg_2)
                                 {
@@ -160,7 +160,7 @@
                         _local_7 = 1;
                         while (_local_7 < this._width)
                         {
-                            if (this._Str_2754(_local_7, _local_6) <= this._floorHeight)
+                            if (this.getTileHeight(_local_7, _local_6) <= this._floorHeight)
                             {
                                 if ((_local_7 - 1) < k)
                                 {
@@ -179,7 +179,7 @@
             }
             var _local_8:Number = Number(k);
             var _local_9:Number = Number(_arg_2);
-            var _local_10:Number = this._Str_2754(k, _arg_2);
+            var _local_10:Number = this.getTileHeight(k, _arg_2);
             if (_arg_5 == R)
             {
                 _local_8 = (_local_8 + ((_arg_3 / Number((this._scale / 2))) - 0.5));
@@ -214,7 +214,7 @@
             {
                 if (((_local_5 >= 0) && (_local_5 < this._height)))
                 {
-                    if (this._Str_2754(_local_4, _local_5) <= this._floorHeight)
+                    if (this.getTileHeight(_local_4, _local_5) <= this._floorHeight)
                     {
                         _local_8 = (_local_4 - 1);
                         _local_9 = _local_5;
@@ -222,7 +222,7 @@
                         _arg_3 = L;
                         break;
                     }
-                    if (this._Str_2754(_local_4, (_local_5 + 1)) <= this._floorHeight)
+                    if (this.getTileHeight(_local_4, (_local_5 + 1)) <= this._floorHeight)
                     {
                         _local_8 = _local_4;
                         _local_9 = _local_5;
@@ -237,7 +237,7 @@
             _local_10 = ((this.scale / 2) * _local_6);
             var _local_13:Number = ((-(_local_7) * this.scale) / 2);
             _local_13 = (_local_13 + ((((-(_arg_2) * 18) / 32) * this.scale) / 2));
-            _local_12 = this._Str_2754(_local_8, _local_9);
+            _local_12 = this.getTileHeight(_local_8, _local_9);
             _local_11 = (((_local_12 * this.scale) / 2) + _local_13);
             if (_arg_3 == R)
             {
@@ -266,7 +266,7 @@
             {
                 _local_3 = Math.floor((k.x - 0.5));
                 _local_4 = Math.floor((k.y + 0.5));
-                _local_8 = this._Str_2754(_local_3, _local_4);
+                _local_8 = this.getTileHeight(_local_3, _local_4);
                 _local_5 = ((this._scale / 2) - (((k.y - _local_4) + 0.5) * Number((this._scale / 2))));
                 _local_6 = (((_local_8 - k.z) * Number((this._scale / 2))) + (((this._scale / 2) - _local_5) / 2));
                 _local_7 = L;
@@ -277,7 +277,7 @@
                 {
                     _local_3 = Math.floor((k.x + 0.5));
                     _local_4 = Math.floor((k.y - 0.5));
-                    _local_8 = this._Str_2754(_local_3, _local_4);
+                    _local_8 = this.getTileHeight(_local_3, _local_4);
                     _local_5 = (((k.x + 0.5) - _local_3) * Number((this._scale / 2)));
                     _local_6 = (((_local_8 - k.z) * Number((this._scale / 2))) + (_local_5 / 2));
                     _local_7 = R;
@@ -318,9 +318,9 @@
         public function getFloorAltitude(k:int, _arg_2:int):Number
         {
             var _local_3:int;
-            _local_3 = this._Str_2754(k, _arg_2);
+            _local_3 = this.getTileHeight(k, _arg_2);
             var _local_4:int = (_local_3 + 1);
-            return _local_3 + (((((((((int(this._Str_2754((k - 1), (_arg_2 - 1))) == _local_4) || (int(this._Str_2754(k, (_arg_2 - 1))) == _local_4)) || (int(this._Str_2754((k + 1), (_arg_2 - 1))) == _local_4)) || (int(this._Str_2754((k - 1), _arg_2)) == _local_4)) || (int(this._Str_2754((k + 1), _arg_2)) == _local_4)) || (int(this._Str_2754((k - 1), (_arg_2 + 1))) == _local_4)) || (int(this._Str_2754(k, (_arg_2 + 1))) == _local_4)) || (int(this._Str_2754((k + 1), (_arg_2 + 1))) == _local_4)) ? 0.5 : 0);
+            return _local_3 + (((((((((int(this.getTileHeight((k - 1), (_arg_2 - 1))) == _local_4) || (int(this.getTileHeight(k, (_arg_2 - 1))) == _local_4)) || (int(this.getTileHeight((k + 1), (_arg_2 - 1))) == _local_4)) || (int(this.getTileHeight((k - 1), _arg_2)) == _local_4)) || (int(this.getTileHeight((k + 1), _arg_2)) == _local_4)) || (int(this.getTileHeight((k - 1), (_arg_2 + 1))) == _local_4)) || (int(this.getTileHeight(k, (_arg_2 + 1))) == _local_4)) || (int(this.getTileHeight((k + 1), (_arg_2 + 1))) == _local_4)) ? 0.5 : 0);
         }
 
         public function isRoomTile(k:int, _arg_2:int):Boolean
