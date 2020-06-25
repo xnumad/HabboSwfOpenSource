@@ -295,7 +295,7 @@
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_7023;
-	import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_7289;
+	import com.sulake.habbo.communication.messages.outgoing.room.layout.UpdateFloorPropertiesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_8089;
 	import com.sulake.habbo.communication.messages.incoming.landingview.PromoArticlesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.layout.RoomEntryTileMessageEvent;
@@ -1972,7 +1972,7 @@
             OUTGOING_PACKETS[869] = _Str_11183;
             OUTGOING_PACKETS[872] = _Str_11461;
             OUTGOING_PACKETS[873] = ModerateMessageMessageComposer;
-            OUTGOING_PACKETS[875] = _Str_7289;
+            OUTGOING_PACKETS[875] = UpdateFloorPropertiesMessageComposer;
             OUTGOING_PACKETS[882] = _Str_9979;
             OUTGOING_PACKETS[887] = _Str_7077;
             OUTGOING_PACKETS[90] = _Str_16291;

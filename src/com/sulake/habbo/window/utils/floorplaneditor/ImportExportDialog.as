@@ -3,7 +3,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_7289;
+    import com.sulake.habbo.communication.messages.outgoing.room.layout.UpdateFloorPropertiesMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
@@ -69,7 +69,7 @@
                         this._window.findChildByName("data").caption = this._bcFloorPlanEditor._Str_24411;
                         return;
                     case "save":
-                        this._bcFloorPlanEditor.windowManager.communication.connection.send(new _Str_7289(this._window.findChildByName("data").caption, this._bcFloorPlanEditor._Str_4134._Str_7642.x, this._bcFloorPlanEditor._Str_4134._Str_7642.y, this._bcFloorPlanEditor._Str_4134._Str_6184, BCFloorPlanEditor._Str_8298(this._bcFloorPlanEditor.wallThickness), BCFloorPlanEditor._Str_8298(this._bcFloorPlanEditor.floorThickness)));
+                        this._bcFloorPlanEditor.windowManager.communication.connection.send(new UpdateFloorPropertiesMessageComposer(this._window.findChildByName("data").caption, this._bcFloorPlanEditor._Str_4134._Str_7642.x, this._bcFloorPlanEditor._Str_4134._Str_7642.y, this._bcFloorPlanEditor._Str_4134._Str_6184, BCFloorPlanEditor._Str_8298(this._bcFloorPlanEditor.wallThickness), BCFloorPlanEditor._Str_8298(this._bcFloorPlanEditor.floorThickness)));
                         return;
                 }
             }

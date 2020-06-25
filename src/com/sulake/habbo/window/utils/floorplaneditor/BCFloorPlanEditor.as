@@ -23,7 +23,7 @@
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.IDropMenuWindow;
-    import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_7289;
+    import com.sulake.habbo.communication.messages.outgoing.room.layout.UpdateFloorPropertiesMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import flash.events.KeyboardEvent;
@@ -276,7 +276,7 @@
                     case "save":
                         this._floorThickness = IDropMenuWindow(this._editorWindow.findChildByName("floor_thickness_drop")).selection;
                         this._wallThickness = IDropMenuWindow(this._editorWindow.findChildByName("wall_thickness_drop")).selection;
-                        this._windowManager.communication.connection.send(new _Str_7289(this._floorPlanCache._Str_21406(), this._floorPlanCache._Str_7642.x, this._floorPlanCache._Str_7642.y, this._floorPlanCache._Str_6184, _Str_8298(this._wallThickness), _Str_8298(this._floorThickness), ((this._Str_18668) ? this._fixedWallsHeight : -1)));
+                        this._windowManager.communication.connection.send(new UpdateFloorPropertiesMessageComposer(this._floorPlanCache._Str_21406(), this._floorPlanCache._Str_7642.x, this._floorPlanCache._Str_7642.y, this._floorPlanCache._Str_6184, _Str_8298(this._wallThickness), _Str_8298(this._floorThickness), ((this._Str_18668) ? this._fixedWallsHeight : -1)));
                         break;
                     case "reload":
                         this._floorPlanCache.onFloorHeightMap(this._lastReceivedMapEvent);
