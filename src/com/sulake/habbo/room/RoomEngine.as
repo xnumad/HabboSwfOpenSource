@@ -3589,7 +3589,7 @@
                     }
                     _local_9.wallHeight = _local_8;
                     _local_9.initializeFromTileData();
-                    _local_11 = _local_9._Str_5598();
+                    _local_11 = _local_9.getXML();
                     k.getEventHandler().initialize(_local_11);
                     k.getModelController().setString(RoomObjectVariableEnum.ROOM_FLOOR_TYPE, _local_4);
                     k.getModelController().setString(RoomObjectVariableEnum.ROOM_WALL_TYPE, _local_5);

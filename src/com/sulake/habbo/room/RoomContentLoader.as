@@ -1241,7 +1241,7 @@
 
         public function getVisualizationXML(k:String):XML
         {
-            return this._Str_5598(k, "_visualization");
+            return this.getXML(k, "_visualization");
         }
 
         public function hasAssetXML(k:String):Boolean
@@ -1251,7 +1251,7 @@
 
         public function getAssetXML(k:String):XML
         {
-            return this._Str_5598(k, "_assets");
+            return this.getXML(k, "_assets");
         }
 
         public function hasLogicXML(k:String):Boolean
@@ -1261,10 +1261,10 @@
 
         public function getLogicXML(k:String):XML
         {
-            return this._Str_5598(k, "_logic");
+            return this.getXML(k, "_logic");
         }
 
-        private function _Str_5598(k:String, _arg_2:String):XML
+        private function getXML(k:String, _arg_2:String):XML
         {
             var _local_3:IAssetLibrary = this.getAssetLibrary(k);
             if (_local_3 == null)

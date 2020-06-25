@@ -495,7 +495,7 @@
                 }
                 _local_14--;
             }
-            var _local_15:XML = this._planeParser._Str_5598();
+            var _local_15:XML = this._planeParser.getXML();
             var _local_16:XML = new (XML)((("<doors>" + (((((((('<door x="' + _local_7) + '" y="') + _local_8) + '" z="') + _local_9) + '" dir="') + _local_10) + '"/>')) + "</doors>"));
             _local_15.appendChild(_local_16);
             this._roomCreator.initializeRoom(this._currentRoomId, _local_15);

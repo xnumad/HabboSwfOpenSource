@@ -112,7 +112,7 @@
             return false;
         }
 
-        public function _Str_5598():XML
+        public function getXML():XML
         {
             var _local_3:String;
             var _local_4:String;

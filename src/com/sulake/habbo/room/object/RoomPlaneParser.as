@@ -1295,7 +1295,7 @@
             return _local_6;
         }
 
-        public function _Str_5598():XML
+        public function getXML():XML
         {
             var _local_7:XML;
             var _local_8:Array;

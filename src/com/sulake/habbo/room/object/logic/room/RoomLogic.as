@@ -102,7 +102,7 @@
                     _local_2 = (object.getModel() as IRoomObjectModelController);
                     if (_local_2 != null)
                     {
-                        _local_3 = this._Str_2550._Str_5598();
+                        _local_3 = this._Str_2550.getXML();
                         _local_2.setString(RoomObjectVariableEnum.ROOM_PLANE_XML, _local_3.toString());
                         _local_2.setNumber(RoomObjectVariableEnum.ROOM_FLOOR_HOLE_UPDATE_TIME, k);
                         this._Str_2550.initializeFromXML(_local_3);
@@ -210,7 +210,7 @@
             }
             if (_local_4)
             {
-                _local_6 = this._roomPlaneBitmapMaskParser._Str_5598();
+                _local_6 = this._roomPlaneBitmapMaskParser.getXML();
                 _local_7 = _local_6.toXMLString();
                 _arg_2.setString(RoomObjectVariableEnum.ROOM_PLANE_MASK_XML, _local_7);
             }

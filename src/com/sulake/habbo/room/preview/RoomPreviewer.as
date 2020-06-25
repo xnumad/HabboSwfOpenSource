@@ -99,7 +99,7 @@
                     _local_3++;
                 }
                 _local_2.initializeFromTileData();
-                this._roomEngine.initializeRoom(this._previewRoomId, _local_2._Str_5598());
+                this._roomEngine.initializeRoom(this._previewRoomId, _local_2.getXML());
                 _local_2.dispose();
             }
         }

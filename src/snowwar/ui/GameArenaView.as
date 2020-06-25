@@ -134,7 +134,7 @@
                 _local_5++;
             }
             _local_4.initializeFromTileData();
-            this._snowWarEngine.roomEngine.initializeRoom(_SafeStr_18716, _local_4._Str_5598());
+            this._snowWarEngine.roomEngine.initializeRoom(_SafeStr_18716, _local_4.getXML());
             (this._snowWarEngine.roomEngine as IRoomCreator).updateObjectRoomVisibilities(_SafeStr_18716, false);
             _local_4.dispose();
             for each (_local_6 in k._SafeStr_18703.fuseObjects)
