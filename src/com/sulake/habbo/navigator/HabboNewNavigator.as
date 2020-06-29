@@ -160,7 +160,7 @@
                 _sessionData = k;
             }, true, [{
                 "type":PerksUpdatedEvent.PERKS_UPDATED,
-                "callback":this._Str_12137
+                "callback":this.onPerksUpdated
             }]), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
                 _localization = k;
@@ -362,7 +362,7 @@
             this.trackEventLog("savedsearch.delete", "SavedSearch");
         }
 
-        private function _Str_12137(k:PerksUpdatedEvent):void
+        private function onPerksUpdated(k:PerksUpdatedEvent):void
         {
             if (!this._sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_PHASE_TWO_2014))
             {

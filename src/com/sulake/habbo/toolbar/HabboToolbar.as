@@ -169,7 +169,7 @@
                 _sessionDataManager = k;
             }, true, [{
                 "type":PerksUpdatedEvent.PERKS_UPDATED,
-                "callback":this._Str_12137
+                "callback":this.onPerksUpdated
             }]), new ComponentDependency(new IIDHabboHelp(), function (k:IHabboHelp):void
             {
                 _habboHelp = k;
@@ -319,7 +319,7 @@
             }
         }
 
-        private function _Str_12137(k:PerksUpdatedEvent):void
+        private function onPerksUpdated(k:PerksUpdatedEvent):void
         {
             if (((this._extensionView) && (!(this._isInitialized))))
             {
