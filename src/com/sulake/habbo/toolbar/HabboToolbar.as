@@ -312,7 +312,7 @@
                     if (((_local_3 > 0) && (this._ownRoomPromoTimer == null)))
                     {
                         this._ownRoomPromoTimer = new Timer(_local_3, 1);
-                        this._ownRoomPromoTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onRoomTimerComplete);
+                        this._ownRoomPromoTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onShowOwnRoomPromo);
                         this._ownRoomPromoTimer.start();
                     }
                 }
@@ -390,7 +390,7 @@
             }
         }
 
-        private function onRoomTimerComplete(k:TimerEvent):void
+        private function onShowOwnRoomPromo(k:TimerEvent):void
         {
             this._Str_21196();
             this._habboHelp._Str_8205(HabboToolbarIconEnum.NAVIGATOR, "new.user.promo.room", WelcomeNotificationAlignment.LEFT, "NAVIGATOR_ME_TAB");
@@ -756,7 +756,7 @@
         {
             if (this._ownRoomPromoTimer)
             {
-                this._ownRoomPromoTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onRoomTimerComplete);
+                this._ownRoomPromoTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onShowOwnRoomPromo);
                 this._ownRoomPromoTimer.stop();
                 this._ownRoomPromoTimer = null;
             }
