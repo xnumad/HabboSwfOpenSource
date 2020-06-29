@@ -5,7 +5,7 @@
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.assets.IAssetLibrary;
     import flash.display.BitmapData;
-    import com.sulake.habbo.ui.widget.events._Str_3535;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetChatUpdateEvent;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -92,7 +92,7 @@
             }
         }
 
-        public function _Str_13182(k:_Str_3535):void
+        public function _Str_13182(k:RoomWidgetChatUpdateEvent):void
         {
             this._chatType = k.chatType;
             this._chatStyle = k.styleId;
@@ -367,49 +367,49 @@
                 }
                 this._width = (this._width + nameWindow.width);
             }
-            if (this._chatType == _Str_3535.CHAT_TYPE_RESPECT)
+            if (this._chatType == RoomWidgetChatUpdateEvent.CHAT_TYPE_RESPECT)
             {
                 textWindow.text = this._localizations.registerParameter("widgets.chatbubble.respect", "username", this._senderName);
                 this._width = _Str_5706;
             }
             else
             {
-                if (this._chatType == _Str_3535.CHAT_TYPE_PETRESPECT)
+                if (this._chatType == RoomWidgetChatUpdateEvent.CHAT_TYPE_PETRESPECT)
                 {
                     textWindow.text = this._localizations.registerParameter("widget.chatbubble.petrespect", "petname", this._senderName);
                     this._width = _Str_5706;
                 }
                 else
                 {
-                    if (this._chatType == _Str_3535.CHAT_TYPE_PETTREAT)
+                    if (this._chatType == RoomWidgetChatUpdateEvent.CHAT_TYPE_PETTREAT)
                     {
                         textWindow.text = this._localizations.registerParameter("widget.chatbubble.pettreat", "petname", this._senderName);
                         this._width = _Str_5706;
                     }
                     else
                     {
-                        if (this._chatType == _Str_3535.CHAT_TYPE_PETREVIVE)
+                        if (this._chatType == RoomWidgetChatUpdateEvent.CHAT_TYPE_PETREVIVE)
                         {
                             textWindow.text = this.message;
                             this._width = _Str_5706;
                         }
                         else
                         {
-                            if (this._chatType == _Str_3535.CHAT_TYPE_PET_REBREED_FERTILIZE)
+                            if (this._chatType == RoomWidgetChatUpdateEvent.CHAT_TYPE_PET_REBREED_FERTILIZE)
                             {
                                 textWindow.text = this.message;
                                 this._width = _Str_5706;
                             }
                             else
                             {
-                                if (this._chatType == _Str_3535.CHAT_TYPE_PET_SPEED_FERTILIZE)
+                                if (this._chatType == RoomWidgetChatUpdateEvent.CHAT_TYPE_PET_SPEED_FERTILIZE)
                                 {
                                     textWindow.text = this.message;
                                     this._width = _Str_5706;
                                 }
                                 else
                                 {
-                                    if (this._chatType == _Str_3535.CHAT_TYPE_NOTIFY)
+                                    if (this._chatType == RoomWidgetChatUpdateEvent.CHAT_TYPE_NOTIFY)
                                     {
                                         textWindow.text = this.message;
                                         this._width = _Str_5706;

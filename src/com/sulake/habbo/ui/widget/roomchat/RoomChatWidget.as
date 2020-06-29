@@ -21,7 +21,7 @@
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.core.window.IWindow;
     import flash.utils.getTimer;
-    import com.sulake.habbo.ui.widget.events._Str_3535;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetChatUpdateEvent;
     import com.sulake.habbo.ui.widget.events._Str_3040;
     import flash.events.IEventDispatcher;
     import com.sulake.room.utils.RoomEnterEffect;
@@ -240,7 +240,7 @@
             {
                 return;
             }
-            k.addEventListener(_Str_3535.RWCUE_EVENT_CHAT, this._Str_21452);
+            k.addEventListener(RoomWidgetChatUpdateEvent.RWCUE_EVENT_CHAT, this._Str_21452);
             k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SIZE_CHANGED, this._Str_8873);
             k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_POSITION_CHANGED, this._Str_8873);
             k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SCALE_CHANGED, this._Str_8873);
@@ -253,15 +253,15 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_3535.RWCUE_EVENT_CHAT, this._Str_21452);
+            k.removeEventListener(RoomWidgetChatUpdateEvent.RWCUE_EVENT_CHAT, this._Str_21452);
             k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SIZE_CHANGED, this._Str_8873);
             k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_POSITION_CHANGED, this._Str_8873);
             k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SCALE_CHANGED, this._Str_8873);
         }
 
-        private function _Str_21452(k:_Str_3535):void
+        private function _Str_21452(k:RoomWidgetChatUpdateEvent):void
         {
-            if (((RoomEnterEffect.isRunning()) && (!(k.chatType == _Str_3535.CHAT_TYPE_WHISPER))))
+            if (((RoomEnterEffect.isRunning()) && (!(k.chatType == RoomWidgetChatUpdateEvent.CHAT_TYPE_WHISPER))))
             {
                 return;
             }
@@ -280,7 +280,7 @@
             _local_7._Str_23108 = _arg_5;
             if (_arg_6)
             {
-                _local_7.chatType = _Str_3535.CHAT_TYPE_NOTIFY;
+                _local_7.chatType = RoomWidgetChatUpdateEvent.CHAT_TYPE_NOTIFY;
             }
             _local_7._Str_13126();
             this._Str_21167(_local_7);

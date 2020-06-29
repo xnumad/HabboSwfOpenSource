@@ -2,7 +2,7 @@
 {
     import flash.display.BitmapData;
 
-    public class _Str_3535 extends RoomWidgetUpdateEvent 
+    public class RoomWidgetChatUpdateEvent extends RoomWidgetUpdateEvent
     {
         public static const RWCUE_EVENT_CHAT:String = "RWCUE_EVENT_CHAT";
         public static const CHAT_TYPE_SPEAK:int = 0;
@@ -34,7 +34,7 @@
         private var _Str_6689:int;
         private var _styleId:int;
 
-        public function _Str_3535(k:String, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:int, _arg_6:int, _arg_7:int, _arg_8:Number, _arg_9:Number, _arg_10:BitmapData, _arg_11:uint, _arg_12:int, _arg_13:int=0, _arg_14:int=0, _arg_15:Array=null, _arg_16:Boolean=false, _arg_17:Boolean=false)
+        public function RoomWidgetChatUpdateEvent(k:String, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:int, _arg_6:int, _arg_7:int, _arg_8:Number, _arg_9:Number, _arg_10:BitmapData, _arg_11:uint, _arg_12:int, _arg_13:int=0, _arg_14:int=0, _arg_15:Array=null, _arg_16:Boolean=false, _arg_17:Boolean=false)
         {
             super(k, _arg_16, _arg_17);
             this._userId = _arg_2;

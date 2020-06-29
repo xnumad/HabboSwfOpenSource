@@ -25,7 +25,7 @@
     import com.sulake.habbo.avatar.pets.PetFigureData;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
     import com.sulake.habbo.ui.widget.enums.SystemChatStyleEnum;
-    import com.sulake.habbo.ui.widget.events._Str_3535;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetChatUpdateEvent;
     import com.sulake.habbo.avatar.IAvatarImage;
     import com.sulake.habbo.avatar.structure.figure.IPartColor;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
@@ -321,8 +321,8 @@
                                     _local_22 = this._container.localization.getLocalizationRaw(_local_33).value;
                                     _local_19 = SystemChatStyleEnum.GENERIC;
                                 }
-                                _local_23 = _Str_3535.RWCUE_EVENT_CHAT;
-                                _local_2 = new _Str_3535(_local_23, _local_3.userId, _local_22, _local_11, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_20, _local_21, _local_6, _local_7, _local_13, _local_12, _local_3.session.roomId, _local_18, _local_19, _local_3.links);
+                                _local_23 = RoomWidgetChatUpdateEvent.RWCUE_EVENT_CHAT;
+                                _local_2 = new RoomWidgetChatUpdateEvent(_local_23, _local_3.userId, _local_22, _local_11, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_20, _local_21, _local_6, _local_7, _local_13, _local_12, _local_3.session.roomId, _local_18, _local_19, _local_3.links);
                             }
                         }
                     }
