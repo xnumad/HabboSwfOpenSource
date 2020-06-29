@@ -5,6 +5,6 @@
         public static const NULL:uint = 0;
         public static const DEFAULT:uint = 0;
         public static const BLACK:uint = 1;
-        public static const _Str_16702:uint = 3;
+        public static const SHINY:uint = 3;
     }
 }
