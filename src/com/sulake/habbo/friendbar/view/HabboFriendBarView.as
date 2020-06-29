@@ -479,7 +479,7 @@
             return (this._friendBarWindow) && (!(this._friendBarWindow.disposed));
         }
 
-        private function _Str_20691():void
+        private function buildUserInterface():void
         {
             Tab._Str_2925 = this._friendBarData;
             Tab.GAMES = this._gameManager;
@@ -707,7 +707,7 @@
         {
             if (!this._Str_22610())
             {
-                this._Str_20691();
+                this.buildUserInterface();
             }
             else
             {
@@ -738,7 +738,7 @@
             }
             else
             {
-                this._Str_20691();
+                this.buildUserInterface();
             }
         }
 
