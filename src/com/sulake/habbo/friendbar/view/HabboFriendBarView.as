@@ -114,7 +114,7 @@
         private var _Str_4075:IWindowContainer;
         private var _Str_22151:NewOpenMessengerTab;
         private var _Str_14931:Boolean = true;
-        private var _Str_2978:Timer;
+        private var _removeDimmerTimer:Timer;
         private var _Str_3312:Boolean = false;
         private var _Str_11102:IRegionWindow;
         private var _Str_10857:IRegionWindow;
@@ -185,10 +185,10 @@
                     this._timer.stop();
                     this._timer = null;
                 }
-                if (this._Str_2978)
+                if (this._removeDimmerTimer)
                 {
-                    this._Str_2978.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
-                    this._Str_2978 = null;
+                    this._removeDimmerTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
+                    this._removeDimmerTimer = null;
                 }
                 if (this._Str_9738)
                 {
@@ -284,18 +284,18 @@
             k.blend = 0.3;
             this._friendBarWindow.addChild(k);
             this._friendBarWindow.invalidate();
-            if (this._Str_2978 == null)
+            if (this._removeDimmerTimer == null)
             {
-                this._Str_2978 = new Timer(RoomEnterEffect.totalRunningTime, 1);
-                this._Str_2978.addEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
-                this._Str_2978.start();
+                this._removeDimmerTimer = new Timer(RoomEnterEffect.totalRunningTime, 1);
+                this._removeDimmerTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
+                this._removeDimmerTimer.start();
             }
         }
 
         private function onRemoveDimmer(k:TimerEvent):void
         {
-            this._Str_2978.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
-            this._Str_2978 = null;
+            this._removeDimmerTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
+            this._removeDimmerTimer = null;
             var _local_2:IWindow = this._friendBarWindow.findChildByName("bar_dimmer");
             if (_local_2 != null)
             {
