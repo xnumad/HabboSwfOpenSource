@@ -524,14 +524,14 @@
                     }
                     else
                     {
-                        this._Str_12674(_local_2.userId, _local_2.userName, _local_2.userType, _local_2.roomIndex, _local_2.allowNameChange, null);
+                        this.updateUserView(_local_2.userId, _local_2.userName, _local_2.userType, _local_2.roomIndex, _local_2.allowNameChange, null);
                     }
                     this._isInitialized = true;
                     break;
                 case _Str_3735.RWONE_TYPE:
                     if (_Str_3735(k).category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                     {
-                        this._Str_12674(_Str_3735(k).userId, _Str_3735(k).userName, _Str_3735(k).userType, _Str_3735(k).roomIndex, false, null);
+                        this.updateUserView(_Str_3735(k).userId, _Str_3735(k).userName, _Str_3735(k).userType, _Str_3735(k).roomIndex, false, null);
                     }
                     break;
                 case RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED:
@@ -709,7 +709,7 @@
                     _local_13 = (k as RoomWidgetUserInfoUpdateEvent);
                     this._userInfoData.populate(_local_13);
                     _local_14 = ((_local_13.isSpectatorMode) ? null : this._userInfoData);
-                    this._Str_12674(_local_13.id, _local_13.name, _local_13.userType, _local_13.userRoomId, this._userInfoData.allowNameChange, _local_14);
+                    this.updateUserView(_local_13.id, _local_13.name, _local_13.userType, _local_13.userRoomId, this._userInfoData.allowNameChange, _local_14);
                     break;
                 case RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT:
                     _local_15 = (k as RoomWidgetRentableBotInfoUpdateEvent);
@@ -760,7 +760,7 @@
                     break;
                 case RoomWidgetUserInfoUpdateEvent.BOT:
                     _local_20 = (k as RoomWidgetUserInfoUpdateEvent);
-                    this._Str_12674(_local_20.id, _local_20.name, _local_20.userType, _local_20.userRoomId, false, null);
+                    this.updateUserView(_local_20.id, _local_20.name, _local_20.userType, _local_20.userRoomId, false, null);
                     break;
                 case RoomWidgetPetInfostandUpdateEvent.PET_INFO:
                     if (this._handlePetInfo)
@@ -1012,7 +1012,7 @@
             }
         }
 
-        private function _Str_12674(k:int, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:Boolean, _arg_6:AvatarInfoData):void
+        private function updateUserView(k:int, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:Boolean, _arg_6:AvatarInfoData):void
         {
             var _local_8:UserNameView;
             var _local_7:* = (!(_arg_6 == null));
