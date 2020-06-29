@@ -102,7 +102,7 @@
         private var _friendsList:IHabboFriendsList;
         private var _toolbar:IHabboToolbar;
         private var _friendBarWindow:IWindowContainer;
-        private var _Str_4452:IWindowContainer;
+        private var _friendRequestCounter:IWindowContainer;
         private var _Str_3984:IWindowContainer;
         private var _Str_2868:Vector.<ITab>;
         private var _Str_11900:ITab;
@@ -210,10 +210,10 @@
                     this._friendBarWindow.dispose();
                     this._friendBarWindow = null;
                 }
-                if (this._Str_4452)
+                if (this._friendRequestCounter)
                 {
-                    this._Str_4452.dispose();
-                    this._Str_4452 = null;
+                    this._friendRequestCounter.dispose();
+                    this._friendRequestCounter = null;
                 }
                 while (this._Str_2868.length > 0)
                 {
@@ -964,26 +964,26 @@
         public function _Str_21482(k:int):void
         {
             var _local_2:IRegionWindow;
-            if (!this._Str_4452)
+            if (!this._friendRequestCounter)
             {
-                this._Str_4452 = _windowManager.createUnseenItemCounter();
+                this._friendRequestCounter = _windowManager.createUnseenItemCounter();
             }
-            if (this._Str_4452)
+            if (this._friendRequestCounter)
             {
                 _local_2 = (this._friendBarWindow.findChildByName("icon_all_friends") as IRegionWindow);
                 if (_local_2)
                 {
-                    _local_2.addChild(this._Str_4452);
-                    this._Str_4452.x = ((_local_2.width - this._Str_4452.width) - 5);
-                    this._Str_4452.y = 0;
+                    _local_2.addChild(this._friendRequestCounter);
+                    this._friendRequestCounter.x = ((_local_2.width - this._friendRequestCounter.width) - 5);
+                    this._friendRequestCounter.y = 0;
                     if (k > 0)
                     {
-                        this._Str_4452.visible = true;
-                        this._Str_4452.findChildByName("count").caption = k.toString();
+                        this._friendRequestCounter.visible = true;
+                        this._friendRequestCounter.findChildByName("count").caption = k.toString();
                     }
                     else
                     {
-                        this._Str_4452.visible = false;
+                        this._friendRequestCounter.visible = false;
                     }
                 }
             }
