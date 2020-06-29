@@ -109,7 +109,7 @@
                 }
                 if (this._itemWindow)
                 {
-                    this._toolbar._Str_14171((_arg_2 as IWindowContainer));
+                    this._toolbar.createAndAttachDimmerWindow((_arg_2 as IWindowContainer));
                     this.refreshItemWindow();
                 }
                 this._Str_21932();

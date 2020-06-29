@@ -262,7 +262,7 @@
                     IItemListWindow(this._chatInputContainerWindow.findChildByName("chat_input_container")).removeListItemAt(0);
                 }
             }
-            this._Str_14171();
+            this.createAndAttachDimmerWindow();
             this._helpButton = ICloseButtonWindow(this._window.findChildByName("helpbutton"));
             this._helpButton.addEventListener(WindowMouseEvent.CLICK, this._Str_8782);
             this._helpButton.addEventListener(WindowMouseEvent.OVER, this._Str_8782);
@@ -294,7 +294,7 @@
             return this._widget._Str_13265.getBoolean("custom.chat.styles.enabled");
         }
 
-        private function _Str_14171():void
+        private function createAndAttachDimmerWindow():void
         {
             var k:IWindow;
             if (RoomEnterEffect.isRunning())

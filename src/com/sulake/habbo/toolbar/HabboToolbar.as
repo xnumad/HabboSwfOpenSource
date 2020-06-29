@@ -409,7 +409,7 @@
                 k = getInteger("room.enter.effect.delay", 4000);
                 _local_2 = getInteger("room.enter.effect.duration", 2000);
                 RoomEnterEffect.init(k, _local_2);
-                this._Str_14171(IWindowContainer(this._view.window));
+                this.createAndAttachDimmerWindow(IWindowContainer(this._view.window));
                 if (this._removeDimmerTimer == null)
                 {
                     this._removeDimmerTimer = new Timer((k + _local_2), 1);
@@ -511,7 +511,7 @@
             }
         }
 
-        public function _Str_14171(k:IWindowContainer):void
+        public function createAndAttachDimmerWindow(k:IWindowContainer):void
         {
             var _local_2:IWindow;
             if (RoomEnterEffect.isRunning())
