@@ -97,7 +97,7 @@
         private static const _Str_16889:int = 1;
         private static const _Str_17338:int = 16;
 
-        private var _Str_2780:IHabboFriendBarData;
+        private var _friendBarData:IHabboFriendBarData;
         private var _gameManager:IHabboGameManager;
         private var _friendsList:IHabboFriendsList;
         private var _toolbar:IHabboToolbar;
@@ -165,7 +165,7 @@
                 _friendsList = k;
             }), new ComponentDependency(new IIDHabboFriendBarData(), function (k:IHabboFriendBarData):void
             {
-                _Str_2780 = k;
+                _friendBarData = k;
             }), new ComponentDependency(new IIDHabboToolbar(), function (k:IHabboToolbar):void
             {
                 _toolbar = k;
@@ -223,14 +223,14 @@
                 {
                     ITab(this._Str_2868.pop()).dispose();
                 }
-                if ((((!(this._Str_2780 == null)) && (!(this._Str_2780.disposed))) && (!(this._Str_2780.events == null))))
+                if ((((!(this._friendBarData == null)) && (!(this._friendBarData.disposed))) && (!(this._friendBarData.events == null))))
                 {
-                    this._Str_2780.events.removeEventListener(FriendBarUpdateEvent.FBE_UPDATED, this._Str_21453);
-                    this._Str_2780.events.removeEventListener(FindFriendsNotificationEvent.FIND_FRIENDS_RESULT, this._Str_19962);
-                    this._Str_2780.events.removeEventListener(FriendRequestUpdateEvent.FBE_REQUESTS, this._Str_21633);
-                    this._Str_2780.events.removeEventListener(NewMessageEvent.FBE_MESSAGE, this._Str_20447);
-                    this._Str_2780.events.removeEventListener(NotificationEvent.FBE_NOTIFICATION_EVENT, this._Str_15197);
-                    this._Str_2780.events.removeEventListener(ActiveConversationsCountEvent.AMC_EVENT, this._Str_21657);
+                    this._friendBarData.events.removeEventListener(FriendBarUpdateEvent.FBE_UPDATED, this._Str_21453);
+                    this._friendBarData.events.removeEventListener(FindFriendsNotificationEvent.FIND_FRIENDS_RESULT, this._Str_19962);
+                    this._friendBarData.events.removeEventListener(FriendRequestUpdateEvent.FBE_REQUESTS, this._Str_21633);
+                    this._friendBarData.events.removeEventListener(NewMessageEvent.FBE_MESSAGE, this._Str_20447);
+                    this._friendBarData.events.removeEventListener(NotificationEvent.FBE_NOTIFICATION_EVENT, this._Str_15197);
+                    this._friendBarData.events.removeEventListener(ActiveConversationsCountEvent.AMC_EVENT, this._Str_21657);
                 }
                 if (_sessionDataManager)
                 {
@@ -249,12 +249,12 @@
         override protected function initComponent():void
         {
             context.addLinkEventTracker(this);
-            this._Str_2780.events.addEventListener(FriendBarUpdateEvent.FBE_UPDATED, this._Str_21453);
-            this._Str_2780.events.addEventListener(FindFriendsNotificationEvent.FIND_FRIENDS_RESULT, this._Str_19962);
-            this._Str_2780.events.addEventListener(FriendRequestUpdateEvent.FBE_REQUESTS, this._Str_21633);
-            this._Str_2780.events.addEventListener(NewMessageEvent.FBE_MESSAGE, this._Str_20447);
-            this._Str_2780.events.addEventListener(NotificationEvent.FBE_NOTIFICATION_EVENT, this._Str_15197);
-            this._Str_2780.events.addEventListener(ActiveConversationsCountEvent.AMC_EVENT, this._Str_21657);
+            this._friendBarData.events.addEventListener(FriendBarUpdateEvent.FBE_UPDATED, this._Str_21453);
+            this._friendBarData.events.addEventListener(FindFriendsNotificationEvent.FIND_FRIENDS_RESULT, this._Str_19962);
+            this._friendBarData.events.addEventListener(FriendRequestUpdateEvent.FBE_REQUESTS, this._Str_21633);
+            this._friendBarData.events.addEventListener(NewMessageEvent.FBE_MESSAGE, this._Str_20447);
+            this._friendBarData.events.addEventListener(NotificationEvent.FBE_NOTIFICATION_EVENT, this._Str_15197);
+            this._friendBarData.events.addEventListener(ActiveConversationsCountEvent.AMC_EVENT, this._Str_21657);
             _sessionDataManager.events.addEventListener(SessionDataPreferencesEvent.APUE_UPDATED, this._Str_10326);
         }
 
@@ -343,8 +343,8 @@
             {
                 this._Str_2868.pop().recycle();
             }
-            this._Str_21482(this._Str_2780._Str_10570);
-            var _local_5:int = this._Str_2780._Str_7830;
+            this._Str_21482(this._friendBarData._Str_10570);
+            var _local_5:int = this._friendBarData._Str_7830;
             var _local_6:int;
             var _local_7:int = this._Str_7488;
             var _local_8:int = ((_local_5 + ((this._Str_14931) ? 1 : 0)) + ((_local_6 > 0) ? 1 : 0));
@@ -362,7 +362,7 @@
                     {
                         if (_local_6 == 1)
                         {
-                            _local_11 = this._Str_2780._Str_21160(0);
+                            _local_11 = this._friendBarData._Str_21160(0);
                             _local_13 = NewFriendRequestTab._Str_2363(_local_11);
                             this._Str_2868.push(_local_13);
                             _local_2.addListItem(_local_13.window);
@@ -371,7 +371,7 @@
                         {
                             if (_local_6 > 1)
                             {
-                                _local_13 = FriendRequestsTab._Str_2363(this._Str_2780._Str_16405());
+                                _local_13 = FriendRequestsTab._Str_2363(this._friendBarData._Str_16405());
                                 this._Str_2868.push(_local_13);
                                 _local_2.addListItem(_local_13.window);
                             }
@@ -394,7 +394,7 @@
                 {
                     break;
                 }
-                _local_12 = this._Str_2780._Str_17238(_local_4);
+                _local_12 = this._friendBarData._Str_17238(_local_4);
                 _local_13 = NewFriendEntityTab._Str_2363(_local_12);
                 this._Str_2868.push(_local_13);
                 _local_2.addListItem(_local_13.window);
@@ -481,7 +481,7 @@
 
         private function _Str_20691():void
         {
-            Tab._Str_2925 = this._Str_2780;
+            Tab._Str_2925 = this._friendBarData;
             Tab.GAMES = this._gameManager;
             Tab.FRIENDS = this._friendsList;
             Tab._Str_3553 = this;
@@ -580,11 +580,11 @@
             var _local_12:IBitmapWrapperWindow;
             var _local_13:Tab;
             var _local_3:IItemListWindow = (this._friendBarWindow.findChildByName(LIST) as IItemListWindow);
-            var _local_4:int = this._Str_2780._Str_7830;
+            var _local_4:int = this._friendBarData._Str_7830;
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                _local_2 = this._Str_2780._Str_17238(_local_5);
+                _local_2 = this._friendBarData._Str_17238(_local_5);
                 if (_local_2.figure == k)
                 {
                     _local_8 = null;
@@ -619,7 +619,7 @@
                 }
                 _local_5++;
             }
-            var _local_6:Array = this._Str_2780._Str_16405();
+            var _local_6:Array = this._friendBarData._Str_16405();
             for each (_local_7 in _local_6)
             {
                 if (_local_7.figure == k)
@@ -729,11 +729,11 @@
         {
             if (this._Str_8151)
             {
-                this._Str_8151.notify((this._Str_2780._Str_10570 > 0));
+                this._Str_8151.notify((this._friendBarData._Str_10570 > 0));
             }
             if (this._friendBarWindow)
             {
-                this._Str_21482(this._Str_2780._Str_10570);
+                this._Str_21482(this._friendBarData._Str_10570);
                 this._Str_6258(true);
             }
             else
@@ -857,7 +857,7 @@
             if (k.type == WindowMouseEvent.DOWN)
             {
                 _local_3 = this._Str_2748;
-                _local_4 = ((this._Str_2780._Str_7830 + ((this._Str_14931) ? 1 : 0)) + ((this._Str_2780._Str_10570 > 0) ? 1 : 0));
+                _local_4 = ((this._friendBarData._Str_7830 + ((this._Str_14931) ? 1 : 0)) + ((this._friendBarData._Str_10570 > 0) ? 1 : 0));
                 switch (_arg_2.name)
                 {
                     case BUTTON_LEFT:
@@ -885,7 +885,7 @@
                         this.deSelect(true);
                         break;
                     case LINK_FRIENDLIST:
-                        this._Str_2780._Str_18959();
+                        this._friendBarData._Str_18959();
                         break;
                 }
                 if (_local_3 != this._Str_2748)
@@ -935,18 +935,18 @@
 
         private function _Str_24031(k:WindowMouseEvent):void
         {
-            this._Str_2780.toggleMessenger();
+            this._friendBarData.toggleMessenger();
             this._Str_12109(false);
         }
 
         private function _Str_24062(k:WindowMouseEvent):void
         {
-            this._Str_2780._Str_18959();
+            this._friendBarData._Str_18959();
         }
 
         private function _Str_22502(k:WindowMouseEvent):void
         {
-            this._Str_2780._Str_21870();
+            this._friendBarData._Str_21870();
         }
 
         public function removeMessengerNotifications():void
@@ -1068,13 +1068,13 @@
                                 }
                                 else
                                 {
-                                    if (this._Str_2868.length < (this._Str_2780._Str_7830 + ((this._Str_14931) ? 1 : 0)))
+                                    if (this._Str_2868.length < (this._friendBarData._Str_7830 + ((this._Str_14931) ? 1 : 0)))
                                     {
                                         k = true;
                                     }
                                     else
                                     {
-                                        if (this._Str_24539 < this._Str_2780._Str_7830)
+                                        if (this._Str_24539 < this._friendBarData._Str_7830)
                                         {
                                             k = true;
                                         }
@@ -1169,12 +1169,12 @@
             switch (_local_2[1])
             {
                 case "findfriends":
-                    this._Str_2780.findNewFriends();
+                    this._friendBarData.findNewFriends();
                     return;
                 case "user":
                     if (_local_2.length > 2)
                     {
-                        this._Str_2780._Str_19230(_local_2[2]);
+                        this._friendBarData._Str_19230(_local_2[2]);
                     }
                     return;
                 default:
