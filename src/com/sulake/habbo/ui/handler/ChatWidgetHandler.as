@@ -370,7 +370,7 @@
 
         private function _Str_22362(k:GameChatEvent):void
         {
-            this._widget._Str_5863(k.message, k.name, k._Str_19907, this._Str_7081(k.figure), k.color, k.notify);
+            this._widget.addChatMessage(k.message, k.name, k._Str_19907, this._Str_7081(k.figure), k.color, k.notify);
         }
 
         public function update():void

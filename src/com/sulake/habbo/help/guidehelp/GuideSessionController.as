@@ -433,7 +433,7 @@
                     _local_6 = false;
                 }
             }
-            this._Str_5863(_local_3, _local_4, _local_5, _local_2._Str_24208, _local_6);
+            this.addChatMessage(_local_3, _local_4, _local_5, _local_2._Str_24208, _local_6);
         }
 
         private function onGuideSessionRequesterRoom(k:IMessageEvent):void
@@ -450,7 +450,7 @@
             }
             else
             {
-                this._Str_5863(this._sessionData._Str_5587, this._sessionData.guideName, this._sessionData.guideFigure, this._habboHelp.localization.getLocalization("guide.help.request.guide.ongoing.user.not.in.room.error", ""), false, _Str_7012);
+                this.addChatMessage(this._sessionData._Str_5587, this._sessionData.guideName, this._sessionData.guideFigure, this._habboHelp.localization.getLocalization("guide.help.request.guide.ongoing.user.not.in.room.error", ""), false, _Str_7012);
             }
         }
 
@@ -477,7 +477,7 @@
             {
                 if (_local_2.getRoomId() > 0)
                 {
-                    this._Str_5863(this._sessionData._Str_5587, this._sessionData.guideName, this._sessionData.guideFigure, this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.visit.guide.request.message", "", "name", this._sessionData.guideName, "roomname", _local_2.getRoomName()), true, _Str_13205, _local_2.getRoomId());
+                    this.addChatMessage(this._sessionData._Str_5587, this._sessionData.guideName, this._sessionData.guideFigure, this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.visit.guide.request.message", "", "name", this._sessionData.guideName, "roomname", _local_2.getRoomName()), true, _Str_13205, _local_2.getRoomId());
                 }
             }
         }
@@ -721,7 +721,7 @@
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUIDE_ONGOING;
             this.openWindow(this._Str_23050, false);
-            this._Str_5863(this._sessionData.userId, this._sessionData.userName, this._sessionData._Str_7586, this._sessionData._Str_8937, true, _Str_7012);
+            this.addChatMessage(this._sessionData.userId, this._sessionData.userName, this._sessionData._Str_7586, this._sessionData._Str_8937, true, _Str_7012);
             this._window.caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.title", "", "name", this._sessionData.userName);
             var inputWidget:IIlluminaInputWidget = IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
             inputWidget.submitHandler = this;
@@ -909,7 +909,7 @@
             }
             else
             {
-                this._Str_5863(this._sessionData.userId, this._sessionData.userName, this._sessionData._Str_7586, this._sessionData._Str_8937, false, _Str_7012);
+                this.addChatMessage(this._sessionData.userId, this._sessionData.userName, this._sessionData._Str_7586, this._sessionData._Str_8937, false, _Str_7012);
             }
             this._window.caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.title", "", "name", this._sessionData.guideName);
             this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
@@ -1539,7 +1539,7 @@
             return this._habboHelp.localization.getLocalization(("guide.help.request.type." + k), "");
         }
 
-        private function _Str_5863(k:int, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:Boolean, _arg_6:int=0, _arg_7:*=null):void
+        private function addChatMessage(k:int, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:Boolean, _arg_6:int=0, _arg_7:*=null):void
         {
             var _local_8:IWidgetWindow;
             var _local_9:IIlluminaChatBubbleWidget;
@@ -1621,11 +1621,11 @@
                 default:
                     if (this._sessionData._Str_5935())
                     {
-                        this._Str_5863(this._sessionData.userId, this._sessionData.userName, this._sessionData._Str_7586, _arg_2, true, _Str_7012);
+                        this.addChatMessage(this._sessionData.userId, this._sessionData.userName, this._sessionData._Str_7586, _arg_2, true, _Str_7012);
                     }
                     else
                     {
-                        this._Str_5863(this._sessionData._Str_5587, this._sessionData.guideName, this._sessionData.guideFigure, _arg_2, true, _Str_7012);
+                        this.addChatMessage(this._sessionData._Str_5587, this._sessionData.guideName, this._sessionData.guideFigure, _arg_2, true, _Str_7012);
                     }
             }
         }
