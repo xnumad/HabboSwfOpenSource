@@ -279,7 +279,7 @@
 
         private function addDimmerToFriendBar():void
         {
-            var k:IWindow = _windowManager.createWindow("bar_dimmer", "", WindowType.WINDOW_TYPE_BORDER, _Str_3108._Str_9798, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, this._friendBarWindow.width, this._friendBarWindow.height), null, 0);
+            var k:IWindow = _windowManager.createWindow("bar_dimmer", "", WindowType.WINDOW_TYPE_BORDER, _Str_3108.BLACK, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, this._friendBarWindow.width, this._friendBarWindow.height), null, 0);
             k.color = 0;
             k.blend = 0.3;
             this._friendBarWindow.addChild(k);

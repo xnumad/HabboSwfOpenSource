@@ -520,7 +520,7 @@
                 {
                     return;
                 }
-                _local_2 = this._windowManager.createWindow(ToolbarDisplayExtensionIds.TOOLBAR_DIMMER, "", WindowType.WINDOW_TYPE_BORDER, _Str_3108._Str_9798, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, k.width, k.height), null, 0);
+                _local_2 = this._windowManager.createWindow(ToolbarDisplayExtensionIds.TOOLBAR_DIMMER, "", WindowType.WINDOW_TYPE_BORDER, _Str_3108.BLACK, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, k.width, k.height), null, 0);
                 _local_2.color = 0;
                 _local_2.blend = 0.3;
                 k.addChild(_local_2);
