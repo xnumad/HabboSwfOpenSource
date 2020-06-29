@@ -62,12 +62,12 @@
             return this._assetName;
         }
 
-        public function get _Str_8401():String
+        public function get assetPosture():String
         {
             return this._assetPosture;
         }
 
-        public function set _Str_8401(k:String):void
+        public function set assetPosture(k:String):void
         {
             this._assetPosture = k;
         }

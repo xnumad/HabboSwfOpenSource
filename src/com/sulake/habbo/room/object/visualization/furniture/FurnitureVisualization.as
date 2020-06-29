@@ -238,7 +238,7 @@
                     _local_4.relativeDepth = _local_6;
                     _local_4.assetName = _local_5.assetName;
                     _local_4.libraryAssetName = this.getLibraryAssetNameForSprite(_local_5, _local_4);
-                    _local_4._Str_8401 = this.getPostureForAssetFile(k, _local_5.libraryAssetName);
+                    _local_4.assetPosture = this.getPostureForAssetFile(k, _local_5.libraryAssetName);
                     _local_4.clickHandling = this._clickHandling;
                 }
                 else
@@ -264,7 +264,7 @@
         {
             k.asset = null;
             k.assetName = "";
-            k._Str_8401 = null;
+            k.assetPosture = null;
             k.tag = "";
             k.flipH = false;
             k.flipV = false;

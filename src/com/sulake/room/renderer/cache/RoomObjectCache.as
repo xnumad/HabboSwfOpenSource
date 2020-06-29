@@ -91,7 +91,7 @@
                         _local_5.width = _local_4.sprite.width;
                         _local_5.height = _local_4.sprite.height;
                         _local_5.objectType = _local_4.sprite.objectType;
-                        _local_5.posture = _local_4.sprite._Str_8401;
+                        _local_5.posture = _local_4.sprite.assetPosture;
                         _local_6 = this._Str_23710(_local_4.sprite);
                         if (_local_6)
                         {

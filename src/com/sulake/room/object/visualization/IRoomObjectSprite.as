@@ -10,8 +10,8 @@
         function set assetName(_arg_1:String):void;
         function get libraryAssetName():String;
         function set libraryAssetName(_arg_1:String):void;
-        function get _Str_8401():String;
-        function set _Str_8401(_arg_1:String):void;
+        function get assetPosture():String;
+        function set assetPosture(_arg_1:String):void;
         function get visible():Boolean;
         function set visible(_arg_1:Boolean):void;
         function get tag():String;
