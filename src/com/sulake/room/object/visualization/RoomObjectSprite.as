@@ -27,7 +27,7 @@
         private var _height:int = 0;
         private var _relativeDepth:Number = 0;
         private var _planeId:int = 0;
-        private var _Str_8253:Boolean = false;
+        private var _varyingDepth:Boolean = false;
         private var _alphaTolerance:int;
         private var _clickHandling:Boolean = false;
         private var _updateID:int = 0;
@@ -149,7 +149,7 @@
 
         public function get _Str_4593():Boolean
         {
-            return this._Str_8253;
+            return this._varyingDepth;
         }
 
         public function get _Str_4530():Boolean
@@ -346,11 +346,11 @@
 
         public function set _Str_4593(k:Boolean):void
         {
-            if (k == this._Str_8253)
+            if (k == this._varyingDepth)
             {
                 return;
             }
-            this._Str_8253 = k;
+            this._varyingDepth = k;
             this._updateID++;
         }
 

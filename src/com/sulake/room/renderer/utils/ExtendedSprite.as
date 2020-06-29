@@ -11,7 +11,7 @@
         private var _tag:String = "";
         private var _identifier:String = "";
         private var _clickHandling:Boolean = false;
-        private var _Str_8253:Boolean = false;
+        private var _varyingDepth:Boolean = false;
         private var _bitmapData:ExtendedBitmapData = null;
         private var _width:int = 0;
         private var _height:int = 0;
@@ -58,12 +58,12 @@
 
         public function get _Str_4593():Boolean
         {
-            return this._Str_8253;
+            return this._varyingDepth;
         }
 
         public function set _Str_4593(k:Boolean):void
         {
-            this._Str_8253 = k;
+            this._varyingDepth = k;
         }
 
         public function get _Str_4530():Boolean
