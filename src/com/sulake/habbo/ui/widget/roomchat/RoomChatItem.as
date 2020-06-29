@@ -409,7 +409,7 @@
                                 }
                                 else
                                 {
-                                    if (this._chatType == _Str_3535._Str_15836)
+                                    if (this._chatType == _Str_3535.CHAT_TYPE_NOTIFY)
                                     {
                                         textWindow.text = this.message;
                                         this._width = _Str_5706;

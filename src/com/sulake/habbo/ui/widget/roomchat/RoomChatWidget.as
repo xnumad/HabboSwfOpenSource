@@ -280,7 +280,7 @@
             _local_7._Str_23108 = _arg_5;
             if (_arg_6)
             {
-                _local_7.chatType = _Str_3535._Str_15836;
+                _local_7.chatType = _Str_3535.CHAT_TYPE_NOTIFY;
             }
             _local_7._Str_13126();
             this._Str_21167(_local_7);

@@ -10,7 +10,7 @@
         public static const CHAT_TYPE_SHOUT:int = 2;
         public static const CHAT_TYPE_RESPECT:int = 3;
         public static const CHAT_TYPE_PETRESPECT:int = 4;
-        public static const _Str_15836:int = 5;
+        public static const CHAT_TYPE_NOTIFY:int = 5;
         public static const CHAT_TYPE_PETTREAT:int = 6;
         public static const CHAT_TYPE_PETREVIVE:int = 7;
         public static const CHAT_TYPE_PET_REBREED_FERTILIZE:int = 8;
