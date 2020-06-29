@@ -18,7 +18,7 @@
         function setMessengerIconNotify(_arg_1:Boolean):void;
         function setFriendListIconNotify(_arg_1:Boolean):void;
         function removeMessengerNotifications():void;
-        function get _Str_20387():int;
+        function get friendBarWidth():int;
         function getIconLocation(_arg_1:String):IWindowContainer;
     }
 }

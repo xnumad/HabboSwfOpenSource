@@ -145,7 +145,7 @@
             }
         }
 
-        public function get _Str_20387():int
+        public function get friendBarWidth():int
         {
             return (this._friendBarWindow == null) ? 0 : ((this._Str_3312) ? _Str_6651 : this._friendBarWindow.width);
         }

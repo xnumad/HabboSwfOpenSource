@@ -175,7 +175,7 @@
             {
                 return 1000;
             }
-            return this._roomUi.friendBarView._Str_20387;
+            return this._roomUi.friendBarView.friendBarWidth;
         }
 
         public function _Str_26449():int
