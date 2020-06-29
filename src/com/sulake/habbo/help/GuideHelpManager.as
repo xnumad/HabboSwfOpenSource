@@ -42,14 +42,14 @@
             if (((((this._habboHelp._Str_19829) && (this._habboHelp.newIdentity)) && (!(this._seenTourPopupDuringSession))) && (!(this._habboHelp.sessionDataManager.isRealNoob))))
             {
                 this._popupTimer = new Timer(this._Str_17155(), 1);
-                this._popupTimer.addEventListener(TimerEvent.TIMER, this._Str_22650);
+                this._popupTimer.addEventListener(TimerEvent.TIMER, this.onTourPopup);
                 this._popupTimer.start();
                 this._habboHelp.tracking.trackEventLog("Help", "", "tour.new_user.create", "", this._Str_17155());
                 this._habboHelp.trackGoogle("newbieTourWindow", "timer_popupCreated");
             }
         }
 
-        private function _Str_22650(k:TimerEvent):void
+        private function onTourPopup(k:TimerEvent):void
         {
             if (this._disposed)
             {
