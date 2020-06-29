@@ -651,7 +651,7 @@
             return this._Str_7119 == k.id;
         }
 
-        public function _Str_8513(k:ITab, _arg_2:Boolean):void
+        public function selectTab(k:ITab, _arg_2:Boolean):void
         {
             if (!k.selected)
             {
@@ -681,7 +681,7 @@
             var _local_2:FriendEntityTab = this._Str_21564(k);
             if (_local_2)
             {
-                this._Str_8513(_local_2, false);
+                this.selectTab(_local_2, false);
                 this._Str_7119 = k;
             }
         }

@@ -11,7 +11,7 @@
         function get events():IEventDispatcher;
         function set visible(_arg_1:Boolean):void;
         function get visible():Boolean;
-        function _Str_8513(_arg_1:ITab, _arg_2:Boolean):void;
+        function selectTab(_arg_1:ITab, _arg_2:Boolean):void;
         function deSelect(_arg_1:Boolean):void;
         function getAvatarFaceBitmap(_arg_1:String):BitmapData;
         function getGroupIconBitmap(_arg_1:String):BitmapData;

@@ -164,7 +164,7 @@
                 this._alphaSlider = new DimmerViewAlphaSlider(this, (k as IWindowContainer), this._widget.assets);
             }
             this._tabContext = ITabContextWindow(this._window.findChildByName("tab_context"));
-            this._Str_8513(this._widget._Str_13894);
+            this.selectTab(this._widget._Str_13894);
             var _local_2:int;
             while (_local_2 < this._tabContext._Str_4277)
             {
@@ -269,7 +269,7 @@
             {
                 return;
             }
-            this._Str_8513(k);
+            this.selectTab(k);
             this._selectedBrightness = _local_2._Str_4272;
             if (this._alphaSlider != null)
             {
@@ -284,7 +284,7 @@
             this._widget._Str_12547();
         }
 
-        private function _Str_8513(k:int):void
+        private function selectTab(k:int):void
         {
             if (this._tabContext == null)
             {

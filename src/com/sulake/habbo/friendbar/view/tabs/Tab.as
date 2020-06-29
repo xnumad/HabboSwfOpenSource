@@ -114,7 +114,7 @@
             }
             else
             {
-                _Str_3553._Str_8513(this, true);
+                _Str_3553.selectTab(this, true);
             }
         }
 
