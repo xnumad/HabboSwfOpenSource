@@ -26,7 +26,7 @@
         private var _width:int = 0;
         private var _height:int = 0;
         private var _relativeDepth:Number = 0;
-        private var _Str_19048:int = 0;
+        private var _planeId:int = 0;
         private var _Str_8253:Boolean = false;
         private var _alphaTolerance:int;
         private var _clickHandling:Boolean = false;
@@ -189,12 +189,12 @@
 
         public function get spriteType():int
         {
-            return this._Str_19048;
+            return this._planeId;
         }
 
         public function set spriteType(k:int):void
         {
-            this._Str_19048 = k;
+            this._planeId = k;
         }
 
         public function set _Str_4918(k:int):void
