@@ -303,7 +303,7 @@
                 if (((_local_2 > 0) && (this._clientPromoTimer == null)))
                 {
                     this._clientPromoTimer = new Timer(_local_2, 1);
-                    this._clientPromoTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onTimerComplete);
+                    this._clientPromoTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onShowClientPromo);
                     this._clientPromoTimer.start();
                 }
                 if (((((k == WingCodeEnum.SOCIAL) || (k == WingCodeEnum.QUEST)) || (k == WingCodeEnum.GROUP)) || (k == WingCodeEnum.GAME)))
@@ -351,7 +351,7 @@
             }
         }
 
-        private function onTimerComplete(k:TimerEvent):void
+        private function onShowClientPromo(k:TimerEvent):void
         {
             var _local_3:String;
             var _local_4:String;
@@ -746,7 +746,7 @@
         {
             if (this._clientPromoTimer)
             {
-                this._clientPromoTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onTimerComplete);
+                this._clientPromoTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onShowClientPromo);
                 this._clientPromoTimer.stop();
                 this._clientPromoTimer = null;
             }
