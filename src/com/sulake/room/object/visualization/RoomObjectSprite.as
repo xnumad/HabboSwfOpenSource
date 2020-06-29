@@ -28,7 +28,7 @@
         private var _relativeDepth:Number = 0;
         private var _Str_19048:int = 0;
         private var _Str_8253:Boolean = false;
-        private var _Str_13928:int;
+        private var _alphaTolerance:int;
         private var _clickHandling:Boolean = false;
         private var _updateID:int = 0;
         private var _instanceId:int = 0;
@@ -39,7 +39,7 @@
         public function RoomObjectSprite()
         {
             this._offset = new Point(0, 0);
-            this._Str_13928 = AlphaTolerance.MATCH_OPAQUE_PIXELS;
+            this._alphaTolerance = AlphaTolerance.MATCH_OPAQUE_PIXELS;
             this._spriteType = RoomObjectSpriteType.DEFAULT;
             super();
             this._instanceId = _globalInstanceId++;
@@ -366,16 +366,16 @@
 
         public function get alphaTolerance():int
         {
-            return this._Str_13928;
+            return this._alphaTolerance;
         }
 
         public function set alphaTolerance(k:int):void
         {
-            if (this._Str_13928 == k)
+            if (this._alphaTolerance == k)
             {
                 return;
             }
-            this._Str_13928 = k;
+            this._alphaTolerance = k;
             this._updateID++;
         }
 
