@@ -646,7 +646,7 @@
             }
         }
 
-        private function _Str_26154(k:IFriendEntity):Boolean
+        private function isFriendSelected(k:IFriendEntity):Boolean
         {
             return this._Str_7119 == k.id;
         }
