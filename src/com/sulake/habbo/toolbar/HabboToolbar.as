@@ -289,7 +289,7 @@
             this._bottomBarBackground = new BottomBackgroundBorder(this);
             this._view = new BottomBarLeft(this, this._windowManager, assets, events);
             this._view.window.visible = false;
-            this._Str_25782();
+            this.initRoomEnterEffect();
             this._extensionView = new ExtensionView(this._windowManager, assets, this);
             if (this._view == null)
             {
@@ -396,7 +396,7 @@
             this._habboHelp._Str_8205(HabboToolbarIconEnum.NAVIGATOR, "new.user.promo.room", WelcomeNotificationAlignment.LEFT, "NAVIGATOR_ME_TAB");
         }
 
-        private function _Str_25782():void
+        private function initRoomEnterEffect():void
         {
             var k:int;
             var _local_2:int;
