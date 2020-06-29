@@ -19,7 +19,7 @@
             return this._level;
         }
 
-        public function get _Str_25423():Boolean
+        public function get isFlipForced():Boolean
         {
             return this._forceFlip;
         }
