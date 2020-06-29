@@ -56,12 +56,12 @@
             this._identifier = k;
         }
 
-        public function get _Str_4593():Boolean
+        public function get varyingDepth():Boolean
         {
             return this._varyingDepth;
         }
 
-        public function set _Str_4593(k:Boolean):void
+        public function set varyingDepth(k:Boolean):void
         {
             this._varyingDepth = k;
         }

@@ -38,8 +38,8 @@
         function get height():int;
         function get relativeDepth():Number;
         function set relativeDepth(_arg_1:Number):void;
-        function get _Str_4593():Boolean;
-        function set _Str_4593(_arg_1:Boolean):void;
+        function get varyingDepth():Boolean;
+        function set varyingDepth(_arg_1:Boolean):void;
         function get clickHandling():Boolean;
         function set clickHandling(_arg_1:Boolean):void;
         function get instanceId():int;

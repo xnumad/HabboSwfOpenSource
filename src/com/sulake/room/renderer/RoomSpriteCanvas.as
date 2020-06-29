@@ -682,7 +682,7 @@
             _local_3.tag = _local_4.tag;
             _local_3.blendMode = _local_4.blendMode;
             _local_3.filters = _local_4.filters;
-            _local_3._Str_4593 = _local_4._Str_4593;
+            _local_3.varyingDepth = _local_4.varyingDepth;
             _local_3.clickHandling = _local_4.clickHandling;
             _local_3.smoothing = false;
             _local_3.pixelSnapping = PixelSnapping.ALWAYS;
@@ -714,9 +714,9 @@
             var _local_4:ExtendedSprite = this.getSprite(k);
             if (_local_4 != null)
             {
-                if (_local_4._Str_4593 != _local_3._Str_4593)
+                if (_local_4.varyingDepth != _local_3.varyingDepth)
                 {
-                    if (((_local_4._Str_4593) && (!(_local_3._Str_4593))))
+                    if (((_local_4.varyingDepth) && (!(_local_3.varyingDepth))))
                     {
                         this._display.removeChildAt(k);
                         this._spritePool.push(_local_4);
@@ -735,7 +735,7 @@
                     }
                     _local_4.identifier = _arg_2.name;
                     _local_4.tag = _local_3.tag;
-                    _local_4._Str_4593 = _local_3._Str_4593;
+                    _local_4.varyingDepth = _local_3.varyingDepth;
                     _local_4.blendMode = _local_3.blendMode;
                     _local_4.clickHandling = _local_3.clickHandling;
                     _local_4.filters = _local_3.filters;

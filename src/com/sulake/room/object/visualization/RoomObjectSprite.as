@@ -147,7 +147,7 @@
             return this._relativeDepth;
         }
 
-        public function get _Str_4593():Boolean
+        public function get varyingDepth():Boolean
         {
             return this._varyingDepth;
         }
@@ -344,7 +344,7 @@
             this._updateID++;
         }
 
-        public function set _Str_4593(k:Boolean):void
+        public function set varyingDepth(k:Boolean):void
         {
             if (k == this._varyingDepth)
             {
