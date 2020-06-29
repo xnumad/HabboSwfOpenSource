@@ -66,12 +66,12 @@
             this._varyingDepth = k;
         }
 
-        public function get _Str_4530():Boolean
+        public function get clickHandling():Boolean
         {
             return this._clickHandling;
         }
 
-        public function set _Str_4530(k:Boolean):void
+        public function set clickHandling(k:Boolean):void
         {
             this._clickHandling = k;
         }

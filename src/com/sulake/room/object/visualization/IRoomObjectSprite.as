@@ -40,8 +40,8 @@
         function set relativeDepth(_arg_1:Number):void;
         function get _Str_4593():Boolean;
         function set _Str_4593(_arg_1:Boolean):void;
-        function get _Str_4530():Boolean;
-        function set _Str_4530(_arg_1:Boolean):void;
+        function get clickHandling():Boolean;
+        function set clickHandling(_arg_1:Boolean):void;
         function get instanceId():int;
         function get updateId():int;
         function set spriteType(_arg_1:int):void;

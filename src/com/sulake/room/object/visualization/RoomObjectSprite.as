@@ -152,7 +152,7 @@
             return this._varyingDepth;
         }
 
-        public function get _Str_4530():Boolean
+        public function get clickHandling():Boolean
         {
             return this._clickHandling;
         }
@@ -354,7 +354,7 @@
             this._updateID++;
         }
 
-        public function set _Str_4530(k:Boolean):void
+        public function set clickHandling(k:Boolean):void
         {
             if (this._clickHandling == k)
             {

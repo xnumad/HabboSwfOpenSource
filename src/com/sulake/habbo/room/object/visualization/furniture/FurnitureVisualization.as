@@ -239,7 +239,7 @@
                     _local_4.assetName = _local_5.assetName;
                     _local_4._Str_3582 = this.getLibraryAssetNameForSprite(_local_5, _local_4);
                     _local_4._Str_8401 = this.getPostureForAssetFile(k, _local_5._Str_3582);
-                    _local_4._Str_4530 = this._clickHandling;
+                    _local_4.clickHandling = this._clickHandling;
                 }
                 else
                 {
@@ -271,7 +271,7 @@
             k.offsetX = 0;
             k.offsetY = 0;
             k.relativeDepth = 0;
-            k._Str_4530 = false;
+            k.clickHandling = false;
         }
 
         protected function getBlendMode(k:int):String
