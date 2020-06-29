@@ -241,9 +241,9 @@
                 return;
             }
             k.addEventListener(RoomWidgetChatUpdateEvent.RWCUE_EVENT_CHAT, this.onChatMessage);
-            k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SIZE_CHANGED, this._Str_8873);
-            k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_POSITION_CHANGED, this._Str_8873);
-            k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SCALE_CHANGED, this._Str_8873);
+            k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SIZE_CHANGED, this.onRoomViewUpdate);
+            k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_POSITION_CHANGED, this.onRoomViewUpdate);
+            k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SCALE_CHANGED, this.onRoomViewUpdate);
             super.registerUpdateEvents(k);
         }
 
@@ -254,9 +254,9 @@
                 return;
             }
             k.removeEventListener(RoomWidgetChatUpdateEvent.RWCUE_EVENT_CHAT, this.onChatMessage);
-            k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SIZE_CHANGED, this._Str_8873);
-            k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_POSITION_CHANGED, this._Str_8873);
-            k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SCALE_CHANGED, this._Str_8873);
+            k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SIZE_CHANGED, this.onRoomViewUpdate);
+            k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_POSITION_CHANGED, this.onRoomViewUpdate);
+            k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SCALE_CHANGED, this.onRoomViewUpdate);
         }
 
         private function onChatMessage(k:RoomWidgetChatUpdateEvent):void
@@ -298,7 +298,7 @@
             this._Str_19076();
         }
 
-        private function _Str_8873(k:_Str_3040):void
+        private function onRoomViewUpdate(k:_Str_3040):void
         {
             var _local_2:Rectangle = k.rect;
             if (k.scale > 0)
