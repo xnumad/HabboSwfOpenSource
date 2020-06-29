@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.window.enum
 {
-    public class _Str_3108 
+    public class HabboWindowStyle
     {
         public static const NULL:uint = 0;
         public static const DEFAULT:uint = 0;

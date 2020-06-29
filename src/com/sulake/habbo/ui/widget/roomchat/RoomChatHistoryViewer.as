@@ -4,7 +4,7 @@
     import com.sulake.core.window.components.IScrollbarWindow;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import com.sulake.core.window.components.IScrollableWindow;
@@ -46,7 +46,7 @@
             }
             _arg_3.removeChild(_local_5);
             _arg_3.addChild(_local_5);
-            this._scrollbarWindow = (_arg_2.createWindow("chatscroller", "", WindowType.WINDOW_TYPE_SCROLLBAR_VERTICAL, _Str_3108.NULL, (WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT | WindowParam.WINDOW_PARAM_NULL), new Rectangle((_arg_3.right - _Str_4906), _arg_3.y, _Str_4906, (_arg_3.height - RoomChatHistoryPulldown.PULLDOWN_WINDOW_HEIGHT)), null, 0) as IScrollbarWindow);
+            this._scrollbarWindow = (_arg_2.createWindow("chatscroller", "", WindowType.WINDOW_TYPE_SCROLLBAR_VERTICAL, HabboWindowStyle.NULL, (WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT | WindowParam.WINDOW_PARAM_NULL), new Rectangle((_arg_3.right - _Str_4906), _arg_3.y, _Str_4906, (_arg_3.height - RoomChatHistoryPulldown.PULLDOWN_WINDOW_HEIGHT)), null, 0) as IScrollbarWindow);
             _arg_3.addChild(this._scrollbarWindow);
             this._scrollbarWindow.visible = false;
             this._scrollbarWindow.scrollable = (_local_5 as IScrollableWindow);

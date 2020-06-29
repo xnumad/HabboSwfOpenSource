@@ -11,7 +11,7 @@
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -84,7 +84,7 @@
             {
                 return;
             }
-            this._genderSelectionWindow = (windowManager.createWindow("clothing change gender selection", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.NULL, (((WindowParam.WINDOW_PARAM_MOUSE_DRAGGING_TARGET | WindowParam.WINDOW_PARAM_PARENT_WINDOW) | WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(100, 100, 200, 200), null, 0) as IWindowContainer);
+            this._genderSelectionWindow = (windowManager.createWindow("clothing change gender selection", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.NULL, (((WindowParam.WINDOW_PARAM_MOUSE_DRAGGING_TARGET | WindowParam.WINDOW_PARAM_PARENT_WINDOW) | WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(100, 100, 200, 200), null, 0) as IWindowContainer);
             this._genderSelectionWindow.buildFromXML(XML(_local_3.content));
             this._genderSelectionWindow.addEventListener(WindowMouseEvent.CLICK, this.onGenderSelectionMouseEvent);
             this._genderSelectionWindow.center();

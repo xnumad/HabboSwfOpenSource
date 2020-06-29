@@ -13,7 +13,7 @@
     import com.sulake.habbo.ui.handler.InfoStandWidgetHandler;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import com.sulake.core.assets.IAsset;
@@ -110,7 +110,7 @@
         {
             if (this._mainContainer == null)
             {
-                this._mainContainer = (windowManager.createWindow("infostand_main_container", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.NULL, WindowParam.WINDOW_PARAM_NULL, new Rectangle(0, 0, 50, 100)) as IWindowContainer);
+                this._mainContainer = (windowManager.createWindow("infostand_main_container", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.NULL, WindowParam.WINDOW_PARAM_NULL, new Rectangle(0, 0, 50, 100)) as IWindowContainer);
                 this._mainContainer.tags.push("room_widget_infostand");
                 this._mainContainer.background = true;
                 this._mainContainer.color = 0;

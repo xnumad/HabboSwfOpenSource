@@ -14,7 +14,7 @@
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import com.sulake.core.window.events.WindowEvent;
@@ -116,7 +116,7 @@
             }
             if (this._window == null)
             {
-                this._window = (windowManager.createWindow(this._Str_18958, "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, (WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(_Str_4126, _Str_4162, 2, 2), null, 0) as IWindowContainer);
+                this._window = (windowManager.createWindow(this._Str_18958, "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.DEFAULT, (WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(_Str_4126, _Str_4162, 2, 2), null, 0) as IWindowContainer);
                 this._window.buildFromXML(XML(_local_2.content));
             }
             _local_3 = (this._window.findChildByName("text") as ITextFieldWindow);

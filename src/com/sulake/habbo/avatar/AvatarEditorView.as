@@ -12,7 +12,7 @@
     import flash.events.TimerEvent;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import flash.events.Event;
@@ -196,7 +196,7 @@
             {
                 if (this._windowContext == null)
                 {
-                    this._windowContext = (this._editor.manager.windowManager.createWindow("avatarEditorContainer", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.SHINY, (WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, 2, 2), null, 0) as IWindowContainer);
+                    this._windowContext = (this._editor.manager.windowManager.createWindow("avatarEditorContainer", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.SHINY, (WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, 2, 2), null, 0) as IWindowContainer);
                     this._windowContext.addChild(this._editorContent);
                 }
                 _local_3 = this._windowContext.getChildIndex(this._editorContent);

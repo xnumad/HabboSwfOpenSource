@@ -59,7 +59,7 @@
     import flash.display.BitmapData;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import com.sulake.core.window.IWindowContainer;
@@ -483,7 +483,7 @@
         public function getButton(k:String, _arg_2:String, _arg_3:Function, _arg_4:int=0, _arg_5:int=0, _arg_6:int=0):IBitmapWrapperWindow
         {
             var _local_7:BitmapData = this.getButtonImage(_arg_2);
-            var _local_8:IBitmapWrapperWindow = IBitmapWrapperWindow(this._windowManager.createWindow(k, "", WindowType.WINDOW_TYPE_BITMAP_WRAPPER, _Str_3108.NULL, (WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR | WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT), new Rectangle(_arg_4, _arg_5, _local_7.width, _local_7.height), _arg_3, _arg_6));
+            var _local_8:IBitmapWrapperWindow = IBitmapWrapperWindow(this._windowManager.createWindow(k, "", WindowType.WINDOW_TYPE_BITMAP_WRAPPER, HabboWindowStyle.NULL, (WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR | WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT), new Rectangle(_arg_4, _arg_5, _local_7.width, _local_7.height), _arg_3, _arg_6));
             _local_8.bitmap = _local_7;
             _local_8.disposesBitmap = false;
             return _local_8;

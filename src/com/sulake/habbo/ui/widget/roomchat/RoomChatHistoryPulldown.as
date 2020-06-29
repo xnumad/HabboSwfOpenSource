@@ -8,7 +8,7 @@
     import flash.display.BitmapData;
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import com.sulake.core.window.enum.WindowType;
@@ -59,11 +59,11 @@
             this._grabBarXOverBmp = ((this._assetLibrary.getAssetByName("chat_grapbar_x_hi") as BitmapDataAsset).content as BitmapData);
             this._grabBarXPressedBmp = ((this._assetLibrary.getAssetByName("chat_grapbar_x_pr") as BitmapDataAsset).content as BitmapData);
             this._chatHistoryBgBmp = ((this._assetLibrary.getAssetByName("chat_history_bg") as BitmapDataAsset).content as BitmapData);
-            this._bgWindow = (this._windowManager.createWindow("chat_history_bg", "", WindowType.WINDOW_TYPE_BITMAP_WRAPPER, _Str_3108.DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle(0, 0, _arg_3.width, (_arg_3.height - PULLDOWN_WINDOW_HEIGHT)), null, 0, 0) as IBitmapWrapperWindow);
+            this._bgWindow = (this._windowManager.createWindow("chat_history_bg", "", WindowType.WINDOW_TYPE_BITMAP_WRAPPER, HabboWindowStyle.DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle(0, 0, _arg_3.width, (_arg_3.height - PULLDOWN_WINDOW_HEIGHT)), null, 0, 0) as IBitmapWrapperWindow);
             this._containerWindow.addChild(this._bgWindow);
-            this._window = (this._windowManager.createWindow("chat_pulldown", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, (WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR | WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT), new Rectangle(0, (this._containerWindow.height - PULLDOWN_WINDOW_HEIGHT), _arg_3.width, PULLDOWN_WINDOW_HEIGHT), null, 0) as IWindowContainer);
+            this._window = (this._windowManager.createWindow("chat_pulldown", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.DEFAULT, (WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR | WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT), new Rectangle(0, (this._containerWindow.height - PULLDOWN_WINDOW_HEIGHT), _arg_3.width, PULLDOWN_WINDOW_HEIGHT), null, 0) as IWindowContainer);
             this._containerWindow.addChild(this._window);
-            this._region = (this._windowManager.createWindow("REGIONchat_pulldown", "", WindowType.WINDOW_TYPE_REGION, _Str_3108.NULL, (((WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR | WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT) | WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_FIXED) | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_FIXED), new Rectangle(0, 0, _arg_3.width, (_arg_3.height - PULLDOWN_WINDOW_HEIGHT)), null, 0) as IRegionWindow);
+            this._region = (this._windowManager.createWindow("REGIONchat_pulldown", "", WindowType.WINDOW_TYPE_REGION, HabboWindowStyle.NULL, (((WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR | WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT) | WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_FIXED) | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_FIXED), new Rectangle(0, 0, _arg_3.width, (_arg_3.height - PULLDOWN_WINDOW_HEIGHT)), null, 0) as IRegionWindow);
             if (this._region != null)
             {
                 this._region.background = true;

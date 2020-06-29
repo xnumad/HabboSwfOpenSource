@@ -24,7 +24,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.navigator.CreateFlatMessageComposer;
     import __AS3__.vec.*;
@@ -368,7 +368,7 @@
 
         private function getRow():IWindowContainer
         {
-            return IWindowContainer(this._navigator.windowManager.createWindow("", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle(0, 0, 100, 300)));
+            return IWindowContainer(this._navigator.windowManager.createWindow("", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle(0, 0, 100, 300)));
         }
 
         private function isMandatoryFieldsFilled():Boolean

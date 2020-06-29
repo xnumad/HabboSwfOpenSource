@@ -10,7 +10,7 @@
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.components.IButtonWindow;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -152,7 +152,7 @@
             var _local_8:IButtonWindow;
             if (!this._window)
             {
-                this._window = (this._widget.windowManager.createWindow("", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT) as IWindowContainer);
+                this._window = (this._widget.windowManager.createWindow("", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT) as IWindowContainer);
             }
             while (this._window.numChildren > 0)
             {

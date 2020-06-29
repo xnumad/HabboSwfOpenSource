@@ -18,7 +18,7 @@
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -176,7 +176,7 @@
                 this._window.dispose();
                 this._window = null;
             }
-            this._window = (windowManager.createWindow("ecotronboxcardui_container", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, (WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(_Str_4126, _Str_4162, 2, 2), null, 0) as IWindowContainer);
+            this._window = (windowManager.createWindow("ecotronboxcardui_container", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.DEFAULT, (WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(_Str_4126, _Str_4162, 2, 2), null, 0) as IWindowContainer);
             this._window.buildFromXML(XML(_local_2.content));
             _local_3 = (this._window.findChildByName("ecotronbox_card_date") as ITextWindow);
             if (((!(_local_3 == null)) && (!(this._text == null))))

@@ -3,7 +3,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.habbo.catalog.HabboCatalog;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IInteractiveWindow;
     import com.sulake.core.window.enum.WindowState;
@@ -83,7 +83,7 @@
             }
             else
             {
-                this._view.getChildByName(BG).style = _Str_3108.DEFAULT;
+                this._view.getChildByName(BG).style = HabboWindowStyle.DEFAULT;
             }
         }
 

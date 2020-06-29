@@ -21,7 +21,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.room.utils.RoomEnterEffect;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import flash.geom.Rectangle;
     import flash.geom.Point;
     import flash.events.KeyboardEvent;
@@ -299,7 +299,7 @@
             var k:IWindow;
             if (RoomEnterEffect.isRunning())
             {
-                k = this._widget.windowManager.createWindow("chat_dimmer", "", WindowType.WINDOW_TYPE_BORDER, _Str_3108.BLACK, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, this._chatInputContainerWindow.width, this._chatInputContainerWindow.height), null, 0);
+                k = this._widget.windowManager.createWindow("chat_dimmer", "", WindowType.WINDOW_TYPE_BORDER, HabboWindowStyle.BLACK, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, this._chatInputContainerWindow.width, this._chatInputContainerWindow.height), null, 0);
                 k.color = 0;
                 k.blend = 0.3;
                 this._chatInputContainerWindow.addChild(k);

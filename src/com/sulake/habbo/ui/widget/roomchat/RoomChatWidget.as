@@ -12,7 +12,7 @@
     import com.sulake.habbo.ui.handler.ChatWidgetHandler;
     import com.sulake.core.window.components.IDesktopWindow;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
@@ -116,14 +116,14 @@
                 }
             }
             this._Str_3991 = (this._Str_8959 + _Str_6383);
-            this._Str_2496 = (_arg_2.createWindow("chat_container", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, WindowParam.WINDOW_PARAM_NULL, new Rectangle(0, 0, 200, (this._Str_3991 + RoomChatHistoryPulldown.PULLDOWN_WINDOW_HEIGHT)), null, 0) as IWindowContainer);
+            this._Str_2496 = (_arg_2.createWindow("chat_container", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.DEFAULT, WindowParam.WINDOW_PARAM_NULL, new Rectangle(0, 0, 200, (this._Str_3991 + RoomChatHistoryPulldown.PULLDOWN_WINDOW_HEIGHT)), null, 0) as IWindowContainer);
             this._Str_2496.background = true;
             this._Str_2496.color = 33554431;
             this._Str_2496.tags.push("room_widget_chat");
-            this._Str_4396 = (_arg_2.createWindow("chat_contentlist", "", WindowType.WINDOW_TYPE_ITEMLIST_VERTICAL, _Str_3108.NULL, (WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT | WindowParam.WINDOW_PARAM_RELATIVE_SCALE_STRETCH), new Rectangle(0, 0, 200, this._Str_3991), null, 0) as IItemListWindow);
+            this._Str_4396 = (_arg_2.createWindow("chat_contentlist", "", WindowType.WINDOW_TYPE_ITEMLIST_VERTICAL, HabboWindowStyle.NULL, (WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT | WindowParam.WINDOW_PARAM_RELATIVE_SCALE_STRETCH), new Rectangle(0, 0, 200, this._Str_3991), null, 0) as IItemListWindow);
             this._Str_4396.disableAutodrag = true;
             this._Str_2496.addChild(this._Str_4396);
-            this._Str_3454 = (_arg_2.createWindow("chat_active_content", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.NULL, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle(0, 0, 200, this._Str_3991), null, 0) as IWindowContainer);
+            this._Str_3454 = (_arg_2.createWindow("chat_active_content", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.NULL, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle(0, 0, 200, this._Str_3991), null, 0) as IWindowContainer);
             this._Str_3454.clipping = false;
             this._Str_4396.addListItem(this._Str_3454);
             this._Str_2701 = new RoomChatHistoryViewer(this, _arg_2, this._Str_2496, _arg_3);

@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import com.sulake.core.window.IWindow;
@@ -66,7 +66,7 @@
             {
                 return;
             }
-            this._window = (this._windowManager.createWindow("habbohelp_window", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.NULL, (WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(-300, 300, 10, 10), null) as IWindowContainer);
+            this._window = (this._windowManager.createWindow("habbohelp_window", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.NULL, (WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(-300, 300, 10, 10), null) as IWindowContainer);
             this._window.buildFromXML((k.content as XML));
             this._window.tags.push("habbo_help_window");
             this._window.background = true;

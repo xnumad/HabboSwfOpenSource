@@ -3,7 +3,7 @@
     import com.sulake.core.window.IWindowContainer;
     import flash.utils.Timer;
     import com.sulake.core.window.enum.WindowType;
-    import com.sulake.habbo.window.enum._Str_3108;
+    import com.sulake.habbo.window.enum.HabboWindowStyle;
     import com.sulake.core.window.enum.WindowParam;
     import flash.geom.Rectangle;
     import com.sulake.core.window.events.WindowEvent;
@@ -32,7 +32,7 @@
             _displayResultDuration = (this._widget.handler.container.config.getInteger("poll.word.quiz.result.view.seconds", 4) * 1000);
             if (CONTAINER_IN_BOTTOM)
             {
-                this._mainWindow = (this._widget.windowManager.createWindow("wordquiz_container", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, (WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN), new Rectangle(0, 0, 2, 2), null, 0, 2) as IWindowContainer);
+                this._mainWindow = (this._widget.windowManager.createWindow("wordquiz_container", "", WindowType.WINDOW_TYPE_CONTAINER, HabboWindowStyle.DEFAULT, (WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN), new Rectangle(0, 0, 2, 2), null, 0, 2) as IWindowContainer);
                 this._mainWindow.width = this._mainWindow.desktop.width;
                 this._mainWindow.height = this._mainWindow.desktop.height;
             }
