@@ -197,7 +197,7 @@
                     this._itemWindowElements.splice(this._itemWindowElements.indexOf(_local_2), 1);
                     if (this._itemWindow)
                     {
-                        this._toolbar._Str_15912(_local_2);
+                        this._toolbar.removeDimmer(_local_2);
                         this.refreshItemWindow();
                     }
                 }
@@ -234,7 +234,7 @@
             var k:IWindowContainer;
             for each (k in this._itemWindowElements)
             {
-                this._toolbar._Str_15912(k);
+                this._toolbar.removeDimmer(k);
             }
         }
 

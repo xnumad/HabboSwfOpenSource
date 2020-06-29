@@ -503,7 +503,7 @@
             this._Str_20582();
             if (this._view)
             {
-                this._Str_15912((this._view.window as IWindowContainer));
+                this.removeDimmer((this._view.window as IWindowContainer));
             }
             if (this._extensionView)
             {
@@ -528,7 +528,7 @@
             }
         }
 
-        public function _Str_15912(k:IWindowContainer):void
+        public function removeDimmer(k:IWindowContainer):void
         {
             if (k == null)
             {
