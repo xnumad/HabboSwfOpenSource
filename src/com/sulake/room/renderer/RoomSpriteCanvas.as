@@ -725,7 +725,7 @@
                     this._Str_20892(_arg_2, k);
                     return true;
                 }
-                if (((_local_4._Str_17574(_local_3._Str_12289, _local_3.updateId)) || (RoomEnterEffect.isVisualizationOn())))
+                if (((_local_4._Str_17574(_local_3.instanceId, _local_3.updateId)) || (RoomEnterEffect.isVisualizationOn())))
                 {
                     _local_4.alphaTolerance = _local_3.alphaTolerance;
                     _local_5 = (_local_3.alpha / 0xFF);

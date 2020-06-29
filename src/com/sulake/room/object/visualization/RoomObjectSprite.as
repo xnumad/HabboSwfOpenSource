@@ -157,7 +157,7 @@
             return this._clickHandling;
         }
 
-        public function get _Str_12289():int
+        public function get instanceId():int
         {
             return this._instanceId;
         }
