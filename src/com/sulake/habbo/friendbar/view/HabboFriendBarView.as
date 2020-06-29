@@ -95,7 +95,7 @@
         private static const ICON_ALL_FRIENDS:String = "icon_all_friends";
         private static const COLLAPSED_MARGIN:int = 150;
         private static const NEW_BAR_BOTTOM_OFFSET:int = 1;
-        private static const _Str_17338:int = 16;
+        private static const NEW_BAR_RIGHT_MARGIN:int = 16;
 
         private var _friendBarData:IHabboFriendBarData;
         private var _gameManager:IHabboGameManager;
@@ -1145,7 +1145,7 @@
         {
             var k:IItemListWindow = (this._friendBarWindow.findChildByName(LIST) as IItemListWindow);
             var _local_2:IWindowContainer = (this._friendBarWindow.findChildByName(FRIENDTOOLS) as IWindowContainer);
-            var _local_3:int = (((this._friendBarWindow.width - _local_2.width) - _Str_17338) / (TAB_WIDTH + k.spacing));
+            var _local_3:int = (((this._friendBarWindow.width - _local_2.width) - NEW_BAR_RIGHT_MARGIN) / (TAB_WIDTH + k.spacing));
             return _local_3;
         }
 
