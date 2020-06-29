@@ -267,7 +267,7 @@
             }
             var _local_2:RoomChatItem = new RoomChatItem(this, windowManager, assets, this._Str_22070(), localizations, this._baseUrl);
             _local_2._Str_13182(k);
-            this._Str_21167(_local_2);
+            this.addChatItem(_local_2);
         }
 
         public function _Str_5863(k:String, _arg_2:String, _arg_3:int, _arg_4:BitmapData, _arg_5:uint, _arg_6:Boolean):void
@@ -283,10 +283,10 @@
                 _local_7.chatType = RoomWidgetChatUpdateEvent.CHAT_TYPE_NOTIFY;
             }
             _local_7._Str_13126();
-            this._Str_21167(_local_7);
+            this.addChatItem(_local_7);
         }
 
-        private function _Str_21167(k:RoomChatItem):void
+        private function addChatItem(k:RoomChatItem):void
         {
             if (this._Str_7184 != 1)
             {
