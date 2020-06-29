@@ -10,7 +10,7 @@
         function get height():int;
         function get asset():IAsset;
         function get assetName():String;
-        function get _Str_3582():String;
+        function get libraryAssetName():String;
         function get offsetX():int;
         function get offsetY():int;
         function get _Str_20249():int;

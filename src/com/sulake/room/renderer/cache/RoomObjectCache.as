@@ -76,14 +76,14 @@
             {
                 for each (_local_4 in _local_3.sprites.sprites)
                 {
-                    if (((!(_local_4.sprite.spriteType == RoomObjectSpriteType.ROOM_PLANE)) && (!(_local_4.sprite._Str_3582 == ""))))
+                    if (((!(_local_4.sprite.spriteType == RoomObjectSpriteType.ROOM_PLANE)) && (!(_local_4.sprite.libraryAssetName == ""))))
                     {
                         _local_5 = new RoomObjectSpriteData();
                         _local_5.objectId = _local_3.objectId;
                         _local_5.x = _local_4.x;
                         _local_5.y = _local_4.y;
                         _local_5.z = _local_4.z;
-                        _local_5.name = StringUtil._Str_25429(_local_4.sprite._Str_3582);
+                        _local_5.name = StringUtil._Str_25429(_local_4.sprite.libraryAssetName);
                         _local_5.flipH = _local_4.sprite.flipH;
                         _local_5.alpha = _local_4.sprite.alpha;
                         _local_5.color = _local_4.sprite.color.toString();

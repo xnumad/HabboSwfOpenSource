@@ -237,8 +237,8 @@
                     _local_6 = (_local_6 * _Str_19020);
                     _local_4.relativeDepth = _local_6;
                     _local_4.assetName = _local_5.assetName;
-                    _local_4._Str_3582 = this.getLibraryAssetNameForSprite(_local_5, _local_4);
-                    _local_4._Str_8401 = this.getPostureForAssetFile(k, _local_5._Str_3582);
+                    _local_4.libraryAssetName = this.getLibraryAssetNameForSprite(_local_5, _local_4);
+                    _local_4._Str_8401 = this.getPostureForAssetFile(k, _local_5.libraryAssetName);
                     _local_4.clickHandling = this._clickHandling;
                 }
                 else
@@ -257,7 +257,7 @@
 
         protected function getLibraryAssetNameForSprite(k:IGraphicAsset, _arg_2:IRoomObjectSprite):String
         {
-            return k._Str_3582;
+            return k.libraryAssetName;
         }
 
         private function resetSprite(k:IRoomObjectSprite):void

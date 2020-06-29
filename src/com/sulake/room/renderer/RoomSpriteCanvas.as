@@ -583,7 +583,7 @@
                             _local_17.sprite = _local_18;
                             if (((_local_18.spriteType == RoomObjectSpriteType.AVATAR) || (_local_18.spriteType == RoomObjectSpriteType.AVATAR_OWN)))
                             {
-                                _local_17.sprite._Str_3582 = ("avatar_" + k.getId());
+                                _local_17.sprite.libraryAssetName = ("avatar_" + k.getId());
                             }
                             _local_17.x = (_local_19 - this._screenOffsetX);
                             _local_17.y = (_local_20 - this._screenOffsetY);

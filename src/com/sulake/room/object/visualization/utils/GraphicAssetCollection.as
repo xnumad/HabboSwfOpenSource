@@ -212,7 +212,7 @@
                         if (!_local_13)
                         {
                             _local_14 = this.getAsset(_local_5);
-                            if (((!(_local_14 == null)) && (!(_local_14.assetName == _local_14._Str_3582))))
+                            if (((!(_local_14 == null)) && (!(_local_14.assetName == _local_14.libraryAssetName))))
                             {
                                 _local_13 = this.replaceAsset(_local_5, _local_6, _local_12, _local_7, _local_8, _local_10, _local_11, _local_9);
                             }
@@ -356,7 +356,7 @@
                         return this._assets[k];
                     }
                     _local_11 = this.getAsset(k);
-                    if (((!(_local_11 == null)) && (!(_local_11.assetName == _local_11._Str_3582))))
+                    if (((!(_local_11 == null)) && (!(_local_11.assetName == _local_11.libraryAssetName))))
                     {
                         if (!this.replaceAsset(k, _local_4, _local_10, _local_5, _local_6, _local_8, _local_9, _local_7))
                         {
@@ -385,7 +385,7 @@
                 {
                     return _local_5;
                 }
-                _local_6 = ((_local_5._Str_3582 + "@") + _arg_2);
+                _local_6 = ((_local_5.libraryAssetName + "@") + _arg_2);
                 _local_7 = this.getLibraryAsset(_local_6);
                 if (_local_7 == null)
                 {
@@ -481,7 +481,7 @@
             var _local_2:GraphicAsset = this._assets.remove(k);
             if (_local_2 != null)
             {
-                _local_3 = this.getLibraryAsset(_local_2._Str_3582);
+                _local_3 = this.getLibraryAsset(_local_2.libraryAssetName);
                 if (_local_3 != null)
                 {
                     this._library.removeAsset(_local_3);

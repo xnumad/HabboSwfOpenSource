@@ -756,15 +756,15 @@
                     _local_5 = 0;
                     if (k < 48)
                     {
-                        _local_2._Str_3582 = "sh_std_sd_1_0_0";
-                        this._shadowAsset = this._activeAvatarImage.getAsset(_local_2._Str_3582);
+                        _local_2.libraryAssetName = "sh_std_sd_1_0_0";
+                        this._shadowAsset = this._activeAvatarImage.getAsset(_local_2.libraryAssetName);
                         _local_4 = -8;
                         _local_5 = ((this._effectJustApplied) ? 6 : -3);
                     }
                     else
                     {
-                        _local_2._Str_3582 = "h_std_sd_1_0_0";
-                        this._shadowAsset = this._activeAvatarImage.getAsset(_local_2._Str_3582);
+                        _local_2.libraryAssetName = "h_std_sd_1_0_0";
+                        this._shadowAsset = this._activeAvatarImage.getAsset(_local_2.libraryAssetName);
                         _local_4 = -17;
                         _local_5 = ((this._effectJustApplied) ? 10 : -7);
                     }

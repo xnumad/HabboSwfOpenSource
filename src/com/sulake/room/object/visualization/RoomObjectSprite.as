@@ -379,12 +379,12 @@
             this._updateID++;
         }
 
-        public function get _Str_3582():String
+        public function get libraryAssetName():String
         {
             return this._libraryAssetName;
         }
 
-        public function set _Str_3582(k:String):void
+        public function set libraryAssetName(k:String):void
         {
             this._libraryAssetName = k;
         }

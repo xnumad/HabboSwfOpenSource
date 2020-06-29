@@ -96,7 +96,7 @@
             return this._assetName;
         }
 
-        public function get _Str_3582():String
+        public function get libraryAssetName():String
         {
             return this._libraryAssetName;
         }
