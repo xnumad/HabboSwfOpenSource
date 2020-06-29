@@ -474,7 +474,7 @@
             return null;
         }
 
-        private function _Str_22610():Boolean
+        private function isUserInterfaceReady():Boolean
         {
             return (this._friendBarWindow) && (!(this._friendBarWindow.disposed));
         }
@@ -705,7 +705,7 @@
 
         private function _Str_21453(k:Event):void
         {
-            if (!this._Str_22610())
+            if (!this.isUserInterfaceReady())
             {
                 this.buildUserInterface();
             }
