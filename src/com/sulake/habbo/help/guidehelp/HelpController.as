@@ -132,7 +132,7 @@
             }
         }
 
-        public function _Str_15702():void
+        public function openTourPopup():void
         {
             if (((this._tourPopup == null) && (!(this.disposed))))
             {

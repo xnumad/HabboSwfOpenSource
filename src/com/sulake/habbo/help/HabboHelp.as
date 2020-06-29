@@ -379,7 +379,7 @@
 
         public function showTourPopup():void
         {
-            this._guideHelpManager._Str_15702();
+            this._guideHelpManager.openTourPopup();
         }
 
         override protected function get dependencies():Vector.<ComponentDependency>

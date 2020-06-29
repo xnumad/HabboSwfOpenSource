@@ -57,12 +57,12 @@
             }
             this._habboHelp.tracking.trackEventLog("Help", "", "tour.new_user.show", "", this._Str_17155());
             this._habboHelp.trackGoogle("newbieTourWindow", "timer_popupShown");
-            this._Str_15702();
+            this.openTourPopup();
         }
 
-        public function _Str_15702():void
+        public function openTourPopup():void
         {
-            this._guideHelpController._Str_15702();
+            this._guideHelpController.openTourPopup();
             this._seenTourPopupDuringSession = true;
         }
 
