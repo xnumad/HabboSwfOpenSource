@@ -413,7 +413,7 @@
                 if (this._removeDimmerTimer == null)
                 {
                     this._removeDimmerTimer = new Timer((k + _local_2), 1);
-                    this._removeDimmerTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
+                    this._removeDimmerTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
                     this._removeDimmerTimer.start();
                 }
             }
@@ -498,7 +498,7 @@
             this.extensionView.refreshItemWindow();
         }
 
-        private function _Str_5360(k:TimerEvent):void
+        private function onRemoveDimmer(k:TimerEvent):void
         {
             this._Str_20582();
             if (this._view)
@@ -736,7 +736,7 @@
         {
             if (this._removeDimmerTimer)
             {
-                this._removeDimmerTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
+                this._removeDimmerTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
                 this._removeDimmerTimer.stop();
                 this._removeDimmerTimer = null;
             }

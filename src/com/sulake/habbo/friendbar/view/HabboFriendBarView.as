@@ -187,7 +187,7 @@
                 }
                 if (this._Str_2978)
                 {
-                    this._Str_2978.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
+                    this._Str_2978.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
                     this._Str_2978 = null;
                 }
                 if (this._Str_9738)
@@ -287,14 +287,14 @@
             if (this._Str_2978 == null)
             {
                 this._Str_2978 = new Timer(RoomEnterEffect.totalRunningTime, 1);
-                this._Str_2978.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
+                this._Str_2978.addEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
                 this._Str_2978.start();
             }
         }
 
-        private function _Str_5360(k:TimerEvent):void
+        private function onRemoveDimmer(k:TimerEvent):void
         {
-            this._Str_2978.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
+            this._Str_2978.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
             this._Str_2978 = null;
             var _local_2:IWindow = this._friendBarWindow.findChildByName("bar_dimmer");
             if (_local_2 != null)

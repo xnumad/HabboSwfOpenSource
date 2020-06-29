@@ -167,7 +167,7 @@
             if (this._removeDimmerTimer)
             {
                 this._removeDimmerTimer.reset();
-                this._removeDimmerTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
+                this._removeDimmerTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
                 this._removeDimmerTimer = null;
             }
             if (((this._window) && (this._window.desktop)))
@@ -307,15 +307,15 @@
                 if (this._removeDimmerTimer == null)
                 {
                     this._removeDimmerTimer = new Timer(RoomEnterEffect.totalRunningTime, 1);
-                    this._removeDimmerTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
+                    this._removeDimmerTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
                     this._removeDimmerTimer.start();
                 }
             }
         }
 
-        private function _Str_5360(k:TimerEvent):void
+        private function onRemoveDimmer(k:TimerEvent):void
         {
-            this._removeDimmerTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
+            this._removeDimmerTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onRemoveDimmer);
             this._removeDimmerTimer = null;
             var _local_2:IWindow = this._chatInputContainerWindow.findChildByName("chat_dimmer");
             if (_local_2 != null)
