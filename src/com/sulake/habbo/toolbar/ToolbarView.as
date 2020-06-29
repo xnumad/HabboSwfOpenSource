@@ -366,7 +366,7 @@
                     extension.visible = (extension.tags.indexOf(_local_3) >= 0);
                     if (extension.name == "QUESTS")
                     {
-                        extension.visible = extension.visible && (!this._toolbar._Str_9485() || !this._toolbar.getBoolean("new.identity.hide.quests"));
+                        extension.visible = extension.visible && (!this._toolbar.isNewIdentity() || !this._toolbar.getBoolean("new.identity.hide.quests"));
                         extension.visible = extension.visible && !this._toolbar.getBoolean("toolbar.hide.quests");
                     }
                     if (extension.name == "STORIES")

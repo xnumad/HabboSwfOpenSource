@@ -349,7 +349,7 @@
                     _local_4.visible = (_local_4.tags.indexOf(_local_3) >= 0);
                     if (((_local_4.name == "QUESTS") && (!(this._collapsed))))
                     {
-                        _local_4.visible = ((_local_4.visible) && ((!(this._toolbar._Str_9485())) || (!(this._toolbar.getBoolean("new.identity.hide.quests")))));
+                        _local_4.visible = ((_local_4.visible) && ((!(this._toolbar.isNewIdentity())) || (!(this._toolbar.getBoolean("new.identity.hide.quests")))));
                         _local_4.visible = ((_local_4.visible) && (!(this._toolbar.getBoolean("toolbar.hide.quests"))));
                     }
                     else
