@@ -68,7 +68,7 @@
 
     public class HabboFriendBarView extends AbstractView implements IHabboFriendBarView, IAvatarImageListener, ILinkEventTracker 
     {
-        private static const _Str_18952:int = 127;
+        private static const TAB_WIDTH:int = 127;
         private static const WINDOW_LAYER_INDEX:int = 1;
         private static const _Str_17134:Boolean = false;
         private static const _Str_9726:int = 3;
@@ -1145,7 +1145,7 @@
         {
             var k:IItemListWindow = (this._friendBarWindow.findChildByName(LIST) as IItemListWindow);
             var _local_2:IWindowContainer = (this._friendBarWindow.findChildByName(FRIENDTOOLS) as IWindowContainer);
-            var _local_3:int = (((this._friendBarWindow.width - _local_2.width) - _Str_17338) / (_Str_18952 + k.spacing));
+            var _local_3:int = (((this._friendBarWindow.width - _local_2.width) - _Str_17338) / (TAB_WIDTH + k.spacing));
             return _local_3;
         }
 
