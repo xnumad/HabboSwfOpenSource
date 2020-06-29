@@ -688,7 +688,7 @@
             _local_3.pixelSnapping = PixelSnapping.ALWAYS;
             _local_3.bitmapData = this.getBitmapData(_local_4.asset, _local_4.assetName, _local_4.flipH, _local_4.flipV, _local_4.color);
             this.updateEnterRoomEffect(_local_3, _local_4);
-            _local_3._Str_4023 = _local_4._Str_4023;
+            _local_3.alphaTolerance = _local_4.alphaTolerance;
             if (((_arg_2 < 0) || (_arg_2 >= this._spriteCount)))
             {
                 this._display.addChild(_local_3);
@@ -727,7 +727,7 @@
                 }
                 if (((_local_4._Str_17574(_local_3._Str_12289, _local_3.updateId)) || (RoomEnterEffect.isVisualizationOn())))
                 {
-                    _local_4._Str_4023 = _local_3._Str_4023;
+                    _local_4.alphaTolerance = _local_3.alphaTolerance;
                     _local_5 = (_local_3.alpha / 0xFF);
                     if (_local_4.alpha != _local_5)
                     {

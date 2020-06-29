@@ -364,12 +364,12 @@
             this._updateID++;
         }
 
-        public function get _Str_4023():int
+        public function get alphaTolerance():int
         {
             return this._Str_13928;
         }
 
-        public function set _Str_4023(k:int):void
+        public function set alphaTolerance(k:int):void
         {
             if (this._Str_13928 == k)
             {

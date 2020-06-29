@@ -48,8 +48,8 @@
         function get _Str_4918():int;
         function set objectType(_arg_1:String):void;
         function get objectType():String;
-        function get _Str_4023():int;
-        function set _Str_4023(_arg_1:int):void;
+        function get alphaTolerance():int;
+        function set alphaTolerance(_arg_1:int):void;
         function get spriteType():int;
         function set spriteType(_arg_1:int):void;
     }

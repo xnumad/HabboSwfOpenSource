@@ -26,12 +26,12 @@
             cacheAsBitmap = false;
         }
 
-        public function get _Str_4023():int
+        public function get alphaTolerance():int
         {
             return this._Str_14842;
         }
 
-        public function set _Str_4023(k:int):void
+        public function set alphaTolerance(k:int):void
         {
             this._Str_14842 = k;
         }

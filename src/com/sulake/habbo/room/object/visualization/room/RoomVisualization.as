@@ -219,11 +219,11 @@
                 {
                     if (((_local_3.type == RoomPlane.TYPE_WALL) && ((_local_3._Str_5424.length < 1) || (_local_3._Str_4968.length < 1))))
                     {
-                        _local_4._Str_4023 = AlphaTolerance.MATCH_NOTHING;
+                        _local_4.alphaTolerance = AlphaTolerance.MATCH_NOTHING;
                     }
                     else
                     {
-                        _local_4._Str_4023 = AlphaTolerance.MATCH_OPAQUE_PIXELS;
+                        _local_4.alphaTolerance = AlphaTolerance.MATCH_OPAQUE_PIXELS;
                     }
                     if (_local_3.type == RoomPlane.TYPE_WALL)
                     {

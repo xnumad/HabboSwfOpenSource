@@ -58,7 +58,7 @@
             k.asset = this._bitmap;
             k.offsetX = OFFSET_X;
             k.offsetY = OFFSET_Y;
-            k._Str_4023 = AlphaTolerance.MATCH_ALL_PIXELS;
+            k.alphaTolerance = AlphaTolerance.MATCH_ALL_PIXELS;
         }
     }
 }

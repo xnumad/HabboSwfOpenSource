@@ -1024,7 +1024,7 @@
                         _local_19 = getSprite(_local_21);
                         if (_local_19 != null)
                         {
-                            _local_19._Str_4023 = AlphaTolerance.MATCH_NOTHING;
+                            _local_19.alphaTolerance = AlphaTolerance.MATCH_NOTHING;
                             _local_19.visible = true;
                             _local_30 = this._activeAvatarImage.getLayerData(_local_23);
                             _local_31 = 0;
