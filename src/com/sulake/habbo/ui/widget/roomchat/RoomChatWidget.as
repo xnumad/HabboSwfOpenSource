@@ -240,7 +240,7 @@
             {
                 return;
             }
-            k.addEventListener(RoomWidgetChatUpdateEvent.RWCUE_EVENT_CHAT, this._Str_21452);
+            k.addEventListener(RoomWidgetChatUpdateEvent.RWCUE_EVENT_CHAT, this.onChatMessage);
             k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SIZE_CHANGED, this._Str_8873);
             k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_POSITION_CHANGED, this._Str_8873);
             k.addEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SCALE_CHANGED, this._Str_8873);
@@ -253,13 +253,13 @@
             {
                 return;
             }
-            k.removeEventListener(RoomWidgetChatUpdateEvent.RWCUE_EVENT_CHAT, this._Str_21452);
+            k.removeEventListener(RoomWidgetChatUpdateEvent.RWCUE_EVENT_CHAT, this.onChatMessage);
             k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SIZE_CHANGED, this._Str_8873);
             k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_POSITION_CHANGED, this._Str_8873);
             k.removeEventListener(_Str_3040.RWRVUE_ROOM_VIEW_SCALE_CHANGED, this._Str_8873);
         }
 
-        private function _Str_21452(k:RoomWidgetChatUpdateEvent):void
+        private function onChatMessage(k:RoomWidgetChatUpdateEvent):void
         {
             if (((RoomEnterEffect.isRunning()) && (!(k.chatType == RoomWidgetChatUpdateEvent.CHAT_TYPE_WHISPER))))
             {
