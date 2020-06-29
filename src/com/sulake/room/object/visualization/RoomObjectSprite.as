@@ -187,12 +187,12 @@
             this._objectType = k;
         }
 
-        public function get spriteType():int
+        public function get planeId():int
         {
             return this._planeId;
         }
 
-        public function set spriteType(k:int):void
+        public function set planeId(k:int):void
         {
             this._planeId = k;
         }

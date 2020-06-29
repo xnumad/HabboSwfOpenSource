@@ -50,7 +50,7 @@
         function get objectType():String;
         function get alphaTolerance():int;
         function set alphaTolerance(_arg_1:int):void;
-        function get spriteType():int;
-        function set spriteType(_arg_1:int):void;
+        function get planeId():int;
+        function set planeId(_arg_1:int):void;
     }
 }
