@@ -17,7 +17,7 @@
         public static const CHAT_TYPE_PET_SPEED_FERTILIZE:int = 9;
         public static const CHAT_TYPE_BOT_SPEAK:int = 10;
         public static const CHAT_TYPE_BOT_SHOUT:int = 11;
-        public static const _Str_19852:int = 12;
+        public static const CHAT_TYPE_BOT_WHISPER:int = 12;
 
         private var _userId:int = 0;
         private var _text:String = "";
