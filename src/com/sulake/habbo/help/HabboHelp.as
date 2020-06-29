@@ -342,7 +342,7 @@
             }
         }
 
-        public function _Str_8723():void
+        public function showSafetyBooklet():void
         {
             if (!this._safetyBookletController)
             {

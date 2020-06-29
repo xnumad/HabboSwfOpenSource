@@ -374,7 +374,7 @@
                     this.closeWindow();
                     return;
                 case "safetybooklet_link":
-                    this._habboHelp._Str_8723();
+                    this._habboHelp.showSafetyBooklet();
                     this._habboHelp.trackGoogle("helpWindow", "click_showSafetyBooklet");
                     this.closeWindow();
                     return;

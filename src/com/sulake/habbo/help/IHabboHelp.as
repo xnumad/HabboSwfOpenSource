@@ -21,7 +21,7 @@
         function _Str_8205(_arg_1:String, _arg_2:String, _arg_3:int, _arg_4:String=null):void;
         function set _Str_16063(_arg_1:Boolean):void;
         function showHabboWay():void;
-        function _Str_8723():void;
+        function showSafetyBooklet():void;
         function _Str_24154():void;
     }
 }

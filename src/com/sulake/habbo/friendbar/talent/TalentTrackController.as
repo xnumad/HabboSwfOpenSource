@@ -646,7 +646,7 @@
                     return;
                 case _Str_2821._Str_7735:
                     this._Str_8556(_arg_2.name);
-                    this._habboTalent.habboHelp._Str_8723();
+                    this._habboTalent.habboHelp.showSafetyBooklet();
                     return;
             }
         }
@@ -818,7 +818,7 @@
                     return;
                 case _Str_2821._Str_7735:
                     this._Str_8556(_arg_2.name);
-                    this._habboTalent.habboHelp._Str_8723();
+                    this._habboTalent.habboHelp.showSafetyBooklet();
                     return;
                 case _Str_2821.ROOM_ENTRY_1:
                 case _Str_2821.ROOM_ENTRY_2:
