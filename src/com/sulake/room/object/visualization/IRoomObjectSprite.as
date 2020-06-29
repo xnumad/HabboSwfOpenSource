@@ -44,8 +44,8 @@
         function set _Str_4530(_arg_1:Boolean):void;
         function get instanceId():int;
         function get updateId():int;
-        function set _Str_4918(_arg_1:int):void;
-        function get _Str_4918():int;
+        function set spriteType(_arg_1:int):void;
+        function get spriteType():int;
         function set objectType(_arg_1:String):void;
         function get objectType():String;
         function get alphaTolerance():int;

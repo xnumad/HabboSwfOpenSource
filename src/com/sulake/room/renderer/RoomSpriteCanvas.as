@@ -581,7 +581,7 @@
                                 _local_17.name = _arg_2;
                             }
                             _local_17.sprite = _local_18;
-                            if (((_local_18._Str_4918 == RoomObjectSpriteType.AVATAR) || (_local_18._Str_4918 == RoomObjectSpriteType.AVATAR_OWN)))
+                            if (((_local_18.spriteType == RoomObjectSpriteType.AVATAR) || (_local_18.spriteType == RoomObjectSpriteType.AVATAR_OWN)))
                             {
                                 _local_17.sprite._Str_3582 = ("avatar_" + k.getId());
                             }
@@ -770,7 +770,7 @@
             {
                 return;
             }
-            switch (_arg_2._Str_4918)
+            switch (_arg_2.spriteType)
             {
                 case RoomObjectSpriteType.AVATAR_OWN:
                     return;

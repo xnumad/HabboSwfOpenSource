@@ -240,7 +240,7 @@
                             _local_4.tag = ("plane@" + (_local_2 + 1));
                         }
                     }
-                    _local_4._Str_4918 = RoomObjectSpriteType.ROOM_PLANE;
+                    _local_4.spriteType = RoomObjectSpriteType.ROOM_PLANE;
                 }
                 _local_2++;
             }

@@ -973,11 +973,11 @@
                     if (this._layInside)
                     {
                         _local_19.relativeDepth = (_local_19.relativeDepth - AVATAR_OWN_DEPTH_ADJUST);
-                        _local_19._Str_4918 = RoomObjectSpriteType.AVATAR_OWN;
+                        _local_19.spriteType = RoomObjectSpriteType.AVATAR_OWN;
                     }
                     else
                     {
-                        _local_19._Str_4918 = RoomObjectSpriteType.AVATAR;
+                        _local_19.spriteType = RoomObjectSpriteType.AVATAR;
                     }
                 }
                 _local_18 = (this._Str_6142(ADDITION_ID_GAME_CLICK_TARGET) as TypingBubble);

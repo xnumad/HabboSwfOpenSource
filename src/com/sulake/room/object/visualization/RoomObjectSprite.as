@@ -172,7 +172,7 @@
             return this._filters;
         }
 
-        public function get _Str_4918():int
+        public function get spriteType():int
         {
             return this._spriteType;
         }
@@ -197,7 +197,7 @@
             this._planeId = k;
         }
 
-        public function set _Str_4918(k:int):void
+        public function set spriteType(k:int):void
         {
             this._spriteType = k;
         }
