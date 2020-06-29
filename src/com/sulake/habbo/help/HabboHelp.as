@@ -377,7 +377,7 @@
             this._habboWayQuizController._Str_14041();
         }
 
-        public function _Str_24154():void
+        public function showTourPopup():void
         {
             this._guideHelpManager._Str_15702();
         }

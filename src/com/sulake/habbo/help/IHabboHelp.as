@@ -22,6 +22,6 @@
         function set _Str_16063(_arg_1:Boolean):void;
         function showHabboWay():void;
         function showSafetyBooklet():void;
-        function _Str_24154():void;
+        function showTourPopup():void;
     }
 }
