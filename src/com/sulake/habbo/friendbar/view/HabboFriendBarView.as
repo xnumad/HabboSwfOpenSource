@@ -150,7 +150,7 @@
             return (this._friendBarWindow == null) ? 0 : ((this._Str_3312) ? _Str_6651 : this._friendBarWindow.width);
         }
 
-        public function _Str_25574(k:Boolean):void
+        public function setFriendListIconNotify(k:Boolean):void
         {
             if (this._Str_8151)
             {

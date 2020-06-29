@@ -16,7 +16,7 @@
         function getAvatarFaceBitmap(_arg_1:String):BitmapData;
         function getGroupIconBitmap(_arg_1:String):BitmapData;
         function setMessengerIconNotify(_arg_1:Boolean):void;
-        function _Str_25574(_arg_1:Boolean):void;
+        function setFriendListIconNotify(_arg_1:Boolean):void;
         function removeMessengerNotifications():void;
         function get _Str_20387():int;
         function getIconLocation(_arg_1:String):IWindowContainer;
