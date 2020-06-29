@@ -94,7 +94,7 @@
         private static const ICON_FIND_FRIENDS:String = "icon_find_friends";
         private static const ICON_ALL_FRIENDS:String = "icon_all_friends";
         private static const COLLAPSED_MARGIN:int = 150;
-        private static const _Str_16889:int = 1;
+        private static const NEW_BAR_BOTTOM_OFFSET:int = 1;
         private static const _Str_17338:int = 16;
 
         private var _friendBarData:IHabboFriendBarData;
@@ -495,7 +495,7 @@
             Token.GAMES = this._gameManager;
             var k:IAsset = assets.getAssetByName(NEW_BAR_XML);
             this._friendBarWindow = (_windowManager.buildFromXML((k.content as XML), WINDOW_LAYER_INDEX) as IWindowContainer);
-            this._friendBarWindow.y = (this._friendBarWindow.parent.height - (this._friendBarWindow.height + _Str_16889));
+            this._friendBarWindow.y = (this._friendBarWindow.parent.height - (this._friendBarWindow.height + NEW_BAR_BOTTOM_OFFSET));
             this._friendBarWindow.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_MOVE, true);
             this._friendBarWindow.procedure = this._Str_22794;
             if (USE_TOGGLE_WINDOW)
