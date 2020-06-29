@@ -21,7 +21,7 @@
 
         private var _userId:int = 0;
         private var _text:String = "";
-        private var _Str_3230:int = 0;
+        private var _chatType:int = 0;
         private var _userName:String;
         private var _links:Array;
         private var _Str_19459:Number;
@@ -39,7 +39,7 @@
             super(k, _arg_16, _arg_17);
             this._userId = _arg_2;
             this._text = _arg_3;
-            this._Str_3230 = _arg_13;
+            this._chatType = _arg_13;
             this._userName = _arg_4;
             this._Str_22055 = _arg_5;
             this._userType = _arg_6;
@@ -65,7 +65,7 @@
 
         public function get chatType():int
         {
-            return this._Str_3230;
+            return this._chatType;
         }
 
         public function get userName():String
