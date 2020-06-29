@@ -277,7 +277,7 @@
             }
         }
 
-        private function _Str_25736():void
+        private function addDimmerToFriendBar():void
         {
             var k:IWindow = _windowManager.createWindow("bar_dimmer", "", WindowType.WINDOW_TYPE_BORDER, _Str_3108._Str_9798, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, this._friendBarWindow.width, this._friendBarWindow.height), null, 0);
             k.color = 0;
@@ -510,7 +510,7 @@
             }
             if (RoomEnterEffect.isRunning())
             {
-                this._Str_25736();
+                this.addDimmerToFriendBar();
             }
             var _local_2:IWindowContainer = (this._friendBarWindow.findChildByName(FRIENDTOOLS) as IWindowContainer);
             this._Str_5894 = (_local_2.getChildByName("line") as IStaticBitmapWrapperWindow);
