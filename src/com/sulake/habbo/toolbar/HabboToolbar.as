@@ -139,16 +139,16 @@
                 _catalog = k;
             }, true, [{
                 "type":CatalogEvent.CATALOG_INITIALIZED,
-                "callback":this._Str_7785
+                "callback":this.onCatalogEvent
             }, {
                 "type":CatalogEvent.CATALOG_NOT_READY,
-                "callback":this._Str_7785
+                "callback":this.onCatalogEvent
             }, {
                 "type":CatalogEvent.CATALOG_NEW_ITEMS_SHOW,
-                "callback":this._Str_7785
+                "callback":this.onCatalogEvent
             }, {
                 "type":CatalogEvent.CATALOG_NEW_ITEMS_HIDE,
-                "callback":this._Str_7785
+                "callback":this.onCatalogEvent
             }]), new ComponentDependency(new IIDCoreLocalizationManager(), function (k:ICoreLocalizationManager):void
             {
                 _localization = k;
@@ -335,11 +335,11 @@
             }
         }
 
-        private function _Str_7785(k:CatalogEvent):void
+        private function onCatalogEvent(k:CatalogEvent):void
         {
             if (this._view)
             {
-                this._view._Str_7785(k);
+                this._view.onCatalogEvent(k);
             }
         }
 

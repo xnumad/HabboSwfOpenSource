@@ -297,7 +297,7 @@
             k.disable();
         }
 
-        public function _Str_7785(k:CatalogEvent):void
+        public function onCatalogEvent(k:CatalogEvent):void
         {
             var _local_2:IWindowContainer;
             var _local_3:String;
