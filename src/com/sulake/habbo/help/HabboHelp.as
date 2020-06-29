@@ -589,12 +589,12 @@
             return this._nameChangeController._Str_6240;
         }
 
-        public function get _Str_16063():Boolean
+        public function get outsideRoom():Boolean
         {
             return this._outsideRoom;
         }
 
-        public function set _Str_16063(k:Boolean):void
+        public function set outsideRoom(k:Boolean):void
         {
             this._outsideRoom = k;
         }

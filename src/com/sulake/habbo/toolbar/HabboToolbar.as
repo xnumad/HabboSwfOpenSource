@@ -653,7 +653,7 @@
             }
             if (this._habboHelp != null)
             {
-                this._habboHelp._Str_16063 = (!(k == HabboToolbarEnum.HTE_STATE_ROOM_VIEW));
+                this._habboHelp.outsideRoom = (!(k == HabboToolbarEnum.HTE_STATE_ROOM_VIEW));
             }
             var _local_2:HabboToolbarEvent = new HabboToolbarEvent(HabboToolbarEvent.HTE_RESIZED);
             events.dispatchEvent(_local_2);

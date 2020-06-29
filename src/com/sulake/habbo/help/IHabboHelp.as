@@ -19,7 +19,7 @@
         function _Str_14206(_arg_1:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):Boolean;
         function _Str_1131():void;
         function _Str_8205(_arg_1:String, _arg_2:String, _arg_3:int, _arg_4:String=null):void;
-        function set _Str_16063(_arg_1:Boolean):void;
+        function set outsideRoom(_arg_1:Boolean):void;
         function showHabboWay():void;
         function showSafetyBooklet():void;
         function showTourPopup():void;
