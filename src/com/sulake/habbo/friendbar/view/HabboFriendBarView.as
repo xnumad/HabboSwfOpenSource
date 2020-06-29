@@ -71,7 +71,7 @@
         private static const TAB_WIDTH:int = 127;
         private static const WINDOW_LAYER_INDEX:int = 1;
         private static const USE_TOGGLE_WINDOW:Boolean = false;
-        private static const _Str_9726:int = 3;
+        private static const MIN_TABS_WHEN_ENOUGH_SPACE:int = 3;
         private static const NEW_BAR_XML:String = "new_bar_xml";
         private static const TOGGLE_XML:String = "toggle_xml";
         private static const BORDER:String = "border";
@@ -438,9 +438,9 @@
             }
             var _local_5:int = 1;
 			var offset:int = ((this._SafeStr_16451(k, (_arg_2 + _local_5), _arg_3)) ? 1 : 0);
-            if ((this._Str_2868.length + _local_5) < (_Str_9726) - offset)
+            if ((this._Str_2868.length + _local_5) < (MIN_TABS_WHEN_ENOUGH_SPACE) - offset)
             {
-                _local_5 = Math.min((k - this._Str_2868.length), (_Str_9726 - this._Str_2868.length) - offset);
+                _local_5 = Math.min((k - this._Str_2868.length), (MIN_TABS_WHEN_ENOUGH_SPACE - this._Str_2868.length) - offset);
             }
             return _local_5;
         }
@@ -1062,7 +1062,7 @@
                         {
                             if (_local_3 > this._Str_2868.length)
                             {
-                                if (this._Str_2868.length < _Str_9726)
+                                if (this._Str_2868.length < MIN_TABS_WHEN_ENOUGH_SPACE)
                                 {
                                     k = true;
                                 }
