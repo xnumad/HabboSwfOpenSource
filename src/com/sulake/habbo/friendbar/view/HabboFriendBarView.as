@@ -70,7 +70,7 @@
     {
         private static const TAB_WIDTH:int = 127;
         private static const WINDOW_LAYER_INDEX:int = 1;
-        private static const _Str_17134:Boolean = false;
+        private static const USE_TOGGLE_WINDOW:Boolean = false;
         private static const _Str_9726:int = 3;
         private static const NEW_BAR_XML:String = "new_bar_xml";
         private static const TOGGLE_XML:String = "toggle_xml";
@@ -498,7 +498,7 @@
             this._friendBarWindow.y = (this._friendBarWindow.parent.height - (this._friendBarWindow.height + _Str_16889));
             this._friendBarWindow.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_MOVE, true);
             this._friendBarWindow.procedure = this._Str_22794;
-            if (_Str_17134)
+            if (USE_TOGGLE_WINDOW)
             {
                 k = assets.getAssetByName(TOGGLE_XML);
                 this._Str_3984 = (_windowManager.buildFromXML((k.content as XML), WINDOW_LAYER_INDEX) as IWindowContainer);
