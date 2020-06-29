@@ -93,7 +93,7 @@
         private static const LINK_FRIENDLIST:String = "link_friendlist";
         private static const ICON_FIND_FRIENDS:String = "icon_find_friends";
         private static const ICON_ALL_FRIENDS:String = "icon_all_friends";
-        private static const _Str_6651:int = 150;
+        private static const COLLAPSED_MARGIN:int = 150;
         private static const _Str_16889:int = 1;
         private static const _Str_17338:int = 16;
 
@@ -147,7 +147,7 @@
 
         public function get friendBarWidth():int
         {
-            return (this._friendBarWindow == null) ? 0 : ((this._Str_3312) ? _Str_6651 : this._friendBarWindow.width);
+            return (this._friendBarWindow == null) ? 0 : ((this._Str_3312) ? COLLAPSED_MARGIN : this._friendBarWindow.width);
         }
 
         public function setFriendListIconNotify(k:Boolean):void
@@ -1090,7 +1090,7 @@
                     }
                     if (this._Str_3312)
                     {
-                        this._friendBarWindow.x = (this._friendBarWindow.desktop.width - _Str_6651);
+                        this._friendBarWindow.x = (this._friendBarWindow.desktop.width - COLLAPSED_MARGIN);
                     }
                     else
                     {

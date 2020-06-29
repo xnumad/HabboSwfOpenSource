@@ -52,7 +52,7 @@
         private static const _Str_16891:int = 45;
         private static const _Str_8952:int = 20;
         private static const _Str_16288:int = 10;
-        private static const _Str_6651:int = 185;
+        private static const COLLAPSED_MARGIN:int = 185;
 
         private var _window:IWindowContainer;
         private var _events:IEventDispatcher;
@@ -820,7 +820,7 @@
             {
                 return 0;
             }
-            return (this._collapsed) ? _Str_6651 : (this._verticalLine.x + this._verticalLine.parent.x);
+            return (this._collapsed) ? COLLAPSED_MARGIN : (this._verticalLine.x + this._verticalLine.parent.x);
         }
     }
 }
