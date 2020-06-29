@@ -316,13 +316,13 @@
             }
         }
 
-        public function _Str_8205(k:String, _arg_2:String, _arg_3:int, _arg_4:String=null):void
+        public function showWelcomeScreen(k:String, _arg_2:String, _arg_3:int, _arg_4:String=null):void
         {
             if (((this._welcomeScreenController == null) || (this._welcomeScreenController.disposed)))
             {
                 this._welcomeScreenController = new WelcomeScreenController(this);
             }
-            this._welcomeScreenController._Str_8205(k, _arg_2, _arg_3, _arg_4);
+            this._welcomeScreenController.showWelcomeScreen(k, _arg_2, _arg_3, _arg_4);
         }
 
         public function showHabboWay():void

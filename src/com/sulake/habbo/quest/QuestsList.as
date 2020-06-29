@@ -322,7 +322,7 @@
                 if ((((_local_3) && (this._showToolbarNotification)) && (!(this._hasActiveQuest))))
                 {
                     this._showToolbarNotification = false;
-                    this._questEngine.habboHelp._Str_8205(HabboToolbarIconEnum.QUESTS, "quests.rejectnotification", WelcomeNotificationAlignment.LEFT);
+                    this._questEngine.habboHelp.showWelcomeScreen(HabboToolbarIconEnum.QUESTS, "quests.rejectnotification", WelcomeNotificationAlignment.LEFT);
                 }
             }
         }

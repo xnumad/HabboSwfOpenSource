@@ -1389,7 +1389,7 @@
             {
                 return;
             }
-            this._habboHelp._Str_8205(HabboToolbarIconEnum.GAMES, "snowwar.promotion", WelcomeNotificationAlignment.LEFT, "GAMES");
+            this._habboHelp.showWelcomeScreen(HabboToolbarIconEnum.GAMES, "snowwar.promotion", WelcomeNotificationAlignment.LEFT, "GAMES");
         }
 
         public function showLeaderboard():void

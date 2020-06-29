@@ -393,7 +393,7 @@
             if ((((!(k == null)) && (!(this._Str_19843))) && (this._Str_19735 == 0)))
             {
                 this._Str_19843 = true;
-                this._help._Str_8205(HabboToolbarIconEnum.GAMES, (k.toLowerCase() + ".promotion"), WelcomeNotificationAlignment.LEFT, "GAMES");
+                this._help.showWelcomeScreen(HabboToolbarIconEnum.GAMES, (k.toLowerCase() + ".promotion"), WelcomeNotificationAlignment.LEFT, "GAMES");
             }
         }
 

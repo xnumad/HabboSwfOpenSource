@@ -52,7 +52,7 @@
             this._disposed = true;
         }
 
-        public function _Str_8205(k:String, _arg_2:String, _arg_3:int, _arg_4:String):void
+        public function showWelcomeScreen(k:String, _arg_2:String, _arg_3:int, _arg_4:String):void
         {
             if (this._disposed)
             {

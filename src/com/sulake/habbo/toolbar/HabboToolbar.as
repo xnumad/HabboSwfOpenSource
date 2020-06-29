@@ -386,14 +386,14 @@
             }
             if (this.getIconLocation(_local_4) != null)
             {
-                this._habboHelp._Str_8205(_local_4, _local_3, _local_5, _local_6);
+                this._habboHelp.showWelcomeScreen(_local_4, _local_3, _local_5, _local_6);
             }
         }
 
         private function onShowOwnRoomPromo(k:TimerEvent):void
         {
             this._Str_21196();
-            this._habboHelp._Str_8205(HabboToolbarIconEnum.NAVIGATOR, "new.user.promo.room", WelcomeNotificationAlignment.LEFT, "NAVIGATOR_ME_TAB");
+            this._habboHelp.showWelcomeScreen(HabboToolbarIconEnum.NAVIGATOR, "new.user.promo.room", WelcomeNotificationAlignment.LEFT, "NAVIGATOR_ME_TAB");
         }
 
         private function initRoomEnterEffect():void
