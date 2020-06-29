@@ -6,7 +6,7 @@
 
     public class ExtendedSprite extends Bitmap 
     {
-        private var _Str_14842:int = 128;
+        private var _threshold:int = 128;
         private var _Str_24201:Point;
         private var _tag:String = "";
         private var _identifier:String = "";
@@ -28,12 +28,12 @@
 
         public function get alphaTolerance():int
         {
-            return this._Str_14842;
+            return this._threshold;
         }
 
         public function set alphaTolerance(k:int):void
         {
-            this._Str_14842 = k;
+            this._threshold = k;
         }
 
         public function get tag():String
@@ -160,7 +160,7 @@
 
         public function hitTest(k:int, _arg_2:int):Boolean
         {
-            if (((this._Str_14842 > 0xFF) || (bitmapData == null)))
+            if (((this._threshold > 0xFF) || (bitmapData == null)))
             {
                 return false;
             }
@@ -179,7 +179,7 @@
             {
                 _local_4 = bitmapData.getPixel32(k, _arg_2);
                 _local_4 = (_local_4 >> 24);
-                _local_3 = (_local_4 > this._Str_14842);
+                _local_3 = (_local_4 > this._threshold);
             }
             catch(e:Error)
             {
