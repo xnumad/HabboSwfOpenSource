@@ -687,7 +687,7 @@
             _local_3.smoothing = false;
             _local_3.pixelSnapping = PixelSnapping.ALWAYS;
             _local_3.bitmapData = this.getBitmapData(_local_4.asset, _local_4.assetName, _local_4.flipH, _local_4.flipV, _local_4.color);
-            this._Str_21914(_local_3, _local_4);
+            this.updateEnterRoomEffect(_local_3, _local_4);
             _local_3._Str_4023 = _local_4._Str_4023;
             if (((_arg_2 < 0) || (_arg_2 >= this._spriteCount)))
             {
@@ -744,7 +744,7 @@
                     {
                         _local_4.bitmapData = _local_6;
                     }
-                    this._Str_21914(_local_4, _local_3);
+                    this.updateEnterRoomEffect(_local_4, _local_3);
                 }
                 if (_local_4.x != _arg_2.x)
                 {
@@ -764,7 +764,7 @@
             return true;
         }
 
-        private function _Str_21914(k:ExtendedSprite, _arg_2:IRoomObjectSprite):void
+        private function updateEnterRoomEffect(k:ExtendedSprite, _arg_2:IRoomObjectSprite):void
         {
             if ((((!(RoomEnterEffect.isVisualizationOn())) || (k.bitmapData == null)) || (_arg_2 == null)))
             {
