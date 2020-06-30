@@ -8,7 +8,7 @@
     public class TargetedOfferData 
     {
         protected var _id:int;
-        protected var _Str_679:String;
+        protected var _identifier:String;
         protected var _type:int;
         protected var _Str_2495:String;
         protected var _Str_1858:String;
@@ -28,7 +28,7 @@
             if (k != null)
             {
                 this._id = k.id;
-                this._Str_679 = k.identifier;
+                this._identifier = k.identifier;
                 this._type = k.type;
                 this._Str_2495 = k.title;
                 this._Str_1858 = k.description;
@@ -49,7 +49,7 @@
         {
             this._Str_9163 = k.readInteger();
             this._id = k.readInteger();
-            this._Str_679 = k.readString();
+            this._identifier = k.readString();
             this._productCode = k.readString();
             this._Str_3594 = k.readInteger();
             this._Str_3539 = k.readInteger();
@@ -85,7 +85,7 @@
 
         public function get identifier():String
         {
-            return this._Str_679;
+            return this._identifier;
         }
 
         public function get type():int
