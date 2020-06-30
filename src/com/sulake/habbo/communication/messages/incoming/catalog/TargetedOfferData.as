@@ -10,7 +10,7 @@
         protected var _id:int;
         protected var _identifier:String;
         protected var _type:int;
-        protected var _Str_2495:String;
+        protected var _title:String;
         protected var _Str_1858:String;
         protected var _Str_2991:String;
         protected var _Str_18782:String;
@@ -30,7 +30,7 @@
                 this._id = k.id;
                 this._identifier = k.identifier;
                 this._type = k.type;
-                this._Str_2495 = k.title;
+                this._title = k.title;
                 this._Str_1858 = k.description;
                 this._Str_2991 = k.imageUrl;
                 this._Str_18782 = k._Str_13452;
@@ -57,7 +57,7 @@
             this._Str_9772 = k.readInteger();
             var _local_2:int = k.readInteger();
             this._Str_4678 = ((_local_2 > 0) ? ((_local_2 * 1000) + getTimer()) : 0);
-            this._Str_2495 = k.readString();
+            this._title = k.readString();
             this._Str_1858 = k.readString();
             this._Str_2991 = k.readString();
             this._Str_18782 = k.readString();
@@ -95,7 +95,7 @@
 
         public function get title():String
         {
-            return this._Str_2495;
+            return this._title;
         }
 
         public function get description():String

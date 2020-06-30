@@ -48,7 +48,7 @@
         protected var _Str_7240:int = 0;
         protected var _Str_8737:int = 0;
         protected var _Str_20639:Boolean = false;
-        protected var _Str_2495:String = null;
+        protected var _title:String = null;
         protected var _Str_3753:Object = null;
         protected var _Str_6195:Boolean = false;
         protected var _Str_18584:Boolean = false;
@@ -132,12 +132,12 @@
 
         public function set title(k:String):void
         {
-            this._Str_2495 = k;
+            this._title = k;
         }
 
         public function get title():String
         {
-            return this._Str_2495;
+            return this._title;
         }
 
         public function get config():Config

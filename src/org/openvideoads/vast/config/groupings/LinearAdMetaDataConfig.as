@@ -4,7 +4,7 @@
 
     public class LinearAdMetaDataConfig extends Debuggable 
     {
-        protected var _Str_2495:String = null;
+        protected var _title:String = null;
         protected var _Str_1858:String = null;
 
         public function LinearAdMetaDataConfig(k:Object=null)
@@ -18,7 +18,7 @@
             {
                 if (k.title != undefined)
                 {
-                    this._Str_2495 = k.title;
+                    this._title = k.title;
                 }
                 if (k.description != undefined)
                 {
@@ -29,17 +29,17 @@
 
         public function get title():String
         {
-            return this._Str_2495;
+            return this._title;
         }
 
         public function set title(k:String):void
         {
-            this._Str_2495 = k;
+            this._title = k;
         }
 
         public function _Str_24997():Boolean
         {
-            return !(this._Str_2495 == null);
+            return !(this._title == null);
         }
 
         public function get description():String
@@ -68,7 +68,7 @@
             var _local_4:String;
             if (this._Str_24997())
             {
-                _local_4 = this._Str_14334(this._Str_2495, "__duration__", _arg_2);
+                _local_4 = this._Str_14334(this._title, "__duration__", _arg_2);
                 _local_4 = this._Str_14334(_local_4, "__index__", new String(_arg_3));
                 return _local_4;
             }

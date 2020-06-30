@@ -16,14 +16,14 @@
         private var _habboFriendList:HabboFriendList;
         private var _Str_3245:IFrameWindow;
         private var _Str_4188:String;
-        private var _Str_2495:String;
+        private var _title:String;
         private var _disposed:Boolean;
 
         public function AlertView(k:HabboFriendList, _arg_2:String, _arg_3:String=null)
         {
             this._habboFriendList = k;
             this._Str_4188 = _arg_2;
-            this._Str_2495 = _arg_3;
+            this._title = _arg_3;
         }
 
         public function show():void
@@ -34,9 +34,9 @@
                 k.dispose();
             }
             this._Str_3245 = this._Str_23510();
-            if (this._Str_2495 != null)
+            if (this._title != null)
             {
-                this._Str_3245.caption = this._Str_2495;
+                this._Str_3245.caption = this._title;
             }
             this.setupContent(this._Str_3245.content);
             var _local_2:Rectangle = Util._Str_10228(this._habboFriendList.view.mainWindow, this._Str_3245.width, this._Str_3245.height);

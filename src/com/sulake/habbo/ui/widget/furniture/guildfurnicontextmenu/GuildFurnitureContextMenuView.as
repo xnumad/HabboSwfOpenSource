@@ -75,7 +75,7 @@
                     _local_1.toolTipCaption = this.widget.localizations.getLocalization("infostand.profile.link.tooltip", "Click to view profile");
                     _local_1._Str_3099 = 100;
                 }
-                _window.findChildByName("name").caption = _Str_2495;
+                _window.findChildByName("name").caption = _title;
                 _window.visible = false;
                 activeView = _window;
                 this._Str_2771();

@@ -14,14 +14,14 @@
         private var _navigator:IHabboTransitionalNavigator;
         protected var _Str_4389:IFrameWindow;
         protected var _Str_4188:String;
-        protected var _Str_2495:String;
+        protected var _title:String;
         protected var _disposed:Boolean;
 
         public function AlertView(k:IHabboTransitionalNavigator, _arg_2:String, _arg_3:String=null)
         {
             this._navigator = k;
             this._Str_4188 = _arg_2;
-            this._Str_2495 = _arg_3;
+            this._title = _arg_3;
         }
 
         public static function _Str_22232(k:IWindow):AlertView
@@ -49,9 +49,9 @@
                 k.dispose();
             }
             this._Str_4389 = this._Str_24090();
-            if (this._Str_2495 != null)
+            if (this._title != null)
             {
-                this._Str_4389.caption = this._Str_2495;
+                this._Str_4389.caption = this._title;
             }
             this.setupAlertWindow(this._Str_4389);
             var _local_2:Rectangle = Util._Str_10228(this._Str_4389.desktop, this._Str_4389.width, this._Str_4389.height);

@@ -15,7 +15,7 @@
         protected var _Str_4904:String = "http";
         protected var _Str_20147:String = null;
         protected var _Str_1858:String = "Not available";
-        protected var _Str_2495:String = "";
+        protected var _title:String = "";
         protected var _Str_1676:String = "Not available";
         protected var _Str_18387:String = "Not available";
         protected var _Str_18379:String = "Not available";
@@ -176,12 +176,12 @@
 
         public function set title(k:String):void
         {
-            this._Str_2495 = k;
+            this._title = k;
         }
 
         public function get title():String
         {
-            return this._Str_2495;
+            return this._title;
         }
 
         public function set link(k:String):void
@@ -484,7 +484,7 @@
 
         public function toString(k:Boolean=false):String
         {
-            return (((((((((((((((((((((((((((((("{ type: " + ((this.isInteractive()) ? "interactive" : ((this.isRTMP()) ? "rtmp" : "http"))) + ", stream: (") + this._Str_1430) + ")") + ", played: ") + this._Str_5596) + ", overrideStartTimeSeconds: ") + this._Str_5542) + ", provider: ") + this._Str_4904) + ", description: ") + this._Str_1858) + ", title: ") + this._Str_2495) + ", link: ") + this._Str_1676) + ", guid: ") + this._Str_18387) + ", publishDate: ") + this._Str_18379) + ", startTime: ") + this._Str_990) + ", duration: ") + this._Str_2467) + ", url: ") + this._Str_577) + ", filename: ") + this._Str_1673) + ", mimeType: ") + this._Str_2230) + "}";
+            return (((((((((((((((((((((((((((((("{ type: " + ((this.isInteractive()) ? "interactive" : ((this.isRTMP()) ? "rtmp" : "http"))) + ", stream: (") + this._Str_1430) + ")") + ", played: ") + this._Str_5596) + ", overrideStartTimeSeconds: ") + this._Str_5542) + ", provider: ") + this._Str_4904) + ", description: ") + this._Str_1858) + ", title: ") + this._title) + ", link: ") + this._Str_1676) + ", guid: ") + this._Str_18387) + ", publishDate: ") + this._Str_18379) + ", startTime: ") + this._Str_990) + ", duration: ") + this._Str_2467) + ", url: ") + this._Str_577) + ", filename: ") + this._Str_1673) + ", mimeType: ") + this._Str_2230) + "}";
         }
     }
 }

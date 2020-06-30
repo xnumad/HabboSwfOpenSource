@@ -9,7 +9,7 @@
     public class MediaRSSPlaylist extends DefaultPlaylist 
     {
         protected var _Str_1858:String = "Not available";
-        protected var _Str_2495:String = "";
+        protected var _title:String = "";
         protected var _Str_1676:String = "Not available";
 
         public function MediaRSSPlaylist(k:StreamSequence=null, _arg_2:ProvidersConfigGroup=null, _arg_3:ProvidersConfigGroup=null)
@@ -33,7 +33,7 @@
                 }
                 if (_local_3.channel.title != null)
                 {
-                    this._Str_2495 = _local_3.channel.title.text();
+                    this._title = _local_3.channel.title.text();
                 }
                 if (_local_3.channel.link != null)
                 {
@@ -74,7 +74,7 @@
             _local_2 = (_local_2 + '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">');
             _local_2 = (_local_2 + "<channel>");
             _local_2 = (_local_2 + (("<description>" + this._Str_1858) + "</description>"));
-            _local_2 = (_local_2 + (("<title>" + this._Str_2495) + "</title>"));
+            _local_2 = (_local_2 + (("<title>" + this._title) + "</title>"));
             _local_2 = (_local_2 + (("<link>" + this._Str_1676) + "</link>"));
             var _local_3:int;
             while (_local_3 < _Str_2519.length)

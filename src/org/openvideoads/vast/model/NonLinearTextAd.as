@@ -4,7 +4,7 @@
 
     public class NonLinearTextAd extends NonLinearVideoAd 
     {
-        protected var _Str_2495:String = null;
+        protected var _title:String = null;
         protected var _Str_1858:String = null;
         protected var _Str_20556:String = null;
 
@@ -24,7 +24,7 @@
             {
                 if (k.Title != undefined)
                 {
-                    this._Str_2495 = k.Title.text();
+                    this._title = k.Title.text();
                 }
                 if (k.Description != undefined)
                 {
@@ -39,7 +39,7 @@
 
         public function get title():String
         {
-            return this._Str_2495;
+            return this._title;
         }
 
         public function get description():String

@@ -398,7 +398,7 @@
             {
                 return this._Str_2384.adTitle;
             }
-            return _Str_2495;
+            return _title;
         }
 
         public function get adServerType():String

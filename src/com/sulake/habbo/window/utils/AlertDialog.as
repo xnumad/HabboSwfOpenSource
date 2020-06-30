@@ -21,7 +21,7 @@
         protected static const _ALERT_TEXT_SUMMARY:String = "_alert_text_summary";
         private static var _counter:uint = 0;
 
-        protected var _Str_2495:String = "";
+        protected var _title:String = "";
         protected var _Str_4444:String = "";
         protected var _disposed:Boolean = false;
         protected var _Str_2715:Function = null;
@@ -175,16 +175,16 @@
 
         public function set title(k:String):void
         {
-            this._Str_2495 = k;
+            this._title = k;
             if (this.window)
             {
-                this.window.caption = this._Str_2495;
+                this.window.caption = this._title;
             }
         }
 
         public function get title():String
         {
-            return this._Str_2495;
+            return this._title;
         }
 
         public function set summary(k:String):void

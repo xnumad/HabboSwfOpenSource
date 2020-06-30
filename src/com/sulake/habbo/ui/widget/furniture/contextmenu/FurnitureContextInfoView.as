@@ -7,7 +7,7 @@
     public class FurnitureContextInfoView extends ButtonMenuView 
     {
         protected var _Str_2731:IRoomObject;
-        protected var _Str_2495:String;
+        protected var _title:String;
 
         public function FurnitureContextInfoView(k:IContextMenuParentWidget)
         {
@@ -17,7 +17,7 @@
         public static function setup(k:FurnitureContextInfoView, _arg_2:IRoomObject, _arg_3:String=""):void
         {
             k._Str_2731 = _arg_2;
-            k._Str_2495 = _arg_3;
+            k._title = _arg_3;
             _Str_8532(k);
         }
 
