@@ -301,12 +301,12 @@
             }
         }
 
-        public function set _Str_16605(k:Point):void
+        public function set addViewOffset(k:Point):void
         {
             this._addViewOffset = k;
         }
 
-        public function get _Str_16605():Point
+        public function get addViewOffset():Point
         {
             return this._addViewOffset;
         }

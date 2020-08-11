@@ -195,7 +195,7 @@
                 {
                     this._roomPreviewer.zoomOut();
                 }
-                this._roomPreviewer._Str_16605 = new Point(this._offsetX, this._offsetY);
+                this._roomPreviewer.addViewOffset = new Point(this._offsetX, this._offsetY);
                 k = this._roomCanvas.getDisplayObject();
                 k.scaleX = (k.scaleY = this.zoom);
                 k.x = this.offsetX;

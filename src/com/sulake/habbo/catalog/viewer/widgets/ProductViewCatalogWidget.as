@@ -355,7 +355,7 @@
                         }
                         if (((!(_local_6 == null)) && (!(this._Str_3605 == null))))
                         {
-                            _local_6._Str_16605.y = ((_local_7.isUniqueLimitedItem) ? -15 : 0);
+                            _local_6.addViewOffset.y = ((_local_7.isUniqueLimitedItem) ? -15 : 0);
                             _local_6.disableUpdate = false;
                         }
                         switch (_local_7.productType)
