@@ -6,7 +6,7 @@
     public class AvailabilityTimeMessageParser implements IMessageParser
     {
         private var _isOpen:Boolean;
-        private var _Str_16145:int;
+        private var _minutesUntilChange:int;
 
 
         public function get isOpen():Boolean
@@ -16,20 +16,20 @@
 
         public function get _Str_26363():int
         {
-            return this._Str_16145;
+            return this._minutesUntilChange;
         }
 
         public function flush():Boolean
         {
             this._isOpen = false;
-            this._Str_16145 = 0;
+            this._minutesUntilChange = 0;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._isOpen = (k.readInteger() > 0);
-            this._Str_16145 = k.readInteger();
+            this._minutesUntilChange = k.readInteger();
             return true;
         }
     }
