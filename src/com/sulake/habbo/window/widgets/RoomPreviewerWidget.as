@@ -221,7 +221,7 @@
 
         private function _Str_24167(k:WindowMouseEvent):void
         {
-            this._roomPreviewer._Str_15499();
+            this._roomPreviewer.changeRoomObjectState();
         }
 
         public function get roomPreviewer():RoomPreviewer

@@ -2335,10 +2335,10 @@
         private function changeObjectState(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:Boolean):void
         {
             var _local_6:int = this._roomEngine.getRoomObjectCategory(_arg_3);
-            this._Str_15499(k, _arg_2, _local_6, _arg_4, _arg_5);
+            this.changeRoomObjectState(k, _arg_2, _local_6, _arg_4, _arg_5);
         }
 
-        private function _Str_15499(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:Boolean):Boolean
+        private function changeRoomObjectState(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:Boolean):Boolean
         {
             if (((!(this._roomEngine == null)) && (!(this._roomEngine.connection == null))))
             {

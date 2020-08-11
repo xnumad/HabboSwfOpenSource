@@ -196,7 +196,7 @@
                 case WindowMouseEvent.CLICK:
                     if (this._habboCatalog.roomPreviewer != null)
                     {
-                        this._habboCatalog.roomPreviewer._Str_15499();
+                        this._habboCatalog.roomPreviewer.changeRoomObjectState();
                     }
                     return;
                 case WindowMouseEvent.UP:

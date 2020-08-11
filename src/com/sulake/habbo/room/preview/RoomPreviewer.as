@@ -242,7 +242,7 @@
             }
         }
 
-        public function _Str_15499():void
+        public function changeRoomObjectState():void
         {
             if (this.isRoomEngineReady)
             {
