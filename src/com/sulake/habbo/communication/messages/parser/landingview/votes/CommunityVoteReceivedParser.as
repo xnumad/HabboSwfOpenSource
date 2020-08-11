@@ -19,7 +19,7 @@
             return true;
         }
 
-        public function get _Str_23568():Boolean
+        public function get acknowledged():Boolean
         {
             return this._acknowledged;
         }

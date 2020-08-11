@@ -65,7 +65,7 @@
 
         private function onInfo(k:CommunityGoalVoteMessageEvent):void
         {
-            if (k.getParser()._Str_23568)
+            if (k.getParser().acknowledged)
             {
                 this.hideVoteButtons();
             }
