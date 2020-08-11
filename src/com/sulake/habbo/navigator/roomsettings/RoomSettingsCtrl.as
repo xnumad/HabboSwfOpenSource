@@ -310,28 +310,28 @@
                 return;
             }
             this._Str_15710 = 0;
-            if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_18222)
+            if (_arg_2 == RoomSettingsSaveErrorMessageParser.ERROR_INVALID_NAME)
             {
                 this._Str_5306(_Str_5300);
                 this._Str_5666.displayError("${navigator.roomsettings.roomnameismandatory}");
             }
             else
             {
-                if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_17186)
+                if (_arg_2 == RoomSettingsSaveErrorMessageParser.ERROR_UNACCEPTABLE_NAME)
                 {
                     this._Str_5306(_Str_5300);
                     this._Str_5666.displayError("${navigator.roomsettings.unacceptablewords}");
                 }
                 else
                 {
-                    if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_18833)
+                    if (_arg_2 == RoomSettingsSaveErrorMessageParser.ERROR_UNACCEPTABLE_DESCRIPTION)
                     {
                         this._Str_5306(_Str_5300);
                         this._Str_7105.displayError("${navigator.roomsettings.unacceptablewords}");
                     }
                     else
                     {
-                        if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_16822)
+                        if (_arg_2 == RoomSettingsSaveErrorMessageParser.ERROR_INVALID_TAG)
                         {
                             this._Str_5306(_Str_5300);
                             this._Str_9153(this._tag1Input, _arg_3, "${navigator.roomsettings.unacceptablewords}");
@@ -339,7 +339,7 @@
                         }
                         else
                         {
-                            if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_17217)
+                            if (_arg_2 == RoomSettingsSaveErrorMessageParser.ERROR_NON_USER_CHOOSABLE_TAG)
                             {
                                 this._Str_5306(_Str_5300);
                                 this._Str_9153(this._tag1Input, _arg_3, "${navigator.roomsettings.nonuserchoosabletag}");
@@ -347,14 +347,14 @@
                             }
                             else
                             {
-                                if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_16354)
+                                if (_arg_2 == RoomSettingsSaveErrorMessageParser.ERROR_INVALID_PASSWORD)
                                 {
                                     this._Str_5306(_Str_7004);
                                     this._Str_4194.displayError("${navigator.roomsettings.passwordismandatory}");
                                 }
                                 else
                                 {
-                                    if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_16136)
+                                    if (_arg_2 == RoomSettingsSaveErrorMessageParser.ERROR_TOO_MANY_CHARACTERS_IN_TAG)
                                     {
                                         this._Str_5306(_Str_5300);
                                         this._Str_9153(this._tag1Input, _arg_3, "${navigator.roomsettings.toomanycharacters}");

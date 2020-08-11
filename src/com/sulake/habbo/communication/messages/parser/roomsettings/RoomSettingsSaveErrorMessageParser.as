@@ -5,19 +5,19 @@
 
     public class RoomSettingsSaveErrorMessageParser implements IMessageParser
     {
-        public static const _Str_20946:int = 1;
-        public static const _Str_20471:int = 2;
-        public static const _Str_20704:int = 3;
-        public static const _Str_20726:int = 4;
-        public static const _Str_16354:int = 5;
-        public static const _Str_19394:int = 6;
-        public static const _Str_18222:int = 7;
-        public static const _Str_17186:int = 8;
-        public static const _Str_20117:int = 9;
-        public static const _Str_18833:int = 10;
-        public static const _Str_16822:int = 11;
-        public static const _Str_17217:int = 12;
-        public static const _Str_16136:int = 13;
+        public static const ERROR_ROOM_NOT_FOUND:int = 1;
+        public static const ERROR_NOT_OWNER:int = 2;
+        public static const ERROR_INVALID_DOOR_MODE:int = 3;
+        public static const ERROR_INVALID_USER_LIMIT:int = 4;
+        public static const ERROR_INVALID_PASSWORD:int = 5;
+        public static const ERROR_INVALID_CATEGORY:int = 6;
+        public static const ERROR_INVALID_NAME:int = 7;
+        public static const ERROR_UNACCEPTABLE_NAME:int = 8;
+        public static const ERROR_INVALID_DESCRIPTION:int = 9;
+        public static const ERROR_UNACCEPTABLE_DESCRIPTION:int = 10;
+        public static const ERROR_INVALID_TAG:int = 11;
+        public static const ERROR_NON_USER_CHOOSABLE_TAG:int = 12;
+        public static const ERROR_TOO_MANY_CHARACTERS_IN_TAG:int = 13;
 
         private var _roomId:int;
         private var _errorCode:int;
