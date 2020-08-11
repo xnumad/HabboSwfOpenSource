@@ -613,7 +613,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10596;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetItemDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemovePetFromFlatMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10852;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.CompostPlantMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveSaddleFromPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12057;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetRidingPermissionMessageComposer;
@@ -1899,7 +1899,7 @@
             OUTGOING_PACKETS[3786] = _Str_12273;
             OUTGOING_PACKETS[3802] = AcceptGameInviteMessageComposer;
             OUTGOING_PACKETS[3817] = _Str_4893;
-            OUTGOING_PACKETS[3835] = _Str_10852;
+            OUTGOING_PACKETS[3835] = CompostPlantMessageComposer;
             OUTGOING_PACKETS[3839] = _Str_7290;
             OUTGOING_PACKETS[3842] = _Str_5691;
             OUTGOING_PACKETS[3845] = _Str_12206;

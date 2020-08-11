@@ -47,7 +47,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetBreedingPermissionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveSaddleFromPetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.HarvestPetMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10852;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.CompostPlantMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10067;
     import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_10642;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
@@ -480,7 +480,7 @@
 
         public function compostPlant(k:int):void
         {
-            this._connection.send(new _Str_10852(k));
+            this._connection.send(new CompostPlantMessageComposer(k));
         }
 
         public function requestPetCommands(k:int):void
