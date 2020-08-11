@@ -4,21 +4,21 @@
 
     public class RoomUsersClassificationMessageComposer implements IMessageComposer
     {
-        private var _Str_7397:String;
+        private var userClassType:String;
 
         public function RoomUsersClassificationMessageComposer(k:String)
         {
-            this._Str_7397 = k;
+            this.userClassType = k;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_7397];
+            return [this.userClassType];
         }
 
         public function dispose():void
         {
-            this._Str_7397 = null;
+            this.userClassType = null;
         }
     }
 }
