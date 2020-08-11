@@ -5,13 +5,13 @@
 
     public class MarketplaceCanMakeOfferResultParser implements IMessageParser
     {
-        private var _Str_19825:int;
+        private var _tokenCount:int;
         private var _result:int;
 
 
         public function get _Str_24601():int
         {
-            return this._Str_19825;
+            return this._tokenCount;
         }
 
         public function get resultCode():int
@@ -27,7 +27,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._result = k.readInteger();
-            this._Str_19825 = k.readInteger();
+            this._tokenCount = k.readInteger();
             return true;
         }
     }
