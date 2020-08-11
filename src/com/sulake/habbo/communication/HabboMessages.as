@@ -709,7 +709,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.GetGuildFurniContextMenuInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10710;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRandomStateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinFigureComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10913;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerGetPresetsMessageComposer;
@@ -1884,7 +1884,7 @@
             OUTGOING_PACKETS[3604] = AcceptQuestMessageComposer;
             OUTGOING_PACKETS[3605] = _Str_12224;
             OUTGOING_PACKETS[3608] = _Str_5686;
-            OUTGOING_PACKETS[3617] = _Str_10710;
+            OUTGOING_PACKETS[3617] = SetRandomStateMessageComposer;
             OUTGOING_PACKETS[3632] = _Str_16470;
             OUTGOING_PACKETS[3637] = MuteAllInRoomComposer;
             OUTGOING_PACKETS[3666] = SetItemDataMessageComposer;

@@ -77,7 +77,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10710;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRandomStateMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.UseWallItemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11935;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11639;
@@ -2350,7 +2350,7 @@
                     }
                     else
                     {
-                        this._roomEngine.connection.send(new _Str_10710(_arg_2, _arg_4));
+                        this._roomEngine.connection.send(new SetRandomStateMessageComposer(_arg_2, _arg_4));
                     }
                 }
                 else
