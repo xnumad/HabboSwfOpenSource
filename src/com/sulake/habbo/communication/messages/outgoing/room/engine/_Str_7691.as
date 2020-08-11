@@ -5,12 +5,12 @@
     public class _Str_7691 implements IMessageComposer 
     {
         private var _petId:int;
-        private var _Str_19733:Boolean;
+        private var _mounted:Boolean;
 
         public function _Str_7691(k:int, _arg_2:Boolean)
         {
             this._petId = k;
-            this._Str_19733 = _arg_2;
+            this._mounted = _arg_2;
         }
 
         public function dispose():void
@@ -19,7 +19,7 @@
 
         public function getMessageArray():Array
         {
-            return [this._petId, this._Str_19733];
+            return [this._petId, this._mounted];
         }
     }
 }
