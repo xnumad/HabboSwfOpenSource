@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7268;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11384;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_3509;
+    import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpTopicData;
 
     public class IssueHandler implements ITrackedWindow, IIssueHandler, IUpdateReceiver 
     {
@@ -415,7 +415,7 @@
         private function _Str_17163():void
         {
             var _local_5:CallForHelpCategoryData;
-            var _local_6:_Str_3509;
+            var _local_6:CallForHelpTopicData;
             this._topicDropdown = (this._window.findChildByName("cfh_topics") as IDropMenuWindow);
             var k:int = -1;
             var _local_2:int = this._issueBundle._Str_5216()._Str_7437;

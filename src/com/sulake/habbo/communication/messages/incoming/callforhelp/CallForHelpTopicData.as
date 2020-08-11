@@ -3,13 +3,13 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.INamed;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3509 implements INamed
+    public class CallForHelpTopicData implements INamed
     {
         private var _name:String;
         private var _id:int;
         private var _Str_18308:String;
 
-        public function _Str_3509(k:IMessageDataWrapper)
+        public function CallForHelpTopicData(k:IMessageDataWrapper)
         {
             this._name = k.readString();
             this._id = k.readInteger();

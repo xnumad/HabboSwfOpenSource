@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import __AS3__.vec.Vector;
     import com.sulake.core.window.components.IItemListWindow;
-    import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_3509;
+    import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpTopicData;
     import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -60,7 +60,7 @@
         private var _reasonPrototype:IWindowContainer;
         private var _chatPrototype:IWindowContainer;
         private var _currentContainer:String = "start_container";
-        private var _currentTopic:_Str_3509;
+        private var _currentTopic:CallForHelpTopicData;
         private var _message:String;
         private var _reportedUserName:String;
         private var _contentModerationType:int = -1;
@@ -544,10 +544,10 @@
 
         private function _Str_23777(k:String):Boolean
         {
-            var _local_2:Vector.<_Str_3509>;
+            var _local_2:Vector.<CallForHelpTopicData>;
             var _local_3:CallForHelpCategoryData;
             var _local_4:int;
-            var _local_5:_Str_3509;
+            var _local_5:CallForHelpTopicData;
             var _local_6:IWindowContainer;
             var _local_7:ITextWindow;
             for each (_local_3 in this._habboHelp._Str_9001)
@@ -767,10 +767,10 @@
             return true;
         }
 
-        private function _Str_21261(k:String):_Str_3509
+        private function _Str_21261(k:String):CallForHelpTopicData
         {
             var _local_2:CallForHelpCategoryData;
-            var _local_3:_Str_3509;
+            var _local_3:CallForHelpTopicData;
             for each (_local_2 in this._habboHelp._Str_9001)
             {
                 for each (_local_3 in _local_2._Str_14841)

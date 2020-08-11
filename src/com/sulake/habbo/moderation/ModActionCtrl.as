@@ -8,7 +8,7 @@
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpCategoryData;
-    import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_3509;
+    import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpTopicData;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -151,7 +151,7 @@
         private function _Str_17163():void
         {
             var _local_3:CallForHelpCategoryData;
-            var _local_4:_Str_3509;
+            var _local_4:CallForHelpTopicData;
             this._Str_3643 = IDropMenuWindow(this._frame.findChildByName("cfh_topics"));
             this._Str_3643.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_17950);
             this._Str_5384 = [];
