@@ -1741,7 +1741,7 @@
                 return false;
             }
             var _local_9:Vector3d = new Vector3d(_arg_8);
-            var _local_10:Vector3d = this._Str_25568(k, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_2);
+            var _local_10:Vector3d = this.validateWallItemLocation(k, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_2);
             if (_local_10 == null)
             {
                 return false;
@@ -1884,7 +1884,7 @@
             return null;
         }
 
-        private function _Str_25568(k:IRoomObject, _arg_2:IVector3d, _arg_3:IVector3d, _arg_4:IVector3d, _arg_5:Number, _arg_6:Number, _arg_7:SelectedRoomObjectData):Vector3d
+        private function validateWallItemLocation(k:IRoomObject, _arg_2:IVector3d, _arg_3:IVector3d, _arg_4:IVector3d, _arg_5:Number, _arg_6:Number, _arg_7:SelectedRoomObjectData):Vector3d
         {
             if (((((((k == null) || (k.getModel() == null)) || (_arg_2 == null)) || (_arg_3 == null)) || (_arg_4 == null)) || (_arg_7 == null)))
             {
