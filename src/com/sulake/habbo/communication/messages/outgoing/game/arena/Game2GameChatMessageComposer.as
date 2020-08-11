@@ -4,21 +4,21 @@
 
     public class Game2GameChatMessageComposer implements IMessageComposer
     {
-        private var _Str_17731:String;
+        private var _chatLine:String;
 
         public function Game2GameChatMessageComposer(k:String)
         {
-            this._Str_17731 = k;
+            this._chatLine = k;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_17731];
+            return [this._chatLine];
         }
 
         public function dispose():void
         {
-            this._Str_17731 = null;
+            this._chatLine = null;
         }
     }
 }
