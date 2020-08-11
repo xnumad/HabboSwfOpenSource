@@ -350,10 +350,10 @@
                     this.handleObjectDimmerStateEvent(k, _arg_2);
                     return;
                 case RoomObjectMoveEvent.ROME_POSITION_CHANGED:
-                    this.handleSelectedObjectRemove(k, _arg_2);
+                    this.handleSelectedObjectMove(k, _arg_2);
                     return;
                 case RoomObjectMoveEvent.ROME_OBJECT_REMOVED:
-                    this._Str_25365(k, _arg_2);
+                    this.handleSelectedObjectRemove(k, _arg_2);
                     return;
                 case RoomObjectWidgetRequestEvent.OPEN_WIDGET:
                 case RoomObjectWidgetRequestEvent.CLOSE_WIDGET:
@@ -442,7 +442,7 @@
                     return;
                 case RoomObjectDataRequestEvent.RODRE_CURRENT_USER_ID:
                 case RoomObjectDataRequestEvent.RODRE_URL_PREFIX:
-                    this.handleSelectedObjectMove(k, _arg_2);
+                    this.handleRoomObjectDataRequestEvent(k, _arg_2);
                     return;
                 default:
                     Logger.log("*** Unhandled room object event in RoomObjectEventHandler::handleRoomObjectEvent !!! ***");
@@ -1658,7 +1658,7 @@
             }
         }
 
-        private function handleSelectedObjectMove(k:RoomObjectEvent, _arg_2:int):void
+        private function handleRoomObjectDataRequestEvent(k:RoomObjectEvent, _arg_2:int):void
         {
             if ((((this._roomEngine == null) || (k == null)) || (k.object == null)))
             {
@@ -1676,7 +1676,7 @@
             }
         }
 
-        private function handleSelectedObjectRemove(k:RoomObjectEvent, _arg_2:int):void
+        private function handleSelectedObjectMove(k:RoomObjectEvent, _arg_2:int):void
         {
             var _local_8:IVector3d;
             var _local_9:RoomObjectUpdateMessage;
@@ -1697,7 +1697,7 @@
             }
         }
 
-        private function _Str_25365(k:RoomObjectEvent, _arg_2:int):void
+        private function handleSelectedObjectRemove(k:RoomObjectEvent, _arg_2:int):void
         {
             this.setSelectedAvatar(_arg_2, 0, false);
         }
