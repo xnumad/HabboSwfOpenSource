@@ -2311,7 +2311,7 @@
         {
             if (this._roomObjectEventHandler != null)
             {
-                return this._roomObjectEventHandler.updateObjectWallItemData(this._activeRoomId, k, _arg_2, _arg_3);
+                return this._roomObjectEventHandler.modifyRoomObject(this._activeRoomId, k, _arg_2, _arg_3);
             }
             return false;
         }

@@ -532,7 +532,7 @@
                     {
                         if (_local_5 != null)
                         {
-                            this.updateObjectWallItemData(_arg_2, _local_5.id, _local_5.category, RoomObjectOperationEnum.OBJECT_MOVE_TO);
+                            this.modifyRoomObject(_arg_2, _local_5.id, _local_5.category, RoomObjectOperationEnum.OBJECT_MOVE_TO);
                         }
                     }
                     else
@@ -541,7 +541,7 @@
                         {
                             if (((!(_local_5 == null)) && (_local_7 == RoomObjectUserTypes.MONSTERPLANT)))
                             {
-                                this.updateObjectWallItemData(_arg_2, _local_5.id, _local_5.category, RoomObjectOperationEnum.OBJECT_MOVE_TO);
+                                this.modifyRoomObject(_arg_2, _local_5.id, _local_5.category, RoomObjectOperationEnum.OBJECT_MOVE_TO);
                             }
                             if (_local_9 != null)
                             {
@@ -597,19 +597,19 @@
                         {
                             if (((((k.ctrlKey) && (!(k.altKey))) && (!(k.shiftKey))) && (_local_7 == RoomObjectUserTypes.RENTABLE_BOT)))
                             {
-                                this.updateObjectWallItemData(_arg_2, _local_6, _local_8, RoomObjectOperationEnum.OBJECT_PICKUP_BOT);
+                                this.modifyRoomObject(_arg_2, _local_6, _local_8, RoomObjectOperationEnum.OBJECT_PICKUP_BOT);
                             }
                             else
                             {
                                 if (((((k.ctrlKey) && (!(k.altKey))) && (!(k.shiftKey))) && (_local_7 == RoomObjectUserTypes.MONSTERPLANT)))
                                 {
-                                    this.updateObjectWallItemData(_arg_2, _local_6, _local_8, RoomObjectOperationEnum.OBJECT_PICKUP_PET);
+                                    this.modifyRoomObject(_arg_2, _local_6, _local_8, RoomObjectOperationEnum.OBJECT_PICKUP_PET);
                                 }
                                 else
                                 {
                                     if (((((!(k.ctrlKey)) && (!(k.altKey))) && (k.shiftKey)) && (_local_7 == RoomObjectUserTypes.MONSTERPLANT)))
                                     {
-                                        this.updateObjectWallItemData(_arg_2, _local_6, _local_8, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
+                                        this.modifyRoomObject(_arg_2, _local_6, _local_8, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
                                     }
                                     else
                                     {
@@ -646,7 +646,7 @@
                                     {
                                         if ((((k.ctrlKey) && (!(k.altKey))) && (!(k.shiftKey))))
                                         {
-                                            this.updateObjectWallItemData(_arg_2, _local_6, _local_8, RoomObjectOperationEnum.OBJECT_PICKUP);
+                                            this.modifyRoomObject(_arg_2, _local_6, _local_8, RoomObjectOperationEnum.OBJECT_PICKUP);
                                         }
                                     }
                                     if (!this._roomEngine.getActiveRoomIsPlayingGame())
@@ -2063,7 +2063,7 @@
             return true;
         }
 
-        public function updateObjectWallItemData(k:int, _arg_2:int, _arg_3:int, _arg_4:String):Boolean
+        public function modifyRoomObject(k:int, _arg_2:int, _arg_3:int, _arg_4:String):Boolean
         {
             var _local_12:SelectedRoomObjectData;
             var _local_13:int;
