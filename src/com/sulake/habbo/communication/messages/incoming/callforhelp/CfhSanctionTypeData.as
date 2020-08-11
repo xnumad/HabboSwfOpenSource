@@ -7,7 +7,7 @@
     {
         private var _name:String;
         private var _sanctionLengthInHours:int;
-        private var _Str_22477:int;
+        private var _probationDays:int;
         private var _Str_16344:Boolean;
         private var _Str_17021:String = "";
         private var _Str_16444:String = "";
@@ -16,7 +16,7 @@
         {
             this._name = k.readString();
             this._sanctionLengthInHours = k.readInteger();
-            this._Str_22477 = k.readInteger();
+            this._probationDays = k.readInteger();
             this._Str_16344 = k.readBoolean();
             if (k.bytesAvailable)
             {
