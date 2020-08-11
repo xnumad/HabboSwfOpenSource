@@ -2,14 +2,14 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11317 implements IMessageComposer 
+    public class SetRoomBackgroundColorDataComposer implements IMessageComposer
     {
         private var _Str_2502:int;
         private var _Str_4256:int;
         private var _Str_4302:int;
         private var _Str_4257:int;
 
-        public function _Str_11317(k:int, _arg_2:int, _arg_3:int, _arg_4:int)
+        public function SetRoomBackgroundColorDataComposer(k:int, _arg_2:int, _arg_3:int, _arg_4:int)
         {
             this._Str_2502 = k;
             this._Str_4256 = _arg_2;

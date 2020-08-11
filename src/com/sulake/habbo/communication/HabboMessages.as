@@ -713,7 +713,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10762;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10913;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11262;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11317;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRoomBackgroundColorDataComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11461;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11532;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11554;
@@ -1771,7 +1771,7 @@
             OUTGOING_PACKETS[2850] = _Str_11554;
             OUTGOING_PACKETS[286] = GetThreadMessageComposer;
             OUTGOING_PACKETS[2864] = _Str_12026;
-            OUTGOING_PACKETS[2880] = _Str_11317;
+            OUTGOING_PACKETS[2880] = SetRoomBackgroundColorDataComposer;
             OUTGOING_PACKETS[2890] = DeclineFriendMessageComposer;
             OUTGOING_PACKETS[2894] = _Str_12111;
             OUTGOING_PACKETS[2908] = GetUnreadForumsCountMessageComposer;
