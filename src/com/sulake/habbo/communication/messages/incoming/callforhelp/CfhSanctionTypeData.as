@@ -10,7 +10,7 @@
         private var _probationDays:int;
         private var _avatarOnly:Boolean;
         private var _tradeLockInfo:String = "";
-        private var _Str_16444:String = "";
+        private var _machineBanInfo:String = "";
 
         public function CfhSanctionTypeData(k:IMessageDataWrapper)
         {
@@ -24,9 +24,9 @@
             }
             if (k.bytesAvailable)
             {
-                this._Str_16444 = k.readString();
+                this._machineBanInfo = k.readString();
             }
-            Logger.log(((((((((("READ CFH SANCTION TYPE: " + this._name) + ", length: ") + this._sanctionLengthInHours) + ", avatar only: ") + this._avatarOnly) + ", trade lock info: ") + this._tradeLockInfo) + ", machine ban info: ") + this._Str_16444));
+            Logger.log(((((((((("READ CFH SANCTION TYPE: " + this._name) + ", length: ") + this._sanctionLengthInHours) + ", avatar only: ") + this._avatarOnly) + ", trade lock info: ") + this._tradeLockInfo) + ", machine ban info: ") + this._machineBanInfo));
         }
 
         public function get name():String
@@ -51,7 +51,7 @@
 
         public function get _Str_19607():String
         {
-            return this._Str_16444;
+            return this._machineBanInfo;
         }
     }
 }
