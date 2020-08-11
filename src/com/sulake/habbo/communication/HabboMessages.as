@@ -606,7 +606,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_8134;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_8147;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.*;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10067;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetPetCommandsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetItemDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10528;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.HarvestPetMessageComposer;
@@ -1663,7 +1663,7 @@
             OUTGOING_PACKETS[2138] = _Str_8049;
             OUTGOING_PACKETS[2144] = _Str_12182;
             OUTGOING_PACKETS[2150] = _Str_11580;
-            OUTGOING_PACKETS[2161] = _Str_10067;
+            OUTGOING_PACKETS[2161] = GetPetCommandsMessageComposer;
             OUTGOING_PACKETS[2167] = _Str_11298;
             OUTGOING_PACKETS[219] = GetAchievementsComposer;
             OUTGOING_PACKETS[2209] = SetMannequinFigureComposer;

@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10067 implements IMessageComposer 
+    public class GetPetCommandsMessageComposer implements IMessageComposer
     {
         private var _petId:int;
 
-        public function _Str_10067(k:int)
+        public function GetPetCommandsMessageComposer(k:int)
         {
             this._petId = k;
         }
