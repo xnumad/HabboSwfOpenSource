@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_817;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6380 implements _Str_817 
+    public class CfhSanctionTypeData implements _Str_817
     {
         private var _name:String;
         private var _Str_17470:int;
@@ -12,7 +12,7 @@
         private var _Str_17021:String = "";
         private var _Str_16444:String = "";
 
-        public function _Str_6380(k:IMessageDataWrapper)
+        public function CfhSanctionTypeData(k:IMessageDataWrapper)
         {
             this._name = k.readString();
             this._Str_17470 = k.readInteger();

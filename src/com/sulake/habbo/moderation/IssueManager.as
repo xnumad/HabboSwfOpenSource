@@ -11,7 +11,7 @@
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7202;
     import com.sulake.habbo.utils.StringUtil;
-    import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_6380;
+    import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhSanctionTypeData;
     import com.sulake.habbo.communication.messages.outgoing.moderator.CloseIssuesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.PickIssuesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.CloseIssueDefaultActionMessageComposer;
@@ -457,7 +457,7 @@
             this._moderationManager.connection.send(new _Str_7202(-1, k, _arg_2));
         }
 
-        public function _Str_24202(k:int, _arg_2:int, _arg_3:_Str_6380):void
+        public function _Str_24202(k:int, _arg_2:int, _arg_3:CfhSanctionTypeData):void
         {
             var _local_5:IssueBundle;
             var _local_6:IIssueHandler;

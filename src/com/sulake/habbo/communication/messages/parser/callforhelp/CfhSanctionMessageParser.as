@@ -1,21 +1,21 @@
 ﻿package com.sulake.habbo.communication.messages.parser.callforhelp
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_6380;
+    import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhSanctionTypeData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class CfhSanctionMessageParser implements IMessageParser
     {
         private var _issueId:int = -1;
         private var _accountId:int = -1;
-        private var _sanctionType:_Str_6380;
+        private var _sanctionType:CfhSanctionTypeData;
 
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._issueId = k.readInteger();
             this._accountId = k.readInteger();
-            this._sanctionType = new _Str_6380(k);
+            this._sanctionType = new CfhSanctionTypeData(k);
             return true;
         }
 
@@ -29,7 +29,7 @@
             return this._accountId;
         }
 
-        public function get _Str_21198():_Str_6380
+        public function get _Str_21198():CfhSanctionTypeData
         {
             return this._sanctionType;
         }
