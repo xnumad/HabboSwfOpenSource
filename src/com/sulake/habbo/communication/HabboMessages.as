@@ -255,7 +255,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_10642;
 	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_11301;
 	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_11731;
-	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_4844;
+	import com.sulake.habbo.communication.messages.outgoing.room.pets.BreedPetsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_8184;
 	import com.sulake.core.communication.messages.IMessageConfiguration;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_10410;
@@ -1595,7 +1595,7 @@
             OUTGOING_PACKETS[1597] = StartTypingMessageComposer;
             OUTGOING_PACKETS[1598] = Game2RequestFullStatusUpdateMessageComposer;
             OUTGOING_PACKETS[1603] = _Str_11685;
-            OUTGOING_PACKETS[1638] = _Str_4844;
+            OUTGOING_PACKETS[1638] = BreedPetsMessageComposer;
             OUTGOING_PACKETS[1644] = LetUserInMessageComposer;
             OUTGOING_PACKETS[1648] = RoomDimmerSavePresetMessageComposer;
             OUTGOING_PACKETS[1667] = _Str_10101;

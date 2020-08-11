@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_4844 implements IMessageComposer 
+    public class BreedPetsMessageComposer implements IMessageComposer
     {
         public static const _Str_17533:int = 0;
         public static const _Str_8664:int = 1;
@@ -10,7 +10,7 @@
 
         private var _data:Array;
 
-        public function _Str_4844(k:int, _arg_2:int, _arg_3:int)
+        public function BreedPetsMessageComposer(k:int, _arg_2:int, _arg_3:int)
         {
             this._data = [];
             super();

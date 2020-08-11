@@ -60,7 +60,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.ui.widget.events.ConfirmPetBreedingPetData;
     import com.sulake.habbo.avatar.pets.PetTypeEnum;
-    import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_4844;
+    import com.sulake.habbo.communication.messages.outgoing.room.pets.BreedPetsMessageComposer;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotSkillsEnum;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotChatterMarkovConfiguration;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotChangeNameConfiguration;
@@ -1668,7 +1668,7 @@
             var _local_4:RoomUserData = this.handler.container.roomSession.userDataManager.getUserDataByIndex(_arg_2);
             if (((_local_3) && (_local_4)))
             {
-                this.handler.container.connection.send(new _Str_4844(_Str_4844._Str_8664, _local_3.id, _local_4.id));
+                this.handler.container.connection.send(new BreedPetsMessageComposer(BreedPetsMessageComposer._Str_8664, _local_3.id, _local_4.id));
             }
         }
 
@@ -1678,7 +1678,7 @@
             var _local_4:RoomUserData = this.handler.container.roomSession.userDataManager.getUserDataByIndex(_arg_2);
             if (((_local_3) && (_local_4)))
             {
-                this.handler.container.connection.send(new _Str_4844(_Str_4844._Str_9186, _local_3.id, _local_4.id));
+                this.handler.container.connection.send(new BreedPetsMessageComposer(BreedPetsMessageComposer._Str_9186, _local_3.id, _local_4.id));
             }
         }
 
@@ -1688,7 +1688,7 @@
             var _local_4:RoomUserData = this.handler.container.roomSession.userDataManager.getUserDataByIndex(_arg_2);
             if (((_local_3) && (_local_4)))
             {
-                this.handler.container.connection.send(new _Str_4844(_Str_4844._Str_17533, _local_3.id, _local_4.id));
+                this.handler.container.connection.send(new BreedPetsMessageComposer(BreedPetsMessageComposer._Str_17533, _local_3.id, _local_4.id));
             }
         }
 
