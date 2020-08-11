@@ -44,7 +44,7 @@
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.room.events.RoomEngineTriggerWidgetEvent;
     import com.sulake.habbo.room.events.RoomEngineUseProductEvent;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10477;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.GetGuildFurniContextMenuInfoMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_4406;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.room.events.RoomEngineRoomAdEvent;
@@ -1317,7 +1317,7 @@
                         return;
                     case RoomObjectWidgetRequestEvent.GUILD_FURNI_CONTEXT_MENU:
                         _local_9 = k.object.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_GUILD_ID);
-                        this._roomEngine.connection.send(new _Str_10477(k.objectId, _local_9));
+                        this._roomEngine.connection.send(new GetGuildFurniContextMenuInfoMessageComposer(k.objectId, _local_9));
                         return;
                     case RoomObjectWidgetRequestEvent.MONSTERPLANT_SEED_PLANT_CONFIRMATION_DIALOG:
                         _local_6.dispatchEvent(new RoomEngineTriggerWidgetEvent(RoomEngineTriggerWidgetEvent.ROWRE_REQUEST_MONSTERPLANT_SEED_PLANT_CONFIRMATION_DIALOG, _arg_2, _local_3, _local_5));

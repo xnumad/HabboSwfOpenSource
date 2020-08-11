@@ -707,7 +707,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10101;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PresentOpenMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10477;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.GetGuildFurniContextMenuInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10710;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10762;
@@ -1737,7 +1737,7 @@
             OUTGOING_PACKETS[2638] = _Str_12374;
             OUTGOING_PACKETS[2647] = _Str_8042;
             OUTGOING_PACKETS[2650] = _Str_12361;
-            OUTGOING_PACKETS[2651] = _Str_10477;
+            OUTGOING_PACKETS[2651] = GetGuildFurniContextMenuInfoMessageComposer;
             OUTGOING_PACKETS[2668] = _Str_11858;
             OUTGOING_PACKETS[2683] = _Str_12446;
             OUTGOING_PACKETS[2688] = _Str_17850;
