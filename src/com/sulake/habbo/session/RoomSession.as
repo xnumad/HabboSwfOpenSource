@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.outgoing.poll._Str_12165;
     import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
     import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9884;
-    import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9928;
+    import com.sulake.habbo.communication.messages.outgoing.userclassification.RoomUsersClassificationMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.FollowFriendMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.AmbassadorAlertMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserKickMessageComposer;
@@ -392,7 +392,7 @@
 
         public function sendRoomUsersClassificationMessage(k:String):void
         {
-            this._connection.send(new _Str_9928(k));
+            this._connection.send(new RoomUsersClassificationMessageComposer(k));
         }
 
         public function sendVisitFlatMessage(k:int):void

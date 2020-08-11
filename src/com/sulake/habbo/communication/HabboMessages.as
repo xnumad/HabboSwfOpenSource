@@ -385,7 +385,7 @@
 	import com.sulake.habbo.communication.messages.incoming.advertisement.RoomAdErrorEvent;
 	import com.sulake.habbo.communication.messages.outgoing.register.UpdateFigureDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9884;
-	import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9928;
+	import com.sulake.habbo.communication.messages.outgoing.userclassification.RoomUsersClassificationMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.directory._Str_16208;
 	import com.sulake.habbo.communication.messages.outgoing.game.directory._Str_7123;
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemIdsComposer;
@@ -1683,7 +1683,7 @@
             OUTGOING_PACKETS[2277] = _Str_9988;
             OUTGOING_PACKETS[2281] = UpdateActionMessageComposer;
             OUTGOING_PACKETS[2283] = _Str_12488;
-            OUTGOING_PACKETS[2285] = _Str_9928;
+            OUTGOING_PACKETS[2285] = RoomUsersClassificationMessageComposer;
             OUTGOING_PACKETS[229] = _Str_9842;
             OUTGOING_PACKETS[2296] = _Str_10045;
             OUTGOING_PACKETS[230] = CreateGuildMessageComposer;
