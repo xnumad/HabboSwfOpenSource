@@ -26,7 +26,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11262;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerSavePresetMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10045;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerChangeStateMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.poll.PollStartComposer;
     import com.sulake.habbo.communication.messages.outgoing.poll.PollRejectComposer;
@@ -362,7 +362,7 @@
 
         public function sendRoomDimmerChangeStateMessage():void
         {
-            this._connection.send(new _Str_10045());
+            this._connection.send(new RoomDimmerChangeStateMessageComposer());
         }
 
         public function sendConversionPoint(k:String, _arg_2:String, _arg_3:String, _arg_4:String=null, _arg_5:int=0):void

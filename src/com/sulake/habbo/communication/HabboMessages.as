@@ -702,7 +702,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9419;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9538;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.*;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10045;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerChangeStateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10097;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10101;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PresentOpenMessageComposer;
@@ -1685,7 +1685,7 @@
             OUTGOING_PACKETS[2283] = _Str_12488;
             OUTGOING_PACKETS[2285] = RoomUsersClassificationMessageComposer;
             OUTGOING_PACKETS[229] = _Str_9842;
-            OUTGOING_PACKETS[2296] = _Str_10045;
+            OUTGOING_PACKETS[2296] = RoomDimmerChangeStateMessageComposer;
             OUTGOING_PACKETS[230] = CreateGuildMessageComposer;
             OUTGOING_PACKETS[2300] = _Str_7716;
             OUTGOING_PACKETS[0x0900] = _Str_11654;

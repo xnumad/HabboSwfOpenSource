@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10045 implements IMessageComposer 
+    public class RoomDimmerChangeStateMessageComposer implements IMessageComposer
     {
 
 
