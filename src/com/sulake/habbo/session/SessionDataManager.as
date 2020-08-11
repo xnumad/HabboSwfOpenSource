@@ -66,7 +66,7 @@
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.session.product.IProductDataListener;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
+    import com.sulake.habbo.communication.messages.outgoing.room.chat.ChatMessageComposer;
     import flash.events.TimerEvent;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
@@ -956,7 +956,7 @@
 
         public function sendSpecialCommandMessage(k:String):void
         {
-            this.send(new _Str_7738(k));
+            this.send(new ChatMessageComposer(k));
         }
 
         public function get roomSessionManager():IRoomSessionManager

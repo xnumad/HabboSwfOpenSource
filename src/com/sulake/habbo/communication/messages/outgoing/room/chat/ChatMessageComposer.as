@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7738 implements IMessageComposer 
+    public class ChatMessageComposer implements IMessageComposer
     {
         private var _text:String;
         private var _Str_7600:int = 0;
         private var _styleId:int = 0;
 
-        public function _Str_7738(k:String, _arg_2:int=0, _arg_3:int=-1)
+        public function ChatMessageComposer(k:String, _arg_2:int=0, _arg_3:int=-1)
         {
             this._text = k;
             this._styleId = _arg_2;

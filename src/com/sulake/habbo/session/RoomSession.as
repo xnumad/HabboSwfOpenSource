@@ -10,7 +10,7 @@
     import com.sulake.habbo.session.enum.RoomTradingLevelEnum;
     import com.sulake.habbo.communication.messages.outgoing.room.session.OpenFlatConnectionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2GameChatMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
+    import com.sulake.habbo.communication.messages.outgoing.room.chat.ChatMessageComposer;
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.outgoing.room.avatar.ChangeMottoMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.chat.ShoutMessageComposer;
@@ -260,7 +260,7 @@
             else
             {
                 k = k.replace(/&#[0-9]+;/g, "");
-                this._connection.send(new _Str_7738(k, _arg_2, this._chatTrackingId));
+                this._connection.send(new ChatMessageComposer(k, _arg_2, this._chatTrackingId));
                 this._messageLagTrackingMap.add(this._chatTrackingId, getTimer());
                 this._chatTrackingId++;
             }

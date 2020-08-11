@@ -950,7 +950,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.WhisperMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.CancelTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.ShoutMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
+	import com.sulake.habbo.communication.messages.outgoing.room.chat.ChatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreOwnerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.permissions.YouAreControllerMessageEvent;
@@ -1552,7 +1552,7 @@
             OUTGOING_PACKETS[1276] = SendRoomInviteMessageComposer;
             OUTGOING_PACKETS[1296] = _Str_8147;
             OUTGOING_PACKETS[1299] = NewUserExperienceScriptProceedComposer;
-            OUTGOING_PACKETS[1314] = _Str_7738;
+            OUTGOING_PACKETS[1314] = ChatMessageComposer;
             OUTGOING_PACKETS[1320] = RoomUserKickMessageComposer;
             OUTGOING_PACKETS[1325] = _Str_11631;
             OUTGOING_PACKETS[1328] = _Str_10642;
