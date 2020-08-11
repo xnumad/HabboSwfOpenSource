@@ -7,7 +7,7 @@
     {
         private var _windowX:int;
         private var _windowY:int;
-        private var _Str_4111:int;
+        private var _windowWidth:int;
         private var _Str_5130:int;
         private var _Str_16883:Boolean;
         private var _Str_18619:int;
@@ -25,7 +25,7 @@
 
         public function get _Str_4971():int
         {
-            return this._Str_4111;
+            return this._windowWidth;
         }
 
         public function get _Str_17903():int
@@ -47,7 +47,7 @@
         {
             this._windowX = 0;
             this._windowY = 0;
-            this._Str_4111 = 0;
+            this._windowWidth = 0;
             this._Str_5130 = 0;
             this._Str_16883 = false;
             this._Str_18619 = 0;
@@ -58,7 +58,7 @@
         {
             this._windowX = k.readInteger();
             this._windowY = k.readInteger();
-            this._Str_4111 = k.readInteger();
+            this._windowWidth = k.readInteger();
             this._Str_5130 = k.readInteger();
             this._Str_16883 = k.readBoolean();
             this._Str_18619 = k.readInteger();
