@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5633;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6030;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.GenericErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.ShowEnforceRoomCategoryDialogEvent;
@@ -135,7 +135,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907));
             _local_2.addHabboConnectionMessageEvent(new _Str_5633(this.onNavigatorSettings));
             _local_2.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647));
-            _local_2.addHabboConnectionMessageEvent(new _Str_6030(this._Str_8265));
+            _local_2.addHabboConnectionMessageEvent(new RoomSettingsSaveErrorEvent(this._Str_8265));
             _local_2.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onError));
             _local_2.addHabboConnectionMessageEvent(new _Str_5134(this._Str_16321));
             _local_2.addHabboConnectionMessageEvent(new ShowEnforceRoomCategoryDialogEvent(this.onEnforceRoomCategorySelection));
@@ -530,7 +530,7 @@
 
         private function _Str_8265(k:IMessageEvent):void
         {
-            var _local_2:RoomSettingsSaveErrorMessageParser = (k as _Str_6030).getParser();
+            var _local_2:RoomSettingsSaveErrorMessageParser = (k as RoomSettingsSaveErrorEvent).getParser();
             this._navigator.roomSettingsCtrl._Str_8265(_local_2.roomId, _local_2.errorCode, _local_2.info);
         }
 

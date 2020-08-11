@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6030;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
     import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
@@ -115,7 +115,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5134(this._Str_16321)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592)));
             this._messageListeners.push(k.connection.addMessageEvent(new _Str_8763(this.onNavigatorPreferences)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6030(this._Str_8265)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSaveErrorEvent(this._Str_8265)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5891(this.onNoOwnedRoomsAlert)));
@@ -399,7 +399,7 @@
 
         private function _Str_8265(k:IMessageEvent):void
         {
-            var _local_2:RoomSettingsSaveErrorMessageParser = (k as _Str_6030).getParser();
+            var _local_2:RoomSettingsSaveErrorMessageParser = (k as RoomSettingsSaveErrorEvent).getParser();
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_8265(_local_2.roomId, _local_2.errorCode, _local_2.info);
         }
 

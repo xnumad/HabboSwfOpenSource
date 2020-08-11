@@ -568,7 +568,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6030;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.ShowEnforceRoomCategoryDialogEvent;
@@ -1073,7 +1073,7 @@
             INCOMING_PACKETS[1551] = _Str_16338;
             INCOMING_PACKETS[1553] = PetBreedingResultEvent;
             INCOMING_PACKETS[1554] = _Str_9325;
-            INCOMING_PACKETS[1555] = _Str_6030;
+            INCOMING_PACKETS[1555] = RoomSettingsSaveErrorEvent;
             INCOMING_PACKETS[156] = _Str_7323;
             INCOMING_PACKETS[1562] = _Str_5728;
             INCOMING_PACKETS[1576] = _Str_9150;
