@@ -341,7 +341,7 @@
             switch (k.type)
             {
                 case RoomObjectStateChangedEvent.STATE_CHANGE:
-                    this._Str_23428((k as RoomObjectStateChangedEvent), _arg_2);
+                    this.handleObjectStateChange((k as RoomObjectStateChangedEvent), _arg_2);
                     return;
                 case RoomObjectStateChangedEvent.STATE_RANDOM:
                     this._Str_24913((k as RoomObjectStateChangedEvent), _arg_2);
@@ -1226,7 +1226,7 @@
             return null;
         }
 
-        protected function _Str_23428(k:RoomObjectStateChangedEvent, _arg_2:int):void
+        protected function handleObjectStateChange(k:RoomObjectStateChangedEvent, _arg_2:int):void
         {
             if (k == null)
             {
