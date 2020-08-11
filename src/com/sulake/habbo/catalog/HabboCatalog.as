@@ -211,7 +211,7 @@
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceItemStatsParser;
     import com.sulake.habbo.catalog.marketplace.MarketplaceItemStats;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceConfigurationMessageParser;
-    import com.sulake.habbo.communication.messages.parser.marketplace._Str_6596;
+    import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceMakeOfferResultParser;
     import com.sulake.habbo.communication.messages.parser.catalog.HabboClubOffersMessageParser;
     import com.sulake.habbo.catalog.enum.ClubOfferRequestSource;
     import com.sulake.habbo.communication.messages.parser.catalog.SellablePetPalettesParser;
@@ -2227,7 +2227,7 @@
             {
                 return;
             }
-            var _local_2:_Str_6596 = k.getParser();
+            var _local_2:MarketplaceMakeOfferResultParser = k.getParser();
             if (!_local_2)
             {
                 return;

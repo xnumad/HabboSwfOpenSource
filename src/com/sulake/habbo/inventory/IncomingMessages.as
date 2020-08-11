@@ -106,7 +106,7 @@
     import com.sulake.habbo.inventory.marketplace.MarketplaceModel;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceConfigurationMessageParser;
     import com.sulake.habbo.communication.messages.parser.marketplace._Str_7065;
-    import com.sulake.habbo.communication.messages.parser.marketplace._Str_6596;
+    import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceMakeOfferResultParser;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceItemStatsParser;
     import __AS3__.vec.*;
 
@@ -915,7 +915,7 @@
             {
                 return;
             }
-            var _local_3:_Str_6596 = k.getParser();
+            var _local_3:MarketplaceMakeOfferResultParser = k.getParser();
             _local_2.endOfferMaking(_local_3.result);
         }
 
