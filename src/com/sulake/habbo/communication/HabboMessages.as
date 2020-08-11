@@ -312,7 +312,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11638;
 	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11776;
 	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_12504;
-	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_12300;
+	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2GameChatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_17897;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_18615;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_18745;
@@ -1718,7 +1718,7 @@
             OUTGOING_PACKETS[2490] = UniqueIDMessageComposer;
             OUTGOING_PACKETS[2492] = _Str_7640;
             OUTGOING_PACKETS[2501] = _Str_4981;
-            OUTGOING_PACKETS[2502] = _Str_12300;
+            OUTGOING_PACKETS[2502] = Game2GameChatMessageComposer;
             OUTGOING_PACKETS[2518] = _Str_11532;
             OUTGOING_PACKETS[2519] = _Str_10855;
             OUTGOING_PACKETS[2529] = _Str_12000;

@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12300 implements IMessageComposer 
+    public class Game2GameChatMessageComposer implements IMessageComposer
     {
         private var _Str_17731:String;
 
-        public function _Str_12300(k:String)
+        public function Game2GameChatMessageComposer(k:String)
         {
             this._Str_17731 = k;
         }
