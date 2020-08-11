@@ -712,7 +712,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10710;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinFigureComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10913;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11262;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerGetPresetsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRoomBackgroundColorDataComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11461;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11532;
@@ -1766,7 +1766,7 @@
             OUTGOING_PACKETS[2771] = _Str_12504;
             OUTGOING_PACKETS[2781] = _Str_9977;
             OUTGOING_PACKETS[2809] = _Str_11181;
-            OUTGOING_PACKETS[2813] = _Str_11262;
+            OUTGOING_PACKETS[2813] = RoomDimmerGetPresetsMessageComposer;
             OUTGOING_PACKETS[2814] = _Str_10794;
             OUTGOING_PACKETS[2850] = SetMannequinNameComposer;
             OUTGOING_PACKETS[286] = GetThreadMessageComposer;

@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.PresentOpenMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11262;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerGetPresetsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerSavePresetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerChangeStateMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
@@ -350,7 +350,7 @@
 
         public function sendRoomDimmerGetPresetsMessage():void
         {
-            this._connection.send(new _Str_11262());
+            this._connection.send(new RoomDimmerGetPresetsMessageComposer());
         }
 
         public function sendRoomDimmerSavePresetMessage(k:int, _arg_2:int, _arg_3:uint, _arg_4:int, _arg_5:Boolean):void
