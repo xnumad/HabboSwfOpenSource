@@ -17,7 +17,7 @@
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
-    import com.sulake.habbo.communication.messages.parser.marketplace._Str_5775;
+    import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceCancelOfferResultParser;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
 
@@ -386,7 +386,7 @@
             {
                 return;
             }
-            var parser:_Str_5775 = (cancelEvent.getParser() as _Str_5775);
+            var parser:MarketplaceCancelOfferResultParser = (cancelEvent.getParser() as MarketplaceCancelOfferResultParser);
             if (parser == null)
             {
                 return;
