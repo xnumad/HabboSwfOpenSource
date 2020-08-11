@@ -475,9 +475,9 @@
             {
                 _local_4 = (_local_4 + (" & " + _arg_3.tradeLockInfo));
             }
-            if (!StringUtil.isEmpty(_arg_3._Str_19607))
+            if (!StringUtil.isEmpty(_arg_3.machineBanInfo))
             {
-                _local_4 = (_local_4 + (" & " + _arg_3._Str_19607));
+                _local_4 = (_local_4 + (" & " + _arg_3.machineBanInfo));
             }
             if (k > 0)
             {

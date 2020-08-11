@@ -49,7 +49,7 @@
             return this._tradeLockInfo;
         }
 
-        public function get _Str_19607():String
+        public function get machineBanInfo():String
         {
             return this._machineBanInfo;
         }
