@@ -344,7 +344,7 @@
                     this.handleObjectStateChange((k as RoomObjectStateChangedEvent), _arg_2);
                     return;
                 case RoomObjectStateChangedEvent.STATE_RANDOM:
-                    this._Str_24913((k as RoomObjectStateChangedEvent), _arg_2);
+                    this.handleObjectRandomStateChange((k as RoomObjectStateChangedEvent), _arg_2);
                     return;
                 case RoomObjectDimmerStateUpdateEvent.DIMMER_STATE:
                     this.handleRoomObjectDataRequestEvent(k, _arg_2);
@@ -1235,7 +1235,7 @@
             this.changeObjectState(_arg_2, k.objectId, k.objectType, k.param, false);
         }
 
-        private function _Str_24913(k:RoomObjectStateChangedEvent, _arg_2:int):void
+        private function handleObjectRandomStateChange(k:RoomObjectStateChangedEvent, _arg_2:int):void
         {
             if (k == null)
             {
