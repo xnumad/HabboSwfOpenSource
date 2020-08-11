@@ -18,7 +18,7 @@
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.ui.widget.events._Str_2693;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.sound._Str_11152;
     import com.sulake.habbo.communication.messages.outgoing.sound._Str_11834;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
@@ -139,7 +139,7 @@
                             {
                                 if (this._connection != null)
                                 {
-                                    this._connection.send(new _Str_3382(_local_3.getId(), -2));
+                                    this._connection.send(new UseFurnitureMessageComposer(_local_3.getId(), -2));
                                 }
                             }
                         }
@@ -163,7 +163,7 @@
                     _local_6 = (k as RoomWidgetPlayListPlayStateMessage);
                     if (this._connection != null)
                     {
-                        this._connection.send(new _Str_3382(_local_6.furniId, _local_6.position));
+                        this._connection.send(new UseFurnitureMessageComposer(_local_6.furniId, _local_6.position));
                     }
                     break;
                 case RoomWidgetPlayListUserActionMessage.RWPLUA_OPEN_CATALOGUE_BUTTON_PRESSED:

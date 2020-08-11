@@ -21,7 +21,7 @@
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import flash.display.BitmapData;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
     import com.sulake.core.communication.connection.IConnection;
 
     public class MysteryBoxOpenDialogView implements IDisposable, IGetImageListener 
@@ -209,7 +209,7 @@
         public function _Str_24779(k:IRoomObject):void
         {
             this._object = k;
-            this.connection.send(new _Str_3382(k.getId()));
+            this.connection.send(new UseFurnitureMessageComposer(k.getId()));
         }
 
         private function get connection():IConnection

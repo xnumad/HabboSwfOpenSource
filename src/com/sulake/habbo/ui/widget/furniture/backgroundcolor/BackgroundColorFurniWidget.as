@@ -14,7 +14,7 @@
     import com.sulake.room.utils.ColorConverter;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRoomBackgroundColorDataComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import __AS3__.vec.*;
@@ -127,7 +127,7 @@
                         this.handler.container.connection.send(new SetRoomBackgroundColorDataComposer(this._furniId, this._hue, this._saturation, this._lightness));
                         return;
                     case "on_off_button":
-                        this.handler.container.connection.send(new _Str_3382(this._furniId));
+                        this.handler.container.connection.send(new UseFurnitureMessageComposer(this._furniId));
                         return;
                     case "header_button_close":
                         this.destroyWindow();

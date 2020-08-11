@@ -7,7 +7,7 @@
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
     import com.sulake.core.communication.connection.IConnection;
 
     public class EffectBoxOpenDialogView implements IDisposable 
@@ -93,7 +93,7 @@
                     this.close();
                     break;
                 case OK:
-                    this.connection.send(new _Str_3382(this._requestRoomObjectId));
+                    this.connection.send(new UseFurnitureMessageComposer(this._requestRoomObjectId));
                     this.close();
                     break;
             }

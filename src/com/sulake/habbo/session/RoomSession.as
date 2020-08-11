@@ -50,7 +50,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine.CompostPlantMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.GetPetCommandsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_10642;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceScriptProceedComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
     import com.sulake.habbo.communication.messages.outgoing.room.session.ChangeQueueMessageComposer;
@@ -495,7 +495,7 @@
 
         public function plantSeed(k:int):void
         {
-            this._connection.send(new _Str_3382(k));
+            this._connection.send(new UseFurnitureMessageComposer(k));
         }
 
         public function sendScriptProceed():void

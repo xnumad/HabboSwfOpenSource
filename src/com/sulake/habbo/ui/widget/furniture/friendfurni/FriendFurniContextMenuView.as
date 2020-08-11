@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.ui.widget.furniture.contextmenu.FurnitureContextMenuWidget;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
 
     public class FriendFurniContextMenuView extends FurnitureContextInfoView 
@@ -73,7 +73,7 @@
                             _local_4 = (_widget as FurnitureContextMenuWidget);
                             if (_local_4 != null)
                             {
-                                _local_4.handler.container.connection.send(new _Str_3382(_Str_2731.getId()));
+                                _local_4.handler.container.connection.send(new UseFurnitureMessageComposer(_Str_2731.getId()));
                             }
                             break;
                     }

@@ -619,7 +619,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetRidingPermissionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetBreedingPermissionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12401;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5686;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
@@ -1979,7 +1979,7 @@
             OUTGOING_PACKETS[924] = _Str_8017;
             OUTGOING_PACKETS[957] = _Str_10281;
             OUTGOING_PACKETS[96] = LatencyPingReportMessageComposer;
-            OUTGOING_PACKETS[99] = _Str_3382;
+            OUTGOING_PACKETS[99] = UseFurnitureMessageComposer;
             OUTGOING_PACKETS[992] = _Str_11552;
             OUTGOING_PACKETS[998] = _Str_6006;
 			
