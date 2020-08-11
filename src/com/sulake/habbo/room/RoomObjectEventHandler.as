@@ -1761,7 +1761,7 @@
             return true;
         }
 
-        private function _Str_22517(k:IRoomObject, _arg_2:IVector3d, _arg_3:FurniStackingHeightMap):Boolean
+        private function validateFurnitureDirection(k:IRoomObject, _arg_2:IVector3d, _arg_3:FurniStackingHeightMap):Boolean
         {
             var _local_12:Boolean;
             if ((((k == null) || (k.getModel() == null)) || (_arg_2 == null)))
@@ -2100,7 +2100,7 @@
                         }
                         _local_6 = _local_5.getLocation().x;
                         _local_7 = _local_5.getLocation().y;
-                        if (this._Str_22517(_local_5, new Vector3d(_local_8), this._roomEngine.getFurniStackingHeightMap(k)))
+                        if (this.validateFurnitureDirection(_local_5, new Vector3d(_local_8), this._roomEngine.getFurniStackingHeightMap(k)))
                         {
                             _local_8 = int((_local_8 / 45));
                             if (_local_5.getType() == RoomObjectUserTypes.MONSTERPLANT)
