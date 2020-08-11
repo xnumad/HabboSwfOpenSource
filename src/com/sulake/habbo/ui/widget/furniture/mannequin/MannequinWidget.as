@@ -26,7 +26,7 @@
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10762;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11554;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinNameComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
@@ -374,7 +374,7 @@
         private function _Str_20994():void
         {
             var k:String = this._Str_23640();
-            this.handler.container.connection.send(new _Str_11554(this._furniId, k));
+            this.handler.container.connection.send(new SetMannequinNameComposer(this._furniId, k));
             this._savedOutfitName = k;
             this._Str_6655(_Str_8218);
         }
