@@ -14,7 +14,7 @@
         private var _kickPermission:Boolean;
         private var _banPermission:Boolean;
         private var _roomAlertPermission:Boolean;
-        private var _Str_19156:Boolean;
+        private var _roomKickPermission:Boolean;
         private var _disposed:Boolean;
 
         public function ModeratorInitData(k:IMessageDataWrapper)
@@ -53,7 +53,7 @@
             this._kickPermission = k.readBoolean();
             this._banPermission = k.readBoolean();
             this._roomAlertPermission = k.readBoolean();
-            this._Str_19156 = k.readBoolean();
+            this._roomKickPermission = k.readBoolean();
             _local_3 = k.readInteger();
             _local_4 = 0;
             while (_local_4 < _local_3)
@@ -127,7 +127,7 @@
 
         public function get _Str_24333():Boolean
         {
-            return this._Str_19156;
+            return this._roomKickPermission;
         }
     }
 }
