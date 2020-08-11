@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7065 implements IMessageParser 
+    public class MarketplaceCanMakeOfferResultParser implements IMessageParser
     {
         private var _Str_19825:int;
         private var _result:int;
