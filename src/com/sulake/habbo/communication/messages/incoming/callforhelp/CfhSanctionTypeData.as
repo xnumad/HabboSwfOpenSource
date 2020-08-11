@@ -34,7 +34,7 @@
             return this._name;
         }
 
-        public function get _Str_16119():int
+        public function get sanctionLengthInHours():int
         {
             return this._sanctionLengthInHours;
         }
