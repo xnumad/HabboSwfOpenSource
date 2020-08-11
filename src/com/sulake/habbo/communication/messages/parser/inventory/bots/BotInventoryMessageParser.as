@@ -4,7 +4,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7631 implements IMessageParser 
+    public class BotInventoryMessageParser implements IMessageParser
     {
         private var _items:Map;
 
