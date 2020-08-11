@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9476 implements IMessageParser 
+    public class BotReceivedMessageParser implements IMessageParser
     {
         private var _Str_10056:Boolean;
         private var _item:BotData;
