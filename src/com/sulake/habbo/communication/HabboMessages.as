@@ -609,7 +609,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10067;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetItemDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10528;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10547;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.HarvestPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10596;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetItemDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemovePetFromFlatMessageComposer;
@@ -1585,7 +1585,7 @@
             OUTGOING_PACKETS[1481] = _Str_11737;
             OUTGOING_PACKETS[15] = PickIssuesMessageComposer;
             OUTGOING_PACKETS[1520] = UpdateTriggerMessageComposer;
-            OUTGOING_PACKETS[1521] = _Str_10547;
+            OUTGOING_PACKETS[1521] = HarvestPetMessageComposer;
             OUTGOING_PACKETS[1523] = _Str_11544;
             OUTGOING_PACKETS[1533] = _Str_11639;
             OUTGOING_PACKETS[1543] = WhisperMessageComposer;
