@@ -8,7 +8,7 @@
         private var _messageTemplates:Array;
         private var _roomMessageTemplates:Array;
         private var _issues:Array;
-        private var _Str_21327:Boolean;
+        private var _cfhPermission:Boolean;
         private var _Str_20034:Boolean;
         private var _Str_21542:Boolean;
         private var _Str_22205:Boolean;
@@ -47,7 +47,7 @@
                 k.readString();
                 _local_4++;
             }
-            this._Str_21327 = k.readBoolean();
+            this._cfhPermission = k.readBoolean();
             this._Str_20034 = k.readBoolean();
             this._Str_21542 = k.readBoolean();
             this._Str_22205 = k.readBoolean();
@@ -97,7 +97,7 @@
 
         public function get _Str_24070():Boolean
         {
-            return this._Str_21327;
+            return this._cfhPermission;
         }
 
         public function get _Str_12765():Boolean
