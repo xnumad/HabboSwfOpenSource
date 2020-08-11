@@ -6,7 +6,7 @@
     public class ModeratorInitData implements IDisposable
     {
         private var _messageTemplates:Array;
-        private var _Str_14428:Array;
+        private var _roomMessageTemplates:Array;
         private var _issues:Array;
         private var _Str_21327:Boolean;
         private var _Str_20034:Boolean;
@@ -22,7 +22,7 @@
             var _local_2:_Str_5460 = new _Str_5460();
             this._issues = [];
             this._messageTemplates = [];
-            this._Str_14428 = [];
+            this._roomMessageTemplates = [];
             var _local_3:int = k.readInteger();
             var _local_4:int;
             while (_local_4 < _local_3)
@@ -58,7 +58,7 @@
             _local_4 = 0;
             while (_local_4 < _local_3)
             {
-                this._Str_14428.push(k.readString());
+                this._roomMessageTemplates.push(k.readString());
                 _local_4++;
             }
         }
@@ -71,7 +71,7 @@
             }
             this._disposed = true;
             this._messageTemplates = null;
-            this._Str_14428 = null;
+            this._roomMessageTemplates = null;
             this._issues = null;
         }
 
@@ -87,7 +87,7 @@
 
         public function get _Str_18336():Array
         {
-            return this._Str_14428;
+            return this._roomMessageTemplates;
         }
 
         public function get issues():Array
