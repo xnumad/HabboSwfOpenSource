@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerSavePresetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10045;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.poll._Str_11290;
+    import com.sulake.habbo.communication.messages.outgoing.poll.PollStartComposer;
     import com.sulake.habbo.communication.messages.outgoing.poll.PollRejectComposer;
     import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
     import com.sulake.habbo.communication.messages.outgoing.userclassification.PeerUsersClassificationMessageComposer;
@@ -372,7 +372,7 @@
 
         public function sendPollStartMessage(k:int):void
         {
-            this._connection.send(new _Str_11290(k));
+            this._connection.send(new PollStartComposer(k));
         }
 
         public function sendPollRejectMessage(k:int):void

@@ -960,7 +960,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestFurniInventoryComposer;
 	import com.sulake.habbo.communication.messages.outgoing.poll.*;
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
-	import com.sulake.habbo.communication.messages.outgoing.poll._Str_11290;
+	import com.sulake.habbo.communication.messages.outgoing.poll.PollStartComposer;
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollRejectComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_11266;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_5945;
@@ -1527,7 +1527,7 @@
             OUTGOING_PACKETS[1075] = _Str_10589;
             OUTGOING_PACKETS[1081] = _Str_11951;
             OUTGOING_PACKETS[1086] = _Str_10960;
-            OUTGOING_PACKETS[109] = _Str_11290;
+            OUTGOING_PACKETS[109] = PollStartComposer;
             OUTGOING_PACKETS[11] = _Str_7123;
             OUTGOING_PACKETS[1109] = _Str_11497;
             OUTGOING_PACKETS[1117] = _Str_10793;

@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11290 implements IMessageComposer 
+    public class PollStartComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_11290(k:int)
+        public function PollStartComposer(k:int)
         {
             this._array = [k];
         }
