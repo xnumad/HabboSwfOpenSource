@@ -41,7 +41,7 @@
 	import com.sulake.core.communication.messages.IMessageComposer;
 	import com.sulake.habbo.events.js.JsMessageHandler;
 	import com.sulake.habbo.communication.IHabboCommunicationManager;
-	import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
+	import com.sulake.habbo.communication.messages.outgoing.room.session.QuitMessageComposer;
 	import com.sulake.habbo.room.IRoomEngine;
 	import com.sulake.iid.IIDAvatarRenderManager;
 	import com.sulake.iid.IIDHabboCatalog;
@@ -571,7 +571,7 @@
             if (((this._roomSessionManager) && (this._roomSessionManager.getSession(-1))))
             {
                 this._roomSessionManager.disposeSession(-1, false);
-                this.send(new _Str_3719());
+                this.send(new QuitMessageComposer());
             }
             this._toolbar.updateVisibility(HabboToolbarEnum.HTE_STATE_HOTEL_VIEW);
             this._Str_2368.initialize(_arg_2, _arg_3);

@@ -8,7 +8,7 @@
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session.QuitMessageComposer;
 
     public class GuestRoomDoorbell 
     {
@@ -156,7 +156,7 @@
             }
             if (((this._isWaiting) && (!(this._navigator == null))))
             {
-                this._navigator.send(new _Str_3719());
+                this._navigator.send(new QuitMessageComposer());
             }
             this._window.dispose();
             this._window = null;

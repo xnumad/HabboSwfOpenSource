@@ -88,7 +88,7 @@
     import com.sulake.core.window.IWindowContext;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.parser.room.session.CantConnectMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session.QuitMessageComposer;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
 
@@ -595,7 +595,7 @@
                     _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator.legacyNavigator), "${room.queue.error.title}", "${room.queue.error.title}");
                     _local_3.show();
             }
-            LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_3719());
+            LegacyNavigator(this._navigator.legacyNavigator).send(new QuitMessageComposer());
             var _local_4:HabboToolbarEvent = new HabboToolbarEvent(HabboToolbarEvent.HTE_TOOLBAR_CLICK);
             _local_4.iconId = HabboToolbarIconEnum.RECEPTION;
             LegacyNavigator(this._navigator.legacyNavigator).toolbar.events.dispatchEvent(_local_4);

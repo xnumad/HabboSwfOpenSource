@@ -52,7 +52,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.pets.CustomizePetWithFurniComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceScriptProceedComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session.QuitMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.session.ChangeQueueMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8017;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsData;
@@ -507,7 +507,7 @@
         {
             if (this._connection != null)
             {
-                this._connection.send(new _Str_3719());
+                this._connection.send(new QuitMessageComposer());
             }
         }
 

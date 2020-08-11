@@ -41,7 +41,7 @@
     import com.sulake.core.window.components.IDesktopWindow;
     import com.sulake.habbo.toolbar.HabboToolbarEnum;
     import com.sulake.core.communication.messages.IMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session.QuitMessageComposer;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.gamecenter.GameCenterEvent;
     import com.sulake.habbo.catalog.event.CatalogEvent;
@@ -288,7 +288,7 @@
                 case HabboToolbarIconEnum.RECEPTION:
                     if (this._roomSessionManager.getSession(-1))
                     {
-                        this.send(new _Str_3719());
+                        this.send(new QuitMessageComposer());
                         this._roomSessionManager.disposeSession(-1);
                     }
                     return;

@@ -102,7 +102,7 @@
     import com.sulake.core.window.IWindowContext;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.parser.room.session.CantConnectMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session.QuitMessageComposer;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.communication.messages.parser.roomsettings.ShowEnforceRoomCategoryDialogParser;
@@ -789,7 +789,7 @@
                     _local_3 = new SimpleAlertView(this._navigator, "${room.queue.error.title}", "${room.queue.error.title}");
                     _local_3.show();
             }
-            this._navigator.send(new _Str_3719());
+            this._navigator.send(new QuitMessageComposer());
             var _local_4:HabboToolbarEvent = new HabboToolbarEvent(HabboToolbarEvent.HTE_TOOLBAR_CLICK);
             _local_4.iconId = HabboToolbarIconEnum.RECEPTION;
             this._navigator.toolbar.events.dispatchEvent(_local_4);

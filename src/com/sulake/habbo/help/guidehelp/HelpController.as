@@ -9,7 +9,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing.room.session.QuitMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import flash.utils.getTimer;
@@ -123,7 +123,7 @@
                     _local_3 = (IWindowContainer(this._helpDialog.rootWindow).findChildByName("leave_room") as ICheckBoxWindow);
                     if (((!(_local_3 == null)) && (_local_3.Selected)))
                     {
-                        this._habboHelp.sendMessage(new _Str_3719());
+                        this._habboHelp.sendMessage(new QuitMessageComposer());
                     }
                     this.closeWindow();
                     this._habboHelp._Str_22356();
