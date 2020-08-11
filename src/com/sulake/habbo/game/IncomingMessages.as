@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelWillCloseInMinutesEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.GameListMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.availability._Str_6521;
+    import com.sulake.habbo.communication.messages.incoming.availability.MaintenanceStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.GameAchievementsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.UnloadGameMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.LoadGameMessageEvent;
@@ -42,7 +42,7 @@
             var _local_2:IHabboCommunicationManager = this._gameManager.communication;
             _local_2.addHabboConnectionMessageEvent(new HotelWillCloseInMinutesEvent(this.onHotelClosed));
             _local_2.addHabboConnectionMessageEvent(new GameListMessageEvent(this.onGameList));
-            _local_2.addHabboConnectionMessageEvent(new _Str_6521(this.onHotelClosed));
+            _local_2.addHabboConnectionMessageEvent(new MaintenanceStatusMessageEvent(this.onHotelClosed));
             _local_2.addHabboConnectionMessageEvent(new GameAchievementsMessageEvent(this.onGameAchievements));
             _local_2.addHabboConnectionMessageEvent(new UnloadGameMessageEvent(this.onUnloadGame));
             _local_2.addHabboConnectionMessageEvent(new LoadGameMessageEvent(this.onLoadGame));

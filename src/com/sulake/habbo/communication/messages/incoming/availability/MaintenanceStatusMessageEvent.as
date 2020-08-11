@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.availability.MaintenanceStatusMessageParser;
 
-    public class _Str_6521 extends MessageEvent implements IMessageEvent 
+    public class MaintenanceStatusMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_6521(k:Function)
+        public function MaintenanceStatusMessageEvent(k:Function)
         {
             super(k, MaintenanceStatusMessageParser);
         }

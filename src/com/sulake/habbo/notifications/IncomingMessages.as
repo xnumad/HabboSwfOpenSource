@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_7309;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftSelectedEvent;
-    import com.sulake.habbo.communication.messages.incoming.availability._Str_6521;
+    import com.sulake.habbo.communication.messages.incoming.availability.MaintenanceStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9583;
     import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelWillCloseInMinutesEvent;
@@ -98,7 +98,7 @@
             this.addMessageEvent(new _Str_7309(this.onInfoFeedEnable));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new ClubGiftSelectedEvent(this.onClubGiftSelected));
-            this.addMessageEvent(new _Str_6521(this.onHotelMaintenance));
+            this.addMessageEvent(new MaintenanceStatusMessageEvent(this.onHotelMaintenance));
             this.addMessageEvent(new _Str_9583(this.onModCautionEvent));
             this.addMessageEvent(new NotificationDialogMessageEvent(this.onNotificationDialogMessageEvent));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this.onHotelClosing));
@@ -303,7 +303,7 @@
 
         private function onHotelMaintenance(k:IMessageEvent):void
         {
-            var _local_2:MaintenanceStatusMessageParser = (k as _Str_6521).getParser();
+            var _local_2:MaintenanceStatusMessageParser = (k as MaintenanceStatusMessageEvent).getParser();
             if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;

@@ -233,7 +233,7 @@
 	import com.sulake.habbo.communication.messages.incoming.availability.HotelClosesAndWillOpenAtEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability.HotelWillCloseInMinutesEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability._Str_17595;
-	import com.sulake.habbo.communication.messages.incoming.availability._Str_6521;
+	import com.sulake.habbo.communication.messages.incoming.availability.MaintenanceStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.talent._Str_10709;
 	import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
@@ -1038,7 +1038,7 @@
             INCOMING_PACKETS[1331] = _Str_7272;
             INCOMING_PACKETS[1333] = _Str_8695;
             INCOMING_PACKETS[1347] = InitDiffieHandshakeEvent;
-            INCOMING_PACKETS[1350] = _Str_6521;
+            INCOMING_PACKETS[1350] = MaintenanceStatusMessageEvent;
             INCOMING_PACKETS[1352] = _Str_8892;
             INCOMING_PACKETS[1359] = _Str_6022;
             INCOMING_PACKETS[1369] = ItemsEvent;
