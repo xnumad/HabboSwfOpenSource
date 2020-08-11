@@ -4,16 +4,16 @@
 
     public class Game2ExitGameMessageComposer implements IMessageComposer
     {
-        private var _Str_21430:Boolean;
+        private var _exitToRoomBeforeGame:Boolean;
 
         public function Game2ExitGameMessageComposer(k:Boolean=true)
         {
-            this._Str_21430 = k;
+            this._exitToRoomBeforeGame = k;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_21430];
+            return [this._exitToRoomBeforeGame];
         }
 
         public function dispose():void
