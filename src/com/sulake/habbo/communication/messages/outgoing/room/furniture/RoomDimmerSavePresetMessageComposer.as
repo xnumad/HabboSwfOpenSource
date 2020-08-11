@@ -6,7 +6,7 @@
     {
         private var _presetNumber:int;
         private var _effectTypeId:int;
-        private var _Str_19730:String;
+        private var _colorRgbHex:String;
         private var _Str_20971:int;
         private var _Str_22039:Boolean;
 
@@ -14,14 +14,14 @@
         {
             this._presetNumber = k;
             this._effectTypeId = _arg_2;
-            this._Str_19730 = _arg_3;
+            this._colorRgbHex = _arg_3;
             this._Str_20971 = _arg_4;
             this._Str_22039 = _arg_5;
         }
 
         public function getMessageArray():Array
         {
-            return [this._presetNumber, this._effectTypeId, this._Str_19730, this._Str_20971, this._Str_22039];
+            return [this._presetNumber, this._effectTypeId, this._colorRgbHex, this._Str_20971, this._Str_22039];
         }
 
         public function dispose():void
