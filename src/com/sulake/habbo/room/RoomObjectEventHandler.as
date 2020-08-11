@@ -743,7 +743,7 @@
                 case RoomObjectOperationEnum.OBJECT_PLACE:
                     if (_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
                     {
-                        this._Str_22548(k, _arg_2);
+                        this.handleObjectPlace(k, _arg_2);
                     }
             }
         }
@@ -986,7 +986,7 @@
             }
         }
 
-        private function _Str_22548(k:RoomObjectMouseEvent, _arg_2:int):void
+        private function handleObjectPlace(k:RoomObjectMouseEvent, _arg_2:int):void
         {
             var _local_8:IRoomObject;
             var _local_9:IRoomObjectModelController;
