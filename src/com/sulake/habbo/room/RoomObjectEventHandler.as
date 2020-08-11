@@ -78,7 +78,7 @@
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10710;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12401;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.UseWallItemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11935;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11639;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12182;
@@ -2357,7 +2357,7 @@
                 {
                     if (_arg_3 == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
                     {
-                        this._roomEngine.connection.send(new _Str_12401(_arg_2, _arg_4));
+                        this._roomEngine.connection.send(new UseWallItemMessageComposer(_arg_2, _arg_4));
                     }
                 }
             }

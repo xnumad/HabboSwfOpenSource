@@ -618,7 +618,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12057;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetRidingPermissionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetBreedingPermissionMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12401;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.UseWallItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5686;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
@@ -1652,7 +1652,7 @@
             OUTGOING_PACKETS[2085] = ShoutMessageComposer;
             OUTGOING_PACKETS[2091] = _Str_6996;
             OUTGOING_PACKETS[21] = _Str_10770;
-            OUTGOING_PACKETS[210] = _Str_12401;
+            OUTGOING_PACKETS[210] = UseWallItemMessageComposer;
             OUTGOING_PACKETS[2105] = _Str_9940;
             OUTGOING_PACKETS[2109] = _Str_12242;
             OUTGOING_PACKETS[211] = _Str_7268;
