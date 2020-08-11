@@ -559,7 +559,7 @@
                 case RoomObjectOperationEnum.OBJECT_PLACE:
                     if (_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
                     {
-                        this._Str_19271(_arg_2, (!(_local_10 == null)), (!(_local_11 == null)));
+                        this.placeObject(_arg_2, (!(_local_10 == null)), (!(_local_11 == null)));
                     }
                     else
                     {
@@ -569,7 +569,7 @@
                             {
                                 case RoomObjectUserTypes.MONSTERPLANT:
                                 case RoomObjectUserTypes.RENTABLE_BOT:
-                                    this._Str_19271(_arg_2, (!(_local_10 == null)), (!(_local_11 == null)));
+                                    this.placeObject(_arg_2, (!(_local_10 == null)), (!(_local_11 == null)));
                                     break;
                                 default:
                                     if (_local_9 != null)
@@ -2240,7 +2240,7 @@
             }
         }
 
-        private function _Str_19271(k:int, _arg_2:Boolean, _arg_3:Boolean):void
+        private function placeObject(k:int, _arg_2:Boolean, _arg_3:Boolean):void
         {
             var _local_7:IRoomObjectController;
             var _local_14:IVector3d;
