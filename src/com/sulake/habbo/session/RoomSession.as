@@ -41,7 +41,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_7856;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10476;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10764;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.RemovePetFromFlatMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.MountPetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetRidingPermissionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetBreedingPermissionMessageComposer;
@@ -445,7 +445,7 @@
 
         public function pickUpPet(k:int):void
         {
-            this._connection.send(new _Str_10764(k));
+            this._connection.send(new RemovePetFromFlatMessageComposer(k));
         }
 
         public function mountPet(k:int):void

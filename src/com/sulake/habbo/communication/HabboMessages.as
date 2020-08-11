@@ -612,7 +612,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10547;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10596;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetItemDataMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10764;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemovePetFromFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10852;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveSaddleFromPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12057;
@@ -1590,7 +1590,7 @@
             OUTGOING_PACKETS[1533] = _Str_11639;
             OUTGOING_PACKETS[1543] = WhisperMessageComposer;
             OUTGOING_PACKETS[1572] = ReleaseIssuesMessageComposer;
-            OUTGOING_PACKETS[1581] = _Str_10764;
+            OUTGOING_PACKETS[1581] = RemovePetFromFlatMessageComposer;
             OUTGOING_PACKETS[1592] = _Str_8136;
             OUTGOING_PACKETS[1597] = StartTypingMessageComposer;
             OUTGOING_PACKETS[1598] = Game2RequestFullStatusUpdateMessageComposer;
