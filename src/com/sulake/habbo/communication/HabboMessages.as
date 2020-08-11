@@ -961,7 +961,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.poll.*;
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
 	import com.sulake.habbo.communication.messages.outgoing.poll._Str_11290;
-	import com.sulake.habbo.communication.messages.outgoing.poll._Str_12165;
+	import com.sulake.habbo.communication.messages.outgoing.poll.PollRejectComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_11266;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_5945;
 	import com.sulake.habbo.communication.messages.incoming.campaign.*;
@@ -1612,7 +1612,7 @@
             OUTGOING_PACKETS[1752] = _Str_5945;
             OUTGOING_PACKETS[1756] = GetSellablePetPalettesComposer;
             OUTGOING_PACKETS[1764] = _Str_11165;
-            OUTGOING_PACKETS[1773] = _Str_12165;
+            OUTGOING_PACKETS[1773] = PollRejectComposer;
             OUTGOING_PACKETS[1782] = _Str_7413;
             OUTGOING_PACKETS[1786] = _Str_10079;
             OUTGOING_PACKETS[1820] = _Str_11883;

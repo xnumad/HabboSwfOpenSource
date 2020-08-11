@@ -29,7 +29,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10045;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.poll._Str_11290;
-    import com.sulake.habbo.communication.messages.outgoing.poll._Str_12165;
+    import com.sulake.habbo.communication.messages.outgoing.poll.PollRejectComposer;
     import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
     import com.sulake.habbo.communication.messages.outgoing.userclassification.PeerUsersClassificationMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.userclassification.RoomUsersClassificationMessageComposer;
@@ -377,7 +377,7 @@
 
         public function sendPollRejectMessage(k:int):void
         {
-            this._connection.send(new _Str_12165(k));
+            this._connection.send(new PollRejectComposer(k));
         }
 
         public function sendPollAnswerMessage(k:int, _arg_2:int, _arg_3:Array):void
