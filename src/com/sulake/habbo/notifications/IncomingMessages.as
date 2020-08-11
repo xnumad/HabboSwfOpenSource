@@ -46,7 +46,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7904;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8126;
     import com.sulake.habbo.communication.messages.parser.availability.HotelWillCloseInMinutesMessageParser;
-    import com.sulake.habbo.communication.messages.parser.availability._Str_7315;
+    import com.sulake.habbo.communication.messages.parser.availability.MaintenanceStatusMessageParser;
     import com.sulake.habbo.communication.messages.parser.availability.HotelClosesAndWillOpenAtMessageParser;
     import com.sulake.habbo.communication.messages.parser.availability.HotelClosedAndOpensMessageParser;
     import com.sulake.habbo.utils.HabboWebTools;
@@ -303,7 +303,7 @@
 
         private function onHotelMaintenance(k:IMessageEvent):void
         {
-            var _local_2:_Str_7315 = (k as _Str_6521).getParser();
+            var _local_2:MaintenanceStatusMessageParser = (k as _Str_6521).getParser();
             if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
