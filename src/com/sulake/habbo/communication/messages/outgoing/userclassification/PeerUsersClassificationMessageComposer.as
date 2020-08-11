@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_9884 implements IMessageComposer 
+    public class PeerUsersClassificationMessageComposer implements IMessageComposer
     {
         private var userClassType:String;
 
-        public function _Str_9884(k:String)
+        public function PeerUsersClassificationMessageComposer(k:String)
         {
             this.userClassType = k;
         }

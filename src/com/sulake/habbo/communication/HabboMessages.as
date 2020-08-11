@@ -384,7 +384,7 @@
 	import com.sulake.habbo.communication.messages.incoming.advertisement.InterstitialMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.advertisement.RoomAdErrorEvent;
 	import com.sulake.habbo.communication.messages.outgoing.register.UpdateFigureDataMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.userclassification._Str_9884;
+	import com.sulake.habbo.communication.messages.outgoing.userclassification.PeerUsersClassificationMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userclassification.RoomUsersClassificationMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.directory._Str_16208;
 	import com.sulake.habbo.communication.messages.outgoing.game.directory._Str_7123;
@@ -1535,7 +1535,7 @@
             OUTGOING_PACKETS[1134] = _Str_10313;
             OUTGOING_PACKETS[1145] = _Str_4438;
             OUTGOING_PACKETS[1148] = _Str_10763;
-            OUTGOING_PACKETS[1160] = _Str_9884;
+            OUTGOING_PACKETS[1160] = PeerUsersClassificationMessageComposer;
             OUTGOING_PACKETS[1173] = _Str_7271;
             OUTGOING_PACKETS[1190] = _Str_11854;
             OUTGOING_PACKETS[1195] = _Str_11178;
