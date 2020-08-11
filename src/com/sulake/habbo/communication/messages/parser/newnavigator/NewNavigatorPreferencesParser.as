@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6991 implements IMessageParser 
+    public class NewNavigatorPreferencesParser implements IMessageParser
     {
         private var _windowX:int;
         private var _windowY:int;

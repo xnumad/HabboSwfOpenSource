@@ -45,7 +45,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SearchResultSet;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorLiftedRoomsParser;
-    import com.sulake.habbo.communication.messages.parser.newnavigator._Str_6991;
+    import com.sulake.habbo.communication.messages.parser.newnavigator.NewNavigatorPreferencesParser;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SavedSearch;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorSavedSearchesParser;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
@@ -267,7 +267,7 @@
             this._navigatorView._Str_24377();
         }
 
-        public function _Str_23415(k:_Str_6991):void
+        public function _Str_23415(k:NewNavigatorPreferencesParser):void
         {
             this._navigatorView._Str_23074(k._Str_17736, k._Str_18137, k._Str_17903, k._Str_25666, k._Str_23289);
         }
