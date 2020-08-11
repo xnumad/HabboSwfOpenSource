@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8720 implements IMessageParser 
+    public class AvailabilityTimeMessageParser implements IMessageParser
     {
         private var _isOpen:Boolean;
         private var _Str_16145:int;

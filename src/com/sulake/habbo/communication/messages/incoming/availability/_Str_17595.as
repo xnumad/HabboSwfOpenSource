@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.availability._Str_8720;
+    import com.sulake.habbo.communication.messages.parser.availability.AvailabilityTimeMessageParser;
 
     public class _Str_17595 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_17595(k:Function)
         {
-            super(k, _Str_8720);
+            super(k, AvailabilityTimeMessageParser);
         }
 
-        public function getParser():_Str_8720
+        public function getParser():AvailabilityTimeMessageParser
         {
-            return _parser as _Str_8720;
+            return _parser as AvailabilityTimeMessageParser;
         }
     }
 }
