@@ -1714,12 +1714,12 @@
             var _local_7:Vector3d = new Vector3d(_arg_3, _arg_4, 0);
             var _local_8:Vector3d = new Vector3d();
             _local_8.assign(k.getDirection());
-            var _local_9:Vector3d = this._Str_21004(k, _local_7, _arg_2.loc, _arg_2.dir, _arg_5);
+            var _local_9:Vector3d = this.validateFurnitureLocation(k, _local_7, _arg_2.loc, _arg_2.dir, _arg_5);
             if (_local_9 == null)
             {
                 _local_8.x = this.getValidRoomObjectDirection(k, true);
                 k.setDirection(_local_8);
-                _local_9 = this._Str_21004(k, _local_7, _arg_2.loc, _arg_2.dir, _arg_5);
+                _local_9 = this.validateFurnitureLocation(k, _local_7, _arg_2.loc, _arg_2.dir, _arg_5);
             }
             if (_local_9 == null)
             {
@@ -1817,7 +1817,7 @@
             return false;
         }
 
-        private function _Str_21004(k:IRoomObject, _arg_2:IVector3d, _arg_3:IVector3d, _arg_4:IVector3d, _arg_5:FurniStackingHeightMap):Vector3d
+        private function validateFurnitureLocation(k:IRoomObject, _arg_2:IVector3d, _arg_3:IVector3d, _arg_4:IVector3d, _arg_5:FurniStackingHeightMap):Vector3d
         {
             var _local_15:Vector3d;
             var stackable:Boolean;
