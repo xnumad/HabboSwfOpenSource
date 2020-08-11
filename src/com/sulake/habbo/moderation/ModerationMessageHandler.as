@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8164;
     import com.sulake.habbo.communication.messages.parser.moderation.ModeratorInitData;
     import com.sulake.habbo.communication.messages.parser.moderation.ModeratorToolPreferencesMessageParser;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_6763;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssuePickFailedMessageParser;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7250;
@@ -139,7 +139,7 @@
 
         private function onIssuePickFailed(event:_Str_7889):void
         {
-            var parser:_Str_6763 = event.getParser();
+            var parser:IssuePickFailedMessageParser = event.getParser();
             if (parser == null)
             {
                 return;

@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6763 implements IMessageParser 
+    public class IssuePickFailedMessageParser implements IMessageParser
     {
         private var _issues:Array;
         private var _retryEnabled:Boolean;
