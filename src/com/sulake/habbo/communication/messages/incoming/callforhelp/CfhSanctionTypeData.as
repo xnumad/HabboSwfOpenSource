@@ -8,7 +8,7 @@
         private var _name:String;
         private var _sanctionLengthInHours:int;
         private var _probationDays:int;
-        private var _Str_16344:Boolean;
+        private var _avatarOnly:Boolean;
         private var _Str_17021:String = "";
         private var _Str_16444:String = "";
 
@@ -17,7 +17,7 @@
             this._name = k.readString();
             this._sanctionLengthInHours = k.readInteger();
             this._probationDays = k.readInteger();
-            this._Str_16344 = k.readBoolean();
+            this._avatarOnly = k.readBoolean();
             if (k.bytesAvailable)
             {
                 this._Str_17021 = k.readString();
@@ -26,7 +26,7 @@
             {
                 this._Str_16444 = k.readString();
             }
-            Logger.log(((((((((("READ CFH SANCTION TYPE: " + this._name) + ", length: ") + this._sanctionLengthInHours) + ", avatar only: ") + this._Str_16344) + ", trade lock info: ") + this._Str_17021) + ", machine ban info: ") + this._Str_16444));
+            Logger.log(((((((((("READ CFH SANCTION TYPE: " + this._name) + ", length: ") + this._sanctionLengthInHours) + ", avatar only: ") + this._avatarOnly) + ", trade lock info: ") + this._Str_17021) + ", machine ban info: ") + this._Str_16444));
         }
 
         public function get name():String
@@ -41,7 +41,7 @@
 
         public function get _Str_25147():Boolean
         {
-            return this._Str_16344;
+            return this._avatarOnly;
         }
 
         public function get _Str_20573():String
