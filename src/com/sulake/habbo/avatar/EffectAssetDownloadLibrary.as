@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.avatar
 {
     import com.sulake.core.runtime.events.EventDispatcherWrapper;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_817;
+    import com.sulake.habbo.communication.messages.incoming.moderation.INamed;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.assets.AssetLibraryCollection;
     import flash.net.URLRequest;
@@ -11,7 +11,7 @@
     import flash.utils.ByteArray;
     import flash.events.Event;
 
-    public class EffectAssetDownloadLibrary extends EventDispatcherWrapper implements _Str_817 
+    public class EffectAssetDownloadLibrary extends EventDispatcherWrapper implements INamed
     {
         private static var STATE_IDLE:int = 0;
         private static var _Str_997:int = 1;

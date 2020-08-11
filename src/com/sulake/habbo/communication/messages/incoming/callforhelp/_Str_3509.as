@@ -1,9 +1,9 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.callforhelp
 {
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_817;
+    import com.sulake.habbo.communication.messages.incoming.moderation.INamed;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3509 implements _Str_817 
+    public class _Str_3509 implements INamed
     {
         private var _name:String;
         private var _id:int;

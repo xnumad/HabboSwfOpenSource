@@ -1,13 +1,13 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.callforhelp
 {
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_817;
+    import com.sulake.habbo.communication.messages.incoming.moderation.INamed;
     import com.sulake.core.runtime.IDisposable;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
     import com.sulake.habbo.communication.messages.incoming.moderation.*;
     import __AS3__.vec.*;
 
-    public class CallForHelpCategoryData implements _Str_817, IDisposable 
+    public class CallForHelpCategoryData implements INamed, IDisposable
     {
         private var _name:String;
         private var _topics:Vector.<_Str_3509>;
