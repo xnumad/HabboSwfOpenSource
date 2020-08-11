@@ -718,7 +718,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11532;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11554;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11639;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11777;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PlacePostItMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11935;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12182;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12348;
@@ -1673,7 +1673,7 @@
             OUTGOING_PACKETS[223] = _Str_11294;
             OUTGOING_PACKETS[2230] = GetGuestRoomMessageComposer;
             OUTGOING_PACKETS[2235] = ChangePostureMessageComposer;
-            OUTGOING_PACKETS[2248] = _Str_11777;
+            OUTGOING_PACKETS[2248] = PlacePostItMessageComposer;
             OUTGOING_PACKETS[2249] = _Str_7285;
             OUTGOING_PACKETS[2257] = OpenCampaignCalendarDoorAsStaffComposer;
             OUTGOING_PACKETS[2264] = _Str_12153;

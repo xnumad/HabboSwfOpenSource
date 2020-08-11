@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11777 implements IMessageComposer 
+    public class PlacePostItMessageComposer implements IMessageComposer
     {
         private var _itemId:int;
         private var _location:String;
 
-        public function _Str_11777(k:int, _arg_2:String)
+        public function PlacePostItMessageComposer(k:int, _arg_2:String)
         {
             this._itemId = k;
             this._location = _arg_2;

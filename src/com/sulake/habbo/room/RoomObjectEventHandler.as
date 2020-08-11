@@ -73,7 +73,7 @@
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8042;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8136;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11777;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.PlacePostItMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
@@ -2311,7 +2311,7 @@
                             {
                                 if (_local_7.getModelController().getString(RoomObjectVariableEnum.FURNITURE_IS_STICKIE) != null)
                                 {
-                                    this._roomEngine.connection.send(new _Str_11777(_local_5, _local_8));
+                                    this._roomEngine.connection.send(new PlacePostItMessageComposer(_local_5, _local_8));
                                 }
                                 else
                                 {
