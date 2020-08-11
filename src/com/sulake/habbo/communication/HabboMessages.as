@@ -89,7 +89,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.lobby.GameListMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
 	import com.sulake.habbo.communication.messages.incoming.callforhelp.SanctionStatusEvent;
-	import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_9038;
+	import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhSanctionMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeBoxPlayListAddSongEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_12108;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7199;
@@ -1240,7 +1240,7 @@
             INCOMING_PACKETS[2771] = HotelClosesAndWillOpenAtEvent;
             INCOMING_PACKETS[2772] = _Str_8785;
             INCOMING_PACKETS[2774] = CraftingRecipeEvent;
-            INCOMING_PACKETS[2782] = _Str_9038;
+            INCOMING_PACKETS[2782] = CfhSanctionMessageEvent;
             INCOMING_PACKETS[2783] = CameraPurchaseOKMessageEvent;
             INCOMING_PACKETS[2788] = PetRespectNotificationEvent;
             INCOMING_PACKETS[280] = _Str_5641;

@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
     import com.sulake.habbo.communication.messages.incoming.userclassification.UserClassificationMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_9038;
+    import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhSanctionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_5460;
     import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
@@ -83,7 +83,7 @@
             _local_2.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addMessageEvent(new _Str_9341(this.onModeratorActionResult));
             _local_2.addMessageEvent(new UserClassificationMessageEvent(this.onRoomUserClassification));
-            _local_2.addMessageEvent(new _Str_9038(this.onSanctions));
+            _local_2.addMessageEvent(new CfhSanctionMessageEvent(this.onSanctions));
             _local_2.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
         }
 
@@ -277,7 +277,7 @@
             }
         }
 
-        private function onSanctions(k:_Str_9038):void
+        private function onSanctions(k:CfhSanctionMessageEvent):void
         {
             var _local_2:CfhSanctionMessageParser = k.getParser();
             Logger.log(("Got sanction data..." + [_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198]));
