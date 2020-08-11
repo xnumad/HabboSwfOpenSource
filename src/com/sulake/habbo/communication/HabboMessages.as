@@ -625,7 +625,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7684;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7691;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.MountPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7716;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8017;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8026;
@@ -1517,7 +1517,7 @@
             OUTGOING_PACKETS[1002] = _Str_11269;
             OUTGOING_PACKETS[1004] = _Str_7379;
             OUTGOING_PACKETS[1030] = _Str_12096;
-            OUTGOING_PACKETS[1036] = _Str_7691;
+            OUTGOING_PACKETS[1036] = MountPetMessageComposer;
             OUTGOING_PACKETS[105] = _Str_3719;
             OUTGOING_PACKETS[1051] = _Str_12382;
             OUTGOING_PACKETS[1052] = _Str_7364;
