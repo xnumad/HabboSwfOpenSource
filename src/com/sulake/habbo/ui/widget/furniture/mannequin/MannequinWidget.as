@@ -25,7 +25,7 @@
     import flash.geom.Point;
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10762;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinFigureComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinNameComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowKeyboardEvent;
@@ -368,7 +368,7 @@
 
         private function saveOutfit():void
         {
-            this.handler.container.connection.send(new _Str_10762(this._furniId));
+            this.handler.container.connection.send(new SetMannequinFigureComposer(this._furniId));
         }
 
         private function _Str_20994():void

@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10762 implements IMessageComposer 
+    public class SetMannequinFigureComposer implements IMessageComposer
     {
         private var _furniId:int;
 
-        public function _Str_10762(k:int)
+        public function SetMannequinFigureComposer(k:int)
         {
             this._furniId = k;
         }

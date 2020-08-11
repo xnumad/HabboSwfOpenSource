@@ -710,7 +710,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.GetGuildFurniContextMenuInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10710;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10762;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinFigureComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10913;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11262;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRoomBackgroundColorDataComposer;
@@ -1666,7 +1666,7 @@
             OUTGOING_PACKETS[2161] = _Str_10067;
             OUTGOING_PACKETS[2167] = _Str_11298;
             OUTGOING_PACKETS[219] = GetAchievementsComposer;
-            OUTGOING_PACKETS[2209] = _Str_10762;
+            OUTGOING_PACKETS[2209] = SetMannequinFigureComposer;
             OUTGOING_PACKETS[2214] = UpdateForumSettingsMessageComposer;
             OUTGOING_PACKETS[2226] = _Str_11429;
             OUTGOING_PACKETS[2228] = ChangeMottoMessageComposer;
