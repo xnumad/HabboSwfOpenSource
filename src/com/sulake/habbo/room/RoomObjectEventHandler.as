@@ -347,7 +347,7 @@
                     this.handleObjectRandomStateChange((k as RoomObjectStateChangedEvent), _arg_2);
                     return;
                 case RoomObjectDimmerStateUpdateEvent.DIMMER_STATE:
-                    this.handleRoomObjectDataRequestEvent(k, _arg_2);
+                    this.handleObjectDimmerStateEvent(k, _arg_2);
                     return;
                 case RoomObjectMoveEvent.ROME_POSITION_CHANGED:
                     this.handleSelectedObjectRemove(k, _arg_2);
@@ -389,44 +389,44 @@
                 case RoomObjectWidgetRequestEvent.HIDE_HIGH_SCORE_DISPLAY:
                 case RoomObjectWidgetRequestEvent.INERNAL_LINK:
                 case RoomObjectWidgetRequestEvent.ROOM_LINK:
-                    this.handleObjectRoomAdEvent(k, _arg_2);
+                    this.handleObjectWidgetRequestEvent(k, _arg_2);
                     return;
                 case RoomObjectFurnitureActionEvent.DICE_ACTIVATE:
                 case RoomObjectFurnitureActionEvent.DICE_OFF:
                 case RoomObjectFurnitureActionEvent.USE_HABBOWHEEL:
                 case RoomObjectFurnitureActionEvent.STICKIE:
                 case RoomObjectFurnitureActionEvent.ENTER_ONEWAYDOOR:
-                    this.handleObjectSoundMachineEvent(k, _arg_2);
+                    this.handleObjectActionEvent(k, _arg_2);
                     return;
                 case RoomObjectFurnitureActionEvent.SOUND_MACHINE_INIT:
                 case RoomObjectFurnitureActionEvent.SOUND_MACHINE_START:
                 case RoomObjectFurnitureActionEvent.SOUND_MACHINE_STOP:
                 case RoomObjectFurnitureActionEvent.SOUND_MACHINE_DISPOSE:
-                    this.handleObjectJukeboxEvent(k, _arg_2);
+                    this.handleObjectSoundMachineEvent(k, _arg_2);
                     return;
                 case RoomObjectFurnitureActionEvent.JUKEBOX_INIT:
                 case RoomObjectFurnitureActionEvent.JUKEBOX_START:
                 case RoomObjectFurnitureActionEvent.JUKEBOX_MACHINE_STOP:
                 case RoomObjectFurnitureActionEvent.JUKEBOX_DISPOSE:
-                    this.handleObjectGroupBadgeEvent(k, _arg_2);
+                    this.handleObjectJukeboxEvent(k, _arg_2);
                     return;
                 case RoomObjectFloorHoleEvent.ROFHO_ADD_HOLE:
                 case RoomObjectFloorHoleEvent.ROFHO_REMOVE_HOLE:
-                    this.handleRoomActionMouseRequestEvent(k, _arg_2);
+                    this.handleObjectFloorHoleEvent(k, _arg_2);
                     return;
                 case RoomObjectRoomAdEvent.RORAE_ROOM_AD_FURNI_CLICK:
                 case RoomObjectRoomAdEvent.RORAE_ROOM_AD_FURNI_DOUBLE_CLICK:
                 case RoomObjectRoomAdEvent.RORAE_ROOM_AD_TOOLTIP_SHOW:
                 case RoomObjectRoomAdEvent.RORAE_ROOM_AD_TOOLTIP_HIDE:
                 case RoomObjectRoomAdEvent.RORAE_ROOM_AD_LOAD_IMAGE:
-                    this.handleObjectActionEvent(k, _arg_2);
+                    this.handleObjectRoomAdEvent(k, _arg_2);
                     return;
                 case RoomObjectBadgeAssetEvent.ROGBE_LOAD_BADGE:
-                    this.handleObjectFloorHoleEvent(k, _arg_2);
+                    this.handleObjectGroupBadgeEvent(k, _arg_2);
                     return;
                 case RoomObjectFurnitureActionEvent.MOUSE_ARROW:
                 case RoomObjectFurnitureActionEvent.MOUSE_BUTTON:
-                    this.handleObjectDimmerStateEvent(k, _arg_2);
+                    this.handleRoomActionMouseRequestEvent(k, _arg_2);
                     return;
                 case RoomObjectPlaySoundIdEvent.ROPSIE_PLAY_SOUND:
                 case RoomObjectPlaySoundIdEvent.ROPSIE_PLAY_SOUND_AT_PITCH:
@@ -1244,7 +1244,7 @@
             this.changeObjectState(_arg_2, k.objectId, k.objectType, k.param, true);
         }
 
-        private function handleObjectRoomAdEvent(k:RoomObjectEvent, _arg_2:int):void
+        private function handleObjectWidgetRequestEvent(k:RoomObjectEvent, _arg_2:int):void
         {
             var _local_7:String;
             var _local_8:String;
@@ -1371,7 +1371,7 @@
             }
         }
 
-        private function handleObjectActionEvent(k:RoomObjectEvent, _arg_2:int):void
+        private function handleObjectRoomAdEvent(k:RoomObjectEvent, _arg_2:int):void
         {
             var _local_6:String;
             var _local_8:Array;
@@ -1447,7 +1447,7 @@
             this._roomEngine.events.dispatchEvent(new RoomEngineObjectEvent(_local_6, _arg_2, _local_3, _local_5));
         }
 
-        private function handleObjectSoundMachineEvent(k:RoomObjectEvent, _arg_2:int):void
+        private function handleObjectActionEvent(k:RoomObjectEvent, _arg_2:int):void
         {
             if (k == null)
             {
@@ -1456,7 +1456,7 @@
             this.useObject(_arg_2, k.objectId, k.objectType, k.type);
         }
 
-        private function handleObjectJukeboxEvent(k:RoomObjectEvent, _arg_2:int):void
+        private function handleObjectSoundMachineEvent(k:RoomObjectEvent, _arg_2:int):void
         {
             if (k == null)
             {
@@ -1491,7 +1491,7 @@
             }
         }
 
-        private function handleObjectGroupBadgeEvent(k:RoomObjectEvent, _arg_2:int):void
+        private function handleObjectJukeboxEvent(k:RoomObjectEvent, _arg_2:int):void
         {
             if (k == null)
             {
@@ -1526,7 +1526,7 @@
             }
         }
 
-        private function handleObjectFloorHoleEvent(k:RoomObjectEvent, _arg_2:int):void
+        private function handleObjectGroupBadgeEvent(k:RoomObjectEvent, _arg_2:int):void
         {
             var _local_6:RoomObjectBadgeAssetEvent;
             if ((((this._roomEngine == null) || (this._roomEngine.events == null)) || (k == null)))
@@ -1546,7 +1546,7 @@
             }
         }
 
-        private function handleRoomActionMouseRequestEvent(k:RoomObjectEvent, _arg_2:int):void
+        private function handleObjectFloorHoleEvent(k:RoomObjectEvent, _arg_2:int):void
         {
             if (k == null)
             {
@@ -1563,12 +1563,12 @@
             }
         }
 
-        private function handleObjectDimmerStateEvent(k:RoomObjectEvent, _arg_2:int):void
+        private function handleRoomActionMouseRequestEvent(k:RoomObjectEvent, _arg_2:int):void
         {
             this._roomEngine.requestMouseCursor(k.type, k.objectId, k.objectType);
         }
 
-        private function handleRoomObjectDataRequestEvent(k:RoomObjectEvent, _arg_2:int):void
+        private function handleObjectDimmerStateEvent(k:RoomObjectEvent, _arg_2:int):void
         {
             var _local_4:RoomObjectDimmerStateUpdateEvent;
             var _local_5:RoomEngineDimmerStateEvent;
