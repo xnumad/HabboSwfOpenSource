@@ -17,7 +17,7 @@
     import com.sulake.habbo.navigator.events.HabboRoomSettingsTrackingEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4114;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5423;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_4043;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsSaveErrorMessageParser;
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IRadioButtonWindow;
@@ -310,28 +310,28 @@
                 return;
             }
             this._Str_15710 = 0;
-            if (_arg_2 == _Str_4043._Str_18222)
+            if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_18222)
             {
                 this._Str_5306(_Str_5300);
                 this._Str_5666.displayError("${navigator.roomsettings.roomnameismandatory}");
             }
             else
             {
-                if (_arg_2 == _Str_4043._Str_17186)
+                if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_17186)
                 {
                     this._Str_5306(_Str_5300);
                     this._Str_5666.displayError("${navigator.roomsettings.unacceptablewords}");
                 }
                 else
                 {
-                    if (_arg_2 == _Str_4043._Str_18833)
+                    if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_18833)
                     {
                         this._Str_5306(_Str_5300);
                         this._Str_7105.displayError("${navigator.roomsettings.unacceptablewords}");
                     }
                     else
                     {
-                        if (_arg_2 == _Str_4043._Str_16822)
+                        if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_16822)
                         {
                             this._Str_5306(_Str_5300);
                             this._Str_9153(this._tag1Input, _arg_3, "${navigator.roomsettings.unacceptablewords}");
@@ -339,7 +339,7 @@
                         }
                         else
                         {
-                            if (_arg_2 == _Str_4043._Str_17217)
+                            if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_17217)
                             {
                                 this._Str_5306(_Str_5300);
                                 this._Str_9153(this._tag1Input, _arg_3, "${navigator.roomsettings.nonuserchoosabletag}");
@@ -347,14 +347,14 @@
                             }
                             else
                             {
-                                if (_arg_2 == _Str_4043._Str_16354)
+                                if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_16354)
                                 {
                                     this._Str_5306(_Str_7004);
                                     this._Str_4194.displayError("${navigator.roomsettings.passwordismandatory}");
                                 }
                                 else
                                 {
-                                    if (_arg_2 == _Str_4043._Str_16136)
+                                    if (_arg_2 == RoomSettingsSaveErrorMessageParser._Str_16136)
                                     {
                                         this._Str_5306(_Str_5300);
                                         this._Str_9153(this._tag1Input, _arg_3, "${navigator.roomsettings.toomanycharacters}");
