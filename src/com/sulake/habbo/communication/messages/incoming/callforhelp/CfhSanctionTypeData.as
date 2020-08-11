@@ -6,7 +6,7 @@
     public class CfhSanctionTypeData implements INamed
     {
         private var _name:String;
-        private var _Str_17470:int;
+        private var _sanctionLengthInHours:int;
         private var _Str_22477:int;
         private var _Str_16344:Boolean;
         private var _Str_17021:String = "";
@@ -15,7 +15,7 @@
         public function CfhSanctionTypeData(k:IMessageDataWrapper)
         {
             this._name = k.readString();
-            this._Str_17470 = k.readInteger();
+            this._sanctionLengthInHours = k.readInteger();
             this._Str_22477 = k.readInteger();
             this._Str_16344 = k.readBoolean();
             if (k.bytesAvailable)
@@ -26,7 +26,7 @@
             {
                 this._Str_16444 = k.readString();
             }
-            Logger.log(((((((((("READ CFH SANCTION TYPE: " + this._name) + ", length: ") + this._Str_17470) + ", avatar only: ") + this._Str_16344) + ", trade lock info: ") + this._Str_17021) + ", machine ban info: ") + this._Str_16444));
+            Logger.log(((((((((("READ CFH SANCTION TYPE: " + this._name) + ", length: ") + this._sanctionLengthInHours) + ", avatar only: ") + this._Str_16344) + ", trade lock info: ") + this._Str_17021) + ", machine ban info: ") + this._Str_16444));
         }
 
         public function get name():String
@@ -36,7 +36,7 @@
 
         public function get _Str_16119():int
         {
-            return this._Str_17470;
+            return this._sanctionLengthInHours;
         }
 
         public function get _Str_25147():Boolean
