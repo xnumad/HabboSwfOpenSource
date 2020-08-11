@@ -313,7 +313,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11776;
 	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_12504;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2GameChatMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_17897;
+	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2ExitGameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_18615;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_18745;
 	import com.sulake.habbo.communication.messages.incoming.users.*;
@@ -1575,7 +1575,7 @@
             OUTGOING_PACKETS[143] = _Str_10126;
             OUTGOING_PACKETS[1435] = _Str_10817;
             OUTGOING_PACKETS[1444] = _Str_10862;
-            OUTGOING_PACKETS[1445] = _Str_17897;
+            OUTGOING_PACKETS[1445] = Game2ExitGameMessageComposer;
             OUTGOING_PACKETS[1450] = _Str_12123;
             OUTGOING_PACKETS[1458] = JoinPlayerQueueMessageComposer;
             OUTGOING_PACKETS[1461] = _Str_11774;
