@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_9899 implements IMessageComposer 
+    public class RoomDimmerSavePresetMessageComposer implements IMessageComposer
     {
         private var _Str_12368:int;
         private var _Str_11437:int;
@@ -10,7 +10,7 @@
         private var _Str_20971:int;
         private var _Str_22039:Boolean;
 
-        public function _Str_9899(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:Boolean)
+        public function RoomDimmerSavePresetMessageComposer(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:Boolean)
         {
             this._Str_12368 = k;
             this._Str_11437 = _arg_2;

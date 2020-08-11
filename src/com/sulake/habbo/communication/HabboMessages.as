@@ -728,7 +728,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_7290;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.AddSpamWallPostItMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9716;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9899;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerSavePresetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9987;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9998;
 	import com.sulake.habbo.communication.messages.incoming.handshake.*;
@@ -1597,7 +1597,7 @@
             OUTGOING_PACKETS[1603] = _Str_11685;
             OUTGOING_PACKETS[1638] = _Str_4844;
             OUTGOING_PACKETS[1644] = _Str_10476;
-            OUTGOING_PACKETS[1648] = _Str_9899;
+            OUTGOING_PACKETS[1648] = RoomDimmerSavePresetMessageComposer;
             OUTGOING_PACKETS[1667] = _Str_10101;
             OUTGOING_PACKETS[168] = _Str_12057;
             OUTGOING_PACKETS[1681] = _Str_10432;

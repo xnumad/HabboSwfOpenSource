@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.PresentOpenMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11262;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9899;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerSavePresetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10045;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.poll._Str_11290;
@@ -357,7 +357,7 @@
         {
             var _local_6:String = ("000000" + _arg_3.toString(16).toUpperCase());
             var _local_7:String = ("#" + _local_6.substr((_local_6.length - 6)));
-            this._connection.send(new _Str_9899(k, _arg_2, _local_7, _arg_4, _arg_5));
+            this._connection.send(new RoomDimmerSavePresetMessageComposer(k, _arg_2, _local_7, _arg_4, _arg_5));
         }
 
         public function sendRoomDimmerChangeStateMessage():void
