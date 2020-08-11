@@ -5,7 +5,7 @@
 
     public class CommunityVoteReceivedParser implements IMessageParser
     {
-        private var _Str_19446:Boolean;
+        private var _acknowledged:Boolean;
 
 
         public function flush():Boolean
@@ -15,13 +15,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_19446 = k.readBoolean();
+            this._acknowledged = k.readBoolean();
             return true;
         }
 
         public function get _Str_23568():Boolean
         {
-            return this._Str_19446;
+            return this._acknowledged;
         }
     }
 }
