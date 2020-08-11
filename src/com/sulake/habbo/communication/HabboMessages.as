@@ -256,7 +256,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.pets.PetSelectedMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.pets.GetPetInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.pets.BreedPetsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_8184;
+	import com.sulake.habbo.communication.messages.outgoing.room.pets.RespectPetMessageComposer;
 	import com.sulake.core.communication.messages.IMessageConfiguration;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_10410;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_18298;
@@ -1823,7 +1823,7 @@
             OUTGOING_PACKETS[3182] = _Str_10878;
             OUTGOING_PACKETS[3189] = _Str_10944;
             OUTGOING_PACKETS[3196] = _Str_18745;
-            OUTGOING_PACKETS[3202] = _Str_8184;
+            OUTGOING_PACKETS[3202] = RespectPetMessageComposer;
             OUTGOING_PACKETS[3203] = UpdateConditionMessageComposer;
             OUTGOING_PACKETS[3207] = _Str_8138;
             OUTGOING_PACKETS[3226] = RenderRoomMessageComposer;
