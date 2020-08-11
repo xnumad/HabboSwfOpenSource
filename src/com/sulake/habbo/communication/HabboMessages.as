@@ -614,7 +614,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetItemDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10764;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10852;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10983;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveSaddleFromPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12057;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12318;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12394;
@@ -1624,7 +1624,7 @@
             OUTGOING_PACKETS[1849] = GetFaqTextMessageComposer;
             OUTGOING_PACKETS[1855] = UpdateForumReadMarkerMessageComposer;
             OUTGOING_PACKETS[1859] = _Str_16422;
-            OUTGOING_PACKETS[186] = _Str_10983;
+            OUTGOING_PACKETS[186] = RemoveSaddleFromPetMessageComposer;
             OUTGOING_PACKETS[1866] = BuyMarketplaceTokensMessageComposer;
             OUTGOING_PACKETS[1894] = _Str_11096;
             OUTGOING_PACKETS[1911] = _Str_7286;

@@ -45,7 +45,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7691;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12318;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12394;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10983;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveSaddleFromPetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10547;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10852;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10067;
@@ -470,7 +470,7 @@
 
         public function removeSaddleFromPet(k:int):void
         {
-            this._connection.send(new _Str_10983(k));
+            this._connection.send(new RemoveSaddleFromPetMessageComposer(k));
         }
 
         public function harvestPet(k:int):void
