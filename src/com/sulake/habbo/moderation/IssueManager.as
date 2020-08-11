@@ -471,9 +471,9 @@
             {
                 _local_4 = (_local_4 + (_arg_3.sanctionLengthInHours + "h"));
             }
-            if (!StringUtil.isEmpty(_arg_3._Str_20573))
+            if (!StringUtil.isEmpty(_arg_3.tradeLockInfo))
             {
-                _local_4 = (_local_4 + (" & " + _arg_3._Str_20573));
+                _local_4 = (_local_4 + (" & " + _arg_3.tradeLockInfo));
             }
             if (!StringUtil.isEmpty(_arg_3._Str_19607))
             {

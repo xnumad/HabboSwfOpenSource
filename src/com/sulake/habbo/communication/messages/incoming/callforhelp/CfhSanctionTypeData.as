@@ -44,7 +44,7 @@
             return this._avatarOnly;
         }
 
-        public function get _Str_20573():String
+        public function get tradeLockInfo():String
         {
             return this._tradeLockInfo;
         }
