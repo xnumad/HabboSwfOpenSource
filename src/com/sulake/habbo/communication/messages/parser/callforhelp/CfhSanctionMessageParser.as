@@ -6,14 +6,14 @@
 
     public class CfhSanctionMessageParser implements IMessageParser
     {
-        private var _Str_6036:int = -1;
+        private var _issueId:int = -1;
         private var _accountId:int = -1;
         private var _Str_18848:_Str_6380;
 
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_6036 = k.readInteger();
+            this._issueId = k.readInteger();
             this._accountId = k.readInteger();
             this._Str_18848 = new _Str_6380(k);
             return true;
@@ -21,7 +21,7 @@
 
         public function get _Str_2869():int
         {
-            return this._Str_6036;
+            return this._issueId;
         }
 
         public function get accountId():int
@@ -36,7 +36,7 @@
 
         public function flush():Boolean
         {
-            this._Str_6036 = -1;
+            this._issueId = -1;
             this._accountId = -1;
             this._Str_18848 = null;
             return true;

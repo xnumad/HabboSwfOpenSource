@@ -5,12 +5,12 @@
 
     public class _Str_7250 implements IMessageParser 
     {
-        private var _Str_6036:int;
+        private var _issueId:int;
 
 
         public function get _Str_2869():int
         {
-            return this._Str_6036;
+            return this._issueId;
         }
 
         public function flush():Boolean
@@ -20,7 +20,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_6036 = parseInt(k.readString());
+            this._issueId = parseInt(k.readString());
             return true;
         }
     }
