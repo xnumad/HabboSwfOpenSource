@@ -42,7 +42,7 @@
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpCategoryData;
     import com.sulake.habbo.communication.messages.parser.callforhelp.CfhTopicsInitMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_8084;
+    import com.sulake.habbo.communication.messages.parser.moderation.ModeratorActionResultMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7074;
     import com.sulake.habbo.communication.messages.incoming.moderation.*;
     import com.sulake.habbo.communication.messages.parser.moderation.*;
@@ -317,7 +317,7 @@
 
         private function onModeratorActionResult(k:_Str_9341):void
         {
-            var _local_2:_Str_8084 = k.getParser();
+            var _local_2:ModeratorActionResultMessageParser = k.getParser();
             Logger.log(((("GOT MOD ACTION RESULT: " + _local_2.userId) + ", ") + _local_2.success));
             if (_local_2.success)
             {
