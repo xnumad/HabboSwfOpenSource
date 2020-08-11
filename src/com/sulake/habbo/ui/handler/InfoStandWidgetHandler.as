@@ -55,7 +55,7 @@
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.habbo.ui.widget.events._Str_3735;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
-    import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_11301;
+    import com.sulake.habbo.communication.messages.outgoing.room.pets.PetSelectedMessageComposer;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRentableBotInfoUpdateEvent;
     import com.sulake.habbo.friendlist.IFriend;
@@ -748,7 +748,7 @@
             var _local_2:Boolean = this.container.config.getBoolean("petSelect.enabled");
             if (_local_2)
             {
-                this._container.connection.send(new _Str_11301(k));
+                this._container.connection.send(new PetSelectedMessageComposer(k));
             }
             this._container.roomSession.userDataManager.requestPetInfo(k);
         }
