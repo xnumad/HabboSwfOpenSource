@@ -737,7 +737,7 @@
                 case RoomObjectOperationEnum.OBJECT_MOVE:
                     if (_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
                     {
-                        this._Str_24048(k, _arg_2);
+                        this.handleObjectMove(k, _arg_2);
                     }
                     return;
                 case RoomObjectOperationEnum.OBJECT_PLACE:
@@ -906,7 +906,7 @@
             return (this._roomEngine.getIsSelectedObjectInValidPosition) && (!((k.ctrlKey) || (k.shiftKey)));
         }
 
-        private function _Str_24048(k:RoomObjectMouseEvent, _arg_2:int):void
+        private function handleObjectMove(k:RoomObjectMouseEvent, _arg_2:int):void
         {
             var _local_6:Boolean;
             var _local_7:FurniStackingHeightMap;
