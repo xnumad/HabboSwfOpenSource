@@ -9,7 +9,7 @@
         private var _roomMessageTemplates:Array;
         private var _issues:Array;
         private var _cfhPermission:Boolean;
-        private var _Str_20034:Boolean;
+        private var _chatlogsPermission:Boolean;
         private var _Str_21542:Boolean;
         private var _Str_22205:Boolean;
         private var _Str_22169:Boolean;
@@ -48,7 +48,7 @@
                 _local_4++;
             }
             this._cfhPermission = k.readBoolean();
-            this._Str_20034 = k.readBoolean();
+            this._chatlogsPermission = k.readBoolean();
             this._Str_21542 = k.readBoolean();
             this._Str_22205 = k.readBoolean();
             this._Str_22169 = k.readBoolean();
@@ -102,7 +102,7 @@
 
         public function get _Str_12765():Boolean
         {
-            return this._Str_20034;
+            return this._chatlogsPermission;
         }
 
         public function get _Str_18465():Boolean
