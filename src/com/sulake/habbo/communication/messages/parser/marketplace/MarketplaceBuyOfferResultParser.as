@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6144 implements IMessageParser 
+    public class MarketplaceBuyOfferResultParser implements IMessageParser
     {
         private var _result:int;
         private var _Str_21768:int = -1;

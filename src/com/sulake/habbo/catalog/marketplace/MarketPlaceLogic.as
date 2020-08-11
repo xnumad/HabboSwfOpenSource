@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketPlaceOwnOffersParser;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
-    import com.sulake.habbo.communication.messages.parser.marketplace._Str_6144;
+    import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceBuyOfferResultParser;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
@@ -312,7 +312,7 @@
             {
                 return;
             }
-            var parser:_Str_6144 = (buyEvent.getParser() as _Str_6144);
+            var parser:MarketplaceBuyOfferResultParser = (buyEvent.getParser() as MarketplaceBuyOfferResultParser);
             if (parser == null)
             {
                 return;
