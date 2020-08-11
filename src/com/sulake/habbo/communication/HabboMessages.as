@@ -863,7 +863,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.action.AmbassadorAlertMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11552;
-	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11568;
+	import com.sulake.habbo.communication.messages.outgoing.room.action.BanUserWithDurationMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.MuteAllInRoomComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_12446;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.AssignRightsMessageComposer;
@@ -1581,7 +1581,7 @@
             OUTGOING_PACKETS[1461] = _Str_11774;
             OUTGOING_PACKETS[1472] = TogglePetRidingPermissionMessageComposer;
             OUTGOING_PACKETS[1474] = CancelTypingMessageComposer;
-            OUTGOING_PACKETS[1477] = _Str_11568;
+            OUTGOING_PACKETS[1477] = BanUserWithDurationMessageComposer;
             OUTGOING_PACKETS[1481] = _Str_11737;
             OUTGOING_PACKETS[15] = PickIssuesMessageComposer;
             OUTGOING_PACKETS[1520] = UpdateTriggerMessageComposer;

@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.outgoing.friendlist.FollowFriendMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.AmbassadorAlertMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserKickMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11568;
+    import com.sulake.habbo.communication.messages.outgoing.room.action.BanUserWithDurationMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.AssignRightsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
@@ -417,7 +417,7 @@
 
         public function banUserWithDuration(k:int, _arg_2:String):void
         {
-            this._connection.send(new _Str_11568(k, _arg_2, this.roomId));
+            this._connection.send(new BanUserWithDurationMessageComposer(k, _arg_2, this.roomId));
         }
 
         public function muteUser(userId:int, minutes:int):void

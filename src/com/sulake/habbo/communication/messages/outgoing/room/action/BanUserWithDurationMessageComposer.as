@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11568 implements IMessageComposer 
+    public class BanUserWithDurationMessageComposer implements IMessageComposer
     {
         private var _Str_2306:int;
         private var _Str_2337:int = 0;
         private var _Str_21335:String;
 
-        public function _Str_11568(k:int, _arg_2:String, _arg_3:int=0)
+        public function BanUserWithDurationMessageComposer(k:int, _arg_2:String, _arg_3:int=0)
         {
             this._Str_2306 = k;
             this._Str_2337 = _arg_3;
