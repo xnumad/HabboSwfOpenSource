@@ -6,13 +6,13 @@
     {
         private var _Str_2306:int;
         private var _Str_2337:int = 0;
-        private var _Str_21335:String;
+        private var _banType:String;
 
         public function BanUserWithDurationMessageComposer(k:int, _arg_2:String, _arg_3:int=0)
         {
             this._Str_2306 = k;
             this._Str_2337 = _arg_3;
-            this._Str_21335 = _arg_2;
+            this._banType = _arg_2;
         }
 
         public function dispose():void
@@ -21,7 +21,7 @@
 
         public function getMessageArray():Array
         {
-            return [this._Str_2306, this._Str_2337, this._Str_21335];
+            return [this._Str_2306, this._Str_2337, this._banType];
         }
     }
 }
