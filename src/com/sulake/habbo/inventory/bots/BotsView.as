@@ -9,7 +9,7 @@
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.avatar.IAvatarRenderManager;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.communication.messages.parser.inventory.bots._Str_3013;
+    import com.sulake.habbo.communication.messages.parser.inventory.bots.BotData;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
     import flash.display.BitmapData;
     import com.sulake.habbo.avatar.IAvatarImage;
@@ -105,7 +105,7 @@
             }
         }
 
-        public function addItem(k:_Str_3013):void
+        public function addItem(k:BotData):void
         {
             if (!this._isInitialized)
             {
@@ -207,13 +207,13 @@
             }
         }
 
-        public function _Str_20649(k:_Str_3013):BitmapData
+        public function _Str_20649(k:BotData):BitmapData
         {
             var _local_2:int = 3;
             return this._Str_9836(k, _local_2, false, AvatarScaleType.LARGE);
         }
 
-        public function _Str_9836(k:_Str_3013, _arg_2:int, _arg_3:Boolean, _arg_4:String):BitmapData
+        public function _Str_9836(k:BotData, _arg_2:int, _arg_3:Boolean, _arg_4:String):BitmapData
         {
             var _local_6:BitmapData;
             var _local_5:IAvatarImage = this._avatarRenderer.createAvatarImage(k.figure, _arg_4, k.gender, this);
@@ -297,7 +297,7 @@
             {
                 return;
             }
-            var _local_2:_Str_3013 = this._selectedGridItem.data;
+            var _local_2:BotData = this._selectedGridItem.data;
             if (_local_2 == null)
             {
                 return;
@@ -366,7 +366,7 @@
             var _local_3:String;
             var _local_4:String;
             var _local_5:Boolean;
-            var _local_12:_Str_3013;
+            var _local_12:BotData;
             var _local_13:BitmapData;
             if (this._view == null)
             {

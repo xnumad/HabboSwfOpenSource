@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3013 
+    public class BotData
     {
         private var _id:int;
         private var _name:String;
@@ -10,7 +10,7 @@
         private var _gender:String;
         private var _figure:String;
 
-        public function _Str_3013(k:IMessageDataWrapper)
+        public function BotData(k:IMessageDataWrapper)
         {
             this._id = k.readInteger();
             this._name = k.readString();

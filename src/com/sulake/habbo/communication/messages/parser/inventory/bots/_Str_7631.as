@@ -21,13 +21,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            var _local_4:_Str_3013;
+            var _local_4:BotData;
             this._items = new Map();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                _local_4 = new _Str_3013(k);
+                _local_4 = new BotData(k);
                 this._items.add(_local_4.id, _local_4);
                 _local_3++;
             }

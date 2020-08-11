@@ -12,7 +12,7 @@
     import com.sulake.habbo.avatar.IAvatarRenderManager;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.communication.messages.outgoing.inventory.bots._Str_10971;
-    import com.sulake.habbo.communication.messages.parser.inventory.bots._Str_3013;
+    import com.sulake.habbo.communication.messages.parser.inventory.bots.BotData;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import flash.events.Event;
     import com.sulake.habbo.inventory.events.HabboInventoryTrackingEvent;
@@ -119,7 +119,7 @@
             return this._items;
         }
 
-        public function addItem(k:_Str_3013):void
+        public function addItem(k:BotData):void
         {
             if (this._items.add(k.id, k))
             {
@@ -191,7 +191,7 @@
         public function _Str_7009(k:int, _arg_2:Boolean=false):Boolean
         {
             var _local_4:int;
-            var _local_3:_Str_3013 = this._Str_14402(k);
+            var _local_3:BotData = this._Str_14402(k);
             if (_local_3 == null)
             {
                 return false;
@@ -223,9 +223,9 @@
             this._view.update();
         }
 
-        private function _Str_14402(k:int):_Str_3013
+        private function _Str_14402(k:int):BotData
         {
-            var _local_2:_Str_3013;
+            var _local_2:BotData;
             for each (_local_2 in this._items)
             {
                 if (_local_2.id == k)

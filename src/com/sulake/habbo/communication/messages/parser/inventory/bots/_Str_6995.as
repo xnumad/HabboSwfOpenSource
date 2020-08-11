@@ -5,7 +5,7 @@
 
     public class _Str_6995 implements IMessageParser 
     {
-        private var _item:_Str_3013;
+        private var _item:BotData;
         private var _Str_12302:Boolean;
 
 
@@ -17,12 +17,12 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._item = new _Str_3013(k);
+            this._item = new BotData(k);
             this._Str_12302 = k.readBoolean();
             return true;
         }
 
-        public function get item():_Str_3013
+        public function get item():BotData
         {
             return this._item;
         }
