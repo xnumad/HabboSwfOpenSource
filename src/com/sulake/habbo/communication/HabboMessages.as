@@ -232,7 +232,7 @@
 	import com.sulake.habbo.communication.messages.incoming.availability.HotelClosedAndOpensEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability.HotelClosesAndWillOpenAtEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability.HotelWillCloseInMinutesEvent;
-	import com.sulake.habbo.communication.messages.incoming.availability._Str_17595;
+	import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityTimeMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability.MaintenanceStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.talent._Str_10709;
@@ -1408,7 +1408,7 @@
             INCOMING_PACKETS[563] = CheckUserNameResultMessageEvent;
             INCOMING_PACKETS[566] = FloodControlMessageEvent;
             INCOMING_PACKETS[596] = _Str_7433;
-            INCOMING_PACKETS[600] = _Str_17595;
+            INCOMING_PACKETS[600] = AvailabilityTimeMessageEvent;
             INCOMING_PACKETS[607] = _Str_8088;
             INCOMING_PACKETS[612] = EmailStatusResultEvent;
             INCOMING_PACKETS[618] = CraftingResultEvent;
