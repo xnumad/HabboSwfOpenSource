@@ -39,7 +39,7 @@
             return this._sanctionLengthInHours;
         }
 
-        public function get _Str_25147():Boolean
+        public function get avatarOnly():Boolean
         {
             return this._avatarOnly;
         }

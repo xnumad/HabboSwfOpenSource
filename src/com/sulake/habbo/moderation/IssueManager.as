@@ -462,7 +462,7 @@
             var _local_5:IssueBundle;
             var _local_6:IIssueHandler;
             var _local_7:ModActionCtrl;
-            var _local_4:String = (_arg_3.name + ((_arg_3._Str_25147) ? " (avatar) " : " "));
+            var _local_4:String = (_arg_3.name + ((_arg_3.avatarOnly) ? " (avatar) " : " "));
             if (_arg_3.sanctionLengthInHours > 24)
             {
                 _local_4 = (_local_4 + ((_arg_3.sanctionLengthInHours / 24) + " days"));
