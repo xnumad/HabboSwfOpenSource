@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8164;
     import com.sulake.habbo.communication.messages.parser.moderation.ModeratorInitData;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_6924;
+    import com.sulake.habbo.communication.messages.parser.moderation.ModeratorToolPreferencesMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_6763;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
@@ -129,7 +129,7 @@
 
         private function onModeratorToolPreferences(k:_Str_9150):void
         {
-            var _local_2:_Str_6924;
+            var _local_2:ModeratorToolPreferencesMessageParser;
             if (((this._moderationManager) && (this._moderationManager.issueManager)))
             {
                 _local_2 = k.getParser();
