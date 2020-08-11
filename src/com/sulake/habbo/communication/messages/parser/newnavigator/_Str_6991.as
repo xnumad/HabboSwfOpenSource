@@ -10,7 +10,7 @@
         private var _windowWidth:int;
         private var _windowHeight:int;
         private var _leftPaneHidden:Boolean;
-        private var _Str_18619:int;
+        private var _resultsMode:int;
 
 
         public function get _Str_17736():int
@@ -40,7 +40,7 @@
 
         public function get _Str_23289():int
         {
-            return this._Str_18619;
+            return this._resultsMode;
         }
 
         public function flush():Boolean
@@ -50,7 +50,7 @@
             this._windowWidth = 0;
             this._windowHeight = 0;
             this._leftPaneHidden = false;
-            this._Str_18619 = 0;
+            this._resultsMode = 0;
             return true;
         }
 
@@ -61,7 +61,7 @@
             this._windowWidth = k.readInteger();
             this._windowHeight = k.readInteger();
             this._leftPaneHidden = k.readBoolean();
-            this._Str_18619 = k.readInteger();
+            this._resultsMode = k.readInteger();
             return true;
         }
     }
