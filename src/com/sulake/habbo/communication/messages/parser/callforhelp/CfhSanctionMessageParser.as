@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_6380;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7060 implements IMessageParser 
+    public class CfhSanctionMessageParser implements IMessageParser
     {
         private var _Str_6036:int = -1;
         private var _accountId:int = -1;

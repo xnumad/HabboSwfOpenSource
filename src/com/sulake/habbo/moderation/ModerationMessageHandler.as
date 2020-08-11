@@ -37,7 +37,7 @@
     import com.sulake.habbo.communication.messages.parser.userclassification.UserClassificationMessageParser;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.userclassification.UserClassificationData;
-    import com.sulake.habbo.communication.messages.parser.callforhelp._Str_7060;
+    import com.sulake.habbo.communication.messages.parser.callforhelp.CfhSanctionMessageParser;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpCategoryData;
     import com.sulake.habbo.communication.messages.parser.callforhelp.CfhTopicsInitMessageParser;
@@ -279,7 +279,7 @@
 
         private function onSanctions(k:_Str_9038):void
         {
-            var _local_2:_Str_7060 = k.getParser();
+            var _local_2:CfhSanctionMessageParser = k.getParser();
             Logger.log(("Got sanction data..." + [_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198]));
             this._moderationManager.issueManager._Str_24202(_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198);
         }
