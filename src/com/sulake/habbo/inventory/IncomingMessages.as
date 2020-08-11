@@ -74,7 +74,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect.AvatarEffectsMessageParser;
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect.AvatarEffectAddedMessageParser;
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect.AvatarEffectActivatedMessageParser;
-    import com.sulake.habbo.communication.messages.parser.inventory.avatareffect._Str_7054;
+    import com.sulake.habbo.communication.messages.parser.inventory.avatareffect.AvatarEffectExpiredMessageParser;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.inventory.events.HabboInventoryHabboClubEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgesParser;
@@ -390,7 +390,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7054 = (k as _Str_5345).getParser();
+            var _local_3:AvatarEffectExpiredMessageParser = (k as _Str_5345).getParser();
             if (_local_3 == null)
             {
                 return;
