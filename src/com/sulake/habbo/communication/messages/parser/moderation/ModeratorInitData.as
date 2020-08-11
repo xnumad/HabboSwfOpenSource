@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5018 implements IDisposable 
+    public class ModeratorInitData implements IDisposable
     {
         private var _Str_12818:Array;
         private var _Str_14428:Array;
@@ -17,7 +17,7 @@
         private var _Str_19156:Boolean;
         private var _disposed:Boolean;
 
-        public function _Str_5018(k:IMessageDataWrapper)
+        public function ModeratorInitData(k:IMessageDataWrapper)
         {
             var _local_2:_Str_5460 = new _Str_5460();
             this._issues = [];

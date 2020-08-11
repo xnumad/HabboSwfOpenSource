@@ -11,7 +11,7 @@
     import com.sulake.habbo.sound.IHabboSoundManager;
     import com.sulake.habbo.tracking.IHabboTracking;
     import com.sulake.habbo.friendbar.IHabboFriendBar;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_5018;
+    import com.sulake.habbo.communication.messages.parser.moderation.ModeratorInitData;
     import com.sulake.core.runtime.IContext;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
@@ -52,7 +52,7 @@
         private var _issueManager:IssueManager;
         private var _startPanelCtrl:StartPanelCtrl;
         private var _windowTracker:WindowTracker;
-        private var _initMsg:_Str_5018;
+        private var _initMsg:ModeratorInitData;
         private var _currentFlatId:int;
 		private var _moderationIconWidget:ModerationIconWidget;
 
@@ -173,7 +173,7 @@
             return this._startPanelCtrl;
         }
 
-        public function get initMsg():_Str_5018
+        public function get initMsg():ModeratorInitData
         {
             return this._initMsg;
         }
@@ -198,7 +198,7 @@
             return this._soundManager;
         }
 
-        public function set initMsg(k:_Str_5018):void
+        public function set initMsg(k:ModeratorInitData):void
         {
             this._initMsg = k;
         }

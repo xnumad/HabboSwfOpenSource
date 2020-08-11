@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation._Str_5460;
     import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8164;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_5018;
+    import com.sulake.habbo.communication.messages.parser.moderation.ModeratorInitData;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_6924;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_6763;
     import com.sulake.habbo.window.utils.IAlertDialog;
@@ -115,7 +115,7 @@
             {
                 return;
             }
-            var _local_3:_Str_5018 = _local_2.data;
+            var _local_3:ModeratorInitData = _local_2.data;
             var _local_4:Array = _local_3.issues;
             var _local_5:Array = _local_3._Str_15690;
             for each (_local_6 in _local_4)

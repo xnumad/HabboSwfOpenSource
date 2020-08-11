@@ -5,7 +5,7 @@
 
     public class _Str_8164 implements IMessageParser 
     {
-        private var _data:_Str_5018;
+        private var _data:ModeratorInitData;
 
 
         public function flush():Boolean
@@ -20,11 +20,11 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._data = new _Str_5018(k);
+            this._data = new ModeratorInitData(k);
             return true;
         }
 
-        public function get data():_Str_5018
+        public function get data():ModeratorInitData
         {
             return this._data;
         }
