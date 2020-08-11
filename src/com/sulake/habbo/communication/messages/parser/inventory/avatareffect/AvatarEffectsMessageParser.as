@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5511;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5747 implements IMessageParser 
+    public class AvatarEffectsMessageParser implements IMessageParser
     {
         private var _effects:Array;
 

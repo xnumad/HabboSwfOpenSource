@@ -71,7 +71,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5511;
     import com.sulake.habbo.inventory.effects.Effect;
     import com.sulake.habbo.inventory.effects.EffectsModel;
-    import com.sulake.habbo.communication.messages.parser.inventory.avatareffect._Str_5747;
+    import com.sulake.habbo.communication.messages.parser.inventory.avatareffect.AvatarEffectsMessageParser;
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect.AvatarEffectAddedMessageParser;
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect._Str_8175;
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect._Str_7054;
@@ -302,7 +302,7 @@
             {
                 return;
             }
-            var _local_3:_Str_5747 = (k as _Str_6450).getParser();
+            var _local_3:AvatarEffectsMessageParser = (k as _Str_6450).getParser();
             if (_local_3 == null)
             {
                 return;
