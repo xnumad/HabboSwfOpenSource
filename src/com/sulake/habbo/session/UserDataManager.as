@@ -3,7 +3,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
-    import com.sulake.habbo.communication.messages.outgoing.room.pets._Str_11731;
+    import com.sulake.habbo.communication.messages.outgoing.room.pets.GetPetInfoMessageComposer;
 
     public class UserDataManager
     {
@@ -204,7 +204,7 @@
             var _local_2:RoomUserData = this._Str_8631(k);
             if (((!(_local_2 == null)) && (!(this._connection == null))))
             {
-                this._connection.send(new _Str_11731(_local_2.id));
+                this._connection.send(new GetPetInfoMessageComposer(_local_2.id));
             }
         }
 
