@@ -27,7 +27,7 @@
         {
             this._controller = k;
             this._communication = _arg_2;
-            this._communication.addHabboConnectionMessageEvent(new _Str_5345(this._Str_17996));
+            this._communication.addHabboConnectionMessageEvent(new _Str_5345(this.onAvatarEffectExpired));
             this._communication.addHabboConnectionMessageEvent(new _Str_5720(this._Str_17365));
             this._communication.addHabboConnectionMessageEvent(new _Str_9393(this._Str_25446));
             this._communication.addHabboConnectionMessageEvent(new CheckUserNameResultMessageEvent(this._Str_18696));
@@ -158,7 +158,7 @@
             }
         }
 
-        private function _Str_17996(k:_Str_5345):void
+        private function onAvatarEffectExpired(k:_Str_5345):void
         {
             var _local_3:int;
             if (((k == null) || (!(this._controller))))

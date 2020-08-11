@@ -163,7 +163,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_6022(this.onMarketplaceMakeOfferResult));
             this._com.addHabboConnectionMessageEvent(new _Str_3660(this._Str_25294));
             this._com.addHabboConnectionMessageEvent(new _Str_8524(this._Str_25173));
-            this._com.addHabboConnectionMessageEvent(new _Str_5345(this._Str_17996));
+            this._com.addHabboConnectionMessageEvent(new _Str_5345(this.onAvatarEffectExpired));
             this._com.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this._com.addHabboConnectionMessageEvent(new _Str_6944(this._Str_18461));
             this._com.addHabboConnectionMessageEvent(new _Str_9047(this._Str_22306));
@@ -383,7 +383,7 @@
             this._inventory._Str_7796();
         }
 
-        public function _Str_17996(k:IMessageEvent):void
+        public function onAvatarEffectExpired(k:IMessageEvent):void
         {
             var _local_2:EffectsModel = this._inventory._Str_3994;
             if (_local_2 == null)
