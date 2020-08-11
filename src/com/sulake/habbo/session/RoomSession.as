@@ -40,7 +40,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_7856;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10476;
+    import com.sulake.habbo.communication.messages.outgoing.room.action.LetUserInMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.RemovePetFromFlatMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.MountPetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetRidingPermissionMessageComposer;
@@ -440,7 +440,7 @@
 
         public function letUserIn(k:String, _arg_2:Boolean):void
         {
-            this._connection.send(new _Str_10476(k, _arg_2));
+            this._connection.send(new LetUserInMessageComposer(k, _arg_2));
         }
 
         public function pickUpPet(k:int):void

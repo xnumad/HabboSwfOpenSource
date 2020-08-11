@@ -859,7 +859,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.PostItPlacedEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10476;
+	import com.sulake.habbo.communication.messages.outgoing.room.action.LetUserInMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.AmbassadorAlertMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11552;
@@ -1596,7 +1596,7 @@
             OUTGOING_PACKETS[1598] = Game2RequestFullStatusUpdateMessageComposer;
             OUTGOING_PACKETS[1603] = _Str_11685;
             OUTGOING_PACKETS[1638] = _Str_4844;
-            OUTGOING_PACKETS[1644] = _Str_10476;
+            OUTGOING_PACKETS[1644] = LetUserInMessageComposer;
             OUTGOING_PACKETS[1648] = RoomDimmerSavePresetMessageComposer;
             OUTGOING_PACKETS[1667] = _Str_10101;
             OUTGOING_PACKETS[168] = _Str_12057;
