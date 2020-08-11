@@ -627,7 +627,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7684;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MountPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7716;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8017;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetClothingChangeDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8026;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8042;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8136;
@@ -1976,7 +1976,7 @@
             OUTGOING_PACKETS[882] = _Str_9979;
             OUTGOING_PACKETS[887] = _Str_7077;
             OUTGOING_PACKETS[90] = _Str_16291;
-            OUTGOING_PACKETS[924] = _Str_8017;
+            OUTGOING_PACKETS[924] = SetClothingChangeDataMessageComposer;
             OUTGOING_PACKETS[957] = _Str_10281;
             OUTGOING_PACKETS[96] = LatencyPingReportMessageComposer;
             OUTGOING_PACKETS[99] = UseFurnitureMessageComposer;

@@ -54,7 +54,7 @@
     import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceScriptProceedComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.session.QuitMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.session.ChangeQueueMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8017;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.SetClothingChangeDataMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsData;
 	import com.sulake.habbo.ui.widget.infobuspolls.VotePollCounterMessageComposer;
 
@@ -526,7 +526,7 @@
             {
                 return;
             }
-            var _local_4:_Str_8017 = new _Str_8017(k, _arg_2, _arg_3);
+            var _local_4:SetClothingChangeDataMessageComposer = new SetClothingChangeDataMessageComposer(k, _arg_2, _arg_3);
             this._connection.send(_local_4);
             _local_4.dispose();
             _local_4 = null;
