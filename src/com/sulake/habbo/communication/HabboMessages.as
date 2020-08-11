@@ -616,7 +616,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10852;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveSaddleFromPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12057;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12318;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetRidingPermissionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetBreedingPermissionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12401;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
@@ -1579,7 +1579,7 @@
             OUTGOING_PACKETS[1450] = _Str_12123;
             OUTGOING_PACKETS[1458] = JoinPlayerQueueMessageComposer;
             OUTGOING_PACKETS[1461] = _Str_11774;
-            OUTGOING_PACKETS[1472] = _Str_12318;
+            OUTGOING_PACKETS[1472] = TogglePetRidingPermissionMessageComposer;
             OUTGOING_PACKETS[1474] = CancelTypingMessageComposer;
             OUTGOING_PACKETS[1477] = _Str_11568;
             OUTGOING_PACKETS[1481] = _Str_11737;
