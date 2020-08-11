@@ -8,7 +8,7 @@
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.utils._Str_3521;
-    import com.sulake.habbo.communication.messages.outgoing.room.action._Str_7856;
+    import com.sulake.habbo.communication.messages.outgoing.room.action.AssignRightsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -135,7 +135,7 @@
             var _local_2:IWindowContainer = IWindowContainer(k.target);
             if (this._Str_16557)
             {
-                this._navigator.send(new _Str_7856(_local_2.id));
+                this._navigator.send(new AssignRightsMessageComposer(_local_2.id));
             }
             else
             {

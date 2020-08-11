@@ -38,7 +38,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserKickMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11568;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.action._Str_7856;
+    import com.sulake.habbo.communication.messages.outgoing.room.action.AssignRightsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.LetUserInMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.RemovePetFromFlatMessageComposer;
@@ -427,7 +427,7 @@
 
         public function assignRights(k:int):void
         {
-            this._connection.send(new _Str_7856(k));
+            this._connection.send(new AssignRightsMessageComposer(k));
         }
 
         public function removeRights(k:int):void

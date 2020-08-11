@@ -866,7 +866,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11568;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.MuteAllInRoomComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_12446;
-	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_7856;
+	import com.sulake.habbo.communication.messages.outgoing.room.action.AssignRightsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserKickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.*;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveRoomSettingsMessageComposer;
@@ -1964,7 +1964,7 @@
             OUTGOING_PACKETS[798] = _Str_10645;
             OUTGOING_PACKETS[800] = _Str_7177;
             OUTGOING_PACKETS[801] = _Str_17078;
-            OUTGOING_PACKETS[808] = _Str_7856;
+            OUTGOING_PACKETS[808] = AssignRightsMessageComposer;
             OUTGOING_PACKETS[813] = _Str_11712;
             OUTGOING_PACKETS[826] = _Str_10397;
             OUTGOING_PACKETS[848] = _Str_11938;
