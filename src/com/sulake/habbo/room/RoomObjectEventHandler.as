@@ -335,7 +335,7 @@
             }
             if ((k is RoomObjectMouseEvent))
             {
-                this.handleRoomObjectMouseMove((k as RoomObjectMouseEvent), _arg_2);
+                this.handleRoomObjectMouseEvent((k as RoomObjectMouseEvent), _arg_2);
                 return;
             }
             switch (k.type)
@@ -472,29 +472,29 @@
             return _local_4;
         }
 
-        private function handleRoomObjectMouseMove(k:RoomObjectMouseEvent, _arg_2:int):void
+        private function handleRoomObjectMouseEvent(k:RoomObjectMouseEvent, _arg_2:int):void
         {
             switch (k.type)
             {
                 case RoomObjectMouseEvent.ROE_MOUSE_CLICK:
-                    this.handleRoomObjectMouseEnter(k, _arg_2);
+                    this.handleRoomObjectMouseClick(k, _arg_2);
                     return;
                 case RoomObjectMouseEvent.ROE_MOUSE_MOVE:
-                    this.handleRoomObjectMouseLeave(k, _arg_2);
+                    this.handleRoomObjectMouseMove(k, _arg_2);
                     return;
                 case RoomObjectMouseEvent.ROE_MOUSE_DOWN:
-                    this.handleObjectPlace(k, _arg_2);
-                    return;
-                case RoomObjectMouseEvent.ROE_MOUSE_ENTER:
                     this.handleRoomObjectMouseDown(k, _arg_2);
                     return;
+                case RoomObjectMouseEvent.ROE_MOUSE_ENTER:
+                    this.handleRoomObjectMouseEnter(k, _arg_2);
+                    return;
                 case RoomObjectMouseEvent.ROE_MOUSE_LEAVE:
-                    this.handleObjectMove(k, _arg_2);
+                    this.handleRoomObjectMouseLeave(k, _arg_2);
                     return;
             }
         }
 
-        private function handleRoomObjectMouseEnter(k:RoomObjectMouseEvent, _arg_2:int):void
+        private function handleRoomObjectMouseClick(k:RoomObjectMouseEvent, _arg_2:int):void
         {
             var _local_14:Boolean;
             var _local_15:String;
@@ -690,7 +690,7 @@
             }
         }
 
-        private function handleRoomObjectMouseLeave(k:RoomObjectMouseEvent, _arg_2:int):void
+        private function handleRoomObjectMouseMove(k:RoomObjectMouseEvent, _arg_2:int):void
         {
             var _local_7:IRoomObjectController;
             var _local_8:RoomObjectTileCursorUpdateMessage;
@@ -823,7 +823,7 @@
             return null;
         }
 
-        private function handleRoomObjectMouseDown(k:RoomObjectMouseEvent, _arg_2:int):void
+        private function handleRoomObjectMouseEnter(k:RoomObjectMouseEvent, _arg_2:int):void
         {
             var _local_3:String = k.objectType;
             var _local_4:int = k.objectId;
@@ -842,7 +842,7 @@
             }
         }
 
-        private function handleObjectMove(k:RoomObjectMouseEvent, _arg_2:int):void
+        private function handleRoomObjectMouseLeave(k:RoomObjectMouseEvent, _arg_2:int):void
         {
             var _local_6:IRoomObjectController;
             var _local_7:RoomObjectDataUpdateMessage;
@@ -867,7 +867,7 @@
             }
         }
 
-        private function handleObjectPlace(k:RoomObjectMouseEvent, _arg_2:int):void
+        private function handleRoomObjectMouseDown(k:RoomObjectMouseEvent, _arg_2:int):void
         {
             var _local_8:IEventDispatcher;
             if (k == null)
