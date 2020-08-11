@@ -10,7 +10,7 @@
         private var _issues:Array;
         private var _cfhPermission:Boolean;
         private var _chatlogsPermission:Boolean;
-        private var _Str_21542:Boolean;
+        private var _alertPermission:Boolean;
         private var _Str_22205:Boolean;
         private var _Str_22169:Boolean;
         private var _Str_19231:Boolean;
@@ -49,7 +49,7 @@
             }
             this._cfhPermission = k.readBoolean();
             this._chatlogsPermission = k.readBoolean();
-            this._Str_21542 = k.readBoolean();
+            this._alertPermission = k.readBoolean();
             this._Str_22205 = k.readBoolean();
             this._Str_22169 = k.readBoolean();
             this._Str_19231 = k.readBoolean();
@@ -107,7 +107,7 @@
 
         public function get _Str_18465():Boolean
         {
-            return this._Str_21542;
+            return this._alertPermission;
         }
 
         public function get _Str_20397():Boolean
