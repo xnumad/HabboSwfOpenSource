@@ -20,7 +20,7 @@
         private static const _Str_15538:int = 20;
 
         private var _window:IWindowContainer;
-        private var _Str_2502:int;
+        private var _furniId:int;
 
         public function CustomStackHeightWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary=null, _arg_4:IHabboLocalizationManager=null)
         {
@@ -51,7 +51,7 @@
 
         public function open(k:int, _arg_2:Number):void
         {
-            this._Str_2502 = k;
+            this._furniId = k;
             _arg_2 = Math.min(_arg_2, MAX_HEIGHT);
             if (this._window == null)
             {
@@ -96,7 +96,7 @@
                         this._Str_12076();
                         break;
                     case "button_above_stack":
-                        this.handler.container.connection.send(new _Str_7290(this._Str_2502));
+                        this.handler.container.connection.send(new _Str_7290(this._furniId));
                         break;
                     case "header_button_close":
                         this.destroyWindow();
@@ -163,7 +163,7 @@
         private function _Str_12076():void
         {
             var k:int = (parseFloat(this._window.findChildByName("input_height").caption) * 100);
-            this.handler.container.connection.send(new _Str_7290(this._Str_2502, k));
+            this.handler.container.connection.send(new _Str_7290(this._furniId, k));
         }
 
         private function _Str_18328():void
@@ -202,7 +202,7 @@
 
         public function _Str_24760(k:int, _arg_2:Number):void
         {
-            if (this._Str_2502 == k)
+            if (this._furniId == k)
             {
                 this._Str_19462 = _arg_2;
             }

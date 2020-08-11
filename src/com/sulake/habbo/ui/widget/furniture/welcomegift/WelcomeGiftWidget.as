@@ -34,7 +34,7 @@
         private var _Str_14637:String;
         private var _isVerified:Boolean;
         private var _Str_5694:Boolean;
-        private var _Str_2502:int;
+        private var _furniId:int;
 
         public function WelcomeGiftWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary, _arg_4:IHabboLocalizationManager)
         {
@@ -216,7 +216,7 @@
 
         private function _Str_23940(k:WindowMouseEvent):void
         {
-            messageListener.processWidgetMessage(new RoomWidgetFurniActionMessage(RoomWidgetFurniActionMessage.RWFAM_OPEN_WELCOME_GIFT, this._Str_2502, 0));
+            messageListener.processWidgetMessage(new RoomWidgetFurniActionMessage(RoomWidgetFurniActionMessage.RWFAM_OPEN_WELCOME_GIFT, this._furniId, 0));
             this.disposeView();
         }
 
@@ -291,7 +291,7 @@
                     this._Str_5694 = k._Str_17916;
                     if (k._Str_10512)
                     {
-                        this._Str_2502 = k.furniId;
+                        this._furniId = k.furniId;
                         this._Str_23801();
                     }
                     else

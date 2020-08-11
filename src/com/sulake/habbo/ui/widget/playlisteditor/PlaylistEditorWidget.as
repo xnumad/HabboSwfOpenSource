@@ -41,7 +41,7 @@
         private var _configurationManager:IHabboConfigurationManager;
         private var _soundManager:IHabboSoundManager;
         private var _Str_2314:MainWindowHandler;
-        private var _Str_2502:int;
+        private var _furniId:int;
 
         public function PlaylistEditorWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IHabboSoundManager, _arg_4:IAssetLibrary, _arg_5:IHabboLocalizationManager, _arg_6:IHabboConfigurationManager, _arg_7:IHabboCatalog)
         {
@@ -166,7 +166,7 @@
             {
                 k = ((this._Str_2314._Str_15855._Str_4405 != -1) ? this._Str_2314._Str_15855._Str_4405 : 0);
             }
-            var _local_2:RoomWidgetPlayListPlayStateMessage = new RoomWidgetPlayListPlayStateMessage(RoomWidgetPlayListPlayStateMessage.RWPLPS_TOGGLE_PLAY_PAUSE, this._Str_2502, k);
+            var _local_2:RoomWidgetPlayListPlayStateMessage = new RoomWidgetPlayListPlayStateMessage(RoomWidgetPlayListPlayStateMessage.RWPLPS_TOGGLE_PLAY_PAUSE, this._furniId, k);
             if (messageListener != null)
             {
                 messageListener.processWidgetMessage(_local_2);
@@ -238,7 +238,7 @@
         private function _Str_19678(k:_Str_2693):void
         {
             var _local_2:IPlayListController;
-            this._Str_2502 = k.furniId;
+            this._furniId = k.furniId;
             if (!this._Str_2314)
             {
                 this._Str_2314 = new MainWindowHandler(this, this._soundManager._Str_2774);
