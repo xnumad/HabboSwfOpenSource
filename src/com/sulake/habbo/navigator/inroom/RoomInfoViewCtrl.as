@@ -399,7 +399,7 @@
                 return;
             }
             this._navigator.trackGoogle("roomInfo", "editRoomSettings");
-            this._navigator.roomSettingsCtrl._Str_25624(_local_2.flatId);
+            this._navigator.roomSettingsCtrl.startRoomSettingsEdit(_local_2.flatId);
             this.close();
         }
 

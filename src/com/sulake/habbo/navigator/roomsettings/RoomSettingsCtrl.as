@@ -187,7 +187,7 @@
             return this._navigator == null;
         }
 
-        public function _Str_25624(k:int):void
+        public function startRoomSettingsEdit(k:int):void
         {
             this.close();
             this._Str_2449 = k;
