@@ -518,7 +518,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabAdClickedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabViewedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.CancelEventMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12081;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToARandomPromotedRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomRightsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomHistorySearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RateFlatMessageComposer;
@@ -1513,7 +1513,7 @@
 
 
 
-            OUTGOING_PACKETS[10] = _Str_12081;
+            OUTGOING_PACKETS[10] = ForwardToARandomPromotedRoomMessageComposer;
             OUTGOING_PACKETS[1002] = MyFrequentRoomHistorySearchMessageComposer;
             OUTGOING_PACKETS[1004] = GetGuildEditInfoMessageComposer;
             OUTGOING_PACKETS[1030] = SetChatStylePreferenceComposer;

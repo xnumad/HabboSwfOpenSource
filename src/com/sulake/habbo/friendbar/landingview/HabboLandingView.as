@@ -49,7 +49,7 @@
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12081;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToARandomPromotedRoomMessageComposer;
     import com.sulake.habbo.session.product.IProductDataListener;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.communication.messages.outgoing.inventory.badges.RequestABadgeComposer;
@@ -395,7 +395,7 @@
             }
             if (k != null)
             {
-                this.send(new _Str_12081(k));
+                this.send(new ForwardToARandomPromotedRoomMessageComposer(k));
             }
         }
 
