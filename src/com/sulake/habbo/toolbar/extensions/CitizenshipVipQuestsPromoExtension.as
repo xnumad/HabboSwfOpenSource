@@ -15,7 +15,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.habbo.toolbar.ToolbarDisplayExtensionIds;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_7568;
+    import com.sulake.habbo.communication.messages.outgoing.quest.StartCampaignMessageComposer;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;
@@ -104,7 +104,7 @@
         {
             if (this._connection)
             {
-                this._connection.send(new _Str_7568(this._vipQuestsCampaignName));
+                this._connection.send(new StartCampaignMessageComposer(this._vipQuestsCampaignName));
             }
             this.destroyWindow();
         }

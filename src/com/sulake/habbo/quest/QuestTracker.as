@@ -10,7 +10,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.quest._Str_7551;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_7568;
+    import com.sulake.habbo.communication.messages.outgoing.quest.StartCampaignMessageComposer;
     import com.sulake.core.window.components.IDesktopWindow;
     import com.sulake.core.window.components.IFrameWindow;
 
@@ -424,7 +424,7 @@
             else
             {
                 this._questEngine._Str_3398._Str_11417._Str_19749 = this._questEngine.getBoolean("questing.showDetailsForNextQuest");
-                this._questEngine.send(new _Str_7568(this.getDefaultCampaign()));
+                this._questEngine.send(new StartCampaignMessageComposer(this.getDefaultCampaign()));
             }
         }
 

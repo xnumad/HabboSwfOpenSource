@@ -39,7 +39,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest.AcceptQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7541;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7551;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7568;
+	import com.sulake.habbo.communication.messages.outgoing.quest.StartCampaignMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersGoalProgressMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.pets.PetTrainingPanelEvent;
@@ -1604,7 +1604,7 @@
             OUTGOING_PACKETS[1687] = _Str_7023;
             OUTGOING_PACKETS[1689] = RemoveFriendMessageComposer;
             OUTGOING_PACKETS[1691] = _Str_6133;
-            OUTGOING_PACKETS[1697] = _Str_7568;
+            OUTGOING_PACKETS[1697] = StartCampaignMessageComposer;
             OUTGOING_PACKETS[17] = GetUserTagsMessageComposer;
             OUTGOING_PACKETS[1703] = ForwardToSomeRoomMessageComposer;
             OUTGOING_PACKETS[172] = ForwardToACompetitionRoomMessageComposer;
