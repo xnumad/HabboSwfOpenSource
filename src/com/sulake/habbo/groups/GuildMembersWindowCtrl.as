@@ -254,7 +254,7 @@
             }
             if (_arg_3 != null)
             {
-                this._Str_24256(_local_4, _arg_3);
+                this.refreshUserEntry(_local_4, _arg_3);
                 _local_4.visible = true;
             }
             else
@@ -263,7 +263,7 @@
             }
         }
 
-        public function _Str_24256(k:IWindowContainer, _arg_2:_Str_2891):void
+        public function refreshUserEntry(k:IWindowContainer, _arg_2:_Str_2891):void
         {
             var _local_5:Boolean;
             k.findChildByName("user_name_txt").caption = _arg_2.userName;
