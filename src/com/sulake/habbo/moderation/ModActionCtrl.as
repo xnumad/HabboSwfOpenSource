@@ -58,8 +58,8 @@
                 _Str_3610.push(new ModActionDefinition(6, "Ban 100 years", ModActionDefinition.BAN, 6, 0));
                 _Str_3610.push(new ModActionDefinition(106, "Ban avatar-only 100 years", ModActionDefinition.BAN, 6, 0));
                 _Str_3610.push(new ModActionDefinition(101, "Kick", ModActionDefinition.KICK, 0, 0));
-                _Str_3610.push(new ModActionDefinition(102, "Lock trade 1 week", ModActionDefinition._Str_10699, 0, 168));
-                _Str_3610.push(new ModActionDefinition(104, "Lock trade permanent", ModActionDefinition._Str_10699, 0, 876000));
+                _Str_3610.push(new ModActionDefinition(102, "Lock trade 1 week", ModActionDefinition.TRADING_LOCK, 0, 168));
+                _Str_3610.push(new ModActionDefinition(104, "Lock trade permanent", ModActionDefinition.TRADING_LOCK, 0, 876000));
                 _Str_3610.push(new ModActionDefinition(105, "Message", ModActionDefinition.MESSAGE, 0, 0));
             }
             this._Str_2327.issueManager._Str_24021(this._Str_4127, this);
@@ -299,7 +299,7 @@
                     this._Str_3066("kick");
                     this._Str_2327.connection.send(new _Str_11592(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
-                case ModActionDefinition._Str_10699:
+                case ModActionDefinition.TRADING_LOCK:
                     this._Str_3066("trading_lock");
                     _local_6 = (_local_4._Str_25670 * 60);
                     this._Str_2327.connection.send(new _Str_12485(this._Str_4127, this._Str_3121.text, _local_6, _local_3, this._Str_7121()));

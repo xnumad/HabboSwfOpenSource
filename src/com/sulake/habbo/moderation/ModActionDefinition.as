@@ -6,7 +6,7 @@
         public static const MUTE:int = 2;
         public static const BAN:int = 3;
         public static const KICK:int = 4;
-        public static const _Str_10699:int = 5;
+        public static const TRADING_LOCK:int = 5;
         public static const MESSAGE:int = 6;
 
         private var _actionId:int;
