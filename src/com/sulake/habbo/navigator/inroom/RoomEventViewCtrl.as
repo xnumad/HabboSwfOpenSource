@@ -55,7 +55,7 @@
             var k:RoomEventData = this._navigator.data.roomEventData;
             if (k == null)
             {
-                this._Str_25306();
+                this.createEvent();
             }
             else
             {
@@ -72,7 +72,7 @@
             this._eventDescInput.setText(k.eventDescription);
         }
 
-        private function _Str_25306():void
+        private function createEvent():void
         {
             this._window.caption = this._navigator.getText("navigator.createevent");
             this._eventDescInput.goBackToInitialState();
