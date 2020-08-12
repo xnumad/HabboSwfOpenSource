@@ -5,25 +5,25 @@
 
     public class _Str_7210 implements IMessageParser 
     {
-        private var _Str_2673:TalentTrack;
+        private var _talentTrack:TalentTrack;
 
 
         public function flush():Boolean
         {
-            this._Str_2673 = null;
+            this._talentTrack = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2673 = new TalentTrack();
-            this._Str_2673.parse(k);
+            this._talentTrack = new TalentTrack();
+            this._talentTrack.parse(k);
             return true;
         }
 
         public function _Str_23534():TalentTrack
         {
-            return this._Str_2673;
+            return this._talentTrack;
         }
     }
 }
