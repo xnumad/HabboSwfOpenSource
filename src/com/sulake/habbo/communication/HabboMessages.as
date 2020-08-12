@@ -27,7 +27,7 @@
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
 	import com.sulake.habbo.communication.messages.outgoing.quest.FriendRequestQuestCompleteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersRewardMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_11298;
+	import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalHallOfFameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetSeasonalQuestsOnlyMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_16291;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_17850;
@@ -1664,7 +1664,7 @@
             OUTGOING_PACKETS[2144] = SpinWheelOfFortuneMessageComposer;
             OUTGOING_PACKETS[2150] = _Str_11580;
             OUTGOING_PACKETS[2161] = GetPetCommandsMessageComposer;
-            OUTGOING_PACKETS[2167] = _Str_11298;
+            OUTGOING_PACKETS[2167] = GetCommunityGoalHallOfFameMessageComposer;
             OUTGOING_PACKETS[219] = GetAchievementsComposer;
             OUTGOING_PACKETS[2209] = SetMannequinFigureComposer;
             OUTGOING_PACKETS[2214] = UpdateForumSettingsMessageComposer;

@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.quest._Str_4106;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToACompetitionRoomMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_11298;
+    import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalHallOfFameMessageComposer;
     import com.sulake.habbo.friendbar.landingview.*;
 
     public class CommunityGoalHallOfFameWidget extends UserListWidget 
@@ -81,7 +81,7 @@
             if ((((k.getParser().schedulingStr == this._schedulingStr) && (!(_local_2 == ""))) && (!(disposed))))
             {
                 this.loadConfigurationOverrides(_local_2);
-                landingView.send(new _Str_11298(k.getParser().code));
+                landingView.send(new GetCommunityGoalHallOfFameMessageComposer(k.getParser().code));
             }
         }
 

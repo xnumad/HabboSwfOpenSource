@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11298 implements IMessageComposer 
+    public class GetCommunityGoalHallOfFameMessageComposer implements IMessageComposer
     {
         private var _data:Array;
 
-        public function _Str_11298(k:String)
+        public function GetCommunityGoalHallOfFameMessageComposer(k:String)
         {
             this._data = [];
             super();
