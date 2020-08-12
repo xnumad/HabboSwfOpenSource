@@ -472,7 +472,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10770;
 	import com.sulake.habbo.communication.messages.outgoing.users.UnignoreUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10793;
+	import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10887;
 	import com.sulake.habbo.communication.messages.outgoing.users.RejectMembershipRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11165;
@@ -1530,7 +1530,7 @@
             OUTGOING_PACKETS[109] = PollStartComposer;
             OUTGOING_PACKETS[11] = _Str_7123;
             OUTGOING_PACKETS[1109] = _Str_11497;
-            OUTGOING_PACKETS[1117] = _Str_10793;
+            OUTGOING_PACKETS[1117] = IgnoreUserMessageComposer;
             OUTGOING_PACKETS[1118] = WhiperGroupComposer;
             OUTGOING_PACKETS[1134] = _Str_10313;
             OUTGOING_PACKETS[1145] = _Str_4438;
