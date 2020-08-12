@@ -341,7 +341,7 @@
             var _local_5:IRegionWindow = IRegionWindow(k.findChildByName("action_link_region"));
             _local_5.addEventListener(WindowMouseEvent.OVER, this.onActionLinkMouseOver);
             _local_5.addEventListener(WindowMouseEvent.OUT, this.onActionLinkMouseOut);
-            _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_23181);
+            _local_5.addEventListener(WindowMouseEvent.CLICK, this.onActionLinkClick);
             return k;
         }
 
@@ -432,7 +432,7 @@
             }
         }
 
-        private function _Str_23181(k:WindowEvent):void
+        private function onActionLinkClick(k:WindowEvent):void
         {
             var _local_2:_Str_2891 = this._data._Str_5126(k.target.id);
             if (((_local_2 == null) || (_local_2.owner)))
