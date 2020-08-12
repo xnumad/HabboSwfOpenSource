@@ -148,7 +148,7 @@
             return this._friendEntityList[k];
         }
 
-        public function _Str_19609(k:int):IFriendEntity
+        public function getFriendByID(k:int):IFriendEntity
         {
             return this._friendMappedByID.getValue(k);
         }
@@ -607,7 +607,7 @@
             var _local_9:Vector.<IFriendNotification>;
             if (this._Str_22383)
             {
-                _local_7 = this._Str_19609(parseInt(k));
+                _local_7 = this.getFriendByID(parseInt(k));
                 if (_local_7)
                 {
                     _local_9 = _local_7.notifications;

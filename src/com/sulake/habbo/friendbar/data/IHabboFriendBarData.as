@@ -8,7 +8,7 @@
         function get events():IEventDispatcher;
         function get _Str_7830():int;
         function _Str_17238(_arg_1:int):IFriendEntity;
-        function _Str_19609(_arg_1:int):IFriendEntity;
+        function getFriendByID(_arg_1:int):IFriendEntity;
         function getFriendByName(_arg_1:String):IFriendEntity;
         function get numFriendRequests():int;
         function getFriendRequestAt(_arg_1:int):IFriendRequest;
