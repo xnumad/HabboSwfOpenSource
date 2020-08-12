@@ -111,7 +111,7 @@
             return (k.highestPriority == _arg_2.highestPriority) && (k.issueAgeInMilliseconds < _arg_2.issueAgeInMilliseconds);
         }
 
-        public function _Str_23549():void
+        public function releaseAll():void
         {
             var _local_3:IssueBundle;
             if (this._bundles == null)

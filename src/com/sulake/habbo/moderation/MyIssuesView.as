@@ -49,7 +49,7 @@
             {
                 return;
             }
-            this._issueManager._Str_23549();
+            this._issueManager.releaseAll();
         }
     }
 }
