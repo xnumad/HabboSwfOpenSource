@@ -946,7 +946,7 @@
 
         private function _Str_22502(k:WindowMouseEvent):void
         {
-            this._friendBarData._Str_21870();
+            this._friendBarData.openUserTextSearch();
         }
 
         public function removeMessengerNotifications():void

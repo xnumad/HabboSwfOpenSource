@@ -22,7 +22,7 @@
         function followToRoom(_arg_1:int):void;
         function startConversation(_arg_1:int):void;
         function findNewFriends():void;
-        function _Str_21870():void;
+        function openUserTextSearch():void;
         function toggleFriendList():void;
         function toggleMessenger():void;
         function showProfile(_arg_1:int):void;

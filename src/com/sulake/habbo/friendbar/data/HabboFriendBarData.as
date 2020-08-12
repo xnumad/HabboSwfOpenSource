@@ -351,7 +351,7 @@
             }
         }
 
-        public function _Str_21870():void
+        public function openUserTextSearch():void
         {
             if (this._habboFriendListComponent.currentTabId() != _Str_2777._Str_5722)
             {
