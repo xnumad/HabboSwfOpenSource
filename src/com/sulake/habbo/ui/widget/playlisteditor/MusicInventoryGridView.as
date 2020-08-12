@@ -81,7 +81,7 @@
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                _local_7 = this._musicController._Str_19508(_local_5);
+                _local_7 = this._musicController.getSongDiskInventoryDiskId(_local_5);
                 _local_8 = this._musicController._Str_20038(_local_5);
                 _local_9 = this._musicController._Str_3255(_local_8);
                 _local_10 = null;

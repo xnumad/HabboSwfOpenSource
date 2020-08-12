@@ -462,7 +462,7 @@
             return this._songDiskInventory.length;
         }
 
-        public function _Str_19508(k:int):int
+        public function getSongDiskInventoryDiskId(k:int):int
         {
             if (((k >= 0) && (k < this._songDiskInventory.length)))
             {
