@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7290 implements IMessageComposer 
+    public class SetCustomStackingHeightComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_7290(k:int, _arg_2:int=-100)
+        public function SetCustomStackingHeightComposer(k:int, _arg_2:int=-100)
         {
             this._array = [k, _arg_2];
         }

@@ -9,7 +9,7 @@
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_7290;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetCustomStackingHeightComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.events.WindowKeyboardEvent;
 
@@ -96,7 +96,7 @@
                         this._Str_12076();
                         break;
                     case "button_above_stack":
-                        this.handler.container.connection.send(new _Str_7290(this._furniId));
+                        this.handler.container.connection.send(new SetCustomStackingHeightComposer(this._furniId));
                         break;
                     case "header_button_close":
                         this.destroyWindow();
@@ -163,7 +163,7 @@
         private function _Str_12076():void
         {
             var k:int = (parseFloat(this._window.findChildByName("input_height").caption) * 100);
-            this.handler.container.connection.send(new _Str_7290(this._furniId, k));
+            this.handler.container.connection.send(new SetCustomStackingHeightComposer(this._furniId, k));
         }
 
         private function _Str_18328():void

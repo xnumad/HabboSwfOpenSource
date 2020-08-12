@@ -725,7 +725,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12374;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenMysteryTrophyMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ControlYoutubeDisplayPlaybackMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_7290;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetCustomStackingHeightComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.AddSpamWallPostItMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceRentMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerSavePresetMessageComposer;
@@ -1900,7 +1900,7 @@
             OUTGOING_PACKETS[3802] = AcceptGameInviteMessageComposer;
             OUTGOING_PACKETS[3817] = _Str_4893;
             OUTGOING_PACKETS[3835] = CompostPlantMessageComposer;
-            OUTGOING_PACKETS[3839] = _Str_7290;
+            OUTGOING_PACKETS[3839] = SetCustomStackingHeightComposer;
             OUTGOING_PACKETS[3842] = _Str_5691;
             OUTGOING_PACKETS[3845] = _Str_12206;
             OUTGOING_PACKETS[3847] = LagWarningReportMessageComposer;
