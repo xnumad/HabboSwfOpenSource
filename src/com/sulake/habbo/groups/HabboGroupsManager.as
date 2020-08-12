@@ -164,7 +164,7 @@
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new ExtendedProfileMessageEvent(this.onExtendedProfile));
-            this.addMessageEvent(new GuildEditFailedMessageEvent(this._Str_25256));
+            this.addMessageEvent(new GuildEditFailedMessageEvent(this.onGuildEditFailed));
             this.addMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
             this.addMessageEvent(new HabboGroupJoinFailedMessageEvent(this.onJoinFailed));
             this.addMessageEvent(new GroupMembershipRequestedMessageEvent(this._guildMembersWindowCtrl._Str_22705));
@@ -411,7 +411,7 @@
             events.dispatchEvent(new HabboGroupsEditorData());
         }
 
-        private function _Str_25256(k:IMessageEvent):void
+        private function onGuildEditFailed(k:IMessageEvent):void
         {
             var _local_3:String;
             var _local_4:String;
