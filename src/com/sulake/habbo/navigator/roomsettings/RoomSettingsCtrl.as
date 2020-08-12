@@ -41,7 +41,7 @@
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_11252;
     import com.sulake.core.window.components.IItemListWindow;
-    import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_12287;
+    import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetBannedUsersFromRoomMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4633;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_12446;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11552;
@@ -1181,7 +1181,7 @@
             }
             if (this._roomSettingsData.bannedUsersById == null)
             {
-                this._navigator.send(new _Str_12287(this._roomSettingsData.roomId));
+                this._navigator.send(new GetBannedUsersFromRoomMessageComposer(this._roomSettingsData.roomId));
                 k = new Array();
             }
             else

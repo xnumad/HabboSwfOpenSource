@@ -872,7 +872,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveRoomSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_11252;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomCategoryAndTradeSettingsComposer;
-	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_12287;
+	import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetBannedUsersFromRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomFilterMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7286;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7484;
@@ -1678,7 +1678,7 @@
             OUTGOING_PACKETS[2257] = OpenCampaignCalendarDoorAsStaffComposer;
             OUTGOING_PACKETS[2264] = _Str_12153;
             OUTGOING_PACKETS[2266] = _Str_9956;
-            OUTGOING_PACKETS[2267] = _Str_12287;
+            OUTGOING_PACKETS[2267] = GetBannedUsersFromRoomMessageComposer;
             OUTGOING_PACKETS[2276] = SelectClubGiftComposer;
             OUTGOING_PACKETS[2277] = _Str_9988;
             OUTGOING_PACKETS[2281] = UpdateActionMessageComposer;
