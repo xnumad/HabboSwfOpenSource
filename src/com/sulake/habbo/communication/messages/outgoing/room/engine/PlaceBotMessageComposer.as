@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_8136 implements IMessageComposer 
+    public class PlaceBotMessageComposer implements IMessageComposer
     {
         private var _botId:int;
         private var _x:int;
         private var _y:int;
 
-        public function _Str_8136(k:int, _arg_2:int, _arg_3:int)
+        public function PlaceBotMessageComposer(k:int, _arg_2:int, _arg_3:int)
         {
             this._botId = k;
             this._x = _arg_2;
