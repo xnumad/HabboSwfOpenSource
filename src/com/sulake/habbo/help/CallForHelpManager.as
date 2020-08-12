@@ -430,7 +430,7 @@
                 switch (_arg_2.name)
                 {
                     case "submit_button":
-                        if (!this._Str_23329())
+                        if (!this.saveEmergencyHelpRequestData())
                         {
                             return;
                         }
@@ -556,7 +556,7 @@
             return ((this._reportedUserId <= 0) || (this._habboHelp._Str_3531._Str_5150(this._reportedUserId).length > 0)) || (this._reportType == HabboHelp._Str_4315);
         }
 
-        private function _Str_23329(k:Boolean=true):Boolean
+        private function saveEmergencyHelpRequestData(k:Boolean=true):Boolean
         {
             if (((this._window == null) || (!(this._window.name == EMERGENCY_HELP_REQUEST))))
             {
