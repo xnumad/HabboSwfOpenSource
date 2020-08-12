@@ -26,7 +26,7 @@
     import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
     import com.sulake.habbo.communication.messages.outgoing.sound.GetSoundSettingsComposer;
     import flash.events.Event;
-    import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11698;
+    import com.sulake.habbo.communication.messages.outgoing.preferences.SetSoundSettingsComposer;
     import com.sulake.habbo.communication.messages.parser.preferences.AccountPreferencesParser;
     import com.sulake.core.communication.messages.IMessageEvent;
 
@@ -426,7 +426,7 @@
         {
             if (this._connection != null)
             {
-                this._connection.send(new _Str_11698((this._traxVolume * 100), (this._furniVolume * 100), (this._genericVolume * 100)));
+                this._connection.send(new SetSoundSettingsComposer((this._traxVolume * 100), (this._furniVolume * 100), (this._genericVolume * 100)));
             }
         }
 

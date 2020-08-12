@@ -248,7 +248,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatPreferencesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_10960;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11137;
-	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11698;
+	import com.sulake.habbo.communication.messages.outgoing.preferences.SetSoundSettingsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetRoomCameraPreferencesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatStylePreferenceComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetUIFlagsMessageComposer;
@@ -1561,7 +1561,7 @@
             OUTGOING_PACKETS[1343] = _Str_8012;
             OUTGOING_PACKETS[1347] = _Str_12467;
             OUTGOING_PACKETS[1364] = GetIsBadgeRequestFulfilledComposer;
-            OUTGOING_PACKETS[1367] = _Str_11698;
+            OUTGOING_PACKETS[1367] = SetSoundSettingsComposer;
             OUTGOING_PACKETS[137] = AcceptFriendMessageComposer;
             OUTGOING_PACKETS[1371] = GetBadgePointLimitsComposer;
             OUTGOING_PACKETS[1379] = _Str_6202;
