@@ -358,7 +358,7 @@
             this._alertedBaseRoomId = 0;
             this.refresh();
             this._Str_9242();
-            this._Str_20884();
+            this.setupInputs();
             this._manager.localization.registerParameter("group.create.confirm.buyinfo", "amount", ("" + k.costInCredits));
             this._window.visible = true;
             this._window.activate();
@@ -371,7 +371,7 @@
             this._alertedBaseRoomId = 0;
             this.refresh();
             this._Str_9242();
-            this._Str_20884();
+            this.setupInputs();
             var _local_2:ITabContextWindow = ITabContextWindow(this._window.findChildByName("edit_guild_tab_context"));
             var _local_3:ISelectableWindow = ISelectableWindow(this._window.findChildByName(("edit_tab_" + this._step)));
             _local_2.selector.setSelected(_local_3);
@@ -379,7 +379,7 @@
             this._window.activate();
         }
 
-        private function _Str_20884():void
+        private function setupInputs():void
         {
             ITextWindow(this._window.findChildByName("name_txt")).text = this._data.groupName;
             ITextWindow(this._window.findChildByName("desc_txt")).text = this._data.groupDesc;
