@@ -537,7 +537,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9806;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9807;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9844;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9889;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWithHighestScoreSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9911;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFriendsRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomsSearchMessageComposer;
@@ -1780,7 +1780,7 @@
             OUTGOING_PACKETS[2914] = _Str_10571;
             OUTGOING_PACKETS[2930] = _Str_10574;
             OUTGOING_PACKETS[2934] = GetPetInfoMessageComposer;
-            OUTGOING_PACKETS[2939] = _Str_9889;
+            OUTGOING_PACKETS[2939] = RoomsWithHighestScoreSearchMessageComposer;
             OUTGOING_PACKETS[2941] = PassCarryItemMessageComposer;
             OUTGOING_PACKETS[2946] = RentableSpaceRentMessageComposer;
             OUTGOING_PACKETS[295] = LatencyPingRequestMessageComposer;
