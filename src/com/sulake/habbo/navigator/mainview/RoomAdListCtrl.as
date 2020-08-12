@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomSettingsFlatInfo;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11792;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabAdClickedComposer;
     import com.sulake.core.window.events.WindowEvent;
 
     public class RoomAdListCtrl extends GuestRoomListCtrl 
@@ -58,7 +58,7 @@
             var _local_4:GuestRoomData = this.getRoomAt(_local_3);
             if (_navigator)
             {
-                _navigator.send(new _Str_11792(_local_4.flatId, _local_4.roomAdName, _local_4.roomAdExpiresInMin));
+                _navigator.send(new RoomAdEventTabAdClickedComposer(_local_4.flatId, _local_4.roomAdName, _local_4.roomAdExpiresInMin));
             }
             super.onMouseClick(k);
         }

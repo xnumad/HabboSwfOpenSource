@@ -515,7 +515,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFavouriteRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11608;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.ToggleStaffPickMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11792;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabAdClickedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11858;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11893;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12081;
@@ -1701,7 +1701,7 @@
             OUTGOING_PACKETS[2399] = _Str_8040;
             OUTGOING_PACKETS[2407] = _Str_11584;
             OUTGOING_PACKETS[2408] = PurchasePhotoMessageComposer;
-            OUTGOING_PACKETS[2412] = _Str_11792;
+            OUTGOING_PACKETS[2412] = RoomAdEventTabAdClickedComposer;
             OUTGOING_PACKETS[2415] = _Str_18615;
             OUTGOING_PACKETS[2419] = SSOTicketMessageComposer;
             OUTGOING_PACKETS[2436] = _Str_18298;
