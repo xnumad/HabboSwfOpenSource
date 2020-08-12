@@ -45,7 +45,7 @@
             }
         }
 
-        public function _Str_5920(k:IWindowContainer):void
+        public function refreshFooter(k:IWindowContainer):void
         {
             var _local_2:IWindowContainer = (k.getChildByName("me_footer") as IWindowContainer);
             var _local_3:IWindow = _local_2.findChildByName("create_room_but");

@@ -22,7 +22,7 @@
         {
         }
 
-        public function _Str_5920(k:IWindowContainer):void
+        public function refreshFooter(k:IWindowContainer):void
         {
             this._navigator.officialRoomEntryManager._Str_21717(k);
         }

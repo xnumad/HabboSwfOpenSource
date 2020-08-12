@@ -26,7 +26,7 @@
             this._navigator.mainViewCtrl.startSearch(Tabs.TAB_CATEGORIES, Tabs.SEARCHTYPE_CATEGORIES);
         }
 
-        public function _Str_5920(k:IWindowContainer):void
+        public function refreshFooter(k:IWindowContainer):void
         {
         }
 

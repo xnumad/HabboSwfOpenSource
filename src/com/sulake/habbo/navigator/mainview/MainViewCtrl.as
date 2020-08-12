@@ -348,7 +348,7 @@
             this._Str_23841();
             this.refreshCustomContent();
             this._Str_24816(true);
-            this._Str_5920();
+            this.refreshFooter();
             this._customContent.height = Util.getLowestPoint(this._customContent);
             this._footer.height = Util.getLowestPoint(this._footer);
             var k:int = this._listContent.y;
@@ -386,11 +386,11 @@
             }
         }
 
-        private function _Str_5920():void
+        private function refreshFooter():void
         {
             Util._Str_2930(this._footer);
             var k:Tab = this._navigator.tabs.getSelected();
-            k._Str_5252._Str_5920(this._footer);
+            k._Str_5252.refreshFooter(this._footer);
             this._footer.visible = Util._Str_13639(this._footer);
         }
 

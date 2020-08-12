@@ -24,7 +24,7 @@
         {
         }
 
-        public function _Str_5920(k:IWindowContainer):void
+        public function refreshFooter(k:IWindowContainer):void
         {
         }
 
