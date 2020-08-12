@@ -83,7 +83,7 @@
             this._handleQueue = this._handleQueue.concat(_local_5._Str_7101());
         }
 
-        public function _Str_15446(k:String, _arg_2:Boolean=false, _arg_3:int=0):void
+        public function autoPick(k:String, _arg_2:Boolean=false, _arg_3:int=0):void
         {
             var _local_5:IssueBundle;
             var _local_6:IssueBundle;
@@ -541,7 +541,7 @@
             }
             if (_local_3 == null)
             {
-                this._Str_15446("issue manager pick next");
+                this.autoPick("issue manager pick next");
                 return;
             }
             this.handleBundle(_local_3.id);

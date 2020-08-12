@@ -197,7 +197,7 @@
         {
             if (this._issueManager != null)
             {
-                this._issueManager._Str_15446("issue browser pick next");
+                this._issueManager.autoPick("issue browser pick next");
             }
         }
     }

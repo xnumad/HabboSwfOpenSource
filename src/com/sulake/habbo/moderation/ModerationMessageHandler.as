@@ -156,7 +156,7 @@
                     if (retryCount < 10)
                     {
                         alert = false;
-                        this._moderationManager.issueManager._Str_15446("pick failed retry", retryEnabled, retryCount);
+                        this._moderationManager.issueManager.autoPick("pick failed retry", retryEnabled, retryCount);
                     }
                 }
             }
