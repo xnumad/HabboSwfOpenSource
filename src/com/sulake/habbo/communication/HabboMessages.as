@@ -496,7 +496,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembershipsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetRelationshipStatusInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetMemberGuildItemCountMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_9855;
+	import com.sulake.habbo.communication.messages.outgoing.users.WelcomeGiftChangeEmailComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.ApproveMembershipRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildIdentityMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.ApproveAllMembershipRequestsMessageComposer;
@@ -1946,7 +1946,7 @@
             OUTGOING_PACKETS[637] = _Str_11341;
             OUTGOING_PACKETS[644] = SetActivatedBadgesComposer;
             OUTGOING_PACKETS[654] = _Str_11321;
-            OUTGOING_PACKETS[66] = _Str_9855;
+            OUTGOING_PACKETS[66] = WelcomeGiftChangeEmailComposer;
             OUTGOING_PACKETS[685] = GoToFlatMessageComposer;
             OUTGOING_PACKETS[707] = _Str_12129;
             OUTGOING_PACKETS[711] = RequestRoomPropertySet;
