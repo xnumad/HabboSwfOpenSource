@@ -376,14 +376,14 @@
         {
             var _local_2:GuildCreationData = GuildCreationInfoMessageEvent(k).data;
             this._guildManagementWindowCtrl.onGuildCreationInfo(_local_2);
-            this._Str_19848();
+            this.requestGuildEditorData();
         }
 
         private function onGuildEditInfo(k:IMessageEvent):void
         {
             var _local_2:GuildEditData = GuildEditInfoMessageEvent(k).data;
             this._guildManagementWindowCtrl.onGuildEditInfo(_local_2);
-            this._Str_19848();
+            this.requestGuildEditorData();
         }
 
         private function onRoomLeave(k:IMessageEvent):void
@@ -534,7 +534,7 @@
             this._extendedProfileWindowCtrl.onUserBadges(k.userId, k.badges);
         }
 
-        private function _Str_19848():void
+        private function requestGuildEditorData():void
         {
             if (this._guildEditorData == null)
             {
