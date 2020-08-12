@@ -150,7 +150,7 @@
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
     import com.sulake.habbo.catalog.purse.IPurse;
     import com.sulake.habbo.catalog.recycler.IRecycler;
-    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11584;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOffersMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10589;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12488;
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_9940;
@@ -1151,7 +1151,7 @@
 
         public function getPublicMarketPlaceOffers(k:int, _arg_2:int, _arg_3:String, _arg_4:int):void
         {
-            this.send(new _Str_11584(k, _arg_2, _arg_3, _arg_4));
+            this.send(new GetMarketplaceOffersMessageComposer(k, _arg_2, _arg_3, _arg_4));
         }
 
         public function getRoomAdsPurchaseInfo():void

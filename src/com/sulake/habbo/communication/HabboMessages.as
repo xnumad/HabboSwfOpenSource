@@ -131,7 +131,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_9816;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_9966;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11296;
-	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11584;
+	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOffersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11685;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11938;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_12361;
@@ -1699,7 +1699,7 @@
             OUTGOING_PACKETS[2388] = GetSoundSettingsComposer;
             OUTGOING_PACKETS[2397] = RejectQuestMessageComposer;
             OUTGOING_PACKETS[2399] = _Str_8040;
-            OUTGOING_PACKETS[2407] = _Str_11584;
+            OUTGOING_PACKETS[2407] = GetMarketplaceOffersMessageComposer;
             OUTGOING_PACKETS[2408] = PurchasePhotoMessageComposer;
             OUTGOING_PACKETS[2412] = RoomAdEventTabAdClickedComposer;
             OUTGOING_PACKETS[2415] = _Str_18615;
