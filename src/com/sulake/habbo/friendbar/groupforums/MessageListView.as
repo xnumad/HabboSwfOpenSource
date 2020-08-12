@@ -398,7 +398,7 @@
 
         private function _Str_10493(k:WindowMouseEvent):void
         {
-            this._controller._Str_24225(this._forumData, this._threadData.threadId, int(k.target.id));
+            this._controller.deleteMessage(this._forumData, this._threadData.threadId, int(k.target.id));
         }
 
         private function _Str_19785(k:WindowMouseEvent):void

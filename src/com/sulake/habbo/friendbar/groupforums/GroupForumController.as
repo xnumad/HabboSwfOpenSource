@@ -568,7 +568,7 @@
             this._threadsListData = new ThreadsListData(1, 0, [_local_3]);
         }
 
-        public function _Str_24225(k:_Str_3372, _arg_2:int, _arg_3:int):void
+        public function deleteMessage(k:_Str_3372, _arg_2:int, _arg_3:int):void
         {
             var _local_4:int;
             if (this._communicationManager)
