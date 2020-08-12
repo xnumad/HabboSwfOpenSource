@@ -660,7 +660,7 @@
             return this._hasVip;
         }
 
-        public function _Str_20430(k:int, _arg_2:int):void
+        public function handleUserKick(k:int, _arg_2:int):void
         {
             this._kickData = new GuildKickData(k, _arg_2);
             this.send(new _Str_8228(_arg_2, k));

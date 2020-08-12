@@ -367,7 +367,7 @@
             }
             if (_local_3.member)
             {
-                this._manager._Str_20430(_local_2.id, this._data.groupId);
+                this._manager.handleUserKick(_local_2.id, this._data.groupId);
             }
             else
             {
