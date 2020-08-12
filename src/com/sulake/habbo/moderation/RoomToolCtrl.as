@@ -16,7 +16,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.incoming.moderation.RoomData;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7731;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_5691;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModeratorActionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12412;
     import com.sulake.habbo.window.utils.IAlertDialog;
 
@@ -351,7 +351,7 @@
                 return;
             }
             var _local_2:int = this.determineAction(k, this._kickCb.Selected);
-            this._main.connection.send(new _Str_5691(_local_2, this._msgInput.text, ""));
+            this._main.connection.send(new ModeratorActionMessageComposer(_local_2, this._msgInput.text, ""));
             if ((((this._lockCb.Selected) || (this._changeNameCb.Selected)) || (this._kickCb.Selected)))
             {
                 this._main.connection.send(new _Str_12412(this._data.flatId, this._lockCb.Selected, this._changeNameCb.Selected, this._kickCb.Selected));
@@ -363,9 +363,9 @@
         {
             if (_arg_2)
             {
-                return (k) ? _Str_5691.ACTION_KICK : _Str_5691.ACTION_MESSAGE_AND_SOFT_KICK;
+                return (k) ? ModeratorActionMessageComposer.ACTION_KICK : ModeratorActionMessageComposer.ACTION_MESSAGE_AND_SOFT_KICK;
             }
-            return (k) ? _Str_5691.ACTION_ALERT : _Str_5691.ACTION_MESSAGE;
+            return (k) ? ModeratorActionMessageComposer.ACTION_ALERT : ModeratorActionMessageComposer.ACTION_MESSAGE;
         }
 
         private function onInputClick(k:WindowEvent, _arg_2:IWindow):void

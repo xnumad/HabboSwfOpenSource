@@ -759,7 +759,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12438;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12485;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_4767;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_5691;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.ModeratorActionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7074;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7103;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7202;
@@ -1901,7 +1901,7 @@
             OUTGOING_PACKETS[3817] = AddFavouriteRoomMessageComposer;
             OUTGOING_PACKETS[3835] = CompostPlantMessageComposer;
             OUTGOING_PACKETS[3839] = SetCustomStackingHeightComposer;
-            OUTGOING_PACKETS[3842] = _Str_5691;
+            OUTGOING_PACKETS[3842] = ModeratorActionMessageComposer;
             OUTGOING_PACKETS[3845] = _Str_12206;
             OUTGOING_PACKETS[3847] = LagWarningReportMessageComposer;
             OUTGOING_PACKETS[3848] = GetBotInventoryComposer;

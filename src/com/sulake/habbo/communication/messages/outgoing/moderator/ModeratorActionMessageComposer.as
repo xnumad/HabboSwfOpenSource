@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_5691 implements IMessageComposer, IDisposable 
+    public class ModeratorActionMessageComposer implements IMessageComposer, IDisposable
     {
         public static const ACTION_ALERT:int = 0;
         public static const ACTION_KICK:int = 1;
@@ -12,7 +12,7 @@
 
         private var messageArray:Array;
 
-        public function _Str_5691(k:int, _arg_2:String, _arg_3:String)
+        public function ModeratorActionMessageComposer(k:int, _arg_2:String, _arg_3:String)
         {
             this.messageArray = new Array();
             super();
