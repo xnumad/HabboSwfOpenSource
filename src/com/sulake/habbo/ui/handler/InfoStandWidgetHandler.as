@@ -287,7 +287,7 @@
             k.push(RoomWidgetUserActionMessage.RWUAM_TRAIN_PET);
             k.push(RoomWidgetPetCommandMessage.RWPCM_PET_COMMAND);
             k.push(RoomWidgetPetCommandMessage.RWPCM_REQUEST_PET_COMMANDS);
-            k.push(RoomWidgetUserActionMessage._Str_6480);
+            k.push(RoomWidgetUserActionMessage.RESPECT_PET);
             k.push(RoomWidgetUserActionMessage.RWUAM_REQUEST_PET_UPDATE);
             k.push(RoomWidgetChangeMottoMessage.RWVM_CHANGE_MOTTO_MESSAGE);
             k.push(RoomWidgetOpenProfileMessage.RWOPEM_OPEN_USER_PROFILE);
@@ -342,7 +342,7 @@
             if (_local_4 != null)
             {
                 _local_2 = _local_4.userId;
-                if (((((((((((((k.type == RoomWidgetUserActionMessage.RWUAM_REQUEST_PET_UPDATE) || (k.type == RoomWidgetUserActionMessage._Str_6480)) || (k.type == RoomWidgetUserActionMessage.RWUAM_PICKUP_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_MOUNT_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_RIDING_PERMISSION)) || (k.type == RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_BREEDING_PERMISSION)) || (k.type == RoomWidgetUserActionMessage.RWUAM_DISMOUNT_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_SADDLE_OFF)) || (k.type == RoomWidgetUserActionMessage.RWUAM_GIVE_CARRY_ITEM_TO_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_GIVE_WATER_TO_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_GIVE_LIGHT_TO_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_TREAT_PET)))
+                if (((((((((((((k.type == RoomWidgetUserActionMessage.RWUAM_REQUEST_PET_UPDATE) || (k.type == RoomWidgetUserActionMessage.RESPECT_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_PICKUP_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_MOUNT_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_RIDING_PERMISSION)) || (k.type == RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_BREEDING_PERMISSION)) || (k.type == RoomWidgetUserActionMessage.RWUAM_DISMOUNT_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_SADDLE_OFF)) || (k.type == RoomWidgetUserActionMessage.RWUAM_GIVE_CARRY_ITEM_TO_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_GIVE_WATER_TO_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_GIVE_LIGHT_TO_PET)) || (k.type == RoomWidgetUserActionMessage.RWUAM_TREAT_PET)))
                 {
                     _local_3 = this._container.roomSession.userDataManager._Str_8631(_local_2);
                 }
@@ -375,7 +375,7 @@
                 case RoomWidgetUserActionMessage.RWUAM_RESPECT_USER:
                     this._container.sessionDataManager.giveRespect(_local_2);
                     break;
-                case RoomWidgetUserActionMessage._Str_6480:
+                case RoomWidgetUserActionMessage.RESPECT_PET:
                     this._container.sessionDataManager.givePetRespect(_local_2);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_WHISPER_USER:

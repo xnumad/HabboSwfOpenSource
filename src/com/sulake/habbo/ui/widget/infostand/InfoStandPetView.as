@@ -696,7 +696,7 @@
                 case "btn_petrespect":
                     this._widget.userData.petRespectLeft--;
                     this._Str_22251();
-                    _local_3 = RoomWidgetUserActionMessage._Str_6480;
+                    _local_3 = RoomWidgetUserActionMessage.RESPECT_PET;
                     break;
                 case "btn_pettreat":
                     _local_3 = RoomWidgetUserActionMessage.RWUAM_TREAT_PET;

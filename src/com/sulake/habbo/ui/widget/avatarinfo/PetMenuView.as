@@ -221,7 +221,7 @@
                         case "respect":
                             this._data.petRespectLeft--;
                             this._Str_2771();
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage._Str_6480, userId);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RESPECT_PET, userId);
                             break;
                         case "treat":
                             _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TREAT_PET, userId);

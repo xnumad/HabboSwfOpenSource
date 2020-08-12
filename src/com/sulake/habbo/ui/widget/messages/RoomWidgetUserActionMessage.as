@@ -27,7 +27,7 @@
         public static const RWUAM_DISMOUNT_PET:String = "RWUAM_DISMOUNT_PET";
         public static const RWUAM_SADDLE_OFF:String = "RWUAM_SADDLE_OFF";
         public static const RWUAM_TRAIN_PET:String = "RWUAM_TRAIN_PET";
-        public static const _Str_6480:String = " RWUAM_RESPECT_PET";
+        public static const RESPECT_PET:String = " RWUAM_RESPECT_PET";
         public static const RWUAM_TREAT_PET:String = "RWUAM_TREAT_PET";
         public static const RWUAM_REQUEST_PET_UPDATE:String = "RWUAM_REQUEST_PET_UPDATE";
         public static const RWUAM_START_NAME_CHANGE:String = "RWUAM_START_NAME_CHANGE";
