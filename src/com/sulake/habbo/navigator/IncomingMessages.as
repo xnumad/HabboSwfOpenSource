@@ -76,7 +76,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator.NavigatorSettingsMessageParser;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6478;
+    import com.sulake.habbo.communication.messages.parser.navigator.UserFlatCatsMessageParser;
     import com.sulake.habbo.navigator.mainview.tabpagedecorators.RoomsTabPageDecorator;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6276;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_4697;
@@ -482,7 +482,7 @@
 
         private function _Str_16709(k:IMessageEvent):void
         {
-            var _local_2:_Str_6478 = (k as _Str_5728).getParser();
+            var _local_2:UserFlatCatsMessageParser = (k as _Str_5728).getParser();
             this._navigator.data.categories = _local_2.nodes;
             var _local_3:RoomsTabPageDecorator = RoomsTabPageDecorator(this._navigator.tabs.getTab(Tabs.TAB_ROOMS)._Str_5252);
             _local_3._Str_19000();

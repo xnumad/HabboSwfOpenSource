@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6478 implements IMessageParser 
+    public class UserFlatCatsMessageParser implements IMessageParser
     {
         private var _nodes:Array;
 
