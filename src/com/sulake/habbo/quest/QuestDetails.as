@@ -11,7 +11,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.outgoing.quest.AcceptQuestMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_4916;
+    import com.sulake.habbo.communication.messages.outgoing.quest.ActivateQuestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.quest.RejectQuestMessageComposer;
 
     public class QuestDetails implements IDisposable 
@@ -250,7 +250,7 @@
                 }
                 else
                 {
-                    this._questEngine.send(new _Str_4916(this._quest.id));
+                    this._questEngine.send(new ActivateQuestMessageComposer(this._quest.id));
                 }
                 this._window.visible = false;
                 this._questEngine._Str_3398._Str_13628.close();

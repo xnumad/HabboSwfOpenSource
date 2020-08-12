@@ -15,7 +15,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_4916;
+    import com.sulake.habbo.communication.messages.outgoing.quest.ActivateQuestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.quest._Str_7541;
 
     public class DailyQuestWidget implements IDisposable, ILandingViewWidget, ISlotAwareWidget, _Str_6397 
@@ -194,7 +194,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._landingView.send(new _Str_4916(this._data.id));
+                this._landingView.send(new ActivateQuestMessageComposer(this._data.id));
             }
         }
 

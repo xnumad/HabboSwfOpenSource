@@ -45,7 +45,7 @@
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.habbo.communication.messages.outgoing.quest.GetSeasonalQuestsOnlyMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.quest.GetQuestsMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_4916;
+    import com.sulake.habbo.communication.messages.outgoing.quest.ActivateQuestMessageComposer;
 
     public class HabboQuestEngine extends Component implements IHabboQuestEngine, IUpdateReceiver, ILinkEventTracker 
     {
@@ -699,7 +699,7 @@
 
         public function activateQuest(k:int):void
         {
-            this.send(new _Str_4916(k));
+            this.send(new ActivateQuestMessageComposer(k));
         }
 
         public function get linkPattern():String

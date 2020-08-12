@@ -32,7 +32,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_16291;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_17850;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_4438;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_4916;
+	import com.sulake.habbo.communication.messages.outgoing.quest.ActivateQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_5085;
 	import com.sulake.habbo.communication.messages.outgoing.quest.RejectQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetQuestsMessageComposer;
@@ -1959,7 +1959,7 @@
             OUTGOING_PACKETS[773] = CompleteDiffieHandshakeMessageComposer;
             OUTGOING_PACKETS[777] = _Str_10613;
             OUTGOING_PACKETS[790] = _Str_9957;
-            OUTGOING_PACKETS[793] = _Str_4916;
+            OUTGOING_PACKETS[793] = ActivateQuestMessageComposer;
             OUTGOING_PACKETS[796] = RequestCameraConfigurationComposer;
             OUTGOING_PACKETS[798] = GetGuildCreationInfoMessageComposer;
             OUTGOING_PACKETS[800] = _Str_7177;
