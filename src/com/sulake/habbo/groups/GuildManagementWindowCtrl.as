@@ -227,7 +227,7 @@
                 {
                     this._manager.trackGoogle("groupPurchase", "step4_confirm");
                 }
-                this._Str_24929();
+                this.updateConfirmPreview();
             }
             if (this._step == VIEW_IDENTITY)
             {
@@ -249,7 +249,7 @@
             this._Str_24568();
         }
 
-        private function _Str_24929():void
+        private function updateConfirmPreview():void
         {
             var k:BitmapData;
             var _local_2:IBitmapWrapperWindow;
