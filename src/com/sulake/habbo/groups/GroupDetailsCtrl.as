@@ -227,10 +227,10 @@
             {
                 return;
             }
-            this._manager.windowManager.confirm("${group.deleteconfirm.title}", "${group.deleteconfirm.desc}", 0, this._Str_23912);
+            this._manager.windowManager.confirm("${group.deleteconfirm.title}", "${group.deleteconfirm.desc}", 0, this.onDeleteGuildConfirmation);
         }
 
-        private function _Str_23912(k:IConfirmDialog, _arg_2:WindowEvent):void
+        private function onDeleteGuildConfirmation(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
