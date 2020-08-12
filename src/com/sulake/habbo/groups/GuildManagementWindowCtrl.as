@@ -537,7 +537,7 @@
                     k = ITextFieldWindow(this._window.findChildByName("name_txt")).text;
                     if (!this._data.exists)
                     {
-                        _local_4 = this._Str_19886();
+                        _local_4 = this.resolveBaseRoom();
                         if (((((k == null) || (k.length == 0)) || (_local_4 == null)) || (_local_4.roomId == 0)))
                         {
                             this.showAlert("${group.edit.error.title}", "${group.edit.error.no.name.or.room.selected}");
@@ -615,7 +615,7 @@
         {
             var k:String = ITextFieldWindow(this._window.findChildByName("name_txt")).text;
             var _local_2:String = ITextFieldWindow(this._window.findChildByName("desc_txt")).text;
-            var _local_3:RoomEntryData = this._Str_19886();
+            var _local_3:RoomEntryData = this.resolveBaseRoom();
             var _local_4:Array = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data.badgeSettings);
             var _local_5:int = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data.primaryColorId);
             var _local_6:int = ((this._secondaryColorCtrl.isInitialized) ? this._secondaryColorCtrl._Str_15044() : this._data.secondaryColorId);
@@ -668,7 +668,7 @@
             }
         }
 
-        private function _Str_19886():RoomEntryData
+        private function resolveBaseRoom():RoomEntryData
         {
             var k:IDropMenuWindow = IDropMenuWindow(this._window.findChildByName("base_dropmenu"));
             var _local_2:int = (k.selection - 1);
