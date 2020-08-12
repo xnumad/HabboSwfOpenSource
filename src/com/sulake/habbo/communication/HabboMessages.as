@@ -719,7 +719,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinNameComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.DiceOffMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PlacePostItMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11935;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ThrowDiceMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12182;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12348;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12374;
@@ -1637,7 +1637,7 @@
             OUTGOING_PACKETS[1975] = SignMessageComposer;
             OUTGOING_PACKETS[1982] = RenderRoomThumbnailMessageComposer;
             OUTGOING_PACKETS[1986] = GetBotCommandConfigurationDataComposer;
-            OUTGOING_PACKETS[1990] = _Str_11935;
+            OUTGOING_PACKETS[1990] = ThrowDiceMessageComposer;
             OUTGOING_PACKETS[1991] = UpdateGuildBadgeMessageComposer;
             OUTGOING_PACKETS[2012] = _Str_11402;
             OUTGOING_PACKETS[2031] = _Str_18219;
