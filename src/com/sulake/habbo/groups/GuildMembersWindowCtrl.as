@@ -487,7 +487,7 @@
             }
         }
 
-        private function _Str_22754(k:WindowEvent, _arg_2:IWindow):void
+        private function onTypeDropmenu(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowEvent.WINDOW_EVENT_SELECTED)
             {
@@ -584,7 +584,7 @@
             _local_2.procedure = null;
             _local_2.populate(k);
             _local_2.selection = ((this._data.allowedToManage) ? this._data.searchType : Math.min(this._data.searchType, 1));
-            _local_2.procedure = this._Str_22754;
+            _local_2.procedure = this.onTypeDropmenu;
         }
 
         private function _Str_23578():void
