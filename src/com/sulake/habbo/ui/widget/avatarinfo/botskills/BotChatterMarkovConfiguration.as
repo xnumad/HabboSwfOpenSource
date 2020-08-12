@@ -5,7 +5,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.room.bots._Str_3365;
+    import com.sulake.habbo.communication.messages.outgoing.room.bots.CommandBotComposer;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -145,7 +145,7 @@
                 switch (_arg_2.name)
                 {
                     case "save_button":
-                        _widget.handler.container.connection.send(new _Str_3365(_botId, BotSkillsEnum.SETUP_CHAT, this._Str_23395));
+                        _widget.handler.container.connection.send(new CommandBotComposer(_botId, BotSkillsEnum.SETUP_CHAT, this._Str_23395));
                         close();
                         return;
                     case "cancel_button":

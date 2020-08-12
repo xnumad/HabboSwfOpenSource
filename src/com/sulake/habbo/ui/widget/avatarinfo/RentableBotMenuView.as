@@ -9,7 +9,7 @@
     import flash.geom.Point;
     import flash.geom.Rectangle;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
-    import com.sulake.habbo.communication.messages.outgoing.room.bots._Str_3365;
+    import com.sulake.habbo.communication.messages.outgoing.room.bots.CommandBotComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
@@ -214,28 +214,28 @@
                             break;
                         case "random_walk":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.RANDOM_WALK, ""));
+                            this.widget.handler.container.connection.send(new CommandBotComposer(this._data.id, BotSkillsEnum.RANDOM_WALK, ""));
                             break;
                         case "dress_up":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.DRESS_UP, ""));
+                            this.widget.handler.container.connection.send(new CommandBotComposer(this._data.id, BotSkillsEnum.DRESS_UP, ""));
                             break;
                         case "dance":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.DANCE, ""));
+                            this.widget.handler.container.connection.send(new CommandBotComposer(this._data.id, BotSkillsEnum.DANCE, ""));
                             break;
                         case "donate_to_all":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.DONATE_TO_ALL, ""));
+                            this.widget.handler.container.connection.send(new CommandBotComposer(this._data.id, BotSkillsEnum.DONATE_TO_ALL, ""));
                             break;
                         case "donate_to_user":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.DONATE_TO_USER, ""));
+                            this.widget.handler.container.connection.send(new CommandBotComposer(this._data.id, BotSkillsEnum.DONATE_TO_USER, ""));
                             break;
                         case "nux_take_tour":
                             _local_3 = true;
                             this.widget.component.context.createLinkEvent("help/tour");
-                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.NUX_TAKE_TOUR, ""));
+                            this.widget.handler.container.connection.send(new CommandBotComposer(this._data.id, BotSkillsEnum.NUX_TAKE_TOUR, ""));
                             break;
                         case "change_bot_motto":
                             _local_3 = true;
@@ -261,7 +261,7 @@
                     if (_arg_2.parent.name.indexOf("nux_proceed_") != -1)
                     {
                         _local_7 = _arg_2.parent.name.substr(12, (_arg_2.parent.name.length - 12));
-                        this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.NUX_PROCEED, _local_7));
+                        this.widget.handler.container.connection.send(new CommandBotComposer(this._data.id, BotSkillsEnum.NUX_PROCEED, _local_7));
                         _local_3 = true;
                     }
                 }

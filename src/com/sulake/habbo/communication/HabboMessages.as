@@ -283,7 +283,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.bots.BotCommandConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.bots.BotErrorEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.bots.GetBotCommandConfigurationDataComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.bots._Str_3365;
+	import com.sulake.habbo.communication.messages.outgoing.room.bots.CommandBotComposer;
 	import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceScriptProceedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceGetGiftsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.purse.GetCreditsInfoComposer;
@@ -1733,7 +1733,7 @@
             OUTGOING_PACKETS[2595] = _Str_4038;
             OUTGOING_PACKETS[2596] = PongMessageComposer;
             OUTGOING_PACKETS[2597] = _Str_7525;
-            OUTGOING_PACKETS[2624] = _Str_3365;
+            OUTGOING_PACKETS[2624] = CommandBotComposer;
             OUTGOING_PACKETS[2638] = _Str_12374;
             OUTGOING_PACKETS[2647] = _Str_8042;
             OUTGOING_PACKETS[2650] = _Str_12361;

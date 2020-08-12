@@ -4,7 +4,7 @@
     import flash.geom.Point;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.room.bots._Str_3365;
+    import com.sulake.habbo.communication.messages.outgoing.room.bots.CommandBotComposer;
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -65,7 +65,7 @@
                 switch (_arg_2.name)
                 {
                     case "save_button":
-                        _widget.handler.container.connection.send(new _Str_3365(_botId, BotSkillsEnum.CHANGE_BOT_NAME, this._newName));
+                        _widget.handler.container.connection.send(new CommandBotComposer(_botId, BotSkillsEnum.CHANGE_BOT_NAME, this._newName));
                         close();
                         break;
                     case "cancel_button":
