@@ -717,7 +717,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11461;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11532;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinNameComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11639;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.DiceOffMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PlacePostItMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11935;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12182;
@@ -1587,7 +1587,7 @@
             OUTGOING_PACKETS[1520] = UpdateTriggerMessageComposer;
             OUTGOING_PACKETS[1521] = HarvestPetMessageComposer;
             OUTGOING_PACKETS[1523] = _Str_11544;
-            OUTGOING_PACKETS[1533] = _Str_11639;
+            OUTGOING_PACKETS[1533] = DiceOffMessageComposer;
             OUTGOING_PACKETS[1543] = WhisperMessageComposer;
             OUTGOING_PACKETS[1572] = ReleaseIssuesMessageComposer;
             OUTGOING_PACKETS[1581] = RemovePetFromFlatMessageComposer;

@@ -80,7 +80,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRandomStateMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.UseWallItemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11935;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11639;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.DiceOffMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12182;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.GetItemDataMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10097;
@@ -2374,7 +2374,7 @@
                         this._roomEngine.connection.send(new _Str_11935(_arg_2));
                         return;
                     case RoomObjectFurnitureActionEvent.DICE_OFF:
-                        this._roomEngine.connection.send(new _Str_11639(_arg_2));
+                        this._roomEngine.connection.send(new DiceOffMessageComposer(_arg_2));
                         return;
                     case RoomObjectFurnitureActionEvent.USE_HABBOWHEEL:
                         this._roomEngine.connection.send(new _Str_12182(_arg_2));
