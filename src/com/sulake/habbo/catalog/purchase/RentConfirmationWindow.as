@@ -13,7 +13,7 @@
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11532;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.GetRentOrBuyoutOfferMessageComposer;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.ExtendRentOrBuyoutFurniMessageComposer;
@@ -144,7 +144,7 @@
                 }
             }
             var _local_6:* = (k.type == ProductTypeEnum.WALL);
-            this._catalog.connection.send(new _Str_11532(_local_6, k.fullName, _arg_2));
+            this._catalog.connection.send(new GetRentOrBuyoutOfferMessageComposer(_local_6, k.fullName, _arg_2));
         }
 
         private function get roomEngine():IRoomEngine

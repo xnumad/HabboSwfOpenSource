@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11532 implements IMessageComposer 
+    public class GetRentOrBuyoutOfferMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_11532(k:Boolean, _arg_2:String, _arg_3:Boolean)
+        public function GetRentOrBuyoutOfferMessageComposer(k:Boolean, _arg_2:String, _arg_3:Boolean)
         {
             this._array = [k, _arg_2, _arg_3];
         }

@@ -715,7 +715,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerGetPresetsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRoomBackgroundColorDataComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceStatusMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11532;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.GetRentOrBuyoutOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinNameComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.DiceOffMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PlacePostItMessageComposer;
@@ -1719,7 +1719,7 @@
             OUTGOING_PACKETS[2492] = _Str_7640;
             OUTGOING_PACKETS[2501] = _Str_4981;
             OUTGOING_PACKETS[2502] = Game2GameChatMessageComposer;
-            OUTGOING_PACKETS[2518] = _Str_11532;
+            OUTGOING_PACKETS[2518] = GetRentOrBuyoutOfferMessageComposer;
             OUTGOING_PACKETS[2519] = _Str_10855;
             OUTGOING_PACKETS[2529] = _Str_12000;
             OUTGOING_PACKETS[2537] = _Str_9807;
