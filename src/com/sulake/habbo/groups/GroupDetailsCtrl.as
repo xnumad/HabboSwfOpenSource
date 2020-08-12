@@ -129,16 +129,16 @@
             this._window.findChildByName("you_are_owner_region").visible = ((this._selectedGroup._Str_6444) && (this._selectedGroup.isOwner));
             this._window.findChildByName("you_are_admin_region").visible = (((this._selectedGroup._Str_6444) && (this._selectedGroup.isAdmin)) && (!(this._selectedGroup.isOwner)));
             this._window.findChildByName("you_are_member_region").visible = ((this._selectedGroup._Str_6444) && ((this._selectedGroup.status == HabboGroupDetailsData.STATUS_MEMBER) && (!((this._selectedGroup.isAdmin) || (this._selectedGroup.isOwner)))));
-            this._Str_11257(0).visible = false;
-            this._Str_11257(1).visible = false;
-            this._Str_11257(2).visible = false;
-            if (this._Str_11257(_arg_2.type) != null)
+            this.getGroupTypeRegion(0).visible = false;
+            this.getGroupTypeRegion(1).visible = false;
+            this.getGroupTypeRegion(2).visible = false;
+            if (this.getGroupTypeRegion(_arg_2.type) != null)
             {
-                this._Str_11257(_arg_2.type).visible = true;
+                this.getGroupTypeRegion(_arg_2.type).visible = true;
             }
         }
 
-        private function _Str_11257(k:int):IWindow
+        private function getGroupTypeRegion(k:int):IWindow
         {
             return this._window.findChildByName(("grouptype_region_" + k));
         }
