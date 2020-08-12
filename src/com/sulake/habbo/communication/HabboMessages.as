@@ -490,7 +490,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserIdMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.JoinHabboGroupMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.ScrGetUserInfoMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetSelectedBadgesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileByNameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembershipsMessageComposer;
@@ -1650,7 +1650,7 @@
             OUTGOING_PACKETS[2077] = _Str_10525;
             OUTGOING_PACKETS[2080] = DanceMessageComposer;
             OUTGOING_PACKETS[2085] = ShoutMessageComposer;
-            OUTGOING_PACKETS[2091] = _Str_6996;
+            OUTGOING_PACKETS[2091] = GetSelectedBadgesMessageComposer;
             OUTGOING_PACKETS[21] = GetHabboGroupBadgesMessageComposer;
             OUTGOING_PACKETS[210] = UseWallItemMessageComposer;
             OUTGOING_PACKETS[2105] = _Str_9940;

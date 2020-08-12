@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_3266;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetSelectedBadgesMessageComposer;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.enum._Str_4387;
@@ -162,7 +162,7 @@
         private function refresh():void
         {
             this._manager.send(new _Str_8049(this._data.userId));
-            this._manager.send(new _Str_6996(this._data.userId));
+            this._manager.send(new GetSelectedBadgesMessageComposer(this._data.userId));
             this.prepareWindow();
             this._Str_11540();
             this._Str_25048();

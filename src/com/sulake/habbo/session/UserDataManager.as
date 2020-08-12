@@ -2,7 +2,7 @@
 {
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.connection.IConnection;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetSelectedBadgesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.pets.GetPetInfoMessageComposer;
 
     public class UserDataManager
@@ -78,7 +78,7 @@
         {
             if (this._connection != null)
             {
-                this._connection.send(new _Str_6996(k));
+                this._connection.send(new GetSelectedBadgesMessageComposer(k));
             }
             var _local_2:Array = (this._userBadges.getValue(k) as Array);
             if (_local_2 == null)

@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_6996 implements IMessageComposer, IDisposable 
+    public class GetSelectedBadgesMessageComposer implements IMessageComposer, IDisposable
     {
         private var messageArray:Array;
 
-        public function _Str_6996(k:int)
+        public function GetSelectedBadgesMessageComposer(k:int)
         {
             this.messageArray = [];
             super();
