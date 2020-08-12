@@ -468,7 +468,7 @@
                     _local_6 = (_local_3.userId == this._habboHelp.reportedUserId);
                     _local_5.name = _local_3.userId.toString();
                     _local_5.findChildByName("user_bg").blend = ((_local_6) ? 1 : 0);
-                    _local_5.procedure = this._Str_17107;
+                    _local_5.procedure = this.onUserSelectEvent;
                     _local_5.findChildByName("user_name").caption = _local_3.userName;
                     _local_5.findChildByName("room_name").id = _local_3.roomId;
                     if (_local_6)
@@ -505,7 +505,7 @@
             }
         }
 
-        private function _Str_17107(k:WindowEvent, _arg_2:IWindow):void
+        private function onUserSelectEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
