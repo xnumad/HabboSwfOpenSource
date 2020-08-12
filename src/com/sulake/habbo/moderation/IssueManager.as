@@ -416,7 +416,7 @@
             {
                 return;
             }
-            this._Str_24743(_local_3._Str_7101(), _arg_2);
+            this.sendClose(_local_3._Str_7101(), _arg_2);
         }
 
         public function _Str_23846(k:int, _arg_2:int):void
@@ -503,7 +503,7 @@
             }
         }
 
-        private function _Str_24743(k:Array, _arg_2:int):void
+        private function sendClose(k:Array, _arg_2:int):void
         {
             if ((((k == null) || (this._moderationManager == null)) || (this._moderationManager.connection == null)))
             {
