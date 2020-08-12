@@ -81,7 +81,7 @@
             this._container.findChildByName("next_quest_region").procedure = this.onNextQuest;
             this._container.findChildByName("cancel_quest_region").procedure = this.onCancelQuest;
             this._container.findChildByName("easy_region").procedure = this.onEasyRegion;
-            this._container.findChildByName("hard_region").procedure = this._Str_18792;
+            this._container.findChildByName("hard_region").procedure = this.onHardRegion;
         }
 
         public function dispose():void
@@ -178,7 +178,7 @@
             }
         }
 
-        private function _Str_18792(k:WindowEvent, _arg_2:IWindow):void
+        private function onHardRegion(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
