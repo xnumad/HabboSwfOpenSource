@@ -98,7 +98,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetInventoryMessageParser;
     import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_8182;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.GoToBreedingNestFailureParser;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_7183;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.PetRemovedFromInventoryParser;
     import com.sulake.habbo.inventory.bots.BotsModel;
     import com.sulake.habbo.communication.messages.parser.inventory.bots.BotInventoryMessageParser;
     import com.sulake.habbo.communication.messages.parser.inventory.bots.BotRemovedFromInventoryParser;
@@ -806,7 +806,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7183 = k.getParser();
+            var _local_3:PetRemovedFromInventoryParser = k.getParser();
             _local_2._Str_12321(_local_3.petId);
         }
 
