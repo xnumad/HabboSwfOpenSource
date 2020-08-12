@@ -49,7 +49,7 @@
     public class MainViewCtrl implements ITransitionalMainViewCtrl, IUpdateReceiver, IDisposable 
     {
         public static const SEARCHMSG_SEARCH:int = 1;
-        public static const _Str_14620:int = 2;
+        public static const SEARCHMSG_POPTAGS:int = 2;
         public static const _Str_15148:int = 4;
         public static const _Str_13989:int = 5;
         private static const _Str_15647:int = 1;
@@ -526,7 +526,7 @@
             }
             else
             {
-                if (_arg_4 == _Str_14620)
+                if (_arg_4 == SEARCHMSG_POPTAGS)
                 {
                     this._navigator.send(new _Str_10397());
                 }

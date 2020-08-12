@@ -66,7 +66,7 @@
             this._tabs.push(new Tab(this._navigator, TAB_ROOMS, SEARCHTYPE_POPULAR_ROOMS, new RoomsTabPageDecorator(this._navigator), MainViewCtrl.SEARCHMSG_SEARCH));
             this._tabs.push(new Tab(this._navigator, TAB_OFFICIAL, SEARCHTYPE_OFFICIALROOMS, new OfficialTabPageDecorator(this._navigator), MainViewCtrl._Str_15148));
             this._tabs.push(new Tab(this._navigator, TAB_ME, SEARCHTYPE_MY_ROOMS, new MyRoomsTabPageDecorator(this._navigator), MainViewCtrl.SEARCHMSG_SEARCH));
-            this._tabs.push(new Tab(this._navigator, TAB_SEARCH, SEARCHTYPE_TEXT_SEARCH, new SearchTabPageDecorator(this._navigator), MainViewCtrl._Str_14620));
+            this._tabs.push(new Tab(this._navigator, TAB_SEARCH, SEARCHTYPE_TEXT_SEARCH, new SearchTabPageDecorator(this._navigator), MainViewCtrl.SEARCHMSG_POPTAGS));
             this.setSelectedTab(TAB_EVENTS);
         }
 
