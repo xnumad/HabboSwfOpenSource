@@ -703,7 +703,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9538;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerChangeStateMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10097;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.EnterOneWayDoorMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10101;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PresentOpenMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
@@ -1759,7 +1759,7 @@
             OUTGOING_PACKETS[2755] = _Str_11879;
             OUTGOING_PACKETS[2758] = _Str_10157;
             OUTGOING_PACKETS[2760] = _Str_11362;
-            OUTGOING_PACKETS[2765] = _Str_10097;
+            OUTGOING_PACKETS[2765] = EnterOneWayDoorMessageComposer;
             OUTGOING_PACKETS[2766] = _Str_4767;
             OUTGOING_PACKETS[2768] = PassCarryItemToPetMessageComposer;
             OUTGOING_PACKETS[2769] = _Str_7891;
