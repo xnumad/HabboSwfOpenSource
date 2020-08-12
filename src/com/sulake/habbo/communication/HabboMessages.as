@@ -526,7 +526,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_18849;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomTextSearchMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.AddFavouriteRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7214;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
@@ -1898,7 +1898,7 @@
             OUTGOING_PACKETS[3782] = _Str_17077;
             OUTGOING_PACKETS[3786] = _Str_12273;
             OUTGOING_PACKETS[3802] = AcceptGameInviteMessageComposer;
-            OUTGOING_PACKETS[3817] = _Str_4893;
+            OUTGOING_PACKETS[3817] = AddFavouriteRoomMessageComposer;
             OUTGOING_PACKETS[3835] = CompostPlantMessageComposer;
             OUTGOING_PACKETS[3839] = SetCustomStackingHeightComposer;
             OUTGOING_PACKETS[3842] = _Str_5691;

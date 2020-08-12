@@ -14,7 +14,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import flash.geom.Rectangle;
     import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.AddFavouriteRoomMessageComposer;
     import com.sulake.core.window.components.IRegionWindow;
 
     public class RoomEntryElementFactory 
@@ -181,7 +181,7 @@
             }
             else
             {
-                this._navigator.communication.connection.send(new _Str_4893(k.window.id));
+                this._navigator.communication.connection.send(new AddFavouriteRoomMessageComposer(k.window.id));
             }
             IStaticBitmapWrapperWindow(IRegionWindow(k.window).findChildByName("favourite_icon")).assetUri = RoomEntryUtils._Str_25708((!(_local_2)));
         }

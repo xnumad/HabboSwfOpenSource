@@ -20,7 +20,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.navigator.roomsettings.RoomSettingsCtrl;
     import com.sulake.habbo.navigator.transitional.LegacyNavigator;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.AddFavouriteRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateHomeRoomMessageComposer;
     import __AS3__.vec.*;
@@ -353,7 +353,7 @@
             {
                 if (!this._Str_9158)
                 {
-                    this._navigator.communication.connection.send(new _Str_4893(this._guestRoomData.flatId));
+                    this._navigator.communication.connection.send(new AddFavouriteRoomMessageComposer(this._guestRoomData.flatId));
                     this._Str_9158 = true;
                 }
                 else

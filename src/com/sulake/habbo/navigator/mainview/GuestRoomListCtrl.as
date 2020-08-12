@@ -18,7 +18,7 @@
     import flash.geom.Point;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.AddFavouriteRoomMessageComposer;
     import com.sulake.core.window.*;
     import com.sulake.core.window.components.*;
     import com.sulake.core.window.events.*;
@@ -361,7 +361,7 @@
             {
                 return;
             }
-            this._navigator.send(new _Str_4893(_local_3.flatId));
+            this._navigator.send(new AddFavouriteRoomMessageComposer(_local_3.flatId));
         }
 
         private function hilite(k:IWindowContainer):void
