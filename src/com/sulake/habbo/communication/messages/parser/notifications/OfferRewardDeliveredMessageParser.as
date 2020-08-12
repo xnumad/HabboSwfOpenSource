@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7924 implements IMessageParser 
+    public class OfferRewardDeliveredMessageParser implements IMessageParser
     {
         private var _contentType:String;
         private var _classId:int;

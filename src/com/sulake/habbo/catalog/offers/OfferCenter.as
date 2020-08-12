@@ -10,7 +10,7 @@
     import flash.utils.Timer;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_7261;
     import flash.events.TimerEvent;
-    import com.sulake.habbo.communication.messages.parser.notifications._Str_7924;
+    import com.sulake.habbo.communication.messages.parser.notifications.OfferRewardDeliveredMessageParser;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -87,7 +87,7 @@
 
         private function _Str_22579(k:_Str_7261):void
         {
-            var _local_2:_Str_7924 = k.getParser();
+            var _local_2:OfferRewardDeliveredMessageParser = k.getParser();
             this._Str_23174(_local_2.name, _local_2.contentType, _local_2.classId);
         }
 
