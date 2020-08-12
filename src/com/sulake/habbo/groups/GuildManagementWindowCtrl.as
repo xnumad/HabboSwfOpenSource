@@ -154,7 +154,7 @@
             var _local_2:int = 1;
             while (_local_2 <= VIEW_SETTINGS)
             {
-                this._Str_15138(_local_2).visible = (this._step == _local_2);
+                this.getStepContainer(_local_2).visible = (this._step == _local_2);
                 _local_3 = this._window.findChildByName(("header_pic_bitmap_step_" + _local_2));
                 _local_3.y = ((this._data.exists) ? 0 : CREATE_HEADER_BITMAP_OFFSET);
                 _local_3.visible = (this._step == _local_2);
@@ -177,7 +177,7 @@
                 }
                 if (!this._badgeEditorCtrl._Str_6443)
                 {
-                    this._badgeEditorCtrl.createWindow(this._Str_15138(VIEW_BADGE), this._data.badgeSettings);
+                    this._badgeEditorCtrl.createWindow(this.getStepContainer(VIEW_BADGE), this._data.badgeSettings);
                     this._badgeEditorCtrl._Str_15567(this._data.badgeSettings);
                 }
                 this._window.findChildByName("reset_badge").visible = this._data.exists;
@@ -190,7 +190,7 @@
                 }
                 if (!this._primaryColorCtrl.isInitialized)
                 {
-                    this._primaryColorCtrl._Str_16890(this._Str_15138(VIEW_COLORS), "guild_primary_color_selector", this._manager.guildEditorData._Str_17665);
+                    this._primaryColorCtrl._Str_16890(this.getStepContainer(VIEW_COLORS), "guild_primary_color_selector", this._manager.guildEditorData._Str_17665);
                     if (this._data.exists)
                     {
                         this._primaryColorCtrl._Str_6434(this._data.primaryColorId);
@@ -202,7 +202,7 @@
                 }
                 if (!this._secondaryColorCtrl.isInitialized)
                 {
-                    this._secondaryColorCtrl._Str_16890(this._Str_15138(VIEW_COLORS), "guild_secondary_color_selector", this._manager.guildEditorData._Str_16298);
+                    this._secondaryColorCtrl._Str_16890(this.getStepContainer(VIEW_COLORS), "guild_secondary_color_selector", this._manager.guildEditorData._Str_16298);
                     if (this._data.exists)
                     {
                         this._secondaryColorCtrl._Str_6434(this._data.secondaryColorId);
@@ -334,7 +334,7 @@
             return this._window.findChildByName(((("gcreate_" + k) + "_") + ((_arg_2) ? "1" : "0")));
         }
 
-        private function _Str_15138(k:int):IWindowContainer
+        private function getStepContainer(k:int):IWindowContainer
         {
             return IWindowContainer(this._window.findChildByName(("step_cont_" + k)));
         }
