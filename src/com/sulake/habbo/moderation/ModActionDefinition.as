@@ -4,7 +4,7 @@
     {
         public static const ALERT:int = 1;
         public static const MUTE:int = 2;
-        public static const _Str_5684:int = 3;
+        public static const BAN:int = 3;
         public static const _Str_13808:int = 4;
         public static const _Str_10699:int = 5;
         public static const MESSAGE:int = 6;

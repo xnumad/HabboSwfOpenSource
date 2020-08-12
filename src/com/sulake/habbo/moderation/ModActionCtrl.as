@@ -51,12 +51,12 @@
                 _Str_3610 = new Array();
                 _Str_3610.push(new ModActionDefinition(1, "Alert", ModActionDefinition.ALERT, 1, 0));
                 _Str_3610.push(new ModActionDefinition(2, "Mute 1h", ModActionDefinition.MUTE, 2, 0));
-                _Str_3610.push(new ModActionDefinition(3, "Ban 18h", ModActionDefinition._Str_5684, 3, 0));
-                _Str_3610.push(new ModActionDefinition(4, "Ban 7 days", ModActionDefinition._Str_5684, 4, 0));
-                _Str_3610.push(new ModActionDefinition(5, "Ban 30 days (step 1)", ModActionDefinition._Str_5684, 5, 0));
-                _Str_3610.push(new ModActionDefinition(7, "Ban 30 days (step 2)", ModActionDefinition._Str_5684, 7, 0));
-                _Str_3610.push(new ModActionDefinition(6, "Ban 100 years", ModActionDefinition._Str_5684, 6, 0));
-                _Str_3610.push(new ModActionDefinition(106, "Ban avatar-only 100 years", ModActionDefinition._Str_5684, 6, 0));
+                _Str_3610.push(new ModActionDefinition(3, "Ban 18h", ModActionDefinition.BAN, 3, 0));
+                _Str_3610.push(new ModActionDefinition(4, "Ban 7 days", ModActionDefinition.BAN, 4, 0));
+                _Str_3610.push(new ModActionDefinition(5, "Ban 30 days (step 1)", ModActionDefinition.BAN, 5, 0));
+                _Str_3610.push(new ModActionDefinition(7, "Ban 30 days (step 2)", ModActionDefinition.BAN, 7, 0));
+                _Str_3610.push(new ModActionDefinition(6, "Ban 100 years", ModActionDefinition.BAN, 6, 0));
+                _Str_3610.push(new ModActionDefinition(106, "Ban avatar-only 100 years", ModActionDefinition.BAN, 6, 0));
                 _Str_3610.push(new ModActionDefinition(101, "Kick", ModActionDefinition._Str_13808, 0, 0));
                 _Str_3610.push(new ModActionDefinition(102, "Lock trade 1 week", ModActionDefinition._Str_10699, 0, 168));
                 _Str_3610.push(new ModActionDefinition(104, "Lock trade permanent", ModActionDefinition._Str_10699, 0, 876000));
@@ -280,7 +280,7 @@
                     this._Str_3066("mute");
                     this._Str_2327.connection.send(new _Str_12438(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
-                case ModActionDefinition._Str_5684:
+                case ModActionDefinition.BAN:
                     if (!this._Str_2327.initMsg._Str_21242)
                     {
                         this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this.onAlertClose);
