@@ -519,7 +519,7 @@
             }
         }
 
-        public function get _Str_19189():Array
+        public function get samplesIdsInUse():Array
         {
             var _local_3:SongStartRequestData;
             var _local_4:SongDataEntry;

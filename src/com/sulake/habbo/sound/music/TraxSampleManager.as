@@ -164,7 +164,7 @@
             var _local_12:TraxSample;
             var k:uint;
             var _local_2:Array = [];
-            var _local_3:Array = this._soundManager._Str_2774._Str_19189;
+            var _local_3:Array = this._soundManager._Str_2774.samplesIdsInUse;
             var _local_4:int;
             while (_local_4 < this._traxSamples.length)
             {

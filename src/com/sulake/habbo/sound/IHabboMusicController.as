@@ -18,7 +18,7 @@
         function onSongLoaded(_arg_1:int):void;
         function updateVolume(_arg_1:Number):void;
         function samplesUnloaded(_arg_1:Array):void;
-        function get _Str_19189():Array;
+        function get samplesIdsInUse():Array;
         function get events():IEventDispatcher;
         function dispose():void;
     }
