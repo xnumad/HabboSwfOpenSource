@@ -64,7 +64,7 @@
 
     public class GroupForumController extends Component implements IGroupForumController, ILinkEventTracker 
     {
-        public static const _Str_18201:int = 0;
+        public static const FORUMS_LIST_CODE_ACTIVE:int = 0;
         public static const _Str_17967:int = 1;
         public static const _Str_8757:int = 2;
         public static const _Str_9418:int = -1;
@@ -252,7 +252,7 @@
                     switch (_local_2[2])
                     {
                         case "active":
-                            _local_3 = _Str_18201;
+                            _local_3 = FORUMS_LIST_CODE_ACTIVE;
                             break;
                         case "popular":
                             _local_3 = _Str_17967;
