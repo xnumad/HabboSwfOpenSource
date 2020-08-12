@@ -67,7 +67,7 @@
         public static const FORUMS_LIST_CODE_ACTIVE:int = 0;
         public static const FORUMS_LIST_CODE_POPULAR:int = 1;
         public static const FORUMS_LIST_CODE_MY_FORUMS:int = 2;
-        public static const _Str_9418:int = -1;
+        public static const NO_ID:int = -1;
 
         private var _configurationManager:IHabboConfigurationManager;
         private var _communicationManager:IHabboCommunicationManager;
@@ -297,7 +297,7 @@
         {
             this._Str_13365();
             this._requestedForumsListCode = k;
-            this._requestedGroupID = _Str_9418;
+            this._requestedGroupID = NO_ID;
             this._communicationManager.connection.send(new ModerateMessageMessageComposer(k, _arg_2, ThreadsListData._Str_3331));
         }
 
@@ -328,7 +328,7 @@
         private function initForum(k:int):void
         {
             this._Str_13365();
-            this._requestedForumsListCode = _Str_9418;
+            this._requestedForumsListCode = NO_ID;
             this._requestedGroupID = k;
             this._lastReadMessageId = 0;
             this._communicationManager.connection.send(new GetThreadsMessageComposer(k));
@@ -646,8 +646,8 @@
             this._Str_13365();
             this._mainView = null;
             this._forumData = null;
-            this._requestedForumsListCode = _Str_9418;
-            this._requestedGroupID = _Str_9418;
+            this._requestedForumsListCode = NO_ID;
+            this._requestedGroupID = NO_ID;
         }
 
         public function _Str_13365(k:Boolean=false):void
