@@ -203,7 +203,7 @@
             return null;
         }
 
-        public function _Str_23043(k:String):IFriendRequest
+        public function getFriendRequestByName(k:String):IFriendRequest
         {
             var _local_2:IFriendRequest;
             if (this._friendRequests)
