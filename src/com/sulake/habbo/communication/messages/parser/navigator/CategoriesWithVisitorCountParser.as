@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.CategoriesWithVisitorCountData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6885 implements IMessageParser 
+    public class CategoriesWithVisitorCountParser implements IMessageParser
     {
         private var _data:CategoriesWithVisitorCountData;
 

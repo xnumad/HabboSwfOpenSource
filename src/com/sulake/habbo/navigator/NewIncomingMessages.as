@@ -55,7 +55,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7413;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.session.SecurityLevelEnum;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6885;
+    import com.sulake.habbo.communication.messages.parser.navigator.CategoriesWithVisitorCountParser;
     import com.sulake.habbo.communication.messages.parser.navigator.OfficialRoomsMessageParser;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
     import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsData;
@@ -250,7 +250,7 @@
 
         private function _Str_18837(k:IMessageEvent):void
         {
-            var _local_2:_Str_6885 = _Str_5006(k).getParser();
+            var _local_2:CategoriesWithVisitorCountParser = _Str_5006(k).getParser();
             this.data._Str_7267 = _local_2.data;
             Logger.log(("Received Categories with user count: " + this.data._Str_7267.categoryToCurrentUserCountMap.length));
         }

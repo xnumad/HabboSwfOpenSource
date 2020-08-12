@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6885;
+    import com.sulake.habbo.communication.messages.parser.navigator.CategoriesWithVisitorCountParser;
 
     public class _Str_5006 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_5006(k:Function)
         {
-            super(k, _Str_6885);
+            super(k, CategoriesWithVisitorCountParser);
         }
 
-        public function getParser():_Str_6885
+        public function getParser():CategoriesWithVisitorCountParser
         {
-            return this._parser as _Str_6885;
+            return this._parser as CategoriesWithVisitorCountParser;
         }
     }
 }
