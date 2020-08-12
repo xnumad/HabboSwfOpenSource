@@ -187,7 +187,7 @@
             this.addMessageEvent(new GuildMembershipUpdatedMessageEvent(this._guildMembersWindowCtrl._Str_25762));
             this.addMessageEvent(new ExtendedProfileChangedMessageEvent(this.onExtendedProfileChanged));
             this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
-            this.addMessageEvent(new UserBadgesEvent(this._Str_24382));
+            this.addMessageEvent(new UserBadgesEvent(this.onUserBadgesMessage));
             context.addLinkEventTracker(this);
         }
 
@@ -529,7 +529,7 @@
             this._extendedProfileWindowCtrl.onRelationshipStatusInfo(_local_2.userId, _local_2.relationshipStatusMap);
         }
 
-        private function _Str_24382(k:UserBadgesEvent):void
+        private function onUserBadgesMessage(k:UserBadgesEvent):void
         {
             this._extendedProfileWindowCtrl.onUserBadges(k.userId, k.badges);
         }
