@@ -343,7 +343,7 @@
             {
                 this._Str_2868.pop().recycle();
             }
-            this._Str_21482(this._friendBarData._Str_10570);
+            this._Str_21482(this._friendBarData.numFriendRequests);
             var _local_5:int = this._friendBarData._Str_7830;
             var _local_6:int;
             var _local_7:int = this._Str_7488;
@@ -729,11 +729,11 @@
         {
             if (this._Str_8151)
             {
-                this._Str_8151.notify((this._friendBarData._Str_10570 > 0));
+                this._Str_8151.notify((this._friendBarData.numFriendRequests > 0));
             }
             if (this._friendBarWindow)
             {
-                this._Str_21482(this._friendBarData._Str_10570);
+                this._Str_21482(this._friendBarData.numFriendRequests);
                 this._Str_6258(true);
             }
             else
@@ -857,7 +857,7 @@
             if (k.type == WindowMouseEvent.DOWN)
             {
                 _local_3 = this._Str_2748;
-                _local_4 = ((this._friendBarData._Str_7830 + ((this._Str_14931) ? 1 : 0)) + ((this._friendBarData._Str_10570 > 0) ? 1 : 0));
+                _local_4 = ((this._friendBarData._Str_7830 + ((this._Str_14931) ? 1 : 0)) + ((this._friendBarData.numFriendRequests > 0) ? 1 : 0));
                 switch (_arg_2.name)
                 {
                     case BUTTON_LEFT:

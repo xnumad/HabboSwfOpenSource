@@ -177,7 +177,7 @@
             }
         }
 
-        public function get _Str_10570():int
+        public function get numFriendRequests():int
         {
             return (this._friendRequests) ? this._friendRequests.length : 0;
         }
