@@ -479,7 +479,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11183;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11544;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditorDataMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_11883;
+	import com.sulake.habbo.communication.messages.outgoing.users.DeselectFavouriteHabboGroupMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UnblockGroupMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.AddAdminRightsToMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12242;
@@ -1615,7 +1615,7 @@
             OUTGOING_PACKETS[1773] = PollRejectComposer;
             OUTGOING_PACKETS[1782] = _Str_7413;
             OUTGOING_PACKETS[1786] = _Str_10079;
-            OUTGOING_PACKETS[1820] = _Str_11883;
+            OUTGOING_PACKETS[1820] = DeselectFavouriteHabboGroupMessageComposer;
             OUTGOING_PACKETS[1822] = NewUserExperienceGetGiftsMessageComposer;
             OUTGOING_PACKETS[1826] = _Str_11313;
             OUTGOING_PACKETS[1827] = GetPromoArticlesComposer;

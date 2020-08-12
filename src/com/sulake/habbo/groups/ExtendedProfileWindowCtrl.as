@@ -24,7 +24,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.SelectFavouriteHabboGroupMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_11883;
+    import com.sulake.habbo.communication.messages.outgoing.users.DeselectFavouriteHabboGroupMessageComposer;
     import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class ExtendedProfileWindowCtrl implements IDisposable 
@@ -425,7 +425,7 @@
             {
                 return;
             }
-            this._manager.send(new _Str_11883(_arg_2.id));
+            this._manager.send(new DeselectFavouriteHabboGroupMessageComposer(_arg_2.id));
             this._manager.send(new EventLogMessageComposer(HabboGroupsManager.HABBOGROUPS, ("" + _arg_2.parent.id), "clear favourite"));
             this._selectedGroupId = _arg_2.id;
         }
