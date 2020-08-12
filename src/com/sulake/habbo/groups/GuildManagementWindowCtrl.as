@@ -130,7 +130,7 @@
             {
                 this._data.ownedRooms.splice(0, 0, new RoomEntryData(k, _arg_2, false));
                 this._Str_20779();
-                this._Str_20262().selection = 0;
+                this.getBaseDropMenu().selection = 0;
             }
         }
 
@@ -638,7 +638,7 @@
             return Math.max(1, Math.min(k, VIEW_CONFIRM));
         }
 
-        private function _Str_20262():IDropMenuWindow
+        private function getBaseDropMenu():IDropMenuWindow
         {
             return IDropMenuWindow(this._window.findChildByName("base_dropmenu"));
         }
@@ -646,7 +646,7 @@
         private function _Str_20779():void
         {
             var _local_5:RoomEntryData;
-            var k:IDropMenuWindow = this._Str_20262();
+            var k:IDropMenuWindow = this.getBaseDropMenu();
             var _local_2:Array = new Array();
             var _local_3:int;
             _local_2.push(this._manager.localization.getLocalization("group.edit.base.select.room", "group.edit.base.select.room"));
