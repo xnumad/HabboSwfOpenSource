@@ -252,7 +252,7 @@
             this.reportUser(0, HabboHelp._Str_5723, -1);
         }
 
-        private function _Str_22936():void
+        private function showAbusiveNotice():void
         {
             this.closeWindow();
             this._window = (this._habboHelp.getXmlWindow("abusive_notice") as IWindowContainer);
@@ -669,7 +669,7 @@
                     this._habboHelp._Str_8128(HabboHelp._Str_5723);
                     return;
                 case CallForHelpResultEnum._Str_18473:
-                    this._Str_22936();
+                    this.showAbusiveNotice();
                     return;
                 default:
                     if (_local_4 == "")
