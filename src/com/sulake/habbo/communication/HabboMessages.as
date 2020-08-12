@@ -522,7 +522,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomRightsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomHistorySearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RateFlatMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_17077;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.GetCategoriesWithUserCountMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateRoomThumbnailMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomTextSearchMessageComposer;
@@ -1895,7 +1895,7 @@
             OUTGOING_PACKETS[3742] = _Str_12485;
             OUTGOING_PACKETS[3768] = _Str_11696;
             OUTGOING_PACKETS[3775] = FriendFurniConfirmLockMessageComposer;
-            OUTGOING_PACKETS[3782] = _Str_17077;
+            OUTGOING_PACKETS[3782] = GetCategoriesWithUserCountMessageComposer;
             OUTGOING_PACKETS[3786] = _Str_12273;
             OUTGOING_PACKETS[3802] = AcceptGameInviteMessageComposer;
             OUTGOING_PACKETS[3817] = AddFavouriteRoomMessageComposer;
