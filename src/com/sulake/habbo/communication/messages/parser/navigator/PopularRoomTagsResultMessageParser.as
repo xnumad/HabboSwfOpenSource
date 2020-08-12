@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8531 implements IMessageParser 
+    public class PopularRoomTagsResultMessageParser implements IMessageParser
     {
         private var _data:PopularRoomTagsData;
 
