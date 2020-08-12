@@ -14,7 +14,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.ICheckBoxWindow;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7268;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.GetCfhChatlogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModToolPreferencesComposer;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpTopicData;
@@ -199,7 +199,7 @@
             }
             this._chatFrame = IWindowContainer(this._window.findChildByName("chat_cont"));
             this._chatList = IItemListWindow(this._chatFrame.findChildByName("evidence_list"));
-            this._chatLogCtrl = new ChatlogCtrl(new _Str_7268(this._selectedIssue._Str_2869), this._moderationManager, WindowTracker._Str_15411, this._selectedIssue._Str_2869, this._selectedIssue, this._chatFrame, this._chatList, true);
+            this._chatLogCtrl = new ChatlogCtrl(new GetCfhChatlogMessageComposer(this._selectedIssue._Str_2869), this._moderationManager, WindowTracker._Str_15411, this._selectedIssue._Str_2869, this._selectedIssue, this._chatFrame, this._chatList, true);
             this._chatLogCtrl.show();
             Logger.log(("HARASSER: " + this._issueBundle.reportedUserId));
             this._Str_21213();
@@ -544,7 +544,7 @@
                         }
                         this._callerUserInfo = new UserInfoCtrl(this._window, this._moderationManager, _local_2, this);
                         this._callerUserInfo.load(IWindowContainer(this._window.findChildByName("caller_user_info")), _local_3);
-                        this._moderationManager.connection.send(new _Str_7268(_local_2._Str_2869));
+                        this._moderationManager.connection.send(new GetCfhChatlogMessageComposer(_local_2._Str_2869));
                         this._chatLogCtrl._Str_25842(_local_2._Str_2869);
                         this._moderationManager.moderationMessageHandler.addChatlogListener(this._chatLogCtrl);
                     }

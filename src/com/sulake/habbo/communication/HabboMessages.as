@@ -763,7 +763,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7074;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7202;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7268;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.GetCfhChatlogMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomChatlogMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModAlertMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.*;
@@ -1655,7 +1655,7 @@
             OUTGOING_PACKETS[210] = UseWallItemMessageComposer;
             OUTGOING_PACKETS[2105] = GetMarketplaceOwnOffersMessageComposer;
             OUTGOING_PACKETS[2109] = ApproveNameMessageComposer;
-            OUTGOING_PACKETS[211] = _Str_7268;
+            OUTGOING_PACKETS[211] = GetCfhChatlogMessageComposer;
             OUTGOING_PACKETS[2110] = NewNavigatorInitComposer;
             OUTGOING_PACKETS[2115] = ExtendRentOrBuyoutStripItemMessageComposer;
             OUTGOING_PACKETS[2127] = GetTalentTrackLevelMessageComposer;
