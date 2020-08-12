@@ -757,7 +757,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12129;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12412;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12485;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.ModTradingLockMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModBanMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModeratorActionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7074;
@@ -1892,7 +1892,7 @@
             OUTGOING_PACKETS[3698] = OpenPetPackageMessageComposer;
             OUTGOING_PACKETS[3720] = PostQuizAnswersComposer;
             OUTGOING_PACKETS[3736] = RoomNetworkOpenConnectionMessageComposer;
-            OUTGOING_PACKETS[3742] = _Str_12485;
+            OUTGOING_PACKETS[3742] = ModTradingLockMessageComposer;
             OUTGOING_PACKETS[3768] = _Str_11696;
             OUTGOING_PACKETS[3775] = FriendFurniConfirmLockMessageComposer;
             OUTGOING_PACKETS[3782] = GetCategoriesWithUserCountMessageComposer;

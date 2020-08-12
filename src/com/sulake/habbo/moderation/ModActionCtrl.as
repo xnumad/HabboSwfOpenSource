@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModBanMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModKickMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12485;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModTradingLockMessageComposer;
     import com.sulake.habbo.utils.StringUtil;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7103;
     import com.sulake.habbo.window.utils.IAlertDialog;
@@ -302,7 +302,7 @@
                 case ModActionDefinition.TRADING_LOCK:
                     this._Str_3066("trading_lock");
                     _local_6 = (_local_4._Str_25670 * 60);
-                    this._Str_2327.connection.send(new _Str_12485(this._Str_4127, this._Str_3121.text, _local_6, _local_3, this._Str_7121()));
+                    this._Str_2327.connection.send(new ModTradingLockMessageComposer(this._Str_4127, this._Str_3121.text, _local_6, _local_3, this._Str_7121()));
                     break;
                 case ModActionDefinition.MESSAGE:
                     if (StringUtil.isEmpty(this._Str_3121.text))
