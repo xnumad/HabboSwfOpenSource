@@ -67,7 +67,7 @@
     import com.sulake.habbo.navigator.domain.Tabs;
     import com.sulake.habbo.communication.messages.parser.navigator.UserFlatCatsMessageParser;
     import com.sulake.habbo.navigator.mainview.tabpagedecorators.RoomsTabPageDecorator;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6276;
+    import com.sulake.habbo.communication.messages.parser.navigator.UserEventCatsMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_4697;
     import com.sulake.habbo.communication.messages.parser.room.chat.RoomFilterSettingsMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6295;
@@ -359,7 +359,7 @@
 
         private function _Str_15947(k:IMessageEvent):void
         {
-            var _local_2:_Str_6276 = (k as _Str_5766).getParser();
+            var _local_2:UserEventCatsMessageParser = (k as _Str_5766).getParser();
             this._navigator.data._Str_10701 = _local_2._Str_10701;
         }
 

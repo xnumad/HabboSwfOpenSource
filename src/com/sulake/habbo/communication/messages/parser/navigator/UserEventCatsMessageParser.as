@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.EventCategory;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6276 implements IMessageParser 
+    public class UserEventCatsMessageParser implements IMessageParser
     {
         private var _Str_15801:Array;
 
