@@ -645,7 +645,7 @@
                         this.closeWindow();
                         return;
                     case "discard_button":
-                        this._Str_23590();
+                        this.deletePendingCallsForHelp();
                         this.closeWindow();
                         return;
                 }
@@ -691,7 +691,7 @@
             this._habboHelp.windowManager.alert("${mod.alert.title}", _local_3, 0, null);
         }
 
-        private function _Str_23590():void
+        private function deletePendingCallsForHelp():void
         {
             this._habboHelp.sendMessage(new _Str_12224());
         }
