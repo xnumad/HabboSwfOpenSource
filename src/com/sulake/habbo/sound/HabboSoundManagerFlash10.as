@@ -417,7 +417,7 @@
             {
                 return;
             }
-            this._musicController._Str_21359(_local_2.id);
+            this._musicController.onSongLoaded(_local_2.id);
             this._loadingSong = null;
             this._loadingSongId = -1;
         }

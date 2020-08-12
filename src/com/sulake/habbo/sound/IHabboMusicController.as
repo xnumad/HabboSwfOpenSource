@@ -15,7 +15,7 @@
         function addSongInfoRequest(_arg_1:int):void;
         function requestSongInfoWithoutSamples(_arg_1:int):void;
         function requestUserSongDisks():void;
-        function _Str_21359(_arg_1:int):void;
+        function onSongLoaded(_arg_1:int):void;
         function _Str_7935(_arg_1:Number):void;
         function _Str_20915(_arg_1:Array):void;
         function get _Str_19189():Array;

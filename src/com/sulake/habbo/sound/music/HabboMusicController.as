@@ -404,7 +404,7 @@
             }
         }
 
-        public function _Str_21359(k:int):void
+        public function onSongLoaded(k:int):void
         {
             var _local_3:int;
             Logger.log(("Song loaded : " + k));
