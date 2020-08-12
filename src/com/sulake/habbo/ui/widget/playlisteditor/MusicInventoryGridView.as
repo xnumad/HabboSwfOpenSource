@@ -77,7 +77,7 @@
             var _local_2:Map = new Map();
             var _local_3:Array = k.getKeys();
             this._items = new Map();
-            var _local_4:int = this._musicController._Str_16230();
+            var _local_4:int = this._musicController.getSongDiskInventorySize();
             var _local_5:int;
             while (_local_5 < _local_4)
             {

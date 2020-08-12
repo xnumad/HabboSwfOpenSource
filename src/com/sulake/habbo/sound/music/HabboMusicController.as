@@ -457,7 +457,7 @@
             this._connection.send(new _Str_11654());
         }
 
-        public function _Str_16230():int
+        public function getSongDiskInventorySize():int
         {
             return this._songDiskInventory.length;
         }

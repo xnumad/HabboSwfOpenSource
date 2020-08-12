@@ -268,7 +268,7 @@
             }
             else
             {
-                if (this._musicController._Str_16230() <= _Str_16427)
+                if (this._musicController.getSongDiskInventorySize() <= _Str_16427)
                 {
                     this._musicStatusView.show();
                     this._musicStatusView._Str_3734(MusicInventoryStatusView.MISV_BUY_MORE);
