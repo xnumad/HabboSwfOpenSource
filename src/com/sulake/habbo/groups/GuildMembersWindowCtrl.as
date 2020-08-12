@@ -98,7 +98,7 @@
             return this._manager == null;
         }
 
-        public function _Str_22267(k:IMessageEvent):void
+        public function onGuildMembers(k:IMessageEvent):void
         {
             this._data = GuildMembersEvent(k).data;
             this.show();

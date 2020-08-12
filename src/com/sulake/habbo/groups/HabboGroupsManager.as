@@ -180,7 +180,7 @@
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomLeave));
             this.addMessageEvent(new GuildMembershipRejectedMessageEvent(this._guildMembersWindowCtrl._Str_25572));
             this.addMessageEvent(new HabboGroupDeactivatedMessageEvent(this.onGroupDeactivated));
-            this.addMessageEvent(new GuildMembersEvent(this._guildMembersWindowCtrl._Str_22267));
+            this.addMessageEvent(new GuildMembersEvent(this._guildMembersWindowCtrl.onGuildMembers));
             this.addMessageEvent(new GroupDetailsChangedMessageEvent(this.onGroupDetailsChanged));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new GuildEditInfoMessageEvent(this.onGuildEditInfo));
