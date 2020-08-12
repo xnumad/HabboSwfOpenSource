@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.outgoing.room.engine
 {
-    public class CompostPlantMessageComposer extends _Str_5726
+    public class CompostPlantMessageComposer extends PetMessageComposer
     {
         public function CompostPlantMessageComposer(k:int)
         {
