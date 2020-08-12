@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_5937 implements IMessageComposer 
+    public class RemoveBotFromFlatMessageComposer implements IMessageComposer
     {
         private var _botId:int;
 
-        public function _Str_5937(k:int)
+        public function RemoveBotFromFlatMessageComposer(k:int)
         {
             this._botId = k;
         }

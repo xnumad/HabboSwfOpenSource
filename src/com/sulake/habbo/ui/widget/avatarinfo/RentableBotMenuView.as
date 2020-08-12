@@ -8,7 +8,7 @@
     import com.sulake.core.assets.XmlAsset;
     import flash.geom.Point;
     import flash.geom.Rectangle;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveBotFromFlatMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.bots.CommandBotComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -203,7 +203,7 @@
                     {
                         case "pick":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_5937(this._data.id));
+                            this.widget.handler.container.connection.send(new RemoveBotFromFlatMessageComposer(this._data.id));
                             break;
                         case "setup_chat":
                             _local_3 = true;

@@ -17,7 +17,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveBotFromFlatMessageComposer;
 
     public class InfoStandRentableBotView 
     {
@@ -270,7 +270,7 @@
         {
             if (k.target.name == "pick")
             {
-                this._widget.handler.container.connection.send(new _Str_5937(this._botId));
+                this._widget.handler.container.connection.send(new RemoveBotFromFlatMessageComposer(this._botId));
             }
         }
 

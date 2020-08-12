@@ -621,7 +621,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.UseWallItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetObjectDataMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveBotFromFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveObjectMessageComposer;
@@ -1841,7 +1841,7 @@
             OUTGOING_PACKETS[3305] = _Str_8348;
             OUTGOING_PACKETS[3314] = _Str_5697;
             OUTGOING_PACKETS[3320] = MoveAvatarMessageComposer;
-            OUTGOING_PACKETS[3323] = _Str_5937;
+            OUTGOING_PACKETS[3323] = RemoveBotFromFlatMessageComposer;
             OUTGOING_PACKETS[3333] = _Str_7461;
             OUTGOING_PACKETS[3336] = RemoveItemMessageComposer;
             OUTGOING_PACKETS[3338] = _Str_7293;

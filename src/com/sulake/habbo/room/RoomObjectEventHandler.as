@@ -64,7 +64,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine.MovePetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveObjectMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.PickupObjectMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveBotFromFlatMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveWallItemMessageComposer;
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedOnUserEvent;
     import com.sulake.habbo.window.enum._Str_3023;
@@ -2149,7 +2149,7 @@
                             _local_11 = _local_10.userDataManager.getUserDataByIndex(_arg_2);
                             if (_local_11 != null)
                             {
-                                this._roomEngine.connection.send(new _Str_5937(_local_11.id));
+                                this._roomEngine.connection.send(new RemoveBotFromFlatMessageComposer(_local_11.id));
                             }
                         }
                     }
