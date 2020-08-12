@@ -79,7 +79,7 @@
         public function show(k:IRoomObject):void
         {
             this._roomObject = k;
-            this._Str_19184();
+            this.updateWidgetState();
         }
 
         private function createWindow():void
@@ -117,7 +117,7 @@
             }
         }
 
-        public function _Str_19184():void
+        public function updateWidgetState():void
         {
             if (this._roomObject == null)
             {

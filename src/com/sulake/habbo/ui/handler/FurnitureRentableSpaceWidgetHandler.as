@@ -124,7 +124,7 @@
 
         public function onRentableSpaceRentOkMessage(k:RentableSpaceRentOkMessageEvent):void
         {
-            this._widget._Str_19184();
+            this._widget.updateWidgetState();
         }
 
         public function _Str_22780(k:_Str_7746):void
