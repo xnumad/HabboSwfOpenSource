@@ -93,12 +93,12 @@
         {
             if (!this._window)
             {
-                this._questEngine._Str_18428();
+                this._questEngine.requestQuests();
                 return;
             }
             if (((!(this._toggle)) || (this._toggle.disposed)))
             {
-                this._toggle = new _Str_3942(this._window, this._window.desktop, this._questEngine._Str_18428, this.close);
+                this._toggle = new _Str_3942(this._window, this._window.desktop, this._questEngine.requestQuests, this.close);
             }
             this._toggle.toggle();
             this._showToolbarNotification = false;

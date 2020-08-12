@@ -692,7 +692,7 @@
             this.send(new _Str_11854());
         }
 
-        public function _Str_18428():void
+        public function requestQuests():void
         {
             this.send(new _Str_7461());
         }
