@@ -217,7 +217,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9065;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9150;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9354;
+	import com.sulake.habbo.communication.messages.incoming.moderation.UserBannedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9383;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9583;
@@ -1092,7 +1092,7 @@
             INCOMING_PACKETS[1660] = _Str_16258;
             INCOMING_PACKETS[1663] = _Str_17947;
             INCOMING_PACKETS[1664] = RoomEntryTileMessageEvent;
-            INCOMING_PACKETS[1683] = _Str_9354;
+            INCOMING_PACKETS[1683] = UserBannedMessageEvent;
             INCOMING_PACKETS[1689] = GameAchievementsMessageEvent;
             INCOMING_PACKETS[1702] = HabboGroupDetailsMessageEvent;
             INCOMING_PACKETS[1715] = UnloadGameMessageEvent;

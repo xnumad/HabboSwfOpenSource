@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_8312;
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_9354;
+    import com.sulake.habbo.communication.messages.incoming.moderation.UserBannedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelClosesAndWillOpenAtEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.OpenConnectionMessageEvent;
@@ -85,7 +85,7 @@
             this.addMessageEvent(new ClubGiftNotificationEvent(this.onClubGiftNotification));
             this.addMessageEvent(new _Str_8312(this.onModMessageEvent));
             this.addMessageEvent(new HabboActivityPointNotificationMessageEvent(this.onActivityPointNotification));
-            this.addMessageEvent(new _Str_9354(this.onUserBannedMessageEvent));
+            this.addMessageEvent(new UserBannedMessageEvent(this.onUserBannedMessageEvent));
             this.addMessageEvent(new HotelClosesAndWillOpenAtEvent(this.onHotelClosed));
             this.addMessageEvent(new PetReceivedMessageEvent(this.onPetReceived));
             this.addMessageEvent(new OpenConnectionMessageEvent(this.onRoomEnter));
@@ -283,7 +283,7 @@
 
         private function onUserBannedMessageEvent(k:IMessageEvent):void
         {
-            var _local_2:_Str_8126 = (k as _Str_9354).getParser();
+            var _local_2:_Str_8126 = (k as UserBannedMessageEvent).getParser();
             if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
