@@ -44,7 +44,7 @@
             this._Str_16535(k, _arg_2, false);
         }
 
-        public function _Str_24335(k:String):void
+        public function handleUserBannedMessage(k:String):void
         {
             this._Str_16535(k, "");
         }

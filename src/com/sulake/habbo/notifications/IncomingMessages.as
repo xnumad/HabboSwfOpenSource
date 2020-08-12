@@ -288,7 +288,7 @@
             {
                 return;
             }
-            this._notifications.singularController.alertDialogManager._Str_24335(_local_2.message);
+            this._notifications.singularController.alertDialogManager.handleUserBannedMessage(_local_2.message);
         }
 
         private function onHotelClosing(k:IMessageEvent):void
