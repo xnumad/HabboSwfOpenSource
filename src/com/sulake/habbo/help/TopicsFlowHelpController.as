@@ -264,7 +264,7 @@
 
         private function _Str_23993():Boolean
         {
-            var k:Array = this._habboHelp._Str_5721._Str_18787._Str_9701(this._contentModerationType, this._habboHelp.reportedUserId);
+            var k:Array = this._habboHelp._Str_5721.chatReportController._Str_9701(this._contentModerationType, this._habboHelp.reportedUserId);
             if (((k == null) || (k.length == 0)))
             {
                 this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.chatmissing}", 0, null);
@@ -424,7 +424,7 @@
                     this._habboHelp.sendMessage(new _Str_7640(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp.reportedUserId, this._currentTopic.id, this._habboHelp._Str_10658));
                     return;
                 case HabboHelp._Str_4315:
-                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721._Str_18787._Str_9701(HabboHelp._Str_4315, this._habboHelp.reportedUserId)));
+                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721.chatReportController._Str_9701(HabboHelp._Str_4315, this._habboHelp.reportedUserId)));
                     return;
                 case HabboHelp._Str_4786:
                     this._habboHelp.sendMessage(new _Str_6133(this._message, this._currentTopic.id, -1, this._habboHelp._Str_3469, []));
@@ -442,7 +442,7 @@
                     }
                     else
                     {
-                        this._habboHelp.sendMessage(new _Str_6133(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_3469, this._habboHelp._Str_5721._Str_18787._Str_9701(HabboHelp._Str_5723, -1)));
+                        this._habboHelp.sendMessage(new _Str_6133(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_3469, this._habboHelp._Str_5721.chatReportController._Str_9701(HabboHelp._Str_5723, -1)));
                     }
             }
         }

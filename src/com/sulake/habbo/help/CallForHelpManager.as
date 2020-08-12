@@ -696,7 +696,7 @@
             this._habboHelp.sendMessage(new _Str_12224());
         }
 
-        public function get _Str_18787():ChatReportController
+        public function get chatReportController():ChatReportController
         {
             return this._chatReportController;
         }
