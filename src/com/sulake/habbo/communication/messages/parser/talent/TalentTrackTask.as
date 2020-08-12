@@ -18,7 +18,7 @@
         private var _badgeCode:String;
         private var _state:int;
         private var _currentScore:int;
-        private var _Str_20094:int;
+        private var _totalScore:int;
 
         public function TalentTrackTask(k:IMessageDataWrapper)
         {
@@ -27,7 +27,7 @@
             this._badgeCode = k.readString();
             this._state = k.readInteger();
             this._currentScore = k.readInteger();
-            this._Str_20094 = k.readInteger();
+            this._totalScore = k.readInteger();
         }
 
         public function get state():int
@@ -57,7 +57,7 @@
 
         public function get _Str_15676():int
         {
-            return this._Str_20094;
+            return this._totalScore;
         }
 
         public function _Str_24120():Boolean
