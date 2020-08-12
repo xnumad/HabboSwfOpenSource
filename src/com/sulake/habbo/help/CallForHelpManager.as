@@ -190,7 +190,7 @@
             this._reportedMessageId = k;
         }
 
-        public function _Str_17200(k:int, _arg_2:int):void
+        public function reportBully(k:int, _arg_2:int):void
         {
             if (this._habboHelp._Str_16486)
             {

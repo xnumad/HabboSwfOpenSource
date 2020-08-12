@@ -193,11 +193,11 @@
             this._guideHelpManager._Str_6255(_Str_2849._Str_4268);
         }
 
-        public function _Str_17200(k:int):void
+        public function reportBully(k:int):void
         {
             if (this._callForHelpManager != null)
             {
-                this._callForHelpManager._Str_17200(k, this._currentRoomId);
+                this._callForHelpManager.reportBully(k, this._currentRoomId);
             }
         }
 
