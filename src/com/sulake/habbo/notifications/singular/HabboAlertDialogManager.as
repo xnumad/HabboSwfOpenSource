@@ -75,7 +75,7 @@
             this._windowManager.simpleAlert("", "${opening.hours.title}", "${maintenance.shutdown}");
         }
 
-        public function _Str_24493(openHour:int, openMinute:int, userThrownOutAtClose:Boolean):void
+        public function handleHotelClosedMessage(openHour:int, openMinute:int, userThrownOutAtClose:Boolean):void
         {
             if (userThrownOutAtClose)
             {
