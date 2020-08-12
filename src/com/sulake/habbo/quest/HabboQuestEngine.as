@@ -43,7 +43,7 @@
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.catalog.purse.ActivityPointTypeEnum;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_11854;
+    import com.sulake.habbo.communication.messages.outgoing.quest.GetSeasonalQuestsOnlyMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.quest._Str_7461;
     import com.sulake.habbo.communication.messages.outgoing.quest._Str_4916;
 
@@ -689,7 +689,7 @@
 
         public function requestSeasonalQuests():void
         {
-            this.send(new _Str_11854());
+            this.send(new GetSeasonalQuestsOnlyMessageComposer());
         }
 
         public function requestQuests():void

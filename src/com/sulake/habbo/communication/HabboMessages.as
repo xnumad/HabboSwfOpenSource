@@ -28,7 +28,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_10763;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_11277;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_11298;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_11854;
+	import com.sulake.habbo.communication.messages.outgoing.quest.GetSeasonalQuestsOnlyMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_16291;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_17850;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_4438;
@@ -1537,7 +1537,7 @@
             OUTGOING_PACKETS[1148] = _Str_10763;
             OUTGOING_PACKETS[1160] = PeerUsersClassificationMessageComposer;
             OUTGOING_PACKETS[1173] = _Str_7271;
-            OUTGOING_PACKETS[1190] = _Str_11854;
+            OUTGOING_PACKETS[1190] = GetSeasonalQuestsOnlyMessageComposer;
             OUTGOING_PACKETS[1195] = _Str_11178;
             OUTGOING_PACKETS[1202] = _Str_9918;
             OUTGOING_PACKETS[1210] = _Str_11941;
