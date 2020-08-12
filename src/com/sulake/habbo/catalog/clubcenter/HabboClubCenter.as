@@ -45,8 +45,8 @@
 
     public class HabboClubCenter extends Component implements ILinkEventTracker, IOfferExtension 
     {
-        private static const _Str_17589:Boolean = false;
-        private static const _Str_14332:int = 10000;
+        private static const USE_FAKE_DATA:Boolean = false;
+        private static const DATA_UPDATE_INTERVAL_MSEC:int = 10000;
 
         private var _communicationManager:IHabboCommunicationManager;
         private var _localizationManager:IHabboLocalizationManager;
@@ -68,7 +68,7 @@
 
         public function HabboClubCenter(k:IContext, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
-            this._dataTimestamp = -(_Str_14332);
+            this._dataTimestamp = -(DATA_UPDATE_INTERVAL_MSEC);
             super(k, _arg_2, _arg_3);
         }
 
@@ -241,7 +241,7 @@
 
         private function _Str_25344():Boolean
         {
-            return (!(this._dataPending)) && ((getTimer() - this._dataTimestamp) > _Str_14332);
+            return (!(this._dataPending)) && ((getTimer() - this._dataTimestamp) > DATA_UPDATE_INTERVAL_MSEC);
         }
 
         private function updateData():void
@@ -249,7 +249,7 @@
             this._dataPending = true;
             this._communicationManager.connection.send(new _Str_7891());
             this._communicationManager.connection.send(new _Str_7373());
-            if (!_Str_17589)
+            if (!USE_FAKE_DATA)
             {
                 this._communicationManager.connection.send(new _Str_11183());
             }
