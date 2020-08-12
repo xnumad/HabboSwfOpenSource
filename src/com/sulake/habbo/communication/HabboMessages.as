@@ -493,7 +493,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileByNameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_7664;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembershipsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetMemberGuildItemCountMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9855;
@@ -1888,7 +1888,7 @@
             OUTGOING_PACKETS[3632] = _Str_16470;
             OUTGOING_PACKETS[3637] = MuteAllInRoomComposer;
             OUTGOING_PACKETS[3666] = SetItemDataMessageComposer;
-            OUTGOING_PACKETS[367] = _Str_7664;
+            OUTGOING_PACKETS[367] = GetGuildMembershipsMessageComposer;
             OUTGOING_PACKETS[3698] = OpenPetPackageMessageComposer;
             OUTGOING_PACKETS[3720] = PostQuizAnswersComposer;
             OUTGOING_PACKETS[3736] = RoomNetworkOpenConnectionMessageComposer;

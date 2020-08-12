@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.catalog.viewer.widgets.GuildSelectorCatalogWidget;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_7664;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembershipsMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipsMessageEvent;
 
     public class GuildMembershipsController 
@@ -29,7 +29,7 @@
         public function registerGuildSelectorWidget(k:GuildSelectorCatalogWidget):void
         {
             this._guildSelectorWidget = k;
-            this._catalog.connection.send(new _Str_7664());
+            this._catalog.connection.send(new GetGuildMembershipsMessageComposer());
         }
 
         public function unregisterGuildSelectorWidget(k:GuildSelectorCatalogWidget):void
@@ -58,7 +58,7 @@
         {
             if (this._guildSelectorWidget != null)
             {
-                this._catalog.connection.send(new _Str_7664());
+                this._catalog.connection.send(new GetGuildMembershipsMessageComposer());
             }
         }
     }
