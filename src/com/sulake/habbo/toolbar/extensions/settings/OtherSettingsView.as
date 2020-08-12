@@ -8,7 +8,7 @@
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.habbo.phonenumber.PhoneNumberStatusEnum;
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
-    import com.sulake.habbo.communication.messages.outgoing.preferences._Str_10960;
+    import com.sulake.habbo.communication.messages.outgoing.preferences.SetIgnoreRoomInvitesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.preferences.SetRoomCameraPreferencesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
 
@@ -87,7 +87,7 @@
                     return;
                 case "ignore_room_invites_checkbox":
                     this._toolbar.messenger.setRoomInvitesIgnored(ICheckBoxWindow(this._window.findChildByName("ignore_room_invites_checkbox")).Selected);
-                    this._toolbar.connection.send(new _Str_10960(this._toolbar.messenger.getRoomInvitesIgnored()));
+                    this._toolbar.connection.send(new SetIgnoreRoomInvitesMessageComposer(this._toolbar.messenger.getRoomInvitesIgnored()));
                     return;
                 case "disable_room_camera_follow_checkbox":
                     _local_4 = ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected;

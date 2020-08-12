@@ -246,7 +246,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9918;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9950;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatPreferencesMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_10960;
+	import com.sulake.habbo.communication.messages.outgoing.preferences.SetIgnoreRoomInvitesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetNewNavigatorWindowPreferencesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetSoundSettingsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetRoomCameraPreferencesMessageComposer;
@@ -1526,7 +1526,7 @@
             OUTGOING_PACKETS[1071] = ExtendRentOrBuyoutFurniMessageComposer;
             OUTGOING_PACKETS[1075] = _Str_10589;
             OUTGOING_PACKETS[1081] = _Str_11951;
-            OUTGOING_PACKETS[1086] = _Str_10960;
+            OUTGOING_PACKETS[1086] = SetIgnoreRoomInvitesMessageComposer;
             OUTGOING_PACKETS[109] = PollStartComposer;
             OUTGOING_PACKETS[11] = _Str_7123;
             OUTGOING_PACKETS[1109] = _Str_11497;
