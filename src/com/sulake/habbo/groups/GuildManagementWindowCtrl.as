@@ -107,7 +107,7 @@
             this._window = IFrameWindow(this._manager.getXmlWindow("group_management_window"));
             this._window.findChildByTag("close").procedure = this._Str_23918;
             this._window.center();
-            this._window.findChildByName("create_room_link_region").procedure = this._Str_25002;
+            this._window.findChildByName("create_room_link_region").procedure = this.onCreateRoomLink;
             this._window.findChildByName("cancel_link_region").procedure = this.onCancelLink;
             this._window.findChildByName("next_step_button").procedure = this._Str_23101;
             this._window.findChildByName("previous_step_link_region").procedure = this._Str_23571;
@@ -447,7 +447,7 @@
             this.close();
         }
 
-        private function _Str_25002(k:WindowEvent, _arg_2:IWindow):void
+        private function onCreateRoomLink(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
