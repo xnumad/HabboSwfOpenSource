@@ -523,7 +523,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomHistorySearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RateFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_17077;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_18849;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateRoomThumbnailMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomTextSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.AddFavouriteRoomMessageComposer;
@@ -1710,7 +1710,7 @@
             OUTGOING_PACKETS[2455] = GuideAdvertisementReadMessageComposer;
             OUTGOING_PACKETS[2456] = AvatarExpressionMessageComposer;
             OUTGOING_PACKETS[2462] = _Str_7218;
-            OUTGOING_PACKETS[2468] = _Str_18849;
+            OUTGOING_PACKETS[2468] = UpdateRoomThumbnailMessageComposer;
             OUTGOING_PACKETS[248] = MoveObjectMessageComposer;
             OUTGOING_PACKETS[2486] = GetDailyQuestMessageComposer;
             OUTGOING_PACKETS[2487] = _Str_12290;
