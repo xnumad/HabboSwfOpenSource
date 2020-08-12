@@ -51,7 +51,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddSavedSearchComposer;
-    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9950;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorDeleteSavedSearchComposer;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
     import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
     import com.sulake.habbo.utils.Base64;
@@ -358,7 +358,7 @@
 
         public function _Str_25285(k:int):void
         {
-            this._communication.connection.send(new _Str_9950(k));
+            this._communication.connection.send(new NavigatorDeleteSavedSearchComposer(k));
             this.trackEventLog("savedsearch.delete", "SavedSearch");
         }
 

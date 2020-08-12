@@ -244,7 +244,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddSavedSearchComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddCollapsedCategoryMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9918;
-	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9950;
+	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorDeleteSavedSearchComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatPreferencesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetIgnoreRoomInvitesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetNewNavigatorWindowPreferencesMessageComposer;
@@ -1631,7 +1631,7 @@
             OUTGOING_PACKETS[1918] = _Str_11662;
             OUTGOING_PACKETS[1922] = _Str_4553;
             OUTGOING_PACKETS[1945] = _Str_12438;
-            OUTGOING_PACKETS[1954] = _Str_9950;
+            OUTGOING_PACKETS[1954] = NavigatorDeleteSavedSearchComposer;
             OUTGOING_PACKETS[196] = GetTalentTrackMessageComposer;
             OUTGOING_PACKETS[1969] = SaveRoomSettingsMessageComposer;
             OUTGOING_PACKETS[1975] = SignMessageComposer;
