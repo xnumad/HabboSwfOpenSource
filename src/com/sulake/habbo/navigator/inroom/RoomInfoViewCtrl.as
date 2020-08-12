@@ -24,7 +24,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.MuteAllInRoomComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7911;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateHomeRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11662;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
@@ -438,7 +438,7 @@
             }
             Logger.log(("SETTING HOME ROOM TO: " + _local_2.flatId));
             this._navigator.trackGoogle("roomInfo", "makeHome");
-            this._navigator.send(new _Str_7911(_local_2.flatId));
+            this._navigator.send(new UpdateHomeRoomMessageComposer(_local_2.flatId));
         }
 
         private function onCloseButtonClick(k:WindowEvent):void

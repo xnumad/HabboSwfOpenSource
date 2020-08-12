@@ -22,7 +22,7 @@
     import com.sulake.habbo.navigator.transitional.LegacyNavigator;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
     import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7911;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateHomeRoomMessageComposer;
     import __AS3__.vec.*;
 
     public class RoomInfoPopup 
@@ -371,7 +371,7 @@
             {
                 if (!this._Str_11907)
                 {
-                    this._navigator.communication.connection.send(new _Str_7911(this._guestRoomData.flatId));
+                    this._navigator.communication.connection.send(new UpdateHomeRoomMessageComposer(this._guestRoomData.flatId));
                     this._Str_11907 = true;
                 }
                 IStaticBitmapWrapperWindow(this._window.findChildByName("home_icon")).assetUri = ("newnavigator_icon_home_" + ((this._Str_11907) ? "yes" : "no"));

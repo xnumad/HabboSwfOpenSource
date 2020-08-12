@@ -531,7 +531,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7214;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7413;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7911;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateHomeRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_8102;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_8348;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9806;
@@ -1608,7 +1608,7 @@
             OUTGOING_PACKETS[17] = GetUserTagsMessageComposer;
             OUTGOING_PACKETS[1703] = ForwardToSomeRoomMessageComposer;
             OUTGOING_PACKETS[172] = ForwardToACompetitionRoomMessageComposer;
-            OUTGOING_PACKETS[1740] = _Str_7911;
+            OUTGOING_PACKETS[1740] = UpdateHomeRoomMessageComposer;
             OUTGOING_PACKETS[1752] = _Str_5945;
             OUTGOING_PACKETS[1756] = GetSellablePetPalettesComposer;
             OUTGOING_PACKETS[1764] = UpdateGuildColorsMessageComposer;
