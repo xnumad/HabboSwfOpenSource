@@ -145,7 +145,7 @@
             }
         }
 
-        public function _Str_19434(k:int):void
+        public function requestEffectActivated(k:int):void
         {
             this._controller.communication.connection.send(new _Str_11266(k));
         }
@@ -172,7 +172,7 @@
             }
             if (!_local_2.isActive)
             {
-                this._Str_19434(_local_2.type);
+                this.requestEffectActivated(_local_2.type);
             }
             if (_local_2._Str_3222 == false)
             {

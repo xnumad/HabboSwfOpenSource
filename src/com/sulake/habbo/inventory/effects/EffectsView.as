@@ -289,7 +289,7 @@
                     _local_3 = this._model._Str_21540(0);
                     if (_local_3 != null)
                     {
-                        this._model._Str_19434(_local_3.type);
+                        this._model.requestEffectActivated(_local_3.type);
                     }
                 }
             }
