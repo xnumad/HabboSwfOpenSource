@@ -192,7 +192,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11152;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11484;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11631;
-	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11654;
+	import com.sulake.habbo.communication.messages.outgoing.sound.GetUserSongDisksMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11834;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_15952;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_16258;
@@ -1688,7 +1688,7 @@
             OUTGOING_PACKETS[2296] = RoomDimmerChangeStateMessageComposer;
             OUTGOING_PACKETS[230] = CreateGuildMessageComposer;
             OUTGOING_PACKETS[2300] = _Str_7716;
-            OUTGOING_PACKETS[0x0900] = _Str_11654;
+            OUTGOING_PACKETS[0x0900] = GetUserSongDisksMessageComposer;
             OUTGOING_PACKETS[2312] = OpenFlatConnectionMessageComposer;
             OUTGOING_PACKETS[0x0909] = SetUIFlagsMessageComposer;
             OUTGOING_PACKETS[232] = _Str_9983;

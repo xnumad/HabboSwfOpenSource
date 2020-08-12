@@ -18,7 +18,7 @@
     import com.sulake.habbo.sound.events.NowPlayingEvent;
     import com.sulake.habbo.sound.IHabboSound;
     import com.sulake.habbo.sound.ISongInfo;
-    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11654;
+    import com.sulake.habbo.communication.messages.outgoing.sound.GetUserSongDisksMessageComposer;
     import com.sulake.habbo.sound.trax.TraxSequencer;
     import com.sulake.habbo.communication.messages.outgoing.sound._Str_11484;
     import com.sulake.habbo.communication.messages.incoming.sound._Str_5724;
@@ -454,7 +454,7 @@
             {
                 return;
             }
-            this._connection.send(new _Str_11654());
+            this._connection.send(new GetUserSongDisksMessageComposer());
         }
 
         public function getSongDiskInventorySize():int
