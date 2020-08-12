@@ -58,7 +58,7 @@
     import com.sulake.habbo.communication.messages.parser.help.CallForHelpPendingCallsMessageParser;
     import com.sulake.habbo.communication.messages.parser.help._Str_5731;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.RemoveFriendMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_5697;
+    import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserIdMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserMessageData;
     import com.sulake.habbo.communication.messages.parser.room.engine.UsersMessageParser;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
@@ -699,7 +699,7 @@
             var k:RemoveFriendMessageComposer;
             if (this._callForHelpManager.reportedUserId > 0)
             {
-                this.sendMessage(new _Str_5697(this._callForHelpManager.reportedUserId));
+                this.sendMessage(new IgnoreUserIdMessageComposer(this._callForHelpManager.reportedUserId));
                 if (this._friendList.getFriend(this._callForHelpManager.reportedUserId) != null)
                 {
                     k = new RemoveFriendMessageComposer();

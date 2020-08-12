@@ -18,7 +18,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_5697;
+    import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserIdMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
     import com.sulake.habbo.window.enum._Str_3023;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_6133;
@@ -452,7 +452,7 @@
                     case "submit_button":
                         if (this._reportedUserId > 0)
                         {
-                            this._habboHelp.sendMessage(new _Str_5697(this._reportedUserId));
+                            this._habboHelp.sendMessage(new IgnoreUserIdMessageComposer(this._reportedUserId));
                             this._habboHelp.sendMessage(new _Str_7634(this._reportedUserId, this._reportedRoomId));
                             this.closeWindow();
                         }

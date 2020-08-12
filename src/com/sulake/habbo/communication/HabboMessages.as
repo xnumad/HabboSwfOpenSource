@@ -487,7 +487,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembersMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_5697;
+	import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserIdMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_6006;
 	import com.sulake.habbo.communication.messages.outgoing.users.ScrGetUserInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
@@ -1839,7 +1839,7 @@
             OUTGOING_PACKETS[3295] = _Str_7074;
             OUTGOING_PACKETS[3301] = LookToMessageComposer;
             OUTGOING_PACKETS[3305] = _Str_8348;
-            OUTGOING_PACKETS[3314] = _Str_5697;
+            OUTGOING_PACKETS[3314] = IgnoreUserIdMessageComposer;
             OUTGOING_PACKETS[3320] = MoveAvatarMessageComposer;
             OUTGOING_PACKETS[3323] = RemoveBotFromFlatMessageComposer;
             OUTGOING_PACKETS[3333] = _Str_7461;
