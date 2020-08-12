@@ -41,10 +41,10 @@
         {
             if (((((this._habboHelp._Str_19829) && (this._habboHelp.newIdentity)) && (!(this._seenTourPopupDuringSession))) && (!(this._habboHelp.sessionDataManager.isRealNoob))))
             {
-                this._popupTimer = new Timer(this._Str_17155(), 1);
+                this._popupTimer = new Timer(this.getTourPopupDelay(), 1);
                 this._popupTimer.addEventListener(TimerEvent.TIMER, this.onTourPopup);
                 this._popupTimer.start();
-                this._habboHelp.tracking.trackEventLog("Help", "", "tour.new_user.create", "", this._Str_17155());
+                this._habboHelp.tracking.trackEventLog("Help", "", "tour.new_user.create", "", this.getTourPopupDelay());
                 this._habboHelp.trackGoogle("newbieTourWindow", "timer_popupCreated");
             }
         }
@@ -55,7 +55,7 @@
             {
                 return;
             }
-            this._habboHelp.tracking.trackEventLog("Help", "", "tour.new_user.show", "", this._Str_17155());
+            this._habboHelp.tracking.trackEventLog("Help", "", "tour.new_user.show", "", this.getTourPopupDelay());
             this._habboHelp.trackGoogle("newbieTourWindow", "timer_popupShown");
             this.openTourPopup();
         }
@@ -125,7 +125,7 @@
             this._chatReviewReporterFeedbackCtrl.show(k);
         }
 
-        private function _Str_17155():int
+        private function getTourPopupDelay():int
         {
             return this._habboHelp.getInteger("guide.help.new.user.tour.popup.delay", 30) * 1000;
         }
