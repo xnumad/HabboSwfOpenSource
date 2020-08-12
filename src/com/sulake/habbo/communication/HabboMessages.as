@@ -190,7 +190,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10944;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11141;
 	import com.sulake.habbo.communication.messages.outgoing.sound.AddJukeboxDiskComposer;
-	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11484;
+	import com.sulake.habbo.communication.messages.outgoing.sound.GetSongInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11631;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetUserSongDisksMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11834;
@@ -1798,7 +1798,7 @@
             OUTGOING_PACKETS[3060] = _Str_7634;
             OUTGOING_PACKETS[3074] = _Str_12509;
             OUTGOING_PACKETS[3077] = RequestABadgeComposer;
-            OUTGOING_PACKETS[3082] = _Str_11484;
+            OUTGOING_PACKETS[3082] = GetSongInfoMessageComposer;
             OUTGOING_PACKETS[3086] = GetCraftingRecipesAvailableComposer;
             OUTGOING_PACKETS[309] = DeleteFavouriteRoomMessageComposer;
             OUTGOING_PACKETS[3093] = ChangeQueueMessageComposer;

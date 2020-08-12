@@ -20,7 +20,7 @@
     import com.sulake.habbo.sound.ISongInfo;
     import com.sulake.habbo.communication.messages.outgoing.sound.GetUserSongDisksMessageComposer;
     import com.sulake.habbo.sound.trax.TraxSequencer;
-    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11484;
+    import com.sulake.habbo.communication.messages.outgoing.sound.GetSongInfoMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.sound._Str_5724;
     import com.sulake.habbo.communication.messages.parser.sound._Str_6929;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
@@ -556,7 +556,7 @@
             {
                 return;
             }
-            this._connection.send(new _Str_11484(this._songRequestList));
+            this._connection.send(new GetSongInfoMessageComposer(this._songRequestList));
             Logger.log(("Requested song info's : " + this._songRequestList));
             this._songRequestList = new Array();
         }
