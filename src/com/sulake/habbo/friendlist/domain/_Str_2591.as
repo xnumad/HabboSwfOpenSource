@@ -6,7 +6,7 @@
 
     public class _Str_2591 implements IDisposable 
     {
-        public static const _Str_3331:int = 100;
+        public static const PAGE_SIZE:int = 100;
         public static const _Str_15031:int = 0;
         public static const _Str_7666:int = -1;
 
@@ -105,19 +105,19 @@
 
         public function _Str_11426():int
         {
-            return Math.ceil((this._friends.length / _Str_3331));
+            return Math.ceil((this._friends.length / PAGE_SIZE));
         }
 
         public function _Str_23845():int
         {
             this._Str_19812();
-            return this._Str_4347 * _Str_3331;
+            return this._Str_4347 * PAGE_SIZE;
         }
 
         public function _Str_25646():int
         {
             this._Str_19812();
-            return Math.min(((this._Str_4347 + 1) * _Str_3331), this._friends.length);
+            return Math.min(((this._Str_4347 + 1) * PAGE_SIZE), this._friends.length);
         }
 
         public function _Str_22255(k:Boolean):void

@@ -298,7 +298,7 @@
             this._Str_13365();
             this._requestedForumsListCode = k;
             this._requestedGroupID = NO_ID;
-            this._communicationManager.connection.send(new ModerateMessageMessageComposer(k, _arg_2, ThreadsListData._Str_3331));
+            this._communicationManager.connection.send(new ModerateMessageMessageComposer(k, _arg_2, ThreadsListData.PAGE_SIZE));
         }
 
         private function _Str_22851(k:_Str_9509):void
@@ -365,7 +365,7 @@
         {
             if (this._communicationManager)
             {
-                this._communicationManager.connection.send(new GetForumsListMessageComposer(k, _arg_2, ThreadsListData._Str_3331));
+                this._communicationManager.connection.send(new GetForumsListMessageComposer(k, _arg_2, ThreadsListData.PAGE_SIZE));
             }
         }
 
@@ -388,7 +388,7 @@
         {
             if (this._communicationManager)
             {
-                this._communicationManager.connection.send(new GetMessagesMessageComposer(k, _arg_2, _arg_3, ThreadsListData._Str_3331));
+                this._communicationManager.connection.send(new GetMessagesMessageComposer(k, _arg_2, _arg_3, ThreadsListData.PAGE_SIZE));
             }
         }
 
@@ -496,7 +496,7 @@
             {
                 return;
             }
-            var _local_3:int = (_local_2.message.messageIndex - (_local_2.message.messageIndex % ThreadsListData._Str_3331));
+            var _local_3:int = (_local_2.message.messageIndex - (_local_2.message.messageIndex % ThreadsListData.PAGE_SIZE));
             this.requestThreadMessageList(this._forumData.groupId, this._currentThreadID, _local_3);
         }
 
@@ -628,9 +628,9 @@
         public function _Str_20033(k:int, _arg_2:int, _arg_3:int):void
         {
             this._goToThreadID = _arg_2;
-            var _local_4:int = Math.floor((_arg_3 / ThreadsListData._Str_3331));
-            this._goToMessageIndex = (_arg_3 % ThreadsListData._Str_3331);
-            this.requestThreadMessageList(k, _arg_2, (_local_4 * ThreadsListData._Str_3331));
+            var _local_4:int = Math.floor((_arg_3 / ThreadsListData.PAGE_SIZE));
+            this._goToMessageIndex = (_arg_3 % ThreadsListData.PAGE_SIZE);
+            this.requestThreadMessageList(k, _arg_2, (_local_4 * ThreadsListData.PAGE_SIZE));
         }
 
         public function _Str_23450(k:int):void
@@ -771,7 +771,7 @@
         {
             if (this._mainView != null)
             {
-                this._communicationManager.connection.send(new ModerateMessageMessageComposer(FORUMS_LIST_CODE_MY_FORUMS, 0, ThreadsListData._Str_3331));
+                this._communicationManager.connection.send(new ModerateMessageMessageComposer(FORUMS_LIST_CODE_MY_FORUMS, 0, ThreadsListData.PAGE_SIZE));
             }
             else
             {

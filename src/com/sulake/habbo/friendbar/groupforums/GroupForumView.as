@@ -53,7 +53,7 @@
         public function GroupForumView(k:GroupForumController)
         {
             this._controller = k;
-            this._pageSize = ThreadsListData._Str_3331;
+            this._pageSize = ThreadsListData.PAGE_SIZE;
         }
 
         private static function enable(k:IWindow, _arg_2:Boolean):void
@@ -244,7 +244,7 @@
             this._threadsListData = null;
             this._messagesListData = null;
             this._numOfPages = this._Str_18295(this._forumsListData.totalAmount);
-            this._currentPage = Math.ceil((this._forumsListData.startIndex / ThreadsListData._Str_3331));
+            this._currentPage = Math.ceil((this._forumsListData.startIndex / ThreadsListData.PAGE_SIZE));
             this._forumsListView = new ForumsListView(this, this._listWindow, this._forumsListData.forums);
             this._forumsListView.update();
             this._listHeader.caption = this._controller.localizationManager.getLocalization(("groupforum.view.forums_list." + this._forumsListData._Str_5154));
@@ -279,7 +279,7 @@
             this._threadsListData = _arg_3;
             this._messagesListData = null;
             this._numOfPages = this._Str_18295(this._threadsListData._Str_18760);
-            this._currentPage = Math.ceil((this._threadsListData.startIndex / ThreadsListData._Str_3331));
+            this._currentPage = Math.ceil((this._threadsListData.startIndex / ThreadsListData.PAGE_SIZE));
             this._threadListView = new ThreadListView(this, this._listWindow, this._forumData, this._threadsListData);
             this._threadListView.update();
             this._listHeader.caption = this._controller.localizationManager.getLocalization("groupforum.view.all_threads");
@@ -327,7 +327,7 @@
             var _local_6:GuildForumThread = this._threadsListData._Str_6700[_local_5];
             this._numOfPages = this._Str_18295(_arg_4._Str_8598);
             var _local_7:int = _arg_4.startIndex;
-            this._currentPage = Math.ceil((_local_7 / ThreadsListData._Str_3331));
+            this._currentPage = Math.ceil((_local_7 / ThreadsListData.PAGE_SIZE));
             this._listHeader.caption = _local_6.header;
             this._messageListView = new MessageListView(this, this._listWindow, this._forumData, _local_6, _arg_4);
             this._messageListView.update();

@@ -602,7 +602,7 @@
                 k.addChild(_local_6);
             }
             _local_6.underline = (!(_arg_2 == _arg_3));
-            _local_6.text = ((("" + ((_arg_2 * _Str_2591._Str_3331) + 1)) + "-") + ("" + ((_arg_2 + 1) * _Str_2591._Str_3331)));
+            _local_6.text = ((("" + ((_arg_2 * _Str_2591.PAGE_SIZE) + 1)) + "-") + ("" + ((_arg_2 + 1) * _Str_2591.PAGE_SIZE)));
             _local_6.id = _arg_2;
             _local_6.procedure = this._Str_23254;
             _local_6.width = (_local_6.textWidth + 5);

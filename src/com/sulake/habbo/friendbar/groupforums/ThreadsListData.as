@@ -5,7 +5,7 @@
 
     public class ThreadsListData 
     {
-        public static const _Str_3331:int = 20;
+        public static const PAGE_SIZE:int = 20;
 
         private var _totalThreads:int;
         private var _startIndex:int;
