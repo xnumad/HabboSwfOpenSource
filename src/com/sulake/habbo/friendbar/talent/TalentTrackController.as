@@ -634,7 +634,7 @@
                     }
                     return;
                 case "task_ongoing_region":
-                    this._Str_23273(_arg_2.id);
+                    this.createTaskProgressDialog(_arg_2.id);
                     return;
                 case "citizenship_button":
                     this._habboTalent.tracking.trackTalentTrackOpen(TalentEnum.CITIZENSHIP, "talentrack");
@@ -679,7 +679,7 @@
             }
         }
 
-        private function _Str_23273(k:int):void
+        private function createTaskProgressDialog(k:int):void
         {
             var _local_5:String;
             var _local_6:String;
