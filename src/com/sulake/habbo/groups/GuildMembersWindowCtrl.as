@@ -103,7 +103,7 @@
             this._data = GuildMembersEvent(k).data;
             this.show();
             this.populateSearchTypes();
-            this._Str_23578();
+            this.populateUserNameFilter();
         }
 
         public function onGuildMembershipUpdated(k:IMessageEvent):void
@@ -587,7 +587,7 @@
             _local_2.procedure = this.onTypeDropmenu;
         }
 
-        private function _Str_23578():void
+        private function populateUserNameFilter():void
         {
             var k:ITextFieldWindow = this._userNameFilter.input;
             k.procedure = null;
