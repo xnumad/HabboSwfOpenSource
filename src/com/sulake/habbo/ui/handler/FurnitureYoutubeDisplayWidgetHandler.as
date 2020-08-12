@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10913;
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9987;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_5009;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.ControlYoutubeDisplayPlaybackMessageComposer;
     import __AS3__.vec.*;
 
     public class FurnitureYoutubeDisplayWidgetHandler implements IRoomWidgetHandler 
@@ -163,22 +163,22 @@
 
         public function _Str_23793(k:int):void
         {
-            this._container.connection.send(new _Str_5009(k, CONTROL_COMMAND_PREVIOUS_VIDEO));
+            this._container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(k, CONTROL_COMMAND_PREVIOUS_VIDEO));
         }
 
         public function _Str_23211(k:int):void
         {
-            this._container.connection.send(new _Str_5009(k, CONTROL_COMMAND_NEXT_VIDEO));
+            this._container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(k, CONTROL_COMMAND_NEXT_VIDEO));
         }
 
         public function pauseVideo(k:int):void
         {
-            this._container.connection.send(new _Str_5009(k, CONTROL_COMMAND_PAUSE_VIDEO));
+            this._container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(k, CONTROL_COMMAND_PAUSE_VIDEO));
         }
 
         public function _Str_25279(k:int):void
         {
-            this._container.connection.send(new _Str_5009(k, CONTROL_COMMAND_CONTINUE_VIDEO));
+            this._container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(k, CONTROL_COMMAND_CONTINUE_VIDEO));
         }
     }
 }

@@ -724,7 +724,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12348;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12374;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12509;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_5009;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ControlYoutubeDisplayPlaybackMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_7290;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.AddSpamWallPostItMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9716;
@@ -1791,7 +1791,7 @@
             OUTGOING_PACKETS[2991] = GetHabboGroupDetailsMessageComposer;
             OUTGOING_PACKETS[2996] = AmbassadorAlertMessageComposer;
             OUTGOING_PACKETS[3001] = UpdateRoomFilterMessageComposer;
-            OUTGOING_PACKETS[3005] = _Str_5009;
+            OUTGOING_PACKETS[3005] = ControlYoutubeDisplayPlaybackMessageComposer;
             OUTGOING_PACKETS[3027] = _Str_8102;
             OUTGOING_PACKETS[3045] = UpdateThreadMessageComposer;
             OUTGOING_PACKETS[3050] = RemoveJukeboxDiskComposer;
