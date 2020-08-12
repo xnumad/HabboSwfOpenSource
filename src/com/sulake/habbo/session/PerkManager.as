@@ -4,7 +4,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
-    import com.sulake.habbo.communication.messages.parser.perk._Str_3818;
+    import com.sulake.habbo.communication.messages.parser.perk.Perk;
     import com.sulake.habbo.session.events.PerksUpdatedEvent;
 
     public class PerkManager implements IDisposable 
@@ -65,13 +65,13 @@
 
         public function getPerkErrorMessage(k:String):String
         {
-            var _local_2:_Str_3818 = this._perks[k];
+            var _local_2:Perk = this._perks[k];
             return (_local_2 != null) ? _local_2.errorMessage : "";
         }
 
         private function onPerkAllowances(k:PerkAllowancesEvent):void
         {
-            var _local_2:_Str_3818;
+            var _local_2:Perk;
             for each (_local_2 in k.getParser()._Str_23301())
             {
                 this._perks[_local_2.code] = _local_2;

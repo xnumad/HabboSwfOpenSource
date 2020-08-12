@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.parser.perk
 {
-    public class _Str_3818 
+    public class Perk
     {
         private var _code:String;
         private var _isAllowed:Boolean = false;
