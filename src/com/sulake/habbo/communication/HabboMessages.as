@@ -468,7 +468,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10635;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10645;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10714;
+	import com.sulake.habbo.communication.messages.outgoing.users.RespectUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10770;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10785;
 	import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
@@ -1741,7 +1741,7 @@
             OUTGOING_PACKETS[2668] = _Str_11858;
             OUTGOING_PACKETS[2683] = RemoveAllRightsMessageComposer;
             OUTGOING_PACKETS[2688] = _Str_17850;
-            OUTGOING_PACKETS[2694] = _Str_10714;
+            OUTGOING_PACKETS[2694] = RespectUserMessageComposer;
             OUTGOING_PACKETS[271] = _Str_9816;
             OUTGOING_PACKETS[2713] = _Str_10953;
             OUTGOING_PACKETS[2717] = CloseIssueDefaultActionMessageComposer;

@@ -58,7 +58,7 @@
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.communication.messages.IMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_10714;
+    import com.sulake.habbo.communication.messages.outgoing.users.RespectUserMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.pets.RespectPetMessageComposer;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.session.furniture.IFurnitureData;
@@ -699,7 +699,7 @@
         {
             if (((k >= 0) && (this._respectLeft > 0)))
             {
-                this.send(new _Str_10714(k));
+                this.send(new RespectUserMessageComposer(k));
                 this._respectLeft = (this._respectLeft - 1);
             }
         }
