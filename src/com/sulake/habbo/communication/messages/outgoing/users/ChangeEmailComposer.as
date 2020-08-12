@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10577 implements IMessageComposer 
+    public class ChangeEmailComposer implements IMessageComposer
     {
         private var _Str_6877:String;
 
-        public function _Str_10577(k:String)
+        public function ChangeEmailComposer(k:String)
         {
             this._Str_6877 = k;
         }

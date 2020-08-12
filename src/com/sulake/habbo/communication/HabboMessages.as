@@ -465,7 +465,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.GetEmailStatusComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.DeactivateGuildMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.RemoveAdminRightsFromMemberMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
+	import com.sulake.habbo.communication.messages.outgoing.users.ChangeEmailComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildCreationInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.RespectUserMessageComposer;
@@ -1919,7 +1919,7 @@
             OUTGOING_PACKETS[3959] = PhotoCompetitionMessageComposer;
             OUTGOING_PACKETS[3961] = _Str_5876;
             OUTGOING_PACKETS[3964] = GetItemDataMessageComposer;
-            OUTGOING_PACKETS[3965] = _Str_10577;
+            OUTGOING_PACKETS[3965] = ChangeEmailComposer;
             OUTGOING_PACKETS[3969] = _Str_11135;
             OUTGOING_PACKETS[398] = _Str_11776;
             OUTGOING_PACKETS[3991] = _Str_9806;

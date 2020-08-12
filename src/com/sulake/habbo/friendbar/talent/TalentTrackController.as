@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
     import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
+    import com.sulake.habbo.communication.messages.outgoing.users.ChangeEmailComposer;
     import com.sulake.habbo.communication.messages.parser.users.ChangeEmailResultParser;
     import com.sulake.core.window.components.ITextFieldWindow;
     import __AS3__.vec.*;
@@ -887,7 +887,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this.getEmailText().text;
-                this._habboTalent.send(new _Str_10577(_local_3));
+                this._habboTalent.send(new ChangeEmailComposer(_local_3));
             }
         }
 
