@@ -33,7 +33,7 @@
     import com.sulake.iid.IIDHabboRoomSessionManager;
     import com.sulake.iid.IIDHabboHelp;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_11544;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetMOTDMessageComposer;
     import com.sulake.core.utils.Map;
     import adobe.serialization.json.JSONDecoder;
 
@@ -234,7 +234,7 @@
             {
                 this._feedController.setFeedEnabled(true);
             }
-            this._communication.connection.send(new _Str_11544());
+            this._communication.connection.send(new GetMOTDMessageComposer());
         }
 
         public function addSongPlayingNotification(k:String, _arg_2:String):void

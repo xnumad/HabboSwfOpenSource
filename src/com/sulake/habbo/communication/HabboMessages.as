@@ -477,7 +477,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.RejectMembershipRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildColorsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.ScrGetKickbackInfoMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_11544;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetMOTDMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditorDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.DeselectFavouriteHabboGroupMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UnblockGroupMemberMessageComposer;
@@ -1586,7 +1586,7 @@
             OUTGOING_PACKETS[15] = PickIssuesMessageComposer;
             OUTGOING_PACKETS[1520] = UpdateTriggerMessageComposer;
             OUTGOING_PACKETS[1521] = HarvestPetMessageComposer;
-            OUTGOING_PACKETS[1523] = _Str_11544;
+            OUTGOING_PACKETS[1523] = GetMOTDMessageComposer;
             OUTGOING_PACKETS[1533] = DiceOffMessageComposer;
             OUTGOING_PACKETS[1543] = WhisperMessageComposer;
             OUTGOING_PACKETS[1572] = ReleaseIssuesMessageComposer;
