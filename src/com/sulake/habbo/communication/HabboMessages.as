@@ -139,7 +139,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.MakeOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceTokensMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_9940;
+	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOwnOffersMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7734;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8524;
@@ -1653,7 +1653,7 @@
             OUTGOING_PACKETS[2091] = GetSelectedBadgesMessageComposer;
             OUTGOING_PACKETS[21] = GetHabboGroupBadgesMessageComposer;
             OUTGOING_PACKETS[210] = UseWallItemMessageComposer;
-            OUTGOING_PACKETS[2105] = _Str_9940;
+            OUTGOING_PACKETS[2105] = GetMarketplaceOwnOffersMessageComposer;
             OUTGOING_PACKETS[2109] = ApproveNameMessageComposer;
             OUTGOING_PACKETS[211] = _Str_7268;
             OUTGOING_PACKETS[2110] = NewNavigatorInitComposer;

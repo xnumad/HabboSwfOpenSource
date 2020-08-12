@@ -153,7 +153,7 @@
     import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOffersMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10589;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12488;
-    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_9940;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOwnOffersMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceOfferMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.RedeemMarketplaceOfferCreditsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.CancelMarketplaceOfferMessageComposer;
@@ -1166,7 +1166,7 @@
 
         public function getOwnMarketPlaceOffers():void
         {
-            this.send(new _Str_9940());
+            this.send(new GetMarketplaceOwnOffersMessageComposer());
         }
 
         public function buyMarketPlaceOffer(k:int):void
