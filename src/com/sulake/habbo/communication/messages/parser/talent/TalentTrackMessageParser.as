@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7210 implements IMessageParser 
+    public class TalentTrackMessageParser implements IMessageParser
     {
         private var _talentTrack:TalentTrack;
 

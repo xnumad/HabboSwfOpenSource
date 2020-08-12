@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.EmailStatusResultEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ChangeEmailResultEvent;
-    import com.sulake.habbo.communication.messages.parser.talent._Str_7210;
+    import com.sulake.habbo.communication.messages.parser.talent.TalentTrackMessageParser;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.session.talent.TalentEnum;
@@ -130,7 +130,7 @@
 
         private function _Str_24186(k:_Str_7229):void
         {
-            var _local_2:_Str_7210 = k.getParser();
+            var _local_2:TalentTrackMessageParser = k.getParser();
             this._talentTrack = _local_2._Str_23534();
             this.createWindow();
         }
