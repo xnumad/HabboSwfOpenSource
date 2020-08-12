@@ -461,7 +461,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.*;
 	import com.sulake.habbo.communication.messages.outgoing.users.CreateGuildMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildBadgeMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10288;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetIgnoredUsersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10302;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10313;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10517;
@@ -1907,7 +1907,7 @@
             OUTGOING_PACKETS[3848] = _Str_10971;
             OUTGOING_PACKETS[3863] = _Str_11093;
             OUTGOING_PACKETS[3872] = _Str_11277;
-            OUTGOING_PACKETS[3878] = _Str_10288;
+            OUTGOING_PACKETS[3878] = GetIgnoredUsersMessageComposer;
             OUTGOING_PACKETS[3889] = OpenCampaignCalendarDoorComposer;
             OUTGOING_PACKETS[389] = _Str_12437;
             OUTGOING_PACKETS[3898] = GetFurnitureAliasesMessageComposer;

@@ -4,7 +4,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.IgnoreResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.IgnoredUsersMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_10288;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetIgnoredUsersMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserIdMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.UnignoreUserMessageComposer;
@@ -46,7 +46,7 @@
 
         public function initIgnoreList():void
         {
-            this._sessionDataManager.send(new _Str_10288(this._sessionDataManager.userName));
+            this._sessionDataManager.send(new GetIgnoredUsersMessageComposer(this._sessionDataManager.userName));
         }
 
         private function _Str_24424(k:IgnoredUsersMessageEvent):void
