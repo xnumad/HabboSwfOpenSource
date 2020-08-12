@@ -61,7 +61,7 @@
             this.setProc("pending_members_region", this._Str_23598);
             this.setProc("show_groups_link_region", this._Str_23641);
             this.setProc("buy_furni_link_region", this._Str_25591);
-            this._window.findChildByName("leave_button").procedure = this._Str_23388;
+            this._window.findChildByName("leave_button").procedure = this.onLeave;
             this._window.findChildByName("join_button").procedure = this._Str_11995;
             this._window.findChildByName("request_membership_button").procedure = this._Str_11995;
         }
@@ -155,7 +155,7 @@
             _local_3.procedure = _arg_2;
         }
 
-        private function _Str_23388(k:WindowEvent, _arg_2:IWindow):void
+        private function onLeave(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
