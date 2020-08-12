@@ -16,7 +16,7 @@
             this.messageArray.push("");
             this.messageArray.push("");
             this.messageArray.push(_arg_3);
-            if (_arg_4 != _Str_4767.NO_ISSUE_ID)
+            if (_arg_4 != ModBanMessageComposer.NO_ISSUE_ID)
             {
                 this.messageArray.push(_arg_4);
             }

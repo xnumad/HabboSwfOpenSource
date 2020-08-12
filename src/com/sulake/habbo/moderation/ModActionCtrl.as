@@ -15,7 +15,7 @@
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10432;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModAlertMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_4767;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModBanMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11592;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12485;
     import com.sulake.habbo.utils.StringUtil;
@@ -288,7 +288,7 @@
                     }
                     this._Str_3066("ban");
                     _local_5 = (_local_4.actionId == 106);
-                    this._Str_2327.connection.send(new _Str_4767(this._Str_4127, this._Str_3121.text, _local_3, _local_4._Str_22995, _local_5, this._Str_7121()));
+                    this._Str_2327.connection.send(new ModBanMessageComposer(this._Str_4127, this._Str_3121.text, _local_3, _local_4._Str_22995, _local_5, this._Str_7121()));
                     break;
                 case ModActionDefinition.KICK:
                     if (!this._Str_2327.initMsg._Str_20397)
@@ -353,7 +353,7 @@
 
         private function _Str_7121():int
         {
-            return (this._Str_3598 != null) ? this._Str_3598._Str_2869 : _Str_4767.NO_ISSUE_ID;
+            return (this._Str_3598 != null) ? this._Str_3598._Str_2869 : ModBanMessageComposer.NO_ISSUE_ID;
         }
     }
 }

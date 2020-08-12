@@ -9,7 +9,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7103;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_4767;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModBanMessageComposer;
     import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class SendMsgsCtrl implements IDisposable, ITrackedWindow 
@@ -101,7 +101,7 @@
                 return;
             }
             Logger.log("Sending message...");
-            this._main.connection.send(new _Str_7103(this._targetUserId, this._msgInput.text, TOPIC_ID_NOT_SELECTED, ((this._issue != null) ? this._issue._Str_2869 : _Str_4767.NO_ISSUE_ID)));
+            this._main.connection.send(new _Str_7103(this._targetUserId, this._msgInput.text, TOPIC_ID_NOT_SELECTED, ((this._issue != null) ? this._issue._Str_2869 : ModBanMessageComposer.NO_ISSUE_ID)));
             this.dispose();
         }
 

@@ -758,7 +758,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12412;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12485;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_4767;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.ModBanMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModeratorActionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7074;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7103;
@@ -1760,7 +1760,7 @@
             OUTGOING_PACKETS[2758] = PopularRoomsSearchMessageComposer;
             OUTGOING_PACKETS[2760] = _Str_11362;
             OUTGOING_PACKETS[2765] = EnterOneWayDoorMessageComposer;
-            OUTGOING_PACKETS[2766] = _Str_4767;
+            OUTGOING_PACKETS[2766] = ModBanMessageComposer;
             OUTGOING_PACKETS[2768] = PassCarryItemToPetMessageComposer;
             OUTGOING_PACKETS[2769] = GetBadgesComposer;
             OUTGOING_PACKETS[2771] = RecycleItemsMessageComposer;
