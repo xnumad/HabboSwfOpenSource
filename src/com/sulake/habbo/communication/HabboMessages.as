@@ -511,7 +511,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10878;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetOfficialRoomsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdSearchMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11269;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFrequentRoomHistorySearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFavouriteRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11608;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11662;
@@ -1514,7 +1514,7 @@
 
 
             OUTGOING_PACKETS[10] = _Str_12081;
-            OUTGOING_PACKETS[1002] = _Str_11269;
+            OUTGOING_PACKETS[1002] = MyFrequentRoomHistorySearchMessageComposer;
             OUTGOING_PACKETS[1004] = GetGuildEditInfoMessageComposer;
             OUTGOING_PACKETS[1030] = SetChatStylePreferenceComposer;
             OUTGOING_PACKETS[1036] = MountPetMessageComposer;

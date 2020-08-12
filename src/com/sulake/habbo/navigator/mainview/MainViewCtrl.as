@@ -43,7 +43,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomRightsSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.MyGuildBasesSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.MyRecommendedRoomsMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11269;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.MyFrequentRoomHistorySearchMessageComposer;
     import com.sulake.core.communication.messages.IMessageComposer;
 
     public class MainViewCtrl implements ITransitionalMainViewCtrl, IUpdateReceiver, IDisposable 
@@ -653,7 +653,7 @@
                 case Tabs.SEARCHTYPE_RECOMMENDED_ROOMS:
                     return new MyRecommendedRoomsMessageComposer();
                 case Tabs.SEARCHTYPE_FREQUENT_HISTORY:
-                    return new _Str_11269();
+                    return new MyFrequentRoomHistorySearchMessageComposer();
             }
             Logger.log(("No message for searchType: " + k));
             return null;
