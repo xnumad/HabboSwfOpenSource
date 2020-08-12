@@ -220,7 +220,7 @@
             this._topicsFlowHelpController._Str_25197();
         }
 
-        public function _Str_25290(k:int, _arg_2:String):void
+        public function reportUserName(k:int, _arg_2:String):void
         {
             this._callForHelpManager.reportedUserId = k;
             this._callForHelpManager.reportedUserName = _arg_2;
