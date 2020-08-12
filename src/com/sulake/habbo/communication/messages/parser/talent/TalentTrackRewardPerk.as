@@ -4,16 +4,16 @@
 
     public class TalentTrackRewardPerk
     {
-        private var _Str_21367:String;
+        private var _perkId:String;
 
         public function TalentTrackRewardPerk(k:IMessageDataWrapper)
         {
-            this._Str_21367 = k.readString();
+            this._perkId = k.readString();
         }
 
         public function get _Str_10964():String
         {
-            return this._Str_21367;
+            return this._perkId;
         }
     }
 }
