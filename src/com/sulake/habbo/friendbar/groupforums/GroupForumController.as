@@ -582,7 +582,7 @@
             }
         }
 
-        public function _Str_25066(k:_Str_2807, _arg_2:int, _arg_3:int):void
+        public function unDeleteMessage(k:_Str_2807, _arg_2:int, _arg_3:int):void
         {
             if (this._communicationManager)
             {

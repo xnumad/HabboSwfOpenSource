@@ -393,7 +393,7 @@
 
         private function _Str_7727(k:WindowMouseEvent):void
         {
-            this._controller._Str_25066(this._forumData, this._threadData.threadId, int(k.target.id));
+            this._controller.unDeleteMessage(this._forumData, this._threadData.threadId, int(k.target.id));
         }
 
         private function _Str_10493(k:WindowMouseEvent):void
