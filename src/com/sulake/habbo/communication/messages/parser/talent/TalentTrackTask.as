@@ -4,14 +4,14 @@
 
     public class TalentTrackTask
     {
-        public static const _Str_13382:String = "ACH_HabboWayGraduate1";
-        public static const _Str_17723:String = "ACH_GuideGroupMember1";
-        public static const _Str_7735:String = "ACH_SafetyQuizGraduate1";
-        public static const _Str_13850:String = "ACH_EmailVerification1";
+        public static const HABBO_WAY_GRADUATE_1:String = "ACH_HabboWayGraduate1";
+        public static const GUIDE_GROUP_MEMBER_1:String = "ACH_GuideGroupMember1";
+        public static const SAFETY_QUIZ_GRADUATE_1:String = "ACH_SafetyQuizGraduate1";
+        public static const EMAIL_VERIFICATION_1:String = "ACH_EmailVerification1";
         public static const ROOM_ENTRY_1:String = "ACH_RoomEntry1";
         public static const ROOM_ENTRY_2:String = "ACH_RoomEntry2";
-        public static const _Str_14749:String = "ACH_AvatarLooks1";
-        public static const _Str_16378:String = "ACH_GuideAdvertisementReader1";
+        public static const AVATAR_LOOKS_1:String = "ACH_AvatarLooks1";
+        public static const GUIDE_ADVERTISEMENT_READER:String = "ACH_GuideAdvertisementReader1";
 
         private var _achievementId:int;
         private var _requiredLevel:int;
@@ -64,10 +64,10 @@
         {
             switch (this.badgeCode)
             {
-                case _Str_13382:
-                case _Str_7735:
-                case _Str_13850:
-                case _Str_14749:
+                case HABBO_WAY_GRADUATE_1:
+                case SAFETY_QUIZ_GRADUATE_1:
+                case EMAIL_VERIFICATION_1:
+                case AVATAR_LOOKS_1:
                     return false;
                 default:
                     return true;

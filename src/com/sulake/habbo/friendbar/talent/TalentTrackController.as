@@ -356,7 +356,7 @@
                     {
                         _local_8.addListItem(_local_18);
                     }
-                    if (((_local_20.badgeCode == TalentTrackTask._Str_7735) && (_local_20.state == TalentTrack.STATE_ONGOING)))
+                    if (((_local_20.badgeCode == TalentTrackTask.SAFETY_QUIZ_GRADUATE_1) && (_local_20.state == TalentTrack.STATE_ONGOING)))
                     {
                         _local_19.push(_local_18);
                     }
@@ -495,7 +495,7 @@
                     _local_3.findChildByName("task_progress_fg").width = _Str_988._Str_1452(_arg_2._Str_7605, 0, _arg_2._Str_15676, 0, 48);
                     _local_6 = (_local_3.findChildByName("task_ongoing_region") as IRegionWindow);
                     _local_6.id = _arg_2.achievementId;
-                    if (_arg_2.badgeCode == TalentTrackTask._Str_7735)
+                    if (_arg_2.badgeCode == TalentTrackTask.SAFETY_QUIZ_GRADUATE_1)
                     {
                         _local_6.toolTipCaption = "";
                         _local_6.name = _arg_2.badgeCode;
@@ -644,7 +644,7 @@
                     return;
                 case "button_track_helper":
                     return;
-                case TalentTrackTask._Str_7735:
+                case TalentTrackTask.SAFETY_QUIZ_GRADUATE_1:
                     this._Str_8556(_arg_2.name);
                     this._habboTalent.habboHelp.showSafetyBooklet();
                     return;
@@ -691,7 +691,7 @@
                 return;
             }
             this._habboTalent.tracking.trackEventLog("Talent", this._Str_19628.name, "talent.progress.show", _local_2.badgeCode);
-            if (_local_2.badgeCode == TalentTrackTask._Str_16378)
+            if (_local_2.badgeCode == TalentTrackTask.GUIDE_ADVERTISEMENT_READER)
             {
                 this._Str_23046();
                 return;
@@ -716,7 +716,7 @@
                 this.setText(_local_3, "action_link", _local_6);
                 _local_3.findChildByName("action_link").name = _local_2.badgeCode;
                 _local_3.findChildByName("progress_separator").visible = (!(_local_6 == ""));
-                if (((_local_2.badgeCode == TalentTrackTask._Str_13850) && (this._Str_25273)))
+                if (((_local_2.badgeCode == TalentTrackTask.EMAIL_VERIFICATION_1) && (this._Str_25273)))
                 {
                     this.getEmailContainer().visible = true;
                     this.getEmailContainer().findChildByName("change_email_region").procedure = this.onChangeEmail;
@@ -803,11 +803,11 @@
                 case "thanks_button":
                     this._Str_8036();
                     return;
-                case TalentTrackTask._Str_13382:
+                case TalentTrackTask.HABBO_WAY_GRADUATE_1:
                     this._Str_8556(_arg_2.name);
                     this._habboTalent.habboHelp.showHabboWay();
                     return;
-                case TalentTrackTask._Str_17723:
+                case TalentTrackTask.GUIDE_GROUP_MEMBER_1:
                     this._Str_8556(_arg_2.name);
                     _local_3 = this._habboTalent.getInteger("guide.help.alpha.groupid", 0);
                     if (_local_3 > 0)
@@ -816,7 +816,7 @@
                         this._habboTalent.send(new GetHabboGroupDetailsMessageComposer(_local_3, false));
                     }
                     return;
-                case TalentTrackTask._Str_7735:
+                case TalentTrackTask.SAFETY_QUIZ_GRADUATE_1:
                     this._Str_8556(_arg_2.name);
                     this._habboTalent.habboHelp.showSafetyBooklet();
                     return;
@@ -825,7 +825,7 @@
                     this._Str_8556(_arg_2.name);
                     this._habboTalent.navigator.openNavigator(null);
                     return;
-                case TalentTrackTask._Str_14749:
+                case TalentTrackTask.AVATAR_LOOKS_1:
                     this._Str_8556(_arg_2.name);
                     this._habboTalent.avatarEditor.openEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR, null, null, true);
                     this._habboTalent.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
