@@ -271,7 +271,7 @@
                 Logger.log("Cannot process canBeAskedForAFriend. Friendlist not initialized.");
                 return false;
             }
-            return ((this.getFriend(k) == null) && (!(this._Str_4227.isRequestFriend(k)))) && (this.categories.getFriendCount(false) < this.friendRequests.limit);
+            return ((this.getFriend(k) == null) && (!(this.searchResults.isRequestFriend(k)))) && (this.categories.getFriendCount(false) < this.friendRequests.limit);
         }
 
         public function askForAFriend(k:int, _arg_2:String):Boolean
@@ -281,7 +281,7 @@
                 Logger.log("Cannot ask for friend. Friendlist not initialized.");
                 return false;
             }
-            if (this._Str_4227.isRequestFriend(k))
+            if (this.searchResults.isRequestFriend(k))
             {
                 return true;
             }
@@ -290,7 +290,7 @@
                 return false;
             }
             this.send(new _Str_11418(_arg_2));
-            this._Str_4227._Str_25695(k);
+            this.searchResults._Str_25695(k);
             this.send(new _Str_10763());
             return true;
         }
@@ -802,7 +802,7 @@
             return this._friendRequests;
         }
 
-        public function get _Str_4227():AvatarSearchResults
+        public function get searchResults():AvatarSearchResults
         {
             return this._Str_17300;
         }

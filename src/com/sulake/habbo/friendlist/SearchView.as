@@ -30,11 +30,11 @@
 
         public function _Str_14366():int
         {
-            if (this._friendList._Str_4227.friends == null)
+            if (this._friendList.searchResults.friends == null)
             {
                 return 0;
             }
-            return this._friendList._Str_4227.friends.length + this._friendList._Str_4227.others.length;
+            return this._friendList.searchResults.friends.length + this._friendList.searchResults.others.length;
         }
 
         public function _Str_13719(k:IItemListWindow):void
@@ -62,7 +62,7 @@
             var _local_5:_Str_3696;
             var _local_6:Boolean;
             this._list.autoArrangeItems = false;
-            var k:AvatarSearchResults = this._friendList._Str_4227;
+            var k:AvatarSearchResults = this._friendList.searchResults;
             var _local_2:int;
             while (true)
             {
@@ -89,7 +89,7 @@
                             if (_local_2 <= ((k.friends.length + k.others.length) + 1))
                             {
                                 _local_5 = k.others[((_local_2 - 2) - k.friends.length)];
-                                this.refreshEntry(true, _local_2, _local_5._Str_17102, _local_5._Str_8751, null, false, ((!(_local_5.avatarId == this._friendList.avatarId)) && (!(this._friendList._Str_4227.isRequestFriend(_local_5.avatarId)))), _local_5.avatarId);
+                                this.refreshEntry(true, _local_2, _local_5._Str_17102, _local_5._Str_8751, null, false, ((!(_local_5.avatarId == this._friendList.avatarId)) && (!(this._friendList.searchResults.isRequestFriend(_local_5.avatarId)))), _local_5.avatarId);
                             }
                             else
                             {
@@ -130,21 +130,21 @@
 
         private function _Str_22898():String
         {
-            if (this._friendList._Str_4227.friends.length == 0)
+            if (this._friendList.searchResults.friends.length == 0)
             {
                 return "${friendlist.search.nofriendsfound}";
             }
-            this._friendList.registerParameter("friendlist.search.friendscaption", "cnt", ("" + this._friendList._Str_4227.friends.length));
+            this._friendList.registerParameter("friendlist.search.friendscaption", "cnt", ("" + this._friendList.searchResults.friends.length));
             return "${friendlist.search.friendscaption}";
         }
 
         private function _Str_25692():String
         {
-            if (this._friendList._Str_4227.others.length == 0)
+            if (this._friendList.searchResults.others.length == 0)
             {
                 return "${friendlist.search.noothersfound}";
             }
-            this._friendList.registerParameter("friendlist.search.otherscaption", "cnt", ("" + this._friendList._Str_4227.others.length));
+            this._friendList.registerParameter("friendlist.search.otherscaption", "cnt", ("" + this._friendList.searchResults.others.length));
             return "${friendlist.search.otherscaption}";
         }
 
@@ -253,7 +253,7 @@
                 return;
             }
             Logger.log(("Ask for friend clicked: " + _arg_2.id));
-            var _local_3:_Str_3696 = this._friendList._Str_4227._Str_21135(_arg_2.id);
+            var _local_3:_Str_3696 = this._friendList.searchResults._Str_21135(_arg_2.id);
             if (_local_3 == null)
             {
                 Logger.log(("No search result found with id: " + _arg_2.id));
@@ -293,7 +293,7 @@
             {
                 return;
             }
-            var _local_3:_Str_3696 = this._friendList._Str_4227._Str_21135(_arg_2.id);
+            var _local_3:_Str_3696 = this._friendList.searchResults._Str_21135(_arg_2.id);
             if (_local_3 == null)
             {
                 Logger.log(("No search result found with id: " + _arg_2.id));
