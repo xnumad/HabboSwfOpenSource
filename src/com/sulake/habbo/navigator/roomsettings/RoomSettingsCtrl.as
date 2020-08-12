@@ -12,7 +12,7 @@
     import com.sulake.core.window.components.ITabContextWindow;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7484;
+    import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetRoomSettingsMessageComposer;
     import flash.events.Event;
     import com.sulake.habbo.navigator.events.HabboRoomSettingsTrackingEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4114;
@@ -192,7 +192,7 @@
             this.close();
             this._Str_2449 = k;
             this._Str_2366 = this._navigator.data.enteredGuestRoom.habboGroupId;
-            this._navigator.send(new _Str_7484(this._Str_2449));
+            this._navigator.send(new GetRoomSettingsMessageComposer(this._Str_2449));
             this._navigator.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT));
         }
 
@@ -201,7 +201,7 @@
             this.close();
             this._Str_2449 = k;
             this._Str_2366 = _arg_2;
-            this._navigator.send(new _Str_7484(this._Str_2449));
+            this._navigator.send(new GetRoomSettingsMessageComposer(this._Str_2449));
             this._navigator.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT));
         }
 

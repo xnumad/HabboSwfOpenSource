@@ -875,7 +875,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetBannedUsersFromRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomFilterMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7286;
-	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7484;
+	import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetRoomSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.DeleteRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.*;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.ClientHelloMessageComposer;
@@ -1808,7 +1808,7 @@
             OUTGOING_PACKETS[3110] = InitDiffieHandshakeMessageComposer;
             OUTGOING_PACKETS[3115] = CreditFurniRedeemMessageComposer;
             OUTGOING_PACKETS[312] = _Str_5612;
-            OUTGOING_PACKETS[3129] = _Str_7484;
+            OUTGOING_PACKETS[3129] = GetRoomSettingsMessageComposer;
             OUTGOING_PACKETS[3133] = _Str_7541;
             OUTGOING_PACKETS[3135] = _Str_7384;
             OUTGOING_PACKETS[3137] = _Str_9952;
