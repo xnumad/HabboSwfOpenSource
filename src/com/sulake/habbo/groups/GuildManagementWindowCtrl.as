@@ -288,7 +288,7 @@
                     _local_6.color = _local_5.color;
                 }
             }
-            if (this._manager._Str_7303)
+            if (this._manager.hasVip)
             {
                 this._window.findChildByName("buy_button").enable();
                 this._window.findChildByName("buy_border").color = 0xFFC300;
@@ -298,7 +298,7 @@
                 this._window.findChildByName("buy_border").color = 0xAAAAAA;
                 this._window.findChildByName("buy_button").disable();
             }
-            this._window.findChildByName("vip_required_border").visible = (!(this._manager._Str_7303));
+            this._window.findChildByName("vip_required_border").visible = (!(this._manager.hasVip));
             this._window.findChildByName("confirmation_caption").caption = ITextWindow(this._window.findChildByName("name_txt")).text;
         }
 

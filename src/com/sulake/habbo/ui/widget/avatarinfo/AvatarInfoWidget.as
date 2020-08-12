@@ -1340,7 +1340,7 @@
             return this.handler.container.sessionDataManager.clubLevel >= HabboClubLevelEnum.CLUB;
         }
 
-        public function get _Str_7303():Boolean
+        public function get hasVip():Boolean
         {
             return this.handler.container.sessionDataManager.clubLevel >= HabboClubLevelEnum.VIP;
         }

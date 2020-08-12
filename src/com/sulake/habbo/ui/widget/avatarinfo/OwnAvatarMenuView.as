@@ -193,8 +193,8 @@
                     break;
                 case _Str_14565:
                     showButton("wave", true, (!(this.widget._Str_12708)));
-                    showButton("laugh", true, (((!(this.widget._Str_4878)) && (!(this.widget._Str_12708))) && (this.widget._Str_7303)), (!(this.widget._Str_7303)));
-                    showButton("blow", true, (((!(this.widget._Str_4878)) && (!(this.widget._Str_12708))) && (this.widget._Str_7303)), (!(this.widget._Str_7303)));
+                    showButton("laugh", true, (((!(this.widget._Str_4878)) && (!(this.widget._Str_12708))) && (this.widget.hasVip)), (!(this.widget.hasVip)));
+                    showButton("blow", true, (((!(this.widget._Str_4878)) && (!(this.widget._Str_12708))) && (this.widget.hasVip)), (!(this.widget.hasVip)));
                     showButton("idle", true);
                     if ((((this.widget.configuration.getBoolean("avatar.sitting.enabled")) && (!(this.widget._Str_12708))) && (!(_local_3))))
                     {

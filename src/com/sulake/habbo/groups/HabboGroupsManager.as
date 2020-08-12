@@ -655,7 +655,7 @@
             this._catalog.openClubCenter();
         }
 
-        public function get _Str_7303():Boolean
+        public function get hasVip():Boolean
         {
             return this._hasVip;
         }
