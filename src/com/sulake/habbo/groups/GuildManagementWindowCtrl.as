@@ -507,7 +507,7 @@
             {
                 this._manager.trackGoogle("groupPurchase", "buyVip");
             }
-            this._manager._Str_21441("GuildManagementWindowCtrl");
+            this._manager.openVipPurchase("GuildManagementWindowCtrl");
         }
 
         private function _Str_5104(k:String, _arg_2:String):void

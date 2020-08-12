@@ -650,7 +650,7 @@
             this._catalog.openCatalogPage(k);
         }
 
-        public function _Str_21441(k:String):void
+        public function openVipPurchase(k:String):void
         {
             this._catalog.openClubCenter();
         }

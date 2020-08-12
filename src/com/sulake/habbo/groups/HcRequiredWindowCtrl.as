@@ -65,7 +65,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._manager._Str_21441("HcRequiredWindowCtrl");
+                this._manager.openVipPurchase("HcRequiredWindowCtrl");
                 this.close();
             }
         }
