@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetBannedUsersFromRoomMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4633;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveAllRightsMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11552;
+    import com.sulake.habbo.communication.messages.outgoing.room.action.UnbanUserFromRoomMessageComposer;
     import com.sulake.habbo.navigator.*;
 
     public class RoomSettingsCtrl implements IDisposable, ILinkEventTracker 
@@ -1253,7 +1253,7 @@
             var _local_2:IItemListWindow = (this._window.findChildByName("moderation_banned_users") as IItemListWindow);
             var _local_3:IWindow = IWindowContainer(_local_2.getListItemAt(this._Str_7254._Str_20232)).findChildByName("user_info_region");
             var _local_4:int = _local_3.id;
-            this._navigator.send(new _Str_11552(_local_4, this._Str_2449));
+            this._navigator.send(new UnbanUserFromRoomMessageComposer(_local_4, this._Str_2449));
         }
 
         private function _Str_20309(k:int):String

@@ -862,7 +862,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.action.LetUserInMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.AmbassadorAlertMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11552;
+	import com.sulake.habbo.communication.messages.outgoing.room.action.UnbanUserFromRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.BanUserWithDurationMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.MuteAllInRoomComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveAllRightsMessageComposer;
@@ -1980,7 +1980,7 @@
             OUTGOING_PACKETS[957] = _Str_10281;
             OUTGOING_PACKETS[96] = LatencyPingReportMessageComposer;
             OUTGOING_PACKETS[99] = UseFurnitureMessageComposer;
-            OUTGOING_PACKETS[992] = _Str_11552;
+            OUTGOING_PACKETS[992] = UnbanUserFromRoomMessageComposer;
             OUTGOING_PACKETS[998] = _Str_6006;
 			
 			//_Str_477 (Leaderboards)

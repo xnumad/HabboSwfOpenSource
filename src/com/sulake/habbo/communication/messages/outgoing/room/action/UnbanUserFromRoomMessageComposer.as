@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11552 implements IMessageComposer 
+    public class UnbanUserFromRoomMessageComposer implements IMessageComposer
     {
         private var messageArray:Array;
 
-        public function _Str_11552(k:int, _arg_2:int)
+        public function UnbanUserFromRoomMessageComposer(k:int, _arg_2:int)
         {
             this.messageArray = new Array();
             super();
