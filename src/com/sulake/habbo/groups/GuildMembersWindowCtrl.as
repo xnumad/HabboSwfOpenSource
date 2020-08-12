@@ -296,29 +296,29 @@
             IAvatarImageWidget(IWidgetWindow(k.findChildByName("avatar_image")).widget).figure = _arg_2.figure;
             if (_arg_2.blocked)
             {
-                this._Str_11551(k, "group.members.unblock", false);
+                this.setActionLink(k, "group.members.unblock", false);
             }
             else
             {
                 if (_arg_2.owner)
                 {
-                    this._Str_11551(k, "group.members.owner", false);
+                    this.setActionLink(k, "group.members.owner", false);
                 }
                 else
                 {
                     if (_arg_2.admin)
                     {
-                        this._Str_11551(k, "group.members.removerights", true);
+                        this.setActionLink(k, "group.members.removerights", true);
                     }
                     else
                     {
                         if (_arg_2.member)
                         {
-                            this._Str_11551(k, "group.members.giverights", true);
+                            this.setActionLink(k, "group.members.giverights", true);
                         }
                         else
                         {
-                            this._Str_11551(k, "group.members.accept", true);
+                            this.setActionLink(k, "group.members.accept", true);
                         }
                     }
                 }
@@ -389,7 +389,7 @@
             }
         }
 
-        private function _Str_11551(k:IWindowContainer, _arg_2:String, _arg_3:Boolean):void
+        private function setActionLink(k:IWindowContainer, _arg_2:String, _arg_3:Boolean):void
         {
             var _local_4:ITextWindow = ITextWindow(k.findChildByName("action_link"));
             _local_4.text = this._manager.localization.getLocalization(_arg_2, _arg_2);
