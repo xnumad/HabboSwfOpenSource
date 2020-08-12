@@ -3,13 +3,13 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_12438 implements IMessageComposer, IDisposable 
+    public class ModMuteMessageComposer implements IMessageComposer, IDisposable
     {
         public static const NO_ISSUE_ID:int = -1;
 
         private var messageArray:Array;
 
-        public function _Str_12438(k:int, _arg_2:String, _arg_3:int, _arg_4:int)
+        public function ModMuteMessageComposer(k:int, _arg_2:String, _arg_3:int, _arg_4:int)
         {
             this.messageArray = new Array();
             super();

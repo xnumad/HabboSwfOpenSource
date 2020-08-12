@@ -756,7 +756,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11910;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12129;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12412;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12438;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12485;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_4767;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModeratorActionMessageComposer;
@@ -1630,7 +1630,7 @@
             OUTGOING_PACKETS[1911] = GetCustomRoomFilterMessageComposer;
             OUTGOING_PACKETS[1918] = ToggleStaffPickMessageComposer;
             OUTGOING_PACKETS[1922] = _Str_4553;
-            OUTGOING_PACKETS[1945] = _Str_12438;
+            OUTGOING_PACKETS[1945] = ModMuteMessageComposer;
             OUTGOING_PACKETS[1954] = NavigatorDeleteSavedSearchComposer;
             OUTGOING_PACKETS[196] = GetTalentTrackMessageComposer;
             OUTGOING_PACKETS[1969] = SaveRoomSettingsMessageComposer;

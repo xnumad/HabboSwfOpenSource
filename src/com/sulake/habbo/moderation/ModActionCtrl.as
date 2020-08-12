@@ -14,7 +14,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10432;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_9842;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12438;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_4767;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11592;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12485;
@@ -278,7 +278,7 @@
                     break;
                 case ModActionDefinition.MUTE:
                     this._Str_3066("mute");
-                    this._Str_2327.connection.send(new _Str_12438(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
+                    this._Str_2327.connection.send(new ModMuteMessageComposer(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
                 case ModActionDefinition.BAN:
                     if (!this._Str_2327.initMsg._Str_21242)
