@@ -510,7 +510,7 @@
             this._manager.openVipPurchase("GuildManagementWindowCtrl");
         }
 
-        private function _Str_5104(k:String, _arg_2:String):void
+        private function showAlert(k:String, _arg_2:String):void
         {
             if (!this._alertVisible)
             {
@@ -540,25 +540,25 @@
                         _local_4 = this._Str_19886();
                         if (((((k == null) || (k.length == 0)) || (_local_4 == null)) || (_local_4.roomId == 0)))
                         {
-                            this._Str_5104("${group.edit.error.title}", "${group.edit.error.no.name.or.room.selected}");
+                            this.showAlert("${group.edit.error.title}", "${group.edit.error.no.name.or.room.selected}");
                             return false;
                         }
                         if (((_local_4._Str_22776) && (!(this._alertedBaseRoomId == _local_4.roomId))))
                         {
                             this._alertedBaseRoomId = _local_4.roomId;
-                            this._Str_5104("${group.edit.error.warning}", "${group.edit.error.controllers}");
+                            this.showAlert("${group.edit.error.warning}", "${group.edit.error.controllers}");
                             return false;
                         }
                     }
                     if (k.length >= MAX_NAME_LENGTH)
                     {
-                        this._Str_5104("${group.edit.error.title}", "${group.edit.error.name.length}");
+                        this.showAlert("${group.edit.error.title}", "${group.edit.error.name.length}");
                         return false;
                     }
                     _local_2 = ITextFieldWindow(this._window.findChildByName("desc_txt")).text;
                     if (((!(_local_2 == null)) && (_local_2.length >= MAX_DESCRIPTION_LENGTH)))
                     {
-                        this._Str_5104("${group.edit.error.title}", "${group.edit.error.desc.length}");
+                        this.showAlert("${group.edit.error.title}", "${group.edit.error.desc.length}");
                         return false;
                     }
                     return true;
@@ -569,7 +569,7 @@
                 case VIEW_COLORS:
                     if (((this._primaryColorCtrl._Str_10058() == null) || (this._secondaryColorCtrl._Str_10058() == null)))
                     {
-                        this._Str_5104("${group.edit.error.title}", "${group.edit.error.no.color.selected}");
+                        this.showAlert("${group.edit.error.title}", "${group.edit.error.no.color.selected}");
                         return false;
                     }
                     return true;

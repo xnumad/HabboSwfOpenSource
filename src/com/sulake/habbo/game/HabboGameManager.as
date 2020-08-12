@@ -486,7 +486,7 @@
         {
             if (((this.gameCenterEnabled) && (this._Str_2368)))
             {
-                this._Str_2368._Str_5104(k);
+                this._Str_2368.showAlert(k);
             }
         }
 

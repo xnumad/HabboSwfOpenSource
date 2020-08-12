@@ -268,7 +268,7 @@
             }
         }
 
-        public function _Str_5104(k:String):void
+        public function showAlert(k:String):void
         {
             this._Str_18574();
             this._alert = this.windowManager.alert("Game Center Alert", k, 0, this.onAlertClose);
