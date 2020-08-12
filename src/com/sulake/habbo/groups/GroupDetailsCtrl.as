@@ -143,7 +143,7 @@
             return this._window.findChildByName(("grouptype_region_" + k));
         }
 
-        private function _Str_26122(k:int):IWindow
+        private function getGroupTypeIcon(k:int):IWindow
         {
             return this._window.findChildByName(("grouptype_icon_" + k));
         }
