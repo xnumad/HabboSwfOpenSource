@@ -188,7 +188,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10678;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetJukeboxPlayListMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10944;
-	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11141;
+	import com.sulake.habbo.communication.messages.outgoing.sound.GetSoundMachinePlayListMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.AddJukeboxDiskComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetSongInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11631;
@@ -1866,7 +1866,7 @@
             OUTGOING_PACKETS[3485] = RoomUserMuteMessageComposer;
             OUTGOING_PACKETS[3492] = _Str_11783;
             OUTGOING_PACKETS[3493] = ResetUnseenItemIdsComposer;
-            OUTGOING_PACKETS[3498] = _Str_11141;
+            OUTGOING_PACKETS[3498] = GetSoundMachinePlayListMessageComposer;
             OUTGOING_PACKETS[3500] = RequestFurniInventoryWhenNotInRoomComposer;
             OUTGOING_PACKETS[3505] = PollAnswerComposer;
             OUTGOING_PACKETS[3526] = _Str_10092;
