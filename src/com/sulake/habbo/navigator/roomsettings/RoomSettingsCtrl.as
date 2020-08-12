@@ -1073,7 +1073,7 @@
                 this._Str_3508.dispose();
             }
             this._navigator.registerParameter("navigator.roomsettings.deleteroom.confirm.message", "room_name", this._roomSettingsData.name);
-            this._Str_3508 = new ConfirmDialogView(this._navigator, this._Str_22815, "${navigator.roomsettings}", "${navigator.roomsettings.deleteroom.confirm.message}");
+            this._Str_3508 = new ConfirmDialogView(this._navigator, this.onConfirmRoomDelete, "${navigator.roomsettings}", "${navigator.roomsettings.deleteroom.confirm.message}");
         }
 
         private function _Str_22624(k:WindowEvent, _arg_2:IWindow):void
@@ -1093,7 +1093,7 @@
             k.dispose();
         }
 
-        private function _Str_22815():void
+        private function onConfirmRoomDelete():void
         {
             var k:GuestRoomSearchResultData;
             this._navigator.send(new _Str_9786(this._roomSettingsData.roomId));
