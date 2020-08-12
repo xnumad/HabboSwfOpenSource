@@ -505,7 +505,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.camera.CameraSnapshotMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWhereMyFriendsAreSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.PopularRoomsSearchMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.GetPopularRoomTagsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GuildBaseSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.CreateFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RemoveOwnRoomRightsRoomMessageComposer;
@@ -1966,7 +1966,7 @@
             OUTGOING_PACKETS[801] = _Str_17078;
             OUTGOING_PACKETS[808] = AssignRightsMessageComposer;
             OUTGOING_PACKETS[813] = GetGuildEditorDataMessageComposer;
-            OUTGOING_PACKETS[826] = _Str_10397;
+            OUTGOING_PACKETS[826] = GetPopularRoomTagsMessageComposer;
             OUTGOING_PACKETS[848] = _Str_11938;
             OUTGOING_PACKETS[865] = _Str_9966;
             OUTGOING_PACKETS[869] = ScrGetKickbackInfoMessageComposer;

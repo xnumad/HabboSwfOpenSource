@@ -26,7 +26,7 @@
     import com.sulake.habbo.navigator.events.HabboNavigatorTrackingEvent;
     import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabViewedComposer;
     import com.sulake.core.utils.ErrorReportStorage;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.GetPopularRoomTagsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetOfficialRoomsMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsData;
     import com.sulake.habbo.communication.messages.outgoing.navigator.MyFavouriteRoomsSearchMessageComposer;
@@ -528,7 +528,7 @@
             {
                 if (_arg_4 == SEARCHMSG_POPTAGS)
                 {
-                    this._navigator.send(new _Str_10397());
+                    this._navigator.send(new GetPopularRoomTagsMessageComposer());
                 }
                 else
                 {

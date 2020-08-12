@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_10397 implements IMessageComposer, IDisposable 
+    public class GetPopularRoomTagsMessageComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function _Str_10397()
+        public function GetPopularRoomTagsMessageComposer()
         {
             this._array = new Array();
             super();
