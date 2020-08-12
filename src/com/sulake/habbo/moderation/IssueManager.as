@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.outgoing.moderator.ReleaseIssuesMessageComposer;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import flash.events.Event;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7202;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModToolSanctionComposer;
     import com.sulake.habbo.utils.StringUtil;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhSanctionTypeData;
     import com.sulake.habbo.communication.messages.outgoing.moderator.CloseIssuesMessageComposer;
@@ -448,13 +448,13 @@
             }
             if (_local_3._Str_5216() != null)
             {
-                this._moderationManager.connection.send(new _Str_7202(_local_3._Str_5216()._Str_2869, -1, _arg_2));
+                this._moderationManager.connection.send(new ModToolSanctionComposer(_local_3._Str_5216()._Str_2869, -1, _arg_2));
             }
         }
 
         public function requestSanctionDataForAccount(k:int, _arg_2:int):void
         {
-            this._moderationManager.connection.send(new _Str_7202(-1, k, _arg_2));
+            this._moderationManager.connection.send(new ModToolSanctionComposer(-1, k, _arg_2));
         }
 
         public function updateSanctionData(k:int, _arg_2:int, _arg_3:CfhSanctionTypeData):void

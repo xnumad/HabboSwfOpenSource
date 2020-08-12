@@ -762,7 +762,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModeratorActionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.GetModeratorUserInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModMessageMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7202;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.ModToolSanctionComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.GetCfhChatlogMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomChatlogMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModAlertMessageComposer;
@@ -1566,7 +1566,7 @@
             OUTGOING_PACKETS[1371] = GetBadgePointLimitsComposer;
             OUTGOING_PACKETS[1379] = _Str_6202;
             OUTGOING_PACKETS[1391] = GetUserChatlogMessageComposer;
-            OUTGOING_PACKETS[1392] = _Str_7202;
+            OUTGOING_PACKETS[1392] = ModToolSanctionComposer;
             OUTGOING_PACKETS[1397] = ModerateThreadMessageComposer;
             OUTGOING_PACKETS[1411] = _Str_10231;
             OUTGOING_PACKETS[1412] = _Str_7494;
