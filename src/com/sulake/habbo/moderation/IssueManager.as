@@ -90,7 +90,7 @@
             var _local_4:Array = this._bundles.getValues();
             for each (_local_6 in _local_4)
             {
-                if (((_local_6.state == IssueMessageData._Str_5035) && ((_local_5 == null) || (this._Str_25768(_local_6, _local_5)))))
+                if (((_local_6.state == IssueMessageData._Str_5035) && ((_local_5 == null) || (this.isBundleHigherPriorityOrOlder(_local_6, _local_5)))))
                 {
                     _local_5 = _local_6;
                 }
@@ -102,7 +102,7 @@
             this._Str_21541(_local_5.id, k, _arg_2, _arg_3);
         }
 
-        private function _Str_25768(k:IssueBundle, _arg_2:IssueBundle):Boolean
+        private function isBundleHigherPriorityOrOlder(k:IssueBundle, _arg_2:IssueBundle):Boolean
         {
             if (k.highestPriority < _arg_2.highestPriority)
             {
