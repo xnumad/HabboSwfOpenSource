@@ -143,7 +143,7 @@
             _local_2.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592));
             _local_2.addHabboConnectionMessageEvent(new _Str_5767(this.onCompetitionData));
             _local_2.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3992(this._Str_7358));
+            _local_2.addHabboConnectionMessageEvent(new _Str_3992(this.onFlatCreated));
             _local_2.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485));
             _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect));
             _local_2.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating));
@@ -353,7 +353,7 @@
             }
         }
 
-        private function _Str_7358(k:IMessageEvent):void
+        private function onFlatCreated(k:IMessageEvent):void
         {
             var _local_2:_Str_5936 = _Str_3992(k).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ((("Flat created: " + _local_2.flatId) + ", ") + _local_2._Str_18439));

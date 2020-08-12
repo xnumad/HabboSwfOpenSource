@@ -124,7 +124,7 @@
             this._settingsCtrl.prepare(this._window);
         }
 
-        public function _Str_7358(k:int, _arg_2:String):void
+        public function onFlatCreated(k:int, _arg_2:String):void
         {
             if (((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data.exists))))
             {

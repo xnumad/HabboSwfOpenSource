@@ -171,7 +171,7 @@
             this.addMessageEvent(new GuildMemberMgmtFailedMessageEvent(this._guildMembersWindowCtrl._Str_23412));
             this.addMessageEvent(new RelationshipStatusInfo(this._Str_18561));
             this.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails));
-            this.addMessageEvent(new _Str_3992(this._Str_7358));
+            this.addMessageEvent(new _Str_3992(this.onFlatCreated));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new GuildCreatedMessageEvent(this._Str_24985));
             this.addMessageEvent(new GuildMemberFurniCountInHQMessageEvent(this._Str_25619));
@@ -434,10 +434,10 @@
             this._avatarId = _local_2.id;
         }
 
-        private function _Str_7358(k:IMessageEvent):void
+        private function onFlatCreated(k:IMessageEvent):void
         {
             var _local_2:_Str_5936 = _Str_3992(k).getParser();
-            this._guildManagementWindowCtrl._Str_7358(_local_2.flatId, _local_2._Str_18439);
+            this._guildManagementWindowCtrl.onFlatCreated(_local_2.flatId, _local_2._Str_18439);
         }
 
         private function _Str_24985(k:IMessageEvent):void
