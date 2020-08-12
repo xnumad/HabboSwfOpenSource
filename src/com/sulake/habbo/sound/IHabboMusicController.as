@@ -7,7 +7,7 @@
         function getRoomItemPlaylist(_arg_1:int=-1):IPlayListController;
         function getSongDiskInventorySize():int;
         function getSongDiskInventoryDiskId(_arg_1:int):int;
-        function _Str_20038(_arg_1:int):int;
+        function getSongDiskInventorySongId(_arg_1:int):int;
         function _Str_3255(_arg_1:int):ISongInfo;
         function _Str_6665(_arg_1:int):int;
         function _Str_9539(_arg_1:int, _arg_2:int, _arg_3:Number=0, _arg_4:Number=0, _arg_5:Number=0.5, _arg_6:Number=0.5):Boolean;
