@@ -66,7 +66,7 @@
             this._window.findChildByName("request_membership_button").procedure = this._Str_11995;
         }
 
-        private function _Str_24132(k:IWindowContainer):void
+        private function attachWindow(k:IWindowContainer):void
         {
             if (k.getChildIndex(this._window) == -1)
             {
@@ -78,7 +78,7 @@
         {
             this._selectedGroup = _arg_2;
             this.prepareWindow(k);
-            this._Str_24132(k);
+            this.attachWindow(k);
             var _local_3:IWindow = this._window.findChildByName("group_decorate_icon_region");
             var _local_4:IWindow = this._window.findChildByName("group_name");
             _local_4.caption = _arg_2.groupName;
