@@ -274,7 +274,7 @@
             return false;
         }
 
-        public function _Str_14206(k:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):Boolean
+        public function reportPhoto(k:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):Boolean
         {
             if (this._callForHelpManager != null)
             {
@@ -283,7 +283,7 @@
                     this.windowManager.alert("${generic.alert.title}", "${help.cfh.error.notopic}", 0, null);
                     return false;
                 }
-                this._callForHelpManager._Str_14206(k, _arg_2, _arg_3, _arg_4, _arg_5);
+                this._callForHelpManager.reportPhoto(k, _arg_2, _arg_3, _arg_4, _arg_5);
                 return true;
             }
             return false;

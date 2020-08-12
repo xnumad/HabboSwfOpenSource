@@ -661,7 +661,7 @@
                     }
                     if (this.getType() == PHOTO_POSTER)
                     {
-                        _local_7 = this._help._Str_14206(this._extraDataID, _local_3, this._roomEngine.activeRoomId, this._senderId, this._roomObjectID);
+                        _local_7 = this._help.reportPhoto(this._extraDataID, _local_3, this._roomEngine.activeRoomId, this._senderId, this._roomObjectID);
                     }
                     else
                     {
