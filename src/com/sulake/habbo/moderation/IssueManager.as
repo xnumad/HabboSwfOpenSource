@@ -235,7 +235,7 @@
             }
             if (this._handleQueue.indexOf(k._Str_2869) != -1)
             {
-                this._Str_16335(_local_3.id);
+                this.handleBundle(_local_3.id);
                 _local_5 = this._moderationManager.sessionDataManager.userId;
                 if (_local_5 != k._Str_5547)
                 {
@@ -372,7 +372,7 @@
             return _local_2;
         }
 
-        public function _Str_16335(k:int):void
+        public function handleBundle(k:int):void
         {
             var _local_5:int;
             var _local_2:IssueBundle = (this._bundles.getValue(k) as IssueBundle);
@@ -544,7 +544,7 @@
                 this._Str_15446("issue manager pick next");
                 return;
             }
-            this._Str_16335(_local_3.id);
+            this.handleBundle(_local_3.id);
         }
 
         public function issuePickFailed(k:Array):Boolean

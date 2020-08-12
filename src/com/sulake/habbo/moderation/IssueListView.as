@@ -197,7 +197,7 @@
             {
                 return;
             }
-            this._issueManager._Str_16335(k.window.id);
+            this._issueManager.handleBundle(k.window.id);
         }
 
         private function _Str_15257(k:WindowMouseEvent):void
