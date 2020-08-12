@@ -49,7 +49,7 @@
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SavedSearch;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorSavedSearchesParser;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
-    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator.NewNavigatorSearchComposer;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddSavedSearchComposer;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorDeleteSavedSearchComposer;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
@@ -335,7 +335,7 @@
             {
                 this._lastSearchCode = k;
                 this._lastFilteringData = _arg_2;
-                this._communication.connection.send(new _Str_11428(k, _arg_2));
+                this._communication.connection.send(new NewNavigatorSearchComposer(k, _arg_2));
                 this.trackEventLog("search", "Search", _Str_6560(k, _arg_2));
             }
             this.open();

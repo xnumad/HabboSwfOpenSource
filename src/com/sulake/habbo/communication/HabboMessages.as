@@ -240,7 +240,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NewNavigatorInitComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorRemoveCollapsedCategoryMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
+	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NewNavigatorSearchComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddSavedSearchComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddCollapsedCategoryMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorSetSearchCodeViewModeMessageComposer;
@@ -1714,7 +1714,7 @@
             OUTGOING_PACKETS[248] = MoveObjectMessageComposer;
             OUTGOING_PACKETS[2486] = GetDailyQuestMessageComposer;
             OUTGOING_PACKETS[2487] = _Str_12290;
-            OUTGOING_PACKETS[249] = _Str_11428;
+            OUTGOING_PACKETS[249] = NewNavigatorSearchComposer;
             OUTGOING_PACKETS[2490] = UniqueIDMessageComposer;
             OUTGOING_PACKETS[2492] = _Str_7640;
             OUTGOING_PACKETS[2501] = _Str_4981;
