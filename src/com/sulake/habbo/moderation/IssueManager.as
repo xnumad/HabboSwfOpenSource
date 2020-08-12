@@ -439,7 +439,7 @@
             this.sendCloseDefaultAction(_local_4, _local_5, _arg_2);
         }
 
-        public function _Str_16247(k:int, _arg_2:int):void
+        public function requestSanctionData(k:int, _arg_2:int):void
         {
             var _local_3:IssueBundle = (this._bundles.getValue(k) as IssueBundle);
             if (_local_3 == null)

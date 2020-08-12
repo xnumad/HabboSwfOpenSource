@@ -169,7 +169,7 @@
             {
                 _local_3.disable();
             }
-            this._moderationManager.issueManager._Str_16247(this._issueBundle.id, -1);
+            this._moderationManager.issueManager.requestSanctionData(this._issueBundle.id, -1);
             this._Str_17163();
             this._selectedIssue = this._issueBundle._Str_5216();
             this._callerUserInfo = new UserInfoCtrl(this._window, this._moderationManager, this._selectedIssue, this);
@@ -178,7 +178,7 @@
             if (((this._selectedIssue.categoryId == _Str_18676) && (this._selectedIssue._Str_7437 == _Str_13006)))
             {
                 this._topicDropdown.selection = this._sexualTalkTopicItemIndex;
-                this._moderationManager.issueManager._Str_16247(this._issueBundle.id, _Str_12881);
+                this._moderationManager.issueManager.requestSanctionData(this._issueBundle.id, _Str_12881);
             }
             var _local_4:IWindowContainer = IWindowContainer(this._window.findChildByName("reported_user_info"));
             if (this._issueBundle.reportedUserId > 0)
@@ -456,7 +456,7 @@
         {
             var _local_2:int = this._topicDropdown.selection;
             var _local_3:int = this._topicIdByDropdownIdx[_local_2];
-            this._moderationManager.issueManager._Str_16247(this._issueBundle.id, _local_3);
+            this._moderationManager.issueManager.requestSanctionData(this._issueBundle.id, _local_3);
         }
 
         private function setProc(k:String, _arg_2:Function):void
