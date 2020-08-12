@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceTokensMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.MakeOfferMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
-    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceConfigurationMessageComposer;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.communication.messages.IMessageComposer;
@@ -266,7 +266,7 @@
 
         public function _Str_4889():void
         {
-            this.send(new _Str_7525());
+            this.send(new GetMarketplaceConfigurationMessageComposer());
         }
 
         public function getOfferItem():IFurnitureItem

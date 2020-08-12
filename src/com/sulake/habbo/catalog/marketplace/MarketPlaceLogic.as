@@ -5,7 +5,7 @@
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
-    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceConfigurationMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffer;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketPlaceOffersParser;
@@ -107,7 +107,7 @@
             {
                 return;
             }
-            this._catalog.connection.send(new _Str_7525());
+            this._catalog.connection.send(new GetMarketplaceConfigurationMessageComposer());
         }
 
         private function showConfirmation(k:int, _arg_2:MarketPlaceOfferData):void

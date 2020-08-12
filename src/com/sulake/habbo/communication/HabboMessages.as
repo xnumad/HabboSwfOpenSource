@@ -135,7 +135,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11938;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.RedeemMarketplaceOfferCreditsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
+	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceConfigurationMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.MakeOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceTokensMessageComposer;
@@ -1732,7 +1732,7 @@
             OUTGOING_PACKETS[2594] = _Str_11905;
             OUTGOING_PACKETS[2595] = _Str_4038;
             OUTGOING_PACKETS[2596] = PongMessageComposer;
-            OUTGOING_PACKETS[2597] = _Str_7525;
+            OUTGOING_PACKETS[2597] = GetMarketplaceConfigurationMessageComposer;
             OUTGOING_PACKETS[2624] = CommandBotComposer;
             OUTGOING_PACKETS[2638] = OpenWelcomeGiftComposer;
             OUTGOING_PACKETS[2647] = PlacePetMessageComposer;
