@@ -125,7 +125,7 @@
 
         private function _Str_17386(k:ChangeEmailResultEvent):void
         {
-            this._Str_16375(true, k.getParser().result);
+            this.setEmailErrorStatus(true, k.getParser().result);
         }
 
         private function _Str_24186(k:_Str_7229):void
@@ -722,7 +722,7 @@
                     this.getEmailContainer().findChildByName("change_email_region").procedure = this.onChangeEmail;
                     this.getEmailText().procedure = this._Str_25645;
                     this._habboTalent.send(new _Str_10302());
-                    this._Str_16375(false);
+                    this.setEmailErrorStatus(false);
                 }
             }
             else
@@ -895,11 +895,11 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_FOCUSED)
             {
-                this._Str_16375(false);
+                this.setEmailErrorStatus(false);
             }
         }
 
-        private function _Str_16375(k:Boolean, _arg_2:int=0):void
+        private function setEmailErrorStatus(k:Boolean, _arg_2:int=0):void
         {
             if (this.getEmailContainer() == null)
             {
