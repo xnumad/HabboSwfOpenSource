@@ -51,7 +51,7 @@
 
         public function onRoomInfo(k:GuestRoomData):void
         {
-            if (!this._manager._Str_13386)
+            if (!this._manager.groupRoomInfoEnabled)
             {
                 return;
             }
@@ -78,7 +78,7 @@
 
         public function onGroupDetails(k:HabboGroupDetailsData):void
         {
-            if (!this._manager._Str_13386)
+            if (!this._manager.groupRoomInfoEnabled)
             {
                 return;
             }

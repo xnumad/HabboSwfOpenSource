@@ -562,7 +562,7 @@
             return this._groupRoomInfoCtrl;
         }
 
-        public function get _Str_13386():Boolean
+        public function get groupRoomInfoEnabled():Boolean
         {
             return getBoolean("groupRoomInfo.enabled");
         }
@@ -574,12 +574,12 @@
 
         public function get groupRoomInfoBadgeEnabled():Boolean
         {
-            return (this._Str_13386) && (getBoolean("groupRoomInfo.badge.enabled"));
+            return (this.groupRoomInfoEnabled) && (getBoolean("groupRoomInfo.badge.enabled"));
         }
 
         public function get toolbarAttachEnabled():Boolean
         {
-            return (this._Str_13386) && (getBoolean("groupRoomInfo.attach.enabled"));
+            return (this.groupRoomInfoEnabled) && (getBoolean("groupRoomInfo.attach.enabled"));
         }
 
         public function get isActivityDisplayEnabled():Boolean
