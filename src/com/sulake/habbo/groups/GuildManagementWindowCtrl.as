@@ -494,7 +494,7 @@
             {
                 this._manager.trackGoogle("groupPurchase", "buyGroup");
             }
-            this._Str_23933();
+            this.sendCreateGuildMessage();
         }
 
         private function onGetVip(k:WindowEvent, _arg_2:IWindow):void
@@ -611,7 +611,7 @@
             }
         }
 
-        private function _Str_23933():void
+        private function sendCreateGuildMessage():void
         {
             var k:String = ITextFieldWindow(this._window.findChildByName("name_txt")).text;
             var _local_2:String = ITextFieldWindow(this._window.findChildByName("desc_txt")).text;
