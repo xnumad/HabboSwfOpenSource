@@ -60,7 +60,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
     import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsData;
     import com.sulake.habbo.communication.messages.parser.navigator.RoomEventMessageParser;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6280;
+    import com.sulake.habbo.communication.messages.parser.navigator.CanCreateRoomEventMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
@@ -255,7 +255,7 @@
         private function _Str_17011(k:IMessageEvent):void
         {
             var _local_3:SimpleAlertView;
-            var _local_2:_Str_6280 = _Str_5212(k).getParser();
+            var _local_2:CanCreateRoomEventMessageParser = _Str_5212(k).getParser();
             Logger.log(("CAN CREATE EVENT: " + _local_2._Str_13420));
             if (_local_2._Str_13420)
             {
