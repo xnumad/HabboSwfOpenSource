@@ -120,7 +120,7 @@
 
         public function show():void
         {
-            this._musicController._Str_14232();
+            this._musicController.requestUserSongDisks();
             var k:IPlayListController = this._musicController.getRoomItemPlaylist();
             if (k != null)
             {

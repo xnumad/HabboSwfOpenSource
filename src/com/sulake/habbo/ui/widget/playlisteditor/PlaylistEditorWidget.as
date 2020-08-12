@@ -247,7 +247,7 @@
             if (!this._Str_2314.window.visible)
             {
                 this._Str_2314.show();
-                this._soundManager._Str_2774._Str_14232();
+                this._soundManager._Str_2774.requestUserSongDisks();
                 _local_2 = this._soundManager._Str_2774.getRoomItemPlaylist();
                 if (_local_2 != null)
                 {
@@ -275,7 +275,7 @@
             }
             if (this._Str_2314.window.visible)
             {
-                this._soundManager._Str_2774._Str_14232();
+                this._soundManager._Str_2774.requestUserSongDisks();
             }
         }
 

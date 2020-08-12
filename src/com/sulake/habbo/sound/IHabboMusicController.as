@@ -14,7 +14,7 @@
         function stop(_arg_1:int):void;
         function addSongInfoRequest(_arg_1:int):void;
         function requestSongInfoWithoutSamples(_arg_1:int):void;
-        function _Str_14232():void;
+        function requestUserSongDisks():void;
         function _Str_21359(_arg_1:int):void;
         function _Str_7935(_arg_1:Number):void;
         function _Str_20915(_arg_1:Array):void;

@@ -448,7 +448,7 @@
             return _local_2;
         }
 
-        public function _Str_14232():void
+        public function requestUserSongDisks():void
         {
             if (this._connection == null)
             {
