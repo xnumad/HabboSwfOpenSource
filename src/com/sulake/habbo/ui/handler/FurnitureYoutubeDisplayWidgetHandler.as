@@ -44,7 +44,7 @@
         {
             this._container = k;
             //this.addMessageEvent(new _Str_8731(this.onVideo));
-            //this.addMessageEvent(new YoutubeDisplayPlaylistsEvent(this._Str_24746));
+            //this.addMessageEvent(new YoutubeDisplayPlaylistsEvent(this.onPlaylists));
             //this.addMessageEvent(new _Str_9325(this.onControlVideo));
         }
 
@@ -80,7 +80,7 @@
             this._widget._Str_22371(_local_2.furniId, _local_2.commandId);
         }
 
-        private function _Str_24746(k:YoutubeDisplayPlaylistsEvent):void
+        private function onPlaylists(k:YoutubeDisplayPlaylistsEvent):void
         {
             var _local_2:YoutubeDisplayPlaylistsMessageParser = k.getParser();
             this._widget._Str_24455(_local_2.furniId, _local_2.playlists, _local_2.unknownString);
