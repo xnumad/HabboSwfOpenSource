@@ -424,7 +424,7 @@
             }
         }
 
-        public function _Str_25084(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):void
+        public function updateForumSettings(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):void
         {
             if (this._communicationManager)
             {

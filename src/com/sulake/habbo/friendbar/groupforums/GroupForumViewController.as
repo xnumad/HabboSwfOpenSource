@@ -157,7 +157,7 @@
 
         private function _Str_10704(k:WindowMouseEvent):void
         {
-            this._controller._Str_25084(this._Str_2381.groupId, this._Str_6730, this._Str_6541, this._Str_9497, this._Str_9468);
+            this._controller.updateForumSettings(this._Str_2381.groupId, this._Str_6730, this._Str_6541, this._Str_9497, this._Str_9468);
             this.dispose();
         }
 
