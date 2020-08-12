@@ -114,10 +114,10 @@
             this._window.findChildByName("buy_button").procedure = this._Str_12134;
             this._window.findChildByName("vip_required_region").procedure = this._Str_24944;
             this._window.addEventListener(WindowEvent.WINDOW_EVENT_DEACTIVATED, this._Str_24784);
-            this._window.findChildByName("edit_tab_1").procedure = this._Str_5308;
-            this._window.findChildByName("edit_tab_2").procedure = this._Str_5308;
-            this._window.findChildByName("edit_tab_3").procedure = this._Str_5308;
-            this._window.findChildByName("edit_tab_5").procedure = this._Str_5308;
+            this._window.findChildByName("edit_tab_1").procedure = this.onTab;
+            this._window.findChildByName("edit_tab_2").procedure = this.onTab;
+            this._window.findChildByName("edit_tab_3").procedure = this.onTab;
+            this._window.findChildByName("edit_tab_5").procedure = this.onTab;
             this._window.findChildByName("reset_badge").procedure = this._Str_24654;
             this._window.findChildByName("reset_colors").procedure = this._Str_25014;
             this._window.findChildByName("step_1_members_region").procedure = this._Str_12428;
@@ -390,7 +390,7 @@
             this._settingsCtrl.refresh(this._data);
         }
 
-        private function _Str_5308(k:WindowEvent, _arg_2:IWindow):void
+        private function onTab(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((!(k.type == WindowEvent.WINDOW_EVENT_SELECT)) || (_arg_2.id == this._step)))
             {

@@ -439,11 +439,11 @@
             }
             if (!this._Str_16440)
             {
-                this._window.findChildByName("tab_1").procedure = this._Str_5308;
-                this._window.findChildByName("tab_2").procedure = this._Str_5308;
-                this._window.findChildByName("tab_3").procedure = this._Str_5308;
-                this._window.findChildByName("tab_4").procedure = this._Str_5308;
-                this._window.findChildByName("tab_5").procedure = this._Str_5308;
+                this._window.findChildByName("tab_1").procedure = this.onTab;
+                this._window.findChildByName("tab_2").procedure = this.onTab;
+                this._window.findChildByName("tab_3").procedure = this.onTab;
+                this._window.findChildByName("tab_4").procedure = this.onTab;
+                this._window.findChildByName("tab_5").procedure = this.onTab;
             }
             this._window.findChildByName("builders_faq_button").procedure = this._Str_22624;
             this._Str_19901();
@@ -1225,7 +1225,7 @@
             this._navigator.send(new RemoveAllRightsMessageComposer(this._Str_2449));
         }
 
-        private function _Str_5308(k:WindowEvent, _arg_2:IWindow):void
+        private function onTab(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
