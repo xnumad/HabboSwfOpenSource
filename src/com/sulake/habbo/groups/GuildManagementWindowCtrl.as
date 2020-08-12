@@ -63,7 +63,7 @@
         {
             this._manager = k;
             this._badgeEditorCtrl = new BadgeEditorCtrl(this._manager);
-            this._primaryColorCtrl = new ColorGridCtrl(this._manager, this._Str_25587);
+            this._primaryColorCtrl = new ColorGridCtrl(this._manager, this.onPrimaryColorSelected);
             this._secondaryColorCtrl = new ColorGridCtrl(this._manager, this._Str_22873);
             this._settingsCtrl = new GuildSettingsCtrl();
         }
@@ -704,7 +704,7 @@
             }
         }
 
-        public function _Str_25587(k:ColorGridCtrl):void
+        public function onPrimaryColorSelected(k:ColorGridCtrl):void
         {
             var _local_3:_Str_2792;
             var _local_2:IWindow = this._window.findChildByName("guild_color_primary_color_top");
