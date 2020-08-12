@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10288;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_5697;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10793;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_10785;
+    import com.sulake.habbo.communication.messages.outgoing.users.UnignoreUserMessageComposer;
 
     public class IgnoredUsersManager implements IDisposable 
     {
@@ -103,7 +103,7 @@
 
         public function unignoreUser(k:String):void
         {
-            this._sessionDataManager.send(new _Str_10785(k));
+            this._sessionDataManager.send(new UnignoreUserMessageComposer(k));
         }
 
         public function isIgnored(k:String):Boolean

@@ -470,7 +470,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10645;
 	import com.sulake.habbo.communication.messages.outgoing.users.RespectUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10770;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10785;
+	import com.sulake.habbo.communication.messages.outgoing.users.UnignoreUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10793;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10887;
@@ -1642,7 +1642,7 @@
             OUTGOING_PACKETS[2012] = _Str_11402;
             OUTGOING_PACKETS[2031] = _Str_18219;
             OUTGOING_PACKETS[2041] = _Str_7084;
-            OUTGOING_PACKETS[2061] = _Str_10785;
+            OUTGOING_PACKETS[2061] = UnignoreUserMessageComposer;
             OUTGOING_PACKETS[2064] = RemoveRightsMessageComposer;
             OUTGOING_PACKETS[2067] = CloseIssuesMessageComposer;
             OUTGOING_PACKETS[2068] = PublishPhotoMessageComposer;
