@@ -528,7 +528,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomTextSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.AddFavouriteRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7214;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.CanCreateRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7413;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateHomeRoomMessageComposer;
@@ -1659,7 +1659,7 @@
             OUTGOING_PACKETS[2110] = NewNavigatorInitComposer;
             OUTGOING_PACKETS[2115] = ExtendRentOrBuyoutStripItemMessageComposer;
             OUTGOING_PACKETS[2127] = GetTalentTrackLevelMessageComposer;
-            OUTGOING_PACKETS[2128] = _Str_7214;
+            OUTGOING_PACKETS[2128] = CanCreateRoomMessageComposer;
             OUTGOING_PACKETS[2138] = GetRelationshipStatusInfoMessageComposer;
             OUTGOING_PACKETS[2144] = SpinWheelOfFortuneMessageComposer;
             OUTGOING_PACKETS[2150] = _Str_11580;

@@ -7,7 +7,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7214;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.CanCreateRoomMessageComposer;
     import com.sulake.core.window.events.*;
 
     public class MyRoomsTabPageDecorator implements ITabPageDecorator 
@@ -64,7 +64,7 @@
 
         private function onCreateRoomClick(k:WindowEvent):void
         {
-            this._navigator.send(new _Str_7214());
+            this._navigator.send(new CanCreateRoomMessageComposer());
         }
 
         private function _Str_22831():void

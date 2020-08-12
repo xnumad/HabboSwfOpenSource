@@ -6,7 +6,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import flash.utils.Timer;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7214;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.CanCreateRoomMessageComposer;
     import com.sulake.core.window.components.ITextWindow;
     import flash.geom.Point;
     import flash.events.TimerEvent;
@@ -90,7 +90,7 @@
 
         private function onCreateRoomClick(k:WindowMouseEvent):void
         {
-            this._habboNavigator.send(new _Str_7214());
+            this._habboNavigator.send(new CanCreateRoomMessageComposer());
             this._Str_8696();
         }
 
