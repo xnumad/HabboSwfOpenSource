@@ -6,7 +6,7 @@
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12509;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenMysteryTrophyMessageComposer;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.communication.connection.IConnection;
 
@@ -94,7 +94,7 @@
                     return;
                 case OK:
                     _local_2 = this._Str_22334();
-                    this.connection.send(new _Str_12509(this._requestRoomObjectId, _local_2));
+                    this.connection.send(new OpenMysteryTrophyMessageComposer(this._requestRoomObjectId, _local_2));
                     this.close();
                     return;
             }

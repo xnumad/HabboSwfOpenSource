@@ -723,7 +723,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SpinWheelOfFortuneMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12348;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12374;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12509;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenMysteryTrophyMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ControlYoutubeDisplayPlaybackMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_7290;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.AddSpamWallPostItMessageComposer;
@@ -1796,7 +1796,7 @@
             OUTGOING_PACKETS[3045] = UpdateThreadMessageComposer;
             OUTGOING_PACKETS[3050] = RemoveJukeboxDiskComposer;
             OUTGOING_PACKETS[3060] = _Str_7634;
-            OUTGOING_PACKETS[3074] = _Str_12509;
+            OUTGOING_PACKETS[3074] = OpenMysteryTrophyMessageComposer;
             OUTGOING_PACKETS[3077] = RequestABadgeComposer;
             OUTGOING_PACKETS[3082] = GetSongInfoMessageComposer;
             OUTGOING_PACKETS[3086] = GetCraftingRecipesAvailableComposer;
