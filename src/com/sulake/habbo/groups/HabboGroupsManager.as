@@ -577,7 +577,7 @@
             return (this._Str_13386) && (getBoolean("groupRoomInfo.badge.enabled"));
         }
 
-        public function get _Str_23231():Boolean
+        public function get toolbarAttachEnabled():Boolean
         {
             return (this._Str_13386) && (getBoolean("groupRoomInfo.attach.enabled"));
         }

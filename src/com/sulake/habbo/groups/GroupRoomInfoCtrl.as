@@ -201,7 +201,7 @@
 
         private function _Str_8061():Boolean
         {
-            return (((!(this._manager == null)) && (!(this._manager.toolbar == null))) && (!(this._manager.toolbar.extensionView == null))) && (this._manager._Str_23231);
+            return (((!(this._manager == null)) && (!(this._manager.toolbar == null))) && (!(this._manager.toolbar.extensionView == null))) && (this._manager.toolbarAttachEnabled);
         }
     }
 }
