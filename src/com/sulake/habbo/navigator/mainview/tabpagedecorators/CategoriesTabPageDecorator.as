@@ -39,7 +39,7 @@
             return null;
         }
 
-        public function _Str_8512(k:String):String
+        public function processSearchParam(k:String):String
         {
             return "";
         }
