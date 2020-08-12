@@ -30,7 +30,7 @@
         {
             this._habboTalent = k;
             this._controller = _arg_2;
-            this._talentTrack = this._controller._Str_19628;
+            this._talentTrack = this._controller.talentTrack;
             this._Str_24296();
         }
 

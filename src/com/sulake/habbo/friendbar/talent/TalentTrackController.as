@@ -99,7 +99,7 @@
             return this._window;
         }
 
-        public function get _Str_19628():TalentTrack
+        public function get talentTrack():TalentTrack
         {
             return this._talentTrack;
         }
@@ -690,7 +690,7 @@
             {
                 return;
             }
-            this._habboTalent.tracking.trackEventLog("Talent", this._Str_19628.name, "talent.progress.show", _local_2.badgeCode);
+            this._habboTalent.tracking.trackEventLog("Talent", this.talentTrack.name, "talent.progress.show", _local_2.badgeCode);
             if (_local_2.badgeCode == TalentTrackTask.GUIDE_ADVERTISEMENT_READER)
             {
                 this.setupTourAdvertisement();
