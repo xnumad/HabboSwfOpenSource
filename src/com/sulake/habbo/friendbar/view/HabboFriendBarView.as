@@ -362,7 +362,7 @@
                     {
                         if (_local_6 == 1)
                         {
-                            _local_11 = this._friendBarData._Str_21160(0);
+                            _local_11 = this._friendBarData.getFriendRequestAt(0);
                             _local_13 = NewFriendRequestTab._Str_2363(_local_11);
                             this._Str_2868.push(_local_13);
                             _local_2.addListItem(_local_13.window);

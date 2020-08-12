@@ -182,7 +182,7 @@
             return (this._friendRequests) ? this._friendRequests.length : 0;
         }
 
-        public function _Str_21160(k:int):IFriendRequest
+        public function getFriendRequestAt(k:int):IFriendRequest
         {
             return (this._friendRequests) ? this._friendRequests[k] : null;
         }
