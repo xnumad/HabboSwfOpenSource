@@ -144,7 +144,7 @@
             this._container.connection.send(new RentableSpaceStatusMessageComposer(k));
         }
 
-        public function _Str_24966(k:int):void
+        public function cancelRent(k:int):void
         {
             this._container.connection.send(new _Str_10101(k));
         }
