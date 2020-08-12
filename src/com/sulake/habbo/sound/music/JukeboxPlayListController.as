@@ -65,7 +65,7 @@
             return this._currentEntryId;
         }
 
-        public function get _Str_15560():int
+        public function get playPosition():int
         {
             return this._playPosition;
         }

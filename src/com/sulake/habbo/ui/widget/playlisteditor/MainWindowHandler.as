@@ -299,7 +299,7 @@
                     }
                     _local_4++;
                 }
-                _local_3 = k._Str_15560;
+                _local_3 = k.playPosition;
             }
             this._playListEditorView.refresh(_local_2, _local_3);
         }

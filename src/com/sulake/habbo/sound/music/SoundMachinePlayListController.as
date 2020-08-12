@@ -75,7 +75,7 @@
             return this._playListEntries.length;
         }
 
-        public function get _Str_15560():int
+        public function get playPosition():int
         {
             return -1;
         }
@@ -90,7 +90,7 @@
             return this._isPlaying;
         }
 
-        public function set _Str_15560(k:int):void
+        public function set playPosition(k:int):void
         {
         }
 

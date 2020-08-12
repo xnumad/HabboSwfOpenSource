@@ -6,7 +6,7 @@
     {
         function get priority():int;
         function get length():int;
-        function get _Str_15560():int;
+        function get playPosition():int;
         function get _Str_13794():int;
         function get isPlaying():Boolean;
         function _Str_4666(_arg_1:int):ISongInfo;
