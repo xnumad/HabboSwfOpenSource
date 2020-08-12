@@ -530,7 +530,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.CanCreateRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7413;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.GetUserEventCatsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateHomeRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetUserFlatCatsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.SetRoomSessionTagsMessageComposer;
@@ -1613,7 +1613,7 @@
             OUTGOING_PACKETS[1756] = GetSellablePetPalettesComposer;
             OUTGOING_PACKETS[1764] = UpdateGuildColorsMessageComposer;
             OUTGOING_PACKETS[1773] = PollRejectComposer;
-            OUTGOING_PACKETS[1782] = _Str_7413;
+            OUTGOING_PACKETS[1782] = GetUserEventCatsMessageComposer;
             OUTGOING_PACKETS[1786] = RoomsWhereMyFriendsAreSearchMessageComposer;
             OUTGOING_PACKETS[1820] = DeselectFavouriteHabboGroupMessageComposer;
             OUTGOING_PACKETS[1822] = NewUserExperienceGetGiftsMessageComposer;

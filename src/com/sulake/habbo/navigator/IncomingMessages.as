@@ -53,7 +53,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetUserFlatCatsMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7413;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.GetUserEventCatsMessageComposer;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.parser.navigator.CategoriesWithVisitorCountParser;
     import com.sulake.habbo.communication.messages.parser.navigator.OfficialRoomsMessageParser;
@@ -192,7 +192,7 @@
             var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
             this.data.avatarId = _local_2.id;
             this._navigator.send(new GetUserFlatCatsMessageComposer());
-            this._navigator.send(new _Str_7413());
+            this._navigator.send(new GetUserEventCatsMessageComposer());
         }
 
         private function onUserRights(k:IMessageEvent):void
