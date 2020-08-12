@@ -61,7 +61,7 @@
         {
             this._habboHelp = k;
             this._chatReportController = new ChatReportController(this._habboHelp, this.onChatReportEvent);
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7837(this._Str_25659));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7837(this.onCallForHelpReply));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7620(this._Str_23792));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8337(this._Str_25598));
         }
@@ -652,7 +652,7 @@
             }
         }
 
-        private function _Str_25659(k:IMessageEvent):void
+        private function onCallForHelpReply(k:IMessageEvent):void
         {
             var _local_2:_Str_7877 = _Str_7837(k).getParser();
             this._habboHelp.windowManager.alert("${help.cfh.reply.title}", _local_2.message, 0, null);
