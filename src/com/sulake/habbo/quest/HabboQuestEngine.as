@@ -462,7 +462,7 @@
             }
         }
 
-        public function _Str_23387():void
+        public function showQuests():void
         {
         }
 
