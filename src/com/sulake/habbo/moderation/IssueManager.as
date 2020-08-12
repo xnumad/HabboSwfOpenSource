@@ -457,7 +457,7 @@
             this._moderationManager.connection.send(new _Str_7202(-1, k, _arg_2));
         }
 
-        public function _Str_24202(k:int, _arg_2:int, _arg_3:CfhSanctionTypeData):void
+        public function updateSanctionData(k:int, _arg_2:int, _arg_3:CfhSanctionTypeData):void
         {
             var _local_5:IssueBundle;
             var _local_6:IIssueHandler;

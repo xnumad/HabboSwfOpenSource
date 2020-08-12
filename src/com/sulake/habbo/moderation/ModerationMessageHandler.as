@@ -281,7 +281,7 @@
         {
             var _local_2:CfhSanctionMessageParser = k.getParser();
             Logger.log(("Got sanction data..." + [_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198]));
-            this._moderationManager.issueManager._Str_24202(_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198);
+            this._moderationManager.issueManager.updateSanctionData(_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198);
         }
 
         private function onCfhTopics(k:CfhTopicsInitEvent):void
