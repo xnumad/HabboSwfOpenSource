@@ -112,7 +112,7 @@
             this._window.findChildByName("next_step_button").procedure = this.onNextStep;
             this._window.findChildByName("previous_step_link_region").procedure = this.onPreviousStep;
             this._window.findChildByName("buy_button").procedure = this.onBuy;
-            this._window.findChildByName("vip_required_region").procedure = this._Str_24944;
+            this._window.findChildByName("vip_required_region").procedure = this.onGetVip;
             this._window.addEventListener(WindowEvent.WINDOW_EVENT_DEACTIVATED, this._Str_24784);
             this._window.findChildByName("edit_tab_1").procedure = this.onTab;
             this._window.findChildByName("edit_tab_2").procedure = this.onTab;
@@ -497,7 +497,7 @@
             this._Str_23933();
         }
 
-        private function _Str_24944(k:WindowEvent, _arg_2:IWindow):void
+        private function onGetVip(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
