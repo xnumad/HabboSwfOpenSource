@@ -119,7 +119,7 @@
             this._window.findChildByName("edit_tab_3").procedure = this.onTab;
             this._window.findChildByName("edit_tab_5").procedure = this.onTab;
             this._window.findChildByName("reset_badge").procedure = this._Str_24654;
-            this._window.findChildByName("reset_colors").procedure = this._Str_25014;
+            this._window.findChildByName("reset_colors").procedure = this.onColorReset;
             this._window.findChildByName("step_1_members_region").procedure = this._Str_12428;
             this._settingsCtrl.prepare(this._window);
         }
@@ -406,7 +406,7 @@
             this.refresh();
         }
 
-        private function _Str_25014(k:WindowEvent, _arg_2:IWindow):void
+        private function onColorReset(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
