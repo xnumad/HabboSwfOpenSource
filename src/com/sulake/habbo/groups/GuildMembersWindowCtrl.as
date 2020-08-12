@@ -506,7 +506,7 @@
             this._manager.send(new GetGuildMembersMessageComposer(_local_2.groupId, k, _local_3, _local_4));
         }
 
-        private function _Str_26373(k:WindowEvent, _arg_2:IWindow):void
+        private function onAcceptAll(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
