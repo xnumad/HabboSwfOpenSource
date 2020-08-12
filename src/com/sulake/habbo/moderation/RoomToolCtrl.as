@@ -365,7 +365,7 @@
             {
                 return (k) ? _Str_5691._Str_17489 : _Str_5691._Str_16816;
             }
-            return (k) ? _Str_5691._Str_18408 : _Str_5691._Str_18637;
+            return (k) ? _Str_5691.ACTION_ALERT : _Str_5691._Str_18637;
         }
 
         private function onInputClick(k:WindowEvent, _arg_2:IWindow):void
