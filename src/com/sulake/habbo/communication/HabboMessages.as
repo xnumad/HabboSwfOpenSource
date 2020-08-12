@@ -29,7 +29,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersRewardMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalHallOfFameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetSeasonalQuestsOnlyMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_16291;
+	import com.sulake.habbo.communication.messages.outgoing.quest.RedeemCommunityGoalPrizeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalEarnedPrizesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.ActivateQuestMessageComposer;
@@ -1975,7 +1975,7 @@
             OUTGOING_PACKETS[875] = UpdateFloorPropertiesMessageComposer;
             OUTGOING_PACKETS[882] = ApproveAllMembershipRequestsMessageComposer;
             OUTGOING_PACKETS[887] = _Str_7077;
-            OUTGOING_PACKETS[90] = _Str_16291;
+            OUTGOING_PACKETS[90] = RedeemCommunityGoalPrizeMessageComposer;
             OUTGOING_PACKETS[924] = SetClothingChangeDataMessageComposer;
             OUTGOING_PACKETS[957] = _Str_10281;
             OUTGOING_PACKETS[96] = LatencyPingReportMessageComposer;
