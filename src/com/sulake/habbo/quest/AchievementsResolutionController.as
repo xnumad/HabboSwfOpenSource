@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementResolution;
     import com.sulake.core.window.components.IItemGridWindow;
     import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_4406;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_6768;
+    import com.sulake.habbo.communication.messages.incoming.notifications.AchievementLevelUpData;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.Achievement;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_9826;
@@ -106,7 +106,7 @@
             this._completedView.show(_arg_2, k);
         }
 
-        public function onLevelUp(k:_Str_6768):void
+        public function onLevelUp(k:AchievementLevelUpData):void
         {
             if ((((this._progressView) && (this._progressView.visible)) && (k.type == this._progressView.achievementId)))
             {

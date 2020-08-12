@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.communication.messages.parser.notifications
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_6768;
+    import com.sulake.habbo.communication.messages.incoming.notifications.AchievementLevelUpData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class HabboAchievementNotificationMessageParser implements IMessageParser
     {
-        private var _data:_Str_6768;
+        private var _data:AchievementLevelUpData;
 
 
         public function flush():Boolean
@@ -17,11 +17,11 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._data = new _Str_6768(k);
+            this._data = new AchievementLevelUpData(k);
             return true;
         }
 
-        public function get data():_Str_6768
+        public function get data():AchievementLevelUpData
         {
             return this._data;
         }

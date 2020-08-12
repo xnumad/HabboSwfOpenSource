@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6768 
+    public class AchievementLevelUpData
     {
         private var _type:int;
         private var _level:int;
@@ -17,7 +17,7 @@
         private var _category:String;
         private var _Str_20333:Boolean;
 
-        public function _Str_6768(k:IMessageDataWrapper)
+        public function AchievementLevelUpData(k:IMessageDataWrapper)
         {
             this._type = k.readInteger();
             this._level = k.readInteger();
