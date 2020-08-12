@@ -131,8 +131,8 @@
                 return;
             }
             this._window = IWindowContainer(this._manager.getXmlWindow("group_room_info"));
-            this._window.findChildByName("join_button").procedure = this._Str_11995;
-            this._window.findChildByName("request_membership_button").procedure = this._Str_11995;
+            this._window.findChildByName("join_button").procedure = this.onJoin;
+            this._window.findChildByName("request_membership_button").procedure = this.onJoin;
             this._window.findChildByName("manage_button").procedure = this._Str_24429;
             this._window.findChildByName("title_region").procedure = this._Str_23702;
             this._window.findChildByName("info_region").procedure = this._Str_24561;
@@ -182,7 +182,7 @@
             }
         }
 
-        private function _Str_11995(k:WindowEvent, _arg_2:IWindow):void
+        private function onJoin(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
