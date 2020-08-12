@@ -129,7 +129,7 @@
             if (((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data.exists))))
             {
                 this._data.ownedRooms.splice(0, 0, new RoomEntryData(k, _arg_2, false));
-                this._Str_20779();
+                this.prepareRoomSelection();
                 this.getBaseDropMenu().selection = 0;
             }
         }
@@ -383,7 +383,7 @@
         {
             ITextWindow(this._window.findChildByName("name_txt")).text = this._data.groupName;
             ITextWindow(this._window.findChildByName("desc_txt")).text = this._data.groupDesc;
-            this._Str_20779();
+            this.prepareRoomSelection();
             this._badgeEditorCtrl._Str_15567(this._data.badgeSettings);
             this._primaryColorCtrl._Str_6434(this._data.primaryColorId);
             this._secondaryColorCtrl._Str_6434(this._data.secondaryColorId);
@@ -643,7 +643,7 @@
             return IDropMenuWindow(this._window.findChildByName("base_dropmenu"));
         }
 
-        private function _Str_20779():void
+        private function prepareRoomSelection():void
         {
             var _local_5:RoomEntryData;
             var k:IDropMenuWindow = this.getBaseDropMenu();
