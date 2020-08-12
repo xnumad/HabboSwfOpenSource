@@ -7,7 +7,7 @@
     {
         private var _Str_8140:String;
         private var _level:int;
-        private var _Str_6392:int;
+        private var _maxLevel:int;
 
 
         public function flush():Boolean
@@ -20,7 +20,7 @@
         {
             this._Str_8140 = k.readString();
             this._level = k.readInteger();
-            this._Str_6392 = k.readInteger();
+            this._maxLevel = k.readInteger();
             return true;
         }
 
@@ -36,7 +36,7 @@
 
         public function get _Str_16859():int
         {
-            return this._Str_6392;
+            return this._maxLevel;
         }
     }
 }
