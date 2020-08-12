@@ -215,7 +215,7 @@
                     }
                     else
                     {
-                        this._questEngine._Str_13260();
+                        this._questEngine.goToQuestRooms();
                     }
                 }
             }
@@ -256,7 +256,7 @@
                 this._questEngine._Str_3398._Str_13628.close();
                 if (((this._goToRoomsOnActivate) && (this._questEngine._Str_7575(this._quest))))
                 {
-                    this._questEngine._Str_13260();
+                    this._questEngine.goToQuestRooms();
                 }
             }
         }

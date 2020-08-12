@@ -15,6 +15,6 @@
         function requestQuests():void;
         function get events():IEventDispatcher;
         function activateQuest(_arg_1:int):void;
-        function _Str_13260():void;
+        function goToQuestRooms():void;
     }
 }

@@ -406,7 +406,7 @@
             return this._localization.getLocalization((("quests." + this._Str_9628()) + ".roomids"));
         }
 
-        public function _Str_13260():void
+        public function goToQuestRooms():void
         {
             if (!this._Str_20111())
             {
@@ -717,7 +717,7 @@
             switch (_local_2[1])
             {
                 case "gotorooms":
-                    this._Str_13260();
+                    this.goToQuestRooms();
                     return;
                 case "achievements":
                     if (_local_2.length == 3)
