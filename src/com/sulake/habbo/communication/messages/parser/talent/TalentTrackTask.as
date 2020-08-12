@@ -17,7 +17,7 @@
         private var _requiredLevel:int;
         private var _badgeCode:String;
         private var _state:int;
-        private var _Str_11456:int;
+        private var _currentScore:int;
         private var _Str_20094:int;
 
         public function TalentTrackTask(k:IMessageDataWrapper)
@@ -26,7 +26,7 @@
             this._requiredLevel = k.readInteger();
             this._badgeCode = k.readString();
             this._state = k.readInteger();
-            this._Str_11456 = k.readInteger();
+            this._currentScore = k.readInteger();
             this._Str_20094 = k.readInteger();
         }
 
@@ -52,7 +52,7 @@
 
         public function get _Str_7605():int
         {
-            return this._Str_11456;
+            return this._currentScore;
         }
 
         public function get _Str_15676():int

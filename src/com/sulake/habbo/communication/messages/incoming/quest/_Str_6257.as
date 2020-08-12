@@ -8,7 +8,7 @@
         private var _userName:String;
         private var _figure:String;
         private var _rank:int;
-        private var _Str_11456:int;
+        private var _currentScore:int;
 
         public function _Str_6257(k:IMessageDataWrapper)
         {
@@ -16,7 +16,7 @@
             this._userName = k.readString();
             this._figure = k.readString();
             this._rank = k.readInteger();
-            this._Str_11456 = k.readInteger();
+            this._currentScore = k.readInteger();
         }
 
         public function get userId():int
@@ -41,7 +41,7 @@
 
         public function get _Str_7605():int
         {
-            return this._Str_11456;
+            return this._currentScore;
         }
     }
 }
