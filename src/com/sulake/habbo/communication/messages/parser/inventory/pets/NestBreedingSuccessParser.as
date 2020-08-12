@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9220 implements IMessageParser 
+    public class NestBreedingSuccessParser implements IMessageParser
     {
         private var _Str_5792:int;
         private var _petId:int;
