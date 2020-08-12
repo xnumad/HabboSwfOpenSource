@@ -210,9 +210,9 @@
         {
             var k:int = this._configurationManager.getInteger("groupforum.poll.period", (5 * 60));
             this._unreadForumsCountUpdateTimer = new Timer((k * 1000), 0);
-            this._unreadForumsCountUpdateTimer.addEventListener(TimerEvent.TIMER, this._Str_21019);
+            this._unreadForumsCountUpdateTimer.addEventListener(TimerEvent.TIMER, this.onUnreadForumsCountUpdateTimerEvent);
             this._unreadForumsCountUpdateTimer.start();
-            this._Str_21019(null);
+            this.onUnreadForumsCountUpdateTimerEvent(null);
         }
 
         public function openGroupForum(k:int):void
@@ -767,7 +767,7 @@
             }
         }
 
-        private function _Str_21019(k:TimerEvent):void
+        private function onUnreadForumsCountUpdateTimerEvent(k:TimerEvent):void
         {
             if (this._mainView != null)
             {
