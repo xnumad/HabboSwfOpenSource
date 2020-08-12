@@ -730,7 +730,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9716;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerSavePresetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9987;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9998;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ExtendRentOrBuyoutFurniMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.handshake.*;
 	import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
 	import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
@@ -1523,7 +1523,7 @@
             OUTGOING_PACKETS[1052] = _Str_7364;
             OUTGOING_PACKETS[1053] = VersionCheckMessageComposer;
             OUTGOING_PACKETS[1054] = _Str_11560;
-            OUTGOING_PACKETS[1071] = _Str_9998;
+            OUTGOING_PACKETS[1071] = ExtendRentOrBuyoutFurniMessageComposer;
             OUTGOING_PACKETS[1075] = _Str_10589;
             OUTGOING_PACKETS[1081] = _Str_11951;
             OUTGOING_PACKETS[1086] = _Str_10960;

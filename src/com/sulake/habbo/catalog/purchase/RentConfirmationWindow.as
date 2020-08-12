@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11532;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9998;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.ExtendRentOrBuyoutFurniMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12348;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -168,7 +168,7 @@
                     switch (this._mode)
                     {
                         case MODE_INFOSTAND:
-                            this._catalog.connection.send(new _Str_9998((this._furniData.type == ProductTypeEnum.WALL), this._roomInstanceId, this._isBuyout));
+                            this._catalog.connection.send(new ExtendRentOrBuyoutFurniMessageComposer((this._furniData.type == ProductTypeEnum.WALL), this._roomInstanceId, this._isBuyout));
                             break;
                         case MODE_INVENTORY:
                             this._catalog.connection.send(new _Str_12348(this._stripId, this._isBuyout));
