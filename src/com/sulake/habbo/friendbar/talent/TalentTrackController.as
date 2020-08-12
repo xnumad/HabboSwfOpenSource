@@ -117,7 +117,7 @@
             var _local_2:IWindowContainer = this.getEmailContainer();
             if (_local_2 != null)
             {
-                this._Str_16767().text = k.getParser().email;
+                this.getEmailText().text = k.getParser().email;
                 _local_2.findChildByName("unverified_container").visible = (!(k.getParser().isVerified));
                 _local_2.findChildByName("verified_txt").visible = k.getParser().isVerified;
             }
@@ -720,7 +720,7 @@
                 {
                     this.getEmailContainer().visible = true;
                     this.getEmailContainer().findChildByName("change_email_region").procedure = this.onChangeEmail;
-                    this._Str_16767().procedure = this._Str_25645;
+                    this.getEmailText().procedure = this._Str_25645;
                     this._habboTalent.send(new _Str_10302());
                     this._Str_16375(false);
                 }
@@ -886,7 +886,7 @@
             var _local_3:String;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = this._Str_16767().text;
+                _local_3 = this.getEmailText().text;
                 this._habboTalent.send(new _Str_10577(_local_3));
             }
         }
@@ -915,7 +915,7 @@
             _local_4.findChildByName("changed_container").visible = ((k) && (_arg_2 == ChangeEmailResultParser.EMAIL_STATUS_OK));
         }
 
-        private function _Str_16767():ITextFieldWindow
+        private function getEmailText():ITextFieldWindow
         {
             return ITextFieldWindow(this.getEmailContainer().findChildByName("email_txt"));
         }
