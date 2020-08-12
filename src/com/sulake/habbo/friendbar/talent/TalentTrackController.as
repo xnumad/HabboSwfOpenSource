@@ -855,7 +855,7 @@
                 this.destroyWindow();
                 this._Str_8036();
                 this._habboTalent.send(new GuideAdvertisementReadMessageComposer());
-                this._habboTalent.habboHelp._Str_18271();
+                this._habboTalent.habboHelp.requestGuide();
                 this._habboTalent.tracking.trackEventLog("Help", "", "tour.new_user.accept");
                 this._habboTalent.tracking.trackGoogle("newbieTourWindow", "click_acceptTour");
             }

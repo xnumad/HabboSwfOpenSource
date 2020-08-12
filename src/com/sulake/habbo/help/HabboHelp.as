@@ -188,7 +188,7 @@
             return getBoolean("safety_quiz.disabled");
         }
 
-        public function _Str_18271():void
+        public function requestGuide():void
         {
             this._guideHelpManager._Str_6255(_Str_2849._Str_4268);
         }
@@ -821,7 +821,7 @@
             var _local_4:*;
             if (k == "help/tour")
             {
-                this._Str_18271();
+                this.requestGuide();
             }
             if (k.indexOf("help/report/room/") == 0)
             {

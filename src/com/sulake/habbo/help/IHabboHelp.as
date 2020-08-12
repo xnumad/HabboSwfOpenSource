@@ -5,7 +5,7 @@
 
     public interface IHabboHelp extends IUnknown 
     {
-        function _Str_18271():void;
+        function requestGuide():void;
         function get events():IEventDispatcher;
         function reportBully(_arg_1:int):void;
         function _Str_21718(_arg_1:int, _arg_2:String, _arg_3:String, _arg_4:int):void;
