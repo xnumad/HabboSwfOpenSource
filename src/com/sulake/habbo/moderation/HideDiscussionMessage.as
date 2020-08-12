@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateMessageMessageComposer;
     import com.sulake.habbo.friendbar.groupforums.ForumModerationState;
     import com.sulake.core.window.events.WindowEvent;
 
@@ -31,7 +31,7 @@
                 return;
             }
             this._popup.dispose();
-            this._main.connection.send(new GetThreadMessageComposer(this._groupId, this._threadId, this._messageId, ForumModerationState._Str_4415));
+            this._main.connection.send(new ModerateMessageMessageComposer(this._groupId, this._threadId, this._messageId, ForumModerationState._Str_4415));
         }
     }
 }

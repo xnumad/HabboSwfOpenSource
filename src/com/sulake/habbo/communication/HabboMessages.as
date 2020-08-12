@@ -57,15 +57,15 @@
 	import com.sulake.habbo.communication.messages.outgoing.tracking.LatencyPingRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateForumReadMarkerMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateThreadMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadsMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumStatsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumsListMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetUnreadForumsCountMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateForumSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateThreadMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateMessageMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.PostMessageMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.groupforums._Str_9897;
+	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetMessagesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.camera.RenderRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.camera.PurchasePhotoMessageComposer;
@@ -1769,7 +1769,7 @@
             OUTGOING_PACKETS[2813] = RoomDimmerGetPresetsMessageComposer;
             OUTGOING_PACKETS[2814] = DropCarryItemMessageComposer;
             OUTGOING_PACKETS[2850] = SetMannequinNameComposer;
-            OUTGOING_PACKETS[286] = GetThreadMessageComposer;
+            OUTGOING_PACKETS[286] = ModerateMessageMessageComposer;
             OUTGOING_PACKETS[2864] = UnblockGroupMemberMessageComposer;
             OUTGOING_PACKETS[2880] = SetRoomBackgroundColorDataComposer;
             OUTGOING_PACKETS[2890] = DeclineFriendMessageComposer;
@@ -1814,7 +1814,7 @@
             OUTGOING_PACKETS[3137] = UpdateGuildIdentityMessageComposer;
             OUTGOING_PACKETS[314] = ConvertGlobalRoomIdMessageComposer;
             OUTGOING_PACKETS[3144] = _Str_9826;
-            OUTGOING_PACKETS[3149] = GetThreadsMessageComposer;
+            OUTGOING_PACKETS[3149] = GetForumStatsMessageComposer;
             OUTGOING_PACKETS[3150] = RequestFurniInventoryComposer;
             OUTGOING_PACKETS[3157] = RequestFriendMessageComposer;
             OUTGOING_PACKETS[3159] = SetNewNavigatorWindowPreferencesMessageComposer;
@@ -1913,7 +1913,7 @@
             OUTGOING_PACKETS[3898] = GetFurnitureAliasesMessageComposer;
             OUTGOING_PACKETS[3899] = _Str_11187;
             OUTGOING_PACKETS[39] = MyGuildBasesSearchMessageComposer;
-            OUTGOING_PACKETS[3900] = _Str_9897;
+            OUTGOING_PACKETS[3900] = GetThreadMessageComposer;
             OUTGOING_PACKETS[3943] = RoomTextSearchMessageComposer;
             OUTGOING_PACKETS[3950] = _Str_7887;
             OUTGOING_PACKETS[3959] = PhotoCompetitionMessageComposer;
@@ -1971,7 +1971,7 @@
             OUTGOING_PACKETS[865] = _Str_9966;
             OUTGOING_PACKETS[869] = ScrGetKickbackInfoMessageComposer;
             OUTGOING_PACKETS[872] = RentableSpaceStatusMessageComposer;
-            OUTGOING_PACKETS[873] = ModerateMessageMessageComposer;
+            OUTGOING_PACKETS[873] = GetThreadsMessageComposer;
             OUTGOING_PACKETS[875] = UpdateFloorPropertiesMessageComposer;
             OUTGOING_PACKETS[882] = ApproveAllMembershipRequestsMessageComposer;
             OUTGOING_PACKETS[887] = _Str_7077;

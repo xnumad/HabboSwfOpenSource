@@ -3,15 +3,15 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class GetThreadsMessageComposer implements IMessageComposer, IDisposable 
+    public class GetThreadsMessageComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function GetThreadsMessageComposer(k:int)
+        public function GetThreadsMessageComposer(k:int, _arg_2:int, _arg_3:int)
         {
             this._array = new Array();
             super();
-            this._array = [k];
+            this._array = [k, _arg_2, _arg_3];
         }
 
         public function getMessageArray():Array

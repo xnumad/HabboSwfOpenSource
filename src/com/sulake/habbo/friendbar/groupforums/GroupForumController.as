@@ -36,10 +36,10 @@
     import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9518;
     import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8905;
     import flash.events.TimerEvent;
-    import com.sulake.habbo.communication.messages.outgoing.groupforums._Str_9897;
-    import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateMessageMessageComposer;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_5953;
+    import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadsMessageComposer;
+    import com.sulake.habbo.communication.messages.parser.groupforums._Str_5953;
+    import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumStatsMessageComposer;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumsListMessageComposer;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThreadsParser;
@@ -56,7 +56,7 @@
     import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateThreadMessageComposer;
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_8101;
-    import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateMessageMessageComposer;
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_7149;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateForumReadMarkerMessageComposer;
@@ -287,7 +287,7 @@
                         _local_6 = _local_2[3];
                     }
                     this.initForum(_local_4);
-                    this._communicationManager.connection.send(new _Str_9897(_local_4, _local_5));
+                    this._communicationManager.connection.send(new GetThreadMessageComposer(_local_4, _local_5));
                     this._Str_20033(_local_4, _local_5, _local_6);
                 }
             }
@@ -298,7 +298,7 @@
             this._Str_13365();
             this._requestedForumsListCode = k;
             this._requestedGroupID = NO_ID;
-            this._communicationManager.connection.send(new ModerateMessageMessageComposer(k, _arg_2, ThreadsListData.PAGE_SIZE));
+            this._communicationManager.connection.send(new GetThreadsMessageComposer(k, _arg_2, ThreadsListData.PAGE_SIZE));
         }
 
         private function _Str_22851(k:_Str_9509):void
@@ -331,7 +331,7 @@
             this._requestedForumsListCode = NO_ID;
             this._requestedGroupID = k;
             this._lastReadMessageId = 0;
-            this._communicationManager.connection.send(new GetThreadsMessageComposer(k));
+            this._communicationManager.connection.send(new GetForumStatsMessageComposer(k));
         }
 
         private function _Str_25702(k:_Str_8331):void
@@ -578,7 +578,7 @@
                 {
                     _local_4 = ForumModerationState._Str_4415;
                 }
-                this._communicationManager.connection.send(new GetThreadMessageComposer(this._forumData.groupId, _arg_2, _arg_3, _local_4));
+                this._communicationManager.connection.send(new ModerateMessageMessageComposer(this._forumData.groupId, _arg_2, _arg_3, _local_4));
             }
         }
 
@@ -586,7 +586,7 @@
         {
             if (this._communicationManager)
             {
-                this._communicationManager.connection.send(new GetThreadMessageComposer(k.groupId, _arg_2, _arg_3, 1));
+                this._communicationManager.connection.send(new ModerateMessageMessageComposer(k.groupId, _arg_2, _arg_3, 1));
             }
         }
 
@@ -771,7 +771,7 @@
         {
             if (this._mainView != null)
             {
-                this._communicationManager.connection.send(new ModerateMessageMessageComposer(FORUMS_LIST_CODE_MY_FORUMS, 0, ThreadsListData.PAGE_SIZE));
+                this._communicationManager.connection.send(new GetThreadsMessageComposer(FORUMS_LIST_CODE_MY_FORUMS, 0, ThreadsListData.PAGE_SIZE));
             }
             else
             {
