@@ -464,21 +464,21 @@
                 if (_local_2 == this._avatarId)
                 {
                     this.localization.registerParameter("group.leaveconfirm.desc", "amount", _local_3.toString());
-                    this._windowManager.confirm("${group.leaveconfirm.title}", "${group.leaveconfirm.desc}", 0, this._Str_12803);
+                    this._windowManager.confirm("${group.leaveconfirm.title}", "${group.leaveconfirm.desc}", 0, this.onKickConfirmationClose);
                 }
                 else
                 {
                     _local_4 = _local_5._Str_5126(_local_2);
                     this.localization.registerParameter((_local_6 + "confirm.desc"), "amount", _local_3.toString());
                     this.localization.registerParameter((_local_6 + "confirm.desc"), "user", _local_4.userName);
-                    this._windowManager.confirm((("${" + _local_6) + "confirm.title}"), (("${" + _local_6) + "confirm.desc}"), 0, this._Str_12803);
+                    this._windowManager.confirm((("${" + _local_6) + "confirm.title}"), (("${" + _local_6) + "confirm.desc}"), 0, this.onKickConfirmationClose);
                 }
             }
             else
             {
                 if (_local_2 == this._avatarId)
                 {
-                    this._windowManager.confirm("${group.leaveconfirm.title}", "${group.leaveconfirm_nofurni.desc}", 0, this._Str_12803);
+                    this._windowManager.confirm("${group.leaveconfirm.title}", "${group.leaveconfirm_nofurni.desc}", 0, this.onKickConfirmationClose);
                 }
                 else
                 {
@@ -486,13 +486,13 @@
                     {
                         _local_4 = _local_5._Str_5126(_local_2);
                         this.localization.registerParameter((_local_6 + "confirm_nofurni.desc"), "user", _local_4.userName);
-                        this._windowManager.confirm((("${" + _local_6) + "confirm.title}"), (("${" + _local_6) + "confirm_nofurni.desc}"), 0, this._Str_12803);
+                        this._windowManager.confirm((("${" + _local_6) + "confirm.title}"), (("${" + _local_6) + "confirm_nofurni.desc}"), 0, this.onKickConfirmationClose);
                     }
                 }
             }
         }
 
-        private function _Str_12803(k:IConfirmDialog, _arg_2:WindowEvent):void
+        private function onKickConfirmationClose(k:IConfirmDialog, _arg_2:WindowEvent):void
         {
             if ((((k == null) || (k.disposed)) || (this._kickData == null)))
             {
