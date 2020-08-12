@@ -316,7 +316,7 @@
                 _local_7 = this._tabContext._Str_20824(_local_4.id);
                 if (_local_7 != null)
                 {
-                    _local_7.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_18079);
+                    _local_7.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this.onTabSelected);
                     _local_4.button = _local_7;
                 }
             }
@@ -454,7 +454,7 @@
             this.close();
         }
 
-        private function _Str_18079(k:WindowEvent):void
+        private function onTabSelected(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
             var _local_3:int = _local_2.id;
