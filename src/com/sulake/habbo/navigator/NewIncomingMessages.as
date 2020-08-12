@@ -51,7 +51,7 @@
     import com.sulake.habbo.navigator.transitional.LegacyNavigator;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_8102;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.GetUserFlatCatsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7413;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.session.SecurityLevelEnum;
@@ -227,7 +227,7 @@
         {
             var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
             this._navigator.data.avatarId = _local_2.id;
-            LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_8102());
+            LegacyNavigator(this._navigator.legacyNavigator).send(new GetUserFlatCatsMessageComposer());
             LegacyNavigator(this._navigator.legacyNavigator).send(new _Str_7413());
         }
 

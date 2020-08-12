@@ -532,7 +532,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7413;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateHomeRoomMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_8102;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.GetUserFlatCatsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.SetRoomSessionTagsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.EditEventMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRecommendedRoomsMessageComposer;
@@ -1792,7 +1792,7 @@
             OUTGOING_PACKETS[2996] = AmbassadorAlertMessageComposer;
             OUTGOING_PACKETS[3001] = UpdateRoomFilterMessageComposer;
             OUTGOING_PACKETS[3005] = ControlYoutubeDisplayPlaybackMessageComposer;
-            OUTGOING_PACKETS[3027] = _Str_8102;
+            OUTGOING_PACKETS[3027] = GetUserFlatCatsMessageComposer;
             OUTGOING_PACKETS[3045] = UpdateThreadMessageComposer;
             OUTGOING_PACKETS[3050] = RemoveJukeboxDiskComposer;
             OUTGOING_PACKETS[3060] = _Str_7634;
