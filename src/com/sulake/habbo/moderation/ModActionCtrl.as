@@ -12,7 +12,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10432;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.DefaultSanctionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModAlertMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModBanMessageComposer;
@@ -240,7 +240,7 @@
             this._Str_3066("defaultAction");
             this.logEvent("action.default");
             var _local_3:int = this._Str_5384[this._Str_3643.selection];
-            this._Str_2327.connection.send(new _Str_10432(this._Str_4127, _local_3, this._Str_3121.text, this._Str_7121()));
+            this._Str_2327.connection.send(new DefaultSanctionMessageComposer(this._Str_4127, _local_3, this._Str_3121.text, this._Str_7121()));
             this.dispose();
         }
 

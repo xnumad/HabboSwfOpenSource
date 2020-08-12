@@ -750,7 +750,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator.PickIssuesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ReleaseIssuesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10092;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10432;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.DefaultSanctionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModToolPreferencesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModKickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11910;
@@ -1600,7 +1600,7 @@
             OUTGOING_PACKETS[1648] = RoomDimmerSavePresetMessageComposer;
             OUTGOING_PACKETS[1667] = RentableSpaceCancelRentMessageComposer;
             OUTGOING_PACKETS[168] = MoveWallItemMessageComposer;
-            OUTGOING_PACKETS[1681] = _Str_10432;
+            OUTGOING_PACKETS[1681] = DefaultSanctionMessageComposer;
             OUTGOING_PACKETS[1687] = GetOccupiedTilesMessageComposer;
             OUTGOING_PACKETS[1689] = RemoveFriendMessageComposer;
             OUTGOING_PACKETS[1691] = _Str_6133;
