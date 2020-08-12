@@ -481,7 +481,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditorDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11883;
 	import com.sulake.habbo.communication.messages.outgoing.users.UnblockGroupMemberMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_12111;
+	import com.sulake.habbo.communication.messages.outgoing.users.AddAdminRightsToMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12242;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12283;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
@@ -1773,7 +1773,7 @@
             OUTGOING_PACKETS[2864] = UnblockGroupMemberMessageComposer;
             OUTGOING_PACKETS[2880] = SetRoomBackgroundColorDataComposer;
             OUTGOING_PACKETS[2890] = DeclineFriendMessageComposer;
-            OUTGOING_PACKETS[2894] = _Str_12111;
+            OUTGOING_PACKETS[2894] = AddAdminRightsToMemberMessageComposer;
             OUTGOING_PACKETS[2908] = GetUnreadForumsCountMessageComposer;
             OUTGOING_PACKETS[291] = _Str_10003;
             OUTGOING_PACKETS[2912] = _Str_5974;

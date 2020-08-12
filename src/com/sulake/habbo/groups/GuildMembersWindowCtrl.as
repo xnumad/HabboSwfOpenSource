@@ -31,7 +31,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.RejectMembershipRequestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.UnblockGroupMemberMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10517;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_12111;
+    import com.sulake.habbo.communication.messages.outgoing.users.AddAdminRightsToMemberMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.ApproveMembershipRequestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9979;
@@ -453,7 +453,7 @@
                 {
                     if (_local_2.member)
                     {
-                        this._manager.send(new _Str_12111(this._data.groupId, _local_2.userId));
+                        this._manager.send(new AddAdminRightsToMemberMessageComposer(this._data.groupId, _local_2.userId));
                     }
                     else
                     {

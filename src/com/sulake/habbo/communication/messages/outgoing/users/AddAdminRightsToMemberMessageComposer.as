@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12111 implements IMessageComposer 
+    public class AddAdminRightsToMemberMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_12111(k:int, _arg_2:int)
+        public function AddAdminRightsToMemberMessageComposer(k:int, _arg_2:int)
         {
             this._array = [];
             super();
