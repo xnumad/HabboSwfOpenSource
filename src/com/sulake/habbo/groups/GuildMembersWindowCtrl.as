@@ -333,7 +333,7 @@
             var _local_3:IRegionWindow = IRegionWindow(k.findChildByName("block_region"));
             _local_3.addEventListener(WindowMouseEvent.OVER, this.onRemoveMouseOver);
             _local_3.addEventListener(WindowMouseEvent.OUT, this.onRemoveMouseOut);
-            _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_25431);
+            _local_3.addEventListener(WindowMouseEvent.CLICK, this.onBlockMouseClick);
             var _local_4:IRegionWindow = IRegionWindow(k.findChildByName("remove_region"));
             _local_4.addEventListener(WindowMouseEvent.OVER, this.onRemoveMouseOver);
             _local_4.addEventListener(WindowMouseEvent.OUT, this.onRemoveMouseOut);
@@ -375,7 +375,7 @@
             }
         }
 
-        private function _Str_25431(k:WindowEvent):void
+        private function onBlockMouseClick(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
             var _local_3:_Str_2891 = this._data._Str_5126(_local_2.id);
