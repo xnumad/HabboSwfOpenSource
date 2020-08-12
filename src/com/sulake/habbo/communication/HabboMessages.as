@@ -927,7 +927,7 @@
 	import com.sulake.habbo.communication.messages.incoming.poll.PollContentsEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll._Str_8879;
 	import com.sulake.habbo.communication.messages.outgoing.room.session.ChangeQueueMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.session._Str_10646;
+	import com.sulake.habbo.communication.messages.outgoing.room.session.GoToFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.session.QuitMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.session.OpenFlatConnectionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.*;
@@ -1947,7 +1947,7 @@
             OUTGOING_PACKETS[644] = SetActivatedBadgesComposer;
             OUTGOING_PACKETS[654] = _Str_11321;
             OUTGOING_PACKETS[66] = _Str_9855;
-            OUTGOING_PACKETS[685] = _Str_10646;
+            OUTGOING_PACKETS[685] = GoToFlatMessageComposer;
             OUTGOING_PACKETS[707] = _Str_12129;
             OUTGOING_PACKETS[711] = RequestRoomPropertySet;
             OUTGOING_PACKETS[722] = _Str_10517;

@@ -12,7 +12,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.room.session._Str_10646;
+    import com.sulake.habbo.communication.messages.outgoing.room.session.GoToFlatMessageComposer;
     import com.sulake.habbo.session.events.RoomSessionDoorbellEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
     import com.sulake.core.utils.ErrorReportStorage;
@@ -64,7 +64,7 @@
             var _local_4:String = _local_3.userName;
             if (((_local_4 == null) || (_local_4.length == 0)))
             {
-                connection.send(new _Str_10646(_local_2));
+                connection.send(new GoToFlatMessageComposer(_local_2));
             }
             else
             {
