@@ -27,7 +27,7 @@
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.parser.moderation.IssueDeletedMessageParser;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_7467;
+    import com.sulake.habbo.communication.messages.parser.moderation.ModeratorUserInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation.ModeratorRoomInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation.CfhChatlogMessageParser;
     import flash.utils.Dictionary;
@@ -186,7 +186,7 @@
         private function onUserInfo(k:_Str_9413):void
         {
             var _local_3:IUserInfoListener;
-            var _local_2:_Str_7467 = k.getParser();
+            var _local_2:ModeratorUserInfoMessageParser = k.getParser();
             Logger.log(((("GOT USER INFO: " + _local_2.data.userId) + ", ") + _local_2.data._Str_16987));
             for each (_local_3 in this._userInfoListeners)
             {

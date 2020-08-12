@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorUserInfoData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7467 implements IMessageParser 
+    public class ModeratorUserInfoMessageParser implements IMessageParser
     {
         private var _data:ModeratorUserInfoData;
 
