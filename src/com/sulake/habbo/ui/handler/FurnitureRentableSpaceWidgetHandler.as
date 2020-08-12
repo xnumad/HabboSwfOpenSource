@@ -42,7 +42,7 @@
             this._container = k;
             this._rentableSpaceStatusMessageEvent = new _Str_7811(this._Str_24112);
             this._container.connection.addMessageEvent(this._rentableSpaceStatusMessageEvent);
-            this._rentableSpaceRentOkMessageEvent = new RentableSpaceRentOkMessageEvent(this._Str_23287);
+            this._rentableSpaceRentOkMessageEvent = new RentableSpaceRentOkMessageEvent(this.onRentableSpaceRentOkMessage);
             this._container.connection.addMessageEvent(this._rentableSpaceRentOkMessageEvent);
             this._rentableSpaceRentFailedMessageEvent = new _Str_7746(this._Str_22780);
             this._container.connection.addMessageEvent(this._rentableSpaceRentFailedMessageEvent);
@@ -122,7 +122,7 @@
             return this._container == null;
         }
 
-        public function _Str_23287(k:RentableSpaceRentOkMessageEvent):void
+        public function onRentableSpaceRentOkMessage(k:RentableSpaceRentOkMessageEvent):void
         {
             this._widget._Str_19184();
         }
