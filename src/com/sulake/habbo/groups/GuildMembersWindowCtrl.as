@@ -147,7 +147,7 @@
             }
         }
 
-        public function _Str_12428(k:int, _arg_2:int):void
+        public function onMembersClick(k:int, _arg_2:int):void
         {
             if (!this._manager.getBoolean("groupMembers.enabled"))
             {

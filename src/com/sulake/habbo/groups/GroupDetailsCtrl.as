@@ -247,7 +247,7 @@
                 return;
             }
             this._manager.trackGoogle("groupDetails", "groupMembers");
-            this._manager.guildMembersWindowCtrl._Str_12428(this._selectedGroup.groupId, GetGuildMembersMessageComposer._Str_13464);
+            this._manager.guildMembersWindowCtrl.onMembersClick(this._selectedGroup.groupId, GetGuildMembersMessageComposer._Str_13464);
         }
 
         private function _Str_23598(k:WindowEvent, _arg_2:IWindow):void
@@ -257,7 +257,7 @@
                 return;
             }
             this._manager.trackGoogle("groupDetails", "groupPendingMembers");
-            this._manager.guildMembersWindowCtrl._Str_12428(this._selectedGroup.groupId, GetGuildMembersMessageComposer._Str_17798);
+            this._manager.guildMembersWindowCtrl.onMembersClick(this._selectedGroup.groupId, GetGuildMembersMessageComposer._Str_17798);
         }
 
         private function _Str_23641(k:WindowEvent, _arg_2:IWindow):void

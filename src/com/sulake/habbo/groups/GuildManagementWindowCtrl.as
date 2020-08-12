@@ -120,7 +120,7 @@
             this._window.findChildByName("edit_tab_5").procedure = this.onTab;
             this._window.findChildByName("reset_badge").procedure = this.onBadgeReset;
             this._window.findChildByName("reset_colors").procedure = this.onColorReset;
-            this._window.findChildByName("step_1_members_region").procedure = this._Str_12428;
+            this._window.findChildByName("step_1_members_region").procedure = this.onMembersClick;
             this._settingsCtrl.prepare(this._window);
         }
 
@@ -429,12 +429,12 @@
             }
         }
 
-        private function _Str_12428(k:WindowEvent, _arg_2:IWindow):void
+        private function onMembersClick(k:WindowEvent, _arg_2:IWindow):void
         {
             if ((((k.type == WindowMouseEvent.CLICK) && (this._data.exists)) && (!(this._manager.guildMembersWindowCtrl == null))))
             {
                 this._manager.trackGoogle("groupManagement", "groupMembers");
-                this._manager.guildMembersWindowCtrl._Str_12428(this._data.groupId, GetGuildMembersMessageComposer._Str_13464);
+                this._manager.guildMembersWindowCtrl.onMembersClick(this._data.groupId, GetGuildMembersMessageComposer._Str_13464);
             }
         }
 
