@@ -360,7 +360,7 @@
         private function onRemoveMouseClick(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
-            var _local_3:_Str_2891 = this._data._Str_5126(_local_2.id);
+            var _local_3:_Str_2891 = this._data.getUser(_local_2.id);
             if (((_local_3 == null) || (_local_3.owner)))
             {
                 return;
@@ -378,7 +378,7 @@
         private function onBlockMouseClick(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
-            var _local_3:_Str_2891 = this._data._Str_5126(_local_2.id);
+            var _local_3:_Str_2891 = this._data.getUser(_local_2.id);
             if (((_local_3 == null) || (_local_3.owner)))
             {
                 return;
@@ -412,7 +412,7 @@
         private function onActionLinkMouseOver(k:WindowEvent):void
         {
             var _local_2:IRegionWindow = IRegionWindow(k.target);
-            var _local_3:_Str_2891 = this._data._Str_5126(k.target.id);
+            var _local_3:_Str_2891 = this._data.getUser(k.target.id);
             if (((_local_3 == null) || (_local_3.owner)))
             {
                 return;
@@ -425,7 +425,7 @@
         {
             var _local_2:IRegionWindow = IRegionWindow(k.target);
             this.setActionLinkState(false, _local_2);
-            var _local_3:_Str_2891 = this._data._Str_5126(k.target.id);
+            var _local_3:_Str_2891 = this._data.getUser(k.target.id);
             if (_local_3 != null)
             {
                 this.setAdminState(_local_3.member, _local_3.admin, IWindowContainer(_local_2.parent));
@@ -434,7 +434,7 @@
 
         private function onActionLinkClick(k:WindowEvent):void
         {
-            var _local_2:_Str_2891 = this._data._Str_5126(k.target.id);
+            var _local_2:_Str_2891 = this._data.getUser(k.target.id);
             if (((_local_2 == null) || (_local_2.owner)))
             {
                 return;

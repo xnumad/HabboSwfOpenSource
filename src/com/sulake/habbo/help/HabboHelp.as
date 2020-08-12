@@ -716,7 +716,7 @@
             var _local_3:int;
             while (_local_3 < _local_2.getUserCount())
             {
-                _local_4 = _local_2._Str_5126(_local_3);
+                _local_4 = _local_2.getUser(_local_3);
                 if (((!(_local_4.id == this._Str_6240)) && (_local_4.userType == RoomObjectTypeEnum.HABBO)))
                 {
                     this._userRegistry._Str_23385(_local_4.id, _local_4.name, _local_4.figure);

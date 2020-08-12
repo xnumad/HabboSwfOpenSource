@@ -148,7 +148,7 @@
             delete this._usersById[k];
         }
 
-        public function _Str_5126(k:int):_Str_2891
+        public function getUser(k:int):_Str_2891
         {
             return this._usersById[k];
         }

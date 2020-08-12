@@ -790,7 +790,7 @@
             var _local_4:int;
             while (_local_4 < _local_3.getUserCount())
             {
-                _local_5 = _local_3._Str_5126(_local_4);
+                _local_5 = _local_3.getUser(_local_4);
                 if (_local_5 != null)
                 {
                     _local_6 = new Vector3d(_local_5.x, _local_5.y, _local_5.z);

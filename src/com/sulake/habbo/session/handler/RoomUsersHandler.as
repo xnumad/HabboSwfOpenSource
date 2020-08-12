@@ -140,7 +140,7 @@
             var _local_6:int;
             while (_local_6 < _local_3.getUserCount())
             {
-                _local_7 = _local_3._Str_5126(_local_6);
+                _local_7 = _local_3.getUser(_local_6);
                 _local_8 = new RoomUserData(_local_7.roomIndex);
                 _local_8.name = _local_7.name;
                 _local_8.custom = _local_7.custom;

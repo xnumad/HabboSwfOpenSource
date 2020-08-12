@@ -468,7 +468,7 @@
                 }
                 else
                 {
-                    _local_4 = _local_5._Str_5126(_local_2);
+                    _local_4 = _local_5.getUser(_local_2);
                     this.localization.registerParameter((_local_6 + "confirm.desc"), "amount", _local_3.toString());
                     this.localization.registerParameter((_local_6 + "confirm.desc"), "user", _local_4.userName);
                     this._windowManager.confirm((("${" + _local_6) + "confirm.title}"), (("${" + _local_6) + "confirm.desc}"), 0, this.onKickConfirmationClose);
@@ -484,7 +484,7 @@
                 {
                     if (_local_5)
                     {
-                        _local_4 = _local_5._Str_5126(_local_2);
+                        _local_4 = _local_5.getUser(_local_2);
                         this.localization.registerParameter((_local_6 + "confirm_nofurni.desc"), "user", _local_4.userName);
                         this._windowManager.confirm((("${" + _local_6) + "confirm.title}"), (("${" + _local_6) + "confirm_nofurni.desc}"), 0, this.onKickConfirmationClose);
                     }

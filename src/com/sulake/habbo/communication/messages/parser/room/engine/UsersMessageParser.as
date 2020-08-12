@@ -58,7 +58,7 @@
             return this._users.length;
         }
 
-        public function _Str_5126(k:int):UserMessageData
+        public function getUser(k:int):UserMessageData
         {
             if (((k < 0) || (k >= this.getUserCount())))
             {
