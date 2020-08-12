@@ -441,7 +441,7 @@
             while (k <= 2)
             {
                 _local_2 = this._questEngine.windowManager.getDesktop(k);
-                if (((!(_local_2 == null)) && (this._Str_24799(_local_2))))
+                if (((!(_local_2 == null)) && (this.hasBlockingWindowInLayer(_local_2))))
                 {
                     return true;
                 }
@@ -450,7 +450,7 @@
             return false;
         }
 
-        private function _Str_24799(k:IWindowContainer):Boolean
+        private function hasBlockingWindowInLayer(k:IWindowContainer):Boolean
         {
             var _local_2:int;
             var _local_3:IWindow;
