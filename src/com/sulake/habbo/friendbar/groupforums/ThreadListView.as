@@ -345,7 +345,7 @@
 
         private function _Str_9877(k:WindowMouseEvent):void
         {
-            this._controller._Str_10138(this._forumData, int(k.target.id));
+            this._controller.reportThread(this._forumData, int(k.target.id));
         }
 
         private function _Str_10493(k:WindowMouseEvent):void

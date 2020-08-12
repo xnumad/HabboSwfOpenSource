@@ -221,7 +221,7 @@
             this._habboHelp._Str_8128(HabboHelp._Str_4786);
         }
 
-        public function _Str_10138(k:int, _arg_2:int):void
+        public function reportThread(k:int, _arg_2:int):void
         {
             this._reportedGroupId = k;
             this._reportedThreadId = _arg_2;

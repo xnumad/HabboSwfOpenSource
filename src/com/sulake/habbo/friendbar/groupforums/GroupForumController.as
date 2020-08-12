@@ -541,11 +541,11 @@
             }
         }
 
-        public function _Str_10138(k:_Str_2807, _arg_2:int):void
+        public function reportThread(k:_Str_2807, _arg_2:int):void
         {
             if (this._help)
             {
-                this._help._Str_10138(k.groupId, _arg_2);
+                this._help.reportThread(k.groupId, _arg_2);
             }
         }
 

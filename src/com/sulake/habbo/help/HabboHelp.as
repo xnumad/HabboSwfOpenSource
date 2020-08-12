@@ -249,7 +249,7 @@
             }
         }
 
-        public function _Str_10138(k:int, _arg_2:int):void
+        public function reportThread(k:int, _arg_2:int):void
         {
             if (this._callForHelpManager != null)
             {
