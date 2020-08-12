@@ -698,7 +698,7 @@
             }
             this._taskProgressPopup = this._habboTalent.getModalXmlWindow("task_progress_dialog");
             this._taskProgressPopup.rootWindow.procedure = this._Str_22508;
-            this._taskProgressPopup.background.procedure = this._Str_22368;
+            this._taskProgressPopup.background.procedure = this.onTaskProgressBackgroundWindowEvent;
             var _local_3:IWindowContainer = IWindowContainer(this._taskProgressPopup.rootWindow);
             _local_3.findChildByName("instruction").caption = this._habboTalent.localizationManager.getAchievementInstruction(_local_2.badgeCode);
             _local_3.findChildByName("title").caption = this._habboTalent.localizationManager.getAchievementName(_local_2.badgeCode);
@@ -920,7 +920,7 @@
             return ITextFieldWindow(this.getEmailContainer().findChildByName("email_txt"));
         }
 
-        private function _Str_22368(k:WindowEvent, _arg_2:IWindow):void
+        private function onTaskProgressBackgroundWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if ((((this._taskProgressPopup == null) || (this._taskProgressPopup.disposed)) || (!(k.type == WindowMouseEvent.CLICK))))
             {
