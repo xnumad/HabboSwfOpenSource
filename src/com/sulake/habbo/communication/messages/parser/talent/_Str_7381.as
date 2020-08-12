@@ -5,20 +5,20 @@
 
     public class _Str_7381 implements IMessageParser 
     {
-        private var _Str_8140:String;
+        private var _talentTrackName:String;
         private var _level:int;
         private var _maxLevel:int;
 
 
         public function flush():Boolean
         {
-            this._Str_8140 = null;
+            this._talentTrackName = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_8140 = k.readString();
+            this._talentTrackName = k.readString();
             this._level = k.readInteger();
             this._maxLevel = k.readInteger();
             return true;
@@ -26,7 +26,7 @@
 
         public function get talentTrackName():String
         {
-            return this._Str_8140;
+            return this._talentTrackName;
         }
 
         public function get level():int
