@@ -41,7 +41,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
     import com.sulake.habbo.ui.widget.enums.PetSupplementEnum;
     import com.sulake.habbo.communication.messages.outgoing.room.pets.RespectPetMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10794;
+    import com.sulake.habbo.communication.messages.outgoing.room.avatar.DropCarryItemMessageComposer;
     import com.sulake.habbo.room.object.RoomObjectOperationEnum;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
@@ -452,7 +452,7 @@
                     this._container.connection.send(new RespectPetMessageComposer(_local_2));
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_DROP_CARRY_ITEM:
-                    this._container.connection.send(new _Str_10794());
+                    this._container.connection.send(new DropCarryItemMessageComposer());
                     break;
                 case RoomWidgetFurniActionMessage.RWFUAM_ROTATE:
                     this._container.roomEngine.modifyRoomObject(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);

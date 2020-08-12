@@ -890,7 +890,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.ChangePostureMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.PassCarryItemToPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.LookToMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10794;
+	import com.sulake.habbo.communication.messages.outgoing.room.avatar.DropCarryItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.CustomizeAvatarWithFurniMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.DanceMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.ChangeMottoMessageComposer;
@@ -1767,7 +1767,7 @@
             OUTGOING_PACKETS[2781] = _Str_9977;
             OUTGOING_PACKETS[2809] = _Str_11181;
             OUTGOING_PACKETS[2813] = RoomDimmerGetPresetsMessageComposer;
-            OUTGOING_PACKETS[2814] = _Str_10794;
+            OUTGOING_PACKETS[2814] = DropCarryItemMessageComposer;
             OUTGOING_PACKETS[2850] = SetMannequinNameComposer;
             OUTGOING_PACKETS[286] = GetThreadMessageComposer;
             OUTGOING_PACKETS[2864] = _Str_12026;
