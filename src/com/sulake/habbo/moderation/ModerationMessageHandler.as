@@ -33,7 +33,7 @@
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.parser.moderation.RoomChatlogMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation.UserChatlogMessageParser;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_7621;
+    import com.sulake.habbo.communication.messages.parser.moderation.RoomVisitsMessageParser;
     import com.sulake.habbo.communication.messages.parser.userclassification.UserClassificationMessageParser;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.userclassification.UserClassificationData;
@@ -245,7 +245,7 @@
         private function onRoomVisits(k:_Str_7632):void
         {
             var _local_3:RoomVisitsCtrl;
-            var _local_2:_Str_7621 = k.getParser();
+            var _local_2:RoomVisitsMessageParser = k.getParser();
             var _local_4:Array = this._roomVisitsListeners.concat();
             for each (_local_3 in _local_4)
             {

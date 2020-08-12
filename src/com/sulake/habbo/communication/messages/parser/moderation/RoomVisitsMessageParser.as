@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7621 implements IMessageParser 
+    public class RoomVisitsMessageParser implements IMessageParser
     {
         private var _data:RoomVisitsData;
 
