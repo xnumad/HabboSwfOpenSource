@@ -9,7 +9,7 @@
         private var _achievementId:int;
         private var _level:int;
         private var _badgeId:String;
-        private var _Str_8741:int;
+        private var _requiredLevel:int;
         private var _state:int;
 
         public function AchievementResolution(k:IMessageDataWrapper)
@@ -17,7 +17,7 @@
             this._achievementId = k.readInteger();
             this._level = k.readInteger();
             this._badgeId = k.readString();
-            this._Str_8741 = k.readInteger();
+            this._requiredLevel = k.readInteger();
             this._state = k.readInteger();
         }
 
@@ -26,7 +26,7 @@
             this._achievementId = 0;
             this._level = 0;
             this._badgeId = "";
-            this._Str_8741 = 0;
+            this._requiredLevel = 0;
         }
 
         public function get achievementId():int
@@ -46,7 +46,7 @@
 
         public function get _Str_20240():int
         {
-            return this._Str_8741;
+            return this._requiredLevel;
         }
 
         public function get enabled():Boolean

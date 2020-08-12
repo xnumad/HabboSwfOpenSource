@@ -14,7 +14,7 @@
         public static const _Str_16378:String = "ACH_GuideAdvertisementReader1";
 
         private var _achievementId:int;
-        private var _Str_8741:int;
+        private var _requiredLevel:int;
         private var _badgeCode:String;
         private var _state:int;
         private var _Str_11456:int;
@@ -23,7 +23,7 @@
         public function TalentTrackTask(k:IMessageDataWrapper)
         {
             this._achievementId = k.readInteger();
-            this._Str_8741 = k.readInteger();
+            this._requiredLevel = k.readInteger();
             this._badgeCode = k.readString();
             this._state = k.readInteger();
             this._Str_11456 = k.readInteger();
@@ -42,7 +42,7 @@
 
         public function get _Str_20240():int
         {
-            return this._Str_8741;
+            return this._requiredLevel;
         }
 
         public function get badgeCode():String
