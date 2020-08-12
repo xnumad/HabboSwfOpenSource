@@ -666,7 +666,7 @@
             this.send(new _Str_8228(_arg_2, k));
         }
 
-        public function _Str_22582(k:int, _arg_2:int):void
+        public function handleUserBlock(k:int, _arg_2:int):void
         {
             this._kickData = new GuildKickData(k, _arg_2, true);
             this.send(new _Str_8228(_arg_2, k));

@@ -385,7 +385,7 @@
             }
             if (_local_3.member)
             {
-                this._manager._Str_22582(_local_2.id, this._data.groupId);
+                this._manager.handleUserBlock(_local_2.id, this._data.groupId);
             }
         }
 
