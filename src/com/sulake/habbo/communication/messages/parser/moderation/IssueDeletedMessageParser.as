@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7250 implements IMessageParser 
+    public class IssueDeletedMessageParser implements IMessageParser
     {
         private var _issueId:int;
 

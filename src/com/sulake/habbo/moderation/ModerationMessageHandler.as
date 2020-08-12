@@ -26,7 +26,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation.IssuePickFailedMessageParser;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_7250;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueDeletedMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7467;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8106;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8235;
@@ -175,7 +175,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7250 = k.getParser();
+            var _local_2:IssueDeletedMessageParser = k.getParser();
             if (_local_2 == null)
             {
                 return;
