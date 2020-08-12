@@ -534,7 +534,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateHomeRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_8102;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_8348;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9806;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.EditEventMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRecommendedRoomsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyGuildBasesSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWithHighestScoreSearchMessageComposer;
@@ -1922,7 +1922,7 @@
             OUTGOING_PACKETS[3965] = ChangeEmailComposer;
             OUTGOING_PACKETS[3969] = _Str_11135;
             OUTGOING_PACKETS[398] = GetRecyclerPrizesMessageComposer;
-            OUTGOING_PACKETS[3991] = _Str_9806;
+            OUTGOING_PACKETS[3991] = EditEventMessageComposer;
             OUTGOING_PACKETS[3997] = _Str_4348;
             OUTGOING_PACKETS[4000] = ClientHelloMessageComposer;
             OUTGOING_PACKETS[410] = _Str_9801;
