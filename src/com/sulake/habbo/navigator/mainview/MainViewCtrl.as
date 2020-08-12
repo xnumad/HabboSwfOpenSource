@@ -24,7 +24,7 @@
     import com.sulake.core.window.components.ISelectableWindow;
     import flash.events.Event;
     import com.sulake.habbo.navigator.events.HabboNavigatorTrackingEvent;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11858;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabViewedComposer;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetOfficialRoomsMessageComposer;
@@ -469,7 +469,7 @@
             {
                 case Tabs.TAB_EVENTS:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_EVENTS));
-                    this._navigator.send(new _Str_11858());
+                    this._navigator.send(new RoomAdEventTabViewedComposer());
                     return;
                 case Tabs.TAB_ME:
                     this._navigator.events.dispatchEvent(new Event(HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_ME));

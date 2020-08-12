@@ -516,7 +516,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11608;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.ToggleStaffPickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabAdClickedComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11858;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabViewedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.CancelEventMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12081;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomRightsSearchMessageComposer;
@@ -1738,7 +1738,7 @@
             OUTGOING_PACKETS[2647] = PlacePetMessageComposer;
             OUTGOING_PACKETS[2650] = _Str_12361;
             OUTGOING_PACKETS[2651] = GetGuildFurniContextMenuInfoMessageComposer;
-            OUTGOING_PACKETS[2668] = _Str_11858;
+            OUTGOING_PACKETS[2668] = RoomAdEventTabViewedComposer;
             OUTGOING_PACKETS[2683] = RemoveAllRightsMessageComposer;
             OUTGOING_PACKETS[2688] = GetCommunityGoalEarnedPrizesMessageComposer;
             OUTGOING_PACKETS[2694] = RespectUserMessageComposer;
