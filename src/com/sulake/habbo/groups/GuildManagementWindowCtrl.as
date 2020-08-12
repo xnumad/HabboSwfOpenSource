@@ -105,7 +105,7 @@
                 return;
             }
             this._window = IFrameWindow(this._manager.getXmlWindow("group_management_window"));
-            this._window.findChildByTag("close").procedure = this._Str_23918;
+            this._window.findChildByTag("close").procedure = this.onCloseWindow;
             this._window.center();
             this._window.findChildByName("create_room_link_region").procedure = this.onCreateRoomLink;
             this._window.findChildByName("cancel_link_region").procedure = this.onCancelLink;
@@ -679,7 +679,7 @@
             return null;
         }
 
-        private function _Str_23918(k:WindowEvent, _arg_2:IWindow):void
+        private function onCloseWindow(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
