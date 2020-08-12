@@ -129,10 +129,10 @@
 
         private function _Str_24260(k:WindowMouseEvent):void
         {
-            this._Str_25357(this._badWordField.text);
+            this.addBadWord(this._badWordField.text);
         }
 
-        private function _Str_25357(k:String):void
+        private function addBadWord(k:String):void
         {
             if (((!(this._badWordField == null)) && (this._badWordField.text.length > 0)))
             {
