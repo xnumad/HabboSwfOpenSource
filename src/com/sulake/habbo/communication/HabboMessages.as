@@ -492,7 +492,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.ScrGetUserInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetSelectedBadgesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileByNameMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembershipsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetRelationshipStatusInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetMemberGuildItemCountMessageComposer;
@@ -1515,7 +1515,7 @@
 
             OUTGOING_PACKETS[10] = _Str_12081;
             OUTGOING_PACKETS[1002] = _Str_11269;
-            OUTGOING_PACKETS[1004] = _Str_7379;
+            OUTGOING_PACKETS[1004] = GetGuildEditInfoMessageComposer;
             OUTGOING_PACKETS[1030] = _Str_12096;
             OUTGOING_PACKETS[1036] = MountPetMessageComposer;
             OUTGOING_PACKETS[105] = QuitMessageComposer;

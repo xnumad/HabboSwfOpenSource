@@ -11,7 +11,7 @@
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditInfoMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.JoinHabboGroupMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
 
@@ -177,7 +177,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._manager.trackGoogle("groupRoomInfo", "manageGroup");
-                this._manager.send(new _Str_7379(this._group.groupId));
+                this._manager.send(new GetGuildEditInfoMessageComposer(this._group.groupId));
                 this._manager.toolbar.events.dispatchEvent(new HabboToolbarEvent(HabboToolbarEvent.HTE_GROUP_ROOM_INFO_CLICK));
             }
         }

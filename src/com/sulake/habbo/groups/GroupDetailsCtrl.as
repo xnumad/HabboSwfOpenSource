@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.window.utils.IAlertDialog;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditInfoMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.DeactivateGuildMessageComposer;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembersMessageComposer;
@@ -218,7 +218,7 @@
                 return;
             }
             this._manager.trackGoogle("groupDetails", "groupManage");
-            this._manager.send(new _Str_7379(this._selectedGroup.groupId));
+            this._manager.send(new GetGuildEditInfoMessageComposer(this._selectedGroup.groupId));
         }
 
         private function onDeleteGuild(k:WindowEvent, _arg_2:IWindow):void
