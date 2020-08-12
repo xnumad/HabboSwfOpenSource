@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorUserInfoData;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7074;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.GetModeratorUserInfoMessageComposer;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -72,7 +72,7 @@
             this._data = null;
             this.refresh();
             this._main.moderationMessageHandler.addUserInfoListener(this);
-            this._main.connection.send(new _Str_7074(_arg_2));
+            this._main.connection.send(new GetModeratorUserInfoMessageComposer(_arg_2));
         }
 
         public function onUserInfo(k:ModeratorUserInfoData):void

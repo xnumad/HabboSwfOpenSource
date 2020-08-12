@@ -760,7 +760,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModTradingLockMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModBanMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModeratorActionMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7074;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.GetModeratorUserInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7202;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.GetCfhChatlogMessageComposer;
@@ -1836,7 +1836,7 @@
             OUTGOING_PACKETS[3283] = AddSpamWallPostItMessageComposer;
             OUTGOING_PACKETS[3285] = _Str_10337;
             OUTGOING_PACKETS[3288] = GetMarketplaceItemStatsComposer;
-            OUTGOING_PACKETS[3295] = _Str_7074;
+            OUTGOING_PACKETS[3295] = GetModeratorUserInfoMessageComposer;
             OUTGOING_PACKETS[3301] = LookToMessageComposer;
             OUTGOING_PACKETS[3305] = SetRoomSessionTagsMessageComposer;
             OUTGOING_PACKETS[3314] = IgnoreUserIdMessageComposer;
