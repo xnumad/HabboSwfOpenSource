@@ -290,7 +290,7 @@
                 return false;
             }
             this.send(new _Str_11418(_arg_2));
-            this.searchResults._Str_25695(k);
+            this.searchResults.setFriendRequestSent(k);
             this.send(new _Str_10763());
             return true;
         }

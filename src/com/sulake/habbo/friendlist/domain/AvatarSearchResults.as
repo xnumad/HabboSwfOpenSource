@@ -55,7 +55,7 @@
             return this._others;
         }
 
-        public function _Str_25695(k:int):void
+        public function setFriendRequestSent(k:int):void
         {
             this._sentRequests[k] = "yes";
         }
