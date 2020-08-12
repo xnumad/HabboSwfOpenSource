@@ -401,7 +401,7 @@
                 k.preventDefault();
                 return;
             }
-            this._Str_18142();
+            this.saveView();
             this._step = _arg_2.id;
             this.refresh();
         }
@@ -578,7 +578,7 @@
             }
         }
 
-        private function _Str_18142():void
+        private function saveView():void
         {
             var k:String;
             var _local_2:String;
@@ -691,7 +691,7 @@
                 {
                     return;
                 }
-                this._Str_18142();
+                this.saveView();
             }
             this.close();
         }
@@ -757,7 +757,7 @@
         {
             if (((((!(this._data == null)) && (this._data.exists)) && (!(this._window == null))) && (this._window.visible)))
             {
-                this._Str_18142();
+                this.saveView();
             }
         }
     }
