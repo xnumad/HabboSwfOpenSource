@@ -466,7 +466,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10313;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10517;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10635;
+	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildCreationInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.RespectUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10770;
@@ -1856,7 +1856,7 @@
             OUTGOING_PACKETS[3386] = _Str_9949;
             OUTGOING_PACKETS[339] = _Str_12068;
             OUTGOING_PACKETS[3407] = _Str_9862;
-            OUTGOING_PACKETS[3435] = _Str_10635;
+            OUTGOING_PACKETS[3435] = UpdateGuildSettingsMessageComposer;
             OUTGOING_PACKETS[3445] = _Str_16318;
             OUTGOING_PACKETS[3447] = _Str_7610;
             OUTGOING_PACKETS[3449] = MovePetMessageComposer;
