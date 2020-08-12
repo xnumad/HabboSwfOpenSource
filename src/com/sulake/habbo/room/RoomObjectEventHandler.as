@@ -86,7 +86,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10097;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.SetItemDataMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveItemMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10596;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveAvatarMessageComposer;
 
     public class RoomObjectEventHandler implements IRoomRenderingCanvasMouseListener 
     {
@@ -2451,7 +2451,7 @@
         {
             if (this._roomEngine.connection)
             {
-                this._roomEngine.connection.send(new _Str_10596(k, _arg_2));
+                this._roomEngine.connection.send(new MoveAvatarMessageComposer(k, _arg_2));
             }
         }
 

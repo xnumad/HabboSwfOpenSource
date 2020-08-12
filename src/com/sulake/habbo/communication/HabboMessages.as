@@ -610,7 +610,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetItemDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10528;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.HarvestPetMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10596;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveAvatarMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetItemDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemovePetFromFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.CompostPlantMessageComposer;
@@ -1840,7 +1840,7 @@
             OUTGOING_PACKETS[3301] = LookToMessageComposer;
             OUTGOING_PACKETS[3305] = _Str_8348;
             OUTGOING_PACKETS[3314] = _Str_5697;
-            OUTGOING_PACKETS[3320] = _Str_10596;
+            OUTGOING_PACKETS[3320] = MoveAvatarMessageComposer;
             OUTGOING_PACKETS[3323] = _Str_5937;
             OUTGOING_PACKETS[3333] = _Str_7461;
             OUTGOING_PACKETS[3336] = RemoveItemMessageComposer;
