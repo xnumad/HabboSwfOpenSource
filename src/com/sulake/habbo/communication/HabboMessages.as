@@ -504,7 +504,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.ingame.Game2RequestFullStatusUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.camera.CameraSnapshotMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWhereMyFriendsAreSearchMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10157;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.PopularRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10574;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.CreateFlatMessageComposer;
@@ -1757,7 +1757,7 @@
             OUTGOING_PACKETS[2750] = OpenQuestTrackerMessageComposer;
             OUTGOING_PACKETS[2752] = CreateFlatMessageComposer;
             OUTGOING_PACKETS[2755] = _Str_11879;
-            OUTGOING_PACKETS[2758] = _Str_10157;
+            OUTGOING_PACKETS[2758] = PopularRoomsSearchMessageComposer;
             OUTGOING_PACKETS[2760] = _Str_11362;
             OUTGOING_PACKETS[2765] = EnterOneWayDoorMessageComposer;
             OUTGOING_PACKETS[2766] = _Str_4767;
