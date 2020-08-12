@@ -24,9 +24,9 @@
 
     public class RentConfirmationWindow implements IDisposable, IGetImageListener 
     {
-        private static const _Str_14621:int = 1;
-        private static const _Str_15835:int = 2;
-        private static const _Str_15768:int = 3;
+        private static const MODE_INFOSTAND:int = 1;
+        private static const MODE_INVENTORY:int = 2;
+        private static const MODE_CATALOGUE:int = 3;
 
         private var _disposed:Boolean;
         private var _offerMessageEvent:_Str_7104;
@@ -130,17 +130,17 @@
             this._stripId = _arg_4;
             if (_arg_5)
             {
-                this._mode = _Str_15768;
+                this._mode = MODE_CATALOGUE;
             }
             else
             {
                 if (this._roomInstanceId > -1)
                 {
-                    this._mode = _Str_14621;
+                    this._mode = MODE_INFOSTAND;
                 }
                 else
                 {
-                    this._mode = _Str_15835;
+                    this._mode = MODE_INVENTORY;
                 }
             }
             var _local_6:* = (k.type == ProductTypeEnum.WALL);
@@ -167,13 +167,13 @@
                 case "ok_button":
                     switch (this._mode)
                     {
-                        case _Str_14621:
+                        case MODE_INFOSTAND:
                             this._catalog.connection.send(new _Str_9998((this._furniData.type == ProductTypeEnum.WALL), this._roomInstanceId, this._isBuyout));
                             break;
-                        case _Str_15835:
+                        case MODE_INVENTORY:
                             this._catalog.connection.send(new _Str_12348(this._stripId, this._isBuyout));
                             break;
-                        case _Str_15768:
+                        case MODE_CATALOGUE:
                             this._catalog.purchaseOffer(this._furniData.rentOfferId);
                             break;
                     }
