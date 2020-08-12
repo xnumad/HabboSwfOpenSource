@@ -476,7 +476,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.SelectFavouriteHabboGroupMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.RejectMembershipRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildColorsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_11183;
+	import com.sulake.habbo.communication.messages.outgoing.users.ScrGetKickbackInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11544;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditorDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.DeselectFavouriteHabboGroupMessageComposer;
@@ -1969,7 +1969,7 @@
             OUTGOING_PACKETS[826] = _Str_10397;
             OUTGOING_PACKETS[848] = _Str_11938;
             OUTGOING_PACKETS[865] = _Str_9966;
-            OUTGOING_PACKETS[869] = _Str_11183;
+            OUTGOING_PACKETS[869] = ScrGetKickbackInfoMessageComposer;
             OUTGOING_PACKETS[872] = RentableSpaceStatusMessageComposer;
             OUTGOING_PACKETS[873] = ModerateMessageMessageComposer;
             OUTGOING_PACKETS[875] = UpdateFloorPropertiesMessageComposer;

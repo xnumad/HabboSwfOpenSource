@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11183 implements IMessageComposer 
+    public class ScrGetKickbackInfoMessageComposer implements IMessageComposer
     {
 
 
