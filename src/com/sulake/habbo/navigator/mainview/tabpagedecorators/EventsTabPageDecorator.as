@@ -111,7 +111,7 @@
             return this._filter.items()[this._filter.selection];
         }
 
-        public function _Str_8025(k:int):void
+        public function setSubSelection(k:int):void
         {
         }
 

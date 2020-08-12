@@ -136,7 +136,7 @@
             return ((this._filter) && (!(this._filter.disposed))) ? this._filter.items()[this._filter.selection] : null;
         }
 
-        public function _Str_8025(k:int):void
+        public function setSubSelection(k:int):void
         {
         }
 

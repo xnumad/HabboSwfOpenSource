@@ -685,7 +685,7 @@
                 return;
             }
             this._mainViewCtrl.startSearch(Tabs.TAB_ME, k);
-            this._tabs.getTab(Tabs.TAB_ME)._Str_5252._Str_8025(k);
+            this._tabs.getTab(Tabs.TAB_ME)._Str_5252.setSubSelection(k);
         }
 
         public function trackNavigationDataPoint(k:String, _arg_2:String, _arg_3:String="", _arg_4:int=0):void
