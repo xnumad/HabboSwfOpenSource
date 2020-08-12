@@ -196,7 +196,7 @@
             this._navigator.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT));
         }
 
-        public function _Str_21207(k:int, _arg_2:int):void
+        public function startRoomSettingsEditFromNavigator(k:int, _arg_2:int):void
         {
             this.close();
             this._Str_2449 = k;
