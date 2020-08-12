@@ -340,7 +340,7 @@
             _local_4.addEventListener(WindowMouseEvent.CLICK, this.onRemoveMouseClick);
             var _local_5:IRegionWindow = IRegionWindow(k.findChildByName("action_link_region"));
             _local_5.addEventListener(WindowMouseEvent.OVER, this.onActionLinkMouseOver);
-            _local_5.addEventListener(WindowMouseEvent.OUT, this._Str_25563);
+            _local_5.addEventListener(WindowMouseEvent.OUT, this.onActionLinkMouseOut);
             _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_23181);
             return k;
         }
@@ -421,7 +421,7 @@
             this._Str_18115(_local_3.member, (!(_local_3.admin)), IWindowContainer(_local_2.parent));
         }
 
-        private function _Str_25563(k:WindowEvent):void
+        private function onActionLinkMouseOut(k:WindowEvent):void
         {
             var _local_2:IRegionWindow = IRegionWindow(k.target);
             this.setActionLinkState(false, _local_2);
