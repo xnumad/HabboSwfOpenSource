@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6990;
+    import com.sulake.habbo.communication.messages.parser.navigator.RoomRatingMessageParser;
 
     public class _Str_6001 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_6001(k:Function)
         {
-            super(k, _Str_6990);
+            super(k, RoomRatingMessageParser);
         }
 
-        public function getParser():_Str_6990
+        public function getParser():RoomRatingMessageParser
         {
-            return this._parser as _Str_6990;
+            return this._parser as RoomRatingMessageParser;
         }
     }
 }

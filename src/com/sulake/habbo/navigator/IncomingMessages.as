@@ -97,7 +97,7 @@
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6990;
+    import com.sulake.habbo.communication.messages.parser.navigator.RoomRatingMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.FlatAccessDeniedMessageParser;
     import com.sulake.core.window.IWindowContext;
     import com.sulake.core.window.IWindow;
@@ -685,7 +685,7 @@
 
         private function onRoomRating(k:IMessageEvent):void
         {
-            var _local_2:_Str_6990 = (k as _Str_6001).getParser();
+            var _local_2:RoomRatingMessageParser = (k as _Str_6001).getParser();
             Logger.log(("Received room rating: " + _local_2.rating));
             this._navigator.data._Str_15395 = _local_2.rating;
             this._navigator.data._Str_5090 = _local_2._Str_5090;
