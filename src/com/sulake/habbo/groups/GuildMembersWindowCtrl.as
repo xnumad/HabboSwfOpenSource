@@ -106,7 +106,7 @@
             this._Str_23578();
         }
 
-        public function _Str_25762(k:IMessageEvent):void
+        public function onGuildMembershipUpdated(k:IMessageEvent):void
         {
             var _local_2:GuildMembershipUpdatedMessageEvent = GuildMembershipUpdatedMessageEvent(k);
             if (((!(this._data == null)) && (this._data.groupId == _local_2.guildId)))

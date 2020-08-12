@@ -184,7 +184,7 @@
             this.addMessageEvent(new GroupDetailsChangedMessageEvent(this.onGroupDetailsChanged));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new GuildEditInfoMessageEvent(this.onGuildEditInfo));
-            this.addMessageEvent(new GuildMembershipUpdatedMessageEvent(this._guildMembersWindowCtrl._Str_25762));
+            this.addMessageEvent(new GuildMembershipUpdatedMessageEvent(this._guildMembersWindowCtrl.onGuildMembershipUpdated));
             this.addMessageEvent(new ExtendedProfileChangedMessageEvent(this.onExtendedProfileChanged));
             this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             this.addMessageEvent(new UserBadgesEvent(this.onUserBadgesMessage));
