@@ -29,7 +29,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation.IssueDeletedMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7467;
     import com.sulake.habbo.communication.messages.parser.moderation.ModeratorRoomInfoMessageParser;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_8235;
+    import com.sulake.habbo.communication.messages.parser.moderation.CfhChatlogMessageParser;
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.parser.moderation.RoomChatlogMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation.UserChatlogMessageParser;
@@ -206,7 +206,7 @@
 
         private function onCfhChatlog(k:_Str_8088):void
         {
-            var _local_2:_Str_8235 = k.getParser();
+            var _local_2:CfhChatlogMessageParser = k.getParser();
             var _local_3:Array = new Array();
             _local_3.push(_local_2.data._Str_17106);
             var _local_4:Dictionary = new Dictionary();
