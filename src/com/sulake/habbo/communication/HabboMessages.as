@@ -624,7 +624,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7684;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MountPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7716;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetClothingChangeDataMessageComposer;
@@ -1711,7 +1711,7 @@
             OUTGOING_PACKETS[2456] = AvatarExpressionMessageComposer;
             OUTGOING_PACKETS[2462] = _Str_7218;
             OUTGOING_PACKETS[2468] = _Str_18849;
-            OUTGOING_PACKETS[248] = _Str_7684;
+            OUTGOING_PACKETS[248] = MoveObjectMessageComposer;
             OUTGOING_PACKETS[2486] = _Str_5085;
             OUTGOING_PACKETS[2487] = _Str_12290;
             OUTGOING_PACKETS[249] = _Str_11428;

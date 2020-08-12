@@ -2,14 +2,14 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7684 implements IMessageComposer 
+    public class MoveObjectMessageComposer implements IMessageComposer
     {
         private var _objectId:int;
         private var _x:int;
         private var _y:int;
         private var _direction:int;
 
-        public function _Str_7684(k:int, _arg_2:int, _arg_3:int, _arg_4:int)
+        public function MoveObjectMessageComposer(k:int, _arg_2:int, _arg_3:int, _arg_4:int)
         {
             this._objectId = k;
             this._x = _arg_2;
