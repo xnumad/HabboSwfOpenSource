@@ -116,7 +116,7 @@
         private var _Str_3764:int;
         internal var _categories:FriendCategories;
         private var _friendRequests:_Str_9210;
-        private var _Str_17300:AvatarSearchResults;
+        private var _avatarSearchResults:AvatarSearchResults;
         private var _notifications:IHabboNotifications;
         private var _Str_6311:Timer;
         private var _Str_21357:int;
@@ -130,7 +130,7 @@
             this._Str_18300 = -(FriendsView._Str_13372);
             super(k, _arg_2, _arg_3);
             this._categories = new FriendCategories(new _Str_10966(this));
-            this._Str_17300 = new AvatarSearchResults(new _Str_10395(this));
+            this._avatarSearchResults = new AvatarSearchResults(new _Str_10395(this));
             this._Str_19590 = new _Str_8767();
             this._Str_5982 = [];
         }
@@ -590,7 +590,7 @@
         private function _Str_23021(k:IMessageEvent):void
         {
             var _local_2:_Str_8159 = (k as _Str_8109).getParser();
-            this._Str_17300._Str_22668(_local_2.friends, _local_2.others);
+            this._avatarSearchResults._Str_22668(_local_2.friends, _local_2.others);
             this._view.refresh("search");
         }
 
@@ -804,7 +804,7 @@
 
         public function get searchResults():AvatarSearchResults
         {
-            return this._Str_17300;
+            return this._avatarSearchResults;
         }
 
         public function get view():FriendListView
