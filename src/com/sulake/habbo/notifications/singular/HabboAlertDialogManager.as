@@ -39,7 +39,7 @@
             this._Str_16535(k, _arg_2);
         }
 
-        public function _Str_22997(k:String, _arg_2:String=""):void
+        public function handleModeratorMessage(k:String, _arg_2:String=""):void
         {
             this._Str_16535(k, _arg_2, false);
         }

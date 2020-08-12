@@ -268,7 +268,7 @@
             }
             if (this.useNotifications())
             {
-                this._notifications.singularController.alertDialogManager._Str_22997(_local_2.message, _local_2.url);
+                this._notifications.singularController.alertDialogManager.handleModeratorMessage(_local_2.message, _local_2.url);
             }
             if (this.useNotificationFeed())
             {
