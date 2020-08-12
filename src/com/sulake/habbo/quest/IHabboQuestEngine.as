@@ -5,7 +5,7 @@
 
     public interface IHabboQuestEngine extends IUnknown 
     {
-        function _Str_23424():Boolean;
+        function isTrackerVisible():Boolean;
         function _Str_12909():void;
         function showAchievements():void;
         function _Str_23387():void;

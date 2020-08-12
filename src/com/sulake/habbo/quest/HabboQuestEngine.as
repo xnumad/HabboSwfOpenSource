@@ -495,7 +495,7 @@
             this.communication.connection.send(k);
         }
 
-        public function _Str_23424():Boolean
+        public function isTrackerVisible():Boolean
         {
             return this._questController._Str_20198.isVisible();
         }
