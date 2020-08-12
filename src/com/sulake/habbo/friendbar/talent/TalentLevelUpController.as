@@ -102,7 +102,7 @@
                 {
                     _local_5.addListItem(_local_6.clone());
                 }
-                _local_5.addListItem(this._Str_13209(_local_8));
+                _local_5.addListItem(this.createRewardPerk(_local_8));
                 _local_7 = true;
             }
             for each (_local_9 in _arg_4)
@@ -121,7 +121,7 @@
             }
         }
 
-        private function _Str_13209(k:TalentTrackRewardPerk):IWindow
+        private function createRewardPerk(k:TalentTrackRewardPerk):IWindow
         {
             var _local_2:IWindowContainer = (this._rewardPerkTemplate.clone() as IWindowContainer);
             IBadgeImageWidget(IWidgetWindow(_local_2.findChildByName("perk_image")).widget).badgeId = k._Str_10964;

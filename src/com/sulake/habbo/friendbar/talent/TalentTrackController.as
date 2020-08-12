@@ -314,7 +314,7 @@
                             _local_9.width = ((_Str_5573 * 2) + (_Str_3555 * 2));
                             _local_12.width = (_Str_5573 * 2);
                             _local_13.width = (_Str_5573 * 2);
-                            _local_14.addListItem(((k._Str_8893.length > 0) ? this._Str_13209(k, k._Str_8893[0]) : this.createRewardProduct(k, k._Str_7068[0])));
+                            _local_14.addListItem(((k._Str_8893.length > 0) ? this.createRewardPerk(k, k._Str_8893[0]) : this.createRewardProduct(k, k._Str_7068[0])));
                             _local_14.arrangeListItems();
                             _local_5.width = (_local_14.width + (2 * _Str_3555));
                             _local_9.width = (_local_14.width + (2 * _Str_3555));
@@ -323,7 +323,7 @@
                         {
                             for each (_local_16 in k._Str_8893)
                             {
-                                _local_14.addListItem(this._Str_13209(k, _local_16));
+                                _local_14.addListItem(this.createRewardPerk(k, _local_16));
                             }
                             for each (_local_17 in k._Str_7068)
                             {
@@ -418,7 +418,7 @@
             _arg_2.width = Math.max(_arg_2.width, _local_4.right);
         }
 
-        private function _Str_13209(k:TalentTrackLevel, _arg_2:TalentTrackRewardPerk):IWindowContainer
+        private function createRewardPerk(k:TalentTrackLevel, _arg_2:TalentTrackRewardPerk):IWindowContainer
         {
             var _local_3:IWindowContainer;
             switch (k.state)
