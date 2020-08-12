@@ -7,14 +7,14 @@
     {
         private var _array:Array;
 
-        public function UpdateRoomThumbnailMessageComposer(k:int, _arg_2:int, _arg_3:int, _arg_4:int)
+        public function UpdateRoomThumbnailMessageComposer(flatId:int, bgImgId:int, frontImgId:int, objCount:int)
         {
             this._array = new Array();
             super();
-            this._array.push(k);
-            this._array.push(_arg_2);
-            this._array.push(_arg_3);
-            this._array.push(_arg_4);
+            this._array.push(flatId);
+            this._array.push(bgImgId);
+            this._array.push(frontImgId);
+            this._array.push(objCount);
         }
 
         public function _Str_26191(k:int, _arg_2:int):void
