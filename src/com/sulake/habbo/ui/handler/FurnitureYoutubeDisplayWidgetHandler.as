@@ -45,7 +45,7 @@
             this._container = k;
             //this.addMessageEvent(new _Str_8731(this.onVideo));
             //this.addMessageEvent(new YoutubeDisplayPlaylistsEvent(this._Str_24746));
-            //this.addMessageEvent(new _Str_9325(this._Str_25218));
+            //this.addMessageEvent(new _Str_9325(this.onControlVideo));
         }
 
         private function addMessageEvent(k:IMessageEvent):void
@@ -74,7 +74,7 @@
             this._widget.showVideo(_local_2.furniId, _local_2.videoId, _local_2._Str_25795, _local_2._Str_23507, _local_2.state);
         }
 
-        private function _Str_25218(k:_Str_9325):void
+        private function onControlVideo(k:_Str_9325):void
         {
             var _local_2:_Str_7559 = k.getParser();
             this._widget._Str_22371(_local_2.furniId, _local_2.commandId);
