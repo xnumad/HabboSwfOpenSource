@@ -9,7 +9,7 @@
     {
         private var _talentTrackName:String;
         private var _level:int;
-        private var _rewardPerks:Vector.<_Str_3450>;
+        private var _rewardPerks:Vector.<TalentTrackRewardPerk>;
         private var _rewardProducts:Vector.<TalentTrackRewardProduct>;
 
 
@@ -26,12 +26,12 @@
             var _local_2:int;
             this._talentTrackName = k.readString();
             this._level = k.readInteger();
-            this._rewardPerks = new Vector.<_Str_3450>();
+            this._rewardPerks = new Vector.<TalentTrackRewardPerk>();
             var _local_3:int = k.readInteger();
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._rewardPerks.push(new _Str_3450(k));
+                this._rewardPerks.push(new TalentTrackRewardPerk(k));
                 _local_2++;
             }
             this._rewardProducts = new Vector.<TalentTrackRewardProduct>();
@@ -55,7 +55,7 @@
             return this._level;
         }
 
-        public function get _Str_8893():Vector.<_Str_3450>
+        public function get _Str_8893():Vector.<TalentTrackRewardPerk>
         {
             return this._rewardPerks;
         }

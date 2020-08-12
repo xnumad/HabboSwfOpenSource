@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
     import com.sulake.habbo.communication.messages.parser.talent.TalentLevelUpMessageParser;
     import com.sulake.habbo.session.talent.TalentEnum;
-    import com.sulake.habbo.communication.messages.parser.talent._Str_3450;
+    import com.sulake.habbo.communication.messages.parser.talent.TalentTrackRewardPerk;
     import com.sulake.habbo.communication.messages.parser.talent.TalentTrackRewardProduct;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IItemListWindow;
@@ -77,9 +77,9 @@
             this._Str_3360(_local_2.talentTrackName, _local_2.level, _local_2._Str_8893, _local_2._Str_7068);
         }
 
-        public function _Str_3360(k:String, _arg_2:int, _arg_3:Vector.<_Str_3450>, _arg_4:Vector.<TalentTrackRewardProduct>):void
+        public function _Str_3360(k:String, _arg_2:int, _arg_3:Vector.<TalentTrackRewardPerk>, _arg_4:Vector.<TalentTrackRewardProduct>):void
         {
-            var _local_8:_Str_3450;
+            var _local_8:TalentTrackRewardPerk;
             var _local_9:TalentTrackRewardProduct;
             this.closeWindow();
             this._track = k;
@@ -121,7 +121,7 @@
             }
         }
 
-        private function _Str_13209(k:_Str_3450):IWindow
+        private function _Str_13209(k:TalentTrackRewardPerk):IWindow
         {
             var _local_2:IWindowContainer = (this._rewardPerkTemplate.clone() as IWindowContainer);
             IBadgeImageWidget(IWidgetWindow(_local_2.findChildByName("perk_image")).widget).badgeId = k._Str_10964;

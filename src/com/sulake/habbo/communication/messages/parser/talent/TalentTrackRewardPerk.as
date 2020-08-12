@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3450 
+    public class TalentTrackRewardPerk
     {
         private var _Str_21367:String;
 
-        public function _Str_3450(k:IMessageDataWrapper)
+        public function TalentTrackRewardPerk(k:IMessageDataWrapper)
         {
             this._Str_21367 = k.readString();
         }

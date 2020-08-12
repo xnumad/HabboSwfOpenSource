@@ -18,7 +18,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.communication.messages.parser.talent._Str_3450;
+    import com.sulake.habbo.communication.messages.parser.talent.TalentTrackRewardPerk;
     import com.sulake.habbo.communication.messages.parser.talent.TalentTrackRewardProduct;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.parser.talent.TalentTrackTask;
@@ -234,7 +234,7 @@
             var _local_13:ITextWindow;
             var _local_14:IItemListWindow;
             var _local_15:int;
-            var _local_16:_Str_3450;
+            var _local_16:TalentTrackRewardPerk;
             var _local_17:TalentTrackRewardProduct;
             var _local_18:IWindow;
             var _local_19:Vector.<IWindow>;
@@ -418,7 +418,7 @@
             _arg_2.width = Math.max(_arg_2.width, _local_4.right);
         }
 
-        private function _Str_13209(k:TalentTrackLevel, _arg_2:_Str_3450):IWindowContainer
+        private function _Str_13209(k:TalentTrackLevel, _arg_2:TalentTrackRewardPerk):IWindowContainer
         {
             var _local_3:IWindowContainer;
             switch (k.state)
