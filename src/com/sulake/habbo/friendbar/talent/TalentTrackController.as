@@ -716,7 +716,7 @@
                 this.setText(_local_3, "action_link", _local_6);
                 _local_3.findChildByName("action_link").name = _local_2.badgeCode;
                 _local_3.findChildByName("progress_separator").visible = (!(_local_6 == ""));
-                if (((_local_2.badgeCode == TalentTrackTask.EMAIL_VERIFICATION_1) && (this._Str_25273)))
+                if (((_local_2.badgeCode == TalentTrackTask.EMAIL_VERIFICATION_1) && (this.emailChangeEnabled)))
                 {
                     this.getEmailContainer().visible = true;
                     this.getEmailContainer().findChildByName("change_email_region").procedure = this.onChangeEmail;
@@ -929,7 +929,7 @@
             this._Str_8036();
         }
 
-        private function get _Str_25273():Boolean
+        private function get emailChangeEnabled():Boolean
         {
             return this._habboTalent.getBoolean("talent.progress.emailchange.enabled");
         }
