@@ -135,7 +135,7 @@
             }
         }
 
-        public static function _Str_3931(k:IWindowContainer, _arg_2:String, _arg_3:Function):void
+        public static function setProc(k:IWindowContainer, _arg_2:String, _arg_3:Function):void
         {
             var _local_4:IWindow = k.findChildByName(_arg_2);
             _local_4.setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, true);

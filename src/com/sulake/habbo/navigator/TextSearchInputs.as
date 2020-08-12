@@ -21,7 +21,7 @@
             this._navigator = k;
             var _local_3:ITextFieldWindow = ITextFieldWindow(_arg_2.findChildByName("search_str"));
             this._searchStr = new TextFieldManager(this._navigator, _local_3, 35, this._Str_21221, this._navigator.getText("navigator.search.info"));
-            Util._Str_3931(_arg_2, "search_but", this._Str_17805);
+            Util.setProc(_arg_2, "search_but", this._Str_17805);
             var _local_4:Boolean = true;
             if (_local_4)
             {

@@ -332,7 +332,7 @@
             }
         }
 
-        private function _Str_3931(k:String, _arg_2:Function):void
+        private function setProc(k:String, _arg_2:Function):void
         {
             var _local_3:IWindow = this._window.findChildByName(k);
             _local_3.mouseThreshold = 0;

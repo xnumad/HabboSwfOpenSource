@@ -54,13 +54,13 @@
                 return;
             }
             this._window = IWindowContainer(this._manager.getXmlWindow("group"));
-            this._Str_3931("group_room_link_region", this._Str_17423);
-            this._Str_3931("manage_guild_region", this._Str_24785);
-            this._Str_3931("delete_guild_region", this._Str_25370);
-            this._Str_3931("members_region", this._Str_22812);
-            this._Str_3931("pending_members_region", this._Str_23598);
-            this._Str_3931("show_groups_link_region", this._Str_23641);
-            this._Str_3931("buy_furni_link_region", this._Str_25591);
+            this.setProc("group_room_link_region", this._Str_17423);
+            this.setProc("manage_guild_region", this._Str_24785);
+            this.setProc("delete_guild_region", this._Str_25370);
+            this.setProc("members_region", this._Str_22812);
+            this.setProc("pending_members_region", this._Str_23598);
+            this.setProc("show_groups_link_region", this._Str_23641);
+            this.setProc("buy_furni_link_region", this._Str_25591);
             this._window.findChildByName("leave_button").procedure = this._Str_23388;
             this._window.findChildByName("join_button").procedure = this._Str_11995;
             this._window.findChildByName("request_membership_button").procedure = this._Str_11995;
@@ -93,7 +93,7 @@
             this._window.findChildByName("show_forum_link").visible = _local_6;
             if (_local_6)
             {
-                this._Str_3931("show_forum_link_region", this._Str_24830);
+                this.setProc("show_forum_link_region", this._Str_24830);
             }
             this._manager.windowManager.registerLocalizationParameter("group.created", "date", ("" + _arg_2.creationDate));
             this._manager.windowManager.registerLocalizationParameter("group.created", "owner", ("" + _arg_2.ownerName));
@@ -148,7 +148,7 @@
             return this._window.findChildByName(("grouptype_icon_" + k));
         }
 
-        private function _Str_3931(k:String, _arg_2:Function):void
+        private function setProc(k:String, _arg_2:Function):void
         {
             var _local_3:IWindow = this._window.findChildByName(k);
             _local_3.mouseThreshold = 0;

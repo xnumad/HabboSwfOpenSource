@@ -160,10 +160,10 @@
                 this._moderationManager.registerUpdateReceiver(this, 1000);
             }
             this._lastWindowPreferencesMessageSentAt = getTimer();
-            this._Str_3931("close_useless", this._Str_23692);
-            this._Str_3931("close_sanction", this._Str_23381);
-            this._Str_3931("close_resolved", this._Str_23537);
-            this._Str_3931("release", this._Str_15257);
+            this.setProc("close_useless", this._Str_23692);
+            this.setProc("close_sanction", this._Str_23381);
+            this.setProc("close_resolved", this._Str_23537);
+            this.setProc("release", this._Str_15257);
             _local_3 = this._window.findChildByName("move_to_player_support");
             if (_local_3 != null)
             {
@@ -459,7 +459,7 @@
             this._moderationManager.issueManager._Str_16247(this._issueBundle.id, _local_3);
         }
 
-        private function _Str_3931(k:String, _arg_2:Function):void
+        private function setProc(k:String, _arg_2:Function):void
         {
             this._window.findChildByName(k).addEventListener(WindowMouseEvent.CLICK, _arg_2);
         }
