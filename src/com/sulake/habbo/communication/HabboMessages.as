@@ -722,7 +722,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ThrowDiceMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SpinWheelOfFortuneMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ExtendRentOrBuyoutStripItemMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12374;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenWelcomeGiftComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenMysteryTrophyMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ControlYoutubeDisplayPlaybackMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetCustomStackingHeightComposer;
@@ -1734,7 +1734,7 @@
             OUTGOING_PACKETS[2596] = PongMessageComposer;
             OUTGOING_PACKETS[2597] = _Str_7525;
             OUTGOING_PACKETS[2624] = CommandBotComposer;
-            OUTGOING_PACKETS[2638] = _Str_12374;
+            OUTGOING_PACKETS[2638] = OpenWelcomeGiftComposer;
             OUTGOING_PACKETS[2647] = PlacePetMessageComposer;
             OUTGOING_PACKETS[2650] = _Str_12361;
             OUTGOING_PACKETS[2651] = GetGuildFurniContextMenuInfoMessageComposer;

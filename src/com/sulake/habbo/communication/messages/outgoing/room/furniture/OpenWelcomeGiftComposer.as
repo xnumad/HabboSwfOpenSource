@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12374 implements IMessageComposer 
+    public class OpenWelcomeGiftComposer implements IMessageComposer
     {
         private var _furniId:int;
 
-        public function _Str_12374(k:int)
+        public function OpenWelcomeGiftComposer(k:int)
         {
             this._furniId = k;
         }

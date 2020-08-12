@@ -12,7 +12,7 @@
     import com.sulake.habbo.ui.widget.events._Str_6843;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetFurniActionMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetChangeEmailMessage;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12374;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenWelcomeGiftComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9855;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
@@ -120,7 +120,7 @@
             {
                 case RoomWidgetFurniActionMessage.RWFAM_OPEN_WELCOME_GIFT:
                     _local_2 = (k as RoomWidgetFurniActionMessage);
-                    this._container.connection.send(new _Str_12374(_local_2.furniId));
+                    this._container.connection.send(new OpenWelcomeGiftComposer(_local_2.furniId));
                     break;
                 case RoomWidgetChangeEmailMessage.RWCEM_CHANGE_EMAIL:
                     _local_3 = (k as RoomWidgetChangeEmailMessage);
