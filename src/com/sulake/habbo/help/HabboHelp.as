@@ -640,7 +640,7 @@
 
         private function _Str_24610(k:IMessageEvent):void
         {
-            this._topicsFlowHelpController._Str_10791(false);
+            this._topicsFlowHelpController.submitCallForHelp(false);
         }
 
         private function _Str_23107(k:_Str_9074):void

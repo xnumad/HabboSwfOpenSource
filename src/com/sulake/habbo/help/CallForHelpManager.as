@@ -480,7 +480,7 @@
                             this._habboHelp.windowManager.alert("${generic.alert.title}", "${help.cfh.error.chatmissing}", 0, null);
                             return;
                         }
-                        this._Str_10791();
+                        this.submitCallForHelp();
                         this._chatReportController.closeWindow();
                         this.closeWindow();
                         return;
@@ -543,7 +543,7 @@
             }
             else
             {
-                this._Str_10791();
+                this.submitCallForHelp();
             }
         }
 
@@ -601,7 +601,7 @@
             return true;
         }
 
-        private function _Str_10791():void
+        private function submitCallForHelp():void
         {
             var k:int;
             this.closeWindow();

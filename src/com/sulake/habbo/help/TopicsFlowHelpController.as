@@ -400,7 +400,7 @@
                 case "submit_button":
                     if (this._currentTopic)
                     {
-                        this._Str_10791(true);
+                        this.submitCallForHelp(true);
                         this.closeWindow();
                     }
                     else
@@ -411,7 +411,7 @@
             }
         }
 
-        public function _Str_10791(k:Boolean):void
+        public function submitCallForHelp(k:Boolean):void
         {
             if ((((!(this._message)) || (!(this._currentTopic))) || (!(this._habboHelp))))
             {
