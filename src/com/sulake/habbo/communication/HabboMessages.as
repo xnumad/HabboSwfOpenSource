@@ -631,7 +631,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8026;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8042;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8136;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_9462;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.PickupObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.SelectClubGiftComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
@@ -1860,7 +1860,7 @@
             OUTGOING_PACKETS[3445] = _Str_16318;
             OUTGOING_PACKETS[3447] = _Str_7610;
             OUTGOING_PACKETS[3449] = _Str_8026;
-            OUTGOING_PACKETS[3456] = _Str_9462;
+            OUTGOING_PACKETS[3456] = PickupObjectMessageComposer;
             OUTGOING_PACKETS[3457] = EventLogMessageComposer;
             OUTGOING_PACKETS[3483] = _Str_6074;
             OUTGOING_PACKETS[3485] = RoomUserMuteMessageComposer;

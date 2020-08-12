@@ -3,12 +3,12 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
 
-    public class _Str_9462 implements IMessageComposer 
+    public class PickupObjectMessageComposer implements IMessageComposer
     {
         private var _objectId:int;
         private var _objectCategory:int;
 
-        public function _Str_9462(k:int, _arg_2:int)
+        public function PickupObjectMessageComposer(k:int, _arg_2:int)
         {
             this._objectId = k;
             this._objectCategory = _arg_2;

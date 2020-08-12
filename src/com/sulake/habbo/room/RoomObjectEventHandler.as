@@ -63,7 +63,7 @@
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8026;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7684;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_9462;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.PickupObjectMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveWallItemMessageComposer;
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedOnUserEvent;
@@ -2126,7 +2126,7 @@
                 case RoomObjectOperationEnum.OBJECT_PICKUP:
                     if (this._roomEngine.connection)
                     {
-                        this._roomEngine.connection.send(new _Str_9462(_arg_2, _arg_3));
+                        this._roomEngine.connection.send(new PickupObjectMessageComposer(_arg_2, _arg_3));
                     }
                     break;
                 case RoomObjectOperationEnum.OBJECT_PICKUP_PET:
