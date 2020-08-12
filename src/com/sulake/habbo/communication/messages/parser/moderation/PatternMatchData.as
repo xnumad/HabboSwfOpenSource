@@ -3,14 +3,14 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8176 implements IDisposable 
+    public class PatternMatchData implements IDisposable
     {
         private var _pattern:String;
         private var _startIndex:int;
         private var _endIndex:int;
         private var _disposed:Boolean = false;
 
-        public function _Str_8176(k:IMessageDataWrapper)
+        public function PatternMatchData(k:IMessageDataWrapper)
         {
             this._pattern = k.readString();
             this._startIndex = k.readInteger();

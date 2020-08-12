@@ -131,7 +131,7 @@
 
         public function dispose():void
         {
-            var k:_Str_8176;
+            var k:PatternMatchData;
             if (this.disposed)
             {
                 return;
