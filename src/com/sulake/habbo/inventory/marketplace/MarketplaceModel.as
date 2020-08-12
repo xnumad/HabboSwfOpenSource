@@ -191,7 +191,7 @@
             {
                 return;
             }
-            var _local_2:int = ((this._item.isWallItem) ? _Str_7610._Str_17086 : _Str_7610._Str_18366);
+            var _local_2:int = ((this._item.isWallItem) ? _Str_7610._Str_17086 : _Str_7610.ITEMTYPE_STUFF);
             this.send(new _Str_7610(k, _local_2, this._item.ref));
             this.releaseItem();
         }

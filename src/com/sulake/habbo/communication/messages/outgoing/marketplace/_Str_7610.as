@@ -5,7 +5,7 @@
 
     public class _Str_7610 implements IMessageComposer, IDisposable 
     {
-        public static const _Str_18366:int = 1;
+        public static const ITEMTYPE_STUFF:int = 1;
         public static const _Str_17086:int = 2;
 
         private var _array:Array;
