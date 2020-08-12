@@ -411,13 +411,13 @@
                     switch (this.tabs.getSelected().id)
                     {
                         case Tabs.TAB_OFFICIAL:
-                            this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.official", String(k), _local_5);
+                            this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252.filterCategory, "go.official", String(k), _local_5);
                             return;
                         case Tabs.TAB_ME:
-                            this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.me", String(k), _local_5);
+                            this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252.filterCategory, "go.me", String(k), _local_5);
                             return;
                         case Tabs.TAB_ROOMS:
-                            this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252._Str_5960, "go.rooms", String(k), _local_5);
+                            this.trackNavigationDataPoint(this.tabs.getSelected()._Str_5252.filterCategory, "go.rooms", String(k), _local_5);
                             return;
                         case Tabs.TAB_EVENTS:
                             this.trackNavigationDataPoint("Events", "go.events", String(k), _local_5);

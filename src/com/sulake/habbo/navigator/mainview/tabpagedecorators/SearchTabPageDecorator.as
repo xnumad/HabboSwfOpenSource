@@ -33,7 +33,7 @@
             this._navigator.mainViewCtrl.open();
         }
 
-        public function get _Str_5960():String
+        public function get filterCategory():String
         {
             return null;
         }

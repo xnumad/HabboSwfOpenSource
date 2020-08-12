@@ -102,7 +102,7 @@
             return 0;
         }
 
-        public function get _Str_5960():String
+        public function get filterCategory():String
         {
             if (((this._filter == null) || (this._filter.disposed)))
             {

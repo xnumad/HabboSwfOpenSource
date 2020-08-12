@@ -32,7 +32,7 @@
             this._navigator.mainViewCtrl.startSearch(Tabs.TAB_OFFICIAL, Tabs.SEARCHTYPE_OFFICIALROOMS, "-1", MainViewCtrl._Str_15148);
         }
 
-        public function get _Str_5960():String
+        public function get filterCategory():String
         {
             return null;
         }

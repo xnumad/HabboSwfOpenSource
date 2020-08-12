@@ -34,7 +34,7 @@
         {
         }
 
-        public function get _Str_5960():String
+        public function get filterCategory():String
         {
             return null;
         }

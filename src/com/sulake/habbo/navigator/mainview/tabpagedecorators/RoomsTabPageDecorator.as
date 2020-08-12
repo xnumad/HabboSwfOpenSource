@@ -131,7 +131,7 @@
             }
         }
 
-        public function get _Str_5960():String
+        public function get filterCategory():String
         {
             return ((this._filter) && (!(this._filter.disposed))) ? this._filter.items()[this._filter.selection] : null;
         }
