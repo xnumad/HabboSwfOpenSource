@@ -155,7 +155,7 @@
             var _local_2:Effect = this._Str_5810(k);
             if (_local_2 != null)
             {
-                this._Str_17044(false, false);
+                this.stopUsingAllEffects(false, false);
                 _local_2.isActive = true;
                 _local_2._Str_3222 = true;
                 this._Str_4879();
@@ -164,7 +164,7 @@
 
         public function _Str_20338(k:int):void
         {
-            this._Str_17044(false, false, true);
+            this.stopUsingAllEffects(false, false, true);
             var _local_2:Effect = this._Str_5810(k);
             if (_local_2 == null)
             {
@@ -201,7 +201,7 @@
             }
         }
 
-        public function _Str_17044(k:Boolean=true, _arg_2:Boolean=true, _arg_3:Boolean=false):void
+        public function stopUsingAllEffects(k:Boolean=true, _arg_2:Boolean=true, _arg_3:Boolean=false):void
         {
             var _local_5:Effect;
             var _local_4:int;
