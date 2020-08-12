@@ -183,7 +183,7 @@
                 {
                     if (((_local_2) && (this._habboGroupBadgesMessageEvent == null)))
                     {
-                        this._groupDetailsChangedMessageEvent = new GroupDetailsChangedMessageEvent(this._Str_18693);
+                        this._groupDetailsChangedMessageEvent = new GroupDetailsChangedMessageEvent(this.onGroupDetailsChanged);
                         this._habboGroupBadgesMessageEvent = new HabboGroupBadgesMessageEvent(this._Str_18218);
                         this._windowManager.communication.addHabboConnectionMessageEvent(this._groupDetailsChangedMessageEvent);
                         this._windowManager.communication.addHabboConnectionMessageEvent(this._habboGroupBadgesMessageEvent);
@@ -342,7 +342,7 @@
             this.refresh();
         }
 
-        private function _Str_18693(k:GroupDetailsChangedMessageEvent):void
+        private function onGroupDetailsChanged(k:GroupDetailsChangedMessageEvent):void
         {
             this._Str_22252(k.groupId, this._badgeId);
         }
