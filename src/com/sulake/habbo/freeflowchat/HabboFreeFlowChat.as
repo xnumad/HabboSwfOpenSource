@@ -61,7 +61,7 @@
     import flash.events.MouseEvent;
     import com.sulake.habbo.freeflowchat.style.IChatStyleLibrary;
     import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatPreferencesMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.preferences._Str_12096;
+    import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatStylePreferenceComposer;
 
     public class HabboFreeFlowChat extends Component implements IHabboFreeFlowChat 
     {
@@ -514,7 +514,7 @@
         public function set preferedChatStyle(k:int):void
         {
             this._preferedChatStyle = k;
-            this._communication.connection.send(new _Str_12096(this._preferedChatStyle));
+            this._communication.connection.send(new SetChatStylePreferenceComposer(this._preferedChatStyle));
         }
 
         public function clear():void

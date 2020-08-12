@@ -250,7 +250,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11137;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11698;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11774;
-	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_12096;
+	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatStylePreferenceComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetUIFlagsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.pets.CustomizePetWithFurniComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.pets.PetSelectedMessageComposer;
@@ -1516,7 +1516,7 @@
             OUTGOING_PACKETS[10] = _Str_12081;
             OUTGOING_PACKETS[1002] = _Str_11269;
             OUTGOING_PACKETS[1004] = GetGuildEditInfoMessageComposer;
-            OUTGOING_PACKETS[1030] = _Str_12096;
+            OUTGOING_PACKETS[1030] = SetChatStylePreferenceComposer;
             OUTGOING_PACKETS[1036] = MountPetMessageComposer;
             OUTGOING_PACKETS[105] = QuitMessageComposer;
             OUTGOING_PACKETS[1051] = _Str_12382;

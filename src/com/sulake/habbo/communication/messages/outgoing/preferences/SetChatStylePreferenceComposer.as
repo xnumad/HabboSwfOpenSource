@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_12096 implements IMessageComposer, IDisposable 
+    public class SetChatStylePreferenceComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function _Str_12096(k:int)
+        public function SetChatStylePreferenceComposer(k:int)
         {
             this._array = new Array();
             super();
