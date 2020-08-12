@@ -54,7 +54,7 @@
     import com.sulake.habbo.communication.messages.parser.notifications.PetLevelNotificationParser;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.Pet;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetReceivedMessageParser;
-    import com.sulake.habbo.communication.messages.parser.notifications._Str_6671;
+    import com.sulake.habbo.communication.messages.parser.notifications.HabboBroadcastMessageParser;
     import com.sulake.habbo.window.enum.FrankIllustration;
     import com.sulake.habbo.communication.messages.parser.notifications.NotificationDialogMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetScratchFailedMessageParser;
@@ -389,7 +389,7 @@
 
         private function onBroadcastMessageEvent(k:IMessageEvent):void
         {
-            var _local_2:_Str_6671 = (k as _Str_8665).getParser();
+            var _local_2:HabboBroadcastMessageParser = (k as _Str_8665).getParser();
             var _local_3:String = _local_2._Str_3460;
             var _local_4:RegExp = /\\r/g;
             _local_3 = _local_3.replace(_local_4, "\r");
