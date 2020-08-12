@@ -97,7 +97,7 @@
             }
         }
 
-        public function _Str_24317(openHour:int, openMinute:int):void
+        public function handleLoginFailedHotelClosedMessage(openHour:int, openMinute:int):void
         {
             this._localization.registerParameter("opening.hours.disconnected", "h", getTimeZeroPadded(openHour));
             this._localization.registerParameter("opening.hours.disconnected", "m", getTimeZeroPadded(openMinute));

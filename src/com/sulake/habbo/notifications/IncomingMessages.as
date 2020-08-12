@@ -328,7 +328,7 @@
             {
                 return;
             }
-            this._notifications.singularController.alertDialogManager._Str_24317(_local_2.openHour, _local_2.openMinute);
+            this._notifications.singularController.alertDialogManager.handleLoginFailedHotelClosedMessage(_local_2.openHour, _local_2.openMinute);
         }
 
         private function onRestoreClientMessageEvent(k:IMessageEvent):void
