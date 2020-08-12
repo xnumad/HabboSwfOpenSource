@@ -29,7 +29,7 @@
 
         public function navigatorOpenedWhileInTab():void
         {
-            this._navigator.mainViewCtrl.startSearch(Tabs.TAB_OFFICIAL, Tabs.SEARCHTYPE_OFFICIALROOMS, "-1", MainViewCtrl._Str_15148);
+            this._navigator.mainViewCtrl.startSearch(Tabs.TAB_OFFICIAL, Tabs.SEARCHTYPE_OFFICIALROOMS, "-1", MainViewCtrl.SEARCHMSG_OFFICIALROOMS);
         }
 
         public function get filterCategory():String

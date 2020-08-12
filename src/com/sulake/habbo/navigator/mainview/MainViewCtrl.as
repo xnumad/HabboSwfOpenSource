@@ -50,7 +50,7 @@
     {
         public static const SEARCHMSG_SEARCH:int = 1;
         public static const SEARCHMSG_POPTAGS:int = 2;
-        public static const _Str_15148:int = 4;
+        public static const SEARCHMSG_OFFICIALROOMS:int = 4;
         public static const _Str_13989:int = 5;
         private static const _Str_15647:int = 1;
         private static const _Str_10433:int = 2;
