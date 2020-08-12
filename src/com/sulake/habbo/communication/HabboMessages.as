@@ -310,7 +310,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10953;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_12104;
 	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11638;
-	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11776;
+	import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerPrizesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_12504;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2GameChatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2ExitGameMessageComposer;
@@ -1921,7 +1921,7 @@
             OUTGOING_PACKETS[3964] = GetItemDataMessageComposer;
             OUTGOING_PACKETS[3965] = ChangeEmailComposer;
             OUTGOING_PACKETS[3969] = _Str_11135;
-            OUTGOING_PACKETS[398] = _Str_11776;
+            OUTGOING_PACKETS[398] = GetRecyclerPrizesMessageComposer;
             OUTGOING_PACKETS[3991] = _Str_9806;
             OUTGOING_PACKETS[3997] = _Str_4348;
             OUTGOING_PACKETS[4000] = ClientHelloMessageComposer;
