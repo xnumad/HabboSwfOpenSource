@@ -178,7 +178,7 @@
             this.addMessageEvent(new GuildCreationInfoMessageEvent(this.onGuildCreationInfo));
             this.addMessageEvent(new GuildEditorDataMessageEvent(this.onGuildEditorData));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomLeave));
-            this.addMessageEvent(new GuildMembershipRejectedMessageEvent(this._guildMembersWindowCtrl._Str_25572));
+            this.addMessageEvent(new GuildMembershipRejectedMessageEvent(this._guildMembersWindowCtrl.onGuildMembershipRejected));
             this.addMessageEvent(new HabboGroupDeactivatedMessageEvent(this.onGroupDeactivated));
             this.addMessageEvent(new GuildMembersEvent(this._guildMembersWindowCtrl.onGuildMembers));
             this.addMessageEvent(new GroupDetailsChangedMessageEvent(this.onGroupDetailsChanged));

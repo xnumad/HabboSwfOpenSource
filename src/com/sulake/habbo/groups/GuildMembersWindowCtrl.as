@@ -129,7 +129,7 @@
             }
         }
 
-        public function _Str_25572(k:IMessageEvent):void
+        public function onGuildMembershipRejected(k:IMessageEvent):void
         {
             var _local_2:GuildMembershipRejectedMessageEvent = GuildMembershipRejectedMessageEvent(k);
             if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.getParser().guildId)))
