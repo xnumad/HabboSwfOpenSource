@@ -521,7 +521,7 @@
 
         private function basicInfoDone():void
         {
-            var k:Boolean = this._Str_23328();
+            var k:Boolean = this.isChatSelectionRequired();
             if (this._reportType == HabboHelp._Str_4315)
             {
                 if (!this._habboHelp._Str_3977._Str_23839(this._reportedUserId))
@@ -547,7 +547,7 @@
             }
         }
 
-        private function _Str_23328():Boolean
+        private function isChatSelectionRequired():Boolean
         {
             if ((((this._reportType == HabboHelp._Str_4459) || (this._reportType == HabboHelp._Str_4490)) || (this._reportType == HabboHelp._Str_4786)))
             {
