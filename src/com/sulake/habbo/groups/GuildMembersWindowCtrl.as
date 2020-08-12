@@ -214,7 +214,7 @@
             this._window = IFrameWindow(this._manager.getXmlWindow("guild_members_window"));
             this._window.findChildByTag("close").procedure = this.onClose;
             this._window.findChildByName("previous_page_button").procedure = this._Str_23530;
-            this._window.findChildByName("next_page_button").procedure = this._Str_22381;
+            this._window.findChildByName("next_page_button").procedure = this.onNextPage;
             this._userNameFilter = new InfoText(ITextFieldWindow(this._window.findChildByName("filter_members_input")), this._manager.localization.getLocalization("group.members.searchinfo"));
             this._window.center();
         }
@@ -528,7 +528,7 @@
             }
         }
 
-        private function _Str_22381(k:WindowEvent, _arg_2:IWindow):void
+        private function onNextPage(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
