@@ -28,7 +28,7 @@
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.parser.sound._Str_6477;
     import flash.events.Event;
-    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11631;
+    import com.sulake.habbo.communication.messages.outgoing.sound.GetNowPlayingMessageComposer;
     import com.sulake.habbo.sound.*;
 
     public class HabboMusicController implements IHabboMusicController, IDisposable 
@@ -739,7 +739,7 @@
         {
             this._Str_14053();
             this._roomItemPlaylist = (new JukeboxPlayListController(this._soundManager, this, this._events, this._connection) as IPlayListController);
-            this._connection.send(new _Str_11631());
+            this._connection.send(new GetNowPlayingMessageComposer());
         }
 
         private function onJukeboxDispose(k:Event):void

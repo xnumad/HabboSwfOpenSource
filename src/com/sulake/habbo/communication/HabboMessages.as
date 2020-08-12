@@ -191,7 +191,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetSoundMachinePlayListMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.AddJukeboxDiskComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetSongInfoMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11631;
+	import com.sulake.habbo.communication.messages.outgoing.sound.GetNowPlayingMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetUserSongDisksMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.RemoveJukeboxDiskComposer;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_15952;
@@ -1554,7 +1554,7 @@
             OUTGOING_PACKETS[1299] = NewUserExperienceScriptProceedComposer;
             OUTGOING_PACKETS[1314] = ChatMessageComposer;
             OUTGOING_PACKETS[1320] = RoomUserKickMessageComposer;
-            OUTGOING_PACKETS[1325] = _Str_11631;
+            OUTGOING_PACKETS[1325] = GetNowPlayingMessageComposer;
             OUTGOING_PACKETS[1328] = CustomizePetWithFurniComposer;
             OUTGOING_PACKETS[1334] = _Str_7424;
             OUTGOING_PACKETS[1342] = _Str_11638;
