@@ -238,7 +238,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackLevelMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_10484;
+	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NewNavigatorInitComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorRemoveCollapsedCategoryMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddSavedSearchComposer;
@@ -1656,7 +1656,7 @@
             OUTGOING_PACKETS[2105] = _Str_9940;
             OUTGOING_PACKETS[2109] = ApproveNameMessageComposer;
             OUTGOING_PACKETS[211] = _Str_7268;
-            OUTGOING_PACKETS[2110] = _Str_10484;
+            OUTGOING_PACKETS[2110] = NewNavigatorInitComposer;
             OUTGOING_PACKETS[2115] = ExtendRentOrBuyoutStripItemMessageComposer;
             OUTGOING_PACKETS[2127] = GetTalentTrackLevelMessageComposer;
             OUTGOING_PACKETS[2128] = _Str_7214;

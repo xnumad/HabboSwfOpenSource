@@ -37,7 +37,7 @@
     import com.sulake.iid.IIDAvatarRenderManager;
     import com.sulake.iid.IIDHabboHelp;
     import com.sulake.iid.IIDHabboNavigator;
-    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_10484;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator.NewNavigatorInitComposer;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorMetaDataParser;
     import com.sulake.habbo.navigator.context.SearchContext;
@@ -198,7 +198,7 @@
             this._searchContextHistoryManager = new SearchContextHistoryManager(this);
             this._liftDataContainer = new LiftDataContainer(this);
             this._navigatorCache = new NavigatorCache();
-            this._communication.connection.send(new _Str_10484());
+            this._communication.connection.send(new NewNavigatorInitComposer());
             this._initialized = true;
         }
 
