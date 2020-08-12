@@ -379,7 +379,7 @@
             }
         }
 
-        private function _Str_18558():void
+        private function refreshUserList():void
         {
             var _local_3:IWindowContainer;
             var k:IItemListWindow = (this._window.findChildByName("user_list") as IItemListWindow);
@@ -516,7 +516,7 @@
                 this._reportedUserId = _local_2;
                 this._reportedRoomId = k.findChildByName("room_name").id;
             }
-            this._Str_18558();
+            this.refreshUserList();
         }
 
         private function _Str_20589():void

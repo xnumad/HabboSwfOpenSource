@@ -493,7 +493,7 @@
             return this._usersList.numListItems > 0;
         }
 
-        private function _Str_18558():void
+        private function refreshUserList():void
         {
             var _local_2:IWindowContainer;
             var k:int;
@@ -518,7 +518,7 @@
             var _local_2:int = int(k.name);
             this._habboHelp.reportedUserId = _local_2;
             this._habboHelp._Str_3469 = k.findChildByName("room_name").id;
-            this._Str_18558();
+            this.refreshUserList();
         }
 
         private function _Str_18243():void
