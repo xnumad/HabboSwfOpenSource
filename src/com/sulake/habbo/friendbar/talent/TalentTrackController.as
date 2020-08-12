@@ -693,7 +693,7 @@
             this._habboTalent.tracking.trackEventLog("Talent", this._Str_19628.name, "talent.progress.show", _local_2.badgeCode);
             if (_local_2.badgeCode == TalentTrackTask.GUIDE_ADVERTISEMENT_READER)
             {
-                this._Str_23046();
+                this.setupTourAdvertisement();
                 return;
             }
             this._taskProgressPopup = this._habboTalent.getModalXmlWindow("task_progress_dialog");
@@ -839,7 +839,7 @@
             this._habboTalent.tracking.trackEventLog("Talent", this._talentTrack.name, "talent.progress.click_activity", k);
         }
 
-        private function _Str_23046():void
+        private function setupTourAdvertisement():void
         {
             this._taskProgressPopup = this._habboTalent.getModalXmlWindow("tour_task_progress_dialog");
             var k:IWindowContainer = IWindowContainer(this._taskProgressPopup.rootWindow);
