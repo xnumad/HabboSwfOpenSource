@@ -26,7 +26,7 @@
     public class StickieFurniWidget extends RoomWidgetBase
     {
         private static const _Str_16242:int = 14;
-        private static const _Str_5003:int = 500;
+        private static const FIELD_MAX_CHARS:int = 500;
         private static const _Str_4126:Number = 100;
         private static const _Str_4162:Number = 100;
 
@@ -288,7 +288,7 @@
             {
                 return;
             }
-            _local_2.maxChars = _Str_5003;
+            _local_2.maxChars = FIELD_MAX_CHARS;
             if (_local_2.numLines < _Str_16242)
             {
                 return;

@@ -44,7 +44,7 @@
         private static const CONTINUE_BUTTON:String = "continue_button";
         private static const _Str_19021:Array = [USERS_CONTAINER, MESSAGE_CONTAINER, CHAT_CONTAINER];
         private static const _Str_14416:Array = [REASON_CONTAINER, MESSAGE_CONTAINER, CHAT_CONTAINER, SUMMARY_CONTAINER];
-        private static const _Str_5003:int = 253;
+        private static const FIELD_MAX_CHARS:int = 253;
         private static const BULLYING:String = "bullying";
         private static const HABBO_NAME:String = "habbo_name";
 
@@ -158,7 +158,7 @@
                 this._usersList.removeListItems();
                 this._reasonsList.removeListItems();
                 this._chatList.removeListItems();
-                IIlluminaInputWidget(IWidgetWindow(this._view.findChildByName("help_message")).widget).maxChars = _Str_5003;
+                IIlluminaInputWidget(IWidgetWindow(this._view.findChildByName("help_message")).widget).maxChars = FIELD_MAX_CHARS;
                 this._Str_14598();
             }
         }

@@ -35,7 +35,7 @@
 
     public class CallForHelpManager implements IDisposable 
     {
-        private static const _Str_5003:int = 253;
+        private static const FIELD_MAX_CHARS:int = 253;
         private static const EMERGENCY_HELP_REQUEST:String = "emergency_help_request";
 
         private var _disposed:Boolean;
@@ -276,7 +276,7 @@
             {
                 this._window = (this._habboHelp.getXmlWindow("emergency_help_request") as IWindowContainer);
                 this._window.procedure = this._Str_22328;
-                IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("help_message")).widget).maxChars = _Str_5003;
+                IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("help_message")).widget).maxChars = FIELD_MAX_CHARS;
             }
             this._window.center();
             var _local_2:IItemListWindow = (this._window.findChildByName("user_panel") as IItemListWindow);
