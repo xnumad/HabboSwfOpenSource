@@ -58,7 +58,7 @@
             this.setProc("manage_guild_region", this.onManageGuild);
             this.setProc("delete_guild_region", this.onDeleteGuild);
             this.setProc("members_region", this.onMembers);
-            this.setProc("pending_members_region", this._Str_23598);
+            this.setProc("pending_members_region", this.onPendingMembers);
             this.setProc("show_groups_link_region", this._Str_23641);
             this.setProc("buy_furni_link_region", this._Str_25591);
             this._window.findChildByName("leave_button").procedure = this.onLeave;
@@ -250,7 +250,7 @@
             this._manager.guildMembersWindowCtrl.onMembersClick(this._selectedGroup.groupId, GetGuildMembersMessageComposer._Str_13464);
         }
 
-        private function _Str_23598(k:WindowEvent, _arg_2:IWindow):void
+        private function onPendingMembers(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
