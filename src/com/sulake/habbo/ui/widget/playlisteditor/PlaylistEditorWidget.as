@@ -251,7 +251,7 @@
                 _local_2 = this._soundManager._Str_2774.getRoomItemPlaylist();
                 if (_local_2 != null)
                 {
-                    _local_2._Str_5930();
+                    _local_2.requestPlayList();
                 }
             }
         }

@@ -124,7 +124,7 @@
             var k:IPlayListController = this._musicController.getRoomItemPlaylist();
             if (k != null)
             {
-                k._Str_5930();
+                k.requestPlayList();
                 this._Str_16190();
             }
             this._mainWindow.visible = true;

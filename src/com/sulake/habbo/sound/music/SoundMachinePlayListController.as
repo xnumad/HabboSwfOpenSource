@@ -149,7 +149,7 @@
             }
             if (((this._playListEntries == null) || (this._playListEntries.length == 0)))
             {
-                this._Str_5930();
+                this.requestPlayList();
                 this._isPlaying = true;
                 return;
             }
@@ -310,7 +310,7 @@
             return null;
         }
 
-        public function _Str_5930():void
+        public function requestPlayList():void
         {
             if (this._connection == null)
             {

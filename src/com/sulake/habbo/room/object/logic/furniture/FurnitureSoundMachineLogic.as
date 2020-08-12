@@ -50,7 +50,7 @@
                     this._currentState = _local_3;
                     if (_local_3 == 1)
                     {
-                        this._Str_5930();
+                        this.requestPlayList();
                     }
                     else
                     {
@@ -75,7 +75,7 @@
             this._isInitialized = true;
         }
 
-        private function _Str_5930():void
+        private function requestPlayList():void
         {
             if (((object == null) || (eventDispatcher == null)))
             {

@@ -10,6 +10,6 @@
         function get nowPlayingSongId():int;
         function get isPlaying():Boolean;
         function getEntry(_arg_1:int):ISongInfo;
-        function _Str_5930():void;
+        function requestPlayList():void;
     }
 }

@@ -128,7 +128,7 @@
             this._isPlaying = false;
         }
 
-        public function _Str_5930():void
+        public function requestPlayList():void
         {
             if (this._connection == null)
             {
