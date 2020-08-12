@@ -85,7 +85,7 @@
             }
         }
 
-        private function _Str_18665(k:Boolean):void
+        private function setSearchingIcon(k:Boolean):void
         {
             if (this._window)
             {
@@ -483,7 +483,7 @@
             {
                 this._searchTimer.reset();
                 this._searchTimer.start();
-                this._Str_18665(true);
+                this.setSearchingIcon(true);
             }
         }
 
@@ -499,7 +499,7 @@
         {
             this._searchTimer.stop();
             this._searchTimer.reset();
-            this._Str_18665(true);
+            this.setSearchingIcon(true);
             var _local_2:GuildMemberData = this._data;
             var _local_3:String = this._userNameFilter.getText();
             var _local_4:int = this._Str_19469().selection;
@@ -597,7 +597,7 @@
             }
             k.procedure = this._Str_23009;
             this._searchTimer.stop();
-            this._Str_18665(false);
+            this.setSearchingIcon(false);
         }
     }
 }
