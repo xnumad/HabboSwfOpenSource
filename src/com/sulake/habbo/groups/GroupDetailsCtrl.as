@@ -15,7 +15,7 @@
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_10313;
+    import com.sulake.habbo.communication.messages.outgoing.users.DeactivateGuildMessageComposer;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembersMessageComposer;
     import com.sulake.habbo.catalog.enum.CatalogPageName;
@@ -236,7 +236,7 @@
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
                 this._manager.trackGoogle("groupDetails", "groupDelete");
-                this._manager.send(new _Str_10313(this._selectedGroup.groupId));
+                this._manager.send(new DeactivateGuildMessageComposer(this._selectedGroup.groupId));
             }
         }
 

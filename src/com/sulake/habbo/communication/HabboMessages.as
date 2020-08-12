@@ -463,7 +463,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildBadgeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetIgnoredUsersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetEmailStatusComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10313;
+	import com.sulake.habbo.communication.messages.outgoing.users.DeactivateGuildMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.RemoveAdminRightsFromMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildSettingsMessageComposer;
@@ -1532,7 +1532,7 @@
             OUTGOING_PACKETS[1109] = _Str_11497;
             OUTGOING_PACKETS[1117] = IgnoreUserMessageComposer;
             OUTGOING_PACKETS[1118] = WhiperGroupComposer;
-            OUTGOING_PACKETS[1134] = _Str_10313;
+            OUTGOING_PACKETS[1134] = DeactivateGuildMessageComposer;
             OUTGOING_PACKETS[1145] = _Str_4438;
             OUTGOING_PACKETS[1148] = _Str_10763;
             OUTGOING_PACKETS[1160] = PeerUsersClassificationMessageComposer;
