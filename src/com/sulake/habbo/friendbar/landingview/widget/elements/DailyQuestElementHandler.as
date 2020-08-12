@@ -174,7 +174,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._Str_7311(true);
+                this.moveChildrenToRow(true);
             }
         }
 
@@ -182,7 +182,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._Str_7311(false);
+                this.moveChildrenToRow(false);
             }
         }
 
@@ -205,7 +205,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._index++;
-                this._Str_7311(this._data.easy);
+                this.moveChildrenToRow(this._data.easy);
             }
         }
 
@@ -217,7 +217,7 @@
             }
         }
 
-        private function _Str_7311(k:Boolean):void
+        private function moveChildrenToRow(k:Boolean):void
         {
             this._landingView.send(new _Str_5085(k, this._index));
         }
