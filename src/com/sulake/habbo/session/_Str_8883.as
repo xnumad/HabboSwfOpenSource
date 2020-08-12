@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.connection.IConnection;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_12283;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetUserTagsMessageComposer;
 
     public class _Str_8883 implements IDisposable 
     {
@@ -29,7 +29,7 @@
                 connection = this._sessionDataManager.communication.connection;
                 if (connection)
                 {
-                    connection.send(new _Str_12283(k));
+                    connection.send(new GetUserTagsMessageComposer(k));
                 }
             }
             return null;

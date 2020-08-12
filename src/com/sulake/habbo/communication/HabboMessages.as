@@ -483,7 +483,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.UnblockGroupMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.AddAdminRightsToMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.ApproveNameMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_12283;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetUserTagsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembersMessageComposer;
@@ -1605,7 +1605,7 @@
             OUTGOING_PACKETS[1689] = RemoveFriendMessageComposer;
             OUTGOING_PACKETS[1691] = _Str_6133;
             OUTGOING_PACKETS[1697] = _Str_7568;
-            OUTGOING_PACKETS[17] = _Str_12283;
+            OUTGOING_PACKETS[17] = GetUserTagsMessageComposer;
             OUTGOING_PACKETS[1703] = ForwardToSomeRoomMessageComposer;
             OUTGOING_PACKETS[172] = _Str_11657;
             OUTGOING_PACKETS[1740] = _Str_7911;
