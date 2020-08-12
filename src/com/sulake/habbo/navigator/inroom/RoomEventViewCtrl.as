@@ -59,13 +59,13 @@
             }
             else
             {
-                this._Str_26474(k);
+                this.editEvent(k);
             }
             this._window.visible = true;
             this._window.activate();
         }
 
-        private function _Str_26474(k:RoomEventData):void
+        private function editEvent(k:RoomEventData):void
         {
             this._window.caption = this._navigator.getText("navigator.eventsettings.editcaption");
             this._eventNameInput.setText(k.eventName);
