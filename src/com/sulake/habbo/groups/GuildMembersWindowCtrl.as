@@ -40,7 +40,7 @@
 
     public class GuildMembersWindowCtrl implements IDisposable 
     {
-        private static const _Str_15719:Point = new Point(5, 5);
+        private static const MEMBER_SPACING:Point = new Point(5, 5);
 
         private var _manager:HabboGroupsManager;
         private var _window:IFrameWindow;
@@ -249,8 +249,8 @@
                 _local_4 = this.getListEntry();
                 _local_4.tags[0] = ("" + _arg_2);
                 k.addChild(_local_4);
-                _local_4.x = (((_arg_2 % 2) == 0) ? 0 : (_local_4.width + _Str_15719.x));
-                _local_4.y = (Math.floor((_arg_2 / 2)) * (_local_4.height + _Str_15719.y));
+                _local_4.x = (((_arg_2 % 2) == 0) ? 0 : (_local_4.width + MEMBER_SPACING.x));
+                _local_4.y = (Math.floor((_arg_2 / 2)) * (_local_4.height + MEMBER_SPACING.y));
             }
             if (_arg_3 != null)
             {
