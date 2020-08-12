@@ -351,7 +351,7 @@
             return this._manager.localization.getLocalization(k, k);
         }
 
-        public function _Str_16681(k:GuildCreationData):void
+        public function onGuildCreationInfo(k:GuildCreationData):void
         {
             this._data = k;
             this._step = _Str_7036;
