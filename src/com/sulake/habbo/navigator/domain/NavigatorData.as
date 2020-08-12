@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsData;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5078;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5546;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CategoriesWithVisitorCountData;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.habbo.communication.messages.incoming.navigator.EventCategory;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6043;
@@ -138,7 +138,7 @@
 
         public function get _Str_26351():Boolean
         {
-            return (!(this._lastMsg == null)) && (!((this._lastMsg as _Str_5546) == null));
+            return (!(this._lastMsg == null)) && (!((this._lastMsg as CategoriesWithVisitorCountData) == null));
         }
 
         public function set guestRoomSearchResults(k:GuestRoomSearchResultData):void
@@ -163,7 +163,7 @@
             this._loading = false;
         }
 
-        public function set _Str_7267(k:_Str_5546):void
+        public function set _Str_7267(k:CategoriesWithVisitorCountData):void
         {
             this._Str_12759();
             this._lastMsg = k;
@@ -210,9 +210,9 @@
             return this._lastMsg as _Str_5078;
         }
 
-        public function get _Str_7267():_Str_5546
+        public function get _Str_7267():CategoriesWithVisitorCountData
         {
-            return this._lastMsg as _Str_5546;
+            return this._lastMsg as CategoriesWithVisitorCountData;
         }
 
         public function get promotedRooms():_Str_5485
