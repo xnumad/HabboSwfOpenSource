@@ -42,7 +42,7 @@
     import com.sulake.habbo.communication.messages.parser.room.furniture.RoomMessageNotificationMessageParser;
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_7427;
+    import com.sulake.habbo.communication.messages.parser.moderation.ModerationCautionParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7904;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8126;
     import com.sulake.habbo.communication.messages.parser.availability.HotelWillCloseInMinutesMessageParser;
@@ -238,7 +238,7 @@
         private function onModCautionEvent(k:IMessageEvent):void
         {
             var _local_3:GenericNotificationItemData;
-            var _local_2:_Str_7427 = (k as _Str_9583).getParser();
+            var _local_2:ModerationCautionParser = (k as _Str_9583).getParser();
             if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
