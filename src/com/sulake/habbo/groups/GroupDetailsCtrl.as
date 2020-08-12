@@ -54,7 +54,7 @@
                 return;
             }
             this._window = IWindowContainer(this._manager.getXmlWindow("group"));
-            this.setProc("group_room_link_region", this._Str_17423);
+            this.setProc("group_room_link_region", this.onRoomLink);
             this.setProc("manage_guild_region", this._Str_24785);
             this.setProc("delete_guild_region", this._Str_25370);
             this.setProc("members_region", this._Str_22812);
@@ -177,7 +177,7 @@
             this._manager.send(new EventLogMessageComposer(HabboGroupsManager.HABBOGROUPS, ("" + this._selectedGroup.groupId), "join"));
         }
 
-        private function _Str_17423(k:WindowEvent, _arg_2:IWindow):void
+        private function onRoomLink(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

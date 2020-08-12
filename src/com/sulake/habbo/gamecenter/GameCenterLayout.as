@@ -216,7 +216,7 @@
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_6994(this._Str_22600));
                 this._gameCenterViewWindow.findChildByName("leaderboard_link").addEventListener(WindowMouseEvent.CLICK, this._Str_20562);
                 this._gameCenterViewWindow.findChildByName("support_link").addEventListener(WindowMouseEvent.CLICK, this._Str_21942);
-                this._gameCenterViewWindow.findChildByName("room_link").addEventListener(WindowMouseEvent.CLICK, this._Str_17423);
+                this._gameCenterViewWindow.findChildByName("room_link").addEventListener(WindowMouseEvent.CLICK, this.onRoomLink);
                 this._gamesLeftContainer = this._gameCenterView.windowManager.createUnseenItemCounter();
                 k = (this._playNowLimitedButton.findChildByName("games_left_container") as IWindowContainer);
                 k.addChild(this._gamesLeftContainer);
@@ -718,7 +718,7 @@
             HabboWebTools.openWebPage(GameConfigurations.getGame(this._selectedGame).supportUrl);
         }
 
-        private function _Str_17423(k:WindowMouseEvent):void
+        private function onRoomLink(k:WindowMouseEvent):void
         {
             var _local_2:String = GameConfigurations.getNameId(this._selectedGame);
             var _local_3:String = this._gameCenterView.gameManager.getProperty(("gamecenter.roomlink." + _local_2));
