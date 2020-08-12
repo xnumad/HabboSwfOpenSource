@@ -53,7 +53,7 @@
             this._catalog = k;
             this._windowManager = _arg_2;
             this._roomEngine = _arg_3;
-            this._Str_22933();
+            this.getConfiguration();
         }
 
         public function get disposed():Boolean
@@ -101,7 +101,7 @@
             this._visualization = k;
         }
 
-        private function _Str_22933():void
+        private function getConfiguration():void
         {
             if (((!(this._catalog)) || (!(this._catalog.connection))))
             {
