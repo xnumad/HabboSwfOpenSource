@@ -895,7 +895,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.DanceMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.ChangeMottoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.SignMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_11770;
+	import com.sulake.habbo.communication.messages.outgoing.room.avatar.PassCarryItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.AvatarExpressionMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.*;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_12022;
@@ -1781,7 +1781,7 @@
             OUTGOING_PACKETS[2930] = _Str_10574;
             OUTGOING_PACKETS[2934] = GetPetInfoMessageComposer;
             OUTGOING_PACKETS[2939] = _Str_9889;
-            OUTGOING_PACKETS[2941] = _Str_11770;
+            OUTGOING_PACKETS[2941] = PassCarryItemMessageComposer;
             OUTGOING_PACKETS[2946] = _Str_9716;
             OUTGOING_PACKETS[295] = LatencyPingRequestMessageComposer;
             OUTGOING_PACKETS[2950] = _Str_8070;

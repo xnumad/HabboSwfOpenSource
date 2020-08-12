@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11770 implements IMessageComposer 
+    public class PassCarryItemMessageComposer implements IMessageComposer
     {
         private var _Str_2306:int;
 
-        public function _Str_11770(k:int)
+        public function PassCarryItemMessageComposer(k:int)
         {
             this._Str_2306 = k;
         }

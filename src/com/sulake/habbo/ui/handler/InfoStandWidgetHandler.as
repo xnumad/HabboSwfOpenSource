@@ -36,7 +36,7 @@
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.ui.widget.events._Str_4831;
     import com.sulake.habbo.ui.widget.infostand.InfoStandFurniData;
-    import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_11770;
+    import com.sulake.habbo.communication.messages.outgoing.room.avatar.PassCarryItemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10187;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
     import com.sulake.habbo.ui.widget.enums.PetSupplementEnum;
@@ -437,7 +437,7 @@
                     this._container.roomSession.removeSaddleFromPet(_local_2);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_PASS_CARRY_ITEM:
-                    this._container.connection.send(new _Str_11770(_local_2));
+                    this._container.connection.send(new PassCarryItemMessageComposer(_local_2));
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_GIVE_CARRY_ITEM_TO_PET:
                     this._container.connection.send(new _Str_10187(_local_2));
