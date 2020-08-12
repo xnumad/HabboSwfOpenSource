@@ -161,7 +161,7 @@
             this._container.connection.send(new _Str_9987(k, _arg_2));
         }
 
-        public function _Str_23793(k:int):void
+        public function switchToPreviousVideo(k:int):void
         {
             this._container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(k, CONTROL_COMMAND_PREVIOUS_VIDEO));
         }

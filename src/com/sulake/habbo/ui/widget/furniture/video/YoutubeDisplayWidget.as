@@ -238,7 +238,7 @@
                             this.hide(this._roomObject);
                             break;
                         case "playlist_prev":
-                            this.ownHandler._Str_23793(this._roomObject.getId());
+                            this.ownHandler.switchToPreviousVideo(this._roomObject.getId());
                             break;
                         case "playlist_next":
                             this.ownHandler._Str_23211(this._roomObject.getId());
