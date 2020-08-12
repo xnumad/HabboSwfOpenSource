@@ -371,7 +371,7 @@
             }
         }
 
-        public function _Str_18959():void
+        public function toggleFriendList():void
         {
             var _local_1:IWindowContainer;
             if (this._habboFriendListComponent)

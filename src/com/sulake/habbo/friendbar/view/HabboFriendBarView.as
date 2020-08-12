@@ -885,7 +885,7 @@
                         this.deSelect(true);
                         break;
                     case LINK_FRIENDLIST:
-                        this._friendBarData._Str_18959();
+                        this._friendBarData.toggleFriendList();
                         break;
                 }
                 if (_local_3 != this._Str_2748)
@@ -941,7 +941,7 @@
 
         private function _Str_24062(k:WindowMouseEvent):void
         {
-            this._friendBarData._Str_18959();
+            this._friendBarData.toggleFriendList();
         }
 
         private function _Str_22502(k:WindowMouseEvent):void

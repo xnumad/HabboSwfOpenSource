@@ -23,7 +23,7 @@
         function startConversation(_arg_1:int):void;
         function findNewFriends():void;
         function _Str_21870():void;
-        function _Str_18959():void;
+        function toggleFriendList():void;
         function toggleMessenger():void;
         function showProfile(_arg_1:int):void;
         function showProfileByName(_arg_1:String):void;
