@@ -185,7 +185,7 @@
 	import com.sulake.habbo.communication.messages.incoming.camera.CameraStorageUrlMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.InitCameraMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.ThumbnailStatusMessageEvent;
-	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10678;
+	import com.sulake.habbo.communication.messages.outgoing.sound.GetSoundSettingsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetJukeboxPlayListMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetOfficialSongIdMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetSoundMachinePlayListMessageComposer;
@@ -1696,7 +1696,7 @@
             OUTGOING_PACKETS[2341] = _Str_11536;
             OUTGOING_PACKETS[2343] = ResetUnseenItemsComposer;
             OUTGOING_PACKETS[2384] = _Str_10650;
-            OUTGOING_PACKETS[2388] = _Str_10678;
+            OUTGOING_PACKETS[2388] = GetSoundSettingsComposer;
             OUTGOING_PACKETS[2397] = RejectQuestMessageComposer;
             OUTGOING_PACKETS[2399] = _Str_8040;
             OUTGOING_PACKETS[2407] = _Str_11584;

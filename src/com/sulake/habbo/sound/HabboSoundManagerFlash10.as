@@ -24,7 +24,7 @@
     import com.sulake.core.runtime.IUnknown;
     import com.sulake.habbo.sound.music.HabboMusicController;
     import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
-    import com.sulake.habbo.communication.messages.outgoing.sound._Str_10678;
+    import com.sulake.habbo.communication.messages.outgoing.sound.GetSoundSettingsComposer;
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11698;
     import com.sulake.habbo.communication.messages.parser.preferences.AccountPreferencesParser;
@@ -393,7 +393,7 @@
             this._roomEngine.events.addEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND, this._Str_15803);
             this._roomEngine.events.addEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, this._Str_15803);
             this._connection.addMessageEvent(new AccountPreferencesEvent(this._Str_24903));
-            this._connection.send(new _Str_10678());
+            this._connection.send(new GetSoundSettingsComposer());
         }
 
         protected function _Str_25965(k:IHabboMusicController):void
