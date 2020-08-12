@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModKickMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModTradingLockMessageComposer;
     import com.sulake.habbo.utils.StringUtil;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7103;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModMessageMessageComposer;
     import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class ModActionCtrl implements IDisposable, ITrackedWindow 
@@ -311,7 +311,7 @@
                         return;
                     }
                     this._Str_3066("sendCaution");
-                    this._Str_2327.connection.send(new _Str_7103(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
+                    this._Str_2327.connection.send(new ModMessageMessageComposer(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
             }
             this.logEvent("action.custom", "unknown");

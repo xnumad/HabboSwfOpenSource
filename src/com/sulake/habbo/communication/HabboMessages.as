@@ -761,7 +761,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModBanMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModeratorActionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7074;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7103;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.ModMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7202;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7268;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomChatlogMessageComposer;
@@ -1620,7 +1620,7 @@
             OUTGOING_PACKETS[1826] = _Str_11313;
             OUTGOING_PACKETS[1827] = GetPromoArticlesComposer;
             OUTGOING_PACKETS[1834] = NavigatorAddCollapsedCategoryMessageComposer;
-            OUTGOING_PACKETS[1840] = _Str_7103;
+            OUTGOING_PACKETS[1840] = ModMessageMessageComposer;
             OUTGOING_PACKETS[1849] = GetFaqTextMessageComposer;
             OUTGOING_PACKETS[1855] = UpdateForumReadMarkerMessageComposer;
             OUTGOING_PACKETS[1859] = _Str_16422;
