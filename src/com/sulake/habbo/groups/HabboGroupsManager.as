@@ -309,7 +309,7 @@
             return _local_6;
         }
 
-        public function _Str_13647(k:int):void
+        public function openGroupForum(k:int):void
         {
             context.createLinkEvent(("groupforum/" + k));
         }

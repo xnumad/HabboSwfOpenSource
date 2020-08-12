@@ -93,7 +93,7 @@
 
         private function _Str_13188(k:WindowMouseEvent):void
         {
-            this._controller._Str_13647(int(k.target.id));
+            this._controller.openGroupForum(int(k.target.id));
         }
     }
 }

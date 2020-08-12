@@ -215,7 +215,7 @@
             this._Str_21019(null);
         }
 
-        public function _Str_13647(k:int):void
+        public function openGroupForum(k:int):void
         {
             if (!this._communicationManager)
             {
@@ -276,7 +276,7 @@
                 this._forumsListData = null;
                 if (_local_2.length == 2)
                 {
-                    this._Str_13647(_local_4);
+                    this.openGroupForum(_local_4);
                 }
                 else
                 {

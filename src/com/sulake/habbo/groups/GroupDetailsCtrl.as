@@ -194,7 +194,7 @@
             {
                 return;
             }
-            this._manager._Str_13647(this._selectedGroup.groupId);
+            this._manager.openGroupForum(this._selectedGroup.groupId);
         }
 
         private function openExternalLink(k:String):void
