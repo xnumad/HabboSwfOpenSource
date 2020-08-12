@@ -508,7 +508,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GuildBaseSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.CreateFlatMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10878;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.RemoveOwnRoomRightsRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetOfficialRoomsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFrequentRoomHistorySearchMessageComposer;
@@ -1820,7 +1820,7 @@
             OUTGOING_PACKETS[3159] = SetNewNavigatorWindowPreferencesMessageComposer;
             OUTGOING_PACKETS[3166] = ScrGetUserInfoMessageComposer;
             OUTGOING_PACKETS[3171] = _Str_10594;
-            OUTGOING_PACKETS[3182] = _Str_10878;
+            OUTGOING_PACKETS[3182] = RemoveOwnRoomRightsRoomMessageComposer;
             OUTGOING_PACKETS[3189] = GetOfficialSongIdMessageComposer;
             OUTGOING_PACKETS[3196] = _Str_18745;
             OUTGOING_PACKETS[3202] = RespectPetMessageComposer;

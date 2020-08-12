@@ -48,7 +48,7 @@
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.communication.messages.outgoing.navigator.ConvertGlobalRoomIdMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10878;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.RemoveOwnRoomRightsRoomMessageComposer;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.core.communication.messages.IMessageComposer;
@@ -365,7 +365,7 @@
 
         public function removeRoomRights(k:int):void
         {
-            this.send(new _Str_10878(k));
+            this.send(new RemoveOwnRoomRightsRoomMessageComposer(k));
         }
 
         public function hasRoomRightsButIsNotOwner(k:int):Boolean
