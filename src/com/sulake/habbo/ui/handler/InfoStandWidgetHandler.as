@@ -34,7 +34,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetOpenProfileMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetPresentOpenMessage;
     import com.sulake.habbo.session.RoomUserData;
-    import com.sulake.habbo.ui.widget.events._Str_4831;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetChatInputContentUpdateEvent;
     import com.sulake.habbo.ui.widget.infostand.InfoStandFurniData;
     import com.sulake.habbo.communication.messages.outgoing.room.avatar.PassCarryItemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.avatar.PassCarryItemToPetMessageComposer;
@@ -311,7 +311,7 @@
             var _local_3:RoomUserData;
             var _local_4:RoomWidgetUserActionMessage;
             var _local_7:RoomWidgetFurniActionMessage;
-            var _local_8:_Str_4831;
+            var _local_8:RoomWidgetChatInputContentUpdateEvent;
             var _local_9:RoomUserData;
             var _local_10:String;
             var _local_11:RoomWidgetRoomTagSearchMessage;
@@ -379,7 +379,7 @@
                     this._container.sessionDataManager.givePetRespect(_local_2);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_WHISPER_USER:
-                    _local_8 = new _Str_4831(_Str_4831.WHISPER, _local_3.name);
+                    _local_8 = new RoomWidgetChatInputContentUpdateEvent(RoomWidgetChatInputContentUpdateEvent.WHISPER, _local_3.name);
                     this._container.events.dispatchEvent(_local_8);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_IGNORE_USER:
@@ -589,7 +589,7 @@
                     this._container.roomSession.muteUser(_local_3.id, 1080);
                     break;
                 case RoomWidgetUserActionMessage.GROUP_WHISPER:
-                    _local_8 = new _Str_4831(_Str_4831.WHISPER, "groupe");
+                    _local_8 = new RoomWidgetChatInputContentUpdateEvent(RoomWidgetChatInputContentUpdateEvent.WHISPER, "groupe");
                     this._container.sessionDataManager.whiperGroup(_local_3.name);
                     this._container.events.dispatchEvent(_local_8);
                     break;
