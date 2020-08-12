@@ -467,7 +467,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10517;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10635;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10645;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildCreationInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.RespectUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10770;
 	import com.sulake.habbo.communication.messages.outgoing.users.UnignoreUserMessageComposer;
@@ -1961,7 +1961,7 @@
             OUTGOING_PACKETS[790] = _Str_9957;
             OUTGOING_PACKETS[793] = _Str_4916;
             OUTGOING_PACKETS[796] = RequestCameraConfigurationComposer;
-            OUTGOING_PACKETS[798] = _Str_10645;
+            OUTGOING_PACKETS[798] = GetGuildCreationInfoMessageComposer;
             OUTGOING_PACKETS[800] = _Str_7177;
             OUTGOING_PACKETS[801] = _Str_17078;
             OUTGOING_PACKETS[808] = AssignRightsMessageComposer;
