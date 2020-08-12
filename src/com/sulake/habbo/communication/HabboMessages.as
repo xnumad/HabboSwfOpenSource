@@ -26,7 +26,7 @@
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.CollapsedCategoriesEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_10763;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_11277;
+	import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersRewardMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_11298;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetSeasonalQuestsOnlyMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_16291;
@@ -1906,7 +1906,7 @@
             OUTGOING_PACKETS[3847] = LagWarningReportMessageComposer;
             OUTGOING_PACKETS[3848] = _Str_10971;
             OUTGOING_PACKETS[3863] = _Str_11093;
-            OUTGOING_PACKETS[3872] = _Str_11277;
+            OUTGOING_PACKETS[3872] = GetConcurrentUsersRewardMessageComposer;
             OUTGOING_PACKETS[3878] = GetIgnoredUsersMessageComposer;
             OUTGOING_PACKETS[3889] = OpenCampaignCalendarDoorComposer;
             OUTGOING_PACKETS[389] = _Str_12437;

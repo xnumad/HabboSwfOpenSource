@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersGoalProgressMessageComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_11277;
+    import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersRewardMessageComposer;
 
     public class ConcurrentUsersInfoElementHandler implements IElementHandler, IDisposable 
     {
@@ -158,7 +158,7 @@
 
         protected function onClick():void
         {
-            this._landingView.send(new _Str_11277());
+            this._landingView.send(new GetConcurrentUsersRewardMessageComposer());
             this._landingView.send(new GetConcurrentUsersGoalProgressMessageComposer());
             this._window.findChildByName("state.active").disable();
         }
