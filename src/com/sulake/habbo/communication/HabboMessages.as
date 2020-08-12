@@ -31,7 +31,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetSeasonalQuestsOnlyMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_16291;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_17850;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_4438;
+	import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.ActivateQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_5085;
 	import com.sulake.habbo.communication.messages.outgoing.quest.RejectQuestMessageComposer;
@@ -1533,7 +1533,7 @@
             OUTGOING_PACKETS[1117] = IgnoreUserMessageComposer;
             OUTGOING_PACKETS[1118] = WhiperGroupComposer;
             OUTGOING_PACKETS[1134] = DeactivateGuildMessageComposer;
-            OUTGOING_PACKETS[1145] = _Str_4438;
+            OUTGOING_PACKETS[1145] = GetCommunityGoalProgressMessageComposer;
             OUTGOING_PACKETS[1148] = FriendRequestQuestCompleteMessageComposer;
             OUTGOING_PACKETS[1160] = PeerUsersClassificationMessageComposer;
             OUTGOING_PACKETS[1173] = _Str_7271;

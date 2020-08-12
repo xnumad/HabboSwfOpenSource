@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_4438 implements IMessageComposer 
+    public class GetCommunityGoalProgressMessageComposer implements IMessageComposer
     {
 
 

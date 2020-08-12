@@ -11,7 +11,7 @@
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgressMessageEvent;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_4438;
+    import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
     import com.sulake.habbo.communication.messages.parser.quest.CommunityGoalProgressParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -199,7 +199,7 @@
         {
             if (!this._communityProgressRequested)
             {
-                this._landingView.send(new _Str_4438());
+                this._landingView.send(new GetCommunityGoalProgressMessageComposer());
                 this._communityProgressRequested = true;
             }
         }

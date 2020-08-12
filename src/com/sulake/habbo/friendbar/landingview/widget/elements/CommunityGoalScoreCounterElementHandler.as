@@ -14,7 +14,7 @@
     import com.sulake.habbo.window.widgets._Str_5046;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_4438;
+    import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgress;
 
     public class CommunityGoalScoreCounterElementHandler implements IElementHandler, IDisposable, IFloatingElement, ILayoutNameProvider, IDisableAwareElement 
@@ -76,7 +76,7 @@
 
         public function refresh():void
         {
-            this._landingView.send(new _Str_4438());
+            this._landingView.send(new GetCommunityGoalProgressMessageComposer());
             this._counter_initialized = false;
             this._pollTimer.start();
         }
@@ -115,7 +115,7 @@
 
         private function _Str_10015(k:TimerEvent):void
         {
-            this._landingView.send(new _Str_4438());
+            this._landingView.send(new GetCommunityGoalProgressMessageComposer());
         }
     }
 }

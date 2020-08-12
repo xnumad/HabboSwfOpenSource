@@ -4,7 +4,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_4438;
+    import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgress;
 
     public class CommunityGoalTimerElementHandler extends AbstractTimerElementHandler 
@@ -17,7 +17,7 @@
 
         override public function refresh():void
         {
-            landingView.send(new _Str_4438());
+            landingView.send(new GetCommunityGoalProgressMessageComposer());
         }
 
         private function onCommunityGoalProgress(k:CommunityGoalProgressMessageEvent):void

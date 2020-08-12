@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgressMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_4438;
+    import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
 
@@ -40,7 +40,7 @@
 
         public function refresh():void
         {
-            this._landingView.send(new _Str_4438());
+            this._landingView.send(new GetCommunityGoalProgressMessageComposer());
             this.refreshContent();
         }
 
