@@ -25,7 +25,7 @@
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.CollapsedCategoriesEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_10763;
+	import com.sulake.habbo.communication.messages.outgoing.quest.FriendRequestQuestCompleteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersRewardMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_11298;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetSeasonalQuestsOnlyMessageComposer;
@@ -1534,7 +1534,7 @@
             OUTGOING_PACKETS[1118] = WhiperGroupComposer;
             OUTGOING_PACKETS[1134] = DeactivateGuildMessageComposer;
             OUTGOING_PACKETS[1145] = _Str_4438;
-            OUTGOING_PACKETS[1148] = _Str_10763;
+            OUTGOING_PACKETS[1148] = FriendRequestQuestCompleteMessageComposer;
             OUTGOING_PACKETS[1160] = PeerUsersClassificationMessageComposer;
             OUTGOING_PACKETS[1173] = _Str_7271;
             OUTGOING_PACKETS[1190] = GetSeasonalQuestsOnlyMessageComposer;
