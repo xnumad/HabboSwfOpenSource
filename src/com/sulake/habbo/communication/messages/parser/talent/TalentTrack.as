@@ -36,11 +36,11 @@
             }
         }
 
-        public function _Str_17590(k:int):_Str_2821
+        public function _Str_17590(k:int):TalentTrackTask
         {
             var _local_3:TalentTrackLevel;
-            var _local_4:_Str_2821;
-            var _local_2:_Str_2821;
+            var _local_4:TalentTrackTask;
+            var _local_2:TalentTrackTask;
             for each (_local_3 in this._levels)
             {
                 if (_local_3.state != TalentTrack.STATE_LOCKED)

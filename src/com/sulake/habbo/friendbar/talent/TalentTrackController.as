@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.parser.talent._Str_3450;
     import com.sulake.habbo.communication.messages.parser.talent._Str_3457;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.parser.talent._Str_2821;
+    import com.sulake.habbo.communication.messages.parser.talent.TalentTrackTask;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.parser.talent.TalentTrackLevel;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
@@ -238,7 +238,7 @@
             var _local_17:_Str_3457;
             var _local_18:IWindow;
             var _local_19:Vector.<IWindow>;
-            var _local_20:_Str_2821;
+            var _local_20:TalentTrackTask;
             var _local_21:IWindow;
             var _local_22:Point;
             var _local_3:IWindowContainer = IWindowContainer(this._levelTemplate.clone());
@@ -356,7 +356,7 @@
                     {
                         _local_8.addListItem(_local_18);
                     }
-                    if (((_local_20.badgeCode == _Str_2821._Str_7735) && (_local_20.state == TalentTrack.STATE_ONGOING)))
+                    if (((_local_20.badgeCode == TalentTrackTask._Str_7735) && (_local_20.state == TalentTrack.STATE_ONGOING)))
                     {
                         _local_19.push(_local_18);
                     }
@@ -475,7 +475,7 @@
             return _local_3;
         }
 
-        private function _Str_22926(k:TalentTrackLevel, _arg_2:_Str_2821):IWindowContainer
+        private function _Str_22926(k:TalentTrackLevel, _arg_2:TalentTrackTask):IWindowContainer
         {
             var _local_3:IWindowContainer;
             var _local_6:IRegionWindow;
@@ -495,7 +495,7 @@
                     _local_3.findChildByName("task_progress_fg").width = _Str_988._Str_1452(_arg_2._Str_7605, 0, _arg_2._Str_15676, 0, 48);
                     _local_6 = (_local_3.findChildByName("task_ongoing_region") as IRegionWindow);
                     _local_6.id = _arg_2.achievementId;
-                    if (_arg_2.badgeCode == _Str_2821._Str_7735)
+                    if (_arg_2.badgeCode == TalentTrackTask._Str_7735)
                     {
                         _local_6.toolTipCaption = "";
                         _local_6.name = _arg_2.badgeCode;
@@ -644,7 +644,7 @@
                     return;
                 case "button_track_helper":
                     return;
-                case _Str_2821._Str_7735:
+                case TalentTrackTask._Str_7735:
                     this._Str_8556(_arg_2.name);
                     this._habboTalent.habboHelp.showSafetyBooklet();
                     return;
@@ -685,13 +685,13 @@
             var _local_6:String;
             var _local_7:Boolean;
             this._Str_8036();
-            var _local_2:_Str_2821 = this._talentTrack._Str_17590(k);
+            var _local_2:TalentTrackTask = this._talentTrack._Str_17590(k);
             if ((((_local_2 == null) || (_local_2.badgeCode == null)) || (_local_2.badgeCode == "")))
             {
                 return;
             }
             this._habboTalent.tracking.trackEventLog("Talent", this._Str_19628.name, "talent.progress.show", _local_2.badgeCode);
-            if (_local_2.badgeCode == _Str_2821._Str_16378)
+            if (_local_2.badgeCode == TalentTrackTask._Str_16378)
             {
                 this._Str_23046();
                 return;
@@ -716,7 +716,7 @@
                 this.setText(_local_3, "action_link", _local_6);
                 _local_3.findChildByName("action_link").name = _local_2.badgeCode;
                 _local_3.findChildByName("progress_separator").visible = (!(_local_6 == ""));
-                if (((_local_2.badgeCode == _Str_2821._Str_13850) && (this._Str_25273)))
+                if (((_local_2.badgeCode == TalentTrackTask._Str_13850) && (this._Str_25273)))
                 {
                     this._Str_7795().visible = true;
                     this._Str_7795().findChildByName("change_email_region").procedure = this._Str_23884;
@@ -767,7 +767,7 @@
 
         private function _Str_19836(k:String):String
         {
-            if (((k == _Str_2821.ROOM_ENTRY_1) || (k == _Str_2821.ROOM_ENTRY_2)))
+            if (((k == TalentTrackTask.ROOM_ENTRY_1) || (k == TalentTrackTask.ROOM_ENTRY_2)))
             {
                 return "ACH_RoomEntry";
             }
@@ -803,11 +803,11 @@
                 case "thanks_button":
                     this._Str_8036();
                     return;
-                case _Str_2821._Str_13382:
+                case TalentTrackTask._Str_13382:
                     this._Str_8556(_arg_2.name);
                     this._habboTalent.habboHelp.showHabboWay();
                     return;
-                case _Str_2821._Str_17723:
+                case TalentTrackTask._Str_17723:
                     this._Str_8556(_arg_2.name);
                     _local_3 = this._habboTalent.getInteger("guide.help.alpha.groupid", 0);
                     if (_local_3 > 0)
@@ -816,16 +816,16 @@
                         this._habboTalent.send(new GetHabboGroupDetailsMessageComposer(_local_3, false));
                     }
                     return;
-                case _Str_2821._Str_7735:
+                case TalentTrackTask._Str_7735:
                     this._Str_8556(_arg_2.name);
                     this._habboTalent.habboHelp.showSafetyBooklet();
                     return;
-                case _Str_2821.ROOM_ENTRY_1:
-                case _Str_2821.ROOM_ENTRY_2:
+                case TalentTrackTask.ROOM_ENTRY_1:
+                case TalentTrackTask.ROOM_ENTRY_2:
                     this._Str_8556(_arg_2.name);
                     this._habboTalent.navigator.openNavigator(null);
                     return;
-                case _Str_2821._Str_14749:
+                case TalentTrackTask._Str_14749:
                     this._Str_8556(_arg_2.name);
                     this._habboTalent.avatarEditor.openEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR, null, null, true);
                     this._habboTalent.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);

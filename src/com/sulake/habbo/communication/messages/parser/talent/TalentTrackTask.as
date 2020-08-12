@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2821 
+    public class TalentTrackTask
     {
         public static const _Str_13382:String = "ACH_HabboWayGraduate1";
         public static const _Str_17723:String = "ACH_GuideGroupMember1";
@@ -20,7 +20,7 @@
         private var _Str_11456:int;
         private var _Str_20094:int;
 
-        public function _Str_2821(k:IMessageDataWrapper)
+        public function TalentTrackTask(k:IMessageDataWrapper)
         {
             this._achievementId = k.readInteger();
             this._Str_8741 = k.readInteger();

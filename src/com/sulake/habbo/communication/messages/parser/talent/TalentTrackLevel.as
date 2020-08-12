@@ -9,13 +9,13 @@
     {
         private var _level:int;
         private var _state:int;
-        private var _tasks:Vector.<_Str_2821>;
+        private var _tasks:Vector.<TalentTrackTask>;
         private var _rewardPerks:Vector.<_Str_3450>;
         private var _rewardProducts:Vector.<_Str_3457>;
 
         public function TalentTrackLevel()
         {
-            this._tasks = new Vector.<_Str_2821>();
+            this._tasks = new Vector.<TalentTrackTask>();
             this._rewardPerks = new Vector.<_Str_3450>();
             this._rewardProducts = new Vector.<_Str_3457>();
             super();
@@ -31,7 +31,7 @@
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._tasks.push(new _Str_2821(k));
+                this._tasks.push(new TalentTrackTask(k));
                 _local_2++;
             }
             _local_3 = k.readInteger();
@@ -70,7 +70,7 @@
             this._state = k;
         }
 
-        public function get _Str_20997():Vector.<_Str_2821>
+        public function get _Str_20997():Vector.<TalentTrackTask>
         {
             return this._tasks;
         }
@@ -92,7 +92,7 @@
 
         public function get levelProgress():Number
         {
-            var _local_3:_Str_2821;
+            var _local_3:TalentTrackTask;
             var k:Number = (1 / this._tasks.length);
             var _local_2:Number = 0;
             for each (_local_3 in this._tasks)
@@ -105,9 +105,9 @@
             return _Str_988._Str_2040(_local_2);
         }
 
-        public function _Str_17590(k:int):_Str_2821
+        public function _Str_17590(k:int):TalentTrackTask
         {
-            var _local_2:_Str_2821;
+            var _local_2:TalentTrackTask;
             for each (_local_2 in this._tasks)
             {
                 if (_local_2.achievementId == k)
