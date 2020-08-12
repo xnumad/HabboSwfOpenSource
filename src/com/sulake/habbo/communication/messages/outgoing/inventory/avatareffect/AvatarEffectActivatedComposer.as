@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11266 implements IMessageComposer 
+    public class AvatarEffectActivatedComposer implements IMessageComposer
     {
         private var _type:int;
 
-        public function _Str_11266(k:int)
+        public function AvatarEffectActivatedComposer(k:int)
         {
             this._type = k;
         }

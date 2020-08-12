@@ -8,7 +8,7 @@
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.display.BitmapData;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_11266;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect.AvatarEffectActivatedComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_5945;
     import com.sulake.habbo.inventory.IAvatarEffect;
     import com.sulake.core.window.IWindowContainer;
@@ -147,7 +147,7 @@
 
         public function requestEffectActivated(k:int):void
         {
-            this._controller.communication.connection.send(new _Str_11266(k));
+            this._controller.communication.connection.send(new AvatarEffectActivatedComposer(k));
         }
 
         public function _Str_22417(k:int):void

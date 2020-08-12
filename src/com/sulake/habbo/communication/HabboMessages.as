@@ -962,7 +962,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollStartComposer;
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollRejectComposer;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_11266;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect.AvatarEffectActivatedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_5945;
 	import com.sulake.habbo.communication.messages.incoming.campaign.*;
 	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9003;
@@ -1785,7 +1785,7 @@
             OUTGOING_PACKETS[2946] = RentableSpaceRentMessageComposer;
             OUTGOING_PACKETS[295] = LatencyPingRequestMessageComposer;
             OUTGOING_PACKETS[2950] = _Str_8070;
-            OUTGOING_PACKETS[2959] = _Str_11266;
+            OUTGOING_PACKETS[2959] = AvatarEffectActivatedComposer;
             OUTGOING_PACKETS[2970] = FollowFriendMessageComposer;
             OUTGOING_PACKETS[2977] = _Str_12037;
             OUTGOING_PACKETS[2991] = GetHabboGroupDetailsMessageComposer;
