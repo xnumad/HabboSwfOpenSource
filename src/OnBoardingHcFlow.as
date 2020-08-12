@@ -170,7 +170,7 @@
             }
             else
             {
-                this._Str_1131();
+                this.startNameChange();
             }
         }
 
@@ -328,7 +328,7 @@
             }
         }
 
-        private function _Str_1131():void
+        private function startNameChange():void
         {
             if (!this._Str_907)
             {

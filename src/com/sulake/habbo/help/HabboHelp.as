@@ -300,7 +300,7 @@
             }
         }
 
-        public function _Str_1131():void
+        public function startNameChange():void
         {
             if (this._nameChangeController != null)
             {
