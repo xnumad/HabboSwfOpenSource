@@ -316,7 +316,7 @@
             }
         }
 
-        private function _Str_23535():void
+        private function showChatReportTool():void
         {
             this.closeWindow();
             this._chatReportController.show(this._habboHelp._Str_6240, this._reportedUserId, this._reportType);
@@ -539,7 +539,7 @@
             }
             if (k)
             {
-                this._Str_23535();
+                this.showChatReportTool();
             }
             else
             {
