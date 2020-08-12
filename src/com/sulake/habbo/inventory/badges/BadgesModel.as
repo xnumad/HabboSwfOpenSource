@@ -6,7 +6,7 @@
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window.IHabboWindowManager;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_7891;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.badges.GetBadgesComposer;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.IWindowContainer;
@@ -78,7 +78,7 @@
 
         public function _Str_4889():void
         {
-            this._communication.connection.send(new _Str_7891());
+            this._communication.connection.send(new GetBadgesComposer());
         }
 
         public function _Str_23348():int

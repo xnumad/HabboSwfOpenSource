@@ -934,7 +934,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.SetActivatedBadgesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.RequestABadgeComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.GetIsBadgeRequestFulfilledComposer;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_7891;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.GetBadgesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.GetBadgePointLimitsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.*;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.CraftSecretComposer;
@@ -1762,7 +1762,7 @@
             OUTGOING_PACKETS[2765] = EnterOneWayDoorMessageComposer;
             OUTGOING_PACKETS[2766] = _Str_4767;
             OUTGOING_PACKETS[2768] = PassCarryItemToPetMessageComposer;
-            OUTGOING_PACKETS[2769] = _Str_7891;
+            OUTGOING_PACKETS[2769] = GetBadgesComposer;
             OUTGOING_PACKETS[2771] = RecycleItemsMessageComposer;
             OUTGOING_PACKETS[2781] = _Str_9977;
             OUTGOING_PACKETS[2809] = RoomAdSearchMessageComposer;
