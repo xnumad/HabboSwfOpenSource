@@ -5,7 +5,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupBadgesMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_10770;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupBadgesMessageComposer;
 
     public class HabboGroupInfoManager implements IDisposable 
     {
@@ -47,7 +47,7 @@
 
         private function onRoomReady(k:IMessageEvent):void
         {
-            this._sessionDataManager.send(new _Str_10770());
+            this._sessionDataManager.send(new GetHabboGroupBadgesMessageComposer());
         }
 
         private function _Str_18218(k:HabboGroupBadgesMessageEvent):void

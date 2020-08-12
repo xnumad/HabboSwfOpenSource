@@ -469,7 +469,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildCreationInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.RespectUserMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10770;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupBadgesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UnignoreUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserMessageComposer;
@@ -1651,7 +1651,7 @@
             OUTGOING_PACKETS[2080] = DanceMessageComposer;
             OUTGOING_PACKETS[2085] = ShoutMessageComposer;
             OUTGOING_PACKETS[2091] = _Str_6996;
-            OUTGOING_PACKETS[21] = _Str_10770;
+            OUTGOING_PACKETS[21] = GetHabboGroupBadgesMessageComposer;
             OUTGOING_PACKETS[210] = UseWallItemMessageComposer;
             OUTGOING_PACKETS[2105] = _Str_9940;
             OUTGOING_PACKETS[2109] = ApproveNameMessageComposer;
