@@ -189,7 +189,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10817;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10944;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11141;
-	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11152;
+	import com.sulake.habbo.communication.messages.outgoing.sound.AddJukeboxDiskComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11484;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11631;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetUserSongDisksMessageComposer;
@@ -1954,7 +1954,7 @@
             OUTGOING_PACKETS[741] = _Str_7312;
             OUTGOING_PACKETS[742] = _Str_17987;
             OUTGOING_PACKETS[749] = _Str_7251;
-            OUTGOING_PACKETS[753] = _Str_11152;
+            OUTGOING_PACKETS[753] = AddJukeboxDiskComposer;
             OUTGOING_PACKETS[0x0300] = OpenMessageComposer;
             OUTGOING_PACKETS[773] = CompleteDiffieHandshakeMessageComposer;
             OUTGOING_PACKETS[777] = _Str_10613;

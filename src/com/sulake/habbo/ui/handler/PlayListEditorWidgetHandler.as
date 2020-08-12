@@ -19,7 +19,7 @@
     import com.sulake.habbo.ui.widget.events._Str_2693;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11152;
+    import com.sulake.habbo.communication.messages.outgoing.sound.AddJukeboxDiskComposer;
     import com.sulake.habbo.communication.messages.outgoing.sound._Str_11834;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
@@ -149,7 +149,7 @@
                     _local_4 = (k as RoomWidgetPlayListModificationMessage);
                     if (this._connection != null)
                     {
-                        this._connection.send(new _Str_11152(_local_4._Str_5848, _local_4._Str_20440));
+                        this._connection.send(new AddJukeboxDiskComposer(_local_4._Str_5848, _local_4._Str_20440));
                     }
                     break;
                 case RoomWidgetPlayListModificationMessage.RWPLAM_REMOVE_FROM_PLAYLIST:
