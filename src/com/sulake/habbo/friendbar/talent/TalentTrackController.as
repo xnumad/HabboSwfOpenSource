@@ -303,7 +303,7 @@
                         _local_15 = Math.max((_Str_5573 + (_Str_3555 * 2)), Math.max(_local_11.width, _local_10.width));
                         _local_12.width = _local_15;
                         _local_13.width = _local_15;
-                        _local_14.addListItem(this._Str_10814(k, k._Str_7068[0]));
+                        _local_14.addListItem(this.createRewardProduct(k, k._Str_7068[0]));
                         _local_9.width = (_local_15 + (2 * _Str_3555));
                         _local_5.width = (_local_15 + (2 * _Str_3555));
                     }
@@ -314,7 +314,7 @@
                             _local_9.width = ((_Str_5573 * 2) + (_Str_3555 * 2));
                             _local_12.width = (_Str_5573 * 2);
                             _local_13.width = (_Str_5573 * 2);
-                            _local_14.addListItem(((k._Str_8893.length > 0) ? this._Str_13209(k, k._Str_8893[0]) : this._Str_10814(k, k._Str_7068[0])));
+                            _local_14.addListItem(((k._Str_8893.length > 0) ? this._Str_13209(k, k._Str_8893[0]) : this.createRewardProduct(k, k._Str_7068[0])));
                             _local_14.arrangeListItems();
                             _local_5.width = (_local_14.width + (2 * _Str_3555));
                             _local_9.width = (_local_14.width + (2 * _Str_3555));
@@ -327,7 +327,7 @@
                             }
                             for each (_local_17 in k._Str_7068)
                             {
-                                _local_14.addListItem(this._Str_10814(k, _local_17));
+                                _local_14.addListItem(this.createRewardProduct(k, _local_17));
                             }
                             _local_14.arrangeListItems();
                             _local_5.width = (_local_14.width + (2 * _Str_3555));
@@ -454,7 +454,7 @@
             return _local_3;
         }
 
-        private function _Str_10814(k:TalentTrackLevel, _arg_2:TalentTrackRewardProduct):IWindowContainer
+        private function createRewardProduct(k:TalentTrackLevel, _arg_2:TalentTrackRewardProduct):IWindowContainer
         {
             var _local_3:IWindowContainer;
             if (_arg_2._Str_13965 == 0)

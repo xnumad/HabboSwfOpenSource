@@ -111,7 +111,7 @@
                 {
                     _local_5.addListItem(_local_6.clone());
                 }
-                _local_5.addListItem(this._Str_10814(_local_9));
+                _local_5.addListItem(this.createRewardProduct(_local_9));
                 _local_7 = true;
             }
             if (_local_5.numListItems < 1)
@@ -129,7 +129,7 @@
             return _local_2;
         }
 
-        private function _Str_10814(k:TalentTrackRewardProduct):IWindow
+        private function createRewardProduct(k:TalentTrackRewardProduct):IWindow
         {
             var _local_2:IWindow;
             if (k._Str_13965 == 0)
