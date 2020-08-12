@@ -704,7 +704,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerChangeStateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.EnterOneWayDoorMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10101;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceCancelRentMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PresentOpenMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.GetGuildFurniContextMenuInfoMessageComposer;
@@ -1598,7 +1598,7 @@
             OUTGOING_PACKETS[1638] = BreedPetsMessageComposer;
             OUTGOING_PACKETS[1644] = LetUserInMessageComposer;
             OUTGOING_PACKETS[1648] = RoomDimmerSavePresetMessageComposer;
-            OUTGOING_PACKETS[1667] = _Str_10101;
+            OUTGOING_PACKETS[1667] = RentableSpaceCancelRentMessageComposer;
             OUTGOING_PACKETS[168] = MoveWallItemMessageComposer;
             OUTGOING_PACKETS[1681] = _Str_10432;
             OUTGOING_PACKETS[1687] = _Str_7023;
