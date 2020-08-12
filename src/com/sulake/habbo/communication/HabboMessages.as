@@ -807,7 +807,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.SendRoomInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.FollowFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_10962;
-	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11418;
+	import com.sulake.habbo.communication.messages.outgoing.friendlist.RequestFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11696;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11750;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11815;
@@ -1816,7 +1816,7 @@
             OUTGOING_PACKETS[3144] = _Str_9826;
             OUTGOING_PACKETS[3149] = GetThreadsMessageComposer;
             OUTGOING_PACKETS[3150] = RequestFurniInventoryComposer;
-            OUTGOING_PACKETS[3157] = _Str_11418;
+            OUTGOING_PACKETS[3157] = RequestFriendMessageComposer;
             OUTGOING_PACKETS[3159] = SetNewNavigatorWindowPreferencesMessageComposer;
             OUTGOING_PACKETS[3166] = ScrGetUserInfoMessageComposer;
             OUTGOING_PACKETS[3171] = _Str_10594;

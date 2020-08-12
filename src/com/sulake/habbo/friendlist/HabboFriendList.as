@@ -39,7 +39,7 @@
     import com.sulake.habbo.utils.HabboWebTools;
     import flash.utils.Dictionary;
     import com.sulake.habbo.friendlist.domain.Friend;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11418;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.RequestFriendMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.quest.FriendRequestQuestCompleteMessageComposer;
     import flash.geom.Point;
     import com.sulake.habbo.friendlist.domain._Str_2740;
@@ -289,7 +289,7 @@
             {
                 return false;
             }
-            this.send(new _Str_11418(_arg_2));
+            this.send(new RequestFriendMessageComposer(_arg_2));
             this.searchResults.setFriendRequestSent(k);
             this.send(new FriendRequestQuestCompleteMessageComposer());
             return true;
