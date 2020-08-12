@@ -131,7 +131,7 @@
             {
                 _local_3 = this._questEngine.getInteger("questing.startQuestDelayInSeconds", 30);
                 this._startQuestTimer = new Timer((_local_3 * 1000), 1);
-                this._startQuestTimer.addEventListener(TimerEvent.TIMER, this._Str_23378);
+                this._startQuestTimer.addEventListener(TimerEvent.TIMER, this.onStartQuestTimer);
                 this._startQuestTimer.start();
                 Logger.log(("Initialized start quest timer with period: " + _local_3));
             }
@@ -413,7 +413,7 @@
             return (this._window) && (this._window.visible);
         }
 
-        private function _Str_23378(k:TimerEvent):void
+        private function onStartQuestTimer(k:TimerEvent):void
         {
             if (this._Str_25445())
             {
