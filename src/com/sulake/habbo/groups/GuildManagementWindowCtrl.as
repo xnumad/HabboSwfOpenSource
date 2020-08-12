@@ -466,7 +466,7 @@
             {
                 return;
             }
-            this._step = this._Str_15418((this._step + 1));
+            this._step = this.limitStep((this._step + 1));
             this.refresh();
         }
 
@@ -480,7 +480,7 @@
             {
                 return;
             }
-            this._step = this._Str_15418((this._step - 1));
+            this._step = this.limitStep((this._step - 1));
             this.refresh();
         }
 
@@ -625,15 +625,15 @@
 
         private function hasPreviousStep():Boolean
         {
-            return !(this._step == this._Str_15418((this._step - 1)));
+            return !(this._step == this.limitStep((this._step - 1)));
         }
 
         private function hasNextStep():Boolean
         {
-            return !(this._step == this._Str_15418((this._step + 1)));
+            return !(this._step == this.limitStep((this._step + 1)));
         }
 
-        private function _Str_15418(k:int):int
+        private function limitStep(k:int):int
         {
             return Math.max(1, Math.min(k, VIEW_CONFIRM));
         }
