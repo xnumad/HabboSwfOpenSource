@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_8049 implements IMessageComposer 
+    public class GetRelationshipStatusInfoMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_8049(k:int)
+        public function GetRelationshipStatusInfoMessageComposer(k:int)
         {
             this._array = [];
             super();

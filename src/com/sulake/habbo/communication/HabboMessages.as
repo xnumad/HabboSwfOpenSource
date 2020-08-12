@@ -494,7 +494,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileByNameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembershipsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetRelationshipStatusInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetMemberGuildItemCountMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9855;
 	import com.sulake.habbo.communication.messages.outgoing.users.ApproveMembershipRequestMessageComposer;
@@ -1660,7 +1660,7 @@
             OUTGOING_PACKETS[2115] = ExtendRentOrBuyoutStripItemMessageComposer;
             OUTGOING_PACKETS[2127] = GetTalentTrackLevelMessageComposer;
             OUTGOING_PACKETS[2128] = _Str_7214;
-            OUTGOING_PACKETS[2138] = _Str_8049;
+            OUTGOING_PACKETS[2138] = GetRelationshipStatusInfoMessageComposer;
             OUTGOING_PACKETS[2144] = SpinWheelOfFortuneMessageComposer;
             OUTGOING_PACKETS[2150] = _Str_11580;
             OUTGOING_PACKETS[2161] = GetPetCommandsMessageComposer;

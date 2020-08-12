@@ -61,7 +61,7 @@
     import com.sulake.habbo.friendlist.IFriend;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.session.enum.RoomTradingLevelEnum;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetRelationshipStatusInfoMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomModerationSettings;
     import com.sulake.habbo.sound.IPlayListController;
     import com.sulake.habbo.sound.ISongInfo;
@@ -914,7 +914,7 @@
             var _local_8:Array = this._container.sessionDataManager.getUserTags(_arg_4.id);
             this._Str_16287(_arg_4.id, _local_8);
             this._container.habboGroupsManager.updateVisibleExtendedProfile(_arg_4.id);
-            this._container.connection.send(new _Str_8049(_arg_4.id));
+            this._container.connection.send(new GetRelationshipStatusInfoMessageComposer(_arg_4.id));
         }
 
         private function determineCanBeMuted(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
