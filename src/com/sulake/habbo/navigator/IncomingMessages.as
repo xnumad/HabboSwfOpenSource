@@ -126,7 +126,7 @@
             _local_2.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened));
             _local_2.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             _local_2.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561));
-            _local_2.addHabboConnectionMessageEvent(new _Str_8029(this._Str_15955));
+            _local_2.addHabboConnectionMessageEvent(new _Str_8029(this.onRoomEventCancel));
             _local_2.addHabboConnectionMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell));
             _local_2.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346));
@@ -246,7 +246,7 @@
             this._navigator.roomEventInfoCtrl.refresh();
         }
 
-        private function _Str_15955(k:IMessageEvent):void
+        private function onRoomEventCancel(k:IMessageEvent):void
         {
             this.data.roomEventData = null;
             this._navigator.roomEventInfoCtrl.refresh();
