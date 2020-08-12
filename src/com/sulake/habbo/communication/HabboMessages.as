@@ -453,7 +453,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemRemoveMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectDataUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.bots._Str_10971;
-	import com.sulake.habbo.communication.messages.outgoing.mysterybox._Str_11402;
+	import com.sulake.habbo.communication.messages.outgoing.mysterybox.MysteryBoxWaitingCanceledMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendfurni.FriendFurniConfirmLockMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomdirectory.RoomNetworkOpenConnectionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.landingview.votes.CommunityGoalVoteMessageComposer;
@@ -1639,7 +1639,7 @@
             OUTGOING_PACKETS[1986] = GetBotCommandConfigurationDataComposer;
             OUTGOING_PACKETS[1990] = ThrowDiceMessageComposer;
             OUTGOING_PACKETS[1991] = UpdateGuildBadgeMessageComposer;
-            OUTGOING_PACKETS[2012] = _Str_11402;
+            OUTGOING_PACKETS[2012] = MysteryBoxWaitingCanceledMessageComposer;
             OUTGOING_PACKETS[2031] = _Str_18219;
             OUTGOING_PACKETS[2041] = _Str_7084;
             OUTGOING_PACKETS[2061] = UnignoreUserMessageComposer;

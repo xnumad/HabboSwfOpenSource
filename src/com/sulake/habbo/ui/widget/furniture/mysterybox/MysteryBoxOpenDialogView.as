@@ -13,7 +13,7 @@
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.mysterybox._Str_11402;
+    import com.sulake.habbo.communication.messages.outgoing.mysterybox.MysteryBoxWaitingCanceledMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.room.ImageResult;
@@ -103,7 +103,7 @@
                 case "header_button_close":
                 case "cancel_button":
                     this.closeWindow();
-                    this.connection.send(new _Str_11402(this._widget.handler.container.getFurnitureOwnerId(this._object)));
+                    this.connection.send(new MysteryBoxWaitingCanceledMessageComposer(this._widget.handler.container.getFurnitureOwnerId(this._object)));
                     return;
             }
         }

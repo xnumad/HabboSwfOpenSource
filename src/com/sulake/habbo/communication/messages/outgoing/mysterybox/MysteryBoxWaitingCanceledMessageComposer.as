@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_11402 implements IMessageComposer, IDisposable 
+    public class MysteryBoxWaitingCanceledMessageComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function _Str_11402(k:int)
+        public function MysteryBoxWaitingCanceledMessageComposer(k:int)
         {
             this._array = new Array();
             super();
