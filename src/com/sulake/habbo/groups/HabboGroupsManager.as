@@ -169,7 +169,7 @@
             this.addMessageEvent(new HabboGroupJoinFailedMessageEvent(this.onJoinFailed));
             this.addMessageEvent(new GroupMembershipRequestedMessageEvent(this._guildMembersWindowCtrl._Str_22705));
             this.addMessageEvent(new GuildMemberMgmtFailedMessageEvent(this._guildMembersWindowCtrl._Str_23412));
-            this.addMessageEvent(new RelationshipStatusInfo(this._Str_18561));
+            this.addMessageEvent(new RelationshipStatusInfo(this.onRelationshipStatusInfo));
             this.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails));
             this.addMessageEvent(new _Str_3992(this.onFlatCreated));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
@@ -523,10 +523,10 @@
             }
         }
 
-        private function _Str_18561(k:IMessageEvent):void
+        private function onRelationshipStatusInfo(k:IMessageEvent):void
         {
             var _local_2:RelationshipStatusInfo = RelationshipStatusInfo(k);
-            this._extendedProfileWindowCtrl._Str_18561(_local_2.userId, _local_2.relationshipStatusMap);
+            this._extendedProfileWindowCtrl.onRelationshipStatusInfo(_local_2.userId, _local_2.relationshipStatusMap);
         }
 
         private function _Str_24382(k:UserBadgesEvent):void

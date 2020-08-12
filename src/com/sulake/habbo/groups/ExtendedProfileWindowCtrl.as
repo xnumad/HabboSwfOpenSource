@@ -304,7 +304,7 @@
             }
         }
 
-        public function _Str_18561(k:int, _arg_2:Map):void
+        public function onRelationshipStatusInfo(k:int, _arg_2:Map):void
         {
             if (((this._data) && (this._Str_12870)))
             {
