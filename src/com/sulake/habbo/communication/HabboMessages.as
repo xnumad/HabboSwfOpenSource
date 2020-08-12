@@ -540,7 +540,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9889;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9911;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9956;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9988;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.*;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11459;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11571;
@@ -1680,7 +1680,7 @@
             OUTGOING_PACKETS[2266] = _Str_9956;
             OUTGOING_PACKETS[2267] = GetBannedUsersFromRoomMessageComposer;
             OUTGOING_PACKETS[2276] = SelectClubGiftComposer;
-            OUTGOING_PACKETS[2277] = _Str_9988;
+            OUTGOING_PACKETS[2277] = MyRoomsSearchMessageComposer;
             OUTGOING_PACKETS[2281] = UpdateActionMessageComposer;
             OUTGOING_PACKETS[2283] = _Str_12488;
             OUTGOING_PACKETS[2285] = RoomUsersClassificationMessageComposer;

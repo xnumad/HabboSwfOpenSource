@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11329;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9956;
     import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomHistorySearchMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9988;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomsSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10157;
     import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWhereMyFriendsAreSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9889;
@@ -621,7 +621,7 @@
                 case Tabs.SEARCHTYPE_MY_HISTORY:
                     return new MyRoomHistorySearchMessageComposer();
                 case Tabs.SEARCHTYPE_MY_ROOMS:
-                    return new _Str_9988();
+                    return new MyRoomsSearchMessageComposer();
                 case Tabs.SEARCHTYPE_POPULAR_ROOMS:
                     return new _Str_10157(_arg_2, this._navigator.data._Str_6357);
                 case Tabs.SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE:
