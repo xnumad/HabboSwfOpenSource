@@ -160,7 +160,7 @@
                 _local_3.visible = (this._step == _local_2);
                 _local_2++;
             }
-            this._window.findChildByName("header_caption_txt").caption = this._Str_24672();
+            this._window.findChildByName("header_caption_txt").caption = this.getStepCaption();
             this._window.findChildByName("header_desc_txt").caption = this._Str_25664();
             this._window.findChildByName("header_pic_bitmap");
             this._window.findChildByName("header_caption_txt").y = (HEADER_CAPTION_Y_CREATE + this.getHeaderTextOffset());
@@ -339,7 +339,7 @@
             return IWindowContainer(this._window.findChildByName(("step_cont_" + k)));
         }
 
-        private function _Str_24672():String
+        private function getStepCaption():String
         {
             var k:String = (((this._data.exists) ? "group.edit.tabcaption." : "group.create.stepcaption.") + this._step);
             return this._manager.localization.getLocalization(k, k);
