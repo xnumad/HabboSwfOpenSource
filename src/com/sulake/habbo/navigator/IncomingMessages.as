@@ -67,7 +67,7 @@
     import com.sulake.habbo.navigator.domain.RoomSessionTags;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsData;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_5936;
+    import com.sulake.habbo.communication.messages.parser.navigator.FlatCreatedMessageParser;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.navigator.domain.Tabs;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
@@ -355,7 +355,7 @@
 
         private function onFlatCreated(k:IMessageEvent):void
         {
-            var _local_2:_Str_5936 = FlatCreatedEvent(k).getParser();
+            var _local_2:FlatCreatedMessageParser = FlatCreatedEvent(k).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ((("Flat created: " + _local_2.flatId) + ", ") + _local_2._Str_18439));
             this.data.createdFlatId = _local_2.flatId;
             this._navigator.goToRoom(_local_2.flatId, true);

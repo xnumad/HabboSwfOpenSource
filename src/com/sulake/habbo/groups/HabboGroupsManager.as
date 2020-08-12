@@ -72,7 +72,7 @@
     import com.sulake.habbo.groups.events.HabboGroupsEditorData;
     import com.sulake.habbo.communication.messages.parser.users.GuildEditFailedMessageParser;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_5936;
+    import com.sulake.habbo.communication.messages.parser.navigator.FlatCreatedMessageParser;
     import com.sulake.habbo.communication.messages.incoming.users._Str_2891;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberData;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
@@ -436,7 +436,7 @@
 
         private function onFlatCreated(k:IMessageEvent):void
         {
-            var _local_2:_Str_5936 = FlatCreatedEvent(k).getParser();
+            var _local_2:FlatCreatedMessageParser = FlatCreatedEvent(k).getParser();
             this._guildManagementWindowCtrl.onFlatCreated(_local_2.flatId, _local_2._Str_18439);
         }
 
