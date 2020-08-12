@@ -203,7 +203,7 @@
             var _local_6:int;
             while (_local_6 < this._talentTrack.levels.length)
             {
-                this._Str_25404(this._talentTrack.levels[_local_6], _local_6);
+                this.createLevelPane(this._talentTrack.levels[_local_6], _local_6);
                 if (this._talentTrack.levels[_local_6].state == TalentTrack.STATE_ONGOING)
                 {
                     _local_5 = _local_6;
@@ -225,7 +225,7 @@
             }
         }
 
-        private function _Str_25404(k:TalentTrackLevel, _arg_2:int):void
+        private function createLevelPane(k:TalentTrackLevel, _arg_2:int):void
         {
             var _local_9:IBorderWindow;
             var _local_10:ITextWindow;
