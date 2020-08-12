@@ -81,7 +81,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine.UseWallItemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.ThrowDiceMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.DiceOffMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12182;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.SpinWheelOfFortuneMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.GetItemDataMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10097;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.SetItemDataMessageComposer;
@@ -2377,7 +2377,7 @@
                         this._roomEngine.connection.send(new DiceOffMessageComposer(_arg_2));
                         return;
                     case RoomObjectFurnitureActionEvent.USE_HABBOWHEEL:
-                        this._roomEngine.connection.send(new _Str_12182(_arg_2));
+                        this._roomEngine.connection.send(new SpinWheelOfFortuneMessageComposer(_arg_2));
                         return;
                     case RoomObjectFurnitureActionEvent.STICKIE:
                         this._roomEngine.connection.send(new GetItemDataMessageComposer(_arg_2));

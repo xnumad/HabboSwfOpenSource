@@ -720,7 +720,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.DiceOffMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PlacePostItMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ThrowDiceMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12182;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SpinWheelOfFortuneMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12348;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12374;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12509;
@@ -1661,7 +1661,7 @@
             OUTGOING_PACKETS[2127] = GetTalentTrackLevelMessageComposer;
             OUTGOING_PACKETS[2128] = _Str_7214;
             OUTGOING_PACKETS[2138] = _Str_8049;
-            OUTGOING_PACKETS[2144] = _Str_12182;
+            OUTGOING_PACKETS[2144] = SpinWheelOfFortuneMessageComposer;
             OUTGOING_PACKETS[2150] = _Str_11580;
             OUTGOING_PACKETS[2161] = GetPetCommandsMessageComposer;
             OUTGOING_PACKETS[2167] = _Str_11298;

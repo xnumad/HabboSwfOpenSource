@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12182 implements IMessageComposer 
+    public class SpinWheelOfFortuneMessageComposer implements IMessageComposer
     {
         private var _objectId:int;
 
-        public function _Str_12182(k:int)
+        public function SpinWheelOfFortuneMessageComposer(k:int)
         {
             this._objectId = k;
         }
