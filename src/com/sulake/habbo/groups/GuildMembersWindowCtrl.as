@@ -102,7 +102,7 @@
         {
             this._data = GuildMembersEvent(k).data;
             this.show();
-            this._Str_25368();
+            this.populateSearchTypes();
             this._Str_23578();
         }
 
@@ -567,7 +567,7 @@
             return this._data;
         }
 
-        private function _Str_25368():void
+        private function populateSearchTypes():void
         {
             var k:Array = new Array();
             k.push("${group.members.search.all}");
