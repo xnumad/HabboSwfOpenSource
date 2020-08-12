@@ -392,7 +392,7 @@
             }
         }
 
-        public function _Str_23281(k:String):void
+        public function showPendingRequest(k:String):void
         {
             this.closeWindow();
             this._window = (this._habboHelp.getXmlWindow("pending_request") as IWindowContainer);

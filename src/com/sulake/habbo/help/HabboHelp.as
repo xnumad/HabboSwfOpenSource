@@ -634,7 +634,7 @@
                     }
                     _local_4++;
                 }
-                this._callForHelpManager._Str_23281(_local_3);
+                this._callForHelpManager.showPendingRequest(_local_3);
             }
         }
 
