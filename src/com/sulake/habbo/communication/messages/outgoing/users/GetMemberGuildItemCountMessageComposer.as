@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_8228 implements IMessageComposer 
+    public class GetMemberGuildItemCountMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_8228(k:int, _arg_2:int)
+        public function GetMemberGuildItemCountMessageComposer(k:int, _arg_2:int)
         {
             this._array = [];
             super();

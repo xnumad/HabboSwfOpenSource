@@ -495,7 +495,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_7664;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_8228;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetMemberGuildItemCountMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9855;
 	import com.sulake.habbo.communication.messages.outgoing.users.ApproveMembershipRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildIdentityMessageComposer;
@@ -1880,7 +1880,7 @@
             OUTGOING_PACKETS[3582] = _Str_12239;
             OUTGOING_PACKETS[359] = _Str_4406;
             OUTGOING_PACKETS[3591] = _Str_12393;
-            OUTGOING_PACKETS[3593] = _Str_8228;
+            OUTGOING_PACKETS[3593] = GetMemberGuildItemCountMessageComposer;
             OUTGOING_PACKETS[3604] = AcceptQuestMessageComposer;
             OUTGOING_PACKETS[3605] = _Str_12224;
             OUTGOING_PACKETS[3608] = SetObjectDataMessageComposer;

@@ -81,7 +81,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditorDataMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_8228;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetMemberGuildItemCountMessageComposer;
     import __AS3__.vec.*;
 
     public class HabboGroupsManager extends Component implements IHabboGroupsManager, ILinkEventTracker 
@@ -663,13 +663,13 @@
         public function handleUserKick(k:int, _arg_2:int):void
         {
             this._kickData = new GuildKickData(k, _arg_2);
-            this.send(new _Str_8228(_arg_2, k));
+            this.send(new GetMemberGuildItemCountMessageComposer(_arg_2, k));
         }
 
         public function handleUserBlock(k:int, _arg_2:int):void
         {
             this._kickData = new GuildKickData(k, _arg_2, true);
-            this.send(new _Str_8228(_arg_2, k));
+            this.send(new GetMemberGuildItemCountMessageComposer(_arg_2, k));
         }
 
         public function get newNavigator():IHabboNewNavigator
