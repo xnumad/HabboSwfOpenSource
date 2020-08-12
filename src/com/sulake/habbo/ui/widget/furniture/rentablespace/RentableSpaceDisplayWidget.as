@@ -123,7 +123,7 @@
             {
                 return;
             }
-            this.ownHandler._Str_25642(this._roomObject.getId());
+            this.ownHandler.getRentableSpaceStatus(this._roomObject.getId());
         }
 
         public function _Str_23885(k:Boolean, _arg_2:Boolean, _arg_3:int, _arg_4:int, _arg_5:String, _arg_6:int, _arg_7:int):void

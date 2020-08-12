@@ -139,7 +139,7 @@
             this._widget._Str_23885(_local_2._Str_22736, _local_2._Str_23603, _local_2._Str_25070, _local_2.renterId, _local_2._Str_23275, _local_2._Str_24083, _local_2.price);
         }
 
-        public function _Str_25642(k:int):void
+        public function getRentableSpaceStatus(k:int):void
         {
             this._container.connection.send(new _Str_11461(k));
         }
