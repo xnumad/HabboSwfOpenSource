@@ -249,7 +249,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_10960;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11137;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11698;
-	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11774;
+	import com.sulake.habbo.communication.messages.outgoing.preferences.SetRoomCameraPreferencesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatStylePreferenceComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetUIFlagsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.pets.CustomizePetWithFurniComposer;
@@ -1578,7 +1578,7 @@
             OUTGOING_PACKETS[1445] = Game2ExitGameMessageComposer;
             OUTGOING_PACKETS[1450] = _Str_12123;
             OUTGOING_PACKETS[1458] = JoinPlayerQueueMessageComposer;
-            OUTGOING_PACKETS[1461] = _Str_11774;
+            OUTGOING_PACKETS[1461] = SetRoomCameraPreferencesMessageComposer;
             OUTGOING_PACKETS[1472] = TogglePetRidingPermissionMessageComposer;
             OUTGOING_PACKETS[1474] = CancelTypingMessageComposer;
             OUTGOING_PACKETS[1477] = BanUserWithDurationMessageComposer;

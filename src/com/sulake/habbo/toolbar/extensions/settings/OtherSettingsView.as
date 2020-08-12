@@ -9,7 +9,7 @@
     import com.sulake.habbo.phonenumber.PhoneNumberStatusEnum;
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
     import com.sulake.habbo.communication.messages.outgoing.preferences._Str_10960;
-    import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11774;
+    import com.sulake.habbo.communication.messages.outgoing.preferences.SetRoomCameraPreferencesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
 
     public class OtherSettingsView 
@@ -91,7 +91,7 @@
                     return;
                 case "disable_room_camera_follow_checkbox":
                     _local_4 = ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected;
-                    this._toolbar.connection.send(new _Str_11774(_local_4));
+                    this._toolbar.connection.send(new SetRoomCameraPreferencesMessageComposer(_local_4));
                     this._toolbar.sessionDataManager.setRoomCameraFollowDisabled(_local_4);
                     return;
                 case "btn_reset_phone_number_collection":
