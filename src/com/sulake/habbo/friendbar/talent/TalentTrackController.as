@@ -106,7 +106,7 @@
 
         public function initialize():void
         {
-            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_7229(this._Str_24186));
+            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_7229(this.onTalentTrack));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this.onEmailStatus));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new ChangeEmailResultEvent(this._Str_17386));
@@ -128,7 +128,7 @@
             this.setEmailErrorStatus(true, k.getParser().result);
         }
 
-        private function _Str_24186(k:_Str_7229):void
+        private function onTalentTrack(k:_Str_7229):void
         {
             var _local_2:TalentTrackMessageParser = k.getParser();
             this._talentTrack = _local_2._Str_23534();
