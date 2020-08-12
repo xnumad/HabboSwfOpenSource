@@ -153,7 +153,7 @@
             this._dialog = this._habboTalent.getModalXmlWindow("talent_track");
             this._window = IWindowContainer(this._dialog.rootWindow);
             this._window.procedure = this.onWindowEvent;
-            this._dialog.background.procedure = this._Str_22317;
+            this._dialog.background.procedure = this.onModalWindowBackgroundEvent;
             this._habboTalent.windowManager.getWindowContext(_Str_4923).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
             this._panoramaList = IItemListWindow(this._window.findChildByName("panorama"));
             this._levelTemplate = IWindowContainer(this._panoramaList.removeListItem(this._panoramaList.getListItemByName("level_pane")));
@@ -651,7 +651,7 @@
             }
         }
 
-        private function _Str_22317(k:WindowEvent, _arg_2:IWindow):void
+        private function onModalWindowBackgroundEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if ((((this._window == null) || (this._window.disposed)) || (!(k.type == WindowMouseEvent.CLICK))))
             {
