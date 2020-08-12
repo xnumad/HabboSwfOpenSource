@@ -125,7 +125,7 @@
             this._manager.windowManager.alert("${group.membermgmt.fail.title}", _local_5, 0, null);
             if (((((!(this._data == null)) && (this._data.groupId == _local_2.guildId)) && (!(this._window == null))) && (this._window.visible)))
             {
-                this._Str_5312(this._data.pageIndex);
+                this.doSearch(this._data.pageIndex);
             }
         }
 
@@ -134,7 +134,7 @@
             var _local_2:GuildMembershipRejectedMessageEvent = GuildMembershipRejectedMessageEvent(k);
             if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.getParser().guildId)))
             {
-                this._Str_5312(this._data.pageIndex);
+                this.doSearch(this._data.pageIndex);
             }
         }
 
@@ -143,7 +143,7 @@
             var _local_2:GroupMembershipRequestedMessageParser = GroupMembershipRequestedMessageEvent(k).getParser();
             if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.groupId)))
             {
-                this._Str_5312(this._data.pageIndex);
+                this.doSearch(this._data.pageIndex);
             }
         }
 
@@ -491,11 +491,11 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_SELECTED)
             {
-                this._Str_5312(0);
+                this.doSearch(0);
             }
         }
 
-        private function _Str_5312(k:int):void
+        private function doSearch(k:int):void
         {
             this._searchTimer.stop();
             this._searchTimer.reset();
@@ -524,7 +524,7 @@
         {
             if (((!(this._window == null)) && (this._window.visible)))
             {
-                this._Str_5312(0);
+                this.doSearch(0);
             }
         }
 
@@ -534,7 +534,7 @@
             {
                 return;
             }
-            this._Str_5312(this._Str_13408((this._data.pageIndex + 1)));
+            this.doSearch(this._Str_13408((this._data.pageIndex + 1)));
         }
 
         private function _Str_23530(k:WindowEvent, _arg_2:IWindow):void
@@ -543,7 +543,7 @@
             {
                 return;
             }
-            this._Str_5312(this._Str_13408((this._data.pageIndex - 1)));
+            this.doSearch(this._Str_13408((this._data.pageIndex - 1)));
         }
 
         private function _Str_24227():Boolean

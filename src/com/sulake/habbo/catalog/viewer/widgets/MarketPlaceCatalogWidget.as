@@ -696,7 +696,7 @@
             _window.getChildAt(0).visible = true;
         }
 
-        private function _Str_5312():void
+        private function doSearch():void
         {
             var _local_5:IWindow;
             this._Str_10239(this._Str_11360);
@@ -770,7 +770,7 @@
                         }
                         if (((_local_6.name == "search_by_value") || (_local_6.name == "search_by_activity")))
                         {
-                            this._Str_5312();
+                            this.doSearch();
                         }
                         break;
                     case "search_by_value":
@@ -797,7 +797,7 @@
                             {
                                 return;
                             }
-                            this._Str_5312();
+                            this.doSearch();
                             break;
                     }
                 }
