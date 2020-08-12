@@ -46,7 +46,7 @@
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
     import flash.external.ExternalInterface;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11608;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.ConvertGlobalRoomIdMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10878;
     import com.sulake.habbo.session.IRoomSession;
@@ -292,7 +292,7 @@
         {
             this._webRoomReport = _arg_2;
             this._webRoomReportedName = _arg_3;
-            this.send(new _Str_11608(k));
+            this.send(new ConvertGlobalRoomIdMessageComposer(k));
         }
 
         override public function dispose():void

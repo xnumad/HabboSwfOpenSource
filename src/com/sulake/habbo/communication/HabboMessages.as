@@ -513,7 +513,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFrequentRoomHistorySearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFavouriteRoomsSearchMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11608;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.ConvertGlobalRoomIdMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.ToggleStaffPickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabAdClickedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabViewedComposer;
@@ -1812,7 +1812,7 @@
             OUTGOING_PACKETS[3133] = CancelQuestMessageComposer;
             OUTGOING_PACKETS[3135] = _Str_7384;
             OUTGOING_PACKETS[3137] = UpdateGuildIdentityMessageComposer;
-            OUTGOING_PACKETS[314] = _Str_11608;
+            OUTGOING_PACKETS[314] = ConvertGlobalRoomIdMessageComposer;
             OUTGOING_PACKETS[3144] = _Str_9826;
             OUTGOING_PACKETS[3149] = GetThreadsMessageComposer;
             OUTGOING_PACKETS[3150] = RequestFurniInventoryComposer;
