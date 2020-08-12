@@ -20,7 +20,7 @@
     import com.sulake.habbo.room.enum.RoomObjectPlacementSource;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8042;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.PlacePetMessageComposer;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.inventory.enum.UnseenItemCategoryEnum;
 
@@ -223,7 +223,7 @@
             }
             if (!_arg_2)
             {
-                this._communication.connection.send(new _Str_8042(_local_3.id, 0, 0));
+                this._communication.connection.send(new PlacePetMessageComposer(_local_3.id, 0, 0));
             }
             return true;
         }

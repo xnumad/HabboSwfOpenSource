@@ -71,7 +71,7 @@
     import com.sulake.habbo.room.enum.RoomObjectPlacementSource;
     import com.sulake.habbo.catalog.enum.CatalogType;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8042;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.PlacePetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8136;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.PlacePostItMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
@@ -2299,7 +2299,7 @@
                     {
                         if (((_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER) && (_local_4.typeId == RoomObjectTypeEnum.PET)))
                         {
-                            this._roomEngine.connection.send(new _Str_8042(_local_5, int(_local_9), int(_local_10)));
+                            this._roomEngine.connection.send(new PlacePetMessageComposer(_local_5, int(_local_9), int(_local_10)));
                         }
                         else
                         {

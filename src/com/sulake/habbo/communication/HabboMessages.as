@@ -629,7 +629,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7716;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetClothingChangeDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MovePetMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8042;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.PlacePetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8136;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.PickupObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveItemMessageComposer;
@@ -1735,7 +1735,7 @@
             OUTGOING_PACKETS[2597] = _Str_7525;
             OUTGOING_PACKETS[2624] = CommandBotComposer;
             OUTGOING_PACKETS[2638] = _Str_12374;
-            OUTGOING_PACKETS[2647] = _Str_8042;
+            OUTGOING_PACKETS[2647] = PlacePetMessageComposer;
             OUTGOING_PACKETS[2650] = _Str_12361;
             OUTGOING_PACKETS[2651] = GetGuildFurniContextMenuInfoMessageComposer;
             OUTGOING_PACKETS[2668] = _Str_11858;
