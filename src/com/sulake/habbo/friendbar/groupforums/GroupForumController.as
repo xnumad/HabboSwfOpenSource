@@ -66,7 +66,7 @@
     {
         public static const FORUMS_LIST_CODE_ACTIVE:int = 0;
         public static const FORUMS_LIST_CODE_POPULAR:int = 1;
-        public static const _Str_8757:int = 2;
+        public static const FORUMS_LIST_CODE_MY_FORUMS:int = 2;
         public static const _Str_9418:int = -1;
 
         private var _configurationManager:IHabboConfigurationManager;
@@ -258,7 +258,7 @@
                             _local_3 = FORUMS_LIST_CODE_POPULAR;
                             break;
                         case "my":
-                            _local_3 = _Str_8757;
+                            _local_3 = FORUMS_LIST_CODE_MY_FORUMS;
                             break;
                         default:
                             return;
@@ -309,7 +309,7 @@
             {
                 _local_3._Str_20834(this._forumData, this._lastReadMessageId);
             }
-            if (_local_3._Str_5154 == _Str_8757)
+            if (_local_3._Str_5154 == FORUMS_LIST_CODE_MY_FORUMS)
             {
                 this._Str_7256(_local_3._Str_9052);
             }
@@ -722,7 +722,7 @@
                 if (this._forumsListData)
                 {
                     this._forumsListData._Str_20834(this._forumData, k);
-                    if (this._forumsListData._Str_5154 == _Str_8757)
+                    if (this._forumsListData._Str_5154 == FORUMS_LIST_CODE_MY_FORUMS)
                     {
                         this._Str_7256(this._forumsListData._Str_9052);
                     }
@@ -771,7 +771,7 @@
         {
             if (this._mainView != null)
             {
-                this._communicationManager.connection.send(new ModerateMessageMessageComposer(_Str_8757, 0, ThreadsListData._Str_3331));
+                this._communicationManager.connection.send(new ModerateMessageMessageComposer(FORUMS_LIST_CODE_MY_FORUMS, 0, ThreadsListData._Str_3331));
             }
             else
             {
