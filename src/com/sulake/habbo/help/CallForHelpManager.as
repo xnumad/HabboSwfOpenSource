@@ -62,7 +62,7 @@
             this._habboHelp = k;
             this._chatReportController = new ChatReportController(this._habboHelp, this.onChatReportEvent);
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7837(this.onCallForHelpReply));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7620(this._Str_23792));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7620(this.onCallForHelpResult));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8337(this._Str_25598));
         }
 
@@ -658,7 +658,7 @@
             this._habboHelp.windowManager.alert("${help.cfh.reply.title}", _local_2.message, 0, null);
         }
 
-        private function _Str_23792(k:IMessageEvent):void
+        private function onCallForHelpResult(k:IMessageEvent):void
         {
             var _local_2:_Str_7322 = _Str_7620(k).getParser();
             var _local_3:int = _local_2.resultType;
