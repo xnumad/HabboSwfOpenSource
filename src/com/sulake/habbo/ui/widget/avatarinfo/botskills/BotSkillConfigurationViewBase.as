@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import flash.geom.Rectangle;
     import com.sulake.habbo.communication.messages.incoming.room.bots.BotCommandConfigurationEvent;
-    import com.sulake.habbo.communication.messages.outgoing.room.bots._Str_12054;
+    import com.sulake.habbo.communication.messages.outgoing.room.bots.GetBotCommandConfigurationDataComposer;
     import flash.geom.Point;
 
     public class BotSkillConfigurationViewBase implements BotSkillConfigurationView 
@@ -54,7 +54,7 @@
                 this._Str_9057 = new BotCommandConfigurationEvent(this._Str_22412);
                 this._widget.handler.container.connection.addMessageEvent(this._Str_9057);
             }
-            this._widget.handler.container.connection.send(new _Str_12054(this._botId, this.skillType));
+            this._widget.handler.container.connection.send(new GetBotCommandConfigurationDataComposer(this._botId, this.skillType));
             if (!this.window)
             {
                 _local_3 = (this._widget.assets.getAssetByName(this.windowAssetName).content as XML);

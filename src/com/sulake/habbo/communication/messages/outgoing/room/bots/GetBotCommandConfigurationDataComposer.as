@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12054 implements IMessageComposer 
+    public class GetBotCommandConfigurationDataComposer implements IMessageComposer
     {
         private var _botId:int;
         private var _Str_12385:int;
 
-        public function _Str_12054(k:int, _arg_2:int)
+        public function GetBotCommandConfigurationDataComposer(k:int, _arg_2:int)
         {
             this._botId = k;
             this._Str_12385 = _arg_2;

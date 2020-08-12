@@ -282,7 +282,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.bots.BotForceOpenContextMenuEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.bots.BotCommandConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.bots.BotErrorEvent;
-	import com.sulake.habbo.communication.messages.outgoing.room.bots._Str_12054;
+	import com.sulake.habbo.communication.messages.outgoing.room.bots.GetBotCommandConfigurationDataComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.bots._Str_3365;
 	import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceScriptProceedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceGetGiftsMessageComposer;
@@ -1636,7 +1636,7 @@
             OUTGOING_PACKETS[1969] = SaveRoomSettingsMessageComposer;
             OUTGOING_PACKETS[1975] = SignMessageComposer;
             OUTGOING_PACKETS[1982] = RenderRoomThumbnailMessageComposer;
-            OUTGOING_PACKETS[1986] = _Str_12054;
+            OUTGOING_PACKETS[1986] = GetBotCommandConfigurationDataComposer;
             OUTGOING_PACKETS[1990] = _Str_11935;
             OUTGOING_PACKETS[1991] = UpdateGuildBadgeMessageComposer;
             OUTGOING_PACKETS[2012] = _Str_11402;
