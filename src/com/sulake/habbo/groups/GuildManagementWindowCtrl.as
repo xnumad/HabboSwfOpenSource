@@ -321,15 +321,15 @@
             var k:int = 1;
             while (k <= VIEW_CONFIRM)
             {
-                this._Str_21080(k, false).visible = (!(k == this._step));
-                this._Str_21080(k, true).visible = (k == this._step);
+                this.getStepHeader(k, false).visible = (!(k == this._step));
+                this.getStepHeader(k, true).visible = (k == this._step);
                 this._window.findChildByName(("step_title_" + k)).y = ((k == this._step) ? STEP_TITLE_Y_OFFSET_ACTIVE : STEP_TITLE_Y_OFFSET_INACTIVE);
                 k++;
             }
             this._window.findChildByName("gcreate_icon_credit").y = ((this._step == VIEW_CONFIRM) ? STEP_TITLE_CREDIT_Y_OFFSET_ACTIVE : STEP_TITLE_CREDIT_Y_OFFSET_INACTIVE);
         }
 
-        private function _Str_21080(k:int, _arg_2:Boolean):IWindow
+        private function getStepHeader(k:int, _arg_2:Boolean):IWindow
         {
             return this._window.findChildByName(((("gcreate_" + k) + "_") + ((_arg_2) ? "1" : "0")));
         }
