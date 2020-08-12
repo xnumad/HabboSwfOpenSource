@@ -527,7 +527,7 @@
 
         private function destroyWindow():void
         {
-            this._Str_8036();
+            this.destroyTaskProgressDialog();
             if (this._overlayTemplate != null)
             {
                 this._overlayTemplate.dispose();
@@ -684,7 +684,7 @@
             var _local_5:String;
             var _local_6:String;
             var _local_7:Boolean;
-            this._Str_8036();
+            this.destroyTaskProgressDialog();
             var _local_2:TalentTrackTask = this._talentTrack._Str_17590(k);
             if ((((_local_2 == null) || (_local_2.badgeCode == null)) || (_local_2.badgeCode == "")))
             {
@@ -781,7 +781,7 @@
             _local_4.visible = (!(_arg_3 == ""));
         }
 
-        private function _Str_8036():void
+        private function destroyTaskProgressDialog():void
         {
             if (this._taskProgressPopup != null)
             {
@@ -801,7 +801,7 @@
             {
                 case "header_button_close":
                 case "thanks_button":
-                    this._Str_8036();
+                    this.destroyTaskProgressDialog();
                     return;
                 case TalentTrackTask.HABBO_WAY_GRADUATE_1:
                     this.closeAndLog(_arg_2.name);
@@ -853,7 +853,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this.destroyWindow();
-                this._Str_8036();
+                this.destroyTaskProgressDialog();
                 this._habboTalent.send(new GuideAdvertisementReadMessageComposer());
                 this._habboTalent.habboHelp.requestGuide();
                 this._habboTalent.tracking.trackEventLog("Help", "", "tour.new_user.accept");
@@ -865,7 +865,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._Str_8036();
+                this.destroyTaskProgressDialog();
             }
         }
 
@@ -874,7 +874,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this.destroyWindow();
-                this._Str_8036();
+                this.destroyTaskProgressDialog();
                 this._habboTalent.send(new GuideAdvertisementReadMessageComposer());
                 this._habboTalent.tracking.trackEventLog("Help", "", "tour.new_user.cancel");
                 this._habboTalent.tracking.trackGoogle("newbieTourWindow", "click_refuseTour");
@@ -926,7 +926,7 @@
             {
                 return;
             }
-            this._Str_8036();
+            this.destroyTaskProgressDialog();
         }
 
         private function get emailChangeEnabled():Boolean
