@@ -153,7 +153,7 @@
             return this._friendMappedByID.getValue(k);
         }
 
-        public function _Str_25174(k:String):IFriendEntity
+        public function getFriendByName(k:String):IFriendEntity
         {
             var _local_2:FriendEntity;
             for each (_local_2 in this._friendEntityList)
