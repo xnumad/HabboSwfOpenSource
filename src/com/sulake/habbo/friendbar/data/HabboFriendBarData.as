@@ -143,7 +143,7 @@
             return this._friendEntityList.length;
         }
 
-        public function _Str_17238(k:int):IFriendEntity
+        public function getFriendAt(k:int):IFriendEntity
         {
             return this._friendEntityList[k];
         }

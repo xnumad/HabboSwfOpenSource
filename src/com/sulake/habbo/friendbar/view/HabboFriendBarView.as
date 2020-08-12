@@ -394,7 +394,7 @@
                 {
                     break;
                 }
-                _local_12 = this._friendBarData._Str_17238(_local_4);
+                _local_12 = this._friendBarData.getFriendAt(_local_4);
                 _local_13 = NewFriendEntityTab._Str_2363(_local_12);
                 this._Str_2868.push(_local_13);
                 _local_2.addListItem(_local_13.window);
@@ -584,7 +584,7 @@
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                _local_2 = this._friendBarData._Str_17238(_local_5);
+                _local_2 = this._friendBarData.getFriendAt(_local_5);
                 if (_local_2.figure == k)
                 {
                     _local_8 = null;
