@@ -30,7 +30,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalHallOfFameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetSeasonalQuestsOnlyMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_16291;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_17850;
+	import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalEarnedPrizesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.ActivateQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetDailyQuestMessageComposer;
@@ -1740,7 +1740,7 @@
             OUTGOING_PACKETS[2651] = GetGuildFurniContextMenuInfoMessageComposer;
             OUTGOING_PACKETS[2668] = _Str_11858;
             OUTGOING_PACKETS[2683] = RemoveAllRightsMessageComposer;
-            OUTGOING_PACKETS[2688] = _Str_17850;
+            OUTGOING_PACKETS[2688] = GetCommunityGoalEarnedPrizesMessageComposer;
             OUTGOING_PACKETS[2694] = RespectUserMessageComposer;
             OUTGOING_PACKETS[271] = _Str_9816;
             OUTGOING_PACKETS[2713] = _Str_10953;
