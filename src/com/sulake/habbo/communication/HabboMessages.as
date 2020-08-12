@@ -66,7 +66,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.PostMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums._Str_9897;
-	import com.sulake.habbo.communication.messages.outgoing.groupforums._Str_9983;
+	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetMessagesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.camera.RenderRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.camera.PurchasePhotoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.camera.PublishPhotoMessageComposer;
@@ -1691,7 +1691,7 @@
             OUTGOING_PACKETS[0x0900] = GetUserSongDisksMessageComposer;
             OUTGOING_PACKETS[2312] = OpenFlatConnectionMessageComposer;
             OUTGOING_PACKETS[0x0909] = SetUIFlagsMessageComposer;
-            OUTGOING_PACKETS[232] = _Str_9983;
+            OUTGOING_PACKETS[232] = GetMessagesMessageComposer;
             OUTGOING_PACKETS[234] = _Str_10522;
             OUTGOING_PACKETS[2341] = _Str_11536;
             OUTGOING_PACKETS[2343] = ResetUnseenItemsComposer;

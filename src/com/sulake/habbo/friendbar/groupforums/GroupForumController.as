@@ -43,7 +43,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumsListMessageComposer;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThreadsParser;
-    import com.sulake.habbo.communication.messages.outgoing.groupforums._Str_9983;
+    import com.sulake.habbo.communication.messages.outgoing.groupforums.GetMessagesMessageComposer;
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_2814;
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_7217;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThread;
@@ -388,7 +388,7 @@
         {
             if (this._communicationManager)
             {
-                this._communicationManager.connection.send(new _Str_9983(k, _arg_2, _arg_3, ThreadsListData._Str_3331));
+                this._communicationManager.connection.send(new GetMessagesMessageComposer(k, _arg_2, _arg_3, ThreadsListData._Str_3331));
             }
         }
 
