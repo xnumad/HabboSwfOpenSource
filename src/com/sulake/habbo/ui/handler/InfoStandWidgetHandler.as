@@ -94,7 +94,7 @@
     import com.sulake.habbo.ui.widget.events.RoomWidgetPetCommandsUpdateEvent;
     import com.sulake.habbo.avatar.pets.PetFigureData;
     import com.sulake.habbo.session.SecurityLevelEnum;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5686;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.SetObjectDataMessageComposer;
 
     public class InfoStandWidgetHandler implements IRoomWidgetHandler 
     {
@@ -1507,7 +1507,7 @@
         {
             if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))
             {
-                this._container.connection.send(new _Str_5686(this._widget.furniData.id, k));
+                this._container.connection.send(new SetObjectDataMessageComposer(this._widget.furniData.id, k));
             }
         }
     }

@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.utils.Map;
 
-    public class _Str_5686 implements IMessageComposer 
+    public class SetObjectDataMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_5686(k:int, _arg_2:Map)
+        public function SetObjectDataMessageComposer(k:int, _arg_2:Map)
         {
             var _local_3:String;
             this._array = [];

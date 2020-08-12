@@ -620,7 +620,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetBreedingPermissionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.UseWallItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5686;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetObjectDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
@@ -1883,7 +1883,7 @@
             OUTGOING_PACKETS[3593] = _Str_8228;
             OUTGOING_PACKETS[3604] = AcceptQuestMessageComposer;
             OUTGOING_PACKETS[3605] = _Str_12224;
-            OUTGOING_PACKETS[3608] = _Str_5686;
+            OUTGOING_PACKETS[3608] = SetObjectDataMessageComposer;
             OUTGOING_PACKETS[3617] = SetRandomStateMessageComposer;
             OUTGOING_PACKETS[3632] = _Str_16470;
             OUTGOING_PACKETS[3637] = MuteAllInRoomComposer;

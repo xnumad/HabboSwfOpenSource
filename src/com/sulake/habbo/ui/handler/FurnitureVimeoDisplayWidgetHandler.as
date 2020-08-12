@@ -12,7 +12,7 @@
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
     import flash.events.Event;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5686;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.SetObjectDataMessageComposer;
 
     public class FurnitureVimeoDisplayWidgetHandler implements IRoomWidgetHandler 
     {
@@ -104,7 +104,7 @@
         {
             var _local_3:Map = new Map();
             _local_3.add(VIDEOID, _arg_2.toString());
-            this._container.connection.send(new _Str_5686(k.getId(), _local_3));
+            this._container.connection.send(new SetObjectDataMessageComposer(k.getId(), _local_3));
         }
     }
 }

@@ -58,7 +58,7 @@
     import com.sulake.habbo.room.messages.RoomObjectAvatarSelectedMessage;
     import com.sulake.habbo.communication.messages.outgoing.room.avatar.LookToMessageComposer;
     import com.sulake.habbo.room.messages.RoomObjectVisibilityUpdateMessage;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5686;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.SetObjectDataMessageComposer;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8026;
@@ -2054,7 +2054,7 @@
                 case RoomObjectOperationEnum.OBJECT_SAVE_STUFF_DATA:
                     if (this._roomEngine.connection)
                     {
-                        this._roomEngine.connection.send(new _Str_5686(_arg_2, _arg_5));
+                        this._roomEngine.connection.send(new SetObjectDataMessageComposer(_arg_2, _arg_5));
                     }
                     break;
                 default:
