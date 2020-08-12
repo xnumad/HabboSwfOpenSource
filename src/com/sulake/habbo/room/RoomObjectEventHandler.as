@@ -56,7 +56,7 @@
     import com.sulake.room.messages.RoomObjectUpdateMessage;
     import com.sulake.habbo.room.utils.LegacyWallGeometry;
     import com.sulake.habbo.room.messages.RoomObjectAvatarSelectedMessage;
-    import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10602;
+    import com.sulake.habbo.communication.messages.outgoing.room.avatar.LookToMessageComposer;
     import com.sulake.habbo.room.messages.RoomObjectVisibilityUpdateMessage;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5686;
     import com.sulake.habbo.session.IRoomSession;
@@ -1959,7 +1959,7 @@
                     this._selectedAvatarId = id;
                     try
                     {
-                        this._roomEngine.connection.send(new _Str_10602(_local_5.getLocation().x, _local_5.getLocation().y));
+                        this._roomEngine.connection.send(new LookToMessageComposer(_local_5.getLocation().x, _local_5.getLocation().y));
                     }
                     catch(e:Error)
                     {

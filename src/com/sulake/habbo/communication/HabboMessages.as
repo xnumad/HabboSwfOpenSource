@@ -889,7 +889,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.handshake.InitDiffieHandshakeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.ChangePostureMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.PassCarryItemToPetMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10602;
+	import com.sulake.habbo.communication.messages.outgoing.room.avatar.LookToMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10794;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.CustomizeAvatarWithFurniMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.DanceMessageComposer;
@@ -1837,7 +1837,7 @@
             OUTGOING_PACKETS[3285] = _Str_10337;
             OUTGOING_PACKETS[3288] = GetMarketplaceItemStatsComposer;
             OUTGOING_PACKETS[3295] = _Str_7074;
-            OUTGOING_PACKETS[3301] = _Str_10602;
+            OUTGOING_PACKETS[3301] = LookToMessageComposer;
             OUTGOING_PACKETS[3305] = _Str_8348;
             OUTGOING_PACKETS[3314] = _Str_5697;
             OUTGOING_PACKETS[3320] = _Str_10596;
