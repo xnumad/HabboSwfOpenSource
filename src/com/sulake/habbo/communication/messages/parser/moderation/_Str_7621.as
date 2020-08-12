@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.communication.messages.parser.moderation
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_6294;
+    import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_7621 implements IMessageParser 
     {
-        private var _data:_Str_6294;
+        private var _data:RoomVisitsData;
 
 
         public function flush():Boolean
@@ -16,11 +16,11 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._data = new _Str_6294(k);
+            this._data = new RoomVisitsData(k);
             return true;
         }
 
-        public function get data():_Str_6294
+        public function get data():RoomVisitsData
         {
             return this._data;
         }

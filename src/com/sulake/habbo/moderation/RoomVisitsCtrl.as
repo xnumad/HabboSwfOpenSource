@@ -8,7 +8,7 @@
     import flash.events.TimerEvent;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10092;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_6294;
+    import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsData;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_6952;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -68,7 +68,7 @@
             k.procedure = this.onClose;
         }
 
-        public function onRoomVisits(k:_Str_6294):void
+        public function onRoomVisits(k:RoomVisitsData):void
         {
             if (k.userId != this._userId)
             {
