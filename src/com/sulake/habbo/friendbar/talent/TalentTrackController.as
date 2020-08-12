@@ -697,7 +697,7 @@
                 return;
             }
             this._taskProgressPopup = this._habboTalent.getModalXmlWindow("task_progress_dialog");
-            this._taskProgressPopup.rootWindow.procedure = this._Str_22508;
+            this._taskProgressPopup.rootWindow.procedure = this.onTaskProgressWindowEvent;
             this._taskProgressPopup.background.procedure = this.onTaskProgressBackgroundWindowEvent;
             var _local_3:IWindowContainer = IWindowContainer(this._taskProgressPopup.rootWindow);
             _local_3.findChildByName("instruction").caption = this._habboTalent.localizationManager.getAchievementInstruction(_local_2.badgeCode);
@@ -790,7 +790,7 @@
             }
         }
 
-        private function _Str_22508(k:WindowEvent, _arg_2:IWindow):void
+        private function onTaskProgressWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:int;
             if ((((this._taskProgressPopup == null) || (this._taskProgressPopup.disposed)) || (!(k.type == WindowMouseEvent.CLICK))))
