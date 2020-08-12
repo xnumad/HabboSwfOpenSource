@@ -41,7 +41,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator.CompetitionRoomsSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomRightsSearchMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9844;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.MyGuildBasesSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9807;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11269;
     import com.sulake.core.communication.messages.IMessageComposer;
@@ -647,7 +647,7 @@
                 case Tabs.SEARCHTYPE_ROOMS_WITH_RIGHTS:
                     return new MyRoomRightsSearchMessageComposer();
                 case Tabs.SEARCHTYPE_MY_GUILD_BASES:
-                    return new _Str_9844();
+                    return new MyGuildBasesSearchMessageComposer();
                 case Tabs.SEARCHTYPE_BY_OWNER:
                     return new RoomTextSearchMessageComposer(("owner:" + _arg_2));
                 case Tabs.SEARCHTYPE_RECOMMENDED_ROOMS:

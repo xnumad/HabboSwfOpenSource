@@ -536,7 +536,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_8348;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9806;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9807;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9844;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.MyGuildBasesSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWithHighestScoreSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.CompetitionRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFriendsRoomsSearchMessageComposer;
@@ -1912,7 +1912,7 @@
             OUTGOING_PACKETS[389] = _Str_12437;
             OUTGOING_PACKETS[3898] = GetFurnitureAliasesMessageComposer;
             OUTGOING_PACKETS[3899] = _Str_11187;
-            OUTGOING_PACKETS[39] = _Str_9844;
+            OUTGOING_PACKETS[39] = MyGuildBasesSearchMessageComposer;
             OUTGOING_PACKETS[3900] = _Str_9897;
             OUTGOING_PACKETS[3943] = RoomTextSearchMessageComposer;
             OUTGOING_PACKETS[3950] = _Str_7887;
