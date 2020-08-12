@@ -57,7 +57,7 @@
             this.setProc("group_room_link_region", this.onRoomLink);
             this.setProc("manage_guild_region", this.onManageGuild);
             this.setProc("delete_guild_region", this.onDeleteGuild);
-            this.setProc("members_region", this._Str_22812);
+            this.setProc("members_region", this.onMembers);
             this.setProc("pending_members_region", this._Str_23598);
             this.setProc("show_groups_link_region", this._Str_23641);
             this.setProc("buy_furni_link_region", this._Str_25591);
@@ -240,7 +240,7 @@
             }
         }
 
-        private function _Str_22812(k:WindowEvent, _arg_2:IWindow):void
+        private function onMembers(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
