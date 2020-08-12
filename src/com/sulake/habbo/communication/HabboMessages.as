@@ -498,7 +498,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_8228;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9855;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9949;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_9952;
+	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildIdentityMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9979;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
 	import com.sulake.habbo.communication.messages.outgoing.game.ingame.Game2RequestFullStatusUpdateMessageComposer;
@@ -1811,7 +1811,7 @@
             OUTGOING_PACKETS[3129] = GetRoomSettingsMessageComposer;
             OUTGOING_PACKETS[3133] = _Str_7541;
             OUTGOING_PACKETS[3135] = _Str_7384;
-            OUTGOING_PACKETS[3137] = _Str_9952;
+            OUTGOING_PACKETS[3137] = UpdateGuildIdentityMessageComposer;
             OUTGOING_PACKETS[314] = _Str_11608;
             OUTGOING_PACKETS[3144] = _Str_9826;
             OUTGOING_PACKETS[3149] = GetThreadsMessageComposer;

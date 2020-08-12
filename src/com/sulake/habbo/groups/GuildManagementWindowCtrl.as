@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembersMessageComposer;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.components.ITextFieldWindow;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_9952;
+    import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildIdentityMessageComposer;
     import com.sulake.habbo.groups.events.GuildSettingsChangedInManageEvent;
     import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildBadgeMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildColorsMessageComposer;
@@ -590,7 +590,7 @@
                 case VIEW_IDENTITY:
                     k = ITextFieldWindow(this._window.findChildByName("name_txt")).text;
                     _local_2 = ITextFieldWindow(this._window.findChildByName("desc_txt")).text;
-                    this._manager.send(new _Str_9952(this._data.groupId, k, _local_2));
+                    this._manager.send(new UpdateGuildIdentityMessageComposer(this._data.groupId, k, _local_2));
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
                 case VIEW_BADGE:
