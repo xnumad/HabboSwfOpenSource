@@ -60,7 +60,7 @@
     import com.sulake.habbo.session.IRoomSession;
     import flash.events.MouseEvent;
     import com.sulake.habbo.freeflowchat.style.IChatStyleLibrary;
-    import com.sulake.habbo.communication.messages.outgoing.preferences._Str_10312;
+    import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatPreferencesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.preferences._Str_12096;
 
     public class HabboFreeFlowChat extends Component implements IHabboFreeFlowChat 
@@ -503,7 +503,7 @@
         public function set isDisabledInPreferences(k:Boolean):void
         {
             this._freeFlowDisabled = k;
-            this._communication.connection.send(new _Str_10312(this._freeFlowDisabled));
+            this._communication.connection.send(new SetChatPreferencesMessageComposer(this._freeFlowDisabled));
         }
 
         public function get preferedChatStyle():int

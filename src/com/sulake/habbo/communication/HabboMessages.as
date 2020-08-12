@@ -245,7 +245,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_12436;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9918;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9950;
-	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_10312;
+	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatPreferencesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_10960;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11137;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11698;
@@ -1546,7 +1546,7 @@
             OUTGOING_PACKETS[1232] = _Str_18426;
             OUTGOING_PACKETS[1251] = CraftSecretComposer;
             OUTGOING_PACKETS[1258] = PlaceObjectMessageComposer;
-            OUTGOING_PACKETS[1262] = _Str_10312;
+            OUTGOING_PACKETS[1262] = SetChatPreferencesMessageComposer;
             OUTGOING_PACKETS[1263] = _Str_10352;
             OUTGOING_PACKETS[1265] = UpdateRoomCategoryAndTradeSettingsComposer;
             OUTGOING_PACKETS[1276] = SendRoomInviteMessageComposer;
