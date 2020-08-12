@@ -274,7 +274,7 @@
             var _local_4:IRegionWindow = IRegionWindow(k.findChildByName("bg_region"));
             _local_4.id = _arg_2.userId;
             this.setRemoveState(false, k);
-            this._Str_16819(false, k);
+            this.setActionLinkState(false, k);
             _local_5 = (_arg_2.userId == this._manager.avatarId);
             var _local_6:IRegionWindow = IRegionWindow(k.findChildByName("remove_region"));
             _local_6.toolTipCaption = this._manager.localization.getLocalization(((_arg_2.member) ? "group.members.kick" : "group.members.reject"));
@@ -403,7 +403,7 @@
             _arg_2.findChildByName("icon_close_down").visible = false;
         }
 
-        private function _Str_16819(k:Boolean, _arg_2:IWindowContainer):void
+        private function setActionLinkState(k:Boolean, _arg_2:IWindowContainer):void
         {
             var _local_3:ITextWindow = ITextWindow(_arg_2.findChildByName("action_link"));
             _local_3.textColor = ((k) ? 4280984060 : 4285492837);
@@ -417,14 +417,14 @@
             {
                 return;
             }
-            this._Str_16819(true, _local_2);
+            this.setActionLinkState(true, _local_2);
             this._Str_18115(_local_3.member, (!(_local_3.admin)), IWindowContainer(_local_2.parent));
         }
 
         private function _Str_25563(k:WindowEvent):void
         {
             var _local_2:IRegionWindow = IRegionWindow(k.target);
-            this._Str_16819(false, _local_2);
+            this.setActionLinkState(false, _local_2);
             var _local_3:_Str_2891 = this._data._Str_5126(k.target.id);
             if (_local_3 != null)
             {
