@@ -134,7 +134,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOffersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11938;
-	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_12361;
+	import com.sulake.habbo.communication.messages.outgoing.marketplace.RedeemMarketplaceOfferCreditsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.MakeOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
@@ -1736,7 +1736,7 @@
             OUTGOING_PACKETS[2624] = CommandBotComposer;
             OUTGOING_PACKETS[2638] = OpenWelcomeGiftComposer;
             OUTGOING_PACKETS[2647] = PlacePetMessageComposer;
-            OUTGOING_PACKETS[2650] = _Str_12361;
+            OUTGOING_PACKETS[2650] = RedeemMarketplaceOfferCreditsMessageComposer;
             OUTGOING_PACKETS[2651] = GetGuildFurniContextMenuInfoMessageComposer;
             OUTGOING_PACKETS[2668] = RoomAdEventTabViewedComposer;
             OUTGOING_PACKETS[2683] = RemoveAllRightsMessageComposer;
