@@ -672,7 +672,7 @@
             this.send(new _Str_8228(_arg_2, k));
         }
 
-        public function get _Str_25772():IHabboNewNavigator
+        public function get newNavigator():IHabboNewNavigator
         {
             return this._newNavigator;
         }

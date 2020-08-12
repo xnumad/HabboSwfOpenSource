@@ -356,7 +356,7 @@
             {
                 return;
             }
-            this._manager._Str_25772.performSearch("hotel_view", ("owner:" + this._data.userName));
+            this._manager.newNavigator.performSearch("hotel_view", ("owner:" + this._data.userName));
         }
 
         private function _Str_24644(k:WindowEvent, _arg_2:IWindow):void
