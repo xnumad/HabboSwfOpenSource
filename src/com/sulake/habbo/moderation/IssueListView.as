@@ -188,7 +188,7 @@
             {
                 return;
             }
-            this._issueManager._Str_21541(k.window.id, "pick button");
+            this._issueManager.pickBundle(k.window.id, "pick button");
         }
 
         private function _Str_20641(k:WindowMouseEvent):void

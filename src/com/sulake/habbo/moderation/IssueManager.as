@@ -72,7 +72,7 @@
             this._issueBrowser.show();
         }
 
-        public function _Str_21541(k:int, _arg_2:String, _arg_3:Boolean=false, _arg_4:int=0):void
+        public function pickBundle(k:int, _arg_2:String, _arg_3:Boolean=false, _arg_4:int=0):void
         {
             var _local_5:IssueBundle = (this._bundles.getValue(k) as IssueBundle);
             if (_local_5 == null)
@@ -99,7 +99,7 @@
             {
                 return;
             }
-            this._Str_21541(_local_5.id, k, _arg_2, _arg_3);
+            this.pickBundle(_local_5.id, k, _arg_2, _arg_3);
         }
 
         private function isBundleHigherPriorityOrOlder(k:IssueBundle, _arg_2:IssueBundle):Boolean
