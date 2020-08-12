@@ -298,7 +298,7 @@
             {
                 return;
             }
-            this._notifications.singularController.alertDialogManager._Str_24270(_local_2.minutes);
+            this._notifications.singularController.alertDialogManager.handleHotelClosingMessage(_local_2.minutes);
         }
 
         private function onHotelMaintenance(k:IMessageEvent):void

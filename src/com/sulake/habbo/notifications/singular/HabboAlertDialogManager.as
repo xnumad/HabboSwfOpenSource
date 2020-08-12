@@ -62,7 +62,7 @@
             });
         }
 
-        public function _Str_24270(k:int):void
+        public function handleHotelClosingMessage(k:int):void
         {
             this._localization.registerParameter("opening.hours.shutdown", "m", String(k));
             this._windowManager.simpleAlert("", "${opening.hours.title}", "${opening.hours.shutdown}");
