@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.parser.catalog._Str_6732;
     import flash.events.TimerEvent;
     import com.sulake.habbo.session.SecurityLevelEnum;
-    import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_8089;
+    import com.sulake.habbo.communication.messages.outgoing.room.layout.GetRoomEntryTileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.layout.GetOccupiedTilesMessageComposer;
     import flash.utils.ByteArray;
     import com.sulake.core.window.components.IItemListWindow;
@@ -188,7 +188,7 @@
             this._editorWindow.visible = k;
             if (k)
             {
-                this._windowManager.communication.connection.send(new _Str_8089());
+                this._windowManager.communication.connection.send(new GetRoomEntryTileMessageComposer());
                 this._windowManager.communication.connection.send(new GetOccupiedTilesMessageComposer());
                 this._Str_21392();
                 this._Str_25182();
@@ -289,7 +289,7 @@
                             this._heightMapEditor._Str_9032();
                         }
                         this._windowManager.communication.connection.send(new GetOccupiedTilesMessageComposer());
-                        this._windowManager.communication.connection.send(new _Str_8089());
+                        this._windowManager.communication.connection.send(new GetRoomEntryTileMessageComposer());
                         break;
                     case "import_export":
                         this._importExportDialog.visible = (!(this._importExportDialog.visible));

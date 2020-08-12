@@ -296,7 +296,7 @@
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout.GetOccupiedTilesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout.UpdateFloorPropertiesMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_8089;
+	import com.sulake.habbo.communication.messages.outgoing.room.layout.GetRoomEntryTileMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.landingview.PromoArticlesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.layout.RoomEntryTileMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.layout.RoomOccupiedTilesMessageEvent;
@@ -1874,7 +1874,7 @@
             OUTGOING_PACKETS[3536] = CommunityGoalVoteMessageComposer;
             OUTGOING_PACKETS[3549] = SelectFavouriteHabboGroupMessageComposer;
             OUTGOING_PACKETS[3558] = PresentOpenMessageComposer;
-            OUTGOING_PACKETS[3559] = _Str_8089;
+            OUTGOING_PACKETS[3559] = GetRoomEntryTileMessageComposer;
             OUTGOING_PACKETS[3567] = _Str_10962;
             OUTGOING_PACKETS[357] = InfoRetrieveMessageComposer;
             OUTGOING_PACKETS[3582] = RateFlatMessageComposer;
