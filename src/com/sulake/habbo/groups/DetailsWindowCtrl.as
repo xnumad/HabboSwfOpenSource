@@ -90,7 +90,7 @@
             }
         }
 
-        public function _Str_26461(k:int):void
+        public function onGroupDeactivated(k:int):void
         {
             if (this._groupId == k)
             {

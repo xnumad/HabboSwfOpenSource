@@ -67,7 +67,7 @@
             }
         }
 
-        public function _Str_26461(k:int):void
+        public function onGroupDeactivated(k:int):void
         {
             if (((k == this._group.groupId) || (k == this._expectedGroupId)))
             {

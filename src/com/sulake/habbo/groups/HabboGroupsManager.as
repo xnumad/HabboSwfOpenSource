@@ -179,7 +179,7 @@
             this.addMessageEvent(new GuildEditorDataMessageEvent(this._Str_25430));
             this.addMessageEvent(new CloseConnectionMessageEvent(this._Str_23870));
             this.addMessageEvent(new GuildMembershipRejectedMessageEvent(this._guildMembersWindowCtrl._Str_25572));
-            this.addMessageEvent(new HabboGroupDeactivatedMessageEvent(this._Str_26461));
+            this.addMessageEvent(new HabboGroupDeactivatedMessageEvent(this.onGroupDeactivated));
             this.addMessageEvent(new GuildMembersEvent(this._guildMembersWindowCtrl._Str_22267));
             this.addMessageEvent(new GroupDetailsChangedMessageEvent(this._Str_18693));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
@@ -314,11 +314,11 @@
             context.createLinkEvent(("groupforum/" + k));
         }
 
-        private function _Str_26461(k:IMessageEvent):void
+        private function onGroupDeactivated(k:IMessageEvent):void
         {
             var _local_2:int = HabboGroupDeactivatedMessageEvent(k).groupId;
-            this._detailsWindowCtrl._Str_26461(_local_2);
-            this._groupRoomInfoCtrl._Str_26461(_local_2);
+            this._detailsWindowCtrl.onGroupDeactivated(_local_2);
+            this._groupRoomInfoCtrl.onGroupDeactivated(_local_2);
         }
 
         private function onGroupDetails(k:IMessageEvent):void
