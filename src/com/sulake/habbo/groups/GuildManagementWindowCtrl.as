@@ -357,7 +357,7 @@
             this._step = VIEW_IDENTITY;
             this._alertedBaseRoomId = 0;
             this.refresh();
-            this._Str_9242();
+            this.refreshBadgeImage();
             this.setupInputs();
             this._manager.localization.registerParameter("group.create.confirm.buyinfo", "amount", ("" + k.costInCredits));
             this._window.visible = true;
@@ -370,7 +370,7 @@
             this._step = VIEW_IDENTITY;
             this._alertedBaseRoomId = 0;
             this.refresh();
-            this._Str_9242();
+            this.refreshBadgeImage();
             this.setupInputs();
             var _local_2:ITabContextWindow = ITabContextWindow(this._window.findChildByName("edit_guild_tab_context"));
             var _local_3:ISelectableWindow = ISelectableWindow(this._window.findChildByName(("edit_tab_" + this._step)));
@@ -731,7 +731,7 @@
             return this._data;
         }
 
-        private function _Str_9242():void
+        private function refreshBadgeImage():void
         {
             var k:IWindow = this._window.findChildByName("step_1_badge");
             var _local_2:IBadgeImageWidget = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as IBadgeImageWidget);

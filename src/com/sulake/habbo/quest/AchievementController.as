@@ -513,7 +513,7 @@
             _local_6.visible = (!(_arg_2 == null));
             var _local_7:IWindow = _local_5.findChildByName("bg_unselected_bitmap");
             var _local_8:IWindow = _local_5.findChildByName("bg_selected_bitmap");
-            this._Str_9242(_local_5, _arg_2);
+            this.refreshBadgeImage(_local_5, _arg_2);
             _local_7.color = (((!(_arg_2 == null)) && (_arg_2.achievementId in this._unseenAchievements)) ? _Str_18435 : 0xFFFFFF);
             if (_arg_2)
             {
@@ -652,7 +652,7 @@
             this.refresh();
         }
 
-        private function _Str_9242(k:IWindowContainer, _arg_2:Achievement):void
+        private function refreshBadgeImage(k:IWindowContainer, _arg_2:Achievement):void
         {
             var _local_3:IWidgetWindow = (k.findChildByName("achievement_pic_bitmap") as IWidgetWindow);
             var _local_4:IBadgeImageWidget = (_local_3.widget as IBadgeImageWidget);

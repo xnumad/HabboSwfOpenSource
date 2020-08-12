@@ -242,7 +242,7 @@
             {
                 _local_4 = (_local_2.clone() as IWindowContainer);
                 _local_4.id = _local_3.achievementId;
-                this._Str_9242(_local_4, _local_3);
+                this.refreshBadgeImage(_local_4, _local_3);
                 _local_4.findChildByName("bg_region").procedure = this._Str_25036;
                 _local_4.findChildByName("bg_selected_bitmap").visible = false;
                 k.addGridItem(_local_4);
@@ -309,7 +309,7 @@
             this._Str_20512(_arg_2.parent.id);
         }
 
-        private function _Str_9242(k:IWindowContainer, _arg_2:AchievementResolution):void
+        private function refreshBadgeImage(k:IWindowContainer, _arg_2:AchievementResolution):void
         {
             var _local_3:IWidgetWindow = (k.findChildByName("achievement_pic_bitmap") as IWidgetWindow);
             var _local_4:IBadgeImageWidget = (_local_3.widget as IBadgeImageWidget);
