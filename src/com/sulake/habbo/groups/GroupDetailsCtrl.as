@@ -93,7 +93,7 @@
             this._window.findChildByName("show_forum_link").visible = _local_6;
             if (_local_6)
             {
-                this.setProc("show_forum_link_region", this._Str_24830);
+                this.setProc("show_forum_link_region", this.onForumLink);
             }
             this._manager.windowManager.registerLocalizationParameter("group.created", "date", ("" + _arg_2.creationDate));
             this._manager.windowManager.registerLocalizationParameter("group.created", "owner", ("" + _arg_2.ownerName));
@@ -188,7 +188,7 @@
             this._manager.send(new EventLogMessageComposer(HabboGroupsManager.HABBOGROUPS, ("" + this._selectedGroup.groupId), "base"));
         }
 
-        private function _Str_24830(k:WindowEvent, _arg_2:IWindow):void
+        private function onForumLink(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
