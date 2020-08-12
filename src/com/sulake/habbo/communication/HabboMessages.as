@@ -500,7 +500,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.ApproveMembershipRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildIdentityMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.ApproveAllMembershipRequestsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
+	import com.sulake.habbo.communication.messages.outgoing.users.KickMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.ingame.Game2RequestFullStatusUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.camera.CameraSnapshotMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10079;
@@ -1939,7 +1939,7 @@
             OUTGOING_PACKETS[532] = DeleteRoomMessageComposer;
             OUTGOING_PACKETS[534] = _Str_7656;
             OUTGOING_PACKETS[549] = PetSelectedMessageComposer;
-            OUTGOING_PACKETS[593] = _Str_9992;
+            OUTGOING_PACKETS[593] = KickMemberMessageComposer;
             OUTGOING_PACKETS[596] = _Str_17774;
             OUTGOING_PACKETS[603] = _Str_17335;
             OUTGOING_PACKETS[633] = _Str_10459;

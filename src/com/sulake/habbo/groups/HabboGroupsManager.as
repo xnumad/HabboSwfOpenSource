@@ -75,7 +75,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator.FlatCreatedMessageParser;
     import com.sulake.habbo.communication.messages.incoming.users.MemberData;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberData;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
+    import com.sulake.habbo.communication.messages.outgoing.users.KickMemberMessageComposer;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
@@ -502,7 +502,7 @@
             k.dispose();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
-                this.send(new _Str_9992(this._kickData._Str_23057, this._kickData._Str_25813, this._kickData._Str_21067));
+                this.send(new KickMemberMessageComposer(this._kickData._Str_23057, this._kickData._Str_25813, this._kickData._Str_21067));
             }
             this._kickData = null;
         }
