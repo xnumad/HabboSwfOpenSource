@@ -477,7 +477,7 @@
             }
         }
 
-        private function _Str_23009(k:WindowEvent, _arg_2:IWindow):void
+        private function onFilterMembers(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowEvent.WINDOW_EVENT_CHANGE)
             {
@@ -595,7 +595,7 @@
             {
                 this._userNameFilter.setText(this._data.userNameFilter);
             }
-            k.procedure = this._Str_23009;
+            k.procedure = this.onFilterMembers;
             this._searchTimer.stop();
             this.setSearchingIcon(false);
         }
