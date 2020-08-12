@@ -359,7 +359,7 @@
                     this.closeWindow();
                     return;
                 case "tour_button":
-                    this._habboHelp._Str_21711._Str_6255(((this._habboHelp.newIdentity) ? _Str_2849._Str_4268 : _Str_2849._Str_4749));
+                    this._habboHelp._Str_21711.createHelpRequest(((this._habboHelp.newIdentity) ? _Str_2849._Str_4268 : _Str_2849._Str_4749));
                     this._habboHelp.trackGoogle("helpWindow", "click_userTour");
                     this.closeWindow();
                     return;
@@ -369,7 +369,7 @@
                     this._habboHelp.trackGoogle("helpWindow", "click_reportBully");
                     return;
                 case "instructions_button":
-                    this._habboHelp._Str_21711._Str_6255(_Str_2849._Str_7052);
+                    this._habboHelp._Str_21711.createHelpRequest(_Str_2849._Str_7052);
                     this._habboHelp.trackGoogle("helpWindow", "click_instructions");
                     this.closeWindow();
                     return;

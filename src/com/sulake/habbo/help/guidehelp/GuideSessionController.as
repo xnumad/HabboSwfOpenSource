@@ -235,7 +235,7 @@
             return this._disposed;
         }
 
-        public function _Str_6255(k:uint):void
+        public function createHelpRequest(k:uint):void
         {
             if (this._sessionData._Str_15842())
             {

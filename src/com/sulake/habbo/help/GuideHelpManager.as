@@ -110,9 +110,9 @@
             this._guideHelpController._Str_17964(k);
         }
 
-        public function _Str_6255(k:uint):void
+        public function createHelpRequest(k:uint):void
         {
-            this._guideSessionController._Str_6255(k);
+            this._guideSessionController.createHelpRequest(k);
         }
 
         public function openReportWindow():void

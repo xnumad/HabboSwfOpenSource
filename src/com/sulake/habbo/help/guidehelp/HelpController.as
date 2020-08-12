@@ -83,7 +83,7 @@
                     this.closeWindow();
                     return;
                 case "tour_button":
-                    this._guideHelp._Str_6255(((this._habboHelp.newIdentity) ? _Str_2849._Str_4268 : _Str_2849._Str_4749));
+                    this._guideHelp.createHelpRequest(((this._habboHelp.newIdentity) ? _Str_2849._Str_4268 : _Str_2849._Str_4749));
                     this._habboHelp.trackGoogle("helpWindow", "click_userTour");
                     this.closeWindow();
                     return;
@@ -93,7 +93,7 @@
                     this._habboHelp.trackGoogle("helpWindow", "click_reportBully");
                     return;
                 case "instructions_button":
-                    this._guideHelp._Str_6255(_Str_2849._Str_7052);
+                    this._guideHelp.createHelpRequest(_Str_2849._Str_7052);
                     this._habboHelp.trackGoogle("helpWindow", "click_instructions");
                     this.closeWindow();
                     return;
@@ -173,7 +173,7 @@
                     this._Str_13765();
                     return;
                 case "take_tour":
-                    this._guideHelp._Str_6255(_Str_2849._Str_4268);
+                    this._guideHelp.createHelpRequest(_Str_2849._Str_4268);
                     this._habboHelp.tracking.trackEventLog("Help", "", "tour.new_user.accept", "", _local_3);
                     this._habboHelp.trackGoogle("newbieTourWindow", "click_acceptTour");
                     this._Str_13765();

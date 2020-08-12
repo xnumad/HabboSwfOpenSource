@@ -190,7 +190,7 @@
 
         public function requestGuide():void
         {
-            this._guideHelpManager._Str_6255(_Str_2849._Str_4268);
+            this._guideHelpManager.createHelpRequest(_Str_2849._Str_4268);
         }
 
         public function reportBully(k:int):void
