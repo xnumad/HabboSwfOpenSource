@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8594 implements IMessageParser 
+    public class CompetitionRoomsDataMessageParser implements IMessageParser
     {
         private var _data:CompetitionRoomsData;
 
