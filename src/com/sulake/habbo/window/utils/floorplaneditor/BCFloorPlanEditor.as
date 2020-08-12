@@ -15,7 +15,7 @@
     import flash.events.TimerEvent;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_8089;
-    import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_7023;
+    import com.sulake.habbo.communication.messages.outgoing.room.layout.GetOccupiedTilesMessageComposer;
     import flash.utils.ByteArray;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.InteractiveController;
@@ -189,7 +189,7 @@
             if (k)
             {
                 this._windowManager.communication.connection.send(new _Str_8089());
-                this._windowManager.communication.connection.send(new _Str_7023());
+                this._windowManager.communication.connection.send(new GetOccupiedTilesMessageComposer());
                 this._Str_21392();
                 this._Str_25182();
                 this._Str_17511(this._fixedWallsHeight);
@@ -288,7 +288,7 @@
                         {
                             this._heightMapEditor._Str_9032();
                         }
-                        this._windowManager.communication.connection.send(new _Str_7023());
+                        this._windowManager.communication.connection.send(new GetOccupiedTilesMessageComposer());
                         this._windowManager.communication.connection.send(new _Str_8089());
                         break;
                     case "import_export":

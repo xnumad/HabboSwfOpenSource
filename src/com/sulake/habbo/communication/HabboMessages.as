@@ -294,7 +294,7 @@
 	import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
-	import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_7023;
+	import com.sulake.habbo.communication.messages.outgoing.room.layout.GetOccupiedTilesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout.UpdateFloorPropertiesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout._Str_8089;
 	import com.sulake.habbo.communication.messages.incoming.landingview.PromoArticlesMessageEvent;
@@ -1601,7 +1601,7 @@
             OUTGOING_PACKETS[1667] = RentableSpaceCancelRentMessageComposer;
             OUTGOING_PACKETS[168] = MoveWallItemMessageComposer;
             OUTGOING_PACKETS[1681] = _Str_10432;
-            OUTGOING_PACKETS[1687] = _Str_7023;
+            OUTGOING_PACKETS[1687] = GetOccupiedTilesMessageComposer;
             OUTGOING_PACKETS[1689] = RemoveFriendMessageComposer;
             OUTGOING_PACKETS[1691] = _Str_6133;
             OUTGOING_PACKETS[1697] = StartCampaignMessageComposer;
