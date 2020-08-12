@@ -539,7 +539,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9844;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9889;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9911;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9956;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFriendsRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.*;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11459;
@@ -1677,7 +1677,7 @@
             OUTGOING_PACKETS[2249] = GetExtendedProfileByNameMessageComposer;
             OUTGOING_PACKETS[2257] = OpenCampaignCalendarDoorAsStaffComposer;
             OUTGOING_PACKETS[2264] = MyRoomHistorySearchMessageComposer;
-            OUTGOING_PACKETS[2266] = _Str_9956;
+            OUTGOING_PACKETS[2266] = MyFriendsRoomsSearchMessageComposer;
             OUTGOING_PACKETS[2267] = GetBannedUsersFromRoomMessageComposer;
             OUTGOING_PACKETS[2276] = SelectClubGiftComposer;
             OUTGOING_PACKETS[2277] = MyRoomsSearchMessageComposer;
