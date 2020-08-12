@@ -645,7 +645,7 @@
                 case "button_track_helper":
                     return;
                 case TalentTrackTask.SAFETY_QUIZ_GRADUATE_1:
-                    this._Str_8556(_arg_2.name);
+                    this.closeAndLog(_arg_2.name);
                     this._habboTalent.habboHelp.showSafetyBooklet();
                     return;
             }
@@ -804,11 +804,11 @@
                     this._Str_8036();
                     return;
                 case TalentTrackTask.HABBO_WAY_GRADUATE_1:
-                    this._Str_8556(_arg_2.name);
+                    this.closeAndLog(_arg_2.name);
                     this._habboTalent.habboHelp.showHabboWay();
                     return;
                 case TalentTrackTask.GUIDE_GROUP_MEMBER_1:
-                    this._Str_8556(_arg_2.name);
+                    this.closeAndLog(_arg_2.name);
                     _local_3 = this._habboTalent.getInteger("guide.help.alpha.groupid", 0);
                     if (_local_3 > 0)
                     {
@@ -817,23 +817,23 @@
                     }
                     return;
                 case TalentTrackTask.SAFETY_QUIZ_GRADUATE_1:
-                    this._Str_8556(_arg_2.name);
+                    this.closeAndLog(_arg_2.name);
                     this._habboTalent.habboHelp.showSafetyBooklet();
                     return;
                 case TalentTrackTask.ROOM_ENTRY_1:
                 case TalentTrackTask.ROOM_ENTRY_2:
-                    this._Str_8556(_arg_2.name);
+                    this.closeAndLog(_arg_2.name);
                     this._habboTalent.navigator.openNavigator(null);
                     return;
                 case TalentTrackTask.AVATAR_LOOKS_1:
-                    this._Str_8556(_arg_2.name);
+                    this.closeAndLog(_arg_2.name);
                     this._habboTalent.avatarEditor.openEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR, null, null, true);
                     this._habboTalent.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
                     return;
             }
         }
 
-        private function _Str_8556(k:String):void
+        private function closeAndLog(k:String):void
         {
             this.destroyWindow();
             this._habboTalent.tracking.trackEventLog("Talent", this._talentTrack.name, "talent.progress.click_activity", k);
