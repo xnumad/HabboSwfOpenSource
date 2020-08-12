@@ -26,10 +26,10 @@
             this._deps = k;
         }
 
-        public function _Str_11247(k:Friend):_Str_2591
+        public function _Str_11247(k:Friend):FriendCategory
         {
-            var _local_2:int = ((k.online) ? k.categoryId : _Str_2591._Str_7666);
-            var _local_3:_Str_2591 = this._Str_5067(_local_2);
+            var _local_2:int = ((k.online) ? k.categoryId : FriendCategory._Str_7666);
+            var _local_3:FriendCategory = this._Str_5067(_local_2);
             if (_local_3 != null)
             {
                 _local_3._Str_11247(k);
@@ -42,7 +42,7 @@
 
         public function _Str_8217():Array
         {
-            var _local_2:_Str_2591;
+            var _local_2:FriendCategory;
             var k:Array = new Array();
             for each (_local_2 in this._categories)
             {
@@ -64,7 +64,7 @@
 
         public function getFriendCount(k:Boolean, _arg_2:Boolean=false):int
         {
-            var _local_4:_Str_2591;
+            var _local_4:FriendCategory;
             var _local_3:int;
             for each (_local_4 in this._categories)
             {
@@ -78,7 +78,7 @@
             return this._categories;
         }
 
-        public function _Str_15664(k:_Str_2591):void
+        public function _Str_15664(k:FriendCategory):void
         {
             this._categories.push(k);
         }
@@ -88,9 +88,9 @@
             return this._friendsById[k];
         }
 
-        public function _Str_5067(k:int):_Str_2591
+        public function _Str_5067(k:int):FriendCategory
         {
-            var _local_2:_Str_2591;
+            var _local_2:FriendCategory;
             for each (_local_2 in this._categories)
             {
                 if (_local_2.id == k)
@@ -164,12 +164,12 @@
         private function _Str_22561(k:Array):void
         {
             var _local_2:FriendCategoryData;
-            var _local_3:_Str_2591;
-            var _local_4:_Str_2591;
-            var _local_5:_Str_2591;
+            var _local_3:FriendCategory;
+            var _local_4:FriendCategory;
+            var _local_5:FriendCategory;
             this._Str_22708();
-            this._Str_5067(_Str_2591._Str_7666).received = true;
-            this._Str_5067(_Str_2591._Str_15031).received = true;
+            this._Str_5067(FriendCategory._Str_7666).received = true;
+            this._Str_5067(FriendCategory._Str_15031).received = true;
             for each (_local_2 in k)
             {
                 _local_4 = this._Str_5067(_local_2.id);
@@ -183,7 +183,7 @@
                 }
                 else
                 {
-                    _local_5 = new _Str_2591(_local_2.id, _local_2.name);
+                    _local_5 = new FriendCategory(_local_2.id, _local_2.name);
                     _local_5.received = true;
                     this._Str_15664(_local_5);
                 }
@@ -203,7 +203,7 @@
 
         private function _Str_8793(k:int, _arg_2:Boolean):Boolean
         {
-            var _local_4:_Str_2591;
+            var _local_4:FriendCategory;
             var _local_5:Friend;
             if (_arg_2)
             {
@@ -227,7 +227,7 @@
 
         private function _Str_22708():void
         {
-            var k:_Str_2591;
+            var k:FriendCategory;
             for each (k in this._categories)
             {
                 k.received = false;
@@ -236,7 +236,7 @@
 
         private function _Str_22944():Array
         {
-            var _local_2:_Str_2591;
+            var _local_2:FriendCategory;
             var k:Array = new Array();
             for each (_local_2 in this._categories)
             {

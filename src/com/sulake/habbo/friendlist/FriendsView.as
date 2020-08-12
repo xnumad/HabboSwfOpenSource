@@ -3,7 +3,7 @@
     import com.sulake.core.window.components.IContainerButtonWindow;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.friendlist.domain._Str_2591;
+    import com.sulake.habbo.friendlist.domain.FriendCategory;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.habbo.friendlist.domain.Friend;
     import com.sulake.core.window.components.ILabelWindow;
@@ -77,7 +77,7 @@
 
         public function _Str_3836():void
         {
-            var _local_2:_Str_2591;
+            var _local_2:FriendCategory;
             var _local_3:int;
             var _local_4:int;
             var _local_5:int;
@@ -142,7 +142,7 @@
             return _local_4;
         }
 
-        private function refreshEntry(k:Boolean, _arg_2:int, _arg_3:_Str_2591, _arg_4:Friend):Boolean
+        private function refreshEntry(k:Boolean, _arg_2:int, _arg_3:FriendCategory, _arg_4:Friend):Boolean
         {
             var _local_5:* = ((_arg_2 % 2) == 1);
             var _local_6:IWindowContainer = (this._list.getListItemAt(_arg_2) as IWindowContainer);
@@ -179,7 +179,7 @@
             return false;
         }
 
-        public function _Str_12989(k:_Str_2591, _arg_2:Boolean):void
+        public function _Str_12989(k:FriendCategory, _arg_2:Boolean):void
         {
             if (this._list == null)
             {
@@ -198,7 +198,7 @@
             _local_3.visible = true;
         }
 
-        private function _Str_22942(k:_Str_2591, _arg_2:Friend, _arg_3:Boolean=false):void
+        private function _Str_22942(k:FriendCategory, _arg_2:Friend, _arg_3:Boolean=false):void
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -385,7 +385,7 @@
             Logger.log(((("Category id: " + _arg_2.name) + ", ") + _arg_2.tags[0]));
             var _local_3:int = _arg_2.tags[0];
             Logger.log(("Cat id: " + _local_3));
-            var _local_4:_Str_2591 = this._friendList.categories._Str_5067(_local_3);
+            var _local_4:FriendCategory = this._friendList.categories._Str_5067(_local_3);
             _local_4._Str_22255((!(_local_4.open)));
             this._Str_3836();
             this._friendList.view.refresh("Cat open/closed");
@@ -570,7 +570,7 @@
             new _Str_12478(this._friendList).show();
         }
 
-        private function _Str_22394(k:_Str_2591, _arg_2:Boolean):void
+        private function _Str_22394(k:FriendCategory, _arg_2:Boolean):void
         {
             var _local_3:IWindowContainer = IWindowContainer(k.view.findChildByName("pager"));
             if (((k._Str_11426() < 2) || (!(k.open))))
@@ -602,7 +602,7 @@
                 k.addChild(_local_6);
             }
             _local_6.underline = (!(_arg_2 == _arg_3));
-            _local_6.text = ((("" + ((_arg_2 * _Str_2591.PAGE_SIZE) + 1)) + "-") + ("" + ((_arg_2 + 1) * _Str_2591.PAGE_SIZE)));
+            _local_6.text = ((("" + ((_arg_2 * FriendCategory.PAGE_SIZE) + 1)) + "-") + ("" + ((_arg_2 + 1) * FriendCategory.PAGE_SIZE)));
             _local_6.id = _arg_2;
             _local_6.procedure = this._Str_23254;
             _local_6.width = (_local_6.textWidth + 5);
@@ -620,7 +620,7 @@
             var _local_4:int = _local_3.parent.parent.tags[0];
             var _local_5:int = _local_3.id;
             Logger.log(((("Page link clicked: " + _local_4) + ", ") + _local_5));
-            var _local_6:_Str_2591 = this._friendList.categories._Str_5067(_local_4);
+            var _local_6:FriendCategory = this._friendList.categories._Str_5067(_local_4);
             _local_6.pageIndex = _local_5;
             this._Str_3836();
         }

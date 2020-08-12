@@ -4,7 +4,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.friendlist.Util;
 
-    public class _Str_2591 implements IDisposable 
+    public class FriendCategory implements IDisposable
     {
         public static const PAGE_SIZE:int = 100;
         public static const _Str_15031:int = 0;
@@ -19,7 +19,7 @@
         private var _view:IWindowContainer;
         private var _Str_4347:int;
 
-        public function _Str_2591(k:int, _arg_2:String)
+        public function FriendCategory(k:int, _arg_2:String)
         {
             this._friends = [];
             super();

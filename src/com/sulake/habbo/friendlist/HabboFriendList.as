@@ -60,7 +60,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.FriendsListFragmentMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendCategoryData;
-    import com.sulake.habbo.friendlist.domain._Str_2591;
+    import com.sulake.habbo.friendlist.domain.FriendCategory;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7185;
     import com.sulake.habbo.friendlist.domain._Str_11887;
     import com.sulake.habbo.friendlist.domain._Str_11703;
@@ -468,16 +468,16 @@
         private function onMessengerInit(k:IMessageEvent):void
         {
             var _local_3:FriendCategoryData;
-            var _local_4:_Str_2591;
+            var _local_4:FriendCategory;
             this._view = new FriendListView(this);
             var _local_2:_Str_7185 = (k as _Str_5567).getParser();
             this._friendRequests = new _Str_9210(new _Str_11887(this), _local_2._Str_22808, _local_2._Str_23653);
             for each (_local_3 in _local_2.categories)
             {
-                this._categories._Str_15664(new _Str_2591(_local_3.id, _local_3.name));
+                this._categories._Str_15664(new FriendCategory(_local_3.id, _local_3.name));
             }
-            this._categories._Str_15664(new _Str_2591(_Str_2591._Str_15031, this.getText("friendlist.friends")));
-            this._categories._Str_15664(new _Str_2591(_Str_2591._Str_7666, this.getText("friendlist.friends.offlinecaption")));
+            this._categories._Str_15664(new FriendCategory(FriendCategory._Str_15031, this.getText("friendlist.friends")));
+            this._categories._Str_15664(new FriendCategory(FriendCategory._Str_7666, this.getText("friendlist.friends.offlinecaption")));
             this._tabs = new FriendListTabs(new _Str_11703(this));
             if (!this._Str_6311)
             {
@@ -489,7 +489,7 @@
             this._Str_22421();
             if (this._categories.getFriendCount(true, false) == 0)
             {
-                _local_4 = this._categories._Str_5067(_Str_2591._Str_7666);
+                _local_4 = this._categories._Str_5067(FriendCategory._Str_7666);
                 if (_local_4)
                 {
                     _local_4._Str_22255(true);
