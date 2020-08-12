@@ -73,7 +73,7 @@
             this._navigator.officialRoomEntryManager._Str_21717(k);
         }
 
-        public function _Str_8146():void
+        public function navigatorOpenedWhileInTab():void
         {
             this.startSearch();
         }

@@ -27,7 +27,7 @@
             this._navigator.officialRoomEntryManager._Str_21717(k);
         }
 
-        public function _Str_8146():void
+        public function navigatorOpenedWhileInTab():void
         {
             this._navigator.mainViewCtrl.startSearch(Tabs.TAB_OFFICIAL, Tabs.SEARCHTYPE_OFFICIALROOMS, "-1", MainViewCtrl._Str_15148);
         }

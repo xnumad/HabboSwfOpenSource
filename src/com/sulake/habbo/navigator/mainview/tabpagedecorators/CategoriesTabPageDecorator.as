@@ -21,7 +21,7 @@
         {
         }
 
-        public function _Str_8146():void
+        public function navigatorOpenedWhileInTab():void
         {
             this._navigator.mainViewCtrl.startSearch(Tabs.TAB_CATEGORIES, Tabs.SEARCHTYPE_CATEGORIES);
         }

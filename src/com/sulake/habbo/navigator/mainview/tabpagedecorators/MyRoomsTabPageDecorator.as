@@ -57,7 +57,7 @@
             _local_2.visible = true;
         }
 
-        public function _Str_8146():void
+        public function navigatorOpenedWhileInTab():void
         {
             this.startSearch();
         }

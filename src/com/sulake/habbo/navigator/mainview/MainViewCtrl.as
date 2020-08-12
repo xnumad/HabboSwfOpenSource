@@ -159,7 +159,7 @@
         private function _Str_19017():void
         {
             var k:Tab = this._navigator.tabs.getSelected();
-            k._Str_5252._Str_8146();
+            k._Str_5252.navigatorOpenedWhileInTab();
         }
 
         public function dispose():void
