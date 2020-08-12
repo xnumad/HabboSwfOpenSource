@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomMessageNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9995;
     import com.sulake.habbo.communication.messages.incoming.users.AccountSafetyLockStatusChangeMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_7309;
+    import com.sulake.habbo.communication.messages.incoming.notifications.InfoFeedEnableMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftSelectedEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.MaintenanceStatusMessageEvent;
@@ -95,7 +95,7 @@
             this.addMessageEvent(new RoomMessageNotificationMessageEvent(this.onRoomMessagesNotification));
             this.addMessageEvent(new _Str_9995(this.onRestoreClientMessageEvent));
             this.addMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
-            this.addMessageEvent(new _Str_7309(this.onInfoFeedEnable));
+            this.addMessageEvent(new InfoFeedEnableMessageEvent(this.onInfoFeedEnable));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new ClubGiftSelectedEvent(this.onClubGiftSelected));
             this.addMessageEvent(new MaintenanceStatusMessageEvent(this.onHotelMaintenance));
@@ -228,7 +228,7 @@
 
         private function onInfoFeedEnable(k:IMessageEvent):void
         {
-            var _local_2:_Str_7309 = (k as _Str_7309);
+            var _local_2:InfoFeedEnableMessageEvent = (k as InfoFeedEnableMessageEvent);
             if (_local_2 != null)
             {
                 this._notifications.disabled = (!(_local_2.enabled));

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.notifications.InfoFeedEnableMessageParser;
 
-    public class _Str_7309 extends MessageEvent implements IMessageEvent 
+    public class InfoFeedEnableMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7309(k:Function)
+        public function InfoFeedEnableMessageEvent(k:Function)
         {
             super(k, InfoFeedEnableMessageParser);
         }

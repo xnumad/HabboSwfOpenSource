@@ -791,7 +791,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7261;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7309;
+	import com.sulake.habbo.communication.messages.incoming.notifications.InfoFeedEnableMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7321;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8054;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
@@ -1302,7 +1302,7 @@
             INCOMING_PACKETS[3264] = _Str_6345;
             INCOMING_PACKETS[3276] = _Str_9409;
             INCOMING_PACKETS[3277] = ScrSendKickbackInfoMessageEvent;
-            INCOMING_PACKETS[3284] = _Str_7309;
+            INCOMING_PACKETS[3284] = InfoFeedEnableMessageEvent;
             INCOMING_PACKETS[3285] = _Str_8429;
             INCOMING_PACKETS[3292] = _Str_16527;
             INCOMING_PACKETS[3293] = _Str_8674;
