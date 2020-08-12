@@ -166,7 +166,7 @@
             this._container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(k, CONTROL_COMMAND_PREVIOUS_VIDEO));
         }
 
-        public function _Str_23211(k:int):void
+        public function switchToNextVideo(k:int):void
         {
             this._container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(k, CONTROL_COMMAND_NEXT_VIDEO));
         }

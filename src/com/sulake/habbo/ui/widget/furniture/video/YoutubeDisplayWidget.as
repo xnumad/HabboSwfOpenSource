@@ -241,7 +241,7 @@
                             this.ownHandler.switchToPreviousVideo(this._roomObject.getId());
                             break;
                         case "playlist_next":
-                            this.ownHandler._Str_23211(this._roomObject.getId());
+                            this.ownHandler.switchToNextVideo(this._roomObject.getId());
                             break;
                         default:
                             if ((_arg_2 is IRegionWindow))
