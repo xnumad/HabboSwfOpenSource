@@ -572,7 +572,7 @@
             return getBoolean("group.deletion.enabled");
         }
 
-        public function get _Str_26174():Boolean
+        public function get groupRoomInfoBadgeEnabled():Boolean
         {
             return (this._Str_13386) && (getBoolean("groupRoomInfo.badge.enabled"));
         }
