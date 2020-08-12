@@ -55,7 +55,7 @@
             this._searchTimer = new Timer(1000, 1);
             super();
             this._manager = k;
-            this._searchTimer.addEventListener(TimerEvent.TIMER, this._Str_20492);
+            this._searchTimer.addEventListener(TimerEvent.TIMER, this.onSearchTimer);
             this._loadingIcon = new LoadingIcon();
         }
 
@@ -74,7 +74,7 @@
             }
             if (this._searchTimer)
             {
-                this._searchTimer.removeEventListener(TimerEvent.TIMER, this._Str_20492);
+                this._searchTimer.removeEventListener(TimerEvent.TIMER, this.onSearchTimer);
                 this._searchTimer.stop();
                 this._searchTimer = null;
             }
@@ -520,7 +520,7 @@
             return IDropMenuWindow(this._window.findChildByName("type_drop_menu"));
         }
 
-        private function _Str_20492(k:Event):void
+        private function onSearchTimer(k:Event):void
         {
             if (((!(this._window == null)) && (this._window.visible)))
             {
