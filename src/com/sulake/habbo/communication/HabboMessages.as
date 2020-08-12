@@ -729,7 +729,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.AddSpamWallPostItMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceRentMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerSavePresetMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9987;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetYoutubeDisplayPlaylistMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ExtendRentOrBuyoutFurniMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.handshake.*;
 	import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
@@ -1646,7 +1646,7 @@
             OUTGOING_PACKETS[2064] = RemoveRightsMessageComposer;
             OUTGOING_PACKETS[2067] = CloseIssuesMessageComposer;
             OUTGOING_PACKETS[2068] = PublishPhotoMessageComposer;
-            OUTGOING_PACKETS[2069] = _Str_9987;
+            OUTGOING_PACKETS[2069] = SetYoutubeDisplayPlaylistMessageComposer;
             OUTGOING_PACKETS[2077] = _Str_10525;
             OUTGOING_PACKETS[2080] = DanceMessageComposer;
             OUTGOING_PACKETS[2085] = ShoutMessageComposer;

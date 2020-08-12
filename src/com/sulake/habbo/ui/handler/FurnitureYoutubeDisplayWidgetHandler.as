@@ -19,7 +19,7 @@
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10913;
     import flash.events.Event;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9987;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetYoutubeDisplayPlaylistMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.ControlYoutubeDisplayPlaybackMessageComposer;
     import __AS3__.vec.*;
 
@@ -158,7 +158,7 @@
 
         public function selectPlaylist(k:int, _arg_2:String):void
         {
-            this._container.connection.send(new _Str_9987(k, _arg_2));
+            this._container.connection.send(new SetYoutubeDisplayPlaylistMessageComposer(k, _arg_2));
         }
 
         public function switchToPreviousVideo(k:int):void

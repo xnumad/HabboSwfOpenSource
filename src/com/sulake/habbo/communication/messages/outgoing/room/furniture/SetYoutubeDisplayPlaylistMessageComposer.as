@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_9987 implements IMessageComposer 
+    public class SetYoutubeDisplayPlaylistMessageComposer implements IMessageComposer
     {
         private var messageArray:Array;
 
-        public function _Str_9987(k:int, _arg_2:String)
+        public function SetYoutubeDisplayPlaylistMessageComposer(k:int, _arg_2:String)
         {
             this.messageArray = [k, _arg_2];
         }
