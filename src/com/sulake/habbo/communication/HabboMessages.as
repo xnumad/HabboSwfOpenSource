@@ -874,7 +874,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomCategoryAndTradeSettingsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetBannedUsersFromRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomFilterMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7286;
+	import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetCustomRoomFilterMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetRoomSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.DeleteRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.*;
@@ -1627,7 +1627,7 @@
             OUTGOING_PACKETS[186] = RemoveSaddleFromPetMessageComposer;
             OUTGOING_PACKETS[1866] = BuyMarketplaceTokensMessageComposer;
             OUTGOING_PACKETS[1894] = _Str_11096;
-            OUTGOING_PACKETS[1911] = _Str_7286;
+            OUTGOING_PACKETS[1911] = GetCustomRoomFilterMessageComposer;
             OUTGOING_PACKETS[1918] = _Str_11662;
             OUTGOING_PACKETS[1922] = _Str_4553;
             OUTGOING_PACKETS[1945] = _Str_12438;

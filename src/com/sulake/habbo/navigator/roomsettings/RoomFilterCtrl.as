@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.ITextFieldWindow;
-    import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7286;
+    import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetCustomRoomFilterMessageComposer;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -31,7 +31,7 @@
         public function startRoomFilterEdit(k:int):void
         {
             this._flatId = k;
-            this._navigator.send(new _Str_7286(this._flatId));
+            this._navigator.send(new GetCustomRoomFilterMessageComposer(this._flatId));
             this._Str_24741();
         }
 
@@ -137,7 +137,7 @@
             if (((!(this._badWordField == null)) && (this._badWordField.text.length > 0)))
             {
                 this._navigator.send(new UpdateRoomFilterMessageComposer(this._flatId, UpdateRoomFilterMessageComposer._Str_16408, k));
-                this._navigator.send(new _Str_7286(this._flatId));
+                this._navigator.send(new GetCustomRoomFilterMessageComposer(this._flatId));
                 this._badWordField.text = "bobba";
             }
         }
