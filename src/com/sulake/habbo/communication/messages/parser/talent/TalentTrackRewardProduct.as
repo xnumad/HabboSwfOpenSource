@@ -5,12 +5,12 @@
     public class TalentTrackRewardProduct
     {
         private var _productCode:String;
-        private var _Str_22129:int;
+        private var _vipDays:int;
 
         public function TalentTrackRewardProduct(k:IMessageDataWrapper)
         {
             this._productCode = k.readString();
-            this._Str_22129 = k.readInteger();
+            this._vipDays = k.readInteger();
         }
 
         public function get productCode():String
@@ -20,7 +20,7 @@
 
         public function get _Str_13965():int
         {
-            return this._Str_22129;
+            return this._vipDays;
         }
     }
 }
