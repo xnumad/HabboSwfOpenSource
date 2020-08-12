@@ -397,11 +397,11 @@
 
         public function _Str_20111():Boolean
         {
-            var k:String = this._Str_19935();
+            var k:String = this.getQuestRoomIds();
             return (!(k == null)) && (!(k == ""));
         }
 
-        private function _Str_19935():String
+        private function getQuestRoomIds():String
         {
             return this._localization.getLocalization((("quests." + this._Str_9628()) + ".roomids"));
         }
@@ -412,7 +412,7 @@
             {
                 return;
             }
-            var k:String = this._Str_19935();
+            var k:String = this.getQuestRoomIds();
             var _local_2:Array = k.split(",");
             if (_local_2.length == 0)
             {
