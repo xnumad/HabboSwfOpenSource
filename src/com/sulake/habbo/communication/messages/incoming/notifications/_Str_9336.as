@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_6256;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.ConfirmBreedingResultParser;
 
     public class _Str_9336 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_9336(k:Function)
         {
-            super(k, _Str_6256);
+            super(k, ConfirmBreedingResultParser);
         }
 
-        public function getParser():_Str_6256
+        public function getParser():ConfirmBreedingResultParser
         {
-            return _parser as _Str_6256;
+            return _parser as ConfirmBreedingResultParser;
         }
     }
 }
