@@ -298,17 +298,17 @@
             switch (this._reportType)
             {
                 case HabboHelp._Str_4786:
-                    this._Str_13189(false, true);
+                    this.showPanels(false, true);
                     return;
                 case HabboHelp._Str_5723:
-                    this._Str_13189(true, false);
+                    this.showPanels(true, false);
                     return;
                 case HabboHelp._Str_4315:
-                    this._Str_13189(false, false);
+                    this.showPanels(false, false);
                     return;
                 case HabboHelp._Str_4459:
                 case HabboHelp._Str_4490:
-                    this._Str_13189(false, false);
+                    this.showPanels(false, false);
                     return;
                 case HabboHelp._Str_15144:
                     this.populateUserList();
@@ -322,7 +322,7 @@
             this._chatReportController.show(this._habboHelp._Str_6240, this._reportedUserId, this._reportType);
         }
 
-        private function _Str_13189(k:Boolean, _arg_2:Boolean):void
+        private function showPanels(k:Boolean, _arg_2:Boolean):void
         {
             var _local_3:IItemListWindow = (this._window.findChildByName("user_panel") as IItemListWindow);
             var _local_4:IItemListWindow = (this._window.findChildByName("room_panel") as IItemListWindow);
