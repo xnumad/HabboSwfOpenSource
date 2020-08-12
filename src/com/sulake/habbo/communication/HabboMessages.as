@@ -608,7 +608,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetPetCommandsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetItemDataMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10528;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetFurnitureAliasesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.HarvestPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveAvatarMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetItemDataMessageComposer;
@@ -1910,7 +1910,7 @@
             OUTGOING_PACKETS[3878] = _Str_10288;
             OUTGOING_PACKETS[3889] = OpenCampaignCalendarDoorComposer;
             OUTGOING_PACKETS[389] = _Str_12437;
-            OUTGOING_PACKETS[3898] = _Str_10528;
+            OUTGOING_PACKETS[3898] = GetFurnitureAliasesMessageComposer;
             OUTGOING_PACKETS[3899] = _Str_11187;
             OUTGOING_PACKETS[39] = _Str_9844;
             OUTGOING_PACKETS[3900] = _Str_9897;

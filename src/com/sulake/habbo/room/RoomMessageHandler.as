@@ -50,7 +50,7 @@
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10528;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.GetFurnitureAliasesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.GetRoomEntryDataMessageComposer;
     import com.sulake.habbo.communication.messages.parser.room.engine.FurnitureAliasesMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.HeightMapMessageParser;
@@ -262,7 +262,7 @@
             }
             if (this._initialConnection)
             {
-                k.connection.send(new _Str_10528());
+                k.connection.send(new GetFurnitureAliasesMessageComposer());
                 this._initialConnection = false;
             }
             else
