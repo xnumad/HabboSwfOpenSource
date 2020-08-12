@@ -163,8 +163,8 @@
             this._window.findChildByName("header_caption_txt").caption = this._Str_24672();
             this._window.findChildByName("header_desc_txt").caption = this._Str_25664();
             this._window.findChildByName("header_pic_bitmap");
-            this._window.findChildByName("header_caption_txt").y = (HEADER_CAPTION_Y_CREATE + this._Str_19668());
-            this._window.findChildByName("header_desc_txt").y = (HEADER_INFO_Y_CREATE + this._Str_19668());
+            this._window.findChildByName("header_caption_txt").y = (HEADER_CAPTION_Y_CREATE + this.getHeaderTextOffset());
+            this._window.findChildByName("header_desc_txt").y = (HEADER_INFO_Y_CREATE + this.getHeaderTextOffset());
             this._window.findChildByName("edit_guild_tab_context").visible = this._data.exists;
             this._window.findChildByName("footer_cont").visible = (!(this._data.exists));
             this._window.findChildByName("reset_badge").visible = false;
@@ -302,7 +302,7 @@
             this._window.findChildByName("confirmation_caption").caption = ITextWindow(this._window.findChildByName("name_txt")).text;
         }
 
-        private function _Str_19668():int
+        private function getHeaderTextOffset():int
         {
             return (this._data.exists) ? EDIT_HEADER_TEXTS_OFFSET : 0;
         }
