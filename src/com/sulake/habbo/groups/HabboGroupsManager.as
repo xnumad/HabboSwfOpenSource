@@ -567,7 +567,7 @@
             return getBoolean("groupRoomInfo.enabled");
         }
 
-        public function get _Str_25533():Boolean
+        public function get groupDeletionEnabled():Boolean
         {
             return getBoolean("group.deletion.enabled");
         }
