@@ -10,13 +10,13 @@
         private var _extraString:String;
         private var _extraInt:int;
 
-        public function EventLogMessageComposer(k:String, _arg_2:String, _arg_3:String, _arg_4:String="", _arg_5:int=0)
+        public function EventLogMessageComposer(category:String, type:String, action:String, extraString:String="", extraInt:int=0)
         {
-            this._category = ((k) ? k : "");
-            this._type = ((_arg_2) ? _arg_2 : "");
-            this._action = ((_arg_3) ? _arg_3 : "");
-            this._extraString = ((_arg_4) ? _arg_4 : "");
-            this._extraInt = ((_arg_5) ? _arg_5 : 0);
+            this._category = ((category) ? category : "");
+            this._type = ((type) ? type : "");
+            this._action = ((action) ? action : "");
+            this._extraString = ((extraString) ? extraString : "");
+            this._extraInt = ((extraInt) ? extraInt : 0);
         }
 
         public function dispose():void
