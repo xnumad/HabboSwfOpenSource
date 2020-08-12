@@ -452,7 +452,7 @@
             }
         }
 
-        public function _Str_24176(k:int, _arg_2:int):void
+        public function requestSanctionDataForAccount(k:int, _arg_2:int):void
         {
             this._moderationManager.connection.send(new _Str_7202(-1, k, _arg_2));
         }

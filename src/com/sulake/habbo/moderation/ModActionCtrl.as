@@ -196,7 +196,7 @@
             {
                 this._Str_8957.selection = -1;
             }
-            this._Str_2327.issueManager._Str_24176(this._Str_4127, _local_3);
+            this._Str_2327.issueManager.requestSanctionDataForAccount(this._Str_4127, _local_3);
         }
 
         public function _Str_13994(k:int, _arg_2:String):void
