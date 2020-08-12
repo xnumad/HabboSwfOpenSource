@@ -50,7 +50,7 @@
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorSavedSearchesParser;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
-    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11429;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddSavedSearchComposer;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9950;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
     import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
@@ -350,7 +350,7 @@
         {
             if (this._currentResults != null)
             {
-                this._communication.connection.send(new _Str_11429(k, _arg_2));
+                this._communication.connection.send(new NavigatorAddSavedSearchComposer(k, _arg_2));
             }
             this.trackEventLog("savedsearch.add", "SavedSearch", _Str_6560(k, _arg_2));
             this._navigatorView.setLeftPaneVisibility(true);

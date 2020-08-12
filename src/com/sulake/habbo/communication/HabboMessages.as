@@ -241,7 +241,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_10484;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorRemoveCollapsedCategoryMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
-	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11429;
+	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddSavedSearchComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddCollapsedCategoryMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9918;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9950;
@@ -1668,7 +1668,7 @@
             OUTGOING_PACKETS[219] = GetAchievementsComposer;
             OUTGOING_PACKETS[2209] = SetMannequinFigureComposer;
             OUTGOING_PACKETS[2214] = UpdateForumSettingsMessageComposer;
-            OUTGOING_PACKETS[2226] = _Str_11429;
+            OUTGOING_PACKETS[2226] = NavigatorAddSavedSearchComposer;
             OUTGOING_PACKETS[2228] = ChangeMottoMessageComposer;
             OUTGOING_PACKETS[223] = _Str_11294;
             OUTGOING_PACKETS[2230] = GetGuestRoomMessageComposer;
