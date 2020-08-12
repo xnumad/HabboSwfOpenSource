@@ -35,7 +35,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_4916;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_5085;
 	import com.sulake.habbo.communication.messages.outgoing.quest.RejectQuestMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7461;
+	import com.sulake.habbo.communication.messages.outgoing.quest.GetQuestsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.AcceptQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7541;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7551;
@@ -1842,7 +1842,7 @@
             OUTGOING_PACKETS[3314] = IgnoreUserIdMessageComposer;
             OUTGOING_PACKETS[3320] = MoveAvatarMessageComposer;
             OUTGOING_PACKETS[3323] = RemoveBotFromFlatMessageComposer;
-            OUTGOING_PACKETS[3333] = _Str_7461;
+            OUTGOING_PACKETS[3333] = GetQuestsMessageComposer;
             OUTGOING_PACKETS[3336] = RemoveItemMessageComposer;
             OUTGOING_PACKETS[3338] = _Str_7293;
             OUTGOING_PACKETS[336] = GetYoutubeDisplayStatusMessageComposer;

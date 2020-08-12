@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.outgoing.quest._Str_7551;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_7461;
+    import com.sulake.habbo.communication.messages.outgoing.quest.GetQuestsMessageComposer;
     import com.sulake.core.window.components.ITextWindow;
 
     public class QuestCompleted implements IDisposable 
@@ -91,7 +91,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._window.visible = false;
-                this._questEngine.send(new _Str_7461());
+                this._questEngine.send(new GetQuestsMessageComposer());
             }
         }
 
