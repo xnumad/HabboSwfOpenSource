@@ -273,7 +273,7 @@
             _local_3.visible = ((!(_local_5)) && ((_arg_2.admin) || (this._data.allowedToManage)));
             var _local_4:IRegionWindow = IRegionWindow(k.findChildByName("bg_region"));
             _local_4.id = _arg_2.userId;
-            this._Str_17814(false, k);
+            this.setRemoveState(false, k);
             this._Str_16819(false, k);
             _local_5 = (_arg_2.userId == this._manager.avatarId);
             var _local_6:IRegionWindow = IRegionWindow(k.findChildByName("remove_region"));
@@ -348,13 +348,13 @@
         private function onRemoveMouseOver(k:WindowEvent):void
         {
             var _local_2:IRegionWindow = IRegionWindow(k.target);
-            this._Str_17814(true, _local_2);
+            this.setRemoveState(true, _local_2);
         }
 
         private function onRemoveMouseOut(k:WindowEvent):void
         {
             var _local_2:IRegionWindow = IRegionWindow(k.target);
-            this._Str_17814(false, _local_2);
+            this.setRemoveState(false, _local_2);
         }
 
         private function onRemoveMouseClick(k:WindowEvent):void
@@ -396,7 +396,7 @@
             _local_4.underline = _arg_3;
         }
 
-        private function _Str_17814(k:Boolean, _arg_2:IWindowContainer):void
+        private function setRemoveState(k:Boolean, _arg_2:IWindowContainer):void
         {
             _arg_2.findChildByName("icon_close_off").visible = (!(k));
             _arg_2.findChildByName("icon_close_over").visible = k;
