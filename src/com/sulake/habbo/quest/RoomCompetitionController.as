@@ -26,7 +26,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.competition._Str_10126;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IItemGridWindow;
@@ -390,7 +390,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._questEngine.tracking.trackTalentTrackOpen(this._questEngine.sessionDataManager.currentTalentTrack, "roomcompetition");
-                this._questEngine.send(new _Str_3075(this._questEngine.sessionDataManager.currentTalentTrack));
+                this._questEngine.send(new GetTalentTrackMessageComposer(this._questEngine.sessionDataManager.currentTalentTrack));
             }
         }
 

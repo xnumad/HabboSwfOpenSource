@@ -54,7 +54,7 @@
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.session.talent.TalentEnum;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
@@ -634,7 +634,7 @@
                         if (this._habboHelp.getBoolean("talent.track.enabled"))
                         {
                             this._habboHelp.tracking.trackTalentTrackOpen(TalentEnum.HELPER, "guidetool");
-                            this._habboHelp.sendMessage(new _Str_3075(TalentEnum.HELPER));
+                            this._habboHelp.sendMessage(new GetTalentTrackMessageComposer(TalentEnum.HELPER));
                             this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_talent"));
                         }
                     }

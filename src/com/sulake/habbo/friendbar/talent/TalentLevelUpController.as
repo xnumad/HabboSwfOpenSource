@@ -14,7 +14,7 @@
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
 
     public class TalentLevelUpController implements IDisposable 
@@ -169,7 +169,7 @@
                 case "talent_button":
                     this.closeWindow();
                     this._habboTalent.tracking.trackTalentTrackOpen(this._track, "levelup");
-                    this._habboTalent.send(new _Str_3075(this._track));
+                    this._habboTalent.send(new GetTalentTrackMessageComposer(this._track));
                     return;
             }
         }

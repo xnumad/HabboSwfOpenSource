@@ -29,7 +29,7 @@
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.habbo.utils._Str_988;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10302;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
@@ -638,7 +638,7 @@
                     return;
                 case "citizenship_button":
                     this._habboTalent.tracking.trackTalentTrackOpen(TalentEnum.CITIZENSHIP, "talentrack");
-                    this._habboTalent.send(new _Str_3075(TalentEnum.CITIZENSHIP));
+                    this._habboTalent.send(new GetTalentTrackMessageComposer(TalentEnum.CITIZENSHIP));
                     return;
                 case "button_track_citizenship":
                     return;

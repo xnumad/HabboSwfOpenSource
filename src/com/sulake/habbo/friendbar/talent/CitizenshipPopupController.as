@@ -9,7 +9,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.session.talent.TalentEnum;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
@@ -101,7 +101,7 @@
                 case "show_citizenship":
                     this.hide();
                     this._habboTalent.tracking.trackTalentTrackOpen(TalentEnum.CITIZENSHIP, "citizenshippopup");
-                    this._habboTalent.send(new _Str_3075(TalentEnum.CITIZENSHIP));
+                    this._habboTalent.send(new GetTalentTrackMessageComposer(TalentEnum.CITIZENSHIP));
                     return;
             }
         }

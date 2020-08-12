@@ -236,7 +236,7 @@
 	import com.sulake.habbo.communication.messages.incoming.availability.MaintenanceStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.talent._Str_10709;
-	import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+	import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_10484;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11341;
@@ -1632,7 +1632,7 @@
             OUTGOING_PACKETS[1922] = _Str_4553;
             OUTGOING_PACKETS[1945] = _Str_12438;
             OUTGOING_PACKETS[1954] = _Str_9950;
-            OUTGOING_PACKETS[196] = _Str_3075;
+            OUTGOING_PACKETS[196] = GetTalentTrackMessageComposer;
             OUTGOING_PACKETS[1969] = SaveRoomSettingsMessageComposer;
             OUTGOING_PACKETS[1975] = SignMessageComposer;
             OUTGOING_PACKETS[1982] = RenderRoomThumbnailMessageComposer;

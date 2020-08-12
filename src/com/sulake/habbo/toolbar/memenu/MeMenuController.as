@@ -13,7 +13,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
@@ -87,7 +87,7 @@
                                 break;
                             case "talents":
                                 _local_6 = this._habboToolbar.sessionDataManager.currentTalentTrack;
-                                this._habboToolbar.connection.send(new _Str_3075(_local_6));
+                                this._habboToolbar.connection.send(new GetTalentTrackMessageComposer(_local_6));
                                 break;
                             case "settings":
                                 this._settingsMenuView = new MeMenuSettingsMenuView();

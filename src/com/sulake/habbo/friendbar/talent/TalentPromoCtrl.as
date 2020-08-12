@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.parser.talent.TalentLevelUpMessageParser;
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
@@ -138,7 +138,7 @@
             if (((k.type == WindowMouseEvent.CLICK) && (this.enabled)))
             {
                 this._manager.tracking.trackTalentTrackOpen(this._Str_7925, "talentpromo");
-                this._manager.send(new _Str_3075(this._Str_7925));
+                this._manager.send(new GetTalentTrackMessageComposer(this._Str_7925));
             }
         }
 

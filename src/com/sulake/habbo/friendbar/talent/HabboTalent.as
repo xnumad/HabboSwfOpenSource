@@ -29,7 +29,7 @@
     import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.habbo.communication.messages.parser.talent.TalentTrackLevel;
     import com.sulake.habbo.session.talent.TalentEnum;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
 
     public class HabboTalent extends AbstractView implements IHabboTalent, ILinkEventTracker 
     {
@@ -255,11 +255,11 @@
                         {
                             case TalentEnum.CITIZENSHIP:
                                 _tracking.trackTalentTrackOpen(TalentEnum.CITIZENSHIP, "citizenshiplink");
-                                this.send(new _Str_3075(TalentEnum.CITIZENSHIP));
+                                this.send(new GetTalentTrackMessageComposer(TalentEnum.CITIZENSHIP));
                                 break;
                             case TalentEnum.HELPER:
                                 _tracking.trackTalentTrackOpen(TalentEnum.HELPER, "helperlink");
-                                this.send(new _Str_3075(TalentEnum.HELPER));
+                                this.send(new GetTalentTrackMessageComposer(TalentEnum.HELPER));
                                 break;
                         }
                     }

@@ -26,7 +26,7 @@
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habboclient.ExternalVariables;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetOpenProfileMessage;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
     import com.sulake.habbo.tracking.HabboTracking;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
@@ -375,7 +375,7 @@
                 case "talents":
                     _local_5 = this._widget.handler.container.sessionDataManager.currentTalentTrack;
                     this._widget.handler.container.habboTracking.trackTalentTrackOpen(_local_5, "memenu");
-                    this._widget.handler.container.connection.send(new _Str_3075(_local_5));
+                    this._widget.handler.container.connection.send(new GetTalentTrackMessageComposer(_local_5));
                     break;
                 default:
                     Logger.log(("Me Menu Main View: unknown button: " + _local_3));

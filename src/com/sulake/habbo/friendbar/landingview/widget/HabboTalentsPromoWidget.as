@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
 
     public class HabboTalentsPromoWidget implements ILandingViewWidget 
@@ -50,7 +50,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._landingView.tracking.trackTalentTrackOpen(this._landingView.sessionDataManager.currentTalentTrack, "landingpagepromo");
-                this._landingView.send(new _Str_3075(this._landingView.sessionDataManager.currentTalentTrack));
+                this._landingView.send(new GetTalentTrackMessageComposer(this._landingView.sessionDataManager.currentTalentTrack));
             }
         }
     }
