@@ -58,7 +58,7 @@
             this._container.connection.addMessageEvent(k);
         }
 
-        private function _Str_22855():void
+        private function removeEvents():void
         {
             var k:IMessageEvent;
             for each (k in this._events)
@@ -147,7 +147,7 @@
             {
                 return;
             }
-            this._Str_22855();
+            this.removeEvents();
             this._container = null;
         }
 
