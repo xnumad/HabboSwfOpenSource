@@ -134,7 +134,7 @@
                     {
                         if (this._player.getPlayerState() == YoutubeVideoPlaybackStateEnum._Str_6168)
                         {
-                            this.ownHandler._Str_25279(this._roomObject.getId());
+                            this.ownHandler.continueVideo(this._roomObject.getId());
                         }
                     }
                 }

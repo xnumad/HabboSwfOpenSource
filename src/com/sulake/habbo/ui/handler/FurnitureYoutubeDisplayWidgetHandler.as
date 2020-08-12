@@ -176,7 +176,7 @@
             this._container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(k, CONTROL_COMMAND_PAUSE_VIDEO));
         }
 
-        public function _Str_25279(k:int):void
+        public function continueVideo(k:int):void
         {
             this._container.connection.send(new ControlYoutubeDisplayPlaybackMessageComposer(k, CONTROL_COMMAND_CONTINUE_VIDEO));
         }
