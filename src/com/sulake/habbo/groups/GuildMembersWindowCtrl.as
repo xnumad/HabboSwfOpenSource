@@ -30,7 +30,7 @@
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.communication.messages.outgoing.users.RejectMembershipRequestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.UnblockGroupMemberMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_10517;
+    import com.sulake.habbo.communication.messages.outgoing.users.RemoveAdminRightsFromMemberMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.AddAdminRightsToMemberMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.ApproveMembershipRequestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
@@ -447,7 +447,7 @@
             {
                 if (_local_2.admin)
                 {
-                    this._manager.send(new _Str_10517(this._data.groupId, _local_2.userId));
+                    this._manager.send(new RemoveAdminRightsFromMemberMessageComposer(this._data.groupId, _local_2.userId));
                 }
                 else
                 {

@@ -464,7 +464,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.GetIgnoredUsersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10302;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10313;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10517;
+	import com.sulake.habbo.communication.messages.outgoing.users.RemoveAdminRightsFromMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildCreationInfoMessageComposer;
@@ -1950,7 +1950,7 @@
             OUTGOING_PACKETS[685] = GoToFlatMessageComposer;
             OUTGOING_PACKETS[707] = _Str_12129;
             OUTGOING_PACKETS[711] = RequestRoomPropertySet;
-            OUTGOING_PACKETS[722] = _Str_10517;
+            OUTGOING_PACKETS[722] = RemoveAdminRightsFromMemberMessageComposer;
             OUTGOING_PACKETS[741] = _Str_7312;
             OUTGOING_PACKETS[742] = _Str_17987;
             OUTGOING_PACKETS[749] = GiveSupplementToPetMessageComposer;
