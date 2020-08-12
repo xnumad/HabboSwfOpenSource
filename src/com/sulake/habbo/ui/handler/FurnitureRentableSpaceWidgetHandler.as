@@ -14,7 +14,7 @@
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_8229;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_8190;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11461;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceStatusMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10101;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9716;
 
@@ -141,7 +141,7 @@
 
         public function getRentableSpaceStatus(k:int):void
         {
-            this._container.connection.send(new _Str_11461(k));
+            this._container.connection.send(new RentableSpaceStatusMessageComposer(k));
         }
 
         public function _Str_24966(k:int):void

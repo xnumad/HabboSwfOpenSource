@@ -714,7 +714,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10913;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerGetPresetsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRoomBackgroundColorDataComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11461;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11532;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinNameComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.DiceOffMessageComposer;
@@ -1970,7 +1970,7 @@
             OUTGOING_PACKETS[848] = _Str_11938;
             OUTGOING_PACKETS[865] = _Str_9966;
             OUTGOING_PACKETS[869] = _Str_11183;
-            OUTGOING_PACKETS[872] = _Str_11461;
+            OUTGOING_PACKETS[872] = RentableSpaceStatusMessageComposer;
             OUTGOING_PACKETS[873] = ModerateMessageMessageComposer;
             OUTGOING_PACKETS[875] = UpdateFloorPropertiesMessageComposer;
             OUTGOING_PACKETS[882] = _Str_9979;

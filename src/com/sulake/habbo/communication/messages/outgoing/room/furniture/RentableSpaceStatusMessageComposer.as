@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11461 implements IMessageComposer 
+    public class RentableSpaceStatusMessageComposer implements IMessageComposer
     {
         private var messageArray:Array;
 
-        public function _Str_11461(k:int)
+        public function RentableSpaceStatusMessageComposer(k:int)
         {
             this.messageArray = [k];
         }
