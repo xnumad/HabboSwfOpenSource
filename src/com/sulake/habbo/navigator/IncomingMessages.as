@@ -73,7 +73,7 @@
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomForwardMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5654;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_7002;
+    import com.sulake.habbo.communication.messages.parser.navigator.NavigatorSettingsMessageParser;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6478;
@@ -403,7 +403,7 @@
             var _local_7:Boolean;
             var _local_8:int;
             var _local_9:Boolean;
-            var _local_2:_Str_7002 = _Str_5633(k).getParser();
+            var _local_2:NavigatorSettingsMessageParser = _Str_5633(k).getParser();
             Logger.log(("Got navigator settings: " + _local_2.homeRoomId));
             var _local_3:* = (!(this._navigator.data._Str_17024));
             this._navigator.data.homeRoomId = _local_2.homeRoomId;
