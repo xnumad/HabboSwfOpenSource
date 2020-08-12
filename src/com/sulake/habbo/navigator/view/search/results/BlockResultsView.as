@@ -102,7 +102,7 @@
 
         public function _Str_21896(k:WindowEvent):void
         {
-            this._navigator._Str_23630(this._searchCodeShowMore[k.window.id]);
+            this._navigator.sendRemoveCollapsedCategory(this._searchCodeShowMore[k.window.id]);
             this._navigator._Str_8273.splice(this._navigator._Str_8273.indexOf(this._searchCodeShowMore[k.window.id]), 1);
             this._Str_18512(k.window.id, true);
             this._navigator.trackEventLog("browse.uncollapsecategory", "Results", HabboNewNavigator._Str_6560(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440.filteringData));

@@ -589,7 +589,7 @@
             this._communication.connection.send(new _Str_12436(k));
         }
 
-        public function _Str_23630(k:String):void
+        public function sendRemoveCollapsedCategory(k:String):void
         {
             this._communication.connection.send(new _Str_11341(k));
         }
