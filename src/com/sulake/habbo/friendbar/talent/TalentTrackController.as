@@ -213,7 +213,7 @@
             this._talentProgressMeter = new TalentProgressMeter(this._habboTalent, this);
             this._panoramaList.setListItemIndex(this._panoramaList.getListItemByName("end_padding"), (this._panoramaList.numListItems - 1));
             this.resizeWindow();
-            this._Str_19216(_local_5);
+            this.scrollToLevel(_local_5);
         }
 
         private function _Str_21334(k:IWindowContainer):void
@@ -629,7 +629,7 @@
                         }
                         else
                         {
-                            this._Str_19216(int(Math.floor((_local_3 / this._talentProgressMeter._Str_19867))));
+                            this.scrollToLevel(int(Math.floor((_local_3 / this._talentProgressMeter._Str_19867))));
                         }
                     }
                     return;
@@ -660,7 +660,7 @@
             this.destroyWindow();
         }
 
-        private function _Str_19216(k:int):void
+        private function scrollToLevel(k:int):void
         {
             var _local_2:IWindow;
             if (k == 0)
