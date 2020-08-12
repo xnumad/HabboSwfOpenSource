@@ -24,7 +24,7 @@
             return this._registry;
         }
 
-        public function _Str_4666(k:int):UserRegistryItem
+        public function getEntry(k:int):UserRegistryItem
         {
             return this._registry[k];
         }

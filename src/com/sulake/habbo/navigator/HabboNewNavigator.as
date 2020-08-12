@@ -326,7 +326,7 @@
         {
             this._navigatorView.isBusy = true;
             this._previousFilterInput = _arg_3;
-            var _local_4:SearchResultContainer = this._navigatorCache._Str_4666(((k + "/") + _arg_2));
+            var _local_4:SearchResultContainer = this._navigatorCache.getEntry(((k + "/") + _arg_2));
             if (_local_4 != null)
             {
                 this.onSearchResult(_local_4);

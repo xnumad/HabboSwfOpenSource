@@ -281,7 +281,7 @@
             return _local_2;
         }
 
-        public function _Str_4666(k:int):ISongInfo
+        public function getEntry(k:int):ISongInfo
         {
             if ((((this._playListEntries == null) || (k < 0)) || (k >= this._playListEntries.length)))
             {

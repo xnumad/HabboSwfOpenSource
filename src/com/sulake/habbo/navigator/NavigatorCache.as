@@ -23,7 +23,7 @@
             this._Str_6451[k] = new NavigatorCacheEntry(k, _arg_2, _local_3, this._Str_25767(_local_3));
         }
 
-        public function _Str_4666(k:String):SearchResultContainer
+        public function getEntry(k:String):SearchResultContainer
         {
             var _local_2:NavigatorCacheEntry = this._Str_6451[k];
             if (_local_2 != null)

@@ -140,7 +140,7 @@
             k.findChildByName("extra_link_region").y = (k.findChildByName("extra_link_region").y - this._avatarOffsetsY[_arg_2]);
         }
 
-        private function _Str_4666(k:IWindow):_Str_4106
+        private function getEntry(k:IWindow):_Str_4106
         {
             var _local_2:int = k.id;
             return this.users[_local_2];
@@ -148,7 +148,7 @@
 
         private function _Str_6514(k:WindowEvent, _arg_2:IWindow):void
         {
-            var _local_3:_Str_4106 = this._Str_4666(_arg_2);
+            var _local_3:_Str_4106 = this.getEntry(_arg_2);
             if (_local_3 == null)
             {
                 return;
@@ -178,7 +178,7 @@
             var _local_3:_Str_4106;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = this._Str_4666(_arg_2);
+                _local_3 = this.getEntry(_arg_2);
                 if (_local_3 == null)
                 {
                     return;

@@ -803,7 +803,7 @@
                 default:
                     if (this._habboHelp.reportedUserId > 0)
                     {
-                        k = this._habboHelp._Str_17447._Str_4666(this._habboHelp.reportedUserId);
+                        k = this._habboHelp._Str_17447.getEntry(this._habboHelp.reportedUserId);
                         if (k)
                         {
                             this._reportedUserName = k.userName;

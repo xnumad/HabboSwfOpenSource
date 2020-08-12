@@ -317,7 +317,7 @@
 
         private function _Str_25371(k:IWindow):void
         {
-            var _local_2:_Str_2632 = this._Str_4666(k);
+            var _local_2:_Str_2632 = this.getEntry(k);
             if (_local_2 == null)
             {
                 return;
@@ -357,7 +357,7 @@
             }
         }
 
-        private function _Str_4666(k:IWindow):_Str_2632
+        private function getEntry(k:IWindow):_Str_2632
         {
             var _local_2:IWindowContainer = (k as IWindowContainer);
             if (((_local_2 == null) || (!(_local_2.name == "cont"))))

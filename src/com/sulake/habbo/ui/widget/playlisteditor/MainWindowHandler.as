@@ -292,7 +292,7 @@
                 _local_4 = 0;
                 while (_local_4 < k.length)
                 {
-                    _local_5 = k._Str_4666(_local_4);
+                    _local_5 = k.getEntry(_local_4);
                     if (_local_5 != null)
                     {
                         _local_2.push(_local_5);

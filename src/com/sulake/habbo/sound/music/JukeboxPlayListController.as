@@ -137,7 +137,7 @@
             this._connection.send(new _Str_10817());
         }
 
-        public function _Str_4666(k:int):ISongInfo
+        public function getEntry(k:int):ISongInfo
         {
             if (((k < 0) || (k >= this._entries.length)))
             {

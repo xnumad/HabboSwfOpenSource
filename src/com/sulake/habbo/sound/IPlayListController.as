@@ -9,7 +9,7 @@
         function get playPosition():int;
         function get nowPlayingSongId():int;
         function get isPlaying():Boolean;
-        function _Str_4666(_arg_1:int):ISongInfo;
+        function getEntry(_arg_1:int):ISongInfo;
         function _Str_5930():void;
     }
 }
