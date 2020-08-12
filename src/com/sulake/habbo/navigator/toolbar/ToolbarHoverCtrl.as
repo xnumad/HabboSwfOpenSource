@@ -45,7 +45,7 @@
             this._Str_9244("navigator", "${navigator.title}", this._Str_23296);
             this._Str_9244("home", "${toolbar.icon.label.exitroom.home}", this._Str_23229);
             this._Str_9244("favorites", "${navigator.navisel.myfavourites}", this._Str_26475);
-            this._Str_9244("create", "${navigator.createroom.create}", this._Str_18652);
+            this._Str_9244("create", "${navigator.createroom.create}", this.onCreateRoomClick);
             this._Str_9244("history", "${navigator.navisel.visitedrooms}", this._Str_23602);
             this._Str_9244("frequent", "${navigator.navisel.frequentvisits}", this._Str_24692);
         }
@@ -88,7 +88,7 @@
             this._Str_8696();
         }
 
-        private function _Str_18652(k:WindowMouseEvent):void
+        private function onCreateRoomClick(k:WindowMouseEvent):void
         {
             this._habboNavigator.send(new _Str_7214());
             this._Str_8696();

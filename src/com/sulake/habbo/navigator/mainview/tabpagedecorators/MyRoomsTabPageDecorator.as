@@ -51,7 +51,7 @@
             var _local_3:IWindow = _local_2.findChildByName("create_room_but");
             if (_local_3 != null)
             {
-                _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_18652);
+                _local_3.addEventListener(WindowMouseEvent.CLICK, this.onCreateRoomClick);
             }
             this._navigator.refreshButton(_local_2, "create_room", true, null, 0);
             _local_2.visible = true;
@@ -62,7 +62,7 @@
             this.startSearch();
         }
 
-        private function _Str_18652(k:WindowEvent):void
+        private function onCreateRoomClick(k:WindowEvent):void
         {
             this._navigator.send(new _Str_7214());
         }
