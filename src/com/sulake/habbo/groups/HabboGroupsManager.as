@@ -552,7 +552,7 @@
             return this._windowManager;
         }
 
-        public function get _Str_26014():GuildManagementWindowCtrl
+        public function get guildManagementWindowCtrl():GuildManagementWindowCtrl
         {
             return this._guildManagementWindowCtrl;
         }
