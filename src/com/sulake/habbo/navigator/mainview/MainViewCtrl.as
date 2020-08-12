@@ -48,7 +48,7 @@
 
     public class MainViewCtrl implements ITransitionalMainViewCtrl, IUpdateReceiver, IDisposable 
     {
-        public static const _Str_8485:int = 1;
+        public static const SEARCHMSG_SEARCH:int = 1;
         public static const _Str_14620:int = 2;
         public static const _Str_15148:int = 4;
         public static const _Str_13989:int = 5;
@@ -520,7 +520,7 @@
                 _local_6._Str_5252.tabSelected();
             }
             this._navigator.data._Str_23771();
-            if (_arg_4 == _Str_8485)
+            if (_arg_4 == SEARCHMSG_SEARCH)
             {
                 this._navigator.send(this._Str_23726(_arg_2, _arg_3));
             }
