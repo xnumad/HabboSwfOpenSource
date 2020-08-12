@@ -177,7 +177,7 @@
             this.addMessageEvent(new GuildMemberFurniCountInHQMessageEvent(this._Str_25619));
             this.addMessageEvent(new GuildCreationInfoMessageEvent(this.onGuildCreationInfo));
             this.addMessageEvent(new GuildEditorDataMessageEvent(this._Str_25430));
-            this.addMessageEvent(new CloseConnectionMessageEvent(this._Str_23870));
+            this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomLeave));
             this.addMessageEvent(new GuildMembershipRejectedMessageEvent(this._guildMembersWindowCtrl._Str_25572));
             this.addMessageEvent(new HabboGroupDeactivatedMessageEvent(this.onGroupDeactivated));
             this.addMessageEvent(new GuildMembersEvent(this._guildMembersWindowCtrl._Str_22267));
@@ -386,7 +386,7 @@
             this._Str_19848();
         }
 
-        private function _Str_23870(k:IMessageEvent):void
+        private function onRoomLeave(k:IMessageEvent):void
         {
             this._detailsWindowCtrl.close();
             this._groupRoomInfoCtrl.close();
