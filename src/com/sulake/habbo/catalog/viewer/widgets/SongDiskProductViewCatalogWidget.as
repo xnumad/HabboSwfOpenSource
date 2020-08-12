@@ -118,7 +118,7 @@
         private function _Str_9908(k:int):void
         {
             var _local_3:ISongInfo;
-            var _local_2:int = this._soundManager._Str_2774._Str_6665(k);
+            var _local_2:int = this._soundManager._Str_2774.getSongIdPlayingAtPriority(k);
             if (_local_2 != -1)
             {
                 _local_3 = this._soundManager._Str_2774.getSongInfo(_local_2);

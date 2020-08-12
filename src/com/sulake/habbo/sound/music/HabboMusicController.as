@@ -111,7 +111,7 @@
         {
             var _local_2:int;
             Logger.log((("Song " + k.id) + " finished playing"));
-            if (this._Str_6665(this._priorityPlaying) == k.id)
+            if (this.getSongIdPlayingAtPriority(this._priorityPlaying) == k.id)
             {
                 if (((this._Str_10224() == this._priorityPlaying) && (this._Str_19565(this._priorityPlaying) == this._requestNumberPlaying)))
                 {
@@ -349,7 +349,7 @@
             var _local_3:SongDataEntry;
             if (((k == this._priorityPlaying) && (this._priorityPlaying >= 0)))
             {
-                _local_2 = this._Str_6665(k);
+                _local_2 = this.getSongIdPlayingAtPriority(k);
                 if (_local_2 >= 0)
                 {
                     _local_3 = this._Str_9498(_local_2);
@@ -391,7 +391,7 @@
             var _local_2:int;
             while (_local_2 < HabboMusicPrioritiesEnum._Str_5905)
             {
-                _local_3 = this._Str_6665(_local_2);
+                _local_3 = this.getSongIdPlayingAtPriority(_local_2);
                 if (_local_3 >= 0)
                 {
                     _local_4 = (this._Str_9498(_local_3) as SongDataEntry);
@@ -480,7 +480,7 @@
             return -1;
         }
 
-        public function _Str_6665(k:int):int
+        public function getSongIdPlayingAtPriority(k:int):int
         {
             if (k != this._priorityPlaying)
             {

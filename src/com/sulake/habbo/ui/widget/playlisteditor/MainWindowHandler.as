@@ -369,7 +369,7 @@
 
         private function _Str_23997():Boolean
         {
-            return !(this._musicController._Str_6665(HabboMusicPrioritiesEnum._Str_7215) == -1);
+            return !(this._musicController.getSongIdPlayingAtPriority(HabboMusicPrioritiesEnum._Str_7215) == -1);
         }
     }
 }
