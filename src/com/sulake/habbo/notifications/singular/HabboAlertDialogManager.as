@@ -36,20 +36,20 @@
 
         public function handleModeratorCaution(k:String, _arg_2:String=""):void
         {
-            this._Str_16535(k, _arg_2);
+            this.showModerationMessage(k, _arg_2);
         }
 
         public function handleModeratorMessage(k:String, _arg_2:String=""):void
         {
-            this._Str_16535(k, _arg_2, false);
+            this.showModerationMessage(k, _arg_2, false);
         }
 
         public function handleUserBannedMessage(k:String):void
         {
-            this._Str_16535(k, "");
+            this.showModerationMessage(k, "");
         }
 
-        private function _Str_16535(message:String, url:String, showHabboWay:Boolean=true):void
+        private function showModerationMessage(message:String, url:String, showHabboWay:Boolean=true):void
         {
             var p:RegExp = /\\r/g;
             message = message.replace(p, "\r");
