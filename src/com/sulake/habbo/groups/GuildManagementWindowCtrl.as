@@ -396,7 +396,7 @@
             {
                 return;
             }
-            if (!this._Str_13503())
+            if (!this.validateView())
             {
                 k.preventDefault();
                 return;
@@ -462,7 +462,7 @@
             {
                 return;
             }
-            if (!this._Str_13503())
+            if (!this.validateView())
             {
                 return;
             }
@@ -476,7 +476,7 @@
             {
                 return;
             }
-            if (!this._Str_13503())
+            if (!this.validateView())
             {
                 return;
             }
@@ -525,7 +525,7 @@
             this._alertVisible = false;
         }
 
-        private function _Str_13503():Boolean
+        private function validateView():Boolean
         {
             var k:String;
             var _local_2:String;
@@ -687,7 +687,7 @@
             }
             if (this._data.exists)
             {
-                if (!this._Str_13503())
+                if (!this.validateView())
                 {
                     return;
                 }
