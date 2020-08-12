@@ -506,7 +506,7 @@
             return this._localization.getLocalization(_local_2, _local_2);
         }
 
-        public function _Str_10470(k:QuestMessageData):String
+        public function getQuestName(k:QuestMessageData):String
         {
             var _local_2:* = (k._Str_5688() + ".name");
             return this._localization.getLocalization(_local_2, _local_2);

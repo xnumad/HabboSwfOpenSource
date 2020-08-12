@@ -120,7 +120,7 @@
             this._container.findChildByName("current_quest_border").visible = ((this._data) && (this._data.accepted));
             if (this._data)
             {
-                this._landingView.localizationManager.registerParameter("landing.view.quest.currenttask", "task", this._Str_10470());
+                this._landingView.localizationManager.registerParameter("landing.view.quest.currenttask", "task", this.getQuestName());
             }
             var k:IWindowContainer = IWindowContainer(this._container.findChildByName("difficulty_container"));
             var _local_2:int = (k.x + k.width);
@@ -184,7 +184,7 @@
             }
         }
 
-        public function _Str_10470():String
+        public function getQuestName():String
         {
             var k:* = (this._data._Str_5688() + ".name");
             return ("${" + k) + "}";

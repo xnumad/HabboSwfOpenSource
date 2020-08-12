@@ -241,7 +241,7 @@
 
         private function _Str_19788():void
         {
-            this._questEngine.localization.registerParameter("quests.tracker.caption", "quest_name", this._questEngine._Str_10470(this._questInTracker));
+            this._questEngine.localization.registerParameter("quests.tracker.caption", "quest_name", this._questEngine.getQuestName(this._questInTracker));
             this._window.findChildByName("desc_txt").caption = this._questEngine._Str_20120(this._questInTracker);
             this._window.findChildByName("more_info_txt").visible = this._questEngine._Str_6927;
             this._window.findChildByName("more_info_region").visible = this._questEngine._Str_6927;
