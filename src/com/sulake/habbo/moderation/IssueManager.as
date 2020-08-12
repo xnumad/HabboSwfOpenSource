@@ -247,7 +247,7 @@
             }
             if (k.state == IssueMessageData._Str_5035)
             {
-                _local_6 = this._Str_15829(ISSUE_BUNDLE_MY);
+                _local_6 = this.getBundles(ISSUE_BUNDLE_MY);
                 _local_7 = false;
                 for each (_local_8 in _local_6)
                 {
@@ -336,7 +336,7 @@
             this._issueBrowser.update();
         }
 
-        public function _Str_15829(k:String):Array
+        public function getBundles(k:String):Array
         {
             var _local_4:IssueBundle;
             if (this._bundles == null)

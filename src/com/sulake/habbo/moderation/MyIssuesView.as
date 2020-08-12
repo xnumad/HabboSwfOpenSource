@@ -39,7 +39,7 @@
 
         public function update():void
         {
-            var k:Array = this._issueManager._Str_15829(IssueManager.ISSUE_BUNDLE_MY);
+            var k:Array = this._issueManager.getBundles(IssueManager.ISSUE_BUNDLE_MY);
             this._issueListView.update(k);
         }
 
