@@ -187,7 +187,7 @@
 	import com.sulake.habbo.communication.messages.incoming.camera.ThumbnailStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10678;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetJukeboxPlayListMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10944;
+	import com.sulake.habbo.communication.messages.outgoing.sound.GetOfficialSongIdMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetSoundMachinePlayListMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.AddJukeboxDiskComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetSongInfoMessageComposer;
@@ -1821,7 +1821,7 @@
             OUTGOING_PACKETS[3166] = ScrGetUserInfoMessageComposer;
             OUTGOING_PACKETS[3171] = _Str_10594;
             OUTGOING_PACKETS[3182] = _Str_10878;
-            OUTGOING_PACKETS[3189] = _Str_10944;
+            OUTGOING_PACKETS[3189] = GetOfficialSongIdMessageComposer;
             OUTGOING_PACKETS[3196] = _Str_18745;
             OUTGOING_PACKETS[3202] = RespectPetMessageComposer;
             OUTGOING_PACKETS[3203] = UpdateConditionMessageComposer;
