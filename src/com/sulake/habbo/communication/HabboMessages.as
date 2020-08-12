@@ -186,7 +186,7 @@
 	import com.sulake.habbo.communication.messages.incoming.camera.InitCameraMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.ThumbnailStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10678;
-	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10817;
+	import com.sulake.habbo.communication.messages.outgoing.sound.GetJukeboxPlayListMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_10944;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11141;
 	import com.sulake.habbo.communication.messages.outgoing.sound.AddJukeboxDiskComposer;
@@ -1573,7 +1573,7 @@
             OUTGOING_PACKETS[1419] = _Str_12244;
             OUTGOING_PACKETS[1424] = _Str_7016;
             OUTGOING_PACKETS[143] = _Str_10126;
-            OUTGOING_PACKETS[1435] = _Str_10817;
+            OUTGOING_PACKETS[1435] = GetJukeboxPlayListMessageComposer;
             OUTGOING_PACKETS[1444] = _Str_10862;
             OUTGOING_PACKETS[1445] = Game2ExitGameMessageComposer;
             OUTGOING_PACKETS[1450] = _Str_12123;

@@ -12,7 +12,7 @@
     import com.sulake.habbo.sound.events.SoundControllerEvent;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
     import com.sulake.habbo.sound.HabboMusicPrioritiesEnum;
-    import com.sulake.habbo.communication.messages.outgoing.sound._Str_10817;
+    import com.sulake.habbo.communication.messages.outgoing.sound.GetJukeboxPlayListMessageComposer;
     import com.sulake.habbo.sound.ISongInfo;
     import com.sulake.habbo.communication.messages.parser.sound._Str_6377;
     import com.sulake.habbo.sound.events.NowPlayingEvent;
@@ -134,7 +134,7 @@
             {
                 return;
             }
-            this._connection.send(new _Str_10817());
+            this._connection.send(new GetJukeboxPlayListMessageComposer());
         }
 
         public function getEntry(k:int):ISongInfo
