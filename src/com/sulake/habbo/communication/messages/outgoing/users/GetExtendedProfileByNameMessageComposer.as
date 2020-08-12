@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7285 implements IMessageComposer 
+    public class GetExtendedProfileByNameMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_7285(k:String)
+        public function GetExtendedProfileByNameMessageComposer(k:String)
         {
             this._array = [];
             super();

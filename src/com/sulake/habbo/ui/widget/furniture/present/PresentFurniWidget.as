@@ -38,7 +38,7 @@
     import com.sulake.habbo.catalog.enum.CatalogPageName;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.core.communication.messages.IMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_7285;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileByNameMessageComposer;
     import com.sulake.habbo.avatar.IAvatarRenderManager;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
     import com.sulake.habbo.avatar.IAvatarImage;
@@ -721,7 +721,7 @@
         {
             if (!this._Str_4649())
             {
-                this.send(new _Str_7285(this._senderName));
+                this.send(new GetExtendedProfileByNameMessageComposer(this._senderName));
             }
         }
 

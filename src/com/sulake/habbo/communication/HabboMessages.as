@@ -491,7 +491,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_6006;
 	import com.sulake.habbo.communication.messages.outgoing.users.ScrGetUserInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_7285;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileByNameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_7664;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
@@ -1674,7 +1674,7 @@
             OUTGOING_PACKETS[2230] = GetGuestRoomMessageComposer;
             OUTGOING_PACKETS[2235] = ChangePostureMessageComposer;
             OUTGOING_PACKETS[2248] = PlacePostItMessageComposer;
-            OUTGOING_PACKETS[2249] = _Str_7285;
+            OUTGOING_PACKETS[2249] = GetExtendedProfileByNameMessageComposer;
             OUTGOING_PACKETS[2257] = OpenCampaignCalendarDoorAsStaffComposer;
             OUTGOING_PACKETS[2264] = _Str_12153;
             OUTGOING_PACKETS[2266] = _Str_9956;
