@@ -176,7 +176,7 @@
                     _local_7.visible = ((_local_4 == this._talentTrack.name) && (_local_3));
                     if (_local_7.visible)
                     {
-                        this._Str_21334(_local_7);
+                        this.showAvatarInContainer(_local_7);
                     }
                 }
                 if (_local_4 != TalentEnum.CITIZENSHIP)
@@ -187,7 +187,7 @@
                         _local_7.visible = ((_local_4 == this._talentTrack.name) && (!(_local_3)));
                         if (_local_7.visible)
                         {
-                            this._Str_21334(_local_7);
+                            this.showAvatarInContainer(_local_7);
                         }
                     }
                 }
@@ -216,7 +216,7 @@
             this.scrollToLevel(_local_5);
         }
 
-        private function _Str_21334(k:IWindowContainer):void
+        private function showAvatarInContainer(k:IWindowContainer):void
         {
             var _local_2:IWidgetWindow = (k.findChildByName("avatar_image") as IWidgetWindow);
             if (_local_2 != null)
