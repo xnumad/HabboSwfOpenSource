@@ -136,7 +136,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11938;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_12361;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
-	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7610;
+	import com.sulake.habbo.communication.messages.outgoing.marketplace.MakeOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceTokensMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_9940;
@@ -1858,7 +1858,7 @@
             OUTGOING_PACKETS[3407] = _Str_9862;
             OUTGOING_PACKETS[3435] = UpdateGuildSettingsMessageComposer;
             OUTGOING_PACKETS[3445] = _Str_16318;
-            OUTGOING_PACKETS[3447] = _Str_7610;
+            OUTGOING_PACKETS[3447] = MakeOfferMessageComposer;
             OUTGOING_PACKETS[3449] = MovePetMessageComposer;
             OUTGOING_PACKETS[3456] = PickupObjectMessageComposer;
             OUTGOING_PACKETS[3457] = EventLogMessageComposer;

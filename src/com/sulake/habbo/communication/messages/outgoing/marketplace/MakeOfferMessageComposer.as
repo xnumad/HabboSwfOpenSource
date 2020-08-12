@@ -3,14 +3,14 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_7610 implements IMessageComposer, IDisposable 
+    public class MakeOfferMessageComposer implements IMessageComposer, IDisposable
     {
         public static const ITEMTYPE_STUFF:int = 1;
         public static const ITEMTYPE_WALLITEM:int = 2;
 
         private var _array:Array;
 
-        public function _Str_7610(k:int, _arg_2:int, _arg_3:int)
+        public function MakeOfferMessageComposer(k:int, _arg_2:int, _arg_3:int)
         {
             this._array = new Array();
             super();

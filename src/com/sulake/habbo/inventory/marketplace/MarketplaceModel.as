@@ -12,7 +12,7 @@
     import com.sulake.habbo.inventory.furni.FurniModel;
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11938;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceTokensMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7610;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace.MakeOfferMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
@@ -191,8 +191,8 @@
             {
                 return;
             }
-            var _local_2:int = ((this._item.isWallItem) ? _Str_7610.ITEMTYPE_WALLITEM : _Str_7610.ITEMTYPE_STUFF);
-            this.send(new _Str_7610(k, _local_2, this._item.ref));
+            var _local_2:int = ((this._item.isWallItem) ? MakeOfferMessageComposer.ITEMTYPE_WALLITEM : MakeOfferMessageComposer.ITEMTYPE_STUFF);
+            this.send(new MakeOfferMessageComposer(k, _local_2, this._item.ref));
             this.releaseItem();
         }
 
