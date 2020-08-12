@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11096 implements IMessageComposer 
+    public class RejectMembershipRequestMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_11096(k:int, _arg_2:int)
+        public function RejectMembershipRequestMessageComposer(k:int, _arg_2:int)
         {
             this._array = [];
             super();

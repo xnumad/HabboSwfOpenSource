@@ -28,7 +28,7 @@
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_11096;
+    import com.sulake.habbo.communication.messages.outgoing.users.RejectMembershipRequestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_12026;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10517;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_12111;
@@ -371,7 +371,7 @@
             }
             else
             {
-                this._manager.send(new _Str_11096(this._data.groupId, _local_3.userId));
+                this._manager.send(new RejectMembershipRequestMessageComposer(this._data.groupId, _local_3.userId));
             }
         }
 

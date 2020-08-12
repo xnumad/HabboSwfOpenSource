@@ -474,7 +474,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10793;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10887;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_11096;
+	import com.sulake.habbo.communication.messages.outgoing.users.RejectMembershipRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11165;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11183;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11544;
@@ -1626,7 +1626,7 @@
             OUTGOING_PACKETS[1859] = _Str_16422;
             OUTGOING_PACKETS[186] = RemoveSaddleFromPetMessageComposer;
             OUTGOING_PACKETS[1866] = BuyMarketplaceTokensMessageComposer;
-            OUTGOING_PACKETS[1894] = _Str_11096;
+            OUTGOING_PACKETS[1894] = RejectMembershipRequestMessageComposer;
             OUTGOING_PACKETS[1911] = GetCustomRoomFilterMessageComposer;
             OUTGOING_PACKETS[1918] = _Str_11662;
             OUTGOING_PACKETS[1922] = _Str_4553;
