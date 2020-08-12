@@ -4,13 +4,13 @@
 
     public class RecycleItemsMessageComposer implements IMessageComposer
     {
-        private var _Str_11669:Array;
+        private var stripItemIds:Array;
 
         public function RecycleItemsMessageComposer(k:Array)
         {
-            this._Str_11669 = new Array();
-            this._Str_11669.push(k.length);
-            this._Str_11669 = this._Str_11669.concat(k);
+            this.stripItemIds = new Array();
+            this.stripItemIds.push(k.length);
+            this.stripItemIds = this.stripItemIds.concat(k);
         }
 
         public function dispose():void
@@ -19,7 +19,7 @@
 
         public function getMessageArray():Array
         {
-            return this._Str_11669;
+            return this.stripItemIds;
         }
     }
 }
