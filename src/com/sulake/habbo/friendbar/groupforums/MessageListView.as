@@ -388,7 +388,7 @@
 
         private function _Str_9877(k:WindowMouseEvent):void
         {
-            this._controller._Str_11424(this._forumData, this._threadData.threadId, int(k.target.id));
+            this._controller.reportMessage(this._forumData, this._threadData.threadId, int(k.target.id));
         }
 
         private function _Str_7727(k:WindowMouseEvent):void

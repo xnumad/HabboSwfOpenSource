@@ -590,11 +590,11 @@
             }
         }
 
-        public function _Str_11424(k:_Str_2807, _arg_2:int, _arg_3:int):void
+        public function reportMessage(k:_Str_2807, _arg_2:int, _arg_3:int):void
         {
             if (this._help)
             {
-                this._help._Str_11424(k.groupId, _arg_2, _arg_3);
+                this._help.reportMessage(k.groupId, _arg_2, _arg_3);
             }
         }
 

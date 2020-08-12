@@ -289,7 +289,7 @@
             return false;
         }
 
-        public function _Str_11424(k:int, _arg_2:int, _arg_3:int):void
+        public function reportMessage(k:int, _arg_2:int, _arg_3:int):void
         {
             if (this._callForHelpManager != null)
             {
