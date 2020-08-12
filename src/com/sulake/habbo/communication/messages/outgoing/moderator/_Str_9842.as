@@ -14,7 +14,7 @@
             this.messageArray.push(k);
             this.messageArray.push(_arg_2);
             this.messageArray.push(_arg_3);
-            if (_arg_4 != _Str_4767._Str_2979)
+            if (_arg_4 != _Str_4767.NO_ISSUE_ID)
             {
                 this.messageArray.push(_arg_4);
             }

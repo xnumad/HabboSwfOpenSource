@@ -5,7 +5,7 @@
 
     public class _Str_18298 implements IMessageComposer, IDisposable 
     {
-        public static const _Str_2979:int = -1;
+        public static const NO_ISSUE_ID:int = -1;
 
         private var _array:Array;
 

@@ -353,7 +353,7 @@
 
         private function _Str_7121():int
         {
-            return (this._Str_3598 != null) ? this._Str_3598._Str_2869 : _Str_4767._Str_2979;
+            return (this._Str_3598 != null) ? this._Str_3598._Str_2869 : _Str_4767.NO_ISSUE_ID;
         }
     }
 }

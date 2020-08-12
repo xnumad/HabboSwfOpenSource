@@ -101,7 +101,7 @@
                 return;
             }
             Logger.log("Sending message...");
-            this._main.connection.send(new _Str_7103(this._targetUserId, this._msgInput.text, TOPIC_ID_NOT_SELECTED, ((this._issue != null) ? this._issue._Str_2869 : _Str_4767._Str_2979)));
+            this._main.connection.send(new _Str_7103(this._targetUserId, this._msgInput.text, TOPIC_ID_NOT_SELECTED, ((this._issue != null) ? this._issue._Str_2869 : _Str_4767.NO_ISSUE_ID)));
             this.dispose();
         }
 

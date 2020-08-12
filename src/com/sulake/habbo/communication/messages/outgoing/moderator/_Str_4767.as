@@ -5,7 +5,7 @@
 
     public class _Str_4767 implements IMessageComposer, IDisposable 
     {
-        public static const _Str_2979:int = -1;
+        public static const NO_ISSUE_ID:int = -1;
 
         private var messageArray:Array;
 
@@ -18,7 +18,7 @@
             this.messageArray.push(_arg_3);
             this.messageArray.push(_arg_4);
             this.messageArray.push(_arg_5);
-            if (_arg_6 != _Str_2979)
+            if (_arg_6 != NO_ISSUE_ID)
             {
                 this.messageArray.push(_arg_6);
             }
