@@ -521,7 +521,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12081;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomRightsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomHistorySearchMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12239;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.RateFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_17077;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_18849;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
@@ -1877,7 +1877,7 @@
             OUTGOING_PACKETS[3559] = _Str_8089;
             OUTGOING_PACKETS[3567] = _Str_10962;
             OUTGOING_PACKETS[357] = InfoRetrieveMessageComposer;
-            OUTGOING_PACKETS[3582] = _Str_12239;
+            OUTGOING_PACKETS[3582] = RateFlatMessageComposer;
             OUTGOING_PACKETS[359] = _Str_4406;
             OUTGOING_PACKETS[3591] = _Str_12393;
             OUTGOING_PACKETS[3593] = GetMemberGuildItemCountMessageComposer;

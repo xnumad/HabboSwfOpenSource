@@ -17,7 +17,7 @@
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import flash.events.Event;
     import com.sulake.habbo.session.ISessionDataManager;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12239;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.RateFlatMessageComposer;
     import __AS3__.vec.*;
 
     public class RoomToolsWidgetHandler implements IRoomWidgetHandler 
@@ -163,7 +163,7 @@
 
         public function rateRoom():void
         {
-            this._container.connection.send(new _Str_12239(1));
+            this._container.connection.send(new RateFlatMessageComposer(1));
         }
 
         public function get _Str_5090():Boolean
