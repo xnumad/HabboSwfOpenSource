@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7486 implements IMessageParser 
+    public class GoToBreedingNestFailureParser implements IMessageParser
     {
         public static const _Str_17785:int = 6;
 

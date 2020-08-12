@@ -97,7 +97,7 @@
     import com.sulake.habbo.inventory.pets.PetsModel;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetInventoryMessageParser;
     import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_8182;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_7486;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.GoToBreedingNestFailureParser;
     import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_7183;
     import com.sulake.habbo.inventory.bots.BotsModel;
     import com.sulake.habbo.communication.messages.parser.inventory.bots.BotInventoryMessageParser;
@@ -775,7 +775,7 @@
             }
             var _local_2:String = "${gotobreedingnestfailure.getnest}";
             var _local_3:Function = this._Str_23001;
-            if (k.getParser().reason == _Str_7486._Str_17785)
+            if (k.getParser().reason == GoToBreedingNestFailureParser._Str_17785)
             {
                 _local_2 = "${gotobreedingnestfailure.getfood}";
                 _local_3 = this._Str_25255;
