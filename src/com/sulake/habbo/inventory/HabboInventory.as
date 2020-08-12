@@ -519,7 +519,7 @@
             {
                 return;
             }
-            _local_2._Str_22531(k, true);
+            _local_2.stopUsingEffect(k, true);
             this._Str_7796();
         }
 

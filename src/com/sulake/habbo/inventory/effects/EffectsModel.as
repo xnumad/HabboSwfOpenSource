@@ -183,7 +183,7 @@
             }
         }
 
-        public function _Str_22531(k:int, _arg_2:Boolean=false):void
+        public function stopUsingEffect(k:int, _arg_2:Boolean=false):void
         {
             var _local_3:Effect = this._Str_5810(k);
             if (_local_3 != null)
