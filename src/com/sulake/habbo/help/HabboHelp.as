@@ -652,7 +652,7 @@
                     this._Str_14807();
                     return;
                 case _Str_5731._Str_15134:
-                    this._guideHelpManager._Str_17964(_local_2._Str_25474);
+                    this._guideHelpManager.showPendingTicket(_local_2._Str_25474);
                     return;
                 default:
                     this._guideHelpManager.showFeedback(_local_2._Str_5961);

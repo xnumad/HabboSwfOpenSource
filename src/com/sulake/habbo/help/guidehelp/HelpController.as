@@ -181,7 +181,7 @@
             }
         }
 
-        public function _Str_17964(k:_Str_5959):void
+        public function showPendingTicket(k:_Str_5959):void
         {
             var _local_2:String;
             if (k._Str_17256)

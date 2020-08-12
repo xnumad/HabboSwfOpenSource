@@ -105,9 +105,9 @@
             this._guideSessionController._Str_18976();
         }
 
-        public function _Str_17964(k:_Str_5959):void
+        public function showPendingTicket(k:_Str_5959):void
         {
-            this._guideHelpController._Str_17964(k);
+            this._guideHelpController.showPendingTicket(k);
         }
 
         public function createHelpRequest(k:uint):void
