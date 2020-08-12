@@ -101,7 +101,7 @@
             this._navigator.send(new _Str_9806(k, _local_2, _local_3));
         }
 
-        private function _Str_26060(k:WindowEvent):void
+        private function onEndButtonClick(k:WindowEvent):void
         {
             this._navigator.send(new _Str_11893(this._navigator.data.roomEventData.adId));
             this.close();
