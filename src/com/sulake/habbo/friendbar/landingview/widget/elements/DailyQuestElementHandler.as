@@ -80,7 +80,7 @@
             this._container.findChildByName("go_button").procedure = this.onGoButton;
             this._container.findChildByName("next_quest_region").procedure = this.onNextQuest;
             this._container.findChildByName("cancel_quest_region").procedure = this.onCancelQuest;
-            this._container.findChildByName("easy_region").procedure = this._Str_16091;
+            this._container.findChildByName("easy_region").procedure = this.onEasyRegion;
             this._container.findChildByName("hard_region").procedure = this._Str_18792;
         }
 
@@ -170,7 +170,7 @@
             }
         }
 
-        private function _Str_16091(k:WindowEvent, _arg_2:IWindow):void
+        private function onEasyRegion(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
