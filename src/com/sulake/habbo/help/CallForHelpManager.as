@@ -258,7 +258,7 @@
             this._window = (this._habboHelp.getXmlWindow("abusive_notice") as IWindowContainer);
             this._window.center();
             this._window.findChildByName("header_button_close").visible = false;
-            this._window.procedure = this._Str_24146;
+            this._window.procedure = this.onAbusiveNoticeEvent;
         }
 
         public function showEmergencyHelpRequest(k:int):void
@@ -410,7 +410,7 @@
             }
         }
 
-        private function _Str_24146(k:WindowEvent, _arg_2:IWindow):void
+        private function onAbusiveNoticeEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
