@@ -149,7 +149,7 @@
             this._container.connection.send(new _Str_10101(k));
         }
 
-        public function _Str_24022(k:int):void
+        public function rentSpace(k:int):void
         {
             this._container.connection.send(new _Str_9716(k));
         }

@@ -108,7 +108,7 @@
                             this.hide(this._roomObject);
                             break;
                         case "rent_button":
-                            this.ownHandler._Str_24022(this._roomObject.getId());
+                            this.ownHandler.rentSpace(this._roomObject.getId());
                             break;
                         case "cancel_rent_button":
                             this.ownHandler._Str_24966(this._roomObject.getId());
