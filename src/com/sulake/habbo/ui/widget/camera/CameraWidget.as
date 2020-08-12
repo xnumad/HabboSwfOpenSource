@@ -48,7 +48,7 @@
             var _local_7:IHabboQuestEngine = this.handler._Str_6647.questEngine;
             if (_local_7 != null)
             {
-                _local_7._Str_12909();
+                _local_7.ensureAchievementsInitialized();
             }
         }
 

@@ -205,7 +205,7 @@
             }
         }
 
-        public function _Str_12909():void
+        public function ensureAchievementsInitialized():void
         {
             if (this._categories == null)
             {

@@ -446,11 +446,11 @@
             }
         }
 
-        public function _Str_12909():void
+        public function ensureAchievementsInitialized():void
         {
             if (this._achievementController != null)
             {
-                this._achievementController._Str_12909();
+                this._achievementController.ensureAchievementsInitialized();
             }
         }
 
