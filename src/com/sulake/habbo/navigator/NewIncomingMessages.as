@@ -59,7 +59,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator.OfficialRoomsMessageParser;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
     import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsData;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6918;
+    import com.sulake.habbo.communication.messages.parser.navigator.RoomEventMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6280;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.communication.messages.parser.navigator.FlatCreatedMessageParser;
@@ -280,7 +280,7 @@
 
         private function _Str_17647(k:IMessageEvent):void
         {
-            var _local_2:_Str_6918 = _Str_5051(k).getParser();
+            var _local_2:RoomEventMessageParser = _Str_5051(k).getParser();
             Logger.log(((("Got room event: " + _local_2.data._Str_13361) + ", ") + _local_2.data.eventName));
             this.data.roomEventData = ((_local_2.data._Str_13361 > 0) ? _local_2.data : null);
             LegacyNavigator(this._navigator.legacyNavigator).roomEventInfoCtrl.refresh();
