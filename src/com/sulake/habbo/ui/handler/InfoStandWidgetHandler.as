@@ -38,7 +38,7 @@
     import com.sulake.habbo.ui.widget.infostand.InfoStandFurniData;
     import com.sulake.habbo.communication.messages.outgoing.room.avatar.PassCarryItemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.avatar.PassCarryItemToPetMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.GiveSupplementToPetMessageComposer;
     import com.sulake.habbo.ui.widget.enums.PetSupplementEnum;
     import com.sulake.habbo.communication.messages.outgoing.room.pets.RespectPetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.avatar.DropCarryItemMessageComposer;
@@ -443,10 +443,10 @@
                     this._container.connection.send(new PassCarryItemToPetMessageComposer(_local_2));
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_GIVE_WATER_TO_PET:
-                    this._container.connection.send(new _Str_7251(_local_2, PetSupplementEnum.WATER));
+                    this._container.connection.send(new GiveSupplementToPetMessageComposer(_local_2, PetSupplementEnum.WATER));
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_GIVE_LIGHT_TO_PET:
-                    this._container.connection.send(new _Str_7251(_local_2, PetSupplementEnum.LIGHT));
+                    this._container.connection.send(new GiveSupplementToPetMessageComposer(_local_2, PetSupplementEnum.LIGHT));
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_TREAT_PET:
                     this._container.connection.send(new RespectPetMessageComposer(_local_2));

@@ -623,7 +623,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetObjectDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveBotFromFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.PlaceObjectMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.GiveSupplementToPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MountPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7716;
@@ -1953,7 +1953,7 @@
             OUTGOING_PACKETS[722] = _Str_10517;
             OUTGOING_PACKETS[741] = _Str_7312;
             OUTGOING_PACKETS[742] = _Str_17987;
-            OUTGOING_PACKETS[749] = _Str_7251;
+            OUTGOING_PACKETS[749] = GiveSupplementToPetMessageComposer;
             OUTGOING_PACKETS[753] = AddJukeboxDiskComposer;
             OUTGOING_PACKETS[0x0300] = OpenMessageComposer;
             OUTGOING_PACKETS[773] = CompleteDiffieHandshakeMessageComposer;
