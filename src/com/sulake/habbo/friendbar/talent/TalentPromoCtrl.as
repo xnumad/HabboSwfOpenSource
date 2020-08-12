@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.outgoing.talent._Str_10709;
-    import com.sulake.habbo.communication.messages.parser.talent._Str_7381;
+    import com.sulake.habbo.communication.messages.parser.talent.TalentTrackLevelMessageParser;
     import com.sulake.habbo.communication.messages.parser.talent.TalentLevelUpMessageParser;
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -68,7 +68,7 @@
 
         private function _Str_23765(k:_Str_9397):void
         {
-            var _local_2:_Str_7381 = k.getParser();
+            var _local_2:TalentTrackLevelMessageParser = k.getParser();
             if (_local_2.talentTrackName == this._Str_7925)
             {
                 this._maxLevel = _local_2._Str_16859;
