@@ -100,9 +100,9 @@
             return this._disposed;
         }
 
-        public function _Str_18976():void
+        public function showGuideTool():void
         {
-            this._guideSessionController._Str_18976();
+            this._guideSessionController.showGuideTool();
         }
 
         public function showPendingTicket(k:_Str_5959):void
@@ -140,7 +140,7 @@
                         this._habboHelp._Str_14807();
                         return;
                     case HabboToolbarIconEnum.GUIDE:
-                        this._Str_18976();
+                        this.showGuideTool();
                         return;
                 }
             }

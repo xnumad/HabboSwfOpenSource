@@ -255,7 +255,7 @@
             }
         }
 
-        public function _Str_18976():void
+        public function showGuideTool():void
         {
             this._habboHelp.sendMessage(new _Str_4553(this._onDuty, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
         }
