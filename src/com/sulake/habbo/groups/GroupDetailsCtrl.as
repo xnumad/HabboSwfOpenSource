@@ -60,7 +60,7 @@
             this.setProc("members_region", this.onMembers);
             this.setProc("pending_members_region", this.onPendingMembers);
             this.setProc("show_groups_link_region", this.onShowGroups);
-            this.setProc("buy_furni_link_region", this._Str_25591);
+            this.setProc("buy_furni_link_region", this.onBuyFurni);
             this._window.findChildByName("leave_button").procedure = this.onLeave;
             this._window.findChildByName("join_button").procedure = this.onJoin;
             this._window.findChildByName("request_membership_button").procedure = this.onJoin;
@@ -270,7 +270,7 @@
             this._manager.navigator.performGuildBaseSearch();
         }
 
-        private function _Str_25591(k:WindowEvent, _arg_2:IWindow):void
+        private function onBuyFurni(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
