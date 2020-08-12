@@ -37,7 +37,7 @@
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
-    import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_9786;
+    import com.sulake.habbo.communication.messages.outgoing.roomsettings.DeleteRoomMessageComposer;
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetFlatControllersMessageComposer;
     import com.sulake.core.window.components.IItemListWindow;
@@ -1096,7 +1096,7 @@
         private function onConfirmRoomDelete():void
         {
             var k:GuestRoomSearchResultData;
-            this._navigator.send(new _Str_9786(this._roomSettingsData.roomId));
+            this._navigator.send(new DeleteRoomMessageComposer(this._roomSettingsData.roomId));
             this.close();
             if (this._navigator.data.guestRoomSearchResults != null)
             {

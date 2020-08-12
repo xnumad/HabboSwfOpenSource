@@ -876,7 +876,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomFilterMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7286;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7484;
-	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_9786;
+	import com.sulake.habbo.communication.messages.outgoing.roomsettings.DeleteRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.*;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.ClientHelloMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.handshake.CompleteDiffieHandshakeMessageComposer;
@@ -1936,7 +1936,7 @@
             OUTGOING_PACKETS[487] = _Str_7373;
             OUTGOING_PACKETS[516] = _Str_11815;
             OUTGOING_PACKETS[519] = _Str_11748;
-            OUTGOING_PACKETS[532] = _Str_9786;
+            OUTGOING_PACKETS[532] = DeleteRoomMessageComposer;
             OUTGOING_PACKETS[534] = _Str_7656;
             OUTGOING_PACKETS[549] = PetSelectedMessageComposer;
             OUTGOING_PACKETS[593] = _Str_9992;
