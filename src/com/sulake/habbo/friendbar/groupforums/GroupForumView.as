@@ -424,7 +424,7 @@
                 {
                     if (this._messageListView != null)
                     {
-                        this._controller._Str_17032(this._forumData.groupId, this._messagesListData.threadId, _local_2);
+                        this._controller.requestThreadMessageList(this._forumData.groupId, this._messagesListData.threadId, _local_2);
                     }
                 }
             }

@@ -384,7 +384,7 @@
             this._mainView._Str_25219(this._forumsListData, this._forumData, this._threadsListData);
         }
 
-        public function _Str_17032(k:int, _arg_2:int, _arg_3:int):void
+        public function requestThreadMessageList(k:int, _arg_2:int, _arg_3:int):void
         {
             if (this._communicationManager)
             {
@@ -497,7 +497,7 @@
                 return;
             }
             var _local_3:int = (_local_2.message.messageIndex - (_local_2.message.messageIndex % ThreadsListData._Str_3331));
-            this._Str_17032(this._forumData.groupId, this._currentThreadID, _local_3);
+            this.requestThreadMessageList(this._forumData.groupId, this._currentThreadID, _local_3);
         }
 
         public function _Str_24351(k:_Str_3372, _arg_2:int):void
@@ -630,7 +630,7 @@
             this._goToThreadID = _arg_2;
             var _local_4:int = Math.floor((_arg_3 / ThreadsListData._Str_3331));
             this._goToMessageIndex = (_arg_3 % ThreadsListData._Str_3331);
-            this._Str_17032(k, _arg_2, (_local_4 * ThreadsListData._Str_3331));
+            this.requestThreadMessageList(k, _arg_2, (_local_4 * ThreadsListData._Str_3331));
         }
 
         public function _Str_23450(k:int):void
