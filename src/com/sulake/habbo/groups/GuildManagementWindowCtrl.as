@@ -17,7 +17,7 @@
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.habbo.communication.messages.incoming.users.GuildEditData;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembersMessageComposer;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9952;
@@ -434,7 +434,7 @@
             if ((((k.type == WindowMouseEvent.CLICK) && (this._data.exists)) && (!(this._manager.guildMembersWindowCtrl == null))))
             {
                 this._manager.trackGoogle("groupManagement", "groupMembers");
-                this._manager.guildMembersWindowCtrl._Str_12428(this._data.groupId, _Str_5612._Str_13464);
+                this._manager.guildMembersWindowCtrl._Str_12428(this._data.groupId, GetGuildMembersMessageComposer._Str_13464);
             }
         }
 

@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10313;
     import com.sulake.habbo.window.utils.IConfirmDialog;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembersMessageComposer;
     import com.sulake.habbo.catalog.enum.CatalogPageName;
 
     public class GroupDetailsCtrl implements IDisposable 
@@ -247,7 +247,7 @@
                 return;
             }
             this._manager.trackGoogle("groupDetails", "groupMembers");
-            this._manager.guildMembersWindowCtrl._Str_12428(this._selectedGroup.groupId, _Str_5612._Str_13464);
+            this._manager.guildMembersWindowCtrl._Str_12428(this._selectedGroup.groupId, GetGuildMembersMessageComposer._Str_13464);
         }
 
         private function _Str_23598(k:WindowEvent, _arg_2:IWindow):void
@@ -257,7 +257,7 @@
                 return;
             }
             this._manager.trackGoogle("groupDetails", "groupPendingMembers");
-            this._manager.guildMembersWindowCtrl._Str_12428(this._selectedGroup.groupId, _Str_5612._Str_17798);
+            this._manager.guildMembersWindowCtrl._Str_12428(this._selectedGroup.groupId, GetGuildMembersMessageComposer._Str_17798);
         }
 
         private function _Str_23641(k:WindowEvent, _arg_2:IWindow):void

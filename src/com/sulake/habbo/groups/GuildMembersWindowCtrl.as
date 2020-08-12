@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipRejectedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GroupMembershipRequestedMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.GroupMembershipRequestedMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembersMessageComposer;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
@@ -164,7 +164,7 @@
                     this._userNameFilter.goBackToInitialState();
                 }
                 this._groupId = k;
-                this._manager.send(new _Str_5612(k, 0, "", _arg_2));
+                this._manager.send(new GetGuildMembersMessageComposer(k, 0, "", _arg_2));
             }
         }
 
@@ -503,7 +503,7 @@
             var _local_2:GuildMemberData = this._data;
             var _local_3:String = this._userNameFilter.getText();
             var _local_4:int = this._Str_19469().selection;
-            this._manager.send(new _Str_5612(_local_2.groupId, k, _local_3, _local_4));
+            this._manager.send(new GetGuildMembersMessageComposer(_local_2.groupId, k, _local_3, _local_4));
         }
 
         private function _Str_26373(k:WindowEvent, _arg_2:IWindow):void

@@ -486,7 +486,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12283;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_5697;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_6006;
 	import com.sulake.habbo.communication.messages.outgoing.users.ScrGetUserInfoMessageComposer;
@@ -1807,7 +1807,7 @@
             OUTGOING_PACKETS[3107] = _Str_8008;
             OUTGOING_PACKETS[3110] = InitDiffieHandshakeMessageComposer;
             OUTGOING_PACKETS[3115] = CreditFurniRedeemMessageComposer;
-            OUTGOING_PACKETS[312] = _Str_5612;
+            OUTGOING_PACKETS[312] = GetGuildMembersMessageComposer;
             OUTGOING_PACKETS[3129] = GetRoomSettingsMessageComposer;
             OUTGOING_PACKETS[3133] = _Str_7541;
             OUTGOING_PACKETS[3135] = _Str_7384;
