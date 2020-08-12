@@ -314,10 +314,10 @@
             {
                 return;
             }
-            this._window.findChildByName("next_step_button").visible = this._Str_21955();
+            this._window.findChildByName("next_step_button").visible = this.hasNextStep();
             this._window.findChildByName("previous_step_link_region").visible = this.hasPreviousStep();
             this._window.findChildByName("cancel_link_region").visible = (!(this.hasPreviousStep()));
-            this._window.findChildByName("buy_border").visible = (!(this._Str_21955()));
+            this._window.findChildByName("buy_border").visible = (!(this.hasNextStep()));
             var k:int = 1;
             while (k <= VIEW_CONFIRM)
             {
@@ -628,7 +628,7 @@
             return !(this._step == this._Str_15418((this._step - 1)));
         }
 
-        private function _Str_21955():Boolean
+        private function hasNextStep():Boolean
         {
             return !(this._step == this._Str_15418((this._step + 1)));
         }
