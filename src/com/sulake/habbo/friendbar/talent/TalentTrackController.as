@@ -843,12 +843,12 @@
         {
             this._taskProgressPopup = this._habboTalent.getModalXmlWindow("tour_task_progress_dialog");
             var k:IWindowContainer = IWindowContainer(this._taskProgressPopup.rootWindow);
-            k.findChildByName("take_tour_button").procedure = this._Str_23407;
+            k.findChildByName("take_tour_button").procedure = this.onTakeTour;
             k.findChildByName("decline_tour_region").procedure = this.onDeclineTour;
             k.findChildByName("header_button_close").procedure = this.onCloseTourAd;
         }
 
-        private function _Str_23407(k:WindowEvent, _arg_2:IWindow):void
+        private function onTakeTour(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
