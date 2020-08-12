@@ -512,7 +512,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetOfficialRoomsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11181;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11269;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11329;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFavouriteRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11608;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11662;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11792;
@@ -1726,7 +1726,7 @@
             OUTGOING_PACKETS[2551] = _Str_10430;
             OUTGOING_PACKETS[2557] = GetEmailStatusComposer;
             OUTGOING_PACKETS[2565] = _Str_5198;
-            OUTGOING_PACKETS[2578] = _Str_11329;
+            OUTGOING_PACKETS[2578] = MyFavouriteRoomsSearchMessageComposer;
             OUTGOING_PACKETS[2582] = _Str_11592;
             OUTGOING_PACKETS[2587] = _Str_7731;
             OUTGOING_PACKETS[2594] = _Str_11905;
