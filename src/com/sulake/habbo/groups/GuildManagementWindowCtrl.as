@@ -32,21 +32,21 @@
 
     public class GuildManagementWindowCtrl implements IDisposable 
     {
-        private static const _Str_7036:int = 1;
-        private static const _Str_8727:int = 2;
-        private static const _Str_7447:int = 3;
-        private static const _Str_7672:int = 4;
-        private static const _Str_12047:int = 5;
-        private static const _Str_18111:int = 43;
-        private static const _Str_17494:int = 69;
-        private static const _Str_17986:int = -20;
-        private static const _Str_16773:int = 36;
-        private static const _Str_17531:int = 5;
-        private static const _Str_18421:int = 9;
-        private static const _Str_17183:int = 6;
-        private static const _Str_16376:int = 10;
-        private static const _Str_16824:int = 0xFF;
-        private static const _Str_16065:int = 30;
+        private static const VIEW_IDENTITY:int = 1;
+        private static const VIEW_BADGE:int = 2;
+        private static const VIEW_COLORS:int = 3;
+        private static const VIEW_CONFIRM:int = 4;
+        private static const VIEW_SETTINGS:int = 5;
+        private static const HEADER_CAPTION_Y_CREATE:int = 43;
+        private static const HEADER_INFO_Y_CREATE:int = 69;
+        private static const EDIT_HEADER_TEXTS_OFFSET:int = -20;
+        private static const CREATE_HEADER_BITMAP_OFFSET:int = 36;
+        private static const STEP_TITLE_Y_OFFSET_ACTIVE:int = 5;
+        private static const STEP_TITLE_Y_OFFSET_INACTIVE:int = 9;
+        private static const STEP_TITLE_CREDIT_Y_OFFSET_ACTIVE:int = 6;
+        private static const STEP_TITLE_CREDIT_Y_OFFSET_INACTIVE:int = 10;
+        private static const MAX_DESCRIPTION_LENGTH:int = 0xFF;
+        private static const MAX_NAME_LENGTH:int = 30;
 
         private var _manager:HabboGroupsManager;
         private var _window:IWindowContainer;
@@ -136,7 +136,7 @@
 
         public function _Str_23040():void
         {
-            if ((((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data.exists))) && (this._step == _Str_7672)))
+            if ((((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data.exists))) && (this._step == VIEW_CONFIRM)))
             {
                 this.refresh();
             }
@@ -152,24 +152,24 @@
             this._window.findChildByName("edit_tab_3").visible = k;
             this._window.findChildByName("edit_tab_5").visible = k;
             var _local_2:int = 1;
-            while (_local_2 <= _Str_12047)
+            while (_local_2 <= VIEW_SETTINGS)
             {
                 this._Str_15138(_local_2).visible = (this._step == _local_2);
                 _local_3 = this._window.findChildByName(("header_pic_bitmap_step_" + _local_2));
-                _local_3.y = ((this._data.exists) ? 0 : _Str_16773);
+                _local_3.y = ((this._data.exists) ? 0 : CREATE_HEADER_BITMAP_OFFSET);
                 _local_3.visible = (this._step == _local_2);
                 _local_2++;
             }
             this._window.findChildByName("header_caption_txt").caption = this._Str_24672();
             this._window.findChildByName("header_desc_txt").caption = this._Str_25664();
             this._window.findChildByName("header_pic_bitmap");
-            this._window.findChildByName("header_caption_txt").y = (_Str_18111 + this._Str_19668());
-            this._window.findChildByName("header_desc_txt").y = (_Str_17494 + this._Str_19668());
+            this._window.findChildByName("header_caption_txt").y = (HEADER_CAPTION_Y_CREATE + this._Str_19668());
+            this._window.findChildByName("header_desc_txt").y = (HEADER_INFO_Y_CREATE + this._Str_19668());
             this._window.findChildByName("edit_guild_tab_context").visible = this._data.exists;
             this._window.findChildByName("footer_cont").visible = (!(this._data.exists));
             this._window.findChildByName("reset_badge").visible = false;
             this._window.findChildByName("reset_colors").visible = false;
-            if (this._step == _Str_8727)
+            if (this._step == VIEW_BADGE)
             {
                 if (!this._data.exists)
                 {
@@ -177,12 +177,12 @@
                 }
                 if (!this._badgeEditorCtrl._Str_6443)
                 {
-                    this._badgeEditorCtrl.createWindow(this._Str_15138(_Str_8727), this._data.badgeSettings);
+                    this._badgeEditorCtrl.createWindow(this._Str_15138(VIEW_BADGE), this._data.badgeSettings);
                     this._badgeEditorCtrl._Str_15567(this._data.badgeSettings);
                 }
                 this._window.findChildByName("reset_badge").visible = this._data.exists;
             }
-            if (this._step == _Str_7447)
+            if (this._step == VIEW_COLORS)
             {
                 if (!this._data.exists)
                 {
@@ -190,7 +190,7 @@
                 }
                 if (!this._primaryColorCtrl.isInitialized)
                 {
-                    this._primaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_primary_color_selector", this._manager.guildEditorData._Str_17665);
+                    this._primaryColorCtrl._Str_16890(this._Str_15138(VIEW_COLORS), "guild_primary_color_selector", this._manager.guildEditorData._Str_17665);
                     if (this._data.exists)
                     {
                         this._primaryColorCtrl._Str_6434(this._data.primaryColorId);
@@ -202,7 +202,7 @@
                 }
                 if (!this._secondaryColorCtrl.isInitialized)
                 {
-                    this._secondaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_secondary_color_selector", this._manager.guildEditorData._Str_16298);
+                    this._secondaryColorCtrl._Str_16890(this._Str_15138(VIEW_COLORS), "guild_secondary_color_selector", this._manager.guildEditorData._Str_16298);
                     if (this._data.exists)
                     {
                         this._secondaryColorCtrl._Str_6434(this._data.secondaryColorId);
@@ -214,14 +214,14 @@
                 }
                 this._window.findChildByName("reset_colors").visible = this._data.exists;
             }
-            if (this._step == _Str_12047)
+            if (this._step == VIEW_SETTINGS)
             {
                 if (!this._settingsCtrl.isInitialized)
                 {
                     this._settingsCtrl.refresh(this._data);
                 }
             }
-            if (this._step == _Str_7672)
+            if (this._step == VIEW_CONFIRM)
             {
                 if (!this._data.exists)
                 {
@@ -229,7 +229,7 @@
                 }
                 this._Str_24929();
             }
-            if (this._step == _Str_7036)
+            if (this._step == VIEW_IDENTITY)
             {
                 if (!this._data.exists)
                 {
@@ -304,7 +304,7 @@
 
         private function _Str_19668():int
         {
-            return (this._data.exists) ? _Str_17986 : 0;
+            return (this._data.exists) ? EDIT_HEADER_TEXTS_OFFSET : 0;
         }
 
         private function _Str_24568():void
@@ -319,14 +319,14 @@
             this._window.findChildByName("cancel_link_region").visible = (!(this._Str_21710()));
             this._window.findChildByName("buy_border").visible = (!(this._Str_21955()));
             var k:int = 1;
-            while (k <= _Str_7672)
+            while (k <= VIEW_CONFIRM)
             {
                 this._Str_21080(k, false).visible = (!(k == this._step));
                 this._Str_21080(k, true).visible = (k == this._step);
-                this._window.findChildByName(("step_title_" + k)).y = ((k == this._step) ? _Str_17531 : _Str_18421);
+                this._window.findChildByName(("step_title_" + k)).y = ((k == this._step) ? STEP_TITLE_Y_OFFSET_ACTIVE : STEP_TITLE_Y_OFFSET_INACTIVE);
                 k++;
             }
-            this._window.findChildByName("gcreate_icon_credit").y = ((this._step == _Str_7672) ? _Str_17183 : _Str_16376);
+            this._window.findChildByName("gcreate_icon_credit").y = ((this._step == VIEW_CONFIRM) ? STEP_TITLE_CREDIT_Y_OFFSET_ACTIVE : STEP_TITLE_CREDIT_Y_OFFSET_INACTIVE);
         }
 
         private function _Str_21080(k:int, _arg_2:Boolean):IWindow
@@ -354,7 +354,7 @@
         public function onGuildCreationInfo(k:GuildCreationData):void
         {
             this._data = k;
-            this._step = _Str_7036;
+            this._step = VIEW_IDENTITY;
             this._alertedBaseRoomId = 0;
             this.refresh();
             this._Str_9242();
@@ -367,7 +367,7 @@
         public function onGuildEditInfo(k:GuildEditData):void
         {
             this._data = k;
-            this._step = _Str_7036;
+            this._step = VIEW_IDENTITY;
             this._alertedBaseRoomId = 0;
             this.refresh();
             this._Str_9242();
@@ -533,7 +533,7 @@
             var _local_4:RoomEntryData;
             switch (this._step)
             {
-                case _Str_7036:
+                case VIEW_IDENTITY:
                     k = ITextFieldWindow(this._window.findChildByName("name_txt")).text;
                     if (!this._data.exists)
                     {
@@ -550,23 +550,23 @@
                             return false;
                         }
                     }
-                    if (k.length >= _Str_16065)
+                    if (k.length >= MAX_NAME_LENGTH)
                     {
                         this._Str_5104("${group.edit.error.title}", "${group.edit.error.name.length}");
                         return false;
                     }
                     _local_2 = ITextFieldWindow(this._window.findChildByName("desc_txt")).text;
-                    if (((!(_local_2 == null)) && (_local_2.length >= _Str_16824)))
+                    if (((!(_local_2 == null)) && (_local_2.length >= MAX_DESCRIPTION_LENGTH)))
                     {
                         this._Str_5104("${group.edit.error.title}", "${group.edit.error.desc.length}");
                         return false;
                     }
                     return true;
-                case _Str_8727:
+                case VIEW_BADGE:
                     _local_3 = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data.badgeSettings);
                     this._badgeEditorCtrl._Str_23176();
                     return true;
-                case _Str_7447:
+                case VIEW_COLORS:
                     if (((this._primaryColorCtrl._Str_10058() == null) || (this._secondaryColorCtrl._Str_10058() == null)))
                     {
                         this._Str_5104("${group.edit.error.title}", "${group.edit.error.no.color.selected}");
@@ -587,24 +587,24 @@
             var _local_5:int;
             switch (this._step)
             {
-                case _Str_7036:
+                case VIEW_IDENTITY:
                     k = ITextFieldWindow(this._window.findChildByName("name_txt")).text;
                     _local_2 = ITextFieldWindow(this._window.findChildByName("desc_txt")).text;
                     this._manager.send(new _Str_9952(this._data.groupId, k, _local_2));
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
-                case _Str_8727:
+                case VIEW_BADGE:
                     _local_3 = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data.badgeSettings);
                     this._manager.send(new UpdateGuildBadgeMessageComposer(this._data.groupId, _local_3));
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
-                case _Str_7447:
+                case VIEW_COLORS:
                     _local_4 = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data.primaryColorId);
                     _local_5 = ((this._secondaryColorCtrl.isInitialized) ? this._secondaryColorCtrl._Str_15044() : this._data.secondaryColorId);
                     this._manager.send(new _Str_11165(this._data.groupId, _local_4, _local_5));
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
-                case _Str_12047:
+                case VIEW_SETTINGS:
                     this._manager.send(new _Str_10635(this._data.groupId, this._settingsCtrl.guildType, this._settingsCtrl._Str_7959));
                     this._settingsCtrl._Str_15948();
                     return;
@@ -635,7 +635,7 @@
 
         private function _Str_15418(k:int):int
         {
-            return Math.max(1, Math.min(k, _Str_7672));
+            return Math.max(1, Math.min(k, VIEW_CONFIRM));
         }
 
         private function _Str_20262():IDropMenuWindow
