@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7551 implements IMessageComposer 
+    public class OpenQuestTrackerMessageComposer implements IMessageComposer
     {
 
 

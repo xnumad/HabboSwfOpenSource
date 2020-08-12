@@ -4,7 +4,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_7551;
+    import com.sulake.habbo.communication.messages.outgoing.quest.OpenQuestTrackerMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.outgoing.quest.GetQuestsMessageComposer;
@@ -83,7 +83,7 @@
             }
             this._window.visible = false;
             this._questEngine._Str_3398._Str_11417._Str_19749 = this._questEngine.getBoolean("questing.showDetailsForNextQuest");
-            this._questEngine.send(new _Str_7551());
+            this._questEngine.send(new OpenQuestTrackerMessageComposer());
         }
 
         private function _Str_22793(k:WindowEvent, _arg_2:IWindow):void

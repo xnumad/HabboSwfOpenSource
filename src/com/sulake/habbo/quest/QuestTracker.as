@@ -9,7 +9,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_7551;
+    import com.sulake.habbo.communication.messages.outgoing.quest.OpenQuestTrackerMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.quest.StartCampaignMessageComposer;
     import com.sulake.core.window.components.IDesktopWindow;
     import com.sulake.core.window.components.IFrameWindow;
@@ -363,7 +363,7 @@
                         this._trackerAnimationStatus = _Str_5976;
                         if (((this._getNextQuestWhenCompletionAnimationFinishes) && (!(this._forcedCloseRequested))))
                         {
-                            this._questEngine.send(new _Str_7551());
+                            this._questEngine.send(new OpenQuestTrackerMessageComposer());
                         }
                         else
                         {

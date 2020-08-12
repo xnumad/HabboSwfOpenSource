@@ -38,7 +38,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetQuestsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.AcceptQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7541;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7551;
+	import com.sulake.habbo.communication.messages.outgoing.quest.OpenQuestTrackerMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.StartCampaignMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersGoalProgressMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
@@ -1754,7 +1754,7 @@
             OUTGOING_PACKETS[2741] = _Str_7498;
             OUTGOING_PACKETS[2742] = _Str_7827;
             OUTGOING_PACKETS[2746] = _Str_11701;
-            OUTGOING_PACKETS[2750] = _Str_7551;
+            OUTGOING_PACKETS[2750] = OpenQuestTrackerMessageComposer;
             OUTGOING_PACKETS[2752] = CreateFlatMessageComposer;
             OUTGOING_PACKETS[2755] = _Str_11879;
             OUTGOING_PACKETS[2758] = _Str_10157;
