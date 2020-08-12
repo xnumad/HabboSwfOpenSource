@@ -626,7 +626,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.GiveSupplementToPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MountPetMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7716;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetRoomEntryDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetClothingChangeDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MovePetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.PlacePetMessageComposer;
@@ -1687,7 +1687,7 @@
             OUTGOING_PACKETS[229] = _Str_9842;
             OUTGOING_PACKETS[2296] = RoomDimmerChangeStateMessageComposer;
             OUTGOING_PACKETS[230] = CreateGuildMessageComposer;
-            OUTGOING_PACKETS[2300] = _Str_7716;
+            OUTGOING_PACKETS[2300] = GetRoomEntryDataMessageComposer;
             OUTGOING_PACKETS[0x0900] = GetUserSongDisksMessageComposer;
             OUTGOING_PACKETS[2312] = OpenFlatConnectionMessageComposer;
             OUTGOING_PACKETS[0x0909] = SetUIFlagsMessageComposer;

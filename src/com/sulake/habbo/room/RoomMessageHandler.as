@@ -51,7 +51,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10528;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7716;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.GetRoomEntryDataMessageComposer;
     import com.sulake.habbo.communication.messages.parser.room.engine.FurnitureAliasesMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.HeightMapMessageParser;
     import com.sulake.habbo.room.utils.FurniStackingHeightMap;
@@ -267,7 +267,7 @@
             }
             else
             {
-                k.connection.send(new _Str_7716());
+                k.connection.send(new GetRoomEntryDataMessageComposer());
             }
         }
 
@@ -300,7 +300,7 @@
                     }
                 }
             }
-            k.connection.send(new _Str_7716());
+            k.connection.send(new GetRoomEntryDataMessageComposer());
         }
 
         private function onHeightMap(k:IMessageEvent):void
