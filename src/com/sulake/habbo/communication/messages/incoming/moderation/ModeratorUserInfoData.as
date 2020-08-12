@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5467 
+    public class ModeratorUserInfoData
     {
         private var _userId:int;
         private var _userName:String;
@@ -24,7 +24,7 @@
         private var _Str_19116:String = "";
         private var _Str_20729:int = 0;
 
-        public function _Str_5467(k:IMessageDataWrapper)
+        public function ModeratorUserInfoData(k:IMessageDataWrapper)
         {
             this._userId = k.readInteger();
             this._userName = k.readString();

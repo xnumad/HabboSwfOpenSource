@@ -1,9 +1,9 @@
 ﻿package com.sulake.habbo.moderation
 {
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_5467;
+    import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorUserInfoData;
 
     public interface IUserInfoListener 
     {
-        function onUserInfo(_arg_1:_Str_5467):void;
+        function onUserInfo(_arg_1:ModeratorUserInfoData):void;
     }
 }

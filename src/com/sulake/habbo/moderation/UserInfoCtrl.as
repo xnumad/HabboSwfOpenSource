@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_5467;
+    import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorUserInfoData;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7074;
     import com.sulake.core.window.components.ITextWindow;
@@ -23,7 +23,7 @@
         private var _main:ModerationManager;
         private var _userId:int;
         private var _issue:IssueMessageData;
-        private var _data:_Str_5467;
+        private var _data:ModeratorUserInfoData;
         private var _father:IWindowContainer;
         private var _openToolsBelow:Boolean;
         private var _disposed:Boolean;
@@ -75,7 +75,7 @@
             this._main.connection.send(new _Str_7074(_arg_2));
         }
 
-        public function onUserInfo(k:_Str_5467):void
+        public function onUserInfo(k:ModeratorUserInfoData):void
         {
             if (k.userId != this._userId)
             {
