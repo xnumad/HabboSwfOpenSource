@@ -587,7 +587,7 @@
             return getBoolean("activity.point.display.enabled");
         }
 
-        public function get _Str_3058():GuildEditorData
+        public function get guildEditorData():GuildEditorData
         {
             return this._guildEditorData;
         }

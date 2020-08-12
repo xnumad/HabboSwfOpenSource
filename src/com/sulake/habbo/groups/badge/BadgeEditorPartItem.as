@@ -148,7 +148,7 @@
             {
                 return this._image;
             }
-            var _local_2:_Str_2792 = (this._manager._Str_3058._Str_9008[k.colorIndex] as _Str_2792);
+            var _local_2:_Str_2792 = (this._manager.guildEditorData._Str_9008[k.colorIndex] as _Str_2792);
             this._colorTransform.redMultiplier = (_local_2.red / 0xFF);
             this._colorTransform.greenMultiplier = (_local_2.green / 0xFF);
             this._colorTransform.blueMultiplier = (_local_2.blue / 0xFF);

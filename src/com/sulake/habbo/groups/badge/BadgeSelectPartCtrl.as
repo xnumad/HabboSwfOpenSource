@@ -102,13 +102,13 @@
                 return;
             }
             this._badgeBaseParts = new Vector.<BadgeEditorPartItem>();
-            for each (k in this._manager._Str_3058._Str_11328)
+            for each (k in this._manager.guildEditorData._Str_11328)
             {
                 this._badgeBaseParts.push(new BadgeEditorPartItem(this._manager, this, this._badgeBaseParts.length, BadgeEditorPartItem._Str_13754, k));
             }
             this._badgeLayerParts = new Vector.<BadgeEditorPartItem>();
             this._badgeLayerParts.push(new BadgeEditorPartItem(this._manager, this, -1, BadgeEditorPartItem._Str_13419));
-            for each (k in this._manager._Str_3058._Str_12125)
+            for each (k in this._manager.guildEditorData._Str_12125)
             {
                 this._badgeLayerParts.push(new BadgeEditorPartItem(this._manager, this, (this._badgeLayerParts.length - 1), BadgeEditorPartItem._Str_13419, k));
             }

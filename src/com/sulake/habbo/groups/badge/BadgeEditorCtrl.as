@@ -151,7 +151,7 @@
             {
                 this._badgeInitData = _arg_2;
             }
-            if (((((this._parentWindow == null) || (this._badgeInitData == null)) || (this._manager == null)) || (this._manager._Str_3058 == null)))
+            if (((((this._parentWindow == null) || (this._badgeInitData == null)) || (this._manager == null)) || (this._manager.guildEditorData == null)))
             {
                 return;
             }
@@ -211,9 +211,9 @@
             _local_4.colorIndex = 0;
             _local_4._Str_25730(_local_3.position);
             _local_2 = 0;
-            while (_local_2 < this._manager._Str_3058._Str_9008.length)
+            while (_local_2 < this._manager.guildEditorData._Str_9008.length)
             {
-                if (this._manager._Str_3058._Str_9008[_local_2].id == _local_3._Str_25271)
+                if (this._manager.guildEditorData._Str_9008[_local_2].id == _local_3._Str_25271)
                 {
                     _local_4.colorIndex = _local_2;
                     break;
@@ -223,9 +223,9 @@
             if (k == BadgeLayerCtrl._Str_5392)
             {
                 _local_2 = 0;
-                while (_local_2 < this._manager._Str_3058._Str_11328.length)
+                while (_local_2 < this._manager.guildEditorData._Str_11328.length)
                 {
-                    if (this._manager._Str_3058._Str_11328[_local_2].id == _local_3._Str_1502)
+                    if (this._manager.guildEditorData._Str_11328[_local_2].id == _local_3._Str_1502)
                     {
                         _local_4._Str_3324 = _local_2;
                         break;
@@ -236,9 +236,9 @@
             else
             {
                 _local_2 = 0;
-                while (_local_2 < this._manager._Str_3058._Str_12125.length)
+                while (_local_2 < this._manager.guildEditorData._Str_12125.length)
                 {
-                    if (this._manager._Str_3058._Str_12125[_local_2].id == _local_3._Str_1502)
+                    if (this._manager.guildEditorData._Str_12125[_local_2].id == _local_3._Str_1502)
                     {
                         _local_4._Str_3324 = _local_2;
                         break;
@@ -388,26 +388,26 @@
             }
             if (k._Str_3617 == BadgeLayerCtrl._Str_5392)
             {
-                if (k._Str_3324 >= this._manager._Str_3058._Str_11328.length)
+                if (k._Str_3324 >= this._manager.guildEditorData._Str_11328.length)
                 {
                     return -1;
                 }
-                return this._manager._Str_3058._Str_11328[k._Str_3324].id;
+                return this._manager.guildEditorData._Str_11328[k._Str_3324].id;
             }
-            if (k._Str_3324 >= this._manager._Str_3058._Str_12125.length)
+            if (k._Str_3324 >= this._manager.guildEditorData._Str_12125.length)
             {
                 return -1;
             }
-            return this._manager._Str_3058._Str_12125[k._Str_3324].id;
+            return this._manager.guildEditorData._Str_12125[k._Str_3324].id;
         }
 
         private function _Str_21488(k:BadgeLayerOptions):int
         {
-            if (((k.colorIndex < 0) || (k.colorIndex >= this._manager._Str_3058._Str_9008.length)))
+            if (((k.colorIndex < 0) || (k.colorIndex >= this._manager.guildEditorData._Str_9008.length)))
             {
                 return -1;
             }
-            return this._manager._Str_3058._Str_9008[k.colorIndex].id;
+            return this._manager.guildEditorData._Str_9008[k.colorIndex].id;
         }
     }
 }

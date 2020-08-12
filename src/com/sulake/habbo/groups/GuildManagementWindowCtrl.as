@@ -190,26 +190,26 @@
                 }
                 if (!this._primaryColorCtrl.isInitialized)
                 {
-                    this._primaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_primary_color_selector", this._manager._Str_3058._Str_17665);
+                    this._primaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_primary_color_selector", this._manager.guildEditorData._Str_17665);
                     if (this._data.exists)
                     {
                         this._primaryColorCtrl._Str_6434(this._data.primaryColorId);
                     }
                     else
                     {
-                        this._primaryColorCtrl._Str_6434(this._manager._Str_3058.findMatchingPrimaryColorId(this._badgeEditorCtrl._Str_23897));
+                        this._primaryColorCtrl._Str_6434(this._manager.guildEditorData.findMatchingPrimaryColorId(this._badgeEditorCtrl._Str_23897));
                     }
                 }
                 if (!this._secondaryColorCtrl.isInitialized)
                 {
-                    this._secondaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_secondary_color_selector", this._manager._Str_3058._Str_16298);
+                    this._secondaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_secondary_color_selector", this._manager.guildEditorData._Str_16298);
                     if (this._data.exists)
                     {
                         this._secondaryColorCtrl._Str_6434(this._data.secondaryColorId);
                     }
                     else
                     {
-                        this._secondaryColorCtrl._Str_6434(this._manager._Str_3058.findMatchingSecondaryColorId(this._badgeEditorCtrl._Str_24812));
+                        this._secondaryColorCtrl._Str_6434(this._manager.guildEditorData.findMatchingSecondaryColorId(this._badgeEditorCtrl._Str_24812));
                     }
                 }
                 this._window.findChildByName("reset_colors").visible = this._data.exists;
@@ -257,7 +257,7 @@
             var _local_4:IWindow;
             var _local_5:_Str_2792;
             var _local_6:IWindow;
-            if (((this._manager._Str_3058 == null) || (this._window == null)))
+            if (((this._manager.guildEditorData == null) || (this._window == null)))
             {
                 return;
             }
@@ -708,9 +708,9 @@
         {
             var _local_3:_Str_2792;
             var _local_2:IWindow = this._window.findChildByName("guild_color_primary_color_top");
-            if (((((!(_local_2 == null)) && (!(this._manager._Str_3058 == null))) && (k._Str_4246 >= 0)) && (k._Str_4246 <= this._manager._Str_3058._Str_17665.length)))
+            if (((((!(_local_2 == null)) && (!(this._manager.guildEditorData == null))) && (k._Str_4246 >= 0)) && (k._Str_4246 <= this._manager.guildEditorData._Str_17665.length)))
             {
-                _local_3 = this._manager._Str_3058._Str_17665[k._Str_4246];
+                _local_3 = this._manager.guildEditorData._Str_17665[k._Str_4246];
                 _local_2.color = _local_3.color;
             }
         }
@@ -719,9 +719,9 @@
         {
             var _local_3:_Str_2792;
             var _local_2:IWindow = this._window.findChildByName("guild_color_secondary_color_top");
-            if ((((!(this._manager._Str_3058 == null)) && (k._Str_4246 >= 0)) && (k._Str_4246 <= this._manager._Str_3058._Str_16298.length)))
+            if ((((!(this._manager.guildEditorData == null)) && (k._Str_4246 >= 0)) && (k._Str_4246 <= this._manager.guildEditorData._Str_16298.length)))
             {
-                _local_3 = this._manager._Str_3058._Str_16298[k._Str_4246];
+                _local_3 = this._manager.guildEditorData._Str_16298[k._Str_4246];
                 _local_2.color = _local_3.color;
             }
         }

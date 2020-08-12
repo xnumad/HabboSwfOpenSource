@@ -69,7 +69,7 @@
                 this._positionGrid.procedure = this._Str_22712;
             }
             this._colorGridCtrl = new ColorGridCtrl(this._manager, this._Str_24879);
-            this._colorGridCtrl._Str_16890(this._layerWindow, "color_selector", this._manager._Str_3058._Str_9008);
+            this._colorGridCtrl._Str_16890(this._layerWindow, "color_selector", this._manager.guildEditorData._Str_9008);
             if (this._layerOptions._Str_3617 == _Str_5392)
             {
                 k.addListItem(this._layerWindow);
