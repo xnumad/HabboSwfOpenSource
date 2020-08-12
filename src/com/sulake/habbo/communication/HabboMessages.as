@@ -506,7 +506,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWhereMyFriendsAreSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.PopularRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10574;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.GuildBaseSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.CreateFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10878;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetOfficialRoomsMessageComposer;
@@ -1778,7 +1778,7 @@
             OUTGOING_PACKETS[291] = _Str_10003;
             OUTGOING_PACKETS[2912] = _Str_5974;
             OUTGOING_PACKETS[2914] = _Str_10571;
-            OUTGOING_PACKETS[2930] = _Str_10574;
+            OUTGOING_PACKETS[2930] = GuildBaseSearchMessageComposer;
             OUTGOING_PACKETS[2934] = GetPetInfoMessageComposer;
             OUTGOING_PACKETS[2939] = RoomsWithHighestScoreSearchMessageComposer;
             OUTGOING_PACKETS[2941] = PassCarryItemMessageComposer;
