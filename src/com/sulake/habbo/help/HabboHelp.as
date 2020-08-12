@@ -668,7 +668,7 @@
                 case _Str_4786:
                 case _Str_4459:
                 case _Str_4490:
-                    this._callForHelpManager._Str_25017(this._reportType);
+                    this._callForHelpManager.showEmergencyHelpRequest(this._reportType);
                     break;
                 case _Str_15870:
                     this._guideHelpManager.openReportWindow();

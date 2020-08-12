@@ -261,7 +261,7 @@
             this._window.procedure = this._Str_24146;
         }
 
-        public function _Str_25017(k:int):void
+        public function showEmergencyHelpRequest(k:int):void
         {
             var _local_5:ISelectableWindow;
             var _local_6:ISelectableWindow;
