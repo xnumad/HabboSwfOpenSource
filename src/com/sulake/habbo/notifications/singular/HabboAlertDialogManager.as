@@ -20,7 +20,7 @@
             this._habboHelp = _arg_3;
         }
 
-        private static function _Str_4652(k:int):String
+        private static function getTimeZeroPadded(k:int):String
         {
             var _local_2:String = ("0" + String(k));
             return _local_2.substr((_local_2.length - 2), _local_2.length);
@@ -79,8 +79,8 @@
         {
             if (userThrownOutAtClose)
             {
-                this._localization.registerParameter("opening.hours.disconnected", "h", _Str_4652(openHour));
-                this._localization.registerParameter("opening.hours.disconnected", "m", _Str_4652(openMinute));
+                this._localization.registerParameter("opening.hours.disconnected", "h", getTimeZeroPadded(openHour));
+                this._localization.registerParameter("opening.hours.disconnected", "m", getTimeZeroPadded(openMinute));
                 this._windowManager.alert("${opening.hours.title}", "${opening.hours.disconnected}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
@@ -88,8 +88,8 @@
             }
             else
             {
-                this._localization.registerParameter("opening.hours.closed", "h", _Str_4652(openHour));
-                this._localization.registerParameter("opening.hours.closed", "m", _Str_4652(openMinute));
+                this._localization.registerParameter("opening.hours.closed", "h", getTimeZeroPadded(openHour));
+                this._localization.registerParameter("opening.hours.closed", "m", getTimeZeroPadded(openMinute));
                 this._windowManager.alert("${opening.hours.title}", "${opening.hours.closed}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
                 {
                     k.dispose();
@@ -99,8 +99,8 @@
 
         public function _Str_24317(openHour:int, openMinute:int):void
         {
-            this._localization.registerParameter("opening.hours.disconnected", "h", _Str_4652(openHour));
-            this._localization.registerParameter("opening.hours.disconnected", "m", _Str_4652(openMinute));
+            this._localization.registerParameter("opening.hours.disconnected", "h", getTimeZeroPadded(openHour));
+            this._localization.registerParameter("opening.hours.disconnected", "m", getTimeZeroPadded(openMinute));
             this._windowManager.alert("${opening.hours.title}", "${opening.hours.disconnected}", 0, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
