@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12153;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9988;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10157;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10079;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWhereMyFriendsAreSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9889;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4390;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10574;
@@ -625,7 +625,7 @@
                 case Tabs.SEARCHTYPE_POPULAR_ROOMS:
                     return new _Str_10157(_arg_2, this._navigator.data._Str_6357);
                 case Tabs.SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE:
-                    return new _Str_10079();
+                    return new RoomsWhereMyFriendsAreSearchMessageComposer();
                 case Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
                     return new _Str_9889(this._navigator.data._Str_6357);
                 case Tabs.SEARCHTYPE_TAG_SEARCH:

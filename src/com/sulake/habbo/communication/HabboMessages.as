@@ -503,7 +503,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.KickMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.ingame.Game2RequestFullStatusUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.camera.CameraSnapshotMessageEvent;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10079;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWhereMyFriendsAreSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10157;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10574;
@@ -1614,7 +1614,7 @@
             OUTGOING_PACKETS[1764] = UpdateGuildColorsMessageComposer;
             OUTGOING_PACKETS[1773] = PollRejectComposer;
             OUTGOING_PACKETS[1782] = _Str_7413;
-            OUTGOING_PACKETS[1786] = _Str_10079;
+            OUTGOING_PACKETS[1786] = RoomsWhereMyFriendsAreSearchMessageComposer;
             OUTGOING_PACKETS[1820] = DeselectFavouriteHabboGroupMessageComposer;
             OUTGOING_PACKETS[1822] = NewUserExperienceGetGiftsMessageComposer;
             OUTGOING_PACKETS[1826] = _Str_11313;
