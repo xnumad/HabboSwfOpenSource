@@ -73,7 +73,7 @@
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6295;
     import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsSavedMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsSaveErrorMessageParser;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6683;
+    import com.sulake.habbo.communication.messages.parser.navigator.RoomInfoUpdatedMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
     import com.sulake.habbo.communication.messages.parser.navigator.FavouritesMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6561;
@@ -405,7 +405,7 @@
 
         private function _Str_18125(k:IMessageEvent):void
         {
-            var _local_2:_Str_6683 = (k as _Str_5711).getParser();
+            var _local_2:RoomInfoUpdatedMessageParser = (k as _Str_5711).getParser();
             Logger.log(("ROOM UPDATED: " + _local_2.flatId));
             LegacyNavigator(this._navigator.legacyNavigator).send(new GetGuestRoomMessageComposer(_local_2.flatId, false, false));
         }
