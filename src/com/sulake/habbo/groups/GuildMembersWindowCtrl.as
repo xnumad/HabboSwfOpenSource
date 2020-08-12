@@ -29,7 +29,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.communication.messages.outgoing.users.RejectMembershipRequestMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_12026;
+    import com.sulake.habbo.communication.messages.outgoing.users.UnblockGroupMemberMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10517;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_12111;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9949;
@@ -441,7 +441,7 @@
             }
             if (_local_2.blocked)
             {
-                this._manager.send(new _Str_12026(this._data.groupId, _local_2.userId));
+                this._manager.send(new UnblockGroupMemberMessageComposer(this._data.groupId, _local_2.userId));
             }
             else
             {

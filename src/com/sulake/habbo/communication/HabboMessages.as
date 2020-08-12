@@ -480,7 +480,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11544;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditorDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11883;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_12026;
+	import com.sulake.habbo.communication.messages.outgoing.users.UnblockGroupMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12111;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12242;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12283;
@@ -1770,7 +1770,7 @@
             OUTGOING_PACKETS[2814] = DropCarryItemMessageComposer;
             OUTGOING_PACKETS[2850] = SetMannequinNameComposer;
             OUTGOING_PACKETS[286] = GetThreadMessageComposer;
-            OUTGOING_PACKETS[2864] = _Str_12026;
+            OUTGOING_PACKETS[2864] = UnblockGroupMemberMessageComposer;
             OUTGOING_PACKETS[2880] = SetRoomBackgroundColorDataComposer;
             OUTGOING_PACKETS[2890] = DeclineFriendMessageComposer;
             OUTGOING_PACKETS[2894] = _Str_12111;
