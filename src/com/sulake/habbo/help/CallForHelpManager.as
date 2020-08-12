@@ -434,7 +434,7 @@
                         {
                             return;
                         }
-                        this._Str_20589();
+                        this.basicInfoDone();
                         return;
                     case "header_button_close":
                         this.closeWindow();
@@ -519,7 +519,7 @@
             this.refreshUserList();
         }
 
-        private function _Str_20589():void
+        private function basicInfoDone():void
         {
             var k:Boolean = this._Str_23328();
             if (this._reportType == HabboHelp._Str_4315)
@@ -629,7 +629,7 @@
         {
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
-                this._Str_20589();
+                this.basicInfoDone();
             }
             k.dispose();
         }
