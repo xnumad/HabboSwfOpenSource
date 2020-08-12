@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator.PopularRoomsSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWhereMyFriendsAreSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWithHighestScoreSearchMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4390;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.RoomTextSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10574;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9911;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11181;
@@ -629,13 +629,13 @@
                 case Tabs.SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
                     return new RoomsWithHighestScoreSearchMessageComposer(this._navigator.data._Str_6357);
                 case Tabs.SEARCHTYPE_TAG_SEARCH:
-                    return new _Str_4390(("tag:" + _arg_2));
+                    return new RoomTextSearchMessageComposer(("tag:" + _arg_2));
                 case Tabs.SEARCHTYPE_TEXT_SEARCH:
-                    return new _Str_4390(_arg_2);
+                    return new RoomTextSearchMessageComposer(_arg_2);
                 case Tabs.SEARCHTYPE_GROUP_NAME_SEARCH:
-                    return new _Str_4390(("group:" + _arg_2));
+                    return new RoomTextSearchMessageComposer(("group:" + _arg_2));
                 case Tabs.SEARCHTYPE_ROOM_NAME_SEARCH:
-                    return new _Str_4390(("roomname:" + _arg_2));
+                    return new RoomTextSearchMessageComposer(("roomname:" + _arg_2));
                 case Tabs.SEARCHTYPE_GUILD_BASES:
                     return new _Str_10574(this._navigator.data._Str_6357);
                 case Tabs.SEARCHTYPE_COMPETITION_ROOMS:
@@ -649,7 +649,7 @@
                 case Tabs.SEARCHTYPE_MY_GUILD_BASES:
                     return new _Str_9844();
                 case Tabs.SEARCHTYPE_BY_OWNER:
-                    return new _Str_4390(("owner:" + _arg_2));
+                    return new RoomTextSearchMessageComposer(("owner:" + _arg_2));
                 case Tabs.SEARCHTYPE_RECOMMENDED_ROOMS:
                     return new _Str_9807();
                 case Tabs.SEARCHTYPE_FREQUENT_HISTORY:

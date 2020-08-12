@@ -525,7 +525,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_17077;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_18849;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4390;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomTextSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7214;
@@ -1914,7 +1914,7 @@
             OUTGOING_PACKETS[3899] = _Str_11187;
             OUTGOING_PACKETS[39] = _Str_9844;
             OUTGOING_PACKETS[3900] = _Str_9897;
-            OUTGOING_PACKETS[3943] = _Str_4390;
+            OUTGOING_PACKETS[3943] = RoomTextSearchMessageComposer;
             OUTGOING_PACKETS[3950] = _Str_7887;
             OUTGOING_PACKETS[3959] = PhotoCompetitionMessageComposer;
             OUTGOING_PACKETS[3961] = _Str_5876;
