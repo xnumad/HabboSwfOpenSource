@@ -615,7 +615,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemovePetFromFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.CompostPlantMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveSaddleFromPetMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12057;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveWallItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetRidingPermissionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.TogglePetBreedingPermissionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.UseWallItemMessageComposer;
@@ -1599,7 +1599,7 @@
             OUTGOING_PACKETS[1644] = LetUserInMessageComposer;
             OUTGOING_PACKETS[1648] = RoomDimmerSavePresetMessageComposer;
             OUTGOING_PACKETS[1667] = _Str_10101;
-            OUTGOING_PACKETS[168] = _Str_12057;
+            OUTGOING_PACKETS[168] = MoveWallItemMessageComposer;
             OUTGOING_PACKETS[1681] = _Str_10432;
             OUTGOING_PACKETS[1687] = _Str_7023;
             OUTGOING_PACKETS[1689] = RemoveFriendMessageComposer;

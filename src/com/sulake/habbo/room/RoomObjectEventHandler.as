@@ -65,7 +65,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7684;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_9462;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_12057;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveWallItemMessageComposer;
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedOnUserEvent;
     import com.sulake.habbo.window.enum._Str_3023;
     import com.sulake.habbo.room.enum.RoomObjectPlacementSource;
@@ -2206,7 +2206,7 @@
                                         _local_15 = _local_14.getOldLocationString(_local_5.getLocation(), _local_8);
                                         if (_local_15 != null)
                                         {
-                                            this._roomEngine.connection.send(new _Str_12057(_arg_2, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM, _local_15));
+                                            this._roomEngine.connection.send(new MoveWallItemMessageComposer(_arg_2, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM, _local_15));
                                         }
                                     }
                                 }
