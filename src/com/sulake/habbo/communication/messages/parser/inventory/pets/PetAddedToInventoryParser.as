@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8182 implements IMessageParser 
+    public class PetAddedToInventoryParser implements IMessageParser
     {
         private var _pet:Pet;
         private var _Str_12302:Boolean;

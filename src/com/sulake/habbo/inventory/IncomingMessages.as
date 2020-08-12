@@ -96,7 +96,7 @@
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.inventory.pets.PetsModel;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetInventoryMessageParser;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_8182;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.PetAddedToInventoryParser;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.GoToBreedingNestFailureParser;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetRemovedFromInventoryParser;
     import com.sulake.habbo.inventory.bots.BotsModel;
@@ -760,7 +760,7 @@
             {
                 return;
             }
-            var _local_3:_Str_8182 = k.getParser();
+            var _local_3:PetAddedToInventoryParser = k.getParser();
             _local_2._Str_9947(_local_3.pet);
             if (_local_3._Str_19947())
             {
