@@ -754,7 +754,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModToolPreferencesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModKickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.GetUserChatlogMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12129;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.GetModeratorRoomInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModerateRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModTradingLockMessageComposer;
@@ -1948,7 +1948,7 @@
             OUTGOING_PACKETS[654] = _Str_11321;
             OUTGOING_PACKETS[66] = WelcomeGiftChangeEmailComposer;
             OUTGOING_PACKETS[685] = GoToFlatMessageComposer;
-            OUTGOING_PACKETS[707] = _Str_12129;
+            OUTGOING_PACKETS[707] = GetModeratorRoomInfoMessageComposer;
             OUTGOING_PACKETS[711] = RequestRoomPropertySet;
             OUTGOING_PACKETS[722] = RemoveAdminRightsFromMemberMessageComposer;
             OUTGOING_PACKETS[741] = _Str_7312;

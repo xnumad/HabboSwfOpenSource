@@ -9,7 +9,7 @@
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12129;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.GetModeratorRoomInfoMessageComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.IButtonWindow;
@@ -89,7 +89,7 @@
             this._roomDataPrototype = (_local_2.findChildByName("room_data") as IWindowContainer);
             _local_2.removeChild(this._roomDataPrototype);
             this._main.moderationMessageHandler.addRoomInfoListener(this);
-            this._main.connection.send(new _Str_12129(this._flatId));
+            this._main.connection.send(new GetModeratorRoomInfoMessageComposer(this._flatId));
             Logger.log(("BEGINNING TO SHOW: " + this._flatId));
         }
 
