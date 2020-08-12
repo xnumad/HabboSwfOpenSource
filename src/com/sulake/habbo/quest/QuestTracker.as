@@ -126,7 +126,7 @@
             {
                 return;
             }
-            var _local_2:String = this._Str_20331();
+            var _local_2:String = this.getDefaultCampaign();
             if ((((this._startQuestTimer == null) && (k)) && (!(_local_2 == ""))))
             {
                 _local_3 = this._questEngine.getInteger("questing.startQuestDelayInSeconds", 30);
@@ -424,11 +424,11 @@
             else
             {
                 this._questEngine._Str_3398._Str_11417._Str_19749 = this._questEngine.getBoolean("questing.showDetailsForNextQuest");
-                this._questEngine.send(new _Str_7568(this._Str_20331()));
+                this._questEngine.send(new _Str_7568(this.getDefaultCampaign()));
             }
         }
 
-        private function _Str_20331():String
+        private function getDefaultCampaign():String
         {
             var k:String = this._questEngine.getProperty("questing.defaultCampaign");
             return (k == null) ? "" : k;
