@@ -180,7 +180,7 @@
             var _local_2:IHabboQuestEngine = this._widget.handler._Str_6647.questEngine;
             if (_local_2 != null)
             {
-                k = _local_2._Str_13119("explore", "ACH_CameraPhotoCount");
+                k = _local_2.getAchievementLevel("explore", "ACH_CameraPhotoCount");
             }
             var _local_4:Map = CameraEffect._Str_6532(this._widget.component.getProperty("camera.available.effects"), this._widget.localizations);
             for each (_local_5 in _local_4)

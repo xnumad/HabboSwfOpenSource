@@ -754,7 +754,7 @@
             return isSkipped;
         }
 
-        public function _Str_13119(k:String, _arg_2:String):int
+        public function getAchievementLevel(k:String, _arg_2:String):int
         {
             var _local_3:AchievementCategory;
             var _local_4:Achievement;

@@ -9,7 +9,7 @@
         function ensureAchievementsInitialized():void;
         function showAchievements():void;
         function showQuests():void;
-        function _Str_13119(_arg_1:String, _arg_2:String):int;
+        function getAchievementLevel(_arg_1:String, _arg_2:String):int;
         function reenableRoomCompetitionWindow():void;
         function _Str_9649():void;
         function _Str_18428():void;

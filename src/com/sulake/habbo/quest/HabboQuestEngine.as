@@ -466,11 +466,11 @@
         {
         }
 
-        public function _Str_13119(k:String, _arg_2:String):int
+        public function getAchievementLevel(k:String, _arg_2:String):int
         {
             if (this._achievementController != null)
             {
-                return this._achievementController._Str_13119(k, _arg_2);
+                return this._achievementController.getAchievementLevel(k, _arg_2);
             }
             return 0;
         }
