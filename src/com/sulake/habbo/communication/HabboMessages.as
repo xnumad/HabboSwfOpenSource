@@ -193,7 +193,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetSongInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11631;
 	import com.sulake.habbo.communication.messages.outgoing.sound.GetUserSongDisksMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.sound._Str_11834;
+	import com.sulake.habbo.communication.messages.outgoing.sound.RemoveJukeboxDiskComposer;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_15952;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_16258;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_16653;
@@ -1794,7 +1794,7 @@
             OUTGOING_PACKETS[3005] = _Str_5009;
             OUTGOING_PACKETS[3027] = _Str_8102;
             OUTGOING_PACKETS[3045] = UpdateThreadMessageComposer;
-            OUTGOING_PACKETS[3050] = _Str_11834;
+            OUTGOING_PACKETS[3050] = RemoveJukeboxDiskComposer;
             OUTGOING_PACKETS[3060] = _Str_7634;
             OUTGOING_PACKETS[3074] = _Str_12509;
             OUTGOING_PACKETS[3077] = RequestABadgeComposer;

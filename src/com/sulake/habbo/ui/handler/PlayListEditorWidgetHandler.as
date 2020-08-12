@@ -20,7 +20,7 @@
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.UseFurnitureMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.sound.AddJukeboxDiskComposer;
-    import com.sulake.habbo.communication.messages.outgoing.sound._Str_11834;
+    import com.sulake.habbo.communication.messages.outgoing.sound.RemoveJukeboxDiskComposer;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.room.events.RoomObjectSoundMachineEvent;
@@ -156,7 +156,7 @@
                     _local_5 = (k as RoomWidgetPlayListModificationMessage);
                     if (this._connection != null)
                     {
-                        this._connection.send(new _Str_11834(_local_5._Str_20440));
+                        this._connection.send(new RemoveJukeboxDiskComposer(_local_5._Str_20440));
                     }
                     break;
                 case RoomWidgetPlayListPlayStateMessage.RWPLPS_TOGGLE_PLAY_PAUSE:
