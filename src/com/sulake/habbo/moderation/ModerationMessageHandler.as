@@ -180,7 +180,7 @@
             {
                 return;
             }
-            this._moderationManager.issueManager._Str_11063(_local_2._Str_2869);
+            this._moderationManager.issueManager.removeIssue(_local_2._Str_2869);
         }
 
         private function onUserInfo(k:_Str_9413):void

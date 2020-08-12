@@ -193,7 +193,7 @@
                     }
                     else
                     {
-                        _local_3._Str_11063(k._Str_2869);
+                        _local_3.removeIssue(k._Str_2869);
                         if (_local_3._Str_20055() == 0)
                         {
                             this._bundles.remove(_local_3.id);
@@ -312,7 +312,7 @@
             this._modActionViews.remove(k);
         }
 
-        public function _Str_11063(k:int):void
+        public function removeIssue(k:int):void
         {
             var _local_3:IssueBundle;
             if (this._issues == null)
@@ -325,7 +325,7 @@
                 _local_3 = (this._bundles.getValue(_local_2) as IssueBundle);
                 if (_local_3 != null)
                 {
-                    _local_3._Str_11063(k);
+                    _local_3.removeIssue(k);
                     if (_local_3._Str_20055() == 0)
                     {
                         this._bundles.remove(_local_3.id);

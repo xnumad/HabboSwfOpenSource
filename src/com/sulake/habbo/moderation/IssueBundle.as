@@ -89,7 +89,7 @@
 
         public function _Str_12118(k:IssueMessageData):void
         {
-            this._Str_11063(k._Str_2869);
+            this.removeIssue(k._Str_2869);
             this._Str_20388(k);
         }
 
@@ -109,7 +109,7 @@
             this._Str_5216();
         }
 
-        public function _Str_11063(k:int):IssueMessageData
+        public function removeIssue(k:int):IssueMessageData
         {
             var _local_2:IssueMessageData = (this._issues.remove(k) as IssueMessageData);
             if (_local_2 != null)
