@@ -749,7 +749,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator.CloseIssuesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.PickIssuesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ReleaseIssuesMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10092;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomVisitsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.DefaultSanctionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModToolPreferencesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModKickMessageComposer;
@@ -1869,7 +1869,7 @@
             OUTGOING_PACKETS[3498] = GetSoundMachinePlayListMessageComposer;
             OUTGOING_PACKETS[3500] = RequestFurniInventoryWhenNotInRoomComposer;
             OUTGOING_PACKETS[3505] = PollAnswerComposer;
-            OUTGOING_PACKETS[3526] = _Str_10092;
+            OUTGOING_PACKETS[3526] = GetRoomVisitsMessageComposer;
             OUTGOING_PACKETS[3529] = PostMessageMessageComposer;
             OUTGOING_PACKETS[3536] = CommunityGoalVoteMessageComposer;
             OUTGOING_PACKETS[3549] = SelectFavouriteHabboGroupMessageComposer;

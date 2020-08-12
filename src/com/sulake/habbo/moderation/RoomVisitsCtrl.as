@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindowContainer;
     import flash.utils.Timer;
     import flash.events.TimerEvent;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10092;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomVisitsMessageComposer;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsData;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_6952;
@@ -58,7 +58,7 @@
             this._resizeTimer = new Timer(300, 1);
             this._resizeTimer.addEventListener(TimerEvent.TIMER, this._Str_3774);
             this._main.moderationMessageHandler.addRoomVisitsListener(this);
-            this._main.connection.send(new _Str_10092(this._userId));
+            this._main.connection.send(new GetRoomVisitsMessageComposer(this._userId));
             this._frame = IFrameWindow(this._main.getXmlWindow("roomvisits_frame"));
             this._list = IItemListWindow(this._frame.findChildByName("visits_list"));
             this._row = (this._list.getListItemAt(0) as IWindowContainer);
