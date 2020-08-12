@@ -135,7 +135,7 @@
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9862;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10231;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_12242;
+    import com.sulake.habbo.communication.messages.outgoing.users.ApproveNameMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11638;
     import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11776;
     import com.sulake.habbo.communication.messages.outgoing.recycler._Str_12504;
@@ -828,7 +828,7 @@
 
         public function approveName(k:String, _arg_2:int):void
         {
-            this.send(new _Str_12242(k, _arg_2));
+            this.send(new ApproveNameMessageComposer(k, _arg_2));
         }
 
         public function getRecyclerStatus():void

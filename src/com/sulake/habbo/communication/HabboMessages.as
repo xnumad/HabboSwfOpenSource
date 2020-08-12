@@ -482,7 +482,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.DeselectFavouriteHabboGroupMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UnblockGroupMemberMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.AddAdminRightsToMemberMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_12242;
+	import com.sulake.habbo.communication.messages.outgoing.users.ApproveNameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12283;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
@@ -1654,7 +1654,7 @@
             OUTGOING_PACKETS[21] = _Str_10770;
             OUTGOING_PACKETS[210] = UseWallItemMessageComposer;
             OUTGOING_PACKETS[2105] = _Str_9940;
-            OUTGOING_PACKETS[2109] = _Str_12242;
+            OUTGOING_PACKETS[2109] = ApproveNameMessageComposer;
             OUTGOING_PACKETS[211] = _Str_7268;
             OUTGOING_PACKETS[2110] = _Str_10484;
             OUTGOING_PACKETS[2115] = ExtendRentOrBuyoutStripItemMessageComposer;
