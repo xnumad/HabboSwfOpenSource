@@ -156,7 +156,7 @@
             return this._container == null;
         }
 
-        public function _Str_19594(k:int, _arg_2:String):void
+        public function selectPlaylist(k:int, _arg_2:String):void
         {
             this._container.connection.send(new _Str_9987(k, _arg_2));
         }

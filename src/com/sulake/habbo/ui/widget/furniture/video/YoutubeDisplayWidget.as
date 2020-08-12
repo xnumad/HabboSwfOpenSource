@@ -253,13 +253,13 @@
                                 if (this._selectedItem == _arg_2)
                                 {
                                     this._selectedItem = null;
-                                    this.ownHandler._Str_19594(this._roomObject.getId(), "");
+                                    this.ownHandler.selectPlaylist(this._roomObject.getId(), "");
                                 }
                                 else
                                 {
                                     this._selectedItem = (_arg_2 as IWindowContainer);
                                     this._selectedItem.findChildByName("item_background").color = _Str_13698;
-                                    this.ownHandler._Str_19594(this._roomObject.getId(), this._selectedItem.name);
+                                    this.ownHandler.selectPlaylist(this._roomObject.getId(), this._selectedItem.name);
                                 }
                                 this._Str_2771();
                             }
