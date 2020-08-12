@@ -6,7 +6,7 @@
     public class NavigatorSettingsMessageParser implements IMessageParser
     {
         private var _Str_7066:int;
-        private var _Str_8048:int;
+        private var _roomIdToEnter:int;
 
 
         public function flush():Boolean
@@ -17,7 +17,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._Str_7066 = k.readInteger();
-            this._Str_8048 = k.readInteger();
+            this._roomIdToEnter = k.readInteger();
             return true;
         }
 
@@ -28,7 +28,7 @@
 
         public function get _Str_17213():int
         {
-            return this._Str_8048;
+            return this._roomIdToEnter;
         }
     }
 }
