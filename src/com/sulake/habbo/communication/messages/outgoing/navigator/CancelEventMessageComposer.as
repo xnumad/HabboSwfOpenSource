@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11893 implements IMessageComposer 
+    public class CancelEventMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_11893(k:int)
+        public function CancelEventMessageComposer(k:int)
         {
             this._array = new Array();
             super();

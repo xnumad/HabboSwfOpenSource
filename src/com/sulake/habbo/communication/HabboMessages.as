@@ -517,7 +517,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.ToggleStaffPickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdEventTabAdClickedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11858;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11893;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.CancelEventMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12081;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomRightsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomHistorySearchMessageComposer;
@@ -1747,7 +1747,7 @@
             OUTGOING_PACKETS[2717] = CloseIssueDefaultActionMessageComposer;
             OUTGOING_PACKETS[272] = MyRoomRightsSearchMessageComposer;
             OUTGOING_PACKETS[2721] = _Str_10410;
-            OUTGOING_PACKETS[2725] = _Str_11893;
+            OUTGOING_PACKETS[2725] = CancelEventMessageComposer;
             OUTGOING_PACKETS[273] = GetCreditsInfoComposer;
             OUTGOING_PACKETS[2730] = UpdateFigureDataMessageComposer;
             OUTGOING_PACKETS[2735] = _Str_10123;

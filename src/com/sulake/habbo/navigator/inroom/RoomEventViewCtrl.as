@@ -8,7 +8,7 @@
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9806;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11893;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.CancelEventMessageComposer;
     import com.sulake.habbo.communication.messages.parser.advertisement.RoomAdErrorMessageParser;
     import com.sulake.habbo.communication.messages.incoming.advertisement.RoomAdErrorEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -103,7 +103,7 @@
 
         private function onEndButtonClick(k:WindowEvent):void
         {
-            this._navigator.send(new _Str_11893(this._navigator.data.roomEventData.adId));
+            this._navigator.send(new CancelEventMessageComposer(this._navigator.data.roomEventData.adId));
             this.close();
         }
 
