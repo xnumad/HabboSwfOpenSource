@@ -11,7 +11,7 @@
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.habbo.avatar.IAvatarRenderManager;
     import com.sulake.core.communication.connection.IConnection;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.bots._Str_10971;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.bots.GetBotInventoryComposer;
     import com.sulake.habbo.communication.messages.parser.inventory.bots.BotData;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import flash.events.Event;
@@ -111,7 +111,7 @@
             {
                 return;
             }
-            k.send(new _Str_10971());
+            k.send(new GetBotInventoryComposer());
         }
 
         public function get items():Map

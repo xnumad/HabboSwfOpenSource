@@ -452,7 +452,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectsDataUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemRemoveMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectDataUpdateMessageEvent;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.bots._Str_10971;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.bots.GetBotInventoryComposer;
 	import com.sulake.habbo.communication.messages.outgoing.mysterybox.MysteryBoxWaitingCanceledMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendfurni.FriendFurniConfirmLockMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomdirectory.RoomNetworkOpenConnectionMessageComposer;
@@ -1904,7 +1904,7 @@
             OUTGOING_PACKETS[3842] = _Str_5691;
             OUTGOING_PACKETS[3845] = _Str_12206;
             OUTGOING_PACKETS[3847] = LagWarningReportMessageComposer;
-            OUTGOING_PACKETS[3848] = _Str_10971;
+            OUTGOING_PACKETS[3848] = GetBotInventoryComposer;
             OUTGOING_PACKETS[3863] = _Str_11093;
             OUTGOING_PACKETS[3872] = GetConcurrentUsersRewardMessageComposer;
             OUTGOING_PACKETS[3878] = GetIgnoredUsersMessageComposer;
