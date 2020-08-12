@@ -395,7 +395,7 @@
             this._navigator.performTagSearch(_local_4);
         }
 
-        public function _Str_20111():Boolean
+        public function hasQuestRoomsIds():Boolean
         {
             var k:String = this.getQuestRoomIds();
             return (!(k == null)) && (!(k == ""));
@@ -408,7 +408,7 @@
 
         public function goToQuestRooms():void
         {
-            if (!this._Str_20111())
+            if (!this.hasQuestRoomsIds())
             {
                 return;
             }

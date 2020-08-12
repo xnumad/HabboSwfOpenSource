@@ -178,7 +178,7 @@
 
         private function _Str_24222():Boolean
         {
-            return ((this._quest._Str_3935 < 1) && (this._questEngine._Str_7575(this._quest))) && (this._questEngine._Str_20111());
+            return ((this._quest._Str_3935 < 1) && (this._questEngine._Str_7575(this._quest))) && (this._questEngine.hasQuestRoomsIds());
         }
 
         private function _Str_21971(k:ITextWindow):int
