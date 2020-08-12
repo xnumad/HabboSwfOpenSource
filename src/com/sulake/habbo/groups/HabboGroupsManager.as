@@ -163,7 +163,7 @@
         override protected function initComponent():void
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new ExtendedProfileMessageEvent(this._Str_24027));
+            this.addMessageEvent(new ExtendedProfileMessageEvent(this.onExtendedProfile));
             this.addMessageEvent(new GuildEditFailedMessageEvent(this._Str_25256));
             this.addMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
             this.addMessageEvent(new HabboGroupJoinFailedMessageEvent(this._Str_25665));
@@ -329,7 +329,7 @@
             this._groupRoomInfoCtrl.onGroupDetails(_local_2);
         }
 
-        private function _Str_24027(k:IMessageEvent):void
+        private function onExtendedProfile(k:IMessageEvent):void
         {
             var _local_2:ExtendedProfileData = ExtendedProfileMessageEvent(k).data;
             if (_local_2.openProfileWindow)
