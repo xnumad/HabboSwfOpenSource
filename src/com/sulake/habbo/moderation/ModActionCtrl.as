@@ -57,7 +57,7 @@
                 _Str_3610.push(new ModActionDefinition(7, "Ban 30 days (step 2)", ModActionDefinition.BAN, 7, 0));
                 _Str_3610.push(new ModActionDefinition(6, "Ban 100 years", ModActionDefinition.BAN, 6, 0));
                 _Str_3610.push(new ModActionDefinition(106, "Ban avatar-only 100 years", ModActionDefinition.BAN, 6, 0));
-                _Str_3610.push(new ModActionDefinition(101, "Kick", ModActionDefinition._Str_13808, 0, 0));
+                _Str_3610.push(new ModActionDefinition(101, "Kick", ModActionDefinition.KICK, 0, 0));
                 _Str_3610.push(new ModActionDefinition(102, "Lock trade 1 week", ModActionDefinition._Str_10699, 0, 168));
                 _Str_3610.push(new ModActionDefinition(104, "Lock trade permanent", ModActionDefinition._Str_10699, 0, 876000));
                 _Str_3610.push(new ModActionDefinition(105, "Message", ModActionDefinition.MESSAGE, 0, 0));
@@ -290,7 +290,7 @@
                     _local_5 = (_local_4.actionId == 106);
                     this._Str_2327.connection.send(new _Str_4767(this._Str_4127, this._Str_3121.text, _local_3, _local_4._Str_22995, _local_5, this._Str_7121()));
                     break;
-                case ModActionDefinition._Str_13808:
+                case ModActionDefinition.KICK:
                     if (!this._Str_2327.initMsg._Str_20397)
                     {
                         this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this.onAlertClose);
