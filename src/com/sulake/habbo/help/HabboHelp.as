@@ -207,7 +207,7 @@
             {
                 this._callForHelpManager._Str_3469 = this._currentRoomId;
                 this._callForHelpManager.reportedUserId = k;
-                this._callForHelpManager._Str_5842 = _arg_2;
+                this._callForHelpManager.reportedUserName = _arg_2;
                 this._callForHelpManager._Str_10658 = _arg_4;
                 this._callForHelpManager._Str_11455 = _arg_3;
                 this._topicsFlowHelpController._Str_15173(HabboHelp._Str_7161);
@@ -223,7 +223,7 @@
         public function _Str_25290(k:int, _arg_2:String):void
         {
             this._callForHelpManager.reportedUserId = k;
-            this._callForHelpManager._Str_5842 = _arg_2;
+            this._callForHelpManager.reportedUserName = _arg_2;
             this._callForHelpManager._Str_3469 = -1;
             this._topicsFlowHelpController._Str_24232();
         }
@@ -244,7 +244,7 @@
                 this._callForHelpManager._Str_3469 = k;
                 this._callForHelpManager._Str_16366 = _arg_2;
                 this._callForHelpManager.reportedUserId = -1;
-                this._callForHelpManager._Str_5842 = "";
+                this._callForHelpManager.reportedUserName = "";
                 this._topicsFlowHelpController._Str_15173(_Str_4786);
             }
         }
@@ -784,9 +784,9 @@
             return this._callForHelpManager.reportedUserId;
         }
 
-        public function get _Str_5842():String
+        public function get reportedUserName():String
         {
-            return this._callForHelpManager._Str_5842;
+            return this._callForHelpManager.reportedUserName;
         }
 
         public function get _Str_3469():int

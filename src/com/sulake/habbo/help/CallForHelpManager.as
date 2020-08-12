@@ -105,7 +105,7 @@
             return this._reportedUserId;
         }
 
-        public function get _Str_5842():String
+        public function get reportedUserName():String
         {
             return this._reportedUserName;
         }
@@ -150,7 +150,7 @@
             this._reportedUserId = k;
         }
 
-        public function set _Str_5842(k:String):void
+        public function set reportedUserName(k:String):void
         {
             this._reportedUserName = k;
         }

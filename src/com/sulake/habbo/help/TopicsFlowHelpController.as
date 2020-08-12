@@ -812,7 +812,7 @@
                         else
                         {
                             this._view.findChildByName("reported_user_avatar").visible = false;
-                            this._reportedUserName = this._habboHelp._Str_5842;
+                            this._reportedUserName = this._habboHelp.reportedUserName;
                         }
                         this._view.findChildByName("reported_user_name").caption = this._reportedUserName;
                     }

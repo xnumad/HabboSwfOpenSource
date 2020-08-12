@@ -122,7 +122,7 @@
                 {
                     if (_local_10.reportedUserId != 0)
                     {
-                        _local_6.caption = _local_10._Str_5842;
+                        _local_6.caption = _local_10.reportedUserName;
                     }
                     else
                     {

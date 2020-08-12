@@ -99,7 +99,7 @@
             return this._Str_2797;
         }
 
-        public function get _Str_5842():String
+        public function get reportedUserName():String
         {
             return this._Str_5502;
         }
