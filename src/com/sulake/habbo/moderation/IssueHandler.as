@@ -15,7 +15,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7268;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11384;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModToolPreferencesComposer;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpTopicData;
 
@@ -213,7 +213,7 @@
             this._lastWindowWidth = this._window.width;
             this._lastWindowHeight = this._window.height;
             this._moderationManager.issueManager.setToolPreferences(this._lastWindowX, this._lastWindowY, this._lastWindowWidth, this._lastWindowHeight);
-            this._moderationManager.connection.send(new _Str_11384(this._lastWindowX, this._lastWindowY, this._lastWindowWidth, this._lastWindowHeight));
+            this._moderationManager.connection.send(new ModToolPreferencesComposer(this._lastWindowX, this._lastWindowY, this._lastWindowWidth, this._lastWindowHeight));
         }
 
         private function _Str_25789():Boolean

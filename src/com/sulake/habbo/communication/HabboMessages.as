@@ -751,7 +751,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ReleaseIssuesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10092;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10432;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11384;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.ModToolPreferencesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11592;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11910;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12129;
@@ -1803,7 +1803,7 @@
             OUTGOING_PACKETS[309] = DeleteFavouriteRoomMessageComposer;
             OUTGOING_PACKETS[3093] = ChangeQueueMessageComposer;
             OUTGOING_PACKETS[3095] = _Str_10323;
-            OUTGOING_PACKETS[31] = _Str_11384;
+            OUTGOING_PACKETS[31] = ModToolPreferencesComposer;
             OUTGOING_PACKETS[3107] = _Str_8008;
             OUTGOING_PACKETS[3110] = InitDiffieHandshakeMessageComposer;
             OUTGOING_PACKETS[3115] = CreditFurniRedeemMessageComposer;
