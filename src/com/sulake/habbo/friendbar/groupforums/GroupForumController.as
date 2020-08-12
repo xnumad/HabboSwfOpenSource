@@ -221,7 +221,7 @@
             {
                 return;
             }
-            this._Str_21628(k);
+            this.initForum(k);
             this._Str_14770(k, 0);
         }
 
@@ -286,7 +286,7 @@
                     {
                         _local_6 = _local_2[3];
                     }
-                    this._Str_21628(_local_4);
+                    this.initForum(_local_4);
                     this._communicationManager.connection.send(new _Str_9897(_local_4, _local_5));
                     this._Str_20033(_local_4, _local_5, _local_6);
                 }
@@ -325,7 +325,7 @@
             this._mainView._Str_12395(this._forumsListData);
         }
 
-        private function _Str_21628(k:int):void
+        private function initForum(k:int):void
         {
             this._Str_13365();
             this._requestedForumsListCode = _Str_9418;
