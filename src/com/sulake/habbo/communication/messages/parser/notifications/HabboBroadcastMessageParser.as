@@ -5,7 +5,7 @@
 
     public class HabboBroadcastMessageParser implements IMessageParser
     {
-        private var _Str_2992:String = "";
+        private var _messageText:String = "";
 
 
         public function flush():Boolean
@@ -15,13 +15,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2992 = k.readString();
+            this._messageText = k.readString();
             return true;
         }
 
         public function get _Str_3460():String
         {
-            return this._Str_2992;
+            return this._messageText;
         }
     }
 }

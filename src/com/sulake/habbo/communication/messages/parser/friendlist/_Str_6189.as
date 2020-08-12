@@ -6,7 +6,7 @@
     public class _Str_6189 implements IMessageParser 
     {
         private var _senderId:int;
-        private var _Str_2992:String;
+        private var _messageText:String;
         private var _Str_12466:int;
         private var _extraData:String;
 
@@ -19,7 +19,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._senderId = k.readInteger();
-            this._Str_2992 = k.readString();
+            this._messageText = k.readString();
             this._Str_12466 = k.readInteger();
             if (k.bytesAvailable)
             {
@@ -35,7 +35,7 @@
 
         public function get _Str_3460():String
         {
-            return this._Str_2992;
+            return this._messageText;
         }
 
         public function get _Str_17201():int

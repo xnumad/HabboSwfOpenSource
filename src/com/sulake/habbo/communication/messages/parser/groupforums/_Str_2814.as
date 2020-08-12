@@ -10,7 +10,7 @@
         private var _Str_21082:int;
         private var _threadId:int;
         private var _creationTime:int;
-        private var _Str_2992:String;
+        private var _messageText:String;
         private var _Str_20600:String;
         private var _Str_21796:String;
         private var _state:int;
@@ -181,12 +181,12 @@
 
         public function get _Str_3460():String
         {
-            return this._Str_2992;
+            return this._messageText;
         }
 
         public function set _Str_3460(k:String):void
         {
-            this._Str_2992 = k;
+            this._messageText = k;
         }
 
         public function get _Str_17584():int
