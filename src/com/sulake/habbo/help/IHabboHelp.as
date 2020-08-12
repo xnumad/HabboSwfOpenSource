@@ -8,7 +8,7 @@
         function requestGuide():void;
         function get events():IEventDispatcher;
         function reportBully(_arg_1:int):void;
-        function _Str_21718(_arg_1:int, _arg_2:String, _arg_3:String, _arg_4:int):void;
+        function startPhotoReportingInNewCfhFlow(_arg_1:int, _arg_2:String, _arg_3:String, _arg_4:int):void;
         function reportUser(_arg_1:int, _arg_2:int, _arg_3:String):void;
         function _Str_25290(_arg_1:int, _arg_2:String):void;
         function reportUserFromIM(_arg_1:int):void;

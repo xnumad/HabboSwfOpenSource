@@ -201,7 +201,7 @@
             }
         }
 
-        public function _Str_21718(k:int, _arg_2:String, _arg_3:String, _arg_4:int):void
+        public function startPhotoReportingInNewCfhFlow(k:int, _arg_2:String, _arg_3:String, _arg_4:int):void
         {
             if (this._callForHelpManager != null)
             {

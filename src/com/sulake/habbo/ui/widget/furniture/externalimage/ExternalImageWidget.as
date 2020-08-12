@@ -603,7 +603,7 @@
 
         private function openReportImage():void
         {
-            this._help._Str_21718(this._senderId, this._senderNameText.caption, this._extraDataID, this._roomObjectID);
+            this._help.startPhotoReportingInNewCfhFlow(this._senderId, this._senderNameText.caption, this._extraDataID, this._roomObjectID);
         }
 
         private function getType():String
