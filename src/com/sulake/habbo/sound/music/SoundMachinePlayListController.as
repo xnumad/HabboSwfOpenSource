@@ -168,7 +168,7 @@
                 _local_2 = this._Str_20355();
                 if (_local_2 != null)
                 {
-                    this._musicController._Str_13991(_local_2.id);
+                    this._musicController.addSongInfoRequest(_local_2.id);
                 }
             }
         }

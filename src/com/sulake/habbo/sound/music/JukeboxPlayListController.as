@@ -167,7 +167,7 @@
             }
             if (_local_3._Str_17943 >= 0)
             {
-                this._musicController._Str_13991(_local_3._Str_17943);
+                this._musicController.addSongInfoRequest(_local_3._Str_17943);
             }
             this._playPosition = _local_3._Str_21591;
             this._soundManager.events.dispatchEvent(new NowPlayingEvent(NowPlayingEvent.NPE_SONG_CHANGED, HabboMusicPrioritiesEnum._Str_4350, _local_3._Str_9166, _local_3._Str_21591));

@@ -12,7 +12,7 @@
         function getSongIdPlayingAtPriority(_arg_1:int):int;
         function playSong(_arg_1:int, _arg_2:int, _arg_3:Number=0, _arg_4:Number=0, _arg_5:Number=0.5, _arg_6:Number=0.5):Boolean;
         function stop(_arg_1:int):void;
-        function _Str_13991(_arg_1:int):void;
+        function addSongInfoRequest(_arg_1:int):void;
         function _Str_7732(_arg_1:int):void;
         function _Str_14232():void;
         function _Str_21359(_arg_1:int):void;

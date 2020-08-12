@@ -268,7 +268,7 @@
             var _local_3:SongDataEntry = this._Str_9498(k);
             if (_local_3 == null)
             {
-                this._Str_13991(k);
+                this.addSongInfoRequest(k);
                 return false;
             }
             if (_local_3._Str_3502 == null)
@@ -419,7 +419,7 @@
             }
         }
 
-        public function _Str_13991(k:int):void
+        public function addSongInfoRequest(k:int):void
         {
             this._Str_21555(k, true);
         }
