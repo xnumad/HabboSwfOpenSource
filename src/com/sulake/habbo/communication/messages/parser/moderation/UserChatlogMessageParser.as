@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7908 implements IMessageParser 
+    public class UserChatlogMessageParser implements IMessageParser
     {
         private var _data:UserChatlogData;
 

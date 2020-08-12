@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8235;
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.parser.moderation.RoomChatlogMessageParser;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_7908;
+    import com.sulake.habbo.communication.messages.parser.moderation.UserChatlogMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7621;
     import com.sulake.habbo.communication.messages.parser.userclassification.UserClassificationMessageParser;
     import com.sulake.core.utils.Map;
@@ -226,7 +226,7 @@
 
         private function onUserChatlog(k:_Str_7898):void
         {
-            var _local_2:_Str_7908 = k.getParser();
+            var _local_2:UserChatlogMessageParser = k.getParser();
             var _local_3:Dictionary = new Dictionary();
             _local_3[_local_2.data.userId] = 0;
             this.onChatlog(("User Chatlog: " + _local_2.data.userName), WindowTracker._Str_15435, _local_2.data.userId, _local_2.data.rooms, _local_3);
