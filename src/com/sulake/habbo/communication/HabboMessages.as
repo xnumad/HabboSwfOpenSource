@@ -239,7 +239,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_10484;
-	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11341;
+	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorRemoveCollapsedCategoryMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11429;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddCollapsedCategoryMessageComposer;
@@ -1943,7 +1943,7 @@
             OUTGOING_PACKETS[596] = _Str_17774;
             OUTGOING_PACKETS[603] = _Str_17335;
             OUTGOING_PACKETS[633] = _Str_10459;
-            OUTGOING_PACKETS[637] = _Str_11341;
+            OUTGOING_PACKETS[637] = NavigatorRemoveCollapsedCategoryMessageComposer;
             OUTGOING_PACKETS[644] = SetActivatedBadgesComposer;
             OUTGOING_PACKETS[654] = _Str_11321;
             OUTGOING_PACKETS[66] = WelcomeGiftChangeEmailComposer;
