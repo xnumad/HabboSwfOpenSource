@@ -510,7 +510,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.CreateFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10878;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.GetOfficialRoomsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11181;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomAdSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11269;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFavouriteRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11608;
@@ -1765,7 +1765,7 @@
             OUTGOING_PACKETS[2769] = _Str_7891;
             OUTGOING_PACKETS[2771] = RecycleItemsMessageComposer;
             OUTGOING_PACKETS[2781] = _Str_9977;
-            OUTGOING_PACKETS[2809] = _Str_11181;
+            OUTGOING_PACKETS[2809] = RoomAdSearchMessageComposer;
             OUTGOING_PACKETS[2813] = RoomDimmerGetPresetsMessageComposer;
             OUTGOING_PACKETS[2814] = DropCarryItemMessageComposer;
             OUTGOING_PACKETS[2850] = SetMannequinNameComposer;
