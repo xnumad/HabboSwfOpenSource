@@ -607,7 +607,7 @@
             return this._friendlist;
         }
 
-        public function get _Str_14291():GuildMembersWindowCtrl
+        public function get guildMembersWindowCtrl():GuildMembersWindowCtrl
         {
             return this._guildMembersWindowCtrl;
         }

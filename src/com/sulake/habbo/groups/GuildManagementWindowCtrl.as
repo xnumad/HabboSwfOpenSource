@@ -431,10 +431,10 @@
 
         private function _Str_12428(k:WindowEvent, _arg_2:IWindow):void
         {
-            if ((((k.type == WindowMouseEvent.CLICK) && (this._data.exists)) && (!(this._manager._Str_14291 == null))))
+            if ((((k.type == WindowMouseEvent.CLICK) && (this._data.exists)) && (!(this._manager.guildMembersWindowCtrl == null))))
             {
                 this._manager.trackGoogle("groupManagement", "groupMembers");
-                this._manager._Str_14291._Str_12428(this._data.groupId, _Str_5612._Str_13464);
+                this._manager.guildMembersWindowCtrl._Str_12428(this._data.groupId, _Str_5612._Str_13464);
             }
         }
 
