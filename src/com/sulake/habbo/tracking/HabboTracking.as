@@ -52,7 +52,7 @@
     import com.sulake.core.runtime.events.ErrorEvent;
     import com.sulake.core.runtime.exceptions.Exception;
     import flash.system.System;
-    import com.sulake.habbo.communication.messages.parser.notifications._Str_5519;
+    import com.sulake.habbo.communication.messages.parser.notifications.HabboAchievementNotificationMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
@@ -553,7 +553,7 @@
 
         private function _Str_25489(k:_Str_3660):void
         {
-            var _local_2:_Str_5519 = k.getParser();
+            var _local_2:HabboAchievementNotificationMessageParser = k.getParser();
             this.legacyTrackGoogle("achievement", "achievement", [_local_2.data.badgeCode]);
         }
 

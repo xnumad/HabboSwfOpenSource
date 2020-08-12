@@ -39,7 +39,7 @@
     import com.sulake.habbo.communication.messages.parser.game.lobby.AchievementResolutionCompletedMessageParser;
     import com.sulake.habbo.communication.messages.parser.inventory.achievements.AchievementParser;
     import com.sulake.habbo.communication.messages.parser.inventory.achievements.AchievementsScoreParser;
-    import com.sulake.habbo.communication.messages.parser.notifications._Str_5519;
+    import com.sulake.habbo.communication.messages.parser.notifications.HabboAchievementNotificationMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.parser.handshake.IsFirstLoginOfDayParser;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
@@ -221,7 +221,7 @@
         private function onLevelUp(k:IMessageEvent):void
         {
             var _local_2:_Str_3660 = (k as _Str_3660);
-            var _local_3:_Str_5519 = _local_2.getParser();
+            var _local_3:HabboAchievementNotificationMessageParser = _local_2.getParser();
             var _local_4:String = this._questEngine.localization.getBadgeBaseName(_local_3.data.badgeCode);
             this._questEngine.send(new EventLogMessageComposer("Achievements", _local_4, "Leveled", "", _local_3.data.level));
             this._questEngine._Str_10255.onLevelUp(_local_3.data);

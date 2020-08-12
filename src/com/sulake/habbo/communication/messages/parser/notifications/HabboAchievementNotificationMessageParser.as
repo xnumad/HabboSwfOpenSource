@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_6768;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5519 implements IMessageParser 
+    public class HabboAchievementNotificationMessageParser implements IMessageParser
     {
         private var _data:_Str_6768;
 
