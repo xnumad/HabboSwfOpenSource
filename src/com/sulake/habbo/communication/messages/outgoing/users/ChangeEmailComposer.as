@@ -4,11 +4,11 @@
 
     public class ChangeEmailComposer implements IMessageComposer
     {
-        private var _Str_6877:String;
+        private var _newEmail:String;
 
         public function ChangeEmailComposer(k:String)
         {
-            this._Str_6877 = k;
+            this._newEmail = k;
         }
 
         public function dispose():void
@@ -17,7 +17,7 @@
 
         public function getMessageArray():Array
         {
-            return [this._Str_6877];
+            return [this._newEmail];
         }
     }
 }
