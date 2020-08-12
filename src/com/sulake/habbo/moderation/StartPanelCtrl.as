@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7731;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomChatlogMessageComposer;
 	import com.sulake.core.window.components.IBitmapWrapperWindow;
 	import flash.display.BitmapData;
 	import com.sulake.habbo.avatar.enum.AvatarScaleType;
@@ -180,7 +180,7 @@
 
         private function _Str_16926(k:WindowEvent):void
         {
-            this._main.windowTracker.show(new ChatlogCtrl(new _Str_7731(((this._isGuestRoom) ? 0 : 1), this._roomId), this._main, WindowTracker._Str_10414, this._roomId), this._frame, false, false, true);
+            this._main.windowTracker.show(new ChatlogCtrl(new GetRoomChatlogMessageComposer(((this._isGuestRoom) ? 0 : 1), this._roomId), this._main, WindowTracker._Str_10414, this._roomId), this._frame, false, false, true);
         }
 
         private function _Str_22876(k:WindowEvent):void

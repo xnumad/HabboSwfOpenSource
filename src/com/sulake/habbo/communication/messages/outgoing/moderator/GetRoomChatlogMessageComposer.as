@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_7731 implements IMessageComposer, IDisposable 
+    public class GetRoomChatlogMessageComposer implements IMessageComposer, IDisposable
     {
         private var messageArray:Array;
 
-        public function _Str_7731(k:int, _arg_2:int)
+        public function GetRoomChatlogMessageComposer(k:int, _arg_2:int)
         {
             this.messageArray = new Array();
             super();

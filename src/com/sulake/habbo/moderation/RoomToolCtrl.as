@@ -15,7 +15,7 @@
     import com.sulake.core.window.components.IButtonWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.incoming.moderation.RoomData;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7731;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomChatlogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModeratorActionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12412;
     import com.sulake.habbo.window.utils.IAlertDialog;
@@ -310,7 +310,7 @@
             {
                 return;
             }
-            this._main.windowTracker.show(new ChatlogCtrl(new _Str_7731(0, this._data.flatId), this._main, WindowTracker._Str_10414, this._data.flatId), this._frame, false, false, true);
+            this._main.windowTracker.show(new ChatlogCtrl(new GetRoomChatlogMessageComposer(0, this._data.flatId), this._main, WindowTracker._Str_10414, this._data.flatId), this._frame, false, false, true);
         }
 
         private function onEditInHk(k:WindowEvent, _arg_2:IWindow):void

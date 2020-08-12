@@ -764,7 +764,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7103;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7202;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7268;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7731;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomChatlogMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_9842;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.*;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayPlaylistsEvent;
@@ -1728,7 +1728,7 @@
             OUTGOING_PACKETS[2565] = _Str_5198;
             OUTGOING_PACKETS[2578] = MyFavouriteRoomsSearchMessageComposer;
             OUTGOING_PACKETS[2582] = _Str_11592;
-            OUTGOING_PACKETS[2587] = _Str_7731;
+            OUTGOING_PACKETS[2587] = GetRoomChatlogMessageComposer;
             OUTGOING_PACKETS[2594] = _Str_11905;
             OUTGOING_PACKETS[2595] = _Str_4038;
             OUTGOING_PACKETS[2596] = PongMessageComposer;
