@@ -39,7 +39,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_9786;
     import flash.utils.Dictionary;
-    import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_11252;
+    import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetFlatControllersMessageComposer;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetBannedUsersFromRoomMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4633;
@@ -1155,7 +1155,7 @@
             if (this._roomSettingsData._Str_13003 == null)
             {
                 this._roomSettingsData._Str_13003 = new Dictionary();
-                this._navigator.send(new _Str_11252(this._roomSettingsData.roomId));
+                this._navigator.send(new GetFlatControllersMessageComposer(this._roomSettingsData.roomId));
                 _local_2 = new Array();
             }
             else

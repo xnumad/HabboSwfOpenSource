@@ -870,7 +870,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserKickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.*;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveRoomSettingsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_11252;
+	import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetFlatControllersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomCategoryAndTradeSettingsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetBannedUsersFromRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomFilterMessageComposer;
@@ -1852,7 +1852,7 @@
             OUTGOING_PACKETS[3374] = _Str_11024;
             OUTGOING_PACKETS[3379] = TogglePetBreedingPermissionMessageComposer;
             OUTGOING_PACKETS[3382] = _Str_12104;
-            OUTGOING_PACKETS[3385] = _Str_11252;
+            OUTGOING_PACKETS[3385] = GetFlatControllersMessageComposer;
             OUTGOING_PACKETS[3386] = _Str_9949;
             OUTGOING_PACKETS[339] = _Str_12068;
             OUTGOING_PACKETS[3407] = _Str_9862;
