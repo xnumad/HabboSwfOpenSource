@@ -14,7 +14,7 @@
         function _Str_21160(_arg_1:int):IFriendRequest;
         function _Str_23651(_arg_1:int):IFriendRequest;
         function _Str_23043(_arg_1:String):IFriendRequest;
-        function _Str_16405():Array;
+        function getFriendRequestList():Array;
         function acceptFriendRequest(_arg_1:int):void;
         function acceptAllFriendRequests():void;
         function declineFriendRequest(_arg_1:int):void;

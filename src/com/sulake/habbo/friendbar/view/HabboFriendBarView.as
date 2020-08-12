@@ -371,7 +371,7 @@
                         {
                             if (_local_6 > 1)
                             {
-                                _local_13 = FriendRequestsTab._Str_2363(this._friendBarData._Str_16405());
+                                _local_13 = FriendRequestsTab._Str_2363(this._friendBarData.getFriendRequestList());
                                 this._Str_2868.push(_local_13);
                                 _local_2.addListItem(_local_13.window);
                             }
@@ -619,7 +619,7 @@
                 }
                 _local_5++;
             }
-            var _local_6:Array = this._friendBarData._Str_16405();
+            var _local_6:Array = this._friendBarData.getFriendRequestList();
             for each (_local_7 in _local_6)
             {
                 if (_local_7.figure == k)

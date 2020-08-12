@@ -219,7 +219,7 @@
             return null;
         }
 
-        public function _Str_16405():Array
+        public function getFriendRequestList():Array
         {
             return this._friendRequests;
         }
