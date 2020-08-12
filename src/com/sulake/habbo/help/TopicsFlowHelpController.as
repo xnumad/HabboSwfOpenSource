@@ -509,11 +509,11 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._Str_17740((_arg_2 as IWindowContainer));
+                this.selectUserToReport((_arg_2 as IWindowContainer));
             }
         }
 
-        private function _Str_17740(k:IWindowContainer):void
+        private function selectUserToReport(k:IWindowContainer):void
         {
             var _local_2:int = int(k.name);
             this._habboHelp.reportedUserId = _local_2;

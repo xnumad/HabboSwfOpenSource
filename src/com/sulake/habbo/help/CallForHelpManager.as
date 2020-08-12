@@ -495,11 +495,11 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._Str_17740((_arg_2 as IWindowContainer));
+                this.selectUserToReport((_arg_2 as IWindowContainer));
             }
         }
 
-        private function _Str_17740(k:IWindowContainer):void
+        private function selectUserToReport(k:IWindowContainer):void
         {
             if ((((this._window == null) || (!(this._window.name == EMERGENCY_HELP_REQUEST))) || (k == null)))
             {
