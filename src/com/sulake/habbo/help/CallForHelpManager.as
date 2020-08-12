@@ -270,7 +270,7 @@
             if (this._reportType == HabboHelp._Str_15144)
             {
                 this._window = (this._habboHelp.getXmlWindow("bully_report") as IWindowContainer);
-                this._window.procedure = this._Str_23738;
+                this._window.procedure = this.onBullyReportEvent;
             }
             else
             {
@@ -443,7 +443,7 @@
             }
         }
 
-        private function _Str_23738(k:WindowEvent, _arg_2:IWindow):void
+        private function onBullyReportEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
