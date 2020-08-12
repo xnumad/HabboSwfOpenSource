@@ -20,7 +20,7 @@
 
         public function GuildMemberData(k:IMessageDataWrapper)
         {
-            var _local_4:_Str_2891;
+            var _local_4:MemberData;
             this._usersById = new Dictionary();
             super();
             this._groupId = k.readInteger();
@@ -33,7 +33,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                _local_4 = new _Str_2891(k);
+                _local_4 = new MemberData(k);
                 this._entries.push(_local_4);
                 this._usersById[_local_4.userId] = _local_4;
                 _local_3++;
@@ -48,7 +48,7 @@
         private static function removeFromArray(k:int, _arg_2:Array):void
         {
             var _local_3:int;
-            var _local_4:_Str_2891;
+            var _local_4:MemberData;
             while (_local_3 < _arg_2.length)
             {
                 _local_4 = _arg_2[_local_3];
@@ -124,10 +124,10 @@
             return Math.max(1, Math.ceil((this._totalEntries / this._pageSize)));
         }
 
-        public function update(k:_Str_2891):void
+        public function update(k:MemberData):void
         {
             var _local_2:int;
-            var _local_3:_Str_2891;
+            var _local_3:MemberData;
             this._usersById[k.userId] = k;
             while (_local_2 < this._entries.length)
             {
@@ -148,7 +148,7 @@
             delete this._usersById[k];
         }
 
-        public function getUser(k:int):_Str_2891
+        public function getUser(k:int):MemberData
         {
             return this._usersById[k];
         }

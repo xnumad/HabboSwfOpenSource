@@ -73,7 +73,7 @@
     import com.sulake.habbo.communication.messages.parser.users.GuildEditFailedMessageParser;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.FlatCreatedMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2891;
+    import com.sulake.habbo.communication.messages.incoming.users.MemberData;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberData;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
     import com.sulake.habbo.window.utils.IConfirmDialog;
@@ -456,7 +456,7 @@
         {
             var _local_2:int = GuildMemberFurniCountInHQMessageEvent(k).userId();
             var _local_3:int = GuildMemberFurniCountInHQMessageEvent(k).furniCount();
-            var _local_4:_Str_2891;
+            var _local_4:MemberData;
             var _local_5:GuildMemberData = this._guildMembersWindowCtrl.data;
             var _local_6:String = ((this._kickData._Str_21067) ? "group.block" : "group.kick");
             if (_local_3 > 0)

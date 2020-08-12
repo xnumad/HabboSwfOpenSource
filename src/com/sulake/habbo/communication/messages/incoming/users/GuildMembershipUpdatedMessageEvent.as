@@ -11,7 +11,7 @@
             super(k, GuildMembershipUpdatedMessageParser);
         }
 
-        public function get data():_Str_2891
+        public function get data():MemberData
         {
             return GuildMembershipUpdatedMessageParser(_parser).data;
         }

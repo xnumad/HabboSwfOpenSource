@@ -1,13 +1,13 @@
 ﻿package com.sulake.habbo.communication.messages.parser.users
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2891;
+    import com.sulake.habbo.communication.messages.incoming.users.MemberData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class GroupMembershipRequestedMessageParser implements IMessageParser 
     {
         private var _groupId:int;
-        private var _requester:_Str_2891;
+        private var _requester:MemberData;
 
 
         public function flush():Boolean
@@ -19,7 +19,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._groupId = k.readInteger();
-            this._requester = new _Str_2891(k);
+            this._requester = new MemberData(k);
             return true;
         }
 
@@ -28,7 +28,7 @@
             return this._groupId;
         }
 
-        public function get requester():_Str_2891
+        public function get requester():MemberData
         {
             return this._requester;
         }

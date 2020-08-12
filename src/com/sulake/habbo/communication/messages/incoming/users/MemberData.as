@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2891 
+    public class MemberData
     {
         private static const _Str_18346:int = 0;
         private static const _Str_17015:int = 1;
@@ -16,7 +16,7 @@
         private var _figure:String;
         private var _Str_20370:String;
 
-        public function _Str_2891(k:IMessageDataWrapper)
+        public function MemberData(k:IMessageDataWrapper)
         {
             this._type = k.readInteger();
             this._userId = k.readInteger();

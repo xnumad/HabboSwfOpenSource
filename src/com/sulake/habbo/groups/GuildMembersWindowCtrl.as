@@ -24,7 +24,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2891;
+    import com.sulake.habbo.communication.messages.incoming.users.MemberData;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
@@ -237,7 +237,7 @@
             }
         }
 
-        private function refreshEntry(k:IWindowContainer, _arg_2:int, _arg_3:_Str_2891):void
+        private function refreshEntry(k:IWindowContainer, _arg_2:int, _arg_3:MemberData):void
         {
             var _local_4:IWindowContainer = IWindowContainer(k.getChildAt(_arg_2));
             if (_local_4 == null)
@@ -263,7 +263,7 @@
             }
         }
 
-        public function refreshUserEntry(k:IWindowContainer, _arg_2:_Str_2891):void
+        public function refreshUserEntry(k:IWindowContainer, _arg_2:MemberData):void
         {
             var _local_5:Boolean;
             k.findChildByName("user_name_txt").caption = _arg_2.userName;
@@ -360,7 +360,7 @@
         private function onRemoveMouseClick(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
-            var _local_3:_Str_2891 = this._data.getUser(_local_2.id);
+            var _local_3:MemberData = this._data.getUser(_local_2.id);
             if (((_local_3 == null) || (_local_3.owner)))
             {
                 return;
@@ -378,7 +378,7 @@
         private function onBlockMouseClick(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
-            var _local_3:_Str_2891 = this._data.getUser(_local_2.id);
+            var _local_3:MemberData = this._data.getUser(_local_2.id);
             if (((_local_3 == null) || (_local_3.owner)))
             {
                 return;
@@ -412,7 +412,7 @@
         private function onActionLinkMouseOver(k:WindowEvent):void
         {
             var _local_2:IRegionWindow = IRegionWindow(k.target);
-            var _local_3:_Str_2891 = this._data.getUser(k.target.id);
+            var _local_3:MemberData = this._data.getUser(k.target.id);
             if (((_local_3 == null) || (_local_3.owner)))
             {
                 return;
@@ -425,7 +425,7 @@
         {
             var _local_2:IRegionWindow = IRegionWindow(k.target);
             this.setActionLinkState(false, _local_2);
-            var _local_3:_Str_2891 = this._data.getUser(k.target.id);
+            var _local_3:MemberData = this._data.getUser(k.target.id);
             if (_local_3 != null)
             {
                 this.setAdminState(_local_3.member, _local_3.admin, IWindowContainer(_local_2.parent));
@@ -434,7 +434,7 @@
 
         private function onActionLinkClick(k:WindowEvent):void
         {
-            var _local_2:_Str_2891 = this._data.getUser(k.target.id);
+            var _local_2:MemberData = this._data.getUser(k.target.id);
             if (((_local_2 == null) || (_local_2.owner)))
             {
                 return;
