@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation.ModerationCautionParser;
     import com.sulake.habbo.communication.messages.parser.moderation.ModeratorMessageParser;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_8126;
+    import com.sulake.habbo.communication.messages.parser.moderation.UserBannedMessageParser;
     import com.sulake.habbo.communication.messages.parser.availability.HotelWillCloseInMinutesMessageParser;
     import com.sulake.habbo.communication.messages.parser.availability.MaintenanceStatusMessageParser;
     import com.sulake.habbo.communication.messages.parser.availability.HotelClosesAndWillOpenAtMessageParser;
@@ -283,7 +283,7 @@
 
         private function onUserBannedMessageEvent(k:IMessageEvent):void
         {
-            var _local_2:_Str_8126 = (k as UserBannedMessageEvent).getParser();
+            var _local_2:UserBannedMessageParser = (k as UserBannedMessageEvent).getParser();
             if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
