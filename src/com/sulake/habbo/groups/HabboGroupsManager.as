@@ -174,7 +174,7 @@
             this.addMessageEvent(new _Str_3992(this.onFlatCreated));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new GuildCreatedMessageEvent(this.onGuildCreated));
-            this.addMessageEvent(new GuildMemberFurniCountInHQMessageEvent(this._Str_25619));
+            this.addMessageEvent(new GuildMemberFurniCountInHQMessageEvent(this.onKickConfirmation));
             this.addMessageEvent(new GuildCreationInfoMessageEvent(this.onGuildCreationInfo));
             this.addMessageEvent(new GuildEditorDataMessageEvent(this.onGuildEditorData));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomLeave));
@@ -452,7 +452,7 @@
             }
         }
 
-        private function _Str_25619(k:IMessageEvent):void
+        private function onKickConfirmation(k:IMessageEvent):void
         {
             var _local_2:int = GuildMemberFurniCountInHQMessageEvent(k).userId();
             var _local_3:int = GuildMemberFurniCountInHQMessageEvent(k).furniCount();
