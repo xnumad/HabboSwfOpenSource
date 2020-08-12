@@ -156,7 +156,7 @@
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_9940;
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11685;
     import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_12361;
-    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11296;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace.CancelMarketplaceOfferMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.habbo.communication.messages.outgoing.catalog.GetSellablePetPalettesComposer;
@@ -1181,7 +1181,7 @@
 
         public function redeemExpiredMarketPlaceOffer(k:int):void
         {
-            this.send(new _Str_11296(k));
+            this.send(new CancelMarketplaceOfferMessageComposer(k));
         }
 
         public function getMarketplaceItemStats(k:int, _arg_2:int):void

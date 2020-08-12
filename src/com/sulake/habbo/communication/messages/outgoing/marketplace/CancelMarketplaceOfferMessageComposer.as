@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_11296 implements IMessageComposer, IDisposable 
+    public class CancelMarketplaceOfferMessageComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function _Str_11296(k:int)
+        public function CancelMarketplaceOfferMessageComposer(k:int)
         {
             this._array = new Array();
             super();

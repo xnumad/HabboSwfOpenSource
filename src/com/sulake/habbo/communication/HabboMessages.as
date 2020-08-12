@@ -130,7 +130,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_7424;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_9816;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_9966;
-	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11296;
+	import com.sulake.habbo.communication.messages.outgoing.marketplace.CancelMarketplaceOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOffersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11685;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11938;
@@ -1929,7 +1929,7 @@
             OUTGOING_PACKETS[412] = RequestCatalogPage;
             OUTGOING_PACKETS[418] = _Str_12034;
             OUTGOING_PACKETS[433] = CompetitionRoomsSearchMessageComposer;
-            OUTGOING_PACKETS[434] = _Str_11296;
+            OUTGOING_PACKETS[434] = CancelMarketplaceOfferMessageComposer;
             OUTGOING_PACKETS[436] = GetForumsListMessageComposer;
             OUTGOING_PACKETS[462] = _Str_11648;
             OUTGOING_PACKETS[477] = _Str_4434;
