@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelClosedAndOpensEvent;
     import com.sulake.habbo.notifications.feed.data.GenericNotificationItemData;
-    import com.sulake.habbo.communication.messages.parser.notifications._Str_6680;
+    import com.sulake.habbo.communication.messages.parser.notifications.MOTDNotificationParser;
     import com.sulake.habbo.notifications.NotificationPopup;
     import flash.utils.getTimer;
     import com.sulake.habbo.notifications.feed.FeedSettings;
@@ -144,7 +144,7 @@
             var _local_4:String;
             var _local_5:GenericNotificationItemData;
             var _local_2:_Str_7321 = (k as _Str_7321);
-            var _local_3:_Str_6680 = (_local_2.getParser() as _Str_6680);
+            var _local_3:MOTDNotificationParser = (_local_2.getParser() as MOTDNotificationParser);
             if (((_local_3.messages) && (_local_3.messages.length > 0)))
             {
                 if (this.useNotifications())
