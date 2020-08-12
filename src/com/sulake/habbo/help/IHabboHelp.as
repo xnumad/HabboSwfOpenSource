@@ -15,7 +15,7 @@
         function reportRoom(_arg_1:int, _arg_2:String, _arg_3:String):void;
         function reportThread(_arg_1:int, _arg_2:int):void;
         function reportMessage(_arg_1:int, _arg_2:int, _arg_3:int):void;
-        function _Str_12812(_arg_1:String, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:int):Boolean;
+        function reportSelfie(_arg_1:String, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:int):Boolean;
         function _Str_14206(_arg_1:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):Boolean;
         function _Str_1131():void;
         function showWelcomeScreen(_arg_1:String, _arg_2:String, _arg_3:int, _arg_4:String=null):void;

@@ -665,7 +665,7 @@
                     }
                     else
                     {
-                        _local_7 = this._help._Str_12812(this._shareUrl, _local_5, this._roomEngine.activeRoomId, this._senderId, this._roomObjectID);
+                        _local_7 = this._help.reportSelfie(this._shareUrl, _local_5, this._roomEngine.activeRoomId, this._senderId, this._roomObjectID);
                     }
                     if (_local_7)
                     {

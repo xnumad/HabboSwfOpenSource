@@ -236,7 +236,7 @@
             this._habboHelp._Str_8128(HabboHelp._Str_4490);
         }
 
-        public function _Str_12812(k:String, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:int):void
+        public function reportSelfie(k:String, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:int):void
         {
             this._habboHelp.sendMessage(new _Str_11879(k, _arg_3, _arg_4, _arg_2, _arg_5));
         }

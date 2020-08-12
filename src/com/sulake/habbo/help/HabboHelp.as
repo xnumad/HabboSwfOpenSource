@@ -259,7 +259,7 @@
             }
         }
 
-        public function _Str_12812(k:String, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:int):Boolean
+        public function reportSelfie(k:String, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:int):Boolean
         {
             if (this._callForHelpManager != null)
             {
@@ -268,7 +268,7 @@
                     this.windowManager.alert("${generic.alert.title}", "${help.cfh.error.msgtooshort}", 0, null);
                     return false;
                 }
-                this._callForHelpManager._Str_12812(k, _arg_2, _arg_3, _arg_4, _arg_5);
+                this._callForHelpManager.reportSelfie(k, _arg_2, _arg_3, _arg_4, _arg_5);
                 return true;
             }
             return false;
