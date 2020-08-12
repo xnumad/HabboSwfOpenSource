@@ -243,7 +243,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddSavedSearchComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddCollapsedCategoryMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9918;
+	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorSetSearchCodeViewModeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorDeleteSavedSearchComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatPreferencesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetIgnoreRoomInvitesMessageComposer;
@@ -1539,7 +1539,7 @@
             OUTGOING_PACKETS[1173] = _Str_7271;
             OUTGOING_PACKETS[1190] = GetSeasonalQuestsOnlyMessageComposer;
             OUTGOING_PACKETS[1195] = _Str_11178;
-            OUTGOING_PACKETS[1202] = _Str_9918;
+            OUTGOING_PACKETS[1202] = NavigatorSetSearchCodeViewModeMessageComposer;
             OUTGOING_PACKETS[1210] = _Str_11941;
             OUTGOING_PACKETS[1224] = _Str_15943;
             OUTGOING_PACKETS[1229] = GetOfficialRoomsMessageComposer;

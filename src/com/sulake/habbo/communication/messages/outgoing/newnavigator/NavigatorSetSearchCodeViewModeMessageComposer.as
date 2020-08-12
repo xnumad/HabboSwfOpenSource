@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_9918 implements IMessageComposer 
+    public class NavigatorSetSearchCodeViewModeMessageComposer implements IMessageComposer
     {
         private var _Str_2907:Array;
 
-        public function _Str_9918(k:String, _arg_2:int)
+        public function NavigatorSetSearchCodeViewModeMessageComposer(k:String, _arg_2:int)
         {
             this._Str_2907 = [];
             super();

@@ -64,7 +64,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddCollapsedCategoryMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorRemoveCollapsedCategoryMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9918;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorSetSearchCodeViewModeMessageComposer;
     import __AS3__.vec.*;
 
     public class HabboNewNavigator extends Component implements IHabboNewNavigator, ILinkEventTracker 
@@ -614,7 +614,7 @@
 
         public function _Str_25231(k:String, _arg_2:int):void
         {
-            this._communication.connection.send(new _Str_9918(k, _arg_2));
+            this._communication.connection.send(new NavigatorSetSearchCodeViewModeMessageComposer(k, _arg_2));
             this.trackEventLog("browse.toggleviewmode", "ViewMode", "", _arg_2);
         }
 
