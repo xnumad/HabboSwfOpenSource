@@ -557,7 +557,7 @@
             return this._guildManagementWindowCtrl;
         }
 
-        public function get _Str_26300():GroupRoomInfoCtrl
+        public function get groupRoomInfoCtrl():GroupRoomInfoCtrl
         {
             return this._groupRoomInfoCtrl;
         }
