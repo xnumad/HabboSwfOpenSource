@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10709 implements IMessageComposer 
+    public class GetTalentTrackLevelMessageComposer implements IMessageComposer
     {
         private var _data:Array;
 
-        public function _Str_10709(k:String)
+        public function GetTalentTrackLevelMessageComposer(k:String)
         {
             this._data = [];
             super();

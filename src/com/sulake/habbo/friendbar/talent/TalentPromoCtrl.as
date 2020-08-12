@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
     import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_10709;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackLevelMessageComposer;
     import com.sulake.habbo.communication.messages.parser.talent.TalentTrackLevelMessageParser;
     import com.sulake.habbo.communication.messages.parser.talent.TalentLevelUpMessageParser;
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;
@@ -63,7 +63,7 @@
 
         private function onUserObject(k:UserObjectEvent):void
         {
-            this._manager.send(new _Str_10709(this._Str_7925));
+            this._manager.send(new GetTalentTrackLevelMessageComposer(this._Str_7925));
         }
 
         private function _Str_23765(k:_Str_9397):void

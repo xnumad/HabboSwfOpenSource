@@ -235,7 +235,7 @@
 	import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityTimeMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability.MaintenanceStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
-	import com.sulake.habbo.communication.messages.outgoing.talent._Str_10709;
+	import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackLevelMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_10484;
@@ -1658,7 +1658,7 @@
             OUTGOING_PACKETS[211] = _Str_7268;
             OUTGOING_PACKETS[2110] = _Str_10484;
             OUTGOING_PACKETS[2115] = _Str_12348;
-            OUTGOING_PACKETS[2127] = _Str_10709;
+            OUTGOING_PACKETS[2127] = GetTalentTrackLevelMessageComposer;
             OUTGOING_PACKETS[2128] = _Str_7214;
             OUTGOING_PACKETS[2138] = _Str_8049;
             OUTGOING_PACKETS[2144] = _Str_12182;
