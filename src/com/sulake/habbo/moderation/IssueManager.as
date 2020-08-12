@@ -79,7 +79,7 @@
             {
                 return;
             }
-            this._Str_20250(_local_5._Str_7101(), _arg_3, _arg_4, _arg_2);
+            this.sendPick(_local_5._Str_7101(), _arg_3, _arg_4, _arg_2);
             this._handleQueue = this._handleQueue.concat(_local_5._Str_7101());
         }
 
@@ -260,7 +260,7 @@
                 _local_9 = this._releaseQueue.indexOf(k._Str_2869);
                 if (((_local_9 == -1) && (_local_7)))
                 {
-                    this._Str_20250([k._Str_2869], false, 0, ("matches bundle with issue: " + _local_8._Str_5216()._Str_2869));
+                    this.sendPick([k._Str_2869], false, 0, ("matches bundle with issue: " + _local_8._Str_5216()._Str_2869));
                 }
                 else
                 {
@@ -512,7 +512,7 @@
             this._moderationManager.connection.send(new CloseIssuesMessageComposer(k, _arg_2));
         }
 
-        private function _Str_20250(k:Array, _arg_2:Boolean, _arg_3:int, _arg_4:String):void
+        private function sendPick(k:Array, _arg_2:Boolean, _arg_3:int, _arg_4:String):void
         {
             if ((((k == null) || (this._moderationManager == null)) || (this._moderationManager.connection == null)))
             {
