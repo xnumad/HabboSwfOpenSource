@@ -200,7 +200,7 @@
                         _local_12.dispose();
                         this._traxSamples.remove(_local_11);
                     }
-                    this._soundManager._Str_2774._Str_20915(_local_7);
+                    this._soundManager._Str_2774.samplesUnloaded(_local_7);
                 }
             }
         }

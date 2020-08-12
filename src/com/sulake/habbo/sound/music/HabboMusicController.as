@@ -489,7 +489,7 @@
             return this._songIdPlaying;
         }
 
-        public function _Str_20915(k:Array):void
+        public function samplesUnloaded(k:Array):void
         {
             var _local_3:SongDataEntry;
             var _local_4:TraxSequencer;
