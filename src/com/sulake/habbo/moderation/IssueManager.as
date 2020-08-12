@@ -166,7 +166,7 @@
             }
         }
 
-        public function _Str_12118(k:IssueMessageData):void
+        public function addModActionView(k:IssueMessageData):void
         {
             var _local_3:IssueBundle;
             var _local_4:IssueBundle;
@@ -189,7 +189,7 @@
                 {
                     if (_local_3._Str_12152(k))
                     {
-                        _local_3._Str_12118(k);
+                        _local_3.addModActionView(k);
                     }
                     else
                     {
@@ -216,7 +216,7 @@
                     if (_local_4._Str_12152(k))
                     {
                         _local_3 = _local_4;
-                        _local_3._Str_12118(k);
+                        _local_3.addModActionView(k);
                         this._bundleIds.add(k._Str_2869, _local_3.id);
                         break;
                     }

@@ -100,7 +100,7 @@
             }
             var _local_3:IssueMessageData = _local_2._Str_22192;
             this._moderationManager.issueManager.playSound(_local_3);
-            this._moderationManager.issueManager._Str_12118(_local_3);
+            this._moderationManager.issueManager.addModActionView(_local_3);
         }
 
         private function onModeratorInit(k:_Str_7080):void
@@ -120,7 +120,7 @@
             var _local_5:Array = _local_3._Str_15690;
             for each (_local_6 in _local_4)
             {
-                this._moderationManager.issueManager._Str_12118(_local_6);
+                this._moderationManager.issueManager.addModActionView(_local_6);
             }
             this._moderationManager.issueManager._Str_19194();
             this._moderationManager.initMsg = _local_3;

@@ -87,7 +87,7 @@
             return this._issues.getKeys().indexOf(k) > -1;
         }
 
-        public function _Str_12118(k:IssueMessageData):void
+        public function addModActionView(k:IssueMessageData):void
         {
             this.removeIssue(k._Str_2869);
             this.removeModActionView(k);
