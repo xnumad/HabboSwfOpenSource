@@ -62,7 +62,7 @@
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.communication.messages.outgoing.preferences.SetNewNavigatorWindowPreferencesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_12436;
+    import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddCollapsedCategoryMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11341;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9918;
     import __AS3__.vec.*;
@@ -586,7 +586,7 @@
 
         public function sendAddCollapsedCategory(k:String):void
         {
-            this._communication.connection.send(new _Str_12436(k));
+            this._communication.connection.send(new NavigatorAddCollapsedCategoryMessageComposer(k));
         }
 
         public function sendRemoveCollapsedCategory(k:String):void

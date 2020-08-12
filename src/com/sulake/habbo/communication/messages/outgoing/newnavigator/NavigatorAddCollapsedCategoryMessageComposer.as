@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12436 implements IMessageComposer 
+    public class NavigatorAddCollapsedCategoryMessageComposer implements IMessageComposer
     {
         private var _Str_2907:Array;
 
-        public function _Str_12436(k:String)
+        public function NavigatorAddCollapsedCategoryMessageComposer(k:String)
         {
             this._Str_2907 = [];
             super();

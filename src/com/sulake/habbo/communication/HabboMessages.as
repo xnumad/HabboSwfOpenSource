@@ -242,7 +242,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11341;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11429;
-	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_12436;
+	import com.sulake.habbo.communication.messages.outgoing.newnavigator.NavigatorAddCollapsedCategoryMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9918;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9950;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatPreferencesMessageComposer;
@@ -1619,7 +1619,7 @@
             OUTGOING_PACKETS[1822] = NewUserExperienceGetGiftsMessageComposer;
             OUTGOING_PACKETS[1826] = _Str_11313;
             OUTGOING_PACKETS[1827] = GetPromoArticlesComposer;
-            OUTGOING_PACKETS[1834] = _Str_12436;
+            OUTGOING_PACKETS[1834] = NavigatorAddCollapsedCategoryMessageComposer;
             OUTGOING_PACKETS[1840] = _Str_7103;
             OUTGOING_PACKETS[1849] = GetFaqTextMessageComposer;
             OUTGOING_PACKETS[1855] = UpdateForumReadMarkerMessageComposer;
