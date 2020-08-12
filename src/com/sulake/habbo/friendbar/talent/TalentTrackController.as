@@ -114,7 +114,7 @@
 
         private function onEmailStatus(k:EmailStatusResultEvent):void
         {
-            var _local_2:IWindowContainer = this._Str_7795();
+            var _local_2:IWindowContainer = this.getEmailContainer();
             if (_local_2 != null)
             {
                 this._Str_16767().text = k.getParser().email;
@@ -704,7 +704,7 @@
             _local_3.findChildByName("title").caption = this._habboTalent.localizationManager.getAchievementName(_local_2.badgeCode);
             _local_3.findChildByName("progress_text").caption = ((((this._habboTalent.localizationManager.getLocalization("talent.track.task.progress.dialog.progress") + " ") + _local_2._Str_7605) + "/") + _local_2._Str_15676);
             IBadgeImageWidget(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _local_2.badgeCode;
-            this._Str_7795().visible = false;
+            this.getEmailContainer().visible = false;
             if (this._habboTalent._Str_9968)
             {
                 _local_5 = this._habboTalent.localizationManager.getLocalization((((("talent.track.task.action." + this._talentTrack.name) + ".") + this._Str_19836(_local_2.badgeCode)) + ".description"), "");
@@ -718,8 +718,8 @@
                 _local_3.findChildByName("progress_separator").visible = (!(_local_6 == ""));
                 if (((_local_2.badgeCode == TalentTrackTask._Str_13850) && (this._Str_25273)))
                 {
-                    this._Str_7795().visible = true;
-                    this._Str_7795().findChildByName("change_email_region").procedure = this.onChangeEmail;
+                    this.getEmailContainer().visible = true;
+                    this.getEmailContainer().findChildByName("change_email_region").procedure = this.onChangeEmail;
                     this._Str_16767().procedure = this._Str_25645;
                     this._habboTalent.send(new _Str_10302());
                     this._Str_16375(false);
@@ -755,7 +755,7 @@
             _local_4.arrangeListItems();
         }
 
-        private function _Str_7795():IWindowContainer
+        private function getEmailContainer():IWindowContainer
         {
             if (((this._taskProgressPopup == null) || (this._taskProgressPopup.rootWindow == null)))
             {
@@ -901,12 +901,12 @@
 
         private function _Str_16375(k:Boolean, _arg_2:int=0):void
         {
-            if (this._Str_7795() == null)
+            if (this.getEmailContainer() == null)
             {
                 return;
             }
             var _local_3:Boolean = ((k) && (!(_arg_2 == ChangeEmailResultParser.EMAIL_STATUS_OK)));
-            var _local_4:IWindowContainer = this._Str_7795();
+            var _local_4:IWindowContainer = this.getEmailContainer();
             var _local_5:IWindow = _local_4.findChildByName("error_txt");
             _local_5.visible = _local_3;
             _local_5.caption = ((("$" + "{welcome.gift.email.error.") + _arg_2) + "}");
@@ -917,7 +917,7 @@
 
         private function _Str_16767():ITextFieldWindow
         {
-            return ITextFieldWindow(this._Str_7795().findChildByName("email_txt"));
+            return ITextFieldWindow(this.getEmailContainer().findChildByName("email_txt"));
         }
 
         private function _Str_22368(k:WindowEvent, _arg_2:IWindow):void
