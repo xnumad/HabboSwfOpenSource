@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_11735 implements IMessageParser 
+    public class DoorbellMessageParser implements IMessageParser
     {
         private var _userName:String;
 
