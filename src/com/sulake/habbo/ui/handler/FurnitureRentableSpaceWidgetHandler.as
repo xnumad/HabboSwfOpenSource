@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_8190;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceStatusMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceCancelRentMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9716;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceRentMessageComposer;
 
     public class FurnitureRentableSpaceWidgetHandler implements IRoomWidgetHandler 
     {
@@ -151,7 +151,7 @@
 
         public function rentSpace(k:int):void
         {
-            this._container.connection.send(new _Str_9716(k));
+            this._container.connection.send(new RentableSpaceRentMessageComposer(k));
         }
 
         public function _Str_26430():int

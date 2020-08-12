@@ -727,7 +727,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ControlYoutubeDisplayPlaybackMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_7290;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.AddSpamWallPostItMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9716;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceRentMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerSavePresetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9987;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ExtendRentOrBuyoutFurniMessageComposer;
@@ -1782,7 +1782,7 @@
             OUTGOING_PACKETS[2934] = GetPetInfoMessageComposer;
             OUTGOING_PACKETS[2939] = _Str_9889;
             OUTGOING_PACKETS[2941] = PassCarryItemMessageComposer;
-            OUTGOING_PACKETS[2946] = _Str_9716;
+            OUTGOING_PACKETS[2946] = RentableSpaceRentMessageComposer;
             OUTGOING_PACKETS[295] = LatencyPingRequestMessageComposer;
             OUTGOING_PACKETS[2950] = _Str_8070;
             OUTGOING_PACKETS[2959] = _Str_11266;
