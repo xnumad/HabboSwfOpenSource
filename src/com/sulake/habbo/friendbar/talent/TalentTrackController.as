@@ -379,11 +379,11 @@
             _local_4.arrangeListItems();
             _local_4.width = ((_local_5.width + _Str_3555) + _local_6.width);
             _local_3.width = ((_local_4.x + _local_4.width) + _Str_3555);
-            this._Str_22992(k, _local_3);
+            this.repositionLevelIllustration(k, _local_3);
             this._panoramaList.addListItem(_local_3);
         }
 
-        private function _Str_22992(k:TalentTrackLevel, _arg_2:IWindowContainer):void
+        private function repositionLevelIllustration(k:TalentTrackLevel, _arg_2:IWindowContainer):void
         {
             var _local_3:IWindow = _arg_2.findChildByName("level_description");
             var _local_4:IStaticBitmapWrapperWindow = IStaticBitmapWrapperWindow(_arg_2.findChildByName("level_illustration"));
