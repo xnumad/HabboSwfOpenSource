@@ -53,7 +53,7 @@
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_10695;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_6216;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_12273;
     import com.sulake.habbo.communication.messages.parser.help.CallForHelpPendingCallsMessageParser;
     import com.sulake.habbo.communication.messages.parser.help._Str_5731;
@@ -608,7 +608,7 @@
         public function _Str_24148(k:int):void
         {
             this._requestType = k;
-            this.sendMessage(new _Str_6216());
+            this.sendMessage(new GuideAdvertisementReadMessageComposer());
             this.sendMessage(new _Str_12273());
         }
 

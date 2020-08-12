@@ -33,7 +33,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10302;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
-    import com.sulake.habbo.communication.messages.outgoing.talent._Str_6216;
+    import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
     import com.sulake.habbo.communication.messages.parser.users.ChangeEmailResultParser;
     import com.sulake.core.window.components.ITextFieldWindow;
@@ -854,7 +854,7 @@
             {
                 this.destroyWindow();
                 this._Str_8036();
-                this._habboTalent.send(new _Str_6216());
+                this._habboTalent.send(new GuideAdvertisementReadMessageComposer());
                 this._habboTalent.habboHelp._Str_18271();
                 this._habboTalent.tracking.trackEventLog("Help", "", "tour.new_user.accept");
                 this._habboTalent.tracking.trackGoogle("newbieTourWindow", "click_acceptTour");
@@ -875,7 +875,7 @@
             {
                 this.destroyWindow();
                 this._Str_8036();
-                this._habboTalent.send(new _Str_6216());
+                this._habboTalent.send(new GuideAdvertisementReadMessageComposer());
                 this._habboTalent.tracking.trackEventLog("Help", "", "tour.new_user.cancel");
                 this._habboTalent.tracking.trackGoogle("newbieTourWindow", "click_refuseTour");
             }

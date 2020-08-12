@@ -237,7 +237,7 @@
 	import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.talent._Str_10709;
 	import com.sulake.habbo.communication.messages.outgoing.talent._Str_3075;
-	import com.sulake.habbo.communication.messages.outgoing.talent._Str_6216;
+	import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_10484;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11341;
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11428;
@@ -1707,7 +1707,7 @@
             OUTGOING_PACKETS[2436] = _Str_18298;
             OUTGOING_PACKETS[2445] = DisconnectMessageComposer;
             OUTGOING_PACKETS[2448] = _Str_11750;
-            OUTGOING_PACKETS[2455] = _Str_6216;
+            OUTGOING_PACKETS[2455] = GuideAdvertisementReadMessageComposer;
             OUTGOING_PACKETS[2456] = AvatarExpressionMessageComposer;
             OUTGOING_PACKETS[2462] = _Str_7218;
             OUTGOING_PACKETS[2468] = _Str_18849;
