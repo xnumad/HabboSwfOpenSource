@@ -755,7 +755,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModKickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.GetUserChatlogMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12129;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12412;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.ModerateRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModTradingLockMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModBanMessageComposer;
@@ -1830,7 +1830,7 @@
             OUTGOING_PACKETS[3230] = PerformanceLogMessageComposer;
             OUTGOING_PACKETS[3257] = _Str_7426;
             OUTGOING_PACKETS[3259] = _Str_16208;
-            OUTGOING_PACKETS[3260] = _Str_12412;
+            OUTGOING_PACKETS[3260] = ModerateRoomMessageComposer;
             OUTGOING_PACKETS[3265] = GetExtendedProfileMessageComposer;
             OUTGOING_PACKETS[3267] = _Str_10695;
             OUTGOING_PACKETS[3283] = AddSpamWallPostItMessageComposer;

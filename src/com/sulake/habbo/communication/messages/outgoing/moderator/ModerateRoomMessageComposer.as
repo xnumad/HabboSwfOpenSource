@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_12412 implements IMessageComposer, IDisposable 
+    public class ModerateRoomMessageComposer implements IMessageComposer, IDisposable
     {
         private var messageArray:Array;
 
-        public function _Str_12412(k:int, _arg_2:Boolean, _arg_3:Boolean, _arg_4:Boolean)
+        public function ModerateRoomMessageComposer(k:int, _arg_2:Boolean, _arg_3:Boolean, _arg_4:Boolean)
         {
             this.messageArray = new Array();
             super();

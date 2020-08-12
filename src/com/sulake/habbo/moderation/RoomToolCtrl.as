@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.RoomData;
     import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomChatlogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModeratorActionMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12412;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModerateRoomMessageComposer;
     import com.sulake.habbo.window.utils.IAlertDialog;
 
     public class RoomToolCtrl implements IDisposable, ITrackedWindow 
@@ -354,7 +354,7 @@
             this._main.connection.send(new ModeratorActionMessageComposer(_local_2, this._msgInput.text, ""));
             if ((((this._lockCb.Selected) || (this._changeNameCb.Selected)) || (this._kickCb.Selected)))
             {
-                this._main.connection.send(new _Str_12412(this._data.flatId, this._lockCb.Selected, this._changeNameCb.Selected, this._kickCb.Selected));
+                this._main.connection.send(new ModerateRoomMessageComposer(this._data.flatId, this._lockCb.Selected, this._changeNameCb.Selected, this._kickCb.Selected));
             }
             this.dispose();
         }
