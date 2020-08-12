@@ -8,7 +8,7 @@
         public static const ACTION_ALERT:int = 0;
         public static const ACTION_KICK:int = 1;
         public static const ACTION_MESSAGE:int = 3;
-        public static const _Str_16816:int = 4;
+        public static const ACTION_MESSAGE_AND_SOFT_KICK:int = 4;
 
         private var messageArray:Array;
 

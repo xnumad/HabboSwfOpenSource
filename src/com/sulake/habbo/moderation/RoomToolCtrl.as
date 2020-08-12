@@ -363,7 +363,7 @@
         {
             if (_arg_2)
             {
-                return (k) ? _Str_5691.ACTION_KICK : _Str_5691._Str_16816;
+                return (k) ? _Str_5691.ACTION_KICK : _Str_5691.ACTION_MESSAGE_AND_SOFT_KICK;
             }
             return (k) ? _Str_5691.ACTION_ALERT : _Str_5691.ACTION_MESSAGE;
         }
