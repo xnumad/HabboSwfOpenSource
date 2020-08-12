@@ -108,7 +108,7 @@
             this._window.findChildByTag("close").procedure = this._Str_23918;
             this._window.center();
             this._window.findChildByName("create_room_link_region").procedure = this._Str_25002;
-            this._window.findChildByName("cancel_link_region").procedure = this._Str_24554;
+            this._window.findChildByName("cancel_link_region").procedure = this.onCancelLink;
             this._window.findChildByName("next_step_button").procedure = this._Str_23101;
             this._window.findChildByName("previous_step_link_region").procedure = this._Str_23571;
             this._window.findChildByName("buy_button").procedure = this._Str_12134;
@@ -438,7 +438,7 @@
             }
         }
 
-        private function _Str_24554(k:WindowEvent, _arg_2:IWindow):void
+        private function onCancelLink(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
