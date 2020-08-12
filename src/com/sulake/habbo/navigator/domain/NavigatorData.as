@@ -498,7 +498,7 @@
             return this._friendList;
         }
 
-        public function _Str_23466():RoomSessionTags
+        public function getAndResetSessionTags():RoomSessionTags
         {
             var k:RoomSessionTags = this._roomSessionTags;
             this._roomSessionTags = null;

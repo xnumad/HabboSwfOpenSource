@@ -306,7 +306,7 @@
                     this._navigator.roomEventInfoCtrl.expanded = false;
                     this._navigator.roomEventInfoCtrl.refresh();
                 }
-                _local_4 = this._navigator.data._Str_23466();
+                _local_4 = this._navigator.data.getAndResetSessionTags();
                 if (_local_4 != null)
                 {
                     this._navigator.send(_local_4._Str_23991());
