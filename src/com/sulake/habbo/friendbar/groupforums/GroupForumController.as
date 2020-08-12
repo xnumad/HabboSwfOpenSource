@@ -517,7 +517,7 @@
             }
         }
 
-        public function _Str_24798(k:_Str_2807, _arg_2:int):void
+        public function unDeleteThread(k:_Str_2807, _arg_2:int):void
         {
             if (this._communicationManager)
             {

@@ -355,7 +355,7 @@
 
         private function _Str_7727(k:WindowMouseEvent):void
         {
-            this._controller._Str_24798(this._forumData, int(k.target.id));
+            this._controller.unDeleteThread(this._forumData, int(k.target.id));
         }
 
         private function _Str_15365(k:WindowMouseEvent):void
