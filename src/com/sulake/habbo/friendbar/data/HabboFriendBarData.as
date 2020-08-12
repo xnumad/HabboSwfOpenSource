@@ -251,7 +251,7 @@
             }
         }
 
-        public function _Str_19230(k:String):void
+        public function showProfileByName(k:String):void
         {
             if (this._habboCommunicationManager)
             {

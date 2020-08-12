@@ -26,6 +26,6 @@
         function _Str_18959():void;
         function toggleMessenger():void;
         function showProfile(_arg_1:int):void;
-        function _Str_19230(_arg_1:String):void;
+        function showProfileByName(_arg_1:String):void;
     }
 }

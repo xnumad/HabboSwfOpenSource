@@ -1174,7 +1174,7 @@
                 case "user":
                     if (_local_2.length > 2)
                     {
-                        this._friendBarData._Str_19230(_local_2[2]);
+                        this._friendBarData.showProfileByName(_local_2[2]);
                     }
                     return;
                 default:
