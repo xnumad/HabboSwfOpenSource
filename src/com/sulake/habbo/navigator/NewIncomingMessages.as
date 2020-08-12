@@ -76,7 +76,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator.RoomInfoUpdatedMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
     import com.sulake.habbo.communication.messages.parser.navigator.FavouritesMessageParser;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6561;
+    import com.sulake.habbo.communication.messages.parser.navigator.FavouriteChangedMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllersMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6824;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6887;
@@ -419,7 +419,7 @@
 
         private function _Str_16972(k:IMessageEvent):void
         {
-            var _local_2:_Str_6561 = (k as _Str_5795).getParser();
+            var _local_2:FavouriteChangedMessageParser = (k as _Str_5795).getParser();
             Logger.log(((("Received favourite changed: " + _local_2.flatId) + ", ") + _local_2._Str_13819));
             this.data._Str_21350(_local_2.flatId, _local_2._Str_13819);
             LegacyNavigator(this._navigator.legacyNavigator).roomInfoViewCtrl.reload();
