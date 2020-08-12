@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.help
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.parser.help.data._Str_5959;
+    import com.sulake.habbo.communication.messages.parser.help.data.PendingGuideTicket;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_5731 implements IMessageParser 
@@ -12,7 +12,7 @@
         public static const _Str_17955:int = 3;
 
         private var _Str_14988:int;
-        private var _Str_17655:_Str_5959;
+        private var _Str_17655:PendingGuideTicket;
 
 
         public function flush():Boolean
@@ -26,7 +26,7 @@
             this._Str_14988 = k.readInteger();
             if (this._Str_14988 == _Str_15134)
             {
-                this._Str_17655 = new _Str_5959(k);
+                this._Str_17655 = new PendingGuideTicket(k);
             }
             return true;
         }
@@ -36,7 +36,7 @@
             return this._Str_14988;
         }
 
-        public function get _Str_25474():_Str_5959
+        public function get _Str_25474():PendingGuideTicket
         {
             return this._Str_17655;
         }

@@ -16,7 +16,7 @@
     import com.sulake.habbo.window.widgets._Str_5483;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
-    import com.sulake.habbo.communication.messages.parser.help.data._Str_5959;
+    import com.sulake.habbo.communication.messages.parser.help.data.PendingGuideTicket;
 
     public class HelpController implements IDisposable 
     {
@@ -181,7 +181,7 @@
             }
         }
 
-        public function showPendingTicket(k:_Str_5959):void
+        public function showPendingTicket(k:PendingGuideTicket):void
         {
             var _local_2:String;
             if (k._Str_17256)

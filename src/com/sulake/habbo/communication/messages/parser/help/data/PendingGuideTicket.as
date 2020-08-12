@@ -3,7 +3,7 @@
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5959 
+    public class PendingGuideTicket
     {
         private var _type:int;
         private var _Str_21075:int;
@@ -13,7 +13,7 @@
         private var _description:String;
         private var _roomName:String;
 
-        public function _Str_5959(k:IMessageDataWrapper):void
+        public function PendingGuideTicket(k:IMessageDataWrapper):void
         {
             this._type = k.readInteger();
             this._Str_21075 = k.readInteger();

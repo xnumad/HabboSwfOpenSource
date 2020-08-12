@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import flash.events.TimerEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.help.data._Str_5959;
+    import com.sulake.habbo.communication.messages.parser.help.data.PendingGuideTicket;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
 
@@ -105,7 +105,7 @@
             this._guideSessionController.showGuideTool();
         }
 
-        public function showPendingTicket(k:_Str_5959):void
+        public function showPendingTicket(k:PendingGuideTicket):void
         {
             this._guideHelpController.showPendingTicket(k);
         }
