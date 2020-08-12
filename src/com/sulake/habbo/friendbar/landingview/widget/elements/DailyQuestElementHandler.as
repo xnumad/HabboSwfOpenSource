@@ -78,7 +78,7 @@
             this._container = (_arg_2 as IWindowContainer);
             this._container.findChildByName("accept_button").procedure = this._Str_17327;
             this._container.findChildByName("go_button").procedure = this._Str_5735;
-            this._container.findChildByName("next_quest_region").procedure = this._Str_8477;
+            this._container.findChildByName("next_quest_region").procedure = this.onNextQuest;
             this._container.findChildByName("cancel_quest_region").procedure = this._Str_8215;
             this._container.findChildByName("easy_region").procedure = this._Str_16091;
             this._container.findChildByName("hard_region").procedure = this._Str_18792;
@@ -200,7 +200,7 @@
             }
         }
 
-        private function _Str_8477(k:WindowEvent, _arg_2:IWindow):void
+        private function onNextQuest(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

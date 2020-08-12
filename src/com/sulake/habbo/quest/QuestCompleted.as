@@ -75,7 +75,7 @@
             }
         }
 
-        private function _Str_8477(k:WindowEvent, _arg_2:IWindow):void
+        private function onNextQuest(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
@@ -101,8 +101,8 @@
             if (this._window == null)
             {
                 this._window = IFrameWindow(this._questEngine.getXmlWindow("QuestCompletedDialog"));
-                this._window.findChildByTag("close").procedure = this._Str_8477;
-                this._window.findChildByName("next_quest_button").procedure = this._Str_8477;
+                this._window.findChildByTag("close").procedure = this.onNextQuest;
+                this._window.findChildByName("next_quest_button").procedure = this.onNextQuest;
                 this._window.findChildByName("more_quests_button").procedure = this._Str_22793;
                 this._window.findChildByName("catalog_link_region").procedure = this._Str_17730;
                 this._twinkleAnimation = this._questEngine._Str_22854(this._window);
