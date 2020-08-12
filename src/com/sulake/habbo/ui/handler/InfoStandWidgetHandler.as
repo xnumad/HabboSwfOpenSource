@@ -1100,7 +1100,7 @@
                 _local_19 = "";
                 if (_local_3.extraParam == RoomWidgetEnumItemExtradataParameter.JUKEBOX)
                 {
-                    _local_20 = this._musicController._Str_6500();
+                    _local_20 = this._musicController.getRoomItemPlaylist();
                     if (_local_20 != null)
                     {
                         _local_16 = _local_20._Str_13794;

@@ -121,7 +121,7 @@
         public function show():void
         {
             this._musicController._Str_14232();
-            var k:IPlayListController = this._musicController._Str_6500();
+            var k:IPlayListController = this._musicController.getRoomItemPlaylist();
             if (k != null)
             {
                 k._Str_5930();
@@ -237,7 +237,7 @@
 
         private function _Str_16190():void
         {
-            var k:IPlayListController = this._musicController._Str_6500();
+            var k:IPlayListController = this._musicController.getRoomItemPlaylist();
             if (k == null)
             {
                 return;
@@ -284,7 +284,7 @@
         {
             var _local_4:int;
             var _local_5:ISongInfo;
-            var k:IPlayListController = this._musicController._Str_6500();
+            var k:IPlayListController = this._musicController.getRoomItemPlaylist();
             var _local_2:Array = [];
             var _local_3:int = -1;
             if (k != null)
@@ -309,7 +309,7 @@
             var _local_3:ISongInfo;
             this._Str_24609();
             this._Str_16190();
-            var k:IPlayListController = this._musicController._Str_6500();
+            var k:IPlayListController = this._musicController.getRoomItemPlaylist();
             if (k == null)
             {
                 return;

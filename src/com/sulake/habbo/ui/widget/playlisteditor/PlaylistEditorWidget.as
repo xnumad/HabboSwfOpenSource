@@ -138,7 +138,7 @@
         {
             var _local_3:int;
             var _local_4:RoomWidgetPlayListModificationMessage;
-            var _local_2:IPlayListController = this._soundManager._Str_2774._Str_6500();
+            var _local_2:IPlayListController = this._soundManager._Str_2774.getRoomItemPlaylist();
             if (_local_2 != null)
             {
                 _local_3 = _local_2.length;
@@ -248,7 +248,7 @@
             {
                 this._Str_2314.show();
                 this._soundManager._Str_2774._Str_14232();
-                _local_2 = this._soundManager._Str_2774._Str_6500();
+                _local_2 = this._soundManager._Str_2774.getRoomItemPlaylist();
                 if (_local_2 != null)
                 {
                     _local_2._Str_5930();

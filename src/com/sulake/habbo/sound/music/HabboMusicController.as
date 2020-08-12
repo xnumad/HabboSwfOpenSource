@@ -191,7 +191,7 @@
             }
         }
 
-        public function _Str_6500(k:int=-1):IPlayListController
+        public function getRoomItemPlaylist(k:int=-1):IPlayListController
         {
             return this._roomItemPlaylist;
         }
