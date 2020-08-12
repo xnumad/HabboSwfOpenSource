@@ -497,7 +497,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_8228;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9855;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_9949;
+	import com.sulake.habbo.communication.messages.outgoing.users.ApproveMembershipRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildIdentityMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9979;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
@@ -1853,7 +1853,7 @@
             OUTGOING_PACKETS[3379] = TogglePetBreedingPermissionMessageComposer;
             OUTGOING_PACKETS[3382] = _Str_12104;
             OUTGOING_PACKETS[3385] = GetFlatControllersMessageComposer;
-            OUTGOING_PACKETS[3386] = _Str_9949;
+            OUTGOING_PACKETS[3386] = ApproveMembershipRequestMessageComposer;
             OUTGOING_PACKETS[339] = _Str_12068;
             OUTGOING_PACKETS[3407] = _Str_9862;
             OUTGOING_PACKETS[3435] = UpdateGuildSettingsMessageComposer;
