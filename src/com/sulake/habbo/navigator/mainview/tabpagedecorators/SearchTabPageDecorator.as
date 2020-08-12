@@ -15,7 +15,7 @@
             this._navigator = k;
         }
 
-        public function _Str_6025(k:IWindowContainer):void
+        public function refreshCustomContent(k:IWindowContainer):void
         {
             this._Str_25530(k);
         }

@@ -346,7 +346,7 @@
                 return;
             }
             this._Str_23841();
-            this._Str_6025();
+            this.refreshCustomContent();
             this._Str_24816(true);
             this._Str_5920();
             this._customContent.height = Util.getLowestPoint(this._customContent);
@@ -370,11 +370,11 @@
             }
         }
 
-        private function _Str_6025():void
+        private function refreshCustomContent():void
         {
             Util._Str_2930(this._customContent);
             var k:Tab = this._navigator.tabs.getSelected();
-            k._Str_5252._Str_6025(this._customContent);
+            k._Str_5252.refreshCustomContent(this._customContent);
             if (Util._Str_13639(this._customContent))
             {
                 this._customContent.visible = true;

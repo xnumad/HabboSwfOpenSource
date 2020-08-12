@@ -19,7 +19,7 @@
             this._navigator = k;
         }
 
-        public function _Str_6025(k:IWindowContainer):void
+        public function refreshCustomContent(k:IWindowContainer):void
         {
             var _local_2:String = "rooms_header";
             var _local_3:IWindowContainer = (k.getChildByName(_local_2) as IWindowContainer);

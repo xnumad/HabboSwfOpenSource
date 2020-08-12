@@ -18,7 +18,7 @@
             this._navigator = k;
         }
 
-        public function _Str_6025(k:IWindowContainer):void
+        public function refreshCustomContent(k:IWindowContainer):void
         {
             var _local_2:IWindowContainer = (k.getChildByName("room_ad_header") as IWindowContainer);
             if (((this._filter == null) || (this._filter.disposed)))

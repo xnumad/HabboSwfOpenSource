@@ -4,7 +4,7 @@
 
     public interface ITabPageDecorator 
     {
-        function _Str_6025(_arg_1:IWindowContainer):void;
+        function refreshCustomContent(_arg_1:IWindowContainer):void;
         function _Str_6883():void;
         function _Str_8146():void;
         function _Str_5920(_arg_1:IWindowContainer):void;
