@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.parser.talent.TalentLevelUpMessageParser;
     import com.sulake.habbo.session.talent.TalentEnum;
     import com.sulake.habbo.communication.messages.parser.talent._Str_3450;
-    import com.sulake.habbo.communication.messages.parser.talent._Str_3457;
+    import com.sulake.habbo.communication.messages.parser.talent.TalentTrackRewardProduct;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IItemListWindow;
     import __AS3__.vec.Vector;
@@ -77,10 +77,10 @@
             this._Str_3360(_local_2.talentTrackName, _local_2.level, _local_2._Str_8893, _local_2._Str_7068);
         }
 
-        public function _Str_3360(k:String, _arg_2:int, _arg_3:Vector.<_Str_3450>, _arg_4:Vector.<_Str_3457>):void
+        public function _Str_3360(k:String, _arg_2:int, _arg_3:Vector.<_Str_3450>, _arg_4:Vector.<TalentTrackRewardProduct>):void
         {
             var _local_8:_Str_3450;
-            var _local_9:_Str_3457;
+            var _local_9:TalentTrackRewardProduct;
             this.closeWindow();
             this._track = k;
             this._window = (this._habboTalent.getXmlWindow("level_up") as IWindowContainer);
@@ -129,7 +129,7 @@
             return _local_2;
         }
 
-        private function _Str_10814(k:_Str_3457):IWindow
+        private function _Str_10814(k:TalentTrackRewardProduct):IWindow
         {
             var _local_2:IWindow;
             if (k._Str_13965 == 0)

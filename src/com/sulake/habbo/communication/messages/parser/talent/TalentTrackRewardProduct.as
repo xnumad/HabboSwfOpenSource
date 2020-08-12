@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3457 
+    public class TalentTrackRewardProduct
     {
         private var _productCode:String;
         private var _Str_22129:int;
 
-        public function _Str_3457(k:IMessageDataWrapper)
+        public function TalentTrackRewardProduct(k:IMessageDataWrapper)
         {
             this._productCode = k.readString();
             this._Str_22129 = k.readInteger();

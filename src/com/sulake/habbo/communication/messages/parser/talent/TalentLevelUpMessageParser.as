@@ -10,7 +10,7 @@
         private var _talentTrackName:String;
         private var _level:int;
         private var _rewardPerks:Vector.<_Str_3450>;
-        private var _rewardProducts:Vector.<_Str_3457>;
+        private var _rewardProducts:Vector.<TalentTrackRewardProduct>;
 
 
         public function flush():Boolean
@@ -34,12 +34,12 @@
                 this._rewardPerks.push(new _Str_3450(k));
                 _local_2++;
             }
-            this._rewardProducts = new Vector.<_Str_3457>();
+            this._rewardProducts = new Vector.<TalentTrackRewardProduct>();
             var _local_4:int = k.readInteger();
             _local_2 = 0;
             while (_local_2 < _local_4)
             {
-                this._rewardProducts.push(new _Str_3457(k));
+                this._rewardProducts.push(new TalentTrackRewardProduct(k));
                 _local_2++;
             }
             return true;
@@ -60,7 +60,7 @@
             return this._rewardPerks;
         }
 
-        public function get _Str_7068():Vector.<_Str_3457>
+        public function get _Str_7068():Vector.<TalentTrackRewardProduct>
         {
             return this._rewardProducts;
         }
