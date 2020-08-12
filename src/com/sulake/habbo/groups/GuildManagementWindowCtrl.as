@@ -246,7 +246,7 @@
                 this._window.findChildByName("create_room_link_region").visible = (!(this._data.exists));
                 this._window.findChildByName("step_1_members_region").visible = this.data.exists;
             }
-            this._Str_24568();
+            this.refreshCreateHeader();
         }
 
         private function updateConfirmPreview():void
@@ -307,7 +307,7 @@
             return (this._data.exists) ? EDIT_HEADER_TEXTS_OFFSET : 0;
         }
 
-        private function _Str_24568():void
+        private function refreshCreateHeader():void
         {
             this._window.findChildByName("steps_header_cont").visible = (!(this._data.exists));
             if (this._data.exists)
