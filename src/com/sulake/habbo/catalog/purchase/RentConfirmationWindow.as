@@ -17,7 +17,7 @@
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.ExtendRentOrBuyoutFurniMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12348;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.ExtendRentOrBuyoutStripItemMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import flash.display.BitmapData;
@@ -171,7 +171,7 @@
                             this._catalog.connection.send(new ExtendRentOrBuyoutFurniMessageComposer((this._furniData.type == ProductTypeEnum.WALL), this._roomInstanceId, this._isBuyout));
                             break;
                         case MODE_INVENTORY:
-                            this._catalog.connection.send(new _Str_12348(this._stripId, this._isBuyout));
+                            this._catalog.connection.send(new ExtendRentOrBuyoutStripItemMessageComposer(this._stripId, this._isBuyout));
                             break;
                         case MODE_CATALOGUE:
                             this._catalog.purchaseOffer(this._furniData.rentOfferId);

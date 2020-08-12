@@ -721,7 +721,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PlacePostItMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ThrowDiceMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SpinWheelOfFortuneMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12348;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ExtendRentOrBuyoutStripItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_12374;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenMysteryTrophyMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.ControlYoutubeDisplayPlaybackMessageComposer;
@@ -1657,7 +1657,7 @@
             OUTGOING_PACKETS[2109] = _Str_12242;
             OUTGOING_PACKETS[211] = _Str_7268;
             OUTGOING_PACKETS[2110] = _Str_10484;
-            OUTGOING_PACKETS[2115] = _Str_12348;
+            OUTGOING_PACKETS[2115] = ExtendRentOrBuyoutStripItemMessageComposer;
             OUTGOING_PACKETS[2127] = GetTalentTrackLevelMessageComposer;
             OUTGOING_PACKETS[2128] = _Str_7214;
             OUTGOING_PACKETS[2138] = _Str_8049;
