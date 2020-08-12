@@ -533,7 +533,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7413;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateHomeRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_8102;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_8348;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.SetRoomSessionTagsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.EditEventMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRecommendedRoomsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyGuildBasesSearchMessageComposer;
@@ -1838,7 +1838,7 @@
             OUTGOING_PACKETS[3288] = GetMarketplaceItemStatsComposer;
             OUTGOING_PACKETS[3295] = _Str_7074;
             OUTGOING_PACKETS[3301] = LookToMessageComposer;
-            OUTGOING_PACKETS[3305] = _Str_8348;
+            OUTGOING_PACKETS[3305] = SetRoomSessionTagsMessageComposer;
             OUTGOING_PACKETS[3314] = IgnoreUserIdMessageComposer;
             OUTGOING_PACKETS[3320] = MoveAvatarMessageComposer;
             OUTGOING_PACKETS[3323] = RemoveBotFromFlatMessageComposer;
