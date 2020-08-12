@@ -55,7 +55,7 @@
             }
             this._window = IWindowContainer(this._manager.getXmlWindow("group"));
             this.setProc("group_room_link_region", this.onRoomLink);
-            this.setProc("manage_guild_region", this._Str_24785);
+            this.setProc("manage_guild_region", this.onManageGuild);
             this.setProc("delete_guild_region", this._Str_25370);
             this.setProc("members_region", this._Str_22812);
             this.setProc("pending_members_region", this._Str_23598);
@@ -211,7 +211,7 @@
             k.dispose();
         }
 
-        private function _Str_24785(k:WindowEvent, _arg_2:IWindow):void
+        private function onManageGuild(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
