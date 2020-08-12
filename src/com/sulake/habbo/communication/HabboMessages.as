@@ -247,7 +247,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_9950;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatPreferencesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_10960;
-	import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11137;
+	import com.sulake.habbo.communication.messages.outgoing.preferences.SetNewNavigatorWindowPreferencesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetSoundSettingsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetRoomCameraPreferencesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.preferences.SetChatStylePreferenceComposer;
@@ -1817,7 +1817,7 @@
             OUTGOING_PACKETS[3149] = GetThreadsMessageComposer;
             OUTGOING_PACKETS[3150] = RequestFurniInventoryComposer;
             OUTGOING_PACKETS[3157] = _Str_11418;
-            OUTGOING_PACKETS[3159] = _Str_11137;
+            OUTGOING_PACKETS[3159] = SetNewNavigatorWindowPreferencesMessageComposer;
             OUTGOING_PACKETS[3166] = ScrGetUserInfoMessageComposer;
             OUTGOING_PACKETS[3171] = _Str_10594;
             OUTGOING_PACKETS[3182] = _Str_10878;

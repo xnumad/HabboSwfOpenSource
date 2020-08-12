@@ -60,7 +60,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.navigator.domain.NavigatorData;
-    import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11137;
+    import com.sulake.habbo.communication.messages.outgoing.preferences.SetNewNavigatorWindowPreferencesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_12436;
     import com.sulake.habbo.communication.messages.outgoing.newnavigator._Str_11341;
@@ -576,7 +576,7 @@
 
         public function sendWindowPreferences(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:Boolean, _arg_6:int):void
         {
-            this._communication.connection.send(new _Str_11137(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6));
+            this._communication.connection.send(new SetNewNavigatorWindowPreferencesMessageComposer(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6));
         }
 
         public function getGuildInfo(k:int, _arg_2:Boolean=true):void
