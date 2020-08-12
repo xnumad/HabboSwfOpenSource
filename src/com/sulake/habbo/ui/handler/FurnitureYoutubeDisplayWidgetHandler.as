@@ -43,7 +43,7 @@
         public function set container(k:IRoomWidgetHandlerContainer):void
         {
             this._container = k;
-            //this.addMessageEvent(new _Str_8731(this._Str_23173));
+            //this.addMessageEvent(new _Str_8731(this.onVideo));
             //this.addMessageEvent(new YoutubeDisplayPlaylistsEvent(this._Str_24746));
             //this.addMessageEvent(new _Str_9325(this._Str_25218));
         }
@@ -68,7 +68,7 @@
             }
         }
 
-        private function _Str_23173(k:_Str_8731):void
+        private function onVideo(k:_Str_8731):void
         {
             var _local_2:_Str_8063 = k.getParser();
             this._widget.showVideo(_local_2.furniId, _local_2.videoId, _local_2._Str_25795, _local_2._Str_23507, _local_2.state);
