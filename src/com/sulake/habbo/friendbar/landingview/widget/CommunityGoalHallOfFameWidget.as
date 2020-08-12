@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalHallOfFameMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.competition._Str_5974;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_6257;
+    import com.sulake.habbo.communication.messages.incoming.quest.HallOfFameEntryData;
     import com.sulake.habbo.communication.messages.incoming.quest._Str_4106;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.communication.messages.outgoing.competition._Str_11657;
@@ -46,7 +46,7 @@
 
         override protected function refreshPopup(k:_Str_4106, _arg_2:IWindowContainer):void
         {
-            var _local_3:_Str_6257 = _Str_6257(k);
+            var _local_3:HallOfFameEntryData = HallOfFameEntryData(k);
             _arg_2.findChildByName("user_name_txt").caption = _local_3.userName;
             var _local_4:String = "landing.view.competition.hof.points";
             landingView.localizationManager.registerParameter(_local_4, "points", ("" + _local_3._Str_7605));

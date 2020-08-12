@@ -17,7 +17,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._hof.push(new _Str_6257(k));
+                this._hof.push(new HallOfFameEntryData(k));
                 _local_3++;
             }
         }

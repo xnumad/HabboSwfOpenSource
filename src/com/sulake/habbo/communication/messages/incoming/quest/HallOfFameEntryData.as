@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6257 implements _Str_4106 
+    public class HallOfFameEntryData implements _Str_4106
     {
         private var _userId:int;
         private var _userName:String;
@@ -10,7 +10,7 @@
         private var _rank:int;
         private var _currentScore:int;
 
-        public function _Str_6257(k:IMessageDataWrapper)
+        public function HallOfFameEntryData(k:IMessageDataWrapper)
         {
             this._userId = k.readInteger();
             this._userName = k.readString();
