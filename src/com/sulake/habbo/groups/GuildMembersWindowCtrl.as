@@ -116,7 +116,7 @@
             }
         }
 
-        public function _Str_23412(k:IMessageEvent):void
+        public function onGuildMemberMgmtFailed(k:IMessageEvent):void
         {
             var _local_2:GuildMemberMgmtFailedMessageEvent = GuildMemberMgmtFailedMessageEvent(k);
             var _local_3:int = _local_2.reason;
