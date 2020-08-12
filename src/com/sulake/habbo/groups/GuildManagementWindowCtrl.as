@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9952;
     import com.sulake.habbo.groups.events.GuildSettingsChangedInManageEvent;
     import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildBadgeMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_11165;
+    import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildColorsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10635;
     import com.sulake.habbo.communication.messages.outgoing.users.CreateGuildMessageComposer;
     import com.sulake.core.window.components.IDropMenuWindow;
@@ -601,7 +601,7 @@
                 case VIEW_COLORS:
                     _local_4 = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data.primaryColorId);
                     _local_5 = ((this._secondaryColorCtrl.isInitialized) ? this._secondaryColorCtrl._Str_15044() : this._data.secondaryColorId);
-                    this._manager.send(new _Str_11165(this._data.groupId, _local_4, _local_5));
+                    this._manager.send(new UpdateGuildColorsMessageComposer(this._data.groupId, _local_4, _local_5));
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
                 case VIEW_SETTINGS:

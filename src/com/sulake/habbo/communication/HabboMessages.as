@@ -475,7 +475,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_10887;
 	import com.sulake.habbo.communication.messages.outgoing.users.RejectMembershipRequestMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_11165;
+	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildColorsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11183;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11544;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditorDataMessageComposer;
@@ -1611,7 +1611,7 @@
             OUTGOING_PACKETS[1740] = _Str_7911;
             OUTGOING_PACKETS[1752] = _Str_5945;
             OUTGOING_PACKETS[1756] = GetSellablePetPalettesComposer;
-            OUTGOING_PACKETS[1764] = _Str_11165;
+            OUTGOING_PACKETS[1764] = UpdateGuildColorsMessageComposer;
             OUTGOING_PACKETS[1773] = PollRejectComposer;
             OUTGOING_PACKETS[1782] = _Str_7413;
             OUTGOING_PACKETS[1786] = _Str_10079;

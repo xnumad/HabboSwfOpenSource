@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11165 implements IMessageComposer 
+    public class UpdateGuildColorsMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_11165(k:int, _arg_2:int, _arg_3:int)
+        public function UpdateGuildColorsMessageComposer(k:int, _arg_2:int, _arg_3:int)
         {
             this._array = [];
             super();
