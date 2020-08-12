@@ -311,7 +311,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_12104;
 	import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerPrizesMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_12504;
+	import com.sulake.habbo.communication.messages.outgoing.recycler.RecycleItemsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2GameChatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2ExitGameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_18615;
@@ -1763,7 +1763,7 @@
             OUTGOING_PACKETS[2766] = _Str_4767;
             OUTGOING_PACKETS[2768] = PassCarryItemToPetMessageComposer;
             OUTGOING_PACKETS[2769] = _Str_7891;
-            OUTGOING_PACKETS[2771] = _Str_12504;
+            OUTGOING_PACKETS[2771] = RecycleItemsMessageComposer;
             OUTGOING_PACKETS[2781] = _Str_9977;
             OUTGOING_PACKETS[2809] = _Str_11181;
             OUTGOING_PACKETS[2813] = RoomDimmerGetPresetsMessageComposer;
