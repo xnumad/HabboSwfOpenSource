@@ -113,7 +113,7 @@
                 this._window = IFrameWindow(this._questEngine.getXmlWindow("QuestDetails"));
                 this._window.findChildByTag("close").procedure = this._Str_25061;
                 this._window.center();
-                _local_9 = this._questEngine._Str_3398._Str_12832._Str_19203(this._Str_17443, this._Str_8215);
+                _local_9 = this._questEngine._Str_3398._Str_12832._Str_19203(this._Str_17443, this.onCancelQuest);
                 _local_9.x = _Str_15189.x;
                 _local_9.y = _Str_15189.y;
                 this._window.content.addChild(_local_9);
@@ -261,7 +261,7 @@
             }
         }
 
-        private function _Str_8215(k:WindowEvent, _arg_2:IWindow):void
+        private function onCancelQuest(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

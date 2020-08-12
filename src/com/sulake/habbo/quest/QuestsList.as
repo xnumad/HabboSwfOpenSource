@@ -186,7 +186,7 @@
                 {
                     return true;
                 }
-                _local_5 = this._Str_19203(this._Str_17443, this._Str_8215);
+                _local_5 = this._Str_19203(this._Str_17443, this.onCancelQuest);
                 this._list.addListItem(_local_5);
                 _local_6 = true;
             }
@@ -339,7 +339,7 @@
             this._window.visible = false;
         }
 
-        private function _Str_8215(k:WindowEvent, _arg_2:IWindow):void
+        private function onCancelQuest(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
