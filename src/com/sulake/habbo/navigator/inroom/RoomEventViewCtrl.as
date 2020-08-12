@@ -18,7 +18,7 @@
     {
         private var _navigator:IHabboTransitionalNavigator;
         private var _window:IFrameWindow;
-        private var _Str_5340:TextFieldManager;
+        private var _eventNameInput:TextFieldManager;
         private var _Str_5951:TextFieldManager;
 
         public function RoomEventViewCtrl(k:IHabboTransitionalNavigator)
@@ -34,7 +34,7 @@
                 this._window.dispose();
                 this._window = null;
             }
-            this._Str_5340 = null;
+            this._eventNameInput = null;
             this._Str_5951 = null;
         }
 
@@ -68,7 +68,7 @@
         private function _Str_26474(k:RoomEventData):void
         {
             this._window.caption = this._navigator.getText("navigator.eventsettings.editcaption");
-            this._Str_5340.setText(k.eventName);
+            this._eventNameInput.setText(k.eventName);
             this._Str_5951.setText(k.eventDescription);
         }
 
@@ -76,7 +76,7 @@
         {
             this._window.caption = this._navigator.getText("navigator.createevent");
             this._Str_5951.goBackToInitialState();
-            this._Str_5340.goBackToInitialState();
+            this._eventNameInput.goBackToInitialState();
         }
 
         private function getInput(k:String):ITextFieldWindow
@@ -92,7 +92,7 @@
         private function save():void
         {
             var k:int = this._navigator.data.roomEventData.adId;
-            var _local_2:String = this._Str_5340.getText();
+            var _local_2:String = this._eventNameInput.getText();
             var _local_3:String = this._Str_5951.getText();
             if (!this.isMandatoryFieldsFilled())
             {
@@ -127,8 +127,8 @@
             var _local_3:int = _local_2.errorCode;
             if (_local_3 == 0)
             {
-                this._Str_5340.displayError(this._navigator.getText("roomad.error.0.description"));
-                this._Str_5340.setText(_local_2.filteredText);
+                this._eventNameInput.displayError(this._navigator.getText("roomad.error.0.description"));
+                this._eventNameInput.setText(_local_2.filteredText);
             }
             else
             {
@@ -143,7 +143,7 @@
         private function isMandatoryFieldsFilled():Boolean
         {
             this.clearErrors();
-            if (!this._Str_5340.checkMandatory(this._navigator.getText("navigator.eventsettings.nameerr")))
+            if (!this._eventNameInput.checkMandatory(this._navigator.getText("navigator.eventsettings.nameerr")))
             {
                 return false;
             }
@@ -152,7 +152,7 @@
 
         private function clearErrors():void
         {
-            this._Str_5340.clearErrors();
+            this._eventNameInput.clearErrors();
             this._Str_5951.clearErrors();
         }
 
@@ -164,9 +164,9 @@
             }
             this._window = IFrameWindow(this._navigator.getXmlWindow("iro_event_settings"));
             this.addMouseClickListener(this._window.findChildByTag("close"), this.onClose);
-            this._Str_5340 = new TextFieldManager(this._navigator, this.getInput("event_name"), 25);
+            this._eventNameInput = new TextFieldManager(this._navigator, this.getInput("event_name"), 25);
             this._Str_5951 = new TextFieldManager(this._navigator, this.getInput("event_desc"), 100);
-            this._Str_5340.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
+            this._eventNameInput.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
             this._Str_5951.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
             this._navigator.communication.addHabboConnectionMessageEvent(new RoomAdErrorEvent(this._Str_24049));
             this._window.center();
