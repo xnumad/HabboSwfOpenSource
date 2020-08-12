@@ -719,7 +719,7 @@
                 if (((_local_2.badgeCode == TalentTrackTask._Str_13850) && (this._Str_25273)))
                 {
                     this._Str_7795().visible = true;
-                    this._Str_7795().findChildByName("change_email_region").procedure = this._Str_23884;
+                    this._Str_7795().findChildByName("change_email_region").procedure = this.onChangeEmail;
                     this._Str_16767().procedure = this._Str_25645;
                     this._habboTalent.send(new _Str_10302());
                     this._Str_16375(false);
@@ -881,7 +881,7 @@
             }
         }
 
-        private function _Str_23884(k:WindowEvent, _arg_2:IWindow):void
+        private function onChangeEmail(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:String;
             if (k.type == WindowMouseEvent.CLICK)
