@@ -63,7 +63,7 @@
             this._chatReportController = new ChatReportController(this._habboHelp, this.onChatReportEvent);
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7837(this.onCallForHelpReply));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7620(this.onCallForHelpResult));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8337(this._Str_25598));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8337(this.onIssueClose));
         }
 
         private static function getCloseReasonKey(k:int):String
@@ -680,7 +680,7 @@
             }
         }
 
-        private function _Str_25598(k:_Str_8337):void
+        private function onIssueClose(k:_Str_8337):void
         {
             var _local_2:_Str_7865 = k.getParser();
             var _local_3:String = _local_2._Str_3460;
