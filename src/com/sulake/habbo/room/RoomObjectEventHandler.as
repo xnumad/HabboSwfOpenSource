@@ -61,7 +61,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine.SetObjectDataMessageComposer;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.RoomUserData;
-    import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8026;
+    import com.sulake.habbo.communication.messages.outgoing.room.engine.MovePetMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7684;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.PickupObjectMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
@@ -2111,7 +2111,7 @@
                                     _local_11 = _local_10.userDataManager.getUserDataByIndex(_arg_2);
                                     if (_local_11 != null)
                                     {
-                                        this._roomEngine.connection.send(new _Str_8026(_local_11.id, _local_6, _local_7, _local_8));
+                                        this._roomEngine.connection.send(new MovePetMessageComposer(_local_11.id, _local_6, _local_7, _local_8));
                                     }
                                 }
                             }
@@ -2191,7 +2191,7 @@
                                     _local_11 = _local_10.userDataManager.getUserDataByIndex(_arg_2);
                                     if (_local_11 != null)
                                     {
-                                        this._roomEngine.connection.send(new _Str_8026(_local_11.id, _local_6, _local_7, _local_8));
+                                        this._roomEngine.connection.send(new MovePetMessageComposer(_local_11.id, _local_6, _local_7, _local_8));
                                     }
                                 }
                             }

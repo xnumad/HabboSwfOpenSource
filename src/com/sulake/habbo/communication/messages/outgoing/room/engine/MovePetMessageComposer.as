@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_8026 implements IMessageComposer 
+    public class MovePetMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_8026(k:int, _arg_2:int, _arg_3:int, _arg_4:int)
+        public function MovePetMessageComposer(k:int, _arg_2:int, _arg_3:int, _arg_4:int)
         {
             this._array = [];
             super();

@@ -628,7 +628,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.MountPetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7716;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.SetClothingChangeDataMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8026;
+	import com.sulake.habbo.communication.messages.outgoing.room.engine.MovePetMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8042;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_8136;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.PickupObjectMessageComposer;
@@ -1859,7 +1859,7 @@
             OUTGOING_PACKETS[3435] = _Str_10635;
             OUTGOING_PACKETS[3445] = _Str_16318;
             OUTGOING_PACKETS[3447] = _Str_7610;
-            OUTGOING_PACKETS[3449] = _Str_8026;
+            OUTGOING_PACKETS[3449] = MovePetMessageComposer;
             OUTGOING_PACKETS[3456] = PickupObjectMessageComposer;
             OUTGOING_PACKETS[3457] = EventLogMessageComposer;
             OUTGOING_PACKETS[3483] = _Str_6074;
