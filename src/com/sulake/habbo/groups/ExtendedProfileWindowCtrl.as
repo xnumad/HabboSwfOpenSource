@@ -183,7 +183,7 @@
                 _local_3.id = _local_2.groupId;
                 _local_3.findChildByName("bg_region").procedure = this._Str_18701;
                 _local_3.findChildByName("bg_region").id = _local_2.groupId;
-                _local_3.findChildByName("clear_favourite").procedure = this._Str_24744;
+                _local_3.findChildByName("clear_favourite").procedure = this.onClearFavourite;
                 _local_3.findChildByName("clear_favourite").visible = ((_local_2.favourite) && (k));
                 _local_3.findChildByName("clear_favourite").id = _local_2.groupId;
                 _local_3.findChildByName("make_favourite").procedure = this.onMakeFavourite;
@@ -419,7 +419,7 @@
             this._selectedGroupId = _arg_2.id;
         }
 
-        private function _Str_24744(k:WindowEvent, _arg_2:IWindow):void
+        private function onClearFavourite(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
