@@ -514,7 +514,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFrequentRoomHistorySearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFavouriteRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11608;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11662;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.ToggleStaffPickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11792;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11858;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11893;
@@ -1628,7 +1628,7 @@
             OUTGOING_PACKETS[1866] = BuyMarketplaceTokensMessageComposer;
             OUTGOING_PACKETS[1894] = RejectMembershipRequestMessageComposer;
             OUTGOING_PACKETS[1911] = GetCustomRoomFilterMessageComposer;
-            OUTGOING_PACKETS[1918] = _Str_11662;
+            OUTGOING_PACKETS[1918] = ToggleStaffPickMessageComposer;
             OUTGOING_PACKETS[1922] = _Str_4553;
             OUTGOING_PACKETS[1945] = _Str_12438;
             OUTGOING_PACKETS[1954] = NavigatorDeleteSavedSearchComposer;

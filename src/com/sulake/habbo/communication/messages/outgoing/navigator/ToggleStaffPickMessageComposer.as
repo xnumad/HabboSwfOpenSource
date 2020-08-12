@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_11662 implements IMessageComposer, IDisposable 
+    public class ToggleStaffPickMessageComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function _Str_11662(k:int, _arg_2:Boolean)
+        public function ToggleStaffPickMessageComposer(k:int, _arg_2:Boolean)
         {
             this._array = new Array();
             super();

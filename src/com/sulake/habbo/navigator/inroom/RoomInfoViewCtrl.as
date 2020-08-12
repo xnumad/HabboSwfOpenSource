@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator.DeleteFavouriteRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.MuteAllInRoomComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.UpdateHomeRoomMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11662;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.ToggleStaffPickMessageComposer;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
 
@@ -455,7 +455,7 @@
         private function onStaffPick(k:WindowEvent):void
         {
             this.refreshStaffPick(true);
-            this._navigator.send(new _Str_11662(this._navigator.data.enteredGuestRoom.flatId, this._navigator.data._Str_8299));
+            this._navigator.send(new ToggleStaffPickMessageComposer(this._navigator.data.enteredGuestRoom.flatId, this._navigator.data._Str_8299));
         }
 
         private function onRoomReport(k:WindowEvent):void
