@@ -415,7 +415,7 @@
 
         private function onStartQuestTimer(k:TimerEvent):void
         {
-            if (this._Str_25445())
+            if (this.hasBlockingWindow())
             {
                 Logger.log("Quest start blocked. Waiting some more");
                 this._startQuestTimer.reset();
@@ -434,7 +434,7 @@
             return (k == null) ? "" : k;
         }
 
-        private function _Str_25445():Boolean
+        private function hasBlockingWindow():Boolean
         {
             var _local_2:IDesktopWindow;
             var k:int;
