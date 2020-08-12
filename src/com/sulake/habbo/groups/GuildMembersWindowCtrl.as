@@ -534,7 +534,7 @@
             {
                 return;
             }
-            this.doSearch(this._Str_13408((this._data.pageIndex + 1)));
+            this.doSearch(this.limitPageIndex((this._data.pageIndex + 1)));
         }
 
         private function onPreviousPage(k:WindowEvent, _arg_2:IWindow):void
@@ -543,20 +543,20 @@
             {
                 return;
             }
-            this.doSearch(this._Str_13408((this._data.pageIndex - 1)));
+            this.doSearch(this.limitPageIndex((this._data.pageIndex - 1)));
         }
 
         private function hasPreviousPage():Boolean
         {
-            return !(this._data.pageIndex == this._Str_13408((this._data.pageIndex - 1)));
+            return !(this._data.pageIndex == this.limitPageIndex((this._data.pageIndex - 1)));
         }
 
         private function hasNextPage():Boolean
         {
-            return !(this._data.pageIndex == this._Str_13408((this._data.pageIndex + 1)));
+            return !(this._data.pageIndex == this.limitPageIndex((this._data.pageIndex + 1)));
         }
 
-        private function _Str_13408(k:int):int
+        private function limitPageIndex(k:int):int
         {
             var _local_2:int = Math.ceil((this._data.totalEntries / this._data.pageSize));
             return Math.max(0, Math.min(k, (_local_2 - 1)));
