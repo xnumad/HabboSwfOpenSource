@@ -10,7 +10,7 @@
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import com.sulake.habbo.inventory.furni.FurniModel;
-    import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11938;
+    import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceCanMakeOfferComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceTokensMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.MakeOfferMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceItemStatsComposer;
@@ -176,7 +176,7 @@
             }
             this._item = k;
             _local_2._Str_15750(k.id);
-            this.send(new _Str_11938());
+            this.send(new GetMarketplaceCanMakeOfferComposer());
         }
 
         public function buyMarketplaceTokens():void
