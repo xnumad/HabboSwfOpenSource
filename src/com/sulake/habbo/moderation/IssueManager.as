@@ -526,7 +526,7 @@
             this._moderationManager.connection.send(new CloseIssueDefaultActionMessageComposer(k, _arg_2, _arg_3));
         }
 
-        public function _Str_25931(k:int):void
+        public function autoHandle(k:int):void
         {
             var _local_3:IssueBundle;
             var _local_5:IssueBundle;
