@@ -519,7 +519,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11858;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11893;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12081;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12106;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomRightsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12153;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12239;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_17077;
@@ -1745,7 +1745,7 @@
             OUTGOING_PACKETS[271] = _Str_9816;
             OUTGOING_PACKETS[2713] = _Str_10953;
             OUTGOING_PACKETS[2717] = CloseIssueDefaultActionMessageComposer;
-            OUTGOING_PACKETS[272] = _Str_12106;
+            OUTGOING_PACKETS[272] = MyRoomRightsSearchMessageComposer;
             OUTGOING_PACKETS[2721] = _Str_10410;
             OUTGOING_PACKETS[2725] = _Str_11893;
             OUTGOING_PACKETS[273] = GetCreditsInfoComposer;

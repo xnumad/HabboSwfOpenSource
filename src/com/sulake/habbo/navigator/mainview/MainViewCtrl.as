@@ -40,7 +40,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10574;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9911;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11181;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12106;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomRightsSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9844;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9807;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11269;
@@ -645,7 +645,7 @@
                 case Tabs.SEARCHTYPE_NEW_ROOM_ADS:
                     return new _Str_11181(this._navigator.data._Str_6357, k);
                 case Tabs.SEARCHTYPE_ROOMS_WITH_RIGHTS:
-                    return new _Str_12106();
+                    return new MyRoomRightsSearchMessageComposer();
                 case Tabs.SEARCHTYPE_MY_GUILD_BASES:
                     return new _Str_9844();
                 case Tabs.SEARCHTYPE_BY_OWNER:
