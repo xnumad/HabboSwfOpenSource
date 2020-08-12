@@ -4,7 +4,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8090 implements IMessageParser 
+    public class PetInventoryMessageParser implements IMessageParser
     {
         protected var _totalFragments:int;
         protected var _fragmentNo:int;

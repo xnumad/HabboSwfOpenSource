@@ -95,7 +95,7 @@
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.inventory.pets.PetsModel;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_8090;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.PetInventoryMessageParser;
     import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_8182;
     import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_7486;
     import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_7183;
@@ -733,7 +733,7 @@
             {
                 return;
             }
-            var _local_3:_Str_8090 = k.getParser();
+            var _local_3:PetInventoryMessageParser = k.getParser();
             if (this._petMsgFragments == null)
             {
                 this._petMsgFragments = new Vector.<Map>(_local_3.totalFragments, true);
