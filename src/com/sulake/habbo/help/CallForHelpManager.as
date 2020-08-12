@@ -275,7 +275,7 @@
             else
             {
                 this._window = (this._habboHelp.getXmlWindow("emergency_help_request") as IWindowContainer);
-                this._window.procedure = this._Str_22328;
+                this._window.procedure = this.onEmergencyHelpRequestEvent;
                 IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("help_message")).widget).maxChars = FIELD_MAX_CHARS;
             }
             this._window.center();
@@ -423,7 +423,7 @@
             }
         }
 
-        private function _Str_22328(k:WindowEvent, _arg_2:IWindow):void
+        private function onEmergencyHelpRequestEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
