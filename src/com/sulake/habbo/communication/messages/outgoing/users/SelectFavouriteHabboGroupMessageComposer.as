@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10887 implements IMessageComposer 
+    public class SelectFavouriteHabboGroupMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_10887(k:int)
+        public function SelectFavouriteHabboGroupMessageComposer(k:int)
         {
             this._array = [];
             super();

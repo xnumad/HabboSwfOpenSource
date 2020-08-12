@@ -473,7 +473,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.UnignoreUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_10887;
+	import com.sulake.habbo.communication.messages.outgoing.users.SelectFavouriteHabboGroupMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.RejectMembershipRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildColorsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11183;
@@ -1872,7 +1872,7 @@
             OUTGOING_PACKETS[3526] = _Str_10092;
             OUTGOING_PACKETS[3529] = PostMessageMessageComposer;
             OUTGOING_PACKETS[3536] = CommunityGoalVoteMessageComposer;
-            OUTGOING_PACKETS[3549] = _Str_10887;
+            OUTGOING_PACKETS[3549] = SelectFavouriteHabboGroupMessageComposer;
             OUTGOING_PACKETS[3558] = PresentOpenMessageComposer;
             OUTGOING_PACKETS[3559] = _Str_8089;
             OUTGOING_PACKETS[3567] = _Str_10962;

@@ -23,7 +23,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_10887;
+    import com.sulake.habbo.communication.messages.outgoing.users.SelectFavouriteHabboGroupMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_11883;
     import com.sulake.habbo.window.utils.IAlertDialog;
 
@@ -414,7 +414,7 @@
             {
                 return;
             }
-            this._manager.send(new _Str_10887(_arg_2.id));
+            this._manager.send(new SelectFavouriteHabboGroupMessageComposer(_arg_2.id));
             this._manager.send(new EventLogMessageComposer(HabboGroupsManager.HABBOGROUPS, ("" + _arg_2.parent.id), "make favourite"));
             this._selectedGroupId = _arg_2.id;
         }
