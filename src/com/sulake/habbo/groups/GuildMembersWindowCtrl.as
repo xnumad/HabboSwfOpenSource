@@ -268,7 +268,7 @@
             var _local_5:Boolean;
             k.findChildByName("user_name_txt").caption = _arg_2.userName;
             k.findChildByName("icon_owner").visible = _arg_2.owner;
-            this._Str_18115(_arg_2.member, _arg_2.admin, k);
+            this.setAdminState(_arg_2.member, _arg_2.admin, k);
             var _local_3:IWindow = k.findChildByName("admin_container");
             _local_3.visible = ((!(_local_5)) && ((_arg_2.admin) || (this._data.allowedToManage)));
             var _local_4:IRegionWindow = IRegionWindow(k.findChildByName("bg_region"));
@@ -418,7 +418,7 @@
                 return;
             }
             this.setActionLinkState(true, _local_2);
-            this._Str_18115(_local_3.member, (!(_local_3.admin)), IWindowContainer(_local_2.parent));
+            this.setAdminState(_local_3.member, (!(_local_3.admin)), IWindowContainer(_local_2.parent));
         }
 
         private function onActionLinkMouseOut(k:WindowEvent):void
@@ -428,7 +428,7 @@
             var _local_3:_Str_2891 = this._data._Str_5126(k.target.id);
             if (_local_3 != null)
             {
-                this._Str_18115(_local_3.member, _local_3.admin, IWindowContainer(_local_2.parent));
+                this.setAdminState(_local_3.member, _local_3.admin, IWindowContainer(_local_2.parent));
             }
         }
 
@@ -463,7 +463,7 @@
             }
         }
 
-        private function _Str_18115(k:Boolean, _arg_2:Boolean, _arg_3:IWindowContainer):void
+        private function setAdminState(k:Boolean, _arg_2:Boolean, _arg_3:IWindowContainer):void
         {
             _arg_3.findChildByName("icon_admin_off").visible = ((k) && (_arg_2));
             _arg_3.findChildByName("icon_admin_over").visible = ((k) && (!(_arg_2)));
