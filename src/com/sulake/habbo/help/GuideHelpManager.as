@@ -120,7 +120,7 @@
             this._guideSessionController._Str_18954();
         }
 
-        public function _Str_22714(k:String):void
+        public function showFeedback(k:String):void
         {
             this._chatReviewReporterFeedbackCtrl.show(k);
         }
