@@ -187,7 +187,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new GuildForumThreadsEvent(this._Str_24478));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8526(this._Str_25325));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8758(this._parser8));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9446(this._Str_25777));
+            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9446(this.onThreadMessageList));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8331(this._Str_25702));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9630(this._Str_24297));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9518(this._Str_22869));
@@ -392,7 +392,7 @@
             }
         }
 
-        private function _Str_25777(k:_Str_9446):void
+        private function onThreadMessageList(k:_Str_9446):void
         {
             var _local_6:_Str_2814;
             var _local_2:_Str_7217 = k.getParser();
