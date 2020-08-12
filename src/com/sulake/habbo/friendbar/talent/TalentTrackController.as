@@ -30,7 +30,7 @@
     import com.sulake.habbo.utils._Str_988;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_10302;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetEmailStatusComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
     import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
@@ -721,7 +721,7 @@
                     this.getEmailContainer().visible = true;
                     this.getEmailContainer().findChildByName("change_email_region").procedure = this.onChangeEmail;
                     this.getEmailText().procedure = this.onEmailTxt;
-                    this._habboTalent.send(new _Str_10302());
+                    this._habboTalent.send(new GetEmailStatusComposer());
                     this.setEmailErrorStatus(false);
                 }
             }
