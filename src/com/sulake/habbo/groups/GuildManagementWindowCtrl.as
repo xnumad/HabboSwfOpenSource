@@ -364,7 +364,7 @@
             this._window.activate();
         }
 
-        public function _Str_18072(k:GuildEditData):void
+        public function onGuildEditInfo(k:GuildEditData):void
         {
             this._data = k;
             this._step = _Str_7036;

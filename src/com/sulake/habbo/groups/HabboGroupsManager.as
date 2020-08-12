@@ -183,7 +183,7 @@
             this.addMessageEvent(new GuildMembersEvent(this._guildMembersWindowCtrl._Str_22267));
             this.addMessageEvent(new GroupDetailsChangedMessageEvent(this.onGroupDetailsChanged));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
-            this.addMessageEvent(new GuildEditInfoMessageEvent(this._Str_18072));
+            this.addMessageEvent(new GuildEditInfoMessageEvent(this.onGuildEditInfo));
             this.addMessageEvent(new GuildMembershipUpdatedMessageEvent(this._guildMembersWindowCtrl._Str_25762));
             this.addMessageEvent(new ExtendedProfileChangedMessageEvent(this.onExtendedProfileChanged));
             this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
@@ -379,10 +379,10 @@
             this._Str_19848();
         }
 
-        private function _Str_18072(k:IMessageEvent):void
+        private function onGuildEditInfo(k:IMessageEvent):void
         {
             var _local_2:GuildEditData = GuildEditInfoMessageEvent(k).data;
-            this._guildManagementWindowCtrl._Str_18072(_local_2);
+            this._guildManagementWindowCtrl.onGuildEditInfo(_local_2);
             this._Str_19848();
         }
 
