@@ -329,7 +329,7 @@
         {
             var k:IWindowContainer = IWindowContainer(this._manager.getXmlWindow("member_entry"));
             var _local_2:IRegionWindow = IRegionWindow(k.findChildByName("bg_region"));
-            _local_2.procedure = this._Str_24347;
+            _local_2.procedure = this.onBg;
             var _local_3:IRegionWindow = IRegionWindow(k.findChildByName("block_region"));
             _local_3.addEventListener(WindowMouseEvent.OVER, this.onRemoveMouseOver);
             _local_3.addEventListener(WindowMouseEvent.OUT, this.onRemoveMouseOut);
@@ -469,7 +469,7 @@
             _arg_3.findChildByName("icon_admin_over").visible = ((k) && (!(_arg_2)));
         }
 
-        private function _Str_24347(k:WindowEvent, _arg_2:IWindow):void
+        private function onBg(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
