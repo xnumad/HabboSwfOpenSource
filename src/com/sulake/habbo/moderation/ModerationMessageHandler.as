@@ -28,7 +28,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.parser.moderation.IssueDeletedMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7467;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_8106;
+    import com.sulake.habbo.communication.messages.parser.moderation.ModeratorRoomInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8235;
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.parser.moderation.RoomChatlogMessageParser;
@@ -197,7 +197,7 @@
         private function onRoomInfo(k:_Str_8695):void
         {
             var _local_3:RoomToolCtrl;
-            var _local_2:_Str_8106 = k.getParser();
+            var _local_2:ModeratorRoomInfoMessageParser = k.getParser();
             for each (_local_3 in this._roomInfoListeners)
             {
                 _local_3.onRoomInfo(_local_2.data);
