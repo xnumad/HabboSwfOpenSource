@@ -66,7 +66,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8337(this._Str_25598));
         }
 
-        private static function _Str_20529(k:int):String
+        private static function getCloseReasonKey(k:int):String
         {
             if (k == 1)
             {
@@ -686,7 +686,7 @@
             var _local_3:String = _local_2._Str_3460;
             if (_local_3 == "")
             {
-                _local_3 = (("${help.cfh.closed." + _Str_20529(_local_2._Str_25784)) + "}");
+                _local_3 = (("${help.cfh.closed." + getCloseReasonKey(_local_2._Str_25784)) + "}");
             }
             this._habboHelp.windowManager.alert("${mod.alert.title}", _local_3, 0, null);
         }
