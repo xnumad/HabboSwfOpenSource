@@ -194,7 +194,7 @@
                     if (this._missingSongInfo.indexOf(_local_5) < 0)
                     {
                         this._missingSongInfo.push(_local_5);
-                        this._musicController._Str_7732(_local_5);
+                        this._musicController.requestSongInfoWithoutSamples(_local_5);
                     }
                 }
                 _local_7._Str_5848 = _local_6;

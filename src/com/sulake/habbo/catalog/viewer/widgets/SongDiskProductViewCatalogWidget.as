@@ -218,7 +218,7 @@
                 {
                     return k.length / 1000;
                 }
-                this._soundManager._Str_2774._Str_7732(this._selectedSongId);
+                this._soundManager._Str_2774.requestSongInfoWithoutSamples(this._selectedSongId);
             }
             return -1;
         }

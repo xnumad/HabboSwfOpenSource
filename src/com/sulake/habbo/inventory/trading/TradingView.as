@@ -900,7 +900,7 @@
                     this._waitingSongInfo.push(_arg_4);
                     this._waitingSongInfo.push(k);
                     this._waitingSongInfo.push(_arg_5);
-                    this._soundManager._Str_2774._Str_7732(_local_6._Str_2794);
+                    this._soundManager._Str_2774.requestSongInfoWithoutSamples(_local_6._Str_2794);
                 }
             }
             return _arg_2;

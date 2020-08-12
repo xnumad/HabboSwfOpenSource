@@ -424,7 +424,7 @@
             this._Str_21555(k, true);
         }
 
-        public function _Str_7732(k:int):void
+        public function requestSongInfoWithoutSamples(k:int):void
         {
             this._Str_21555(k, false);
         }
@@ -443,7 +443,7 @@
             var _local_2:SongDataEntry = this._Str_9498(k);
             if (_local_2 == null)
             {
-                this._Str_7732(k);
+                this.requestSongInfoWithoutSamples(k);
             }
             return _local_2;
         }
@@ -714,7 +714,7 @@
                 if (this._availableSongs.getValue(_local_6) == null)
                 {
                     this._diskInventoryMissingData.push(_local_6);
-                    this._Str_7732(_local_6);
+                    this.requestSongInfoWithoutSamples(_local_6);
                 }
                 _local_4++;
             }

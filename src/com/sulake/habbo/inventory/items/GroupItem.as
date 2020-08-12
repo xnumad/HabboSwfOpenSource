@@ -1020,7 +1020,7 @@
                     _local_3 = this._model._Str_2476._Str_2774.getSongInfo(_local_2);
                     if (_local_3 == null)
                     {
-                        this._model._Str_2476._Str_2774._Str_7732(_local_2);
+                        this._model._Str_2476._Str_2774.requestSongInfoWithoutSamples(_local_2);
                         this._Str_14420 = _local_2;
                     }
                 }
