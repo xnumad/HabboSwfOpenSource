@@ -517,7 +517,7 @@
             this._blendCustomContent = (!(_local_5 == _local_6));
             if (_local_5 != _local_6)
             {
-                _local_6._Str_5252._Str_6883();
+                _local_6._Str_5252.tabSelected();
             }
             this._navigator.data._Str_23771();
             if (_arg_4 == _Str_8485)

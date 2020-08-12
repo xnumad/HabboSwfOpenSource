@@ -30,7 +30,7 @@
             _local_2.visible = true;
         }
 
-        public function _Str_6883():void
+        public function tabSelected():void
         {
             if (((!(this._filter == null)) && (!(this._filter.disposed))))
             {

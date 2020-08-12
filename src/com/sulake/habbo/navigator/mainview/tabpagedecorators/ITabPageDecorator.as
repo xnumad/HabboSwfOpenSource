@@ -5,7 +5,7 @@
     public interface ITabPageDecorator 
     {
         function refreshCustomContent(_arg_1:IWindowContainer):void;
-        function _Str_6883():void;
+        function tabSelected():void;
         function _Str_8146():void;
         function _Str_5920(_arg_1:IWindowContainer):void;
         function get _Str_5960():String;

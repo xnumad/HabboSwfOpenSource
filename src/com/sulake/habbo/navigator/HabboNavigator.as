@@ -660,7 +660,7 @@
                 return;
             }
             this._mainViewCtrl.startSearch(Tabs.TAB_ME, Tabs.SEARCHTYPE_MY_ROOMS);
-            this._tabs.getTab(Tabs.TAB_ME)._Str_5252._Str_6883();
+            this._tabs.getTab(Tabs.TAB_ME)._Str_5252.tabSelected();
         }
 
         public function showFavouriteRooms():void

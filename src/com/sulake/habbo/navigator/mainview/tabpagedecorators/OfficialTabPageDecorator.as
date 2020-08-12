@@ -18,7 +18,7 @@
         {
         }
 
-        public function _Str_6883():void
+        public function tabSelected():void
         {
         }
 
