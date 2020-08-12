@@ -752,7 +752,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10092;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10432;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModToolPreferencesComposer;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11592;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.ModKickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11910;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12129;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12412;
@@ -1727,7 +1727,7 @@
             OUTGOING_PACKETS[2557] = GetEmailStatusComposer;
             OUTGOING_PACKETS[2565] = _Str_5198;
             OUTGOING_PACKETS[2578] = MyFavouriteRoomsSearchMessageComposer;
-            OUTGOING_PACKETS[2582] = _Str_11592;
+            OUTGOING_PACKETS[2582] = ModKickMessageComposer;
             OUTGOING_PACKETS[2587] = GetRoomChatlogMessageComposer;
             OUTGOING_PACKETS[2594] = _Str_11905;
             OUTGOING_PACKETS[2595] = _Str_4038;

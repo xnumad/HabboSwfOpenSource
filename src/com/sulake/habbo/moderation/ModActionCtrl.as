@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModAlertMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModBanMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11592;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModKickMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_12485;
     import com.sulake.habbo.utils.StringUtil;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7103;
@@ -297,7 +297,7 @@
                         return;
                     }
                     this._Str_3066("kick");
-                    this._Str_2327.connection.send(new _Str_11592(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
+                    this._Str_2327.connection.send(new ModKickMessageComposer(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
                 case ModActionDefinition.TRADING_LOCK:
                     this._Str_3066("trading_lock");
