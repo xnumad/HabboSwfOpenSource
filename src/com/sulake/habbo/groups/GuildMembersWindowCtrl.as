@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.AddAdminRightsToMemberMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.ApproveMembershipRequestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_9979;
+    import com.sulake.habbo.communication.messages.outgoing.users.ApproveAllMembershipRequestsMessageComposer;
     import com.sulake.core.window.components.IDropMenuWindow;
     import flash.events.Event;
 
@@ -512,7 +512,7 @@
             {
                 return;
             }
-            this._manager.send(new _Str_9979(this._data.groupId));
+            this._manager.send(new ApproveAllMembershipRequestsMessageComposer(this._data.groupId));
         }
 
         private function getTypeDropMenu():IDropMenuWindow

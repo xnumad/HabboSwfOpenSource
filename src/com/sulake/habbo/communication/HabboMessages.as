@@ -499,7 +499,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9855;
 	import com.sulake.habbo.communication.messages.outgoing.users.ApproveMembershipRequestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.UpdateGuildIdentityMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_9979;
+	import com.sulake.habbo.communication.messages.outgoing.users.ApproveAllMembershipRequestsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
 	import com.sulake.habbo.communication.messages.outgoing.game.ingame.Game2RequestFullStatusUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.camera.CameraSnapshotMessageEvent;
@@ -1973,7 +1973,7 @@
             OUTGOING_PACKETS[872] = RentableSpaceStatusMessageComposer;
             OUTGOING_PACKETS[873] = ModerateMessageMessageComposer;
             OUTGOING_PACKETS[875] = UpdateFloorPropertiesMessageComposer;
-            OUTGOING_PACKETS[882] = _Str_9979;
+            OUTGOING_PACKETS[882] = ApproveAllMembershipRequestsMessageComposer;
             OUTGOING_PACKETS[887] = _Str_7077;
             OUTGOING_PACKETS[90] = _Str_16291;
             OUTGOING_PACKETS[924] = SetClothingChangeDataMessageComposer;
