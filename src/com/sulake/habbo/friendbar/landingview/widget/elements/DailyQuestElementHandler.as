@@ -16,7 +16,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.quest.ActivateQuestMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_7541;
+    import com.sulake.habbo.communication.messages.outgoing.quest.CancelQuestMessageComposer;
 
     public class DailyQuestElementHandler implements IElementHandler, IFloatingElement, IDisposable 
     {
@@ -213,7 +213,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._landingView.send(new _Str_7541());
+                this._landingView.send(new CancelQuestMessageComposer());
             }
         }
 

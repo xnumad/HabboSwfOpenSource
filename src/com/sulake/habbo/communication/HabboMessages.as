@@ -37,7 +37,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest.RejectQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetQuestsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.AcceptQuestMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7541;
+	import com.sulake.habbo.communication.messages.outgoing.quest.CancelQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.OpenQuestTrackerMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.StartCampaignMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersGoalProgressMessageComposer;
@@ -1809,7 +1809,7 @@
             OUTGOING_PACKETS[3115] = CreditFurniRedeemMessageComposer;
             OUTGOING_PACKETS[312] = GetGuildMembersMessageComposer;
             OUTGOING_PACKETS[3129] = GetRoomSettingsMessageComposer;
-            OUTGOING_PACKETS[3133] = _Str_7541;
+            OUTGOING_PACKETS[3133] = CancelQuestMessageComposer;
             OUTGOING_PACKETS[3135] = _Str_7384;
             OUTGOING_PACKETS[3137] = UpdateGuildIdentityMessageComposer;
             OUTGOING_PACKETS[314] = _Str_11608;
