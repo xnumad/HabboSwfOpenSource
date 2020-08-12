@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageData;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.quest.QuestDailyMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_5085;
+    import com.sulake.habbo.communication.messages.outgoing.quest.GetDailyQuestMessageComposer;
     import com.sulake.habbo.communication.messages.parser.quest.QuestDailyParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.window.components.ITextWindow;
@@ -98,7 +98,7 @@
         public function refresh():void
         {
             this._index = 0;
-            this._landingView.send(new _Str_5085(true, 0));
+            this._landingView.send(new GetDailyQuestMessageComposer(true, 0));
         }
 
         public function get disposed():Boolean
@@ -219,7 +219,7 @@
 
         private function moveChildrenToRow(k:Boolean):void
         {
-            this._landingView.send(new _Str_5085(k, this._index));
+            this._landingView.send(new GetDailyQuestMessageComposer(k, this._index));
         }
     }
 }

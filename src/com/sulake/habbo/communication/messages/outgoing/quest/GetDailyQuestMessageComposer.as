@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_5085 implements IMessageComposer 
+    public class GetDailyQuestMessageComposer implements IMessageComposer
     {
         private var _data:Array;
 
-        public function _Str_5085(k:Boolean, _arg_2:int)
+        public function GetDailyQuestMessageComposer(k:Boolean, _arg_2:int)
         {
             this._data = [];
             super();

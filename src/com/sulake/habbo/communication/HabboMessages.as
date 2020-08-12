@@ -33,7 +33,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_17850;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.ActivateQuestMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_5085;
+	import com.sulake.habbo.communication.messages.outgoing.quest.GetDailyQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.RejectQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetQuestsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.AcceptQuestMessageComposer;
@@ -1712,7 +1712,7 @@
             OUTGOING_PACKETS[2462] = _Str_7218;
             OUTGOING_PACKETS[2468] = _Str_18849;
             OUTGOING_PACKETS[248] = MoveObjectMessageComposer;
-            OUTGOING_PACKETS[2486] = _Str_5085;
+            OUTGOING_PACKETS[2486] = GetDailyQuestMessageComposer;
             OUTGOING_PACKETS[2487] = _Str_12290;
             OUTGOING_PACKETS[249] = _Str_11428;
             OUTGOING_PACKETS[2490] = UniqueIDMessageComposer;
