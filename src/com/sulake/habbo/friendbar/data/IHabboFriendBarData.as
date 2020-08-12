@@ -12,7 +12,7 @@
         function _Str_25174(_arg_1:String):IFriendEntity;
         function get _Str_10570():int;
         function _Str_21160(_arg_1:int):IFriendRequest;
-        function _Str_23651(_arg_1:int):IFriendRequest;
+        function getFriendRequestByID(_arg_1:int):IFriendRequest;
         function getFriendRequestByName(_arg_1:String):IFriendRequest;
         function getFriendRequestList():Array;
         function acceptFriendRequest(_arg_1:int):void;

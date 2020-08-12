@@ -187,7 +187,7 @@
             return (this._friendRequests) ? this._friendRequests[k] : null;
         }
 
-        public function _Str_23651(k:int):IFriendRequest
+        public function getFriendRequestByID(k:int):IFriendRequest
         {
             var _local_2:IFriendRequest;
             if (this._friendRequests)
