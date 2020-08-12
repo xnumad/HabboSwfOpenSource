@@ -595,7 +595,7 @@
             }
             if (this._habboHelp.friendList.getFriend(this._reportedUserId) != null)
             {
-                this._habboHelp.windowManager.confirm("${help.cfh.unfriend.confirm.title}", "${help.cfh.unfriend.confirm.message}", (_Str_3023.BUTTON_OK | _Str_3023.BUTTON_CANCEL), this._Str_24374);
+                this._habboHelp.windowManager.confirm("${help.cfh.unfriend.confirm.title}", "${help.cfh.unfriend.confirm.message}", (_Str_3023.BUTTON_OK | _Str_3023.BUTTON_CANCEL), this.onFriendReportConfirmation);
                 return false;
             }
             return true;
@@ -625,7 +625,7 @@
             this._habboHelp._Str_19312();
         }
 
-        private function _Str_24374(k:IAlertDialog, _arg_2:WindowEvent):void
+        private function onFriendReportConfirmation(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
