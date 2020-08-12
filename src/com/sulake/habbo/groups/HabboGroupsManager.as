@@ -166,7 +166,7 @@
             this.addMessageEvent(new ExtendedProfileMessageEvent(this.onExtendedProfile));
             this.addMessageEvent(new GuildEditFailedMessageEvent(this._Str_25256));
             this.addMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
-            this.addMessageEvent(new HabboGroupJoinFailedMessageEvent(this._Str_25665));
+            this.addMessageEvent(new HabboGroupJoinFailedMessageEvent(this.onJoinFailed));
             this.addMessageEvent(new GroupMembershipRequestedMessageEvent(this._guildMembersWindowCtrl._Str_22705));
             this.addMessageEvent(new GuildMemberMgmtFailedMessageEvent(this._guildMembersWindowCtrl._Str_23412));
             this.addMessageEvent(new RelationshipStatusInfo(this._Str_18561));
@@ -355,7 +355,7 @@
             }
         }
 
-        private function _Str_25665(k:IMessageEvent):void
+        private function onJoinFailed(k:IMessageEvent):void
         {
             var _local_3:String;
             var _local_4:String;
