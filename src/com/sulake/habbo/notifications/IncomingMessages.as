@@ -245,7 +245,7 @@
             }
             if (this.useNotifications())
             {
-                this._notifications.singularController.alertDialogManager._Str_22425(_local_2.message, _local_2.url);
+                this._notifications.singularController.alertDialogManager.handleModeratorCaution(_local_2.message, _local_2.url);
             }
             if (this.useNotificationFeed())
             {

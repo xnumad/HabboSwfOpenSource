@@ -34,7 +34,7 @@
             this._habboHelp = null;
         }
 
-        public function _Str_22425(k:String, _arg_2:String=""):void
+        public function handleModeratorCaution(k:String, _arg_2:String=""):void
         {
             this._Str_16535(k, _arg_2);
         }
