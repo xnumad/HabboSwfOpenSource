@@ -28,7 +28,7 @@
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetOfficialRoomsMessageComposer;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4374;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsData;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11329;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9956;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12153;
@@ -611,7 +611,7 @@
 
         private function _Str_23726(k:int, _arg_2:String):IMessageComposer
         {
-            var _local_3:_Str_4374;
+            var _local_3:CompetitionRoomsData;
             switch (k)
             {
                 case Tabs.SEARCHTYPE_MY_FAVOURITES:

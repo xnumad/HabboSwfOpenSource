@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.communication.messages.parser.navigator
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4374;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_8594 implements IMessageParser 
     {
-        private var _data:_Str_4374;
+        private var _data:CompetitionRoomsData;
 
 
         public function flush():Boolean
@@ -16,11 +16,11 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._data = new _Str_4374(k);
+            this._data = new CompetitionRoomsData(k);
             return true;
         }
 
-        public function get data():_Str_4374
+        public function get data():CompetitionRoomsData
         {
             return this._data;
         }

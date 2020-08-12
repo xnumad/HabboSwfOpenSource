@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4374 
+    public class CompetitionRoomsData
     {
         private var _Str_5696:int;
         private var _Str_4347:int;
         private var _Str_18850:int;
 
-        public function _Str_4374(k:IMessageDataWrapper, _arg_2:int=0, _arg_3:int=0)
+        public function CompetitionRoomsData(k:IMessageDataWrapper, _arg_2:int=0, _arg_3:int=0)
         {
             this._Str_5696 = _arg_2;
             this._Str_4347 = _arg_3;

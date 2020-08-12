@@ -65,7 +65,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4374;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsData;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.communication.messages.outgoing.navigator.ForwardToSomeRoomMessageComposer;
@@ -636,7 +636,7 @@
             {
                 return;
             }
-            this._data._Str_4079 = new _Str_4374(null, k, _arg_2);
+            this._data._Str_4079 = new CompetitionRoomsData(null, k, _arg_2);
             this._mainViewCtrl.startSearch(Tabs.TAB_SEARCH, Tabs.SEARCHTYPE_COMPETITION_ROOMS, "");
             this._mainViewCtrl.mainWindow.activate();
             this._mainViewCtrl.searchInput._Str_17634.setText("");

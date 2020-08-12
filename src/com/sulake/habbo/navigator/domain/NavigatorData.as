@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2632;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5485;
     import com.sulake.habbo.navigator.roomsettings.FriendList;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4374;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsData;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsData;
@@ -56,7 +56,7 @@
         private var _promotedRooms:_Str_5485;
         private var _friendList:FriendList;
         private var _roomSessionTags:RoomSessionTags;
-        private var _competitionRoomsData:_Str_4374;
+        private var _competitionRoomsData:CompetitionRoomsData;
 
         public function NavigatorData(k:HabboNavigator)
         {
@@ -510,12 +510,12 @@
             this._roomSessionTags = k;
         }
 
-        public function get _Str_4079():_Str_4374
+        public function get _Str_4079():CompetitionRoomsData
         {
             return this._competitionRoomsData;
         }
 
-        public function set _Str_4079(k:_Str_4374):void
+        public function set _Str_4079(k:CompetitionRoomsData):void
         {
             this._competitionRoomsData = k;
         }
