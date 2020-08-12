@@ -37,7 +37,7 @@
         public function initialize():void
         {
             this._container = IWindowContainer(this._landingView.getXmlWindow("fast_food_game_promo"));
-            this._container.findChildByName("go_button").procedure = this._Str_5735;
+            this._container.findChildByName("go_button").procedure = this.onGoButton;
         }
 
         public function refresh():void
@@ -49,7 +49,7 @@
             return this._landingView == null;
         }
 
-        private function _Str_5735(k:WindowEvent, _arg_2:IWindow):void
+        private function onGoButton(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
