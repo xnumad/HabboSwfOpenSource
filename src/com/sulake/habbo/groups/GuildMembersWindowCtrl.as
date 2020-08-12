@@ -138,7 +138,7 @@
             }
         }
 
-        public function _Str_22705(k:IMessageEvent):void
+        public function onMembershipRequested(k:IMessageEvent):void
         {
             var _local_2:GroupMembershipRequestedMessageParser = GroupMembershipRequestedMessageEvent(k).getParser();
             if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.groupId)))
