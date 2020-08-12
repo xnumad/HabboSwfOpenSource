@@ -963,7 +963,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollStartComposer;
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollRejectComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect.AvatarEffectActivatedComposer;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_5945;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect.AvatarEffectSelectedComposer;
 	import com.sulake.habbo.communication.messages.incoming.campaign.*;
 	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9003;
 	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9045;
@@ -1609,7 +1609,7 @@
             OUTGOING_PACKETS[1703] = ForwardToSomeRoomMessageComposer;
             OUTGOING_PACKETS[172] = ForwardToACompetitionRoomMessageComposer;
             OUTGOING_PACKETS[1740] = UpdateHomeRoomMessageComposer;
-            OUTGOING_PACKETS[1752] = _Str_5945;
+            OUTGOING_PACKETS[1752] = AvatarEffectSelectedComposer;
             OUTGOING_PACKETS[1756] = GetSellablePetPalettesComposer;
             OUTGOING_PACKETS[1764] = UpdateGuildColorsMessageComposer;
             OUTGOING_PACKETS[1773] = PollRejectComposer;

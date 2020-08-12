@@ -9,7 +9,7 @@
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.display.BitmapData;
     import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect.AvatarEffectActivatedComposer;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_5945;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect.AvatarEffectSelectedComposer;
     import com.sulake.habbo.inventory.IAvatarEffect;
     import com.sulake.core.window.IWindowContainer;
 
@@ -177,7 +177,7 @@
             if (_local_2._Str_3222 == false)
             {
                 _local_2._Str_3222 = true;
-                this._controller.communication.connection.send(new _Str_5945(k));
+                this._controller.communication.connection.send(new AvatarEffectSelectedComposer(k));
                 this._lastActivatedEffect = k;
                 this._Str_4879();
             }
@@ -193,7 +193,7 @@
                     _local_3._Str_3222 = false;
                     if (_arg_2)
                     {
-                        this._controller.communication.connection.send(new _Str_5945(-1));
+                        this._controller.communication.connection.send(new AvatarEffectSelectedComposer(-1));
                         this._lastActivatedEffect = -1;
                     }
                     this._Str_4879();
@@ -213,7 +213,7 @@
             }
             if (k)
             {
-                this._controller.communication.connection.send(new _Str_5945(-1));
+                this._controller.communication.connection.send(new AvatarEffectSelectedComposer(-1));
             }
             if (_arg_2)
             {
