@@ -26,7 +26,7 @@
             this._pickerName = _arg_2._Str_22164;
             this._reportedUserId = _arg_2.reportedUserId;
             this._groupingId = _arg_2._Str_16842;
-            this._Str_20388(_arg_2);
+            this.removeModActionView(_arg_2);
         }
 
         public function get id():int
@@ -90,10 +90,10 @@
         public function _Str_12118(k:IssueMessageData):void
         {
             this.removeIssue(k._Str_2869);
-            this._Str_20388(k);
+            this.removeModActionView(k);
         }
 
-        private function _Str_20388(k:IssueMessageData):void
+        private function removeModActionView(k:IssueMessageData):void
         {
             this._issues.add(k._Str_2869, k);
             this._issueAgeInMilliseconds = k.issueAgeInMilliseconds;
