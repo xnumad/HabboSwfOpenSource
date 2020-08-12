@@ -671,7 +671,7 @@
                     this._callForHelpManager._Str_25017(this._reportType);
                     break;
                 case _Str_15870:
-                    this._guideHelpManager._Str_18954();
+                    this._guideHelpManager.openReportWindow();
                     break;
                 case _Str_7161:
                     if (this._reportMessage != null)

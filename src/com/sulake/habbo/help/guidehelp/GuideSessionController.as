@@ -1440,7 +1440,7 @@
             this._habboHelp._Str_8128(HabboHelp._Str_15870);
         }
 
-        public function _Str_18954():void
+        public function openReportWindow():void
         {
             if (((this._reportWindow) || (this._window == null)))
             {

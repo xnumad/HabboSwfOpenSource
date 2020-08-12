@@ -115,9 +115,9 @@
             this._guideSessionController._Str_6255(k);
         }
 
-        public function _Str_18954():void
+        public function openReportWindow():void
         {
-            this._guideSessionController._Str_18954();
+            this._guideSessionController.openReportWindow();
         }
 
         public function showFeedback(k:String):void
