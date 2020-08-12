@@ -80,7 +80,7 @@
             return -1;
         }
 
-        public function get _Str_13794():int
+        public function get nowPlayingSongId():int
         {
             return this._currentEntryId;
         }

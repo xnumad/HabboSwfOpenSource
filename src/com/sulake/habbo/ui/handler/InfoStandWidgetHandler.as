@@ -1103,7 +1103,7 @@
                     _local_20 = this._musicController.getRoomItemPlaylist();
                     if (_local_20 != null)
                     {
-                        _local_16 = _local_20._Str_13794;
+                        _local_16 = _local_20.nowPlayingSongId;
                         _local_19 = RoomWidgetSongUpdateEvent.PLAYING_CHANGED;
                     }
                 }

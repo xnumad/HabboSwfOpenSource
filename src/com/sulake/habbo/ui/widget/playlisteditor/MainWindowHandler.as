@@ -314,7 +314,7 @@
             {
                 return;
             }
-            var _local_2:int = k._Str_13794;
+            var _local_2:int = k.nowPlayingSongId;
             if (_local_2 != -1)
             {
                 _local_3 = this._musicController.getSongInfo(_local_2);
