@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_8012 implements IMessageComposer, IDisposable 
+    public class GetConcurrentUsersGoalProgressMessageComposer implements IMessageComposer, IDisposable
     {
 
 

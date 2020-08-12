@@ -10,7 +10,7 @@
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.communication.messages.incoming.quest.ConcurrentUsersGoalProgressMessageEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing.quest._Str_8012;
+    import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersGoalProgressMessageComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.quest._Str_11277;
@@ -82,7 +82,7 @@
 
         public function refresh():void
         {
-            this._landingView.send(new _Str_8012());
+            this._landingView.send(new GetConcurrentUsersGoalProgressMessageComposer());
         }
 
         private function _Str_5681():void
@@ -159,7 +159,7 @@
         protected function onClick():void
         {
             this._landingView.send(new _Str_11277());
-            this._landingView.send(new _Str_8012());
+            this._landingView.send(new GetConcurrentUsersGoalProgressMessageComposer());
             this._window.findChildByName("state.active").disable();
         }
     }

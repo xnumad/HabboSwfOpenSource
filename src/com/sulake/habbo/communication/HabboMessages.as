@@ -40,7 +40,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7541;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7551;
 	import com.sulake.habbo.communication.messages.outgoing.quest._Str_7568;
-	import com.sulake.habbo.communication.messages.outgoing.quest._Str_8012;
+	import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersGoalProgressMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.pets.PetTrainingPanelEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.pets.PetFigureUpdateEvent;
@@ -1558,7 +1558,7 @@
             OUTGOING_PACKETS[1328] = CustomizePetWithFurniComposer;
             OUTGOING_PACKETS[1334] = _Str_7424;
             OUTGOING_PACKETS[1342] = GetRecyclerStatusMessageComposer;
-            OUTGOING_PACKETS[1343] = _Str_8012;
+            OUTGOING_PACKETS[1343] = GetConcurrentUsersGoalProgressMessageComposer;
             OUTGOING_PACKETS[1347] = _Str_12467;
             OUTGOING_PACKETS[1364] = GetIsBadgeRequestFulfilledComposer;
             OUTGOING_PACKETS[1367] = SetSoundSettingsComposer;
