@@ -51,7 +51,7 @@
         public static const SEARCHMSG_SEARCH:int = 1;
         public static const SEARCHMSG_POPTAGS:int = 2;
         public static const SEARCHMSG_OFFICIALROOMS:int = 4;
-        public static const _Str_13989:int = 5;
+        public static const SEARCHMSG_CATEGORIESWITHUSERCOUNT:int = 5;
         private static const _Str_15647:int = 1;
         private static const _Str_10433:int = 2;
         private static const _Str_14003:int = 3;
@@ -532,7 +532,7 @@
                 }
                 else
                 {
-                    if (_arg_4 != _Str_13989)
+                    if (_arg_4 != SEARCHMSG_CATEGORIESWITHUSERCOUNT)
                     {
                         this._navigator.send(new GetOfficialRoomsMessageComposer(this._navigator.data._Str_6357));
                     }
