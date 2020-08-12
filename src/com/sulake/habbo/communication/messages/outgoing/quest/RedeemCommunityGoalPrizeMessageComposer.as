@@ -6,11 +6,11 @@
     {
         private var _data:Array;
 
-        public function RedeemCommunityGoalPrizeMessageComposer(k:int)
+        public function RedeemCommunityGoalPrizeMessageComposer(communityGoalId:int)
         {
             this._data = [];
             super();
-            this._data.push(k);
+            this._data.push(communityGoalId);
         }
 
         public function getMessageArray():Array
