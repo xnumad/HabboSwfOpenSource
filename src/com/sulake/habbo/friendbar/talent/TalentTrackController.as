@@ -347,7 +347,7 @@
                 _local_19 = new Vector.<IWindow>();
                 for each (_local_20 in k._Str_20997)
                 {
-                    _local_18 = this._Str_22926(k, _local_20);
+                    _local_18 = this.createTask(k, _local_20);
                     if (_local_7.numListItems == _local_8.numListItems)
                     {
                         _local_7.addListItem(_local_18);
@@ -475,7 +475,7 @@
             return _local_3;
         }
 
-        private function _Str_22926(k:TalentTrackLevel, _arg_2:TalentTrackTask):IWindowContainer
+        private function createTask(k:TalentTrackLevel, _arg_2:TalentTrackTask):IWindowContainer
         {
             var _local_3:IWindowContainer;
             var _local_6:IRegionWindow;
