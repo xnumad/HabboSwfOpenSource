@@ -25,10 +25,10 @@
 
     public class FurnitureYoutubeDisplayWidgetHandler implements IRoomWidgetHandler 
     {
-        private static const _Str_17561:int = 0;
-        private static const _Str_17664:int = 1;
-        private static const _Str_18151:int = 2;
-        private static const _Str_18591:int = 3;
+        private static const CONTROL_COMMAND_PREVIOUS_VIDEO:int = 0;
+        private static const CONTROL_COMMAND_NEXT_VIDEO:int = 1;
+        private static const CONTROL_COMMAND_PAUSE_VIDEO:int = 2;
+        private static const CONTROL_COMMAND_CONTINUE_VIDEO:int = 3;
 
         private var _container:IRoomWidgetHandlerContainer;
         private var _widget:YoutubeDisplayWidget;
@@ -163,22 +163,22 @@
 
         public function _Str_23793(k:int):void
         {
-            this._container.connection.send(new _Str_5009(k, _Str_17561));
+            this._container.connection.send(new _Str_5009(k, CONTROL_COMMAND_PREVIOUS_VIDEO));
         }
 
         public function _Str_23211(k:int):void
         {
-            this._container.connection.send(new _Str_5009(k, _Str_17664));
+            this._container.connection.send(new _Str_5009(k, CONTROL_COMMAND_NEXT_VIDEO));
         }
 
         public function pauseVideo(k:int):void
         {
-            this._container.connection.send(new _Str_5009(k, _Str_18151));
+            this._container.connection.send(new _Str_5009(k, CONTROL_COMMAND_PAUSE_VIDEO));
         }
 
         public function _Str_25279(k:int):void
         {
-            this._container.connection.send(new _Str_5009(k, _Str_18591));
+            this._container.connection.send(new _Str_5009(k, CONTROL_COMMAND_CONTINUE_VIDEO));
         }
     }
 }
