@@ -134,7 +134,7 @@
             }
         }
 
-        public function _Str_23040():void
+        public function onSubscriptionChange():void
         {
             if ((((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data.exists))) && (this._step == VIEW_CONFIRM)))
             {

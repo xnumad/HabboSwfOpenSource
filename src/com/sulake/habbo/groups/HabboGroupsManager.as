@@ -511,7 +511,7 @@
         {
             var _local_2:ScrSendUserInfoMessageParser = ScrSendUserInfoEvent(k).getParser();
             this._hasVip = ((_local_2.isVIP) && (_local_2.minutesUntilExpiration > 0));
-            this._guildManagementWindowCtrl._Str_23040();
+            this._guildManagementWindowCtrl.onSubscriptionChange();
         }
 
         private function onRoomInfo(k:IMessageEvent):void
