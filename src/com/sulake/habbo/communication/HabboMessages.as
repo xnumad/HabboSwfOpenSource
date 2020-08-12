@@ -891,7 +891,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10187;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10602;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_10794;
-	import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_11024;
+	import com.sulake.habbo.communication.messages.outgoing.room.avatar.CustomizeAvatarWithFurniMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.DanceMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.ChangeMottoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.SignMessageComposer;
@@ -1849,7 +1849,7 @@
             OUTGOING_PACKETS[3362] = _Str_18174;
             OUTGOING_PACKETS[3365] = _Str_8134;
             OUTGOING_PACKETS[3373] = ApplySnapshotMessageComposer;
-            OUTGOING_PACKETS[3374] = _Str_11024;
+            OUTGOING_PACKETS[3374] = CustomizeAvatarWithFurniMessageComposer;
             OUTGOING_PACKETS[3379] = TogglePetBreedingPermissionMessageComposer;
             OUTGOING_PACKETS[3382] = _Str_12104;
             OUTGOING_PACKETS[3385] = GetFlatControllersMessageComposer;

@@ -15,7 +15,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.room.avatar._Str_11024;
+    import com.sulake.habbo.communication.messages.outgoing.room.avatar.CustomizeAvatarWithFurniMessageComposer;
     import __AS3__.vec.*;
 
     public class PurchasableClothingConfirmationView implements IDisposable 
@@ -175,7 +175,7 @@
                     this.close();
                     return;
                 case SAVE_BUTTON:
-                    this._widget.handler.container.connection.send(new _Str_11024(this._requestObjectId));
+                    this._widget.handler.container.connection.send(new CustomizeAvatarWithFurniMessageComposer(this._requestObjectId));
                     this._widget.handler.container.connection.send(new UpdateFigureDataMessageComposer(this._newFigureString, this._widget.handler.container.sessionDataManager.gender));
                     this.close();
                     return;
