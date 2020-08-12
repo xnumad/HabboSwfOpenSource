@@ -72,7 +72,7 @@
     import com.sulake.habbo.navigator.domain.Tabs;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomForwardMessageParser;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_5654;
+    import com.sulake.habbo.communication.messages.parser.navigator.ConvertedRoomIdMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.NavigatorSettingsMessageParser;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
@@ -385,7 +385,7 @@
 
         private function onConvertedRoomId(k:IMessageEvent):void
         {
-            var _local_2:_Str_5654 = _Str_7272(k).getParser();
+            var _local_2:ConvertedRoomIdMessageParser = _Str_7272(k).getParser();
             if (this._navigator._Str_25806)
             {
                 this._navigator.habboHelp.reportRoom(_local_2._Str_12434, this._navigator._Str_23036, "");
