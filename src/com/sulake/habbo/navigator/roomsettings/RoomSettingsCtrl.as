@@ -43,7 +43,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetBannedUsersFromRoomMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4633;
-    import com.sulake.habbo.communication.messages.outgoing.room.action._Str_12446;
+    import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveAllRightsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11552;
     import com.sulake.habbo.navigator.*;
 
@@ -1222,7 +1222,7 @@
 
         private function _Str_25387():void
         {
-            this._navigator.send(new _Str_12446(this._Str_2449));
+            this._navigator.send(new RemoveAllRightsMessageComposer(this._Str_2449));
         }
 
         private function _Str_5308(k:WindowEvent, _arg_2:IWindow):void

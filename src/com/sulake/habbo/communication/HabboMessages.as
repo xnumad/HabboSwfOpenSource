@@ -865,7 +865,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11552;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.BanUserWithDurationMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.MuteAllInRoomComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_12446;
+	import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveAllRightsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.AssignRightsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserKickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.*;
@@ -1739,7 +1739,7 @@
             OUTGOING_PACKETS[2650] = _Str_12361;
             OUTGOING_PACKETS[2651] = GetGuildFurniContextMenuInfoMessageComposer;
             OUTGOING_PACKETS[2668] = _Str_11858;
-            OUTGOING_PACKETS[2683] = _Str_12446;
+            OUTGOING_PACKETS[2683] = RemoveAllRightsMessageComposer;
             OUTGOING_PACKETS[2688] = _Str_17850;
             OUTGOING_PACKETS[2694] = _Str_10714;
             OUTGOING_PACKETS[271] = _Str_9816;
