@@ -502,7 +502,7 @@
             this.setSearchingIcon(true);
             var _local_2:GuildMemberData = this._data;
             var _local_3:String = this._userNameFilter.getText();
-            var _local_4:int = this._Str_19469().selection;
+            var _local_4:int = this.getTypeDropMenu().selection;
             this._manager.send(new GetGuildMembersMessageComposer(_local_2.groupId, k, _local_3, _local_4));
         }
 
@@ -515,7 +515,7 @@
             this._manager.send(new _Str_9979(this._data.groupId));
         }
 
-        private function _Str_19469():IDropMenuWindow
+        private function getTypeDropMenu():IDropMenuWindow
         {
             return IDropMenuWindow(this._window.findChildByName("type_drop_menu"));
         }
@@ -580,7 +580,7 @@
                     k.push("${group.members.search.blocked}");
                 }
             }
-            var _local_2:IDropMenuWindow = this._Str_19469();
+            var _local_2:IDropMenuWindow = this.getTypeDropMenu();
             _local_2.procedure = null;
             _local_2.populate(k);
             _local_2.selection = ((this._data.allowedToManage) ? this._data.searchType : Math.min(this._data.searchType, 1));
