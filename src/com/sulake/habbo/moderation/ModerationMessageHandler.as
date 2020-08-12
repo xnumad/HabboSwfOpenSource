@@ -18,7 +18,7 @@
     import com.sulake.habbo.communication.messages.incoming.userclassification.UserClassificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhSanctionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_5460;
+    import com.sulake.habbo.communication.messages.parser.moderation.IssueInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8164;
     import com.sulake.habbo.communication.messages.parser.moderation.ModeratorInitData;
@@ -93,7 +93,7 @@
             {
                 return;
             }
-            var _local_2:_Str_5460 = k.getParser();
+            var _local_2:IssueInfoMessageParser = k.getParser();
             if (_local_2 == null)
             {
                 return;

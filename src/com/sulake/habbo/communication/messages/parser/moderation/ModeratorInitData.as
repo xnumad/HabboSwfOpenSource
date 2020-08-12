@@ -19,7 +19,7 @@
 
         public function ModeratorInitData(k:IMessageDataWrapper)
         {
-            var _local_2:_Str_5460 = new _Str_5460();
+            var _local_2:IssueInfoMessageParser = new IssueInfoMessageParser();
             this._issues = [];
             this._messageTemplates = [];
             this._roomMessageTemplates = [];
