@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.pets.RarityCategoryData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6719 implements IMessageParser 
+    public class ConfirmBreedingRequestParser implements IMessageParser
     {
         private var _nestId:int;
         private var _pet1:BreedingPetInfo;
