@@ -136,7 +136,7 @@
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10231;
     import com.sulake.habbo.communication.messages.outgoing.users.ApproveNameMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11638;
+    import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerStatusMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerPrizesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.recycler._Str_12504;
     import com.sulake.habbo.catalog.navigation.CatalogNavigator;
@@ -833,7 +833,7 @@
 
         public function getRecyclerStatus():void
         {
-            this.send(new _Str_11638());
+            this.send(new GetRecyclerStatusMessageComposer());
         }
 
         public function getRecyclerPrizes():void

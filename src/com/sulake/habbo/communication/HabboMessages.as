@@ -309,7 +309,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10323;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10953;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_12104;
-	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_11638;
+	import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerPrizesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.recycler._Str_12504;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2GameChatMessageComposer;
@@ -1557,7 +1557,7 @@
             OUTGOING_PACKETS[1325] = GetNowPlayingMessageComposer;
             OUTGOING_PACKETS[1328] = CustomizePetWithFurniComposer;
             OUTGOING_PACKETS[1334] = _Str_7424;
-            OUTGOING_PACKETS[1342] = _Str_11638;
+            OUTGOING_PACKETS[1342] = GetRecyclerStatusMessageComposer;
             OUTGOING_PACKETS[1343] = _Str_8012;
             OUTGOING_PACKETS[1347] = _Str_12467;
             OUTGOING_PACKETS[1364] = GetIsBadgeRequestFulfilledComposer;
