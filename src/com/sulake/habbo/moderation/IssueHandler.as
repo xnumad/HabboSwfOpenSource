@@ -212,7 +212,7 @@
             this._lastWindowY = this._window.y;
             this._lastWindowWidth = this._window.width;
             this._lastWindowHeight = this._window.height;
-            this._moderationManager.issueManager._Str_21909(this._lastWindowX, this._lastWindowY, this._lastWindowWidth, this._lastWindowHeight);
+            this._moderationManager.issueManager.setToolPreferences(this._lastWindowX, this._lastWindowY, this._lastWindowWidth, this._lastWindowHeight);
             this._moderationManager.connection.send(new _Str_11384(this._lastWindowX, this._lastWindowY, this._lastWindowWidth, this._lastWindowHeight));
         }
 

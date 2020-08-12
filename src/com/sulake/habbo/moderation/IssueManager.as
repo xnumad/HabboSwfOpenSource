@@ -604,7 +604,7 @@
             return _local_2;
         }
 
-        public function _Str_21909(k:int, _arg_2:int, _arg_3:int, _arg_4:int):void
+        public function setToolPreferences(k:int, _arg_2:int, _arg_3:int, _arg_4:int):void
         {
             this._windowX = k;
             this._windowY = _arg_2;

@@ -133,7 +133,7 @@
             if (((this._moderationManager) && (this._moderationManager.issueManager)))
             {
                 _local_2 = k.getParser();
-                this._moderationManager.issueManager._Str_21909(_local_2._Str_17736, _local_2._Str_18137, _local_2._Str_17903, _local_2._Str_4971);
+                this._moderationManager.issueManager.setToolPreferences(_local_2._Str_17736, _local_2._Str_18137, _local_2._Str_17903, _local_2._Str_4971);
             }
         }
 
