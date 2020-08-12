@@ -315,8 +315,8 @@
                 return;
             }
             this._window.findChildByName("next_step_button").visible = this._Str_21955();
-            this._window.findChildByName("previous_step_link_region").visible = this._Str_21710();
-            this._window.findChildByName("cancel_link_region").visible = (!(this._Str_21710()));
+            this._window.findChildByName("previous_step_link_region").visible = this.hasPreviousStep();
+            this._window.findChildByName("cancel_link_region").visible = (!(this.hasPreviousStep()));
             this._window.findChildByName("buy_border").visible = (!(this._Str_21955()));
             var k:int = 1;
             while (k <= VIEW_CONFIRM)
@@ -623,7 +623,7 @@
             this._manager.send(new CreateGuildMessageComposer(k, _local_2, _local_3.roomId, _local_5, _local_6, _local_4));
         }
 
-        private function _Str_21710():Boolean
+        private function hasPreviousStep():Boolean
         {
             return !(this._step == this._Str_15418((this._step - 1)));
         }
