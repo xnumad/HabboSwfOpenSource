@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6043 implements IMessageParser 
+    public class FavouritesMessageParser implements IMessageParser
     {
         private var _limit:int;
         private var _Str_18010:Array;

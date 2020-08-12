@@ -75,7 +75,7 @@
     import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsSaveErrorMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6683;
     import com.sulake.habbo.communication.messages.outgoing.navigator.GetGuestRoomMessageComposer;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6043;
+    import com.sulake.habbo.communication.messages.parser.navigator.FavouritesMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6561;
     import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllersMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6824;
@@ -412,7 +412,7 @@
 
         private function _Str_8561(k:IMessageEvent):void
         {
-            var _local_2:_Str_6043 = (k as _Str_6109).getParser();
+            var _local_2:FavouritesMessageParser = (k as _Str_6109).getParser();
             Logger.log(((("Received favourites: " + _local_2.limit) + ", ") + _local_2._Str_13809.length));
             this._navigator.data._Str_8561(_local_2);
         }

@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.CategoriesWithVisitorCountData;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.habbo.communication.messages.incoming.navigator.EventCategory;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_6043;
+    import com.sulake.habbo.communication.messages.parser.navigator.FavouritesMessageParser;
     import com.sulake.habbo.communication.messages.incoming.navigator.*;
     import com.sulake.habbo.navigator.*;
     import com.sulake.habbo.communication.messages.parser.navigator.*;
@@ -434,7 +434,7 @@
             return null;
         }
 
-        public function _Str_8561(k:_Str_6043):void
+        public function _Str_8561(k:FavouritesMessageParser):void
         {
             var _local_2:int;
             this._favouriteLimit = k.limit;
