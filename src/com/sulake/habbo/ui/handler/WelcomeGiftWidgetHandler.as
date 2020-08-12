@@ -60,7 +60,7 @@
             }
             this._messageEvents = [];
             this._messageEvents.push(new _Str_8288(this._Str_23237));
-            this._messageEvents.push(new _Str_8246(this._Str_17386));
+            this._messageEvents.push(new _Str_8246(this.onChangeEmailResult));
             for each (k in this._messageEvents)
             {
                 this._container.connection.addMessageEvent(k);
@@ -94,7 +94,7 @@
             this._container.events.dispatchEvent(_local_3);
         }
 
-        private function _Str_17386(k:_Str_8246):void
+        private function onChangeEmailResult(k:_Str_8246):void
         {
             var _local_2:_Str_7457 = k.getParser();
             this._container.events.dispatchEvent(new _Str_6843(_local_2.result));

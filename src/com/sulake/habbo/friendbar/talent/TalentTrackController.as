@@ -109,7 +109,7 @@
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_7229(this.onTalentTrack));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this.onEmailStatus));
-            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new ChangeEmailResultEvent(this._Str_17386));
+            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new ChangeEmailResultEvent(this.onChangeEmailResult));
         }
 
         private function onEmailStatus(k:EmailStatusResultEvent):void
@@ -123,7 +123,7 @@
             }
         }
 
-        private function _Str_17386(k:ChangeEmailResultEvent):void
+        private function onChangeEmailResult(k:ChangeEmailResultEvent):void
         {
             this.setEmailErrorStatus(true, k.getParser().result);
         }
