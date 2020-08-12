@@ -4,7 +4,7 @@
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
     import com.sulake.habbo.ui.widget.furniture.rentablespace.RentableSpaceDisplayWidget;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7811;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8033;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentOkMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7746;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
@@ -23,7 +23,7 @@
         private var _container:IRoomWidgetHandlerContainer;
         private var _widget:RentableSpaceDisplayWidget;
         private var _rentableSpaceStatusMessageEvent:_Str_7811;
-        private var _rentableSpaceRentOkMessageEvent:_Str_8033;
+        private var _rentableSpaceRentOkMessageEvent:RentableSpaceRentOkMessageEvent;
         private var _rentableSpaceRentFailedMessageEvent:_Str_7746;
 
 
@@ -42,7 +42,7 @@
             this._container = k;
             this._rentableSpaceStatusMessageEvent = new _Str_7811(this._Str_24112);
             this._container.connection.addMessageEvent(this._rentableSpaceStatusMessageEvent);
-            this._rentableSpaceRentOkMessageEvent = new _Str_8033(this._Str_23287);
+            this._rentableSpaceRentOkMessageEvent = new RentableSpaceRentOkMessageEvent(this._Str_23287);
             this._container.connection.addMessageEvent(this._rentableSpaceRentOkMessageEvent);
             this._rentableSpaceRentFailedMessageEvent = new _Str_7746(this._Str_22780);
             this._container.connection.addMessageEvent(this._rentableSpaceRentFailedMessageEvent);
@@ -122,7 +122,7 @@
             return this._container == null;
         }
 
-        public function _Str_23287(k:_Str_8033):void
+        public function _Str_23287(k:RentableSpaceRentOkMessageEvent):void
         {
             this._widget._Str_19184();
         }

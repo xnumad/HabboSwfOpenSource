@@ -773,7 +773,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7657;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7746;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7811;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8033;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentOkMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomDimmerPresetsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8183;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8241;
@@ -1144,7 +1144,7 @@
             INCOMING_PACKETS[2032] = _Str_6344;
             INCOMING_PACKETS[2033] = AvailabilityStatusMessageEvent;
             INCOMING_PACKETS[2035] = _Str_7321;
-            INCOMING_PACKETS[2046] = _Str_8033;
+            INCOMING_PACKETS[2046] = RentableSpaceRentOkMessageEvent;
             INCOMING_PACKETS[2049] = _Str_9630;
             INCOMING_PACKETS[2057] = CameraPublishStatusMessageEvent;
             INCOMING_PACKETS[2064] = _Str_5891;
