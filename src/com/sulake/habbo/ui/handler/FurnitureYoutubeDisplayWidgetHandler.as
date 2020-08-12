@@ -17,7 +17,7 @@
     import com.sulake.habbo.room.events.RoomEngineTriggerWidgetEvent;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.session.SecurityLevelEnum;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10913;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.GetYoutubeDisplayStatusMessageComposer;
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetYoutubeDisplayPlaylistMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.ControlYoutubeDisplayPlaybackMessageComposer;
@@ -128,7 +128,7 @@
                     {
                         _local_4 = ((this._container.isOwnerOfFurniture(_local_3)) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE)));
                         this._widget.show(_local_3, _local_4);
-                        this._container.connection.send(new _Str_10913(_local_3.getId()));
+                        this._container.connection.send(new GetYoutubeDisplayStatusMessageComposer(_local_3.getId()));
                     }
                     return;
                 case RoomEngineTriggerWidgetEvent.CLOSE_WIDGET:

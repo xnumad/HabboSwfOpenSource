@@ -711,7 +711,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRandomStateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetMannequinFigureComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10913;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.GetYoutubeDisplayStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerGetPresetsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRoomBackgroundColorDataComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceStatusMessageComposer;
@@ -1845,7 +1845,7 @@
             OUTGOING_PACKETS[3333] = _Str_7461;
             OUTGOING_PACKETS[3336] = RemoveItemMessageComposer;
             OUTGOING_PACKETS[3338] = _Str_7293;
-            OUTGOING_PACKETS[336] = _Str_10913;
+            OUTGOING_PACKETS[336] = GetYoutubeDisplayStatusMessageComposer;
             OUTGOING_PACKETS[3362] = _Str_18174;
             OUTGOING_PACKETS[3365] = _Str_8134;
             OUTGOING_PACKETS[3373] = ApplySnapshotMessageComposer;
