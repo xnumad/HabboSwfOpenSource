@@ -76,7 +76,7 @@
             }
             k.communicationManager.addHabboConnectionMessageEvent(new QuestDailyMessageEvent(this._Str_17705));
             this._container = (_arg_2 as IWindowContainer);
-            this._container.findChildByName("accept_button").procedure = this._Str_17327;
+            this._container.findChildByName("accept_button").procedure = this.onAcceptButton;
             this._container.findChildByName("go_button").procedure = this._Str_5735;
             this._container.findChildByName("next_quest_region").procedure = this.onNextQuest;
             this._container.findChildByName("cancel_quest_region").procedure = this.onCancelQuest;
@@ -192,7 +192,7 @@
             return ("${" + k) + "}";
         }
 
-        private function _Str_17327(k:WindowEvent, _arg_2:IWindow):void
+        private function onAcceptButton(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
