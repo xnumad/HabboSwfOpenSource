@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.quest.HallOfFameEntryData;
     import com.sulake.habbo.communication.messages.incoming.quest._Str_4106;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_11657;
+    import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToACompetitionRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.quest._Str_11298;
     import com.sulake.habbo.friendbar.landingview.*;
 
@@ -72,7 +72,7 @@
 
         override protected function extraLinkClicked(k:_Str_4106):void
         {
-            landingView.send(new _Str_11657(this._data.goalCode, k.userId));
+            landingView.send(new ForwardToACompetitionRoomMessageComposer(this._data.goalCode, k.userId));
         }
 
         private function onTimingCode(k:CurrentTimingCodeMessageEvent):void

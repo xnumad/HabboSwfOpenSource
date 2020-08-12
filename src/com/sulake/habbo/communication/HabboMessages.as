@@ -123,7 +123,7 @@
 	import com.sulake.habbo.communication.messages.incoming.avatar._Str_9393;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_10126;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_10525;
-	import com.sulake.habbo.communication.messages.outgoing.competition._Str_11657;
+	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToACompetitionRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_12123;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_4038;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_5974;
@@ -1607,7 +1607,7 @@
             OUTGOING_PACKETS[1697] = _Str_7568;
             OUTGOING_PACKETS[17] = GetUserTagsMessageComposer;
             OUTGOING_PACKETS[1703] = ForwardToSomeRoomMessageComposer;
-            OUTGOING_PACKETS[172] = _Str_11657;
+            OUTGOING_PACKETS[172] = ForwardToACompetitionRoomMessageComposer;
             OUTGOING_PACKETS[1740] = _Str_7911;
             OUTGOING_PACKETS[1752] = _Str_5945;
             OUTGOING_PACKETS[1756] = GetSellablePetPalettesComposer;
