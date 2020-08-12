@@ -765,7 +765,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7202;
 	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7268;
 	import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomChatlogMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.moderator._Str_9842;
+	import com.sulake.habbo.communication.messages.outgoing.moderator.ModAlertMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.*;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayPlaylistsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_6132;
@@ -1684,7 +1684,7 @@
             OUTGOING_PACKETS[2281] = UpdateActionMessageComposer;
             OUTGOING_PACKETS[2283] = _Str_12488;
             OUTGOING_PACKETS[2285] = RoomUsersClassificationMessageComposer;
-            OUTGOING_PACKETS[229] = _Str_9842;
+            OUTGOING_PACKETS[229] = ModAlertMessageComposer;
             OUTGOING_PACKETS[2296] = RoomDimmerChangeStateMessageComposer;
             OUTGOING_PACKETS[230] = CreateGuildMessageComposer;
             OUTGOING_PACKETS[2300] = GetRoomEntryDataMessageComposer;

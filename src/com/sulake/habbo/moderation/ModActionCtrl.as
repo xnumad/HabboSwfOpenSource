@@ -13,7 +13,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_10432;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_9842;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.ModAlertMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ModMuteMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_4767;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11592;
@@ -274,7 +274,7 @@
                         return;
                     }
                     this._Str_3066("sendCaution");
-                    this._Str_2327.connection.send(new _Str_9842(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
+                    this._Str_2327.connection.send(new ModAlertMessageComposer(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
                 case ModActionDefinition.MUTE:
                     this._Str_3066("mute");
