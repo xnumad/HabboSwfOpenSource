@@ -312,7 +312,7 @@
         {
             if (this._callForHelpManager != null)
             {
-                this._callForHelpManager._Str_22391();
+                this._callForHelpManager.openEmergencyHelpRequest();
             }
         }
 

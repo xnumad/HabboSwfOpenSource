@@ -247,7 +247,7 @@
             this._habboHelp._Str_8128(HabboHelp._Str_7161);
         }
 
-        public function _Str_22391():void
+        public function openEmergencyHelpRequest():void
         {
             this.reportUser(0, HabboHelp._Str_5723, -1);
         }
