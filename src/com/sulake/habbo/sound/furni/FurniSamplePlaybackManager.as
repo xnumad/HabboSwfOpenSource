@@ -71,7 +71,7 @@
             return this._disposed;
         }
 
-        public function _Str_7935(k:Number):void
+        public function updateVolume(k:Number):void
         {
             var _local_2:HabboSoundWithPitch;
             this._volume = k;

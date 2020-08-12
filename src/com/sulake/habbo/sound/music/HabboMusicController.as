@@ -384,7 +384,7 @@
             return _local_2;
         }
 
-        public function _Str_7935(k:Number):void
+        public function updateVolume(k:Number):void
         {
             var _local_3:int;
             var _local_4:SongDataEntry;

@@ -437,16 +437,16 @@
                 this._genericVolume = 0;
                 this._furniVolume = 0;
                 this._traxVolume = 0;
-                this._musicController._Str_7935(0);
-                this._onDemandSamplePlaybackManager._Str_7935(0);
+                this._musicController.updateVolume(0);
+                this._onDemandSamplePlaybackManager.updateVolume(0);
             }
             else
             {
                 this._genericVolume = k;
                 this._furniVolume = _arg_2;
                 this._traxVolume = _arg_3;
-                this._musicController._Str_7935(_arg_3);
-                this._onDemandSamplePlaybackManager._Str_7935(_arg_2);
+                this._musicController.updateVolume(_arg_3);
+                this._onDemandSamplePlaybackManager.updateVolume(_arg_2);
             }
         }
 

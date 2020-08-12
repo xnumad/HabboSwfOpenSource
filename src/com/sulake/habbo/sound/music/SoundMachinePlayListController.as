@@ -180,7 +180,7 @@
             this._musicController.stop(HabboMusicPrioritiesEnum._Str_4350);
         }
 
-        public function _Str_7935(k:Number):void
+        public function updateVolume(k:Number):void
         {
         }
 
