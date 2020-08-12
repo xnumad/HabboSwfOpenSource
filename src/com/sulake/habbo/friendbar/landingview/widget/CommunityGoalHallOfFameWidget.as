@@ -30,7 +30,7 @@
 
         override protected function registerMessageListeners():void
         {
-            landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalHallOfFameMessageEvent(this._Str_22591));
+            landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalHallOfFameMessageEvent(this.onCommunityGoalHallOfFame));
             landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this.onTimingCode));
         }
 
@@ -59,7 +59,7 @@
             return "competition_user_popup";
         }
 
-        private function _Str_22591(k:CommunityGoalHallOfFameMessageEvent):void
+        private function onCommunityGoalHallOfFame(k:CommunityGoalHallOfFameMessageEvent):void
         {
             this._data = k.getParser().data;
             refreshContent();
