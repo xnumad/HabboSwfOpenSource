@@ -99,12 +99,12 @@
         {
             if (!this._window)
             {
-                this._questEngine._Str_9649();
+                this._questEngine.requestSeasonalQuests();
                 return;
             }
             if (((!(this._toggle)) || (this._toggle.disposed)))
             {
-                this._toggle = new _Str_3942(this._window, this._window.desktop, this._questEngine._Str_9649, this.close);
+                this._toggle = new _Str_3942(this._window, this._window.desktop, this._questEngine.requestSeasonalQuests, this.close);
             }
             this._toggle.toggle();
         }
@@ -139,7 +139,7 @@
         private function _Str_21252(k:QuestCompletedEvent):void
         {
             this._questEngine._Str_3398._Str_20198._Str_24904();
-            this._questEngine._Str_9649();
+            this._questEngine.requestSeasonalQuests();
         }
 
         public function onActivityPoints(k:int, _arg_2:int):void
@@ -207,7 +207,7 @@
         {
             if (((((!(this._questEngine.configuration == null)) && (this._questEngine._Str_18128)) && (!(this._seasonalQuestsRequested))) && (this._questEngine._Str_19304())))
             {
-                this._questEngine._Str_9649();
+                this._questEngine.requestSeasonalQuests();
                 this._seasonalQuestsRequested = true;
             }
         }

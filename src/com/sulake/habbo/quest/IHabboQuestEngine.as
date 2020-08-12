@@ -11,7 +11,7 @@
         function showQuests():void;
         function getAchievementLevel(_arg_1:String, _arg_2:String):int;
         function reenableRoomCompetitionWindow():void;
-        function _Str_9649():void;
+        function requestSeasonalQuests():void;
         function _Str_18428():void;
         function get events():IEventDispatcher;
         function _Str_23483(_arg_1:int):void;

@@ -926,7 +926,7 @@
             var _local_2:Date = new Date();
             if (this._lastDate != _local_2.getDate())
             {
-                this._questEngine._Str_9649();
+                this._questEngine.requestSeasonalQuests();
             }
             this._lastDate = _local_2.getDate();
         }

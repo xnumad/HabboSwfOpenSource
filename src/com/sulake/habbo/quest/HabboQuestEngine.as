@@ -687,7 +687,7 @@
             return this._navigator;
         }
 
-        public function _Str_9649():void
+        public function requestSeasonalQuests():void
         {
             this.send(new _Str_11854());
         }
