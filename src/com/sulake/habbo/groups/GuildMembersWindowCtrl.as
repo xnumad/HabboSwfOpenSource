@@ -339,7 +339,7 @@
             _local_4.addEventListener(WindowMouseEvent.OUT, this.onRemoveMouseOut);
             _local_4.addEventListener(WindowMouseEvent.CLICK, this.onRemoveMouseClick);
             var _local_5:IRegionWindow = IRegionWindow(k.findChildByName("action_link_region"));
-            _local_5.addEventListener(WindowMouseEvent.OVER, this._Str_22651);
+            _local_5.addEventListener(WindowMouseEvent.OVER, this.onActionLinkMouseOver);
             _local_5.addEventListener(WindowMouseEvent.OUT, this._Str_25563);
             _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_23181);
             return k;
@@ -409,7 +409,7 @@
             _local_3.textColor = ((k) ? 4280984060 : 4285492837);
         }
 
-        private function _Str_22651(k:WindowEvent):void
+        private function onActionLinkMouseOver(k:WindowEvent):void
         {
             var _local_2:IRegionWindow = IRegionWindow(k.target);
             var _local_3:_Str_2891 = this._data._Str_5126(k.target.id);
