@@ -68,7 +68,7 @@
             this._windowManager.simpleAlert("", "${opening.hours.title}", "${opening.hours.shutdown}");
         }
 
-        public function _Str_23818(k:int, _arg_2:int):void
+        public function handleHotelMaintenanceMessage(k:int, _arg_2:int):void
         {
             this._localization.registerParameter("maintenance.shutdown", "m", String(k));
             this._localization.registerParameter("maintenance.shutdown", "d", String(_arg_2));
