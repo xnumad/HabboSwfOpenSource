@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
     import com.sulake.habbo.communication.messages.parser.moderation.IssueInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation.IssueMessageData;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_8164;
+    import com.sulake.habbo.communication.messages.parser.moderation.ModeratorInitMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation.ModeratorInitData;
     import com.sulake.habbo.communication.messages.parser.moderation.ModeratorToolPreferencesMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation.IssuePickFailedMessageParser;
@@ -110,7 +110,7 @@
             {
                 return;
             }
-            var _local_2:_Str_8164 = k.getParser();
+            var _local_2:ModeratorInitMessageParser = k.getParser();
             if (((_local_2 == null) || (_local_2.data == null)))
             {
                 return;
