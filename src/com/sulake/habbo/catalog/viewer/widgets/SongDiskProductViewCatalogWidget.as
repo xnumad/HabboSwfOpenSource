@@ -121,7 +121,7 @@
             var _local_2:int = this._soundManager._Str_2774._Str_6665(k);
             if (_local_2 != -1)
             {
-                _local_3 = this._soundManager._Str_2774._Str_3255(_local_2);
+                _local_3 = this._soundManager._Str_2774.getSongInfo(_local_2);
                 if (_local_3._Str_3502 != null)
                 {
                     _local_3._Str_3502._Str_4908 = 0;
@@ -213,7 +213,7 @@
             var k:ISongInfo;
             if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
             {
-                k = this._soundManager._Str_2774._Str_3255(this._selectedSongId);
+                k = this._soundManager._Str_2774.getSongInfo(this._selectedSongId);
                 if (k != null)
                 {
                     return k.length / 1000;

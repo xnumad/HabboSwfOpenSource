@@ -83,7 +83,7 @@
             {
                 _local_7 = this._musicController.getSongDiskInventoryDiskId(_local_5);
                 _local_8 = this._musicController.getSongDiskInventorySongId(_local_5);
-                _local_9 = this._musicController._Str_3255(_local_8);
+                _local_9 = this._musicController.getSongInfo(_local_8);
                 _local_10 = null;
                 _local_11 = null;
                 if (_local_9 != null)
@@ -210,7 +210,7 @@
             var _local_5:MusicInventoryGridItem;
             if (this._musicController != null)
             {
-                _local_2 = this._musicController._Str_3255(k.id);
+                _local_2 = this._musicController.getSongInfo(k.id);
                 if (_local_2 != null)
                 {
                     _local_3 = _local_2.name;

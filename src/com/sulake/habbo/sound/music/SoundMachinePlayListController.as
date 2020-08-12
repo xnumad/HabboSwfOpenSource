@@ -219,7 +219,7 @@
                 _local_2 = this._playListEntries[_local_3];
                 if (_local_2.id == k.id)
                 {
-                    _local_4 = (this._musicController._Str_3255(k.id) as SongDataEntry);
+                    _local_4 = (this._musicController.getSongInfo(k.id) as SongDataEntry);
                     if (_local_4 != null)
                     {
                         this._playListEntries[_local_3] = _local_4;

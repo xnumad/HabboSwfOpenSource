@@ -880,7 +880,7 @@
         private function _Str_19943(k:GroupItem, _arg_2:String, _arg_3:Boolean, _arg_4:int=-1, _arg_5:Boolean=false):String
         {
             var _local_6:IFurnitureItem = k._Str_3205();
-            var _local_7:ISongInfo = this._soundManager._Str_2774._Str_3255(_local_6._Str_2794);
+            var _local_7:ISongInfo = this._soundManager._Str_2774.getSongInfo(_local_6._Str_2794);
             if (_local_7 != null)
             {
                 this._localization.registerParameter("songdisc.info", "name", _local_7.name);

@@ -1118,7 +1118,7 @@
                 }
                 if (_local_16 != -1)
                 {
-                    _local_22 = this._musicController._Str_3255(_local_16);
+                    _local_22 = this._musicController.getSongInfo(_local_16);
                     if (_local_22 != null)
                     {
                         _local_17 = _local_22.name;
@@ -1466,7 +1466,7 @@
                 _local_4 = "";
                 if (_local_2 != -1)
                 {
-                    _local_5 = this._musicController._Str_3255(_local_2);
+                    _local_5 = this._musicController.getSongInfo(_local_2);
                     if (_local_5 != null)
                     {
                         _local_3 = _local_5.name;
@@ -1482,7 +1482,7 @@
             var _local_2:ISongInfo;
             if (this._musicController != null)
             {
-                _local_2 = this._musicController._Str_3255(k.id);
+                _local_2 = this._musicController.getSongInfo(k.id);
                 if (_local_2 != null)
                 {
                     this._container.events.dispatchEvent(new RoomWidgetSongUpdateEvent(RoomWidgetSongUpdateEvent.DATA_RECEIVED, k.id, _local_2.name, _local_2.creator));

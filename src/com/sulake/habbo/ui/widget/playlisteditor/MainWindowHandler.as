@@ -317,7 +317,7 @@
             var _local_2:int = k._Str_13794;
             if (_local_2 != -1)
             {
-                _local_3 = this._musicController._Str_3255(_local_2);
+                _local_3 = this._musicController.getSongInfo(_local_2);
                 this._playListStatusView._Str_11249 = _local_3.name;
                 this._playListStatusView._Str_9732 = _local_3.creator;
             }
@@ -342,14 +342,14 @@
                     this._playListEditorView._Str_21115(k.position);
                     if (k.id != -1)
                     {
-                        _local_3 = this._musicController._Str_3255(k.id);
+                        _local_3 = this._musicController.getSongInfo(k.id);
                         this._playListStatusView._Str_11249 = ((_local_3 != null) ? _local_3.name : "");
                         this._playListStatusView._Str_9732 = ((_local_3 != null) ? _local_3.creator : "");
                     }
                     return;
                 case _Str_3301.RWPLENPE_USER_PLAY_SONG:
                     this._musicInventoryView._Str_24959();
-                    _local_2 = this._musicController._Str_3255(k.id);
+                    _local_2 = this._musicController.getSongInfo(k.id);
                     this._musicStatusView._Str_10782 = ((_local_2 != null) ? _local_2.name : "");
                     this._musicStatusView._Str_10782 = ((_local_2 != null) ? _local_2.name : "");
                     this._musicStatusView._Str_6415 = ((_local_2 != null) ? _local_2.creator : "");

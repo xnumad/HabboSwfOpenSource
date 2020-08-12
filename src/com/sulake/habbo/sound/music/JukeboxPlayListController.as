@@ -187,7 +187,7 @@
             {
                 _local_5 = _local_3._Str_14484.getWithIndex(_local_4);
                 _local_6 = _local_3._Str_14484.getKey(_local_4);
-                _local_7 = (this._musicController._Str_3255(_local_5) as SongDataEntry);
+                _local_7 = (this._musicController.getSongInfo(_local_5) as SongDataEntry);
                 if (_local_7 == null)
                 {
                     _local_7 = new SongDataEntry(_local_5, -1, null, null, null);
@@ -225,7 +225,7 @@
                 if (_local_4.id == k.id)
                 {
                     _local_5 = _local_4._Str_5848;
-                    _local_6 = (this._musicController._Str_3255(k.id) as SongDataEntry);
+                    _local_6 = (this._musicController.getSongInfo(k.id) as SongDataEntry);
                     if (_local_6 != null)
                     {
                         _local_6._Str_5848 = _local_5;

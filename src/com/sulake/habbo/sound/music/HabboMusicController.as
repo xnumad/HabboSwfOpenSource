@@ -438,7 +438,7 @@
             }
         }
 
-        public function _Str_3255(k:int):ISongInfo
+        public function getSongInfo(k:int):ISongInfo
         {
             var _local_2:SongDataEntry = this._Str_9498(k);
             if (_local_2 == null)
