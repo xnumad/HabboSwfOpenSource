@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7904 implements IMessageParser 
+    public class ModeratorMessageParser implements IMessageParser
     {
         private var _message:String;
         private var _url:String;
