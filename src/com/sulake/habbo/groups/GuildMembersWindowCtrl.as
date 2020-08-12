@@ -331,11 +331,11 @@
             var _local_2:IRegionWindow = IRegionWindow(k.findChildByName("bg_region"));
             _local_2.procedure = this._Str_24347;
             var _local_3:IRegionWindow = IRegionWindow(k.findChildByName("block_region"));
-            _local_3.addEventListener(WindowMouseEvent.OVER, this._Str_21724);
+            _local_3.addEventListener(WindowMouseEvent.OVER, this.onRemoveMouseOver);
             _local_3.addEventListener(WindowMouseEvent.OUT, this._Str_19989);
             _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_25431);
             var _local_4:IRegionWindow = IRegionWindow(k.findChildByName("remove_region"));
-            _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_21724);
+            _local_4.addEventListener(WindowMouseEvent.OVER, this.onRemoveMouseOver);
             _local_4.addEventListener(WindowMouseEvent.OUT, this._Str_19989);
             _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_25288);
             var _local_5:IRegionWindow = IRegionWindow(k.findChildByName("action_link_region"));
@@ -345,7 +345,7 @@
             return k;
         }
 
-        private function _Str_21724(k:WindowEvent):void
+        private function onRemoveMouseOver(k:WindowEvent):void
         {
             var _local_2:IRegionWindow = IRegionWindow(k.target);
             this._Str_17814(true, _local_2);
