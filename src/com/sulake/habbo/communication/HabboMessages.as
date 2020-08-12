@@ -538,7 +538,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9807;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9844;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWithHighestScoreSearchMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9911;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.CompetitionRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFriendsRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.*;
@@ -1928,7 +1928,7 @@
             OUTGOING_PACKETS[410] = _Str_9801;
             OUTGOING_PACKETS[412] = RequestCatalogPage;
             OUTGOING_PACKETS[418] = _Str_12034;
-            OUTGOING_PACKETS[433] = _Str_9911;
+            OUTGOING_PACKETS[433] = CompetitionRoomsSearchMessageComposer;
             OUTGOING_PACKETS[434] = _Str_11296;
             OUTGOING_PACKETS[436] = GetForumsListMessageComposer;
             OUTGOING_PACKETS[462] = _Str_11648;

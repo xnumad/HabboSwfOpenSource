@@ -38,7 +38,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator.RoomsWithHighestScoreSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator.RoomTextSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10574;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9911;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.CompetitionRoomsSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11181;
     import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomRightsSearchMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9844;
@@ -640,7 +640,7 @@
                     return new _Str_10574(this._navigator.data._Str_6357);
                 case Tabs.SEARCHTYPE_COMPETITION_ROOMS:
                     _local_3 = this._navigator.data._Str_4079;
-                    return new _Str_9911(_local_3.goalId, _local_3.pageIndex);
+                    return new CompetitionRoomsSearchMessageComposer(_local_3.goalId, _local_3.pageIndex);
                 case Tabs.SEARCHTYPE_ROOM_ADS:
                 case Tabs.SEARCHTYPE_NEW_ROOM_ADS:
                     return new _Str_11181(this._navigator.data._Str_6357, k);
