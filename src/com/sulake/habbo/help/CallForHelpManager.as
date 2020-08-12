@@ -398,7 +398,7 @@
             this._window = (this._habboHelp.getXmlWindow("pending_request") as IWindowContainer);
             this._window.findChildByName("request_message").caption = k;
             this._window.center();
-            this._window.procedure = this._Str_18728;
+            this._window.procedure = this.onPendingReuqestEvent;
         }
 
         private function closeWindow():void
@@ -634,7 +634,7 @@
             k.dispose();
         }
 
-        private function _Str_18728(k:WindowEvent, _arg_2:IWindow):void
+        private function onPendingReuqestEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

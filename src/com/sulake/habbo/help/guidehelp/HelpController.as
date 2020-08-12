@@ -208,7 +208,7 @@
             }
             this._pendingRequestWindow = (this._habboHelp.getXmlWindow(_local_2) as IWindowContainer);
             this._pendingRequestWindow.center();
-            this._pendingRequestWindow.procedure = this._Str_18728;
+            this._pendingRequestWindow.procedure = this.onPendingReuqestEvent;
             if (k._Str_17256)
             {
                 return;
@@ -228,7 +228,7 @@
             }
         }
 
-        private function _Str_18728(k:WindowEvent, _arg_2:IWindow):void
+        private function onPendingReuqestEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
