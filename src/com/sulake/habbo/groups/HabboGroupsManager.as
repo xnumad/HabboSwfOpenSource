@@ -79,7 +79,7 @@
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_11712;
+    import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditorDataMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_8228;
     import __AS3__.vec.*;
@@ -538,7 +538,7 @@
         {
             if (this._guildEditorData == null)
             {
-                this.send(new _Str_11712());
+                this.send(new GetGuildEditorDataMessageComposer());
             }
         }
 

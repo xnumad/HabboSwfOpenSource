@@ -478,7 +478,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11165;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11183;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11544;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_11712;
+	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildEditorDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_11883;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12026;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_12111;
@@ -1965,7 +1965,7 @@
             OUTGOING_PACKETS[800] = _Str_7177;
             OUTGOING_PACKETS[801] = _Str_17078;
             OUTGOING_PACKETS[808] = AssignRightsMessageComposer;
-            OUTGOING_PACKETS[813] = _Str_11712;
+            OUTGOING_PACKETS[813] = GetGuildEditorDataMessageComposer;
             OUTGOING_PACKETS[826] = _Str_10397;
             OUTGOING_PACKETS[848] = _Str_11938;
             OUTGOING_PACKETS[865] = _Str_9966;
