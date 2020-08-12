@@ -94,7 +94,7 @@
 
         public function _Str_19418(k:WindowEvent):void
         {
-            this._navigator._Str_23169(this._searchCodeShowMore[k.window.id]);
+            this._navigator.sendAddCollapsedCategory(this._searchCodeShowMore[k.window.id]);
             this._navigator._Str_8273.push(this._searchCodeShowMore[k.window.id]);
             this._Str_18512(k.window.id, false);
             this._navigator.trackEventLog("browse.collapsecategory", "Results", HabboNewNavigator._Str_6560(this._searchCodeShowMore[k.window.id], this._navigator._Str_3440.filteringData));

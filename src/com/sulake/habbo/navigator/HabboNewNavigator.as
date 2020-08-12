@@ -584,7 +584,7 @@
             this._communication.connection.send(new GetHabboGroupDetailsMessageComposer(k, _arg_2));
         }
 
-        public function _Str_23169(k:String):void
+        public function sendAddCollapsedCategory(k:String):void
         {
             this._communication.connection.send(new _Str_12436(k));
         }
