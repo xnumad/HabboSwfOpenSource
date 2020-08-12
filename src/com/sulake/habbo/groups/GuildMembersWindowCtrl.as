@@ -201,7 +201,7 @@
             this._manager.localization.registerParameter("group.members.pageinfo", "amount", ("" + this._data.totalEntries));
             this._manager.localization.registerParameter("group.members.pageinfo", "page", ("" + (this._data.pageIndex + 1)));
             this._manager.localization.registerParameter("group.members.pageinfo", "totalPages", ("" + this._data.totalPages));
-            this._window.findChildByName("previous_page_button").visible = this._Str_24227();
+            this._window.findChildByName("previous_page_button").visible = this.hasPreviousPage();
             this._window.findChildByName("next_page_button").visible = this._Str_25422();
         }
 
@@ -546,7 +546,7 @@
             this.doSearch(this._Str_13408((this._data.pageIndex - 1)));
         }
 
-        private function _Str_24227():Boolean
+        private function hasPreviousPage():Boolean
         {
             return !(this._data.pageIndex == this._Str_13408((this._data.pageIndex - 1)));
         }
