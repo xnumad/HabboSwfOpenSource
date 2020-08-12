@@ -697,7 +697,7 @@
             this.send(new _Str_7461());
         }
 
-        public function _Str_23483(k:int):void
+        public function activateQuest(k:int):void
         {
             this.send(new _Str_4916(k));
         }

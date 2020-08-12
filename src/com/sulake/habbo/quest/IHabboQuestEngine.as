@@ -14,7 +14,7 @@
         function requestSeasonalQuests():void;
         function requestQuests():void;
         function get events():IEventDispatcher;
-        function _Str_23483(_arg_1:int):void;
+        function activateQuest(_arg_1:int):void;
         function _Str_13260():void;
     }
 }
