@@ -185,7 +185,7 @@
                     _local_3._Str_3502._Str_4908 = 0;
                 }
             }
-            this._soundManager._Str_2774._Str_9539(k, HabboMusicPrioritiesEnum._Str_7215, 0, 0, 0, 0);
+            this._soundManager._Str_2774.playSong(k, HabboMusicPrioritiesEnum._Str_7215, 0, 0, 0, 0);
         }
 
         public function _Str_16919():void

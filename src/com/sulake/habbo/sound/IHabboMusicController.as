@@ -10,7 +10,7 @@
         function getSongDiskInventorySongId(_arg_1:int):int;
         function getSongInfo(_arg_1:int):ISongInfo;
         function getSongIdPlayingAtPriority(_arg_1:int):int;
-        function _Str_9539(_arg_1:int, _arg_2:int, _arg_3:Number=0, _arg_4:Number=0, _arg_5:Number=0.5, _arg_6:Number=0.5):Boolean;
+        function playSong(_arg_1:int, _arg_2:int, _arg_3:Number=0, _arg_4:Number=0, _arg_5:Number=0.5, _arg_6:Number=0.5):Boolean;
         function stop(_arg_1:int):void;
         function _Str_13991(_arg_1:int):void;
         function _Str_7732(_arg_1:int):void;

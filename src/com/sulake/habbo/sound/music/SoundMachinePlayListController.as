@@ -249,7 +249,7 @@
             }
             var _local_3:Number = _local_2._Str_14463;
             _local_2._Str_14463 = 0;
-            if (this._musicController._Str_9539(k, HabboMusicPrioritiesEnum._Str_4350, _local_3, 0, 0, 0))
+            if (this._musicController.playSong(k, HabboMusicPrioritiesEnum._Str_4350, _local_3, 0, 0, 0))
             {
                 Logger.log(((("Trax song started by playlist: " + _local_2.name) + " by ") + _local_2.creator));
             }

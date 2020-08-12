@@ -158,7 +158,7 @@
             this._isPlaying = (!(_local_3._Str_9166 == -1));
             if (_local_3._Str_9166 >= 0)
             {
-                this._musicController._Str_9539(_local_3._Str_9166, HabboMusicPrioritiesEnum._Str_4350, (_local_3._Str_19692 / 1000), 0, 1, 1);
+                this._musicController.playSong(_local_3._Str_9166, HabboMusicPrioritiesEnum._Str_4350, (_local_3._Str_19692 / 1000), 0, 1, 1);
                 this._currentEntryId = _local_3._Str_9166;
             }
             else

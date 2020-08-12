@@ -98,7 +98,7 @@
             {
                 this._Str_9908(HabboMusicPrioritiesEnum._Str_4350);
                 this._Str_9908(HabboMusicPrioritiesEnum._Str_5352);
-                this._soundManager._Str_2774._Str_9539(this._selectedSongId, HabboMusicPrioritiesEnum._Str_5352, 15, 40, 0, 2);
+                this._soundManager._Str_2774.playSong(this._selectedSongId, HabboMusicPrioritiesEnum._Str_5352, 15, 40, 0, 2);
             }
         }
 

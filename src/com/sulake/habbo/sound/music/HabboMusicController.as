@@ -283,7 +283,7 @@
             return true;
         }
 
-        public function _Str_9539(k:int, _arg_2:int, _arg_3:Number=0, _arg_4:Number=0, _arg_5:Number=0.5, _arg_6:Number=0.5):Boolean
+        public function playSong(k:int, _arg_2:int, _arg_3:Number=0, _arg_4:Number=0, _arg_5:Number=0.5, _arg_6:Number=0.5):Boolean
         {
             Logger.log((("Requesting " + k) + " for playing"));
             if (!this._Str_25630(_arg_2, k, _arg_3, _arg_4, _arg_5, _arg_6))
