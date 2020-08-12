@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_9106;
+    import com.sulake.habbo.communication.messages.parser.navigator.RoomThumbnailUpdateResultMessageParser;
 
     public class _Str_16380 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_16380(k:Function)
         {
-            super(k, _Str_9106);
+            super(k, RoomThumbnailUpdateResultMessageParser);
         }
 
-        public function getParser():_Str_9106
+        public function getParser():RoomThumbnailUpdateResultMessageParser
         {
-            return this._parser as _Str_9106;
+            return this._parser as RoomThumbnailUpdateResultMessageParser;
         }
     }
 }
