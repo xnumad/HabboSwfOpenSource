@@ -720,7 +720,7 @@
                 {
                     this.getEmailContainer().visible = true;
                     this.getEmailContainer().findChildByName("change_email_region").procedure = this.onChangeEmail;
-                    this.getEmailText().procedure = this._Str_25645;
+                    this.getEmailText().procedure = this.onEmailTxt;
                     this._habboTalent.send(new _Str_10302());
                     this.setEmailErrorStatus(false);
                 }
@@ -891,7 +891,7 @@
             }
         }
 
-        private function _Str_25645(k:WindowEvent, _arg_2:IWindow):void
+        private function onEmailTxt(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowEvent.WINDOW_EVENT_FOCUSED)
             {
