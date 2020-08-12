@@ -127,7 +127,7 @@
                     _local_2 = _local_2.concat(_local_3._Str_7101());
                 }
             }
-            this._Str_19424(_local_2);
+            this.sendRelease(_local_2);
         }
 
         public function _Str_17732(k:int):void
@@ -141,10 +141,10 @@
             {
                 return;
             }
-            this._Str_19424(_local_2._Str_7101());
+            this.sendRelease(_local_2._Str_7101());
         }
 
-        private function _Str_19424(k:Array):void
+        private function sendRelease(k:Array):void
         {
             if (((((k == null) || (k.length == 0)) || (this._moderationManager == null)) || (this._moderationManager.connection == null)))
             {
