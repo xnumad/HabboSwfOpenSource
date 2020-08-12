@@ -132,7 +132,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_9966;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.CancelMarketplaceOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOffersMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11685;
+	import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_11938;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_12361;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace._Str_7525;
@@ -1594,7 +1594,7 @@
             OUTGOING_PACKETS[1592] = PlaceBotMessageComposer;
             OUTGOING_PACKETS[1597] = StartTypingMessageComposer;
             OUTGOING_PACKETS[1598] = Game2RequestFullStatusUpdateMessageComposer;
-            OUTGOING_PACKETS[1603] = _Str_11685;
+            OUTGOING_PACKETS[1603] = BuyMarketplaceOfferMessageComposer;
             OUTGOING_PACKETS[1638] = BreedPetsMessageComposer;
             OUTGOING_PACKETS[1644] = LetUserInMessageComposer;
             OUTGOING_PACKETS[1648] = RoomDimmerSavePresetMessageComposer;
