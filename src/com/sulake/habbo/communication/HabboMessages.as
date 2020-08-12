@@ -361,7 +361,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator.*;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_16380;
 	import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
+	import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
@@ -1032,7 +1032,7 @@
             INCOMING_PACKETS[126] = IgnoredUsersMessageEvent;
             INCOMING_PACKETS[1284] = FlatControllersEvent;
             INCOMING_PACKETS[1301] = FloorHeightMapEvent;
-            INCOMING_PACKETS[1304] = _Str_3992;
+            INCOMING_PACKETS[1304] = FlatCreatedEvent;
             INCOMING_PACKETS[1327] = _Str_5683;
             INCOMING_PACKETS[133] = CompetitionStatusMessageEvent;
             INCOMING_PACKETS[1331] = _Str_7272;

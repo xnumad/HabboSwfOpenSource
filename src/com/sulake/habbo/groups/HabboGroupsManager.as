@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberMgmtFailedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfo;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildCreatedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberFurniCountInHQMessageEvent;
@@ -171,7 +171,7 @@
             this.addMessageEvent(new GuildMemberMgmtFailedMessageEvent(this._guildMembersWindowCtrl._Str_23412));
             this.addMessageEvent(new RelationshipStatusInfo(this.onRelationshipStatusInfo));
             this.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails));
-            this.addMessageEvent(new _Str_3992(this.onFlatCreated));
+            this.addMessageEvent(new FlatCreatedEvent(this.onFlatCreated));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new GuildCreatedMessageEvent(this.onGuildCreated));
             this.addMessageEvent(new GuildMemberFurniCountInHQMessageEvent(this.onKickConfirmation));
@@ -436,7 +436,7 @@
 
         private function onFlatCreated(k:IMessageEvent):void
         {
-            var _local_2:_Str_5936 = _Str_3992(k).getParser();
+            var _local_2:_Str_5936 = FlatCreatedEvent(k).getParser();
             this._guildManagementWindowCtrl.onFlatCreated(_local_2.flatId, _local_2._Str_18439);
         }
 

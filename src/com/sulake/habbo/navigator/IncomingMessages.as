@@ -29,7 +29,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
     import com.sulake.habbo.communication.messages.incoming.room.session.CantConnectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
@@ -143,7 +143,7 @@
             _local_2.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592));
             _local_2.addHabboConnectionMessageEvent(new _Str_5767(this.onCompetitionData));
             _local_2.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3992(this.onFlatCreated));
+            _local_2.addHabboConnectionMessageEvent(new FlatCreatedEvent(this.onFlatCreated));
             _local_2.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485));
             _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect));
             _local_2.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating));
@@ -355,7 +355,7 @@
 
         private function onFlatCreated(k:IMessageEvent):void
         {
-            var _local_2:_Str_5936 = _Str_3992(k).getParser();
+            var _local_2:_Str_5936 = FlatCreatedEvent(k).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ((("Flat created: " + _local_2.flatId) + ", ") + _local_2._Str_18439));
             this.data.createdFlatId = _local_2.flatId;
             this._navigator.goToRoom(_local_2.flatId, true);

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5936;
 
-    public class _Str_3992 extends MessageEvent implements IMessageEvent 
+    public class FlatCreatedEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_3992(k:Function)
+        public function FlatCreatedEvent(k:Function)
         {
             super(k, _Str_5936);
         }

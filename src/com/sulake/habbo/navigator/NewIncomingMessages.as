@@ -39,7 +39,7 @@
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_8029;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5212;
@@ -147,7 +147,7 @@
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorMetaDataEvent(this.onNavigatorMetaData)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5767(this.onCompetitionData)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3992(this.onFlatCreated)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatCreatedEvent(this.onFlatCreated)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_8029(this._Str_15955)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5212(this._Str_17011)));
@@ -319,7 +319,7 @@
 
         private function onFlatCreated(k:IMessageEvent):void
         {
-            var _local_2:_Str_5936 = _Str_3992(k).getParser();
+            var _local_2:_Str_5936 = FlatCreatedEvent(k).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ((("Flat created: " + _local_2.flatId) + ", ") + _local_2._Str_18439));
             this.data.createdFlatId = _local_2.flatId;
             LegacyNavigator(this._navigator.legacyNavigator).goToRoom(_local_2.flatId, true);
