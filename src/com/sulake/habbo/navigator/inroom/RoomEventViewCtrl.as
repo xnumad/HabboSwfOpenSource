@@ -19,7 +19,7 @@
         private var _navigator:IHabboTransitionalNavigator;
         private var _window:IFrameWindow;
         private var _eventNameInput:TextFieldManager;
-        private var _Str_5951:TextFieldManager;
+        private var _eventDescInput:TextFieldManager;
 
         public function RoomEventViewCtrl(k:IHabboTransitionalNavigator)
         {
@@ -35,7 +35,7 @@
                 this._window = null;
             }
             this._eventNameInput = null;
-            this._Str_5951 = null;
+            this._eventDescInput = null;
         }
 
         public function get disposed():Boolean
@@ -69,13 +69,13 @@
         {
             this._window.caption = this._navigator.getText("navigator.eventsettings.editcaption");
             this._eventNameInput.setText(k.eventName);
-            this._Str_5951.setText(k.eventDescription);
+            this._eventDescInput.setText(k.eventDescription);
         }
 
         private function _Str_25306():void
         {
             this._window.caption = this._navigator.getText("navigator.createevent");
-            this._Str_5951.goBackToInitialState();
+            this._eventDescInput.goBackToInitialState();
             this._eventNameInput.goBackToInitialState();
         }
 
@@ -93,7 +93,7 @@
         {
             var k:int = this._navigator.data.roomEventData.adId;
             var _local_2:String = this._eventNameInput.getText();
-            var _local_3:String = this._Str_5951.getText();
+            var _local_3:String = this._eventDescInput.getText();
             if (!this.isMandatoryFieldsFilled())
             {
                 return;
@@ -134,8 +134,8 @@
             {
                 if (_local_3 == 1)
                 {
-                    this._Str_5951.displayError(this._navigator.getText("roomad.error.0.description"));
-                    this._Str_5951.setText(_local_2.filteredText);
+                    this._eventDescInput.displayError(this._navigator.getText("roomad.error.0.description"));
+                    this._eventDescInput.setText(_local_2.filteredText);
                 }
             }
         }
@@ -153,7 +153,7 @@
         private function clearErrors():void
         {
             this._eventNameInput.clearErrors();
-            this._Str_5951.clearErrors();
+            this._eventDescInput.clearErrors();
         }
 
         private function prepareWindow():void
@@ -165,9 +165,9 @@
             this._window = IFrameWindow(this._navigator.getXmlWindow("iro_event_settings"));
             this.addMouseClickListener(this._window.findChildByTag("close"), this.onClose);
             this._eventNameInput = new TextFieldManager(this._navigator, this.getInput("event_name"), 25);
-            this._Str_5951 = new TextFieldManager(this._navigator, this.getInput("event_desc"), 100);
+            this._eventDescInput = new TextFieldManager(this._navigator, this.getInput("event_desc"), 100);
             this._eventNameInput.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
-            this._Str_5951.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
+            this._eventDescInput.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
             this._navigator.communication.addHabboConnectionMessageEvent(new RoomAdErrorEvent(this._Str_24049));
             this._window.center();
         }
