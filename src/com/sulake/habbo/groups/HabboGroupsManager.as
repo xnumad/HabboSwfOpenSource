@@ -185,7 +185,7 @@
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new GuildEditInfoMessageEvent(this._Str_18072));
             this.addMessageEvent(new GuildMembershipUpdatedMessageEvent(this._guildMembersWindowCtrl._Str_25762));
-            this.addMessageEvent(new ExtendedProfileChangedMessageEvent(this._Str_23512));
+            this.addMessageEvent(new ExtendedProfileChangedMessageEvent(this.onExtendedProfileChanged));
             this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             this.addMessageEvent(new UserBadgesEvent(this._Str_24382));
             context.addLinkEventTracker(this);
@@ -340,7 +340,7 @@
             }
         }
 
-        private function _Str_23512(k:IMessageEvent):void
+        private function onExtendedProfileChanged(k:IMessageEvent):void
         {
             var _local_2:int = ExtendedProfileChangedMessageEvent(k).userId;
             this._extendedProfileWindowCtrl._Str_24312(_local_2);
