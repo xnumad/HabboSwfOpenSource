@@ -138,7 +138,7 @@
             }
         }
 
-        public function get _Str_7830():int
+        public function get numFriends():int
         {
             return this._friendEntityList.length;
         }
@@ -347,7 +347,7 @@
         {
             if (this._habboCommunicationManager)
             {
-                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, TRACKING_EVENT_TYPE, k, _arg_2, this._Str_7830));
+                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, TRACKING_EVENT_TYPE, k, _arg_2, this.numFriends));
             }
         }
 
@@ -367,7 +367,7 @@
         {
             if (this._habboCommunicationManager)
             {
-                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, TRACKING_EVENT_TYPE, k, _arg_2, this._Str_7830));
+                this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, TRACKING_EVENT_TYPE, k, _arg_2, this.numFriends));
             }
         }
 

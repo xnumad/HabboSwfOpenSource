@@ -344,7 +344,7 @@
                 this._Str_2868.pop().recycle();
             }
             this._Str_21482(this._friendBarData.numFriendRequests);
-            var _local_5:int = this._friendBarData._Str_7830;
+            var _local_5:int = this._friendBarData.numFriends;
             var _local_6:int;
             var _local_7:int = this._Str_7488;
             var _local_8:int = ((_local_5 + ((this._Str_14931) ? 1 : 0)) + ((_local_6 > 0) ? 1 : 0));
@@ -580,7 +580,7 @@
             var _local_12:IBitmapWrapperWindow;
             var _local_13:Tab;
             var _local_3:IItemListWindow = (this._friendBarWindow.findChildByName(LIST) as IItemListWindow);
-            var _local_4:int = this._friendBarData._Str_7830;
+            var _local_4:int = this._friendBarData.numFriends;
             var _local_5:int;
             while (_local_5 < _local_4)
             {
@@ -857,7 +857,7 @@
             if (k.type == WindowMouseEvent.DOWN)
             {
                 _local_3 = this._Str_2748;
-                _local_4 = ((this._friendBarData._Str_7830 + ((this._Str_14931) ? 1 : 0)) + ((this._friendBarData.numFriendRequests > 0) ? 1 : 0));
+                _local_4 = ((this._friendBarData.numFriends + ((this._Str_14931) ? 1 : 0)) + ((this._friendBarData.numFriendRequests > 0) ? 1 : 0));
                 switch (_arg_2.name)
                 {
                     case BUTTON_LEFT:
@@ -1068,13 +1068,13 @@
                                 }
                                 else
                                 {
-                                    if (this._Str_2868.length < (this._friendBarData._Str_7830 + ((this._Str_14931) ? 1 : 0)))
+                                    if (this._Str_2868.length < (this._friendBarData.numFriends + ((this._Str_14931) ? 1 : 0)))
                                     {
                                         k = true;
                                     }
                                     else
                                     {
-                                        if (this._Str_24539 < this._friendBarData._Str_7830)
+                                        if (this._Str_24539 < this._friendBarData.numFriends)
                                         {
                                             k = true;
                                         }
