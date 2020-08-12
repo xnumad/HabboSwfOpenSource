@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.ChatRecordData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7868 implements IMessageParser 
+    public class RoomChatlogMessageParser implements IMessageParser
     {
         private var _data:ChatRecordData;
 

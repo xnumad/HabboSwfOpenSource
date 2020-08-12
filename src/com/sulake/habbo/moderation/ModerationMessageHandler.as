@@ -31,7 +31,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8106;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8235;
     import flash.utils.Dictionary;
-    import com.sulake.habbo.communication.messages.parser.moderation._Str_7868;
+    import com.sulake.habbo.communication.messages.parser.moderation.RoomChatlogMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7908;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7621;
     import com.sulake.habbo.communication.messages.parser.userclassification.UserClassificationMessageParser;
@@ -217,7 +217,7 @@
 
         private function onRoomChatlog(k:_Str_7799):void
         {
-            var _local_2:_Str_7868 = k.getParser();
+            var _local_2:RoomChatlogMessageParser = k.getParser();
             var _local_3:Array = new Array();
             _local_3.push(_local_2.data);
             var _local_4:Dictionary = new Dictionary();
