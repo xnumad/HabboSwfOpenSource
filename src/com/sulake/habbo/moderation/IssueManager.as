@@ -419,7 +419,7 @@
             this.sendClose(_local_3._Str_7101(), _arg_2);
         }
 
-        public function _Str_23846(k:int, _arg_2:int):void
+        public function closeDefaultAction(k:int, _arg_2:int):void
         {
             var _local_6:int;
             var _local_3:IssueBundle = (this._bundles.getValue(k) as IssueBundle);

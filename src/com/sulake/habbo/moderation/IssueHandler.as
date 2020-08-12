@@ -511,7 +511,7 @@
             }
             else
             {
-                this._moderationManager.issueManager._Str_23846(this._issueBundle.id, _local_2);
+                this._moderationManager.issueManager.closeDefaultAction(this._issueBundle.id, _local_2);
                 this._Str_13345();
                 this.dispose();
             }
