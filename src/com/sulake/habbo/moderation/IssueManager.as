@@ -436,7 +436,7 @@
                     _local_5.push(_local_6);
                 }
             }
-            this._Str_24279(_local_4, _local_5, _arg_2);
+            this.sendCloseDefaultAction(_local_4, _local_5, _arg_2);
         }
 
         public function _Str_16247(k:int, _arg_2:int):void
@@ -521,7 +521,7 @@
             this._moderationManager.connection.send(new PickIssuesMessageComposer(k, _arg_2, _arg_3, _arg_4));
         }
 
-        private function _Str_24279(k:int, _arg_2:Array, _arg_3:int):void
+        private function sendCloseDefaultAction(k:int, _arg_2:Array, _arg_3:int):void
         {
             this._moderationManager.connection.send(new CloseIssueDefaultActionMessageComposer(k, _arg_2, _arg_3));
         }
