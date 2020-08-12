@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7284 
+    public class UserChatlogData
     {
         private var _userId:int;
         private var _userName:String;
         private var _rooms:Array;
 
-        public function _Str_7284(k:IMessageDataWrapper)
+        public function UserChatlogData(k:IMessageDataWrapper)
         {
             this._rooms = new Array();
             super();
