@@ -12,7 +12,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_7379;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_6006;
+    import com.sulake.habbo.communication.messages.outgoing.users.JoinHabboGroupMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
 
     public class GroupRoomInfoCtrl implements IDisposable 
@@ -188,7 +188,7 @@
             {
                 this._manager.trackGoogle("groupRoomInfo", "joinGroup");
                 this._window.findChildByName("join_button").disable();
-                this._manager.send(new _Str_6006(this._group.groupId));
+                this._manager.send(new JoinHabboGroupMessageComposer(this._group.groupId));
                 this._manager.send(new EventLogMessageComposer(HabboGroupsManager.HABBOGROUPS, ("" + this._group.groupId), "join"));
                 this._manager.toolbar.events.dispatchEvent(new HabboToolbarEvent(HabboToolbarEvent.HTE_GROUP_ROOM_INFO_CLICK));
             }

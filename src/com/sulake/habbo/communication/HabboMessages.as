@@ -488,7 +488,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetGuildMembersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserIdMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.users._Str_6006;
+	import com.sulake.habbo.communication.messages.outgoing.users.JoinHabboGroupMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.ScrGetUserInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
 	import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileByNameMessageComposer;
@@ -1981,7 +1981,7 @@
             OUTGOING_PACKETS[96] = LatencyPingReportMessageComposer;
             OUTGOING_PACKETS[99] = UseFurnitureMessageComposer;
             OUTGOING_PACKETS[992] = UnbanUserFromRoomMessageComposer;
-            OUTGOING_PACKETS[998] = _Str_6006;
+            OUTGOING_PACKETS[998] = JoinHabboGroupMessageComposer;
 			
 			//_Str_477 (Leaderboards)
 			OUTGOING_PACKETS[6000] = _SafeStr_3633;

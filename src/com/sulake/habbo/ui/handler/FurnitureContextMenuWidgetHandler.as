@@ -21,7 +21,7 @@
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import flash.geom.Rectangle;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_6006;
+    import com.sulake.habbo.communication.messages.outgoing.users.JoinHabboGroupMessageComposer;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_6716;
     import com.sulake.habbo.room.events.RoomEngineObjectEvent;
 
@@ -240,7 +240,7 @@
 
         public function _Str_24943(k:int):void
         {
-            this._connection.send(new _Str_6006(k));
+            this._connection.send(new JoinHabboGroupMessageComposer(k));
         }
 
         private function getRoomObject(k:int):IRoomObject

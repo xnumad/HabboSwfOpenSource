@@ -10,7 +10,7 @@
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.users._Str_6006;
+    import com.sulake.habbo.communication.messages.outgoing.users.JoinHabboGroupMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.window.utils.IAlertDialog;
@@ -173,7 +173,7 @@
             }
             this._manager.trackGoogle("groupDetails", "joinGroup");
             this._window.findChildByName("join_button").disable();
-            this._manager.send(new _Str_6006(this._selectedGroup.groupId));
+            this._manager.send(new JoinHabboGroupMessageComposer(this._selectedGroup.groupId));
             this._manager.send(new EventLogMessageComposer(HabboGroupsManager.HABBOGROUPS, ("" + this._selectedGroup.groupId), "join"));
         }
 
