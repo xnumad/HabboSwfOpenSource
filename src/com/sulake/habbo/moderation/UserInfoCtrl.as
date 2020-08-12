@@ -9,7 +9,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.moderator._Str_11910;
+    import com.sulake.habbo.communication.messages.outgoing.moderator.GetUserChatlogMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
 
     public class UserInfoCtrl implements IDisposable, IUserInfoListener 
@@ -203,7 +203,7 @@
                 return;
             }
             this._Str_3066("chatLog");
-            this._main.windowTracker.show(new ChatlogCtrl(new _Str_11910(this._data.userId), this._main, WindowTracker._Str_15435, this._data.userId), this._callerFrame, this._openToolsBelow, false, true);
+            this._main.windowTracker.show(new ChatlogCtrl(new GetUserChatlogMessageComposer(this._data.userId), this._main, WindowTracker._Str_15435, this._data.userId), this._callerFrame, this._openToolsBelow, false, true);
         }
 
         private function _Str_24240(k:WindowEvent, _arg_2:IWindow):void
