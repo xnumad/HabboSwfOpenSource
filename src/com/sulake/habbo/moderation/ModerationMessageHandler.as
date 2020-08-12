@@ -148,7 +148,7 @@
             var issues:Array = parser.issues;
             var retryEnabled:Boolean = parser.retryEnabled;
             var retryCount:int = parser.retryCount;
-            var pickedAlready:Boolean = this._moderationManager.issueManager._Str_25696(issues);
+            var pickedAlready:Boolean = this._moderationManager.issueManager.issuePickFailed(issues);
             if (pickedAlready)
             {
                 if (retryEnabled)

@@ -547,7 +547,7 @@
             this._Str_16335(_local_3.id);
         }
 
-        public function _Str_25696(k:Array):Boolean
+        public function issuePickFailed(k:Array):Boolean
         {
             var _local_4:IssueMessageData;
             var _local_5:int;
