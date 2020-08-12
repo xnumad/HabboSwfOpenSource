@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7965 
+    public class CfhChatlogData
     {
         private var _callId:int;
         private var _Str_20226:int;
@@ -10,7 +10,7 @@
         private var _Str_10679:int;
         private var _Str_8977:ChatRecordData;
 
-        public function _Str_7965(k:IMessageDataWrapper)
+        public function CfhChatlogData(k:IMessageDataWrapper)
         {
             this._callId = k.readInteger();
             this._Str_20226 = k.readInteger();
