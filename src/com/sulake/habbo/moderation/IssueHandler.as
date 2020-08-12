@@ -521,7 +521,7 @@
         {
             Logger.log("Release clicked");
             this._Str_3066("release");
-            this._moderationManager.issueManager._Str_17732(this._issueBundle.id);
+            this._moderationManager.issueManager.releaseBundle(this._issueBundle.id);
             this._Str_13345();
             this.dispose();
         }

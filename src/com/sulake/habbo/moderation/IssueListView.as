@@ -206,7 +206,7 @@
             {
                 return;
             }
-            this._issueManager._Str_17732(k.window.id);
+            this._issueManager.releaseBundle(k.window.id);
         }
     }
 }

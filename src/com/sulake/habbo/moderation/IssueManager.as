@@ -130,7 +130,7 @@
             this.sendRelease(_local_2);
         }
 
-        public function _Str_17732(k:int):void
+        public function releaseBundle(k:int):void
         {
             if (this._bundles == null)
             {
@@ -598,7 +598,7 @@
                     {
                         _local_13.dispose();
                     }
-                    this._Str_17732(_local_12);
+                    this.releaseBundle(_local_12);
                 }
             }
             return _local_2;
