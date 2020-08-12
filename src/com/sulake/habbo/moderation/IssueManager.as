@@ -241,7 +241,7 @@
                 {
                     if (k.state == IssueMessageData._Str_8056)
                     {
-                        this._Str_22925(_local_3.id);
+                        this.unhandleBundle(_local_3.id);
                     }
                 }
             }
@@ -395,7 +395,7 @@
             this._handleQueue = _local_4;
         }
 
-        public function _Str_22925(k:int):void
+        public function unhandleBundle(k:int):void
         {
             var _local_2:IssueBundle = (this._bundles.getValue(k) as IssueBundle);
             if (_local_2 == null)
