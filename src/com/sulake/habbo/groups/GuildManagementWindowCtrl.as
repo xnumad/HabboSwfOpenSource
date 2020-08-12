@@ -111,7 +111,7 @@
             this._window.findChildByName("cancel_link_region").procedure = this.onCancelLink;
             this._window.findChildByName("next_step_button").procedure = this.onNextStep;
             this._window.findChildByName("previous_step_link_region").procedure = this.onPreviousStep;
-            this._window.findChildByName("buy_button").procedure = this._Str_12134;
+            this._window.findChildByName("buy_button").procedure = this.onBuy;
             this._window.findChildByName("vip_required_region").procedure = this._Str_24944;
             this._window.addEventListener(WindowEvent.WINDOW_EVENT_DEACTIVATED, this._Str_24784);
             this._window.findChildByName("edit_tab_1").procedure = this.onTab;
@@ -484,7 +484,7 @@
             this.refresh();
         }
 
-        private function _Str_12134(k:WindowEvent, _arg_2:IWindow):void
+        private function onBuy(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

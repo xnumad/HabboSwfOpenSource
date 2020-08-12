@@ -37,7 +37,7 @@
             }
             this._window.findChildByName("item_header").caption = ((_local_5 != null) ? _local_5.value : "-");
             this._habboCatalog.utils._Str_6455((this._window.findChildByName("item_price") as IWindowContainer), this._offer);
-            this._window.findChildByName("item_buy").addEventListener(WindowMouseEvent.CLICK, this._Str_12134);
+            this._window.findChildByName("item_buy").addEventListener(WindowMouseEvent.CLICK, this.onBuy);
             if (k.giftable)
             {
                 this._window.findChildByName("item_gift").addEventListener(WindowMouseEvent.CLICK, this._Str_18825);
@@ -63,7 +63,7 @@
             return this._disposed;
         }
 
-        private function _Str_12134(k:WindowMouseEvent):void
+        private function onBuy(k:WindowMouseEvent):void
         {
             this._habboCatalog.purchaseWillBeGift(false);
             this._habboCatalog.showPurchaseConfirmation(this._offer, ((this._offer.page == null) ? -1 : this._offer.page.pageId));

@@ -42,7 +42,7 @@
             var _local_6:IButtonWindow = (this._window.findChildByName("item_buy") as IButtonWindow);
             if (_local_6 != null)
             {
-                _local_6.addEventListener(WindowMouseEvent.CLICK, this._Str_12134);
+                _local_6.addEventListener(WindowMouseEvent.CLICK, this.onBuy);
             }
         }
 
@@ -51,7 +51,7 @@
             this._window.dispose();
         }
 
-        private function _Str_12134(k:WindowMouseEvent):void
+        private function onBuy(k:WindowMouseEvent):void
         {
             HabboCatalog(this._Str_2619.viewer.catalog).showPurchaseConfirmation(this._offer, this._Str_2619.pageId);
         }
