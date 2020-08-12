@@ -707,8 +707,8 @@
             this.getEmailContainer().visible = false;
             if (this._habboTalent._Str_9968)
             {
-                _local_5 = this._habboTalent.localizationManager.getLocalization((((("talent.track.task.action." + this._talentTrack.name) + ".") + this._Str_19836(_local_2.badgeCode)) + ".description"), "");
-                _local_6 = this._habboTalent.localizationManager.getLocalization((((("talent.track.task.action." + this._talentTrack.name) + ".") + this._Str_19836(_local_2.badgeCode)) + ".link"), "");
+                _local_5 = this._habboTalent.localizationManager.getLocalization((((("talent.track.task.action." + this._talentTrack.name) + ".") + this.mapBadgeCode(_local_2.badgeCode)) + ".description"), "");
+                _local_6 = this._habboTalent.localizationManager.getLocalization((((("talent.track.task.action." + this._talentTrack.name) + ".") + this.mapBadgeCode(_local_2.badgeCode)) + ".link"), "");
                 _local_7 = ((!(_local_5 == "")) || (!(_local_6 == "")));
                 _local_3.findChildByName("action_separator").visible = _local_7;
                 _local_3.findChildByName("action_title").visible = _local_7;
@@ -765,7 +765,7 @@
             return (k == null) ? null : IWindowContainer(k.findChildByName("email_container"));
         }
 
-        private function _Str_19836(k:String):String
+        private function mapBadgeCode(k:String):String
         {
             if (((k == TalentTrackTask.ROOM_ENTRY_1) || (k == TalentTrackTask.ROOM_ENTRY_2)))
             {
