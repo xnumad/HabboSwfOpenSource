@@ -173,7 +173,7 @@
             this.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails));
             this.addMessageEvent(new _Str_3992(this.onFlatCreated));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
-            this.addMessageEvent(new GuildCreatedMessageEvent(this._Str_24985));
+            this.addMessageEvent(new GuildCreatedMessageEvent(this.onGuildCreated));
             this.addMessageEvent(new GuildMemberFurniCountInHQMessageEvent(this._Str_25619));
             this.addMessageEvent(new GuildCreationInfoMessageEvent(this.onGuildCreationInfo));
             this.addMessageEvent(new GuildEditorDataMessageEvent(this.onGuildEditorData));
@@ -440,7 +440,7 @@
             this._guildManagementWindowCtrl.onFlatCreated(_local_2.flatId, _local_2._Str_18439);
         }
 
-        private function _Str_24985(k:IMessageEvent):void
+        private function onGuildCreated(k:IMessageEvent):void
         {
             var _local_2:GuildCreatedMessageEvent = GuildCreatedMessageEvent(k);
             this._groupCreatedWindowCtrl.show(_local_2.groupId);
