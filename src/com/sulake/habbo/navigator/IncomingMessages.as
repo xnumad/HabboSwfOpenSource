@@ -58,7 +58,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6885;
     import com.sulake.habbo.communication.messages.parser.navigator.OfficialRoomsMessageParser;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4587;
+    import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsData;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6918;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6280;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
@@ -233,7 +233,7 @@
 
         private function _Str_17226(k:IMessageEvent):void
         {
-            var _local_2:_Str_4587 = _Str_5017(k).getParser().data;
+            var _local_2:PopularRoomTagsData = _Str_5017(k).getParser().data;
             this.data._Str_6697 = _local_2;
             Logger.log(("Received popular room tags: " + this.data._Str_6697.tags.length));
         }

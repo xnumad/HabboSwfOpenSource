@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4374;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4587;
+    import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsData;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultData;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5078;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5546;
@@ -123,7 +123,7 @@
 
         public function get popularTagsArrived():Boolean
         {
-            return (!(this._lastMsg == null)) && (!((this._lastMsg as _Str_4587) == null));
+            return (!(this._lastMsg == null)) && (!((this._lastMsg as PopularRoomTagsData) == null));
         }
 
         public function get guestRoomSearchArrived():Boolean
@@ -149,7 +149,7 @@
             this._loading = false;
         }
 
-        public function set _Str_6697(k:_Str_4587):void
+        public function set _Str_6697(k:PopularRoomTagsData):void
         {
             this._Str_12759();
             this._lastMsg = k;
@@ -200,9 +200,9 @@
             return this._lastMsg as GuestRoomSearchResultData;
         }
 
-        public function get _Str_6697():_Str_4587
+        public function get _Str_6697():PopularRoomTagsData
         {
-            return this._lastMsg as _Str_4587;
+            return this._lastMsg as PopularRoomTagsData;
         }
 
         public function get _Str_5645():_Str_5078
