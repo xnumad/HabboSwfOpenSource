@@ -10,7 +10,7 @@
     import com.sulake.habbo.room.events.RoomEngineObjectEvent;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.communication.connection.IConnection;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10323;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.pets.GetPetInventoryComposer;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.Pet;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import flash.events.Event;
@@ -111,7 +111,7 @@
             {
                 return;
             }
-            k.send(new _Str_10323());
+            k.send(new GetPetInventoryComposer());
         }
 
         public function get pets():Map

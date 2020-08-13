@@ -306,7 +306,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniCancelLockMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniStartConfirmationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniOtherLockConfirmedMessageEvent;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10323;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.pets.GetPetInventoryComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10953;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_12104;
 	import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerStatusMessageComposer;
@@ -1802,7 +1802,7 @@
             OUTGOING_PACKETS[3086] = GetCraftingRecipesAvailableComposer;
             OUTGOING_PACKETS[309] = DeleteFavouriteRoomMessageComposer;
             OUTGOING_PACKETS[3093] = ChangeQueueMessageComposer;
-            OUTGOING_PACKETS[3095] = _Str_10323;
+            OUTGOING_PACKETS[3095] = GetPetInventoryComposer;
             OUTGOING_PACKETS[31] = ModToolPreferencesComposer;
             OUTGOING_PACKETS[3107] = _Str_8008;
             OUTGOING_PACKETS[3110] = InitDiffieHandshakeMessageComposer;
