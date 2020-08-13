@@ -6,6 +6,6 @@
         public static const CFHRE_ERROR_TOO_MANY_PENDING:String = "CFHRE_ERROR_TOO_MANY_PENDING";
         public static const CFHRE_HAS_ABUSIVE_CALL:String = "CFHRE_HAS_ABUSIVE_CALL";
         public static const TOO_MANY_PENDING_CALLS_CODE:int = 1;
-        public static const _Str_18473:int = 2;
+        public static const HAS_ABUSIVE_CALL_CODE:int = 2;
     }
 }

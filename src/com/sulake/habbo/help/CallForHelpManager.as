@@ -668,7 +668,7 @@
                 case CallForHelpResultEnum.TOO_MANY_PENDING_CALLS_CODE:
                     this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_EMERGENCY);
                     return;
-                case CallForHelpResultEnum._Str_18473:
+                case CallForHelpResultEnum.HAS_ABUSIVE_CALL_CODE:
                     this.showAbusiveNotice();
                     return;
                 default:
