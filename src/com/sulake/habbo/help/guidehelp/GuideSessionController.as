@@ -1674,11 +1674,11 @@
             this._typingTimer = new Timer(_Str_18329);
             this._typingTimer.addEventListener(TimerEvent.TIMER, this.onTypingTimer);
             this._typingTimer.start();
-            this._lastMessageTypedLength = this._Str_19035;
+            this._lastMessageTypedLength = this.messageLength;
             this._Str_19579(false);
         }
 
-        private function get _Str_19035():int
+        private function get messageLength():int
         {
             if ((((this._window == null) || (this._window.disposed)) || ((!(this._window.name == GuideSessionStateEnum.USER_ONGOING)) && (!(this._window.name == GuideSessionStateEnum.GUIDE_ONGOING)))))
             {
@@ -1694,7 +1694,7 @@
             {
                 return;
             }
-            var _local_2:int = this._Str_19035;
+            var _local_2:int = this.messageLength;
             var _local_3:* = (!(this._lastMessageTypedLength == _local_2));
             if (this._lastTypingInfo != _local_3)
             {
