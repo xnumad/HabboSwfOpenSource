@@ -588,7 +588,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.GetFaqCategoryMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_16470;
 	import com.sulake.habbo.communication.messages.outgoing.help.GetFaqTextMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_18219;
+	import com.sulake.habbo.communication.messages.outgoing.help.SearchFaqsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionFeedbackMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionOnDutyUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideDetachedMessageComposer;
@@ -1640,7 +1640,7 @@
             OUTGOING_PACKETS[1990] = ThrowDiceMessageComposer;
             OUTGOING_PACKETS[1991] = UpdateGuildBadgeMessageComposer;
             OUTGOING_PACKETS[2012] = MysteryBoxWaitingCanceledMessageComposer;
-            OUTGOING_PACKETS[2031] = _Str_18219;
+            OUTGOING_PACKETS[2031] = SearchFaqsMessageComposer;
             OUTGOING_PACKETS[2041] = _Str_7084;
             OUTGOING_PACKETS[2061] = UnignoreUserMessageComposer;
             OUTGOING_PACKETS[2064] = RemoveRightsMessageComposer;
