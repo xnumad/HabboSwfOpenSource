@@ -590,7 +590,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.GetFaqTextMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_18219;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_4434;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_4553;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionOnDutyUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_4981;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_5876;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
@@ -1629,7 +1629,7 @@
             OUTGOING_PACKETS[1894] = RejectMembershipRequestMessageComposer;
             OUTGOING_PACKETS[1911] = GetCustomRoomFilterMessageComposer;
             OUTGOING_PACKETS[1918] = ToggleStaffPickMessageComposer;
-            OUTGOING_PACKETS[1922] = _Str_4553;
+            OUTGOING_PACKETS[1922] = GuideSessionOnDutyUpdateMessageComposer;
             OUTGOING_PACKETS[1945] = ModMuteMessageComposer;
             OUTGOING_PACKETS[1954] = NavigatorDeleteSavedSearchComposer;
             OUTGOING_PACKETS[196] = GetTalentTrackMessageComposer;

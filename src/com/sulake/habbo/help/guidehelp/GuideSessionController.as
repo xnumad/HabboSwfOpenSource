@@ -32,7 +32,7 @@
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.habbo.help.enum.GuideSessionStateEnum;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7293;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_4553;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionOnDutyUpdateMessageComposer;
     import com.sulake.habbo.communication.messages.parser.help._Str_7652;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionAttachedParser;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -257,7 +257,7 @@
 
         public function showGuideTool():void
         {
-            this._habboHelp.sendMessage(new _Str_4553(this._onDuty, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
+            this._habboHelp.sendMessage(new GuideSessionOnDutyUpdateMessageComposer(this._onDuty, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
         }
 
         private function _window9(k:_Str_8903):void
@@ -500,7 +500,7 @@
                     if (this._onDuty)
                     {
                         this._Str_10865(false);
-                        this._habboHelp.sendMessage(new _Str_4553(false, false, false, false));
+                        this._habboHelp.sendMessage(new GuideSessionOnDutyUpdateMessageComposer(false, false, false, false));
                     }
                     this._Str_4260(false);
                 }
@@ -618,12 +618,12 @@
                                 this._Str_13929(false);
                                 return;
                             }
-                            this._habboHelp.sendMessage(new _Str_4553(true, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
+                            this._habboHelp.sendMessage(new GuideSessionOnDutyUpdateMessageComposer(true, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
                             this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_onDuty"));
                             break;
                         case WindowEvent.WINDOW_EVENT_UNSELECTED:
                             this._Str_13929(false);
-                            this._habboHelp.sendMessage(new _Str_4553(false, false, false, false));
+                            this._habboHelp.sendMessage(new GuideSessionOnDutyUpdateMessageComposer(false, false, false, false));
                             this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_offDuty"));
                             break;
                     }
@@ -1761,7 +1761,7 @@
         {
             if (((this._onDuty) && ((getTimer() - this._idleCheckLastActivity) > (this._habboHelp.getInteger("guidetool.idle.timeout", 300) * 1000))))
             {
-                this._habboHelp.sendMessage(new _Str_4553(false, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
+                this._habboHelp.sendMessage(new GuideSessionOnDutyUpdateMessageComposer(false, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
             }
         }
     }
