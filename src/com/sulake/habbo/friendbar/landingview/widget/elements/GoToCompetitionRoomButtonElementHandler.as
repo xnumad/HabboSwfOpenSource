@@ -3,7 +3,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_9966;
+    import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToRandomCompetitionRoomMessageComposer;
 
     public class GoToCompetitionRoomButtonElementHandler extends AbstractButtonElementHandler 
     {
@@ -19,7 +19,7 @@
         override protected function onClick():void
         {
             landingView.questEngine.reenableRoomCompetitionWindow();
-            landingView.send(new _Str_9966(this._goalCode));
+            landingView.send(new ForwardToRandomCompetitionRoomMessageComposer(this._goalCode));
             landingView.tracking.trackGoogle("landingView", "click_gotocompetitionroom");
         }
     }

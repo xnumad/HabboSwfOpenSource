@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_9966 implements IMessageComposer 
+    public class ForwardToRandomCompetitionRoomMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_9966(k:String)
+        public function ForwardToRandomCompetitionRoomMessageComposer(k:String)
         {
             this._array = new Array();
             super();

@@ -129,7 +129,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_5974;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_7424;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_9816;
-	import com.sulake.habbo.communication.messages.outgoing.competition._Str_9966;
+	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToRandomCompetitionRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.CancelMarketplaceOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOffersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceOfferMessageComposer;
@@ -1968,7 +1968,7 @@
             OUTGOING_PACKETS[813] = GetGuildEditorDataMessageComposer;
             OUTGOING_PACKETS[826] = GetPopularRoomTagsMessageComposer;
             OUTGOING_PACKETS[848] = GetMarketplaceCanMakeOfferComposer;
-            OUTGOING_PACKETS[865] = _Str_9966;
+            OUTGOING_PACKETS[865] = ForwardToRandomCompetitionRoomMessageComposer;
             OUTGOING_PACKETS[869] = ScrGetKickbackInfoMessageComposer;
             OUTGOING_PACKETS[872] = RentableSpaceStatusMessageComposer;
             OUTGOING_PACKETS[873] = GetThreadsMessageComposer;
