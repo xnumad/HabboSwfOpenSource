@@ -267,7 +267,7 @@
             var _local_6:ISelectableWindow;
             this.closeWindow();
             this._reportType = k;
-            if (this._reportType == HabboHelp._Str_15144)
+            if (this._reportType == HabboHelp.REPORT_TYPE_BULLY)
             {
                 this._window = (this._habboHelp.getXmlWindow("bully_report") as IWindowContainer);
                 this._window.procedure = this.onBullyReportEvent;
@@ -310,7 +310,7 @@
                 case HabboHelp._Str_4490:
                     this.showPanels(false, false);
                     return;
-                case HabboHelp._Str_15144:
+                case HabboHelp.REPORT_TYPE_BULLY:
                     this.populateUserList();
                     return;
             }
