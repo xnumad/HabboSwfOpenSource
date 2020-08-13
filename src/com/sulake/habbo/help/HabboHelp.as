@@ -75,7 +75,7 @@
     public class HabboHelp extends Component implements IHabboHelp, ILinkEventTracker 
     {
         public static const REPORT_TYPE_EMERGENCY:int = 1;
-        public static const _Str_15870:int = 2;
+        public static const REPORT_TYPE_GUIDE:int = 2;
         public static const _Str_4315:int = 3;
         public static const _Str_4786:int = 4;
         public static const _Str_15144:int = 6;
@@ -670,7 +670,7 @@
                 case _Str_4490:
                     this._callForHelpManager.showEmergencyHelpRequest(this._reportType);
                     break;
-                case _Str_15870:
+                case REPORT_TYPE_GUIDE:
                     this._guideHelpManager.openReportWindow();
                     break;
                 case _Str_7161:
