@@ -314,7 +314,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.recycler.RecycleItemsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2GameChatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2ExitGameMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_18615;
+	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2LoadStageReadyMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2PlayAgainMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.users.*;
 	import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
@@ -1702,7 +1702,7 @@
             OUTGOING_PACKETS[2407] = GetMarketplaceOffersMessageComposer;
             OUTGOING_PACKETS[2408] = PurchasePhotoMessageComposer;
             OUTGOING_PACKETS[2412] = RoomAdEventTabAdClickedComposer;
-            OUTGOING_PACKETS[2415] = _Str_18615;
+            OUTGOING_PACKETS[2415] = Game2LoadStageReadyMessageComposer;
             OUTGOING_PACKETS[2419] = SSOTicketMessageComposer;
             OUTGOING_PACKETS[2436] = _Str_18298;
             OUTGOING_PACKETS[2445] = DisconnectMessageComposer;
