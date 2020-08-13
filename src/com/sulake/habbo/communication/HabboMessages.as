@@ -638,7 +638,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10231;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10281;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10337;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10589;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetRoomAdPurchaseInfoComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10613;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11178;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11294;
@@ -1524,7 +1524,7 @@
             OUTGOING_PACKETS[1053] = VersionCheckMessageComposer;
             OUTGOING_PACKETS[1054] = _Str_11560;
             OUTGOING_PACKETS[1071] = ExtendRentOrBuyoutFurniMessageComposer;
-            OUTGOING_PACKETS[1075] = _Str_10589;
+            OUTGOING_PACKETS[1075] = GetRoomAdPurchaseInfoComposer;
             OUTGOING_PACKETS[1081] = _Str_11951;
             OUTGOING_PACKETS[1086] = SetIgnoreRoomInvitesMessageComposer;
             OUTGOING_PACKETS[109] = PollStartComposer;
