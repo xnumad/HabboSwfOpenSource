@@ -295,7 +295,7 @@
             this._gameManager._Str_22538(_local_2, "getVip.clicked.playNow");
         }
 
-        public function _Str_20681(k:IGameRewardListener):void
+        public function getWeeklyGameRewardInformation(k:IGameRewardListener):void
         {
             this._gameRewardListener = k;
             this.send(new _Str_10571(k._Str_18928()));

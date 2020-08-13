@@ -155,7 +155,7 @@
             this._ownEntryList.destroyListItems();
             this.updateThisWeek();
             this.send(new Game2GetWeeklyLeaderboardComposer(this._selectedGame, 1, 0, 0, 5, 5));
-            this._gameCenterView._Str_20681(this);
+            this._gameCenterView.getWeeklyGameRewardInformation(this);
         }
 
         private function updateThisWeek():void

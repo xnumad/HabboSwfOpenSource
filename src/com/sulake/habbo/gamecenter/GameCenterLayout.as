@@ -427,7 +427,7 @@
             this._gameCenterViewWindow.findChildByName("playnow_text").caption = "";
             this._gameCenterView.send(new Game2GetAccountGameStatusMessageComposer(this._selectedGame));
             this._gameCenterView.send(new _Str_11560(this._selectedGame));
-            this._gameCenterView._Str_20681(this);
+            this._gameCenterView.getWeeklyGameRewardInformation(this);
             var _local_5:String = ("gamecenter.roomlink." + _local_2);
             var _local_6:String = this._gameCenterView.gameManager.getProperty(_local_5);
             var _local_7:IWindowContainer = (this._gameCenterViewWindow.findChildByName("room_link_container") as IWindowContainer);
