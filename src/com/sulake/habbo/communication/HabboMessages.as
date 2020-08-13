@@ -904,7 +904,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6450;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemsToTradeComposer;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10430;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.CloseTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.UnacceptTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AcceptTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.ConfirmAcceptTradingComposer;
@@ -1723,7 +1723,7 @@
             OUTGOING_PACKETS[2519] = GetInterstitialMessageComposer;
             OUTGOING_PACKETS[2529] = BuildersClubQueryFurniCountMessageComposer;
             OUTGOING_PACKETS[2537] = MyRecommendedRoomsMessageComposer;
-            OUTGOING_PACKETS[2551] = _Str_10430;
+            OUTGOING_PACKETS[2551] = CloseTradingComposer;
             OUTGOING_PACKETS[2557] = GetEmailStatusComposer;
             OUTGOING_PACKETS[2565] = _Str_5198;
             OUTGOING_PACKETS[2578] = MyFavouriteRoomsSearchMessageComposer;

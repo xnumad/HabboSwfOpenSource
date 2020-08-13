@@ -48,7 +48,7 @@
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.UnacceptTradingComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.ConfirmAcceptTradingComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.ConfirmDeclineTradingComposer;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10430;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.trading.CloseTradingComposer;
     import __AS3__.vec.*;
 
     public class TradingModel implements IInventoryModel, IGetImageListener 
@@ -787,7 +787,7 @@
 
         public function requestCancelTrading():void
         {
-            this._communication.connection.send(new _Str_10430());
+            this._communication.connection.send(new CloseTradingComposer());
         }
 
         public function _Str_24618():Boolean
