@@ -38,7 +38,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.utils._Str_14579;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11737;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.trading.OpenTradingComposer;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_8008;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10352;
@@ -672,7 +672,7 @@
         {
             if (_Str_14579.isPerkAllowed(this._inventory.sessionData, this._inventory.windowManager, PerkEnum.TRADE))
             {
-                this._communication.connection.send(new _Str_11737(k));
+                this._communication.connection.send(new OpenTradingComposer(k));
             }
         }
 

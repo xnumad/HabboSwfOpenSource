@@ -909,7 +909,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11093;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11362;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11536;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11737;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.OpenTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_12206;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_8008;
 	import com.sulake.habbo.communication.messages.incoming.room.action.*;
@@ -1582,7 +1582,7 @@
             OUTGOING_PACKETS[1472] = TogglePetRidingPermissionMessageComposer;
             OUTGOING_PACKETS[1474] = CancelTypingMessageComposer;
             OUTGOING_PACKETS[1477] = BanUserWithDurationMessageComposer;
-            OUTGOING_PACKETS[1481] = _Str_11737;
+            OUTGOING_PACKETS[1481] = OpenTradingComposer;
             OUTGOING_PACKETS[15] = PickIssuesMessageComposer;
             OUTGOING_PACKETS[1520] = UpdateTriggerMessageComposer;
             OUTGOING_PACKETS[1521] = HarvestPetMessageComposer;

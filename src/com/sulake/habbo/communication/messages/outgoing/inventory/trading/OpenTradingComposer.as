@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11737 implements IMessageComposer 
+    public class OpenTradingComposer implements IMessageComposer
     {
         private var _Str_20479:int;
 
-        public function _Str_11737(k:int)
+        public function OpenTradingComposer(k:int)
         {
             this._Str_20479 = k;
         }
