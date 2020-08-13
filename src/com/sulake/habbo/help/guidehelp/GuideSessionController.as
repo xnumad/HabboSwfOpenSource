@@ -951,11 +951,11 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_GUIDE_DISCONNECTED;
-            this.openWindow(this._Str_25007, true);
+            this.openWindow(this.onUserGuideDisconnected, true);
             this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
         }
 
-        private function _Str_25007(k:WindowEvent, _arg_2:IWindow):void
+        private function onUserGuideDisconnected(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((((this.disposed) || (this._window == null)) || (!(this._window.name == GuideSessionStateEnum.USER_GUIDE_DISCONNECTED))) || (!(k.type == WindowMouseEvent.CLICK))))
             {
