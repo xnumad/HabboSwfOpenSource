@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.parser.game.lobby.LoadGameUrlMessageParser;
     import com.sulake.habbo.communication.messages.parser.game.lobby.UnloadGameMessageParser;
     import com.sulake.habbo.communication.messages.parser.game.directory.Game2AccountGameStatusMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.game.directory._Str_7123;
+    import com.sulake.habbo.communication.messages.outgoing.game.directory.Game2GetAccountGameStatusMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
     import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -113,7 +113,7 @@
             var _local_2:int = this._gameManager.promotedGameId();
             if (_local_2 != -1)
             {
-                this._gameManager.send(new _Str_7123(_local_2));
+                this._gameManager.send(new Game2GetAccountGameStatusMessageComposer(_local_2));
             }
             this._gameManager.send(new _Str_7312());
             this._gameManager.send(new _Str_8040());

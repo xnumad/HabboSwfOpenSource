@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7123 implements IMessageComposer 
+    public class Game2GetAccountGameStatusMessageComposer implements IMessageComposer
     {
         private var _data:Array;
 
-        public function _Str_7123(k:int)
+        public function Game2GetAccountGameStatusMessageComposer(k:int)
         {
             this._data = [];
             super();

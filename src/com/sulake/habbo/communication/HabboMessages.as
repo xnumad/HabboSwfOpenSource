@@ -387,7 +387,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.userclassification.PeerUsersClassificationMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userclassification.RoomUsersClassificationMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.directory.Game2CheckGameDirectoryStatusMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.game.directory._Str_7123;
+	import com.sulake.habbo.communication.messages.outgoing.game.directory.Game2GetAccountGameStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemIdsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.advertisement.GetInterstitialMessageComposer;
@@ -1528,7 +1528,7 @@
             OUTGOING_PACKETS[1081] = _Str_11951;
             OUTGOING_PACKETS[1086] = SetIgnoreRoomInvitesMessageComposer;
             OUTGOING_PACKETS[109] = PollStartComposer;
-            OUTGOING_PACKETS[11] = _Str_7123;
+            OUTGOING_PACKETS[11] = Game2GetAccountGameStatusMessageComposer;
             OUTGOING_PACKETS[1109] = InterstitialShownMessageComposer;
             OUTGOING_PACKETS[1117] = IgnoreUserMessageComposer;
             OUTGOING_PACKETS[1118] = WhiperGroupComposer;
