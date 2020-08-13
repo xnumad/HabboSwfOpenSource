@@ -475,7 +475,7 @@
                 switch (_arg_2.name)
                 {
                     case "submit_button":
-                        if (this._chatReportController._Str_9701(this._reportType, -1).length == 0)
+                        if (this._chatReportController.collectSelectedEntries(this._reportType, -1).length == 0)
                         {
                             this._habboHelp.windowManager.alert("${generic.alert.title}", "${help.cfh.error.chatmissing}", 0, null);
                             return;
@@ -610,10 +610,10 @@
                 case HabboHelp.REPORT_TYPE_EMERGENCY:
                 case HabboHelp.REPORT_TYPE_ROOM:
                     k = ((this._chatReportController._Str_3469 <= 0) ? this._reportedRoomId : this._chatReportController._Str_3469);
-                    this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._topicIndex, this._reportedUserId, k, this._chatReportController._Str_9701(this._reportType, -1)));
+                    this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._topicIndex, this._reportedUserId, k, this._chatReportController.collectSelectedEntries(this._reportType, -1)));
                     break;
                 case HabboHelp.REPORT_TYPE_IM:
-                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._topicIndex, this._reportedUserId, this._chatReportController._Str_9701(HabboHelp.REPORT_TYPE_IM, -1)));
+                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._topicIndex, this._reportedUserId, this._chatReportController.collectSelectedEntries(HabboHelp.REPORT_TYPE_IM, -1)));
                     break;
                 case HabboHelp.REPORT_TYPE_THREAD:
                     this._habboHelp.sendMessage(new CallForHelpFromForumThreadMessageComposer(this._reportedGroupId, this._reportedThreadId, this._topicIndex, this._message));

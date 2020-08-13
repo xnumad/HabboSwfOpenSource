@@ -264,7 +264,7 @@
 
         private function _Str_23993():Boolean
         {
-            var k:Array = this._habboHelp._Str_5721.chatReportController._Str_9701(this._contentModerationType, this._habboHelp.reportedUserId);
+            var k:Array = this._habboHelp._Str_5721.chatReportController.collectSelectedEntries(this._contentModerationType, this._habboHelp.reportedUserId);
             if (((k == null) || (k.length == 0)))
             {
                 this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.chatmissing}", 0, null);
@@ -424,7 +424,7 @@
                     this._habboHelp.sendMessage(new _Str_7640(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp.reportedUserId, this._currentTopic.id, this._habboHelp._Str_10658));
                     return;
                 case HabboHelp.REPORT_TYPE_IM:
-                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721.chatReportController._Str_9701(HabboHelp.REPORT_TYPE_IM, this._habboHelp.reportedUserId)));
+                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721.chatReportController.collectSelectedEntries(HabboHelp.REPORT_TYPE_IM, this._habboHelp.reportedUserId)));
                     return;
                 case HabboHelp.REPORT_TYPE_ROOM:
                     this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, -1, this._habboHelp._Str_3469, []));
@@ -442,7 +442,7 @@
                     }
                     else
                     {
-                        this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_3469, this._habboHelp._Str_5721.chatReportController._Str_9701(HabboHelp.REPORT_TYPE_EMERGENCY, -1)));
+                        this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_3469, this._habboHelp._Str_5721.chatReportController.collectSelectedEntries(HabboHelp.REPORT_TYPE_EMERGENCY, -1)));
                     }
             }
         }

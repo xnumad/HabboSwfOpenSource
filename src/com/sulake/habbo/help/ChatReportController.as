@@ -85,7 +85,7 @@
             this._window = null;
         }
 
-        public function _Str_9701(k:int, _arg_2:int):Array
+        public function collectSelectedEntries(k:int, _arg_2:int):Array
         {
             var _local_4:int;
             var _local_5:Vector.<InstantMessageRegistryItem>;
