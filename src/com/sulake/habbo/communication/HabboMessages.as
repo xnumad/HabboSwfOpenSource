@@ -809,7 +809,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.SendMsgMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.RequestFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.SetRelationshipStatusMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11750;
+	import com.sulake.habbo.communication.messages.outgoing.friendlist.GetFriendRequestsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11815;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.HabboSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_12244;
@@ -1706,7 +1706,7 @@
             OUTGOING_PACKETS[2419] = SSOTicketMessageComposer;
             OUTGOING_PACKETS[2436] = GetGiftMessageComposer;
             OUTGOING_PACKETS[2445] = DisconnectMessageComposer;
-            OUTGOING_PACKETS[2448] = _Str_11750;
+            OUTGOING_PACKETS[2448] = GetFriendRequestsMessageComposer;
             OUTGOING_PACKETS[2455] = GuideAdvertisementReadMessageComposer;
             OUTGOING_PACKETS[2456] = AvatarExpressionMessageComposer;
             OUTGOING_PACKETS[2462] = GetHabboClubExtendOfferMessageComposer;
