@@ -272,7 +272,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.avatar.ChangeUserNameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.avatar.SaveWardrobeOutfitMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.avatar.GetWardrobeMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7887;
+	import com.sulake.habbo.communication.messages.outgoing.avatar.CheckUserNameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.OpenMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.ApplySnapshotMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.UpdateConditionMessageComposer;
@@ -1915,7 +1915,7 @@
             OUTGOING_PACKETS[39] = MyGuildBasesSearchMessageComposer;
             OUTGOING_PACKETS[3900] = GetThreadMessageComposer;
             OUTGOING_PACKETS[3943] = RoomTextSearchMessageComposer;
-            OUTGOING_PACKETS[3950] = _Str_7887;
+            OUTGOING_PACKETS[3950] = CheckUserNameMessageComposer;
             OUTGOING_PACKETS[3959] = PhotoCompetitionMessageComposer;
             OUTGOING_PACKETS[3961] = ChatReviewGuideVoteMessageComposer;
             OUTGOING_PACKETS[3964] = GetItemDataMessageComposer;
