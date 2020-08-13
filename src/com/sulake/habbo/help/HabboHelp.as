@@ -432,7 +432,7 @@
             this.addMessageEvent(new UsersEvent(this.onUsers));
             this.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
             this.addMessageEvent(new GetGuestRoomResultEvent(this._Str_24404));
-            this.addMessageEvent(new CallForHelpPendingCallsEvent(this._Str_23679));
+            this.addMessageEvent(new CallForHelpPendingCallsEvent(this.onPendingCallsForHelp));
             this.addMessageEvent(new _Str_11155(this._Str_24610));
             this.addMessageEvent(new _Str_9121(this._Str_24314));
             this.addMessageEvent(new _Str_9074(this._Str_23107));
@@ -612,7 +612,7 @@
             this.sendMessage(new _Str_12273());
         }
 
-        private function _Str_23679(k:IMessageEvent):void
+        private function onPendingCallsForHelp(k:IMessageEvent):void
         {
             var _local_3:String;
             var _local_4:int;
