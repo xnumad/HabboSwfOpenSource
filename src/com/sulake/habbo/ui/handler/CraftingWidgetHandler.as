@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftableProductsComposer;
     import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftingRecipesAvailableComposer;
     import com.sulake.habbo.ui.widget.crafting.utils.CraftingViewStateEnum;
-    import com.sulake.habbo.communication.messages.outgoing.crafting._Str_12393;
+    import com.sulake.habbo.communication.messages.outgoing.crafting.CraftComposer;
     import com.sulake.habbo.communication.messages.outgoing.crafting.CraftSecretComposer;
     import com.sulake.habbo.communication.messages.incoming.crafting.CraftingResultObjectParser;
     import com.sulake.habbo.session.furniture.IFurnitureData;
@@ -171,7 +171,7 @@
             }
             this._widget._Str_11931.setState(CraftingViewStateEnum._Str_9671);
             this._Str_21898();
-            this._container.connection.send(new _Str_12393(this._gizmoFurnitureId, this._selectedProductData.type));
+            this._container.connection.send(new CraftComposer(this._gizmoFurnitureId, this._selectedProductData.type));
         }
 
         public function _Str_23682():void

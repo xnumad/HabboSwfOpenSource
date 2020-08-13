@@ -940,7 +940,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.crafting.CraftSecretComposer;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftingRecipesAvailableComposer;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftableProductsComposer;
-	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_12393;
+	import com.sulake.habbo.communication.messages.outgoing.crafting.CraftComposer;
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_7271;
 	import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgesEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgeReceivedEvent;
@@ -1879,7 +1879,7 @@
             OUTGOING_PACKETS[357] = InfoRetrieveMessageComposer;
             OUTGOING_PACKETS[3582] = RateFlatMessageComposer;
             OUTGOING_PACKETS[359] = _Str_4406;
-            OUTGOING_PACKETS[3591] = _Str_12393;
+            OUTGOING_PACKETS[3591] = CraftComposer;
             OUTGOING_PACKETS[3593] = GetMemberGuildItemCountMessageComposer;
             OUTGOING_PACKETS[3604] = AcceptQuestMessageComposer;
             OUTGOING_PACKETS[3605] = DeletePendingCallsForHelpMessageComposer;
