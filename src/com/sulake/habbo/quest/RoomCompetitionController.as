@@ -135,7 +135,7 @@
                 if (this._result == CompetitionEntrySubmitResultMessageParser.ASK_FOR_ACCEPT_RULES)
                 {
                     this._Str_6512(this._Str_16143);
-                    this._Str_4365().procedure = this._Str_16362;
+                    this._Str_4365().procedure = this.onAccept;
                 }
                 else
                 {
@@ -394,7 +394,7 @@
             }
         }
 
-        private function _Str_16362(k:WindowEvent, _arg_2:IWindow=null):void
+        private function onAccept(k:WindowEvent, _arg_2:IWindow=null):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

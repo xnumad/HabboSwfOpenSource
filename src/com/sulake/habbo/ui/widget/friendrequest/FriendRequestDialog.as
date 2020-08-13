@@ -83,7 +83,7 @@
                 _local_3.text = this._widget.localizations.registerParameter("widget.friendrequest.from", "username", this._userName);
             }
             var _local_4:IWindow = this._window.findChildByName("accept_button");
-            this.addMouseClickListener(_local_4, this._Str_16362);
+            this.addMouseClickListener(_local_4, this.onAccept);
             var _local_5:IWindow = this._window.findChildByName("decline_button");
             this.addMouseClickListener(_local_5, this._Str_23136);
             var _local_6:IWindow = this._window.findChildByName("close_button");
@@ -215,7 +215,7 @@
             }
         }
 
-        private function _Str_16362(k:WindowMouseEvent):void
+        private function onAccept(k:WindowMouseEvent):void
         {
             if (this._widget != null)
             {
