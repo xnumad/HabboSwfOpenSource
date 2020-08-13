@@ -812,7 +812,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.GetFriendRequestsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.FindNewFriendsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.HabboSearchMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_12244;
+	import com.sulake.habbo.communication.messages.outgoing.friendlist.FriendListUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.VisitUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_9977;
 	import com.sulake.habbo.communication.messages.incoming.room.session.*;
@@ -1570,7 +1570,7 @@
             OUTGOING_PACKETS[1397] = ModerateThreadMessageComposer;
             OUTGOING_PACKETS[1411] = PurchaseFromCatalogAsGiftComposer;
             OUTGOING_PACKETS[1412] = CallForHelpFromForumMessageMessageComposer;
-            OUTGOING_PACKETS[1419] = _Str_12244;
+            OUTGOING_PACKETS[1419] = FriendListUpdateMessageComposer;
             OUTGOING_PACKETS[1424] = GuideSessionGuideDecidesMessageComposer;
             OUTGOING_PACKETS[143] = VoteForRoomMessageComposer;
             OUTGOING_PACKETS[1435] = GetJukeboxPlayListMessageComposer;

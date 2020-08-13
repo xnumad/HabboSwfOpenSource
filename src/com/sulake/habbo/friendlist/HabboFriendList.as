@@ -75,7 +75,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_9229;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.GetFriendRequestsMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_12244;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.FriendListUpdateMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestData;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7531;
     import com.sulake.habbo.friendlist.domain.FriendRequest;
@@ -546,7 +546,7 @@
         protected function _Str_20682(k:Event):void
         {
             Logger.log("Sending update request");
-            this.send(new _Str_12244());
+            this.send(new FriendListUpdateMessageComposer());
         }
 
         private function _Str_24954(k:IMessageEvent):void
