@@ -599,7 +599,7 @@
             this._outsideRoom = k;
         }
 
-        public function _Str_8128(k:int):void
+        public function queryForPendingCallsForHelp(k:int):void
         {
             this._reportType = k;
             this.sendMessage(new _Str_10695());

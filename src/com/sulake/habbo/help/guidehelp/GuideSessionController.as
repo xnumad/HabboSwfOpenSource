@@ -1437,7 +1437,7 @@
 
         private function _Str_10116():void
         {
-            this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_GUIDE);
+            this._habboHelp.queryForPendingCallsForHelp(HabboHelp.REPORT_TYPE_GUIDE);
         }
 
         public function openReportWindow():void

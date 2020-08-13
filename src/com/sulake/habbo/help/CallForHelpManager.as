@@ -209,7 +209,7 @@
             this._reportedUserId = k;
             this._reportedRoomId = -1;
             this._incomingTopic = _arg_3;
-            this._habboHelp._Str_8128(_arg_2);
+            this._habboHelp.queryForPendingCallsForHelp(_arg_2);
         }
 
         public function reportRoom(k:int, _arg_2:String, _arg_3:String):void
@@ -218,14 +218,14 @@
             this._reportedRoomName = _arg_2;
             this._reportedRoomDescription = _arg_3;
             this._reportedUserId = -1;
-            this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_ROOM);
+            this._habboHelp.queryForPendingCallsForHelp(HabboHelp.REPORT_TYPE_ROOM);
         }
 
         public function reportThread(k:int, _arg_2:int):void
         {
             this._reportedGroupId = k;
             this._reportedThreadId = _arg_2;
-            this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_THREAD);
+            this._habboHelp.queryForPendingCallsForHelp(HabboHelp.REPORT_TYPE_THREAD);
         }
 
         public function reportMessage(k:int, _arg_2:int, _arg_3:int):void
@@ -233,7 +233,7 @@
             this._reportedGroupId = k;
             this._reportedThreadId = _arg_2;
             this._reportedMessageId = _arg_3;
-            this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_MESSAGE);
+            this._habboHelp.queryForPendingCallsForHelp(HabboHelp.REPORT_TYPE_MESSAGE);
         }
 
         public function reportSelfie(k:String, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:int):void
@@ -244,7 +244,7 @@
         public function reportPhoto(k:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):void
         {
             this._habboHelp._Str_25749(new CallForHelpFromPhotoMessageComposer(k, _arg_3, _arg_4, _arg_2, _arg_5));
-            this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_PHOTO);
+            this._habboHelp.queryForPendingCallsForHelp(HabboHelp.REPORT_TYPE_PHOTO);
         }
 
         public function openEmergencyHelpRequest():void
@@ -666,7 +666,7 @@
             switch (_local_3)
             {
                 case CallForHelpResultEnum.TOO_MANY_PENDING_CALLS_CODE:
-                    this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_EMERGENCY);
+                    this._habboHelp.queryForPendingCallsForHelp(HabboHelp.REPORT_TYPE_EMERGENCY);
                     return;
                 case CallForHelpResultEnum.HAS_ABUSIVE_CALL_CODE:
                     this.showAbusiveNotice();
