@@ -585,7 +585,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_12224;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_12273;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_15943;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_16318;
+	import com.sulake.habbo.communication.messages.outgoing.help.GetFaqCategoryMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_16470;
 	import com.sulake.habbo.communication.messages.outgoing.help.GetFaqTextMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_18219;
@@ -1857,7 +1857,7 @@
             OUTGOING_PACKETS[339] = _Str_12068;
             OUTGOING_PACKETS[3407] = _Str_9862;
             OUTGOING_PACKETS[3435] = UpdateGuildSettingsMessageComposer;
-            OUTGOING_PACKETS[3445] = _Str_16318;
+            OUTGOING_PACKETS[3445] = GetFaqCategoryMessageComposer;
             OUTGOING_PACKETS[3447] = MakeOfferMessageComposer;
             OUTGOING_PACKETS[3449] = MovePetMessageComposer;
             OUTGOING_PACKETS[3456] = PickupObjectMessageComposer;

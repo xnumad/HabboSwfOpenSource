@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_16318 implements IMessageComposer 
+    public class GetFaqCategoryMessageComposer implements IMessageComposer
     {
         private var _categoryId:int;
 
-        public function _Str_16318(k:int)
+        public function GetFaqCategoryMessageComposer(k:int)
         {
             this._categoryId = k;
         }
