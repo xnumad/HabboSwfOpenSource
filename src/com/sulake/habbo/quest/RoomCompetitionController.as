@@ -27,7 +27,7 @@
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_10126;
+    import com.sulake.habbo.communication.messages.outgoing.competition.VoteForRoomMessageComposer;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IItemGridWindow;
 
@@ -422,7 +422,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._questEngine.send(new _Str_10126(this._goalCode));
+                this._questEngine.send(new VoteForRoomMessageComposer(this._goalCode));
             }
         }
 

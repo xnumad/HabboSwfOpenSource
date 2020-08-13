@@ -121,7 +121,7 @@
 	import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar.CheckUserNameResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar._Str_9393;
-	import com.sulake.habbo.communication.messages.outgoing.competition._Str_10126;
+	import com.sulake.habbo.communication.messages.outgoing.competition.VoteForRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_10525;
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToACompetitionRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_12123;
@@ -1572,7 +1572,7 @@
             OUTGOING_PACKETS[1412] = CallForHelpFromForumMessageMessageComposer;
             OUTGOING_PACKETS[1419] = _Str_12244;
             OUTGOING_PACKETS[1424] = GuideSessionGuideDecidesMessageComposer;
-            OUTGOING_PACKETS[143] = _Str_10126;
+            OUTGOING_PACKETS[143] = VoteForRoomMessageComposer;
             OUTGOING_PACKETS[1435] = GetJukeboxPlayListMessageComposer;
             OUTGOING_PACKETS[1444] = _Str_10862;
             OUTGOING_PACKETS[1445] = Game2ExitGameMessageComposer;
