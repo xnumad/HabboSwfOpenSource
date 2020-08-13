@@ -223,7 +223,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9583;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_10571;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11321;
-	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11560;
+	import com.sulake.habbo.communication.messages.outgoing.game.score.GetWeeklyGameRewardWinnersComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11951;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_16422;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_18174;
@@ -1522,7 +1522,7 @@
             OUTGOING_PACKETS[1051] = BuildersClubPlaceRoomItemMessageComposer;
             OUTGOING_PACKETS[1052] = GuideSessionGetRequesterRoomMessageComposer;
             OUTGOING_PACKETS[1053] = VersionCheckMessageComposer;
-            OUTGOING_PACKETS[1054] = _Str_11560;
+            OUTGOING_PACKETS[1054] = GetWeeklyGameRewardWinnersComposer;
             OUTGOING_PACKETS[1071] = ExtendRentOrBuyoutFurniMessageComposer;
             OUTGOING_PACKETS[1075] = GetRoomAdPurchaseInfoComposer;
             OUTGOING_PACKETS[1081] = _Str_11951;

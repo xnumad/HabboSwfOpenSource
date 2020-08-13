@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.outgoing.game.score.Game2GetWeeklyLeaderboardComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_10594;
     import com.sulake.habbo.communication.messages.outgoing.game.directory.Game2GetAccountGameStatusMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11560;
+    import com.sulake.habbo.communication.messages.outgoing.game.score.GetWeeklyGameRewardWinnersComposer;
     import flash.display.BitmapData;
     import com.sulake.core.assets.IAsset;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.Achievement;
@@ -426,7 +426,7 @@
             this._playNowUnlimitedButton.visible = false;
             this._gameCenterViewWindow.findChildByName("playnow_text").caption = "";
             this._gameCenterView.send(new Game2GetAccountGameStatusMessageComposer(this._selectedGame));
-            this._gameCenterView.send(new _Str_11560(this._selectedGame));
+            this._gameCenterView.send(new GetWeeklyGameRewardWinnersComposer(this._selectedGame));
             this._gameCenterView.getWeeklyGameRewardInformation(this);
             var _local_5:String = ("gamecenter.roomlink." + _local_2);
             var _local_6:String = this._gameCenterView.gameManager.getProperty(_local_5);
