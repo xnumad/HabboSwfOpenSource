@@ -1672,7 +1672,7 @@
                 return;
             }
             this._typingTimer = new Timer(_Str_18329);
-            this._typingTimer.addEventListener(TimerEvent.TIMER, this._Str_23506);
+            this._typingTimer.addEventListener(TimerEvent.TIMER, this.onTypingTimer);
             this._typingTimer.start();
             this._lastMessageTypedLength = this._Str_19035;
             this._Str_19579(false);
@@ -1688,7 +1688,7 @@
             return (k != null) ? IIlluminaInputWidget(k.widget).message.length : 0;
         }
 
-        private function _Str_23506(k:TimerEvent):void
+        private function onTypingTimer(k:TimerEvent):void
         {
             if ((((this._window == null) || (this._window.disposed)) || ((!(this._window.name == GuideSessionStateEnum.USER_ONGOING)) && (!(this._window.name == GuideSessionStateEnum.GUIDE_ONGOING)))))
             {
