@@ -127,7 +127,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToASubmittableRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.SubmitRoomToCompetitionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.GetCurrentTimingCodeMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.competition._Str_7424;
+	import com.sulake.habbo.communication.messages.outgoing.competition.RoomCompetitionInitMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.GetSecondsUntilMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToRandomCompetitionRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.CancelMarketplaceOfferMessageComposer;
@@ -1556,7 +1556,7 @@
             OUTGOING_PACKETS[1320] = RoomUserKickMessageComposer;
             OUTGOING_PACKETS[1325] = GetNowPlayingMessageComposer;
             OUTGOING_PACKETS[1328] = CustomizePetWithFurniComposer;
-            OUTGOING_PACKETS[1334] = _Str_7424;
+            OUTGOING_PACKETS[1334] = RoomCompetitionInitMessageComposer;
             OUTGOING_PACKETS[1342] = GetRecyclerStatusMessageComposer;
             OUTGOING_PACKETS[1343] = GetConcurrentUsersGoalProgressMessageComposer;
             OUTGOING_PACKETS[1347] = GetIsOfferGiftableComposer;

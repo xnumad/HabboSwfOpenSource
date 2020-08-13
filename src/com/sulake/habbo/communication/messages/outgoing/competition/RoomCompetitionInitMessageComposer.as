@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7424 implements IMessageComposer 
+    public class RoomCompetitionInitMessageComposer implements IMessageComposer
     {
 
 

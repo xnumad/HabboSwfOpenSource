@@ -19,7 +19,7 @@
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_7424;
+    import com.sulake.habbo.communication.messages.outgoing.competition.RoomCompetitionInitMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.competition.SubmitRoomToCompetitionMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
@@ -315,13 +315,13 @@
             if (((!(this._dontShowAgain)) && (_local_3)))
             {
                 this._submit = _local_2.owner;
-                this._questEngine.send(new _Str_7424());
+                this._questEngine.send(new RoomCompetitionInitMessageComposer());
             }
         }
 
         public function _Str_25159():void
         {
-            this._questEngine.send(new _Str_7424());
+            this._questEngine.send(new RoomCompetitionInitMessageComposer());
         }
 
         public function _Str_21523():void
