@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.outgoing.gifts.TryPhoneNumberMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.gifts.VerifyCodeMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.gifts.SetPhoneNumberVerificationStatusMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
+    import com.sulake.habbo.communication.messages.outgoing.gifts.ResetPhoneNumberStateMessageComposer;
     import flash.utils.getTimer;
     import com.sulake.habbo.toolbar.ToolbarDisplayExtensionIds;
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;
@@ -129,7 +129,7 @@
         public function _Str_24068():void
         {
             this._Str_9778();
-            this._connection.send(new _Str_7498());
+            this._connection.send(new ResetPhoneNumberStateMessageComposer());
         }
 
         private function _Str_23318(k:TryPhoneNumberResultMessageEvent):void

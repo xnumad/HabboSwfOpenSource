@@ -10,7 +10,7 @@
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
     import com.sulake.habbo.communication.messages.outgoing.preferences.SetIgnoreRoomInvitesMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.preferences.SetRoomCameraPreferencesMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
+    import com.sulake.habbo.communication.messages.outgoing.gifts.ResetPhoneNumberStateMessageComposer;
 
     public class OtherSettingsView 
     {
@@ -96,7 +96,7 @@
                     return;
                 case "btn_reset_phone_number_collection":
                     this._window.findChildByName("btn_reset_phone_number_collection").visible = false;
-                    this._toolbar.connection.send(new _Str_7498());
+                    this._toolbar.connection.send(new ResetPhoneNumberStateMessageComposer());
                     return;
             }
         }

@@ -261,7 +261,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.gifts.VerifyCodeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_18298;
 	import com.sulake.habbo.communication.messages.outgoing.gifts.SetPhoneNumberVerificationStatusMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
+	import com.sulake.habbo.communication.messages.outgoing.gifts.ResetPhoneNumberStateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.gifts.TryPhoneNumberMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7433;
 	import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7564;
@@ -1751,7 +1751,7 @@
             OUTGOING_PACKETS[273] = GetCreditsInfoComposer;
             OUTGOING_PACKETS[2730] = UpdateFigureDataMessageComposer;
             OUTGOING_PACKETS[2735] = PurchaseBasicMembershipExtensionComposer;
-            OUTGOING_PACKETS[2741] = _Str_7498;
+            OUTGOING_PACKETS[2741] = ResetPhoneNumberStateMessageComposer;
             OUTGOING_PACKETS[2742] = GetWardrobeMessageComposer;
             OUTGOING_PACKETS[2746] = GetCfhStatusMessageComposer;
             OUTGOING_PACKETS[2750] = OpenQuestTrackerMessageComposer;
