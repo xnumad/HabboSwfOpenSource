@@ -112,7 +112,7 @@
             var _local_3:int = k.getParser().resultCode;
             this.refreshContent(k.getParser().goalId, false, k.getParser().goalCode, _local_3.toString());
             this._Str_6512(((_local_3 == CompetitionVotingInfoResult.REQUIRED_PERK_MISSING) ? this._Str_24392 : this._Str_24761));
-            this._Str_4365().procedure = this._Str_24140;
+            this._Str_4365().procedure = this.onVote;
             this._Str_4365().visible = ((this._remainingVotes > 0) && (_local_2));
             this._Str_19349().visible = _local_2;
         }
@@ -418,7 +418,7 @@
             }
         }
 
-        private function _Str_24140(k:WindowEvent, _arg_2:IWindow=null):void
+        private function onVote(k:WindowEvent, _arg_2:IWindow=null):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
