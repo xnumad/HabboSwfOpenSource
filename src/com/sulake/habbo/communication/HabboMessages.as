@@ -646,7 +646,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.MarkCatalogNewAdditionsPageOpenedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11648;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11783;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11905;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetProductOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12000;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12034;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12068;
@@ -1729,7 +1729,7 @@
             OUTGOING_PACKETS[2578] = MyFavouriteRoomsSearchMessageComposer;
             OUTGOING_PACKETS[2582] = ModKickMessageComposer;
             OUTGOING_PACKETS[2587] = GetRoomChatlogMessageComposer;
-            OUTGOING_PACKETS[2594] = _Str_11905;
+            OUTGOING_PACKETS[2594] = GetProductOfferComposer;
             OUTGOING_PACKETS[2595] = _Str_4038;
             OUTGOING_PACKETS[2596] = PongMessageComposer;
             OUTGOING_PACKETS[2597] = GetMarketplaceConfigurationMessageComposer;

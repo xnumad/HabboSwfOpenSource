@@ -245,7 +245,7 @@
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12467;
     import com.sulake.habbo.communication.messages.outgoing.catalog.GetBundleDiscountRulesetComposer;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11905;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetProductOfferComposer;
     import com.sulake.habbo.communication.messages.parser.catalog.BundleDiscountRulesetMessageParser;
     import com.sulake.habbo.communication.messages.parser.catalog.CatalogSearchResultParser;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
@@ -2938,7 +2938,7 @@
 
         public function sendGetProductOffer(k:int):void
         {
-            this.send(new _Str_11905(k));
+            this.send(new GetProductOfferComposer(k));
         }
 
         private function onBundleDiscountRulesetMessageEvent(k:_Str_7288):void
