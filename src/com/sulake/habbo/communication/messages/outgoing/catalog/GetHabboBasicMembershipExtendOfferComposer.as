@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_17335 implements IMessageComposer, IDisposable 
+    public class GetHabboBasicMembershipExtendOfferComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function _Str_17335()
+        public function GetHabboBasicMembershipExtendOfferComposer()
         {
             this._array = [];
             super();

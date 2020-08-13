@@ -656,7 +656,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetIsOfferGiftableComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RoomAdPurchaseInitiatedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetDirectClubBuyAvailableComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17335;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetHabboBasicMembershipExtendOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17774;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageExpirationComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.ShopTargetedOfferViewedComposer;
@@ -1941,7 +1941,7 @@
             OUTGOING_PACKETS[549] = PetSelectedMessageComposer;
             OUTGOING_PACKETS[593] = KickMemberMessageComposer;
             OUTGOING_PACKETS[596] = _Str_17774;
-            OUTGOING_PACKETS[603] = _Str_17335;
+            OUTGOING_PACKETS[603] = GetHabboBasicMembershipExtendOfferComposer;
             OUTGOING_PACKETS[633] = GetCraftableProductsComposer;
             OUTGOING_PACKETS[637] = NavigatorRemoveCollapsedCategoryMessageComposer;
             OUTGOING_PACKETS[644] = SetActivatedBadgesComposer;
