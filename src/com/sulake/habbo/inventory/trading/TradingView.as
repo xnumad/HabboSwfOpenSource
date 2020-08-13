@@ -755,7 +755,7 @@
                                 }
                                 if (this._tradingModel._Str_11659)
                                 {
-                                    this._tradingModel._Str_24071();
+                                    this._tradingModel.requestUnacceptTrading();
                                 }
                                 else
                                 {

@@ -769,7 +769,7 @@
             this._communication.connection.send(new _Str_11093());
         }
 
-        public function _Str_24071():void
+        public function requestUnacceptTrading():void
         {
             this._communication.connection.send(new _Str_10862());
         }
