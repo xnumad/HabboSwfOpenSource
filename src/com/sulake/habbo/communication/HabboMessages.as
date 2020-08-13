@@ -596,7 +596,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7077;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_7293;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionCreateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7364;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
@@ -1844,7 +1844,7 @@
             OUTGOING_PACKETS[3323] = RemoveBotFromFlatMessageComposer;
             OUTGOING_PACKETS[3333] = GetQuestsMessageComposer;
             OUTGOING_PACKETS[3336] = RemoveItemMessageComposer;
-            OUTGOING_PACKETS[3338] = _Str_7293;
+            OUTGOING_PACKETS[3338] = GuideSessionCreateMessageComposer;
             OUTGOING_PACKETS[336] = GetYoutubeDisplayStatusMessageComposer;
             OUTGOING_PACKETS[3362] = _Str_18174;
             OUTGOING_PACKETS[3365] = _Str_8134;

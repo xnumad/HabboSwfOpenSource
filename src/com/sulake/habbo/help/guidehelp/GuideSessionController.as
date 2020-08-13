@@ -31,7 +31,7 @@
     import com.sulake.habbo.communication.messages.parser.help._Str_4393;
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.habbo.help.enum.GuideSessionStateEnum;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_7293;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionCreateMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionOnDutyUpdateMessageComposer;
     import com.sulake.habbo.communication.messages.parser.help._Str_7652;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionAttachedParser;
@@ -247,7 +247,7 @@
                 this._sessionData._Str_17222 = GuideSessionData._Str_11013;
                 this._sessionData._Str_3201 = GuideSessionStateEnum.USER_CREATE;
                 this._sessionData._Str_3989 = k;
-                this._habboHelp.sendMessage(new _Str_7293(k, this._habboHelp.localization.getLocalization("guide.help.request.tour.description")));
+                this._habboHelp.sendMessage(new GuideSessionCreateMessageComposer(k, this._habboHelp.localization.getLocalization("guide.help.request.tour.description")));
             }
             else
             {
@@ -848,7 +848,7 @@
                     }
                     else
                     {
-                        this._habboHelp.sendMessage(new _Str_7293(this._sessionData._Str_3989, _local_3));
+                        this._habboHelp.sendMessage(new GuideSessionCreateMessageComposer(this._sessionData._Str_3989, _local_3));
                         this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickCreate"));
                         this.closeWindow();
                     }
