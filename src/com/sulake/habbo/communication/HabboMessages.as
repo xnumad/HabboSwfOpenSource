@@ -637,7 +637,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseBasicMembershipExtensionComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogAsGiftComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetBonusRareInfoMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10337;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubOffersMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetRoomAdPurchaseInfoComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseRoomAdMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogIndexComposer;
@@ -1834,7 +1834,7 @@
             OUTGOING_PACKETS[3265] = GetExtendedProfileMessageComposer;
             OUTGOING_PACKETS[3267] = GetPendingCallsForHelpMessageComposer;
             OUTGOING_PACKETS[3283] = AddSpamWallPostItMessageComposer;
-            OUTGOING_PACKETS[3285] = _Str_10337;
+            OUTGOING_PACKETS[3285] = GetClubOffersMessageComposer;
             OUTGOING_PACKETS[3288] = GetMarketplaceItemStatsComposer;
             OUTGOING_PACKETS[3295] = GetModeratorUserInfoMessageComposer;
             OUTGOING_PACKETS[3301] = LookToMessageComposer;

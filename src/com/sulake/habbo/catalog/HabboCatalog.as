@@ -183,7 +183,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetRoomChangedEvent;
     import com.sulake.habbo.catalog.marketplace.MarketPlaceLogic;
     import com.sulake.habbo.communication.messages.outgoing.catalog.GetGiftWrappingConfigurationComposer;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10337;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubOffersMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageOfferData;
     import com.sulake.habbo.catalog.viewer.IProduct;
@@ -1720,7 +1720,7 @@
 
         public function getHabboClubOffers(k:int):void
         {
-            this.send(new _Str_10337(k));
+            this.send(new GetClubOffersMessageComposer(k));
         }
 
         private function onWindowClose(k:WindowEvent, _arg_2:IWindow):void
