@@ -43,7 +43,7 @@
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemToTradeComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10352;
     import com.sulake.habbo.inventory.enum.FurniCategory;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_12206;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.trading.RemoveItemFromTradeComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11093;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10862;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11362;
@@ -759,7 +759,7 @@
                 _local_3 = _local_2._Str_3205();
                 if (_local_3)
                 {
-                    this._communication.connection.send(new _Str_12206(_local_3.id));
+                    this._communication.connection.send(new RemoveItemFromTradeComposer(_local_3.id));
                 }
             }
         }

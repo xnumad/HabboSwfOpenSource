@@ -910,7 +910,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11362;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11536;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.OpenTradingComposer;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_12206;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.RemoveItemFromTradeComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemToTradeComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.action.*;
 	import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
@@ -1902,7 +1902,7 @@
             OUTGOING_PACKETS[3835] = CompostPlantMessageComposer;
             OUTGOING_PACKETS[3839] = SetCustomStackingHeightComposer;
             OUTGOING_PACKETS[3842] = ModeratorActionMessageComposer;
-            OUTGOING_PACKETS[3845] = _Str_12206;
+            OUTGOING_PACKETS[3845] = RemoveItemFromTradeComposer;
             OUTGOING_PACKETS[3847] = LagWarningReportMessageComposer;
             OUTGOING_PACKETS[3848] = GetBotInventoryComposer;
             OUTGOING_PACKETS[3863] = _Str_11093;
