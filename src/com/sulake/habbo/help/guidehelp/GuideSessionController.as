@@ -73,7 +73,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_8134;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_4981;
+    import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideDetachedMessageComposer;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideVoteMessageComposer;
     import com.sulake.core.window.enum.WindowType;
@@ -1096,7 +1096,7 @@
             switch (_arg_2.name)
             {
                 case "close_link":
-                    this._habboHelp.sendMessage(new _Str_4981());
+                    this._habboHelp.sendMessage(new ChatReviewGuideDetachedMessageComposer());
                     this._Str_4260(true);
                     return;
             }
@@ -1183,7 +1183,7 @@
                 switch (_arg_2.name)
                 {
                     case "close_link":
-                        this._habboHelp.sendMessage(new _Str_4981());
+                        this._habboHelp.sendMessage(new ChatReviewGuideDetachedMessageComposer());
                         this._Str_4260(true);
                         break;
                     case "vote_ok":
@@ -1256,7 +1256,7 @@
             {
                 case "header_button_close":
                 case "close_button":
-                    this._habboHelp.sendMessage(new _Str_4981());
+                    this._habboHelp.sendMessage(new ChatReviewGuideDetachedMessageComposer());
                     this._Str_4260(true);
                     return;
             }
@@ -1283,7 +1283,7 @@
             {
                 case "header_button_close":
                 case "close_button":
-                    this._habboHelp.sendMessage(new _Str_4981());
+                    this._habboHelp.sendMessage(new ChatReviewGuideDetachedMessageComposer());
                     this._Str_4260(true);
                     return;
             }

@@ -591,7 +591,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_18219;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_4434;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionOnDutyUpdateMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_4981;
+	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideDetachedMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideVoteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
@@ -1717,7 +1717,7 @@
             OUTGOING_PACKETS[249] = NewNavigatorSearchComposer;
             OUTGOING_PACKETS[2490] = UniqueIDMessageComposer;
             OUTGOING_PACKETS[2492] = CallForHelpFromPhotoMessageComposer;
-            OUTGOING_PACKETS[2501] = _Str_4981;
+            OUTGOING_PACKETS[2501] = ChatReviewGuideDetachedMessageComposer;
             OUTGOING_PACKETS[2502] = Game2GameChatMessageComposer;
             OUTGOING_PACKETS[2518] = GetRentOrBuyoutOfferMessageComposer;
             OUTGOING_PACKETS[2519] = _Str_10855;
