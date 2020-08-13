@@ -128,7 +128,7 @@
             if (this._result == CompetitionEntrySubmitResultMessageParser.ASK_FOR_CONFIRM)
             {
                 this._Str_6512(null);
-                this._Str_4365().procedure = this._Str_25817;
+                this._Str_4365().procedure = this.onConfirm;
             }
             else
             {
@@ -410,7 +410,7 @@
             }
         }
 
-        private function _Str_25817(k:WindowEvent, _arg_2:IWindow=null):void
+        private function onConfirm(k:WindowEvent, _arg_2:IWindow=null):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
