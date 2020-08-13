@@ -152,7 +152,7 @@
     import com.sulake.habbo.catalog.recycler.IRecycler;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOffersMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.GetRoomAdPurchaseInfoComposer;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12488;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.RoomAdPurchaseInitiatedComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOwnOffersMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceOfferMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.marketplace.RedeemMarketplaceOfferCreditsMessageComposer;
@@ -1161,7 +1161,7 @@
 
         public function sendRoomAdPurchaseInitiatedEvent():void
         {
-            this.send(new _Str_12488());
+            this.send(new RoomAdPurchaseInitiatedComposer());
         }
 
         public function getOwnMarketPlaceOffers():void

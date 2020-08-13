@@ -654,7 +654,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12382;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSellablePetPalettesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12467;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12488;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.RoomAdPurchaseInitiatedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17078;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17335;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17774;
@@ -1682,7 +1682,7 @@
             OUTGOING_PACKETS[2276] = SelectClubGiftComposer;
             OUTGOING_PACKETS[2277] = MyRoomsSearchMessageComposer;
             OUTGOING_PACKETS[2281] = UpdateActionMessageComposer;
-            OUTGOING_PACKETS[2283] = _Str_12488;
+            OUTGOING_PACKETS[2283] = RoomAdPurchaseInitiatedComposer;
             OUTGOING_PACKETS[2285] = RoomUsersClassificationMessageComposer;
             OUTGOING_PACKETS[229] = ModAlertMessageComposer;
             OUTGOING_PACKETS[2296] = RoomDimmerChangeStateMessageComposer;
