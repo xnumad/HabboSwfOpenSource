@@ -775,7 +775,7 @@
                                 this._tradingModel.requestCancelTrading();
                                 break;
                             case TradingModel.TRADING_STATE_CONFIRMING:
-                                this._tradingModel._Str_24661();
+                                this._tradingModel.requestConfirmDeclineTrading();
                                 break;
                         }
                         return;

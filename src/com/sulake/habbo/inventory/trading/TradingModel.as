@@ -780,7 +780,7 @@
             this._communication.connection.send(new _Str_11362());
         }
 
-        public function _Str_24661():void
+        public function requestConfirmDeclineTrading():void
         {
             this._communication.connection.send(new _Str_11536());
         }
