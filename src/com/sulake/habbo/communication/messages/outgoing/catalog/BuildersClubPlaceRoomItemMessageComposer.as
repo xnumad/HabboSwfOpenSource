@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12382 implements IMessageComposer 
+    public class BuildersClubPlaceRoomItemMessageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_12382(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:int)
+        public function BuildersClubPlaceRoomItemMessageComposer(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:int)
         {
             this._array = [];
             super();

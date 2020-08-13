@@ -232,7 +232,7 @@
     import com.sulake.room.object.IRoomObjectController;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.room.object.data.LegacyStuffData;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12382;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceRoomItemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11648;
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedEvent;
     import com.sulake.habbo.communication.messages.outgoing.inventory.furni.RequestRoomPropertySet;
@@ -2622,7 +2622,7 @@
                         switch (_local_2)
                         {
                             case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
-                                this.send(new _Str_12382(_local_7, this._purchasableOffer.offerId, _local_3.extraParam, k.x, k.y, k.direction));
+                                this.send(new BuildersClubPlaceRoomItemMessageComposer(_local_7, this._purchasableOffer.offerId, _local_3.extraParam, k.x, k.y, k.direction));
                                 break;
                             case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
                                 this.send(new _Str_11648(_local_7, this._purchasableOffer.offerId, _local_3.extraParam, k._Str_7031));

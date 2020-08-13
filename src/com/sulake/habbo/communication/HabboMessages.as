@@ -651,7 +651,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12034;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12068;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12290;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12382;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceRoomItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSellablePetPalettesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12467;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RoomAdPurchaseInitiatedComposer;
@@ -1519,7 +1519,7 @@
             OUTGOING_PACKETS[1030] = SetChatStylePreferenceComposer;
             OUTGOING_PACKETS[1036] = MountPetMessageComposer;
             OUTGOING_PACKETS[105] = QuitMessageComposer;
-            OUTGOING_PACKETS[1051] = _Str_12382;
+            OUTGOING_PACKETS[1051] = BuildersClubPlaceRoomItemMessageComposer;
             OUTGOING_PACKETS[1052] = GuideSessionGetRequesterRoomMessageComposer;
             OUTGOING_PACKETS[1053] = VersionCheckMessageComposer;
             OUTGOING_PACKETS[1054] = _Str_11560;
