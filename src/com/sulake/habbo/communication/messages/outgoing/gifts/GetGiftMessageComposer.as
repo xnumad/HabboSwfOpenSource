@@ -3,13 +3,13 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_18298 implements IMessageComposer, IDisposable 
+    public class GetGiftMessageComposer implements IMessageComposer, IDisposable
     {
         public static const NO_ISSUE_ID:int = -1;
 
         private var _array:Array;
 
-        public function _Str_18298()
+        public function GetGiftMessageComposer()
         {
             this._array = new Array();
             super();

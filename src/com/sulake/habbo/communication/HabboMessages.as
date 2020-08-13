@@ -259,7 +259,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.pets.RespectPetMessageComposer;
 	import com.sulake.core.communication.messages.IMessageConfiguration;
 	import com.sulake.habbo.communication.messages.outgoing.gifts.VerifyCodeMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_18298;
+	import com.sulake.habbo.communication.messages.outgoing.gifts.GetGiftMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.gifts.SetPhoneNumberVerificationStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.gifts.ResetPhoneNumberStateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.gifts.TryPhoneNumberMessageComposer;
@@ -1704,7 +1704,7 @@
             OUTGOING_PACKETS[2412] = RoomAdEventTabAdClickedComposer;
             OUTGOING_PACKETS[2415] = Game2LoadStageReadyMessageComposer;
             OUTGOING_PACKETS[2419] = SSOTicketMessageComposer;
-            OUTGOING_PACKETS[2436] = _Str_18298;
+            OUTGOING_PACKETS[2436] = GetGiftMessageComposer;
             OUTGOING_PACKETS[2445] = DisconnectMessageComposer;
             OUTGOING_PACKETS[2448] = _Str_11750;
             OUTGOING_PACKETS[2455] = GuideAdvertisementReadMessageComposer;
