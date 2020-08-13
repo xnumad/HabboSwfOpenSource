@@ -658,7 +658,7 @@
             this._sessionData._Str_17222 = GuideSessionData._Str_15093;
             this._sessionData._Str_8937 = _arg_2;
             this._sessionData._Str_3989 = k;
-            this.openWindow(this._Str_22772, false);
+            this.openWindow(this.onGuideAcceptEvent, false);
             this._habboHelp._Str_2476.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
             if (((k == _Str_2849._Str_4749) || (k == _Str_2849._Str_4268)))
             {
@@ -689,7 +689,7 @@
             _local_4.running = true;
         }
 
-        private function _Str_22772(k:WindowEvent, _arg_2:IWindow):void
+        private function onGuideAcceptEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((((this.disposed) || (this._window == null)) || (!(this._window.name == GuideSessionStateEnum.GUIDE_ACCEPT))) || (!(k.type == WindowMouseEvent.CLICK))))
             {
