@@ -433,7 +433,7 @@
                     this._controller._Str_5574();
                     return;
                 case "confirm_name_button":
-                    this._controller._Str_20431(this._checkedName);
+                    this._controller.changeName(this._checkedName);
                     return;
                 case "cancel_confirmation_button":
                     this._controller._Str_5574();

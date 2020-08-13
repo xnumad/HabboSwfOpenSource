@@ -157,7 +157,7 @@
             }
         }
 
-        public function _Str_20431(k:String):void
+        public function changeName(k:String):void
         {
             this.disposeWindow();
             this._habboHelp.sendMessage(new _Str_12037(k));
