@@ -592,7 +592,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_4434;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionOnDutyUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_4981;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_5876;
+	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideVoteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionResolvedMessageComposer;
@@ -1917,7 +1917,7 @@
             OUTGOING_PACKETS[3943] = RoomTextSearchMessageComposer;
             OUTGOING_PACKETS[3950] = _Str_7887;
             OUTGOING_PACKETS[3959] = PhotoCompetitionMessageComposer;
-            OUTGOING_PACKETS[3961] = _Str_5876;
+            OUTGOING_PACKETS[3961] = ChatReviewGuideVoteMessageComposer;
             OUTGOING_PACKETS[3964] = GetItemDataMessageComposer;
             OUTGOING_PACKETS[3965] = ChangeEmailComposer;
             OUTGOING_PACKETS[3969] = _Str_11135;

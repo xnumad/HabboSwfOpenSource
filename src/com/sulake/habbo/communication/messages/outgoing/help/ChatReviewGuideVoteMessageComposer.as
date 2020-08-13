@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_5876 implements IMessageComposer, IDisposable 
+    public class ChatReviewGuideVoteMessageComposer implements IMessageComposer, IDisposable
     {
         private var messageArray:Array;
 
-        public function _Str_5876(k:int)
+        public function ChatReviewGuideVoteMessageComposer(k:int)
         {
             this.messageArray = [];
             super();

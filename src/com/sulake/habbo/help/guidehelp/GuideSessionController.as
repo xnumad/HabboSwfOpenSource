@@ -75,7 +75,7 @@
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_4981;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_5876;
+    import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideVoteMessageComposer;
     import com.sulake.core.window.enum.WindowType;
     import com.sulake.core.window.components.IDesktopWindow;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_11135;
@@ -1187,15 +1187,15 @@
                         this._Str_4260(true);
                         break;
                     case "vote_ok":
-                        this._habboHelp.sendMessage(new _Str_5876(_Str_10084));
+                        this._habboHelp.sendMessage(new ChatReviewGuideVoteMessageComposer(_Str_10084));
                         this._Str_18645(_Str_10084);
                         break;
                     case "vote_bad":
-                        this._habboHelp.sendMessage(new _Str_5876(_Str_9791));
+                        this._habboHelp.sendMessage(new ChatReviewGuideVoteMessageComposer(_Str_9791));
                         this._Str_18645(_Str_9791);
                         break;
                     case "vote_very_bad":
-                        this._habboHelp.sendMessage(new _Str_5876(_Str_10906));
+                        this._habboHelp.sendMessage(new ChatReviewGuideVoteMessageComposer(_Str_10906));
                         this._Str_18645(_Str_10906);
                         break;
                 }
