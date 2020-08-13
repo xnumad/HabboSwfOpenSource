@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7426 implements IMessageComposer 
+    public class GetSeasonalCalendarDailyOfferComposer implements IMessageComposer
     {
         public function dispose():void
         {

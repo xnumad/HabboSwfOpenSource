@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.SeasonalCalendarDailyOfferMessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7426;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetSeasonalCalendarDailyOfferComposer;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.room.ImageResult;
     import com.sulake.core.window.components.ITextWindow;
@@ -99,7 +99,7 @@
                 this._catalogPublishedListener = new _Str_5264(this.onCatalogPublished);
                 this._connection.addMessageEvent(this._dailyOfferListener);
                 this._connection.addMessageEvent(this._catalogPublishedListener);
-                this._connection.send(new _Str_7426());
+                this._connection.send(new GetSeasonalCalendarDailyOfferComposer());
             }
         }
 
@@ -221,7 +221,7 @@
         {
             if (this._connection != null)
             {
-                this._connection.send(new _Str_7426());
+                this._connection.send(new GetSeasonalCalendarDailyOfferComposer());
             }
         }
     }

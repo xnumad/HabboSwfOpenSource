@@ -664,7 +664,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7218;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubGiftInfo;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7384;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7426;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSeasonalCalendarDailyOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetLimitedOfferAppearingNextComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseVipMembershipExtensionComposer;
@@ -1828,7 +1828,7 @@
             OUTGOING_PACKETS[3207] = _Str_8138;
             OUTGOING_PACKETS[3226] = RenderRoomMessageComposer;
             OUTGOING_PACKETS[3230] = PerformanceLogMessageComposer;
-            OUTGOING_PACKETS[3257] = _Str_7426;
+            OUTGOING_PACKETS[3257] = GetSeasonalCalendarDailyOfferComposer;
             OUTGOING_PACKETS[3259] = _Str_16208;
             OUTGOING_PACKETS[3260] = ModerateRoomMessageComposer;
             OUTGOING_PACKETS[3265] = GetExtendedProfileMessageComposer;
