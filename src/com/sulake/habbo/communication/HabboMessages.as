@@ -315,7 +315,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2GameChatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2ExitGameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_18615;
-	import com.sulake.habbo.communication.messages.outgoing.game.arena._Str_18745;
+	import com.sulake.habbo.communication.messages.outgoing.game.arena.Game2PlayAgainMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.users.*;
 	import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
@@ -1822,7 +1822,7 @@
             OUTGOING_PACKETS[3171] = _Str_10594;
             OUTGOING_PACKETS[3182] = RemoveOwnRoomRightsRoomMessageComposer;
             OUTGOING_PACKETS[3189] = GetOfficialSongIdMessageComposer;
-            OUTGOING_PACKETS[3196] = _Str_18745;
+            OUTGOING_PACKETS[3196] = Game2PlayAgainMessageComposer;
             OUTGOING_PACKETS[3202] = RespectPetMessageComposer;
             OUTGOING_PACKETS[3203] = UpdateConditionMessageComposer;
             OUTGOING_PACKETS[3207] = _Str_8138;
