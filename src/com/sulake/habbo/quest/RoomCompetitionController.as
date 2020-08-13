@@ -142,7 +142,7 @@
                     if (this._result == CompetitionEntrySubmitResultMessageParser.ASK_FOR_SUBMIT)
                     {
                         this._Str_6512(this._Str_16143);
-                        this._Str_4365().procedure = this._Str_23403;
+                        this._Str_4365().procedure = this.onSubmit;
                     }
                     else
                     {
@@ -402,7 +402,7 @@
             }
         }
 
-        private function _Str_23403(k:WindowEvent, _arg_2:IWindow=null):void
+        private function onSubmit(k:WindowEvent, _arg_2:IWindow=null):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
