@@ -45,7 +45,7 @@
     import com.sulake.habbo.inventory.enum.FurniCategory;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.RemoveItemFromTradeComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11093;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10862;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.trading.UnacceptTradingComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11362;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11536;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10430;
@@ -771,7 +771,7 @@
 
         public function requestUnacceptTrading():void
         {
-            this._communication.connection.send(new _Str_10862());
+            this._communication.connection.send(new UnacceptTradingComposer());
         }
 
         public function requestConfirmAcceptTrading():void

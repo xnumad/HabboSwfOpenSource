@@ -905,7 +905,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10352;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10430;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10862;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.UnacceptTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11093;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11362;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11536;
@@ -1574,7 +1574,7 @@
             OUTGOING_PACKETS[1424] = GuideSessionGuideDecidesMessageComposer;
             OUTGOING_PACKETS[143] = VoteForRoomMessageComposer;
             OUTGOING_PACKETS[1435] = GetJukeboxPlayListMessageComposer;
-            OUTGOING_PACKETS[1444] = _Str_10862;
+            OUTGOING_PACKETS[1444] = UnacceptTradingComposer;
             OUTGOING_PACKETS[1445] = Game2ExitGameMessageComposer;
             OUTGOING_PACKETS[1450] = ForwardToASubmittableRoomMessageComposer;
             OUTGOING_PACKETS[1458] = JoinPlayerQueueMessageComposer;
