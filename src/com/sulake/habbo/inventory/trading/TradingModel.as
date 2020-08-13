@@ -228,7 +228,7 @@
             {
                 if (((!(this._state == TRADING_STATE_READY)) && (!(this._state == TRADING_STATE_COMPLETED))))
                 {
-                    this._Str_14630();
+                    this.requestCancelTrading();
                     this.state = TradingModel.TRADING_STATE_CANCELLED;
                 }
                 this.state = TRADING_STATE_READY;
@@ -504,7 +504,7 @@
             {
                 if (this._state != TRADING_STATE_READY)
                 {
-                    this._Str_14630();
+                    this.requestCancelTrading();
                 }
             }
         }
@@ -785,7 +785,7 @@
             this._communication.connection.send(new _Str_11536());
         }
 
-        public function _Str_14630():void
+        public function requestCancelTrading():void
         {
             this._communication.connection.send(new _Str_10430());
         }

@@ -733,7 +733,7 @@
                         this._tradingModel._Str_24199();
                         return;
                     case "button_cancel":
-                        this._tradingModel._Str_14630();
+                        this._tradingModel.requestCancelTrading();
                         return;
                 }
             }
@@ -772,7 +772,7 @@
                         switch (this._tradingModel.state)
                         {
                             case TradingModel.TRADING_STATE_RUNNING:
-                                this._tradingModel._Str_14630();
+                                this._tradingModel.requestCancelTrading();
                                 break;
                             case TradingModel.TRADING_STATE_CONFIRMING:
                                 this._tradingModel._Str_24661();
