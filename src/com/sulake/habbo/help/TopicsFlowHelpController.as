@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7640;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_8070;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_7656;
+    import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
     import com.sulake.habbo.help.cfh.registry.user.UserRegistryItem;
@@ -430,7 +430,7 @@
                     this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, -1, this._habboHelp._Str_3469, []));
                     return;
                 case HabboHelp.REPORT_TYPE_THREAD:
-                    this._habboHelp.sendMessage(new _Str_7656(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._currentTopic.id, this._message));
+                    this._habboHelp.sendMessage(new CallForHelpFromForumThreadMessageComposer(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._currentTopic.id, this._message));
                     return;
                 case HabboHelp.REPORT_TYPE_MESSAGE:
                     this._habboHelp.sendMessage(new CallForHelpFromForumMessageMessageComposer(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._habboHelp._Str_5721._Str_16155, this._currentTopic.id, this._message));

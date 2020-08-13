@@ -23,7 +23,7 @@
     import com.sulake.habbo.window.enum._Str_3023;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_8070;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_7656;
+    import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.parser.help._Str_7877;
@@ -616,7 +616,7 @@
                     this._habboHelp.sendMessage(new _Str_8070(this._message, this._topicIndex, this._reportedUserId, this._chatReportController._Str_9701(HabboHelp.REPORT_TYPE_IM, -1)));
                     break;
                 case HabboHelp.REPORT_TYPE_THREAD:
-                    this._habboHelp.sendMessage(new _Str_7656(this._reportedGroupId, this._reportedThreadId, this._topicIndex, this._message));
+                    this._habboHelp.sendMessage(new CallForHelpFromForumThreadMessageComposer(this._reportedGroupId, this._reportedThreadId, this._topicIndex, this._message));
                     break;
                 case HabboHelp.REPORT_TYPE_MESSAGE:
                     this._habboHelp.sendMessage(new CallForHelpFromForumMessageMessageComposer(this._reportedGroupId, this._reportedThreadId, this._reportedMessageId, this._topicIndex, this._message));

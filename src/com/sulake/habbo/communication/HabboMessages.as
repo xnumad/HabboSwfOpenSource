@@ -601,7 +601,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7640;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_7656;
+	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_8070;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_8134;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_8147;
@@ -1937,7 +1937,7 @@
             OUTGOING_PACKETS[516] = _Str_11815;
             OUTGOING_PACKETS[519] = _Str_11748;
             OUTGOING_PACKETS[532] = DeleteRoomMessageComposer;
-            OUTGOING_PACKETS[534] = _Str_7656;
+            OUTGOING_PACKETS[534] = CallForHelpFromForumThreadMessageComposer;
             OUTGOING_PACKETS[549] = PetSelectedMessageComposer;
             OUTGOING_PACKETS[593] = KickMemberMessageComposer;
             OUTGOING_PACKETS[596] = _Str_17774;
