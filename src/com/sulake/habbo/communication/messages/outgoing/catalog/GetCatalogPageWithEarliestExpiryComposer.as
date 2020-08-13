@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7384 implements IMessageComposer 
+    public class GetCatalogPageWithEarliestExpiryComposer implements IMessageComposer
     {
         public function dispose():void
         {

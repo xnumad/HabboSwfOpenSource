@@ -663,7 +663,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.SetTargetedOfferStateComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7218;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubGiftInfo;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7384;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageWithEarliestExpiryComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSeasonalCalendarDailyOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetLimitedOfferAppearingNextComposer;
@@ -1810,7 +1810,7 @@
             OUTGOING_PACKETS[312] = GetGuildMembersMessageComposer;
             OUTGOING_PACKETS[3129] = GetRoomSettingsMessageComposer;
             OUTGOING_PACKETS[3133] = CancelQuestMessageComposer;
-            OUTGOING_PACKETS[3135] = _Str_7384;
+            OUTGOING_PACKETS[3135] = GetCatalogPageWithEarliestExpiryComposer;
             OUTGOING_PACKETS[3137] = UpdateGuildIdentityMessageComposer;
             OUTGOING_PACKETS[314] = ConvertGlobalRoomIdMessageComposer;
             OUTGOING_PACKETS[3144] = _Str_9826;

@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageWithEarliestExpiryMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7384;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageWithEarliestExpiryComposer;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -55,7 +55,7 @@
         {
             if (((this._lastRequestTime == null) || ((this._lastRequestTime.time + _Str_3981) < new Date().time)))
             {
-                this._landingView.send(new _Str_7384());
+                this._landingView.send(new GetCatalogPageWithEarliestExpiryComposer());
                 this._lastRequestTime = new Date();
             }
         }
