@@ -580,7 +580,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11135;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11187;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11701;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_11748;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionIsTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromSelfieMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_12224;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_12273;
@@ -1935,7 +1935,7 @@
             OUTGOING_PACKETS[477] = _Str_4434;
             OUTGOING_PACKETS[487] = _Str_7373;
             OUTGOING_PACKETS[516] = _Str_11815;
-            OUTGOING_PACKETS[519] = _Str_11748;
+            OUTGOING_PACKETS[519] = GuideSessionIsTypingMessageComposer;
             OUTGOING_PACKETS[532] = DeleteRoomMessageComposer;
             OUTGOING_PACKETS[534] = CallForHelpFromForumThreadMessageComposer;
             OUTGOING_PACKETS[549] = PetSelectedMessageComposer;

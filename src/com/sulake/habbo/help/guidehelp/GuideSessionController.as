@@ -82,7 +82,7 @@
     import com.sulake.habbo.window.widgets.IIlluminaChatBubbleWidget;
     import com.sulake.core.window.enum.WindowParam;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_11187;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_11748;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionIsTypingMessageComposer;
     import __AS3__.vec.*;
 
     public class GuideSessionController implements IDisposable, IIlluminaInputHandler
@@ -1698,7 +1698,7 @@
             var _local_3:* = (!(this._lastMessageTypedLength == _local_2));
             if (this._lastTypingInfo != _local_3)
             {
-                this._habboHelp.sendMessage(new _Str_11748(_local_3));
+                this._habboHelp.sendMessage(new GuideSessionIsTypingMessageComposer(_local_3));
                 this._lastTypingInfo = _local_3;
             }
             this._lastMessageTypedLength = _local_2;
