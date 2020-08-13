@@ -810,7 +810,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.RequestFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.SetRelationshipStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.GetFriendRequestsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11815;
+	import com.sulake.habbo.communication.messages.outgoing.friendlist.FindNewFriendsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.HabboSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_12244;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.VisitUserMessageComposer;
@@ -1934,7 +1934,7 @@
             OUTGOING_PACKETS[462] = BuildersClubPlaceWallItemMessageComposer;
             OUTGOING_PACKETS[477] = GuideSessionFeedbackMessageComposer;
             OUTGOING_PACKETS[487] = GetClubGiftInfo;
-            OUTGOING_PACKETS[516] = _Str_11815;
+            OUTGOING_PACKETS[516] = FindNewFriendsMessageComposer;
             OUTGOING_PACKETS[519] = GuideSessionIsTypingMessageComposer;
             OUTGOING_PACKETS[532] = DeleteRoomMessageComposer;
             OUTGOING_PACKETS[534] = CallForHelpFromForumThreadMessageComposer;

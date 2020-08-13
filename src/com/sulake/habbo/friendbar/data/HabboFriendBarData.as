@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.outgoing.friendlist.VisitUserMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.friendbar.events.NewMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11815;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.FindNewFriendsMessageComposer;
     import com.sulake.habbo.friendlist._Str_2777;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.utils._Str_3942;
@@ -328,7 +328,7 @@
         {
             if (this._habboCommunicationManager)
             {
-                this._habboCommunicationManager.connection.send(new _Str_11815());
+                this._habboCommunicationManager.connection.send(new FindNewFriendsMessageComposer());
                 this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, TRACKING_EVENT_TYPE, TRACKING_EVENT_ACTION_FIND_FRIENDS));
             }
         }
