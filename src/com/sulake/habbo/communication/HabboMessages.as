@@ -583,7 +583,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionIsTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromSelfieMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_12224;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_12273;
+	import com.sulake.habbo.communication.messages.outgoing.help.GetGuideReportingStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_15943;
 	import com.sulake.habbo.communication.messages.outgoing.help.GetFaqCategoryMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_16470;
@@ -1896,7 +1896,7 @@
             OUTGOING_PACKETS[3768] = _Str_11696;
             OUTGOING_PACKETS[3775] = FriendFurniConfirmLockMessageComposer;
             OUTGOING_PACKETS[3782] = GetCategoriesWithUserCountMessageComposer;
-            OUTGOING_PACKETS[3786] = _Str_12273;
+            OUTGOING_PACKETS[3786] = GetGuideReportingStatusMessageComposer;
             OUTGOING_PACKETS[3802] = AcceptGameInviteMessageComposer;
             OUTGOING_PACKETS[3817] = AddFavouriteRoomMessageComposer;
             OUTGOING_PACKETS[3835] = CompostPlantMessageComposer;

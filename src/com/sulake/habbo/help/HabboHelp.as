@@ -54,7 +54,7 @@
     import com.sulake.habbo.window.utils.IModalDialog;
     import com.sulake.habbo.communication.messages.outgoing.help.GetPendingCallsForHelpMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_12273;
+    import com.sulake.habbo.communication.messages.outgoing.help.GetGuideReportingStatusMessageComposer;
     import com.sulake.habbo.communication.messages.parser.help.CallForHelpPendingCallsMessageParser;
     import com.sulake.habbo.communication.messages.parser.help._Str_5731;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.RemoveFriendMessageComposer;
@@ -609,7 +609,7 @@
         {
             this._requestType = k;
             this.sendMessage(new GuideAdvertisementReadMessageComposer());
-            this.sendMessage(new _Str_12273());
+            this.sendMessage(new GetGuideReportingStatusMessageComposer());
         }
 
         private function onPendingCallsForHelp(k:IMessageEvent):void
