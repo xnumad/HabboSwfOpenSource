@@ -15,7 +15,7 @@
     import com.sulake.habbo.avatar.view.AvatarEditorNameChangeView;
     import com.sulake.habbo.communication.messages.parser.avatar.CheckUserNameResultMessageParser;
     import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7827;
+    import com.sulake.habbo.communication.messages.outgoing.avatar.GetWardrobeMessageComposer;
     import com.sulake.core.communication.messages.IMessageEvent;
 
     public class AvatarEditorMessageHandler 
@@ -97,7 +97,7 @@
             {
                 return;
             }
-            var k:_Str_7827 = new _Str_7827();
+            var k:GetWardrobeMessageComposer = new GetWardrobeMessageComposer();
             this._communication.connection.send(k);
             k.dispose();
             k = null;
