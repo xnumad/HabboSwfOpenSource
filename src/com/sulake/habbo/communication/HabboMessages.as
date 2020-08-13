@@ -307,7 +307,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniStartConfirmationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniOtherLockConfirmedMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets.GetPetInventoryComposer;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10953;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.pets.CancelPetBreedingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets.ConfirmPetBreedingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerPrizesMessageComposer;
@@ -1743,7 +1743,7 @@
             OUTGOING_PACKETS[2688] = GetCommunityGoalEarnedPrizesMessageComposer;
             OUTGOING_PACKETS[2694] = RespectUserMessageComposer;
             OUTGOING_PACKETS[271] = GetSecondsUntilMessageComposer;
-            OUTGOING_PACKETS[2713] = _Str_10953;
+            OUTGOING_PACKETS[2713] = CancelPetBreedingComposer;
             OUTGOING_PACKETS[2717] = CloseIssueDefaultActionMessageComposer;
             OUTGOING_PACKETS[272] = MyRoomRightsSearchMessageComposer;
             OUTGOING_PACKETS[2721] = _Str_10410;

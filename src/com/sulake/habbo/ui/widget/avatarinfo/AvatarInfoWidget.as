@@ -66,7 +66,7 @@
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotChangeNameConfiguration;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotSkillConfigurationView;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10953;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.pets.CancelPetBreedingComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.pets.ConfirmPetBreedingComposer;
     import com.sulake.habbo.friendlist.IHabboFriendsList;
 
@@ -1716,7 +1716,7 @@
 
         public function _Str_24617(k:int):void
         {
-            this.handler.container.connection.send(new _Str_10953(k));
+            this.handler.container.connection.send(new CancelPetBreedingComposer(k));
         }
 
         public function _Str_23246(k:int, _arg_2:String, _arg_3:int, _arg_4:int):void
