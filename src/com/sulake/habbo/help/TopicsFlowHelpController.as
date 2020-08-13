@@ -394,7 +394,7 @@
                     this._habboHelp._Str_19088();
                     return;
                 case "sanction_info_link":
-                    this._habboHelp._Str_19612(false);
+                    this._habboHelp.requestSanctionInfo(false);
                     this.closeWindow();
                     return;
                 case "submit_button":

@@ -449,7 +449,7 @@
             context.addLinkEventTracker(this);
             if (((getBoolean("show.sanction.info.on.login")) && (Math.random() < 0.2)))
             {
-                this._Str_19612(true);
+                this.requestSanctionInfo(true);
             }
         }
 
@@ -857,7 +857,7 @@
             this._topicsFlowHelpController._Str_19572();
         }
 
-        public function _Str_19612(k:Boolean):void
+        public function requestSanctionInfo(k:Boolean):void
         {
             this.sendMessage(new _Str_11701(k));
         }
