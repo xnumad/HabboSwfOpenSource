@@ -764,7 +764,7 @@
                                 break;
                             case TradingModel.TRADING_STATE_CONFIRMING:
                                 _arg_2.disable();
-                                this._tradingModel._Str_25581();
+                                this._tradingModel.requestConfirmAcceptTrading();
                                 break;
                         }
                         return;

@@ -774,7 +774,7 @@
             this._communication.connection.send(new _Str_10862());
         }
 
-        public function _Str_25581():void
+        public function requestConfirmAcceptTrading():void
         {
             this.state = TRADING_STATE_CONFIRMED;
             this._communication.connection.send(new _Str_11362());
