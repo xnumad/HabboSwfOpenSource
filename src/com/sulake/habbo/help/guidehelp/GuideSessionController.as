@@ -992,11 +992,11 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_FEEDBACK;
-            this.openWindow(this._Str_25707, false);
+            this.openWindow(this.onUserFeedbackEvent, false);
             this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
         }
 
-        private function _Str_25707(k:WindowEvent, _arg_2:IWindow):void
+        private function onUserFeedbackEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((((this.disposed) || (this._window == null)) || (!(this._window.name == GuideSessionStateEnum.USER_FEEDBACK))) || (!(k.type == WindowMouseEvent.CLICK))))
             {
