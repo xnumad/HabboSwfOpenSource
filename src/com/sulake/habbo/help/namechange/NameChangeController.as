@@ -14,7 +14,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.help.enum.HabboHelpTutorialEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.avatar._Str_12037;
+    import com.sulake.habbo.communication.messages.outgoing.avatar.ChangeUserNameMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7887;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.parser.avatar.ChangeUserNameResultMessageParser;
@@ -160,7 +160,7 @@
         public function changeName(k:String):void
         {
             this.disposeWindow();
-            this._habboHelp.sendMessage(new _Str_12037(k));
+            this._habboHelp.sendMessage(new ChangeUserNameMessageComposer(k));
         }
 
         public function checkName(k:String):void

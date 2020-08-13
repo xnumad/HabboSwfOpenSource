@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12037 implements IMessageComposer 
+    public class ChangeUserNameMessageComposer implements IMessageComposer
     {
         private var _data:Array;
 
-        public function _Str_12037(k:String)
+        public function ChangeUserNameMessageComposer(k:String)
         {
             this._data = new Array();
             this._data.push(k);

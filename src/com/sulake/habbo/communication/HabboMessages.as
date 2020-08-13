@@ -269,7 +269,7 @@
 	import com.sulake.habbo.communication.messages.incoming.mysterybox.MysteryBoxKeysMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.perk._Str_12157;
 	import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
-	import com.sulake.habbo.communication.messages.outgoing.avatar._Str_12037;
+	import com.sulake.habbo.communication.messages.outgoing.avatar.ChangeUserNameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.avatar.SaveWardrobeOutfitMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.avatar.GetWardrobeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7887;
@@ -1787,7 +1787,7 @@
             OUTGOING_PACKETS[2950] = CallForHelpFromIMMessageComposer;
             OUTGOING_PACKETS[2959] = AvatarEffectActivatedComposer;
             OUTGOING_PACKETS[2970] = FollowFriendMessageComposer;
-            OUTGOING_PACKETS[2977] = _Str_12037;
+            OUTGOING_PACKETS[2977] = ChangeUserNameMessageComposer;
             OUTGOING_PACKETS[2991] = GetHabboGroupDetailsMessageComposer;
             OUTGOING_PACKETS[2996] = AmbassadorAlertMessageComposer;
             OUTGOING_PACKETS[3001] = UpdateRoomFilterMessageComposer;
