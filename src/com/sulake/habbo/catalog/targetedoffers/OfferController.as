@@ -121,7 +121,7 @@
             this._extension = new MallOfferMinimizedView(this, k);
         }
 
-        public function _Str_23977(k:HabboMallOffer):void
+        public function onHabboMallOfferOpened(k:HabboMallOffer):void
         {
             this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum.OFFERED));
             this._catalog.openCreditsHabblet();
