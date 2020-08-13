@@ -81,7 +81,7 @@
         public static const REPORT_TYPE_BULLY:int = 6;
         public static const REPORT_TYPE_THREAD:int = 7;
         public static const REPORT_TYPE_MESSAGE:int = 8;
-        public static const _Str_7161:int = 9;
+        public static const REPORT_TYPE_PHOTO:int = 9;
 
         private var _toolbar:IHabboToolbar;
         private var _windowManager:IHabboWindowManager;
@@ -210,7 +210,7 @@
                 this._callForHelpManager.reportedUserName = _arg_2;
                 this._callForHelpManager._Str_10658 = _arg_4;
                 this._callForHelpManager._Str_11455 = _arg_3;
-                this._topicsFlowHelpController._Str_15173(HabboHelp._Str_7161);
+                this._topicsFlowHelpController._Str_15173(HabboHelp.REPORT_TYPE_PHOTO);
             }
         }
 
@@ -617,7 +617,7 @@
             var _local_3:String;
             var _local_4:int;
             var _local_2:CallForHelpPendingCallsMessageParser = CallForHelpPendingCallsEvent(k).getParser();
-            if (((_local_2.count == 0) || ((this._reportType == _Str_7161) && (_local_2.count < 3))))
+            if (((_local_2.count == 0) || ((this._reportType == REPORT_TYPE_PHOTO) && (_local_2.count < 3))))
             {
                 this._Str_24430();
             }
@@ -673,7 +673,7 @@
                 case REPORT_TYPE_GUIDE:
                     this._guideHelpManager.openReportWindow();
                     break;
-                case _Str_7161:
+                case REPORT_TYPE_PHOTO:
                     if (this._reportMessage != null)
                     {
                         this.sendMessage(this._reportMessage);

@@ -420,7 +420,7 @@
             this._habboHelp._Str_19312();
             switch (this._contentModerationType)
             {
-                case HabboHelp._Str_7161:
+                case HabboHelp.REPORT_TYPE_PHOTO:
                     this._habboHelp.sendMessage(new _Str_7640(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp.reportedUserId, this._currentTopic.id, this._habboHelp._Str_10658));
                     return;
                 case HabboHelp.REPORT_TYPE_IM:

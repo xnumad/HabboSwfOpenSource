@@ -244,7 +244,7 @@
         public function reportPhoto(k:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):void
         {
             this._habboHelp._Str_25749(new _Str_7640(k, _arg_3, _arg_4, _arg_2, _arg_5));
-            this._habboHelp._Str_8128(HabboHelp._Str_7161);
+            this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_PHOTO);
         }
 
         public function openEmergencyHelpRequest():void
