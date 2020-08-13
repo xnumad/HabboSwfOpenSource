@@ -700,7 +700,7 @@
                     if (k.view != null)
                     {
                         this._Str_3454.removeChild(k.view);
-                        k._Str_5574();
+                        k.hideView();
                     }
                 }
                 else
@@ -781,7 +781,7 @@
                 if (_local_2.view != null)
                 {
                     this._Str_3454.removeChild(_local_2.view);
-                    _local_2._Str_5574();
+                    _local_2.hideView();
                 }
                 _local_2.dispose();
                 _local_2 = null;
@@ -804,7 +804,7 @@
                                 this._Str_4125.splice(_local_3, 1);
                             }
                             this._Str_3454.removeChild(_local_2.view);
-                            _local_2._Str_5574();
+                            _local_2.hideView();
                         }
                     }
                     else
@@ -1118,7 +1118,7 @@
             if (k.view != null)
             {
                 this._Str_3454.removeChild(k.view);
-                k._Str_5574();
+                k.hideView();
             }
             k.dispose();
             this._Str_8599(false);

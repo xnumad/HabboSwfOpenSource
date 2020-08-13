@@ -262,7 +262,7 @@
             return _local_6.intersects(_local_7);
         }
 
-        public function _Str_5574():void
+        public function hideView():void
         {
             if (this._window)
             {

@@ -13,6 +13,6 @@
         function checkName(_arg_1:String):void;
         function changeName(_arg_1:String):void;
         function showView():void;
-        function _Str_5574():void;
+        function hideView():void;
     }
 }

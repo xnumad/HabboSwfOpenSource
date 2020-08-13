@@ -430,16 +430,16 @@
                     }
                     return;
                 case "cancel_selection_button":
-                    this._controller._Str_5574();
+                    this._controller.hideView();
                     return;
                 case "confirm_name_button":
                     this._controller.changeName(this._checkedName);
                     return;
                 case "cancel_confirmation_button":
-                    this._controller._Str_5574();
+                    this._controller.hideView();
                     return;
                 case "header_button_close":
-                    this._controller._Str_5574();
+                    this._controller.hideView();
                     return;
             }
         }

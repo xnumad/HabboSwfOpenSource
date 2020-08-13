@@ -118,7 +118,7 @@
             this.disposeWindow();
         }
 
-        public function _Str_5574():void
+        public function hideView():void
         {
             if (this._nameChangeView != null)
             {
@@ -196,7 +196,7 @@
             if (_local_2.resultCode == ChangeUserNameResultMessageEvent.NAME_OK)
             {
                 this._Str_25375(_local_2.name);
-                this._Str_5574();
+                this.hideView();
             }
             else
             {
