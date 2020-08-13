@@ -806,7 +806,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.RemoveFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.SendRoomInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.FollowFriendMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_10962;
+	import com.sulake.habbo.communication.messages.outgoing.friendlist.SendMsgMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.RequestFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11696;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11750;
@@ -1875,7 +1875,7 @@
             OUTGOING_PACKETS[3549] = SelectFavouriteHabboGroupMessageComposer;
             OUTGOING_PACKETS[3558] = PresentOpenMessageComposer;
             OUTGOING_PACKETS[3559] = GetRoomEntryTileMessageComposer;
-            OUTGOING_PACKETS[3567] = _Str_10962;
+            OUTGOING_PACKETS[3567] = SendMsgMessageComposer;
             OUTGOING_PACKETS[357] = InfoRetrieveMessageComposer;
             OUTGOING_PACKETS[3582] = RateFlatMessageComposer;
             OUTGOING_PACKETS[359] = _Str_4406;

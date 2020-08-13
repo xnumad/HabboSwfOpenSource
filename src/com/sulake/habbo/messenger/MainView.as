@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_10962;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.SendMsgMessageComposer;
 
     public class MainView implements IDisposable, IIlluminaInputHandler
     {
@@ -827,7 +827,7 @@
 
         public function onInput(k:IWidgetWindow, _arg_2:String):void
         {
-            this._messenger.send(new _Str_10962(this._currentConversationId, _arg_2));
+            this._messenger.send(new SendMsgMessageComposer(this._currentConversationId, _arg_2));
             IIlluminaInputWidget(k.widget).message = "";
             var _local_3:Array = this._chatEntries[this._currentConversationId];
             if (((_local_3.length == 0) || ((_local_3.length == 1) && (ChatEntry(_local_3[0]).type == ChatEntry.TYPE_NOTIFICATION))))
