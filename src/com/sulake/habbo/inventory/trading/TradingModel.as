@@ -41,7 +41,7 @@
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.OpenTradingComposer;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemToTradeComposer;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10352;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemsToTradeComposer;
     import com.sulake.habbo.inventory.enum.FurniCategory;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.RemoveItemFromTradeComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AcceptTradingComposer;
@@ -702,7 +702,7 @@
                     }
                     else
                     {
-                        this._communication.connection.send(new _Str_10352(_local_7));
+                        this._communication.connection.send(new AddItemsToTradeComposer(_local_7));
                     }
                 }
             }

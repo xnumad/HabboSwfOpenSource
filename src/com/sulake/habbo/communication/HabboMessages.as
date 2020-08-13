@@ -903,7 +903,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5720;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6450;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10352;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemsToTradeComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10430;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.UnacceptTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AcceptTradingComposer;
@@ -1547,7 +1547,7 @@
             OUTGOING_PACKETS[1251] = CraftSecretComposer;
             OUTGOING_PACKETS[1258] = PlaceObjectMessageComposer;
             OUTGOING_PACKETS[1262] = SetChatPreferencesMessageComposer;
-            OUTGOING_PACKETS[1263] = _Str_10352;
+            OUTGOING_PACKETS[1263] = AddItemsToTradeComposer;
             OUTGOING_PACKETS[1265] = UpdateRoomCategoryAndTradeSettingsComposer;
             OUTGOING_PACKETS[1276] = SendRoomInviteMessageComposer;
             OUTGOING_PACKETS[1296] = GetQuizQuestionsComposer;

@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import __AS3__.vec.Vector;
 
-    public class _Str_10352 implements IMessageComposer 
+    public class AddItemsToTradeComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_10352(k:Vector.<int>)
+        public function AddItemsToTradeComposer(k:Vector.<int>)
         {
             var _local_2:int;
             this._array = new Array();
