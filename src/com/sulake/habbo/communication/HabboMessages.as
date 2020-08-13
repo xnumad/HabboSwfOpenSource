@@ -655,7 +655,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSellablePetPalettesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetIsOfferGiftableComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RoomAdPurchaseInitiatedComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17078;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetDirectClubBuyAvailableComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17335;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17774;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17987;
@@ -1963,7 +1963,7 @@
             OUTGOING_PACKETS[796] = RequestCameraConfigurationComposer;
             OUTGOING_PACKETS[798] = GetGuildCreationInfoMessageComposer;
             OUTGOING_PACKETS[800] = SaveWardrobeOutfitMessageComposer;
-            OUTGOING_PACKETS[801] = _Str_17078;
+            OUTGOING_PACKETS[801] = GetDirectClubBuyAvailableComposer;
             OUTGOING_PACKETS[808] = AssignRightsMessageComposer;
             OUTGOING_PACKETS[813] = GetGuildEditorDataMessageComposer;
             OUTGOING_PACKETS[826] = GetPopularRoomTagsMessageComposer;

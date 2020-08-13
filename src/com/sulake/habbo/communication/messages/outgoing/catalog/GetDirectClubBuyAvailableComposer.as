@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_17078 implements IMessageComposer 
+    public class GetDirectClubBuyAvailableComposer implements IMessageComposer
     {
         private var _days:int;
 
-        public function _Str_17078(k:int)
+        public function GetDirectClubBuyAvailableComposer(k:int)
         {
             this._days = k;
         }
