@@ -200,7 +200,7 @@
             }
             else
             {
-                this.reportUser(k, HabboHelp._Str_5723, 123);
+                this.reportUser(k, HabboHelp.REPORT_TYPE_EMERGENCY, 123);
             }
         }
 
@@ -249,7 +249,7 @@
 
         public function openEmergencyHelpRequest():void
         {
-            this.reportUser(0, HabboHelp._Str_5723, -1);
+            this.reportUser(0, HabboHelp.REPORT_TYPE_EMERGENCY, -1);
         }
 
         private function showAbusiveNotice():void
@@ -300,7 +300,7 @@
                 case HabboHelp._Str_4786:
                     this.showPanels(false, true);
                     return;
-                case HabboHelp._Str_5723:
+                case HabboHelp.REPORT_TYPE_EMERGENCY:
                     this.showPanels(true, false);
                     return;
                 case HabboHelp._Str_4315:
@@ -607,7 +607,7 @@
             this.closeWindow();
             switch (this._reportType)
             {
-                case HabboHelp._Str_5723:
+                case HabboHelp.REPORT_TYPE_EMERGENCY:
                 case HabboHelp._Str_4786:
                     k = ((this._chatReportController._Str_3469 <= 0) ? this._reportedRoomId : this._chatReportController._Str_3469);
                     this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._topicIndex, this._reportedUserId, k, this._chatReportController._Str_9701(this._reportType, -1)));
@@ -666,7 +666,7 @@
             switch (_local_3)
             {
                 case CallForHelpResultEnum._Str_18080:
-                    this._habboHelp._Str_8128(HabboHelp._Str_5723);
+                    this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_EMERGENCY);
                     return;
                 case CallForHelpResultEnum._Str_18473:
                     this.showAbusiveNotice();

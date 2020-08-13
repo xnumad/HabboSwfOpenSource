@@ -442,7 +442,7 @@
                     }
                     else
                     {
-                        this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_3469, this._habboHelp._Str_5721.chatReportController._Str_9701(HabboHelp._Str_5723, -1)));
+                        this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_3469, this._habboHelp._Str_5721.chatReportController._Str_9701(HabboHelp.REPORT_TYPE_EMERGENCY, -1)));
                     }
             }
         }
