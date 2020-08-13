@@ -262,7 +262,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_18298;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_6202;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
-	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_9957;
+	import com.sulake.habbo.communication.messages.outgoing.gifts.TryPhoneNumberMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7433;
 	import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7564;
 	import com.sulake.habbo.communication.messages.incoming.mysterybox.GotMysteryBoxPrizeMessageEvent;
@@ -1958,7 +1958,7 @@
             OUTGOING_PACKETS[0x0300] = OpenMessageComposer;
             OUTGOING_PACKETS[773] = CompleteDiffieHandshakeMessageComposer;
             OUTGOING_PACKETS[777] = PurchaseRoomAdMessageComposer;
-            OUTGOING_PACKETS[790] = _Str_9957;
+            OUTGOING_PACKETS[790] = TryPhoneNumberMessageComposer;
             OUTGOING_PACKETS[793] = ActivateQuestMessageComposer;
             OUTGOING_PACKETS[796] = RequestCameraConfigurationComposer;
             OUTGOING_PACKETS[798] = GetGuildCreationInfoMessageComposer;

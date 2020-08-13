@@ -3,13 +3,13 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_9957 implements IMessageComposer, IDisposable 
+    public class TryPhoneNumberMessageComposer implements IMessageComposer, IDisposable
     {
         public static const NO_ISSUE_ID:int = -1;
 
         private var _array:Array;
 
-        public function _Str_9957(k:String, _arg_2:String)
+        public function TryPhoneNumberMessageComposer(k:String, _arg_2:String)
         {
             this._array = new Array();
             super();

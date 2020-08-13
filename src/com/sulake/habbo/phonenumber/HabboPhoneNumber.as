@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.gifts.PhoneCollectionStateMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_9957;
+    import com.sulake.habbo.communication.messages.outgoing.gifts.TryPhoneNumberMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_10410;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_6202;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
@@ -79,7 +79,7 @@
 
         public function _Str_22965(k:String, _arg_2:String):void
         {
-            this._connection.send(new _Str_9957(k, _arg_2));
+            this._connection.send(new TryPhoneNumberMessageComposer(k, _arg_2));
         }
 
         public function _Str_24369(k:String):void
