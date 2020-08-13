@@ -153,12 +153,12 @@
             this._thisWeekList.destroyListItems();
             this._lastWeekList.destroyListItems();
             this._ownEntryList.destroyListItems();
-            this._Str_21845();
+            this.updateThisWeek();
             this.send(new _Str_5198(this._selectedGame, 1, 0, 0, 5, 5));
             this._gameCenterView._Str_20681(this);
         }
 
-        private function _Str_21845():void
+        private function updateThisWeek():void
         {
             if (this._thisWeekTopScoresMode)
             {
@@ -282,7 +282,7 @@
             {
                 this._thisWeekTopScoresMode = true;
             }
-            this._Str_21845();
+            this.updateThisWeek();
         }
 
         private function _Str_21627(k:IBitmapWrapperWindow, _arg_2:String, _arg_3:String=null):void
