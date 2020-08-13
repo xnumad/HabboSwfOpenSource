@@ -69,7 +69,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionFeedbackMessageComposer;
     import mx.utils.StringUtil;
     import com.sulake.habbo.utils.FriendlyTime;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_10003;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionRequesterCancelsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideDecidesOnOfferMessageComposer;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
@@ -886,7 +886,7 @@
             switch (_arg_2.name)
             {
                 case "cancel_button":
-                    this._habboHelp.sendMessage(new _Str_10003());
+                    this._habboHelp.sendMessage(new GuideSessionRequesterCancelsMessageComposer());
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickCancel"));
                     this.closeWindow();
                     return;

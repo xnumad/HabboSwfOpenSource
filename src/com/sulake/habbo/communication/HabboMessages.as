@@ -574,7 +574,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.ShowEnforceRoomCategoryDialogEvent;
 	import com.sulake.habbo.communication.messages.outgoing.help.*;
 	import com.sulake.habbo.communication.messages.outgoing.help.PostQuizAnswersComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_10003;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionRequesterCancelsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionInviteRequesterMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GetPendingCallsForHelpMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionReportMessageComposer;
@@ -1775,7 +1775,7 @@
             OUTGOING_PACKETS[2890] = DeclineFriendMessageComposer;
             OUTGOING_PACKETS[2894] = AddAdminRightsToMemberMessageComposer;
             OUTGOING_PACKETS[2908] = GetUnreadForumsCountMessageComposer;
-            OUTGOING_PACKETS[291] = _Str_10003;
+            OUTGOING_PACKETS[291] = GuideSessionRequesterCancelsMessageComposer;
             OUTGOING_PACKETS[2912] = _Str_5974;
             OUTGOING_PACKETS[2914] = _Str_10571;
             OUTGOING_PACKETS[2930] = GuildBaseSearchMessageComposer;
