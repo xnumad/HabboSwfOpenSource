@@ -227,7 +227,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11951;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_16422;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_18174;
-	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_18426;
+	import com.sulake.habbo.communication.messages.outgoing.game.score.Game2GetWeeklyFriendsLeaderboardComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.score.Game2GetWeeklyLeaderboardComposer;
 	import com.sulake.habbo.communication.messages.incoming.availability.HotelClosedAndOpensEvent;
 	import com.sulake.habbo.communication.messages.incoming.availability.HotelClosesAndWillOpenAtEvent;
@@ -1543,7 +1543,7 @@
             OUTGOING_PACKETS[1210] = HabboSearchMessageComposer;
             OUTGOING_PACKETS[1224] = _Str_15943;
             OUTGOING_PACKETS[1229] = GetOfficialRoomsMessageComposer;
-            OUTGOING_PACKETS[1232] = _Str_18426;
+            OUTGOING_PACKETS[1232] = Game2GetWeeklyFriendsLeaderboardComposer;
             OUTGOING_PACKETS[1251] = CraftSecretComposer;
             OUTGOING_PACKETS[1258] = PlaceObjectMessageComposer;
             OUTGOING_PACKETS[1262] = SetChatPreferencesMessageComposer;
