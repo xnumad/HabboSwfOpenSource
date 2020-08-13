@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserIdMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
     import com.sulake.habbo.window.enum._Str_3023;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_6133;
+    import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_8070;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7656;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7494;
@@ -610,7 +610,7 @@
                 case HabboHelp._Str_5723:
                 case HabboHelp._Str_4786:
                     k = ((this._chatReportController._Str_3469 <= 0) ? this._reportedRoomId : this._chatReportController._Str_3469);
-                    this._habboHelp.sendMessage(new _Str_6133(this._message, this._topicIndex, this._reportedUserId, k, this._chatReportController._Str_9701(this._reportType, -1)));
+                    this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._topicIndex, this._reportedUserId, k, this._chatReportController._Str_9701(this._reportType, -1)));
                     break;
                 case HabboHelp._Str_4315:
                     this._habboHelp.sendMessage(new _Str_8070(this._message, this._topicIndex, this._reportedUserId, this._chatReportController._Str_9701(HabboHelp._Str_4315, -1)));

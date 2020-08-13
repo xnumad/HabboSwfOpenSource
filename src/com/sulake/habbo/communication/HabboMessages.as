@@ -593,7 +593,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_4553;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_4981;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_5876;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_6133;
+	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7077;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7293;
@@ -1603,7 +1603,7 @@
             OUTGOING_PACKETS[1681] = DefaultSanctionMessageComposer;
             OUTGOING_PACKETS[1687] = GetOccupiedTilesMessageComposer;
             OUTGOING_PACKETS[1689] = RemoveFriendMessageComposer;
-            OUTGOING_PACKETS[1691] = _Str_6133;
+            OUTGOING_PACKETS[1691] = CallForHelpMessageComposer;
             OUTGOING_PACKETS[1697] = StartCampaignMessageComposer;
             OUTGOING_PACKETS[17] = GetUserTagsMessageComposer;
             OUTGOING_PACKETS[1703] = ForwardToSomeRoomMessageComposer;
