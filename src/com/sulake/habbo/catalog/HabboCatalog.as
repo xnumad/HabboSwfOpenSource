@@ -244,7 +244,7 @@
     import com.sulake.core.window.components.IDesktopWindow;
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12467;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11294;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetBundleDiscountRulesetComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11905;
     import com.sulake.habbo.communication.messages.parser.catalog.BundleDiscountRulesetMessageParser;
     import com.sulake.habbo.communication.messages.parser.catalog.CatalogSearchResultParser;
@@ -2933,7 +2933,7 @@
 
         private function sendGetBundleDiscountRuleset():void
         {
-            this.send(new _Str_11294());
+            this.send(new GetBundleDiscountRulesetComposer());
         }
 
         public function sendGetProductOffer(k:int):void

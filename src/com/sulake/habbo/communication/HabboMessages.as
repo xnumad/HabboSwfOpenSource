@@ -641,7 +641,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetRoomAdPurchaseInfoComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10613;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogIndexComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11294;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetBundleDiscountRulesetComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11313;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.MarkCatalogNewAdditionsPageOpenedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11648;
@@ -1670,7 +1670,7 @@
             OUTGOING_PACKETS[2214] = UpdateForumSettingsMessageComposer;
             OUTGOING_PACKETS[2226] = NavigatorAddSavedSearchComposer;
             OUTGOING_PACKETS[2228] = ChangeMottoMessageComposer;
-            OUTGOING_PACKETS[223] = _Str_11294;
+            OUTGOING_PACKETS[223] = GetBundleDiscountRulesetComposer;
             OUTGOING_PACKETS[2230] = GetGuestRoomMessageComposer;
             OUTGOING_PACKETS[2235] = ChangePostureMessageComposer;
             OUTGOING_PACKETS[2248] = PlacePostItMessageComposer;
