@@ -172,7 +172,7 @@
     import flash.events.Event;
     import com.sulake.habbo.catalog.enum.HabboCatalogTrackingEvent;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11178;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11580;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.MarkCatalogNewAdditionsPageOpenedComposer;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -1421,7 +1421,7 @@
 
         private function markNewAdditionPageOpened():void
         {
-            this.send(new _Str_11580());
+            this.send(new MarkCatalogNewAdditionsPageOpenedComposer());
         }
 
         private function createCatalogNavigators():void

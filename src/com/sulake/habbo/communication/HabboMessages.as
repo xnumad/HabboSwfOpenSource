@@ -643,7 +643,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11178;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11294;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11313;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11580;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.MarkCatalogNewAdditionsPageOpenedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11648;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11783;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11905;
@@ -1662,7 +1662,7 @@
             OUTGOING_PACKETS[2128] = CanCreateRoomMessageComposer;
             OUTGOING_PACKETS[2138] = GetRelationshipStatusInfoMessageComposer;
             OUTGOING_PACKETS[2144] = SpinWheelOfFortuneMessageComposer;
-            OUTGOING_PACKETS[2150] = _Str_11580;
+            OUTGOING_PACKETS[2150] = MarkCatalogNewAdditionsPageOpenedComposer;
             OUTGOING_PACKETS[2161] = GetPetCommandsMessageComposer;
             OUTGOING_PACKETS[2167] = GetCommunityGoalHallOfFameMessageComposer;
             OUTGOING_PACKETS[219] = GetAchievementsComposer;
