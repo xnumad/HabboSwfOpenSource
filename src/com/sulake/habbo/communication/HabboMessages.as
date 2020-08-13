@@ -906,7 +906,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10352;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10430;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.UnacceptTradingComposer;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11093;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AcceptTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.ConfirmAcceptTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.ConfirmDeclineTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.OpenTradingComposer;
@@ -1905,7 +1905,7 @@
             OUTGOING_PACKETS[3845] = RemoveItemFromTradeComposer;
             OUTGOING_PACKETS[3847] = LagWarningReportMessageComposer;
             OUTGOING_PACKETS[3848] = GetBotInventoryComposer;
-            OUTGOING_PACKETS[3863] = _Str_11093;
+            OUTGOING_PACKETS[3863] = AcceptTradingComposer;
             OUTGOING_PACKETS[3872] = GetConcurrentUsersRewardMessageComposer;
             OUTGOING_PACKETS[3878] = GetIgnoredUsersMessageComposer;
             OUTGOING_PACKETS[3889] = OpenCampaignCalendarDoorComposer;
