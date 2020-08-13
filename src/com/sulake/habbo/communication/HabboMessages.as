@@ -941,7 +941,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftingRecipesAvailableComposer;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftableProductsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.CraftComposer;
-	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_7271;
+	import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftingRecipeComposer;
 	import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgesEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgeReceivedEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.badges.IsBadgeRequestFulfilledEvent;
@@ -1536,7 +1536,7 @@
             OUTGOING_PACKETS[1145] = GetCommunityGoalProgressMessageComposer;
             OUTGOING_PACKETS[1148] = FriendRequestQuestCompleteMessageComposer;
             OUTGOING_PACKETS[1160] = PeerUsersClassificationMessageComposer;
-            OUTGOING_PACKETS[1173] = _Str_7271;
+            OUTGOING_PACKETS[1173] = GetCraftingRecipeComposer;
             OUTGOING_PACKETS[1190] = GetSeasonalQuestsOnlyMessageComposer;
             OUTGOING_PACKETS[1195] = _Str_11178;
             OUTGOING_PACKETS[1202] = NavigatorSetSearchCodeViewModeMessageComposer;

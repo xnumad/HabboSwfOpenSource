@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.incoming.crafting.CraftingRecipesAvailableEvent;
     import com.sulake.habbo.inventory.events.HabboInventoryFurniListParsedEvent;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
-    import com.sulake.habbo.communication.messages.outgoing.crafting._Str_7271;
+    import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftingRecipeComposer;
     import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftableProductsComposer;
     import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftingRecipesAvailableComposer;
     import com.sulake.habbo.ui.widget.crafting.utils.CraftingViewStateEnum;
@@ -122,7 +122,7 @@
 
         private function _Str_19499():void
         {
-            this._container.connection.send(new _Str_7271(this._gizmoFurnitureId));
+            this._container.connection.send(new GetCraftingRecipeComposer(this._gizmoFurnitureId));
         }
 
         private function _Str_23500(k:CraftableProductsEvent):void
@@ -220,7 +220,7 @@
         private function _Str_18656(k:FurniListInvalidateEvent):void
         {
             this._container.connection.send(new RequestFurniInventoryComposer());
-            this._container.connection.send(new _Str_7271(this._gizmoFurnitureId));
+            this._container.connection.send(new GetCraftingRecipeComposer(this._gizmoFurnitureId));
             this._Str_15726();
         }
 
