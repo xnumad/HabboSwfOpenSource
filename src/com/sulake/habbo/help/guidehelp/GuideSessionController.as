@@ -821,7 +821,7 @@
             this._sessionData._Str_17222 = GuideSessionData._Str_11013;
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_CREATE;
             this._sessionData._Str_3989 = k;
-            this.openWindow(this._Str_24366, true);
+            this.openWindow(this.onUserCreateEvent, true);
             var _local_3:IIlluminaInputWidget = IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
             _local_3.maxChars = this._habboHelp.getInteger("guide.help.request.max.description.length", 0xFF);
             if (_arg_2)
@@ -830,7 +830,7 @@
             }
         }
 
-        private function _Str_24366(k:WindowEvent, _arg_2:IWindow):void
+        private function onUserCreateEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:String;
             if (((((this.disposed) || (this._window == null)) || (!(this._window.name == GuideSessionStateEnum.USER_CREATE))) || (!(k.type == WindowMouseEvent.CLICK))))
