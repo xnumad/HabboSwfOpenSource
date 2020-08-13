@@ -604,7 +604,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromIMMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideDecidesOnOfferMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_8147;
+	import com.sulake.habbo.communication.messages.outgoing.help.GetQuizQuestionsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetPetCommandsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetItemDataMessageComposer;
@@ -1550,7 +1550,7 @@
             OUTGOING_PACKETS[1263] = _Str_10352;
             OUTGOING_PACKETS[1265] = UpdateRoomCategoryAndTradeSettingsComposer;
             OUTGOING_PACKETS[1276] = SendRoomInviteMessageComposer;
-            OUTGOING_PACKETS[1296] = _Str_8147;
+            OUTGOING_PACKETS[1296] = GetQuizQuestionsComposer;
             OUTGOING_PACKETS[1299] = NewUserExperienceScriptProceedComposer;
             OUTGOING_PACKETS[1314] = ChatMessageComposer;
             OUTGOING_PACKETS[1320] = RoomUserKickMessageComposer;

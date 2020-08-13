@@ -9,7 +9,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9419;
     import com.sulake.habbo.communication.messages.incoming.help._Str_8785;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_8147;
+    import com.sulake.habbo.communication.messages.outgoing.help.GetQuizQuestionsComposer;
     import com.sulake.habbo.communication.messages.parser.help._Str_8043;
     import com.sulake.habbo.communication.messages.parser.help._Str_7308;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
@@ -78,12 +78,12 @@
 
         public function _Str_16933():void
         {
-            this._habboHelp.sendMessage(new _Str_8147(HABBO_WAY_QUIZ_CODE));
+            this._habboHelp.sendMessage(new GetQuizQuestionsComposer(HABBO_WAY_QUIZ_CODE));
         }
 
         public function _Str_14041():void
         {
-            this._habboHelp.sendMessage(new _Str_8147(SAFETY_QUIZ_CODE));
+            this._habboHelp.sendMessage(new GetQuizQuestionsComposer(SAFETY_QUIZ_CODE));
         }
 
         private function _Str_23120(k:_Str_9419):void
