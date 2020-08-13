@@ -11,7 +11,7 @@
     import com.sulake.habbo.toolbar.ToolbarDisplayExtensionIds;
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7218;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetHabboClubExtendOfferMessageComposer;
     import flash.events.TimerEvent;
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;
     import com.sulake.habbo.inventory.events.HabboInventoryHabboClubEvent;
@@ -81,7 +81,7 @@
             if (this._toolbar.inventory.clubLevel == HabboClubLevelEnum.VIP)
             {
                 this._toolbar.connection.send(new EventLogMessageComposer("DiscountPromo", "citizenshipdiscount", "client.club.extend.discount.clicked"));
-                this._toolbar.connection.send(new _Str_7218());
+                this._toolbar.connection.send(new GetHabboClubExtendOfferMessageComposer());
             }
         }
 

@@ -661,7 +661,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageExpirationComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.ShopTargetedOfferViewedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.SetTargetedOfferStateComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7218;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetHabboClubExtendOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubGiftInfo;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageWithEarliestExpiryComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSeasonalCalendarDailyOfferComposer;
@@ -1709,7 +1709,7 @@
             OUTGOING_PACKETS[2448] = _Str_11750;
             OUTGOING_PACKETS[2455] = GuideAdvertisementReadMessageComposer;
             OUTGOING_PACKETS[2456] = AvatarExpressionMessageComposer;
-            OUTGOING_PACKETS[2462] = _Str_7218;
+            OUTGOING_PACKETS[2462] = GetHabboClubExtendOfferMessageComposer;
             OUTGOING_PACKETS[2468] = UpdateRoomThumbnailMessageComposer;
             OUTGOING_PACKETS[248] = MoveObjectMessageComposer;
             OUTGOING_PACKETS[2486] = GetDailyQuestMessageComposer;
