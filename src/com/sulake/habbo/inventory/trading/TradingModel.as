@@ -764,7 +764,7 @@
             }
         }
 
-        public function _Str_24188():void
+        public function requestAcceptTrading():void
         {
             this._communication.connection.send(new _Str_11093());
         }

@@ -759,7 +759,7 @@
                                 }
                                 else
                                 {
-                                    this._tradingModel._Str_24188();
+                                    this._tradingModel.requestAcceptTrading();
                                 }
                                 break;
                             case TradingModel.TRADING_STATE_CONFIRMING:
