@@ -665,7 +665,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubGiftInfo;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7384;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7426;
-	import com.sulake.habbo.communication.messages.outgoing.catalog.RequestCatalogPage;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetLimitedOfferAppearingNextComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseVipMembershipExtensionComposer;
 	import com.sulake.habbo.communication.messages.incoming.help.*;
@@ -1926,7 +1926,7 @@
             OUTGOING_PACKETS[3997] = _Str_4348;
             OUTGOING_PACKETS[4000] = ClientHelloMessageComposer;
             OUTGOING_PACKETS[410] = GetLimitedOfferAppearingNextComposer;
-            OUTGOING_PACKETS[412] = RequestCatalogPage;
+            OUTGOING_PACKETS[412] = GetCatalogPageComposer;
             OUTGOING_PACKETS[418] = GetGiftWrappingConfigurationComposer;
             OUTGOING_PACKETS[433] = CompetitionRoomsSearchMessageComposer;
             OUTGOING_PACKETS[434] = CancelMarketplaceOfferMessageComposer;

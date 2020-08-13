@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class RequestCatalogPage implements IMessageComposer 
+    public class GetCatalogPageComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function RequestCatalogPage(_pageId:int, _offerId:int, _catalogType:String)
+        public function GetCatalogPageComposer(_pageId:int, _offerId:int, _catalogType:String)
         {
             this._array = [_pageId, _offerId, _catalogType];
         }

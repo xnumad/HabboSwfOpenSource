@@ -127,7 +127,7 @@
     import com.sulake.habbo.catalog.navigation.ICatalogNavigator;
     import com.sulake.core.Core;
     import com.sulake.core.communication.messages.IMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.catalog.RequestCatalogPage;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageComposer;
     import com.sulake.habbo.catalog.navigation.ICatalogNode;
     import com.sulake.habbo.catalog.enum.CatalogType;
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogComposer;
@@ -768,7 +768,7 @@
         {
             this.isBusy = true;
             this._pageId = k;
-            this.send(new RequestCatalogPage(k, _arg_2, _arg_3));
+            this.send(new GetCatalogPageComposer(k, _arg_2, _arg_3));
         }
 
         public function purchaseOffer(k:int, _arg_2:String="", _arg_3:int=1):void
