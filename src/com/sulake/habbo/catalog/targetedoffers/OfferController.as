@@ -14,7 +14,7 @@
     import com.sulake.habbo.catalog.targetedoffers.data.HabboMallOffer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_6074;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7084;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11313;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseTargetedOfferComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.catalog.targetedoffers.util.EventLogActions;
     import com.sulake.habbo.toolbar.ToolbarDisplayExtensionIds;
@@ -167,7 +167,7 @@
 
         public function purchaseTargetedOffer(k:TargetedOffer, _arg_2:int):void
         {
-            this._catalog.connection.send(new _Str_11313(k.id, _arg_2));
+            this._catalog.connection.send(new PurchaseTargetedOfferComposer(k.id, _arg_2));
             k._Str_24338(_arg_2);
             if (k.purchaseLimit > 0)
             {

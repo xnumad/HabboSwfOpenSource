@@ -642,7 +642,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseRoomAdMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogIndexComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetBundleDiscountRulesetComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11313;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseTargetedOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.MarkCatalogNewAdditionsPageOpenedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceWallItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogComposer;
@@ -1617,7 +1617,7 @@
             OUTGOING_PACKETS[1786] = RoomsWhereMyFriendsAreSearchMessageComposer;
             OUTGOING_PACKETS[1820] = DeselectFavouriteHabboGroupMessageComposer;
             OUTGOING_PACKETS[1822] = NewUserExperienceGetGiftsMessageComposer;
-            OUTGOING_PACKETS[1826] = _Str_11313;
+            OUTGOING_PACKETS[1826] = PurchaseTargetedOfferComposer;
             OUTGOING_PACKETS[1827] = GetPromoArticlesComposer;
             OUTGOING_PACKETS[1834] = NavigatorAddCollapsedCategoryMessageComposer;
             OUTGOING_PACKETS[1840] = ModMessageMessageComposer;
