@@ -577,7 +577,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_10003;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionInviteRequesterMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GetPendingCallsForHelpMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_11135;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionReportMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11187;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11701;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionIsTypingMessageComposer;
@@ -1920,7 +1920,7 @@
             OUTGOING_PACKETS[3961] = ChatReviewGuideVoteMessageComposer;
             OUTGOING_PACKETS[3964] = GetItemDataMessageComposer;
             OUTGOING_PACKETS[3965] = ChangeEmailComposer;
-            OUTGOING_PACKETS[3969] = _Str_11135;
+            OUTGOING_PACKETS[3969] = GuideSessionReportMessageComposer;
             OUTGOING_PACKETS[398] = GetRecyclerPrizesMessageComposer;
             OUTGOING_PACKETS[3991] = EditEventMessageComposer;
             OUTGOING_PACKETS[3997] = _Str_4348;

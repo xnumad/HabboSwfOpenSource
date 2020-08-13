@@ -78,7 +78,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideVoteMessageComposer;
     import com.sulake.core.window.enum.WindowType;
     import com.sulake.core.window.components.IDesktopWindow;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_11135;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionReportMessageComposer;
     import com.sulake.habbo.window.widgets.IIlluminaChatBubbleWidget;
     import com.sulake.core.window.enum.WindowParam;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_11187;
@@ -1487,7 +1487,7 @@
                     }
                     else
                     {
-                        this._habboHelp.sendMessage(new _Str_11135(_local_3));
+                        this._habboHelp.sendMessage(new GuideSessionReportMessageComposer(_local_3));
                         this._habboHelp.trackGoogle("guideHelp", (this._reportWindow.name + "_clickReport"));
                         this._Str_19564();
                         this.closeWindow();
