@@ -647,7 +647,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceWallItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetProductOfferComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12000;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubQueryFurniCountMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetGiftWrappingConfigurationComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RedeemVoucherMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetTargetedOfferComposer;
@@ -1721,7 +1721,7 @@
             OUTGOING_PACKETS[2502] = Game2GameChatMessageComposer;
             OUTGOING_PACKETS[2518] = GetRentOrBuyoutOfferMessageComposer;
             OUTGOING_PACKETS[2519] = GetInterstitialMessageComposer;
-            OUTGOING_PACKETS[2529] = _Str_12000;
+            OUTGOING_PACKETS[2529] = BuildersClubQueryFurniCountMessageComposer;
             OUTGOING_PACKETS[2537] = MyRecommendedRoomsMessageComposer;
             OUTGOING_PACKETS[2551] = _Str_10430;
             OUTGOING_PACKETS[2557] = GetEmailStatusComposer;

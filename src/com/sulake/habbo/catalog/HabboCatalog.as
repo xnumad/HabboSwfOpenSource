@@ -123,7 +123,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
     import com.sulake.habbo.catalog.event.CatalogEvent;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12000;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubQueryFurniCountMessageComposer;
     import com.sulake.habbo.catalog.navigation.ICatalogNavigator;
     import com.sulake.core.Core;
     import com.sulake.core.communication.messages.IMessageComposer;
@@ -707,7 +707,7 @@
                 this.createGroupMembershipsController();
                 this.initBundleDiscounts();
                 events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_INITIALIZED));
-                this.send(new _Str_12000());
+                this.send(new BuildersClubQueryFurniCountMessageComposer());
                 return true;
             }
             return false;

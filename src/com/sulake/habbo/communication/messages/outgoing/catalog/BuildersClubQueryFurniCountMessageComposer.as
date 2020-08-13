@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12000 implements IMessageComposer 
+    public class BuildersClubQueryFurniCountMessageComposer implements IMessageComposer
     {
 
 
