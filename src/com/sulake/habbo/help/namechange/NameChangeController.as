@@ -57,7 +57,7 @@
             return this._habboHelp.localization;
         }
 
-        public function get _Str_16619():String
+        public function get myName():String
         {
             return this._ownUserName;
         }

@@ -104,7 +104,7 @@
                 this._window.procedure = this._Str_3545;
                 this._mainView = (this._window.content.getChildAt(0) as IWindowContainer);
             }
-            this._controller.localization.registerParameter("tutorial.name_change.current", "name", this._controller._Str_16619);
+            this._controller.localization.registerParameter("tutorial.name_change.current", "name", this._controller.myName);
             this._window.caption = this._controller.localization.getLocalization("tutorial.name_change.title.main");
             this._Str_4731(this._mainView);
         }
@@ -405,7 +405,7 @@
                     this._Str_20459();
                     return;
                 case "keep_name_button":
-                    this._checkedName = this._controller._Str_16619;
+                    this._checkedName = this._controller.myName;
                     this._Str_16586();
                     return;
                 case "check_name_button":
