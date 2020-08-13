@@ -63,7 +63,7 @@
     import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7364;
     import com.sulake.habbo.window.utils.IConfirmDialog;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_10522;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionInviteRequesterMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7077;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_4434;
@@ -755,7 +755,7 @@
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickVisit"));
                     return;
                 case "invite_button":
-                    this._habboHelp.sendMessage(new _Str_10522());
+                    this._habboHelp.sendMessage(new GuideSessionInviteRequesterMessageComposer());
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickInvite"));
                     return;
                 case "report_link":

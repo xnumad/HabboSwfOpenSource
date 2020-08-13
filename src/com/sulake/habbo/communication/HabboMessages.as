@@ -575,7 +575,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.*;
 	import com.sulake.habbo.communication.messages.outgoing.help.PostQuizAnswersComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_10003;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_10522;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionInviteRequesterMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_10695;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11135;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11187;
@@ -1692,7 +1692,7 @@
             OUTGOING_PACKETS[2312] = OpenFlatConnectionMessageComposer;
             OUTGOING_PACKETS[0x0909] = SetUIFlagsMessageComposer;
             OUTGOING_PACKETS[232] = GetMessagesMessageComposer;
-            OUTGOING_PACKETS[234] = _Str_10522;
+            OUTGOING_PACKETS[234] = GuideSessionInviteRequesterMessageComposer;
             OUTGOING_PACKETS[2341] = _Str_11536;
             OUTGOING_PACKETS[2343] = ResetUnseenItemsComposer;
             OUTGOING_PACKETS[2384] = _Str_10650;
