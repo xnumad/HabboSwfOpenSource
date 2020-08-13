@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7373 implements IMessageComposer 
+    public class GetClubGiftInfo implements IMessageComposer
     {
         public function dispose():void
         {

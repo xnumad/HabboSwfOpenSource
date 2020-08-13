@@ -3,7 +3,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.ClubGiftWidget;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.catalog.HabboCatalog;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7373;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubGiftInfo;
     import com.sulake.habbo.catalog.IPurchasableOffer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.SelectClubGiftComposer;
     import com.sulake.habbo.window.IHabboWindowManager;
@@ -41,7 +41,7 @@
         public function set widget(k:ClubGiftWidget):void
         {
             this._widget = k;
-            this._catalog.connection.send(new _Str_7373());
+            this._catalog.connection.send(new GetClubGiftInfo());
         }
 
         public function get _Str_12860():int

@@ -33,7 +33,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.badges.BadgesParser;
     import com.sulake.habbo.catalog.clubcenter.util.BadgeResolver;
     import com.sulake.habbo.communication.messages.outgoing.inventory.badges.GetBadgesComposer;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7373;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubGiftInfo;
     import com.sulake.habbo.communication.messages.outgoing.users.ScrGetKickbackInfoMessageComposer;
     import com.sulake.habbo.catalog.purse.IPurse;
     import com.sulake.habbo.catalog.clubcenter.util.ClubStatus;
@@ -248,7 +248,7 @@
         {
             this._dataPending = true;
             this._communicationManager.connection.send(new GetBadgesComposer());
-            this._communicationManager.connection.send(new _Str_7373());
+            this._communicationManager.connection.send(new GetClubGiftInfo());
             if (!USE_FAKE_DATA)
             {
                 this._communicationManager.connection.send(new ScrGetKickbackInfoMessageComposer());

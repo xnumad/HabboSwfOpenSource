@@ -662,7 +662,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_6074;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7084;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7218;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7373;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubGiftInfo;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7384;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7426;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RequestCatalogPage;
@@ -1933,7 +1933,7 @@
             OUTGOING_PACKETS[436] = GetForumsListMessageComposer;
             OUTGOING_PACKETS[462] = BuildersClubPlaceWallItemMessageComposer;
             OUTGOING_PACKETS[477] = GuideSessionFeedbackMessageComposer;
-            OUTGOING_PACKETS[487] = _Str_7373;
+            OUTGOING_PACKETS[487] = GetClubGiftInfo;
             OUTGOING_PACKETS[516] = _Str_11815;
             OUTGOING_PACKETS[519] = GuideSessionIsTypingMessageComposer;
             OUTGOING_PACKETS[532] = DeleteRoomMessageComposer;
