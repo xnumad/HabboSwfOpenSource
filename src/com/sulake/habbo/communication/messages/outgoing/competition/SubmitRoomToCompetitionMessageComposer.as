@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_4038 implements IMessageComposer 
+    public class SubmitRoomToCompetitionMessageComposer implements IMessageComposer
     {
         public static const _Str_16111:int = 0;
         public static const _Str_17637:int = 1;
@@ -11,7 +11,7 @@
 
         private var _data:Array;
 
-        public function _Str_4038(k:String, _arg_2:int)
+        public function SubmitRoomToCompetitionMessageComposer(k:String, _arg_2:int)
         {
             this._data = [];
             super();

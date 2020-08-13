@@ -125,7 +125,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_10525;
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToACompetitionRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_12123;
-	import com.sulake.habbo.communication.messages.outgoing.competition._Str_4038;
+	import com.sulake.habbo.communication.messages.outgoing.competition.SubmitRoomToCompetitionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_5974;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_7424;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_9816;
@@ -1730,7 +1730,7 @@
             OUTGOING_PACKETS[2582] = ModKickMessageComposer;
             OUTGOING_PACKETS[2587] = GetRoomChatlogMessageComposer;
             OUTGOING_PACKETS[2594] = GetProductOfferComposer;
-            OUTGOING_PACKETS[2595] = _Str_4038;
+            OUTGOING_PACKETS[2595] = SubmitRoomToCompetitionMessageComposer;
             OUTGOING_PACKETS[2596] = PongMessageComposer;
             OUTGOING_PACKETS[2597] = GetMarketplaceConfigurationMessageComposer;
             OUTGOING_PACKETS[2624] = CommandBotComposer;

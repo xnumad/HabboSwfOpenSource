@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.competition._Str_7424;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_4038;
+    import com.sulake.habbo.communication.messages.outgoing.competition.SubmitRoomToCompetitionMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
@@ -328,7 +328,7 @@
         {
             if ((((!(this._window == null)) && (this._window.visible)) && (this._submit)))
             {
-                this._questEngine.send(new _Str_4038(this._goalCode, _Str_4038._Str_16111));
+                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer._Str_16111));
             }
         }
 
@@ -398,7 +398,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._questEngine.send(new _Str_4038(this._goalCode, _Str_4038._Str_17637));
+                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer._Str_17637));
             }
         }
 
@@ -406,7 +406,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._questEngine.send(new _Str_4038(this._goalCode, _Str_4038._Str_18299));
+                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer._Str_18299));
             }
         }
 
@@ -414,7 +414,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._questEngine.send(new _Str_4038(this._goalCode, _Str_4038._Str_15919));
+                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer._Str_15919));
             }
         }
 
