@@ -578,7 +578,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionInviteRequesterMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GetPendingCallsForHelpMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionReportMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_11187;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11701;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionIsTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromSelfieMessageComposer;
@@ -1911,7 +1911,7 @@
             OUTGOING_PACKETS[3889] = OpenCampaignCalendarDoorComposer;
             OUTGOING_PACKETS[389] = _Str_12437;
             OUTGOING_PACKETS[3898] = GetFurnitureAliasesMessageComposer;
-            OUTGOING_PACKETS[3899] = _Str_11187;
+            OUTGOING_PACKETS[3899] = GuideSessionMessageMessageComposer;
             OUTGOING_PACKETS[39] = MyGuildBasesSearchMessageComposer;
             OUTGOING_PACKETS[3900] = GetThreadMessageComposer;
             OUTGOING_PACKETS[3943] = RoomTextSearchMessageComposer;

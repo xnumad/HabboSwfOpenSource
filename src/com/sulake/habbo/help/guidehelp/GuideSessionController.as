@@ -81,7 +81,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionReportMessageComposer;
     import com.sulake.habbo.window.widgets.IIlluminaChatBubbleWidget;
     import com.sulake.core.window.enum.WindowParam;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_11187;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionMessageMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionIsTypingMessageComposer;
     import __AS3__.vec.*;
 
@@ -1648,7 +1648,7 @@
         {
             if (_arg_2.length > 0)
             {
-                this._habboHelp.sendMessage(new _Str_11187(_arg_2));
+                this._habboHelp.sendMessage(new GuideSessionMessageMessageComposer(_arg_2));
                 IIlluminaInputWidget(k.widget).message = "";
                 this._Str_21639();
             }
