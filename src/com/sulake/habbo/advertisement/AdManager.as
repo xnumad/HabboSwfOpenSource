@@ -21,7 +21,7 @@
     import flash.system.Security;
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import flash.external.ExternalInterface;
-    import com.sulake.habbo.communication.messages.outgoing.advertisement._Str_10855;
+    import com.sulake.habbo.communication.messages.outgoing.advertisement.GetInterstitialMessageComposer;
     import com.sulake.habbo.communication.messages.parser.advertisement.InterstitialMessageParser;
     import com.sulake.habbo.advertisement.events.InterstitialEvent;
     import flash.display.Bitmap;
@@ -131,7 +131,7 @@
                 this._Str_17549();
                 return;
             }
-            this._communicationManager.connection.send(new _Str_10855());
+            this._communicationManager.connection.send(new GetInterstitialMessageComposer());
         }
 
         private function _Str_24116(k:InterstitialMessageEvent):void

@@ -390,7 +390,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.directory._Str_7123;
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemIdsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemsComposer;
-	import com.sulake.habbo.communication.messages.outgoing.advertisement._Str_10855;
+	import com.sulake.habbo.communication.messages.outgoing.advertisement.GetInterstitialMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.advertisement.InterstitialShownMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.tracking.LatencyPingResponseMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.userclassification.UserClassificationMessageEvent;
@@ -1720,7 +1720,7 @@
             OUTGOING_PACKETS[2501] = ChatReviewGuideDetachedMessageComposer;
             OUTGOING_PACKETS[2502] = Game2GameChatMessageComposer;
             OUTGOING_PACKETS[2518] = GetRentOrBuyoutOfferMessageComposer;
-            OUTGOING_PACKETS[2519] = _Str_10855;
+            OUTGOING_PACKETS[2519] = GetInterstitialMessageComposer;
             OUTGOING_PACKETS[2529] = _Str_12000;
             OUTGOING_PACKETS[2537] = MyRecommendedRoomsMessageComposer;
             OUTGOING_PACKETS[2551] = _Str_10430;
