@@ -385,7 +385,7 @@
             }
             else
             {
-                this._gameCenterView._Str_24458(this._selectedGame);
+                this._gameCenterView.openVipBuying(this._selectedGame);
             }
         }
 

@@ -288,7 +288,7 @@
             this._Str_18574();
         }
 
-        public function _Str_24458(k:int):void
+        public function openVipBuying(k:int):void
         {
             this._startPlaying = false;
             var _local_2:String = GameConfigurations.getNameId(k);
