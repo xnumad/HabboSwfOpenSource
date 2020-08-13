@@ -668,7 +668,7 @@
             this._inventory.toggleInventoryPage(InventoryCategory.FURNI);
         }
 
-        public function _Str_24442(k:int):void
+        public function requestOpenTrading(k:int):void
         {
             if (_Str_14579.isPerkAllowed(this._inventory.sessionData, this._inventory.windowManager, PerkEnum.TRADE))
             {

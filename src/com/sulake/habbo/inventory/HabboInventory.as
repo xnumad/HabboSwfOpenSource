@@ -659,7 +659,7 @@
             {
                 return;
             }
-            _local_3._Str_24442(k);
+            _local_3.requestOpenTrading(k);
         }
 
         public function get tradingActive():Boolean
