@@ -122,7 +122,7 @@
                     this._textRegion = (k.findChildByName("text_region") as IRegionWindow);
                     if (this._textRegion)
                     {
-                        this._textRegion.addEventListener(WindowMouseEvent.CLICK, this._Str_13315);
+                        this._textRegion.addEventListener(WindowMouseEvent.CLICK, this.onTextRegionClicked);
                         this._textRegion.addEventListener(WindowMouseEvent.OVER, this._Str_14217);
                         this._textRegion.addEventListener(WindowMouseEvent.OUT, this._Str_13749);
                     }
@@ -145,7 +145,7 @@
             {
                 if (this._textRegion)
                 {
-                    this._textRegion.removeEventListener(WindowMouseEvent.CLICK, this._Str_13315);
+                    this._textRegion.removeEventListener(WindowMouseEvent.CLICK, this.onTextRegionClicked);
                     this._textRegion.removeEventListener(WindowMouseEvent.OVER, this._Str_14217);
                     this._textRegion.removeEventListener(WindowMouseEvent.OUT, this._Str_13749);
                     this._textRegion = null;
@@ -196,7 +196,7 @@
             }
         }
 
-        private function _Str_13315(k:WindowMouseEvent):void
+        private function onTextRegionClicked(k:WindowMouseEvent):void
         {
             if (!this._toolbar.catalog.videoOffers.launch(VideoOfferTypeEnum.CREDIT))
             {

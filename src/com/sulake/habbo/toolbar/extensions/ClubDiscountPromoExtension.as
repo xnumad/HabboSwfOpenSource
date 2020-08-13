@@ -71,7 +71,7 @@
                     _local_3 = (k.findChildByName("text_region") as IRegionWindow);
                     if (_local_3)
                     {
-                        _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_13315);
+                        _local_3.addEventListener(WindowMouseEvent.CLICK, this.onTextRegionClicked);
                         _local_3.addEventListener(WindowMouseEvent.OVER, this._Str_14217);
                         _local_3.addEventListener(WindowMouseEvent.OUT, this._Str_13749);
                     }
@@ -109,7 +109,7 @@
             this._disposed = true;
         }
 
-        private function _Str_13315(k:WindowMouseEvent):void
+        private function onTextRegionClicked(k:WindowMouseEvent):void
         {
             if (this._toolbar.inventory.clubLevel == HabboClubLevelEnum.VIP)
             {
