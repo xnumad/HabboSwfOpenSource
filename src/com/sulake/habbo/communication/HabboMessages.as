@@ -386,7 +386,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.register.UpdateFigureDataMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userclassification.PeerUsersClassificationMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.userclassification.RoomUsersClassificationMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.game.directory._Str_16208;
+	import com.sulake.habbo.communication.messages.outgoing.game.directory.Game2CheckGameDirectoryStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.directory._Str_7123;
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemIdsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemsComposer;
@@ -1829,7 +1829,7 @@
             OUTGOING_PACKETS[3226] = RenderRoomMessageComposer;
             OUTGOING_PACKETS[3230] = PerformanceLogMessageComposer;
             OUTGOING_PACKETS[3257] = GetSeasonalCalendarDailyOfferComposer;
-            OUTGOING_PACKETS[3259] = _Str_16208;
+            OUTGOING_PACKETS[3259] = Game2CheckGameDirectoryStatusMessageComposer;
             OUTGOING_PACKETS[3260] = ModerateRoomMessageComposer;
             OUTGOING_PACKETS[3265] = GetExtendedProfileMessageComposer;
             OUTGOING_PACKETS[3267] = GetPendingCallsForHelpMessageComposer;
