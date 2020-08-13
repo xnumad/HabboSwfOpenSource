@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_8070;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7656;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_7494;
+    import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.parser.help._Str_7877;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -619,7 +619,7 @@
                     this._habboHelp.sendMessage(new _Str_7656(this._reportedGroupId, this._reportedThreadId, this._topicIndex, this._message));
                     break;
                 case HabboHelp._Str_4490:
-                    this._habboHelp.sendMessage(new _Str_7494(this._reportedGroupId, this._reportedThreadId, this._reportedMessageId, this._topicIndex, this._message));
+                    this._habboHelp.sendMessage(new CallForHelpFromForumMessageMessageComposer(this._reportedGroupId, this._reportedThreadId, this._reportedMessageId, this._topicIndex, this._message));
                     break;
             }
             this._habboHelp._Str_19312();

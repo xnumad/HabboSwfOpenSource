@@ -598,7 +598,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7077;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7293;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7364;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_7494;
+	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7640;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7656;
@@ -1569,7 +1569,7 @@
             OUTGOING_PACKETS[1392] = ModToolSanctionComposer;
             OUTGOING_PACKETS[1397] = ModerateThreadMessageComposer;
             OUTGOING_PACKETS[1411] = _Str_10231;
-            OUTGOING_PACKETS[1412] = _Str_7494;
+            OUTGOING_PACKETS[1412] = CallForHelpFromForumMessageMessageComposer;
             OUTGOING_PACKETS[1419] = _Str_12244;
             OUTGOING_PACKETS[1424] = _Str_7016;
             OUTGOING_PACKETS[143] = _Str_10126;
