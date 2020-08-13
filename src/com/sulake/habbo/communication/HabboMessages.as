@@ -907,7 +907,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10430;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.UnacceptTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11093;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11362;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.ConfirmAcceptTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11536;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.OpenTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.RemoveItemFromTradeComposer;
@@ -1758,7 +1758,7 @@
             OUTGOING_PACKETS[2752] = CreateFlatMessageComposer;
             OUTGOING_PACKETS[2755] = CallForHelpFromSelfieMessageComposer;
             OUTGOING_PACKETS[2758] = PopularRoomsSearchMessageComposer;
-            OUTGOING_PACKETS[2760] = _Str_11362;
+            OUTGOING_PACKETS[2760] = ConfirmAcceptTradingComposer;
             OUTGOING_PACKETS[2765] = EnterOneWayDoorMessageComposer;
             OUTGOING_PACKETS[2766] = ModBanMessageComposer;
             OUTGOING_PACKETS[2768] = PassCarryItemToPetMessageComposer;
