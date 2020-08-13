@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.help._Str_7620;
     import com.sulake.habbo.communication.messages.incoming.help._Str_8337;
     import com.sulake.habbo.help.enum._Str_2849;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_11879;
+    import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromSelfieMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7640;
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
@@ -238,7 +238,7 @@
 
         public function reportSelfie(k:String, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:int):void
         {
-            this._habboHelp.sendMessage(new _Str_11879(k, _arg_3, _arg_4, _arg_2, _arg_5));
+            this._habboHelp.sendMessage(new CallForHelpFromSelfieMessageComposer(k, _arg_3, _arg_4, _arg_2, _arg_5));
         }
 
         public function reportPhoto(k:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):void

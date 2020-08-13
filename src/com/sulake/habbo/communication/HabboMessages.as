@@ -581,7 +581,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11187;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11701;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11748;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_11879;
+	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromSelfieMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_12224;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_12273;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_15943;
@@ -1756,7 +1756,7 @@
             OUTGOING_PACKETS[2746] = _Str_11701;
             OUTGOING_PACKETS[2750] = OpenQuestTrackerMessageComposer;
             OUTGOING_PACKETS[2752] = CreateFlatMessageComposer;
-            OUTGOING_PACKETS[2755] = _Str_11879;
+            OUTGOING_PACKETS[2755] = CallForHelpFromSelfieMessageComposer;
             OUTGOING_PACKETS[2758] = PopularRoomsSearchMessageComposer;
             OUTGOING_PACKETS[2760] = _Str_11362;
             OUTGOING_PACKETS[2765] = EnterOneWayDoorMessageComposer;
