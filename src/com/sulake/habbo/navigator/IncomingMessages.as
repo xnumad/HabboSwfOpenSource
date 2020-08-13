@@ -75,7 +75,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator.ConvertedRoomIdMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.NavigatorSettingsMessageParser;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.VisitUserMessageComposer;
     import com.sulake.habbo.communication.messages.parser.navigator.UserFlatCatsMessageParser;
     import com.sulake.habbo.navigator.mainview.tabpagedecorators.RoomsTabPageDecorator;
     import com.sulake.habbo.communication.messages.parser.navigator.UserEventCatsMessageParser;
@@ -418,7 +418,7 @@
                 if (this._navigator.propertyExists("friend.id"))
                 {
                     _local_4 = 0;
-                    this._navigator.send(new _Str_4348(int(this._navigator.getProperty("friend.id"))));
+                    this._navigator.send(new VisitUserMessageComposer(int(this._navigator.getProperty("friend.id"))));
                 }
                 if (((this._navigator.propertyExists("forward.type")) && (this._navigator.propertyExists("forward.id"))))
                 {

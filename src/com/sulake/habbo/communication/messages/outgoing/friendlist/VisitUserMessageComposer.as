@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_4348 implements IMessageComposer, IDisposable 
+    public class VisitUserMessageComposer implements IMessageComposer, IDisposable
     {
         private var messageArray:Array;
 
-        public function _Str_4348(k:int)
+        public function VisitUserMessageComposer(k:int)
         {
             this.messageArray = new Array();
             super();

@@ -31,7 +31,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileByNameMessageComposer;
     import com.sulake.habbo.friendbar.events.FriendRequestUpdateEvent;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.VisitUserMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.friendbar.events.NewMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11815;
@@ -306,7 +306,7 @@
         {
             if (this._habboCommunicationManager)
             {
-                this._habboCommunicationManager.connection.send(new _Str_4348(k));
+                this._habboCommunicationManager.connection.send(new VisitUserMessageComposer(k));
                 this._habboCommunicationManager.connection.send(new EventLogMessageComposer(TRACKING_EVENT_CATEGORY, TRACKING_EVENT_TYPE, TRACKING_EVENT_ACTION_VISIT));
             }
         }

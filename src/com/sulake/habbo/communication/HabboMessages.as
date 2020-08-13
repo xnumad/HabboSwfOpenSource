@@ -813,7 +813,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11815;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.HabboSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_12244;
-	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
+	import com.sulake.habbo.communication.messages.outgoing.friendlist.VisitUserMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_9977;
 	import com.sulake.habbo.communication.messages.incoming.room.session.*;
 	import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
@@ -1923,7 +1923,7 @@
             OUTGOING_PACKETS[3969] = GuideSessionReportMessageComposer;
             OUTGOING_PACKETS[398] = GetRecyclerPrizesMessageComposer;
             OUTGOING_PACKETS[3991] = EditEventMessageComposer;
-            OUTGOING_PACKETS[3997] = _Str_4348;
+            OUTGOING_PACKETS[3997] = VisitUserMessageComposer;
             OUTGOING_PACKETS[4000] = ClientHelloMessageComposer;
             OUTGOING_PACKETS[410] = GetLimitedOfferAppearingNextComposer;
             OUTGOING_PACKETS[412] = GetCatalogPageComposer;

@@ -3,7 +3,7 @@
     import com.sulake.habbo.moderation.ModerationManager;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.VisitUserMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
 
     public class _Str_10411 
@@ -24,7 +24,7 @@
             {
                 return;
             }
-            this._Str_2327.connection.send(new _Str_4348(this._Str_2306));
+            this._Str_2327.connection.send(new VisitUserMessageComposer(this._Str_2306));
         }
     }
 }

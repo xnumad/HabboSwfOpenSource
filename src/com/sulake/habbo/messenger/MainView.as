@@ -19,7 +19,7 @@
     import com.sulake.habbo.messenger.events.NewMessageEvent;
     import com.sulake.habbo.window.widgets.IIlluminaChatBubbleWidget;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.VisitUserMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
@@ -799,7 +799,7 @@
                             this.hideConversation(this._currentConversationId);
                             break;
                         case "follow_button":
-                            this._messenger.send(new _Str_4348(this._currentConversationId));
+                            this._messenger.send(new VisitUserMessageComposer(this._currentConversationId));
                             this._messenger.send(new EventLogMessageComposer("Navigation", "IM", "go.im"));
                             break;
                         case "profile_button":

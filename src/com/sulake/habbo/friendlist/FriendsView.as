@@ -14,7 +14,7 @@
     import flash.geom.Point;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.VisitUserMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
@@ -437,7 +437,7 @@
             {
                 return;
             }
-            this._friendList.send(new _Str_4348(_arg_2.id));
+            this._friendList.send(new VisitUserMessageComposer(_arg_2.id));
             this._friendList.send(new EventLogMessageComposer("Navigation", "Friend List", "go.friendlist"));
         }
 
