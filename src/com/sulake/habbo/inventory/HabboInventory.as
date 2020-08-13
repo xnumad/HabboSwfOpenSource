@@ -547,7 +547,7 @@
             }
         }
 
-        public function _Str_4731():void
+        public function showView():void
         {
             if (this._view)
             {

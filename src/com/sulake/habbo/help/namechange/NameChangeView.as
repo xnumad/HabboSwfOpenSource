@@ -79,7 +79,7 @@
             }
         }
 
-        private function _Str_4731(k:IWindowContainer):void
+        private function showView(k:IWindowContainer):void
         {
             this._waitingNameCheck = false;
             if (this._currentView)
@@ -106,7 +106,7 @@
             }
             this._controller.localization.registerParameter("tutorial.name_change.current", "name", this._controller.myName);
             this._window.caption = this._controller.localization.getLocalization("tutorial.name_change.title.main");
-            this._Str_4731(this._mainView);
+            this.showView(this._mainView);
         }
 
         private function _Str_20459():void
@@ -127,7 +127,7 @@
                 k.disable();
             }
             this._Str_15733();
-            this._Str_4731(this._selectionView);
+            this.showView(this._selectionView);
         }
 
         private function _Str_16586():void
@@ -147,7 +147,7 @@
             {
                 k.text = this._checkedName;
             }
-            this._Str_4731(this._confirmationView);
+            this.showView(this._confirmationView);
             if (ExternalInterface.available)
             {
                 ExternalInterface.call(FLASHEXTERNALINTERFACE_UPDATENAME, this._checkedName);

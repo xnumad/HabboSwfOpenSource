@@ -244,7 +244,7 @@
             }
             if (((this._isPlacing) && (k.type == RoomEngineObjectEvent.PLACED)))
             {
-                this._controller._Str_4731();
+                this._controller.showView();
                 this._isPlacing = false;
             }
         }

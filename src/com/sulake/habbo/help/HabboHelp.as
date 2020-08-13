@@ -304,7 +304,7 @@
         {
             if (this._nameChangeController != null)
             {
-                this._nameChangeController._Str_4731();
+                this._nameChangeController.showView();
             }
         }
 

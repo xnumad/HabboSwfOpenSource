@@ -574,7 +574,7 @@
                         this.cancelFurniInMover();
                         if (!this._Str_5337())
                         {
-                            this._controller._Str_4731();
+                            this._controller.showView();
                         }
                     }
                     if (_local_3.getTotalCount() <= 0)
@@ -1294,13 +1294,13 @@
                 this._isObjectMoverRequested = false;
                 if (!(k as RoomEngineObjectPlacedEvent)._Str_4057)
                 {
-                    this._controller._Str_4731();
+                    this._controller.showView();
                 }
                 else
                 {
                     if (this._category == InventoryCategory.RENTABLES)
                     {
-                        this._controller._Str_4731();
+                        this._controller.showView();
                     }
                 }
             }
