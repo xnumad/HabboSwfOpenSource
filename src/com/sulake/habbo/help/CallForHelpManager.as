@@ -665,7 +665,7 @@
             var _local_4:String = _local_2._Str_3460;
             switch (_local_3)
             {
-                case CallForHelpResultEnum._Str_18080:
+                case CallForHelpResultEnum.TOO_MANY_PENDING_CALLS_CODE:
                     this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_EMERGENCY);
                     return;
                 case CallForHelpResultEnum._Str_18473:
