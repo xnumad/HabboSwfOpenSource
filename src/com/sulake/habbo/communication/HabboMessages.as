@@ -658,7 +658,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetDirectClubBuyAvailableComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17335;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17774;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17987;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageExpirationComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_6074;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7084;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7218;
@@ -1952,7 +1952,7 @@
             OUTGOING_PACKETS[711] = RequestRoomPropertySet;
             OUTGOING_PACKETS[722] = RemoveAdminRightsFromMemberMessageComposer;
             OUTGOING_PACKETS[741] = _Str_7312;
-            OUTGOING_PACKETS[742] = _Str_17987;
+            OUTGOING_PACKETS[742] = GetCatalogPageExpirationComposer;
             OUTGOING_PACKETS[749] = GiveSupplementToPetMessageComposer;
             OUTGOING_PACKETS[753] = AddJukeboxDiskComposer;
             OUTGOING_PACKETS[0x0300] = OpenMessageComposer;

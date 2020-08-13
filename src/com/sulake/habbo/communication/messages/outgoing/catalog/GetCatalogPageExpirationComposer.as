@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_17987 implements IMessageComposer 
+    public class GetCatalogPageExpirationComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_17987(k:String)
+        public function GetCatalogPageExpirationComposer(k:String)
         {
             this._array = [];
             super();
