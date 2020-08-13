@@ -13,7 +13,7 @@
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_7640;
+    import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromPhotoMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromIMMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
@@ -421,7 +421,7 @@
             switch (this._contentModerationType)
             {
                 case HabboHelp.REPORT_TYPE_PHOTO:
-                    this._habboHelp.sendMessage(new _Str_7640(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp.reportedUserId, this._currentTopic.id, this._habboHelp._Str_10658));
+                    this._habboHelp.sendMessage(new CallForHelpFromPhotoMessageComposer(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp.reportedUserId, this._currentTopic.id, this._habboHelp._Str_10658));
                     return;
                 case HabboHelp.REPORT_TYPE_IM:
                     this._habboHelp.sendMessage(new CallForHelpFromIMMessageComposer(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721.chatReportController.collectSelectedEntries(HabboHelp.REPORT_TYPE_IM, this._habboHelp.reportedUserId)));

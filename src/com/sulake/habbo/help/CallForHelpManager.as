@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.incoming.help._Str_8337;
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromSelfieMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_7640;
+    import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromPhotoMessageComposer;
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
     import com.sulake.core.window.components.IWidgetWindow;
@@ -243,7 +243,7 @@
 
         public function reportPhoto(k:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):void
         {
-            this._habboHelp._Str_25749(new _Str_7640(k, _arg_3, _arg_4, _arg_2, _arg_5));
+            this._habboHelp._Str_25749(new CallForHelpFromPhotoMessageComposer(k, _arg_3, _arg_4, _arg_2, _arg_5));
             this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_PHOTO);
         }
 
