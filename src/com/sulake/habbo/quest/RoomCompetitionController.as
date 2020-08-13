@@ -319,7 +319,7 @@
             }
         }
 
-        public function _Str_25159():void
+        public function sendRoomCompetitionInit():void
         {
             this._questEngine.send(new RoomCompetitionInitMessageComposer());
         }

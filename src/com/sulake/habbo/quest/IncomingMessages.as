@@ -247,7 +247,7 @@
         {
             if (((k.getParser().isVIP) && (k.getParser().responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_PURCHASE)))
             {
-                this._questEngine._Str_8189._Str_25159();
+                this._questEngine._Str_8189.sendRoomCompetitionInit();
             }
         }
 
