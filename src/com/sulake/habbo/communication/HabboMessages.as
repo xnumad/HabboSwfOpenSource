@@ -260,7 +260,7 @@
 	import com.sulake.core.communication.messages.IMessageConfiguration;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_10410;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_18298;
-	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_6202;
+	import com.sulake.habbo.communication.messages.outgoing.gifts.SetPhoneNumberVerificationStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
 	import com.sulake.habbo.communication.messages.outgoing.gifts.TryPhoneNumberMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7433;
@@ -1564,7 +1564,7 @@
             OUTGOING_PACKETS[1367] = SetSoundSettingsComposer;
             OUTGOING_PACKETS[137] = AcceptFriendMessageComposer;
             OUTGOING_PACKETS[1371] = GetBadgePointLimitsComposer;
-            OUTGOING_PACKETS[1379] = _Str_6202;
+            OUTGOING_PACKETS[1379] = SetPhoneNumberVerificationStatusMessageComposer;
             OUTGOING_PACKETS[1391] = GetUserChatlogMessageComposer;
             OUTGOING_PACKETS[1392] = ModToolSanctionComposer;
             OUTGOING_PACKETS[1397] = ModerateThreadMessageComposer;

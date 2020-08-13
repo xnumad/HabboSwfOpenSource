@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.gifts.TryPhoneNumberMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_10410;
-    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_6202;
+    import com.sulake.habbo.communication.messages.outgoing.gifts.SetPhoneNumberVerificationStatusMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
     import flash.utils.getTimer;
     import com.sulake.habbo.toolbar.ToolbarDisplayExtensionIds;
@@ -94,7 +94,7 @@
 
         public function _Str_23711():void
         {
-            this._connection.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
+            this._connection.send(new SetPhoneNumberVerificationStatusMessageComposer(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
             this._Str_7383();
         }
 

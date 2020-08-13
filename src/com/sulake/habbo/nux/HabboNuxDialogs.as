@@ -25,7 +25,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceNotCompleteEvent;
     import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOfferEvent;
-    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_6202;
+    import com.sulake.habbo.communication.messages.outgoing.gifts.SetPhoneNumberVerificationStatusMessageComposer;
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.window.utils.IConfirmDialog;
@@ -144,7 +144,7 @@
 
         public function onVerify():void
         {
-            this._connection.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NON_EXISTING));
+            this._connection.send(new SetPhoneNumberVerificationStatusMessageComposer(ClientPhoneVerificationStatusEnum.NON_EXISTING));
         }
 
         public function onReject():void
@@ -158,7 +158,7 @@
             if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) && (this._connection)))
             {
                 this.destroyNuxOfferView();
-                this._connection.send(new _Str_6202(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
+                this._connection.send(new SetPhoneNumberVerificationStatusMessageComposer(ClientPhoneVerificationStatusEnum.NEVER_AGAIN));
             }
         }
 

@@ -3,13 +3,13 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_6202 implements IMessageComposer, IDisposable 
+    public class SetPhoneNumberVerificationStatusMessageComposer implements IMessageComposer, IDisposable
     {
         public static const NO_ISSUE_ID:int = -1;
 
         private var _array:Array;
 
-        public function _Str_6202(k:int)
+        public function SetPhoneNumberVerificationStatusMessageComposer(k:int)
         {
             this._array = new Array();
             super();
