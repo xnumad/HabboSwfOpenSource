@@ -636,7 +636,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.SelectClubGiftComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10231;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10281;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetBonusRareInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10337;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetRoomAdPurchaseInfoComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10613;
@@ -1977,7 +1977,7 @@
             OUTGOING_PACKETS[887] = GuideSessionResolvedMessageComposer;
             OUTGOING_PACKETS[90] = RedeemCommunityGoalPrizeMessageComposer;
             OUTGOING_PACKETS[924] = SetClothingChangeDataMessageComposer;
-            OUTGOING_PACKETS[957] = _Str_10281;
+            OUTGOING_PACKETS[957] = GetBonusRareInfoMessageComposer;
             OUTGOING_PACKETS[96] = LatencyPingReportMessageComposer;
             OUTGOING_PACKETS[99] = UseFurnitureMessageComposer;
             OUTGOING_PACKETS[992] = UnbanUserFromRoomMessageComposer;

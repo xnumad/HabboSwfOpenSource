@@ -8,7 +8,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.room.events.RoomEngineEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_6906;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10281;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetBonusRareInfoMessageComposer;
     import com.sulake.core.window.IWindow;
     import flash.display.BitmapData;
     import com.sulake.habbo.session.product.IProductData;
@@ -60,7 +60,7 @@
 
         private function _Str_19551():void
         {
-            this._habboLandingView.communicationManager.connection.send(new _Str_10281());
+            this._habboLandingView.communicationManager.connection.send(new GetBonusRareInfoMessageComposer());
         }
 
         public function refresh():void
