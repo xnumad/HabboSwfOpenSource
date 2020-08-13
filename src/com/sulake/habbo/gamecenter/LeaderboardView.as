@@ -12,7 +12,7 @@
     import com.sulake.habbo.game.WindowUtils;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_8022;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
-    import com.sulake.habbo.communication.messages.outgoing.game.score._Str_5198;
+    import com.sulake.habbo.communication.messages.outgoing.game.score.Game2GetWeeklyLeaderboardComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11321;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.game.score._Str_3326;
@@ -154,7 +154,7 @@
             this._lastWeekList.destroyListItems();
             this._ownEntryList.destroyListItems();
             this.updateThisWeek();
-            this.send(new _Str_5198(this._selectedGame, 1, 0, 0, 5, 5));
+            this.send(new Game2GetWeeklyLeaderboardComposer(this._selectedGame, 1, 0, 0, 5, 5));
             this._gameCenterView._Str_20681(this);
         }
 
@@ -163,7 +163,7 @@
             if (this._thisWeekTopScoresMode)
             {
                 this._thisWeekToggle.caption = "${gamecenter.leaderboard_my_ranking_link}";
-                this.send(new _Str_5198(this._selectedGame, 0, 0, 0, 10, 10));
+                this.send(new Game2GetWeeklyLeaderboardComposer(this._selectedGame, 0, 0, 0, 10, 10));
             }
             else
             {
