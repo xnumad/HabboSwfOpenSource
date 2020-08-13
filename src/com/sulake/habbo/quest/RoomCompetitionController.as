@@ -328,7 +328,7 @@
         {
             if ((((!(this._window == null)) && (this._window.visible)) && (this._submit)))
             {
-                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer._Str_16111));
+                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer.CONFIRM_LEVEL_NOT_ACCEPTED));
             }
         }
 
@@ -398,7 +398,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer._Str_17637));
+                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer.CONFIRM_LEVEL_NOT_SUBMITTED));
             }
         }
 
@@ -406,7 +406,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer._Str_18299));
+                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer.CONFIRM_LEVEL_NOT_CONFIRMED));
             }
         }
 
@@ -414,7 +414,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer._Str_15919));
+                this._questEngine.send(new SubmitRoomToCompetitionMessageComposer(this._goalCode, SubmitRoomToCompetitionMessageComposer.CONFIRM_LEVEL_COMMIT));
             }
         }
 

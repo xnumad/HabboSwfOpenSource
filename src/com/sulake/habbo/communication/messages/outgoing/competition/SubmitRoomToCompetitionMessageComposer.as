@@ -4,10 +4,10 @@
 
     public class SubmitRoomToCompetitionMessageComposer implements IMessageComposer
     {
-        public static const _Str_16111:int = 0;
-        public static const _Str_17637:int = 1;
-        public static const _Str_18299:int = 2;
-        public static const _Str_15919:int = 3;
+        public static const CONFIRM_LEVEL_NOT_ACCEPTED:int = 0;
+        public static const CONFIRM_LEVEL_NOT_SUBMITTED:int = 1;
+        public static const CONFIRM_LEVEL_NOT_CONFIRMED:int = 2;
+        public static const CONFIRM_LEVEL_COMMIT:int = 3;
 
         private var _data:Array;
 
