@@ -1054,14 +1054,14 @@
         private function _Str_22573(k:int):void
         {
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_ACCEPT;
-            this.openWindow(this._Str_25328, false);
+            this.openWindow(this.onGuardianChatReviewAcceptEvent, false);
             this._habboHelp._Str_2476.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
             var _local_2:_Str_2961 = (IWidgetWindow(this._window.findChildByName("countdown")).widget as _Str_2961);
             _local_2.seconds = k;
             _local_2.running = true;
         }
 
-        private function _Str_25328(k:WindowEvent, _arg_2:IWindow):void
+        private function onGuardianChatReviewAcceptEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if ((((this.disposed) || (this._window == null)) || (!(k.type == WindowMouseEvent.CLICK))))
             {
