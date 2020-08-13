@@ -92,17 +92,17 @@
             this._holdPurges = k;
         }
 
-        public function _Str_5150(k:int):Vector.<InstantMessageRegistryItem>
+        public function getItemsByUser(k:int):Vector.<InstantMessageRegistryItem>
         {
             return this._registry.getValue(k);
         }
 
         public function _Str_23839(k:int):Boolean
         {
-            var _local_2:Vector.<InstantMessageRegistryItem> = this._Str_5150(k);
+            var _local_2:Vector.<InstantMessageRegistryItem> = this.getItemsByUser(k);
             if (_local_2)
             {
-                return this._Str_5150(k).length > 0;
+                return this.getItemsByUser(k).length > 0;
             }
             return false;
         }
@@ -119,7 +119,7 @@
 
         public function getItem(k:int, _arg_2:uint):InstantMessageRegistryItem
         {
-            var _local_3:Vector.<InstantMessageRegistryItem> = this._Str_5150(k);
+            var _local_3:Vector.<InstantMessageRegistryItem> = this.getItemsByUser(k);
             var _local_4:int;
             while (_local_4 < _local_3.length)
             {

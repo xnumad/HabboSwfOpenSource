@@ -87,7 +87,7 @@
             return null;
         }
 
-        public function _Str_5150(k:int):Vector.<ChatRegistryItem>
+        public function getItemsByUser(k:int):Vector.<ChatRegistryItem>
         {
             var _local_2:Vector.<ChatRegistryItem> = new Vector.<ChatRegistryItem>(0);
             var _local_3:int;

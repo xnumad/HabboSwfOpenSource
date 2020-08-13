@@ -95,7 +95,7 @@
             if (k == HabboHelp.REPORT_TYPE_IM)
             {
                 _local_4 = ((_arg_2 > 0) ? _arg_2 : this._reportedUserId);
-                _local_5 = this._habboHelp._Str_3977._Str_5150(_local_4);
+                _local_5 = this._habboHelp._Str_3977.getItemsByUser(_local_4);
                 for each (_local_6 in _local_5)
                 {
                     if (_local_6.selected)
@@ -141,7 +141,7 @@
             var _local_7:IItemListWindow = (_local_6.findChildByName("chat_items") as IItemListWindow);
             _local_7.removeListItems();
             this._habboHelp._Str_3977._Str_7724 = true;
-            var _local_8:Vector.<InstantMessageRegistryItem> = this._habboHelp._Str_3977._Str_5150(_arg_2);
+            var _local_8:Vector.<InstantMessageRegistryItem> = this._habboHelp._Str_3977.getItemsByUser(_arg_2);
             for each (_local_9 in _local_8)
             {
                 _local_10 = (_local_5.clone() as IWindowContainer);
@@ -174,7 +174,7 @@
             var _local_5:IWindowContainer = (this._habboHelp.getXmlWindow("chat_report_item") as IWindowContainer);
             _local_3.removeListItems();
             this._habboHelp._Str_3531._Str_7724 = true;
-            var _local_9:Vector.<ChatRegistryItem> = ((_arg_2 > 0) ? this._habboHelp._Str_3531._Str_5150(_arg_2) : this._habboHelp._Str_3531._Str_6828());
+            var _local_9:Vector.<ChatRegistryItem> = ((_arg_2 > 0) ? this._habboHelp._Str_3531.getItemsByUser(_arg_2) : this._habboHelp._Str_3531._Str_6828());
             for each (_local_10 in _local_9)
             {
                 if (_local_10.userId == k)

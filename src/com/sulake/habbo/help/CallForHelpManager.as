@@ -553,7 +553,7 @@
             {
                 return false;
             }
-            return ((this._reportedUserId <= 0) || (this._habboHelp._Str_3531._Str_5150(this._reportedUserId).length > 0)) || (this._reportType == HabboHelp.REPORT_TYPE_IM);
+            return ((this._reportedUserId <= 0) || (this._habboHelp._Str_3531.getItemsByUser(this._reportedUserId).length > 0)) || (this._reportType == HabboHelp.REPORT_TYPE_IM);
         }
 
         private function saveEmergencyHelpRequestData(k:Boolean=true):Boolean
