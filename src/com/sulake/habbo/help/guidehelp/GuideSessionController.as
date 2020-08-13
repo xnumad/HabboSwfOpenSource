@@ -778,7 +778,7 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUIDE_CLOSED;
-            this.openWindow(this._Str_22605, true);
+            this.openWindow(this.onGuideClosedEvent, true);
             if (((k == GuideSessionData._Str_14462) || (k == GuideSessionData._Str_19034)))
             {
                 this._window.findChildByName("close_reason").caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.closed.reason.other", "", "name", this._sessionData.userName);
@@ -791,7 +791,7 @@
             IAvatarImageWidget(IWidgetWindow(this._window.findChildByName("requester_avatar")).widget).figure = this._sessionData._Str_7586;
         }
 
-        private function _Str_22605(k:WindowEvent, _arg_2:IWindow):void
+        private function onGuideClosedEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((((this.disposed) || (this._window == null)) || (!(this._window.name == GuideSessionStateEnum.GUIDE_CLOSED))) || (!(k.type == WindowMouseEvent.CLICK))))
             {
