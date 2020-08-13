@@ -134,7 +134,7 @@
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseRoomAdMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9862;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10231;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogAsGiftComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.ApproveNameMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerStatusMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerPrizesMessageComposer;
@@ -813,7 +813,7 @@
 
         public function purchaseProductAsGift(k:int, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:Boolean=false):void
         {
-            this.send(new _Str_10231(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9));
+            this.send(new PurchaseFromCatalogAsGiftComposer(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9));
         }
 
         public function get roomAdPurchaseData():RoomAdPurchaseData

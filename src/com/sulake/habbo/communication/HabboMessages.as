@@ -635,7 +635,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.SelectClubGiftComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10231;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogAsGiftComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetBonusRareInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10337;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetRoomAdPurchaseInfoComposer;
@@ -1568,7 +1568,7 @@
             OUTGOING_PACKETS[1391] = GetUserChatlogMessageComposer;
             OUTGOING_PACKETS[1392] = ModToolSanctionComposer;
             OUTGOING_PACKETS[1397] = ModerateThreadMessageComposer;
-            OUTGOING_PACKETS[1411] = _Str_10231;
+            OUTGOING_PACKETS[1411] = PurchaseFromCatalogAsGiftComposer;
             OUTGOING_PACKETS[1412] = CallForHelpFromForumMessageMessageComposer;
             OUTGOING_PACKETS[1419] = _Str_12244;
             OUTGOING_PACKETS[1424] = GuideSessionGuideDecidesMessageComposer;
