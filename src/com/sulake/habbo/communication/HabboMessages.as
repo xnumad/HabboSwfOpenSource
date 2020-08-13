@@ -594,7 +594,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideDetachedMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideVoteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGuideDecidesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionResolvedMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionCreateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGetRequesterRoomMessageComposer;
@@ -1571,7 +1571,7 @@
             OUTGOING_PACKETS[1411] = _Str_10231;
             OUTGOING_PACKETS[1412] = CallForHelpFromForumMessageMessageComposer;
             OUTGOING_PACKETS[1419] = _Str_12244;
-            OUTGOING_PACKETS[1424] = _Str_7016;
+            OUTGOING_PACKETS[1424] = GuideSessionGuideDecidesMessageComposer;
             OUTGOING_PACKETS[143] = _Str_10126;
             OUTGOING_PACKETS[1435] = GetJukeboxPlayListMessageComposer;
             OUTGOING_PACKETS[1444] = _Str_10862;

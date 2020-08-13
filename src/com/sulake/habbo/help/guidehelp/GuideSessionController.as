@@ -59,7 +59,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import com.sulake.habbo.window.widgets._Str_2961;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGuideDecidesMessageComposer;
     import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGetRequesterRoomMessageComposer;
     import com.sulake.habbo.window.utils.IConfirmDialog;
@@ -698,12 +698,12 @@
             switch (_arg_2.name)
             {
                 case "accept_button":
-                    this._habboHelp.sendMessage(new _Str_7016(true));
+                    this._habboHelp.sendMessage(new GuideSessionGuideDecidesMessageComposer(true));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickAccept"));
                     this.closeWindow();
                     return;
                 case "skip_link":
-                    this._habboHelp.sendMessage(new _Str_7016(false));
+                    this._habboHelp.sendMessage(new GuideSessionGuideDecidesMessageComposer(false));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickSkip"));
                     this.closeWindow();
                     return;
