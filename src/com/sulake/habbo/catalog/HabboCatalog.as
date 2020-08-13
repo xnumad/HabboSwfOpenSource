@@ -130,7 +130,7 @@
     import com.sulake.habbo.communication.messages.outgoing.catalog.RequestCatalogPage;
     import com.sulake.habbo.catalog.navigation.ICatalogNode;
     import com.sulake.habbo.catalog.enum.CatalogType;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11783;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseRoomAdMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9862;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
@@ -789,7 +789,7 @@
         {
             if (((this.roomAdPurchaseData == null) || (!(this.roomAdPurchaseData.offerId == _arg_2))))
             {
-                this.send(new _Str_11783(k, _arg_2, _arg_3, _arg_4));
+                this.send(new PurchaseFromCatalogComposer(k, _arg_2, _arg_3, _arg_4));
             }
             else
             {

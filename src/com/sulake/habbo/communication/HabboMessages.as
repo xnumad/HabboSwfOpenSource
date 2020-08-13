@@ -645,7 +645,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11313;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.MarkCatalogNewAdditionsPageOpenedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11648;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11783;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetProductOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12000;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12034;
@@ -1864,7 +1864,7 @@
             OUTGOING_PACKETS[3457] = EventLogMessageComposer;
             OUTGOING_PACKETS[3483] = _Str_6074;
             OUTGOING_PACKETS[3485] = RoomUserMuteMessageComposer;
-            OUTGOING_PACKETS[3492] = _Str_11783;
+            OUTGOING_PACKETS[3492] = PurchaseFromCatalogComposer;
             OUTGOING_PACKETS[3493] = ResetUnseenItemIdsComposer;
             OUTGOING_PACKETS[3498] = GetSoundMachinePlayListMessageComposer;
             OUTGOING_PACKETS[3500] = RequestFurniInventoryWhenNotInRoomComposer;
