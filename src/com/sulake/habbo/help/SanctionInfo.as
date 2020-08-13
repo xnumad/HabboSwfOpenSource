@@ -128,7 +128,7 @@
             switch (_arg_2.name)
             {
                 case "faq_link":
-                    this._habboHelp._Str_19088();
+                    this._habboHelp.openCfhFaq();
                     return;
                 case "header_button_close":
                 case "ok_button":

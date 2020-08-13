@@ -391,7 +391,7 @@
                     this.closeWindow();
                     return;
                 case "faq_link":
-                    this._habboHelp._Str_19088();
+                    this._habboHelp.openCfhFaq();
                     return;
                 case "sanction_info_link":
                     this._habboHelp.requestSanctionInfo(false);

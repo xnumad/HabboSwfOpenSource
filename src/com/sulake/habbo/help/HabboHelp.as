@@ -867,7 +867,7 @@
             this._sanctionInfo.openWindow(k);
         }
 
-        public function _Str_19088():void
+        public function openCfhFaq():void
         {
             var k:String = context.configuration.getProperty("cfh.faq.url");
             if (!StringUtil.isEmpty(k))
