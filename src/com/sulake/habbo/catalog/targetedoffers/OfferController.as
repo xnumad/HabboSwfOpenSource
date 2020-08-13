@@ -36,7 +36,7 @@
             this._catalog = k;
             this._catalog.connection.addMessageEvent(new TargetedOfferEvent(this._Str_25111));
             this._catalog.connection.addMessageEvent(new _Str_9208(this._Str_22594));
-            this._catalog.events.addEventListener(PurseUpdateEvent.CATALOG_PURSE_UPDATE, this._Str_14817);
+            this._catalog.events.addEventListener(PurseUpdateEvent.CATALOG_PURSE_UPDATE, this.onPurseUpdate);
             this._catalog.sessionDataManager.addProductsReadyEventListener(this);
         }
 
@@ -209,7 +209,7 @@
             this._confirmation = new TargetedOfferPurchaseConfirmationView(this, k, _arg_2);
         }
 
-        private function _Str_14817(k:PurseUpdateEvent):void
+        private function onPurseUpdate(k:PurseUpdateEvent):void
         {
             if (this._offerDialog)
             {

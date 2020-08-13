@@ -17,7 +17,7 @@
         override public function dispose():void
         {
             var k:HabboCatalog = HabboCatalog(page.viewer.catalog);
-            k.events.removeEventListener(PurseUpdateEvent.CATALOG_PURSE_UPDATE, this._Str_14817);
+            k.events.removeEventListener(PurseUpdateEvent.CATALOG_PURSE_UPDATE, this.onPurseUpdate);
             super.dispose();
         }
 
@@ -30,7 +30,7 @@
             _Str_2819(CatalogWidgetEnum.ACTIVITY_POINT_DISPLAY);
             _window.findChildByName("activity_points_txt").caption = "";
             var k:HabboCatalog = HabboCatalog(page.viewer.catalog);
-            k.events.addEventListener(PurseUpdateEvent.CATALOG_PURSE_UPDATE, this._Str_14817);
+            k.events.addEventListener(PurseUpdateEvent.CATALOG_PURSE_UPDATE, this.onPurseUpdate);
             return this._Str_19249();
         }
 
@@ -60,7 +60,7 @@
             return true;
         }
 
-        private function _Str_14817(k:PurseUpdateEvent):void
+        private function onPurseUpdate(k:PurseUpdateEvent):void
         {
             this._Str_19249();
         }
