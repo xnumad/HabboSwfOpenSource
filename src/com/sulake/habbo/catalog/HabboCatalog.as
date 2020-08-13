@@ -218,7 +218,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetSellablePetPalettesEvent;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.window.utils.IConfirmDialog;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12068;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.RedeemVoucherMessageComposer;
     import com.sulake.habbo.catalog.enum.BuilderFurniPlaceableStatus;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.room.object.IRoomObject;
@@ -2328,7 +2328,7 @@
 
         public function redeemVoucher(k:String):void
         {
-            var _local_2:IMessageComposer = new _Str_12068(k);
+            var _local_2:IMessageComposer = new RedeemVoucherMessageComposer(k);
             this.send(_local_2);
             _local_2.dispose();
             _local_2 = null;

@@ -649,7 +649,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetProductOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12000;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetGiftWrappingConfigurationComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12068;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.RedeemVoucherMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12290;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceRoomItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSellablePetPalettesComposer;
@@ -1854,7 +1854,7 @@
             OUTGOING_PACKETS[3382] = _Str_12104;
             OUTGOING_PACKETS[3385] = GetFlatControllersMessageComposer;
             OUTGOING_PACKETS[3386] = ApproveMembershipRequestMessageComposer;
-            OUTGOING_PACKETS[339] = _Str_12068;
+            OUTGOING_PACKETS[339] = RedeemVoucherMessageComposer;
             OUTGOING_PACKETS[3407] = PurchaseVipMembershipExtensionComposer;
             OUTGOING_PACKETS[3435] = UpdateGuildSettingsMessageComposer;
             OUTGOING_PACKETS[3445] = GetFaqCategoryMessageComposer;
