@@ -33,7 +33,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_9977;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.MessengerInitMessageComposer;
     import flash.events.TimerEvent;
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
@@ -170,7 +170,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_5567(this.onMessengerInit));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
             context.addLinkEventTracker(this);
-            this.send(new _Str_9977());
+            this.send(new MessengerInitMessageComposer());
         }
 
         override public function dispose():void

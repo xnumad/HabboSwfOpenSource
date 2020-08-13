@@ -814,7 +814,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.HabboSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.FriendListUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.VisitUserMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_9977;
+	import com.sulake.habbo.communication.messages.outgoing.friendlist.MessengerInitMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.session.*;
 	import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
@@ -1764,7 +1764,7 @@
             OUTGOING_PACKETS[2768] = PassCarryItemToPetMessageComposer;
             OUTGOING_PACKETS[2769] = GetBadgesComposer;
             OUTGOING_PACKETS[2771] = RecycleItemsMessageComposer;
-            OUTGOING_PACKETS[2781] = _Str_9977;
+            OUTGOING_PACKETS[2781] = MessengerInitMessageComposer;
             OUTGOING_PACKETS[2809] = RoomAdSearchMessageComposer;
             OUTGOING_PACKETS[2813] = RoomDimmerGetPresetsMessageComposer;
             OUTGOING_PACKETS[2814] = DropCarryItemMessageComposer;
