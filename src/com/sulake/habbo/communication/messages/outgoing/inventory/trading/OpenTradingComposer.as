@@ -4,11 +4,11 @@
 
     public class OpenTradingComposer implements IMessageComposer
     {
-        private var _Str_20479:int;
+        private var _userRoomIndex:int;
 
         public function OpenTradingComposer(k:int)
         {
-            this._Str_20479 = k;
+            this._userRoomIndex = k;
         }
 
         public function dispose():void
@@ -17,7 +17,7 @@
 
         public function getMessageArray():Array
         {
-            return [this._Str_20479];
+            return [this._userRoomIndex];
         }
     }
 }
