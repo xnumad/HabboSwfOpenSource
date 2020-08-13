@@ -784,7 +784,7 @@
                     {
                         offerInTradingCount.caption = String(itemIds.length);
                     }
-                    trading._Str_24612(itemIds, coreItem.isWallItem, coreItem.type, coreItem.category, coreItem.groupable, coreItem.stuffData);
+                    trading.requestAddItemsToTrading(itemIds, coreItem.isWallItem, coreItem.type, coreItem.category, coreItem.groupable, coreItem.stuffData);
                 }
                 else
                 {

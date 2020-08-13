@@ -676,7 +676,7 @@
             }
         }
 
-        public function _Str_24612(k:Vector.<int>, _arg_2:Boolean, _arg_3:int, _arg_4:int, _arg_5:Boolean, _arg_6:IStuffData):void
+        public function requestAddItemsToTrading(k:Vector.<int>, _arg_2:Boolean, _arg_3:int, _arg_4:int, _arg_5:Boolean, _arg_6:IStuffData):void
         {
             var _local_7:Vector.<int>;
             var _local_8:int;
