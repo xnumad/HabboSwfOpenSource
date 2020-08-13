@@ -218,7 +218,7 @@
             this._reportedRoomName = _arg_2;
             this._reportedRoomDescription = _arg_3;
             this._reportedUserId = -1;
-            this._habboHelp._Str_8128(HabboHelp._Str_4786);
+            this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_ROOM);
         }
 
         public function reportThread(k:int, _arg_2:int):void
@@ -297,7 +297,7 @@
             }
             switch (this._reportType)
             {
-                case HabboHelp._Str_4786:
+                case HabboHelp.REPORT_TYPE_ROOM:
                     this.showPanels(false, true);
                     return;
                 case HabboHelp.REPORT_TYPE_EMERGENCY:
@@ -549,7 +549,7 @@
 
         private function isChatSelectionRequired():Boolean
         {
-            if ((((this._reportType == HabboHelp._Str_4459) || (this._reportType == HabboHelp._Str_4490)) || (this._reportType == HabboHelp._Str_4786)))
+            if ((((this._reportType == HabboHelp._Str_4459) || (this._reportType == HabboHelp._Str_4490)) || (this._reportType == HabboHelp.REPORT_TYPE_ROOM)))
             {
                 return false;
             }
@@ -588,7 +588,7 @@
             {
                 return true;
             }
-            if ((((this._reportedUserId <= 0) && ((!(this._reportType == HabboHelp._Str_4490)) && (this._reportType == HabboHelp._Str_4459))) || ((this._reportType == HabboHelp._Str_4786) && (!(this._habboHelp.getBoolean("room.report.enabled"))))))
+            if ((((this._reportedUserId <= 0) && ((!(this._reportType == HabboHelp._Str_4490)) && (this._reportType == HabboHelp._Str_4459))) || ((this._reportType == HabboHelp.REPORT_TYPE_ROOM) && (!(this._habboHelp.getBoolean("room.report.enabled"))))))
             {
                 this._habboHelp.windowManager.alert("${generic.alert.title}", "${guide.bully.request.usermissing}", 0, null);
                 return false;
@@ -608,7 +608,7 @@
             switch (this._reportType)
             {
                 case HabboHelp.REPORT_TYPE_EMERGENCY:
-                case HabboHelp._Str_4786:
+                case HabboHelp.REPORT_TYPE_ROOM:
                     k = ((this._chatReportController._Str_3469 <= 0) ? this._reportedRoomId : this._chatReportController._Str_3469);
                     this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._topicIndex, this._reportedUserId, k, this._chatReportController._Str_9701(this._reportType, -1)));
                     break;

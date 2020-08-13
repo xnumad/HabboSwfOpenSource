@@ -77,7 +77,7 @@
         public static const REPORT_TYPE_EMERGENCY:int = 1;
         public static const REPORT_TYPE_GUIDE:int = 2;
         public static const REPORT_TYPE_IM:int = 3;
-        public static const _Str_4786:int = 4;
+        public static const REPORT_TYPE_ROOM:int = 4;
         public static const _Str_15144:int = 6;
         public static const _Str_4459:int = 7;
         public static const _Str_4490:int = 8;
@@ -245,7 +245,7 @@
                 this._callForHelpManager._Str_16366 = _arg_2;
                 this._callForHelpManager.reportedUserId = -1;
                 this._callForHelpManager.reportedUserName = "";
-                this._topicsFlowHelpController._Str_15173(_Str_4786);
+                this._topicsFlowHelpController._Str_15173(REPORT_TYPE_ROOM);
             }
         }
 
@@ -665,7 +665,7 @@
             {
                 case REPORT_TYPE_EMERGENCY:
                 case REPORT_TYPE_IM:
-                case _Str_4786:
+                case REPORT_TYPE_ROOM:
                 case _Str_4459:
                 case _Str_4490:
                     this._callForHelpManager.showEmergencyHelpRequest(this._reportType);

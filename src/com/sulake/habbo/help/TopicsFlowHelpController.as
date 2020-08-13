@@ -426,7 +426,7 @@
                 case HabboHelp.REPORT_TYPE_IM:
                     this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721.chatReportController._Str_9701(HabboHelp.REPORT_TYPE_IM, this._habboHelp.reportedUserId)));
                     return;
-                case HabboHelp._Str_4786:
+                case HabboHelp.REPORT_TYPE_ROOM:
                     this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, -1, this._habboHelp._Str_3469, []));
                     return;
                 case HabboHelp._Str_4459:
@@ -741,7 +741,7 @@
 
         private function _Str_24715():Boolean
         {
-            return ((this._contentModerationType == HabboHelp._Str_4786) || (this._contentModerationType == HabboHelp._Str_4459)) || (this._contentModerationType == HabboHelp._Str_4490);
+            return ((this._contentModerationType == HabboHelp.REPORT_TYPE_ROOM) || (this._contentModerationType == HabboHelp._Str_4459)) || (this._contentModerationType == HabboHelp._Str_4490);
         }
 
         private function _Str_24500():Boolean
@@ -789,7 +789,7 @@
             var k:UserRegistryItem;
             switch (this._contentModerationType)
             {
-                case HabboHelp._Str_4786:
+                case HabboHelp.REPORT_TYPE_ROOM:
                     this._view.findChildByName("reported_user_avatar").visible = false;
                     this._view.findChildByName("user_info_title").visible = false;
                     this._view.findChildByName("reported_user_name").caption = this._habboHelp._Str_5721._Str_16366;
