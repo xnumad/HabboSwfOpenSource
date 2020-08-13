@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11178 implements IMessageComposer 
+    public class GetCatalogIndexComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_11178(k:String)
+        public function GetCatalogIndexComposer(k:String)
         {
             this._array = [k];
         }

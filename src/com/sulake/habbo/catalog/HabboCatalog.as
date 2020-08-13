@@ -171,7 +171,7 @@
     import com.sulake.habbo.tracking.HabboTracking;
     import flash.events.Event;
     import com.sulake.habbo.catalog.enum.HabboCatalogTrackingEvent;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11178;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogIndexComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.MarkCatalogNewAdditionsPageOpenedComposer;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.events.WindowKeyboardEvent;
@@ -1416,7 +1416,7 @@
 
         private function refreshCatalogIndex(k:String):void
         {
-            this.send(new _Str_11178(k));
+            this.send(new GetCatalogIndexComposer(k));
         }
 
         private function markNewAdditionPageOpened():void

@@ -640,7 +640,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10337;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetRoomAdPurchaseInfoComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10613;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11178;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogIndexComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11294;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11313;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.MarkCatalogNewAdditionsPageOpenedComposer;
@@ -1538,7 +1538,7 @@
             OUTGOING_PACKETS[1160] = PeerUsersClassificationMessageComposer;
             OUTGOING_PACKETS[1173] = GetCraftingRecipeComposer;
             OUTGOING_PACKETS[1190] = GetSeasonalQuestsOnlyMessageComposer;
-            OUTGOING_PACKETS[1195] = _Str_11178;
+            OUTGOING_PACKETS[1195] = GetCatalogIndexComposer;
             OUTGOING_PACKETS[1202] = NavigatorSetSearchCodeViewModeMessageComposer;
             OUTGOING_PACKETS[1210] = _Str_11941;
             OUTGOING_PACKETS[1224] = _Str_15943;
