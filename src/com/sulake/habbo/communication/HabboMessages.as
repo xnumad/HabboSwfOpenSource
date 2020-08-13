@@ -576,7 +576,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.PostQuizAnswersComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_10003;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionInviteRequesterMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_10695;
+	import com.sulake.habbo.communication.messages.outgoing.help.GetPendingCallsForHelpMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11135;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11187;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_11701;
@@ -1832,7 +1832,7 @@
             OUTGOING_PACKETS[3259] = _Str_16208;
             OUTGOING_PACKETS[3260] = ModerateRoomMessageComposer;
             OUTGOING_PACKETS[3265] = GetExtendedProfileMessageComposer;
-            OUTGOING_PACKETS[3267] = _Str_10695;
+            OUTGOING_PACKETS[3267] = GetPendingCallsForHelpMessageComposer;
             OUTGOING_PACKETS[3283] = AddSpamWallPostItMessageComposer;
             OUTGOING_PACKETS[3285] = _Str_10337;
             OUTGOING_PACKETS[3288] = GetMarketplaceItemStatsComposer;

@@ -52,7 +52,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.window.utils.IModalDialog;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_10695;
+    import com.sulake.habbo.communication.messages.outgoing.help.GetPendingCallsForHelpMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_12273;
     import com.sulake.habbo.communication.messages.parser.help.CallForHelpPendingCallsMessageParser;
@@ -602,7 +602,7 @@
         public function queryForPendingCallsForHelp(k:int):void
         {
             this._reportType = k;
-            this.sendMessage(new _Str_10695());
+            this.sendMessage(new GetPendingCallsForHelpMessageComposer());
         }
 
         public function queryForGuideReportingStatus(k:int):void
