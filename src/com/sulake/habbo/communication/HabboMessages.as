@@ -811,7 +811,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.SetRelationshipStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11750;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11815;
-	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11941;
+	import com.sulake.habbo.communication.messages.outgoing.friendlist.HabboSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_12244;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_9977;
@@ -1540,7 +1540,7 @@
             OUTGOING_PACKETS[1190] = GetSeasonalQuestsOnlyMessageComposer;
             OUTGOING_PACKETS[1195] = GetCatalogIndexComposer;
             OUTGOING_PACKETS[1202] = NavigatorSetSearchCodeViewModeMessageComposer;
-            OUTGOING_PACKETS[1210] = _Str_11941;
+            OUTGOING_PACKETS[1210] = HabboSearchMessageComposer;
             OUTGOING_PACKETS[1224] = _Str_15943;
             OUTGOING_PACKETS[1229] = GetOfficialRoomsMessageComposer;
             OUTGOING_PACKETS[1232] = _Str_18426;

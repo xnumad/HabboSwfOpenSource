@@ -13,7 +13,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import flash.ui.Keyboard;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11941;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.HabboSearchMessageComposer;
     import com.sulake.core.window.events.*;
 
     public class SearchView implements _Str_6180, _Str_7814 
@@ -338,7 +338,7 @@
                 Logger.log("No text...");
                 return;
             }
-            this._friendList.send(new _Str_11941(k));
+            this._friendList.send(new HabboSearchMessageComposer(k));
         }
     }
 }
