@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.gifts.TryPhoneNumberMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.gifts._Str_10410;
+    import com.sulake.habbo.communication.messages.outgoing.gifts.VerifyCodeMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.gifts.SetPhoneNumberVerificationStatusMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
     import flash.utils.getTimer;
@@ -89,7 +89,7 @@
                 return;
             }
             k = k.toUpperCase();
-            this._connection.send(new _Str_10410(k));
+            this._connection.send(new VerifyCodeMessageComposer(k));
         }
 
         public function _Str_23711():void

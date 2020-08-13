@@ -258,7 +258,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.pets.BreedPetsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.pets.RespectPetMessageComposer;
 	import com.sulake.core.communication.messages.IMessageConfiguration;
-	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_10410;
+	import com.sulake.habbo.communication.messages.outgoing.gifts.VerifyCodeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_18298;
 	import com.sulake.habbo.communication.messages.outgoing.gifts.SetPhoneNumberVerificationStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
@@ -1746,7 +1746,7 @@
             OUTGOING_PACKETS[2713] = CancelPetBreedingComposer;
             OUTGOING_PACKETS[2717] = CloseIssueDefaultActionMessageComposer;
             OUTGOING_PACKETS[272] = MyRoomRightsSearchMessageComposer;
-            OUTGOING_PACKETS[2721] = _Str_10410;
+            OUTGOING_PACKETS[2721] = VerifyCodeMessageComposer;
             OUTGOING_PACKETS[2725] = CancelEventMessageComposer;
             OUTGOING_PACKETS[273] = GetCreditsInfoComposer;
             OUTGOING_PACKETS[2730] = UpdateFigureDataMessageComposer;
