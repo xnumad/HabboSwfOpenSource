@@ -4,16 +4,16 @@
 
     public class _Str_17078 implements IMessageComposer 
     {
-        private var _Str_20608:int;
+        private var _days:int;
 
         public function _Str_17078(k:int)
         {
-            this._Str_20608 = k;
+            this._days = k;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_20608];
+            return [this._days];
         }
 
         public function dispose():void
