@@ -650,7 +650,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12000;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetGiftWrappingConfigurationComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RedeemVoucherMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12290;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetTargetedOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceRoomItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSellablePetPalettesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetIsOfferGiftableComposer;
@@ -1713,7 +1713,7 @@
             OUTGOING_PACKETS[2468] = UpdateRoomThumbnailMessageComposer;
             OUTGOING_PACKETS[248] = MoveObjectMessageComposer;
             OUTGOING_PACKETS[2486] = GetDailyQuestMessageComposer;
-            OUTGOING_PACKETS[2487] = _Str_12290;
+            OUTGOING_PACKETS[2487] = GetTargetedOfferComposer;
             OUTGOING_PACKETS[249] = NewNavigatorSearchComposer;
             OUTGOING_PACKETS[2490] = UniqueIDMessageComposer;
             OUTGOING_PACKETS[2492] = CallForHelpFromPhotoMessageComposer;
