@@ -47,7 +47,7 @@
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11093;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.UnacceptTradingComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.ConfirmAcceptTradingComposer;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11536;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.trading.ConfirmDeclineTradingComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10430;
     import __AS3__.vec.*;
 
@@ -782,7 +782,7 @@
 
         public function requestConfirmDeclineTrading():void
         {
-            this._communication.connection.send(new _Str_11536());
+            this._communication.connection.send(new ConfirmDeclineTradingComposer());
         }
 
         public function requestCancelTrading():void

@@ -908,7 +908,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.UnacceptTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11093;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.ConfirmAcceptTradingComposer;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11536;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.ConfirmDeclineTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.OpenTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.RemoveItemFromTradeComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemToTradeComposer;
@@ -1693,7 +1693,7 @@
             OUTGOING_PACKETS[0x0909] = SetUIFlagsMessageComposer;
             OUTGOING_PACKETS[232] = GetMessagesMessageComposer;
             OUTGOING_PACKETS[234] = GuideSessionInviteRequesterMessageComposer;
-            OUTGOING_PACKETS[2341] = _Str_11536;
+            OUTGOING_PACKETS[2341] = ConfirmDeclineTradingComposer;
             OUTGOING_PACKETS[2343] = ResetUnseenItemsComposer;
             OUTGOING_PACKETS[2384] = _Str_10650;
             OUTGOING_PACKETS[2388] = GetSoundSettingsComposer;
