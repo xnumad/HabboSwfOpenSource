@@ -19,12 +19,12 @@
 
     public class HabboWayQuizController implements IDisposable 
     {
-        private static const _Str_10976:String = "HabboWay1";
-        private static const _Str_14005:String = "SafetyQuiz1";
-        private static const _Str_8904:int = 1;
-        private static const _Str_8615:int = 2;
-        private static const _Str_9704:int = 3;
-        private static const _Str_8334:int = 4;
+        private static const HABBO_WAY_QUIZ_CODE:String = "HabboWay1";
+        private static const SAFETY_QUIZ_CODE:String = "SafetyQuiz1";
+        private static const PAGE_QUESTION:int = 1;
+        private static const PAGE_SUCCESS:int = 2;
+        private static const PAGE_FAILURE:int = 3;
+        private static const PAGE_ANALYSIS:int = 4;
 
         private var _disposed:Boolean;
         private var _habboHelp:HabboHelp;
@@ -78,12 +78,12 @@
 
         public function _Str_16933():void
         {
-            this._habboHelp.sendMessage(new _Str_8147(_Str_10976));
+            this._habboHelp.sendMessage(new _Str_8147(HABBO_WAY_QUIZ_CODE));
         }
 
         public function _Str_14041():void
         {
-            this._habboHelp.sendMessage(new _Str_8147(_Str_14005));
+            this._habboHelp.sendMessage(new _Str_8147(SAFETY_QUIZ_CODE));
         }
 
         private function _Str_23120(k:_Str_9419):void
@@ -100,11 +100,11 @@
             this._questionIdsForWrongAnswers = _local_2._Str_23947;
             if (this._questionIdsForWrongAnswers.length == 0)
             {
-                this._Str_13401(_Str_8615);
+                this._Str_13401(PAGE_SUCCESS);
             }
             else
             {
-                this._Str_13401(_Str_9704);
+                this._Str_13401(PAGE_FAILURE);
             }
         }
 
@@ -130,13 +130,13 @@
             var _local_3:IWindowContainer = IWindowContainer(IItemListWindow(this._explanationTemplate).getListItemByName("explanation_container"));
             switch (this._quizCode)
             {
-                case _Str_10976:
+                case HABBO_WAY_QUIZ_CODE:
                     IStaticBitmapWrapperWindow(this._window.findChildByName("question_illustration")).assetUri = "${image.library.url}habboway/quiz_question.png";
                     IStaticBitmapWrapperWindow(this._window.findChildByName("indicator_image")).assetUri = "help_habboway_dove_on";
                     IStaticBitmapWrapperWindow(this._window.findChildByName("success_illustration")).assetUri = "${image.library.url}habboway/quiz_success.png";
                     IStaticBitmapWrapperWindow(_local_3.findChildByName("explanation_illustration")).assetUri = "help_habboway_dove_quizz";
                     break;
-                case _Str_14005:
+                case SAFETY_QUIZ_CODE:
                     IStaticBitmapWrapperWindow(this._window.findChildByName("question_illustration")).assetUri = "${image.library.url}safetyquiz/question_illustration.png";
                     IStaticBitmapWrapperWindow(this._window.findChildByName("indicator_image")).assetUri = "${image.library.url}safetyquiz/safety_on.png";
                     IStaticBitmapWrapperWindow(this._window.findChildByName("failure_illustration")).assetUri = "${image.library.url}safetyquiz/result_failure.png";
@@ -144,7 +144,7 @@
                     IStaticBitmapWrapperWindow(_local_3.findChildByName("explanation_illustration")).assetUri = "${image.library.url}safetyquiz/safety_on.png";
                     break;
             }
-            this._Str_13401(_Str_8904);
+            this._Str_13401(PAGE_QUESTION);
         }
 
         private function closeWindow():void
@@ -165,25 +165,25 @@
             var _local_7:IItemListWindow;
             var _local_8:String;
             var _local_9:String;
-            this._window.findChildByName("question_pane").visible = (k == _Str_8904);
-            this._window.findChildByName("success_pane").visible = (k == _Str_8615);
-            this._window.findChildByName("failure_pane").visible = (k == _Str_9704);
-            this._analysisPane.visible = (k == _Str_8334);
-            this._window.findChildByName("prev_next_buttons").visible = (k == _Str_8904);
-            this._window.findChildByName("failure_buttons").visible = (k == _Str_9704);
-            this._window.findChildByName("exit_button_container").visible = ((k == _Str_8615) || (k == _Str_8334));
+            this._window.findChildByName("question_pane").visible = (k == PAGE_QUESTION);
+            this._window.findChildByName("success_pane").visible = (k == PAGE_SUCCESS);
+            this._window.findChildByName("failure_pane").visible = (k == PAGE_FAILURE);
+            this._analysisPane.visible = (k == PAGE_ANALYSIS);
+            this._window.findChildByName("prev_next_buttons").visible = (k == PAGE_QUESTION);
+            this._window.findChildByName("failure_buttons").visible = (k == PAGE_FAILURE);
+            this._window.findChildByName("exit_button_container").visible = ((k == PAGE_SUCCESS) || (k == PAGE_ANALYSIS));
             var _local_2:IWindow = this._window.findChildByName("top_indicator");
             var _local_3:IWindow = this._window.findChildByName("indicator_image");
             switch (k)
             {
-                case _Str_8904:
+                case PAGE_QUESTION:
                     this._window.caption = this._Str_6820("question.title");
                     _local_3.visible = true;
                     _local_2.visible = true;
                     _local_2.caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("question.page"), "", "current_page", 1, "page_count", this._Str_8127.toString());
                     _local_2.caption = this._Str_6820("question.page");
                     return;
-                case _Str_8615:
+                case PAGE_SUCCESS:
                     this._window.caption = this._Str_6820("success.title");
                     this._window.findChildByName("failure_advice").caption = this._Str_6820("failure.advice");
                     this._window.findChildByName("success_results").caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("success.results"), "", "question_count", this._Str_8127.toString());
@@ -191,7 +191,7 @@
                     _local_2.visible = false;
                     _local_2.caption = "";
                     return;
-                case _Str_9704:
+                case PAGE_FAILURE:
                     _local_4 = (this._questionIds.length - this._questionIdsForWrongAnswers.length);
                     this._window.caption = this._Str_6820("failure.title");
                     this._window.findChildByName("failure_advice").caption = this._Str_6820("failure.advice");
@@ -200,7 +200,7 @@
                     _local_2.visible = false;
                     _local_2.caption = "";
                     return;
-                case _Str_8334:
+                case PAGE_ANALYSIS:
                     this._window.caption = this._Str_6820("analysis.title");
                     _local_3.visible = true;
                     _local_2.visible = true;
@@ -247,7 +247,7 @@
                         this._Str_18391((this._currentQuestion + 1));
                         return;
                     case "review_button":
-                        this._Str_13401(_Str_8334);
+                        this._Str_13401(PAGE_ANALYSIS);
                         return;
                 }
             }
@@ -342,7 +342,7 @@
         {
             switch (this._quizCode)
             {
-                case _Str_10976:
+                case HABBO_WAY_QUIZ_CODE:
                     return "habbo.way.quiz." + k;
                 default:
                     return (("quiz." + this._quizCode) + ".") + k;
