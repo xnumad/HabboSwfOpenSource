@@ -660,7 +660,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17774;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageExpirationComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.ShopTargetedOfferViewedComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7084;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.SetTargetedOfferStateComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7218;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubGiftInfo;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7384;
@@ -1641,7 +1641,7 @@
             OUTGOING_PACKETS[1991] = UpdateGuildBadgeMessageComposer;
             OUTGOING_PACKETS[2012] = MysteryBoxWaitingCanceledMessageComposer;
             OUTGOING_PACKETS[2031] = SearchFaqsMessageComposer;
-            OUTGOING_PACKETS[2041] = _Str_7084;
+            OUTGOING_PACKETS[2041] = SetTargetedOfferStateComposer;
             OUTGOING_PACKETS[2061] = UnignoreUserMessageComposer;
             OUTGOING_PACKETS[2064] = RemoveRightsMessageComposer;
             OUTGOING_PACKETS[2067] = CloseIssuesMessageComposer;

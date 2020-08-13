@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.enum.TargetedOfferTrackingStateEnum;
     import com.sulake.habbo.catalog.targetedoffers.data.HabboMallOffer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.ShopTargetedOfferViewedComposer;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7084;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.SetTargetedOfferStateComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseTargetedOfferComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.catalog.targetedoffers.util.EventLogActions;
@@ -138,7 +138,7 @@
         {
             this._Str_6602();
             this._extension = new TargetedOfferMinimizedView(this, k);
-            this._catalog.connection.send(new _Str_7084(k.id, TargetedOfferTrackingStateEnum.MINIMIZED));
+            this._catalog.connection.send(new SetTargetedOfferStateComposer(k.id, TargetedOfferTrackingStateEnum.MINIMIZED));
         }
 
         public function maximizeOffer(k:TargetedOffer):void
@@ -161,7 +161,7 @@
                 {
                     this._offerDialog._Str_6297("targeted_offer_dialog_xml");
                 }
-                this._catalog.connection.send(new _Str_7084(k.id, TargetedOfferTrackingStateEnum.OFFERED));
+                this._catalog.connection.send(new SetTargetedOfferStateComposer(k.id, TargetedOfferTrackingStateEnum.OFFERED));
             }
         }
 
