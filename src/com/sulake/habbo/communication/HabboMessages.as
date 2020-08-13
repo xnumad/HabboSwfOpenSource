@@ -597,7 +597,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7077;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionCreateMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_7364;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGetRequesterRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromPhotoMessageComposer;
@@ -1520,7 +1520,7 @@
             OUTGOING_PACKETS[1036] = MountPetMessageComposer;
             OUTGOING_PACKETS[105] = QuitMessageComposer;
             OUTGOING_PACKETS[1051] = _Str_12382;
-            OUTGOING_PACKETS[1052] = _Str_7364;
+            OUTGOING_PACKETS[1052] = GuideSessionGetRequesterRoomMessageComposer;
             OUTGOING_PACKETS[1053] = VersionCheckMessageComposer;
             OUTGOING_PACKETS[1054] = _Str_11560;
             OUTGOING_PACKETS[1071] = ExtendRentOrBuyoutFurniMessageComposer;

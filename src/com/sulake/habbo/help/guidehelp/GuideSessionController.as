@@ -61,7 +61,7 @@
     import com.sulake.habbo.window.widgets._Str_2961;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
     import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_7364;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGetRequesterRoomMessageComposer;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionInviteRequesterMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7077;
@@ -736,7 +736,7 @@
                     k.dispose();
                     if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
                     {
-                        _habboHelp.sendMessage(new _Str_7364());
+                        _habboHelp.sendMessage(new GuideSessionGetRequesterRoomMessageComposer());
                     }
                 });
             }
@@ -751,7 +751,7 @@
             switch (_arg_2.name)
             {
                 case "visit_button":
-                    this._habboHelp.sendMessage(new _Str_7364());
+                    this._habboHelp.sendMessage(new GuideSessionGetRequesterRoomMessageComposer());
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickVisit"));
                     return;
                 case "invite_button":
