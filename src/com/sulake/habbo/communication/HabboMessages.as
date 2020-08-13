@@ -221,7 +221,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9383;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9583;
-	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_10571;
+	import com.sulake.habbo.communication.messages.outgoing.game.score.GetWeeklyGameRewardComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11321;
 	import com.sulake.habbo.communication.messages.outgoing.game.score.GetWeeklyGameRewardWinnersComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11951;
@@ -1777,7 +1777,7 @@
             OUTGOING_PACKETS[2908] = GetUnreadForumsCountMessageComposer;
             OUTGOING_PACKETS[291] = GuideSessionRequesterCancelsMessageComposer;
             OUTGOING_PACKETS[2912] = GetCurrentTimingCodeMessageComposer;
-            OUTGOING_PACKETS[2914] = _Str_10571;
+            OUTGOING_PACKETS[2914] = GetWeeklyGameRewardComposer;
             OUTGOING_PACKETS[2930] = GuildBaseSearchMessageComposer;
             OUTGOING_PACKETS[2934] = GetPetInfoMessageComposer;
             OUTGOING_PACKETS[2939] = RoomsWithHighestScoreSearchMessageComposer;

@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_11645;
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.game.score._Str_10571;
+    import com.sulake.habbo.communication.messages.outgoing.game.score.GetWeeklyGameRewardComposer;
     import com.sulake.core.communication.messages.IMessageEvent;
     import flash.display.BitmapData;
 
@@ -298,7 +298,7 @@
         public function getWeeklyGameRewardInformation(k:IGameRewardListener):void
         {
             this._gameRewardListener = k;
-            this.send(new _Str_10571(k._Str_18928()));
+            this.send(new GetWeeklyGameRewardComposer(k._Str_18928()));
         }
 
         private function _Str_23350(k:IMessageEvent):void
