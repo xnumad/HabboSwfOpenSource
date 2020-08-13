@@ -122,7 +122,7 @@
 	import com.sulake.habbo.communication.messages.incoming.avatar.CheckUserNameResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar._Str_9393;
 	import com.sulake.habbo.communication.messages.outgoing.competition.VoteForRoomMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.competition._Str_10525;
+	import com.sulake.habbo.communication.messages.outgoing.competition.GetIsUserPartOfCompetitionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToACompetitionRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToASubmittableRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.SubmitRoomToCompetitionMessageComposer;
@@ -1647,7 +1647,7 @@
             OUTGOING_PACKETS[2067] = CloseIssuesMessageComposer;
             OUTGOING_PACKETS[2068] = PublishPhotoMessageComposer;
             OUTGOING_PACKETS[2069] = SetYoutubeDisplayPlaylistMessageComposer;
-            OUTGOING_PACKETS[2077] = _Str_10525;
+            OUTGOING_PACKETS[2077] = GetIsUserPartOfCompetitionMessageComposer;
             OUTGOING_PACKETS[2080] = DanceMessageComposer;
             OUTGOING_PACKETS[2085] = ShoutMessageComposer;
             OUTGOING_PACKETS[2091] = GetSelectedBadgesMessageComposer;

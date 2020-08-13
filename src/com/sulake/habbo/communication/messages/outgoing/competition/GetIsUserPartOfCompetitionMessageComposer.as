@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10525 implements IMessageComposer 
+    public class GetIsUserPartOfCompetitionMessageComposer implements IMessageComposer
     {
         private var _data:Array;
 
-        public function _Str_10525(k:String)
+        public function GetIsUserPartOfCompetitionMessageComposer(k:String)
         {
             this._data = [];
             super();

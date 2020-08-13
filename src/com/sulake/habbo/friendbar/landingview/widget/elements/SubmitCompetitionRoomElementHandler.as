@@ -4,7 +4,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_10525;
+    import com.sulake.habbo.communication.messages.outgoing.competition.GetIsUserPartOfCompetitionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToASubmittableRoomMessageComposer;
 
     public class SubmitCompetitionRoomElementHandler extends AbstractButtonElementHandler 
@@ -26,7 +26,7 @@
         override public function refresh():void
         {
             super.refresh();
-            landingView.send(new _Str_10525(this._goalCode));
+            landingView.send(new GetIsUserPartOfCompetitionMessageComposer(this._goalCode));
         }
 
         override protected function onClick():void
