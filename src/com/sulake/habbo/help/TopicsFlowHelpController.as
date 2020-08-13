@@ -432,7 +432,7 @@
                 case HabboHelp.REPORT_TYPE_THREAD:
                     this._habboHelp.sendMessage(new _Str_7656(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._currentTopic.id, this._message));
                     return;
-                case HabboHelp._Str_4490:
+                case HabboHelp.REPORT_TYPE_MESSAGE:
                     this._habboHelp.sendMessage(new CallForHelpFromForumMessageMessageComposer(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._habboHelp._Str_5721._Str_16155, this._currentTopic.id, this._message));
                     return;
                 default:
@@ -741,7 +741,7 @@
 
         private function _Str_24715():Boolean
         {
-            return ((this._contentModerationType == HabboHelp.REPORT_TYPE_ROOM) || (this._contentModerationType == HabboHelp.REPORT_TYPE_THREAD)) || (this._contentModerationType == HabboHelp._Str_4490);
+            return ((this._contentModerationType == HabboHelp.REPORT_TYPE_ROOM) || (this._contentModerationType == HabboHelp.REPORT_TYPE_THREAD)) || (this._contentModerationType == HabboHelp.REPORT_TYPE_MESSAGE);
         }
 
         private function _Str_24500():Boolean
@@ -795,7 +795,7 @@
                     this._view.findChildByName("reported_user_name").caption = this._habboHelp._Str_5721._Str_16366;
                     return;
                 case HabboHelp.REPORT_TYPE_THREAD:
-                case HabboHelp._Str_4490:
+                case HabboHelp.REPORT_TYPE_MESSAGE:
                     this._view.findChildByName("reported_user_avatar").visible = false;
                     this._view.findChildByName("user_info_title").visible = false;
                     this._view.findChildByName("reported_user_name").visible = false;
