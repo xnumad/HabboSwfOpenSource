@@ -182,7 +182,7 @@
     import com.sulake.habbo.catalog.viewer.PageLocalization;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetRoomChangedEvent;
     import com.sulake.habbo.catalog.marketplace.MarketPlaceLogic;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12034;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetGiftWrappingConfigurationComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10337;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageOfferData;
@@ -1715,7 +1715,7 @@
 
         private function getGiftWrappingConfiguration():void
         {
-            this.send(new _Str_12034());
+            this.send(new GetGiftWrappingConfigurationComposer());
         }
 
         public function getHabboClubOffers(k:int):void
