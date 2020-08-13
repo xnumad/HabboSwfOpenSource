@@ -66,7 +66,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.callforhelp.CfhTopicsInitMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_11701;
+    import com.sulake.habbo.communication.messages.outgoing.help.GetCfhStatusMessageComposer;
     import com.sulake.habbo.utils.StringUtil;
     import flash.net.navigateToURL;
     import flash.net.URLRequest;
@@ -859,7 +859,7 @@
 
         public function requestSanctionInfo(k:Boolean):void
         {
-            this.sendMessage(new _Str_11701(k));
+            this.sendMessage(new GetCfhStatusMessageComposer(k));
         }
 
         private function onSanctionStatusEvent(k:SanctionStatusEvent):void

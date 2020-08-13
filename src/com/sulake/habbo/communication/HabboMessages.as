@@ -579,7 +579,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.GetPendingCallsForHelpMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionReportMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionMessageMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_11701;
+	import com.sulake.habbo.communication.messages.outgoing.help.GetCfhStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionIsTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromSelfieMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_12224;
@@ -1753,7 +1753,7 @@
             OUTGOING_PACKETS[2735] = _Str_10123;
             OUTGOING_PACKETS[2741] = _Str_7498;
             OUTGOING_PACKETS[2742] = _Str_7827;
-            OUTGOING_PACKETS[2746] = _Str_11701;
+            OUTGOING_PACKETS[2746] = GetCfhStatusMessageComposer;
             OUTGOING_PACKETS[2750] = OpenQuestTrackerMessageComposer;
             OUTGOING_PACKETS[2752] = CreateFlatMessageComposer;
             OUTGOING_PACKETS[2755] = CallForHelpFromSelfieMessageComposer;

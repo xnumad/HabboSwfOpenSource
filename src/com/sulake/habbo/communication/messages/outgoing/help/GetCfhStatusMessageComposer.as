@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11701 implements IMessageComposer 
+    public class GetCfhStatusMessageComposer implements IMessageComposer
     {
         private var _Str_22113:Boolean;
 
-        public function _Str_11701(k:Boolean)
+        public function GetCfhStatusMessageComposer(k:Boolean)
         {
             this._Str_22113 = k;
         }
