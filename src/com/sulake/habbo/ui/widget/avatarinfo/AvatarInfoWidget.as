@@ -67,7 +67,7 @@
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotSkillConfigurationView;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10953;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_12104;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.pets.ConfirmPetBreedingComposer;
     import com.sulake.habbo.friendlist.IHabboFriendsList;
 
     public class AvatarInfoWidget extends RoomWidgetBase implements IUpdateReceiver, IContextMenuParentWidget
@@ -1721,7 +1721,7 @@
 
         public function _Str_23246(k:int, _arg_2:String, _arg_3:int, _arg_4:int):void
         {
-            this.handler.container.connection.send(new _Str_12104(k, _arg_2, _arg_3, _arg_4));
+            this.handler.container.connection.send(new ConfirmPetBreedingComposer(k, _arg_2, _arg_3, _arg_4));
         }
 
         public function _Str_24481(k:int, _arg_2:int):void

@@ -308,7 +308,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniOtherLockConfirmedMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets.GetPetInventoryComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_10953;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.pets._Str_12104;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.pets.ConfirmPetBreedingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerPrizesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.recycler.RecycleItemsMessageComposer;
@@ -1851,7 +1851,7 @@
             OUTGOING_PACKETS[3373] = ApplySnapshotMessageComposer;
             OUTGOING_PACKETS[3374] = CustomizeAvatarWithFurniMessageComposer;
             OUTGOING_PACKETS[3379] = TogglePetBreedingPermissionMessageComposer;
-            OUTGOING_PACKETS[3382] = _Str_12104;
+            OUTGOING_PACKETS[3382] = ConfirmPetBreedingComposer;
             OUTGOING_PACKETS[3385] = GetFlatControllersMessageComposer;
             OUTGOING_PACKETS[3386] = ApproveMembershipRequestMessageComposer;
             OUTGOING_PACKETS[339] = RedeemVoucherMessageComposer;
