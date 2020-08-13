@@ -6,7 +6,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_5974;
+    import com.sulake.habbo.communication.messages.outgoing.competition.GetCurrentTimingCodeMessageComposer;
     import flash.geom.Point;
     import com.sulake.core.window.IWindow;
     import flash.geom.Rectangle;
@@ -180,7 +180,7 @@
             {
                 this.landingView.navigator.openNavigator(this.navigatorPosition);
             }
-            this.landingView.send(new _Str_5974(this._schedulingStr));
+            this.landingView.send(new GetCurrentTimingCodeMessageComposer(this._schedulingStr));
             this.windowContainer.visible = true;
         }
 

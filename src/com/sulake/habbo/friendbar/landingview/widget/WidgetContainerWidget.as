@@ -9,7 +9,7 @@
     import com.sulake.habbo.friendbar.landingview.layout.WidgetPlaceholder;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_5974;
+    import com.sulake.habbo.communication.messages.outgoing.competition.GetCurrentTimingCodeMessageComposer;
     import com.sulake.habbo.friendbar.landingview.layout.HabboLandingViewWidgets;
     import com.sulake.habbo.friendbar.landingview.interfaces._Str_6397;
     import com.sulake.habbo.friendbar.landingview.*;
@@ -68,7 +68,7 @@
 
         public function refresh():void
         {
-            this._landingView.send(new _Str_5974(this._schedulingStr));
+            this._landingView.send(new GetCurrentTimingCodeMessageComposer(this._schedulingStr));
         }
 
         public function get disposed():Boolean

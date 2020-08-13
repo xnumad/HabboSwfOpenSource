@@ -126,7 +126,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToACompetitionRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToASubmittableRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.SubmitRoomToCompetitionMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.competition._Str_5974;
+	import com.sulake.habbo.communication.messages.outgoing.competition.GetCurrentTimingCodeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_7424;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_9816;
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToRandomCompetitionRoomMessageComposer;
@@ -1776,7 +1776,7 @@
             OUTGOING_PACKETS[2894] = AddAdminRightsToMemberMessageComposer;
             OUTGOING_PACKETS[2908] = GetUnreadForumsCountMessageComposer;
             OUTGOING_PACKETS[291] = GuideSessionRequesterCancelsMessageComposer;
-            OUTGOING_PACKETS[2912] = _Str_5974;
+            OUTGOING_PACKETS[2912] = GetCurrentTimingCodeMessageComposer;
             OUTGOING_PACKETS[2914] = _Str_10571;
             OUTGOING_PACKETS[2930] = GuildBaseSearchMessageComposer;
             OUTGOING_PACKETS[2934] = GetPetInfoMessageComposer;

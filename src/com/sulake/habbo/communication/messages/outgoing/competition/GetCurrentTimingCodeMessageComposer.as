@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_5974 implements IMessageComposer 
+    public class GetCurrentTimingCodeMessageComposer implements IMessageComposer
     {
         private var _data:Array;
 
-        public function _Str_5974(k:String)
+        public function GetCurrentTimingCodeMessageComposer(k:String)
         {
             this._data = [];
             super();

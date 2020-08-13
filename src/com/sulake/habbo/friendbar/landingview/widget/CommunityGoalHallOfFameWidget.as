@@ -4,7 +4,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalHallOfFameMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_5974;
+    import com.sulake.habbo.communication.messages.outgoing.competition.GetCurrentTimingCodeMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.quest.HallOfFameEntryData;
     import com.sulake.habbo.communication.messages.incoming.quest._Str_4106;
     import com.sulake.core.window.IWindowContainer;
@@ -36,7 +36,7 @@
 
         override public function refresh():void
         {
-            landingView.send(new _Str_5974(this._schedulingStr));
+            landingView.send(new GetCurrentTimingCodeMessageComposer(this._schedulingStr));
         }
 
         override protected function get users():Array
