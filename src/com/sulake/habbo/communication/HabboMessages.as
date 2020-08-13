@@ -589,7 +589,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_16470;
 	import com.sulake.habbo.communication.messages.outgoing.help.GetFaqTextMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_18219;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_4434;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionFeedbackMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionOnDutyUpdateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideDetachedMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideVoteMessageComposer;
@@ -1932,7 +1932,7 @@
             OUTGOING_PACKETS[434] = CancelMarketplaceOfferMessageComposer;
             OUTGOING_PACKETS[436] = GetForumsListMessageComposer;
             OUTGOING_PACKETS[462] = _Str_11648;
-            OUTGOING_PACKETS[477] = _Str_4434;
+            OUTGOING_PACKETS[477] = GuideSessionFeedbackMessageComposer;
             OUTGOING_PACKETS[487] = _Str_7373;
             OUTGOING_PACKETS[516] = _Str_11815;
             OUTGOING_PACKETS[519] = GuideSessionIsTypingMessageComposer;

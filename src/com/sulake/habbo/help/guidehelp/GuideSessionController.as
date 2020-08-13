@@ -66,7 +66,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionInviteRequesterMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionResolvedMessageComposer;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_4434;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionFeedbackMessageComposer;
     import mx.utils.StringUtil;
     import com.sulake.habbo.utils.FriendlyTime;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_10003;
@@ -801,7 +801,7 @@
             {
                 case "close_button":
                 case "header_button_close":
-                    this._habboHelp.sendMessage(new _Str_4434(true));
+                    this._habboHelp.sendMessage(new GuideSessionFeedbackMessageComposer(true));
                     this.closeWindow();
                     return;
                 case "report_link":
@@ -964,7 +964,7 @@
             switch (_arg_2.name)
             {
                 case "header_button_close":
-                    this._habboHelp.sendMessage(new _Str_4434(false));
+                    this._habboHelp.sendMessage(new GuideSessionFeedbackMessageComposer(false));
                     this.closeWindow();
                     return;
                 case "guide_name_link":
@@ -977,7 +977,7 @@
                     return;
                 case "resubmit_button":
                     this._resubmitDescription = true;
-                    this._habboHelp.sendMessage(new _Str_4434(false));
+                    this._habboHelp.sendMessage(new GuideSessionFeedbackMessageComposer(false));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickResubmit"));
                     this.closeWindow();
                     return;
@@ -1013,12 +1013,12 @@
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickReport"));
                     return;
                 case "positive_button":
-                    this._habboHelp.sendMessage(new _Str_4434(true));
+                    this._habboHelp.sendMessage(new GuideSessionFeedbackMessageComposer(true));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickPositiveFeedback"));
                     this.closeWindow();
                     return;
                 case "negative_button":
-                    this._habboHelp.sendMessage(new _Str_4434(false));
+                    this._habboHelp.sendMessage(new GuideSessionFeedbackMessageComposer(false));
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickNegativeFeedback"));
                     this.closeWindow();
                     return;
