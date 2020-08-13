@@ -79,7 +79,7 @@
         public static const REPORT_TYPE_IM:int = 3;
         public static const REPORT_TYPE_ROOM:int = 4;
         public static const REPORT_TYPE_BULLY:int = 6;
-        public static const _Str_4459:int = 7;
+        public static const REPORT_TYPE_THREAD:int = 7;
         public static const _Str_4490:int = 8;
         public static const _Str_7161:int = 9;
 
@@ -255,7 +255,7 @@
             {
                 this._callForHelpManager._Str_11420 = k;
                 this._callForHelpManager._Str_10392 = _arg_2;
-                this._topicsFlowHelpController._Str_15173(HabboHelp._Str_4459);
+                this._topicsFlowHelpController._Str_15173(HabboHelp.REPORT_TYPE_THREAD);
             }
         }
 
@@ -666,7 +666,7 @@
                 case REPORT_TYPE_EMERGENCY:
                 case REPORT_TYPE_IM:
                 case REPORT_TYPE_ROOM:
-                case _Str_4459:
+                case REPORT_TYPE_THREAD:
                 case _Str_4490:
                     this._callForHelpManager.showEmergencyHelpRequest(this._reportType);
                     break;

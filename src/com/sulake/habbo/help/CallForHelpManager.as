@@ -225,7 +225,7 @@
         {
             this._reportedGroupId = k;
             this._reportedThreadId = _arg_2;
-            this._habboHelp._Str_8128(HabboHelp._Str_4459);
+            this._habboHelp._Str_8128(HabboHelp.REPORT_TYPE_THREAD);
         }
 
         public function reportMessage(k:int, _arg_2:int, _arg_3:int):void
@@ -306,7 +306,7 @@
                 case HabboHelp.REPORT_TYPE_IM:
                     this.showPanels(false, false);
                     return;
-                case HabboHelp._Str_4459:
+                case HabboHelp.REPORT_TYPE_THREAD:
                 case HabboHelp._Str_4490:
                     this.showPanels(false, false);
                     return;
@@ -549,7 +549,7 @@
 
         private function isChatSelectionRequired():Boolean
         {
-            if ((((this._reportType == HabboHelp._Str_4459) || (this._reportType == HabboHelp._Str_4490)) || (this._reportType == HabboHelp.REPORT_TYPE_ROOM)))
+            if ((((this._reportType == HabboHelp.REPORT_TYPE_THREAD) || (this._reportType == HabboHelp._Str_4490)) || (this._reportType == HabboHelp.REPORT_TYPE_ROOM)))
             {
                 return false;
             }
@@ -584,11 +584,11 @@
                 this._habboHelp.windowManager.alert("${generic.alert.title}", "${help.cfh.error.notopic}", 0, null);
                 return false;
             }
-            if (((this._reportType == HabboHelp._Str_4490) || (this._reportType == HabboHelp._Str_4459)))
+            if (((this._reportType == HabboHelp._Str_4490) || (this._reportType == HabboHelp.REPORT_TYPE_THREAD)))
             {
                 return true;
             }
-            if ((((this._reportedUserId <= 0) && ((!(this._reportType == HabboHelp._Str_4490)) && (this._reportType == HabboHelp._Str_4459))) || ((this._reportType == HabboHelp.REPORT_TYPE_ROOM) && (!(this._habboHelp.getBoolean("room.report.enabled"))))))
+            if ((((this._reportedUserId <= 0) && ((!(this._reportType == HabboHelp._Str_4490)) && (this._reportType == HabboHelp.REPORT_TYPE_THREAD))) || ((this._reportType == HabboHelp.REPORT_TYPE_ROOM) && (!(this._habboHelp.getBoolean("room.report.enabled"))))))
             {
                 this._habboHelp.windowManager.alert("${generic.alert.title}", "${guide.bully.request.usermissing}", 0, null);
                 return false;
@@ -615,7 +615,7 @@
                 case HabboHelp.REPORT_TYPE_IM:
                     this._habboHelp.sendMessage(new _Str_8070(this._message, this._topicIndex, this._reportedUserId, this._chatReportController._Str_9701(HabboHelp.REPORT_TYPE_IM, -1)));
                     break;
-                case HabboHelp._Str_4459:
+                case HabboHelp.REPORT_TYPE_THREAD:
                     this._habboHelp.sendMessage(new _Str_7656(this._reportedGroupId, this._reportedThreadId, this._topicIndex, this._message));
                     break;
                 case HabboHelp._Str_4490:
