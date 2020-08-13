@@ -132,7 +132,7 @@
     import com.sulake.habbo.catalog.enum.CatalogType;
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseRoomAdMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9862;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseVipMembershipExtensionComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseBasicMembershipExtensionComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogAsGiftComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.ApproveNameMessageComposer;
@@ -803,7 +803,7 @@
 
         public function purchaseVipMembershipExtension(k:int):void
         {
-            this.send(new _Str_9862(k));
+            this.send(new PurchaseVipMembershipExtensionComposer(k));
         }
 
         public function purchaseBasicMembershipExtension(k:int):void

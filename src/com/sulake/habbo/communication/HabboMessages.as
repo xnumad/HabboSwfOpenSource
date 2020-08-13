@@ -667,7 +667,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7426;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RequestCatalogPage;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9801;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9862;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseVipMembershipExtensionComposer;
 	import com.sulake.habbo.communication.messages.incoming.help.*;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionAttachedEvent;
@@ -1855,7 +1855,7 @@
             OUTGOING_PACKETS[3385] = GetFlatControllersMessageComposer;
             OUTGOING_PACKETS[3386] = ApproveMembershipRequestMessageComposer;
             OUTGOING_PACKETS[339] = _Str_12068;
-            OUTGOING_PACKETS[3407] = _Str_9862;
+            OUTGOING_PACKETS[3407] = PurchaseVipMembershipExtensionComposer;
             OUTGOING_PACKETS[3435] = UpdateGuildSettingsMessageComposer;
             OUTGOING_PACKETS[3445] = GetFaqCategoryMessageComposer;
             OUTGOING_PACKETS[3447] = MakeOfferMessageComposer;
