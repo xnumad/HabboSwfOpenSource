@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_7177 implements IMessageComposer 
+    public class SaveWardrobeOutfitMessageComposer implements IMessageComposer
     {
         private var _data:Array;
 
-        public function _Str_7177(k:int, _arg_2:String, _arg_3:String)
+        public function SaveWardrobeOutfitMessageComposer(k:int, _arg_2:String, _arg_3:String)
         {
             this._data = [];
             super();

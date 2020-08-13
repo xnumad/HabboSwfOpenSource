@@ -270,7 +270,7 @@
 	import com.sulake.habbo.communication.messages.incoming.perk._Str_12157;
 	import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
 	import com.sulake.habbo.communication.messages.outgoing.avatar._Str_12037;
-	import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7177;
+	import com.sulake.habbo.communication.messages.outgoing.avatar.SaveWardrobeOutfitMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.avatar.GetWardrobeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7887;
 	import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.OpenMessageComposer;
@@ -1962,7 +1962,7 @@
             OUTGOING_PACKETS[793] = ActivateQuestMessageComposer;
             OUTGOING_PACKETS[796] = RequestCameraConfigurationComposer;
             OUTGOING_PACKETS[798] = GetGuildCreationInfoMessageComposer;
-            OUTGOING_PACKETS[800] = _Str_7177;
+            OUTGOING_PACKETS[800] = SaveWardrobeOutfitMessageComposer;
             OUTGOING_PACKETS[801] = _Str_17078;
             OUTGOING_PACKETS[808] = AssignRightsMessageComposer;
             OUTGOING_PACKETS[813] = GetGuildEditorDataMessageComposer;

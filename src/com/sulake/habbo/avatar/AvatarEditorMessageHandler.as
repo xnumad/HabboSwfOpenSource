@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_12022;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
-    import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7177;
+    import com.sulake.habbo.communication.messages.outgoing.avatar.SaveWardrobeOutfitMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.avatar._Str_7887;
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
     import com.sulake.habbo.avatar.view.AvatarEditorNameChangeView;
@@ -49,7 +49,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7177 = new _Str_7177(k, _arg_2.figure, _arg_2.gender);
+            var _local_3:SaveWardrobeOutfitMessageComposer = new SaveWardrobeOutfitMessageComposer(k, _arg_2.figure, _arg_2.gender);
             this._communication.connection.send(_local_3);
             _local_3.dispose();
             _local_3 = null;
