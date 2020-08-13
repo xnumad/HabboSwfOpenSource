@@ -438,7 +438,7 @@
             this.addMessageEvent(new _Str_9074(this._Str_23107));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
-            this.addMessageEvent(new SanctionStatusEvent(this._Str_22418));
+            this.addMessageEvent(new SanctionStatusEvent(this.onSanctionStatusEvent));
             this._chatEventHandler = new ChatEventHandler(this);
             this._guideHelpManager = new GuideHelpManager(this);
             this._callForHelpManager = new CallForHelpManager(this);
@@ -862,7 +862,7 @@
             this.sendMessage(new _Str_11701(k));
         }
 
-        private function _Str_22418(k:SanctionStatusEvent):void
+        private function onSanctionStatusEvent(k:SanctionStatusEvent):void
         {
             this._sanctionInfo.openWindow(k);
         }
