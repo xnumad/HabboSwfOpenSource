@@ -90,7 +90,7 @@
             }
             this._leaderboardWindow.invalidate();
             this._leaderboardWindow.visible = true;
-            this._Str_6199();
+            this.updateLayout();
         }
 
         public function disable():void
@@ -143,7 +143,7 @@
             }
         }
 
-        private function _Str_6199():void
+        private function updateLayout():void
         {
             this._Str_20297(null);
             this._leaderboardWindow.findChildByName("weekly_top_avatar_name").caption = "";

@@ -221,7 +221,7 @@
                 {
                     if (this._slots[k] != null)
                     {
-                        this._slots[k].addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_6199);
+                        this._slots[k].addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.updateLayout);
                     }
                     k++;
                 }
@@ -230,7 +230,7 @@
             this._currentlyResizingWindow = null;
         }
 
-        private function _Str_6199(k:WindowEvent=null):void
+        private function updateLayout(k:WindowEvent=null):void
         {
             if (this._currentlyResizingWindow == null)
             {

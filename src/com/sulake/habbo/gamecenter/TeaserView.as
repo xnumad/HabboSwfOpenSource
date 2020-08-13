@@ -52,7 +52,7 @@
             }
             this._teaserWindow.invalidate();
             this._teaserWindow.visible = true;
-            this._Str_6199();
+            this.updateLayout();
         }
 
         public function disable():void
@@ -105,7 +105,7 @@
             k.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this._Str_22482);
         }
 
-        private function _Str_6199():void
+        private function updateLayout():void
         {
             this._gameCenterView.registerParameter(this._selectedGame, "gamecenter.teaser_title");
         }

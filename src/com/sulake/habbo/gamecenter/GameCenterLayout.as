@@ -389,7 +389,7 @@
             }
         }
 
-        private function _Str_6199(k:Boolean):void
+        private function updateLayout(k:Boolean):void
         {
             var _local_2:String = GameConfigurations.getNameId(this._selectedGame);
             this._gameCenterContainer.color = GameConfigurations.getBgColor(this._selectedGame);
@@ -486,7 +486,7 @@
             this._gamesLeft = 0;
             this._gamesLeftContainer.caption = "0";
             this._Str_20908(k);
-            this._Str_6199(_arg_2);
+            this.updateLayout(_arg_2);
             this._gameCenterView._Str_18157(k);
         }
 

@@ -71,7 +71,7 @@
             }
             this._waitingGameWindow.invalidate();
             this._waitingGameWindow.visible = true;
-            this._Str_6199();
+            this.updateLayout();
             this._gameCenterView._Str_3777(GameConfigurations.getNameId(this._selectedGame), "waitingGame");
             if (!this._waitingGameTimer)
             {
@@ -81,7 +81,7 @@
             this._waitingGameTimer.start();
         }
 
-        private function _Str_6199():void
+        private function updateLayout():void
         {
             this._logoImage.assetUri = null;
             this._logoImage.assetUri = GameConfigurations.getAssetUrl(this._selectedGame, GameAssetEnum.LOGO);
