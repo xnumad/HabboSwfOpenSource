@@ -4,7 +4,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_9816;
+    import com.sulake.habbo.communication.messages.outgoing.competition.GetSecondsUntilMessageComposer;
 
     public class CustomTimerElementHandler extends AbstractTimerElementHandler 
     {
@@ -20,7 +20,7 @@
 
         override public function refresh():void
         {
-            landingView.send(new _Str_9816(this._timeStr));
+            landingView.send(new GetSecondsUntilMessageComposer(this._timeStr));
         }
 
         private function _Str_24489(k:_Str_9217):void

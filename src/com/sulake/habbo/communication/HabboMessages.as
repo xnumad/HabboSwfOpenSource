@@ -128,7 +128,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.competition.SubmitRoomToCompetitionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.GetCurrentTimingCodeMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_7424;
-	import com.sulake.habbo.communication.messages.outgoing.competition._Str_9816;
+	import com.sulake.habbo.communication.messages.outgoing.competition.GetSecondsUntilMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToRandomCompetitionRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.CancelMarketplaceOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOffersMessageComposer;
@@ -1742,7 +1742,7 @@
             OUTGOING_PACKETS[2683] = RemoveAllRightsMessageComposer;
             OUTGOING_PACKETS[2688] = GetCommunityGoalEarnedPrizesMessageComposer;
             OUTGOING_PACKETS[2694] = RespectUserMessageComposer;
-            OUTGOING_PACKETS[271] = _Str_9816;
+            OUTGOING_PACKETS[271] = GetSecondsUntilMessageComposer;
             OUTGOING_PACKETS[2713] = _Str_10953;
             OUTGOING_PACKETS[2717] = CloseIssueDefaultActionMessageComposer;
             OUTGOING_PACKETS[272] = MyRoomRightsSearchMessageComposer;
