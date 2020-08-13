@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12467 implements IMessageComposer 
+    public class GetIsOfferGiftableComposer implements IMessageComposer
     {
         private var _array:Array;
 
-        public function _Str_12467(k:int)
+        public function GetIsOfferGiftableComposer(k:int)
         {
             this._array = [];
             super();

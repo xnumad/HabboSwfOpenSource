@@ -653,7 +653,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12290;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceRoomItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSellablePetPalettesComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12467;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetIsOfferGiftableComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RoomAdPurchaseInitiatedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17078;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17335;
@@ -1559,7 +1559,7 @@
             OUTGOING_PACKETS[1334] = _Str_7424;
             OUTGOING_PACKETS[1342] = GetRecyclerStatusMessageComposer;
             OUTGOING_PACKETS[1343] = GetConcurrentUsersGoalProgressMessageComposer;
-            OUTGOING_PACKETS[1347] = _Str_12467;
+            OUTGOING_PACKETS[1347] = GetIsOfferGiftableComposer;
             OUTGOING_PACKETS[1364] = GetIsBadgeRequestFulfilledComposer;
             OUTGOING_PACKETS[1367] = SetSoundSettingsComposer;
             OUTGOING_PACKETS[137] = AcceptFriendMessageComposer;

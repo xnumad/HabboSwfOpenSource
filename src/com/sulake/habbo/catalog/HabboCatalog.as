@@ -243,7 +243,7 @@
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import com.sulake.core.window.components.IDesktopWindow;
     import flash.utils.getTimer;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12467;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetIsOfferGiftableComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.GetBundleDiscountRulesetComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.GetProductOfferComposer;
     import com.sulake.habbo.communication.messages.parser.catalog.BundleDiscountRulesetMessageParser;
@@ -2896,7 +2896,7 @@
 
         public function checkGiftable(k:IPurchasableOffer):void
         {
-            this.send(new _Str_12467(k.offerId));
+            this.send(new GetIsOfferGiftableComposer(k.offerId));
         }
 
         public function rememberPageDuringVipPurchase(k:int):void
