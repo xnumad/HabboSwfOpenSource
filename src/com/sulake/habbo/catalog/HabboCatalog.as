@@ -131,7 +131,7 @@
     import com.sulake.habbo.catalog.navigation.ICatalogNode;
     import com.sulake.habbo.catalog.enum.CatalogType;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11783;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10613;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseRoomAdMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9862;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10231;
@@ -797,7 +797,7 @@
                 {
                     this._roomAdPurchaseData._Str_8314 = false;
                 }
-                this.send(new _Str_10613(k, _arg_2, this.roomAdPurchaseData.flatId, this.roomAdPurchaseData.name, this.roomAdPurchaseData._Str_8314, this.roomAdPurchaseData.description, this.roomAdPurchaseData.categoryId));
+                this.send(new PurchaseRoomAdMessageComposer(k, _arg_2, this.roomAdPurchaseData.flatId, this.roomAdPurchaseData.name, this.roomAdPurchaseData._Str_8314, this.roomAdPurchaseData.description, this.roomAdPurchaseData.categoryId));
             }
         }
 

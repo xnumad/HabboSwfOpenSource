@@ -639,7 +639,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetBonusRareInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10337;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetRoomAdPurchaseInfoComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10613;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseRoomAdMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogIndexComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetBundleDiscountRulesetComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11313;
@@ -1957,7 +1957,7 @@
             OUTGOING_PACKETS[753] = AddJukeboxDiskComposer;
             OUTGOING_PACKETS[0x0300] = OpenMessageComposer;
             OUTGOING_PACKETS[773] = CompleteDiffieHandshakeMessageComposer;
-            OUTGOING_PACKETS[777] = _Str_10613;
+            OUTGOING_PACKETS[777] = PurchaseRoomAdMessageComposer;
             OUTGOING_PACKETS[790] = _Str_9957;
             OUTGOING_PACKETS[793] = ActivateQuestMessageComposer;
             OUTGOING_PACKETS[796] = RequestCameraConfigurationComposer;
