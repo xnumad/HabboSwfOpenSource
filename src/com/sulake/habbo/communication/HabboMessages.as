@@ -391,7 +391,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemIdsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.advertisement._Str_10855;
-	import com.sulake.habbo.communication.messages.outgoing.advertisement._Str_11497;
+	import com.sulake.habbo.communication.messages.outgoing.advertisement.InterstitialShownMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.tracking.LatencyPingResponseMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.userclassification.UserClassificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.*;
@@ -1529,7 +1529,7 @@
             OUTGOING_PACKETS[1086] = SetIgnoreRoomInvitesMessageComposer;
             OUTGOING_PACKETS[109] = PollStartComposer;
             OUTGOING_PACKETS[11] = _Str_7123;
-            OUTGOING_PACKETS[1109] = _Str_11497;
+            OUTGOING_PACKETS[1109] = InterstitialShownMessageComposer;
             OUTGOING_PACKETS[1117] = IgnoreUserMessageComposer;
             OUTGOING_PACKETS[1118] = WhiperGroupComposer;
             OUTGOING_PACKETS[1134] = DeactivateGuildMessageComposer;

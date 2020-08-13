@@ -100,7 +100,7 @@
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.advertisement._Str_11497;
+    import com.sulake.habbo.communication.messages.outgoing.advertisement.InterstitialShownMessageComposer;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetChangePostureMessage;
     import flash.utils.Timer;
     import flash.events.TimerEvent;
@@ -795,7 +795,7 @@
             this._interstitialActive = false;
             if (k.status == "complete")
             {
-                this._communication.connection.send(new _Str_11497());
+                this._communication.connection.send(new InterstitialShownMessageComposer());
             }
             var _local_2:String = this.getRoomIdentifier(this._interstitialRoomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
