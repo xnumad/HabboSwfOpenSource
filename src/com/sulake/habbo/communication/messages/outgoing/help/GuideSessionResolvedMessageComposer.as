@@ -3,12 +3,12 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_7077 implements IMessageComposer, IDisposable 
+    public class GuideSessionResolvedMessageComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
         private var _disposed:Boolean = false;
 
-        public function _Str_7077()
+        public function GuideSessionResolvedMessageComposer()
         {
             this._array = [];
             super();

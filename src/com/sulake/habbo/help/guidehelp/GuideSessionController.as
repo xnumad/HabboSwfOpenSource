@@ -64,7 +64,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGetRequesterRoomMessageComposer;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionInviteRequesterMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_7077;
+    import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionResolvedMessageComposer;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_4434;
     import mx.utils.StringUtil;
@@ -763,7 +763,7 @@
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickReport"));
                     return;
                 case "close_link":
-                    this._habboHelp.sendMessage(new _Str_7077());
+                    this._habboHelp.sendMessage(new GuideSessionResolvedMessageComposer());
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickClose"));
                     this.closeWindow();
                     return;
@@ -936,7 +936,7 @@
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickReport"));
                     return;
                 case "close_link":
-                    this._habboHelp.sendMessage(new _Str_7077());
+                    this._habboHelp.sendMessage(new GuideSessionResolvedMessageComposer());
                     this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickClose"));
                     this.closeWindow();
                     return;

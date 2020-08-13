@@ -595,7 +595,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_5876;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_7077;
+	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionResolvedMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionCreateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGetRequesterRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
@@ -1974,7 +1974,7 @@
             OUTGOING_PACKETS[873] = GetThreadsMessageComposer;
             OUTGOING_PACKETS[875] = UpdateFloorPropertiesMessageComposer;
             OUTGOING_PACKETS[882] = ApproveAllMembershipRequestsMessageComposer;
-            OUTGOING_PACKETS[887] = _Str_7077;
+            OUTGOING_PACKETS[887] = GuideSessionResolvedMessageComposer;
             OUTGOING_PACKETS[90] = RedeemCommunityGoalPrizeMessageComposer;
             OUTGOING_PACKETS[924] = SetClothingChangeDataMessageComposer;
             OUTGOING_PACKETS[957] = _Str_10281;
