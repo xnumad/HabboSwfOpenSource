@@ -12,7 +12,7 @@
     import com.sulake.habbo.catalog.targetedoffers.data.TargetedOffer;
     import com.sulake.habbo.communication.enum.TargetedOfferTrackingStateEnum;
     import com.sulake.habbo.catalog.targetedoffers.data.HabboMallOffer;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_6074;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.ShopTargetedOfferViewedComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7084;
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseTargetedOfferComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
@@ -112,7 +112,7 @@
             }
             this._Str_6602();
             this._mallOfferDialog = new MallOfferDialogView(this, k);
-            this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum.PREVIEWED));
+            this._catalog.connection.send(new ShopTargetedOfferViewedComposer(k.targetedOfferId, TargetedOfferTrackingStateEnum.PREVIEWED));
         }
 
         public function minimizeMallOffer(k:HabboMallOffer, _arg_2:Boolean=false):void
@@ -123,14 +123,14 @@
 
         public function onHabboMallOfferOpened(k:HabboMallOffer):void
         {
-            this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum.OFFERED));
+            this._catalog.connection.send(new ShopTargetedOfferViewedComposer(k.targetedOfferId, TargetedOfferTrackingStateEnum.OFFERED));
             this._catalog.openCreditsHabblet();
             this.minimizeMallOffer(k);
         }
 
         public function onHabboMallOfferClosed(k:HabboMallOffer):void
         {
-            this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum.MINIMIZED));
+            this._catalog.connection.send(new ShopTargetedOfferViewedComposer(k.targetedOfferId, TargetedOfferTrackingStateEnum.MINIMIZED));
             this.minimizeMallOffer(k);
         }
 

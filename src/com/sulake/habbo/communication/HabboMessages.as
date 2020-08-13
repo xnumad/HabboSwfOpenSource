@@ -659,7 +659,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17335;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_17774;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageExpirationComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_6074;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.ShopTargetedOfferViewedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7084;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7218;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetClubGiftInfo;
@@ -1862,7 +1862,7 @@
             OUTGOING_PACKETS[3449] = MovePetMessageComposer;
             OUTGOING_PACKETS[3456] = PickupObjectMessageComposer;
             OUTGOING_PACKETS[3457] = EventLogMessageComposer;
-            OUTGOING_PACKETS[3483] = _Str_6074;
+            OUTGOING_PACKETS[3483] = ShopTargetedOfferViewedComposer;
             OUTGOING_PACKETS[3485] = RoomUserMuteMessageComposer;
             OUTGOING_PACKETS[3492] = PurchaseFromCatalogComposer;
             OUTGOING_PACKETS[3493] = ResetUnseenItemIdsComposer;
