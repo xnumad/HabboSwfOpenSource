@@ -71,7 +71,7 @@
     import com.sulake.habbo.utils.FriendlyTime;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_10003;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_8134;
+    import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideDecidesOnOfferMessageComposer;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideDetachedMessageComposer;
     import com.sulake.core.window.components.IRegionWindow;
@@ -1070,11 +1070,11 @@
             switch (_arg_2.name)
             {
                 case "skip_link":
-                    this._habboHelp.sendMessage(new _Str_8134(false));
+                    this._habboHelp.sendMessage(new ChatReviewGuideDecidesOnOfferMessageComposer(false));
                     this._Str_4260(true);
                     return;
                 case "accept_button":
-                    this._habboHelp.sendMessage(new _Str_8134(true));
+                    this._habboHelp.sendMessage(new ChatReviewGuideDecidesOnOfferMessageComposer(true));
                     this._Str_24340();
                     return;
             }

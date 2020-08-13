@@ -603,7 +603,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromPhotoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromIMMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_8134;
+	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewGuideDecidesOnOfferMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_8147;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.GetPetCommandsMessageComposer;
@@ -1847,7 +1847,7 @@
             OUTGOING_PACKETS[3338] = GuideSessionCreateMessageComposer;
             OUTGOING_PACKETS[336] = GetYoutubeDisplayStatusMessageComposer;
             OUTGOING_PACKETS[3362] = _Str_18174;
-            OUTGOING_PACKETS[3365] = _Str_8134;
+            OUTGOING_PACKETS[3365] = ChatReviewGuideDecidesOnOfferMessageComposer;
             OUTGOING_PACKETS[3373] = ApplySnapshotMessageComposer;
             OUTGOING_PACKETS[3374] = CustomizeAvatarWithFurniMessageComposer;
             OUTGOING_PACKETS[3379] = TogglePetBreedingPermissionMessageComposer;
