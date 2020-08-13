@@ -4,11 +4,11 @@
 
     public class _Str_12206 implements IMessageComposer 
     {
-        private var _Str_12122:int;
+        private var _itemID:int;
 
         public function _Str_12206(k:int)
         {
-            this._Str_12122 = k;
+            this._itemID = k;
         }
 
         public function dispose():void
@@ -17,7 +17,7 @@
 
         public function getMessageArray():Array
         {
-            return [this._Str_12122];
+            return [this._itemID];
         }
     }
 }
