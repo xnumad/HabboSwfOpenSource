@@ -54,7 +54,7 @@
                 switch (_arg_2.name)
                 {
                     case "header_button_close":
-                        this._controller._Str_25187(this._offer);
+                        this._controller.onHabboMallOfferClosed(this._offer);
                         return;
                     case "btn_buy":
                         this._controller.onHabboMallOfferOpened(this._offer);

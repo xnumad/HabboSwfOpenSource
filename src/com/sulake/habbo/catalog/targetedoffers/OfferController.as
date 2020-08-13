@@ -128,7 +128,7 @@
             this.minimizeMallOffer(k);
         }
 
-        public function _Str_25187(k:HabboMallOffer):void
+        public function onHabboMallOfferClosed(k:HabboMallOffer):void
         {
             this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum.MINIMIZED));
             this.minimizeMallOffer(k);
