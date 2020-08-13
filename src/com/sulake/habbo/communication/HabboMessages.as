@@ -666,7 +666,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7384;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_7426;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RequestCatalogPage;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9801;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetLimitedOfferAppearingNextComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseVipMembershipExtensionComposer;
 	import com.sulake.habbo.communication.messages.incoming.help.*;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsEvent;
@@ -1925,7 +1925,7 @@
             OUTGOING_PACKETS[3991] = EditEventMessageComposer;
             OUTGOING_PACKETS[3997] = _Str_4348;
             OUTGOING_PACKETS[4000] = ClientHelloMessageComposer;
-            OUTGOING_PACKETS[410] = _Str_9801;
+            OUTGOING_PACKETS[410] = GetLimitedOfferAppearingNextComposer;
             OUTGOING_PACKETS[412] = RequestCatalogPage;
             OUTGOING_PACKETS[418] = GetGiftWrappingConfigurationComposer;
             OUTGOING_PACKETS[433] = CompetitionRoomsSearchMessageComposer;

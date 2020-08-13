@@ -7,7 +7,7 @@
     import com.sulake.core.window.IWindowContainer;
     import flash.utils.Timer;
     import com.sulake.habbo.communication.messages.incoming.catalog.LimitedOfferAppearingNextMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9801;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetLimitedOfferAppearingNextComposer;
     import flash.events.TimerEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IWidgetWindow;
@@ -69,7 +69,7 @@
         {
             if (!this._landingView.getBoolean("next.limited.rare.countdown.widget.disabled"))
             {
-                this._landingView.communicationManager.connection.send(new _Str_9801());
+                this._landingView.communicationManager.connection.send(new GetLimitedOfferAppearingNextComposer());
             }
         }
 
