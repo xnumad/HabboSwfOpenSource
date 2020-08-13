@@ -14,7 +14,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7640;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_8070;
+    import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromIMMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
@@ -424,7 +424,7 @@
                     this._habboHelp.sendMessage(new _Str_7640(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp.reportedUserId, this._currentTopic.id, this._habboHelp._Str_10658));
                     return;
                 case HabboHelp.REPORT_TYPE_IM:
-                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721.chatReportController.collectSelectedEntries(HabboHelp.REPORT_TYPE_IM, this._habboHelp.reportedUserId)));
+                    this._habboHelp.sendMessage(new CallForHelpFromIMMessageComposer(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721.chatReportController.collectSelectedEntries(HabboHelp.REPORT_TYPE_IM, this._habboHelp.reportedUserId)));
                     return;
                 case HabboHelp.REPORT_TYPE_ROOM:
                     this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, -1, this._habboHelp._Str_3469, []));

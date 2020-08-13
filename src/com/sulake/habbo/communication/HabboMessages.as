@@ -602,7 +602,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_7640;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_8070;
+	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromIMMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_8134;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_8147;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.*;
@@ -1784,7 +1784,7 @@
             OUTGOING_PACKETS[2941] = PassCarryItemMessageComposer;
             OUTGOING_PACKETS[2946] = RentableSpaceRentMessageComposer;
             OUTGOING_PACKETS[295] = LatencyPingRequestMessageComposer;
-            OUTGOING_PACKETS[2950] = _Str_8070;
+            OUTGOING_PACKETS[2950] = CallForHelpFromIMMessageComposer;
             OUTGOING_PACKETS[2959] = AvatarEffectActivatedComposer;
             OUTGOING_PACKETS[2970] = FollowFriendMessageComposer;
             OUTGOING_PACKETS[2977] = _Str_12037;
