@@ -14,7 +14,7 @@
     import com.sulake.habbo.inventory.events.HabboInventoryFurniListParsedEvent;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import com.sulake.habbo.communication.messages.outgoing.crafting._Str_7271;
-    import com.sulake.habbo.communication.messages.outgoing.crafting._Str_10459;
+    import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftableProductsComposer;
     import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftingRecipesAvailableComposer;
     import com.sulake.habbo.ui.widget.crafting.utils.CraftingViewStateEnum;
     import com.sulake.habbo.communication.messages.outgoing.crafting._Str_12393;
@@ -145,7 +145,7 @@
         public function _Str_25388(k:String):void
         {
             this._selectedProductData = this._container.sessionDataManager.getProductData(k);
-            this._container.connection.send(new _Str_10459(k));
+            this._container.connection.send(new GetCraftableProductsComposer(k));
         }
 
         private function _Str_24394(k:CraftingRecipeEvent):void

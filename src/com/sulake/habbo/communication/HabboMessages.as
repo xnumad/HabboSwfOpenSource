@@ -939,7 +939,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.crafting.*;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.CraftSecretComposer;
 	import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftingRecipesAvailableComposer;
-	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_10459;
+	import com.sulake.habbo.communication.messages.outgoing.crafting.GetCraftableProductsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_12393;
 	import com.sulake.habbo.communication.messages.outgoing.crafting._Str_7271;
 	import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgesEvent;
@@ -1942,7 +1942,7 @@
             OUTGOING_PACKETS[593] = KickMemberMessageComposer;
             OUTGOING_PACKETS[596] = _Str_17774;
             OUTGOING_PACKETS[603] = _Str_17335;
-            OUTGOING_PACKETS[633] = _Str_10459;
+            OUTGOING_PACKETS[633] = GetCraftableProductsComposer;
             OUTGOING_PACKETS[637] = NavigatorRemoveCollapsedCategoryMessageComposer;
             OUTGOING_PACKETS[644] = SetActivatedBadgesComposer;
             OUTGOING_PACKETS[654] = _Str_11321;
