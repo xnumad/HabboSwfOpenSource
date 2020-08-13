@@ -124,7 +124,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.competition.VoteForRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_10525;
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToACompetitionRoomMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.competition._Str_12123;
+	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToASubmittableRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.SubmitRoomToCompetitionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_5974;
 	import com.sulake.habbo.communication.messages.outgoing.competition._Str_7424;
@@ -1576,7 +1576,7 @@
             OUTGOING_PACKETS[1435] = GetJukeboxPlayListMessageComposer;
             OUTGOING_PACKETS[1444] = _Str_10862;
             OUTGOING_PACKETS[1445] = Game2ExitGameMessageComposer;
-            OUTGOING_PACKETS[1450] = _Str_12123;
+            OUTGOING_PACKETS[1450] = ForwardToASubmittableRoomMessageComposer;
             OUTGOING_PACKETS[1458] = JoinPlayerQueueMessageComposer;
             OUTGOING_PACKETS[1461] = SetRoomCameraPreferencesMessageComposer;
             OUTGOING_PACKETS[1472] = TogglePetRidingPermissionMessageComposer;

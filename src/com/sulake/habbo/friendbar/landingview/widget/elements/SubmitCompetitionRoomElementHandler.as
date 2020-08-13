@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
     import com.sulake.habbo.communication.messages.outgoing.competition._Str_10525;
-    import com.sulake.habbo.communication.messages.outgoing.competition._Str_12123;
+    import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToASubmittableRoomMessageComposer;
 
     public class SubmitCompetitionRoomElementHandler extends AbstractButtonElementHandler 
     {
@@ -39,7 +39,7 @@
             }
             else
             {
-                landingView.send(new _Str_12123());
+                landingView.send(new ForwardToASubmittableRoomMessageComposer());
                 landingView.tracking.trackGoogle("landingView", "click_startsubmit");
             }
         }
