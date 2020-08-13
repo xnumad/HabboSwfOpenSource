@@ -808,7 +808,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.FollowFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.SendMsgMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.RequestFriendMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11696;
+	import com.sulake.habbo.communication.messages.outgoing.friendlist.SetRelationshipStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11750;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11815;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11941;
@@ -1893,7 +1893,7 @@
             OUTGOING_PACKETS[3720] = PostQuizAnswersComposer;
             OUTGOING_PACKETS[3736] = RoomNetworkOpenConnectionMessageComposer;
             OUTGOING_PACKETS[3742] = ModTradingLockMessageComposer;
-            OUTGOING_PACKETS[3768] = _Str_11696;
+            OUTGOING_PACKETS[3768] = SetRelationshipStatusMessageComposer;
             OUTGOING_PACKETS[3775] = FriendFurniConfirmLockMessageComposer;
             OUTGOING_PACKETS[3782] = GetCategoriesWithUserCountMessageComposer;
             OUTGOING_PACKETS[3786] = GetGuideReportingStatusMessageComposer;

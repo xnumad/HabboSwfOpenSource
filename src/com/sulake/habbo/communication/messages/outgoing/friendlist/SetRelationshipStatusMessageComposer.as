@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11696 implements IMessageComposer 
+    public class SetRelationshipStatusMessageComposer implements IMessageComposer
     {
         private var _Str_5045:int;
         private var _Str_19532:int;
 
-        public function _Str_11696(k:int, _arg_2:int)
+        public function SetRelationshipStatusMessageComposer(k:int, _arg_2:int)
         {
             this._Str_5045 = k;
             this._Str_19532 = _arg_2;

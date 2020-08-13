@@ -91,7 +91,7 @@
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.utils.getTimer;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11696;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.SetRelationshipStatusMessageComposer;
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.communication.messages.incoming.friendlist.*;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.*;
@@ -926,7 +926,7 @@
 
         public function setRelationshipStatus(k:int, _arg_2:int):void
         {
-            this.send(new _Str_11696(k, _arg_2));
+            this.send(new SetRelationshipStatusMessageComposer(k, _arg_2));
         }
 
         public function getRelationshipStatus(k:int):int
