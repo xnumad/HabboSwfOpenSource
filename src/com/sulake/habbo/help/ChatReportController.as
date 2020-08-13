@@ -56,7 +56,7 @@
             this._window.center();
             this._reportedUserId = _arg_2;
             this._reportedRoomId = -1;
-            if (_arg_3 == HabboHelp._Str_4315)
+            if (_arg_3 == HabboHelp.REPORT_TYPE_IM)
             {
                 this._Str_25143();
                 this._Str_25723(k, _arg_2);
@@ -92,7 +92,7 @@
             var _local_6:InstantMessageRegistryItem;
             var _local_7:ChatRegistryItem;
             var _local_3:Array = new Array();
-            if (k == HabboHelp._Str_4315)
+            if (k == HabboHelp.REPORT_TYPE_IM)
             {
                 _local_4 = ((_arg_2 > 0) ? _arg_2 : this._reportedUserId);
                 _local_5 = this._habboHelp._Str_3977._Str_5150(_local_4);

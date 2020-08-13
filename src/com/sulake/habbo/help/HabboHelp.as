@@ -76,7 +76,7 @@
     {
         public static const REPORT_TYPE_EMERGENCY:int = 1;
         public static const REPORT_TYPE_GUIDE:int = 2;
-        public static const _Str_4315:int = 3;
+        public static const REPORT_TYPE_IM:int = 3;
         public static const _Str_4786:int = 4;
         public static const _Str_15144:int = 6;
         public static const _Str_4459:int = 7;
@@ -664,7 +664,7 @@
             switch (this._reportType)
             {
                 case REPORT_TYPE_EMERGENCY:
-                case _Str_4315:
+                case REPORT_TYPE_IM:
                 case _Str_4786:
                 case _Str_4459:
                 case _Str_4490:

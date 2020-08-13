@@ -303,7 +303,7 @@
                 case HabboHelp.REPORT_TYPE_EMERGENCY:
                     this.showPanels(true, false);
                     return;
-                case HabboHelp._Str_4315:
+                case HabboHelp.REPORT_TYPE_IM:
                     this.showPanels(false, false);
                     return;
                 case HabboHelp._Str_4459:
@@ -522,7 +522,7 @@
         private function basicInfoDone():void
         {
             var k:Boolean = this.isChatSelectionRequired();
-            if (this._reportType == HabboHelp._Str_4315)
+            if (this._reportType == HabboHelp.REPORT_TYPE_IM)
             {
                 if (!this._habboHelp._Str_3977._Str_23839(this._reportedUserId))
                 {
@@ -553,7 +553,7 @@
             {
                 return false;
             }
-            return ((this._reportedUserId <= 0) || (this._habboHelp._Str_3531._Str_5150(this._reportedUserId).length > 0)) || (this._reportType == HabboHelp._Str_4315);
+            return ((this._reportedUserId <= 0) || (this._habboHelp._Str_3531._Str_5150(this._reportedUserId).length > 0)) || (this._reportType == HabboHelp.REPORT_TYPE_IM);
         }
 
         private function saveEmergencyHelpRequestData(k:Boolean=true):Boolean
@@ -612,8 +612,8 @@
                     k = ((this._chatReportController._Str_3469 <= 0) ? this._reportedRoomId : this._chatReportController._Str_3469);
                     this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._topicIndex, this._reportedUserId, k, this._chatReportController._Str_9701(this._reportType, -1)));
                     break;
-                case HabboHelp._Str_4315:
-                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._topicIndex, this._reportedUserId, this._chatReportController._Str_9701(HabboHelp._Str_4315, -1)));
+                case HabboHelp.REPORT_TYPE_IM:
+                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._topicIndex, this._reportedUserId, this._chatReportController._Str_9701(HabboHelp.REPORT_TYPE_IM, -1)));
                     break;
                 case HabboHelp._Str_4459:
                     this._habboHelp.sendMessage(new _Str_7656(this._reportedGroupId, this._reportedThreadId, this._topicIndex, this._message));

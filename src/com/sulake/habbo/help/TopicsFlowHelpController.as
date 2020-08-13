@@ -122,7 +122,7 @@
 
         public function _Str_23015():void
         {
-            this._Str_13370(HabboHelp._Str_4315, false);
+            this._Str_13370(HabboHelp.REPORT_TYPE_IM, false);
             this._Str_3615(CHAT_CONTAINER);
             this._Str_23695();
             if (this._chatList.numListItems == 0)
@@ -214,7 +214,7 @@
             }
             else
             {
-                if (this._contentModerationType == HabboHelp._Str_4315)
+                if (this._contentModerationType == HabboHelp.REPORT_TYPE_IM)
                 {
                     k = (!(this._currentContainer == CHAT_CONTAINER));
                 }
@@ -423,8 +423,8 @@
                 case HabboHelp._Str_7161:
                     this._habboHelp.sendMessage(new _Str_7640(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp.reportedUserId, this._currentTopic.id, this._habboHelp._Str_10658));
                     return;
-                case HabboHelp._Str_4315:
-                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721.chatReportController._Str_9701(HabboHelp._Str_4315, this._habboHelp.reportedUserId)));
+                case HabboHelp.REPORT_TYPE_IM:
+                    this._habboHelp.sendMessage(new _Str_8070(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721.chatReportController._Str_9701(HabboHelp.REPORT_TYPE_IM, this._habboHelp.reportedUserId)));
                     return;
                 case HabboHelp._Str_4786:
                     this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, -1, this._habboHelp._Str_3469, []));
