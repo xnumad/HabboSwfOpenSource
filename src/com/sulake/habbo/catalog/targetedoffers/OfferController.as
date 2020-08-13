@@ -179,7 +179,7 @@
             }
         }
 
-        public function _Str_24046(k:String, _arg_2:String=""):void
+        public function sendLogEvent(k:String, _arg_2:String=""):void
         {
             if (((!(this._catalog)) || (!(this._catalog.connection))))
             {
@@ -190,7 +190,7 @@
 
         public function purchaseCredits(k:TargetedOffer):void
         {
-            this._Str_24046(EventLogActions.TARGETED_OFFER_OPEN_CREDITS_PAGE_CLICKED, k.identifier);
+            this.sendLogEvent(EventLogActions.TARGETED_OFFER_OPEN_CREDITS_PAGE_CLICKED, k.identifier);
             this._catalog.openCreditsHabblet();
         }
 
