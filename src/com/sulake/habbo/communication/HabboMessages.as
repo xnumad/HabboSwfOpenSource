@@ -644,7 +644,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetBundleDiscountRulesetComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11313;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.MarkCatalogNewAdditionsPageOpenedComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_11648;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceWallItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetProductOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_12000;
@@ -1931,7 +1931,7 @@
             OUTGOING_PACKETS[433] = CompetitionRoomsSearchMessageComposer;
             OUTGOING_PACKETS[434] = CancelMarketplaceOfferMessageComposer;
             OUTGOING_PACKETS[436] = GetForumsListMessageComposer;
-            OUTGOING_PACKETS[462] = _Str_11648;
+            OUTGOING_PACKETS[462] = BuildersClubPlaceWallItemMessageComposer;
             OUTGOING_PACKETS[477] = GuideSessionFeedbackMessageComposer;
             OUTGOING_PACKETS[487] = _Str_7373;
             OUTGOING_PACKETS[516] = _Str_11815;
