@@ -89,7 +89,7 @@
 
         private function _Str_16658(k:String):ITextWindow
         {
-            var _local_2:ITextWindow = (this._main._Str_12245("welcome_name_suggestion_item") as ITextWindow);
+            var _local_2:ITextWindow = (this._main.buildXmlWindow("welcome_name_suggestion_item") as ITextWindow);
             if (_local_2 == null)
             {
                 return null;

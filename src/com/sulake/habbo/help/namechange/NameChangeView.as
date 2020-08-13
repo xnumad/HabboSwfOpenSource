@@ -99,7 +99,7 @@
         {
             if (!this._window)
             {
-                this._window = (this._controller._Str_12245("welcome_name_change") as IFrameWindow);
+                this._window = (this._controller.buildXmlWindow("welcome_name_change") as IFrameWindow);
                 this._window.center();
                 this._window.procedure = this._Str_3545;
                 this._mainView = (this._window.content.getChildAt(0) as IWindowContainer);
@@ -113,7 +113,7 @@
         {
             if (!this._selectionView)
             {
-                this._selectionView = (this._controller._Str_12245("welcome_name_selection") as IWindowContainer);
+                this._selectionView = (this._controller.buildXmlWindow("welcome_name_selection") as IWindowContainer);
                 if (!this._selectionView)
                 {
                     return;
@@ -134,7 +134,7 @@
         {
             if (!this._confirmationView)
             {
-                this._confirmationView = (this._controller._Str_12245("welcome_name_confirmation") as IWindowContainer);
+                this._confirmationView = (this._controller.buildXmlWindow("welcome_name_confirmation") as IWindowContainer);
                 if (!this._confirmationView)
                 {
                     return;

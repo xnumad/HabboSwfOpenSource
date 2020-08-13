@@ -90,7 +90,7 @@
             this._Str_25860();
         }
 
-        public function _Str_12245(k:String, _arg_2:uint=1):IWindow
+        public function buildXmlWindow(k:String, _arg_2:uint=1):IWindow
         {
             if (this._habboHelp.assets == null)
             {
