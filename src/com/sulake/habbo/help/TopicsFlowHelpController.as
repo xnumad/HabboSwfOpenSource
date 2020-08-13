@@ -18,7 +18,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
+    import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewSessionCreateMessageComposer;
     import com.sulake.habbo.help.cfh.registry.user.UserRegistryItem;
     import com.sulake.habbo.help.cfh.registry.chat.ChatRegistryItem;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
@@ -438,7 +438,7 @@
                 default:
                     if (((((k) && (this._currentTopic.name == BULLYING)) && (this._habboHelp.getBoolean("guides.enabled"))) && (this._habboHelp._Str_16486)))
                     {
-                        this._habboHelp.sendMessage(new _Str_7634(this._habboHelp.reportedUserId, this._habboHelp._Str_3469));
+                        this._habboHelp.sendMessage(new ChatReviewSessionCreateMessageComposer(this._habboHelp.reportedUserId, this._habboHelp._Str_3469));
                     }
                     else
                     {

@@ -599,7 +599,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionCreateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGetRequesterRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_7634;
+	import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewSessionCreateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromPhotoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromIMMessageComposer;
@@ -1795,7 +1795,7 @@
             OUTGOING_PACKETS[3027] = GetUserFlatCatsMessageComposer;
             OUTGOING_PACKETS[3045] = UpdateThreadMessageComposer;
             OUTGOING_PACKETS[3050] = RemoveJukeboxDiskComposer;
-            OUTGOING_PACKETS[3060] = _Str_7634;
+            OUTGOING_PACKETS[3060] = ChatReviewSessionCreateMessageComposer;
             OUTGOING_PACKETS[3074] = OpenMysteryTrophyMessageComposer;
             OUTGOING_PACKETS[3077] = RequestABadgeComposer;
             OUTGOING_PACKETS[3082] = GetSongInfoMessageComposer;
