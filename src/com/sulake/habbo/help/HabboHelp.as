@@ -605,7 +605,7 @@
             this.sendMessage(new _Str_10695());
         }
 
-        public function _Str_24148(k:int):void
+        public function queryForGuideReportingStatus(k:int):void
         {
             this._requestType = k;
             this.sendMessage(new GuideAdvertisementReadMessageComposer());

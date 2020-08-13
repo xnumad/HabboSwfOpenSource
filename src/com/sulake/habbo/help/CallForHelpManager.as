@@ -196,7 +196,7 @@
             {
                 this._reportedUserId = k;
                 this._reportedRoomId = _arg_2;
-                this._habboHelp._Str_24148(_Str_2849._Str_8260);
+                this._habboHelp.queryForGuideReportingStatus(_Str_2849._Str_8260);
             }
             else
             {
