@@ -746,7 +746,7 @@
             return !(this._ownUserItems.getValue(_local_6) == null);
         }
 
-        public function _Str_22686(k:int):void
+        public function requestRemoveItemFromTrading(k:int):void
         {
             var _local_3:IFurnitureItem;
             if (this._ownUserAccepts)

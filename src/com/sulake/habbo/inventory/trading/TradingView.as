@@ -804,7 +804,7 @@
             var _local_10:Date;
             if (((_arg_3) && (k.type == WindowMouseEvent.CLICK)))
             {
-                this._tradingModel._Str_22686(_arg_2.id);
+                this._tradingModel.requestRemoveItemFromTrading(_arg_2.id);
             }
             if (k.type == WindowMouseEvent.OVER)
             {
