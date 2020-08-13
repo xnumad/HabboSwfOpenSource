@@ -133,7 +133,7 @@
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseRoomAdMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog._Str_9862;
-    import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseBasicMembershipExtensionComposer;
     import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogAsGiftComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.ApproveNameMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.recycler.GetRecyclerStatusMessageComposer;
@@ -808,7 +808,7 @@
 
         public function purchaseBasicMembershipExtension(k:int):void
         {
-            this.send(new _Str_10123(k));
+            this.send(new PurchaseBasicMembershipExtensionComposer(k));
         }
 
         public function purchaseProductAsGift(k:int, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:Boolean=false):void

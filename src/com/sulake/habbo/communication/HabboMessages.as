@@ -634,7 +634,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.PickupObjectMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.SelectClubGiftComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10123;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseBasicMembershipExtensionComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseFromCatalogAsGiftComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetBonusRareInfoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog._Str_10337;
@@ -1750,7 +1750,7 @@
             OUTGOING_PACKETS[2725] = CancelEventMessageComposer;
             OUTGOING_PACKETS[273] = GetCreditsInfoComposer;
             OUTGOING_PACKETS[2730] = UpdateFigureDataMessageComposer;
-            OUTGOING_PACKETS[2735] = _Str_10123;
+            OUTGOING_PACKETS[2735] = PurchaseBasicMembershipExtensionComposer;
             OUTGOING_PACKETS[2741] = _Str_7498;
             OUTGOING_PACKETS[2742] = GetWardrobeMessageComposer;
             OUTGOING_PACKETS[2746] = GetCfhStatusMessageComposer;
