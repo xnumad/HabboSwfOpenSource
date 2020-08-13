@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12224 implements IMessageComposer 
+    public class DeletePendingCallsForHelpMessageComposer implements IMessageComposer
     {
 
 

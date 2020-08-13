@@ -31,7 +31,7 @@
     import com.sulake.habbo.communication.messages.parser.help._Str_7322;
     import com.sulake.habbo.help.enum.CallForHelpResultEnum;
     import com.sulake.habbo.communication.messages.parser.help._Str_7865;
-    import com.sulake.habbo.communication.messages.outgoing.help._Str_12224;
+    import com.sulake.habbo.communication.messages.outgoing.help.DeletePendingCallsForHelpMessageComposer;
 
     public class CallForHelpManager implements IDisposable 
     {
@@ -693,7 +693,7 @@
 
         private function deletePendingCallsForHelp():void
         {
-            this._habboHelp.sendMessage(new _Str_12224());
+            this._habboHelp.sendMessage(new DeletePendingCallsForHelpMessageComposer());
         }
 
         public function get chatReportController():ChatReportController

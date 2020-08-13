@@ -582,7 +582,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.help.GetCfhStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionIsTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromSelfieMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.help._Str_12224;
+	import com.sulake.habbo.communication.messages.outgoing.help.DeletePendingCallsForHelpMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help.GetGuideReportingStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.help._Str_15943;
 	import com.sulake.habbo.communication.messages.outgoing.help.GetFaqCategoryMessageComposer;
@@ -1882,7 +1882,7 @@
             OUTGOING_PACKETS[3591] = _Str_12393;
             OUTGOING_PACKETS[3593] = GetMemberGuildItemCountMessageComposer;
             OUTGOING_PACKETS[3604] = AcceptQuestMessageComposer;
-            OUTGOING_PACKETS[3605] = _Str_12224;
+            OUTGOING_PACKETS[3605] = DeletePendingCallsForHelpMessageComposer;
             OUTGOING_PACKETS[3608] = SetObjectDataMessageComposer;
             OUTGOING_PACKETS[3617] = SetRandomStateMessageComposer;
             OUTGOING_PACKETS[3632] = _Str_16470;
