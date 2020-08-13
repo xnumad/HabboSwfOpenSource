@@ -911,7 +911,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_11536;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.OpenTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_12206;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_8008;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemToTradeComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.action.*;
 	import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
@@ -1804,7 +1804,7 @@
             OUTGOING_PACKETS[3093] = ChangeQueueMessageComposer;
             OUTGOING_PACKETS[3095] = GetPetInventoryComposer;
             OUTGOING_PACKETS[31] = ModToolPreferencesComposer;
-            OUTGOING_PACKETS[3107] = _Str_8008;
+            OUTGOING_PACKETS[3107] = AddItemToTradeComposer;
             OUTGOING_PACKETS[3110] = InitDiffieHandshakeMessageComposer;
             OUTGOING_PACKETS[3115] = CreditFurniRedeemMessageComposer;
             OUTGOING_PACKETS[312] = GetGuildMembersMessageComposer;

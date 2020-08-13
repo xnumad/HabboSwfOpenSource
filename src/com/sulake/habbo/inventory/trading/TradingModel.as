@@ -40,7 +40,7 @@
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.OpenTradingComposer;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_8008;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemToTradeComposer;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_10352;
     import com.sulake.habbo.inventory.enum.FurniCategory;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading._Str_12206;
@@ -682,7 +682,7 @@
             var _local_8:int;
             if (((!(_arg_5)) && (k.length > 0)))
             {
-                this._communication.connection.send(new _Str_8008(k.pop()));
+                this._communication.connection.send(new AddItemToTradeComposer(k.pop()));
             }
             else
             {
@@ -698,7 +698,7 @@
                 {
                     if (_local_7.length == 1)
                     {
-                        this._communication.connection.send(new _Str_8008(_local_7.pop()));
+                        this._communication.connection.send(new AddItemToTradeComposer(_local_7.pop()));
                     }
                     else
                     {
