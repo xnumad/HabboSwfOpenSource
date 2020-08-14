@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.help._Str_7534;
+    import com.sulake.habbo.communication.messages.parser.help.ChatReviewSessionResultsMessageParser;
 
     public class ChatReviewSessionResultsMessageEvent extends MessageEvent implements IMessageEvent
     {
         public function ChatReviewSessionResultsMessageEvent(k:Function)
         {
-            super(k, _Str_7534);
+            super(k, ChatReviewSessionResultsMessageParser);
         }
 
-        public function getParser():_Str_7534
+        public function getParser():ChatReviewSessionResultsMessageParser
         {
-            return _parser as _Str_7534;
+            return _parser as ChatReviewSessionResultsMessageParser;
         }
     }
 }

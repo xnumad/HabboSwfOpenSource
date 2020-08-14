@@ -47,7 +47,7 @@
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
     import com.sulake.habbo.communication.messages.parser.help.ChatReviewSessionStartedMessageParser;
     import com.sulake.core.window.components.IItemListWindow;
-    import com.sulake.habbo.communication.messages.parser.help._Str_7534;
+    import com.sulake.habbo.communication.messages.parser.help.ChatReviewSessionResultsMessageParser;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.utils.HabboWebTools;
@@ -529,7 +529,7 @@
 
         private function onChatReviewSessionResults(k:ChatReviewSessionResultsMessageEvent):void
         {
-            var _local_2:_Str_7534 = k.getParser();
+            var _local_2:ChatReviewSessionResultsMessageParser = k.getParser();
             this._Str_22460(_local_2._Str_22263, _local_2._Str_25395, _local_2._Str_24620);
         }
 
