@@ -51,7 +51,7 @@
     import com.sulake.habbo.communication.messages.outgoing.groupforums.PostMessageMessageComposer;
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.parser.groupforums.ForumData;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_5956;
+    import com.sulake.habbo.communication.messages.parser.groupforums.PostThreadMessageParser;
     import com.sulake.habbo.communication.messages.parser.groupforums.PostMessageMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateThreadMessageComposer;
@@ -444,7 +444,7 @@
         private function onPostThreadMessage(k:_Str_9518):void
         {
             var _local_3:ForumData;
-            var _local_2:_Str_5956 = _Str_5956(k.getParser());
+            var _local_2:PostThreadMessageParser = PostThreadMessageParser(k.getParser());
             if (this._composeMessageView)
             {
                 this._composeMessageView.dispose();
