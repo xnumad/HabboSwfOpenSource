@@ -22,7 +22,7 @@
     import com.sulake.habbo.sound.trax.TraxSequencer;
     import com.sulake.habbo.communication.messages.outgoing.sound.GetSongInfoMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.sound._Str_5724;
-    import com.sulake.habbo.communication.messages.parser.sound._Str_6929;
+    import com.sulake.habbo.communication.messages.parser.sound.TraxSongInfoMessageParser;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
     import com.sulake.habbo.sound.events.SongDiskInventoryReceivedEvent;
     import flash.utils.getTimer;
@@ -571,7 +571,7 @@
             var _local_11:int;
             var _local_12:int;
             var _local_2:_Str_7199 = (k as _Str_7199);
-            var _local_3:_Str_6929 = (_local_2.getParser() as _Str_6929);
+            var _local_3:TraxSongInfoMessageParser = (_local_2.getParser() as TraxSongInfoMessageParser);
             var _local_4:Array = _local_3._Str_25090;
             var _local_5:int;
             while (_local_5 < _local_4.length)
