@@ -681,7 +681,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionDetachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsDeletedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_16028;
+	import com.sulake.habbo.communication.messages.incoming.help.FaqCategoryMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_16338;
 	import com.sulake.habbo.communication.messages.incoming.help.FaqTextMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_17947;
@@ -1249,7 +1249,7 @@
             INCOMING_PACKETS[2808] = GuildCreatedMessageEvent;
             INCOMING_PACKETS[2815] = RoomUserRespect;
             INCOMING_PACKETS[0x0B00] = _Str_9362;
-            INCOMING_PACKETS[2819] = _Str_16028;
+            INCOMING_PACKETS[2819] = FaqCategoryMessageEvent;
             INCOMING_PACKETS[2824] = PetLevelUpdateEvent;
             INCOMING_PACKETS[2833] = MysteryBoxKeysMessageEvent;
             INCOMING_PACKETS[286] = PromoArticlesMessageEvent;
