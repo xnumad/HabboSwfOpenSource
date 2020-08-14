@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7308 implements IMessageParser 
+    public class QuizResultsMessageParser implements IMessageParser
     {
         private var _Str_3912:String;
         private var _Str_6079:Array;

@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.QuizResultsMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.help.GetQuizQuestionsComposer;
     import com.sulake.habbo.communication.messages.parser.help.QuizDataMessageParser;
-    import com.sulake.habbo.communication.messages.parser.help._Str_7308;
+    import com.sulake.habbo.communication.messages.parser.help.QuizResultsMessageParser;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -96,7 +96,7 @@
 
         private function onQuizResults(k:QuizResultsMessageEvent):void
         {
-            var _local_2:_Str_7308 = k.getParser();
+            var _local_2:QuizResultsMessageParser = k.getParser();
             this._questionIdsForWrongAnswers = _local_2._Str_23947;
             if (this._questionIdsForWrongAnswers.length == 0)
             {
