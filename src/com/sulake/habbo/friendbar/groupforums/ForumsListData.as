@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.friendbar.groupforums
 {
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_5953;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_2807;
+    import com.sulake.habbo.communication.messages.parser.groupforums.ForumData;
 
     public class ForumsListData 
     {
@@ -40,7 +40,7 @@
 
         public function get _Str_9052():int
         {
-            var _local_3:_Str_2807;
+            var _local_3:ForumData;
             var k:int;
             var _local_2:int;
             while (_local_2 < this._forums.length)
@@ -55,9 +55,9 @@
             return k;
         }
 
-        public function _Str_20077(k:int):_Str_2807
+        public function _Str_20077(k:int):ForumData
         {
-            var _local_2:_Str_2807;
+            var _local_2:ForumData;
             for each (_local_2 in this._forums)
             {
                 if (_local_2.groupId == k)
@@ -68,9 +68,9 @@
             return null;
         }
 
-        public function _Str_20834(k:_Str_2807, _arg_2:int):void
+        public function _Str_20834(k:ForumData, _arg_2:int):void
         {
-            var _local_3:_Str_2807 = this._Str_20077(k.groupId);
+            var _local_3:ForumData = this._Str_20077(k.groupId);
             if (_local_3 != null)
             {
                 _local_3._Str_25309(k);

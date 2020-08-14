@@ -53,7 +53,7 @@
             var _local_2:int;
             while (_local_2 < this.amount)
             {
-                this._forums.push(_Str_2807._Str_4933(k));
+                this._forums.push(ForumData._Str_4933(k));
                 _local_2++;
             }
             return true;

@@ -4,7 +4,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_2807;
+    import com.sulake.habbo.communication.messages.parser.groupforums.ForumData;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThread;
     import flash.events.TimerEvent;
     import com.sulake.habbo.communication.messages.parser.groupforums.MessageData;
@@ -30,12 +30,12 @@
         private var _messageText:ITextFieldWindow;
         private var _postButton:IWindow;
         private var _status:IWindow;
-        private var _forumData:_Str_2807;
+        private var _forumData:ForumData;
         private var _threadData:GuildForumThread;
         private var _hasErrors:Boolean = false;
         private var _posting:Boolean = false;
 
-        public function ComposeMessageView(k:GroupForumView, _arg_2:int, _arg_3:int, _arg_4:_Str_2807, _arg_5:GuildForumThread, _arg_6:MessageData)
+        public function ComposeMessageView(k:GroupForumView, _arg_2:int, _arg_3:int, _arg_4:ForumData, _arg_5:GuildForumThread, _arg_6:MessageData)
         {
             this._mainView = k;
             this._controller = this._mainView.controller;
@@ -59,7 +59,7 @@
             this._timer.start();
         }
 
-        public function focus(k:_Str_2807, _arg_2:GuildForumThread, _arg_3:MessageData):void
+        public function focus(k:ForumData, _arg_2:GuildForumThread, _arg_3:MessageData):void
         {
             if (!this._posting)
             {

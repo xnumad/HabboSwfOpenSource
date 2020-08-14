@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.components.IScrollableListWindow;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_2807;
+    import com.sulake.habbo.communication.messages.parser.groupforums.ForumData;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -31,7 +31,7 @@
         {
             var k:int;
             var _local_2:IWindowContainer;
-            var _local_3:_Str_2807;
+            var _local_3:ForumData;
             this._list.invalidate();
             k = 0;
             while (k < this._forums.length)
@@ -46,7 +46,7 @@
             this._Str_11755();
         }
 
-        private function _Str_10311(k:IWindowContainer, _arg_2:_Str_2807, _arg_3:int):void
+        private function _Str_10311(k:IWindowContainer, _arg_2:ForumData, _arg_3:int):void
         {
             var _local_4:IWindowContainer = (k as IWindowContainer);
             _local_4.color = (((_arg_3 + 1) % 2) ? 4293852927 : 4289914618);

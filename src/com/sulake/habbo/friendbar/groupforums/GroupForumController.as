@@ -50,7 +50,7 @@
     import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateForumSettingsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.PostMessageMessageComposer;
     import flash.utils.getTimer;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_2807;
+    import com.sulake.habbo.communication.messages.parser.groupforums.ForumData;
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_5956;
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_5975;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateThreadMessageComposer;
@@ -443,7 +443,7 @@
 
         private function _Str_22869(k:_Str_9518):void
         {
-            var _local_3:_Str_2807;
+            var _local_3:ForumData;
             var _local_2:_Str_5956 = _Str_5956(k.getParser());
             if (this._composeMessageView)
             {
@@ -517,7 +517,7 @@
             }
         }
 
-        public function unDeleteThread(k:_Str_2807, _arg_2:int):void
+        public function unDeleteThread(k:ForumData, _arg_2:int):void
         {
             if (this._communicationManager)
             {
@@ -525,7 +525,7 @@
             }
         }
 
-        public function _Str_24793(k:_Str_2807, _arg_2:int, _arg_3:Boolean, _arg_4:Boolean):void
+        public function _Str_24793(k:ForumData, _arg_2:int, _arg_3:Boolean, _arg_4:Boolean):void
         {
             if (this._communicationManager)
             {
@@ -533,7 +533,7 @@
             }
         }
 
-        public function _Str_22439(k:_Str_2807, _arg_2:int, _arg_3:Boolean, _arg_4:Boolean):void
+        public function _Str_22439(k:ForumData, _arg_2:int, _arg_3:Boolean, _arg_4:Boolean):void
         {
             if (this._communicationManager)
             {
@@ -541,7 +541,7 @@
             }
         }
 
-        public function reportThread(k:_Str_2807, _arg_2:int):void
+        public function reportThread(k:ForumData, _arg_2:int):void
         {
             if (this._help)
             {
@@ -582,7 +582,7 @@
             }
         }
 
-        public function unDeleteMessage(k:_Str_2807, _arg_2:int, _arg_3:int):void
+        public function unDeleteMessage(k:ForumData, _arg_2:int, _arg_3:int):void
         {
             if (this._communicationManager)
             {
@@ -590,7 +590,7 @@
             }
         }
 
-        public function reportMessage(k:_Str_2807, _arg_2:int, _arg_3:int):void
+        public function reportMessage(k:ForumData, _arg_2:int, _arg_3:int):void
         {
             if (this._help)
             {
@@ -676,7 +676,7 @@
         public function _Str_23963():void
         {
             var k:UpdateForumReadMarkerMessageComposer;
-            var _local_2:_Str_2807;
+            var _local_2:ForumData;
             if (((this._communicationManager) && (this._forumsListData)))
             {
                 k = new UpdateForumReadMarkerMessageComposer();

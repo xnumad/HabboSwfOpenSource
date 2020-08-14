@@ -12,7 +12,7 @@
     import com.sulake.habbo.window.enum._Str_4387;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_2807;
+    import com.sulake.habbo.communication.messages.parser.groupforums.ForumData;
     import flash.events.MouseEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.ILabelWindow;
@@ -68,7 +68,7 @@
             }
         }
 
-        internal static function _Str_14926(k:IFrameWindow, _arg_2:_Str_2807):IRegionWindow
+        internal static function _Str_14926(k:IFrameWindow, _arg_2:ForumData):IRegionWindow
         {
             var _local_3:IWindowContainer = (k.findChildByName("top_part") as IWindowContainer);
             var _local_4:IWidgetWindow = IWidgetWindow(_local_3.findChildByName("group_icon"));

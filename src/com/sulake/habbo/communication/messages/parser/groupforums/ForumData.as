@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2807 
+    public class ForumData
     {
         private var _groupId:int;
         private var _name:String;
@@ -18,12 +18,12 @@
         private var _Str_6378:int;
 
 
-        public static function _Str_4933(k:IMessageDataWrapper):_Str_2807
+        public static function _Str_4933(k:IMessageDataWrapper):ForumData
         {
-            return fillFromMessage(new (_Str_2807)(), k);
+            return fillFromMessage(new (ForumData)(), k);
         }
 
-        internal static function fillFromMessage(k:_Str_2807, _arg_2:IMessageDataWrapper):_Str_2807
+        internal static function fillFromMessage(k:ForumData, _arg_2:IMessageDataWrapper):ForumData
         {
             k._groupId = _arg_2.readInteger();
             k._name = _arg_2.readString();
@@ -101,7 +101,7 @@
             return this._Str_6378;
         }
 
-        public function _Str_25309(k:_Str_2807):void
+        public function _Str_25309(k:ForumData):void
         {
             this._Str_6203 = k._Str_6203;
             this._Str_5103 = k._Str_5103;

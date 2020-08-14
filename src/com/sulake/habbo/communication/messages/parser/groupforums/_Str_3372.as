@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3372 extends _Str_2807 
+    public class _Str_3372 extends ForumData
     {
         private var _Str_6730:int;
         private var _Str_6541:int;
@@ -20,7 +20,7 @@
         public static function _Str_4933(k:IMessageDataWrapper):_Str_3372
         {
             var _local_2:_Str_3372 = new (_Str_3372)();
-            _Str_2807.fillFromMessage(_local_2, k);
+            ForumData.fillFromMessage(_local_2, k);
             _local_2._Str_6730 = k.readInteger();
             _local_2._Str_6541 = k.readInteger();
             _local_2._Str_9497 = k.readInteger();
