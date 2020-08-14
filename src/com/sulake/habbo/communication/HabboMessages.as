@@ -695,7 +695,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8785;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideOnDutyStatusMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideReportingStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionStartedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpDisabledNotifyMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionResultsMessageEvent;
@@ -1326,7 +1326,7 @@
             INCOMING_PACKETS[3433] = RecyclerStatusEvent;
             INCOMING_PACKETS[3434] = _Str_7799;
             INCOMING_PACKETS[3441] = PetSupplementedNotificationEvent;
-            INCOMING_PACKETS[3463] = _Str_9074;
+            INCOMING_PACKETS[3463] = GuideReportingStatusMessageEvent;
             INCOMING_PACKETS[3473] = _Str_12022;
             INCOMING_PACKETS[3475] = CreditBalanceEvent;
             INCOMING_PACKETS[3479] = _Str_8029;

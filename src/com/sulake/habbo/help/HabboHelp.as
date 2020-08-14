@@ -43,7 +43,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsEvent;
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsDeletedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpDisabledNotifyMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideReportingStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.SanctionStatusEvent;
@@ -435,7 +435,7 @@
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this.onPendingCallsForHelp));
             this.addMessageEvent(new CallForHelpPendingCallsDeletedMessageEvent(this.onPendingCallsForHelpDeleted));
             this.addMessageEvent(new CallForHelpDisabledNotifyMessageEvent(this.onCallForHelpDisabledNotify));
-            this.addMessageEvent(new _Str_9074(this.onGuideReportingStatus));
+            this.addMessageEvent(new GuideReportingStatusMessageEvent(this.onGuideReportingStatus));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
             this.addMessageEvent(new SanctionStatusEvent(this.onSanctionStatusEvent));
@@ -643,7 +643,7 @@
             this._topicsFlowHelpController.submitCallForHelp(false);
         }
 
-        private function onGuideReportingStatus(k:_Str_9074):void
+        private function onGuideReportingStatus(k:GuideReportingStatusMessageEvent):void
         {
             var _local_2:GuideReportingStatusMessageParser = k.getParser();
             switch (_local_2._Str_23632)
