@@ -691,7 +691,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_7837;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8337;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8429;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_8464;
+	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionVotingStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8785;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8903;
@@ -1112,7 +1112,7 @@
             INCOMING_PACKETS[1808] = InterstitialMessageEvent;
             INCOMING_PACKETS[1815] = ChangeEmailResultEvent;
             INCOMING_PACKETS[1823] = MarketplaceConfigurationEvent;
-            INCOMING_PACKETS[1829] = _Str_8464;
+            INCOMING_PACKETS[1829] = ChatReviewSessionVotingStatusMessageEvent;
             INCOMING_PACKETS[1830] = _Str_8791;
             INCOMING_PACKETS[1840] = _Str_5051;
             INCOMING_PACKETS[1847] = GuideSessionRequesterRoomEvent;

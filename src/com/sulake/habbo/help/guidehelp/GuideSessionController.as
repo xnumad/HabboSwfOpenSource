@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.incoming.help._Str_8903;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionStartedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_8464;
+    import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionVotingStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionResultsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionDetachedMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.ChatReviewSessionVotingStatusMessageParser;
@@ -162,7 +162,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8903(this._window9));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionOfferedToGuideMessageEvent(this.onChatReviewSessionOfferedToGuide));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionStartedMessageEvent(this.onChatReviewSessionStarted));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8464(this.onChatReviewSessionVotingStatus));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionVotingStatusMessageEvent(this.onChatReviewSessionVotingStatus));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionResultsMessageEvent(this.onChatReviewSessionResults));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionDetachedMessageEvent(this.onChatReviewSessionDetached));
         }
@@ -518,7 +518,7 @@
             this._Str_23588(_local_2._Str_23086, _local_2._Str_17106);
         }
 
-        private function onChatReviewSessionVotingStatus(k:_Str_8464):void
+        private function onChatReviewSessionVotingStatus(k:ChatReviewSessionVotingStatusMessageEvent):void
         {
             if (this._sessionData._Str_3201 != GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_WAIT_FOR_RESULTS)
             {

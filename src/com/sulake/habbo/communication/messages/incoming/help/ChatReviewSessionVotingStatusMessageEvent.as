@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.ChatReviewSessionVotingStatusMessageParser;
 
-    public class _Str_8464 extends MessageEvent implements IMessageEvent 
+    public class ChatReviewSessionVotingStatusMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8464(k:Function)
+        public function ChatReviewSessionVotingStatusMessageEvent(k:Function)
         {
             super(k, ChatReviewSessionVotingStatusMessageParser);
         }
