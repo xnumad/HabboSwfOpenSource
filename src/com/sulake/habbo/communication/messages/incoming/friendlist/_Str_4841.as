@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_6246;
+    import com.sulake.habbo.communication.messages.parser.friendlist.NewFriendRequestMessageParser;
 
     public class _Str_4841 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_4841(k:Function)
         {
-            super(k, _Str_6246);
+            super(k, NewFriendRequestMessageParser);
         }
 
-        public function getParser():_Str_6246
+        public function getParser():NewFriendRequestMessageParser
         {
-            return this._parser as _Str_6246;
+            return this._parser as NewFriendRequestMessageParser;
         }
     }
 }

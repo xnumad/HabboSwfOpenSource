@@ -59,7 +59,7 @@
     import com.sulake.habbo.communication.messages.parser.room.pets.PetTrainingPanelMessageParser;
     import com.sulake.habbo.session.events.RoomSessionPetCommandsUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionErrorMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_6246;
+    import com.sulake.habbo.communication.messages.parser.friendlist.NewFriendRequestMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestData;
     import com.sulake.habbo.session.events.RoomSessionFriendRequestEvent;
     import com.sulake.habbo.communication.messages.parser.room.action.DanceMessageParser;
@@ -546,7 +546,7 @@
             {
                 return;
             }
-            var _local_2:_Str_6246 = k.getParser();
+            var _local_2:NewFriendRequestMessageParser = k.getParser();
             if (!_local_2)
             {
                 return;

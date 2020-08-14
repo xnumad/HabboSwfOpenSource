@@ -79,7 +79,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestData;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7531;
     import com.sulake.habbo.friendlist.domain.FriendRequest;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_6246;
+    import com.sulake.habbo.communication.messages.parser.friendlist.NewFriendRequestMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7034;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7071;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_8159;
@@ -568,7 +568,7 @@
         private function _Str_16886(k:IMessageEvent):void
         {
             Logger.log("Received new friend request");
-            var _local_2:_Str_6246 = (k as _Str_4841).getParser();
+            var _local_2:NewFriendRequestMessageParser = (k as _Str_4841).getParser();
             var _local_3:FriendRequest = new FriendRequest(_local_2.req);
             this._friendRequests._Str_24807(_local_3);
             var _local_4:_Str_2740 = this._tabs._Str_4403(_Str_2777._Str_3798);
