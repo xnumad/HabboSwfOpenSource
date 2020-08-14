@@ -435,7 +435,7 @@
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this.onPendingCallsForHelp));
             this.addMessageEvent(new _Str_11155(this.onPendingCallsForHelpDeleted));
             this.addMessageEvent(new _Str_9121(this._Str_24314));
-            this.addMessageEvent(new _Str_9074(this._Str_23107));
+            this.addMessageEvent(new _Str_9074(this.onGuideReportingStatus));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
             this.addMessageEvent(new SanctionStatusEvent(this.onSanctionStatusEvent));
@@ -643,7 +643,7 @@
             this._topicsFlowHelpController.submitCallForHelp(false);
         }
 
-        private function _Str_23107(k:_Str_9074):void
+        private function onGuideReportingStatus(k:_Str_9074):void
         {
             var _local_2:GuideReportingStatusMessageParser = k.getParser();
             switch (_local_2._Str_23632)
