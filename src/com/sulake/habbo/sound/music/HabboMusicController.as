@@ -26,7 +26,7 @@
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
     import com.sulake.habbo.sound.events.SongDiskInventoryReceivedEvent;
     import flash.utils.getTimer;
-    import com.sulake.habbo.communication.messages.parser.sound._Str_6477;
+    import com.sulake.habbo.communication.messages.parser.sound.UserSongDisksInventoryMessageParser;
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.outgoing.sound.GetNowPlayingMessageComposer;
     import com.sulake.habbo.sound.*;
@@ -703,7 +703,7 @@
             var _local_5:int;
             var _local_6:int;
             var _local_2:_Str_7922 = (k as _Str_7922);
-            var _local_3:_Str_6477 = (_local_2.getParser() as _Str_6477);
+            var _local_3:UserSongDisksInventoryMessageParser = (_local_2.getParser() as UserSongDisksInventoryMessageParser);
             this._songDiskInventory.reset();
             var _local_4:int;
             while (_local_4 < _local_3._Str_22284)
