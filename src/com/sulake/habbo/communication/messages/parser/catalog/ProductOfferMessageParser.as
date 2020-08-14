@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageOfferData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class CatalogSearchResultParser implements IMessageParser
+    public class ProductOfferMessageParser implements IMessageParser
     {
         private var offerData:CatalogPageMessageOfferData;
 
