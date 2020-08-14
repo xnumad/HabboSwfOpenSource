@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.GuideTicketCreationResultMessageParser;
 
-    public class _Str_8429 extends MessageEvent implements IMessageEvent 
+    public class GuideTicketCreationResultMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8429(k:Function)
+        public function GuideTicketCreationResultMessageEvent(k:Function)
         {
             super(k, GuideTicketCreationResultMessageParser);
         }

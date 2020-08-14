@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.communication.messages.incoming.help.GuideTicketResolutionMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_8429;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideTicketCreationResultMessageEvent;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -18,7 +18,7 @@
         {
             this._habboHelp = k;
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideTicketResolutionMessageEvent(this._Str_25116));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8429(this._Str_22825));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideTicketCreationResultMessageEvent(this._Str_22825));
         }
 
         public function dispose():void
@@ -41,7 +41,7 @@
             this.show(k.getParser()._Str_5961);
         }
 
-        private function _Str_22825(k:_Str_8429):void
+        private function _Str_22825(k:GuideTicketCreationResultMessageEvent):void
         {
             this.show(k.getParser()._Str_5961);
         }

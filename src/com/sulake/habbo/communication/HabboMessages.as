@@ -690,7 +690,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_7620;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_7837;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8337;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_8429;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideTicketCreationResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionVotingStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.QuizResultsMessageEvent;
@@ -1303,7 +1303,7 @@
             INCOMING_PACKETS[3276] = ChatReviewSessionResultsMessageEvent;
             INCOMING_PACKETS[3277] = ScrSendKickbackInfoMessageEvent;
             INCOMING_PACKETS[3284] = InfoFeedEnableMessageEvent;
-            INCOMING_PACKETS[3285] = _Str_8429;
+            INCOMING_PACKETS[3285] = GuideTicketCreationResultMessageEvent;
             INCOMING_PACKETS[3292] = FaqTextMessageEvent;
             INCOMING_PACKETS[3293] = _Str_8674;
             INCOMING_PACKETS[3297] = _Str_5711;
