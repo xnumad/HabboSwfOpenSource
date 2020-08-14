@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7335 implements IMessageParser 
+    public class TargetedOfferParser implements IMessageParser
     {
         private var _data:TargetedOfferData;
 

@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_9208;
     import com.sulake.habbo.catalog.purse.PurseUpdateEvent;
     import com.sulake.habbo.communication.messages.outgoing.catalog.GetTargetedOfferComposer;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7335;
+    import com.sulake.habbo.communication.messages.parser.catalog.TargetedOfferParser;
     import com.sulake.habbo.catalog.targetedoffers.data.TargetedOffer;
     import com.sulake.habbo.communication.enum.TargetedOfferTrackingStateEnum;
     import com.sulake.habbo.catalog.targetedoffers.data.HabboMallOffer;
@@ -67,7 +67,7 @@
 
         private function _Str_25111(k:TargetedOfferEvent):void
         {
-            var _local_2:_Str_7335 = k.getParser();
+            var _local_2:TargetedOfferParser = k.getParser();
             var _local_3:TargetedOffer = new TargetedOffer(_local_2.data);
             if (_local_3._Str_11180 == TargetedOfferTrackingStateEnum.MINIMIZED)
             {
