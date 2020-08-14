@@ -11,7 +11,7 @@
         function get isHotelClosed():Boolean;
         function loadGameClient(_arg_1:int, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:Object):void;
         function _Str_19055(_arg_1:int, _arg_2:String, _arg_3:String, _arg_4:String=""):void;
-        function _Str_8716(_arg_1:int, _arg_2:String, _arg_3:String):void;
+        function unloadGame(_arg_1:int, _arg_2:String, _arg_3:String):void;
         function joinPlayerQueue(_arg_1:int):void;
         function leavePlayerQueue(_arg_1:int):void;
         function acceptGameInvite(_arg_1:int, _arg_2:int):void;

@@ -785,14 +785,14 @@
         {
             HabboGamesCom.log("[HabboGameManager] external game client IO error");
             context.error(("IOError while loading game client for " + this._Str_4091), false);
-            this._Str_8716(this._Str_4091, this._Str_3852, "loadGameClientError");
+            this.unloadGame(this._Str_4091, this._Str_3852, "loadGameClientError");
         }
 
         private function onGameClientLoadSecurityError(event:SecurityErrorEvent):void
         {
             HabboGamesCom.log("[HabboGameManager] external game client security error");
             context.error(("SecurityError while loading game client for " + this._Str_4091), false);
-            this._Str_8716(this._Str_4091, this._Str_3852, "loadGameClientError");
+            this.unloadGame(this._Str_4091, this._Str_3852, "loadGameClientError");
         }
 
         private function onGameClientLoadProgress(event:ProgressEvent):void
@@ -855,7 +855,7 @@
             HabboGamesCom.log("[HabboGameManager] external game client unloaded");
         }
 
-        public function _Str_8716(k:int, _arg_2:String, _arg_3:String):void
+        public function unloadGame(k:int, _arg_2:String, _arg_3:String):void
         {
             var _local_4:HabboToolbarEvent;
             this._Str_9452 = -1;
@@ -903,7 +903,7 @@
         {
             if (this._Str_4091 > -1)
             {
-                this._Str_8716(this._Str_4091, this._Str_3852, "unloadGameClient");
+                this.unloadGame(this._Str_4091, this._Str_3852, "unloadGameClient");
             }
         }
 
@@ -995,7 +995,7 @@
         public function _Str_21246(k:String, _arg_2:String, _arg_3:String=null):void
         {
             this._Str_24065(this._Str_4091, k, _arg_2, _arg_3);
-            this._Str_8716(this._Str_4091, this._Str_3852, "gameClientCrash");
+            this.unloadGame(this._Str_4091, this._Str_3852, "gameClientCrash");
             this.alert("${gamecenter.game_crashed}");
         }
 

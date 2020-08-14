@@ -95,7 +95,7 @@
         {
             var _local_2:UnloadGameMessageParser = k.getParser();
             HabboGamesCom.log(("[BaseJump] unload game " + _local_2.gameTypeId));
-            this._gameManager._Str_8716(_local_2.gameTypeId, _local_2._Str_12486, "unloadGameClient");
+            this._gameManager.unloadGame(_local_2.gameTypeId, _local_2._Str_12486, "unloadGameClient");
         }
 
         private function onAccountGameStatus(k:Game2AccountGameStatusMessageEvent):void
