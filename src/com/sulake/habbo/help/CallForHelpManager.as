@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_7837;
+    import com.sulake.habbo.communication.messages.incoming.help.CallForHelpReplyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_7620;
     import com.sulake.habbo.communication.messages.incoming.help.IssueCloseNotificationMessageEvent;
     import com.sulake.habbo.help.enum._Str_2849;
@@ -61,7 +61,7 @@
         {
             this._habboHelp = k;
             this._chatReportController = new ChatReportController(this._habboHelp, this.onChatReportEvent);
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7837(this.onCallForHelpReply));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new CallForHelpReplyMessageEvent(this.onCallForHelpReply));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7620(this.onCallForHelpResult));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new IssueCloseNotificationMessageEvent(this.onIssueClose));
         }
@@ -654,7 +654,7 @@
 
         private function onCallForHelpReply(k:IMessageEvent):void
         {
-            var _local_2:CallForHelpReplyMessageParser = _Str_7837(k).getParser();
+            var _local_2:CallForHelpReplyMessageParser = CallForHelpReplyMessageEvent(k).getParser();
             this._habboHelp.windowManager.alert("${help.cfh.reply.title}", _local_2.message, 0, null);
         }
 

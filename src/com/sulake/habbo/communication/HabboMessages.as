@@ -688,7 +688,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_18296;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_18853;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_7620;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_7837;
+	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpReplyMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.IssueCloseNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideTicketCreationResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionVotingStatusMessageEvent;
@@ -1359,7 +1359,7 @@
             INCOMING_PACKETS[378] = CanCreateRoomMessageEvent;
             INCOMING_PACKETS[3783] = FlatAccessibleMessageEvent;
             INCOMING_PACKETS[3785] = PollOfferEvent;
-            INCOMING_PACKETS[3796] = _Str_7837;
+            INCOMING_PACKETS[3796] = CallForHelpReplyMessageEvent;
             INCOMING_PACKETS[3801] = _Str_8665;
             INCOMING_PACKETS[3805] = GameStatusMessageEvent;
             INCOMING_PACKETS[382] = FriendFurniOtherLockConfirmedMessageEvent;
