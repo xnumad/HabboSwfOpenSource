@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.help._Str_9447;
+    import com.sulake.habbo.communication.messages.parser.help.CallForHelpDisabledNotifyMessageParser;
 
     public class CallForHelpDisabledNotifyMessageEvent extends MessageEvent implements IMessageEvent
     {
         public function CallForHelpDisabledNotifyMessageEvent(k:Function)
         {
-            super(k, _Str_9447);
+            super(k, CallForHelpDisabledNotifyMessageParser);
         }
 
-        public function getParser():_Str_9447
+        public function getParser():CallForHelpDisabledNotifyMessageParser
         {
-            return _parser as _Str_9447;
+            return _parser as CallForHelpDisabledNotifyMessageParser;
         }
     }
 }
