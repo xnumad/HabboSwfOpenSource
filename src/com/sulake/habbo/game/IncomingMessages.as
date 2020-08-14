@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameListMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameAchievementsMessageComposer;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.game.lobby._Str_5486;
+    import com.sulake.habbo.communication.messages.parser.game.lobby.GameConfigurationData;
     import com.sulake.habbo.communication.messages.parser.game.lobby.GameListMessageParser;
     import com.sulake.habbo.gamecenter.GameConfigurations;
     import com.sulake.habbo.gamecenter.GameConfiguration;
@@ -126,7 +126,7 @@
 
         private function onGameList(k:GameListMessageEvent):void
         {
-            var _local_3:_Str_5486;
+            var _local_3:GameConfigurationData;
             var _local_2:GameListMessageParser = (k.parser as GameListMessageParser);
             GameConfigurations.resetGames();
             for each (_local_3 in _local_2.games)

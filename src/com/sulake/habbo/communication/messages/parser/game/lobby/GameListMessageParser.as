@@ -7,7 +7,7 @@
 
     public class GameListMessageParser implements IMessageParser 
     {
-        private var _games:Vector.<_Str_5486>;
+        private var _games:Vector.<GameConfigurationData>;
 
 
         public function flush():Boolean
@@ -15,7 +15,7 @@
             return true;
         }
 
-        public function get games():Vector.<_Str_5486>
+        public function get games():Vector.<GameConfigurationData>
         {
             return this._games;
         }
@@ -30,7 +30,7 @@
             var _local_9:uint;
             var _local_10:String;
             var _local_11:String;
-            this._games = new Vector.<_Str_5486>();
+            this._games = new Vector.<GameConfigurationData>();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
@@ -45,7 +45,7 @@
                 _local_9 = (_local_9 | 0xFF000000);
                 _local_10 = k.readString();
                 _local_11 = k.readString();
-                this._games.push(new _Str_5486(_local_4, _local_5, _local_7, _local_9, _local_10, _local_11));
+                this._games.push(new GameConfigurationData(_local_4, _local_5, _local_7, _local_9, _local_10, _local_11));
                 _local_3++;
             }
             return true;
