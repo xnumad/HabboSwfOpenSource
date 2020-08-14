@@ -82,7 +82,7 @@
     import com.sulake.habbo.communication.messages.parser.friendlist.NewFriendRequestMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7034;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7071;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_8159;
+    import com.sulake.habbo.communication.messages.parser.friendlist.HabboSearchResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7276;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7324;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7159;
@@ -589,7 +589,7 @@
 
         private function _Str_23021(k:IMessageEvent):void
         {
-            var _local_2:_Str_8159 = (k as _Str_8109).getParser();
+            var _local_2:HabboSearchResultMessageParser = (k as _Str_8109).getParser();
             this._avatarSearchResults._Str_22668(_local_2.friends, _local_2.others);
             this._view.refresh("search");
         }
