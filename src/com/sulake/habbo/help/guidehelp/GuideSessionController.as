@@ -164,7 +164,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9097(this._Str_24700));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8464(this._Str_24456));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9409(this._Str_22443));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_10860(this._Str_25179));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_10860(this.onChatReviewSessionDetached));
         }
 
         private static function _Str_13055(k:int):int
@@ -533,7 +533,7 @@
             this._Str_22460(_local_2._Str_22263, _local_2._Str_25395, _local_2._Str_24620);
         }
 
-        private function _Str_25179(k:IMessageEvent):void
+        private function onChatReviewSessionDetached(k:IMessageEvent):void
         {
             this._Str_4260(true);
         }
