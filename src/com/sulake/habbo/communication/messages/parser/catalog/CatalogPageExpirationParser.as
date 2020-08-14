@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9280 implements IMessageParser 
+    public class CatalogPageExpirationParser implements IMessageParser
     {
         private var _pageName:String;
         private var _pageId:int;
