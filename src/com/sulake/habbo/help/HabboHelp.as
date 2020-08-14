@@ -434,7 +434,7 @@
             this.addMessageEvent(new GetGuestRoomResultEvent(this._Str_24404));
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this.onPendingCallsForHelp));
             this.addMessageEvent(new _Str_11155(this.onPendingCallsForHelpDeleted));
-            this.addMessageEvent(new _Str_9121(this._Str_24314));
+            this.addMessageEvent(new _Str_9121(this.onCallForHelpDisabledNotify));
             this.addMessageEvent(new _Str_9074(this.onGuideReportingStatus));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
@@ -684,7 +684,7 @@
             this._reportType = 0;
         }
 
-        private function _Str_24314(k:_Str_9121):void
+        private function onCallForHelpDisabledNotify(k:_Str_9121):void
         {
             this._windowManager.simpleAlert("${help.emergency.global_mute.caption}", "${help.emergency.global_mute.subtitle}", "${help.emergency.global_mute.message}", "${help.emergency.global_mute.link}", k.getParser()._Str_23798);
         }
