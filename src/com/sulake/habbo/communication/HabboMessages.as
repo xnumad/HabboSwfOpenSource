@@ -106,7 +106,7 @@
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_10594;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.LeaveQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.JoinQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.AcceptGameInviteMessageComposer;
@@ -1819,7 +1819,7 @@
             OUTGOING_PACKETS[3157] = RequestFriendMessageComposer;
             OUTGOING_PACKETS[3159] = SetNewNavigatorWindowPreferencesMessageComposer;
             OUTGOING_PACKETS[3166] = ScrGetUserInfoMessageComposer;
-            OUTGOING_PACKETS[3171] = _Str_10594;
+            OUTGOING_PACKETS[3171] = GetGameStatusMessageComposer;
             OUTGOING_PACKETS[3182] = RemoveOwnRoomRightsRoomMessageComposer;
             OUTGOING_PACKETS[3189] = GetOfficialSongIdMessageComposer;
             OUTGOING_PACKETS[3196] = Game2PlayAgainMessageComposer;
