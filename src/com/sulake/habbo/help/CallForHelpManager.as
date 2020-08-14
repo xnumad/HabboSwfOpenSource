@@ -28,7 +28,7 @@
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.parser.help.CallForHelpReplyMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.help._Str_7322;
+    import com.sulake.habbo.communication.messages.parser.help.CallForHelpResultMessageParser;
     import com.sulake.habbo.help.enum.CallForHelpResultEnum;
     import com.sulake.habbo.communication.messages.parser.help.IssueCloseNotificationMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.help.DeletePendingCallsForHelpMessageComposer;
@@ -660,7 +660,7 @@
 
         private function onCallForHelpResult(k:IMessageEvent):void
         {
-            var _local_2:_Str_7322 = _Str_7620(k).getParser();
+            var _local_2:CallForHelpResultMessageParser = _Str_7620(k).getParser();
             var _local_3:int = _local_2.resultType;
             var _local_4:String = _local_2._Str_3460;
             switch (_local_3)
