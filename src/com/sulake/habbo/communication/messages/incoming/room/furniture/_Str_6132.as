@@ -1,18 +1,18 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.room.furniture
 {
     import com.sulake.core.communication.messages.MessageEvent;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_9499;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.CustomUserNotificationMessageParser;
 
     public class _Str_6132 extends MessageEvent 
     {
         public function _Str_6132(k:Function)
         {
-            super(k, _Str_9499);
+            super(k, CustomUserNotificationMessageParser);
         }
 
-        public function getParser():_Str_9499
+        public function getParser():CustomUserNotificationMessageParser
         {
-            return parser as _Str_9499;
+            return parser as CustomUserNotificationMessageParser;
         }
     }
 }

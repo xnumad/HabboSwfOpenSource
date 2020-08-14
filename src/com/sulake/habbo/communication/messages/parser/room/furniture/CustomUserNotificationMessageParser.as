@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9499 implements IMessageParser 
+    public class CustomUserNotificationMessageParser implements IMessageParser
     {
         private var _code:int = 0;
 
