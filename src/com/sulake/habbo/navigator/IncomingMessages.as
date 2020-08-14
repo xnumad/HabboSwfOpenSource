@@ -93,7 +93,7 @@
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6824;
     import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllerRemovedMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6752;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6587;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.UserUnbannedFromRoomParser;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
@@ -611,7 +611,7 @@
 
         private function onUserUnbannedFromRoom(k:IMessageEvent):void
         {
-            var _local_2:_Str_6587 = (k as _Str_5655).getParser();
+            var _local_2:UserUnbannedFromRoomParser = (k as _Str_5655).getParser();
             Logger.log(((("User was unbanned from room. User Id: " + _local_2.userId) + " Room Id: ") + _local_2.roomId));
             this._navigator.roomSettingsCtrl.onUserUnbannedFromRoom(_local_2.roomId, _local_2.userId);
         }

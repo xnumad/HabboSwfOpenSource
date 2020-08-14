@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6587 implements IMessageParser 
+    public class UserUnbannedFromRoomParser implements IMessageParser
     {
         private var _roomId:int;
         private var _userId:int;
