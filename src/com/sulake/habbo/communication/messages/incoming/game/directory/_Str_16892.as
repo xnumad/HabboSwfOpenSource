@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.game.directory._Str_6529;
+    import com.sulake.habbo.communication.messages.parser.game.directory.Game2InArenaQueueMessageParser;
 
     public class _Str_16892 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_16892(k:Function)
         {
-            super(k, _Str_6529);
+            super(k, Game2InArenaQueueMessageParser);
         }
 
-        public function getParser():_Str_6529
+        public function getParser():Game2InArenaQueueMessageParser
         {
-            return this._parser as _Str_6529;
+            return this._parser as Game2InArenaQueueMessageParser;
         }
     }
 }
