@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.incoming.help._Str_8464;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9409;
     import com.sulake.habbo.communication.messages.incoming.help._Str_10860;
-    import com.sulake.habbo.communication.messages.parser.help._Str_4393;
+    import com.sulake.habbo.communication.messages.parser.help.ChatReviewSessionVotingStatusMessageParser;
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.habbo.help.enum.GuideSessionStateEnum;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionCreateMessageComposer;
@@ -169,20 +169,20 @@
 
         private static function _Str_13055(k:int):int
         {
-            var _local_2:int = _Str_4393._Str_14199;
+            var _local_2:int = ChatReviewSessionVotingStatusMessageParser._Str_14199;
             switch (k)
             {
                 case _Str_10084:
-                    _local_2 = _Str_4393._Str_18915;
+                    _local_2 = ChatReviewSessionVotingStatusMessageParser._Str_18915;
                     break;
                 case _Str_9791:
-                    _local_2 = _Str_4393._Str_16095;
+                    _local_2 = ChatReviewSessionVotingStatusMessageParser._Str_16095;
                     break;
                 case _Str_10906:
-                    _local_2 = _Str_4393._Str_16785;
+                    _local_2 = ChatReviewSessionVotingStatusMessageParser._Str_16785;
                     break;
                 case _Str_17188:
-                    _local_2 = _Str_4393._Str_17026;
+                    _local_2 = ChatReviewSessionVotingStatusMessageParser._Str_17026;
                     break;
             }
             return _local_2;
@@ -1325,8 +1325,8 @@
                 this._window6(_local_7);
                 switch (_local_6)
                 {
-                    case _Str_4393._Str_14199:
-                    case _Str_4393._Str_17414:
+                    case ChatReviewSessionVotingStatusMessageParser._Str_14199:
+                    case ChatReviewSessionVotingStatusMessageParser._Str_17414:
                         this._Str_20955(_local_7, (HELP_CHAT_REVIEW_DECISION_ + _Str_6777[_local_6]), 2);
                         break;
                     default:
