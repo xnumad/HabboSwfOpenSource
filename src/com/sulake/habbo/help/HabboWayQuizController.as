@@ -8,7 +8,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9419;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_8785;
+    import com.sulake.habbo.communication.messages.incoming.help.QuizResultsMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.help.GetQuizQuestionsComposer;
     import com.sulake.habbo.communication.messages.parser.help._Str_8043;
     import com.sulake.habbo.communication.messages.parser.help._Str_7308;
@@ -46,7 +46,7 @@
         {
             this._habboHelp = k;
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9419(this.onQuizData));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8785(this.onQuizResults));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new QuizResultsMessageEvent(this.onQuizResults));
         }
 
         public function dispose():void
@@ -94,7 +94,7 @@
             this.showWindow(_local_2._Str_21852, _local_2._Str_25814);
         }
 
-        private function onQuizResults(k:_Str_8785):void
+        private function onQuizResults(k:QuizResultsMessageEvent):void
         {
             var _local_2:_Str_7308 = k.getParser();
             this._questionIdsForWrongAnswers = _local_2._Str_23947;

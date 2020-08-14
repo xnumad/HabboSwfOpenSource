@@ -693,7 +693,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8429;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionVotingStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_8785;
+	import com.sulake.habbo.communication.messages.incoming.help.QuizResultsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideOnDutyStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideReportingStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionStartedMessageEvent;
@@ -1238,7 +1238,7 @@
             INCOMING_PACKETS[2753] = HeightMapEvent;
             INCOMING_PACKETS[2756] = _Str_18296;
             INCOMING_PACKETS[2771] = HotelClosesAndWillOpenAtEvent;
-            INCOMING_PACKETS[2772] = _Str_8785;
+            INCOMING_PACKETS[2772] = QuizResultsMessageEvent;
             INCOMING_PACKETS[2774] = CraftingRecipeEvent;
             INCOMING_PACKETS[2782] = CfhSanctionMessageEvent;
             INCOMING_PACKETS[2783] = CameraPurchaseOKMessageEvent;
