@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.sound.SongEntry;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6369 implements IMessageParser 
+    public class PlayListMessageParser implements IMessageParser
     {
         private var _Str_17090:int;
         private var _Str_2519:Array;

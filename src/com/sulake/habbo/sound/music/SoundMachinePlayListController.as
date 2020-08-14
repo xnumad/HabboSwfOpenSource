@@ -15,7 +15,7 @@
     import com.sulake.habbo.sound.ISongInfo;
     import com.sulake.habbo.communication.messages.outgoing.sound.GetSoundMachinePlayListMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.sound.SongEntry;
-    import com.sulake.habbo.communication.messages.parser.sound._Str_6369;
+    import com.sulake.habbo.communication.messages.parser.sound.PlayListMessageParser;
     import com.sulake.habbo.sound.events.PlayListStatusEvent;
     import com.sulake.habbo.communication.messages.parser.sound.JukeBoxPlayListAddSongMessageParser;
     import com.sulake.habbo.sound.*;
@@ -335,7 +335,7 @@
             var _local_6:SongDataEntry;
             var _local_8:int;
             var _local_2:_Str_8135 = (k as _Str_8135);
-            var _local_3:_Str_6369 = (_local_2.getParser() as _Str_6369);
+            var _local_3:PlayListMessageParser = (_local_2.getParser() as PlayListMessageParser);
             var _local_4:int = _local_3._Str_23052;
             var _local_5:Array = this._Str_22257(_local_3._Str_24122);
             if (((_local_5 == null) || (_local_5.length == 0)))
