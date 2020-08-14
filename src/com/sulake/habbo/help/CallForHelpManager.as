@@ -26,7 +26,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumMessageMessageComposer;
     import com.sulake.habbo.window.utils.IAlertDialog;
-    import com.sulake.habbo.communication.messages.parser.help._Str_7877;
+    import com.sulake.habbo.communication.messages.parser.help.CallForHelpReplyMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help._Str_7322;
     import com.sulake.habbo.help.enum.CallForHelpResultEnum;
@@ -654,7 +654,7 @@
 
         private function onCallForHelpReply(k:IMessageEvent):void
         {
-            var _local_2:_Str_7877 = _Str_7837(k).getParser();
+            var _local_2:CallForHelpReplyMessageParser = _Str_7837(k).getParser();
             this._habboHelp.windowManager.alert("${help.cfh.reply.title}", _local_2.message, 0, null);
         }
 
