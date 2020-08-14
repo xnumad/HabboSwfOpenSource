@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7819 implements IMessageParser 
+    public class FriendNotificationMessageParser implements IMessageParser
     {
         private var _Str_5400:int = -1;
         private var _Str_3764:String;

@@ -49,7 +49,7 @@
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_5791;
     import com.sulake.habbo.communication.messages.parser.game.lobby.GameInviteMessageParser;
     import com.sulake.habbo.gamecenter.GameConfigurations;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_7819;
+    import com.sulake.habbo.communication.messages.parser.friendlist.FriendNotificationMessageParser;
     import com.sulake.habbo.friendbar.events.NotificationEvent;
 
     public class HabboFriendBarData extends Component implements IHabboFriendBarData 
@@ -593,7 +593,7 @@
 
         private function _Str_15197(k:_Str_8552):void
         {
-            var _local_2:_Str_7819 = k.getParser();
+            var _local_2:FriendNotificationMessageParser = k.getParser();
             var _local_3:* = (!(_local_2._Str_3293 == FriendNotification._Str_5815));
             var _local_4:* = (!(_local_2._Str_3293 == FriendNotification._Str_9572));
             var _local_5:* = (!(_local_2._Str_3293 == FriendNotification._Str_5815));
