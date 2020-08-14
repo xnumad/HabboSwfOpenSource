@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.incoming.sound.SongEntry;
     import com.sulake.habbo.communication.messages.parser.sound.PlayListMessageParser;
     import com.sulake.habbo.sound.events.PlayListStatusEvent;
-    import com.sulake.habbo.communication.messages.parser.sound.JukeBoxPlayListAddSongMessageParser;
+    import com.sulake.habbo.communication.messages.parser.sound.PlayListSongAddedMessageParser;
     import com.sulake.habbo.sound.*;
 
     public class SoundMachinePlayListController implements IPlayListController 
@@ -382,7 +382,7 @@
         private function _Str_23767(k:IMessageEvent):void
         {
             var _local_2:JukeBoxPlayListAddSongEvent = (k as JukeBoxPlayListAddSongEvent);
-            var _local_3:JukeBoxPlayListAddSongMessageParser = (_local_2.getParser() as JukeBoxPlayListAddSongMessageParser);
+            var _local_3:PlayListSongAddedMessageParser = (_local_2.getParser() as PlayListSongAddedMessageParser);
             var _local_4:SongDataEntry = new SongDataEntry(_local_3.entry.id, _local_3.entry.length, _local_3.entry.name, _local_3.entry.creator, null);
             if (_local_4 == null)
             {
