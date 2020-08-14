@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3140 
+    public class SellablePetPaletteData
     {
         private var _type:int;
         private var _Str_3717:int;
@@ -10,7 +10,7 @@
         private var _sellable:Boolean;
         private var _rare:Boolean;
 
-        public function _Str_3140(k:IMessageDataWrapper)
+        public function SellablePetPaletteData(k:IMessageDataWrapper)
         {
             this._type = k.readInteger();
             this._Str_3717 = k.readInteger();

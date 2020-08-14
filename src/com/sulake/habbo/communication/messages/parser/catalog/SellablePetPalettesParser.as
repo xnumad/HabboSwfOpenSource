@@ -38,7 +38,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_6479.push(new _Str_3140(k));
+                this._Str_6479.push(new SellablePetPaletteData(k));
                 _local_3++;
             }
             return true;

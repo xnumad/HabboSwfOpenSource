@@ -10,7 +10,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetPurchaseOverrideEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events._Str_3308;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_3140;
+    import com.sulake.habbo.communication.messages.parser.catalog.SellablePetPaletteData;
     import com.sulake.habbo.room.PetColorResult;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetMultiColoursEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetColourIndexEvent;
@@ -132,7 +132,7 @@
         {
             var k:Array;
             var _local_2:int;
-            var _local_3:_Str_3140;
+            var _local_3:SellablePetPaletteData;
             var _local_4:PetColorResult;
             if (this._availablePalettes != null)
             {
@@ -184,7 +184,7 @@
 
         private function _Str_23077():String
         {
-            var k:_Str_3140;
+            var k:SellablePetPaletteData;
             if (this._selectedPaletteIndex < 0)
             {
                 return "";
@@ -193,7 +193,7 @@
             {
                 if (((!(this._catalog == null)) && (!(this._catalog.localization == null))))
                 {
-                    k = (this._availablePalettes[this._selectedPaletteIndex] as _Str_3140);
+                    k = (this._availablePalettes[this._selectedPaletteIndex] as SellablePetPaletteData);
                     return this._catalog.localization.getLocalization(this._Str_9430(this._selectedTypeIndex, k.breedId), this._Str_9430(this._selectedTypeIndex, k.breedId));
                 }
             }
@@ -302,7 +302,7 @@
 
         private function _Str_11449(k:Array):Array
         {
-            var _local_3:_Str_3140;
+            var _local_3:SellablePetPaletteData;
             if (!k)
             {
                 return null;
@@ -336,7 +336,7 @@
                 return null;
             }
             _local_2 = this._selectedTypeIndex;
-            var _local_3:_Str_3140 = this._availablePalettes[this._selectedPaletteIndex];
+            var _local_3:SellablePetPaletteData = this._availablePalettes[this._selectedPaletteIndex];
             var _local_4:int = _local_3.paletteId;
             var _local_5:* = 0xFFFFFF;
             _local_6 = this._catalog.roomEngine;
@@ -403,7 +403,7 @@
                 return "";
             }
             var color:uint = 0xFFFFFF;
-            var data:_Str_3140 = this._availablePalettes[this._selectedPaletteIndex];
+            var data:SellablePetPaletteData = this._availablePalettes[this._selectedPaletteIndex];
             var p:String = ((((name + String.fromCharCode(10)) + data.paletteId) + String.fromCharCode(10)) + this._Str_17779(color.toString(16).toUpperCase(), 6));
             return p;
         }

@@ -19,7 +19,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetApproveNameResultEvent;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetSellablePetPalettesEvent;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_3140;
+    import com.sulake.habbo.communication.messages.parser.catalog.SellablePetPaletteData;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.room.ImageResult;
     import flash.display.BitmapData;
@@ -310,7 +310,7 @@
 
         private function _Str_11449(k:Array):Array
         {
-            var _local_3:_Str_3140;
+            var _local_3:SellablePetPaletteData;
             if (!k)
             {
                 return null;
@@ -328,13 +328,13 @@
 
         private function _Str_19742():void
         {
-            var _local_5:_Str_3140;
+            var _local_5:SellablePetPaletteData;
             var k:IHabboLocalizationManager = this._catalog.localization;
             var _local_2:Array = new Array();
             var _local_3:int;
             while (_local_3 < this._availablePalettes.length)
             {
-                _local_5 = (this._availablePalettes[_local_3] as _Str_3140);
+                _local_5 = (this._availablePalettes[_local_3] as SellablePetPaletteData);
                 _local_2.push(k.getLocalization(this._Str_9430(this._selectedTypeIndex, _local_5.breedId), this._Str_9430(this._selectedTypeIndex, _local_5.breedId)));
                 _local_3++;
             }
@@ -374,7 +374,7 @@
                 _local_2 = this._availableColors[this._selectedColorIndex];
             }
             var _local_3:int = this._selectedTypeIndex;
-            var _local_4:_Str_3140 = (this._availablePalettes[this._selectedPaletteIndex] as _Str_3140);
+            var _local_4:SellablePetPaletteData = (this._availablePalettes[this._selectedPaletteIndex] as SellablePetPaletteData);
             var _local_5:int = _local_4.paletteId;
             var _local_6:ImageResult = this._catalog.roomEngine.getPetImage(_local_3, _local_5, _local_2, new Vector3d(90, 0, 0), 64, this);
             if (_local_6 != null)
@@ -421,7 +421,7 @@
                 return "";
             }
             var color:uint = this._availableColors[this._selectedColorIndex];
-            var data:_Str_3140 = (this._availablePalettes[this._selectedPaletteIndex] as _Str_3140);
+            var data:SellablePetPaletteData = (this._availablePalettes[this._selectedPaletteIndex] as SellablePetPaletteData);
             var paletteId:int = data.paletteId;
             var p:String = ((((name + String.fromCharCode(10)) + paletteId) + String.fromCharCode(10)) + this._Str_17779(color.toString(16).toUpperCase(), 6));
             return p;
