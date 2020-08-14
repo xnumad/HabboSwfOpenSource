@@ -38,7 +38,7 @@
     import flash.events.TimerEvent;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadsMessageComposer;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_5953;
+    import com.sulake.habbo.communication.messages.parser.groupforums.GetForumsListMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumStatsMessageComposer;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumsListMessageComposer;
@@ -303,7 +303,7 @@
 
         private function _Str_22851(k:_Str_9509):void
         {
-            var _local_2:_Str_5953 = k.getParser();
+            var _local_2:GetForumsListMessageParser = k.getParser();
             var _local_3:ForumsListData = new ForumsListData(_local_2);
             if (((!(this._forumData == null)) && (this._lastReadMessageId > 0)))
             {

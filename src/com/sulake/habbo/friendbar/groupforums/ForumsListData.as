@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.friendbar.groupforums
 {
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_5953;
+    import com.sulake.habbo.communication.messages.parser.groupforums.GetForumsListMessageParser;
     import com.sulake.habbo.communication.messages.parser.groupforums.ForumData;
 
     public class ForumsListData 
@@ -10,7 +10,7 @@
         private var _startIndex:int;
         private var _forums:Array;
 
-        public function ForumsListData(k:_Str_5953)
+        public function ForumsListData(k:GetForumsListMessageParser)
         {
             this._listCode = k._Str_5154;
             this._totalAmount = k.totalAmount;

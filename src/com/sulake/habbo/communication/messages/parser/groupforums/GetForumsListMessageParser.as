@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5953 implements IMessageParser 
+    public class GetForumsListMessageParser implements IMessageParser
     {
         private var _Str_9742:int;
         private var _totalAmount:int;
