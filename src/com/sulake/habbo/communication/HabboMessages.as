@@ -108,7 +108,7 @@
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_10594;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.LeaveQueueMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby.JoinPlayerQueueMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.JoinQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.AcceptGameInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_12437;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetResolutionAchievementsMessageComposer;
@@ -1577,7 +1577,7 @@
             OUTGOING_PACKETS[1444] = UnacceptTradingComposer;
             OUTGOING_PACKETS[1445] = Game2ExitGameMessageComposer;
             OUTGOING_PACKETS[1450] = ForwardToASubmittableRoomMessageComposer;
-            OUTGOING_PACKETS[1458] = JoinPlayerQueueMessageComposer;
+            OUTGOING_PACKETS[1458] = JoinQueueMessageComposer;
             OUTGOING_PACKETS[1461] = SetRoomCameraPreferencesMessageComposer;
             OUTGOING_PACKETS[1472] = TogglePetRidingPermissionMessageComposer;
             OUTGOING_PACKETS[1474] = CancelTypingMessageComposer;
