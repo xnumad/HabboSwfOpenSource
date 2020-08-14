@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7128 implements IMessageParser 
+    public class RequestSpamWallPostItMessageParser implements IMessageParser
     {
         private var _itemId:int;
         private var _location:String;

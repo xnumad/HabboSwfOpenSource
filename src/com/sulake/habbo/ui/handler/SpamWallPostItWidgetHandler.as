@@ -6,7 +6,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9687;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7128;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.RequestSpamWallPostItMessageParser;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.habbo.ui.widget.events.RoomWidgetSpamWallPostItEditEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetSpamWallPostItFinishEditingMessage;
@@ -62,7 +62,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7128 = k.getParser();
+            var _local_2:RequestSpamWallPostItMessageParser = k.getParser();
             var _local_3:int = _local_2.itemId;
             var _local_4:String = _local_2.location;
             var _local_5:String = "post_it";
