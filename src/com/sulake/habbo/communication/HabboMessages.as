@@ -698,7 +698,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9097;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9121;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_9409;
+	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionResultsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9419;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9538;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.*;
@@ -1300,7 +1300,7 @@
             INCOMING_PACKETS[325] = CfhTopicsInitEvent;
             INCOMING_PACKETS[3253] = _Str_9047;
             INCOMING_PACKETS[3264] = _Str_6345;
-            INCOMING_PACKETS[3276] = _Str_9409;
+            INCOMING_PACKETS[3276] = ChatReviewSessionResultsMessageEvent;
             INCOMING_PACKETS[3277] = ScrSendKickbackInfoMessageEvent;
             INCOMING_PACKETS[3284] = InfoFeedEnableMessageEvent;
             INCOMING_PACKETS[3285] = _Str_8429;
