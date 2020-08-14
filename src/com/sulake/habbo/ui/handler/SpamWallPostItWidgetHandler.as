@@ -40,7 +40,7 @@
 
         public function set connection(k:IConnection):void
         {
-            this._spamWallPostItEditRequestListener = new _Str_9687(this._Str_23816);
+            this._spamWallPostItEditRequestListener = new _Str_9687(this.onSpamWallPostItRequest);
             this._connection = k;
             this._connection.addMessageEvent(this._spamWallPostItEditRequestListener);
         }
@@ -55,7 +55,7 @@
             }
         }
 
-        private function _Str_23816(k:_Str_9687):void
+        private function onSpamWallPostItRequest(k:_Str_9687):void
         {
             var _local_7:String;
             if (k == null)
