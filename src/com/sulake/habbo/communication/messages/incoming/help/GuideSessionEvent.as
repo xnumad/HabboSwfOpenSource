@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.help.GuideSessionMessageParser;
+    import com.sulake.habbo.communication.messages.parser.help.GuideSessionMessageMessageParser;
 
     public class GuideSessionEvent extends MessageEvent implements IMessageEvent 
     {
         public function GuideSessionEvent(k:Function)
         {
-            super(k, GuideSessionMessageParser);
+            super(k, GuideSessionMessageMessageParser);
         }
 
-        public function getParser():GuideSessionMessageParser
+        public function getParser():GuideSessionMessageMessageParser
         {
-            return _parser as GuideSessionMessageParser;
+            return _parser as GuideSessionMessageMessageParser;
         }
     }
 }

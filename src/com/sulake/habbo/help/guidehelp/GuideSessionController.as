@@ -39,7 +39,7 @@
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionStartedMessageParser;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionEndedMessageParser;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionErrorMessageParser;
-    import com.sulake.habbo.communication.messages.parser.help.GuideSessionMessageParser;
+    import com.sulake.habbo.communication.messages.parser.help.GuideSessionMessageMessageParser;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionRequesterRoomMessageParser;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionInvitedToGuideRoomMessageParser;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionPartnerIsTypingMessageParser;
@@ -409,7 +409,7 @@
             {
                 return;
             }
-            var _local_2:GuideSessionMessageParser = (k.parser as GuideSessionMessageParser);
+            var _local_2:GuideSessionMessageMessageParser = (k.parser as GuideSessionMessageMessageParser);
             var _local_3:int = _local_2.senderId;
             if (_local_3 == this._sessionData._Str_5587)
             {
