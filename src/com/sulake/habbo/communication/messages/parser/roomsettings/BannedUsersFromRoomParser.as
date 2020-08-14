@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5423;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6752 implements IMessageParser 
+    public class BannedUsersFromRoomParser implements IMessageParser
     {
         private var _roomId:int;
         private var _Str_17279:Array;

@@ -80,7 +80,7 @@
     import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllersMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6824;
     import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllerRemovedMessageParser;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6752;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.BannedUsersFromRoomParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings.UserUnbannedFromRoomParser;
     import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.RoomRatingMessageParser;
@@ -449,7 +449,7 @@
 
         private function _Str_8907(k:IMessageEvent):void
         {
-            var _local_2:_Str_6752 = (k as _Str_5881).getParser();
+            var _local_2:BannedUsersFromRoomParser = (k as _Str_5881).getParser();
             Logger.log(((("Got Banned users for room: " + _local_2.roomId) + ", ") + _local_2._Str_14901.length));
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_8907(_local_2.roomId, _local_2._Str_14901);
         }
