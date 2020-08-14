@@ -45,7 +45,7 @@
         public function HabboWayQuizController(k:HabboHelp)
         {
             this._habboHelp = k;
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9419(this._Str_23120));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9419(this.onQuizData));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8785(this._Str_24077));
         }
 
@@ -86,7 +86,7 @@
             this._habboHelp.sendMessage(new GetQuizQuestionsComposer(SAFETY_QUIZ_CODE));
         }
 
-        private function _Str_23120(k:_Str_9419):void
+        private function onQuizData(k:_Str_9419):void
         {
             var _local_2:_Str_8043 = k.getParser();
             this._habboHelp._Str_24844();
