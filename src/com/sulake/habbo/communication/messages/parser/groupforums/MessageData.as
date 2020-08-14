@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2814 
+    public class MessageData
     {
         private var _groupId:int;
         private var _messageId:int;
@@ -20,9 +20,9 @@
         private var _Str_21485:int;
 
 
-        public static function _Str_4933(k:IMessageDataWrapper):_Str_2814
+        public static function _Str_4933(k:IMessageDataWrapper):MessageData
         {
-            var _local_2:_Str_2814 = new (_Str_2814)();
+            var _local_2:MessageData = new (MessageData)();
             _local_2.messageId = k.readInteger();
             _local_2.messageIndex = k.readInteger();
             _local_2._Str_18036 = k.readInteger();

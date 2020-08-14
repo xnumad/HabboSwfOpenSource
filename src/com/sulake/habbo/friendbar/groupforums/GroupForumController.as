@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumsListMessageComposer;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThreadsParser;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetMessagesMessageComposer;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_2814;
+    import com.sulake.habbo.communication.messages.parser.groupforums.MessageData;
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_7217;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThread;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateForumSettingsMessageComposer;
@@ -394,7 +394,7 @@
 
         private function onThreadMessageList(k:_Str_9446):void
         {
-            var _local_6:_Str_2814;
+            var _local_6:MessageData;
             var _local_2:_Str_7217 = k.getParser();
             if ((((this._forumData == null) || (!(this._forumData.groupId == _local_2.groupId))) || (this._threadsListData == null)))
             {
@@ -416,7 +416,7 @@
             this._mainView._Str_24648(this._forumsListData, this._forumData, this._threadsListData, this._messagesListData);
             if (_local_2.messages.length > 0)
             {
-                _local_6 = _Str_2814(_local_2.messages[(_local_2.messages.length - 1)]);
+                _local_6 = MessageData(_local_2.messages[(_local_2.messages.length - 1)]);
                 if (_local_6)
                 {
                     this._Str_20284(_local_6.messageId, _local_6.threadId, _local_6.messageIndex);
@@ -600,13 +600,13 @@
 
         private function _parser8(k:_Str_8758):void
         {
-            var _local_6:_Str_2814;
+            var _local_6:MessageData;
             var _local_2:_Str_7149 = k.getParser();
             if ((((this._forumData == null) || (!(this._forumData.groupId == _local_2.groupId))) || (!(this._currentThreadID == _local_2.threadId))))
             {
                 return;
             }
-            var _local_3:_Str_2814 = _local_2.message;
+            var _local_3:MessageData = _local_2.message;
             var _local_4:Array = this._messagesListData["messages"];
             var _local_5:int;
             while (_local_5 < _local_4.length)

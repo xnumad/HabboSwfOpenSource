@@ -19,7 +19,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThread;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_2814;
+    import com.sulake.habbo.communication.messages.parser.groupforums.MessageData;
     import com.sulake.habbo.utils.FriendlyTime;
 
     public class GroupForumView 
@@ -308,7 +308,7 @@
             }
         }
 
-        public function _Str_25031(k:_Str_2814):void
+        public function _Str_25031(k:MessageData):void
         {
             if (this._messageListView != null)
             {
@@ -507,7 +507,7 @@
             }
         }
 
-        public function _Str_21538(k:GuildForumThread, _arg_2:_Str_2814=null):void
+        public function _Str_21538(k:GuildForumThread, _arg_2:MessageData=null):void
         {
             if (this._controller._Str_10252 != null)
             {

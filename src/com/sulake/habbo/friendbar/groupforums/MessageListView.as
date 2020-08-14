@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_3372;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThread;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_2814;
+    import com.sulake.habbo.communication.messages.parser.groupforums.MessageData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.components.IWidgetWindow;
@@ -160,7 +160,7 @@
 
         public function update():void
         {
-            var _local_2:_Str_2814;
+            var _local_2:MessageData;
             var _local_3:Boolean;
             if (this._list.numListItems > 0)
             {
@@ -225,7 +225,7 @@
             this._list.autoArrangeItems = true;
         }
 
-        private function _Str_6850(k:_Str_2814, _arg_2:Boolean=false):IWindowContainer
+        private function _Str_6850(k:MessageData, _arg_2:Boolean=false):IWindowContainer
         {
             var _local_3:IWindowContainer = (this._listItem.clone() as IWindowContainer);
             _local_3.name = ("message_" + k.messageId);
@@ -272,7 +272,7 @@
             return _local_3;
         }
 
-        public function _Str_16935(k:_Str_2814):void
+        public function _Str_16935(k:MessageData):void
         {
             var _local_2:int = k.messageId;
             var _local_3:IWindowContainer = (this._list.getListItemByName(("message_" + _local_2)) as IWindowContainer);
@@ -289,7 +289,7 @@
             this._Str_18220();
         }
 
-        private function _Str_15972(k:IWindowContainer, _arg_2:_Str_2814, _arg_3:int):void
+        private function _Str_15972(k:IWindowContainer, _arg_2:MessageData, _arg_3:int):void
         {
             var _local_4:IRegionWindow;
             var _local_9:IStaticBitmapWrapperWindow;
@@ -356,7 +356,7 @@
             }
         }
 
-        private function _Str_13405(k:_Str_2814):String
+        private function _Str_13405(k:MessageData):String
         {
             switch (k.state)
             {
@@ -409,7 +409,7 @@
         private function _Str_20759(k:WindowMouseEvent):void
         {
             var _local_2:int = int(k.target.id);
-            var _local_3:_Str_2814 = this._messagesListData._Str_22993[_local_2];
+            var _local_3:MessageData = this._messagesListData._Str_22993[_local_2];
             if (_local_3 == null)
             {
                 return;

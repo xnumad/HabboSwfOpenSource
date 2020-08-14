@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.friendbar.groupforums
 {
     import flash.utils.Dictionary;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_2814;
+    import com.sulake.habbo.communication.messages.parser.groupforums.MessageData;
 
     public class MessagesListData 
     {
@@ -13,7 +13,7 @@
 
         public function MessagesListData(k:int, _arg_2:int, _arg_3:int, _arg_4:Array):void
         {
-            var _local_6:_Str_2814;
+            var _local_6:MessageData;
             super();
             this._threadId = k;
             this._startIndex = _arg_3;

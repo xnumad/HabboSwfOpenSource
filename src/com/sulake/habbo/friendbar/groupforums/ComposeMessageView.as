@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.parser.groupforums._Str_2807;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThread;
     import flash.events.TimerEvent;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_2814;
+    import com.sulake.habbo.communication.messages.parser.groupforums.MessageData;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowKeyboardEvent;
@@ -35,7 +35,7 @@
         private var _hasErrors:Boolean = false;
         private var _posting:Boolean = false;
 
-        public function ComposeMessageView(k:GroupForumView, _arg_2:int, _arg_3:int, _arg_4:_Str_2807, _arg_5:GuildForumThread, _arg_6:_Str_2814)
+        public function ComposeMessageView(k:GroupForumView, _arg_2:int, _arg_3:int, _arg_4:_Str_2807, _arg_5:GuildForumThread, _arg_6:MessageData)
         {
             this._mainView = k;
             this._controller = this._mainView.controller;
@@ -59,7 +59,7 @@
             this._timer.start();
         }
 
-        public function focus(k:_Str_2807, _arg_2:GuildForumThread, _arg_3:_Str_2814):void
+        public function focus(k:_Str_2807, _arg_2:GuildForumThread, _arg_3:MessageData):void
         {
             if (!this._posting)
             {
@@ -74,7 +74,7 @@
             this._window.activate();
         }
 
-        private function _Str_7598(k:_Str_2814):void
+        private function _Str_7598(k:MessageData):void
         {
             var _local_2:IRegionWindow = GroupForumView._Str_14926(this._window, this._forumData);
             _local_2.removeEventListener(WindowMouseEvent.CLICK, this._Str_4912);
@@ -115,7 +115,7 @@
             this._Str_11234();
         }
 
-        private function _Str_24168(k:_Str_2814):void
+        private function _Str_24168(k:MessageData):void
         {
             var _local_5:String;
             var _local_6:*;

@@ -7,7 +7,7 @@
     {
         private var _groupId:int;
         private var _threadId:int;
-        private var _message:_Str_2814;
+        private var _message:MessageData;
 
 
         public function get groupId():int
@@ -20,7 +20,7 @@
             return this._threadId;
         }
 
-        public function get message():_Str_2814
+        public function get message():MessageData
         {
             return this._message;
         }
@@ -37,7 +37,7 @@
         {
             this._groupId = k.readInteger();
             this._threadId = k.readInteger();
-            this._message = _Str_2814._Str_4933(k);
+            this._message = MessageData._Str_4933(k);
             return true;
         }
     }
