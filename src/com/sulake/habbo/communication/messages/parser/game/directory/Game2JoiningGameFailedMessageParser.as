@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9392 implements IMessageParser 
+    public class Game2JoiningGameFailedMessageParser implements IMessageParser
     {
         public static const _Str_20087:int = 1;
         public static const DUPLICATE_MACHINEID:int = 2;
