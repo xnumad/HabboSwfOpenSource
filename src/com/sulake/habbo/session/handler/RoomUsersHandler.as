@@ -54,7 +54,7 @@
     import com.sulake.habbo.session.events.RoomSessionPetBreedingEvent;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetStatusUpdateParser;
     import com.sulake.habbo.session.events.RoomSessionPetStatusUpdateEvent;
-    import com.sulake.habbo.communication.messages.parser.room.pets._Str_7212;
+    import com.sulake.habbo.communication.messages.parser.room.pets.PetLevelUpdateMessageParser;
     import com.sulake.habbo.session.events.RoomSessionPetLevelUpdateEvent;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetTrainingPanelMessageParser;
     import com.sulake.habbo.session.events.RoomSessionPetCommandsUpdateEvent;
@@ -433,7 +433,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7212 = _local_2.getParser();
+            var _local_3:PetLevelUpdateMessageParser = _local_2.getParser();
             var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {
