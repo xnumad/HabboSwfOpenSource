@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7276 implements IMessageParser 
+    public class MessengerErrorMessageParser implements IMessageParser
     {
         private var _Str_19500:int;
         private var _errorCode:int;

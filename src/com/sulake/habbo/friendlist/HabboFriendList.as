@@ -83,7 +83,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7034;
     import com.sulake.habbo.communication.messages.parser.friendlist.AcceptFriendResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.HabboSearchResultMessageParser;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_7276;
+    import com.sulake.habbo.communication.messages.parser.friendlist.MessengerErrorMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteErrorMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.FollowFriendFailedMessageParser;
     import com.sulake.core.window.IWindowContainer;
@@ -596,7 +596,7 @@
 
         private function _Str_23472(k:IMessageEvent):void
         {
-            var _local_2:_Str_7276 = (k as _Str_8535).getParser();
+            var _local_2:MessengerErrorMessageParser = (k as _Str_8535).getParser();
             this._Str_20985(_local_2.errorCode, _local_2._Str_23408);
         }
 
