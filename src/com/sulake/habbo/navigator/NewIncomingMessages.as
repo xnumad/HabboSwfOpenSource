@@ -70,7 +70,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator.UserEventCatsMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.chat.RoomFilterSettingsMessageParser;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6295;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsErrorMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsSavedMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsSaveErrorMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.RoomInfoUpdatedMessageParser;
@@ -387,7 +387,7 @@
 
         private function _Str_18344(k:IMessageEvent):void
         {
-            var _local_2:_Str_6295 = (k as _Str_5752).getParser();
+            var _local_2:RoomSettingsErrorMessageParser = (k as _Str_5752).getParser();
         }
 
         private function onRoomSettingsSaved(k:IMessageEvent):void
