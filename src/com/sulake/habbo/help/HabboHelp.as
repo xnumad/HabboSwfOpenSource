@@ -694,7 +694,7 @@
             return this._friendList;
         }
 
-        public function _Str_19312():void
+        public function ignoreAndUnfriendReportedUser():void
         {
             var k:RemoveFriendMessageComposer;
             if (this._callForHelpManager.reportedUserId > 0)

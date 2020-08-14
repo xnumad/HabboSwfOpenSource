@@ -417,7 +417,7 @@
             {
                 return;
             }
-            this._habboHelp._Str_19312();
+            this._habboHelp.ignoreAndUnfriendReportedUser();
             switch (this._contentModerationType)
             {
                 case HabboHelp.REPORT_TYPE_PHOTO:

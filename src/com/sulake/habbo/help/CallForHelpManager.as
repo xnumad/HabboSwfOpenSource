@@ -622,7 +622,7 @@
                     this._habboHelp.sendMessage(new CallForHelpFromForumMessageMessageComposer(this._reportedGroupId, this._reportedThreadId, this._reportedMessageId, this._topicIndex, this._message));
                     break;
             }
-            this._habboHelp._Str_19312();
+            this._habboHelp.ignoreAndUnfriendReportedUser();
         }
 
         private function onFriendReportConfirmation(k:IAlertDialog, _arg_2:WindowEvent):void
