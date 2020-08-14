@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8754 implements IMessageParser 
+    public class IsUserPartOfCompetitionMessageParser implements IMessageParser
     {
         private var _Str_8579:Boolean;
         private var _Str_6987:int;
