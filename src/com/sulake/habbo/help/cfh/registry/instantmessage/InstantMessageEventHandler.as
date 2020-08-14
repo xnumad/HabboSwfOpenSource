@@ -27,18 +27,18 @@
             {
                 _local_3 = _local_2.extraData.split("/")[2];
                 _local_4 = _local_2.extraData.split("/")[0];
-                this._component._Str_3977.addItem(_local_2.senderId, ((_local_3 + ":") + _local_4), _local_2._Str_3460);
+                this._component.instantMessageRegistry.addItem(_local_2.senderId, ((_local_3 + ":") + _local_4), _local_2._Str_3460);
             }
             else
             {
-                this._component._Str_3977.addItem(_local_2.senderId, "", _local_2._Str_3460);
+                this._component.instantMessageRegistry.addItem(_local_2.senderId, "", _local_2._Str_3460);
             }
         }
 
         public function onRoomInvite(k:_Str_4696):void
         {
             var _local_2:RoomInviteMessageParser = k.getParser();
-            this._component._Str_3977.addItem(_local_2.senderId, "", _local_2._Str_3460);
+            this._component.instantMessageRegistry.addItem(_local_2.senderId, "", _local_2._Str_3460);
         }
 
         public function dispose():void

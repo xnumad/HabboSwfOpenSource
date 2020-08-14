@@ -74,9 +74,9 @@
             {
                 this._habboHelp.chatRegistry._Str_7724 = false;
             }
-            if (((this._habboHelp) && (this._habboHelp._Str_3977)))
+            if (((this._habboHelp) && (this._habboHelp.instantMessageRegistry)))
             {
-                this._habboHelp._Str_3977._Str_7724 = false;
+                this._habboHelp.instantMessageRegistry._Str_7724 = false;
             }
             if (this._window)
             {
@@ -95,7 +95,7 @@
             if (k == HabboHelp.REPORT_TYPE_IM)
             {
                 _local_4 = ((_arg_2 > 0) ? _arg_2 : this._reportedUserId);
-                _local_5 = this._habboHelp._Str_3977.getItemsByUser(_local_4);
+                _local_5 = this._habboHelp.instantMessageRegistry.getItemsByUser(_local_4);
                 for each (_local_6 in _local_5)
                 {
                     if (_local_6.selected)
@@ -140,8 +140,8 @@
             _local_3.addListItemAt(_local_6, 0);
             var _local_7:IItemListWindow = (_local_6.findChildByName("chat_items") as IItemListWindow);
             _local_7.removeListItems();
-            this._habboHelp._Str_3977._Str_7724 = true;
-            var _local_8:Vector.<InstantMessageRegistryItem> = this._habboHelp._Str_3977.getItemsByUser(_arg_2);
+            this._habboHelp.instantMessageRegistry._Str_7724 = true;
+            var _local_8:Vector.<InstantMessageRegistryItem> = this._habboHelp.instantMessageRegistry.getItemsByUser(_arg_2);
             for each (_local_9 in _local_8)
             {
                 _local_10 = (_local_5.clone() as IWindowContainer);
@@ -227,7 +227,7 @@
             var _local_3:InstantMessageRegistryItem;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = this._habboHelp._Str_3977.getItem(this._reportedUserId, _arg_2.id);
+                _local_3 = this._habboHelp.instantMessageRegistry.getItem(this._reportedUserId, _arg_2.id);
                 if (!_local_3)
                 {
                     return;
@@ -254,7 +254,7 @@
             var k:Vector.<InstantMessageRegistryItem>;
             var _local_2:ChatRegistryItem;
             var _local_3:InstantMessageRegistryItem;
-            for each (k in this._habboHelp._Str_3977._Str_6828())
+            for each (k in this._habboHelp.instantMessageRegistry._Str_6828())
             {
                 for each (_local_3 in k)
                 {
@@ -312,7 +312,7 @@
                 while (_local_5 < _local_4.numListItems)
                 {
                     _local_6 = (_local_4.getListItemAt(_local_5) as IWindow);
-                    _local_7 = this._habboHelp._Str_3977.getItem(this._reportedUserId, _local_6.id);
+                    _local_7 = this._habboHelp.instantMessageRegistry.getItem(this._reportedUserId, _local_6.id);
                     if (_local_7)
                     {
                         _local_6.color = ((_local_7.selected) ? _Str_9415 : _Str_6492);

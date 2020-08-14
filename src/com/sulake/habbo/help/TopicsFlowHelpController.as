@@ -634,7 +634,7 @@
             var k:Vector.<InstantMessageRegistryItem>;
             var _local_2:ChatRegistryItem;
             var _local_3:InstantMessageRegistryItem;
-            for each (k in this._habboHelp._Str_3977._Str_6828())
+            for each (k in this._habboHelp.instantMessageRegistry._Str_6828())
             {
                 for each (_local_3 in k)
                 {
@@ -685,8 +685,8 @@
             var _local_3:IWindowContainer;
             var _local_4:ICheckBoxWindow;
             this._chatList.removeListItems();
-            this._habboHelp._Str_3977._Str_7724 = true;
-            var k:Vector.<InstantMessageRegistryItem> = this._habboHelp._Str_3977.getItemsByUser(this._habboHelp.reportedUserId);
+            this._habboHelp.instantMessageRegistry._Str_7724 = true;
+            var k:Vector.<InstantMessageRegistryItem> = this._habboHelp.instantMessageRegistry.getItemsByUser(this._habboHelp.reportedUserId);
             for each (_local_2 in k)
             {
                 _local_3 = (this._chatPrototype.clone() as IWindowContainer);
@@ -720,7 +720,7 @@
                         _local_4 = (_arg_2 as ICheckBoxWindow);
                     }
                 }
-                _local_5 = this._habboHelp._Str_3977.getItem(this._habboHelp.reportedUserId, _local_3);
+                _local_5 = this._habboHelp.instantMessageRegistry.getItem(this._habboHelp.reportedUserId, _local_3);
                 if (_local_5)
                 {
                     _local_5.selected = (!(_local_5.selected));

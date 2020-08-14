@@ -524,7 +524,7 @@
             var k:Boolean = this.isChatSelectionRequired();
             if (this._reportType == HabboHelp.REPORT_TYPE_IM)
             {
-                if (!this._habboHelp._Str_3977._Str_23839(this._reportedUserId))
+                if (!this._habboHelp.instantMessageRegistry._Str_23839(this._reportedUserId))
                 {
                     this._habboHelp.windowManager.alert("${generic.alert.title}", "${help.cfh.error.nochathistory}", 0, null);
                 }

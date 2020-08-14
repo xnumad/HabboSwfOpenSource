@@ -747,7 +747,7 @@
             return this._chatRegistry;
         }
 
-        public function get _Str_3977():InstantMessageRegistry
+        public function get instantMessageRegistry():InstantMessageRegistry
         {
             return this._instantMessageRegistry;
         }
