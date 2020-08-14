@@ -120,7 +120,7 @@
 	import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar.CheckUserNameResultMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.avatar._Str_9393;
+	import com.sulake.habbo.communication.messages.incoming.avatar.WardrobeMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.competition.VoteForRoomMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.GetIsUserPartOfCompetitionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToACompetitionRoomMessageComposer;
@@ -1307,7 +1307,7 @@
             INCOMING_PACKETS[3292] = FaqTextMessageEvent;
             INCOMING_PACKETS[3293] = _Str_8674;
             INCOMING_PACKETS[3297] = _Str_5711;
-            INCOMING_PACKETS[3315] = _Str_9393;
+            INCOMING_PACKETS[3315] = WardrobeMessageEvent;
             INCOMING_PACKETS[3319] = CommunityGoalEarnedPrizesMessageEvent;
             INCOMING_PACKETS[3331] = SellablePetPalettesMessageEvent;
             INCOMING_PACKETS[3336] = VoucherRedeemOkMessageEvent;
