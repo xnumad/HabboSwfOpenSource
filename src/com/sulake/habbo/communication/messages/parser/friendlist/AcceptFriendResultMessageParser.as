@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7034;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7071 implements IMessageParser 
+    public class AcceptFriendResultMessageParser implements IMessageParser
     {
         private var _Str_17671:Array;
 
