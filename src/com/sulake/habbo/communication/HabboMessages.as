@@ -699,7 +699,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionStartedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpDisabledNotifyMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionResultsMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_9419;
+	import com.sulake.habbo.communication.messages.incoming.help.QuizDataMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideTicketResolutionMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerChangeStateMessageComposer;
@@ -1262,7 +1262,7 @@
             INCOMING_PACKETS[2897] = _Str_5752;
             INCOMING_PACKETS[2901] = PetInfoMessageEvent;
             INCOMING_PACKETS[2913] = PetPlacingErrorEvent;
-            INCOMING_PACKETS[2927] = _Str_9419;
+            INCOMING_PACKETS[2927] = QuizDataMessageEvent;
             INCOMING_PACKETS[2937] = RoomFilterSettingsMessageEvent;
             INCOMING_PACKETS[296] = BotForceOpenContextMenuEvent;
             INCOMING_PACKETS[2997] = PollContentsEvent;

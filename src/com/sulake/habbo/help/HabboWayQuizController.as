@@ -7,7 +7,7 @@
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_9419;
+    import com.sulake.habbo.communication.messages.incoming.help.QuizDataMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.QuizResultsMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.help.GetQuizQuestionsComposer;
     import com.sulake.habbo.communication.messages.parser.help._Str_8043;
@@ -45,7 +45,7 @@
         public function HabboWayQuizController(k:HabboHelp)
         {
             this._habboHelp = k;
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9419(this.onQuizData));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new QuizDataMessageEvent(this.onQuizData));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new QuizResultsMessageEvent(this.onQuizResults));
         }
 
@@ -86,7 +86,7 @@
             this._habboHelp.sendMessage(new GetQuizQuestionsComposer(SAFETY_QUIZ_CODE));
         }
 
-        private function onQuizData(k:_Str_9419):void
+        private function onQuizData(k:QuizDataMessageEvent):void
         {
             var _local_2:_Str_8043 = k.getParser();
             this._habboHelp._Str_24844();
