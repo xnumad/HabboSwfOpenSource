@@ -19,7 +19,7 @@
 	import snowwar._Str_277.SnowStormGenericErrorParser2;
 	import snowwar._Str_277.SnowStormUserRematchedParser;
 	import com.sulake.habbo.communication.messages.parser.game.score.Game2WeeklyLeaderboardParser;
-	import com.sulake.habbo.communication.messages.parser.game.score._Str_4574;
+	import com.sulake.habbo.communication.messages.parser.game.score.Game2LeaderboardParser;
 	import snowwar._Str_320._SafeStr_4674;
 	//import com.sulake.room.renderer.cache._SafeStr_1440; //TODO
 	import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyLeaderboardEvent;
@@ -713,7 +713,7 @@
 
         private function _SafeStr_18933(k:Game2WeeklyLeaderboardEvent):void
         {
-            var _local_2:_Str_4574 = k.getParser();
+            var _local_2:Game2LeaderboardParser = k.getParser();
             if (this._snowWarEngine.leaderboard)
             {
                 this._snowWarEngine.leaderboard._SafeStr_18636(_local_2.leaderboard, _local_2._Str_26158);
@@ -722,7 +722,7 @@
 
         private function _SafeStr_18941(k:_Str_5142):void
         {
-            var _local_2:_Str_4574 = k.getParser();
+            var _local_2:Game2LeaderboardParser = k.getParser();
             if (this._snowWarEngine.leaderboard)
             {
                 this._snowWarEngine.leaderboard._SafeStr_18634(_local_2.leaderboard, _local_2._Str_26158);

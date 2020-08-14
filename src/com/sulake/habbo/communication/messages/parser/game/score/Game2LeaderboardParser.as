@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4574 implements IMessageParser 
+    public class Game2LeaderboardParser implements IMessageParser
     {
         private var _gameTypeId:int;
         private var _leaderBoard:Array;

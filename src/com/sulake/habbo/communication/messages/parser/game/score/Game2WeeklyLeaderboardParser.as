@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class Game2WeeklyLeaderboardParser extends _Str_4574 
+    public class Game2WeeklyLeaderboardParser extends Game2LeaderboardParser
     {
         private var _year:int;
         private var _week:int;

@@ -42,7 +42,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.game.score.LeaderboardEntry;
-    import com.sulake.habbo.communication.messages.parser.game.score._Str_4574;
+    import com.sulake.habbo.communication.messages.parser.game.score.Game2LeaderboardParser;
     import com.sulake.habbo.communication.messages.parser.game.score.Game2WeeklyLeaderboardParser;
     import com.sulake.habbo.communication.messages.parser.game.score.GameRewardWinnerEntry;
     import com.sulake.habbo.communication.messages.parser.game.score._Str_7341;
@@ -554,7 +554,7 @@
             var _local_7:IWindowContainer;
             var _local_8:IBitmapWrapperWindow;
             var _local_2:_Str_8191 = (k as _Str_8191);
-            var _local_3:_Str_4574 = _local_2.getParser();
+            var _local_3:Game2LeaderboardParser = _local_2.getParser();
             if (((this._leaderboardList) && (_local_3.gameTypeId == this._selectedGame)))
             {
                 this._leaderboardList.destroyListItems();
