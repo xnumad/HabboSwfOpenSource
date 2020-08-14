@@ -123,7 +123,7 @@
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSavedSearchesEvent(this.onSavedSearches)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5038(this.onMuteAllEvent)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch)));
@@ -204,7 +204,7 @@
             return this._navigator.data;
         }
 
-        private function _Str_17199(k:IMessageEvent):void
+        private function onMuteAllEvent(k:IMessageEvent):void
         {
             var _local_2:_Str_5038 = (k as _Str_5038);
             var _local_3:_Str_6564 = _local_2.getParser();
