@@ -692,7 +692,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8337;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8429;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8464;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_8747;
+	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8785;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8903;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
@@ -1426,7 +1426,7 @@
             INCOMING_PACKETS[714] = _Str_8418;
             INCOMING_PACKETS[717] = BadgesEvent;
             INCOMING_PACKETS[725] = _Str_5946;
-            INCOMING_PACKETS[735] = _Str_8747;
+            INCOMING_PACKETS[735] = ChatReviewSessionOfferedToGuideMessageEvent;
             INCOMING_PACKETS[740] = AchievementResolutionCompletedMessageEvent;
             INCOMING_PACKETS[749] = RoomEntryInfoMessageEvent;
             INCOMING_PACKETS[758] = OpenConnectionMessageEvent;

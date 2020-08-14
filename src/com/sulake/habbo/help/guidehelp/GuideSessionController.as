@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingEvent;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_8903;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_8747;
+    import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9097;
     import com.sulake.habbo.communication.messages.incoming.help._Str_8464;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionResultsMessageEvent;
@@ -160,7 +160,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionPartnerIsTypingEvent(this.onGuideSessionPartnerIsTyping));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8903(this._window9));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8747(this.onChatReviewSessionOfferedToGuide));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionOfferedToGuideMessageEvent(this.onChatReviewSessionOfferedToGuide));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9097(this.onChatReviewSessionStarted));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8464(this.onChatReviewSessionVotingStatus));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionResultsMessageEvent(this.onChatReviewSessionResults));
@@ -507,7 +507,7 @@
             }
         }
 
-        private function onChatReviewSessionOfferedToGuide(k:_Str_8747):void
+        private function onChatReviewSessionOfferedToGuide(k:ChatReviewSessionOfferedToGuideMessageEvent):void
         {
             this._Str_22573(k.getParser()._Str_23730);
         }

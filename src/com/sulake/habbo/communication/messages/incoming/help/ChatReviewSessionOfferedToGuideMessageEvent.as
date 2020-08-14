@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help._Str_9102;
 
-    public class _Str_8747 extends MessageEvent implements IMessageEvent 
+    public class ChatReviewSessionOfferedToGuideMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8747(k:Function)
+        public function ChatReviewSessionOfferedToGuideMessageEvent(k:Function)
         {
             super(k, _Str_9102);
         }
