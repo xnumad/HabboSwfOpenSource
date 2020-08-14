@@ -548,9 +548,9 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUIDE_TOOL;
-            this.openWindow(this._Str_21226, true);
+            this.openWindow(this.onGuideToolEvent, true);
             this._Str_13929(this._onDuty);
-            this._window.procedure = this._Str_21226;
+            this._window.procedure = this.onGuideToolEvent;
             this._Str_18493("handle_guardian_tickets", this._handleGuardianRequests);
             this._Str_18493("handle_helper_tickets", this._handleHelperRequests);
             this._Str_18493("handle_guide_tickets", this._handleGuideRequests);
@@ -564,7 +564,7 @@
             }
         }
 
-        private function _Str_21226(k:WindowEvent, _arg_2:IWindow):void
+        private function onGuideToolEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_4:String;
             if ((((this.disposed) || (this._window == null)) || (!(this._window.name == GuideSessionStateEnum.GUIDE_TOOL))))
