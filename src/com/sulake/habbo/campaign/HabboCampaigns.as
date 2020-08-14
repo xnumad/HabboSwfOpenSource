@@ -22,7 +22,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.campaign._Str_9003;
     import com.sulake.habbo.communication.messages.incoming.campaign._Str_9045;
-    import com.sulake.habbo.communication.messages.parser.campaign._Str_7028;
+    import com.sulake.habbo.communication.messages.parser.campaign.CampaignCalendarDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.campaign._Str_7637;
     import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorAsStaffComposer;
     import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorComposer;
@@ -81,7 +81,7 @@
 
         private function _Str_25846(k:_Str_9003):void
         {
-            var _local_2:_Str_7028 = k.getParser();
+            var _local_2:CampaignCalendarDataMessageParser = k.getParser();
             this._calendarData = _local_2.getCampaignCalenderData();
         }
 

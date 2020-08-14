@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7028 implements IMessageParser 
+    public class CampaignCalendarDataMessageParser implements IMessageParser
     {
         private var _campaignCalendarData:CampaignCalendarData;
 
