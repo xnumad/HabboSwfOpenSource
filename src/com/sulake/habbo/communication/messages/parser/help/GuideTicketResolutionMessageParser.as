@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9027 implements IMessageParser 
+    public class GuideTicketResolutionMessageParser implements IMessageParser
     {
         private static const _Str_17022:int = 0;
         private static const _Str_16537:int = 1;
