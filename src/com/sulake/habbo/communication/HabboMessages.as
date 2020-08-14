@@ -115,7 +115,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8138;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_9826;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.ResetResolutionAchievementMessageComposer;
 	import snowwar.outgoing.*;
 	import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
@@ -1813,7 +1813,7 @@
             OUTGOING_PACKETS[3135] = GetCatalogPageWithEarliestExpiryComposer;
             OUTGOING_PACKETS[3137] = UpdateGuildIdentityMessageComposer;
             OUTGOING_PACKETS[314] = ConvertGlobalRoomIdMessageComposer;
-            OUTGOING_PACKETS[3144] = _Str_9826;
+            OUTGOING_PACKETS[3144] = ResetResolutionAchievementMessageComposer;
             OUTGOING_PACKETS[3149] = GetForumStatsMessageComposer;
             OUTGOING_PACKETS[3150] = RequestFurniInventoryComposer;
             OUTGOING_PACKETS[3157] = RequestFriendMessageComposer;

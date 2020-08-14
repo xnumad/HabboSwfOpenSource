@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications.AchievementLevelUpData;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.Achievement;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_9826;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby.ResetResolutionAchievementMessageComposer;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets._Str_2961;
@@ -135,7 +135,7 @@
                     k.dispose();
                     if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
                     {
-                        _questEngine.send(new _Str_9826(stuffId));
+                        _questEngine.send(new ResetResolutionAchievementMessageComposer(stuffId));
                         _questEngine.send(new GetResolutionAchievementsMessageComposer(_progressView.stuffId, 0));
                     }
                 });
