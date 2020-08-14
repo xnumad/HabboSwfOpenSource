@@ -737,7 +737,7 @@
             this._userRegistry._Str_19528(_local_2.data.flatId, _local_2.data.roomName);
         }
 
-        public function get _Str_17447():UserRegistry
+        public function get userRegistry():UserRegistry
         {
             return this._userRegistry;
         }

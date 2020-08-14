@@ -456,7 +456,7 @@
             this._usersList.removeListItems();
             var k:int;
             var _local_2:Boolean;
-            for each (_local_3 in this._habboHelp._Str_17447._Str_20328())
+            for each (_local_3 in this._habboHelp.userRegistry._Str_20328())
             {
                 _local_4 = this._habboHelp._Str_3531.getItemsByUser(_local_3.userId);
                 if (_local_4.length == 0)
@@ -803,7 +803,7 @@
                 default:
                     if (this._habboHelp.reportedUserId > 0)
                     {
-                        k = this._habboHelp._Str_17447.getEntry(this._habboHelp.reportedUserId);
+                        k = this._habboHelp.userRegistry.getEntry(this._habboHelp.reportedUserId);
                         if (k)
                         {
                             this._reportedUserName = k.userName;

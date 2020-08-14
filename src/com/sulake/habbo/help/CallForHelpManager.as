@@ -356,7 +356,7 @@
             var _local_2:IWindowContainer = (k.getListItemAt(0) as IWindowContainer);
             k.removeListItems();
             var _local_3:int;
-            for each (_local_4 in this._habboHelp._Str_17447._Str_20328())
+            for each (_local_4 in this._habboHelp.userRegistry._Str_20328())
             {
                 _local_5 = (_local_2.clone() as IWindowContainer);
                 _local_6 = (_local_4.userId == this._reportedUserId);
