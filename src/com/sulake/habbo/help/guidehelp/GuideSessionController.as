@@ -45,7 +45,7 @@
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionPartnerIsTypingMessageParser;
     import com.sulake.habbo.communication.messages.parser.perk.PerkAllowancesMessageParser;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
-    import com.sulake.habbo.communication.messages.parser.help._Str_7083;
+    import com.sulake.habbo.communication.messages.parser.help.ChatReviewSessionStartedMessageParser;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.communication.messages.parser.help._Str_7534;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -514,7 +514,7 @@
 
         private function onChatReviewSessionStarted(k:ChatReviewSessionStartedMessageEvent):void
         {
-            var _local_2:_Str_7083 = k.getParser();
+            var _local_2:ChatReviewSessionStartedMessageParser = k.getParser();
             this._Str_23588(_local_2._Str_23086, _local_2._Str_17106);
         }
 
