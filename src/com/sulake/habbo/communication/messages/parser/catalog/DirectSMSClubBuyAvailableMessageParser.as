@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9706 implements IMessageParser 
+    public class DirectSMSClubBuyAvailableMessageParser implements IMessageParser
     {
         private var _available:Boolean;
         private var _Str_16515:String;
