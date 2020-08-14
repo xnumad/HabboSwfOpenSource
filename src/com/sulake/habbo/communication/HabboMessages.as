@@ -689,7 +689,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_18853;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_7620;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_7837;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_8337;
+	import com.sulake.habbo.communication.messages.incoming.help.IssueCloseNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideTicketCreationResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionVotingStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
@@ -1454,7 +1454,7 @@
             INCOMING_PACKETS[904] = GameInviteMessageEvent;
             INCOMING_PACKETS[909] = _Str_6132;
             INCOMING_PACKETS[91] = TryVerificationCodeResultMessageEvent;
-            INCOMING_PACKETS[934] = _Str_8337;
+            INCOMING_PACKETS[934] = IssueCloseNotificationMessageEvent;
             INCOMING_PACKETS[948] = RoomSettingsSavedEvent;
             INCOMING_PACKETS[949] = QuestCompletedMessageEvent;
             INCOMING_PACKETS[954] = ScrSendUserInfoEvent;

@@ -4,7 +4,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.communication.messages.incoming.help._Str_7837;
     import com.sulake.habbo.communication.messages.incoming.help._Str_7620;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_8337;
+    import com.sulake.habbo.communication.messages.incoming.help.IssueCloseNotificationMessageEvent;
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromSelfieMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromPhotoMessageComposer;
@@ -63,7 +63,7 @@
             this._chatReportController = new ChatReportController(this._habboHelp, this.onChatReportEvent);
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7837(this.onCallForHelpReply));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7620(this.onCallForHelpResult));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8337(this.onIssueClose));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new IssueCloseNotificationMessageEvent(this.onIssueClose));
         }
 
         private static function getCloseReasonKey(k:int):String
@@ -680,7 +680,7 @@
             }
         }
 
-        private function onIssueClose(k:_Str_8337):void
+        private function onIssueClose(k:IssueCloseNotificationMessageEvent):void
         {
             var _local_2:IssueCloseNotificationMessageParser = k.getParser();
             var _local_3:String = _local_2._Str_3460;
