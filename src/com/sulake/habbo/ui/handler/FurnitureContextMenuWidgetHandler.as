@@ -22,7 +22,7 @@
     import flash.geom.Rectangle;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.outgoing.users.JoinHabboGroupMessageComposer;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_6716;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.GuildFurniContextMenuInfoMessageParser;
     import com.sulake.habbo.room.events.RoomEngineObjectEvent;
 
     public class FurnitureContextMenuWidgetHandler implements IRoomWidgetHandler 
@@ -254,7 +254,7 @@
 
         private function onGuildFurniContextMenuInfo(k:_Str_8674):void
         {
-            var _local_2:_Str_6716;
+            var _local_2:GuildFurniContextMenuInfoMessageParser;
             var _local_3:IRoomObject;
             if (this._widget != null)
             {

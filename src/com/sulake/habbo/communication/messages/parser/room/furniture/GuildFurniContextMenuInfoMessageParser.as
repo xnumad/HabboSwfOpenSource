@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6716 implements IMessageParser 
+    public class GuildFurniContextMenuInfoMessageParser implements IMessageParser
     {
         private var _objectId:int;
         private var _guildId:int;
