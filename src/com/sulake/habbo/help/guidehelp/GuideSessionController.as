@@ -163,7 +163,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8747(this._Str_23266));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9097(this._Str_24700));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8464(this._Str_24456));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9409(this._Str_22443));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9409(this.onChatReviewSessionResults));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_10860(this.onChatReviewSessionDetached));
         }
 
@@ -527,7 +527,7 @@
             this._Str_19514((this._window.findChildByName("results") as IItemListWindow), k.getParser().status);
         }
 
-        private function _Str_22443(k:_Str_9409):void
+        private function onChatReviewSessionResults(k:_Str_9409):void
         {
             var _local_2:_Str_7534 = k.getParser();
             this._Str_22460(_local_2._Str_22263, _local_2._Str_25395, _local_2._Str_24620);
