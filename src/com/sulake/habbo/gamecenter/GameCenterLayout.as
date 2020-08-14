@@ -27,7 +27,7 @@
     import com.sulake.habbo.game.GameAssetEnum;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.utils.IRectLimiter;
-    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_12437;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetUserGameAchievementsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11951;
     import com.sulake.habbo.communication.messages.outgoing.game.score.Game2GetWeeklyLeaderboardComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameStatusMessageComposer;
@@ -416,7 +416,7 @@
             this._achievementList.destroyListItems();
             this._leaderboardList.destroyListItems();
             this._achievementsContainer.visible = false;
-            this._gameCenterView.send(new _Str_12437(this._selectedGame));
+            this._gameCenterView.send(new GetUserGameAchievementsMessageComposer(this._selectedGame));
             this._leaderboardContainer.visible = false;
             this._gameCenterView.send(new _Str_11951(this._selectedGame, 1));
             this._gameCenterView.send(new Game2GetWeeklyLeaderboardComposer(this._selectedGame, 0, 0, 0, 1, 1));

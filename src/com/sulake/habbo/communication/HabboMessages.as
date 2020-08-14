@@ -110,7 +110,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.LeaveQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.JoinQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.AcceptGameInviteMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_12437;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetUserGameAchievementsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetResolutionAchievementsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
@@ -1909,7 +1909,7 @@
             OUTGOING_PACKETS[3872] = GetConcurrentUsersRewardMessageComposer;
             OUTGOING_PACKETS[3878] = GetIgnoredUsersMessageComposer;
             OUTGOING_PACKETS[3889] = OpenCampaignCalendarDoorComposer;
-            OUTGOING_PACKETS[389] = _Str_12437;
+            OUTGOING_PACKETS[389] = GetUserGameAchievementsMessageComposer;
             OUTGOING_PACKETS[3898] = GetFurnitureAliasesMessageComposer;
             OUTGOING_PACKETS[3899] = GuideSessionMessageMessageComposer;
             OUTGOING_PACKETS[39] = MyGuildBasesSearchMessageComposer;

@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_12437 implements IMessageComposer 
+    public class GetUserGameAchievementsMessageComposer implements IMessageComposer
     {
         private var _Str_2634:int;
 
-        public function _Str_12437(k:int)
+        public function GetUserGameAchievementsMessageComposer(k:int)
         {
             this._Str_2634 = k;
         }
