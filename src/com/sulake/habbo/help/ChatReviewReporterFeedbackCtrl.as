@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.components.IFrameWindow;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_9538;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideTicketResolutionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_8429;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -17,7 +17,7 @@
         public function ChatReviewReporterFeedbackCtrl(k:HabboHelp)
         {
             this._habboHelp = k;
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9538(this._Str_25116));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideTicketResolutionMessageEvent(this._Str_25116));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8429(this._Str_22825));
         }
 
@@ -36,7 +36,7 @@
             return this._habboHelp == null;
         }
 
-        private function _Str_25116(k:_Str_9538):void
+        private function _Str_25116(k:GuideTicketResolutionMessageEvent):void
         {
             this.show(k.getParser()._Str_5961);
         }

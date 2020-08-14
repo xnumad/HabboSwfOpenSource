@@ -700,7 +700,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpDisabledNotifyMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionResultsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9419;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_9538;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideTicketResolutionMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.RoomDimmerChangeStateMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.EnterOneWayDoorMessageComposer;
@@ -1224,7 +1224,7 @@
             INCOMING_PACKETS[2661] = UserRemoveMessageEvent;
             INCOMING_PACKETS[2665] = QuestionEvent;
             INCOMING_PACKETS[2668] = _Str_17379;
-            INCOMING_PACKETS[2674] = _Str_9538;
+            INCOMING_PACKETS[2674] = GuideTicketResolutionMessageEvent;
             INCOMING_PACKETS[2690] = NavigatorSearchResultBlocksEvent;
             INCOMING_PACKETS[2696] = _Str_7080;
             INCOMING_PACKETS[2703] = ObjectRemoveMessageEvent;
