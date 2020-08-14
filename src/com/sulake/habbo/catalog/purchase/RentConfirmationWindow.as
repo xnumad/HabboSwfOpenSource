@@ -7,7 +7,7 @@
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.room.ImageResult;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7443;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.FurniRentOrBuyoutOfferMessageParser;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.room.utils.Vector3d;
@@ -53,7 +53,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7443 = k.getParser();
+            var _local_2:FurniRentOrBuyoutOfferMessageParser = k.getParser();
             if (this._furniData.fullName != _local_2._Str_17878)
             {
                 return;
