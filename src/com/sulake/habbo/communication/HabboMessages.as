@@ -696,7 +696,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8785;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8903;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_9097;
+	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionStartedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9121;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionResultsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9419;
@@ -1047,7 +1047,7 @@
             INCOMING_PACKETS[1381] = _Str_9631;
             INCOMING_PACKETS[1404] = PurchaseErrorMessageEvent;
             INCOMING_PACKETS[1411] = _Str_8731;
-            INCOMING_PACKETS[143] = _Str_9097;
+            INCOMING_PACKETS[143] = ChatReviewSessionStartedMessageEvent;
             INCOMING_PACKETS[1434] = WiredEffectDataEvent;
             INCOMING_PACKETS[1435] = CommunityGoalVoteMessageEvent;
             INCOMING_PACKETS[1437] = _Str_17532;

@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_8903;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_9097;
+    import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionStartedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_8464;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionResultsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionDetachedMessageEvent;
@@ -161,7 +161,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8903(this._window9));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionOfferedToGuideMessageEvent(this.onChatReviewSessionOfferedToGuide));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9097(this.onChatReviewSessionStarted));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionStartedMessageEvent(this.onChatReviewSessionStarted));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8464(this.onChatReviewSessionVotingStatus));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionResultsMessageEvent(this.onChatReviewSessionResults));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionDetachedMessageEvent(this.onChatReviewSessionDetached));
@@ -512,7 +512,7 @@
             this._Str_22573(k.getParser()._Str_23730);
         }
 
-        private function onChatReviewSessionStarted(k:_Str_9097):void
+        private function onChatReviewSessionStarted(k:ChatReviewSessionStartedMessageEvent):void
         {
             var _local_2:_Str_7083 = k.getParser();
             this._Str_23588(_local_2._Str_23086, _local_2._Str_17106);
