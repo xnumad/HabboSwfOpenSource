@@ -120,7 +120,7 @@
             this._connection = k;
             if (!this._furniContextMenuInfoListener)
             {
-                this._furniContextMenuInfoListener = new _Str_8674(this._Str_23634);
+                this._furniContextMenuInfoListener = new _Str_8674(this.onGuildFurniContextMenuInfo);
                 this._connection.addMessageEvent(this._furniContextMenuInfoListener);
             }
         }
@@ -252,7 +252,7 @@
             return this._container.roomEngine.getRoomObject(this._container.roomSession.roomId, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
         }
 
-        private function _Str_23634(k:_Str_8674):void
+        private function onGuildFurniContextMenuInfo(k:_Str_8674):void
         {
             var _local_2:_Str_6716;
             var _local_3:IRoomObject;
