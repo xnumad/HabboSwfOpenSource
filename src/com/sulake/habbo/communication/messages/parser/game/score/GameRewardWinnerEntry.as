@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7552 
+    public class GameRewardWinnerEntry
     {
         private var _name:String;
         private var _figure:String;
@@ -10,7 +10,7 @@
         private var _rank:int;
         private var _score:int;
 
-        public function _Str_7552(k:IMessageDataWrapper)
+        public function GameRewardWinnerEntry(k:IMessageDataWrapper)
         {
             this._name = k.readString();
             this._figure = k.readString();

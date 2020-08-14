@@ -38,7 +38,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_15876.push(new _Str_7552(k));
+                this._Str_15876.push(new GameRewardWinnerEntry(k));
                 _local_3++;
             }
             return true;

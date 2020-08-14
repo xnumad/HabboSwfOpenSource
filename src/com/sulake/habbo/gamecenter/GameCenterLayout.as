@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.parser.game.score._Str_3326;
     import com.sulake.habbo.communication.messages.parser.game.score._Str_4574;
     import com.sulake.habbo.communication.messages.parser.game.score.Game2WeeklyLeaderboardParser;
-    import com.sulake.habbo.communication.messages.parser.game.score._Str_7552;
+    import com.sulake.habbo.communication.messages.parser.game.score.GameRewardWinnerEntry;
     import com.sulake.habbo.communication.messages.parser.game.score._Str_7341;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
@@ -608,7 +608,7 @@
         private function _Str_22600(k:IMessageEvent):void
         {
             var _local_4:IWindowContainer;
-            var _local_5:_Str_7552;
+            var _local_5:GameRewardWinnerEntry;
             var _local_6:IWindowContainer;
             var _local_2:_Str_6994 = (k as _Str_6994);
             var _local_3:_Str_7341 = _local_2.getParser();
