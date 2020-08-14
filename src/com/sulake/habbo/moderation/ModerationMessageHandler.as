@@ -288,7 +288,7 @@
         {
             var _local_3:Vector.<CallForHelpCategoryData>;
             var _local_2:CfhTopicsInitMessageParser = k.getParser();
-            _local_3 = _local_2._Str_9001;
+            _local_3 = _local_2.callForHelpCategories;
             this._moderationManager.cfhTopics = _local_3;
         }
 

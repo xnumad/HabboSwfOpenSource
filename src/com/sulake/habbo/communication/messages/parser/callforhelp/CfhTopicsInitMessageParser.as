@@ -41,7 +41,7 @@
             return true;
         }
 
-        public function get _Str_9001():Vector.<CallForHelpCategoryData>
+        public function get callForHelpCategories():Vector.<CallForHelpCategoryData>
         {
             return this._callForHelpCategories;
         }

@@ -761,10 +761,10 @@
         private function onCfhTopics(k:CfhTopicsInitEvent):void
         {
             var _local_2:CfhTopicsInitMessageParser = k.getParser();
-            this._callForHelpCategories = _local_2._Str_9001;
+            this._callForHelpCategories = _local_2.callForHelpCategories;
         }
 
-        public function get _Str_9001():Vector.<CallForHelpCategoryData>
+        public function get callForHelpCategories():Vector.<CallForHelpCategoryData>
         {
             return this._callForHelpCategories;
         }

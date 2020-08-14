@@ -526,7 +526,7 @@
             var k:CallForHelpCategoryData;
             var _local_2:IWindowContainer;
             this._reasonsList.destroyListItems();
-            for each (k in this._habboHelp._Str_9001)
+            for each (k in this._habboHelp.callForHelpCategories)
             {
                 _local_2 = (this._reasonPrototype.clone() as IWindowContainer);
                 _local_2.findChildByName("name").caption = (("${help.cfh.reason." + k.name) + "}");
@@ -550,7 +550,7 @@
             var _local_5:CallForHelpTopicData;
             var _local_6:IWindowContainer;
             var _local_7:ITextWindow;
-            for each (_local_3 in this._habboHelp._Str_9001)
+            for each (_local_3 in this._habboHelp.callForHelpCategories)
             {
                 if (_local_3.name == k)
                 {
@@ -771,7 +771,7 @@
         {
             var _local_2:CallForHelpCategoryData;
             var _local_3:CallForHelpTopicData;
-            for each (_local_2 in this._habboHelp._Str_9001)
+            for each (_local_2 in this._habboHelp.callForHelpCategories)
             {
                 for each (_local_3 in _local_2._Str_14841)
                 {
