@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help._Str_9447;
 
-    public class _Str_9121 extends MessageEvent implements IMessageEvent 
+    public class CallForHelpDisabledNotifyMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9121(k:Function)
+        public function CallForHelpDisabledNotifyMessageEvent(k:Function)
         {
             super(k, _Str_9447);
         }

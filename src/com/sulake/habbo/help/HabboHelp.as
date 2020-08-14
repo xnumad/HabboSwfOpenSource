@@ -42,7 +42,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_11155;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_9121;
+    import com.sulake.habbo.communication.messages.incoming.help.CallForHelpDisabledNotifyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
@@ -434,7 +434,7 @@
             this.addMessageEvent(new GetGuestRoomResultEvent(this.onGuestRoomResult));
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this.onPendingCallsForHelp));
             this.addMessageEvent(new _Str_11155(this.onPendingCallsForHelpDeleted));
-            this.addMessageEvent(new _Str_9121(this.onCallForHelpDisabledNotify));
+            this.addMessageEvent(new CallForHelpDisabledNotifyMessageEvent(this.onCallForHelpDisabledNotify));
             this.addMessageEvent(new _Str_9074(this.onGuideReportingStatus));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
@@ -684,7 +684,7 @@
             this._reportType = 0;
         }
 
-        private function onCallForHelpDisabledNotify(k:_Str_9121):void
+        private function onCallForHelpDisabledNotify(k:CallForHelpDisabledNotifyMessageEvent):void
         {
             this._windowManager.simpleAlert("${help.emergency.global_mute.caption}", "${help.emergency.global_mute.subtitle}", "${help.emergency.global_mute.message}", "${help.emergency.global_mute.link}", k.getParser()._Str_23798);
         }

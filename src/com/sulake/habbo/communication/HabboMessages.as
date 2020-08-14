@@ -697,7 +697,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.GuideOnDutyStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionStartedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_9121;
+	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpDisabledNotifyMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionResultsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9419;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9538;
@@ -1088,7 +1088,7 @@
             INCOMING_PACKETS[1631] = ExpressionMessageEvent;
             INCOMING_PACKETS[1634] = RoomMessageNotificationMessageEvent;
             INCOMING_PACKETS[1640] = UserUpdateEvent;
-            INCOMING_PACKETS[1651] = _Str_9121;
+            INCOMING_PACKETS[1651] = CallForHelpDisabledNotifyMessageEvent;
             INCOMING_PACKETS[1660] = _Str_16258;
             INCOMING_PACKETS[1663] = _Str_17947;
             INCOMING_PACKETS[1664] = RoomEntryTileMessageEvent;
