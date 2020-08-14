@@ -267,7 +267,7 @@
             this._habboHelp.localization.registerParameter("guide.help.guide.tool.guidesonduty", "amount", _local_2._Str_24740.toString());
             this._habboHelp.localization.registerParameter("guide.help.guide.tool.helpersonduty", "amount", _local_2._Str_25148.toString());
             this._habboHelp.localization.registerParameter("guide.help.guide.tool.guardiansonduty", "amount", _local_2._Str_24092.toString());
-            this._Str_20372();
+            this.setStateGuideTool();
         }
 
         private function onGuideSessionAttached(k:IMessageEvent):void
@@ -538,7 +538,7 @@
             this._Str_4260(true);
         }
 
-        private function _Str_20372():void
+        private function setStateGuideTool():void
         {
             var k:IItemListWindow;
             var _local_2:IWindowContainer;
@@ -1402,7 +1402,7 @@
             }
             if (((k) && (this._onDuty)))
             {
-                this._Str_20372();
+                this.setStateGuideTool();
             }
         }
 
