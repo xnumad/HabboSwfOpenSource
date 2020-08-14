@@ -619,7 +619,7 @@
             var _local_2:CallForHelpPendingCallsMessageParser = CallForHelpPendingCallsEvent(k).getParser();
             if (((_local_2.count == 0) || ((this._reportType == REPORT_TYPE_PHOTO) && (_local_2.count < 3))))
             {
-                this._Str_24430();
+                this.proceedWithReporting();
             }
             else
             {
@@ -659,7 +659,7 @@
             }
         }
 
-        private function _Str_24430():void
+        private function proceedWithReporting():void
         {
             switch (this._reportType)
             {
