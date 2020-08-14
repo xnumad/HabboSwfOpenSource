@@ -91,7 +91,7 @@
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllersMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6824;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6887;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllerRemovedMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6752;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6587;
     import com.sulake.habbo.window.utils.IAlertDialog;
@@ -597,7 +597,7 @@
 
         private function _Str_8484(k:IMessageEvent):void
         {
-            var _local_2:_Str_6887 = (k as _Str_5683).getParser();
+            var _local_2:FlatControllerRemovedMessageParser = (k as _Str_5683).getParser();
             Logger.log(((("Flat controller removed: " + _local_2.flatId) + ", ") + _local_2.userId));
             this._navigator.roomSettingsCtrl._Str_8484(_local_2.flatId, _local_2.userId);
         }

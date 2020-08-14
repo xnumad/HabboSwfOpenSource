@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6887 implements IMessageParser 
+    public class FlatControllerRemovedMessageParser implements IMessageParser
     {
         private var _flatId:int;
         private var _userId:int;
