@@ -76,7 +76,7 @@
             return this._disposed;
         }
 
-        public function _Str_16933():void
+        public function showHabboWayQuiz():void
         {
             this._habboHelp.sendMessage(new GetQuizQuestionsComposer(HABBO_WAY_QUIZ_CODE));
         }

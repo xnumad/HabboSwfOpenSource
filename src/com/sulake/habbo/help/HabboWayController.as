@@ -90,7 +90,7 @@
                     return;
                 case "quiz_button":
                     this._habboHelp.trackGoogle("habboWay", "clickQuiz");
-                    this._habboHelp._Str_16933();
+                    this._habboHelp.showHabboWayQuiz();
                     return;
             }
         }

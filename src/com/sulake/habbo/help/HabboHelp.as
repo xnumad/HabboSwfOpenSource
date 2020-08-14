@@ -359,13 +359,13 @@
             }
         }
 
-        public function _Str_16933():void
+        public function showHabboWayQuiz():void
         {
             if (((this._habboWayQuizController == null) || (this._habboWayQuizController.disposed)))
             {
                 this._habboWayQuizController = new HabboWayQuizController(this);
             }
-            this._habboWayQuizController._Str_16933();
+            this._habboWayQuizController.showHabboWayQuiz();
         }
 
         public function _Str_14041():void
