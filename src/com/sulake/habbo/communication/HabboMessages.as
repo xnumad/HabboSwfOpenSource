@@ -683,7 +683,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsDeletedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_16028;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_16338;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_16527;
+	import com.sulake.habbo.communication.messages.incoming.help.FaqTextMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_17947;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_18296;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_18853;
@@ -1304,7 +1304,7 @@
             INCOMING_PACKETS[3277] = ScrSendKickbackInfoMessageEvent;
             INCOMING_PACKETS[3284] = InfoFeedEnableMessageEvent;
             INCOMING_PACKETS[3285] = _Str_8429;
-            INCOMING_PACKETS[3292] = _Str_16527;
+            INCOMING_PACKETS[3292] = FaqTextMessageEvent;
             INCOMING_PACKETS[3293] = _Str_8674;
             INCOMING_PACKETS[3297] = _Str_5711;
             INCOMING_PACKETS[3315] = _Str_9393;
