@@ -124,8 +124,8 @@
             this._analysisPane.spacing = 4;
             this._quizCode = k;
             this._questionIds = _arg_2;
-            this._answerIds = new Array(this._Str_8127);
-            this._answerOrders = new Array(this._Str_8127);
+            this._answerIds = new Array(this.questionCount);
+            this._answerOrders = new Array(this.questionCount);
             this.setCurrentQuestion(0);
             var _local_3:IWindowContainer = IWindowContainer(IItemListWindow(this._explanationTemplate).getListItemByName("explanation_container"));
             switch (this._quizCode)
@@ -180,13 +180,13 @@
                     this._window.caption = this._Str_6820("question.title");
                     _local_3.visible = true;
                     _local_2.visible = true;
-                    _local_2.caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("question.page"), "", "current_page", 1, "page_count", this._Str_8127.toString());
+                    _local_2.caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("question.page"), "", "current_page", 1, "page_count", this.questionCount.toString());
                     _local_2.caption = this._Str_6820("question.page");
                     return;
                 case PAGE_SUCCESS:
                     this._window.caption = this._Str_6820("success.title");
                     this._window.findChildByName("failure_advice").caption = this._Str_6820("failure.advice");
-                    this._window.findChildByName("success_results").caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("success.results"), "", "question_count", this._Str_8127.toString());
+                    this._window.findChildByName("success_results").caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("success.results"), "", "question_count", this.questionCount.toString());
                     _local_3.visible = false;
                     _local_2.visible = false;
                     _local_2.caption = "";
@@ -195,7 +195,7 @@
                     _local_4 = (this._questionIds.length - this._questionIdsForWrongAnswers.length);
                     this._window.caption = this._Str_6820("failure.title");
                     this._window.findChildByName("failure_advice").caption = this._Str_6820("failure.advice");
-                    this._window.findChildByName("failure_results").caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("failure.results"), "", "correct_count", _local_4.toString(), "total_count", this._Str_8127.toString());
+                    this._window.findChildByName("failure_results").caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("failure.results"), "", "correct_count", _local_4.toString(), "total_count", this.questionCount.toString());
                     _local_3.visible = false;
                     _local_2.visible = false;
                     _local_2.caption = "";
@@ -264,7 +264,7 @@
             var _local_8:int;
             var _local_9:ISelectableWindow;
             var _local_10:int;
-            if (k >= this._Str_8127)
+            if (k >= this.questionCount)
             {
                 this._habboHelp.sendMessage(new PostQuizAnswersComposer(this._quizCode, this._answerIds));
             }
@@ -275,7 +275,7 @@
                     this._currentQuestion = k;
                     this._window.findChildByName("prev_dimmer").visible = (k <= 0);
                     this._window.findChildByName("next_dimmer").visible = (this._answerIds[this._currentQuestion] == null);
-                    this._window.findChildByName("top_indicator").caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("question.page"), "", "current_page", String((k + 1)), "page_count", this._Str_8127.toString());
+                    this._window.findChildByName("top_indicator").caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("question.page"), "", "current_page", String((k + 1)), "page_count", this.questionCount.toString());
                     while (this._answerList.numSelectables > 0)
                     {
                         this._answerList.removeSelectable(this._answerList.getSelectableAt(0)).dispose();
@@ -328,7 +328,7 @@
             }
         }
 
-        private function get _Str_8127():int
+        private function get questionCount():int
         {
             return (this._questionIds != null) ? this._questionIds.length : 0;
         }
