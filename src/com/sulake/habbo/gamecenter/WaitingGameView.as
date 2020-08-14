@@ -126,7 +126,7 @@
 
         private function _Str_26455(k:WindowMouseEvent):void
         {
-            this._gameCenterView._Str_10458(this._selectedGame);
+            this._gameCenterView.leavePlayerQueue(this._selectedGame);
             this.disable();
             this._gameCenterView.activate(this._selectedGame, false);
             this._gameCenterView._Str_3777(GameConfigurations.getNameId(this._selectedGame), "waitingGameCancel");

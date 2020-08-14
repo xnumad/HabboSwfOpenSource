@@ -13,7 +13,7 @@
         function _Str_19055(_arg_1:int, _arg_2:String, _arg_3:String, _arg_4:String=""):void;
         function _Str_8716(_arg_1:int, _arg_2:String, _arg_3:String):void;
         function joinPlayerQueue(_arg_1:int):void;
-        function _Str_10458(_arg_1:int):void;
+        function leavePlayerQueue(_arg_1:int):void;
         function acceptGameInvite(_arg_1:int, _arg_2:int):void;
         function showGameCenter(_arg_1:String, _arg_2:int=0, _arg_3:Boolean=false):void;
         function showGameCenterByGameName(_arg_1:String, _arg_2:String, _arg_3:Boolean=false):void;

@@ -828,11 +828,11 @@
         {
             if (this._Str_9452 != -1)
             {
-                this._Str_10458(this._Str_9452);
+                this.leavePlayerQueue(this._Str_9452);
             }
         }
 
-        public function _Str_10458(k:int):void
+        public function leavePlayerQueue(k:int):void
         {
             this.send(new _Str_10650(k));
             this._Str_9452 = -1;

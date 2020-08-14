@@ -203,9 +203,9 @@
             this._gameManager.joinPlayerQueue(k);
         }
 
-        public function _Str_10458(k:int):void
+        public function leavePlayerQueue(k:int):void
         {
-            this._gameManager._Str_10458(k);
+            this._gameManager.leavePlayerQueue(k);
         }
 
         public function showLeaderboard(k:int):void
