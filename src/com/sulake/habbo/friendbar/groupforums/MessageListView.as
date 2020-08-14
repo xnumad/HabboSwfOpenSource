@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.components.IScrollableListWindow;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_3372;
+    import com.sulake.habbo.communication.messages.parser.groupforums.ExtendedForumData;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThread;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.parser.groupforums.MessageData;
@@ -24,12 +24,12 @@
         private var _mainView:GroupForumView;
         private var _list:IScrollableListWindow;
         private var _listItem:IWindowContainer;
-        private var _forumData:_Str_3372;
+        private var _forumData:ExtendedForumData;
         private var _threadData:GuildForumThread;
         private var _messagesListData:MessagesListData;
         private var _adding:Boolean = true;
 
-        public function MessageListView(k:GroupForumView, _arg_2:IScrollableListWindow, _arg_3:_Str_3372, _arg_4:GuildForumThread, _arg_5:MessagesListData)
+        public function MessageListView(k:GroupForumView, _arg_2:IScrollableListWindow, _arg_3:ExtendedForumData, _arg_4:GuildForumThread, _arg_5:MessagesListData)
         {
             this._mainView = k;
             this._controller = this._mainView.controller;

@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.components.ISelectorWindow;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_3372;
+    import com.sulake.habbo.communication.messages.parser.groupforums.ExtendedForumData;
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.IWindowContainer;
@@ -21,13 +21,13 @@
         private var _Str_8356:ISelectorWindow;
         private var _Str_9318:ISelectorWindow;
         private var _Str_11160:ISelectorWindow;
-        private var _Str_2381:_Str_3372;
+        private var _Str_2381:ExtendedForumData;
         private var _Str_6730:int;
         private var _Str_6541:int;
         private var _Str_9497:int;
         private var _Str_9468:int;
 
-        public function GroupForumViewController(k:GroupForumView, _arg_2:int, _arg_3:int, _arg_4:_Str_3372)
+        public function GroupForumViewController(k:GroupForumView, _arg_2:int, _arg_3:int, _arg_4:ExtendedForumData)
         {
             this._mainView = k;
             this._controller = this._mainView.controller;
@@ -101,7 +101,7 @@
         }
 
 
-        public function focus(k:_Str_3372):void
+        public function focus(k:ExtendedForumData):void
         {
             if (this._Str_2381 != k)
             {

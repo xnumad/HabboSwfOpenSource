@@ -10,7 +10,7 @@
     import com.sulake.habbo.notifications.IHabboNotifications;
     import com.sulake.habbo.sound.IHabboSoundManager;
     import com.sulake.habbo.tracking.IHabboTracking;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_3372;
+    import com.sulake.habbo.communication.messages.parser.groupforums.ExtendedForumData;
     import flash.utils.Dictionary;
     import flash.utils.Timer;
     import com.sulake.core.runtime.IContext;
@@ -82,7 +82,7 @@
         private var _forumSettingsView:GroupForumViewController;
         private var _requestedForumsListCode:int = -1;
         private var _requestedGroupID:int = -1;
-        private var _forumData:_Str_3372;
+        private var _forumData:ExtendedForumData;
         private var _currentThreadID:int;
         private var _lastReadMessageId:int = 0;
         private var _forumsListData:ForumsListData;
@@ -338,7 +338,7 @@
         {
             var _local_3:Map;
             var _local_4:String;
-            var _local_2:_Str_3372 = k.getParser()._Str_22345;
+            var _local_2:ExtendedForumData = k.getParser()._Str_22345;
             if (this._requestedGroupID != _local_2.groupId)
             {
                 return;
@@ -500,7 +500,7 @@
             this.requestThreadMessageList(this._forumData.groupId, this._currentThreadID, _local_3);
         }
 
-        public function _Str_24351(k:_Str_3372, _arg_2:int):void
+        public function _Str_24351(k:ExtendedForumData, _arg_2:int):void
         {
             var _local_3:int;
             if (this._communicationManager)
@@ -568,7 +568,7 @@
             this._threadsListData = new ThreadsListData(1, 0, [_local_3]);
         }
 
-        public function deleteMessage(k:_Str_3372, _arg_2:int, _arg_3:int):void
+        public function deleteMessage(k:ExtendedForumData, _arg_2:int, _arg_3:int):void
         {
             var _local_4:int;
             if (this._communicationManager)

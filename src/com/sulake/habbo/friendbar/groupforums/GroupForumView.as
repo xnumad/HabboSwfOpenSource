@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IContainerButtonWindow;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_3372;
+    import com.sulake.habbo.communication.messages.parser.groupforums.ExtendedForumData;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
@@ -43,7 +43,7 @@
         private var _listHeader:IWindow;
         private var _myForumsLink:ITextWindow;
         private var _forumsListData:ForumsListData;
-        private var _forumData:_Str_3372;
+        private var _forumData:ExtendedForumData;
         private var _threadsListData:ThreadsListData;
         private var _messagesListData:MessagesListData;
         private var _currentPage:int = 1;
@@ -271,7 +271,7 @@
             return !(this._forumsListView == null);
         }
 
-        public function _Str_25219(k:ForumsListData, _arg_2:_Str_3372, _arg_3:ThreadsListData):void
+        public function _Str_25219(k:ForumsListData, _arg_2:ExtendedForumData, _arg_3:ThreadsListData):void
         {
             this._Str_18232();
             this._forumsListData = k;
@@ -316,7 +316,7 @@
             }
         }
 
-        public function _Str_24648(k:ForumsListData, _arg_2:_Str_3372, _arg_3:ThreadsListData, _arg_4:MessagesListData):void
+        public function _Str_24648(k:ForumsListData, _arg_2:ExtendedForumData, _arg_3:ThreadsListData, _arg_4:MessagesListData):void
         {
             this._Str_18232();
             this._forumsListData = k;
