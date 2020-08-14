@@ -48,7 +48,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_7272;
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomForwardMessageEvent;
     import com.sulake.habbo.navigator.domain.NavigatorData;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6564;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.MuteAllInRoomParser;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
@@ -171,7 +171,7 @@
         private function onMuteAllEvent(k:IMessageEvent):void
         {
             var _local_2:_Str_5038 = (k as _Str_5038);
-            var _local_3:_Str_6564 = _local_2.getParser();
+            var _local_3:MuteAllInRoomParser = _local_2.getParser();
             var _local_4:GuestRoomData = this._navigator.data.enteredGuestRoom;
             if (_local_4 != null)
             {

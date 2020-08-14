@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6564 implements IMessageParser 
+    public class MuteAllInRoomParser implements IMessageParser
     {
         private var _Str_19797:Boolean;
 
