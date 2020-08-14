@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredConditionDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectRemoveMessageParser;
-    import com.sulake.habbo.communication.messages.parser.userdefinedroomevents._Str_7138;
+    import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredRewardResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredValidationErrorParser;
     import __AS3__.vec.*;
 
@@ -96,7 +96,7 @@
 
         private function _Str_23600(k:IMessageEvent):void
         {
-            var _local_2:_Str_7138 = _Str_4585(k).getParser();
+            var _local_2:WiredRewardResultMessageParser = _Str_4585(k).getParser();
             if (_local_2.reason == _Str_4585._Str_18436)
             {
                 this._roomEvents.windowManager.alert(this._roomEvents.localization.getLocalization("wiredfurni.rewardsuccess.title"), this._roomEvents.localization.getLocalization("wiredfurni.rewardsuccess.body"), 0, null);
