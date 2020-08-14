@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3326 
+    public class LeaderboardEntry
     {
         private var _userId:int;
         private var _score:int;
@@ -11,7 +11,7 @@
         private var _figure:String;
         private var _gender:String;
 
-        public function _Str_3326(k:IMessageDataWrapper)
+        public function LeaderboardEntry(k:IMessageDataWrapper)
         {
             this._userId = k.readInteger();
             this._score = k.readInteger();

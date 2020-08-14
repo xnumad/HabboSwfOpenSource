@@ -1,13 +1,13 @@
 ﻿package snowwar._Str_267
 {
-    import com.sulake.habbo.communication.messages.parser.game.score._Str_3326;
+    import com.sulake.habbo.communication.messages.parser.game.score.LeaderboardEntry;
     import snowwar.SnowWarEngine;
     import snowwar._Str_477._SafeStr_3776;
     import com.sulake.core.communication.messages.IMessageComposer;
 
     public class _SafeStr_4664 extends LeaderboardTable 
     {
-        private var _SafeStr_22055:_Str_3326;
+        private var _SafeStr_22055:LeaderboardEntry;
 
         public function _SafeStr_4664(k:SnowWarEngine)
         {

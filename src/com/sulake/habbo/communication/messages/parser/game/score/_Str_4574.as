@@ -25,7 +25,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._leaderBoard.push(new _Str_3326(k));
+                this._leaderBoard.push(new LeaderboardEntry(k));
                 _local_3++;
             }
             this._Str_16831 = k.readInteger();

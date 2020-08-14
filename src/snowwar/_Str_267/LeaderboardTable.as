@@ -1,6 +1,6 @@
 ﻿package snowwar._Str_267
 {
-	import com.sulake.habbo.communication.messages.parser.game.score._Str_3326;
+	import com.sulake.habbo.communication.messages.parser.game.score.LeaderboardEntry;
 	import com.sulake.core.communication.messages.IMessageComposer;
 	import snowwar._Str_477._SafeStr_3694;
 	import snowwar.SnowWarEngine;
@@ -72,7 +72,7 @@
             var _local_2:int;
             while (_local_2 < this._SafeStr_13384.length)
             {
-                if ((this._SafeStr_13384[_local_2] as _Str_3326).userId == this._SafeStr_12643)
+                if ((this._SafeStr_13384[_local_2] as LeaderboardEntry).userId == this._SafeStr_12643)
                 {
                     k = _local_2;
                     break;

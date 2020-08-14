@@ -15,7 +15,7 @@
     import com.sulake.habbo.communication.messages.outgoing.game.score.Game2GetWeeklyLeaderboardComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11321;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.game.score._Str_3326;
+    import com.sulake.habbo.communication.messages.parser.game.score.LeaderboardEntry;
     import com.sulake.habbo.communication.messages.parser.game.score.Game2WeeklyLeaderboardParser;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import flash.display.BitmapData;
@@ -184,8 +184,8 @@
 
         private function _Str_25832(k:IMessageEvent):void
         {
-            var _local_4:_Str_3326;
-            var _local_5:_Str_3326;
+            var _local_4:LeaderboardEntry;
+            var _local_5:LeaderboardEntry;
             if (!this._leaderboardWindow)
             {
                 return;
@@ -205,7 +205,7 @@
                 }
                 if (_local_3.leaderboard.length > 0)
                 {
-                    _local_5 = (_local_3.leaderboard[0] as _Str_3326);
+                    _local_5 = (_local_3.leaderboard[0] as LeaderboardEntry);
                     this._Str_20814(_local_5.figure, _local_5.gender);
                     this._leaderboardWindow.findChildByName("weekly_top_avatar_name").caption = _local_5.name;
                     this._leaderboardWindow.findChildByName("weekly_top_avatar_score").caption = this._gameCenterView.localization.registerParameter("gamecenter.leaderboard_score", "score", _local_5.score.toString());
@@ -213,12 +213,12 @@
             }
         }
 
-        private function _Str_17910(k:IItemListWindow, _arg_2:Game2WeeklyLeaderboardParser, _arg_3:int, _arg_4:Boolean):_Str_3326
+        private function _Str_17910(k:IItemListWindow, _arg_2:Game2WeeklyLeaderboardParser, _arg_3:int, _arg_4:Boolean):LeaderboardEntry
         {
-            var _local_5:_Str_3326;
+            var _local_5:LeaderboardEntry;
             var _local_6:IWindowContainer;
             var _local_7:int;
-            var _local_8:_Str_3326;
+            var _local_8:LeaderboardEntry;
             var _local_9:uint;
             if (((k) && (_arg_2.gameTypeId == this._selectedGame)))
             {
@@ -259,7 +259,7 @@
             return null;
         }
 
-        private function _Str_20301(k:IItemListWindow, _arg_2:_Str_3326, _arg_3:uint):void
+        private function _Str_20301(k:IItemListWindow, _arg_2:LeaderboardEntry, _arg_3:uint):void
         {
             var _local_4:IWindowContainer = (this._entryWindow.clone() as IWindowContainer);
             _local_4.color = _arg_3;

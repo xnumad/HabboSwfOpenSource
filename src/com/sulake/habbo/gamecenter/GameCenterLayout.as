@@ -41,7 +41,7 @@
     import com.sulake.habbo.game.WindowUtils;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.game.score._Str_3326;
+    import com.sulake.habbo.communication.messages.parser.game.score.LeaderboardEntry;
     import com.sulake.habbo.communication.messages.parser.game.score._Str_4574;
     import com.sulake.habbo.communication.messages.parser.game.score.Game2WeeklyLeaderboardParser;
     import com.sulake.habbo.communication.messages.parser.game.score.GameRewardWinnerEntry;
@@ -549,8 +549,8 @@
         private function _Str_25658(k:IMessageEvent):void
         {
             var _local_4:IWindowContainer;
-            var _local_5:_Str_3326;
-            var _local_6:_Str_3326;
+            var _local_5:LeaderboardEntry;
+            var _local_6:LeaderboardEntry;
             var _local_7:IWindowContainer;
             var _local_8:IBitmapWrapperWindow;
             var _local_2:_Str_8191 = (k as _Str_8191);
@@ -592,7 +592,7 @@
 
         private function _Str_23128(k:IMessageEvent):void
         {
-            var _local_4:_Str_3326;
+            var _local_4:LeaderboardEntry;
             var _local_2:_Str_5142 = (k as _Str_5142);
             var _local_3:Game2WeeklyLeaderboardParser = _local_2.getParser();
             if (((_local_3.gameTypeId == this._selectedGame) && (_local_3.leaderboard.length > 0)))

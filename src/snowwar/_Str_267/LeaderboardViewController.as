@@ -7,7 +7,7 @@
 	import com.sulake.habbo.game.WindowUtils;
 	import com.sulake.habbo.avatar.IAvatarImageListener;
 	import com.sulake.habbo.avatar.IAvatarImage;
-	import com.sulake.habbo.communication.messages.parser.game.score._Str_3326;
+	import com.sulake.habbo.communication.messages.parser.game.score.LeaderboardEntry;
 	import com.sulake.core.assets.IAsset;
 	import com.sulake.core.utils.Map;
 	import com.sulake.core.window.IWindow;
@@ -663,7 +663,7 @@
 
         private function _SafeStr_18658():void
         {
-            var _local_5:_Str_3326;
+            var _local_5:LeaderboardEntry;
             var _local_6:IWindowContainer;
             var _local_7:IWindowContainer;
             var _local_8:IWindow;
