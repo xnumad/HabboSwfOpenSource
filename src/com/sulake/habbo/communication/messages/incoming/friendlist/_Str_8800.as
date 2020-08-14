@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_8705;
+    import com.sulake.habbo.communication.messages.parser.friendlist.FindFriendsProcessResultMessageParser;
 
     public class _Str_8800 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_8800(k:Function)
         {
-            super(k, _Str_8705);
+            super(k, FindFriendsProcessResultMessageParser);
         }
 
         public function get success():Boolean
         {
-            return _Str_8705(_parser).success;
+            return FindFriendsProcessResultMessageParser(_parser).success;
         }
     }
 }
