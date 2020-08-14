@@ -107,7 +107,7 @@
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_10594;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_10650;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.LeaveQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.JoinPlayerQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.AcceptGameInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_12437;
@@ -1695,7 +1695,7 @@
             OUTGOING_PACKETS[234] = GuideSessionInviteRequesterMessageComposer;
             OUTGOING_PACKETS[2341] = ConfirmDeclineTradingComposer;
             OUTGOING_PACKETS[2343] = ResetUnseenItemsComposer;
-            OUTGOING_PACKETS[2384] = _Str_10650;
+            OUTGOING_PACKETS[2384] = LeaveQueueMessageComposer;
             OUTGOING_PACKETS[2388] = GetSoundSettingsComposer;
             OUTGOING_PACKETS[2397] = RejectQuestMessageComposer;
             OUTGOING_PACKETS[2399] = _Str_8040;

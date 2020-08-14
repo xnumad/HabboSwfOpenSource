@@ -27,7 +27,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
 	import com.sulake.habbo.help.enum.WelcomeNotificationAlignment;
 	import com.sulake.core.assets.IAssetLibrary;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_10650;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.LeaveQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.JoinPlayerQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.AcceptGameInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
@@ -834,7 +834,7 @@
 
         public function leavePlayerQueue(k:int):void
         {
-            this.send(new _Str_10650(k));
+            this.send(new LeaveQueueMessageComposer(k));
             this._Str_9452 = -1;
         }
 
