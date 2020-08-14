@@ -531,7 +531,7 @@
             }
             else
             {
-                if ((((k) && (!(this._habboHelp._Str_3531._Str_20222(this._habboHelp._Str_6240)))) && (this._habboHelp._Str_3531._Str_20222(this._reportedUserId))))
+                if ((((k) && (!(this._habboHelp.chatRegistry._Str_20222(this._habboHelp._Str_6240)))) && (this._habboHelp.chatRegistry._Str_20222(this._reportedUserId))))
                 {
                     this._habboHelp.windowManager.alert("${generic.alert.title}", "${help.cfh.error.nochathistory}", 0, null);
                     return;
@@ -553,7 +553,7 @@
             {
                 return false;
             }
-            return ((this._reportedUserId <= 0) || (this._habboHelp._Str_3531.getItemsByUser(this._reportedUserId).length > 0)) || (this._reportType == HabboHelp.REPORT_TYPE_IM);
+            return ((this._reportedUserId <= 0) || (this._habboHelp.chatRegistry.getItemsByUser(this._reportedUserId).length > 0)) || (this._reportType == HabboHelp.REPORT_TYPE_IM);
         }
 
         private function saveEmergencyHelpRequestData(k:Boolean=true):Boolean

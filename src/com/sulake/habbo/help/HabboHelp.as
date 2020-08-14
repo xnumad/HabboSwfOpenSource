@@ -742,7 +742,7 @@
             return this._userRegistry;
         }
 
-        public function get _Str_3531():ChatRegistry
+        public function get chatRegistry():ChatRegistry
         {
             return this._chatRegistry;
         }

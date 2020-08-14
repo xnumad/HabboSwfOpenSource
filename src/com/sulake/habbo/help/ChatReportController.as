@@ -70,9 +70,9 @@
 
         public function closeWindow():void
         {
-            if (((this._habboHelp) && (this._habboHelp._Str_3531)))
+            if (((this._habboHelp) && (this._habboHelp.chatRegistry)))
             {
-                this._habboHelp._Str_3531._Str_7724 = false;
+                this._habboHelp.chatRegistry._Str_7724 = false;
             }
             if (((this._habboHelp) && (this._habboHelp._Str_3977)))
             {
@@ -115,7 +115,7 @@
             }
             else
             {
-                for each (_local_7 in this._habboHelp._Str_3531._Str_6828())
+                for each (_local_7 in this._habboHelp.chatRegistry._Str_6828())
                 {
                     if (_local_7.selected)
                     {
@@ -173,8 +173,8 @@
             var _local_4:IWindowContainer = (_local_3.getListItemAt(0) as IWindowContainer);
             var _local_5:IWindowContainer = (this._habboHelp.getXmlWindow("chat_report_item") as IWindowContainer);
             _local_3.removeListItems();
-            this._habboHelp._Str_3531._Str_7724 = true;
-            var _local_9:Vector.<ChatRegistryItem> = ((_arg_2 > 0) ? this._habboHelp._Str_3531.getItemsByUser(_arg_2) : this._habboHelp._Str_3531._Str_6828());
+            this._habboHelp.chatRegistry._Str_7724 = true;
+            var _local_9:Vector.<ChatRegistryItem> = ((_arg_2 > 0) ? this._habboHelp.chatRegistry.getItemsByUser(_arg_2) : this._habboHelp.chatRegistry._Str_6828());
             for each (_local_10 in _local_9)
             {
                 if (_local_10.userId == k)
@@ -207,7 +207,7 @@
             var _local_3:ChatRegistryItem;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = this._habboHelp._Str_3531.getItem(_arg_2.id);
+                _local_3 = this._habboHelp.chatRegistry.getItem(_arg_2.id);
                 if (!_local_3)
                 {
                     return;
@@ -261,7 +261,7 @@
                     _local_3.selected = false;
                 }
             }
-            for each (_local_2 in this._habboHelp._Str_3531._Str_6828())
+            for each (_local_2 in this._habboHelp.chatRegistry._Str_6828())
             {
                 _local_2.selected = false;
             }
@@ -284,7 +284,7 @@
                 while (_local_5 < _local_4.numListItems)
                 {
                     _local_6 = (_local_4.getListItemAt(_local_5) as IWindow);
-                    _local_7 = this._habboHelp._Str_3531.getItem(_local_6.id);
+                    _local_7 = this._habboHelp.chatRegistry.getItem(_local_6.id);
                     if (_local_7)
                     {
                         _local_6.color = ((_local_7.selected) ? _Str_9415 : _Str_6492);
