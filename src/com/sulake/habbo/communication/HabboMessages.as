@@ -111,7 +111,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.JoinPlayerQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.AcceptGameInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_12437;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_4406;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetResolutionAchievementsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8138;
@@ -1878,7 +1878,7 @@
             OUTGOING_PACKETS[3567] = SendMsgMessageComposer;
             OUTGOING_PACKETS[357] = InfoRetrieveMessageComposer;
             OUTGOING_PACKETS[3582] = RateFlatMessageComposer;
-            OUTGOING_PACKETS[359] = _Str_4406;
+            OUTGOING_PACKETS[359] = GetResolutionAchievementsMessageComposer;
             OUTGOING_PACKETS[3591] = CraftComposer;
             OUTGOING_PACKETS[3593] = GetMemberGuildItemCountMessageComposer;
             OUTGOING_PACKETS[3604] = AcceptQuestMessageComposer;

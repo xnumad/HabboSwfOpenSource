@@ -5,7 +5,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementResolution;
     import com.sulake.core.window.components.IItemGridWindow;
-    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_4406;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetResolutionAchievementsMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.notifications.AchievementLevelUpData;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.Achievement;
     import com.sulake.core.window.events.WindowEvent;
@@ -110,7 +110,7 @@
         {
             if ((((this._progressView) && (this._progressView.visible)) && (k.type == this._progressView.achievementId)))
             {
-                this._questEngine.send(new _Str_4406(this._progressView.stuffId, 0));
+                this._questEngine.send(new GetResolutionAchievementsMessageComposer(this._progressView.stuffId, 0));
             }
         }
 
@@ -118,7 +118,7 @@
         {
             if ((((this._progressView) && (this._progressView.visible)) && (k.achievementId == this._progressView.achievementId)))
             {
-                this._questEngine.send(new _Str_4406(this._progressView.stuffId, 0));
+                this._questEngine.send(new GetResolutionAchievementsMessageComposer(this._progressView.stuffId, 0));
             }
         }
 
@@ -136,7 +136,7 @@
                     if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
                     {
                         _questEngine.send(new _Str_9826(stuffId));
-                        _questEngine.send(new _Str_4406(_progressView.stuffId, 0));
+                        _questEngine.send(new GetResolutionAchievementsMessageComposer(_progressView.stuffId, 0));
                     }
                 });
             }
@@ -207,7 +207,7 @@
                         k.dispose();
                         if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
                         {
-                            _questEngine.send(new _Str_4406(_stuffId, _selectedAchievementId));
+                            _questEngine.send(new GetResolutionAchievementsMessageComposer(_stuffId, _selectedAchievementId));
                         }
                         else
                         {

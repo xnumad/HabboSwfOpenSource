@@ -45,7 +45,7 @@
     import com.sulake.habbo.room.events.RoomEngineTriggerWidgetEvent;
     import com.sulake.habbo.room.events.RoomEngineUseProductEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.GetGuildFurniContextMenuInfoMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_4406;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetResolutionAchievementsMessageComposer;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.room.events.RoomEngineRoomAdEvent;
     import com.sulake.habbo.room.events.RoomObjectSoundMachineEvent;
@@ -1338,7 +1338,7 @@
                         _local_6.dispatchEvent(new RoomEngineTriggerWidgetEvent(RoomEngineTriggerWidgetEvent.RETWE_REQUEST_MYSTERYTROPHY_OPEN_DIALOG, _arg_2, _local_3, _local_5));
                         return;
                     case RoomObjectWidgetRequestEvent.ACHIEVEMENT_RESOLUTION_OPEN:
-                        this._roomEngine.connection.send(new _Str_4406(k.objectId, 0));
+                        this._roomEngine.connection.send(new GetResolutionAchievementsMessageComposer(k.objectId, 0));
                         return;
                     case RoomObjectWidgetRequestEvent.ACHIEVEMENT_RESOLUTION_ENGRAVING:
                         _local_6.dispatchEvent(new RoomEngineTriggerWidgetEvent(RoomEngineTriggerWidgetEvent.RETWE_REQUEST_ACHIEVEMENT_RESOLUTION_ENGRAVING, _arg_2, _local_3, _local_5));
