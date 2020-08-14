@@ -126,7 +126,7 @@
             this._questionIds = _arg_2;
             this._answerIds = new Array(this._Str_8127);
             this._answerOrders = new Array(this._Str_8127);
-            this._Str_18391(0);
+            this.setCurrentQuestion(0);
             var _local_3:IWindowContainer = IWindowContainer(IItemListWindow(this._explanationTemplate).getListItemByName("explanation_container"));
             switch (this._quizCode)
             {
@@ -241,10 +241,10 @@
                         this.closeWindow();
                         return;
                     case "prev_button":
-                        this._Str_18391((this._currentQuestion - 1));
+                        this.setCurrentQuestion((this._currentQuestion - 1));
                         return;
                     case "next_button":
-                        this._Str_18391((this._currentQuestion + 1));
+                        this.setCurrentQuestion((this._currentQuestion + 1));
                         return;
                     case "review_button":
                         this.showPage(PAGE_ANALYSIS);
@@ -253,7 +253,7 @@
             }
         }
 
-        private function _Str_18391(k:int):void
+        private function setCurrentQuestion(k:int):void
         {
             var _local_2:int;
             var _local_3:Array;
