@@ -622,7 +622,7 @@
             _local_10.addEventListener(MouseEvent.ROLL_OUT, this._Str_5609);
             _local_10.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onGameClientLoadCompleted);
             _local_10.contentLoaderInfo.addEventListener(Event.INIT, this.onGameClientLoadInit);
-            _local_10.contentLoaderInfo.addEventListener(Event.UNLOAD, this.onGameClientLoadUnload);
+            _local_10.contentLoaderInfo.addEventListener(Event.UNLOAD, this.onGameClientUnload);
             _local_10.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.onGameClientLoadIOError);
             _local_10.contentLoaderInfo.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this.onGameClientLoadSecurityError);
             _local_10.contentLoaderInfo.addEventListener(ProgressEvent.PROGRESS, this.onGameClientLoadProgress);
@@ -850,7 +850,7 @@
             }
         }
 
-        public function onGameClientLoadUnload(k:Event):void
+        public function onGameClientUnload(k:Event):void
         {
             HabboGamesCom.log("[HabboGameManager] external game client unloaded");
         }
