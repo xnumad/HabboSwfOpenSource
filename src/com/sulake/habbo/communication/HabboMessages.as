@@ -694,7 +694,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionVotingStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_8785;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_8903;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideOnDutyStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionStartedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_9121;
@@ -1069,7 +1069,7 @@
             INCOMING_PACKETS[1533] = _Str_6906;
             INCOMING_PACKETS[1534] = ObjectAddMessageEvent;
             INCOMING_PACKETS[1543] = CollapsedCategoriesEvent;
-            INCOMING_PACKETS[1548] = _Str_8903;
+            INCOMING_PACKETS[1548] = GuideOnDutyStatusMessageEvent;
             INCOMING_PACKETS[1551] = _Str_16338;
             INCOMING_PACKETS[1553] = PetBreedingResultEvent;
             INCOMING_PACKETS[1554] = _Str_9325;

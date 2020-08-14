@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingEvent;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_8903;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideOnDutyStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionStartedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionVotingStatusMessageEvent;
@@ -159,7 +159,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionInvitedToGuideRoomEvent(this.onGuideSessionInvitedToGuideRoom));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionPartnerIsTypingEvent(this.onGuideSessionPartnerIsTyping));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8903(this.onGuideOnDutyStatus));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideOnDutyStatusMessageEvent(this.onGuideOnDutyStatus));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionOfferedToGuideMessageEvent(this.onChatReviewSessionOfferedToGuide));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionStartedMessageEvent(this.onChatReviewSessionStarted));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionVotingStatusMessageEvent(this.onChatReviewSessionVotingStatus));
@@ -260,7 +260,7 @@
             this._habboHelp.sendMessage(new GuideSessionOnDutyUpdateMessageComposer(this._onDuty, this._handleGuideRequests, this._handleHelperRequests, this._handleGuardianRequests));
         }
 
-        private function onGuideOnDutyStatus(k:_Str_8903):void
+        private function onGuideOnDutyStatus(k:GuideOnDutyStatusMessageEvent):void
         {
             var _local_2:GuideOnDutyStatusMessageParser = k.getParser();
             this._onDuty = _local_2.onDuty;
