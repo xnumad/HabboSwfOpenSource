@@ -46,7 +46,7 @@
         {
             this._habboHelp = k;
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9419(this.onQuizData));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8785(this._Str_24077));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8785(this.onQuizResults));
         }
 
         public function dispose():void
@@ -94,7 +94,7 @@
             this._Str_3360(_local_2._Str_21852, _local_2._Str_25814);
         }
 
-        private function _Str_24077(k:_Str_8785):void
+        private function onQuizResults(k:_Str_8785):void
         {
             var _local_2:_Str_7308 = k.getParser();
             this._questionIdsForWrongAnswers = _local_2._Str_23947;
