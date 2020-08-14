@@ -189,7 +189,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8758(this._parser8));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9446(this.onThreadMessageList));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8331(this._Str_25702));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9630(this._Str_24297));
+            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9630(this.onPostMessageMessage));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9518(this._Str_22869));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8905(this._Str_23952));
             context.addLinkEventTracker(this);
@@ -481,7 +481,7 @@
             }
         }
 
-        private function _Str_24297(k:_Str_9630):void
+        private function onPostMessageMessage(k:_Str_9630):void
         {
             if (this._composeMessageView)
             {
