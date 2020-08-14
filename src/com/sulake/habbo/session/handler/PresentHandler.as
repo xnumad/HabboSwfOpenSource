@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9591;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_8104;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.PresentOpenedMessageParser;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.events.RoomSessionPresentEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -22,7 +22,7 @@
 
         private function onPresentOpened(k:IMessageEvent):void
         {
-            var _local_2:_Str_8104 = (k as _Str_9591).getParser();
+            var _local_2:PresentOpenedMessageParser = (k as _Str_9591).getParser();
             if (_local_2 == null)
             {
                 return;
