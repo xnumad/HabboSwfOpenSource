@@ -8,7 +8,7 @@
     public class YoutubeDisplayPlaylistsMessageParser implements IMessageParser 
     {
         private var _furniId:int;
-        private var _playlists:Vector.<YoutubePlayListNode>;
+        private var _playlists:Vector.<YoutubeDisplayPlaylist>;
         private var _selectedPlaylistId:String;
 
 
@@ -22,11 +22,11 @@
         {
             this._furniId = k.readInteger();
             var count:int = k.readInteger();
-            this._playlists = new Vector.<YoutubePlayListNode>(0);
+            this._playlists = new Vector.<YoutubeDisplayPlaylist>(0);
             var index:int;
             while (index < count)
             {
-                this._playlists.push(new YoutubePlayListNode(k.readString(), k.readString(), k.readString()));
+                this._playlists.push(new YoutubeDisplayPlaylist(k.readString(), k.readString(), k.readString()));
                 index++;
             }
             this._selectedPlaylistId = k.readString();
@@ -38,7 +38,7 @@
             return this._furniId;
         }
 
-        public function get playlists():Vector.<YoutubePlayListNode>
+        public function get playlists():Vector.<YoutubeDisplayPlaylist>
         {
             return this._playlists;
         }

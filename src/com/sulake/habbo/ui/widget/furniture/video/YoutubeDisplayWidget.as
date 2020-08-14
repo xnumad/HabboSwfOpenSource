@@ -23,7 +23,7 @@
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.parser.room.furniture.YoutubePlayListNode;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.YoutubeDisplayPlaylist;
     import __AS3__.vec.Vector;
 
     public class YoutubeDisplayWidget extends RoomWidgetBase
@@ -380,9 +380,9 @@
             }
         }
 
-        public function _Str_24455(k:int, _arg_2:Vector.<YoutubePlayListNode>, _arg_3:String):void
+        public function _Str_24455(k:int, _arg_2:Vector.<YoutubeDisplayPlaylist>, _arg_3:String):void
         {
-            var _local_5:YoutubePlayListNode;
+            var _local_5:YoutubeDisplayPlaylist;
             var _local_6:IWindowContainer;
             if (((((this._roomObject == null) || (!(this._roomObject.getId() == k))) || (this._window == null)) || (this._itemTemplate == null)))
             {
