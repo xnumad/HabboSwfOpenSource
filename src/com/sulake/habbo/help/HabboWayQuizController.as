@@ -100,11 +100,11 @@
             this._questionIdsForWrongAnswers = _local_2._Str_23947;
             if (this._questionIdsForWrongAnswers.length == 0)
             {
-                this._Str_13401(PAGE_SUCCESS);
+                this.showPage(PAGE_SUCCESS);
             }
             else
             {
-                this._Str_13401(PAGE_FAILURE);
+                this.showPage(PAGE_FAILURE);
             }
         }
 
@@ -144,7 +144,7 @@
                     IStaticBitmapWrapperWindow(_local_3.findChildByName("explanation_illustration")).assetUri = "${image.library.url}safetyquiz/safety_on.png";
                     break;
             }
-            this._Str_13401(PAGE_QUESTION);
+            this.showPage(PAGE_QUESTION);
         }
 
         private function closeWindow():void
@@ -157,7 +157,7 @@
             }
         }
 
-        private function _Str_13401(k:int):void
+        private function showPage(k:int):void
         {
             var _local_4:int;
             var _local_5:int;
@@ -247,7 +247,7 @@
                         this._Str_18391((this._currentQuestion + 1));
                         return;
                     case "review_button":
-                        this._Str_13401(PAGE_ANALYSIS);
+                        this.showPage(PAGE_ANALYSIS);
                         return;
                 }
             }
