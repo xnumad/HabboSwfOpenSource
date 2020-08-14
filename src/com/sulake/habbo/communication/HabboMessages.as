@@ -679,7 +679,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedEvent;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_10860;
+	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionDetachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_11155;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_16028;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_16338;
@@ -1267,7 +1267,7 @@
             INCOMING_PACKETS[296] = BotForceOpenContextMenuEvent;
             INCOMING_PACKETS[2997] = PollContentsEvent;
             INCOMING_PACKETS[2998] = IsBadgeRequestFulfilledEvent;
-            INCOMING_PACKETS[30] = _Str_10860;
+            INCOMING_PACKETS[30] = ChatReviewSessionDetachedMessageEvent;
             INCOMING_PACKETS[3001] = _Str_9509;
             INCOMING_PACKETS[3005] = CommunityGoalHallOfFameMessageEvent;
             INCOMING_PACKETS[3011] = _Str_8331;

@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.incoming.help._Str_9097;
     import com.sulake.habbo.communication.messages.incoming.help._Str_8464;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9409;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_10860;
+    import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionDetachedMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.ChatReviewSessionVotingStatusMessageParser;
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.habbo.help.enum.GuideSessionStateEnum;
@@ -164,7 +164,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9097(this.onChatReviewSessionStarted));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8464(this.onChatReviewSessionVotingStatus));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9409(this.onChatReviewSessionResults));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_10860(this.onChatReviewSessionDetached));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionDetachedMessageEvent(this.onChatReviewSessionDetached));
         }
 
         private static function _Str_13055(k:int):int
