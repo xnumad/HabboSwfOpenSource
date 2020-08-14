@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8063 implements IMessageParser 
+    public class YoutubeDisplayVideoMessageParser implements IMessageParser
     {
         private var _furniId:int;
         private var _videoId:String;

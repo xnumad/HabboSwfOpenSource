@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8731;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayPlaylistsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9325;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_8063;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.YoutubeDisplayVideoMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7559;
     import com.sulake.habbo.communication.messages.parser.room.furniture.YoutubeDisplayPlaylistsMessageParser;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
@@ -70,7 +70,7 @@
 
         private function onVideo(k:_Str_8731):void
         {
-            var _local_2:_Str_8063 = k.getParser();
+            var _local_2:YoutubeDisplayVideoMessageParser = k.getParser();
             this._widget.showVideo(_local_2.furniId, _local_2.videoId, _local_2._Str_25795, _local_2._Str_23507, _local_2.state);
         }
 
