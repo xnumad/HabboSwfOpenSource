@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.incoming.campaign._Str_9003;
     import com.sulake.habbo.communication.messages.incoming.campaign._Str_9045;
     import com.sulake.habbo.communication.messages.parser.campaign.CampaignCalendarDataMessageParser;
-    import com.sulake.habbo.communication.messages.parser.campaign._Str_7637;
+    import com.sulake.habbo.communication.messages.parser.campaign.CampaignCalendarDoorOpenedMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorAsStaffComposer;
     import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorComposer;
     import com.sulake.habbo.session.product.IProductData;
@@ -87,7 +87,7 @@
 
         private function _Str_24922(k:_Str_9045):void
         {
-            var _local_2:_Str_7637 = k.getParser();
+            var _local_2:CampaignCalendarDoorOpenedMessageParser = k.getParser();
             if (_local_2._Str_22341)
             {
                 this._Str_16700(_local_2.productName, _local_2.customImage, _local_2._Str_8979);
