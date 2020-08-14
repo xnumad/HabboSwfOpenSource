@@ -14,7 +14,7 @@
     import com.sulake.habbo.sound.HabboMusicPrioritiesEnum;
     import com.sulake.habbo.communication.messages.outgoing.sound.GetJukeboxPlayListMessageComposer;
     import com.sulake.habbo.sound.ISongInfo;
-    import com.sulake.habbo.communication.messages.parser.sound._Str_6377;
+    import com.sulake.habbo.communication.messages.parser.sound.NowPlayingMessageParser;
     import com.sulake.habbo.sound.events.NowPlayingEvent;
     import com.sulake.habbo.communication.messages.parser.sound.JukeboxSongDisksMessageParser;
     import com.sulake.habbo.sound.events.PlayListStatusEvent;
@@ -153,7 +153,7 @@
         private function _Str_25253(k:IMessageEvent):void
         {
             var _local_2:_Str_8016 = (k as _Str_8016);
-            var _local_3:_Str_6377 = (_local_2.getParser() as _Str_6377);
+            var _local_3:NowPlayingMessageParser = (_local_2.getParser() as NowPlayingMessageParser);
             Logger.log(((((("Received Now Playing message with: " + _local_3._Str_9166) + ", ") + _local_3._Str_17943) + ", ") + _local_3._Str_19692));
             this._isPlaying = (!(_local_3._Str_9166 == -1));
             if (_local_3._Str_9166 >= 0)
