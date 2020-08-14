@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9102 implements IMessageParser 
+    public class ChatReviewSessionOfferedToGuideMessageParser implements IMessageParser
     {
         private var _acceptanceTimeout:int;
 
