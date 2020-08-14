@@ -105,7 +105,7 @@
     import com.sulake.habbo.communication.messages.parser.room.pets.PetExperienceParser;
     import com.sulake.habbo.communication.messages.parser.room.furniture.DiceValueMessageParser;
     import com.sulake.habbo.room.object.data.LegacyStuffData;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7431;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.OneWayDoorStatusMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.session.YouArePlayingGameMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.session.GamePlayerValueMessageParser;
     import com.sulake.habbo.session.RoomUserData;
@@ -1228,7 +1228,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7431 = _local_2.getParser();
+            var _local_3:OneWayDoorStatusMessageParser = _local_2.getParser();
             var _local_4:int = _local_3.id;
             var _local_5:int = _local_3.status;
             var _local_6:IStuffData = new LegacyStuffData();
