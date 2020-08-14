@@ -431,7 +431,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new UsersEvent(this.onUsers));
             this.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
-            this.addMessageEvent(new GetGuestRoomResultEvent(this._Str_24404));
+            this.addMessageEvent(new GetGuestRoomResultEvent(this.onGuestRoomResult));
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this.onPendingCallsForHelp));
             this.addMessageEvent(new _Str_11155(this.onPendingCallsForHelpDeleted));
             this.addMessageEvent(new _Str_9121(this.onCallForHelpDisabledNotify));
@@ -731,7 +731,7 @@
             this._userRegistry._Str_19528(_local_2.roomId, "");
         }
 
-        private function _Str_24404(k:IMessageEvent):void
+        private function onGuestRoomResult(k:IMessageEvent):void
         {
             var _local_2:GetGuestRoomResultMessageParser = GetGuestRoomResultEvent(k).getParser();
             this._userRegistry._Str_19528(_local_2.data.flatId, _local_2.data.roomName);
