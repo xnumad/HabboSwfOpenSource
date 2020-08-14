@@ -32,7 +32,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.AcceptGameInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8138;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GameUnloadedMessageComposer;
 	import com.sulake.habbo.room.events.RoomObjectTileMouseEvent;
 	import snowwar._Str_400._SafeStr_2513;
 	import com.sulake.core.utils.PlayerVersionCheck;
@@ -603,7 +603,7 @@
             if (!PlayerVersionCheck.isVersionAtLeast(_arg_7, _arg_8))
             {
                 this._Str_3777(GameConfigurations.getNameId(k), "versionCheckFailed");
-                this.send(new _Str_8138(k));
+                this.send(new GameUnloadedMessageComposer(k));
                 this._localizationManager.registerParameter("gamecenter.flash_version_required", "version", ((_arg_7 + ".") + _arg_8));
                 this.alert("${gamecenter.flash_version_required}");
                 return;
@@ -895,7 +895,7 @@
                         this._Str_3777(GameConfigurations.getNameId(k), "showGameCenter.gameEnd");
                     }
                 }
-                this.send(new _Str_8138(k));
+                this.send(new GameUnloadedMessageComposer(k));
             }
         }
 

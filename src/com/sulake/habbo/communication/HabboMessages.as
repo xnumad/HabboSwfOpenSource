@@ -114,7 +114,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetResolutionAchievementsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8138;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GameUnloadedMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.ResetResolutionAchievementMessageComposer;
 	import snowwar.outgoing.*;
 	import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
@@ -1825,7 +1825,7 @@
             OUTGOING_PACKETS[3196] = Game2PlayAgainMessageComposer;
             OUTGOING_PACKETS[3202] = RespectPetMessageComposer;
             OUTGOING_PACKETS[3203] = UpdateConditionMessageComposer;
-            OUTGOING_PACKETS[3207] = _Str_8138;
+            OUTGOING_PACKETS[3207] = GameUnloadedMessageComposer;
             OUTGOING_PACKETS[3226] = RenderRoomMessageComposer;
             OUTGOING_PACKETS[3230] = PerformanceLogMessageComposer;
             OUTGOING_PACKETS[3257] = GetSeasonalCalendarDailyOfferComposer;
