@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11459;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11571;
     import com.sulake.habbo.messenger.events.MiniMailMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_8206;
+    import com.sulake.habbo.communication.messages.parser.friendlist.MiniMailUnreadCountMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8339;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
@@ -135,7 +135,7 @@
 
         private function onMiniMailUnreadCount(k:IMessageEvent):void
         {
-            this._miniMailUnseenCount = (k.parser as _Str_8206)._Str_22745;
+            this._miniMailUnseenCount = (k.parser as MiniMailUnreadCountMessageParser)._Str_22745;
             events.dispatchEvent(new MiniMailMessageEvent(MiniMailMessageEvent.MMME_UNREAD, this._miniMailUnseenCount));
         }
 

@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8206 implements IMessageParser 
+    public class MiniMailUnreadCountMessageParser implements IMessageParser
     {
         private var _Str_20485:int;
 
