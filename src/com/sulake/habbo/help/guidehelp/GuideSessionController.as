@@ -162,7 +162,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8903(this._window9));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8747(this._Str_23266));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9097(this._Str_24700));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8464(this._Str_24456));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8464(this.onChatReviewSessionVotingStatus));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9409(this.onChatReviewSessionResults));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_10860(this.onChatReviewSessionDetached));
         }
@@ -518,7 +518,7 @@
             this._Str_23588(_local_2._Str_23086, _local_2._Str_17106);
         }
 
-        private function _Str_24456(k:_Str_8464):void
+        private function onChatReviewSessionVotingStatus(k:_Str_8464):void
         {
             if (this._sessionData._Str_3201 != GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_WAIT_FOR_RESULTS)
             {
