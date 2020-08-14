@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.help._Str_7652;
+    import com.sulake.habbo.communication.messages.parser.help.GuideOnDutyStatusMessageParser;
 
     public class _Str_8903 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_8903(k:Function)
         {
-            super(k, _Str_7652);
+            super(k, GuideOnDutyStatusMessageParser);
         }
 
-        public function getParser():_Str_7652
+        public function getParser():GuideOnDutyStatusMessageParser
         {
-            return _parser as _Str_7652;
+            return _parser as GuideOnDutyStatusMessageParser;
         }
     }
 }

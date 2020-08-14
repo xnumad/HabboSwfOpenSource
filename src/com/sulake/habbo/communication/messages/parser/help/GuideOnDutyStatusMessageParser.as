@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7652 implements IMessageParser 
+    public class GuideOnDutyStatusMessageParser implements IMessageParser
     {
         private var _onDuty:Boolean;
         private var _Str_21395:int;

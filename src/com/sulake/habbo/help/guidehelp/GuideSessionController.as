@@ -33,7 +33,7 @@
     import com.sulake.habbo.help.enum.GuideSessionStateEnum;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionCreateMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionOnDutyUpdateMessageComposer;
-    import com.sulake.habbo.communication.messages.parser.help._Str_7652;
+    import com.sulake.habbo.communication.messages.parser.help.GuideOnDutyStatusMessageParser;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionAttachedParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionStartedMessageParser;
@@ -262,7 +262,7 @@
 
         private function _window9(k:_Str_8903):void
         {
-            var _local_2:_Str_7652 = k.getParser();
+            var _local_2:GuideOnDutyStatusMessageParser = k.getParser();
             this._onDuty = _local_2.onDuty;
             this._habboHelp.localization.registerParameter("guide.help.guide.tool.guidesonduty", "amount", _local_2._Str_24740.toString());
             this._habboHelp.localization.registerParameter("guide.help.guide.tool.helpersonduty", "amount", _local_2._Str_25148.toString());
