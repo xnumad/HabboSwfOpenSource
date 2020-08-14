@@ -11,7 +11,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import flash.utils.Timer;
     import com.sulake.habbo.room.events.RoomEngineEvent;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_6732;
+    import com.sulake.habbo.communication.messages.parser.catalog.BuildersClubSubscriptionStatusMessageParser;
     import flash.events.TimerEvent;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.outgoing.room.layout.GetRoomEntryTileMessageComposer;
@@ -153,7 +153,7 @@
 
         private function _Str_22764(k:_Str_5417):void
         {
-            var _local_2:_Str_6732 = k.getParser();
+            var _local_2:BuildersClubSubscriptionStatusMessageParser = k.getParser();
             this._bcSecondsLeft = _local_2._Str_3709;
             if (!this._bcSecondsCountdownTimer)
             {

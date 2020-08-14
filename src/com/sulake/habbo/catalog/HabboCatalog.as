@@ -250,7 +250,7 @@
     import com.sulake.habbo.communication.messages.parser.catalog.ProductOfferMessageParser;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events.SetExtraPurchaseParameterEvent;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_6732;
+    import com.sulake.habbo.communication.messages.parser.catalog.BuildersClubSubscriptionStatusMessageParser;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetBuilderSubscriptionUpdatedEvent;
     import com.sulake.habbo.utils.FriendlyTime;
     import com.sulake.habbo.catalog.viewer.ICatalogPage;
@@ -3003,7 +3003,7 @@
 
         private function onBuildersClubSubscriptionStatus(k:_Str_5417):void
         {
-            var _local_2:_Str_6732 = k.getParser();
+            var _local_2:BuildersClubSubscriptionStatusMessageParser = k.getParser();
             this._builderFurniLimit = _local_2._Str_15864;
             this._builderMaxFurniLimit = _local_2._Str_24094;
             this._builderMembershipSecondsLeft = _local_2._Str_3709;
