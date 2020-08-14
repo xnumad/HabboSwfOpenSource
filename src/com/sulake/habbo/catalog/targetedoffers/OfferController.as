@@ -35,7 +35,7 @@
         {
             this._catalog = k;
             this._catalog.connection.addMessageEvent(new TargetedOfferEvent(this._Str_25111));
-            this._catalog.connection.addMessageEvent(new _Str_9208(this._Str_22594));
+            this._catalog.connection.addMessageEvent(new _Str_9208(this.onTargetedOfferNotFound));
             this._catalog.events.addEventListener(PurseUpdateEvent.CATALOG_PURSE_UPDATE, this.onPurseUpdate);
             this._catalog.sessionDataManager.addProductsReadyEventListener(this);
         }
@@ -79,7 +79,7 @@
             }
         }
 
-        private function _Str_22594(k:_Str_9208):void
+        private function onTargetedOfferNotFound(k:_Str_9208):void
         {
             this._externalInterfaceHelper = new MallOfferExternalInterfaceHelper(this);
         }
