@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.help._Str_8272;
+    import com.sulake.habbo.communication.messages.parser.help.GuideTicketCreationResultMessageParser;
 
     public class _Str_8429 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_8429(k:Function)
         {
-            super(k, _Str_8272);
+            super(k, GuideTicketCreationResultMessageParser);
         }
 
-        public function getParser():_Str_8272
+        public function getParser():GuideTicketCreationResultMessageParser
         {
-            return _parser as _Str_8272;
+            return _parser as GuideTicketCreationResultMessageParser;
         }
     }
 }
