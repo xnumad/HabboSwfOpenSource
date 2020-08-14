@@ -433,7 +433,7 @@
             this.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
             this.addMessageEvent(new GetGuestRoomResultEvent(this._Str_24404));
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this.onPendingCallsForHelp));
-            this.addMessageEvent(new _Str_11155(this._Str_24610));
+            this.addMessageEvent(new _Str_11155(this.onPendingCallsForHelpDeleted));
             this.addMessageEvent(new _Str_9121(this._Str_24314));
             this.addMessageEvent(new _Str_9074(this._Str_23107));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
@@ -638,7 +638,7 @@
             }
         }
 
-        private function _Str_24610(k:IMessageEvent):void
+        private function onPendingCallsForHelpDeleted(k:IMessageEvent):void
         {
             this._topicsFlowHelpController.submitCallForHelp(false);
         }
