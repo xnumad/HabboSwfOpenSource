@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7758 implements IMessageParser 
+    public class WiredValidationErrorParser implements IMessageParser
     {
         private var _info:String;
 

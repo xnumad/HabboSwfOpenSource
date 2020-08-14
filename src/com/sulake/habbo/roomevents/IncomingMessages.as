@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectRemoveMessageParser;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents._Str_7138;
-    import com.sulake.habbo.communication.messages.parser.userdefinedroomevents._Str_7758;
+    import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredValidationErrorParser;
     import __AS3__.vec.*;
 
     public class IncomingMessages implements IDisposable 
@@ -116,7 +116,7 @@
 
         private function _Str_25729(k:IMessageEvent):void
         {
-            var _local_2:_Str_7758 = _Str_7323(k).getParser();
+            var _local_2:WiredValidationErrorParser = _Str_7323(k).getParser();
             this._roomEvents.windowManager.alert("Update failed", _local_2.info, 0, null);
         }
 
