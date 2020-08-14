@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.CallForHelpResultMessageParser;
 
-    public class _Str_7620 extends MessageEvent implements IMessageEvent 
+    public class CallForHelpResultMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7620(k:Function)
+        public function CallForHelpResultMessageEvent(k:Function)
         {
             super(k, CallForHelpResultMessageParser);
         }

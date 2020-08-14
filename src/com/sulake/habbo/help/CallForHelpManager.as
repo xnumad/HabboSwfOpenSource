@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpReplyMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_7620;
+    import com.sulake.habbo.communication.messages.incoming.help.CallForHelpResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.IssueCloseNotificationMessageEvent;
     import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromSelfieMessageComposer;
@@ -62,7 +62,7 @@
             this._habboHelp = k;
             this._chatReportController = new ChatReportController(this._habboHelp, this.onChatReportEvent);
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new CallForHelpReplyMessageEvent(this.onCallForHelpReply));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_7620(this.onCallForHelpResult));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new CallForHelpResultMessageEvent(this.onCallForHelpResult));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new IssueCloseNotificationMessageEvent(this.onIssueClose));
         }
 
@@ -660,7 +660,7 @@
 
         private function onCallForHelpResult(k:IMessageEvent):void
         {
-            var _local_2:CallForHelpResultMessageParser = _Str_7620(k).getParser();
+            var _local_2:CallForHelpResultMessageParser = CallForHelpResultMessageEvent(k).getParser();
             var _local_3:int = _local_2.resultType;
             var _local_4:String = _local_2._Str_3460;
             switch (_local_3)

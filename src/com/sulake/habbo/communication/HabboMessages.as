@@ -687,7 +687,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_17947;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_18296;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_18853;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_7620;
+	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpReplyMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.IssueCloseNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideTicketCreationResultMessageEvent;
@@ -1343,7 +1343,7 @@
             INCOMING_PACKETS[3595] = ThumbnailStatusMessageEvent;
             INCOMING_PACKETS[3609] = _Str_9065;
             INCOMING_PACKETS[3625] = QuestsMessageEvent;
-            INCOMING_PACKETS[3635] = _Str_7620;
+            INCOMING_PACKETS[3635] = CallForHelpResultMessageEvent;
             INCOMING_PACKETS[3639] = NewUserExperienceNotCompleteEvent;
             INCOMING_PACKETS[3654] = LoadGameMessageEvent;
             INCOMING_PACKETS[3684] = _Str_16597;
