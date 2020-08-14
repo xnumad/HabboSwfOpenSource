@@ -13,7 +13,7 @@
     import com.sulake.room.object.IRoomObject;
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.parser.room.furniture.RentableSpaceRentFailedMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_8190;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.RentableSpaceStatusMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceStatusMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceCancelRentMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.RentableSpaceRentMessageComposer;
@@ -135,7 +135,7 @@
 
         public function _Str_24112(k:_Str_7811):void
         {
-            var _local_2:_Str_8190 = k.getParser();
+            var _local_2:RentableSpaceStatusMessageParser = k.getParser();
             this._widget._Str_23885(_local_2._Str_22736, _local_2._Str_23603, _local_2._Str_25070, _local_2.renterId, _local_2._Str_23275, _local_2._Str_24083, _local_2.price);
         }
 

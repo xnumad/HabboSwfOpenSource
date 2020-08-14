@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8190 implements IMessageParser 
+    public class RentableSpaceStatusMessageParser implements IMessageParser
     {
         private var _Str_16670:Boolean;
         private var _renterId:int;
