@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7848 implements IMessageParser 
+    public class CustomStackingHeightUpdateMessageParser implements IMessageParser
     {
         private var _furniId:int;
         private var _height:Number;

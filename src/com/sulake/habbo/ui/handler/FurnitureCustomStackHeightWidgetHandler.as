@@ -5,7 +5,7 @@
     import com.sulake.habbo.ui.widget.furniture.customstackheight.CustomStackHeightWidget;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9362;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7848;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.CustomStackingHeightUpdateMessageParser;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.room.events.RoomEngineTriggerWidgetEvent;
@@ -38,7 +38,7 @@
 
         private function _Str_23242(k:_Str_9362):void
         {
-            var _local_2:_Str_7848 = k.getParser();
+            var _local_2:CustomStackingHeightUpdateMessageParser = k.getParser();
             if (((this._widget) && (this._Str_6826())))
             {
                 this._widget._Str_24760(_local_2.furniId, _local_2.height);
