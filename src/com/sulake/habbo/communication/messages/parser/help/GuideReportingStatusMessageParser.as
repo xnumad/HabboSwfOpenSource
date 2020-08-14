@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.parser.help.data.PendingGuideTicket;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5731 implements IMessageParser 
+    public class GuideReportingStatusMessageParser implements IMessageParser
     {
         public static const _Str_17350:int = 0;
         public static const _Str_15134:int = 1;

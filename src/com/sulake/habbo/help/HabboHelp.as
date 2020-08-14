@@ -56,7 +56,7 @@
     import com.sulake.habbo.communication.messages.outgoing.talent.GuideAdvertisementReadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.GetGuideReportingStatusMessageComposer;
     import com.sulake.habbo.communication.messages.parser.help.CallForHelpPendingCallsMessageParser;
-    import com.sulake.habbo.communication.messages.parser.help._Str_5731;
+    import com.sulake.habbo.communication.messages.parser.help.GuideReportingStatusMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.RemoveFriendMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserIdMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserMessageData;
@@ -645,13 +645,13 @@
 
         private function _Str_23107(k:_Str_9074):void
         {
-            var _local_2:_Str_5731 = k.getParser();
+            var _local_2:GuideReportingStatusMessageParser = k.getParser();
             switch (_local_2._Str_23632)
             {
-                case _Str_5731._Str_17350:
+                case GuideReportingStatusMessageParser._Str_17350:
                     this._Str_14807();
                     return;
-                case _Str_5731._Str_15134:
+                case GuideReportingStatusMessageParser._Str_15134:
                     this._guideHelpManager.showPendingTicket(_local_2._Str_25474);
                     return;
                 default:
