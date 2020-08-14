@@ -8,7 +8,7 @@
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.events.RoomSessionPetPackageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_8050;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.OpenPetPackageResultMessageParser;
 
     public class PetPackageHandler extends BaseHandler 
     {
@@ -43,7 +43,7 @@
 
         private function onOpenPetPackageResult(k:IMessageEvent):void
         {
-            var _local_2:_Str_8050 = (k as _Str_8241).getParser();
+            var _local_2:OpenPetPackageResultMessageParser = (k as _Str_8241).getParser();
             if (_local_2 == null)
             {
                 return;

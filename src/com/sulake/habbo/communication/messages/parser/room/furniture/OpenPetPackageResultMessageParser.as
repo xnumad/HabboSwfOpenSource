@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8050 implements IMessageParser 
+    public class OpenPetPackageResultMessageParser implements IMessageParser
     {
         private var _objectId:int = 0;
         private var _nameValidationStatus:int = 0;
