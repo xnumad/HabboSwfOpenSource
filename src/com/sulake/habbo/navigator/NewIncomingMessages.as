@@ -78,7 +78,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator.FavouritesMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator.FavouriteChangedMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllersMessageParser;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6824;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllerAddedMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllerRemovedMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings.BannedUsersFromRoomParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings.UserUnbannedFromRoomParser;
@@ -435,7 +435,7 @@
 
         private function _Str_9346(k:IMessageEvent):void
         {
-            var _local_2:_Str_6824 = (k as _Str_6213).getParser();
+            var _local_2:FlatControllerAddedMessageParser = (k as _Str_6213).getParser();
             Logger.log(((((("Flat controller added: " + _local_2.flatId) + ", ") + _local_2.data.userId) + ", ") + _local_2.data.userName));
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_9346(_local_2.flatId, _local_2.data);
         }
