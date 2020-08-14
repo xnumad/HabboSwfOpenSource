@@ -207,7 +207,7 @@
             this._disableTimer.stop();
         }
 
-        public function _Str_3360(k:Boolean):void
+        public function showWindow(k:Boolean):void
         {
             if (k)
             {

@@ -318,8 +318,8 @@
             this._ownerId = k;
             if (this._ownerId == 0)
             {
-                this._Str_3360("owner_region", false);
-                this._Str_3360("owner_spacer", false);
+                this.showWindow("owner_region", false);
+                this.showWindow("owner_spacer", false);
             }
             else
             {
@@ -348,8 +348,8 @@
                         _local_6.visible = true;
                     }
                 }
-                this._Str_3360("owner_region", true);
-                this._Str_3360("owner_spacer", true);
+                this.showWindow("owner_region", true);
+                this.showWindow("owner_spacer", true);
             }
             this.updateWindow();
         }
@@ -751,13 +751,13 @@
 
         private function _Str_22883(k:Boolean):void
         {
-            this._Str_3360("group_details_spacer", k);
-            this._Str_3360("group_details_container", k);
-            this._Str_3360("group_badge_image", false);
-            this._Str_3360("group_name", false);
+            this.showWindow("group_details_spacer", k);
+            this.showWindow("group_details_container", k);
+            this.showWindow("group_badge_image", false);
+            this.showWindow("group_name", false);
         }
 
-        private function _Str_3360(k:String, _arg_2:Boolean):void
+        private function showWindow(k:String, _arg_2:Boolean):void
         {
             var _local_3:IWindow = this._border.findChildByName(k);
             if (_local_3)

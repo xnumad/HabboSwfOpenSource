@@ -91,7 +91,7 @@
             var _local_2:_Str_8043 = k.getParser();
             this._habboHelp._Str_24844();
             this._habboHelp._Str_21195();
-            this._Str_3360(_local_2._Str_21852, _local_2._Str_25814);
+            this.showWindow(_local_2._Str_21852, _local_2._Str_25814);
         }
 
         private function onQuizResults(k:_Str_8785):void
@@ -108,7 +108,7 @@
             }
         }
 
-        private function _Str_3360(k:String, _arg_2:Array):void
+        private function showWindow(k:String, _arg_2:Array):void
         {
             this.closeWindow();
             this._dialog = this._habboHelp.getModalXmlWindow("habbo_way_quiz");

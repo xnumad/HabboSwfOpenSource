@@ -57,7 +57,7 @@
             {
                 this._view = new PlaceholderView(assets, windowManager);
             }
-            this._view._Str_3360();
+            this._view.showWindow();
         }
 
         private function _Str_2718():void

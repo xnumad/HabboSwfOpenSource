@@ -74,10 +74,10 @@
             {
                 return;
             }
-            this._Str_3360(_local_2.talentTrackName, _local_2.level, _local_2._Str_8893, _local_2._Str_7068);
+            this.showWindow(_local_2.talentTrackName, _local_2.level, _local_2._Str_8893, _local_2._Str_7068);
         }
 
-        public function _Str_3360(k:String, _arg_2:int, _arg_3:Vector.<TalentTrackRewardPerk>, _arg_4:Vector.<TalentTrackRewardProduct>):void
+        public function showWindow(k:String, _arg_2:int, _arg_3:Vector.<TalentTrackRewardPerk>, _arg_4:Vector.<TalentTrackRewardProduct>):void
         {
             var _local_8:TalentTrackRewardPerk;
             var _local_9:TalentTrackRewardProduct;

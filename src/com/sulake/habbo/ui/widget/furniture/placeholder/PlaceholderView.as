@@ -41,11 +41,11 @@
             }
             else
             {
-                this._Str_3360();
+                this.showWindow();
             }
         }
 
-        public function _Str_3360():void
+        public function showWindow():void
         {
             if (this._window == null)
             {

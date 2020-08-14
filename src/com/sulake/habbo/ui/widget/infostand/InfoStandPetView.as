@@ -282,7 +282,7 @@
             var k:InfoStandPetData = (this._petData.getValue(this._currentPetId) as InfoStandPetData);
             if (k != null)
             {
-                this._petCommadTool._Str_3360(true);
+                this._petCommadTool.showWindow(true);
                 _local_2 = this._Str_16104(k.level, k.skillTresholds);
                 _local_3 = (k.experience / k._Str_4095);
                 this._petCommadTool._Str_19046(k.id, k.name, k.image, k.type, (k.level - _local_2), _local_3, (this._Str_19542(k.level, k.skillTresholds) - _local_2), k.skillTresholds);
@@ -293,7 +293,7 @@
         {
             if (((this._petCommadTool) && (this._petCommadTool._Str_18025() == this._currentPetId)))
             {
-                this._petCommadTool._Str_3360(false);
+                this._petCommadTool.showWindow(false);
             }
         }
 
@@ -670,14 +670,14 @@
                     _local_3 = RoomWidgetUserActionMessage.RWUAM_PICKUP_PET;
                     if (((this._petCommadTool) && (this._petCommadTool._Str_18025() == this._currentPetId)))
                     {
-                        this._petCommadTool._Str_3360(false);
+                        this._petCommadTool.showWindow(false);
                     }
                     break;
                 case "btn_kick":
                     _local_3 = RoomWidgetUserActionMessage.RWUAM_PICKUP_PET;
                     if (((this._petCommadTool) && (this._petCommadTool._Str_18025() == this._currentPetId)))
                     {
-                        this._petCommadTool._Str_3360(false);
+                        this._petCommadTool.showWindow(false);
                     }
                     break;
                 case "btn_train":
