@@ -21,8 +21,8 @@
     import com.sulake.habbo.communication.messages.parser.game.lobby.UnloadGameMessageParser;
     import com.sulake.habbo.communication.messages.parser.game.directory.Game2AccountGameStatusMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.game.directory.Game2GetAccountGameStatusMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
-    import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameListMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameAchievementsMessageComposer;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.game.lobby._Str_5486;
     import com.sulake.habbo.communication.messages.parser.game.lobby.GameListMessageParser;
@@ -115,8 +115,8 @@
             {
                 this._gameManager.send(new Game2GetAccountGameStatusMessageComposer(_local_2));
             }
-            this._gameManager.send(new _Str_7312());
-            this._gameManager.send(new _Str_8040());
+            this._gameManager.send(new GetGameListMessageComposer());
+            this._gameManager.send(new GetGameAchievementsMessageComposer());
         }
 
         private function onHotelClosed(k:IMessageEvent):void

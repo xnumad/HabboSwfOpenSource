@@ -30,8 +30,8 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.LeaveQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.JoinQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.AcceptGameInviteMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameListMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameAchievementsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GameUnloadedMessageComposer;
 	import com.sulake.habbo.room.events.RoomObjectTileMouseEvent;
 	import snowwar._Str_400._SafeStr_2513;
@@ -585,8 +585,8 @@
         private function _Str_24183():void
         {
             GameConfigurations.initialized = false;
-            this.send(new _Str_7312());
-            this.send(new _Str_8040());
+            this.send(new GetGameListMessageComposer());
+            this.send(new GetGameAchievementsMessageComposer());
         }
 
         public function _Str_15814():void

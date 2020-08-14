@@ -112,8 +112,8 @@
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.AcceptGameInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetUserGameAchievementsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetResolutionAchievementsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_7312;
-	import com.sulake.habbo.communication.messages.outgoing.game.lobby._Str_8040;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameListMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameAchievementsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GameUnloadedMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.ResetResolutionAchievementMessageComposer;
 	import snowwar.outgoing.*;
@@ -1698,7 +1698,7 @@
             OUTGOING_PACKETS[2384] = LeaveQueueMessageComposer;
             OUTGOING_PACKETS[2388] = GetSoundSettingsComposer;
             OUTGOING_PACKETS[2397] = RejectQuestMessageComposer;
-            OUTGOING_PACKETS[2399] = _Str_8040;
+            OUTGOING_PACKETS[2399] = GetGameAchievementsMessageComposer;
             OUTGOING_PACKETS[2407] = GetMarketplaceOffersMessageComposer;
             OUTGOING_PACKETS[2408] = PurchasePhotoMessageComposer;
             OUTGOING_PACKETS[2412] = RoomAdEventTabAdClickedComposer;
@@ -1951,7 +1951,7 @@
             OUTGOING_PACKETS[707] = GetModeratorRoomInfoMessageComposer;
             OUTGOING_PACKETS[711] = RequestRoomPropertySet;
             OUTGOING_PACKETS[722] = RemoveAdminRightsFromMemberMessageComposer;
-            OUTGOING_PACKETS[741] = _Str_7312;
+            OUTGOING_PACKETS[741] = GetGameListMessageComposer;
             OUTGOING_PACKETS[742] = GetCatalogPageExpirationComposer;
             OUTGOING_PACKETS[749] = GiveSupplementToPetMessageComposer;
             OUTGOING_PACKETS[753] = AddJukeboxDiskComposer;
