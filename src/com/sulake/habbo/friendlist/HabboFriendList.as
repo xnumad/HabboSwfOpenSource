@@ -61,7 +61,7 @@
     import com.sulake.habbo.communication.messages.parser.friendlist.FriendsListFragmentMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendCategoryData;
     import com.sulake.habbo.friendlist.domain.FriendCategory;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_7185;
+    import com.sulake.habbo.communication.messages.parser.friendlist.MessengerInitMessageParser;
     import com.sulake.habbo.friendlist.domain._Str_11887;
     import com.sulake.habbo.friendlist.domain._Str_11703;
     import flash.events.Event;
@@ -470,7 +470,7 @@
             var _local_3:FriendCategoryData;
             var _local_4:FriendCategory;
             this._view = new FriendListView(this);
-            var _local_2:_Str_7185 = (k as _Str_5567).getParser();
+            var _local_2:MessengerInitMessageParser = (k as _Str_5567).getParser();
             this._friendRequests = new _Str_9210(new _Str_11887(this), _local_2._Str_22808, _local_2._Str_23653);
             for each (_local_3 in _local_2.categories)
             {
