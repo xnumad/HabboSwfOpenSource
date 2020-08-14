@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.help._Str_8595;
+    import com.sulake.habbo.communication.messages.parser.help.FaqCategoryMessageParser;
 
     public class _Str_16028 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_16028(k:Function)
         {
-            super(k, _Str_8595);
+            super(k, FaqCategoryMessageParser);
         }
 
-        public function getParser():_Str_8595
+        public function getParser():FaqCategoryMessageParser
         {
-            return _parser as _Str_8595;
+            return _parser as FaqCategoryMessageParser;
         }
     }
 }
