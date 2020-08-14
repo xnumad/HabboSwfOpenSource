@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.parser.friendlist.FriendListUpdateMessageParser;
     import com.sulake.habbo.friendbar.events.FindFriendsNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestData;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_6189;
+    import com.sulake.habbo.communication.messages.parser.friendlist.NewConsoleMessageMessageParser;
     import com.sulake.habbo.friendbar.events.ActiveConversationsCountEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteMessageParser;
     import com.sulake.habbo.communication.messages.parser.game.lobby.GameInviteMessageParser;
@@ -545,7 +545,7 @@
 
         private function onNewConsoleMessage(k:_Str_4851):void
         {
-            var _local_2:_Str_6189 = k.getParser();
+            var _local_2:NewConsoleMessageMessageParser = k.getParser();
             this._lastMessageSenderId = _local_2.senderId;
             var _local_3:Boolean = true;
             if (this._habboMessengerComponent)

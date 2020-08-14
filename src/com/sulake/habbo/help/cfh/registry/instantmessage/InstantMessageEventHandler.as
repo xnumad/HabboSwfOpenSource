@@ -4,7 +4,7 @@
     import com.sulake.habbo.help.HabboHelp;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_6189;
+    import com.sulake.habbo.communication.messages.parser.friendlist.NewConsoleMessageMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteMessageParser;
 
     public class InstantMessageEventHandler implements IDisposable 
@@ -22,7 +22,7 @@
         {
             var _local_3:String;
             var _local_4:String;
-            var _local_2:_Str_6189 = k.getParser();
+            var _local_2:NewConsoleMessageMessageParser = k.getParser();
             if (((_local_2.senderId < 0) && (!(_local_2.extraData == null))))
             {
                 _local_3 = _local_2.extraData.split("/")[2];

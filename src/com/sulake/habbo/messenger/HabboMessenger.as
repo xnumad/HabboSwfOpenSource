@@ -33,7 +33,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_6189;
+    import com.sulake.habbo.communication.messages.parser.friendlist.NewConsoleMessageMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.InstantMessageErrorMessageParser;
     import com.sulake.habbo.messenger.events.ActiveConversationEvent;
@@ -225,7 +225,7 @@
 
         private function onNewConsoleMessage(k:_Str_4851):void
         {
-            var _local_2:_Str_6189 = k.getParser();
+            var _local_2:NewConsoleMessageMessageParser = k.getParser();
             Logger.log(((("Received console msg: " + _local_2._Str_3460) + ", ") + _local_2.senderId));
             if (this._mainView != null)
             {
