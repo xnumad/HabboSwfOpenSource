@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredEffectDataEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_7323;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.parser.userdefinedroomevents._Str_7362;
+    import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.OpenMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.OpenMessageComposer;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredTriggerDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredEffectDataMessageParser;
@@ -54,7 +54,7 @@
 
         private function _Str_24104(k:IMessageEvent):void
         {
-            var _local_2:_Str_7362 = (k as _Str_8791).getParser();
+            var _local_2:OpenMessageParser = (k as _Str_8791).getParser();
             this._roomEvents.send(new OpenMessageComposer(_local_2.stuffId));
         }
 
