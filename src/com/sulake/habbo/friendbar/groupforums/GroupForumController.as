@@ -190,7 +190,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9446(this.onThreadMessageList));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8331(this._Str_25702));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9630(this.onPostMessageMessage));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9518(this._Str_22869));
+            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9518(this.onPostThreadMessage));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8905(this._Str_23952));
             context.addLinkEventTracker(this);
             this._Str_22401();
@@ -441,7 +441,7 @@
             }
         }
 
-        private function _Str_22869(k:_Str_9518):void
+        private function onPostThreadMessage(k:_Str_9518):void
         {
             var _local_3:ForumData;
             var _local_2:_Str_5956 = _Str_5956(k.getParser());
