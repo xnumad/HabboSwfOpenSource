@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_7217;
+    import com.sulake.habbo.communication.messages.parser.groupforums.ThreadMessagesMessageParser;
 
     public class _Str_9446 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_9446(k:Function)
         {
-            super(k, _Str_7217);
+            super(k, ThreadMessagesMessageParser);
         }
 
-        public function getParser():_Str_7217
+        public function getParser():ThreadMessagesMessageParser
         {
-            return this._parser as _Str_7217;
+            return this._parser as ThreadMessagesMessageParser;
         }
     }
 }

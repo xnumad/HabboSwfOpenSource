@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7217 implements IMessageParser 
+    public class ThreadMessagesMessageParser implements IMessageParser
     {
         private var _groupId:int;
         private var _threadId:int;
