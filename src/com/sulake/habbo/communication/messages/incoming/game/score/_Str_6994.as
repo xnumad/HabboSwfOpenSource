@@ -1,18 +1,18 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.game.score
 {
     import com.sulake.core.communication.messages.MessageEvent;
-    import com.sulake.habbo.communication.messages.parser.game.score._Str_7341;
+    import com.sulake.habbo.communication.messages.parser.game.score.WeeklyGameRewardWinnersParser;
 
     public class _Str_6994 extends MessageEvent 
     {
         public function _Str_6994(k:Function)
         {
-            super(k, _Str_7341);
+            super(k, WeeklyGameRewardWinnersParser);
         }
 
-        public function getParser():_Str_7341
+        public function getParser():WeeklyGameRewardWinnersParser
         {
-            return this._parser as _Str_7341;
+            return this._parser as WeeklyGameRewardWinnersParser;
         }
     }
 }

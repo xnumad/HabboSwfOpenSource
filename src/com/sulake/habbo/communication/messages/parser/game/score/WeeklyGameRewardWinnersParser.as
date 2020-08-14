@@ -3,12 +3,12 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7341 implements IMessageParser 
+    public class WeeklyGameRewardWinnersParser implements IMessageParser
     {
         private var _gameTypeId:int;
         private var _Str_15876:Array;
 
-        public function _Str_7341()
+        public function WeeklyGameRewardWinnersParser()
         {
             this._Str_15876 = [];
             super();

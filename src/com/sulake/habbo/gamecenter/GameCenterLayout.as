@@ -45,7 +45,7 @@
     import com.sulake.habbo.communication.messages.parser.game.score.Game2LeaderboardParser;
     import com.sulake.habbo.communication.messages.parser.game.score.Game2WeeklyLeaderboardParser;
     import com.sulake.habbo.communication.messages.parser.game.score.GameRewardWinnerEntry;
-    import com.sulake.habbo.communication.messages.parser.game.score._Str_7341;
+    import com.sulake.habbo.communication.messages.parser.game.score.WeeklyGameRewardWinnersParser;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
     import com.sulake.habbo.avatar.IAvatarImage;
@@ -611,7 +611,7 @@
             var _local_5:GameRewardWinnerEntry;
             var _local_6:IWindowContainer;
             var _local_2:_Str_6994 = (k as _Str_6994);
-            var _local_3:_Str_7341 = _local_2.getParser();
+            var _local_3:WeeklyGameRewardWinnersParser = _local_2.getParser();
             if (((this._luckyLosersList) && (_local_3.gameTypeId == this._selectedGame)))
             {
                 this._gameCenterViewWindow.findChildByName("previous_winner").visible = false;
