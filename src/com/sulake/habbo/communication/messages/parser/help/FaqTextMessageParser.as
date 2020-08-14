@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9187 implements IMessageParser 
+    public class FaqTextMessageParser implements IMessageParser
     {
         private var _questionId:int;
         private var _Str_17066:String;
