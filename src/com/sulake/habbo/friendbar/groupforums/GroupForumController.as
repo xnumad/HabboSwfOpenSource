@@ -55,7 +55,7 @@
     import com.sulake.habbo.communication.messages.parser.groupforums.PostMessageMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateThreadMessageComposer;
-    import com.sulake.habbo.communication.messages.parser.groupforums._Str_8101;
+    import com.sulake.habbo.communication.messages.parser.groupforums.UpdateThreadMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateMessageMessageComposer;
     import com.sulake.habbo.communication.messages.parser.groupforums.UpdateMessageMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
@@ -551,7 +551,7 @@
 
         private function onUpdateThread(k:_Str_8526):void
         {
-            var _local_2:_Str_8101 = k.getParser();
+            var _local_2:UpdateThreadMessageParser = k.getParser();
             if (((this._forumData == null) || (!(this._forumData.groupId == _local_2.groupId))))
             {
                 return;
