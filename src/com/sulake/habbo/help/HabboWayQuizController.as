@@ -177,15 +177,15 @@
             switch (k)
             {
                 case PAGE_QUESTION:
-                    this._window.caption = this._Str_6820("question.title");
+                    this._window.caption = this.getFullLocalizationKey("question.title");
                     _local_3.visible = true;
                     _local_2.visible = true;
                     _local_2.caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("question.page"), "", "current_page", 1, "page_count", this.questionCount.toString());
-                    _local_2.caption = this._Str_6820("question.page");
+                    _local_2.caption = this.getFullLocalizationKey("question.page");
                     return;
                 case PAGE_SUCCESS:
-                    this._window.caption = this._Str_6820("success.title");
-                    this._window.findChildByName("failure_advice").caption = this._Str_6820("failure.advice");
+                    this._window.caption = this.getFullLocalizationKey("success.title");
+                    this._window.findChildByName("failure_advice").caption = this.getFullLocalizationKey("failure.advice");
                     this._window.findChildByName("success_results").caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("success.results"), "", "question_count", this.questionCount.toString());
                     _local_3.visible = false;
                     _local_2.visible = false;
@@ -193,18 +193,18 @@
                     return;
                 case PAGE_FAILURE:
                     _local_4 = (this._questionIds.length - this._questionIdsForWrongAnswers.length);
-                    this._window.caption = this._Str_6820("failure.title");
-                    this._window.findChildByName("failure_advice").caption = this._Str_6820("failure.advice");
+                    this._window.caption = this.getFullLocalizationKey("failure.title");
+                    this._window.findChildByName("failure_advice").caption = this.getFullLocalizationKey("failure.advice");
                     this._window.findChildByName("failure_results").caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("failure.results"), "", "correct_count", _local_4.toString(), "total_count", this.questionCount.toString());
                     _local_3.visible = false;
                     _local_2.visible = false;
                     _local_2.caption = "";
                     return;
                 case PAGE_ANALYSIS:
-                    this._window.caption = this._Str_6820("analysis.title");
+                    this._window.caption = this.getFullLocalizationKey("analysis.title");
                     _local_3.visible = true;
                     _local_2.visible = true;
-                    _local_2.caption = this._Str_6820("analysis.top");
+                    _local_2.caption = this.getFullLocalizationKey("analysis.top");
                     for each (_local_5 in this._questionIdsForWrongAnswers)
                     {
                         _local_6 = this._answerIds[this._questionIds.indexOf(_local_5)];
@@ -333,7 +333,7 @@
             return (this._questionIds != null) ? this._questionIds.length : 0;
         }
 
-        private function _Str_6820(k:String):String
+        private function getFullLocalizationKey(k:String):String
         {
             return ("${" + this._Str_11458(k)) + "}";
         }
