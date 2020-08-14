@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8659 implements IMessageParser 
+    public class NoOwnedRoomsAlertMessageParser implements IMessageParser
     {
 
 
