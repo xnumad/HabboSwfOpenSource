@@ -84,7 +84,7 @@
     import com.sulake.habbo.communication.messages.parser.friendlist.AcceptFriendResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.HabboSearchResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7276;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_7324;
+    import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteErrorMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7159;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IRegionWindow;
@@ -625,7 +625,7 @@
 
         private function _Str_22762(k:IMessageEvent):void
         {
-            var _local_2:_Str_7324 = (k as _Str_9229).getParser();
+            var _local_2:RoomInviteErrorMessageParser = (k as _Str_9229).getParser();
             var _local_3:String = ((("Received room invite error: errorCode: " + _local_2.errorCode) + ", recipients: ") + Util.arrayToString(_local_2._Str_25393));
             this.simpleAlert("${friendlist.alert.title}", _local_3);
         }
