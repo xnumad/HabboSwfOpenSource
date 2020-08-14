@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class GuideSessionAttachedParser implements IMessageParser 
+    public class GuideSessionAttachedMessageParser implements IMessageParser
     {
         private var _Str_19490:Boolean;
         private var _Str_21721:int;

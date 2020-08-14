@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionCreateMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionOnDutyUpdateMessageComposer;
     import com.sulake.habbo.communication.messages.parser.help.GuideOnDutyStatusMessageParser;
-    import com.sulake.habbo.communication.messages.parser.help.GuideSessionAttachedParser;
+    import com.sulake.habbo.communication.messages.parser.help.GuideSessionAttachedMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionStartedMessageParser;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionEndedMessageParser;
@@ -278,7 +278,7 @@
                 Logger.log("_diposed or no _sessionData");
                 return;
             }
-            var _local_2:GuideSessionAttachedParser = (k.parser as GuideSessionAttachedParser);
+            var _local_2:GuideSessionAttachedMessageParser = (k.parser as GuideSessionAttachedMessageParser);
             if (_local_2._Str_23343)
             {
                 if (this._sessionData._Str_5908())
