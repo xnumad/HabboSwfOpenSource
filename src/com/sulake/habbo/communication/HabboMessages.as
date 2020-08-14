@@ -287,7 +287,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceScriptProceedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.nux.NewUserExperienceGetGiftsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.purse.GetCreditsInfoComposer;
-	import com.sulake.habbo.communication.messages.incoming.bots._Str_16597;
+	import com.sulake.habbo.communication.messages.incoming.bots.BotReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.bots.BotRemovedFromInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.bots._Str_8892;
 	import com.sulake.habbo.communication.messages.incoming.bots._Str_9129;
@@ -1346,7 +1346,7 @@
             INCOMING_PACKETS[3635] = CallForHelpResultMessageEvent;
             INCOMING_PACKETS[3639] = NewUserExperienceNotCompleteEvent;
             INCOMING_PACKETS[3654] = LoadGameMessageEvent;
-            INCOMING_PACKETS[3684] = _Str_16597;
+            INCOMING_PACKETS[3684] = BotReceivedMessageEvent;
             INCOMING_PACKETS[3696] = CameraStorageUrlMessageEvent;
             INCOMING_PACKETS[3712] = GotMysteryBoxPrizeMessageEvent;
             INCOMING_PACKETS[3728] = HotelClosedAndOpensEvent;
