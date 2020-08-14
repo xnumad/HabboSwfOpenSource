@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5791 implements IMessageParser 
+    public class RoomInviteMessageParser implements IMessageParser
     {
         private var _senderId:int;
         private var _messageText:String;

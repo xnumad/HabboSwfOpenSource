@@ -46,7 +46,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestData;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_6189;
     import com.sulake.habbo.friendbar.events.ActiveConversationsCountEvent;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_5791;
+    import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteMessageParser;
     import com.sulake.habbo.communication.messages.parser.game.lobby.GameInviteMessageParser;
     import com.sulake.habbo.gamecenter.GameConfigurations;
     import com.sulake.habbo.communication.messages.parser.friendlist.FriendNotificationMessageParser;
@@ -572,7 +572,7 @@
 
         private function onRoomInvite(k:_Str_4696):void
         {
-            var _local_2:_Str_5791 = k.getParser();
+            var _local_2:RoomInviteMessageParser = k.getParser();
             this._lastMessageSenderId = _local_2.senderId;
             if (((this._habboMessengerComponent) && (!(this._habboMessengerComponent.isOpen()))))
             {

@@ -34,7 +34,7 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_6189;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_5791;
+    import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.InstantMessageErrorMessageParser;
     import com.sulake.habbo.messenger.events.ActiveConversationEvent;
     import com.sulake.core.assets.IAsset;
@@ -239,7 +239,7 @@
 
         private function onRoomInvite(k:_Str_4696):void
         {
-            var _local_2:_Str_5791 = k.getParser();
+            var _local_2:RoomInviteMessageParser = k.getParser();
             if (this._mainView != null)
             {
                 this._mainView.addRoomInvite(_local_2.senderId, _local_2._Str_3460);

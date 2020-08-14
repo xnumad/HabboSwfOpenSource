@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_6189;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_5791;
+    import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteMessageParser;
 
     public class InstantMessageEventHandler implements IDisposable 
     {
@@ -37,7 +37,7 @@
 
         public function onRoomInvite(k:_Str_4696):void
         {
-            var _local_2:_Str_5791 = k.getParser();
+            var _local_2:RoomInviteMessageParser = k.getParser();
             this._component._Str_3977.addItem(_local_2.senderId, "", _local_2._Str_3460);
         }
 
