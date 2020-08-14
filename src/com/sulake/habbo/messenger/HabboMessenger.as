@@ -35,7 +35,7 @@
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_6189;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_5791;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_7091;
+    import com.sulake.habbo.communication.messages.parser.friendlist.InstantMessageErrorMessageParser;
     import com.sulake.habbo.messenger.events.ActiveConversationEvent;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
@@ -260,7 +260,7 @@
 
         private function onInstantMessageError(k:IMessageEvent):void
         {
-            var _local_2:_Str_7091 = (k as _Str_8339).getParser();
+            var _local_2:InstantMessageErrorMessageParser = (k as _Str_8339).getParser();
             if (this._mainView != null)
             {
                 this._mainView.onInstantMessageError(_local_2.userId, _local_2.errorCode, _local_2.message);
