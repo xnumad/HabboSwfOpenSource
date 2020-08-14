@@ -5,7 +5,7 @@
 
     public class _Str_9447 implements IMessageParser 
     {
-        private var _Str_19533:String;
+        private var _infoUrl:String;
 
 
         public function flush():Boolean
@@ -15,13 +15,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_19533 = k.readString();
+            this._infoUrl = k.readString();
             return true;
         }
 
         public function get _Str_23798():String
         {
-            return this._Str_19533;
+            return this._infoUrl;
         }
     }
 }
