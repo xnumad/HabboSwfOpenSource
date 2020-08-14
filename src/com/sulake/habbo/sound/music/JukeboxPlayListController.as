@@ -16,7 +16,7 @@
     import com.sulake.habbo.sound.ISongInfo;
     import com.sulake.habbo.communication.messages.parser.sound._Str_6377;
     import com.sulake.habbo.sound.events.NowPlayingEvent;
-    import com.sulake.habbo.communication.messages.parser.sound._Str_6513;
+    import com.sulake.habbo.communication.messages.parser.sound.JukeboxSongDisksMessageParser;
     import com.sulake.habbo.sound.events.PlayListStatusEvent;
 
     public class JukeboxPlayListController implements IPlayListController 
@@ -179,7 +179,7 @@
             var _local_6:int;
             var _local_7:SongDataEntry;
             var _local_2:_Str_7248 = (k as _Str_7248);
-            var _local_3:_Str_6513 = (_local_2.getParser() as _Str_6513);
+            var _local_3:JukeboxSongDisksMessageParser = (_local_2.getParser() as JukeboxSongDisksMessageParser);
             Logger.log(("Received Jukebox song disks (=playlist) message, length of playlist: " + _local_3._Str_14484.length));
             this._entries = new Array();
             var _local_4:int;

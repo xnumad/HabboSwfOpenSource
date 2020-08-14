@@ -4,12 +4,12 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6513 implements IMessageParser 
+    public class JukeboxSongDisksMessageParser implements IMessageParser
     {
         private var _Str_14708:Map;
         private var _Str_18029:int;
 
-        public function _Str_6513()
+        public function JukeboxSongDisksMessageParser()
         {
             this._Str_14708 = new Map();
         }
