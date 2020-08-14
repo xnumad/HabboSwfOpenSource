@@ -5,24 +5,24 @@
 
     public class _Str_9102 implements IMessageParser 
     {
-        private var _Str_18965:int;
+        private var _acceptanceTimeout:int;
 
 
         public function flush():Boolean
         {
-            this._Str_18965 = -1;
+            this._acceptanceTimeout = -1;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_18965 = k.readInteger();
+            this._acceptanceTimeout = k.readInteger();
             return true;
         }
 
         public function get _Str_23730():int
         {
-            return this._Str_18965;
+            return this._acceptanceTimeout;
         }
     }
 }
