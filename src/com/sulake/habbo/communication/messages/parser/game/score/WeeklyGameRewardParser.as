@@ -4,14 +4,14 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageProductData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8582 implements IMessageParser 
+    public class WeeklyGameRewardParser implements IMessageParser
     {
         private var _gameTypeId:int;
         private var _products:Array;
         private var _Str_17600:int;
         private var _Str_16182:Boolean;
 
-        public function _Str_8582()
+        public function WeeklyGameRewardParser()
         {
             this._products = [];
             super();
