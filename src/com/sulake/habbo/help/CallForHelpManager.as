@@ -30,7 +30,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help._Str_7322;
     import com.sulake.habbo.help.enum.CallForHelpResultEnum;
-    import com.sulake.habbo.communication.messages.parser.help._Str_7865;
+    import com.sulake.habbo.communication.messages.parser.help.IssueCloseNotificationMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.help.DeletePendingCallsForHelpMessageComposer;
 
     public class CallForHelpManager implements IDisposable 
@@ -682,7 +682,7 @@
 
         private function onIssueClose(k:_Str_8337):void
         {
-            var _local_2:_Str_7865 = k.getParser();
+            var _local_2:IssueCloseNotificationMessageParser = k.getParser();
             var _local_3:String = _local_2._Str_3460;
             if (_local_3 == "")
             {
