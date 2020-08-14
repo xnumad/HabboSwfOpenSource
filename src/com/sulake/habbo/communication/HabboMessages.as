@@ -680,7 +680,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionDetachedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_11155;
+	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsDeletedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_16028;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_16338;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_16527;
@@ -1432,7 +1432,7 @@
             INCOMING_PACKETS[758] = OpenConnectionMessageEvent;
             INCOMING_PACKETS[761] = _Str_16789;
             INCOMING_PACKETS[762] = HabboGroupJoinFailedMessageEvent;
-            INCOMING_PACKETS[77] = _Str_11155;
+            INCOMING_PACKETS[77] = CallForHelpPendingCallsDeletedMessageEvent;
             INCOMING_PACKETS[770] = FriendFurniCancelLockMessageEvent;
             INCOMING_PACKETS[780] = YouAreControllerMessageEvent;
             INCOMING_PACKETS[793] = IsFirstLoginOfDayEvent;

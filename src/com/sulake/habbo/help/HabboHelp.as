@@ -41,7 +41,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsEvent;
-    import com.sulake.habbo.communication.messages.incoming.help._Str_11155;
+    import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsDeletedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpDisabledNotifyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
@@ -433,7 +433,7 @@
             this.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
             this.addMessageEvent(new GetGuestRoomResultEvent(this.onGuestRoomResult));
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this.onPendingCallsForHelp));
-            this.addMessageEvent(new _Str_11155(this.onPendingCallsForHelpDeleted));
+            this.addMessageEvent(new CallForHelpPendingCallsDeletedMessageEvent(this.onPendingCallsForHelpDeleted));
             this.addMessageEvent(new CallForHelpDisabledNotifyMessageEvent(this.onCallForHelpDisabledNotify));
             this.addMessageEvent(new _Str_9074(this.onGuideReportingStatus));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
