@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8241;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7736;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.OpenPetPackageRequestedMessageParser;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.events.RoomSessionPetPackageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -25,7 +25,7 @@
 
         private function onOpenPetPackageRequested(k:IMessageEvent):void
         {
-            var _local_2:_Str_7736 = (k as _Str_8382).getParser();
+            var _local_2:OpenPetPackageRequestedMessageParser = (k as _Str_8382).getParser();
             if (_local_2 == null)
             {
                 return;

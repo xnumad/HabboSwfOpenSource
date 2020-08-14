@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetFigureData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7736 implements IMessageParser 
+    public class OpenPetPackageRequestedMessageParser implements IMessageParser
     {
         private var _objectId:int = -1;
         private var _figureData:PetFigureData;
