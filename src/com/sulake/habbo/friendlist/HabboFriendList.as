@@ -85,7 +85,7 @@
     import com.sulake.habbo.communication.messages.parser.friendlist.HabboSearchResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7276;
     import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteErrorMessageParser;
-    import com.sulake.habbo.communication.messages.parser.friendlist._Str_7159;
+    import com.sulake.habbo.communication.messages.parser.friendlist.FollowFriendFailedMessageParser;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
@@ -638,7 +638,7 @@
 
         private function _Str_24032(k:IMessageEvent):void
         {
-            var _local_2:_Str_7159 = (k as _Str_8333).getParser();
+            var _local_2:FollowFriendFailedMessageParser = (k as _Str_8333).getParser();
             var _local_3:String = this._Str_25719(_local_2.errorCode);
             Logger.log(((("Received follow friend failed: " + _local_2.errorCode) + ", ") + _local_3));
             this.simpleAlert("${friendlist.alert.title}", _local_3);
