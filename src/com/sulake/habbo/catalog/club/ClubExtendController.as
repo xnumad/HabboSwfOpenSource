@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5335;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7148;
+    import com.sulake.habbo.communication.messages.parser.catalog.HabboClubExtendOfferMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
     import com.sulake.habbo.window.IHabboWindowManager;
@@ -40,7 +40,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7148 = k.getParser();
+            var _local_2:HabboClubExtendOfferMessageParser = k.getParser();
             this._offer = _local_2.offer();
             this.showConfirmation();
             if (this._catalog.connection)
