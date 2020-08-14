@@ -33,7 +33,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._skillList.push(new _Str_6169(k));
+                this._skillList.push(new BotSkillData(k));
                 _local_3++;
             }
             return true;

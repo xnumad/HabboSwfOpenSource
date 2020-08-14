@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.ui.widget.avatarinfo
 {
     import com.sulake.habbo.ui.widget.events.RoomWidgetRentableBotInfoUpdateEvent;
-    import com.sulake.habbo.communication.messages.parser.room.bots._Str_6169;
+    import com.sulake.habbo.communication.messages.parser.room.bots.BotSkillData;
 
     public class RentableBotInfoData 
     {
@@ -123,7 +123,7 @@
 
         public function _Str_19891(k:Array):void
         {
-            var _local_2:_Str_6169;
+            var _local_2:BotSkillData;
             this._botSkills = new Array();
             for each (_local_2 in k)
             {

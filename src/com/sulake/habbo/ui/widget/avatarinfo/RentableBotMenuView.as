@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.ui.widget.avatarinfo
 {
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.parser.room.bots._Str_6169;
+    import com.sulake.habbo.communication.messages.parser.room.bots.BotSkillData;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotSkillsEnum;
@@ -43,7 +43,7 @@
 
         protected function _Str_2771():void
         {
-            var _local_7:_Str_6169;
+            var _local_7:BotSkillData;
             var _local_8:Array;
             var _local_9:IWindowContainer;
             var _local_10:int;

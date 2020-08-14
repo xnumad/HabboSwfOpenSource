@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6169 
+    public class BotSkillData
     {
         private var _id:int;
         private var _data:String;
 
-        public function _Str_6169(k:IMessageDataWrapper)
+        public function BotSkillData(k:IMessageDataWrapper)
         {
             this.parse(k);
         }
