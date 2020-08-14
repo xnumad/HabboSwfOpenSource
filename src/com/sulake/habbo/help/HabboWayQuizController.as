@@ -81,7 +81,7 @@
             this._habboHelp.sendMessage(new GetQuizQuestionsComposer(HABBO_WAY_QUIZ_CODE));
         }
 
-        public function _Str_14041():void
+        public function showSafetyQuiz():void
         {
             this._habboHelp.sendMessage(new GetQuizQuestionsComposer(SAFETY_QUIZ_CODE));
         }

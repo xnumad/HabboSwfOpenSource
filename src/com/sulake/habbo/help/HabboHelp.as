@@ -368,13 +368,13 @@
             this._habboWayQuizController.showHabboWayQuiz();
         }
 
-        public function _Str_14041():void
+        public function showSafetyQuiz():void
         {
             if (((this._habboWayQuizController == null) || (this._habboWayQuizController.disposed)))
             {
                 this._habboWayQuizController = new HabboWayQuizController(this);
             }
-            this._habboWayQuizController._Str_14041();
+            this._habboWayQuizController.showSafetyQuiz();
         }
 
         public function showTourPopup():void

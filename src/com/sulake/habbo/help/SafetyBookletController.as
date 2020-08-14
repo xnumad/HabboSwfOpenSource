@@ -88,11 +88,11 @@
                     return;
                 case "quiz_button":
                     this._habboHelp.trackGoogle("safetyBooklet", "clickQuiz");
-                    this._habboHelp._Str_14041();
+                    this._habboHelp.showSafetyQuiz();
                     return;
                 case "ok_button":
                     this._habboHelp.trackGoogle("safetyBooklet", "clickOk");
-                    this._habboHelp._Str_14041();
+                    this._habboHelp.showSafetyQuiz();
                     this._habboHelp._Str_21195();
                     return;
             }
