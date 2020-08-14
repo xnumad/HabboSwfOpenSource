@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8673 implements IMessageParser 
+    public class GiftReceiverNotFoundParser implements IMessageParser
     {
 
 
