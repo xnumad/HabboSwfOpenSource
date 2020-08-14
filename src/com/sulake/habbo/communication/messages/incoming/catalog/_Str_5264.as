@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_8365;
+    import com.sulake.habbo.communication.messages.parser.catalog.CatalogPublishedMessageParser;
 
     public class _Str_5264 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_5264(k:Function)
         {
-            super(k, _Str_8365);
+            super(k, CatalogPublishedMessageParser);
         }
 
-        public function getParser():_Str_8365
+        public function getParser():CatalogPublishedMessageParser
         {
-            return this._parser as _Str_8365;
+            return this._parser as CatalogPublishedMessageParser;
         }
 
         public function get _Str_17070():Boolean
