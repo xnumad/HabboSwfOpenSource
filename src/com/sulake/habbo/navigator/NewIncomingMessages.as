@@ -68,7 +68,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator.UserFlatCatsMessageParser;
     import com.sulake.habbo.navigator.mainview.tabpagedecorators.RoomsTabPageDecorator;
     import com.sulake.habbo.communication.messages.parser.navigator.UserEventCatsMessageParser;
-    import com.sulake.habbo.communication.messages.parser.roomsettings._Str_4697;
+    import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.chat.RoomFilterSettingsMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6295;
     import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsSavedMessageParser;
@@ -365,7 +365,7 @@
 
         private function _Str_16485(event:IMessageEvent):void
         {
-            var parser:_Str_4697;
+            var parser:RoomSettingsDataMessageParser;
             try
             {
                 parser = (event as _Str_5993).getParser();

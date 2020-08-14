@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomModerationSettings;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4697 implements IMessageParser 
+    public class RoomSettingsDataMessageParser implements IMessageParser
     {
         private var _roomSettingsData:RoomSettingsData;
 
