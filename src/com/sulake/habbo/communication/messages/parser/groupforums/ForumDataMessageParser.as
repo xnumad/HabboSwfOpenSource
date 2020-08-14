@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9365 implements IMessageParser 
+    public class ForumDataMessageParser implements IMessageParser
     {
         private var _Str_2381:ExtendedForumData;
 
