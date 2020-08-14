@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.QuizDataMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.QuizResultsMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.help.GetQuizQuestionsComposer;
-    import com.sulake.habbo.communication.messages.parser.help._Str_8043;
+    import com.sulake.habbo.communication.messages.parser.help.QuizDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.help._Str_7308;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -88,7 +88,7 @@
 
         private function onQuizData(k:QuizDataMessageEvent):void
         {
-            var _local_2:_Str_8043 = k.getParser();
+            var _local_2:QuizDataMessageParser = k.getParser();
             this._habboHelp._Str_24844();
             this._habboHelp._Str_21195();
             this.showWindow(_local_2._Str_21852, _local_2._Str_25814);
