@@ -364,7 +364,7 @@
         {
         }
 
-        public function _Str_18928():int
+        public function getCurrentlySelectedGame():int
         {
             return this._selectedGame;
         }

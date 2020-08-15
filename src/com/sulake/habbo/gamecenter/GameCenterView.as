@@ -298,7 +298,7 @@
         public function getWeeklyGameRewardInformation(k:IGameRewardListener):void
         {
             this._gameRewardListener = k;
-            this.send(new GetWeeklyGameRewardComposer(k._Str_18928()));
+            this.send(new GetWeeklyGameRewardComposer(k.getCurrentlySelectedGame()));
         }
 
         private function _Str_23350(k:IMessageEvent):void
