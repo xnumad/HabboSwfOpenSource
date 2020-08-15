@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7034 
+    public class AcceptFriendFailureData
     {
         private var _senderId:int;
         private var _errorCode:int;
 
-        public function _Str_7034(k:IMessageDataWrapper)
+        public function AcceptFriendFailureData(k:IMessageDataWrapper)
         {
             this._senderId = k.readInteger();
             this._errorCode = k.readInteger();

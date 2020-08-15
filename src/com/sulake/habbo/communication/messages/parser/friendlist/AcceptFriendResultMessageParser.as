@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.friendlist
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7034;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.AcceptFriendFailureData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class AcceptFriendResultMessageParser implements IMessageParser
@@ -21,7 +21,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_17671.push(new _Str_7034(k));
+                this._Str_17671.push(new AcceptFriendFailureData(k));
                 _local_3++;
             }
             return true;

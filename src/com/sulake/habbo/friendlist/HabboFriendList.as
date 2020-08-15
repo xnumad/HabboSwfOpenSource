@@ -80,7 +80,7 @@
     import com.sulake.habbo.communication.messages.parser.friendlist.FriendRequestsMessageParser;
     import com.sulake.habbo.friendlist.domain.FriendRequest;
     import com.sulake.habbo.communication.messages.parser.friendlist.NewFriendRequestMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7034;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.AcceptFriendFailureData;
     import com.sulake.habbo.communication.messages.parser.friendlist.AcceptFriendResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.HabboSearchResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.MessengerErrorMessageParser;
@@ -578,7 +578,7 @@
 
         private function _Str_22373(k:IMessageEvent):void
         {
-            var _local_3:_Str_7034;
+            var _local_3:AcceptFriendFailureData;
             var _local_2:AcceptFriendResultMessageParser = (k as AcceptFriendResultEvent).getParser();
             for each (_local_3 in _local_2._Str_22533)
             {
