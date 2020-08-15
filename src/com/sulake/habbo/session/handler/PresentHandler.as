@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.session.handler
 {
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9591;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.PresentOpenedMessageEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.communication.messages.parser.room.furniture.PresentOpenedMessageParser;
@@ -17,12 +17,12 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_9591(this.onPresentOpened));
+            k.addMessageEvent(new PresentOpenedMessageEvent(this.onPresentOpened));
         }
 
         private function onPresentOpened(k:IMessageEvent):void
         {
-            var _local_2:PresentOpenedMessageParser = (k as _Str_9591).getParser();
+            var _local_2:PresentOpenedMessageParser = (k as PresentOpenedMessageEvent).getParser();
             if (_local_2 == null)
             {
                 return;

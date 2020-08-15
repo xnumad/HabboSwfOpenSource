@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.furniture.PresentOpenedMessageParser;
 
-    public class _Str_9591 extends MessageEvent implements IMessageEvent 
+    public class PresentOpenedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9591(k:Function)
+        public function PresentOpenedMessageEvent(k:Function)
         {
             super(k, PresentOpenedMessageParser);
         }

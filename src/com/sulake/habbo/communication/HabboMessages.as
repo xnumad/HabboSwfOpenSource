@@ -784,7 +784,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomMessageNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9325;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9362;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9591;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.PresentOpenedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RequestSpamWallPostItMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.*;
 	import com.sulake.habbo.communication.messages.incoming.notifications.HabboAchievementNotificationMessageEvent;
@@ -1404,7 +1404,7 @@
             INCOMING_PACKETS[54] = MarketplaceCanMakeOfferResult;
             INCOMING_PACKETS[546] = _Str_8241;
             INCOMING_PACKETS[558] = HeightMapUpdateMessageEvent;
-            INCOMING_PACKETS[56] = _Str_9591;
+            INCOMING_PACKETS[56] = PresentOpenedMessageEvent;
             INCOMING_PACKETS[563] = CheckUserNameResultMessageEvent;
             INCOMING_PACKETS[566] = FloodControlMessageEvent;
             INCOMING_PACKETS[596] = _Str_7433;
