@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerAddedEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
@@ -110,7 +110,7 @@
         {
             var k:IHabboCommunicationManager = this._navigator.communication;
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatControllerAddedEvent(this._Str_9346)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FriendListUpdateEvent(this.onFriendListUpdate)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new OfficialRoomsEvent(this._Str_16321)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592)));
@@ -435,7 +435,7 @@
 
         private function _Str_9346(k:IMessageEvent):void
         {
-            var _local_2:FlatControllerAddedMessageParser = (k as _Str_6213).getParser();
+            var _local_2:FlatControllerAddedMessageParser = (k as FlatControllerAddedEvent).getParser();
             Logger.log(((((("Flat controller added: " + _local_2.flatId) + ", ") + _local_2.data.userId) + ", ") + _local_2.data.userName));
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_9346(_local_2.flatId, _local_2.data);
         }

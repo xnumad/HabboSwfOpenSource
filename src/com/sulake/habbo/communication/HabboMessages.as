@@ -569,7 +569,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerAddedEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.ShowEnforceRoomCategoryDialogEvent;
 	import com.sulake.habbo.communication.messages.outgoing.help.*;
@@ -1149,7 +1149,7 @@
             INCOMING_PACKETS[2057] = CameraPublishStatusMessageEvent;
             INCOMING_PACKETS[2064] = NoOwnedRoomsAlertMessageEvent;
             INCOMING_PACKETS[207] = IgnoreResultMessageEvent;
-            INCOMING_PACKETS[2088] = _Str_6213;
+            INCOMING_PACKETS[2088] = FlatControllerAddedEvent;
             INCOMING_PACKETS[2101] = PetAddedToInventoryEvent;
             INCOMING_PACKETS[2103] = UnseenItemsEvent;
             INCOMING_PACKETS[2107] = AchievementEvent;

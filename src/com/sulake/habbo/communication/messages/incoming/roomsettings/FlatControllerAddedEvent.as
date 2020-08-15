@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.roomsettings.FlatControllerAddedMessageParser;
 
-    public class _Str_6213 extends MessageEvent implements IMessageEvent 
+    public class FlatControllerAddedEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_6213(k:Function)
+        public function FlatControllerAddedEvent(k:Function)
         {
             super(k, FlatControllerAddedMessageParser);
         }

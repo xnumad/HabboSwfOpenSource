@@ -15,7 +15,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventCancelEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.DoorbellMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerAddedEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
@@ -129,7 +129,7 @@
             _local_2.addHabboConnectionMessageEvent(new RoomEventCancelEvent(this.onRoomEventCancel));
             _local_2.addHabboConnectionMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
             _local_2.addHabboConnectionMessageEvent(new DoorbellMessageEvent(this.onDoorbell));
-            _local_2.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346));
+            _local_2.addHabboConnectionMessageEvent(new FlatControllerAddedEvent(this._Str_9346));
             _local_2.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved));
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907));
@@ -590,7 +590,7 @@
 
         private function _Str_9346(k:IMessageEvent):void
         {
-            var _local_2:FlatControllerAddedMessageParser = (k as _Str_6213).getParser();
+            var _local_2:FlatControllerAddedMessageParser = (k as FlatControllerAddedEvent).getParser();
             Logger.log(((((("Flat controller added: " + _local_2.flatId) + ", ") + _local_2.data.userId) + ", ") + _local_2.data.userName));
             this._navigator.roomSettingsCtrl._Str_9346(_local_2.flatId, _local_2.data);
         }
