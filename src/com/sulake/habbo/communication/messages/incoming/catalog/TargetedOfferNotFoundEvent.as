@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.TargetedOfferNotFoundParser;
 
-    public class _Str_9208 extends MessageEvent implements IMessageEvent 
+    public class TargetedOfferNotFoundEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9208(k:Function)
+        public function TargetedOfferNotFoundEvent(k:Function)
         {
             super(k, TargetedOfferNotFoundParser);
         }

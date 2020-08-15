@@ -423,7 +423,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.VoucherRedeemOkMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftSelectedEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9208;
+	import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferNotFoundEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9560;
 	import com.sulake.habbo.communication.messages.incoming.landingview.votes.CommunityGoalVoteMessageEvent;
@@ -1025,7 +1025,7 @@
             INCOMING_PACKETS[1203] = _Str_9397;
             INCOMING_PACKETS[1210] = _Str_8800;
             INCOMING_PACKETS[122] = CloseConnectionMessageEvent;
-            INCOMING_PACKETS[1237] = _Str_9208;
+            INCOMING_PACKETS[1237] = TargetedOfferNotFoundEvent;
             INCOMING_PACKETS[1243] = AccountSafetyLockStatusChangeMessageEvent;
             INCOMING_PACKETS[1254] = TradingOtherNotAllowedEvent;
             INCOMING_PACKETS[1255] = _Str_8527;

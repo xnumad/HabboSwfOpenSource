@@ -5,7 +5,7 @@
     import com.sulake.habbo.catalog.targetedoffers.util.MallOfferExternalInterfaceHelper;
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_9208;
+    import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferNotFoundEvent;
     import com.sulake.habbo.catalog.purse.PurseUpdateEvent;
     import com.sulake.habbo.communication.messages.outgoing.catalog.GetTargetedOfferComposer;
     import com.sulake.habbo.communication.messages.parser.catalog.TargetedOfferParser;
@@ -35,7 +35,7 @@
         {
             this._catalog = k;
             this._catalog.connection.addMessageEvent(new TargetedOfferEvent(this._Str_25111));
-            this._catalog.connection.addMessageEvent(new _Str_9208(this.onTargetedOfferNotFound));
+            this._catalog.connection.addMessageEvent(new TargetedOfferNotFoundEvent(this.onTargetedOfferNotFound));
             this._catalog.events.addEventListener(PurseUpdateEvent.CATALOG_PURSE_UPDATE, this.onPurseUpdate);
             this._catalog.sessionDataManager.addProductsReadyEventListener(this);
         }
@@ -79,7 +79,7 @@
             }
         }
 
-        private function onTargetedOfferNotFound(k:_Str_9208):void
+        private function onTargetedOfferNotFound(k:TargetedOfferNotFoundEvent):void
         {
             this._externalInterfaceHelper = new MallOfferExternalInterfaceHelper(this);
         }
