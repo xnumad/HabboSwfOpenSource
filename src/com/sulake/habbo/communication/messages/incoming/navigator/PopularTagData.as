@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6625 
+    public class PopularTagData
     {
         private var _tagName:String;
         private var _userCount:int;
 
-        public function _Str_6625(k:IMessageDataWrapper)
+        public function PopularTagData(k:IMessageDataWrapper)
         {
             this._tagName = k.readString();
             this._userCount = k.readInteger();

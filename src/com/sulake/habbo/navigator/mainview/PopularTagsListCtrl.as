@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.navigator.TagRenderer;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_6625;
+    import com.sulake.habbo.communication.messages.incoming.navigator.PopularTagData;
     import com.sulake.habbo.navigator.Util;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.*;
@@ -50,7 +50,7 @@
 
         public function refresh():void
         {
-            var _local_4:_Str_6625;
+            var _local_4:PopularTagData;
             this._tagRenderer._Str_8651 = true;
             var k:Array = this._navigator.data._Str_6697.tags;
             var _local_2:IWindowContainer = IWindowContainer(this._list.getListItemAt(0));
@@ -72,7 +72,7 @@
             this._content.findChildByName("no_tags_found").visible = (k.length < 1);
         }
 
-        private function _Str_26120(k:IWindowContainer, _arg_2:_Str_6625):void
+        private function _Str_26120(k:IWindowContainer, _arg_2:PopularTagData):void
         {
             var _local_3:String = "txt";
             var _local_4:ITextWindow = ITextWindow(k.findChildByName(_local_3));

@@ -16,7 +16,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._tags.push(new _Str_6625(k));
+                this._tags.push(new PopularTagData(k));
                 _local_3++;
             }
         }
