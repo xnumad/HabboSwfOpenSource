@@ -219,7 +219,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorActionResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.UserBannedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.IssueDeletedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
+	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorUserInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9583;
 	import com.sulake.habbo.communication.messages.outgoing.game.score.GetWeeklyGameRewardComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11321;
@@ -1253,7 +1253,7 @@
             INCOMING_PACKETS[2824] = PetLevelUpdateEvent;
             INCOMING_PACKETS[2833] = MysteryBoxKeysMessageEvent;
             INCOMING_PACKETS[286] = PromoArticlesMessageEvent;
-            INCOMING_PACKETS[2866] = _Str_9413;
+            INCOMING_PACKETS[2866] = ModeratorUserInfoEvent;
             INCOMING_PACKETS[2867] = AvatarEffectAddedMessageEvent;
             INCOMING_PACKETS[2873] = TradingNoSuchItemEvent;
             INCOMING_PACKETS[2875] = _Str_5633;

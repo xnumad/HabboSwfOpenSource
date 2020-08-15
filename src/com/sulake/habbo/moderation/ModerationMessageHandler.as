@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorToolPreferencesEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.IssuePickFailedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.IssueDeletedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
+    import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorRoomInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.CfhChatlogEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogEvent;
@@ -73,7 +73,7 @@
             _local_2.addMessageEvent(new ModeratorToolPreferencesEvent(this.onModeratorToolPreferences));
             _local_2.addMessageEvent(new IssuePickFailedMessageEvent(this.onIssuePickFailed));
             _local_2.addMessageEvent(new IssueDeletedMessageEvent(this.onIssueDeleted));
-            _local_2.addMessageEvent(new _Str_9413(this.onUserInfo));
+            _local_2.addMessageEvent(new ModeratorUserInfoEvent(this.onUserInfo));
             _local_2.addMessageEvent(new ModeratorRoomInfoEvent(this.onRoomInfo));
             _local_2.addMessageEvent(new CfhChatlogEvent(this.onCfhChatlog));
             _local_2.addMessageEvent(new UserChatlogEvent(this.onUserChatlog));
@@ -183,7 +183,7 @@
             this._moderationManager.issueManager.removeIssue(_local_2._Str_2869);
         }
 
-        private function onUserInfo(k:_Str_9413):void
+        private function onUserInfo(k:ModeratorUserInfoEvent):void
         {
             var _local_3:IUserInfoListener;
             var _local_2:ModeratorUserInfoMessageParser = k.getParser();
