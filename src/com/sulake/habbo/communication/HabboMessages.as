@@ -359,7 +359,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_17532;
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes.FigureSetIdsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.*;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_16380;
+	import com.sulake.habbo.communication.messages.incoming.navigator.RoomThumbnailUpdateResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
@@ -1127,7 +1127,7 @@
             INCOMING_PACKETS[1907] = PetStatusUpdateEvent;
             INCOMING_PACKETS[1911] = MiniMailNewMessageEvent;
             INCOMING_PACKETS[1924] = PetFigureUpdateEvent;
-            INCOMING_PACKETS[1927] = _Str_16380;
+            INCOMING_PACKETS[1927] = RoomThumbnailUpdateResultEvent;
             INCOMING_PACKETS[195] = DirectSMSClubBuyAvailableMessageEvent;
             INCOMING_PACKETS[1959] = AvatarEffectActivatedMessageEvent;
             INCOMING_PACKETS[1968] = AchievementsScoreEvent;

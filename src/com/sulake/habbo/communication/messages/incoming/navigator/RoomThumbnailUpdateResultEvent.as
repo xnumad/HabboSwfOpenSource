@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.RoomThumbnailUpdateResultMessageParser;
 
-    public class _Str_16380 extends MessageEvent implements IMessageEvent 
+    public class RoomThumbnailUpdateResultEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_16380(k:Function)
+        public function RoomThumbnailUpdateResultEvent(k:Function)
         {
             super(k, RoomThumbnailUpdateResultMessageParser);
         }
