@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5633;
+    import com.sulake.habbo.communication.messages.incoming.navigator.NavigatorSettingsEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.GenericErrorEvent;
@@ -133,7 +133,7 @@
             _local_2.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved));
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5633(this.onNavigatorSettings));
+            _local_2.addHabboConnectionMessageEvent(new NavigatorSettingsEvent(this.onNavigatorSettings));
             _local_2.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647));
             _local_2.addHabboConnectionMessageEvent(new RoomSettingsSaveErrorEvent(this._Str_8265));
             _local_2.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onError));
@@ -403,7 +403,7 @@
             var _local_7:Boolean;
             var _local_8:int;
             var _local_9:Boolean;
-            var _local_2:NavigatorSettingsMessageParser = _Str_5633(k).getParser();
+            var _local_2:NavigatorSettingsMessageParser = NavigatorSettingsEvent(k).getParser();
             Logger.log(("Got navigator settings: " + _local_2.homeRoomId));
             var _local_3:* = (!(this._navigator.data._Str_17024));
             this._navigator.data.homeRoomId = _local_2.homeRoomId;

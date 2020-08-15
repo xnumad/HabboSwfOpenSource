@@ -370,7 +370,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5212;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5633;
+	import com.sulake.habbo.communication.messages.incoming.navigator.NavigatorSettingsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomInfoUpdatedEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.UserFlatCatsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.UserEventCatsEvent;
@@ -1256,7 +1256,7 @@
             INCOMING_PACKETS[2866] = ModeratorUserInfoEvent;
             INCOMING_PACKETS[2867] = AvatarEffectAddedMessageEvent;
             INCOMING_PACKETS[2873] = TradingNoSuchItemEvent;
-            INCOMING_PACKETS[2875] = _Str_5633;
+            INCOMING_PACKETS[2875] = NavigatorSettingsEvent;
             INCOMING_PACKETS[2890] = PhoneCollectionStateMessageEvent;
             INCOMING_PACKETS[2893] = Game2AccountGameStatusMessageEvent;
             INCOMING_PACKETS[2897] = _Str_5752;

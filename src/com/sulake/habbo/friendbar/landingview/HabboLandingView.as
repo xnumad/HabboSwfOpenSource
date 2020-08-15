@@ -45,7 +45,7 @@
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.gamecenter.GameCenterEvent;
     import com.sulake.habbo.catalog.event.CatalogEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5633;
+    import com.sulake.habbo.communication.messages.incoming.navigator.NavigatorSettingsEvent;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
@@ -320,7 +320,7 @@
             }
             else
             {
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_5633(this.onNavigatorSettings));
+                this._communicationManager.addHabboConnectionMessageEvent(new NavigatorSettingsEvent(this.onNavigatorSettings));
             }
         }
 
@@ -332,7 +332,7 @@
             }
         }
 
-        private function onNavigatorSettings(k:_Str_5633):void
+        private function onNavigatorSettings(k:NavigatorSettingsEvent):void
         {
             if (k.getParser()._Str_17213 <= 0)
             {
