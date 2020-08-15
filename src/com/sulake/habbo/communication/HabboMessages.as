@@ -212,7 +212,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.IssuePickFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.CfhChatlogEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8312;
+	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8695;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9065;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9150;
@@ -1139,7 +1139,7 @@
             INCOMING_PACKETS[2018] = ActivityPointsEvent;
             INCOMING_PACKETS[2023] = InClientLinkMessageEvent;
             INCOMING_PACKETS[2024] = TradingItemListEvent;
-            INCOMING_PACKETS[2030] = _Str_8312;
+            INCOMING_PACKETS[2030] = ModeratorMessageEvent;
             INCOMING_PACKETS[2031] = RoomReadyMessageEvent;
             INCOMING_PACKETS[2032] = MarketplaceBuyOfferResultEvent;
             INCOMING_PACKETS[2033] = AvailabilityStatusMessageEvent;

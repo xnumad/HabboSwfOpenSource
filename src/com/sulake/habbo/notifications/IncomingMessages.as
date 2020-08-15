@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_8665;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
     import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_8312;
+    import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.UserBannedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelClosesAndWillOpenAtEvent;
@@ -83,7 +83,7 @@
             this.addMessageEvent(new _Str_8665(this.onBroadcastMessageEvent));
             this.addMessageEvent(new _Str_3660(this.onLevelUp));
             this.addMessageEvent(new ClubGiftNotificationEvent(this.onClubGiftNotification));
-            this.addMessageEvent(new _Str_8312(this.onModMessageEvent));
+            this.addMessageEvent(new ModeratorMessageEvent(this.onModMessageEvent));
             this.addMessageEvent(new HabboActivityPointNotificationMessageEvent(this.onActivityPointNotification));
             this.addMessageEvent(new UserBannedMessageEvent(this.onUserBannedMessageEvent));
             this.addMessageEvent(new HotelClosesAndWillOpenAtEvent(this.onHotelClosed));
@@ -261,7 +261,7 @@
         private function onModMessageEvent(k:IMessageEvent):void
         {
             var _local_3:GenericNotificationItemData;
-            var _local_2:ModeratorMessageParser = (k as _Str_8312).getParser();
+            var _local_2:ModeratorMessageParser = (k as ModeratorMessageEvent).getParser();
             if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
