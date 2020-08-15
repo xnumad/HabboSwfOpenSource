@@ -97,7 +97,7 @@
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7922;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_8016;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_8135;
-	import com.sulake.habbo.communication.messages.incoming.sound._Str_9631;
+	import com.sulake.habbo.communication.messages.incoming.sound.OfficialSongIdMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceItemStatsEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceMakeOfferResult;
@@ -1044,7 +1044,7 @@
             INCOMING_PACKETS[1369] = ItemsEvent;
             INCOMING_PACKETS[1373] = TradingCloseEvent;
             INCOMING_PACKETS[138] = GuideSessionDetachedEvent;
-            INCOMING_PACKETS[1381] = _Str_9631;
+            INCOMING_PACKETS[1381] = OfficialSongIdMessageEvent;
             INCOMING_PACKETS[1404] = PurchaseErrorMessageEvent;
             INCOMING_PACKETS[1411] = YoutubeDisplayVideoMessageEvent;
             INCOMING_PACKETS[143] = ChatReviewSessionStartedMessageEvent;

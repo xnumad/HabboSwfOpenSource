@@ -8,7 +8,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
-    import com.sulake.habbo.communication.messages.incoming.sound._Str_9631;
+    import com.sulake.habbo.communication.messages.incoming.sound.OfficialSongIdMessageEvent;
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.sound.HabboMusicPrioritiesEnum;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
@@ -53,7 +53,7 @@
             this._connection = _arg_2.connection;
             if (((this._connection) && (!(this._officialSongIdListener))))
             {
-                this._officialSongIdListener = new _Str_9631(this._Str_22652);
+                this._officialSongIdListener = new OfficialSongIdMessageEvent(this._Str_22652);
                 this._connection.addMessageEvent(this._officialSongIdListener);
             }
         }
@@ -231,7 +231,7 @@
             }
         }
 
-        private function _Str_22652(k:_Str_9631):void
+        private function _Str_22652(k:OfficialSongIdMessageEvent):void
         {
             if (k.getParser()._Str_25744 == this._officialSongId)
             {
