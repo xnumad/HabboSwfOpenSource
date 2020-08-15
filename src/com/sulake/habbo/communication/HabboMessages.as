@@ -202,7 +202,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17148;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2GameDirectoryStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17782;
-	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_18475;
+	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2UserLeftGameMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2StartingGameFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2AccountGameStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.*;
@@ -1285,7 +1285,7 @@
             INCOMING_PACKETS[3128] = TradingNotOpenEvent;
             INCOMING_PACKETS[3129] = HabboGroupDeactivatedMessageEvent;
             INCOMING_PACKETS[3130] = _Str_3873;
-            INCOMING_PACKETS[3138] = _Str_18475;
+            INCOMING_PACKETS[3138] = Game2UserLeftGameMessageEvent;
             INCOMING_PACKETS[3150] = _Str_7889;
             INCOMING_PACKETS[3151] = FurniListInvalidateEvent;
             INCOMING_PACKETS[3164] = RecyclerPrizesEvent;
