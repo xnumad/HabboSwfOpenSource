@@ -153,7 +153,7 @@
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ForumDataMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8526;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.UpdateMessageMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8905;
+	import com.sulake.habbo.communication.messages.incoming.groupforums.UnreadForumsCountMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ThreadMessagesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ForumsListMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.PostThreadMessageEvent;
@@ -1189,7 +1189,7 @@
             INCOMING_PACKETS[2347] = BundleDiscountRulesetMessageEvent;
             INCOMING_PACKETS[2366] = _Str_9687;
             INCOMING_PACKETS[2376] = _Str_7657;
-            INCOMING_PACKETS[2379] = _Str_8905;
+            INCOMING_PACKETS[2379] = UnreadForumsCountMessageEvent;
             INCOMING_PACKETS[2380] = _Str_8382;
             INCOMING_PACKETS[2392] = YouAreNotControllerMessageEvent;
             INCOMING_PACKETS[2402] = HabboGroupBadgesMessageEvent;

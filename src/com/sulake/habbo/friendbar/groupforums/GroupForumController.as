@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.incoming.groupforums.ForumDataMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9630;
     import com.sulake.habbo.communication.messages.incoming.groupforums.PostThreadMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8905;
+    import com.sulake.habbo.communication.messages.incoming.groupforums.UnreadForumsCountMessageEvent;
     import flash.events.TimerEvent;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadsMessageComposer;
@@ -191,7 +191,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new ForumDataMessageEvent(this._Str_25702));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9630(this.onPostMessageMessage));
             this._communicationManager.addHabboConnectionMessageEvent(new PostThreadMessageEvent(this.onPostThreadMessage));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_8905(this._Str_23952));
+            this._communicationManager.addHabboConnectionMessageEvent(new UnreadForumsCountMessageEvent(this._Str_23952));
             context.addLinkEventTracker(this);
             this._Str_22401();
         }
@@ -779,7 +779,7 @@
             }
         }
 
-        private function _Str_23952(k:_Str_8905):void
+        private function _Str_23952(k:UnreadForumsCountMessageEvent):void
         {
             this._Str_7256(k.getParser()._Str_9052);
         }

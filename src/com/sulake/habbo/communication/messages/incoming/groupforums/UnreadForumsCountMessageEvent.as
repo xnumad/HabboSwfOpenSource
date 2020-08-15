@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.groupforums.UnreadForumsCountMessageParser;
 
-    public class _Str_8905 extends MessageEvent implements IMessageEvent 
+    public class UnreadForumsCountMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8905(k:Function)
+        public function UnreadForumsCountMessageEvent(k:Function)
         {
             super(k, UnreadForumsCountMessageParser);
         }
