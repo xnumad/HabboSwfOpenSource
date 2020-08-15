@@ -3,7 +3,7 @@
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
     import com.sulake.habbo.ui.widget.furniture.rentablespace.RentableSpaceDisplayWidget;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7811;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentOkMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7746;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
@@ -22,7 +22,7 @@
     {
         private var _container:IRoomWidgetHandlerContainer;
         private var _widget:RentableSpaceDisplayWidget;
-        private var _rentableSpaceStatusMessageEvent:_Str_7811;
+        private var _rentableSpaceStatusMessageEvent:RentableSpaceStatusMessageEvent;
         private var _rentableSpaceRentOkMessageEvent:RentableSpaceRentOkMessageEvent;
         private var _rentableSpaceRentFailedMessageEvent:_Str_7746;
 
@@ -40,7 +40,7 @@
         public function set container(k:IRoomWidgetHandlerContainer):void
         {
             this._container = k;
-            this._rentableSpaceStatusMessageEvent = new _Str_7811(this._Str_24112);
+            this._rentableSpaceStatusMessageEvent = new RentableSpaceStatusMessageEvent(this._Str_24112);
             this._container.connection.addMessageEvent(this._rentableSpaceStatusMessageEvent);
             this._rentableSpaceRentOkMessageEvent = new RentableSpaceRentOkMessageEvent(this.onRentableSpaceRentOkMessage);
             this._container.connection.addMessageEvent(this._rentableSpaceRentOkMessageEvent);
@@ -133,7 +133,7 @@
             this._widget._Str_23970(_local_2.reason);
         }
 
-        public function _Str_24112(k:_Str_7811):void
+        public function _Str_24112(k:RentableSpaceStatusMessageEvent):void
         {
             var _local_2:RentableSpaceStatusMessageParser = k.getParser();
             this._widget._Str_23885(_local_2._Str_22736, _local_2._Str_23603, _local_2._Str_25070, _local_2.renterId, _local_2._Str_23275, _local_2._Str_24083, _local_2.price);

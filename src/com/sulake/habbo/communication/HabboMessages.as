@@ -772,7 +772,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7104;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7657;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7746;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7811;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentOkMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomDimmerPresetsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.DiceValueMessageEvent;
@@ -1337,7 +1337,7 @@
             INCOMING_PACKETS[3523] = IdentityAccountsEvent;
             INCOMING_PACKETS[354] = HandItemReceivedMessageEvent;
             INCOMING_PACKETS[3547] = RoomVisualizationSettingsEvent;
-            INCOMING_PACKETS[3559] = _Str_7811;
+            INCOMING_PACKETS[3559] = RentableSpaceStatusMessageEvent;
             INCOMING_PACKETS[3560] = WeeklyCompetitiveFriendsLeaderboardEvent;
             INCOMING_PACKETS[3575] = NewUserExperienceGiftOfferEvent;
             INCOMING_PACKETS[3595] = ThumbnailStatusMessageEvent;
