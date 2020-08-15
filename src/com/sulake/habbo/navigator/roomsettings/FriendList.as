@@ -2,7 +2,7 @@
 {
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendParser;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.FriendsListFragmentMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
@@ -22,7 +22,7 @@
         public function onFriendsListFragment(k:IMessageEvent):void
         {
             var _local_3:FriendParser;
-            var _local_2:FriendsListFragmentMessageParser = (k as _Str_3873).getParser();
+            var _local_2:FriendsListFragmentMessageParser = (k as FriendListFragmentMessageEvent).getParser();
             if (_local_2 == null)
             {
                 return;

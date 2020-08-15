@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestsEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FindFriendsProcessResultEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.GameInviteMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.NewFriendRequestEvent;
@@ -111,7 +111,7 @@
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendRequestsEvent(this._Str_22480));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FindFriendsProcessResultEvent(this._Str_24044));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new RoomInviteEvent(this.onRoomInvite));
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendListFragmentMessageEvent(this.onFriendsListFragment));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new GameInviteMessageEvent(this._Str_25411));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new MessengerInitEvent(this._Str_24730));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new NewFriendRequestEvent(this._Str_16886));
@@ -432,7 +432,7 @@
 
         private function onFriendsListFragment(k:IMessageEvent):void
         {
-            this._Str_25150(_Str_3873(k).getParser().friendFragment);
+            this._Str_25150(FriendListFragmentMessageEvent(k).getParser().friendFragment);
         }
 
         private function onFriendListUpdate(k:IMessageEvent):void

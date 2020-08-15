@@ -544,7 +544,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist.*;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailNewMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailUnreadCountEvent;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.NewFriendRequestEvent;
@@ -1284,7 +1284,7 @@
             INCOMING_PACKETS[3104] = NavigatorLiftedRoomsEvent;
             INCOMING_PACKETS[3128] = TradingNotOpenEvent;
             INCOMING_PACKETS[3129] = HabboGroupDeactivatedMessageEvent;
-            INCOMING_PACKETS[3130] = _Str_3873;
+            INCOMING_PACKETS[3130] = FriendListFragmentMessageEvent;
             INCOMING_PACKETS[3138] = Game2UserLeftGameMessageEvent;
             INCOMING_PACKETS[3150] = _Str_7889;
             INCOMING_PACKETS[3151] = FurniListInvalidateEvent;

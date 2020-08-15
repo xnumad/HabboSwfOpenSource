@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
     import com.sulake.habbo.communication.messages.incoming.room.session.FlatAccessibleMessageEvent;
@@ -120,7 +120,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226));
             _local_2.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch));
             _local_2.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
+            _local_2.addHabboConnectionMessageEvent(new FriendListFragmentMessageEvent(this.onFriendsListFragment));
             _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             _local_2.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344));
             _local_2.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened));

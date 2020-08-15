@@ -32,7 +32,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.MessengerInitMessageComposer;
     import flash.events.TimerEvent;
     import com.sulake.core.communication.messages.IMessageComposer;
@@ -168,7 +168,7 @@
         {
             this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             this._communicationManager.addHabboConnectionMessageEvent(new MessengerInitEvent(this.onMessengerInit));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
+            this._communicationManager.addHabboConnectionMessageEvent(new FriendListFragmentMessageEvent(this.onFriendsListFragment));
             context.addLinkEventTracker(this);
             this.send(new MessengerInitMessageComposer());
         }
@@ -430,7 +430,7 @@
         private function onFriendsListFragment(k:IMessageEvent):void
         {
             var _local_3:FriendParser;
-            var _local_2:FriendsListFragmentMessageParser = (k as _Str_3873).getParser();
+            var _local_2:FriendsListFragmentMessageParser = (k as FriendListFragmentMessageEvent).getParser();
             for each (_local_3 in _local_2.friendFragment)
             {
                 this._Str_5982.push(_local_3);

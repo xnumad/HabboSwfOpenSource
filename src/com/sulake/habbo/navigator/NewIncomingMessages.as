@@ -40,7 +40,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_8029;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5212;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -148,7 +148,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5767(this.onCompetitionData)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatCreatedEvent(this.onFlatCreated)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FriendListFragmentMessageEvent(this.onFriendsListFragment)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_8029(this.onRoomEventCancel)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5212(this._Str_17011)));
         }
