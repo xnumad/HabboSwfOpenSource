@@ -138,7 +138,7 @@
             {
                 this._entryWindow = (WindowUtils.createWindow("game_leaderboard_entry_small_xml") as IWindowContainer);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_8022(this.onWeeklyCompetitiveLeaderboard));
-                this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5142(this._Str_25832));
+                this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5142(this.onWeeklyTopScoresLeaderboard));
                 this._initialized = true;
             }
         }
@@ -182,7 +182,7 @@
             this._Str_17910(this._thisWeekList, _local_2.getParser(), 10, false);
         }
 
-        private function _Str_25832(k:IMessageEvent):void
+        private function onWeeklyTopScoresLeaderboard(k:IMessageEvent):void
         {
             var _local_4:LeaderboardEntry;
             var _local_5:LeaderboardEntry;
