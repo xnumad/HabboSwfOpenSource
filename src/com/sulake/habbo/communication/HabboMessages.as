@@ -898,7 +898,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.PassCarryItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.AvatarExpressionMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.*;
-	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_12022;
+	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectSelectedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectActivatedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectsMessageEvent;
@@ -1327,7 +1327,7 @@
             INCOMING_PACKETS[3434] = _Str_7799;
             INCOMING_PACKETS[3441] = PetSupplementedNotificationEvent;
             INCOMING_PACKETS[3463] = GuideReportingStatusMessageEvent;
-            INCOMING_PACKETS[3473] = _Str_12022;
+            INCOMING_PACKETS[3473] = AvatarEffectSelectedMessageEvent;
             INCOMING_PACKETS[3475] = CreditBalanceEvent;
             INCOMING_PACKETS[3479] = _Str_8029;
             INCOMING_PACKETS[35] = _Str_7104;
