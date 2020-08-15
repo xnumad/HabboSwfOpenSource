@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomRatingEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
+    import com.sulake.habbo.communication.messages.incoming.navigator.UserFlatCatsEvent;
     import com.sulake.habbo.communication.messages.incoming.competition.NoOwnedRoomsAlertMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorLiftedRoomsEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSavedSearchesEvent;
@@ -117,7 +117,7 @@
             this._messageListeners.push(k.connection.addMessageEvent(new _Str_8763(this.onNavigatorPreferences)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSaveErrorEvent(this._Str_8265)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomRatingEvent(this.onRoomRating)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new UserFlatCatsEvent(this._Str_16709)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new NoOwnedRoomsAlertMessageEvent(this.onNoOwnedRoomsAlert)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorLiftedRoomsEvent(this.onNavigatorLiftedRooms)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSavedSearchesEvent(this.onSavedSearches)));
@@ -351,7 +351,7 @@
 
         private function _Str_16709(k:IMessageEvent):void
         {
-            var _local_2:UserFlatCatsMessageParser = (k as _Str_5728).getParser();
+            var _local_2:UserFlatCatsMessageParser = (k as UserFlatCatsEvent).getParser();
             this._navigator.data.categories = _local_2.nodes;
             var _local_3:RoomsTabPageDecorator = RoomsTabPageDecorator(LegacyNavigator(this._navigator.legacyNavigator).tabs.getTab(Tabs.TAB_ROOMS)._Str_5252);
             _local_3._Str_19000();

@@ -37,7 +37,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
+    import com.sulake.habbo.communication.messages.incoming.navigator.UserFlatCatsEvent;
     import com.sulake.habbo.communication.messages.incoming.competition.NoOwnedRoomsAlertMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.UserEventCatsEvent;
@@ -151,7 +151,7 @@
             _local_2.addHabboConnectionMessageEvent(new FriendListUpdateEvent(this.onFriendListUpdate));
             _local_2.addHabboConnectionMessageEvent(new CanCreateRoomMessageEvent(this._Str_25812));
             _local_2.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709));
+            _local_2.addHabboConnectionMessageEvent(new UserFlatCatsEvent(this._Str_16709));
             _local_2.addHabboConnectionMessageEvent(new NoOwnedRoomsAlertMessageEvent(this.onNoOwnedRoomsAlert));
             _local_2.addHabboConnectionMessageEvent(new NoSuchFlatEvent(this.onNoSuchFlat));
             _local_2.addHabboConnectionMessageEvent(new UserEventCatsEvent(this._Str_15947));
@@ -482,7 +482,7 @@
 
         private function _Str_16709(k:IMessageEvent):void
         {
-            var _local_2:UserFlatCatsMessageParser = (k as _Str_5728).getParser();
+            var _local_2:UserFlatCatsMessageParser = (k as UserFlatCatsEvent).getParser();
             this._navigator.data.categories = _local_2.nodes;
             var _local_3:RoomsTabPageDecorator = RoomsTabPageDecorator(this._navigator.tabs.getTab(Tabs.TAB_ROOMS)._Str_5252);
             _local_3._Str_19000();

@@ -372,7 +372,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5212;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5633;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5711;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
+	import com.sulake.habbo.communication.messages.incoming.navigator.UserFlatCatsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.UserEventCatsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsDataMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
@@ -1075,7 +1075,7 @@
             INCOMING_PACKETS[1554] = _Str_9325;
             INCOMING_PACKETS[1555] = RoomSettingsSaveErrorEvent;
             INCOMING_PACKETS[156] = _Str_7323;
-            INCOMING_PACKETS[1562] = _Str_5728;
+            INCOMING_PACKETS[1562] = UserFlatCatsEvent;
             INCOMING_PACKETS[1576] = ModeratorToolPreferencesEvent;
             INCOMING_PACKETS[1587] = NewConsoleMessageEvent;
             INCOMING_PACKETS[159] = FurniListRemoveEvent;
