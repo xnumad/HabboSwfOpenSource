@@ -16,7 +16,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.enum._Str_4387;
     import com.sulake.habbo.utils.FriendlyTime;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_4838;
+    import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfo;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
@@ -262,7 +262,7 @@
 
         private function _Str_24258(k:int):void
         {
-            var _local_2:_Str_4838 = this._relationshipStatusMap.getValue(k);
+            var _local_2:RelationshipStatusInfo = this._relationshipStatusMap.getValue(k);
             var _local_3:String = RelationshipStatusEnum._Str_7401(k);
             var _local_4:IWindow = this._window.findChildByName((_local_3 + "_txt"));
             var _local_5:IWindow = this._window.findChildByName((_local_3 + "_friend_name_link_text"));
@@ -362,7 +362,7 @@
         private function _Str_24644(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:String;
-            var _local_4:_Str_4838;
+            var _local_4:RelationshipStatusInfo;
             var _local_5:int;
             if (k.type != WindowMouseEvent.CLICK)
             {

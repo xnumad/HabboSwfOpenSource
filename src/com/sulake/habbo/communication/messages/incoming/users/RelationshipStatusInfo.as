@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4838 
+    public class RelationshipStatusInfo
     {
         private var _Str_22032:int;
         private var _friendCount:int;
@@ -10,7 +10,7 @@
         private var _Str_21862:String;
         private var _Str_20718:String;
 
-        public function _Str_4838(k:IMessageDataWrapper)
+        public function RelationshipStatusInfo(k:IMessageDataWrapper)
         {
             this._Str_22032 = k.readInteger();
             this._friendCount = k.readInteger();

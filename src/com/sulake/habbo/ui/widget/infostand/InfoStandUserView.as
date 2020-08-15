@@ -20,7 +20,7 @@
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRoomTagSearchMessage;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_4838;
+    import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfo;
     import com.sulake.habbo.friendlist.RelationshipStatusEnum;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetChangeMottoMessage;
@@ -526,7 +526,7 @@
             var _local_2:int;
             var _local_3:String;
             var _local_4:IWindow;
-            var _local_5:_Str_4838;
+            var _local_5:RelationshipStatusInfo;
             var _local_6:String;
             var _local_7:IWindow;
             if (((!(this._border)) || (!(this._widget))))
