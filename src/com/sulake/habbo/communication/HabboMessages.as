@@ -562,7 +562,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.*;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.UserUnbannedFromRoomEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerRemovedEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
@@ -1321,7 +1321,7 @@
             INCOMING_PACKETS[340] = AvatarEffectsMessageEvent;
             INCOMING_PACKETS[3403] = FavoriteMembershipUpdateMessageEvent;
             INCOMING_PACKETS[3406] = _Str_7229;
-            INCOMING_PACKETS[3429] = _Str_5655;
+            INCOMING_PACKETS[3429] = UserUnbannedFromRoomEvent;
             INCOMING_PACKETS[3431] = DiceValueMessageEvent;
             INCOMING_PACKETS[3433] = RecyclerStatusEvent;
             INCOMING_PACKETS[3434] = RoomChatlogEvent;

@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorLiftedRoomsEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSavedSearchesEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.FlatAccessibleMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.UserUnbannedFromRoomEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
     import com.sulake.habbo.communication.messages.incoming.navigator.CategoriesWithVisitorCountEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
@@ -122,7 +122,7 @@
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorLiftedRoomsEvent(this.onNavigatorLiftedRooms)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSavedSearchesEvent(this.onSavedSearches)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new UserUnbannedFromRoomEvent(this.onUserUnbannedFromRoom)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5038(this.onMuteAllEvent)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CategoriesWithVisitorCountEvent(this._Str_18837)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied)));
@@ -456,7 +456,7 @@
 
         private function onUserUnbannedFromRoom(k:IMessageEvent):void
         {
-            var _local_2:UserUnbannedFromRoomParser = (k as _Str_5655).getParser();
+            var _local_2:UserUnbannedFromRoomParser = (k as UserUnbannedFromRoomEvent).getParser();
             Logger.log(((("User was unbanned from room. User Id: " + _local_2.userId) + " Room Id: ") + _local_2.roomId));
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl.onUserUnbannedFromRoom(_local_2.roomId, _local_2.userId);
         }

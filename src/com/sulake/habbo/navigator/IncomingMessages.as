@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.CategoriesWithVisitorCountEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.UserUnbannedFromRoomEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.ConvertedRoomIdEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomForwardMessageEvent;
     import com.sulake.habbo.navigator.domain.NavigatorData;
@@ -158,7 +158,7 @@
             _local_2.addHabboConnectionMessageEvent(new FavouriteChangedEvent(this._Str_16972));
             _local_2.addHabboConnectionMessageEvent(new CategoriesWithVisitorCountEvent(this._Str_18837));
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom));
+            _local_2.addHabboConnectionMessageEvent(new UserUnbannedFromRoomEvent(this.onUserUnbannedFromRoom));
             _local_2.addHabboConnectionMessageEvent(new ConvertedRoomIdEvent(this.onConvertedRoomId));
             _local_2.addHabboConnectionMessageEvent(new RoomForwardMessageEvent(this.onRoomForward));
         }
@@ -611,7 +611,7 @@
 
         private function onUserUnbannedFromRoom(k:IMessageEvent):void
         {
-            var _local_2:UserUnbannedFromRoomParser = (k as _Str_5655).getParser();
+            var _local_2:UserUnbannedFromRoomParser = (k as UserUnbannedFromRoomEvent).getParser();
             Logger.log(((("User was unbanned from room. User Id: " + _local_2.userId) + " Room Id: ") + _local_2.roomId));
             this._navigator.roomSettingsCtrl.onUserUnbannedFromRoom(_local_2.roomId, _local_2.userId);
         }
