@@ -293,7 +293,7 @@
 	import com.sulake.habbo.communication.messages.incoming.bots.BotInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
-	import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
+	import com.sulake.habbo.communication.messages.incoming.talent.TalentTrackLevelMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout.GetOccupiedTilesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout.UpdateFloorPropertiesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout.GetRoomEntryTileMessageComposer;
@@ -1022,7 +1022,7 @@
             INCOMING_PACKETS[119] = TargetedOfferEvent;
             INCOMING_PACKETS[1191] = RoomChatSettingsMessageEvent;
             INCOMING_PACKETS[1200] = GuildMembersEvent;
-            INCOMING_PACKETS[1203] = _Str_9397;
+            INCOMING_PACKETS[1203] = TalentTrackLevelMessageEvent;
             INCOMING_PACKETS[1210] = FindFriendsProcessResultEvent;
             INCOMING_PACKETS[122] = CloseConnectionMessageEvent;
             INCOMING_PACKETS[1237] = TargetedOfferNotFoundEvent;

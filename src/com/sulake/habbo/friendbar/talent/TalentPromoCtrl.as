@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.toolbar.ToolbarDisplayExtensionIds;
-    import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
+    import com.sulake.habbo.communication.messages.incoming.talent.TalentTrackLevelMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.outgoing.talent.GetTalentTrackLevelMessageComposer;
@@ -56,7 +56,7 @@
             {
                 return;
             }
-            this._manager.communicationManager.addHabboConnectionMessageEvent(new _Str_9397(this._Str_23765));
+            this._manager.communicationManager.addHabboConnectionMessageEvent(new TalentTrackLevelMessageEvent(this._Str_23765));
             this._manager.communicationManager.addHabboConnectionMessageEvent(new TalentLevelUpEvent(this._Str_16796));
             this._manager.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
         }
@@ -66,7 +66,7 @@
             this._manager.send(new GetTalentTrackLevelMessageComposer(this._Str_7925));
         }
 
-        private function _Str_23765(k:_Str_9397):void
+        private function _Str_23765(k:TalentTrackLevelMessageEvent):void
         {
             var _local_2:TalentTrackLevelMessageParser = k.getParser();
             if (_local_2.talentTrackName == this._Str_7925)
