@@ -19,7 +19,7 @@
     import com.sulake.iid.IIDHabboLocalizationManager;
     import com.sulake.iid.IIDHabboRoomSessionManager;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
+    import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPublishedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
@@ -168,7 +168,7 @@
         {
             if (this._communicationManager)
             {
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_5264(this.onCatalogPublished));
+                this._communicationManager.addHabboConnectionMessageEvent(new CatalogPublishedMessageEvent(this.onCatalogPublished));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
                 this._communicationManager.addHabboConnectionMessageEvent(new FigureUpdateEvent(this.onFigureUpdate));
@@ -979,7 +979,7 @@
             var _local_3:int;
             var _local_4:int;
             var _local_5:int;
-            var _local_2:_Str_5264 = (k as _Str_5264);
+            var _local_2:CatalogPublishedMessageEvent = (k as CatalogPublishedMessageEvent);
             if (_local_2._Str_12669 != null)
             {
                 this._Str_8546 = _local_2._Str_12669;

@@ -399,7 +399,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_16789;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_17034;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_17379;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
+	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPublishedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
@@ -1117,7 +1117,7 @@
             INCOMING_PACKETS[1840] = _Str_5051;
             INCOMING_PACKETS[1847] = GuideSessionRequesterRoomEvent;
             INCOMING_PACKETS[1862] = _Str_9518;
-            INCOMING_PACKETS[1866] = _Str_5264;
+            INCOMING_PACKETS[1866] = CatalogPublishedMessageEvent;
             INCOMING_PACKETS[1868] = _Str_7746;
             INCOMING_PACKETS[1869] = _Str_5881;
             INCOMING_PACKETS[1876] = GuildMemberFurniCountInHQMessageEvent;
