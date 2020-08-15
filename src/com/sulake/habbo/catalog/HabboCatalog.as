@@ -98,7 +98,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.BundleDiscountRulesetMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPagesListEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
+    import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.SellablePetPalettesMessageEvent;
@@ -560,7 +560,7 @@
             this.addMessageEvent(new BundleDiscountRulesetMessageEvent(this.onBundleDiscountRulesetMessageEvent));
             this.addMessageEvent(new CatalogPagesListEvent(this.onCatalogIndex));
             this.addMessageEvent(new MarketPlaceOffersEvent(this.onMarketPlaceOffers));
-            this.addMessageEvent(new _Str_8504(this.onCatalogPage));
+            this.addMessageEvent(new CatalogPageMessageEvent(this.onCatalogPage));
             this.addMessageEvent(new MarketplaceConfigurationEvent(this.onMarketplaceConfiguration));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             this.addMessageEvent(new SellablePetPalettesMessageEvent(this.onSellablePalettes));
@@ -1778,7 +1778,7 @@
             }
         }
 
-        private function onCatalogPage(k:_Str_8504):void
+        private function onCatalogPage(k:CatalogPageMessageEvent):void
         {
             var _local_11:CatalogPageMessageOfferData;
             var _local_12:Vector.<IProduct>;

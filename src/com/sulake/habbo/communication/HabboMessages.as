@@ -417,7 +417,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.LimitedOfferAppearingNextMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.GiftReceiverNotFoundEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.VoucherRedeemErrorMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
+	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.LimitedEditionSoldOutEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.SellablePetPalettesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.VoucherRedeemOkMessageEvent;
@@ -1437,7 +1437,7 @@
             INCOMING_PACKETS[780] = YouAreControllerMessageEvent;
             INCOMING_PACKETS[793] = IsFirstLoginOfDayEvent;
             INCOMING_PACKETS[800] = TryPhoneNumberResultMessageEvent;
-            INCOMING_PACKETS[804] = _Str_8504;
+            INCOMING_PACKETS[804] = CatalogPageMessageEvent;
             INCOMING_PACKETS[806] = _Str_3660;
             INCOMING_PACKETS[818] = GuildMemberMgmtFailedMessageEvent;
             INCOMING_PACKETS[826] = RemainingMutePeriodEvent;
