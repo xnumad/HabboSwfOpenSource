@@ -95,7 +95,7 @@
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7199;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7248;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7922;
-	import com.sulake.habbo.communication.messages.incoming.sound._Str_8016;
+	import com.sulake.habbo.communication.messages.incoming.sound.NowPlayingMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.PlayListMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.OfficialSongIdMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
@@ -1395,7 +1395,7 @@
             INCOMING_PACKETS[462] = RoomInviteErrorEvent;
             INCOMING_PACKETS[463] = CameraSnapshotMessageEvent;
             INCOMING_PACKETS[468] = RecyclerFinishedEvent;
-            INCOMING_PACKETS[469] = _Str_8016;
+            INCOMING_PACKETS[469] = NowPlayingMessageEvent;
             INCOMING_PACKETS[482] = RoomRatingEvent;
             INCOMING_PACKETS[509] = ThreadMessagesMessageEvent;
             INCOMING_PACKETS[513] = AccountPreferencesEvent;

@@ -6,7 +6,7 @@
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.sound.HabboSoundManagerFlash10;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.sound._Str_8016;
+    import com.sulake.habbo.communication.messages.incoming.sound.NowPlayingMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.sound._Str_7248;
     import com.sulake.habbo.communication.messages.incoming.sound.JukeboxPlayListFullMessageEvent;
     import com.sulake.habbo.sound.events.SoundControllerEvent;
@@ -44,7 +44,7 @@
             this._events = _arg_3;
             this._connection = _arg_4;
             this._messageEvents = [];
-            this._messageEvents.push(new _Str_8016(this._Str_25253));
+            this._messageEvents.push(new NowPlayingMessageEvent(this._Str_25253));
             this._messageEvents.push(new _Str_7248(this._Str_24814));
             this._messageEvents.push(new JukeboxPlayListFullMessageEvent(this._Str_22626));
             for each (_local_5 in this._messageEvents)
@@ -152,7 +152,7 @@
 
         private function _Str_25253(k:IMessageEvent):void
         {
-            var _local_2:_Str_8016 = (k as _Str_8016);
+            var _local_2:NowPlayingMessageEvent = (k as NowPlayingMessageEvent);
             var _local_3:NowPlayingMessageParser = (_local_2.getParser() as NowPlayingMessageParser);
             Logger.log(((((("Received Now Playing message with: " + _local_3._Str_9166) + ", ") + _local_3._Str_17943) + ", ") + _local_3._Str_19692));
             this._isPlaying = (!(_local_3._Str_9166 == -1));
