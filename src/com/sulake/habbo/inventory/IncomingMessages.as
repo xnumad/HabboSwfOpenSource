@@ -68,7 +68,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.furni.FurniListRemoveParser;
     import com.sulake.habbo.communication.messages.parser.inventory.furni.PostItPlacedParser;
-    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5511;
+    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffect;
     import com.sulake.habbo.inventory.effects.Effect;
     import com.sulake.habbo.inventory.effects.EffectsModel;
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect.AvatarEffectsMessageParser;
@@ -291,7 +291,7 @@
 
         public function onAvatarEffects(k:IMessageEvent):void
         {
-            var _local_6:_Str_5511;
+            var _local_6:AvatarEffect;
             var _local_7:Effect;
             if (this._inventory == null)
             {
@@ -311,7 +311,7 @@
             var _local_5:int;
             while (_local_5 < _local_4.length)
             {
-                _local_6 = (_local_4[_local_5] as _Str_5511);
+                _local_6 = (_local_4[_local_5] as AvatarEffect);
                 _local_7 = new Effect();
                 _local_7.type = _local_6.type;
                 _local_7.subType = _local_6.subType;

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.inventory.avatareffect
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5511;
+    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffect;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class AvatarEffectsMessageParser implements IMessageParser
@@ -17,13 +17,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            var _local_4:_Str_5511;
+            var _local_4:AvatarEffect;
             this._effects = new Array();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                _local_4 = new _Str_5511();
+                _local_4 = new AvatarEffect();
                 _local_4.type = k.readInteger();
                 _local_4.subType = k.readInteger();
                 _local_4.duration = k.readInteger();

@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.inventory.avatareffect
 {
-    public class _Str_5511 
+    public class AvatarEffect
     {
         private var _type:int;
         private var _subType:int;
