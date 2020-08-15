@@ -899,7 +899,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.avatar.AvatarExpressionMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.*;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_12022;
-	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5345;
+	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5720;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6450;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
@@ -1169,7 +1169,7 @@
             INCOMING_PACKETS[2219] = NewFriendRequestEvent;
             INCOMING_PACKETS[222] = GameListMessageEvent;
             INCOMING_PACKETS[2221] = SanctionStatusEvent;
-            INCOMING_PACKETS[2228] = _Str_5345;
+            INCOMING_PACKETS[2228] = AvatarEffectExpiredMessageEvent;
             INCOMING_PACKETS[2233] = DanceMessageEvent;
             INCOMING_PACKETS[2234] = GiftWrappingConfigurationEvent;
             INCOMING_PACKETS[2238] = GuildEditorDataMessageEvent;

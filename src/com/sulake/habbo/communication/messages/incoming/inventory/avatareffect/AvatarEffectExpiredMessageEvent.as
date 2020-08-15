@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect.AvatarEffectExpiredMessageParser;
 
-    public class _Str_5345 extends MessageEvent 
+    public class AvatarEffectExpiredMessageEvent extends MessageEvent
     {
-        public function _Str_5345(k:Function)
+        public function AvatarEffectExpiredMessageEvent(k:Function)
         {
             super(k, AvatarEffectExpiredMessageParser);
         }

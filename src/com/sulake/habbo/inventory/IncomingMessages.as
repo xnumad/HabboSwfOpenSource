@@ -52,7 +52,7 @@
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6022;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_8524;
-    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5345;
+    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
@@ -163,7 +163,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_6022(this.onMarketplaceMakeOfferResult));
             this._com.addHabboConnectionMessageEvent(new _Str_3660(this._Str_25294));
             this._com.addHabboConnectionMessageEvent(new _Str_8524(this._Str_25173));
-            this._com.addHabboConnectionMessageEvent(new _Str_5345(this.onAvatarEffectExpired));
+            this._com.addHabboConnectionMessageEvent(new AvatarEffectExpiredMessageEvent(this.onAvatarEffectExpired));
             this._com.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this._com.addHabboConnectionMessageEvent(new _Str_6944(this._Str_18461));
             this._com.addHabboConnectionMessageEvent(new _Str_9047(this._Str_22306));
@@ -390,7 +390,7 @@
             {
                 return;
             }
-            var _local_3:AvatarEffectExpiredMessageParser = (k as _Str_5345).getParser();
+            var _local_3:AvatarEffectExpiredMessageParser = (k as AvatarEffectExpiredMessageEvent).getParser();
             if (_local_3 == null)
             {
                 return;
