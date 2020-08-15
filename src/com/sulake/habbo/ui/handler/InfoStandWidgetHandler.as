@@ -20,7 +20,7 @@
     import com.sulake.habbo.session.events.RoomSessionConfirmPetBreedingEvent;
     import com.sulake.habbo.session.events.RoomSessionConfirmPetBreedingResultEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfo;
+    import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import flash.display.BitmapData;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRoomObjectMessage;
@@ -199,7 +199,7 @@
             {
                 this._groupDetailsMessageEvent = new HabboGroupDetailsMessageEvent(this.onGroupDetails);
                 this._container.connection.addMessageEvent(this._groupDetailsMessageEvent);
-                this._relationshipStatusMessageEvent = new RelationshipStatusInfo(this.onRelationshipStatusEvent);
+                this._relationshipStatusMessageEvent = new RelationshipStatusInfoEvent(this.onRelationshipStatusEvent);
                 this._container.connection.addMessageEvent(this._relationshipStatusMessageEvent);
             }
         }
@@ -1490,7 +1490,7 @@
             }
         }
 
-        private function onRelationshipStatusEvent(k:RelationshipStatusInfo):void
+        private function onRelationshipStatusEvent(k:RelationshipStatusInfoEvent):void
         {
             if (((this._widget) && (this._widget.mainWindow.visible)))
             {

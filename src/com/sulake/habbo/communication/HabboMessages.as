@@ -323,7 +323,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.RoomUserRespect;
 	import com.sulake.habbo.communication.messages.incoming.users.GroupDetailsChangedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfo;
+	import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.HabboGroupBadgesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.IgnoreResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.EmailStatusResultEvent;
@@ -1135,7 +1135,7 @@
             INCOMING_PACKETS[1992] = NotificationDialogMessageEvent;
             INCOMING_PACKETS[2009] = ItemUpdateMessageEvent;
             INCOMING_PACKETS[2012] = PopularRoomTagsResultEvent;
-            INCOMING_PACKETS[2016] = RelationshipStatusInfo;
+            INCOMING_PACKETS[2016] = RelationshipStatusInfoEvent;
             INCOMING_PACKETS[2018] = ActivityPointsEvent;
             INCOMING_PACKETS[2023] = InClientLinkMessageEvent;
             INCOMING_PACKETS[2024] = TradingItemListEvent;

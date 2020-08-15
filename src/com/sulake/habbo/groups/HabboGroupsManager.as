@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupJoinFailedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GroupMembershipRequestedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberMgmtFailedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfo;
+    import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
@@ -169,7 +169,7 @@
             this.addMessageEvent(new HabboGroupJoinFailedMessageEvent(this.onJoinFailed));
             this.addMessageEvent(new GroupMembershipRequestedMessageEvent(this._guildMembersWindowCtrl.onMembershipRequested));
             this.addMessageEvent(new GuildMemberMgmtFailedMessageEvent(this._guildMembersWindowCtrl.onGuildMemberMgmtFailed));
-            this.addMessageEvent(new RelationshipStatusInfo(this.onRelationshipStatusInfo));
+            this.addMessageEvent(new RelationshipStatusInfoEvent(this.onRelationshipStatusInfo));
             this.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails));
             this.addMessageEvent(new FlatCreatedEvent(this.onFlatCreated));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
@@ -525,7 +525,7 @@
 
         private function onRelationshipStatusInfo(k:IMessageEvent):void
         {
-            var _local_2:RelationshipStatusInfo = RelationshipStatusInfo(k);
+            var _local_2:RelationshipStatusInfoEvent = RelationshipStatusInfoEvent(k);
             this._extendedProfileWindowCtrl.onRelationshipStatusInfo(_local_2.userId, _local_2.relationshipStatusMap);
         }
 
