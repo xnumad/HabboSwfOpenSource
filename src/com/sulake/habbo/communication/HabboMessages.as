@@ -16,7 +16,7 @@
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredEffectDataEvent;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredSavedEvent;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredTriggerDataEvent;
-	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_4585;
+	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredRewardResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_7323;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_8791;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSavedSearchesEvent;
@@ -1106,7 +1106,7 @@
             INCOMING_PACKETS[1759] = RoomAdErrorEvent;
             INCOMING_PACKETS[1774] = UseObjectMessageEvent;
             INCOMING_PACKETS[1778] = ObjectsMessageEvent;
-            INCOMING_PACKETS[178] = _Str_4585;
+            INCOMING_PACKETS[178] = WiredRewardResultMessageEvent;
             INCOMING_PACKETS[1787] = ElementPointerMessageEvent;
             INCOMING_PACKETS[1797] = SleepMessageEvent;
             INCOMING_PACKETS[1808] = InterstitialMessageEvent;

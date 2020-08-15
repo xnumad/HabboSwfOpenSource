@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredTriggerDataEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_8791;
-    import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_4585;
+    import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredRewardResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredConditionDataEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredSavedEvent;
@@ -37,7 +37,7 @@
             var _local_2:IHabboCommunicationManager = this._roomEvents.communication;
             this.addMessageEvent(new WiredTriggerDataEvent(this._Str_22337));
             this.addMessageEvent(new _Str_8791(this._Str_24104));
-            this.addMessageEvent(new _Str_4585(this._Str_23600));
+            this.addMessageEvent(new WiredRewardResultMessageEvent(this._Str_23600));
             this.addMessageEvent(new WiredConditionDataEvent(this._Str_23144));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             this.addMessageEvent(new WiredSavedEvent(this._Str_25470));
@@ -96,14 +96,14 @@
 
         private function _Str_23600(k:IMessageEvent):void
         {
-            var _local_2:WiredRewardResultMessageParser = _Str_4585(k).getParser();
-            if (_local_2.reason == _Str_4585._Str_18436)
+            var _local_2:WiredRewardResultMessageParser = WiredRewardResultMessageEvent(k).getParser();
+            if (_local_2.reason == WiredRewardResultMessageEvent._Str_18436)
             {
                 this._roomEvents.windowManager.alert(this._roomEvents.localization.getLocalization("wiredfurni.rewardsuccess.title"), this._roomEvents.localization.getLocalization("wiredfurni.rewardsuccess.body"), 0, null);
             }
             else
             {
-                if (_local_2.reason == _Str_4585._Str_17787)
+                if (_local_2.reason == WiredRewardResultMessageEvent._Str_17787)
                 {
                     this._roomEvents.windowManager.alert(this._roomEvents.localization.getLocalization("wiredfurni.badgereceived.title"), this._roomEvents.localization.getLocalization("wiredfurni.badgereceived.body"), 0, null);
                 }

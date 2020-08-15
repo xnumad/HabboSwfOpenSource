@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.friendbar.landingview.interfaces.elements.IFloatingElement;
     import com.sulake.habbo.communication.messages.incoming.inventory.badges.IsBadgeRequestFulfilledEvent;
-    import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_4585;
+    import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredRewardResultMessageEvent;
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
@@ -25,7 +25,7 @@
                 this._isFloating = (_arg_3[5] == "true");
             }
             k.communicationManager.addHabboConnectionMessageEvent(new IsBadgeRequestFulfilledEvent(this.onInfo));
-            k.communicationManager.addHabboConnectionMessageEvent(new _Str_4585(this._Str_23794));
+            k.communicationManager.addHabboConnectionMessageEvent(new WiredRewardResultMessageEvent(this._Str_23794));
         }
 
         override protected function onClick():void
@@ -53,7 +53,7 @@
             }
         }
 
-        private function _Str_23794(k:_Str_4585):void
+        private function _Str_23794(k:WiredRewardResultMessageEvent):void
         {
             if (window)
             {
