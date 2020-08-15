@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserRemoveMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
+    import com.sulake.habbo.communication.messages.incoming.navigator.DoorbellMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetInfoMessageEvent;
@@ -78,7 +78,7 @@
             k.addMessageEvent(new UsersEvent(this.onUsers));
             k.addMessageEvent(new UserRemoveMessageEvent(this.onUserRemove));
             k.addMessageEvent(new UserBadgesEvent(this.onUserBadges));
-            k.addMessageEvent(new _Str_4129(this.onDoorbell));
+            k.addMessageEvent(new DoorbellMessageEvent(this.onDoorbell));
             k.addMessageEvent(new UserChangeMessageEvent(this.onUserChange));
             k.addMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
             k.addMessageEvent(new PetInfoMessageEvent(this.onPetInfo));
@@ -208,7 +208,7 @@
 
         private function onDoorbell(k:IMessageEvent):void
         {
-            var _local_2:_Str_4129 = (k as _Str_4129);
+            var _local_2:DoorbellMessageEvent = (k as DoorbellMessageEvent);
             if (_local_2 == null)
             {
                 return;

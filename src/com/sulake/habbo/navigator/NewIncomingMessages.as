@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
+    import com.sulake.habbo.communication.messages.incoming.navigator.DoorbellMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
@@ -128,7 +128,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new PopularRoomTagsResultEvent(this._Str_17226)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new DoorbellMessageEvent(this.onDoorbell)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSearchResultBlocksEvent(this.onNavigatorSearchResultBlocks)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved)));
@@ -463,7 +463,7 @@
 
         private function onDoorbell(k:IMessageEvent):void
         {
-            var _local_2:_Str_4129 = (k as _Str_4129);
+            var _local_2:DoorbellMessageEvent = (k as DoorbellMessageEvent);
             if (_local_2 == null)
             {
                 return;

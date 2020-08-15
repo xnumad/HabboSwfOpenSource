@@ -362,7 +362,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomThumbnailUpdateResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
+	import com.sulake.habbo.communication.messages.incoming.navigator.DoorbellMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.CategoriesWithVisitorCountEvent;
@@ -1181,7 +1181,7 @@
             INCOMING_PACKETS[2278] = _Str_12157;
             INCOMING_PACKETS[2293] = _Str_8246;
             INCOMING_PACKETS[230] = QuestMessageEvent;
-            INCOMING_PACKETS[2309] = _Str_4129;
+            INCOMING_PACKETS[2309] = DoorbellMessageEvent;
             INCOMING_PACKETS[2313] = _Str_16135;
             INCOMING_PACKETS[2324] = GamePlayerValueMessageEvent;
             INCOMING_PACKETS[233] = BotRemovedFromInventoryEvent;

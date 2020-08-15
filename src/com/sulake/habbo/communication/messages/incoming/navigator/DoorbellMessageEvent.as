@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.DoorbellMessageParser;
 
-    public class _Str_4129 extends MessageEvent implements IMessageEvent 
+    public class DoorbellMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_4129(k:Function)
+        public function DoorbellMessageEvent(k:Function)
         {
             super(k, DoorbellMessageParser);
         }

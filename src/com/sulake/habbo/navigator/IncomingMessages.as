@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.FavouritesEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventCancelEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
+    import com.sulake.habbo.communication.messages.incoming.navigator.DoorbellMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
@@ -128,7 +128,7 @@
             _local_2.addHabboConnectionMessageEvent(new FavouritesEvent(this._Str_8561));
             _local_2.addHabboConnectionMessageEvent(new RoomEventCancelEvent(this.onRoomEventCancel));
             _local_2.addHabboConnectionMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
-            _local_2.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell));
+            _local_2.addHabboConnectionMessageEvent(new DoorbellMessageEvent(this.onDoorbell));
             _local_2.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346));
             _local_2.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved));
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
@@ -657,7 +657,7 @@
 
         private function onDoorbell(k:IMessageEvent):void
         {
-            var _local_2:_Str_4129 = (k as _Str_4129);
+            var _local_2:DoorbellMessageEvent = (k as DoorbellMessageEvent);
             if (_local_2 == null)
             {
                 return;
