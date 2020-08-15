@@ -102,7 +102,7 @@
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceItemStatsEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceMakeOfferResult;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceBuyOfferResultEvent;
-	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
+	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceCancelOfferResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
@@ -1299,7 +1299,7 @@
             INCOMING_PACKETS[3244] = _Str_5766;
             INCOMING_PACKETS[325] = CfhTopicsInitEvent;
             INCOMING_PACKETS[3253] = _Str_9047;
-            INCOMING_PACKETS[3264] = _Str_6345;
+            INCOMING_PACKETS[3264] = MarketplaceCancelOfferResultEvent;
             INCOMING_PACKETS[3276] = ChatReviewSessionResultsMessageEvent;
             INCOMING_PACKETS[3277] = ScrSendKickbackInfoMessageEvent;
             INCOMING_PACKETS[3284] = InfoFeedEnableMessageEvent;

@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceBuyOfferResultParser;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceCancelOfferResultEvent;
     import com.sulake.habbo.communication.messages.parser.marketplace.MarketplaceCancelOfferResultParser;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
@@ -381,7 +381,7 @@
         public function onCancelResult(event:IMessageEvent):void
         {
             var item:MarketPlaceOfferData;
-            var cancelEvent:_Str_6345 = (event as _Str_6345);
+            var cancelEvent:MarketplaceCancelOfferResultEvent = (event as MarketplaceCancelOfferResultEvent);
             if (event == null)
             {
                 return;

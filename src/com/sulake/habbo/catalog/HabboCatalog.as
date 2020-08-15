@@ -114,7 +114,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceMakeOfferResult;
     import com.sulake.habbo.communication.messages.incoming.catalog.ProductOfferEvent;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceCancelOfferResultEvent;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerStatusEvent;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerPrizesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceItemStatsEvent;
@@ -576,7 +576,7 @@
             this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             this.addMessageEvent(new MarketplaceMakeOfferResult(this.onMarketplaceMakeOfferResult));
             this.addMessageEvent(new ProductOfferEvent(this.onProductOffer));
-            this.addMessageEvent(new _Str_6345(this.onMarketPlaceCancelResult));
+            this.addMessageEvent(new MarketplaceCancelOfferResultEvent(this.onMarketPlaceCancelResult));
             this.addMessageEvent(new RecyclerStatusEvent(this._Str_24950));
             this.addMessageEvent(new RecyclerPrizesEvent(this._Str_23749));
             this.addMessageEvent(new MarketplaceItemStatsEvent(this.onMarketplaceItemStats));
