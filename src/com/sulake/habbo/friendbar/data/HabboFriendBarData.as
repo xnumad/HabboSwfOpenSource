@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendNotificationEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.NewConsoleMessageEvent;
     import com.sulake.habbo.friendlist.events._Str_2948;
     import com.sulake.habbo.friendbar.events.FriendBarUpdateEvent;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
@@ -116,7 +116,7 @@
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new MessengerInitEvent(this._Str_24730));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4841(this._Str_16886));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendNotificationEvent(this._Str_15197));
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4851(this.onNewConsoleMessage));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new NewConsoleMessageEvent(this.onNewConsoleMessage));
             this._habboFriendListComponent.events.addEventListener(_Str_2948.FRE_ACCEPTED, this._Str_14893);
             this._habboFriendListComponent.events.addEventListener(_Str_2948.FRE_DECLINED, this._Str_14893);
         }
@@ -543,7 +543,7 @@
             this._Str_15774(k.requestId);
         }
 
-        private function onNewConsoleMessage(k:_Str_4851):void
+        private function onNewConsoleMessage(k:NewConsoleMessageEvent):void
         {
             var _local_2:NewConsoleMessageMessageParser = k.getParser();
             this._lastMessageSenderId = _local_2.senderId;

@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailUnreadCountEvent;
     import com.sulake.habbo.messenger.events.MiniMailMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.MiniMailUnreadCountMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.NewConsoleMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.InstantMessageErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
     import com.sulake.core.communication.messages.IMessageComposer;
@@ -157,7 +157,7 @@
         private function onMessengerInit(k:IMessageEvent):void
         {
             this._mainView = new MainView(this);
-            this.addMessageEvent(new _Str_4851(this.onNewConsoleMessage));
+            this.addMessageEvent(new NewConsoleMessageEvent(this.onNewConsoleMessage));
             this.addMessageEvent(new InstantMessageErrorEvent(this.onInstantMessageError));
             this.addMessageEvent(new _Str_4696(this.onRoomInvite));
         }
@@ -223,7 +223,7 @@
             return this._localizationManager.getLocalization(k, k);
         }
 
-        private function onNewConsoleMessage(k:_Str_4851):void
+        private function onNewConsoleMessage(k:NewConsoleMessageEvent):void
         {
             var _local_2:NewConsoleMessageMessageParser = k.getParser();
             Logger.log(((("Received console msg: " + _local_2._Str_3460) + ", ") + _local_2.senderId));

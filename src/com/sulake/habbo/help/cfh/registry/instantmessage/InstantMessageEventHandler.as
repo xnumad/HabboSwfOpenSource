@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.help.HabboHelp;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.NewConsoleMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
     import com.sulake.habbo.communication.messages.parser.friendlist.NewConsoleMessageMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteMessageParser;
@@ -14,11 +14,11 @@
         public function InstantMessageEventHandler(k:HabboHelp)
         {
             this._component = k;
-            this._component.addMessageEvent(new _Str_4851(this._Str_24521));
+            this._component.addMessageEvent(new NewConsoleMessageEvent(this._Str_24521));
             this._component.addMessageEvent(new _Str_4696(this.onRoomInvite));
         }
 
-        public function _Str_24521(k:_Str_4851):void
+        public function _Str_24521(k:NewConsoleMessageEvent):void
         {
             var _local_3:String;
             var _local_4:String;

@@ -548,7 +548,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.NewConsoleMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestsEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.AcceptFriendResultEvent;
@@ -1077,7 +1077,7 @@
             INCOMING_PACKETS[156] = _Str_7323;
             INCOMING_PACKETS[1562] = _Str_5728;
             INCOMING_PACKETS[1576] = _Str_9150;
-            INCOMING_PACKETS[1587] = _Str_4851;
+            INCOMING_PACKETS[1587] = NewConsoleMessageEvent;
             INCOMING_PACKETS[159] = FurniListRemoveEvent;
             INCOMING_PACKETS[1591] = GuideSessionAttachedEvent;
             INCOMING_PACKETS[160] = RoomForwardMessageEvent;

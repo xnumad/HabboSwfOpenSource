@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.NewConsoleMessageMessageParser;
 
-    public class _Str_4851 extends MessageEvent implements IMessageEvent 
+    public class NewConsoleMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_4851(k:Function)
+        public function NewConsoleMessageEvent(k:Function)
         {
             super(k, NewConsoleMessageMessageParser);
         }
