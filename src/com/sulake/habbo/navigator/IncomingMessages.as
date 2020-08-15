@@ -35,7 +35,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomRatingEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.UserFlatCatsEvent;
     import com.sulake.habbo.communication.messages.incoming.competition.NoOwnedRoomsAlertMessageEvent;
@@ -149,7 +149,7 @@
             _local_2.addHabboConnectionMessageEvent(new RoomRatingEvent(this.onRoomRating));
             _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new FriendListUpdateEvent(this.onFriendListUpdate));
-            _local_2.addHabboConnectionMessageEvent(new CanCreateRoomMessageEvent(this._Str_25812));
+            _local_2.addHabboConnectionMessageEvent(new CanCreateRoomEvent(this._Str_25812));
             _local_2.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576));
             _local_2.addHabboConnectionMessageEvent(new UserFlatCatsEvent(this._Str_16709));
             _local_2.addHabboConnectionMessageEvent(new NoOwnedRoomsAlertMessageEvent(this.onNoOwnedRoomsAlert));
@@ -560,7 +560,7 @@
         private function _Str_25812(k:IMessageEvent):void
         {
             var _local_3:AlertView;
-            var _local_2:CanCreateRoomMessageParser = (k as CanCreateRoomMessageEvent).getParser();
+            var _local_2:CanCreateRoomMessageParser = (k as CanCreateRoomEvent).getParser();
             Logger.log(((("Can create room: " + _local_2.resultCode) + ", ") + _local_2._Str_20396));
             if (_local_2.resultCode == 0)
             {
