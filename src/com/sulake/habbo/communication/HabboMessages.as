@@ -901,7 +901,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_12022;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5720;
-	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6450;
+	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemsToTradeComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.CloseTradingComposer;
@@ -1318,7 +1318,7 @@
             INCOMING_PACKETS[3388] = ProductOfferEvent;
             INCOMING_PACKETS[339] = YouAreOwnerMessageEvent;
             INCOMING_PACKETS[34] = _Str_7248;
-            INCOMING_PACKETS[340] = _Str_6450;
+            INCOMING_PACKETS[340] = AvatarEffectsMessageEvent;
             INCOMING_PACKETS[3403] = FavoriteMembershipUpdateMessageEvent;
             INCOMING_PACKETS[3406] = _Str_7229;
             INCOMING_PACKETS[3429] = _Str_5655;
