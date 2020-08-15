@@ -799,7 +799,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetLevelNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.UnseenItemsEvent;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9995;
+	import com.sulake.habbo.communication.messages.incoming.notifications.RestoreClientMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.*;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.AcceptFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.DeclineFriendMessageComposer;
@@ -1389,7 +1389,7 @@
             INCOMING_PACKETS[411] = UserRightsMessageEvent;
             INCOMING_PACKETS[416] = _Str_17054;
             INCOMING_PACKETS[420] = GuildMembershipsMessageEvent;
-            INCOMING_PACKETS[426] = _Str_9995;
+            INCOMING_PACKETS[426] = RestoreClientMessageEvent;
             INCOMING_PACKETS[44] = LimitedOfferAppearingNextMessageEvent;
             INCOMING_PACKETS[448] = YouArePlayingGameMessageEvent;
             INCOMING_PACKETS[462] = RoomInviteErrorEvent;

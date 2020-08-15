@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.PetLevelNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomMessageNotificationMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_9995;
+    import com.sulake.habbo.communication.messages.incoming.notifications.RestoreClientMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.AccountSafetyLockStatusChangeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.InfoFeedEnableMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
@@ -93,7 +93,7 @@
             this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
             this.addMessageEvent(new PetLevelNotificationEvent(this.onPetLevelNotification));
             this.addMessageEvent(new RoomMessageNotificationMessageEvent(this.onRoomMessagesNotification));
-            this.addMessageEvent(new _Str_9995(this.onRestoreClientMessageEvent));
+            this.addMessageEvent(new RestoreClientMessageEvent(this.onRestoreClientMessageEvent));
             this.addMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
             this.addMessageEvent(new InfoFeedEnableMessageEvent(this.onInfoFeedEnable));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
