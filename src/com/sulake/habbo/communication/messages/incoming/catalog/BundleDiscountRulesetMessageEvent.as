@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.BundleDiscountRulesetMessageParser;
 
-    public class _Str_7288 extends MessageEvent implements IMessageEvent 
+    public class BundleDiscountRulesetMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7288(k:Function)
+        public function BundleDiscountRulesetMessageEvent(k:Function)
         {
             super(k, BundleDiscountRulesetMessageParser);
         }

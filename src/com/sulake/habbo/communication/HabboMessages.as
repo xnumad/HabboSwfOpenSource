@@ -406,7 +406,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6906;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseNotAllowedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7288;
+	import com.sulake.habbo.communication.messages.incoming.catalog.BundleDiscountRulesetMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.RoomAdPurchaseInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.SeasonalCalendarDailyOfferMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
@@ -1186,7 +1186,7 @@
             INCOMING_PACKETS[2324] = GamePlayerValueMessageEvent;
             INCOMING_PACKETS[233] = BotRemovedFromInventoryEvent;
             INCOMING_PACKETS[2335] = _Str_9341;
-            INCOMING_PACKETS[2347] = _Str_7288;
+            INCOMING_PACKETS[2347] = BundleDiscountRulesetMessageEvent;
             INCOMING_PACKETS[2366] = _Str_9687;
             INCOMING_PACKETS[2376] = _Str_7657;
             INCOMING_PACKETS[2379] = _Str_8905;

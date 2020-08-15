@@ -95,7 +95,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseNotAllowedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_7288;
+    import com.sulake.habbo.communication.messages.incoming.catalog.BundleDiscountRulesetMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPagesListEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
@@ -557,7 +557,7 @@
             this.addMessageEvent(new PurchaseNotAllowedMessageEvent(this.onPurchaseNotAllowed));
             this.addMessageEvent(new GiftWrappingConfigurationEvent(this.onGiftWrappingConfiguration));
             this.addMessageEvent(new PurchaseErrorMessageEvent(this.onPurchaseError));
-            this.addMessageEvent(new _Str_7288(this.onBundleDiscountRulesetMessageEvent));
+            this.addMessageEvent(new BundleDiscountRulesetMessageEvent(this.onBundleDiscountRulesetMessageEvent));
             this.addMessageEvent(new CatalogPagesListEvent(this.onCatalogIndex));
             this.addMessageEvent(new MarketPlaceOffersEvent(this.onMarketPlaceOffers));
             this.addMessageEvent(new _Str_8504(this.onCatalogPage));
@@ -2941,7 +2941,7 @@
             this.send(new GetProductOfferComposer(k));
         }
 
-        private function onBundleDiscountRulesetMessageEvent(k:_Str_7288):void
+        private function onBundleDiscountRulesetMessageEvent(k:BundleDiscountRulesetMessageEvent):void
         {
             var _local_2:BundleDiscountRulesetMessageParser = k.getParser();
             this._bundleDiscountRuleset = _local_2.bundleDiscountRuleset;
