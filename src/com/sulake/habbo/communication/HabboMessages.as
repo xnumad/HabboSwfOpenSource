@@ -551,7 +551,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5641;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7759;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.AcceptFriendResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.HabboSearchResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FollowFriendFailedEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.InstantMessageErrorEvent;
@@ -1449,7 +1449,7 @@
             INCOMING_PACKETS[876] = ExtendedProfileChangedMessageEvent;
             INCOMING_PACKETS[878] = FlatAccessDeniedMessageEvent;
             INCOMING_PACKETS[892] = MessengerErrorEvent;
-            INCOMING_PACKETS[896] = _Str_7759;
+            INCOMING_PACKETS[896] = AcceptFriendResultEvent;
             INCOMING_PACKETS[899] = CantConnectMessageEvent;
             INCOMING_PACKETS[904] = GameInviteMessageEvent;
             INCOMING_PACKETS[909] = _Str_6132;
