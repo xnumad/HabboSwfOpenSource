@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.groupforums.GetForumsListMessageParser;
 
-    public class _Str_9509 extends MessageEvent implements IMessageEvent 
+    public class ForumsListMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9509(k:Function)
+        public function ForumsListMessageEvent(k:Function)
         {
             super(k, GetForumsListMessageParser);
         }

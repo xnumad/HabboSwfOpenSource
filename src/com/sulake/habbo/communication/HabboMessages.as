@@ -155,7 +155,7 @@
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8758;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8905;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9446;
-	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9509;
+	import com.sulake.habbo.communication.messages.incoming.groupforums.ForumsListMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9518;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9630;
 	import com.sulake.core.utils.Map;
@@ -1268,7 +1268,7 @@
             INCOMING_PACKETS[2997] = PollContentsEvent;
             INCOMING_PACKETS[2998] = IsBadgeRequestFulfilledEvent;
             INCOMING_PACKETS[30] = ChatReviewSessionDetachedMessageEvent;
-            INCOMING_PACKETS[3001] = _Str_9509;
+            INCOMING_PACKETS[3001] = ForumsListMessageEvent;
             INCOMING_PACKETS[3005] = CommunityGoalHallOfFameMessageEvent;
             INCOMING_PACKETS[3011] = ForumDataMessageEvent;
             INCOMING_PACKETS[3027] = QuestCancelledMessageEvent;

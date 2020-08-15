@@ -26,7 +26,7 @@
     import com.sulake.iid.IIDHabboTracking;
     import com.sulake.iid.IIDHabboToolbar;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9509;
+    import com.sulake.habbo.communication.messages.incoming.groupforums.ForumsListMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.GuildForumThreadsEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8526;
     import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8758;
@@ -183,7 +183,7 @@
 
         override protected function initComponent():void
         {
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9509(this._Str_22851));
+            this._communicationManager.addHabboConnectionMessageEvent(new ForumsListMessageEvent(this._Str_22851));
             this._communicationManager.addHabboConnectionMessageEvent(new GuildForumThreadsEvent(this._Str_24478));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8526(this.onUpdateThread));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8758(this._parser8));
@@ -301,7 +301,7 @@
             this._communicationManager.connection.send(new GetThreadsMessageComposer(k, _arg_2, ThreadsListData.PAGE_SIZE));
         }
 
-        private function _Str_22851(k:_Str_9509):void
+        private function _Str_22851(k:ForumsListMessageEvent):void
         {
             var _local_2:GetForumsListMessageParser = k.getParser();
             var _local_3:ForumsListData = new ForumsListData(_local_2);
