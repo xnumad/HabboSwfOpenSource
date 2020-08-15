@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NewNavigatorPreferencesParser;
 
-    public class _Str_8763 extends MessageEvent 
+    public class NewNavigatorPreferencesEvent extends MessageEvent
     {
-        public function _Str_8763(k:Function)
+        public function NewNavigatorPreferencesEvent(k:Function)
         {
             super(k, NewNavigatorPreferencesParser);
         }

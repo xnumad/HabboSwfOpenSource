@@ -22,7 +22,7 @@
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSavedSearchesEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorLiftedRoomsEvent;
-	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
+	import com.sulake.habbo.communication.messages.incoming.newnavigator.NewNavigatorPreferencesEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.CollapsedCategoriesEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
 	import com.sulake.habbo.communication.messages.outgoing.quest.FriendRequestQuestCompleteMessageComposer;
@@ -1399,7 +1399,7 @@
             INCOMING_PACKETS[482] = RoomRatingEvent;
             INCOMING_PACKETS[509] = ThreadMessagesMessageEvent;
             INCOMING_PACKETS[513] = AccountPreferencesEvent;
-            INCOMING_PACKETS[518] = _Str_8763;
+            INCOMING_PACKETS[518] = NewNavigatorPreferencesEvent;
             INCOMING_PACKETS[52] = GuestRoomSearchResultEvent;
             INCOMING_PACKETS[54] = MarketplaceCanMakeOfferResult;
             INCOMING_PACKETS[546] = _Str_8241;

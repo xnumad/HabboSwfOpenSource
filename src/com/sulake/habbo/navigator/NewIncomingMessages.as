@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
+    import com.sulake.habbo.communication.messages.incoming.newnavigator.NewNavigatorPreferencesEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomRatingEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.UserFlatCatsEvent;
@@ -114,7 +114,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FriendListUpdateEvent(this.onFriendListUpdate)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new OfficialRoomsEvent(this._Str_16321)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592)));
-            this._messageListeners.push(k.connection.addMessageEvent(new _Str_8763(this.onNavigatorPreferences)));
+            this._messageListeners.push(k.connection.addMessageEvent(new NewNavigatorPreferencesEvent(this.onNavigatorPreferences)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSaveErrorEvent(this._Str_8265)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomRatingEvent(this.onRoomRating)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new UserFlatCatsEvent(this._Str_16709)));
@@ -179,7 +179,7 @@
             this._navigator._Str_23125(k.getParser());
         }
 
-        private function onNavigatorPreferences(k:_Str_8763):void
+        private function onNavigatorPreferences(k:NewNavigatorPreferencesEvent):void
         {
             this._navigator._Str_23415(k.getParser());
         }
