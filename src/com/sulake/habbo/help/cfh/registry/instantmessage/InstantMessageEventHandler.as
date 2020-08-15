@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.help.HabboHelp;
     import com.sulake.habbo.communication.messages.incoming.friendlist.NewConsoleMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.NewConsoleMessageMessageParser;
     import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteMessageParser;
 
@@ -15,7 +15,7 @@
         {
             this._component = k;
             this._component.addMessageEvent(new NewConsoleMessageEvent(this._Str_24521));
-            this._component.addMessageEvent(new _Str_4696(this.onRoomInvite));
+            this._component.addMessageEvent(new RoomInviteEvent(this.onRoomInvite));
         }
 
         public function _Str_24521(k:NewConsoleMessageEvent):void
@@ -35,7 +35,7 @@
             }
         }
 
-        public function onRoomInvite(k:_Str_4696):void
+        public function onRoomInvite(k:RoomInviteEvent):void
         {
             var _local_2:RoomInviteMessageParser = k.getParser();
             this._component.instantMessageRegistry.addItem(_local_2.senderId, "", _local_2._Str_3460);

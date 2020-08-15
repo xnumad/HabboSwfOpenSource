@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.RoomInviteMessageParser;
 
-    public class _Str_4696 extends MessageEvent implements IMessageEvent 
+    public class RoomInviteEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_4696(k:Function)
+        public function RoomInviteEvent(k:Function)
         {
             super(k, RoomInviteMessageParser);
         }

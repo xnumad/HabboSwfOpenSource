@@ -546,7 +546,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailUnreadCountEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.NewFriendRequestEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.NewConsoleMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
@@ -1367,7 +1367,7 @@
             INCOMING_PACKETS[383] = WiredTriggerDataEvent;
             INCOMING_PACKETS[3841] = IsUserPartOfCompetitionMessageEvent;
             INCOMING_PACKETS[3863] = _Str_18906;
-            INCOMING_PACKETS[3870] = _Str_4696;
+            INCOMING_PACKETS[3870] = RoomInviteEvent;
             INCOMING_PACKETS[3878] = InitCameraMessageEvent;
             INCOMING_PACKETS[3884] = MarketPlaceOwnOffersEvent;
             INCOMING_PACKETS[3885] = CompleteDiffieHandshakeEvent;

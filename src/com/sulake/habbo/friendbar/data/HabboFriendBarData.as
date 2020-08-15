@@ -18,7 +18,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestsEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FindFriendsProcessResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.GameInviteMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
@@ -110,7 +110,7 @@
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendRequestsEvent(this._Str_22480));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FindFriendsProcessResultEvent(this._Str_24044));
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4696(this.onRoomInvite));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new RoomInviteEvent(this.onRoomInvite));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new GameInviteMessageEvent(this._Str_25411));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new MessengerInitEvent(this._Str_24730));
@@ -570,7 +570,7 @@
             events.dispatchEvent(new ActiveConversationsCountEvent(k._Str_18689));
         }
 
-        private function onRoomInvite(k:_Str_4696):void
+        private function onRoomInvite(k:RoomInviteEvent):void
         {
             var _local_2:RoomInviteMessageParser = k.getParser();
             this._lastMessageSenderId = _local_2.senderId;
