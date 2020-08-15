@@ -369,7 +369,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5212;
+	import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomEventEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.NavigatorSettingsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomInfoUpdatedEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.UserFlatCatsEvent;
@@ -1215,7 +1215,7 @@
             INCOMING_PACKETS[2568] = TradingAcceptEvent;
             INCOMING_PACKETS[2586] = PerkAllowancesEvent;
             INCOMING_PACKETS[2589] = _Str_8879;
-            INCOMING_PACKETS[2599] = _Str_5212;
+            INCOMING_PACKETS[2599] = CanCreateRoomEventEvent;
             INCOMING_PACKETS[2602] = _Str_7922;
             INCOMING_PACKETS[2621] = _Str_8524;
             INCOMING_PACKETS[2624] = LoadGameUrlMessageEvent;

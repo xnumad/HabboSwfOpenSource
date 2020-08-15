@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomInfoUpdatedEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5212;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomEventEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
@@ -116,7 +116,7 @@
             this._navigator = k;
             var _local_2:IHabboCommunicationManager = this._navigator.communication;
             _local_2.addHabboConnectionMessageEvent(new RoomInfoUpdatedEvent(this._Str_18125));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5212(this._Str_17011));
+            _local_2.addHabboConnectionMessageEvent(new CanCreateRoomEventEvent(this._Str_17011));
             _local_2.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226));
             _local_2.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch));
             _local_2.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied));
@@ -255,7 +255,7 @@
         private function _Str_17011(k:IMessageEvent):void
         {
             var _local_3:SimpleAlertView;
-            var _local_2:CanCreateRoomEventMessageParser = _Str_5212(k).getParser();
+            var _local_2:CanCreateRoomEventMessageParser = CanCreateRoomEventEvent(k).getParser();
             Logger.log(("CAN CREATE EVENT: " + _local_2._Str_13420));
             if (_local_2._Str_13420)
             {

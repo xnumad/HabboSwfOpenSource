@@ -42,7 +42,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventCancelEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5212;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomEventEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SearchResultContainer;
     import com.sulake.habbo.navigator.domain.NavigatorData;
@@ -150,7 +150,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatCreatedEvent(this.onFlatCreated)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FriendListFragmentMessageEvent(this.onFriendsListFragment)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomEventCancelEvent(this.onRoomEventCancel)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5212(this._Str_17011)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new CanCreateRoomEventEvent(this._Str_17011)));
         }
 
         public function removeLegacyMessageListeners():void
@@ -295,7 +295,7 @@
         private function _Str_17011(k:IMessageEvent):void
         {
             var _local_3:SimpleAlertView;
-            var _local_2:CanCreateRoomEventMessageParser = _Str_5212(k).getParser();
+            var _local_2:CanCreateRoomEventMessageParser = CanCreateRoomEventEvent(k).getParser();
             Logger.log(("CAN CREATE EVENT: " + _local_2._Str_13420));
             if (_local_2._Str_13420)
             {
