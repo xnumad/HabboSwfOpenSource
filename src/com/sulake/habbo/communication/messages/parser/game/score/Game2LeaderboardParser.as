@@ -7,14 +7,14 @@
     {
         private var _gameTypeId:int;
         private var _leaderBoard:Array;
-        private var _Str_16831:int;
+        private var _totalListSize:int;
 
 
         public function flush():Boolean
         {
             this._gameTypeId = -1;
             this._leaderBoard = null;
-            this._Str_16831 = -1;
+            this._totalListSize = -1;
             return true;
         }
 
@@ -28,7 +28,7 @@
                 this._leaderBoard.push(new LeaderboardEntry(k));
                 _local_3++;
             }
-            this._Str_16831 = k.readInteger();
+            this._totalListSize = k.readInteger();
             this._gameTypeId = k.readInteger();
             return true;
         }
@@ -45,7 +45,7 @@
 
         public function get _Str_26158():int
         {
-            return this._Str_16831;
+            return this._totalListSize;
         }
     }
 }
