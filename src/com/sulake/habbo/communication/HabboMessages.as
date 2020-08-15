@@ -94,7 +94,7 @@
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeboxPlayListFullMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7199;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7248;
-	import com.sulake.habbo.communication.messages.incoming.sound._Str_7922;
+	import com.sulake.habbo.communication.messages.incoming.sound.UserSongDisksInventoryMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.NowPlayingMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.PlayListMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.OfficialSongIdMessageEvent;
@@ -1216,7 +1216,7 @@
             INCOMING_PACKETS[2586] = PerkAllowancesEvent;
             INCOMING_PACKETS[2589] = QuestionAnsweredEvent;
             INCOMING_PACKETS[2599] = CanCreateRoomEventEvent;
-            INCOMING_PACKETS[2602] = _Str_7922;
+            INCOMING_PACKETS[2602] = UserSongDisksInventoryMessageEvent;
             INCOMING_PACKETS[2621] = GoToBreedingNestFailureEvent;
             INCOMING_PACKETS[2624] = LoadGameUrlMessageEvent;
             INCOMING_PACKETS[2641] = WeeklyGameRewardEvent;
