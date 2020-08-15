@@ -6,7 +6,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.RoomUserRespect;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_8665;
+    import com.sulake.habbo.communication.messages.incoming.notifications.HabboBroadcastMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
     import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorMessageEvent;
@@ -80,7 +80,7 @@
             this._communication = _arg_2;
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
-            this.addMessageEvent(new _Str_8665(this.onBroadcastMessageEvent));
+            this.addMessageEvent(new HabboBroadcastMessageEvent(this.onBroadcastMessageEvent));
             this.addMessageEvent(new _Str_3660(this.onLevelUp));
             this.addMessageEvent(new ClubGiftNotificationEvent(this.onClubGiftNotification));
             this.addMessageEvent(new ModeratorMessageEvent(this.onModMessageEvent));
@@ -389,7 +389,7 @@
 
         private function onBroadcastMessageEvent(k:IMessageEvent):void
         {
-            var _local_2:HabboBroadcastMessageParser = (k as _Str_8665).getParser();
+            var _local_2:HabboBroadcastMessageParser = (k as HabboBroadcastMessageEvent).getParser();
             var _local_3:String = _local_2._Str_3460;
             var _local_4:RegExp = /\\r/g;
             _local_3 = _local_3.replace(_local_4, "\r");

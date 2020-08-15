@@ -795,7 +795,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7321;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8054;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8665;
+	import com.sulake.habbo.communication.messages.incoming.notifications.HabboBroadcastMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetLevelNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.UnseenItemsEvent;
@@ -1360,7 +1360,7 @@
             INCOMING_PACKETS[3783] = FlatAccessibleMessageEvent;
             INCOMING_PACKETS[3785] = PollOfferEvent;
             INCOMING_PACKETS[3796] = CallForHelpReplyMessageEvent;
-            INCOMING_PACKETS[3801] = _Str_8665;
+            INCOMING_PACKETS[3801] = HabboBroadcastMessageEvent;
             INCOMING_PACKETS[3805] = GameStatusMessageEvent;
             INCOMING_PACKETS[382] = FriendFurniOtherLockConfirmedMessageEvent;
             INCOMING_PACKETS[3828] = BuildersClubFurniCountMessageEvent;
