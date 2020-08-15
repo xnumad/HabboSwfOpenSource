@@ -8,7 +8,7 @@
     import com.sulake.habbo.ui.widget.furniture.mysterybox.MysteryBoxToolbarExtension;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.room.events.RoomEngineTriggerWidgetEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8674;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.GuildFurniContextMenuInfoMessageEvent;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
@@ -120,7 +120,7 @@
             this._connection = k;
             if (!this._furniContextMenuInfoListener)
             {
-                this._furniContextMenuInfoListener = new _Str_8674(this.onGuildFurniContextMenuInfo);
+                this._furniContextMenuInfoListener = new GuildFurniContextMenuInfoMessageEvent(this.onGuildFurniContextMenuInfo);
                 this._connection.addMessageEvent(this._furniContextMenuInfoListener);
             }
         }
@@ -252,7 +252,7 @@
             return this._container.roomEngine.getRoomObject(this._container.roomSession.roomId, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
         }
 
-        private function onGuildFurniContextMenuInfo(k:_Str_8674):void
+        private function onGuildFurniContextMenuInfo(k:GuildFurniContextMenuInfoMessageEvent):void
         {
             var _local_2:GuildFurniContextMenuInfoMessageParser;
             var _local_3:IRoomObject;

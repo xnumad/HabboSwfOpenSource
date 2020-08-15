@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.furniture.GuildFurniContextMenuInfoMessageParser;
 
-    public class _Str_8674 extends MessageEvent implements IMessageEvent 
+    public class GuildFurniContextMenuInfoMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8674(k:Function)
+        public function GuildFurniContextMenuInfoMessageEvent(k:Function)
         {
             super(k, GuildFurniContextMenuInfoMessageParser);
         }

@@ -779,7 +779,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8241;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8288;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8382;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8674;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.GuildFurniContextMenuInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayVideoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomMessageNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeControlVideoMessageEvent;
@@ -1305,7 +1305,7 @@
             INCOMING_PACKETS[3284] = InfoFeedEnableMessageEvent;
             INCOMING_PACKETS[3285] = GuideTicketCreationResultMessageEvent;
             INCOMING_PACKETS[3292] = FaqTextMessageEvent;
-            INCOMING_PACKETS[3293] = _Str_8674;
+            INCOMING_PACKETS[3293] = GuildFurniContextMenuInfoMessageEvent;
             INCOMING_PACKETS[3297] = RoomInfoUpdatedEvent;
             INCOMING_PACKETS[3315] = WardrobeMessageEvent;
             INCOMING_PACKETS[3319] = CommunityGoalEarnedPrizesMessageEvent;
