@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.GenericErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomsEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.ShowEnforceRoomCategoryDialogEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerRemovedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsDataMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
@@ -139,7 +139,7 @@
             _local_2.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onError));
             _local_2.addHabboConnectionMessageEvent(new OfficialRoomsEvent(this._Str_16321));
             _local_2.addHabboConnectionMessageEvent(new ShowEnforceRoomCategoryDialogEvent(this.onEnforceRoomCategorySelection));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484));
+            _local_2.addHabboConnectionMessageEvent(new FlatControllerRemovedEvent(this._Str_8484));
             _local_2.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592));
             _local_2.addHabboConnectionMessageEvent(new CompetitionRoomsDataMessageEvent(this.onCompetitionData));
             _local_2.addHabboConnectionMessageEvent(new _Str_5038(this.onMuteAllEvent));
@@ -597,7 +597,7 @@
 
         private function _Str_8484(k:IMessageEvent):void
         {
-            var _local_2:FlatControllerRemovedMessageParser = (k as _Str_5683).getParser();
+            var _local_2:FlatControllerRemovedMessageParser = (k as FlatControllerRemovedEvent).getParser();
             Logger.log(((("Flat controller removed: " + _local_2.flatId) + ", ") + _local_2.userId));
             this._navigator.roomSettingsCtrl._Str_8484(_local_2.flatId, _local_2.userId);
         }

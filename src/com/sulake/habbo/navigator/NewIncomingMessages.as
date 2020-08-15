@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.DoorbellMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerRemovedEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomInfoUpdatedEvent;
@@ -129,7 +129,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new PopularRoomTagsResultEvent(this._Str_17226)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new DoorbellMessageEvent(this.onDoorbell)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatControllerRemovedEvent(this._Str_8484)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSearchResultBlocksEvent(this.onNavigatorSearchResultBlocks)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomInfoUpdatedEvent(this._Str_18125)));
@@ -442,7 +442,7 @@
 
         private function _Str_8484(k:IMessageEvent):void
         {
-            var _local_2:FlatControllerRemovedMessageParser = (k as _Str_5683).getParser();
+            var _local_2:FlatControllerRemovedMessageParser = (k as FlatControllerRemovedEvent).getParser();
             Logger.log(((("Flat controller removed: " + _local_2.flatId) + ", ") + _local_2.userId));
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_8484(_local_2.flatId, _local_2.userId);
         }

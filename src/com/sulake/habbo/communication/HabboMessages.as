@@ -563,7 +563,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerRemovedEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.BannedUsersFromRoomEvent;
@@ -1033,7 +1033,7 @@
             INCOMING_PACKETS[1284] = FlatControllersEvent;
             INCOMING_PACKETS[1301] = FloorHeightMapEvent;
             INCOMING_PACKETS[1304] = FlatCreatedEvent;
-            INCOMING_PACKETS[1327] = _Str_5683;
+            INCOMING_PACKETS[1327] = FlatControllerRemovedEvent;
             INCOMING_PACKETS[133] = CompetitionStatusMessageEvent;
             INCOMING_PACKETS[1331] = ConvertedRoomIdEvent;
             INCOMING_PACKETS[1333] = ModeratorRoomInfoEvent;
