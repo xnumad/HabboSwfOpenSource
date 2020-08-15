@@ -678,7 +678,7 @@
             this._Str_14846(_local_2, k);
         }
 
-        public function _Str_20140(k:String):void
+        public function setGameRewardName(k:String):void
         {
         }
 
