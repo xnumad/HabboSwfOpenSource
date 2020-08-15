@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.game.lobby.UserGameAchievementsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
-    import com.sulake.habbo.communication.messages.incoming.game.score._Str_6994;
+    import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyGameRewardWinnersEvent;
     import com.sulake.habbo.communication.messages.incoming.game.directory.Game2AccountGameStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.GameStatusMessageEvent;
     import com.sulake.habbo.inventory.enum.UnseenItemCategoryEnum;
@@ -213,7 +213,7 @@
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_8191(this._Str_25658));
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5142(this._Str_23128));
                 this._luckyLosersList = (this._gameCenterViewWindow.findChildByName("lucky_losers_list") as IItemListWindow);
-                this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_6994(this._Str_22600));
+                this._gameCenterView.communication.addHabboConnectionMessageEvent(new WeeklyGameRewardWinnersEvent(this._Str_22600));
                 this._gameCenterViewWindow.findChildByName("leaderboard_link").addEventListener(WindowMouseEvent.CLICK, this._Str_20562);
                 this._gameCenterViewWindow.findChildByName("support_link").addEventListener(WindowMouseEvent.CLICK, this._Str_21942);
                 this._gameCenterViewWindow.findChildByName("room_link").addEventListener(WindowMouseEvent.CLICK, this.onRoomLink);
@@ -610,7 +610,7 @@
             var _local_4:IWindowContainer;
             var _local_5:GameRewardWinnerEntry;
             var _local_6:IWindowContainer;
-            var _local_2:_Str_6994 = (k as _Str_6994);
+            var _local_2:WeeklyGameRewardWinnersEvent = (k as WeeklyGameRewardWinnersEvent);
             var _local_3:WeeklyGameRewardWinnersParser = _local_2.getParser();
             if (((this._luckyLosersList) && (_local_3.gameTypeId == this._selectedGame)))
             {

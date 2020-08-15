@@ -176,7 +176,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyLeaderboardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_18906;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
-	import com.sulake.habbo.communication.messages.incoming.game.score._Str_6994;
+	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyGameRewardWinnersEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8022;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
 	import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
@@ -1279,7 +1279,7 @@
             INCOMING_PACKETS[3058] = TradingYouAreNotAllowedEvent;
             INCOMING_PACKETS[3082] = FriendNotificationEvent;
             INCOMING_PACKETS[3086] = BotInventoryEvent;
-            INCOMING_PACKETS[3097] = _Str_6994;
+            INCOMING_PACKETS[3097] = WeeklyGameRewardWinnersEvent;
             INCOMING_PACKETS[3099] = _Str_16667;
             INCOMING_PACKETS[3104] = NavigatorLiftedRoomsEvent;
             INCOMING_PACKETS[3128] = TradingNotOpenEvent;
