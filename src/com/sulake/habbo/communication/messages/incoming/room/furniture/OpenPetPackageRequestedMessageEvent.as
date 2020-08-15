@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.furniture.OpenPetPackageRequestedMessageParser;
 
-    public class _Str_8382 extends MessageEvent implements IMessageEvent 
+    public class OpenPetPackageRequestedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8382(k:Function)
+        public function OpenPetPackageRequestedMessageEvent(k:Function)
         {
             super(k, OpenPetPackageRequestedMessageParser);
         }

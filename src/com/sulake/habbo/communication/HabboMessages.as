@@ -778,7 +778,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8183;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8241;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8288;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8382;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.OpenPetPackageRequestedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.GuildFurniContextMenuInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayVideoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomMessageNotificationMessageEvent;
@@ -1190,7 +1190,7 @@
             INCOMING_PACKETS[2366] = RequestSpamWallPostItMessageEvent;
             INCOMING_PACKETS[2376] = _Str_7657;
             INCOMING_PACKETS[2379] = UnreadForumsCountMessageEvent;
-            INCOMING_PACKETS[2380] = _Str_8382;
+            INCOMING_PACKETS[2380] = OpenPetPackageRequestedMessageEvent;
             INCOMING_PACKETS[2392] = YouAreNotControllerMessageEvent;
             INCOMING_PACKETS[2402] = HabboGroupBadgesMessageEvent;
             INCOMING_PACKETS[2405] = HabboClubOffersMessageEvent;

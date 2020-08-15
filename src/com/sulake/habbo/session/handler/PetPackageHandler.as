@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.session.handler
 {
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8382;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.OpenPetPackageRequestedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8241;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
@@ -19,13 +19,13 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_8382(this.onOpenPetPackageRequested));
+            k.addMessageEvent(new OpenPetPackageRequestedMessageEvent(this.onOpenPetPackageRequested));
             k.addMessageEvent(new _Str_8241(this.onOpenPetPackageResult));
         }
 
         private function onOpenPetPackageRequested(k:IMessageEvent):void
         {
-            var _local_2:OpenPetPackageRequestedMessageParser = (k as _Str_8382).getParser();
+            var _local_2:OpenPetPackageRequestedMessageParser = (k as OpenPetPackageRequestedMessageEvent).getParser();
             if (_local_2 == null)
             {
                 return;
