@@ -45,7 +45,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOpenParser;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgeReceivedEvent;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceItemStatsEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9259;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
@@ -156,7 +156,7 @@
             this._com.addHabboConnectionMessageEvent(new TradingOpenEvent(this._Str_22556, TradingOpenParser));
             this._com.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             this._com.addHabboConnectionMessageEvent(new BadgeReceivedEvent(this._Str_23620));
-            this._com.addHabboConnectionMessageEvent(new _Str_5946(this.onMarketplaceItemStats));
+            this._com.addHabboConnectionMessageEvent(new MarketplaceItemStatsEvent(this.onMarketplaceItemStats));
             this._com.addHabboConnectionMessageEvent(new AvatarEffectsMessageEvent(this.onAvatarEffects));
             this._com.addHabboConnectionMessageEvent(new _Str_9259(this._Str_24135));
             this._com.addHabboConnectionMessageEvent(new FurniListAddOrUpdateEvent(this._Str_23121));
@@ -919,7 +919,7 @@
             _local_2.endOfferMaking(_local_3.result);
         }
 
-        private function onMarketplaceItemStats(k:_Str_5946):void
+        private function onMarketplaceItemStats(k:MarketplaceItemStatsEvent):void
         {
             if (((k == null) || (this._inventory == null)))
             {

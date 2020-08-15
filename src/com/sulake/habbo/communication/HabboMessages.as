@@ -99,7 +99,7 @@
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_8135;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_9631;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
-	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
+	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceItemStatsEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6022;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
@@ -1425,7 +1425,7 @@
             INCOMING_PACKETS[69] = BotSkillListUpdateEvent;
             INCOMING_PACKETS[714] = VoucherRedeemErrorMessageEvent;
             INCOMING_PACKETS[717] = BadgesEvent;
-            INCOMING_PACKETS[725] = _Str_5946;
+            INCOMING_PACKETS[725] = MarketplaceItemStatsEvent;
             INCOMING_PACKETS[735] = ChatReviewSessionOfferedToGuideMessageEvent;
             INCOMING_PACKETS[740] = AchievementResolutionCompletedMessageEvent;
             INCOMING_PACKETS[749] = RoomEntryInfoMessageEvent;

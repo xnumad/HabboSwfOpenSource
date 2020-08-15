@@ -117,7 +117,7 @@
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerStatusEvent;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerPrizesEvent;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceItemStatsEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubExtendOfferMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
@@ -579,7 +579,7 @@
             this.addMessageEvent(new _Str_6345(this.onMarketPlaceCancelResult));
             this.addMessageEvent(new RecyclerStatusEvent(this._Str_24950));
             this.addMessageEvent(new RecyclerPrizesEvent(this._Str_23749));
-            this.addMessageEvent(new _Str_5946(this.onMarketplaceItemStats));
+            this.addMessageEvent(new MarketplaceItemStatsEvent(this.onMarketplaceItemStats));
             this.addMessageEvent(new NotEnoughBalanceMessageEvent(this.onNotEnoughBalance));
             this.addMessageEvent(new HabboClubExtendOfferMessageEvent(this.onHabboClubExtendOffer));
             this.addMessageEvent(new BuildersClubFurniCountMessageEvent(this.onBuildersClubFurniCount));
@@ -2184,7 +2184,7 @@
             this._giftWrappingConfiguration = new GiftWrappingConfiguration(k);
         }
 
-        private function onMarketplaceItemStats(k:_Str_5946):void
+        private function onMarketplaceItemStats(k:MarketplaceItemStatsEvent):void
         {
             if (((!(k)) || (!(this._marketplace))))
             {
