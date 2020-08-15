@@ -4,7 +4,7 @@
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8288;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.WelcomeGiftStatusEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8246;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7719;
     import com.sulake.habbo.ui.widget.events._Str_5438;
@@ -59,7 +59,7 @@
                 return;
             }
             this._messageEvents = [];
-            this._messageEvents.push(new _Str_8288(this._Str_23237));
+            this._messageEvents.push(new WelcomeGiftStatusEvent(this._Str_23237));
             this._messageEvents.push(new _Str_8246(this.onChangeEmailResult));
             for each (k in this._messageEvents)
             {
@@ -82,7 +82,7 @@
             this._messageEvents = null;
         }
 
-        private function _Str_23237(k:_Str_8288):void
+        private function _Str_23237(k:WelcomeGiftStatusEvent):void
         {
             var _local_2:_Str_7719 = k.getParser();
             var _local_3:_Str_5438 = new _Str_5438();

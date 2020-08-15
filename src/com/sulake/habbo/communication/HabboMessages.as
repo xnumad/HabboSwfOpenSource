@@ -777,7 +777,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomDimmerPresetsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8183;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8241;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8288;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.WelcomeGiftStatusEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.OpenPetPackageRequestedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.GuildFurniContextMenuInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayVideoMessageEvent;
@@ -1229,7 +1229,7 @@
             INCOMING_PACKETS[2696] = ModeratorInitMessageEvent;
             INCOMING_PACKETS[2703] = ObjectRemoveMessageEvent;
             INCOMING_PACKETS[2704] = WhisperMessageEvent;
-            INCOMING_PACKETS[2707] = _Str_8288;
+            INCOMING_PACKETS[2707] = WelcomeGiftStatusEvent;
             INCOMING_PACKETS[2710] = RoomDimmerPresetsEvent;
             INCOMING_PACKETS[2720] = TradingConfirmationEvent;
             INCOMING_PACKETS[2725] = UserObjectEvent;
