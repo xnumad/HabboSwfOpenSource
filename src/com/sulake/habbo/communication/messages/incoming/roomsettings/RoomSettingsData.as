@@ -207,7 +207,7 @@
             this._tags = k;
         }
 
-        public function _Str_17474(k:int, _arg_2:_Str_4114):void
+        public function _Str_17474(k:int, _arg_2:FlatControllerData):void
         {
             if (this._controllersById != null)
             {
@@ -241,7 +241,7 @@
         {
             var k:String;
             var _local_2:int;
-            var _local_3:_Str_4114;
+            var _local_3:FlatControllerData;
             if (this._controllerList == null)
             {
                 this._controllerList = new Array();

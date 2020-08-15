@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4114 implements _Str_4633 
+    public class FlatControllerData implements _Str_4633
     {
         private var _userId:int;
         private var _userName:String;
         private var _selected:Boolean;
 
-        public function _Str_4114(k:IMessageDataWrapper)
+        public function FlatControllerData(k:IMessageDataWrapper)
         {
             this._userId = k.readInteger();
             this._userName = k.readString();

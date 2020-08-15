@@ -1,13 +1,13 @@
 ﻿package com.sulake.habbo.communication.messages.parser.roomsettings
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4114;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class FlatControllerAddedMessageParser implements IMessageParser
     {
         private var _flatId:int;
-        private var _data:_Str_4114;
+        private var _data:FlatControllerData;
 
 
         public function flush():Boolean
@@ -18,7 +18,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._flatId = k.readInteger();
-            this._data = new _Str_4114(k);
+            this._data = new FlatControllerData(k);
             return true;
         }
 
@@ -27,7 +27,7 @@
             return this._flatId;
         }
 
-        public function get data():_Str_4114
+        public function get data():FlatControllerData
         {
             return this._data;
         }
