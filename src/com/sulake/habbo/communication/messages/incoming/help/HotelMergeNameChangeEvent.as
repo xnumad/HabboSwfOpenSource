@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.HotelMergeNameChangeParser;
 
-    public class _Str_17947 extends MessageEvent implements IMessageEvent 
+    public class HotelMergeNameChangeEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_17947(k:Function)
+        public function HotelMergeNameChangeEvent(k:Function)
         {
             super(k, HotelMergeNameChangeParser);
         }

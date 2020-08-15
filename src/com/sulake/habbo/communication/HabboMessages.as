@@ -684,7 +684,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.FaqCategoryMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_16338;
 	import com.sulake.habbo.communication.messages.incoming.help.FaqTextMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_17947;
+	import com.sulake.habbo.communication.messages.incoming.help.HotelMergeNameChangeEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_18296;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_18853;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpResultMessageEvent;
@@ -1090,7 +1090,7 @@
             INCOMING_PACKETS[1640] = UserUpdateEvent;
             INCOMING_PACKETS[1651] = CallForHelpDisabledNotifyMessageEvent;
             INCOMING_PACKETS[1660] = _Str_16258;
-            INCOMING_PACKETS[1663] = _Str_17947;
+            INCOMING_PACKETS[1663] = HotelMergeNameChangeEvent;
             INCOMING_PACKETS[1664] = RoomEntryTileMessageEvent;
             INCOMING_PACKETS[1683] = UserBannedMessageEvent;
             INCOMING_PACKETS[1689] = GameAchievementsMessageEvent;
