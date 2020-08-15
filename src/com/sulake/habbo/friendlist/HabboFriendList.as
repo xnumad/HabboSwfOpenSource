@@ -67,7 +67,7 @@
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FollowFriendFailedEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5641;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestsEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
     import com.sulake.habbo.communication.messages.incoming.friendlist.AcceptFriendResultEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerErrorEvent;
@@ -528,7 +528,7 @@
         {
             this._communicationManager.addHabboConnectionMessageEvent(new FollowFriendFailedEvent(this._Str_24032));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_5641(this._Str_24954));
+            this._communicationManager.addHabboConnectionMessageEvent(new FriendRequestsEvent(this._Str_24954));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_4841(this._Str_16886));
             this._communicationManager.addHabboConnectionMessageEvent(new AcceptFriendResultEvent(this._Str_22373));
             this._communicationManager.addHabboConnectionMessageEvent(new MessengerErrorEvent(this._Str_23472));
@@ -552,7 +552,7 @@
         private function _Str_24954(k:IMessageEvent):void
         {
             var _local_3:FriendRequestData;
-            var _local_2:FriendRequestsMessageParser = (k as _Str_5641).getParser();
+            var _local_2:FriendRequestsMessageParser = (k as FriendRequestsEvent).getParser();
             this._friendRequests._Str_20199(false);
             for each (_local_3 in _local_2._Str_17539)
             {

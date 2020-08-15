@@ -550,7 +550,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5641;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestsEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.AcceptFriendResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.HabboSearchResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FollowFriendFailedEvent;
@@ -1243,7 +1243,7 @@
             INCOMING_PACKETS[2782] = CfhSanctionMessageEvent;
             INCOMING_PACKETS[2783] = CameraPurchaseOKMessageEvent;
             INCOMING_PACKETS[2788] = PetRespectNotificationEvent;
-            INCOMING_PACKETS[280] = _Str_5641;
+            INCOMING_PACKETS[280] = FriendRequestsEvent;
             INCOMING_PACKETS[2800] = _Str_4035;
             INCOMING_PACKETS[2803] = MiniMailUnreadCountEvent;
             INCOMING_PACKETS[2808] = GuildCreatedMessageEvent;

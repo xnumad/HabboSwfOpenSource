@@ -16,7 +16,7 @@
     import com.sulake.iid.IIDHabboTracking;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5641;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestsEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FindFriendsProcessResultEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
@@ -108,7 +108,7 @@
         override protected function initComponent():void
         {
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_5641(this._Str_22480));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendRequestsEvent(this._Str_22480));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FindFriendsProcessResultEvent(this._Str_24044));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4696(this.onRoomInvite));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
@@ -523,7 +523,7 @@
             }
         }
 
-        private function _Str_22480(k:_Str_5641):void
+        private function _Str_22480(k:FriendRequestsEvent):void
         {
             var _local_2:Array;
             var _local_3:FriendRequestData;
