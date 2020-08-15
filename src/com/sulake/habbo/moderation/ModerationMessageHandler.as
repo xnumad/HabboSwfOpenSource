@@ -3,7 +3,7 @@
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.communication.messages.incoming.moderation.IssueInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorInitMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_9150;
+    import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorToolPreferencesEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.IssuePickFailedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9383;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
@@ -70,7 +70,7 @@
             var _local_2:IConnection = k.connection;
             _local_2.addMessageEvent(new IssueInfoMessageEvent(this.onIssueInfo));
             _local_2.addMessageEvent(new ModeratorInitMessageEvent(this.onModeratorInit));
-            _local_2.addMessageEvent(new _Str_9150(this.onModeratorToolPreferences));
+            _local_2.addMessageEvent(new ModeratorToolPreferencesEvent(this.onModeratorToolPreferences));
             _local_2.addMessageEvent(new IssuePickFailedMessageEvent(this.onIssuePickFailed));
             _local_2.addMessageEvent(new _Str_9383(this.onIssueDeleted));
             _local_2.addMessageEvent(new _Str_9413(this.onUserInfo));
@@ -127,7 +127,7 @@
             this._moderationManager.startPanel.show();
         }
 
-        private function onModeratorToolPreferences(k:_Str_9150):void
+        private function onModeratorToolPreferences(k:ModeratorToolPreferencesEvent):void
         {
             var _local_2:ModeratorToolPreferencesMessageParser;
             if (((this._moderationManager) && (this._moderationManager.issueManager)))

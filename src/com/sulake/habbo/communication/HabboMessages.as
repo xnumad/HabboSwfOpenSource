@@ -215,7 +215,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorRoomInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.IssueInfoMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9150;
+	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorToolPreferencesEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
 	import com.sulake.habbo.communication.messages.incoming.moderation.UserBannedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9383;
@@ -1076,7 +1076,7 @@
             INCOMING_PACKETS[1555] = RoomSettingsSaveErrorEvent;
             INCOMING_PACKETS[156] = _Str_7323;
             INCOMING_PACKETS[1562] = _Str_5728;
-            INCOMING_PACKETS[1576] = _Str_9150;
+            INCOMING_PACKETS[1576] = ModeratorToolPreferencesEvent;
             INCOMING_PACKETS[1587] = NewConsoleMessageEvent;
             INCOMING_PACKETS[159] = FurniListRemoveEvent;
             INCOMING_PACKETS[1591] = GuideSessionAttachedEvent;
