@@ -101,7 +101,7 @@
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceItemStatsEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceMakeOfferResult;
-	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
+	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceBuyOfferResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
@@ -1141,7 +1141,7 @@
             INCOMING_PACKETS[2024] = TradingItemListEvent;
             INCOMING_PACKETS[2030] = _Str_8312;
             INCOMING_PACKETS[2031] = RoomReadyMessageEvent;
-            INCOMING_PACKETS[2032] = _Str_6344;
+            INCOMING_PACKETS[2032] = MarketplaceBuyOfferResultEvent;
             INCOMING_PACKETS[2033] = AvailabilityStatusMessageEvent;
             INCOMING_PACKETS[2035] = _Str_7321;
             INCOMING_PACKETS[2046] = RentableSpaceRentOkMessageEvent;

@@ -104,7 +104,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.SellablePetPalettesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubSubscriptionStatusMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceBuyOfferResultEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPublishedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.CreditBalanceEvent;
@@ -566,7 +566,7 @@
             this.addMessageEvent(new SellablePetPalettesMessageEvent(this.onSellablePalettes));
             this.addMessageEvent(new MarketPlaceOwnOffersEvent(this.onMarketPlaceOwnOffers));
             this.addMessageEvent(new BuildersClubSubscriptionStatusMessageEvent(this.onBuildersClubSubscriptionStatus));
-            this.addMessageEvent(new _Str_6344(this.onMarketPlaceBuyResult));
+            this.addMessageEvent(new MarketplaceBuyOfferResultEvent(this.onMarketPlaceBuyResult));
             this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
             this.addMessageEvent(new CatalogPublishedMessageEvent(this.onCatalogPublished));
             this.addMessageEvent(new CreditBalanceEvent(this.onCreditBalance));
