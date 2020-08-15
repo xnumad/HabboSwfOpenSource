@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5965 
+    public class GuildBadgeSettings
     {
         private var _Str_2046:int;
         private var _Str_21054:int;
         private var _position:int;
 
-        public function _Str_5965(k:IMessageDataWrapper)
+        public function GuildBadgeSettings(k:IMessageDataWrapper)
         {
             this._Str_2046 = k.readInteger();
             this._Str_21054 = k.readInteger();

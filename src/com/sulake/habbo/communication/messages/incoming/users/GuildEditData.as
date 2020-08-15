@@ -49,7 +49,7 @@
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._badgeSettings.push(new _Str_5965(k));
+                this._badgeSettings.push(new GuildBadgeSettings(k));
                 _local_2++;
             }
             this._badgeCode = k.readString();

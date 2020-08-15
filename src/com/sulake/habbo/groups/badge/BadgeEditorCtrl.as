@@ -7,7 +7,7 @@
     import com.sulake.core.window.components.IItemGridWindow;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.habbo.groups.events.HabboGroupsEditorData;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5965;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildBadgeSettings;
     import flash.display.BitmapData;
     import flash.geom.Point;
     import __AS3__.vec.*;
@@ -205,7 +205,7 @@
         private function _Str_23257(k:int):BadgeLayerOptions
         {
             var _local_2:int;
-            var _local_3:_Str_5965 = (this._badgeInitData[k] as _Str_5965);
+            var _local_3:GuildBadgeSettings = (this._badgeInitData[k] as GuildBadgeSettings);
             var _local_4:BadgeLayerOptions = new BadgeLayerOptions();
             _local_4._Str_3617 = k;
             _local_4.colorIndex = 0;
