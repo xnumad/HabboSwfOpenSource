@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_8695;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_8088;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_7898;
+    import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
     import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
@@ -76,7 +76,7 @@
             _local_2.addMessageEvent(new _Str_9413(this.onUserInfo));
             _local_2.addMessageEvent(new _Str_8695(this.onRoomInfo));
             _local_2.addMessageEvent(new _Str_8088(this.onCfhChatlog));
-            _local_2.addMessageEvent(new _Str_7898(this.onUserChatlog));
+            _local_2.addMessageEvent(new UserChatlogEvent(this.onUserChatlog));
             _local_2.addMessageEvent(new _Str_7799(this.onRoomChatlog));
             _local_2.addMessageEvent(new RoomVisitsEvent(this.onRoomVisits));
             _local_2.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
@@ -224,7 +224,7 @@
             this.onChatlog(("Room Chatlog: " + _local_2.data.roomName), WindowTracker._Str_10414, _local_2.data.roomId, _local_3, _local_4);
         }
 
-        private function onUserChatlog(k:_Str_7898):void
+        private function onUserChatlog(k:UserChatlogEvent):void
         {
             var _local_2:UserChatlogMessageParser = k.getParser();
             var _local_3:Dictionary = new Dictionary();

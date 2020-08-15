@@ -210,7 +210,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
 	import com.sulake.habbo.communication.messages.incoming.moderation.IssuePickFailedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7898;
+	import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8088;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8312;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8695;
@@ -1314,7 +1314,7 @@
             INCOMING_PACKETS[3359] = InstantMessageErrorEvent;
             INCOMING_PACKETS[3365] = _Str_7199;
             INCOMING_PACKETS[3370] = AchievementResolutionProgressMessageEvent;
-            INCOMING_PACKETS[3377] = _Str_7898;
+            INCOMING_PACKETS[3377] = UserChatlogEvent;
             INCOMING_PACKETS[3388] = ProductOfferEvent;
             INCOMING_PACKETS[339] = YouAreOwnerMessageEvent;
             INCOMING_PACKETS[34] = _Str_7248;
