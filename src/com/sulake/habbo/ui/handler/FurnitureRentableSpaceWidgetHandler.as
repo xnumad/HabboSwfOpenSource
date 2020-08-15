@@ -5,7 +5,7 @@
     import com.sulake.habbo.ui.widget.furniture.rentablespace.RentableSpaceDisplayWidget;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentOkMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7746;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentFailedMessageEvent;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
@@ -24,7 +24,7 @@
         private var _widget:RentableSpaceDisplayWidget;
         private var _rentableSpaceStatusMessageEvent:RentableSpaceStatusMessageEvent;
         private var _rentableSpaceRentOkMessageEvent:RentableSpaceRentOkMessageEvent;
-        private var _rentableSpaceRentFailedMessageEvent:_Str_7746;
+        private var _rentableSpaceRentFailedMessageEvent:RentableSpaceRentFailedMessageEvent;
 
 
         public function get type():String
@@ -44,7 +44,7 @@
             this._container.connection.addMessageEvent(this._rentableSpaceStatusMessageEvent);
             this._rentableSpaceRentOkMessageEvent = new RentableSpaceRentOkMessageEvent(this.onRentableSpaceRentOkMessage);
             this._container.connection.addMessageEvent(this._rentableSpaceRentOkMessageEvent);
-            this._rentableSpaceRentFailedMessageEvent = new _Str_7746(this._Str_22780);
+            this._rentableSpaceRentFailedMessageEvent = new RentableSpaceRentFailedMessageEvent(this._Str_22780);
             this._container.connection.addMessageEvent(this._rentableSpaceRentFailedMessageEvent);
         }
 
@@ -127,7 +127,7 @@
             this._widget.updateWidgetState();
         }
 
-        public function _Str_22780(k:_Str_7746):void
+        public function _Str_22780(k:RentableSpaceRentFailedMessageEvent):void
         {
             var _local_2:RentableSpaceRentFailedMessageParser = k.getParser();
             this._widget._Str_23970(_local_2.reason);

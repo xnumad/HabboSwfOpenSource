@@ -771,7 +771,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_6132;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7104;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7657;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7746;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentOkMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomDimmerPresetsEvent;
@@ -1118,7 +1118,7 @@
             INCOMING_PACKETS[1847] = GuideSessionRequesterRoomEvent;
             INCOMING_PACKETS[1862] = PostThreadMessageEvent;
             INCOMING_PACKETS[1866] = CatalogPublishedMessageEvent;
-            INCOMING_PACKETS[1868] = _Str_7746;
+            INCOMING_PACKETS[1868] = RentableSpaceRentFailedMessageEvent;
             INCOMING_PACKETS[1869] = _Str_5881;
             INCOMING_PACKETS[1876] = GuildMemberFurniCountInHQMessageEvent;
             INCOMING_PACKETS[1878] = QuestDailyMessageEvent;
