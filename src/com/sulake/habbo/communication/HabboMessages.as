@@ -197,7 +197,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_15952;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_16258;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2JoiningGameFailedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_16892;
+	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2InArenaQueueMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17054;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17148;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2GameDirectoryStatusMessageEvent;
@@ -1445,7 +1445,7 @@
             INCOMING_PACKETS[841] = GuideSessionEvent;
             INCOMING_PACKETS[859] = PetLevelNotificationEvent;
             INCOMING_PACKETS[869] = PurchaseOKMessageEvent;
-            INCOMING_PACKETS[872] = _Str_16892;
+            INCOMING_PACKETS[872] = Game2InArenaQueueMessageEvent;
             INCOMING_PACKETS[876] = ExtendedProfileChangedMessageEvent;
             INCOMING_PACKETS[878] = FlatAccessDeniedMessageEvent;
             INCOMING_PACKETS[892] = _Str_8535;
