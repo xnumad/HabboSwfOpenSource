@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.outgoing.sound.GetUserSongDisksMessageComposer;
     import com.sulake.habbo.sound.trax.TraxSequencer;
     import com.sulake.habbo.communication.messages.outgoing.sound.GetSongInfoMessageComposer;
-    import com.sulake.habbo.communication.messages.incoming.sound._Str_5724;
+    import com.sulake.habbo.communication.messages.incoming.sound.SongInfoEntry;
     import com.sulake.habbo.communication.messages.parser.sound.TraxSongInfoMessageParser;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
     import com.sulake.habbo.sound.events.SongDiskInventoryReceivedEvent;
@@ -563,7 +563,7 @@
 
         private function _Str_25546(k:IMessageEvent):void
         {
-            var _local_6:_Str_5724;
+            var _local_6:SongInfoEntry;
             var _local_7:Boolean;
             var _local_8:Boolean;
             var _local_9:IHabboSound;
