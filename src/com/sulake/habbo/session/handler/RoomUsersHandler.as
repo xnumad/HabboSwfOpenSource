@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetLevelUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9293;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9336;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_9632;
+    import com.sulake.habbo.communication.messages.incoming.notifications.NestBreedingSuccessEvent;
     import com.sulake.habbo.communication.messages.incoming.room.bots.BotErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.NewFriendRequestEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
@@ -91,7 +91,7 @@
             k.addMessageEvent(new PetLevelUpdateEvent(this.onPetLevelUpdate));
             k.addMessageEvent(new _Str_9293(this._Str_25414));
             k.addMessageEvent(new _Str_9336(this._Str_24337));
-            k.addMessageEvent(new _Str_9632(this._Str_22690));
+            k.addMessageEvent(new NestBreedingSuccessEvent(this._Str_22690));
             k.addMessageEvent(new BotErrorEvent(this.onBotError));
             k.addMessageEvent(new NewFriendRequestEvent(this._Str_22755));
             k.addMessageEvent(new DanceMessageEvent(this.onDance));
@@ -373,7 +373,7 @@
             listener.events.dispatchEvent(new RoomSessionConfirmPetBreedingResultEvent(_local_3, _local_2.breedingNestStuffId, _local_2.result));
         }
 
-        private function _Str_22690(k:_Str_9632):void
+        private function _Str_22690(k:NestBreedingSuccessEvent):void
         {
             if (k == null)
             {
