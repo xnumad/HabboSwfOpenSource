@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.competition.SecondsUntilMessageParser;
 
-    public class _Str_9217 extends MessageEvent implements IMessageEvent 
+    public class SecondsUntilMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9217(k:Function)
+        public function SecondsUntilMessageEvent(k:Function)
         {
             super(k, SecondsUntilMessageParser);
         }

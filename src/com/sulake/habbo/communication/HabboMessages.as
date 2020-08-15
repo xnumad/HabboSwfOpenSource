@@ -168,7 +168,7 @@
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionVotingInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_8237;
-	import com.sulake.habbo.communication.messages.incoming.competition._Str_9217;
+	import com.sulake.habbo.communication.messages.incoming.competition.SecondsUntilMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceNotCompleteEvent;
 	import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_11645;
@@ -1376,7 +1376,7 @@
             INCOMING_PACKETS[3914] = NotEnoughBalanceMessageEvent;
             INCOMING_PACKETS[3915] = _Str_15952;
             INCOMING_PACKETS[3920] = UserChangeMessageEvent;
-            INCOMING_PACKETS[3926] = _Str_9217;
+            INCOMING_PACKETS[3926] = SecondsUntilMessageEvent;
             INCOMING_PACKETS[3928] = PingMessageEvent;
             INCOMING_PACKETS[3945] = EpicPopupMessageEvent;
             INCOMING_PACKETS[3954] = _Str_5767;
