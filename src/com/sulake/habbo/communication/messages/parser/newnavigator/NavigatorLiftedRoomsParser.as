@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_4768;
+    import com.sulake.habbo.communication.messages.incoming.newnavigator.LiftedRoomData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
     import __AS3__.vec.*;
 
     public class NavigatorLiftedRoomsParser implements IMessageParser 
     {
-        private var _liftedRooms:Vector.<_Str_4768>;
+        private var _liftedRooms:Vector.<LiftedRoomData>;
 
 
         public function flush():Boolean
         {
-            this._liftedRooms = new Vector.<_Str_4768>();
+            this._liftedRooms = new Vector.<LiftedRoomData>();
             return true;
         }
 
@@ -23,13 +23,13 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._liftedRooms.push(new _Str_4768(k));
+                this._liftedRooms.push(new LiftedRoomData(k));
                 _local_3++;
             }
             return true;
         }
 
-        public function get _Str_6772():Vector.<_Str_4768>
+        public function get _Str_6772():Vector.<LiftedRoomData>
         {
             return this._liftedRooms;
         }

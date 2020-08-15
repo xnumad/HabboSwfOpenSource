@@ -2,14 +2,14 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4768 
+    public class LiftedRoomData
     {
         private var _flatId:int;
         private var _Str_20569:int;
         private var _image:String;
         private var _caption:String;
 
-        public function _Str_4768(k:IMessageDataWrapper)
+        public function LiftedRoomData(k:IMessageDataWrapper)
         {
             this._flatId = k.readInteger();
             this._Str_20569 = k.readInteger();
