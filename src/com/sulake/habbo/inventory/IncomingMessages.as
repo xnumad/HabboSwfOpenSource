@@ -55,7 +55,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectAddedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
+    import com.sulake.habbo.communication.messages.incoming.notifications.PetRemovedFromInventoryEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgePointLimitsEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.furni.FurniListParser;
     import com.sulake.habbo.inventory.furni.FurniModel;
@@ -166,7 +166,7 @@
             this._com.addHabboConnectionMessageEvent(new AvatarEffectExpiredMessageEvent(this.onAvatarEffectExpired));
             this._com.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this._com.addHabboConnectionMessageEvent(new AvatarEffectAddedMessageEvent(this._Str_18461));
-            this._com.addHabboConnectionMessageEvent(new _Str_9047(this._Str_22306));
+            this._com.addHabboConnectionMessageEvent(new PetRemovedFromInventoryEvent(this._Str_22306));
             this._com.addHabboConnectionMessageEvent(new BadgePointLimitsEvent(this.onBadgePointLimits));
         }
 
@@ -795,7 +795,7 @@
             this._inventory.catalog.openCatalogPage(k);
         }
 
-        private function _Str_22306(k:_Str_9047):void
+        private function _Str_22306(k:PetRemovedFromInventoryEvent):void
         {
             if (((k == null) || (this._inventory == null)))
             {

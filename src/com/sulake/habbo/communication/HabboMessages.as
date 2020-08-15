@@ -143,7 +143,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7734;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8524;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
+	import com.sulake.habbo.communication.messages.incoming.notifications.PetRemovedFromInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingRequestEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingResultEvent;
@@ -1298,7 +1298,7 @@
             INCOMING_PACKETS[324] = UpdateMessageMessageEvent;
             INCOMING_PACKETS[3244] = UserEventCatsEvent;
             INCOMING_PACKETS[325] = CfhTopicsInitEvent;
-            INCOMING_PACKETS[3253] = _Str_9047;
+            INCOMING_PACKETS[3253] = PetRemovedFromInventoryEvent;
             INCOMING_PACKETS[3264] = MarketplaceCancelOfferResultEvent;
             INCOMING_PACKETS[3276] = ChatReviewSessionResultsMessageEvent;
             INCOMING_PACKETS[3277] = ScrSendKickbackInfoMessageEvent;
