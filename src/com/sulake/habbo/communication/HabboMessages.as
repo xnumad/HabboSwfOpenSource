@@ -196,7 +196,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.sound.RemoveJukeboxDiskComposer;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_15952;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_16258;
-	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_16653;
+	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2JoiningGameFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_16892;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17054;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17148;
@@ -1098,7 +1098,7 @@
             INCOMING_PACKETS[1715] = UnloadGameMessageEvent;
             INCOMING_PACKETS[1717] = UserTypingMessageEvent;
             INCOMING_PACKETS[1723] = FurnitureAliasesMessageEvent;
-            INCOMING_PACKETS[1730] = _Str_16653;
+            INCOMING_PACKETS[1730] = Game2JoiningGameFailedMessageEvent;
             INCOMING_PACKETS[1745] = CurrentTimingCodeMessageEvent;
             INCOMING_PACKETS[1746] = _Str_7734;
             INCOMING_PACKETS[1748] = _Str_8135;

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.game.directory.Game2JoiningGameFailedMessageParser;
 
-    public class _Str_16653 extends MessageEvent implements IMessageEvent 
+    public class Game2JoiningGameFailedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_16653(k:Function)
+        public function Game2JoiningGameFailedMessageEvent(k:Function)
         {
             super(k, Game2JoiningGameFailedMessageParser);
         }
