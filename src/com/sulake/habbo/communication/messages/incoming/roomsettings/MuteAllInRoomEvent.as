@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.roomsettings.MuteAllInRoomParser;
 
-    public class _Str_5038 extends MessageEvent implements IMessageEvent 
+    public class MuteAllInRoomEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_5038(k:Function)
+        public function MuteAllInRoomEvent(k:Function)
         {
             super(k, MuteAllInRoomParser);
         }

@@ -560,7 +560,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FindFriendsProcessResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.*;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.MuteAllInRoomEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.UserUnbannedFromRoomEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerRemovedEvent;
@@ -1209,7 +1209,7 @@
             INCOMING_PACKETS[2527] = NestBreedingSuccessEvent;
             INCOMING_PACKETS[2528] = UpdateThreadMessageEvent;
             INCOMING_PACKETS[2531] = CampaignCalendarDataMessageEvent;
-            INCOMING_PACKETS[2533] = _Str_5038;
+            INCOMING_PACKETS[2533] = MuteAllInRoomEvent;
             INCOMING_PACKETS[2547] = ObjectDataUpdateMessageEvent;
             INCOMING_PACKETS[2551] = CampaignCalendarDoorOpenedMessageEvent;
             INCOMING_PACKETS[2568] = TradingAcceptEvent;

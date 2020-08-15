@@ -15,7 +15,7 @@
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSavedSearchesEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.FlatAccessibleMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.UserUnbannedFromRoomEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.MuteAllInRoomEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.CategoriesWithVisitorCountEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
@@ -123,7 +123,7 @@
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSavedSearchesEvent(this.onSavedSearches)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new UserUnbannedFromRoomEvent(this.onUserUnbannedFromRoom)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5038(this.onMuteAllEvent)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new MuteAllInRoomEvent(this.onMuteAllEvent)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CategoriesWithVisitorCountEvent(this._Str_18837)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch)));
@@ -206,7 +206,7 @@
 
         private function onMuteAllEvent(k:IMessageEvent):void
         {
-            var _local_2:_Str_5038 = (k as _Str_5038);
+            var _local_2:MuteAllInRoomEvent = (k as MuteAllInRoomEvent);
             var _local_3:MuteAllInRoomParser = _local_2.getParser();
             var _local_4:GuestRoomData = this._navigator.data.enteredGuestRoom;
             if (_local_4 != null)

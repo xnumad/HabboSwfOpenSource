@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerRemovedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsDataMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.MuteAllInRoomEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsDataEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CantConnectMessageEvent;
@@ -142,7 +142,7 @@
             _local_2.addHabboConnectionMessageEvent(new FlatControllerRemovedEvent(this._Str_8484));
             _local_2.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592));
             _local_2.addHabboConnectionMessageEvent(new CompetitionRoomsDataMessageEvent(this.onCompetitionData));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5038(this.onMuteAllEvent));
+            _local_2.addHabboConnectionMessageEvent(new MuteAllInRoomEvent(this.onMuteAllEvent));
             _local_2.addHabboConnectionMessageEvent(new FlatCreatedEvent(this.onFlatCreated));
             _local_2.addHabboConnectionMessageEvent(new RoomSettingsDataEvent(this._Str_16485));
             _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect));
@@ -170,7 +170,7 @@
 
         private function onMuteAllEvent(k:IMessageEvent):void
         {
-            var _local_2:_Str_5038 = (k as _Str_5038);
+            var _local_2:MuteAllInRoomEvent = (k as MuteAllInRoomEvent);
             var _local_3:MuteAllInRoomParser = _local_2.getParser();
             var _local_4:GuestRoomData = this._navigator.data.enteredGuestRoom;
             if (_local_4 != null)
