@@ -554,7 +554,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7759;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8109;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8333;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8339;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.InstantMessageErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FindFriendsProcessResultEvent;
@@ -1311,7 +1311,7 @@
             INCOMING_PACKETS[3319] = CommunityGoalEarnedPrizesMessageEvent;
             INCOMING_PACKETS[3331] = SellablePetPalettesMessageEvent;
             INCOMING_PACKETS[3336] = VoucherRedeemOkMessageEvent;
-            INCOMING_PACKETS[3359] = _Str_8339;
+            INCOMING_PACKETS[3359] = InstantMessageErrorEvent;
             INCOMING_PACKETS[3365] = _Str_7199;
             INCOMING_PACKETS[3370] = AchievementResolutionProgressMessageEvent;
             INCOMING_PACKETS[3377] = _Str_7898;

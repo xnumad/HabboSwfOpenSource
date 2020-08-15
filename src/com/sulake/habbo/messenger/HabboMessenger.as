@@ -29,7 +29,7 @@
     import com.sulake.habbo.messenger.events.MiniMailMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.MiniMailUnreadCountMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8339;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.InstantMessageErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
@@ -158,7 +158,7 @@
         {
             this._mainView = new MainView(this);
             this.addMessageEvent(new _Str_4851(this.onNewConsoleMessage));
-            this.addMessageEvent(new _Str_8339(this.onInstantMessageError));
+            this.addMessageEvent(new InstantMessageErrorEvent(this.onInstantMessageError));
             this.addMessageEvent(new _Str_4696(this.onRoomInvite));
         }
 
@@ -260,7 +260,7 @@
 
         private function onInstantMessageError(k:IMessageEvent):void
         {
-            var _local_2:InstantMessageErrorMessageParser = (k as _Str_8339).getParser();
+            var _local_2:InstantMessageErrorMessageParser = (k as InstantMessageErrorEvent).getParser();
             if (this._mainView != null)
             {
                 this._mainView.onInstantMessageError(_local_2.userId, _local_2.errorCode, _local_2.message);
