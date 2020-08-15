@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
+    import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
@@ -127,7 +127,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new PopularRoomTagsResultEvent(this._Str_17226)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSearchResultBlocksEvent(this.onNavigatorSearchResultBlocks)));
@@ -273,7 +273,7 @@
 
         private function _Str_17226(k:IMessageEvent):void
         {
-            var _local_2:PopularRoomTagsData = _Str_5017(k).getParser().data;
+            var _local_2:PopularRoomTagsData = PopularRoomTagsResultEvent(k).getParser().data;
             this.data._Str_6697 = _local_2;
             Logger.log(("Received popular room tags: " + this.data._Str_6697.tags.length));
         }

@@ -366,7 +366,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
+	import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomEventEvent;
@@ -1134,7 +1134,7 @@
             INCOMING_PACKETS[1982] = _Str_17148;
             INCOMING_PACKETS[1992] = NotificationDialogMessageEvent;
             INCOMING_PACKETS[2009] = ItemUpdateMessageEvent;
-            INCOMING_PACKETS[2012] = _Str_5017;
+            INCOMING_PACKETS[2012] = PopularRoomTagsResultEvent;
             INCOMING_PACKETS[2016] = RelationshipStatusInfo;
             INCOMING_PACKETS[2018] = ActivityPointsEvent;
             INCOMING_PACKETS[2023] = InClientLinkMessageEvent;

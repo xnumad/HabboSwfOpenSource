@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomInfoUpdatedEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomEventEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
+    import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
@@ -117,7 +117,7 @@
             var _local_2:IHabboCommunicationManager = this._navigator.communication;
             _local_2.addHabboConnectionMessageEvent(new RoomInfoUpdatedEvent(this._Str_18125));
             _local_2.addHabboConnectionMessageEvent(new CanCreateRoomEventEvent(this._Str_17011));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226));
+            _local_2.addHabboConnectionMessageEvent(new PopularRoomTagsResultEvent(this._Str_17226));
             _local_2.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch));
             _local_2.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied));
             _local_2.addHabboConnectionMessageEvent(new FriendListFragmentMessageEvent(this.onFriendsListFragment));
@@ -233,7 +233,7 @@
 
         private function _Str_17226(k:IMessageEvent):void
         {
-            var _local_2:PopularRoomTagsData = _Str_5017(k).getParser().data;
+            var _local_2:PopularRoomTagsData = PopularRoomTagsResultEvent(k).getParser().data;
             this.data._Str_6697 = _local_2;
             Logger.log(("Received popular room tags: " + this.data._Str_6697.tags.length));
         }
