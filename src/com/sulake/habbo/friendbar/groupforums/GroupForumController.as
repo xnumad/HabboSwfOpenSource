@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.incoming.groupforums.UpdateMessageMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.ThreadMessagesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.ForumDataMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9630;
+    import com.sulake.habbo.communication.messages.incoming.groupforums.PostMessageMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.PostThreadMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.UnreadForumsCountMessageEvent;
     import flash.events.TimerEvent;
@@ -189,7 +189,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new UpdateMessageMessageEvent(this._parser8));
             this._communicationManager.addHabboConnectionMessageEvent(new ThreadMessagesMessageEvent(this.onThreadMessageList));
             this._communicationManager.addHabboConnectionMessageEvent(new ForumDataMessageEvent(this._Str_25702));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9630(this.onPostMessageMessage));
+            this._communicationManager.addHabboConnectionMessageEvent(new PostMessageMessageEvent(this.onPostMessageMessage));
             this._communicationManager.addHabboConnectionMessageEvent(new PostThreadMessageEvent(this.onPostThreadMessage));
             this._communicationManager.addHabboConnectionMessageEvent(new UnreadForumsCountMessageEvent(this._Str_23952));
             context.addLinkEventTracker(this);
@@ -481,7 +481,7 @@
             }
         }
 
-        private function onPostMessageMessage(k:_Str_9630):void
+        private function onPostMessageMessage(k:PostMessageMessageEvent):void
         {
             if (this._composeMessageView)
             {

@@ -157,7 +157,7 @@
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ThreadMessagesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ForumsListMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.PostThreadMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9630;
+	import com.sulake.habbo.communication.messages.incoming.groupforums.PostMessageMessageEvent;
 	import com.sulake.core.utils.Map;
 	import com.sulake.core.utils.SingleWriteMap;
 	import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
@@ -1145,7 +1145,7 @@
             INCOMING_PACKETS[2033] = AvailabilityStatusMessageEvent;
             INCOMING_PACKETS[2035] = _Str_7321;
             INCOMING_PACKETS[2046] = RentableSpaceRentOkMessageEvent;
-            INCOMING_PACKETS[2049] = _Str_9630;
+            INCOMING_PACKETS[2049] = PostMessageMessageEvent;
             INCOMING_PACKETS[2057] = CameraPublishStatusMessageEvent;
             INCOMING_PACKETS[2064] = NoOwnedRoomsAlertMessageEvent;
             INCOMING_PACKETS[207] = IgnoreResultMessageEvent;
