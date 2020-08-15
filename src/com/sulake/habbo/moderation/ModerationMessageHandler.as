@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
+    import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorActionResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.userclassification.UserClassificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhSanctionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
@@ -81,7 +81,7 @@
             _local_2.addMessageEvent(new RoomVisitsEvent(this.onRoomVisits));
             _local_2.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
-            _local_2.addMessageEvent(new _Str_9341(this.onModeratorActionResult));
+            _local_2.addMessageEvent(new ModeratorActionResultMessageEvent(this.onModeratorActionResult));
             _local_2.addMessageEvent(new UserClassificationMessageEvent(this.onRoomUserClassification));
             _local_2.addMessageEvent(new CfhSanctionMessageEvent(this.onSanctions));
             _local_2.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
@@ -315,7 +315,7 @@
             }
         }
 
-        private function onModeratorActionResult(k:_Str_9341):void
+        private function onModeratorActionResult(k:ModeratorActionResultMessageEvent):void
         {
             var _local_2:ModeratorActionResultMessageParser = k.getParser();
             Logger.log(((("GOT MOD ACTION RESULT: " + _local_2.userId) + ", ") + _local_2.success));

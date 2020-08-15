@@ -216,7 +216,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorRoomInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.IssueInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorToolPreferencesEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
+	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorActionResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.UserBannedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9383;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
@@ -1185,7 +1185,7 @@
             INCOMING_PACKETS[2313] = _Str_16135;
             INCOMING_PACKETS[2324] = GamePlayerValueMessageEvent;
             INCOMING_PACKETS[233] = BotRemovedFromInventoryEvent;
-            INCOMING_PACKETS[2335] = _Str_9341;
+            INCOMING_PACKETS[2335] = ModeratorActionResultMessageEvent;
             INCOMING_PACKETS[2347] = BundleDiscountRulesetMessageEvent;
             INCOMING_PACKETS[2366] = _Str_9687;
             INCOMING_PACKETS[2376] = _Str_7657;
