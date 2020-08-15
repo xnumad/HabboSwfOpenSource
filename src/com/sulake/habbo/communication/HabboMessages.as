@@ -96,7 +96,7 @@
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7248;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7922;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_8016;
-	import com.sulake.habbo.communication.messages.incoming.sound._Str_8135;
+	import com.sulake.habbo.communication.messages.incoming.sound.PlayListMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.OfficialSongIdMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceItemStatsEvent;
@@ -1101,7 +1101,7 @@
             INCOMING_PACKETS[1730] = Game2JoiningGameFailedMessageEvent;
             INCOMING_PACKETS[1745] = CurrentTimingCodeMessageEvent;
             INCOMING_PACKETS[1746] = PetBreedingEvent;
-            INCOMING_PACKETS[1748] = _Str_8135;
+            INCOMING_PACKETS[1748] = PlayListMessageEvent;
             INCOMING_PACKETS[1752] = RoomVisitsEvent;
             INCOMING_PACKETS[1759] = RoomAdErrorEvent;
             INCOMING_PACKETS[1774] = UseObjectMessageEvent;

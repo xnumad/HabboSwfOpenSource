@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.sound.PlayListMessageParser;
 
-    public class _Str_8135 extends MessageEvent implements IMessageEvent 
+    public class PlayListMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8135(k:Function)
+        public function PlayListMessageEvent(k:Function)
         {
             super(k, PlayListMessageParser);
         }

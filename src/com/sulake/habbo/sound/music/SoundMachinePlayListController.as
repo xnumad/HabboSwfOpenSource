@@ -5,7 +5,7 @@
     import com.sulake.core.communication.connection.IConnection;
     import flash.events.IEventDispatcher;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.sound._Str_8135;
+    import com.sulake.habbo.communication.messages.incoming.sound.PlayListMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.sound.JukeBoxPlayListAddSongEvent;
     import com.sulake.habbo.sound.events.SoundControllerEvent;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
@@ -44,7 +44,7 @@
             this._connection = _arg_5;
             this._musicController = _arg_2;
             this._messageEvents = [];
-            this._messageEvents.push(new _Str_8135(this._Str_23522));
+            this._messageEvents.push(new PlayListMessageEvent(this._Str_23522));
             this._messageEvents.push(new JukeBoxPlayListAddSongEvent(this._Str_23767));
             for each (_local_6 in this._messageEvents)
             {
@@ -334,7 +334,7 @@
         {
             var _local_6:SongDataEntry;
             var _local_8:int;
-            var _local_2:_Str_8135 = (k as _Str_8135);
+            var _local_2:PlayListMessageEvent = (k as PlayListMessageEvent);
             var _local_3:PlayListMessageParser = (_local_2.getParser() as PlayListMessageParser);
             var _local_4:int = _local_3._Str_23052;
             var _local_5:Array = this._Str_22257(_local_3._Str_24122);
