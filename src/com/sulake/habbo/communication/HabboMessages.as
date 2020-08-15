@@ -775,7 +775,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7811;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentOkMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomDimmerPresetsEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8183;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.DiceValueMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.OpenPetPackageResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.WelcomeGiftStatusEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.OpenPetPackageRequestedMessageEvent;
@@ -1322,7 +1322,7 @@
             INCOMING_PACKETS[3403] = FavoriteMembershipUpdateMessageEvent;
             INCOMING_PACKETS[3406] = _Str_7229;
             INCOMING_PACKETS[3429] = _Str_5655;
-            INCOMING_PACKETS[3431] = _Str_8183;
+            INCOMING_PACKETS[3431] = DiceValueMessageEvent;
             INCOMING_PACKETS[3433] = RecyclerStatusEvent;
             INCOMING_PACKETS[3434] = RoomChatlogEvent;
             INCOMING_PACKETS[3441] = PetSupplementedNotificationEvent;
