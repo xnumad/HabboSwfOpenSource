@@ -211,7 +211,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
 	import com.sulake.habbo.communication.messages.incoming.moderation.IssuePickFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8088;
+	import com.sulake.habbo.communication.messages.incoming.moderation.CfhChatlogEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8312;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8695;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9065;
@@ -1409,7 +1409,7 @@
             INCOMING_PACKETS[566] = FloodControlMessageEvent;
             INCOMING_PACKETS[596] = _Str_7433;
             INCOMING_PACKETS[600] = AvailabilityTimeMessageEvent;
-            INCOMING_PACKETS[607] = _Str_8088;
+            INCOMING_PACKETS[607] = CfhChatlogEvent;
             INCOMING_PACKETS[612] = EmailStatusResultEvent;
             INCOMING_PACKETS[618] = CraftingResultEvent;
             INCOMING_PACKETS[619] = ClubGiftInfoEvent;

@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9383;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_8695;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_8088;
+    import com.sulake.habbo.communication.messages.incoming.moderation.CfhChatlogEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
     import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsEvent;
@@ -75,7 +75,7 @@
             _local_2.addMessageEvent(new _Str_9383(this.onIssueDeleted));
             _local_2.addMessageEvent(new _Str_9413(this.onUserInfo));
             _local_2.addMessageEvent(new _Str_8695(this.onRoomInfo));
-            _local_2.addMessageEvent(new _Str_8088(this.onCfhChatlog));
+            _local_2.addMessageEvent(new CfhChatlogEvent(this.onCfhChatlog));
             _local_2.addMessageEvent(new UserChatlogEvent(this.onUserChatlog));
             _local_2.addMessageEvent(new _Str_7799(this.onRoomChatlog));
             _local_2.addMessageEvent(new RoomVisitsEvent(this.onRoomVisits));
@@ -204,7 +204,7 @@
             }
         }
 
-        private function onCfhChatlog(k:_Str_8088):void
+        private function onCfhChatlog(k:CfhChatlogEvent):void
         {
             var _local_2:CfhChatlogMessageParser = k.getParser();
             var _local_3:Array = new Array();
