@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.moderation.IssuePickFailedMessageParser;
 
-    public class _Str_7889 extends MessageEvent implements IMessageEvent 
+    public class IssuePickFailedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7889(k:Function)
+        public function IssuePickFailedMessageEvent(k:Function)
         {
             super(k, IssuePickFailedMessageParser);
         }

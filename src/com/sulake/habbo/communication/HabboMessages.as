@@ -209,7 +209,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorInitMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7889;
+	import com.sulake.habbo.communication.messages.incoming.moderation.IssuePickFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7898;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8088;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8312;
@@ -1286,7 +1286,7 @@
             INCOMING_PACKETS[3129] = HabboGroupDeactivatedMessageEvent;
             INCOMING_PACKETS[3130] = FriendListFragmentMessageEvent;
             INCOMING_PACKETS[3138] = Game2UserLeftGameMessageEvent;
-            INCOMING_PACKETS[3150] = _Str_7889;
+            INCOMING_PACKETS[3150] = IssuePickFailedMessageEvent;
             INCOMING_PACKETS[3151] = FurniListInvalidateEvent;
             INCOMING_PACKETS[3164] = RecyclerPrizesEvent;
             INCOMING_PACKETS[3191] = _Str_17782;

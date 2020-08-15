@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9065;
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorInitMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9150;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_7889;
+    import com.sulake.habbo.communication.messages.incoming.moderation.IssuePickFailedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9383;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_8695;
@@ -71,7 +71,7 @@
             _local_2.addMessageEvent(new _Str_9065(this.onIssueInfo));
             _local_2.addMessageEvent(new ModeratorInitMessageEvent(this.onModeratorInit));
             _local_2.addMessageEvent(new _Str_9150(this.onModeratorToolPreferences));
-            _local_2.addMessageEvent(new _Str_7889(this.onIssuePickFailed));
+            _local_2.addMessageEvent(new IssuePickFailedMessageEvent(this.onIssuePickFailed));
             _local_2.addMessageEvent(new _Str_9383(this.onIssueDeleted));
             _local_2.addMessageEvent(new _Str_9413(this.onUserInfo));
             _local_2.addMessageEvent(new _Str_8695(this.onRoomInfo));
@@ -137,7 +137,7 @@
             }
         }
 
-        private function onIssuePickFailed(event:_Str_7889):void
+        private function onIssuePickFailed(event:IssuePickFailedMessageEvent):void
         {
             var parser:IssuePickFailedMessageParser = event.getParser();
             if (parser == null)
