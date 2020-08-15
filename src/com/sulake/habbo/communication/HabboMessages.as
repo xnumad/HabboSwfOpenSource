@@ -686,7 +686,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.FaqTextMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.HotelMergeNameChangeEvent;
 	import com.sulake.habbo.communication.messages.incoming.help._Str_18296;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_18853;
+	import com.sulake.habbo.communication.messages.incoming.help.FaqClientFaqsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpReplyMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.IssueCloseNotificationMessageEvent;
@@ -1200,7 +1200,7 @@
             INCOMING_PACKETS[2468] = RoomAdPurchaseInfoEvent;
             INCOMING_PACKETS[2491] = AuthenticationOKMessageEvent;
             INCOMING_PACKETS[2493] = BadgeReceivedEvent;
-            INCOMING_PACKETS[2494] = _Str_18853;
+            INCOMING_PACKETS[2494] = FaqClientFaqsMessageEvent;
             INCOMING_PACKETS[2501] = BadgePointLimitsEvent;
             INCOMING_PACKETS[2505] = TradingOpenEvent;
             INCOMING_PACKETS[2515] = CatalogPageWithEarliestExpiryMessageEvent;
