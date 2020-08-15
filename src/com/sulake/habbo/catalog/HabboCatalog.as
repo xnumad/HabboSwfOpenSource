@@ -105,7 +105,7 @@
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubSubscriptionStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceBuyOfferResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
+    import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPublishedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.CreditBalanceEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipsMessageEvent;
@@ -567,7 +567,7 @@
             this.addMessageEvent(new MarketPlaceOwnOffersEvent(this.onMarketPlaceOwnOffers));
             this.addMessageEvent(new BuildersClubSubscriptionStatusMessageEvent(this.onBuildersClubSubscriptionStatus));
             this.addMessageEvent(new MarketplaceBuyOfferResultEvent(this.onMarketPlaceBuyResult));
-            this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
+            this.addMessageEvent(new ActivityPointsMessageEvent(this.onActivityPoints));
             this.addMessageEvent(new CatalogPublishedMessageEvent(this.onCatalogPublished));
             this.addMessageEvent(new CreditBalanceEvent(this.onCreditBalance));
             this.addMessageEvent(new GuildMembershipsMessageEvent(this.onGuildMemberships));
@@ -2056,7 +2056,7 @@
         {
             var _local_3:String;
             var _local_4:int;
-            var _local_2:ActivityPointsEvent = (k as ActivityPointsEvent);
+            var _local_2:ActivityPointsMessageEvent = (k as ActivityPointsMessageEvent);
             this._purse.activityPoints = _local_2.points;
             this.updatePurse();
             for (_local_3 in _local_2.points)

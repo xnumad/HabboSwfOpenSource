@@ -789,7 +789,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications.*;
 	import com.sulake.habbo.communication.messages.incoming.notifications.HabboAchievementNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
+	import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.OfferRewardDeliveredMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.InfoFeedEnableMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.MOTDNotificationEvent;
@@ -1136,7 +1136,7 @@
             INCOMING_PACKETS[2009] = ItemUpdateMessageEvent;
             INCOMING_PACKETS[2012] = PopularRoomTagsResultEvent;
             INCOMING_PACKETS[2016] = RelationshipStatusInfoEvent;
-            INCOMING_PACKETS[2018] = ActivityPointsEvent;
+            INCOMING_PACKETS[2018] = ActivityPointsMessageEvent;
             INCOMING_PACKETS[2023] = InClientLinkMessageEvent;
             INCOMING_PACKETS[2024] = TradingItemListEvent;
             INCOMING_PACKETS[2030] = ModeratorMessageEvent;
