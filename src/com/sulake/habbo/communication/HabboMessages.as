@@ -965,7 +965,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect.AvatarEffectActivatedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect.AvatarEffectSelectedComposer;
 	import com.sulake.habbo.communication.messages.incoming.campaign.*;
-	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9003;
+	import com.sulake.habbo.communication.messages.incoming.campaign.CampaignCalendarDataMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.campaign.CampaignCalendarDoorOpenedMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorComposer;
 	import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorAsStaffComposer;
@@ -1208,7 +1208,7 @@
             INCOMING_PACKETS[2525] = CommunityGoalProgressMessageEvent;
             INCOMING_PACKETS[2527] = _Str_9632;
             INCOMING_PACKETS[2528] = _Str_8526;
-            INCOMING_PACKETS[2531] = _Str_9003;
+            INCOMING_PACKETS[2531] = CampaignCalendarDataMessageEvent;
             INCOMING_PACKETS[2533] = _Str_5038;
             INCOMING_PACKETS[2547] = ObjectDataUpdateMessageEvent;
             INCOMING_PACKETS[2551] = CampaignCalendarDoorOpenedMessageEvent;
