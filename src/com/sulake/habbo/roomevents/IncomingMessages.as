@@ -5,7 +5,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredTriggerDataEvent;
-    import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_8791;
+    import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.OpenEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredRewardResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredConditionDataEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
@@ -36,7 +36,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             var _local_2:IHabboCommunicationManager = this._roomEvents.communication;
             this.addMessageEvent(new WiredTriggerDataEvent(this._Str_22337));
-            this.addMessageEvent(new _Str_8791(this._Str_24104));
+            this.addMessageEvent(new OpenEvent(this._Str_24104));
             this.addMessageEvent(new WiredRewardResultMessageEvent(this._Str_23600));
             this.addMessageEvent(new WiredConditionDataEvent(this._Str_23144));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
@@ -54,7 +54,7 @@
 
         private function _Str_24104(k:IMessageEvent):void
         {
-            var _local_2:OpenMessageParser = (k as _Str_8791).getParser();
+            var _local_2:OpenMessageParser = (k as OpenEvent).getParser();
             this._roomEvents.send(new OpenMessageComposer(_local_2.stuffId));
         }
 

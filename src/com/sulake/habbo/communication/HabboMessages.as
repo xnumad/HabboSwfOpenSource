@@ -18,7 +18,7 @@
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredTriggerDataEvent;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredRewardResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_7323;
-	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_8791;
+	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.OpenEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSavedSearchesEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorLiftedRoomsEvent;
@@ -1113,7 +1113,7 @@
             INCOMING_PACKETS[1815] = ChangeEmailResultEvent;
             INCOMING_PACKETS[1823] = MarketplaceConfigurationEvent;
             INCOMING_PACKETS[1829] = ChatReviewSessionVotingStatusMessageEvent;
-            INCOMING_PACKETS[1830] = _Str_8791;
+            INCOMING_PACKETS[1830] = OpenEvent;
             INCOMING_PACKETS[1840] = RoomEventEvent;
             INCOMING_PACKETS[1847] = GuideSessionRequesterRoomEvent;
             INCOMING_PACKETS[1862] = PostThreadMessageEvent;
