@@ -213,7 +213,7 @@
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_8191(this.onFriendLeaderboard));
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5142(this.onTopScoresLeaderboard));
                 this._luckyLosersList = (this._gameCenterViewWindow.findChildByName("lucky_losers_list") as IItemListWindow);
-                this._gameCenterView.communication.addHabboConnectionMessageEvent(new WeeklyGameRewardWinnersEvent(this._Str_22600));
+                this._gameCenterView.communication.addHabboConnectionMessageEvent(new WeeklyGameRewardWinnersEvent(this.onWeeklyWinners));
                 this._gameCenterViewWindow.findChildByName("leaderboard_link").addEventListener(WindowMouseEvent.CLICK, this._Str_20562);
                 this._gameCenterViewWindow.findChildByName("support_link").addEventListener(WindowMouseEvent.CLICK, this._Str_21942);
                 this._gameCenterViewWindow.findChildByName("room_link").addEventListener(WindowMouseEvent.CLICK, this.onRoomLink);
@@ -605,7 +605,7 @@
             }
         }
 
-        private function _Str_22600(k:IMessageEvent):void
+        private function onWeeklyWinners(k:IMessageEvent):void
         {
             var _local_4:IWindowContainer;
             var _local_5:GameRewardWinnerEntry;
