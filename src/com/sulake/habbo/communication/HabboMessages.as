@@ -564,7 +564,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.BannedUsersFromRoomEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsDataEvent;
@@ -1259,7 +1259,7 @@
             INCOMING_PACKETS[2875] = NavigatorSettingsEvent;
             INCOMING_PACKETS[2890] = PhoneCollectionStateMessageEvent;
             INCOMING_PACKETS[2893] = Game2AccountGameStatusMessageEvent;
-            INCOMING_PACKETS[2897] = _Str_5752;
+            INCOMING_PACKETS[2897] = RoomSettingsErrorEvent;
             INCOMING_PACKETS[2901] = PetInfoMessageEvent;
             INCOMING_PACKETS[2913] = PetPlacingErrorEvent;
             INCOMING_PACKETS[2927] = QuizDataMessageEvent;

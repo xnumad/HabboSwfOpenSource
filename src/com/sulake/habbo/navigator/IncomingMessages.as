@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.FlatAccessibleMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FavouritesEvent;
@@ -122,7 +122,7 @@
             _local_2.addHabboConnectionMessageEvent(new FlatAccessDeniedMessageEvent(this.onFlatAccessDenied));
             _local_2.addHabboConnectionMessageEvent(new FriendListFragmentMessageEvent(this.onFriendsListFragment));
             _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344));
+            _local_2.addHabboConnectionMessageEvent(new RoomSettingsErrorEvent(this._Str_18344));
             _local_2.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened));
             _local_2.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             _local_2.addHabboConnectionMessageEvent(new FavouritesEvent(this._Str_8561));
@@ -518,7 +518,7 @@
 
         private function _Str_18344(k:IMessageEvent):void
         {
-            var _local_2:RoomSettingsErrorMessageParser = (k as _Str_5752).getParser();
+            var _local_2:RoomSettingsErrorMessageParser = (k as RoomSettingsErrorEvent).getParser();
         }
 
         private function onRoomSettingsSaved(k:IMessageEvent):void

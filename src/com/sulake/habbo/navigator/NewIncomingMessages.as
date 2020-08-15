@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomInfoUpdatedEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.BannedUsersFromRoomEvent;
@@ -133,7 +133,7 @@
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSearchResultBlocksEvent(this.onNavigatorSearchResultBlocks)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomInfoUpdatedEvent(this._Str_18125)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsErrorEvent(this._Str_18344)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FavouriteChangedEvent(this._Str_16972)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new BannedUsersFromRoomEvent(this._Str_8907)));
@@ -387,7 +387,7 @@
 
         private function _Str_18344(k:IMessageEvent):void
         {
-            var _local_2:RoomSettingsErrorMessageParser = (k as _Str_5752).getParser();
+            var _local_2:RoomSettingsErrorMessageParser = (k as RoomSettingsErrorEvent).getParser();
         }
 
         private function onRoomSettingsSaved(k:IMessageEvent):void
