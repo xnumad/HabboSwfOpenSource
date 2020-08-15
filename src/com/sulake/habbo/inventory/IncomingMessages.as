@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingNotOpenEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingNotOpenParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListRemoveEvent;
-    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5720;
+    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectActivatedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingCloseEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingCloseParser;
     import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
@@ -146,7 +146,7 @@
             this._com.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onClubStatus));
             this._com.addHabboConnectionMessageEvent(new TradingNotOpenEvent(this._Str_23644, TradingNotOpenParser));
             this._com.addHabboConnectionMessageEvent(new FurniListRemoveEvent(this._Str_25700));
-            this._com.addHabboConnectionMessageEvent(new _Str_5720(this._Str_17365));
+            this._com.addHabboConnectionMessageEvent(new AvatarEffectActivatedMessageEvent(this._Str_17365));
             this._com.addHabboConnectionMessageEvent(new TradingCloseEvent(this._Str_25275, TradingCloseParser));
             this._com.addHabboConnectionMessageEvent(new NotEnoughBalanceMessageEvent(this.onNotEnoughCredits));
             this._com.addHabboConnectionMessageEvent(new BotAddedToInventoryEvent(this._Str_23929));
@@ -373,7 +373,7 @@
             {
                 return;
             }
-            var _local_3:AvatarEffectActivatedMessageParser = (k as _Str_5720).getParser();
+            var _local_3:AvatarEffectActivatedMessageParser = (k as AvatarEffectActivatedMessageEvent).getParser();
             if (_local_3 == null)
             {
                 return;

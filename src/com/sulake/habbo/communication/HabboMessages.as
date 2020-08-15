@@ -900,7 +900,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.*;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_12022;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5720;
+	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectActivatedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemsToTradeComposer;
@@ -1129,7 +1129,7 @@
             INCOMING_PACKETS[1924] = PetFigureUpdateEvent;
             INCOMING_PACKETS[1927] = _Str_16380;
             INCOMING_PACKETS[195] = DirectSMSClubBuyAvailableMessageEvent;
-            INCOMING_PACKETS[1959] = _Str_5720;
+            INCOMING_PACKETS[1959] = AvatarEffectActivatedMessageEvent;
             INCOMING_PACKETS[1968] = AchievementsScoreEvent;
             INCOMING_PACKETS[1982] = _Str_17148;
             INCOMING_PACKETS[1992] = NotificationDialogMessageEvent;

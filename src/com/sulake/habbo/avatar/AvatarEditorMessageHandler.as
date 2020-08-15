@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5720;
+    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectActivatedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.WardrobeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.CheckUserNameResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
@@ -28,7 +28,7 @@
             this._controller = k;
             this._communication = _arg_2;
             this._communication.addHabboConnectionMessageEvent(new AvatarEffectExpiredMessageEvent(this.onAvatarEffectExpired));
-            this._communication.addHabboConnectionMessageEvent(new _Str_5720(this._Str_17365));
+            this._communication.addHabboConnectionMessageEvent(new AvatarEffectActivatedMessageEvent(this._Str_17365));
             this._communication.addHabboConnectionMessageEvent(new WardrobeMessageEvent(this._Str_25446));
             this._communication.addHabboConnectionMessageEvent(new CheckUserNameResultMessageEvent(this._Str_18696));
             this._communication.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
@@ -143,7 +143,7 @@
             }
         }
 
-        private function _Str_17365(k:_Str_5720):void
+        private function _Str_17365(k:AvatarEffectActivatedMessageEvent):void
         {
             if (((k == null) || (!(this._controller))))
             {
