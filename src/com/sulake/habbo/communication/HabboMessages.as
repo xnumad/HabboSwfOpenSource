@@ -203,7 +203,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2GameDirectoryStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17782;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_18475;
-	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_18557;
+	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2StartingGameFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2AccountGameStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.*;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7080;
@@ -1155,7 +1155,7 @@
             INCOMING_PACKETS[2107] = AchievementEvent;
             INCOMING_PACKETS[2124] = CraftingRecipesAvailableEvent;
             INCOMING_PACKETS[2125] = _Str_7261;
-            INCOMING_PACKETS[2142] = _Str_18557;
+            INCOMING_PACKETS[2142] = Game2StartingGameFailedMessageEvent;
             INCOMING_PACKETS[2156] = PetExperienceEvent;
             INCOMING_PACKETS[2159] = GuildCreationInfoMessageEvent;
             INCOMING_PACKETS[217] = TradingOpenFailedEvent;
