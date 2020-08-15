@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class HallOfFameEntryData implements _Str_4106
+    public class HallOfFameEntryData implements ILandingPageUserEntry
     {
         private var _userId:int;
         private var _userName:String;

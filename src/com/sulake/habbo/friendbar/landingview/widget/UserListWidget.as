@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.window.enum._Str_3724;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_4106;
+    import com.sulake.habbo.communication.messages.incoming.quest.ILandingPageUserEntry;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets.IAvatarImageWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -78,7 +78,7 @@
         private function _Str_3836():void
         {
             var _local_3:IWindowContainer;
-            var _local_4:_Str_4106;
+            var _local_4:ILandingPageUserEntry;
             var _local_5:IWidgetWindow;
             var _local_6:IAvatarImageWidget;
             var k:int = this._startOffset;
@@ -140,7 +140,7 @@
             k.findChildByName("extra_link_region").y = (k.findChildByName("extra_link_region").y - this._avatarOffsetsY[_arg_2]);
         }
 
-        private function getEntry(k:IWindow):_Str_4106
+        private function getEntry(k:IWindow):ILandingPageUserEntry
         {
             var _local_2:int = k.id;
             return this.users[_local_2];
@@ -148,7 +148,7 @@
 
         private function _Str_6514(k:WindowEvent, _arg_2:IWindow):void
         {
-            var _local_3:_Str_4106 = this.getEntry(_arg_2);
+            var _local_3:ILandingPageUserEntry = this.getEntry(_arg_2);
             if (_local_3 == null)
             {
                 return;
@@ -175,7 +175,7 @@
 
         private function _Str_23122(k:WindowEvent, _arg_2:IWindow):void
         {
-            var _local_3:_Str_4106;
+            var _local_3:ILandingPageUserEntry;
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this.getEntry(_arg_2);
@@ -191,7 +191,7 @@
             }
         }
 
-        private function _Str_8168(k:_Str_4106, _arg_2:IWindow):void
+        private function _Str_8168(k:ILandingPageUserEntry, _arg_2:IWindow):void
         {
             if (this._popup == null)
             {
@@ -238,7 +238,7 @@
             return null;
         }
 
-        protected function refreshPopup(k:_Str_4106, _arg_2:IWindowContainer):void
+        protected function refreshPopup(k:ILandingPageUserEntry, _arg_2:IWindowContainer):void
         {
         }
 
@@ -252,7 +252,7 @@
             return false;
         }
 
-        protected function extraLinkClicked(k:_Str_4106):void
+        protected function extraLinkClicked(k:ILandingPageUserEntry):void
         {
         }
 

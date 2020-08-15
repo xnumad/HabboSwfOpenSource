@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.competition.GetCurrentTimingCodeMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.quest.HallOfFameEntryData;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_4106;
+    import com.sulake.habbo.communication.messages.incoming.quest.ILandingPageUserEntry;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.communication.messages.outgoing.competition.ForwardToACompetitionRoomMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalHallOfFameMessageComposer;
@@ -44,7 +44,7 @@
             return (this._data == null) ? null : this._data.hof;
         }
 
-        override protected function refreshPopup(k:_Str_4106, _arg_2:IWindowContainer):void
+        override protected function refreshPopup(k:ILandingPageUserEntry, _arg_2:IWindowContainer):void
         {
             var _local_3:HallOfFameEntryData = HallOfFameEntryData(k);
             _arg_2.findChildByName("user_name_txt").caption = _local_3.userName;
@@ -70,7 +70,7 @@
             return landingView.getBoolean("landing.view.communitygoalhof.hasroomlink");
         }
 
-        override protected function extraLinkClicked(k:_Str_4106):void
+        override protected function extraLinkClicked(k:ILandingPageUserEntry):void
         {
             landingView.send(new ForwardToACompetitionRoomMessageComposer(this._data.goalCode, k.userId));
         }

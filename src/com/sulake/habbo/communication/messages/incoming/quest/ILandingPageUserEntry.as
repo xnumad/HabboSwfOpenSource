@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.quest
 {
-    public interface _Str_4106 
+    public interface ILandingPageUserEntry
     {
         function get userId():int;
         function get userName():String;
