@@ -141,7 +141,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.BuyMarketplaceTokensMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOwnOffersMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7734;
+	import com.sulake.habbo.communication.messages.incoming.notifications.PetBreedingEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.GoToBreedingNestFailureEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetRemovedFromInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetInventoryEvent;
@@ -1100,7 +1100,7 @@
             INCOMING_PACKETS[1723] = FurnitureAliasesMessageEvent;
             INCOMING_PACKETS[1730] = Game2JoiningGameFailedMessageEvent;
             INCOMING_PACKETS[1745] = CurrentTimingCodeMessageEvent;
-            INCOMING_PACKETS[1746] = _Str_7734;
+            INCOMING_PACKETS[1746] = PetBreedingEvent;
             INCOMING_PACKETS[1748] = _Str_8135;
             INCOMING_PACKETS[1752] = RoomVisitsEvent;
             INCOMING_PACKETS[1759] = RoomAdErrorEvent;

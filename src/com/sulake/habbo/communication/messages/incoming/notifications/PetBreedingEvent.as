@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetBreedingMessageParser;
 
-    public class _Str_7734 extends MessageEvent implements IMessageEvent 
+    public class PetBreedingEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7734(k:Function)
+        public function PetBreedingEvent(k:Function)
         {
             super(k, PetBreedingMessageParser);
         }

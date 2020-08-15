@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetPlacingErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetFigureUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetBreedingResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_7734;
+    import com.sulake.habbo.communication.messages.incoming.notifications.PetBreedingEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetStatusUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetLevelUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingRequestEvent;
@@ -86,7 +86,7 @@
             k.addMessageEvent(new PetPlacingErrorEvent(this.onPetPlacingError));
             k.addMessageEvent(new PetFigureUpdateEvent(this.onPetFigureUpdate));
             k.addMessageEvent(new PetBreedingResultEvent(this.onPetBreedingResult));
-            k.addMessageEvent(new _Str_7734(this.onPetBreedingEvent));
+            k.addMessageEvent(new PetBreedingEvent(this.onPetBreedingEvent));
             k.addMessageEvent(new PetStatusUpdateEvent(this.onPetStatusUpdate));
             k.addMessageEvent(new PetLevelUpdateEvent(this.onPetLevelUpdate));
             k.addMessageEvent(new ConfirmBreedingRequestEvent(this._Str_25414));
@@ -389,7 +389,7 @@
 
         private function onPetBreedingEvent(k:IMessageEvent):void
         {
-            var _local_2:_Str_7734 = (k as _Str_7734);
+            var _local_2:PetBreedingEvent = (k as PetBreedingEvent);
             if (_local_2 == null)
             {
                 return;
