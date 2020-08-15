@@ -396,7 +396,7 @@
 	import com.sulake.habbo.communication.messages.incoming.userclassification.UserClassificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.*;
 	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPagesListEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_16789;
+	import com.sulake.habbo.communication.messages.incoming.catalog.IsOfferGiftableMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_17034;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_17379;
 	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPublishedMessageEvent;
@@ -1430,7 +1430,7 @@
             INCOMING_PACKETS[740] = AchievementResolutionCompletedMessageEvent;
             INCOMING_PACKETS[749] = RoomEntryInfoMessageEvent;
             INCOMING_PACKETS[758] = OpenConnectionMessageEvent;
-            INCOMING_PACKETS[761] = _Str_16789;
+            INCOMING_PACKETS[761] = IsOfferGiftableMessageEvent;
             INCOMING_PACKETS[762] = HabboGroupJoinFailedMessageEvent;
             INCOMING_PACKETS[77] = CallForHelpPendingCallsDeletedMessageEvent;
             INCOMING_PACKETS[770] = FriendFurniCancelLockMessageEvent;
