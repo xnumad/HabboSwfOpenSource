@@ -552,7 +552,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5641;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7759;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8109;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.HabboSearchResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FollowFriendFailedEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.InstantMessageErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerErrorEvent;
@@ -1459,7 +1459,7 @@
             INCOMING_PACKETS[949] = QuestCompletedMessageEvent;
             INCOMING_PACKETS[954] = ScrSendUserInfoEvent;
             INCOMING_PACKETS[966] = UserClassificationMessageEvent;
-            INCOMING_PACKETS[973] = _Str_8109;
+            INCOMING_PACKETS[973] = HabboSearchResultEvent;
             INCOMING_PACKETS[994] = FurniListEvent;
 			
 			/*

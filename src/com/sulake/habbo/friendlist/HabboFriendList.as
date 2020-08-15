@@ -71,7 +71,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7759;
     import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerErrorEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8109;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.HabboSearchResultEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.GetFriendRequestsMessageComposer;
@@ -532,7 +532,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_4841(this._Str_16886));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_7759(this._Str_22373));
             this._communicationManager.addHabboConnectionMessageEvent(new MessengerErrorEvent(this._Str_23472));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_8109(this._Str_23021));
+            this._communicationManager.addHabboConnectionMessageEvent(new HabboSearchResultEvent(this._Str_23021));
             this._communicationManager.addHabboConnectionMessageEvent(new RoomInviteErrorEvent(this._Str_22762));
             this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
         }
@@ -589,7 +589,7 @@
 
         private function _Str_23021(k:IMessageEvent):void
         {
-            var _local_2:HabboSearchResultMessageParser = (k as _Str_8109).getParser();
+            var _local_2:HabboSearchResultMessageParser = (k as HabboSearchResultEvent).getParser();
             this._avatarSearchResults._Str_22668(_local_2.friends, _local_2.others);
             this._view.refresh("search");
         }
