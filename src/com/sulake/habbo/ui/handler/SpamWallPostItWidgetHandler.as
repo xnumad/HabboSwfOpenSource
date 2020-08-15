@@ -5,7 +5,7 @@
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9687;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.RequestSpamWallPostItMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.furniture.RequestSpamWallPostItMessageParser;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.habbo.ui.widget.events.RoomWidgetSpamWallPostItEditEvent;
@@ -40,7 +40,7 @@
 
         public function set connection(k:IConnection):void
         {
-            this._spamWallPostItEditRequestListener = new _Str_9687(this.onSpamWallPostItRequest);
+            this._spamWallPostItEditRequestListener = new RequestSpamWallPostItMessageEvent(this.onSpamWallPostItRequest);
             this._connection = k;
             this._connection.addMessageEvent(this._spamWallPostItEditRequestListener);
         }
@@ -55,7 +55,7 @@
             }
         }
 
-        private function onSpamWallPostItRequest(k:_Str_9687):void
+        private function onSpamWallPostItRequest(k:RequestSpamWallPostItMessageEvent):void
         {
             var _local_7:String;
             if (k == null)

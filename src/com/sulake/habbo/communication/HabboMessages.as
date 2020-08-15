@@ -785,7 +785,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9325;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9362;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9591;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9687;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.RequestSpamWallPostItMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.*;
 	import com.sulake.habbo.communication.messages.incoming.notifications.HabboAchievementNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
@@ -1187,7 +1187,7 @@
             INCOMING_PACKETS[233] = BotRemovedFromInventoryEvent;
             INCOMING_PACKETS[2335] = ModeratorActionResultMessageEvent;
             INCOMING_PACKETS[2347] = BundleDiscountRulesetMessageEvent;
-            INCOMING_PACKETS[2366] = _Str_9687;
+            INCOMING_PACKETS[2366] = RequestSpamWallPostItMessageEvent;
             INCOMING_PACKETS[2376] = _Str_7657;
             INCOMING_PACKETS[2379] = UnreadForumsCountMessageEvent;
             INCOMING_PACKETS[2380] = _Str_8382;
