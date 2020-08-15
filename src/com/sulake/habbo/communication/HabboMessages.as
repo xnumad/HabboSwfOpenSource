@@ -373,7 +373,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5633;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5711;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
+	import com.sulake.habbo.communication.messages.incoming.navigator.UserEventCatsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsDataMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomRatingEvent;
@@ -1296,7 +1296,7 @@
             INCOMING_PACKETS[3208] = ItemRemoveMessageEvent;
             INCOMING_PACKETS[3209] = GuideSessionStartedEvent;
             INCOMING_PACKETS[324] = UpdateMessageMessageEvent;
-            INCOMING_PACKETS[3244] = _Str_5766;
+            INCOMING_PACKETS[3244] = UserEventCatsEvent;
             INCOMING_PACKETS[325] = CfhTopicsInitEvent;
             INCOMING_PACKETS[3253] = _Str_9047;
             INCOMING_PACKETS[3264] = MarketplaceCancelOfferResultEvent;

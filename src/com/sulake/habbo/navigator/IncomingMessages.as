@@ -40,7 +40,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
     import com.sulake.habbo.communication.messages.incoming.competition.NoOwnedRoomsAlertMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
+    import com.sulake.habbo.communication.messages.incoming.navigator.UserEventCatsEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
@@ -154,7 +154,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709));
             _local_2.addHabboConnectionMessageEvent(new NoOwnedRoomsAlertMessageEvent(this.onNoOwnedRoomsAlert));
             _local_2.addHabboConnectionMessageEvent(new NoSuchFlatEvent(this.onNoSuchFlat));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947));
+            _local_2.addHabboConnectionMessageEvent(new UserEventCatsEvent(this._Str_15947));
             _local_2.addHabboConnectionMessageEvent(new FavouriteChangedEvent(this._Str_16972));
             _local_2.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837));
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
@@ -490,7 +490,7 @@
 
         private function _Str_15947(k:IMessageEvent):void
         {
-            var _local_2:UserEventCatsMessageParser = (k as _Str_5766).getParser();
+            var _local_2:UserEventCatsMessageParser = (k as UserEventCatsEvent).getParser();
             this._navigator.data._Str_10701 = _local_2._Str_10701;
         }
 

@@ -35,7 +35,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CantConnectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
+    import com.sulake.habbo.communication.messages.incoming.navigator.UserEventCatsEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
     import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsDataMessageEvent;
@@ -143,7 +143,7 @@
             this._messageListeners.push(k.connection.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new UserEventCatsEvent(this._Str_15947)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorMetaDataEvent(this.onNavigatorMetaData)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CompetitionRoomsDataMessageEvent(this.onCompetitionData)));
@@ -359,7 +359,7 @@
 
         private function _Str_15947(k:IMessageEvent):void
         {
-            var _local_2:UserEventCatsMessageParser = (k as _Str_5766).getParser();
+            var _local_2:UserEventCatsMessageParser = (k as UserEventCatsEvent).getParser();
             this._navigator.data._Str_10701 = _local_2._Str_10701;
         }
 
