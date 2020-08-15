@@ -91,7 +91,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.VoucherRedeemOkMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_8530;
+    import com.sulake.habbo.communication.messages.incoming.catalog.LimitedEditionSoldOutEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseNotAllowedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
@@ -553,7 +553,7 @@
             this.addMessageEvent(new VoucherRedeemOkMessageEvent(this.onVoucherRedeemOk));
             this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
             this.addMessageEvent(new _Str_8409(this.onGiftReceiverNotFound));
-            this.addMessageEvent(new _Str_8530(this.onLimitedEditionSoldOut));
+            this.addMessageEvent(new LimitedEditionSoldOutEvent(this.onLimitedEditionSoldOut));
             this.addMessageEvent(new PurchaseNotAllowedMessageEvent(this.onPurchaseNotAllowed));
             this.addMessageEvent(new GiftWrappingConfigurationEvent(this.onGiftWrappingConfiguration));
             this.addMessageEvent(new PurchaseErrorMessageEvent(this.onPurchaseError));
@@ -2948,7 +2948,7 @@
             this._utils._Str_24024();
         }
 
-        private function onLimitedEditionSoldOut(k:_Str_8530):void
+        private function onLimitedEditionSoldOut(k:LimitedEditionSoldOutEvent):void
         {
             this._windowManager.alert("${catalog.alert.limited_edition_sold_out.title}", "${catalog.alert.limited_edition_sold_out.message}", 0, this.alertDialogEventProcessor);
             if (this._purchaseConfirmationDialog != null)

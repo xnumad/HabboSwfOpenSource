@@ -418,7 +418,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8530;
+	import com.sulake.habbo.communication.messages.incoming.catalog.LimitedEditionSoldOutEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.SellablePetPalettesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.VoucherRedeemOkMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferEvent;
@@ -1353,7 +1353,7 @@
             INCOMING_PACKETS[3738] = NoobnessLevelMessageEvent;
             INCOMING_PACKETS[374] = UsersEvent;
             INCOMING_PACKETS[3753] = FriendFurniStartConfirmationMessageEvent;
-            INCOMING_PACKETS[377] = _Str_8530;
+            INCOMING_PACKETS[377] = LimitedEditionSoldOutEvent;
             INCOMING_PACKETS[3770] = PurchaseNotAllowedMessageEvent;
             INCOMING_PACKETS[3776] = ObjectUpdateMessageEvent;
             INCOMING_PACKETS[378] = CanCreateRoomMessageEvent;

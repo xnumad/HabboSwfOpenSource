@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.LimitedEditionSoldOutParser;
 
-    public class _Str_8530 extends MessageEvent implements IMessageEvent 
+    public class LimitedEditionSoldOutEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8530(k:Function)
+        public function LimitedEditionSoldOutEvent(k:Function)
         {
             super(k, LimitedEditionSoldOutParser);
         }
