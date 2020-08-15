@@ -290,7 +290,7 @@
 	import com.sulake.habbo.communication.messages.incoming.bots.BotReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.bots.BotRemovedFromInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.bots.BotAddedToInventoryEvent;
-	import com.sulake.habbo.communication.messages.incoming.bots._Str_9129;
+	import com.sulake.habbo.communication.messages.incoming.bots.BotInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
@@ -1278,7 +1278,7 @@
             INCOMING_PACKETS[3052] = NavigatorMetaDataEvent;
             INCOMING_PACKETS[3058] = TradingYouAreNotAllowedEvent;
             INCOMING_PACKETS[3082] = _Str_8552;
-            INCOMING_PACKETS[3086] = _Str_9129;
+            INCOMING_PACKETS[3086] = BotInventoryEvent;
             INCOMING_PACKETS[3097] = _Str_6994;
             INCOMING_PACKETS[3099] = _Str_16667;
             INCOMING_PACKETS[3104] = NavigatorLiftedRoomsEvent;
