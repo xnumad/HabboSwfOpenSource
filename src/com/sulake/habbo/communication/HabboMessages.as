@@ -105,7 +105,7 @@
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceCancelOfferResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOffersEvent;
-	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
+	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceCanMakeOfferResult;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.GetGameStatusMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.LeaveQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.lobby.JoinQueueMessageComposer;
@@ -1401,7 +1401,7 @@
             INCOMING_PACKETS[513] = AccountPreferencesEvent;
             INCOMING_PACKETS[518] = _Str_8763;
             INCOMING_PACKETS[52] = GuestRoomSearchResultEvent;
-            INCOMING_PACKETS[54] = _Str_9517;
+            INCOMING_PACKETS[54] = MarketplaceCanMakeOfferResult;
             INCOMING_PACKETS[546] = _Str_8241;
             INCOMING_PACKETS[558] = HeightMapUpdateMessageEvent;
             INCOMING_PACKETS[56] = _Str_9591;

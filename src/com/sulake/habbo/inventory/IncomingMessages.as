@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.OpenConnectionMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceCanMakeOfferResult;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOtherNotAllowedEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOtherNotAllowedParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListEvent;
@@ -137,7 +137,7 @@
             this._com.addHabboConnectionMessageEvent(new UserBadgesEvent(this.onUserBadges));
             this._com.addHabboConnectionMessageEvent(new MarketplaceConfigurationEvent(this.onMarketplaceConfiguration));
             this._com.addHabboConnectionMessageEvent(new OpenConnectionMessageEvent(this._Str_15910));
-            this._com.addHabboConnectionMessageEvent(new _Str_9517(this._Str_25747));
+            this._com.addHabboConnectionMessageEvent(new MarketplaceCanMakeOfferResult(this._Str_25747));
             this._com.addHabboConnectionMessageEvent(new TradingOtherNotAllowedEvent(this._Str_22530, TradingOtherNotAllowedParser));
             this._com.addHabboConnectionMessageEvent(new FurniListEvent(this._Str_25001));
             this._com.addHabboConnectionMessageEvent(new TradingAcceptEvent(this._Str_23770, TradingAcceptParser));
@@ -889,7 +889,7 @@
             }
         }
 
-        private function _Str_25747(k:_Str_9517):void
+        private function _Str_25747(k:MarketplaceCanMakeOfferResult):void
         {
             if (((k == null) || (this._inventory == null)))
             {
