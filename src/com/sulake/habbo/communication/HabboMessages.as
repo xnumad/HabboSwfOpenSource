@@ -289,7 +289,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.purse.GetCreditsInfoComposer;
 	import com.sulake.habbo.communication.messages.incoming.bots.BotReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.bots.BotRemovedFromInventoryEvent;
-	import com.sulake.habbo.communication.messages.incoming.bots._Str_8892;
+	import com.sulake.habbo.communication.messages.incoming.bots.BotAddedToInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.bots._Str_9129;
 	import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
@@ -1039,7 +1039,7 @@
             INCOMING_PACKETS[1333] = _Str_8695;
             INCOMING_PACKETS[1347] = InitDiffieHandshakeEvent;
             INCOMING_PACKETS[1350] = MaintenanceStatusMessageEvent;
-            INCOMING_PACKETS[1352] = _Str_8892;
+            INCOMING_PACKETS[1352] = BotAddedToInventoryEvent;
             INCOMING_PACKETS[1359] = _Str_6022;
             INCOMING_PACKETS[1369] = ItemsEvent;
             INCOMING_PACKETS[1373] = TradingCloseEvent;

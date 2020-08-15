@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingCloseEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingCloseParser;
     import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.bots._Str_8892;
+    import com.sulake.habbo.communication.messages.incoming.bots.BotAddedToInventoryEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.PostItPlacedEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenFailedEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOpenFailedEventParser;
@@ -149,7 +149,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_5720(this._Str_17365));
             this._com.addHabboConnectionMessageEvent(new TradingCloseEvent(this._Str_25275, TradingCloseParser));
             this._com.addHabboConnectionMessageEvent(new NotEnoughBalanceMessageEvent(this.onNotEnoughCredits));
-            this._com.addHabboConnectionMessageEvent(new _Str_8892(this._Str_23929));
+            this._com.addHabboConnectionMessageEvent(new BotAddedToInventoryEvent(this._Str_23929));
             this._com.addHabboConnectionMessageEvent(new PostItPlacedEvent(this._Str_23887));
             this._com.addHabboConnectionMessageEvent(new TradingOpenFailedEvent(this._Str_23502, TradingOpenFailedEventParser));
             this._com.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this._Str_15910));
@@ -842,7 +842,7 @@
             _local_2.removeItem(_local_3.itemId);
         }
 
-        private function _Str_23929(k:_Str_8892):void
+        private function _Str_23929(k:BotAddedToInventoryEvent):void
         {
             if (((k == null) || (this._inventory == null)))
             {
