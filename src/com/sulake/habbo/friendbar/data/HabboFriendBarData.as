@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.GameInviteMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.NewFriendRequestEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.NewConsoleMessageEvent;
     import com.sulake.habbo.friendlist.events._Str_2948;
@@ -114,7 +114,7 @@
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new GameInviteMessageEvent(this._Str_25411));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new MessengerInitEvent(this._Str_24730));
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4841(this._Str_16886));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new NewFriendRequestEvent(this._Str_16886));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendNotificationEvent(this._Str_15197));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new NewConsoleMessageEvent(this.onNewConsoleMessage));
             this._habboFriendListComponent.events.addEventListener(_Str_2948.FRE_ACCEPTED, this._Str_14893);
@@ -512,7 +512,7 @@
             events.dispatchEvent(new FindFriendsNotificationEvent(k.success));
         }
 
-        private function _Str_16886(k:_Str_4841):void
+        private function _Str_16886(k:NewFriendRequestEvent):void
         {
             var _local_2:FriendRequestData;
             if (this._Str_19444)

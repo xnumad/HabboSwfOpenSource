@@ -547,7 +547,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.NewFriendRequestEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.NewConsoleMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestsEvent;
@@ -1166,7 +1166,7 @@
             INCOMING_PACKETS[2196] = _Str_5142;
             INCOMING_PACKETS[2202] = ItemDataUpdateMessageEvent;
             INCOMING_PACKETS[2208] = RoomQueueStatusMessageEvent;
-            INCOMING_PACKETS[2219] = _Str_4841;
+            INCOMING_PACKETS[2219] = NewFriendRequestEvent;
             INCOMING_PACKETS[222] = GameListMessageEvent;
             INCOMING_PACKETS[2221] = SanctionStatusEvent;
             INCOMING_PACKETS[2228] = _Str_5345;

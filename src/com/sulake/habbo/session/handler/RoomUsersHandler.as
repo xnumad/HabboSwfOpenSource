@@ -18,7 +18,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9336;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9632;
     import com.sulake.habbo.communication.messages.incoming.room.bots.BotErrorEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.NewFriendRequestEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.FavoriteMembershipUpdateMessageEvent;
     import com.sulake.core.communication.connection.IConnection;
@@ -93,7 +93,7 @@
             k.addMessageEvent(new _Str_9336(this._Str_24337));
             k.addMessageEvent(new _Str_9632(this._Str_22690));
             k.addMessageEvent(new BotErrorEvent(this.onBotError));
-            k.addMessageEvent(new _Str_4841(this._Str_22755));
+            k.addMessageEvent(new NewFriendRequestEvent(this._Str_22755));
             k.addMessageEvent(new DanceMessageEvent(this.onDance));
             k.addMessageEvent(new FavoriteMembershipUpdateMessageEvent(this.onFavoriteMembershipUpdate));
         }
@@ -540,7 +540,7 @@
             }
         }
 
-        private function _Str_22755(k:_Str_4841):void
+        private function _Str_22755(k:NewFriendRequestEvent):void
         {
             if ((((!(k)) || (!(listener))) || (!(listener.events))))
             {

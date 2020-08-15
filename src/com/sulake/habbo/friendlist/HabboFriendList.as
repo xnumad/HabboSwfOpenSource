@@ -68,7 +68,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist.FollowFriendFailedEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestsEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.NewFriendRequestEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.AcceptFriendResultEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.HabboSearchResultEvent;
@@ -529,7 +529,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new FollowFriendFailedEvent(this._Str_24032));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
             this._communicationManager.addHabboConnectionMessageEvent(new FriendRequestsEvent(this._Str_24954));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_4841(this._Str_16886));
+            this._communicationManager.addHabboConnectionMessageEvent(new NewFriendRequestEvent(this._Str_16886));
             this._communicationManager.addHabboConnectionMessageEvent(new AcceptFriendResultEvent(this._Str_22373));
             this._communicationManager.addHabboConnectionMessageEvent(new MessengerErrorEvent(this._Str_23472));
             this._communicationManager.addHabboConnectionMessageEvent(new HabboSearchResultEvent(this._Str_23021));
@@ -568,7 +568,7 @@
         private function _Str_16886(k:IMessageEvent):void
         {
             Logger.log("Received new friend request");
-            var _local_2:NewFriendRequestMessageParser = (k as _Str_4841).getParser();
+            var _local_2:NewFriendRequestMessageParser = (k as NewFriendRequestEvent).getParser();
             var _local_3:FriendRequest = new FriendRequest(_local_2.req);
             this._friendRequests._Str_24807(_local_3);
             var _local_4:_Str_2740 = this._tabs._Str_4403(_Str_2777._Str_3798);
