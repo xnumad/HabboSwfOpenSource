@@ -7,7 +7,7 @@
     import com.sulake.habbo.sound.HabboSoundManagerFlash10;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.sound.NowPlayingMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.sound._Str_7248;
+    import com.sulake.habbo.communication.messages.incoming.sound.JukeboxSongDisksMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.sound.JukeboxPlayListFullMessageEvent;
     import com.sulake.habbo.sound.events.SoundControllerEvent;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
@@ -45,7 +45,7 @@
             this._connection = _arg_4;
             this._messageEvents = [];
             this._messageEvents.push(new NowPlayingMessageEvent(this._Str_25253));
-            this._messageEvents.push(new _Str_7248(this._Str_24814));
+            this._messageEvents.push(new JukeboxSongDisksMessageEvent(this._Str_24814));
             this._messageEvents.push(new JukeboxPlayListFullMessageEvent(this._Str_22626));
             for each (_local_5 in this._messageEvents)
             {
@@ -178,7 +178,7 @@
             var _local_5:int;
             var _local_6:int;
             var _local_7:SongDataEntry;
-            var _local_2:_Str_7248 = (k as _Str_7248);
+            var _local_2:JukeboxSongDisksMessageEvent = (k as JukeboxSongDisksMessageEvent);
             var _local_3:JukeboxSongDisksMessageParser = (_local_2.getParser() as JukeboxSongDisksMessageParser);
             Logger.log(("Received Jukebox song disks (=playlist) message, length of playlist: " + _local_3._Str_14484.length));
             this._entries = new Array();

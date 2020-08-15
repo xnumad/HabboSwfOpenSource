@@ -93,7 +93,7 @@
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeBoxPlayListAddSongEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeboxPlayListFullMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7199;
-	import com.sulake.habbo.communication.messages.incoming.sound._Str_7248;
+	import com.sulake.habbo.communication.messages.incoming.sound.JukeboxSongDisksMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.UserSongDisksInventoryMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.NowPlayingMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.PlayListMessageEvent;
@@ -1317,7 +1317,7 @@
             INCOMING_PACKETS[3377] = UserChatlogEvent;
             INCOMING_PACKETS[3388] = ProductOfferEvent;
             INCOMING_PACKETS[339] = YouAreOwnerMessageEvent;
-            INCOMING_PACKETS[34] = _Str_7248;
+            INCOMING_PACKETS[34] = JukeboxSongDisksMessageEvent;
             INCOMING_PACKETS[340] = AvatarEffectsMessageEvent;
             INCOMING_PACKETS[3403] = FavoriteMembershipUpdateMessageEvent;
             INCOMING_PACKETS[3406] = _Str_7229;
