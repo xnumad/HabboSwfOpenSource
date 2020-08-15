@@ -51,7 +51,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceMakeOfferResult;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_8524;
+    import com.sulake.habbo.communication.messages.incoming.notifications.GoToBreedingNestFailureEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectAddedMessageEvent;
@@ -162,7 +162,7 @@
             this._com.addHabboConnectionMessageEvent(new FurniListAddOrUpdateEvent(this._Str_23121));
             this._com.addHabboConnectionMessageEvent(new MarketplaceMakeOfferResult(this.onMarketplaceMakeOfferResult));
             this._com.addHabboConnectionMessageEvent(new _Str_3660(this._Str_25294));
-            this._com.addHabboConnectionMessageEvent(new _Str_8524(this._Str_25173));
+            this._com.addHabboConnectionMessageEvent(new GoToBreedingNestFailureEvent(this._Str_25173));
             this._com.addHabboConnectionMessageEvent(new AvatarEffectExpiredMessageEvent(this.onAvatarEffectExpired));
             this._com.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this._com.addHabboConnectionMessageEvent(new AvatarEffectAddedMessageEvent(this._Str_18461));
@@ -767,7 +767,7 @@
             }
         }
 
-        private function _Str_25173(k:_Str_8524):void
+        private function _Str_25173(k:GoToBreedingNestFailureEvent):void
         {
             if (((k == null) || (this._inventory == null)))
             {

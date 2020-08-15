@@ -142,7 +142,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.marketplace.GetMarketplaceOwnOffersMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7734;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8524;
+	import com.sulake.habbo.communication.messages.incoming.notifications.GoToBreedingNestFailureEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetRemovedFromInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingRequestEvent;
@@ -1217,7 +1217,7 @@
             INCOMING_PACKETS[2589] = _Str_8879;
             INCOMING_PACKETS[2599] = CanCreateRoomEventEvent;
             INCOMING_PACKETS[2602] = _Str_7922;
-            INCOMING_PACKETS[2621] = _Str_8524;
+            INCOMING_PACKETS[2621] = GoToBreedingNestFailureEvent;
             INCOMING_PACKETS[2624] = LoadGameUrlMessageEvent;
             INCOMING_PACKETS[2641] = WeeklyGameRewardEvent;
             INCOMING_PACKETS[265] = GuildMembershipUpdatedMessageEvent;
