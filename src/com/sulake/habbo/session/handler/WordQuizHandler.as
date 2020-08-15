@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.session.handler
 {
     import com.sulake.habbo.communication.messages.incoming.poll.QuestionEvent;
-    import com.sulake.habbo.communication.messages.incoming.poll._Str_8879;
+    import com.sulake.habbo.communication.messages.incoming.poll.QuestionAnsweredEvent;
     import com.sulake.habbo.communication.messages.incoming.poll.SimplePollResultsEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
@@ -21,7 +21,7 @@
                 return;
             }
             k.addMessageEvent(new QuestionEvent(this._Str_23470));
-            k.addMessageEvent(new _Str_8879(this._Str_23131));
+            k.addMessageEvent(new QuestionAnsweredEvent(this._Str_23131));
             k.addMessageEvent(new SimplePollResultsEvent(this._Str_24658));
         }
 
@@ -47,7 +47,7 @@
             listener.events.dispatchEvent(_local_4);
         }
 
-        private function _Str_23131(k:_Str_8879):void
+        private function _Str_23131(k:QuestionAnsweredEvent):void
         {
             var _local_4:RoomSessionWordQuizEvent;
             if (!k)

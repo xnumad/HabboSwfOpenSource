@@ -925,7 +925,7 @@
 	import com.sulake.habbo.communication.messages.incoming.poll.PollOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.PollErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.PollContentsEvent;
-	import com.sulake.habbo.communication.messages.incoming.poll._Str_8879;
+	import com.sulake.habbo.communication.messages.incoming.poll.QuestionAnsweredEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.session.ChangeQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.session.GoToFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.session.QuitMessageComposer;
@@ -1214,7 +1214,7 @@
             INCOMING_PACKETS[2551] = CampaignCalendarDoorOpenedMessageEvent;
             INCOMING_PACKETS[2568] = TradingAcceptEvent;
             INCOMING_PACKETS[2586] = PerkAllowancesEvent;
-            INCOMING_PACKETS[2589] = _Str_8879;
+            INCOMING_PACKETS[2589] = QuestionAnsweredEvent;
             INCOMING_PACKETS[2599] = CanCreateRoomEventEvent;
             INCOMING_PACKETS[2602] = _Str_7922;
             INCOMING_PACKETS[2621] = GoToBreedingNestFailureEvent;
