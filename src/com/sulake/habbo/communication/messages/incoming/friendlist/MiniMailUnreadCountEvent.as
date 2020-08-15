@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.MiniMailUnreadCountMessageParser;
 
-    public class _Str_11571 extends MessageEvent implements IMessageEvent 
+    public class MiniMailUnreadCountEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_11571(k:Function)
+        public function MiniMailUnreadCountEvent(k:Function)
         {
             super(k, MiniMailUnreadCountMessageParser);
         }

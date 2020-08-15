@@ -543,7 +543,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.*;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11459;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11571;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailUnreadCountEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
@@ -1245,7 +1245,7 @@
             INCOMING_PACKETS[2788] = PetRespectNotificationEvent;
             INCOMING_PACKETS[280] = _Str_5641;
             INCOMING_PACKETS[2800] = _Str_4035;
-            INCOMING_PACKETS[2803] = _Str_11571;
+            INCOMING_PACKETS[2803] = MiniMailUnreadCountEvent;
             INCOMING_PACKETS[2808] = GuildCreatedMessageEvent;
             INCOMING_PACKETS[2815] = RoomUserRespect;
             INCOMING_PACKETS[0x0B00] = _Str_9362;

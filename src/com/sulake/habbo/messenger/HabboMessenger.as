@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
     import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11459;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11571;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailUnreadCountEvent;
     import com.sulake.habbo.messenger.events.MiniMailMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.MiniMailUnreadCountMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
@@ -100,7 +100,7 @@
             if (getBoolean("client.minimail.embed.enabled"))
             {
                 this.addMessageEvent(new _Str_11459(this.onMiniMailMessage));
-                this.addMessageEvent(new _Str_11571(this.onMiniMailUnreadCount));
+                this.addMessageEvent(new MiniMailUnreadCountEvent(this.onMiniMailUnreadCount));
             }
         }
 
