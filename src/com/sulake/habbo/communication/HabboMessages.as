@@ -425,7 +425,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftSelectedEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferNotFoundEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9560;
+	import com.sulake.habbo.communication.messages.incoming.catalog.ProductOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.landingview.votes.CommunityGoalVoteMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.*;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
@@ -1315,7 +1315,7 @@
             INCOMING_PACKETS[3365] = _Str_7199;
             INCOMING_PACKETS[3370] = AchievementResolutionProgressMessageEvent;
             INCOMING_PACKETS[3377] = _Str_7898;
-            INCOMING_PACKETS[3388] = _Str_9560;
+            INCOMING_PACKETS[3388] = ProductOfferEvent;
             INCOMING_PACKETS[339] = YouAreOwnerMessageEvent;
             INCOMING_PACKETS[34] = _Str_7248;
             INCOMING_PACKETS[340] = _Str_6450;
