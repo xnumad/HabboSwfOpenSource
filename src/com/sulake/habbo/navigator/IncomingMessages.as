@@ -18,7 +18,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerAddedEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.BannedUsersFromRoomEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.NavigatorSettingsEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
@@ -132,7 +132,7 @@
             _local_2.addHabboConnectionMessageEvent(new FlatControllerAddedEvent(this._Str_9346));
             _local_2.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved));
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907));
+            _local_2.addHabboConnectionMessageEvent(new BannedUsersFromRoomEvent(this._Str_8907));
             _local_2.addHabboConnectionMessageEvent(new NavigatorSettingsEvent(this.onNavigatorSettings));
             _local_2.addHabboConnectionMessageEvent(new RoomEventEvent(this._Str_17647));
             _local_2.addHabboConnectionMessageEvent(new RoomSettingsSaveErrorEvent(this._Str_8265));
@@ -604,7 +604,7 @@
 
         private function _Str_8907(k:IMessageEvent):void
         {
-            var _local_2:BannedUsersFromRoomParser = (k as _Str_5881).getParser();
+            var _local_2:BannedUsersFromRoomParser = (k as BannedUsersFromRoomEvent).getParser();
             Logger.log(((("Got Banned users for room: " + _local_2.roomId) + ", ") + _local_2._Str_14901.length));
             this._navigator.roomSettingsCtrl._Str_8907(_local_2.roomId, _local_2._Str_14901);
         }

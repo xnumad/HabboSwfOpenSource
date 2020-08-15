@@ -566,7 +566,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.BannedUsersFromRoomEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsDataEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerAddedEvent;
@@ -1119,7 +1119,7 @@
             INCOMING_PACKETS[1862] = PostThreadMessageEvent;
             INCOMING_PACKETS[1866] = CatalogPublishedMessageEvent;
             INCOMING_PACKETS[1868] = RentableSpaceRentFailedMessageEvent;
-            INCOMING_PACKETS[1869] = _Str_5881;
+            INCOMING_PACKETS[1869] = BannedUsersFromRoomEvent;
             INCOMING_PACKETS[1876] = GuildMemberFurniCountInHQMessageEvent;
             INCOMING_PACKETS[1878] = QuestDailyMessageEvent;
             INCOMING_PACKETS[1889] = SeasonalCalendarDailyOfferMessageEvent;

@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.BannedUsersFromRoomEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FavouritesEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.CollapsedCategoriesEvent;
@@ -136,7 +136,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FavouriteChangedEvent(this._Str_16972)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new BannedUsersFromRoomEvent(this._Str_8907)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FavouritesEvent(this._Str_8561)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new NoSuchFlatEvent(this.onNoSuchFlat)));
             this._messageListeners.push(k.connection.addMessageEvent(new CollapsedCategoriesEvent(this._Str_18969)));
@@ -449,7 +449,7 @@
 
         private function _Str_8907(k:IMessageEvent):void
         {
-            var _local_2:BannedUsersFromRoomParser = (k as _Str_5881).getParser();
+            var _local_2:BannedUsersFromRoomParser = (k as BannedUsersFromRoomEvent).getParser();
             Logger.log(((("Got Banned users for room: " + _local_2.roomId) + ", ") + _local_2._Str_14901.length));
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl._Str_8907(_local_2.roomId, _local_2._Str_14901);
         }
