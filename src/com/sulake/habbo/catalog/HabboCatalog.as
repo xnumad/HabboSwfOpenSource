@@ -103,7 +103,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.SellablePetPalettesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
+    import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubSubscriptionStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
     import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPublishedMessageEvent;
@@ -565,7 +565,7 @@
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             this.addMessageEvent(new SellablePetPalettesMessageEvent(this.onSellablePalettes));
             this.addMessageEvent(new MarketPlaceOwnOffersEvent(this.onMarketPlaceOwnOffers));
-            this.addMessageEvent(new _Str_5417(this.onBuildersClubSubscriptionStatus));
+            this.addMessageEvent(new BuildersClubSubscriptionStatusMessageEvent(this.onBuildersClubSubscriptionStatus));
             this.addMessageEvent(new _Str_6344(this.onMarketPlaceBuyResult));
             this.addMessageEvent(new ActivityPointsEvent(this.onActivityPoints));
             this.addMessageEvent(new CatalogPublishedMessageEvent(this.onCatalogPublished));
@@ -3001,7 +3001,7 @@
             }
         }
 
-        private function onBuildersClubSubscriptionStatus(k:_Str_5417):void
+        private function onBuildersClubSubscriptionStatus(k:BuildersClubSubscriptionStatusMessageEvent):void
         {
             var _local_2:BuildersClubSubscriptionStatusMessageParser = k.getParser();
             this._builderFurniLimit = _local_2._Str_15864;

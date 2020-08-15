@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.layout.RoomEntryTileMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.layout.RoomOccupiedTilesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomVisualizationSettingsEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
+    import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubSubscriptionStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.core.window.components.IFrameWindow;
     import flash.utils.Timer;
@@ -54,7 +54,7 @@
         private var _entryTileDataMessageEvent:RoomEntryTileMessageEvent;
         private var _occupiedTilesMessageEvent:RoomOccupiedTilesMessageEvent;
         private var _roomVisualizationSettingsMessageEvent:RoomVisualizationSettingsEvent;
-        private var _buildersClubSubscriptionStatusMessageEvent:_Str_5417;
+        private var _buildersClubSubscriptionStatusMessageEvent:BuildersClubSubscriptionStatusMessageEvent;
         private var _perkAllowancesMessageEvent:PerkAllowancesEvent;
         private var _floorPlanCache:FloorPlanCache;
         private var _floorPlanPreviewer:FloorPlanPreviewer;
@@ -87,7 +87,7 @@
                 this._entryTileDataMessageEvent = new RoomEntryTileMessageEvent(this.onEntryTileData);
                 this._occupiedTilesMessageEvent = new RoomOccupiedTilesMessageEvent(this.onOccupiedTiles);
                 this._roomVisualizationSettingsMessageEvent = new RoomVisualizationSettingsEvent(this.onRoomVisualizationSettings);
-                this._buildersClubSubscriptionStatusMessageEvent = new _Str_5417(this._Str_22764);
+                this._buildersClubSubscriptionStatusMessageEvent = new BuildersClubSubscriptionStatusMessageEvent(this._Str_22764);
                 this._perkAllowancesMessageEvent = new PerkAllowancesEvent(this.onPerkAllowances);
                 this._windowManager.communication.addHabboConnectionMessageEvent(this._floorHeightMapMessageEvent);
                 this._windowManager.communication.addHabboConnectionMessageEvent(this._buildersClubSubscriptionStatusMessageEvent);
@@ -151,7 +151,7 @@
             return this._windowManager == null;
         }
 
-        private function _Str_22764(k:_Str_5417):void
+        private function _Str_22764(k:BuildersClubSubscriptionStatusMessageEvent):void
         {
             var _local_2:BuildersClubSubscriptionStatusMessageParser = k.getParser();
             this._bcSecondsLeft = _local_2._Str_3709;

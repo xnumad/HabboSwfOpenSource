@@ -400,7 +400,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_17034;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_17379;
 	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPublishedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
+	import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubSubscriptionStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
@@ -1053,7 +1053,7 @@
             INCOMING_PACKETS[1437] = _Str_17532;
             INCOMING_PACKETS[1446] = ChatMessageEvent;
             INCOMING_PACKETS[1450] = FigureSetIdsEvent;
-            INCOMING_PACKETS[1452] = _Str_5417;
+            INCOMING_PACKETS[1452] = BuildersClubSubscriptionStatusMessageEvent;
             INCOMING_PACKETS[1453] = ObjectsDataUpdateMessageEvent;
             INCOMING_PACKETS[1455] = _Str_5006;
             INCOMING_PACKETS[1456] = GuideSessionEndedEvent;
