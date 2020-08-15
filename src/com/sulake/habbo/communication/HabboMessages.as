@@ -768,7 +768,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.moderator.ModAlertMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.*;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayPlaylistsEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_6132;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.CustomUserNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.FurniRentOrBuyoutOfferMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.OneWayDoorStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentFailedMessageEvent;
@@ -1452,7 +1452,7 @@
             INCOMING_PACKETS[896] = AcceptFriendResultEvent;
             INCOMING_PACKETS[899] = CantConnectMessageEvent;
             INCOMING_PACKETS[904] = GameInviteMessageEvent;
-            INCOMING_PACKETS[909] = _Str_6132;
+            INCOMING_PACKETS[909] = CustomUserNotificationMessageEvent;
             INCOMING_PACKETS[91] = TryVerificationCodeResultMessageEvent;
             INCOMING_PACKETS[934] = IssueCloseNotificationMessageEvent;
             INCOMING_PACKETS[948] = RoomSettingsSavedEvent;

@@ -14,7 +14,7 @@
     import com.sulake.habbo.session.events.RoomSessionPetLevelUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionNestBreedingSuccessEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_6132;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.CustomUserNotificationMessageEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetInventoryUpdatedMessage;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.session.RoomUserData;
@@ -141,7 +141,7 @@
             }
             if (((!(this._respectNotificationListener)) && (this._container.connection)))
             {
-                this._respectNotificationListener = new _Str_6132(this._Str_22329);
+                this._respectNotificationListener = new CustomUserNotificationMessageEvent(this._Str_22329);
                 this._container.connection.addMessageEvent(this._respectNotificationListener);
             }
             if ((((this._container) && (this._container.toolbar)) && (this._container.toolbar.events)))
@@ -603,7 +603,7 @@
             return null;
         }
 
-        public function _Str_22329(k:_Str_6132):void
+        public function _Str_22329(k:CustomUserNotificationMessageEvent):void
         {
             var _local_2:int = k.getParser().code;
             switch (_local_2)

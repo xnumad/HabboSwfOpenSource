@@ -5,7 +5,7 @@
     import com.sulake.habbo.ui.widget.furniture.requirementsmissing.CustomUserNotificationWidget;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_6132;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.CustomUserNotificationMessageEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import flash.events.Event;
@@ -33,7 +33,7 @@
             this._container = k;
             if (!this._customUserNotificationListener)
             {
-                this._customUserNotificationListener = new _Str_6132(this._Str_23893);
+                this._customUserNotificationListener = new CustomUserNotificationMessageEvent(this._Str_23893);
                 this._container.connection.addMessageEvent(this._customUserNotificationListener);
             }
         }
@@ -86,7 +86,7 @@
             return this._isDisposed;
         }
 
-        public function _Str_23893(k:_Str_6132):void
+        public function _Str_23893(k:CustomUserNotificationMessageEvent):void
         {
             var _local_2:int = k.getParser().code;
             if (this._widget)

@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.furniture.CustomUserNotificationMessageParser;
 
-    public class _Str_6132 extends MessageEvent 
+    public class CustomUserNotificationMessageEvent extends MessageEvent
     {
-        public function _Str_6132(k:Function)
+        public function CustomUserNotificationMessageEvent(k:Function)
         {
             super(k, CustomUserNotificationMessageParser);
         }
