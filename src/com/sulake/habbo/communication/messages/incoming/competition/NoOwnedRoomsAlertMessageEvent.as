@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.competition.NoOwnedRoomsAlertMessageParser;
 
-    public class _Str_5891 extends MessageEvent implements IMessageEvent 
+    public class NoOwnedRoomsAlertMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_5891(k:Function)
+        public function NoOwnedRoomsAlertMessageEvent(k:Function)
         {
             super(k, NoOwnedRoomsAlertMessageParser);
         }

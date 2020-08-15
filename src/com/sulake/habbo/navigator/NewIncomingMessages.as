@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
-    import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
+    import com.sulake.habbo.communication.messages.incoming.competition.NoOwnedRoomsAlertMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorLiftedRoomsEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSavedSearchesEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.FlatAccessibleMessageEvent;
@@ -118,7 +118,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSaveErrorEvent(this._Str_8265)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5891(this.onNoOwnedRoomsAlert)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new NoOwnedRoomsAlertMessageEvent(this.onNoOwnedRoomsAlert)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorLiftedRoomsEvent(this.onNavigatorLiftedRooms)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSavedSearchesEvent(this.onSavedSearches)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened)));
@@ -529,7 +529,7 @@
             LegacyNavigator(this._navigator.legacyNavigator).trackNavigationDataPoint("Room Forward", "go.roomforward", "", k);
         }
 
-        private function onNoOwnedRoomsAlert(k:_Str_5891):void
+        private function onNoOwnedRoomsAlert(k:NoOwnedRoomsAlertMessageEvent):void
         {
             LegacyNavigator(this._navigator.legacyNavigator).startRoomCreation();
         }

@@ -38,7 +38,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
-    import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
+    import com.sulake.habbo.communication.messages.incoming.competition.NoOwnedRoomsAlertMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5795;
@@ -152,7 +152,7 @@
             _local_2.addHabboConnectionMessageEvent(new CanCreateRoomMessageEvent(this._Str_25812));
             _local_2.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576));
             _local_2.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5891(this.onNoOwnedRoomsAlert));
+            _local_2.addHabboConnectionMessageEvent(new NoOwnedRoomsAlertMessageEvent(this.onNoOwnedRoomsAlert));
             _local_2.addHabboConnectionMessageEvent(new NoSuchFlatEvent(this.onNoSuchFlat));
             _local_2.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947));
             _local_2.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972));
@@ -723,7 +723,7 @@
             this._navigator.trackNavigationDataPoint("Room Forward", "go.roomforward", "", k);
         }
 
-        private function onNoOwnedRoomsAlert(k:_Str_5891):void
+        private function onNoOwnedRoomsAlert(k:NoOwnedRoomsAlertMessageEvent):void
         {
             this._navigator.startRoomCreation();
         }

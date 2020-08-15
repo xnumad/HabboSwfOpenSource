@@ -164,7 +164,7 @@
 	import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerStatusEvent;
 	import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerPrizesEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
+	import com.sulake.habbo.communication.messages.incoming.competition.NoOwnedRoomsAlertMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionVotingInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_8237;
@@ -1147,7 +1147,7 @@
             INCOMING_PACKETS[2046] = RentableSpaceRentOkMessageEvent;
             INCOMING_PACKETS[2049] = _Str_9630;
             INCOMING_PACKETS[2057] = CameraPublishStatusMessageEvent;
-            INCOMING_PACKETS[2064] = _Str_5891;
+            INCOMING_PACKETS[2064] = NoOwnedRoomsAlertMessageEvent;
             INCOMING_PACKETS[207] = IgnoreResultMessageEvent;
             INCOMING_PACKETS[2088] = _Str_6213;
             INCOMING_PACKETS[2101] = _Str_9550;
