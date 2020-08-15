@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_8088;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_7898;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_7632;
+    import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
@@ -78,7 +78,7 @@
             _local_2.addMessageEvent(new _Str_8088(this.onCfhChatlog));
             _local_2.addMessageEvent(new _Str_7898(this.onUserChatlog));
             _local_2.addMessageEvent(new _Str_7799(this.onRoomChatlog));
-            _local_2.addMessageEvent(new _Str_7632(this.onRoomVisits));
+            _local_2.addMessageEvent(new RoomVisitsEvent(this.onRoomVisits));
             _local_2.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addMessageEvent(new _Str_9341(this.onModeratorActionResult));
@@ -242,7 +242,7 @@
             }
         }
 
-        private function onRoomVisits(k:_Str_7632):void
+        private function onRoomVisits(k:RoomVisitsEvent):void
         {
             var _local_3:RoomVisitsCtrl;
             var _local_2:RoomVisitsMessageParser = k.getParser();

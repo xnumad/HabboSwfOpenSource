@@ -207,7 +207,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2AccountGameStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.*;
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorInitMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7632;
+	import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7889;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7898;
@@ -1102,7 +1102,7 @@
             INCOMING_PACKETS[1745] = CurrentTimingCodeMessageEvent;
             INCOMING_PACKETS[1746] = _Str_7734;
             INCOMING_PACKETS[1748] = _Str_8135;
-            INCOMING_PACKETS[1752] = _Str_7632;
+            INCOMING_PACKETS[1752] = RoomVisitsEvent;
             INCOMING_PACKETS[1759] = RoomAdErrorEvent;
             INCOMING_PACKETS[1774] = UseObjectMessageEvent;
             INCOMING_PACKETS[1778] = ObjectsMessageEvent;
