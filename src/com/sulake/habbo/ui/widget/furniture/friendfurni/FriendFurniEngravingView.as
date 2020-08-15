@@ -128,12 +128,12 @@
                 _local_2 = this.widget._Str_11963.container.avatarRenderManager.createAvatarImage(this.stuffData.getValue(4), AvatarScaleType.LARGE, null, this);
                 if (!k.isPlaceholder())
                 {
-                    this._Str_7967("avatar_left", k._Str_818(AvatarSetType.FULL));
+                    this.setAvatarImage("avatar_left", k._Str_818(AvatarSetType.FULL));
                 }
                 if (!_local_2.isPlaceholder())
                 {
                     _local_2.setDirection(AvatarSetType.FULL, 4);
-                    this._Str_7967("avatar_right", _local_2._Str_818(AvatarSetType.FULL));
+                    this.setAvatarImage("avatar_right", _local_2._Str_818(AvatarSetType.FULL));
                 }
             }
         }
@@ -145,17 +145,17 @@
             if (k == this.stuffData.getValue(3))
             {
                 _local_2 = this.widget._Str_11963.container.avatarRenderManager.createAvatarImage(this.stuffData.getValue(3), AvatarScaleType.LARGE, null, this);
-                this._Str_7967("avatar_left", _local_2._Str_818(AvatarSetType.FULL));
+                this.setAvatarImage("avatar_left", _local_2._Str_818(AvatarSetType.FULL));
             }
             if (k == this.stuffData.getValue(4))
             {
                 _local_3 = this.widget._Str_11963.container.avatarRenderManager.createAvatarImage(this.stuffData.getValue(4), AvatarScaleType.LARGE, null, this);
                 _local_3.setDirection(AvatarSetType.FULL, 4);
-                this._Str_7967("avatar_right", _local_3._Str_818(AvatarSetType.FULL));
+                this.setAvatarImage("avatar_right", _local_3._Str_818(AvatarSetType.FULL));
             }
         }
 
-        private function _Str_7967(k:String, _arg_2:BitmapData):void
+        private function setAvatarImage(k:String, _arg_2:BitmapData):void
         {
             var _local_3:IBitmapWrapperWindow = IBitmapWrapperWindow(this._window.findChildByName(k));
             setElementImage(_local_3, _arg_2, 0, 0, 0);

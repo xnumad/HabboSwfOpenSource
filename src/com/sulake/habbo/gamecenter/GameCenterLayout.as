@@ -584,7 +584,7 @@
                     }
                     _local_7.name = _local_5.figure;
                     _local_8 = (_local_7.findChildByName("avatar_image") as IBitmapWrapperWindow);
-                    this._Str_7967(_local_8, _local_5.figure, _local_5.gender);
+                    this.setAvatarImage(_local_8, _local_5.figure, _local_5.gender);
                     this._leaderboardList.addListItem(_local_7);
                 }
             }
@@ -638,7 +638,7 @@
             }
         }
 
-        private function _Str_7967(k:IBitmapWrapperWindow, _arg_2:String, _arg_3:String=null):void
+        private function setAvatarImage(k:IBitmapWrapperWindow, _arg_2:String, _arg_3:String=null):void
         {
             var _local_4:BitmapData;
             var _local_5:IAvatarImage = this._gameCenterView.avatarRenderManager.createAvatarImage(_arg_2, AvatarScaleType.LARGE, _arg_3, this);
@@ -665,7 +665,7 @@
                     _local_4 = (_local_3.findChildByName("avatar_image") as IBitmapWrapperWindow);
                     if (_local_3.name == k)
                     {
-                        this._Str_7967(_local_4, k);
+                        this.setAvatarImage(_local_4, k);
                     }
                     _local_2++;
                 }
