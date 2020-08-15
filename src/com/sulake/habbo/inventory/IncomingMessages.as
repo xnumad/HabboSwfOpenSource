@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingAcceptEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingAcceptParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementsScoreEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_9550;
+    import com.sulake.habbo.communication.messages.incoming.notifications.PetAddedToInventoryEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingNotOpenEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingNotOpenParser;
@@ -142,7 +142,7 @@
             this._com.addHabboConnectionMessageEvent(new FurniListEvent(this._Str_25001));
             this._com.addHabboConnectionMessageEvent(new TradingAcceptEvent(this._Str_23770, TradingAcceptParser));
             this._com.addHabboConnectionMessageEvent(new AchievementsScoreEvent(this._Str_18065));
-            this._com.addHabboConnectionMessageEvent(new _Str_9550(this._Str_23427));
+            this._com.addHabboConnectionMessageEvent(new PetAddedToInventoryEvent(this._Str_23427));
             this._com.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onClubStatus));
             this._com.addHabboConnectionMessageEvent(new TradingNotOpenEvent(this._Str_23644, TradingNotOpenParser));
             this._com.addHabboConnectionMessageEvent(new FurniListRemoveEvent(this._Str_25700));
@@ -749,7 +749,7 @@
             this._petMsgFragments = null;
         }
 
-        private function _Str_23427(k:_Str_9550):void
+        private function _Str_23427(k:PetAddedToInventoryEvent):void
         {
             if (((k == null) || (this._inventory == null)))
             {

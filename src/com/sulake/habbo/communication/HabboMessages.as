@@ -147,7 +147,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9259;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9293;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9336;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9550;
+	import com.sulake.habbo.communication.messages.incoming.notifications.PetAddedToInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.NestBreedingSuccessEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.GuildForumThreadsEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ForumDataMessageEvent;
@@ -1150,7 +1150,7 @@
             INCOMING_PACKETS[2064] = NoOwnedRoomsAlertMessageEvent;
             INCOMING_PACKETS[207] = IgnoreResultMessageEvent;
             INCOMING_PACKETS[2088] = _Str_6213;
-            INCOMING_PACKETS[2101] = _Str_9550;
+            INCOMING_PACKETS[2101] = PetAddedToInventoryEvent;
             INCOMING_PACKETS[2103] = UnseenItemsEvent;
             INCOMING_PACKETS[2107] = AchievementEvent;
             INCOMING_PACKETS[2124] = CraftingRecipesAvailableEvent;
