@@ -267,7 +267,7 @@
 	import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7564;
 	import com.sulake.habbo.communication.messages.incoming.mysterybox.GotMysteryBoxPrizeMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.mysterybox.MysteryBoxKeysMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.perk._Str_12157;
+	import com.sulake.habbo.communication.messages.incoming.perk.CitizenshipVipOfferPromoEnabledEvent;
 	import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
 	import com.sulake.habbo.communication.messages.outgoing.avatar.ChangeUserNameMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.avatar.SaveWardrobeOutfitMessageComposer;
@@ -1178,7 +1178,7 @@
             INCOMING_PACKETS[2265] = UserGameAchievementsMessageEvent;
             INCOMING_PACKETS[2270] = Game2WeeklyFriendsLeaderboardEvent;
             INCOMING_PACKETS[2275] = HabboActivityPointNotificationMessageEvent;
-            INCOMING_PACKETS[2278] = _Str_12157;
+            INCOMING_PACKETS[2278] = CitizenshipVipOfferPromoEnabledEvent;
             INCOMING_PACKETS[2293] = _Str_8246;
             INCOMING_PACKETS[230] = QuestMessageEvent;
             INCOMING_PACKETS[2309] = DoorbellMessageEvent;

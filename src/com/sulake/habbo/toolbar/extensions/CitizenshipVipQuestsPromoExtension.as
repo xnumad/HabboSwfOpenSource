@@ -8,7 +8,7 @@
     import com.sulake.habbo.toolbar.IExtensionView;
     import com.sulake.core.window.components.IBorderWindow;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.perk._Str_12157;
+    import com.sulake.habbo.communication.messages.incoming.perk.CitizenshipVipOfferPromoEnabledEvent;
     import com.sulake.habbo.toolbar.HabboToolbar;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.window.components.IButtonWindow;
@@ -43,7 +43,7 @@
             this._localization = _arg_5;
             this._connection = _arg_6;
             this._extensionView = k.extensionView;
-            this._promoEnabledListener = new _Str_12157(this._Str_24787);
+            this._promoEnabledListener = new CitizenshipVipOfferPromoEnabledEvent(this._Str_24787);
             this._connection.addMessageEvent(this._promoEnabledListener);
             this._vipQuestsCampaignName = k.getProperty("citizenship.vip.tutorial.quest.campaign.name");
         }

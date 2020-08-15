@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.perk.CitizenshipVipOfferPromoEnabledMessageParser;
 
-    public class _Str_12157 extends MessageEvent implements IMessageEvent 
+    public class CitizenshipVipOfferPromoEnabledEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_12157(k:Function)
+        public function CitizenshipVipOfferPromoEnabledEvent(k:Function)
         {
             super(k, CitizenshipVipOfferPromoEnabledMessageParser);
         }
