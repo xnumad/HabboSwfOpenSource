@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7089 
+    public class CatalogLocalizationData
     {
         private var _images:Array;
         private var _texts:Array;
 
-        public function _Str_7089(k:IMessageDataWrapper)
+        public function CatalogLocalizationData(k:IMessageDataWrapper)
         {
             this._images = new Array();
             this._texts = new Array();

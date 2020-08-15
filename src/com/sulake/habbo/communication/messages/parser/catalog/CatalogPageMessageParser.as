@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.catalog
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_7089;
+    import com.sulake.habbo.communication.messages.incoming.catalog.CatalogLocalizationData;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageOfferData;
     import com.sulake.habbo.communication.messages.incoming.catalog.FrontPageItem;
@@ -13,7 +13,7 @@
         private var _pageId:int;
         private var _catalogType:String;
         private var _layoutCode:String;
-        private var _localization:_Str_7089;
+        private var _localization:CatalogLocalizationData;
         private var _offers:Vector.<CatalogPageMessageOfferData>;
         private var _offerId:int;
         private var _acceptSeasonCurrencyAsCredits:Boolean;
@@ -35,7 +35,7 @@
             return this._layoutCode;
         }
 
-        public function get localization():_Str_7089
+        public function get localization():CatalogLocalizationData
         {
             return this._localization;
         }
@@ -77,7 +77,7 @@
             this._pageId = k.readInteger();
             this._catalogType = k.readString();
             this._layoutCode = k.readString();
-            this._localization = new _Str_7089(k);
+            this._localization = new CatalogLocalizationData(k);
             this._offers = new Vector.<CatalogPageMessageOfferData>(0);
             var _local_2:int = k.readInteger();
             var _local_3:int;
