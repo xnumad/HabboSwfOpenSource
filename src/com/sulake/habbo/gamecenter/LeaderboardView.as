@@ -10,7 +10,7 @@
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.habbo.game.WindowUtils;
-    import com.sulake.habbo.communication.messages.incoming.game.score._Str_8022;
+    import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyCompetitiveLeaderboardEvent;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
     import com.sulake.habbo.communication.messages.outgoing.game.score.Game2GetWeeklyLeaderboardComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11321;
@@ -137,7 +137,7 @@
             if (!this._initialized)
             {
                 this._entryWindow = (WindowUtils.createWindow("game_leaderboard_entry_small_xml") as IWindowContainer);
-                this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_8022(this.onWeeklyCompetitiveLeaderboard));
+                this._gameCenterView.communication.addHabboConnectionMessageEvent(new WeeklyCompetitiveLeaderboardEvent(this.onWeeklyCompetitiveLeaderboard));
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5142(this.onWeeklyTopScoresLeaderboard));
                 this._initialized = true;
             }
@@ -178,7 +178,7 @@
             {
                 return;
             }
-            var _local_2:_Str_8022 = (k as _Str_8022);
+            var _local_2:WeeklyCompetitiveLeaderboardEvent = (k as WeeklyCompetitiveLeaderboardEvent);
             this.populateLeaderboard(this._thisWeekList, _local_2.getParser(), 10, false);
         }
 

@@ -24,7 +24,7 @@
 	//import com.sulake.room.renderer.cache._SafeStr_1440; //TODO
 	import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyLeaderboardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
-	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8022;
+	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyCompetitiveLeaderboardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
 	import com.sulake.core.utils.Map;
 	import com.sulake.habbo.catalog.enum._SafeStr_2308; //constants 2308
@@ -121,7 +121,7 @@
             _local_2.addHabboConnectionMessageEvent(new SnowStormIntializedPlayersEvent(this._SafeStr_18915));
             _local_2.addHabboConnectionMessageEvent(new SnowStormOnStageStartEvent(this._SafeStr_18916));
             _local_2.addHabboConnectionMessageEvent(new SnowStormLevelDataEvent(this._SafeStr_18917));
-            _local_2.addHabboConnectionMessageEvent(new _Str_8022(this._SafeStr_18918));
+            _local_2.addHabboConnectionMessageEvent(new WeeklyCompetitiveLeaderboardEvent(this._SafeStr_18918));
             _local_2.addHabboConnectionMessageEvent(new SnowStormQuePositionEvent(this._SafeStr_18919));
             _local_2.addHabboConnectionMessageEvent(new SnowStormGameEndedEvent(this._SafeStr_18920));
             _local_2.addHabboConnectionMessageEvent(new SnowStormGamesLeftEvent(this._SafeStr_13119));
@@ -729,7 +729,7 @@
             }
         }
 
-        private function _SafeStr_18918(k:_Str_8022):void
+        private function _SafeStr_18918(k:WeeklyCompetitiveLeaderboardEvent):void
         {
             var _local_2:Game2WeeklyLeaderboardParser = k.getParser();
             if (this._snowWarEngine.leaderboard)
