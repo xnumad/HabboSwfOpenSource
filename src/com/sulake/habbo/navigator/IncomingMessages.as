@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
     import com.sulake.habbo.communication.messages.incoming.room.session.CantConnectMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomRatingEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
@@ -146,7 +146,7 @@
             _local_2.addHabboConnectionMessageEvent(new FlatCreatedEvent(this.onFlatCreated));
             _local_2.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485));
             _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect));
-            _local_2.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating));
+            _local_2.addHabboConnectionMessageEvent(new RoomRatingEvent(this.onRoomRating));
             _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new FriendListUpdateEvent(this.onFriendListUpdate));
             _local_2.addHabboConnectionMessageEvent(new CanCreateRoomMessageEvent(this._Str_25812));
@@ -685,7 +685,7 @@
 
         private function onRoomRating(k:IMessageEvent):void
         {
-            var _local_2:RoomRatingMessageParser = (k as _Str_6001).getParser();
+            var _local_2:RoomRatingMessageParser = (k as RoomRatingEvent).getParser();
             Logger.log(("Received room rating: " + _local_2.rating));
             this._navigator.data._Str_15395 = _local_2.rating;
             this._navigator.data._Str_5090 = _local_2._Str_5090;

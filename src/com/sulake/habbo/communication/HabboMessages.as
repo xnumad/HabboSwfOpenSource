@@ -376,7 +376,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5795;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
+	import com.sulake.habbo.communication.messages.incoming.navigator.RoomRatingEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FavouritesEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.ConvertedRoomIdEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventCancelEvent;
@@ -1396,7 +1396,7 @@
             INCOMING_PACKETS[463] = CameraSnapshotMessageEvent;
             INCOMING_PACKETS[468] = RecyclerFinishedEvent;
             INCOMING_PACKETS[469] = _Str_8016;
-            INCOMING_PACKETS[482] = _Str_6001;
+            INCOMING_PACKETS[482] = RoomRatingEvent;
             INCOMING_PACKETS[509] = ThreadMessagesMessageEvent;
             INCOMING_PACKETS[513] = AccountPreferencesEvent;
             INCOMING_PACKETS[518] = _Str_8763;

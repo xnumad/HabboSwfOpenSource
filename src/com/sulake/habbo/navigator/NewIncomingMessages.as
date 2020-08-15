@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomRatingEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
     import com.sulake.habbo.communication.messages.incoming.competition.NoOwnedRoomsAlertMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorLiftedRoomsEvent;
@@ -116,7 +116,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592)));
             this._messageListeners.push(k.connection.addMessageEvent(new _Str_8763(this.onNavigatorPreferences)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSaveErrorEvent(this._Str_8265)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomRatingEvent(this.onRoomRating)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new NoOwnedRoomsAlertMessageEvent(this.onNoOwnedRoomsAlert)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorLiftedRoomsEvent(this.onNavigatorLiftedRooms)));
@@ -491,7 +491,7 @@
 
         private function onRoomRating(k:IMessageEvent):void
         {
-            var _local_2:RoomRatingMessageParser = (k as _Str_6001).getParser();
+            var _local_2:RoomRatingMessageParser = (k as RoomRatingEvent).getParser();
             Logger.log(("Received room rating: " + _local_2.rating));
             this.data._Str_15395 = _local_2.rating;
             this.data._Str_5090 = _local_2._Str_5090;

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.RoomRatingMessageParser;
 
-    public class _Str_6001 extends MessageEvent implements IMessageEvent 
+    public class RoomRatingEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_6001(k:Function)
+        public function RoomRatingEvent(k:Function)
         {
             super(k, RoomRatingMessageParser);
         }
