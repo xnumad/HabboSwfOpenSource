@@ -397,7 +397,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.*;
 	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPagesListEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.IsOfferGiftableMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_17034;
+	import com.sulake.habbo.communication.messages.incoming.catalog.DirectSMSClubBuyAvailableMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_17379;
 	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPublishedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubSubscriptionStatusMessageEvent;
@@ -1128,7 +1128,7 @@
             INCOMING_PACKETS[1911] = _Str_11459;
             INCOMING_PACKETS[1924] = PetFigureUpdateEvent;
             INCOMING_PACKETS[1927] = _Str_16380;
-            INCOMING_PACKETS[195] = _Str_17034;
+            INCOMING_PACKETS[195] = DirectSMSClubBuyAvailableMessageEvent;
             INCOMING_PACKETS[1959] = _Str_5720;
             INCOMING_PACKETS[1968] = AchievementsScoreEvent;
             INCOMING_PACKETS[1982] = _Str_17148;

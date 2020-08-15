@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.DirectSMSClubBuyAvailableMessageParser;
 
-    public class _Str_17034 extends MessageEvent implements IMessageEvent 
+    public class DirectSMSClubBuyAvailableMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_17034(k:Function)
+        public function DirectSMSClubBuyAvailableMessageEvent(k:Function)
         {
             super(k, DirectSMSClubBuyAvailableMessageParser);
         }
