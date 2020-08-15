@@ -367,7 +367,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
+	import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomEventEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.NavigatorSettingsEvent;
@@ -1114,7 +1114,7 @@
             INCOMING_PACKETS[1823] = MarketplaceConfigurationEvent;
             INCOMING_PACKETS[1829] = ChatReviewSessionVotingStatusMessageEvent;
             INCOMING_PACKETS[1830] = _Str_8791;
-            INCOMING_PACKETS[1840] = _Str_5051;
+            INCOMING_PACKETS[1840] = RoomEventEvent;
             INCOMING_PACKETS[1847] = GuideSessionRequesterRoomEvent;
             INCOMING_PACKETS[1862] = PostThreadMessageEvent;
             INCOMING_PACKETS[1866] = CatalogPublishedMessageEvent;

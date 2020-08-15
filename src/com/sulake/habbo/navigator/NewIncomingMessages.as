@@ -37,7 +37,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
     import com.sulake.habbo.communication.messages.incoming.navigator.UserEventCatsEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsDataMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
@@ -145,7 +145,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new UserEventCatsEvent(this._Str_15947)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorMetaDataEvent(this.onNavigatorMetaData)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomEventEvent(this._Str_17647)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CompetitionRoomsDataMessageEvent(this.onCompetitionData)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatCreatedEvent(this.onFlatCreated)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FriendListFragmentMessageEvent(this.onFriendsListFragment)));
@@ -280,7 +280,7 @@
 
         private function _Str_17647(k:IMessageEvent):void
         {
-            var _local_2:RoomEventMessageParser = _Str_5051(k).getParser();
+            var _local_2:RoomEventMessageParser = RoomEventEvent(k).getParser();
             Logger.log(((("Got room event: " + _local_2.data._Str_13361) + ", ") + _local_2.data.eventName));
             this.data.roomEventData = ((_local_2.data._Str_13361 > 0) ? _local_2.data : null);
             LegacyNavigator(this._navigator.legacyNavigator).roomEventInfoCtrl.refresh();

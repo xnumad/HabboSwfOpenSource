@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
     import com.sulake.habbo.communication.messages.incoming.navigator.NavigatorSettingsEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.GenericErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomsEvent;
@@ -134,7 +134,7 @@
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907));
             _local_2.addHabboConnectionMessageEvent(new NavigatorSettingsEvent(this.onNavigatorSettings));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647));
+            _local_2.addHabboConnectionMessageEvent(new RoomEventEvent(this._Str_17647));
             _local_2.addHabboConnectionMessageEvent(new RoomSettingsSaveErrorEvent(this._Str_8265));
             _local_2.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onError));
             _local_2.addHabboConnectionMessageEvent(new OfficialRoomsEvent(this._Str_16321));
@@ -240,7 +240,7 @@
 
         private function _Str_17647(k:IMessageEvent):void
         {
-            var _local_2:RoomEventMessageParser = _Str_5051(k).getParser();
+            var _local_2:RoomEventMessageParser = RoomEventEvent(k).getParser();
             Logger.log(((("Got room event: " + _local_2.data._Str_13361) + ", ") + _local_2.data.eventName));
             this.data.roomEventData = ((_local_2.data._Str_13361 > 0) ? _local_2.data : null);
             this._navigator.roomEventInfoCtrl.refresh();
