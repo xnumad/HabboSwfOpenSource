@@ -12,7 +12,7 @@
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectRemoveMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredEffectDataEvent;
-    import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_7323;
+    import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredValidationErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.OpenMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.userdefinedroomevents.OpenMessageComposer;
@@ -43,7 +43,7 @@
             this.addMessageEvent(new WiredSavedEvent(this._Str_25470));
             this.addMessageEvent(new ObjectRemoveMessageEvent(this.onObjectRemove));
             this.addMessageEvent(new WiredEffectDataEvent(this._Str_23979));
-            this.addMessageEvent(new _Str_7323(this._Str_25729));
+            this.addMessageEvent(new WiredValidationErrorEvent(this._Str_25729));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
         }
 
@@ -116,7 +116,7 @@
 
         private function _Str_25729(k:IMessageEvent):void
         {
-            var _local_2:WiredValidationErrorParser = _Str_7323(k).getParser();
+            var _local_2:WiredValidationErrorParser = WiredValidationErrorEvent(k).getParser();
             this._roomEvents.windowManager.alert("Update failed", _local_2.info, 0, null);
         }
 

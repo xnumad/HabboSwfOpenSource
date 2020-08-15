@@ -17,7 +17,7 @@
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredSavedEvent;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredTriggerDataEvent;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredRewardResultMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_7323;
+	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredValidationErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.OpenEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSavedSearchesEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
@@ -1074,7 +1074,7 @@
             INCOMING_PACKETS[1553] = PetBreedingResultEvent;
             INCOMING_PACKETS[1554] = YoutubeControlVideoMessageEvent;
             INCOMING_PACKETS[1555] = RoomSettingsSaveErrorEvent;
-            INCOMING_PACKETS[156] = _Str_7323;
+            INCOMING_PACKETS[156] = WiredValidationErrorEvent;
             INCOMING_PACKETS[1562] = UserFlatCatsEvent;
             INCOMING_PACKETS[1576] = ModeratorToolPreferencesEvent;
             INCOMING_PACKETS[1587] = NewConsoleMessageEvent;
