@@ -783,7 +783,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8731;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomMessageNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9325;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9362;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.CustomStackingHeightUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.PresentOpenedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RequestSpamWallPostItMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.*;
@@ -1248,7 +1248,7 @@
             INCOMING_PACKETS[2803] = MiniMailUnreadCountEvent;
             INCOMING_PACKETS[2808] = GuildCreatedMessageEvent;
             INCOMING_PACKETS[2815] = RoomUserRespect;
-            INCOMING_PACKETS[0x0B00] = _Str_9362;
+            INCOMING_PACKETS[0x0B00] = CustomStackingHeightUpdateMessageEvent;
             INCOMING_PACKETS[2819] = FaqCategoryMessageEvent;
             INCOMING_PACKETS[2824] = PetLevelUpdateEvent;
             INCOMING_PACKETS[2833] = MysteryBoxKeysMessageEvent;
