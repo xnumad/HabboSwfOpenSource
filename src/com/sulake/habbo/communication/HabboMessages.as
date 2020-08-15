@@ -770,7 +770,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayPlaylistsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_6132;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7104;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7657;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.OneWayDoorStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentOkMessageEvent;
@@ -1188,7 +1188,7 @@
             INCOMING_PACKETS[2335] = ModeratorActionResultMessageEvent;
             INCOMING_PACKETS[2347] = BundleDiscountRulesetMessageEvent;
             INCOMING_PACKETS[2366] = RequestSpamWallPostItMessageEvent;
-            INCOMING_PACKETS[2376] = _Str_7657;
+            INCOMING_PACKETS[2376] = OneWayDoorStatusMessageEvent;
             INCOMING_PACKETS[2379] = UnreadForumsCountMessageEvent;
             INCOMING_PACKETS[2380] = OpenPetPackageRequestedMessageEvent;
             INCOMING_PACKETS[2392] = YouAreNotControllerMessageEvent;

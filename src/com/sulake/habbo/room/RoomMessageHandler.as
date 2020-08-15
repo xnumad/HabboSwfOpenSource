@@ -38,7 +38,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.chat.ShoutMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.UserTypingMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.DiceValueMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7657;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.OneWayDoorStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetExperienceEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.YouArePlayingGameMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.GamePlayerValueMessageEvent;
@@ -217,7 +217,7 @@
                 k.addMessageEvent(new ShoutMessageEvent(this.onChat));
                 k.addMessageEvent(new UserTypingMessageEvent(this.onTypingStatus));
                 k.addMessageEvent(new DiceValueMessageEvent(this.onDiceValue));
-                k.addMessageEvent(new _Str_7657(this.onOneWayDoorStatus));
+                k.addMessageEvent(new OneWayDoorStatusMessageEvent(this.onOneWayDoorStatus));
                 k.addMessageEvent(new PetExperienceEvent(this.onPetExperience));
                 k.addMessageEvent(new YouArePlayingGameMessageEvent(this.onPlayingGame));
                 k.addMessageEvent(new GamePlayerValueMessageEvent(this.onGamePlayerNumberValue));
@@ -1219,7 +1219,7 @@
 
         private function onOneWayDoorStatus(k:IMessageEvent):void
         {
-            var _local_2:_Str_7657 = (k as _Str_7657);
+            var _local_2:OneWayDoorStatusMessageEvent = (k as OneWayDoorStatusMessageEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;

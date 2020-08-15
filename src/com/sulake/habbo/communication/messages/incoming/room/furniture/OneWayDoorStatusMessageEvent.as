@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.furniture.OneWayDoorStatusMessageParser;
 
-    public class _Str_7657 extends MessageEvent implements IMessageEvent 
+    public class OneWayDoorStatusMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7657(k:Function)
+        public function OneWayDoorStatusMessageEvent(k:Function)
         {
             super(k, OneWayDoorStatusMessageParser);
         }
