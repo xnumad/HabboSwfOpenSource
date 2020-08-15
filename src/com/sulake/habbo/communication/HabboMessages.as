@@ -378,7 +378,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5795;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_6109;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_7272;
+	import com.sulake.habbo.communication.messages.incoming.navigator.ConvertedRoomIdEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventCancelEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.advertisement.InterstitialMessageEvent;
@@ -1035,7 +1035,7 @@
             INCOMING_PACKETS[1304] = FlatCreatedEvent;
             INCOMING_PACKETS[1327] = _Str_5683;
             INCOMING_PACKETS[133] = CompetitionStatusMessageEvent;
-            INCOMING_PACKETS[1331] = _Str_7272;
+            INCOMING_PACKETS[1331] = ConvertedRoomIdEvent;
             INCOMING_PACKETS[1333] = ModeratorRoomInfoEvent;
             INCOMING_PACKETS[1347] = InitDiffieHandshakeEvent;
             INCOMING_PACKETS[1350] = MaintenanceStatusMessageEvent;

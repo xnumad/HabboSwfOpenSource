@@ -45,7 +45,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_7272;
+    import com.sulake.habbo.communication.messages.incoming.navigator.ConvertedRoomIdEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomForwardMessageEvent;
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.communication.messages.parser.roomsettings.MuteAllInRoomParser;
@@ -159,7 +159,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837));
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom));
-            _local_2.addHabboConnectionMessageEvent(new _Str_7272(this.onConvertedRoomId));
+            _local_2.addHabboConnectionMessageEvent(new ConvertedRoomIdEvent(this.onConvertedRoomId));
             _local_2.addHabboConnectionMessageEvent(new RoomForwardMessageEvent(this.onRoomForward));
         }
 
@@ -385,7 +385,7 @@
 
         private function onConvertedRoomId(k:IMessageEvent):void
         {
-            var _local_2:ConvertedRoomIdMessageParser = _Str_7272(k).getParser();
+            var _local_2:ConvertedRoomIdMessageParser = ConvertedRoomIdEvent(k).getParser();
             if (this._navigator._Str_25806)
             {
                 this._navigator.habboHelp.reportRoom(_local_2._Str_12434, this._navigator._Str_23036, "");

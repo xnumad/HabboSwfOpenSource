@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.ConvertedRoomIdMessageParser;
 
-    public class _Str_7272 extends MessageEvent 
+    public class ConvertedRoomIdEvent extends MessageEvent
     {
-        public function _Str_7272(k:Function)
+        public function ConvertedRoomIdEvent(k:Function)
         {
             super(k, ConvertedRoomIdMessageParser);
         }
