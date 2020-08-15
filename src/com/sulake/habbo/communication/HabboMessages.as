@@ -150,7 +150,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9550;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9632;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.GuildForumThreadsEvent;
-	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8331;
+	import com.sulake.habbo.communication.messages.incoming.groupforums.ForumDataMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8526;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8758;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8905;
@@ -1270,7 +1270,7 @@
             INCOMING_PACKETS[30] = ChatReviewSessionDetachedMessageEvent;
             INCOMING_PACKETS[3001] = _Str_9509;
             INCOMING_PACKETS[3005] = CommunityGoalHallOfFameMessageEvent;
-            INCOMING_PACKETS[3011] = _Str_8331;
+            INCOMING_PACKETS[3011] = ForumDataMessageEvent;
             INCOMING_PACKETS[3027] = QuestCancelledMessageEvent;
             INCOMING_PACKETS[3035] = JoiningQueueFailedMessageEvent;
             INCOMING_PACKETS[3048] = FollowFriendFailedEvent;
