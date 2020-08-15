@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.competition.IsUserPartOfCompetitionMessageParser;
 
-    public class _Str_8237 extends MessageEvent implements IMessageEvent 
+    public class IsUserPartOfCompetitionMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8237(k:Function)
+        public function IsUserPartOfCompetitionMessageEvent(k:Function)
         {
             super(k, IsUserPartOfCompetitionMessageParser);
         }

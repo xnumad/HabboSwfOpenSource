@@ -167,7 +167,7 @@
 	import com.sulake.habbo.communication.messages.incoming.competition.NoOwnedRoomsAlertMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionVotingInfoMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.competition._Str_8237;
+	import com.sulake.habbo.communication.messages.incoming.competition.IsUserPartOfCompetitionMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition.SecondsUntilMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceNotCompleteEvent;
 	import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOfferEvent;
@@ -1365,7 +1365,7 @@
             INCOMING_PACKETS[382] = FriendFurniOtherLockConfirmedMessageEvent;
             INCOMING_PACKETS[3828] = BuildersClubFurniCountMessageEvent;
             INCOMING_PACKETS[383] = WiredTriggerDataEvent;
-            INCOMING_PACKETS[3841] = _Str_8237;
+            INCOMING_PACKETS[3841] = IsUserPartOfCompetitionMessageEvent;
             INCOMING_PACKETS[3863] = _Str_18906;
             INCOMING_PACKETS[3870] = _Str_4696;
             INCOMING_PACKETS[3878] = InitCameraMessageEvent;

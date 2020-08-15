@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.friendbar.landingview.widget.elements
 {
-    import com.sulake.habbo.communication.messages.incoming.competition._Str_8237;
+    import com.sulake.habbo.communication.messages.incoming.competition.IsUserPartOfCompetitionMessageEvent;
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
@@ -20,7 +20,7 @@
             super.initialize(k, _arg_2, _arg_3, _arg_4);
             this._submittedKey = _arg_3[2];
             this._goalCode = _arg_3[3];
-            k.communicationManager.addHabboConnectionMessageEvent(new _Str_8237(this.onInfo));
+            k.communicationManager.addHabboConnectionMessageEvent(new IsUserPartOfCompetitionMessageEvent(this.onInfo));
         }
 
         override public function refresh():void
@@ -44,7 +44,7 @@
             }
         }
 
-        private function onInfo(k:_Str_8237):void
+        private function onInfo(k:IsUserPartOfCompetitionMessageEvent):void
         {
             this._isPartOf = k.getParser()._Str_25348;
             this._targetId = k.getParser()._Str_10760;
