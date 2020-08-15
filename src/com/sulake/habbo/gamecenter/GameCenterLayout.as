@@ -211,7 +211,7 @@
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new UserGameAchievementsMessageEvent(this.onUserGameAchievements));
                 this._leaderboardList = (this._gameCenterViewWindow.findChildByName("leaderboard_list") as IItemListWindow);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_8191(this.onFriendLeaderboard));
-                this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5142(this._Str_23128));
+                this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5142(this.onTopScoresLeaderboard));
                 this._luckyLosersList = (this._gameCenterViewWindow.findChildByName("lucky_losers_list") as IItemListWindow);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new WeeklyGameRewardWinnersEvent(this._Str_22600));
                 this._gameCenterViewWindow.findChildByName("leaderboard_link").addEventListener(WindowMouseEvent.CLICK, this._Str_20562);
@@ -590,7 +590,7 @@
             }
         }
 
-        private function _Str_23128(k:IMessageEvent):void
+        private function onTopScoresLeaderboard(k:IMessageEvent):void
         {
             var _local_4:LeaderboardEntry;
             var _local_2:_Str_5142 = (k as _Str_5142);
