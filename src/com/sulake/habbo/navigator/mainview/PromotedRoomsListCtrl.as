@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.navigator.Util;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3451;
+    import com.sulake.habbo.communication.messages.incoming.navigator.PromotedRoomCategoryData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.navigator.domain.RoomSessionTags;
     import com.sulake.core.window.events.WindowEvent;
@@ -101,7 +101,7 @@
             k.findChildByName(_arg_3).id = _arg_2;
         }
 
-        public function refreshEntry(k:IWindowContainer, _arg_2:_Str_3451):void
+        public function refreshEntry(k:IWindowContainer, _arg_2:PromotedRoomCategoryData):void
         {
             var _local_3:String = this._navigator.getText(("promotedroomcategory." + _arg_2.code));
             k.findChildByName("category_name_txt").caption = _local_3;
@@ -135,7 +135,7 @@
 
         private function _Str_23764(k:WindowEvent, _arg_2:IWindow):void
         {
-            var _local_3:_Str_3451;
+            var _local_3:PromotedRoomCategoryData;
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this._Str_5067(_arg_2);
@@ -147,7 +147,7 @@
 
         private function _Str_23520(k:WindowEvent, _arg_2:IWindow):void
         {
-            var _local_3:_Str_3451;
+            var _local_3:PromotedRoomCategoryData;
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this._Str_5067(_arg_2);
@@ -159,8 +159,8 @@
         private function _Str_23366(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:int;
-            var _local_4:_Str_3451;
-            var _local_5:_Str_3451;
+            var _local_4:PromotedRoomCategoryData;
+            var _local_5:PromotedRoomCategoryData;
             if (k.type == WindowMouseEvent.CLICK)
             {
                 while (_local_3 < this._navigator.data.promotedRooms.entries.length)
@@ -178,12 +178,12 @@
             }
         }
 
-        private function _Str_5067(k:IWindow):_Str_3451
+        private function _Str_5067(k:IWindow):PromotedRoomCategoryData
         {
             return this._navigator.data.promotedRooms.entries[k.id];
         }
 
-        private function _Str_16592(k:IWindowContainer, _arg_2:_Str_3451):void
+        private function _Str_16592(k:IWindowContainer, _arg_2:PromotedRoomCategoryData):void
         {
             var _local_3:IWidgetWindow = IWidgetWindow(k.findChildByName("avatar_image_widget"));
             var _local_4:IAvatarImageWidget = IAvatarImageWidget(_local_3.widget);

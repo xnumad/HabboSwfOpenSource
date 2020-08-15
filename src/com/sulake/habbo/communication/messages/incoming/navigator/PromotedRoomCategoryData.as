@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3451 implements IDisposable 
+    public class PromotedRoomCategoryData implements IDisposable
     {
         private var _code:String;
         private var _Str_21922:String;
@@ -13,7 +13,7 @@
         private var _Str_20192:Boolean;
         private var _disposed:Boolean;
 
-        public function _Str_3451(k:IMessageDataWrapper)
+        public function PromotedRoomCategoryData(k:IMessageDataWrapper)
         {
             this._rooms = new Array();
             super();

@@ -16,14 +16,14 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._entries.push(new _Str_3451(k));
+                this._entries.push(new PromotedRoomCategoryData(k));
                 _local_3++;
             }
         }
 
         public function dispose():void
         {
-            var k:_Str_3451;
+            var k:PromotedRoomCategoryData;
             if (this._disposed)
             {
                 return;

@@ -1,19 +1,19 @@
 ﻿package com.sulake.habbo.navigator.mainview
 {
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_3451;
+    import com.sulake.habbo.communication.messages.incoming.navigator.PromotedRoomCategoryData;
     import com.sulake.habbo.navigator.HabboNavigator;
     import com.sulake.habbo.navigator.domain.RoomSessionTags;
 
     public class PromotedRoomsGuestRoomListCtrl extends GuestRoomListCtrl 
     {
-        private var _category:_Str_3451;
+        private var _category:PromotedRoomCategoryData;
 
         public function PromotedRoomsGuestRoomListCtrl(k:HabboNavigator)
         {
             super(k, -6, false);
         }
 
-        public function set category(k:_Str_3451):void
+        public function set category(k:PromotedRoomCategoryData):void
         {
             this._category = k;
         }
