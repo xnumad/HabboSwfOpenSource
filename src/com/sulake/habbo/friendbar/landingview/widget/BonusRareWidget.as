@@ -7,7 +7,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.room.events.RoomEngineEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_6906;
+    import com.sulake.habbo.communication.messages.incoming.catalog.BonusRareInfoMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.catalog.GetBonusRareInfoMessageComposer;
     import com.sulake.core.window.IWindow;
     import flash.display.BitmapData;
@@ -37,7 +37,7 @@
             if (!this.disposed)
             {
                 this._habboLandingView.roomEngine.events.removeEventListener(RoomEngineEvent.ENGINE_INITIALIZED, this.onRoomEngineInitialized);
-                this._habboLandingView.communicationManager.removeHabboConnectionMessageEvent(new _Str_6906(this._Str_21615));
+                this._habboLandingView.communicationManager.removeHabboConnectionMessageEvent(new BonusRareInfoMessageEvent(this._Str_21615));
                 this._habboLandingView = null;
                 this._container = null;
             }
@@ -53,7 +53,7 @@
             this._container = IWindowContainer(this._habboLandingView.getXmlWindow("bonus_rare_promo"));
             this._container.findChildByName("buy_button").procedure = this._Str_25025;
             this._container.visible = false;
-            this._habboLandingView.communicationManager.addHabboConnectionMessageEvent(new _Str_6906(this._Str_21615));
+            this._habboLandingView.communicationManager.addHabboConnectionMessageEvent(new BonusRareInfoMessageEvent(this._Str_21615));
             this._habboLandingView.roomEngine.events.addEventListener(RoomEngineEvent.ENGINE_INITIALIZED, this.onRoomEngineInitialized);
             this._Str_19551();
         }
@@ -109,7 +109,7 @@
             }
         }
 
-        private function _Str_21615(k:_Str_6906):void
+        private function _Str_21615(k:BonusRareInfoMessageEvent):void
         {
             this._productType = k.getParser().productType;
             this._Str_4261 = k.getParser().productClassId;

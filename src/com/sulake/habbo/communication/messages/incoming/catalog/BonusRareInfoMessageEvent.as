@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.BonusRareInfoMessageParser;
 
-    public class _Str_6906 extends MessageEvent implements IMessageEvent 
+    public class BonusRareInfoMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_6906(k:Function)
+        public function BonusRareInfoMessageEvent(k:Function)
         {
             super(k, BonusRareInfoMessageParser);
         }

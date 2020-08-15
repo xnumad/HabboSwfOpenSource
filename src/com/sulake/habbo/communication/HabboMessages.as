@@ -404,7 +404,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubExtendOfferMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6906;
+	import com.sulake.habbo.communication.messages.incoming.catalog.BonusRareInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseNotAllowedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.BundleDiscountRulesetMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.RoomAdPurchaseInfoEvent;
@@ -1066,7 +1066,7 @@
             INCOMING_PACKETS[1503] = ApproveNameMessageEvent;
             INCOMING_PACKETS[151] = _Str_6109;
             INCOMING_PACKETS[1517] = GiftReceiverNotFoundEvent;
-            INCOMING_PACKETS[1533] = _Str_6906;
+            INCOMING_PACKETS[1533] = BonusRareInfoMessageEvent;
             INCOMING_PACKETS[1534] = ObjectAddMessageEvent;
             INCOMING_PACKETS[1543] = CollapsedCategoriesEvent;
             INCOMING_PACKETS[1548] = GuideOnDutyStatusMessageEvent;
