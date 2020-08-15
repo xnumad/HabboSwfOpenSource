@@ -152,7 +152,7 @@
 	import com.sulake.habbo.communication.messages.incoming.groupforums.GuildForumThreadsEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ForumDataMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8526;
-	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8758;
+	import com.sulake.habbo.communication.messages.incoming.groupforums.UpdateMessageMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8905;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ThreadMessagesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ForumsListMessageEvent;
@@ -1295,7 +1295,7 @@
             INCOMING_PACKETS[3207] = SlideObjectBundleMessageEvent;
             INCOMING_PACKETS[3208] = ItemRemoveMessageEvent;
             INCOMING_PACKETS[3209] = GuideSessionStartedEvent;
-            INCOMING_PACKETS[324] = _Str_8758;
+            INCOMING_PACKETS[324] = UpdateMessageMessageEvent;
             INCOMING_PACKETS[3244] = _Str_5766;
             INCOMING_PACKETS[325] = CfhTopicsInitEvent;
             INCOMING_PACKETS[3253] = _Str_9047;

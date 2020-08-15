@@ -29,7 +29,7 @@
     import com.sulake.habbo.communication.messages.incoming.groupforums.ForumsListMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.GuildForumThreadsEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8526;
-    import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8758;
+    import com.sulake.habbo.communication.messages.incoming.groupforums.UpdateMessageMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.ThreadMessagesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.ForumDataMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9630;
@@ -186,7 +186,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new ForumsListMessageEvent(this._Str_22851));
             this._communicationManager.addHabboConnectionMessageEvent(new GuildForumThreadsEvent(this._Str_24478));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8526(this.onUpdateThread));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_8758(this._parser8));
+            this._communicationManager.addHabboConnectionMessageEvent(new UpdateMessageMessageEvent(this._parser8));
             this._communicationManager.addHabboConnectionMessageEvent(new ThreadMessagesMessageEvent(this.onThreadMessageList));
             this._communicationManager.addHabboConnectionMessageEvent(new ForumDataMessageEvent(this._Str_25702));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9630(this.onPostMessageMessage));
@@ -598,7 +598,7 @@
             }
         }
 
-        private function _parser8(k:_Str_8758):void
+        private function _parser8(k:UpdateMessageMessageEvent):void
         {
             var _local_6:MessageData;
             var _local_2:UpdateMessageMessageParser = k.getParser();
