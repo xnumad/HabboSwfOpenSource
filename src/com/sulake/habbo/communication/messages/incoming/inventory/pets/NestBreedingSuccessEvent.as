@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.incoming.notifications
+﻿package com.sulake.habbo.communication.messages.incoming.inventory.pets
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;

@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.UserBannedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelClosesAndWillOpenAtEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.pets.PetReceivedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.OpenConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.MOTDNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;

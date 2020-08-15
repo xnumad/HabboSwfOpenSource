@@ -11,12 +11,12 @@
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetPlacingErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetFigureUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetBreedingResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.PetBreedingEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.pets.PetBreedingEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetStatusUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetLevelUpdateEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingRequestEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.NestBreedingSuccessEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.pets.ConfirmBreedingRequestEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.pets.ConfirmBreedingResultEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.pets.NestBreedingSuccessEvent;
     import com.sulake.habbo.communication.messages.incoming.room.bots.BotErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.NewFriendRequestEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;

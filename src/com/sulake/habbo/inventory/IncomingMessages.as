@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingAcceptEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingAcceptParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementsScoreEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.PetAddedToInventoryEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.pets.PetAddedToInventoryEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingNotOpenEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingNotOpenParser;
@@ -47,15 +47,15 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgeReceivedEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceItemStatsEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectsMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.PetInventoryEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.pets.PetInventoryEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceMakeOfferResult;
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboAchievementNotificationMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.GoToBreedingNestFailureEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.pets.GoToBreedingNestFailureEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectAddedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.PetRemovedFromInventoryEvent;
+    import com.sulake.habbo.communication.messages.incoming.inventory.pets.PetRemovedFromInventoryEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.badges.BadgePointLimitsEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.furni.FurniListParser;
     import com.sulake.habbo.inventory.furni.FurniModel;
