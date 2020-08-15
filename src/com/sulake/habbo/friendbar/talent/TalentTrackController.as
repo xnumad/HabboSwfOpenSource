@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.parser.talent.TalentTrack;
     import com.sulake.core.window.components.IBorderWindow;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
+    import com.sulake.habbo.communication.messages.incoming.talent.TalentTrackMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.EmailStatusResultEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ChangeEmailResultEvent;
@@ -106,7 +106,7 @@
 
         public function initialize():void
         {
-            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_7229(this.onTalentTrack));
+            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new TalentTrackMessageEvent(this.onTalentTrack));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this.onEmailStatus));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new ChangeEmailResultEvent(this.onChangeEmailResult));
@@ -128,7 +128,7 @@
             this.setEmailErrorStatus(true, k.getParser().result);
         }
 
-        private function onTalentTrack(k:_Str_7229):void
+        private function onTalentTrack(k:TalentTrackMessageEvent):void
         {
             var _local_2:TalentTrackMessageParser = k.getParser();
             this._talentTrack = _local_2._Str_23534();

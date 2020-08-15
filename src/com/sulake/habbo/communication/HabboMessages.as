@@ -292,7 +292,7 @@
 	import com.sulake.habbo.communication.messages.incoming.bots.BotAddedToInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.bots.BotInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
-	import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
+	import com.sulake.habbo.communication.messages.incoming.talent.TalentTrackMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent.TalentTrackLevelMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout.GetOccupiedTilesMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.layout.UpdateFloorPropertiesMessageComposer;
@@ -1320,7 +1320,7 @@
             INCOMING_PACKETS[34] = JukeboxSongDisksMessageEvent;
             INCOMING_PACKETS[340] = AvatarEffectsMessageEvent;
             INCOMING_PACKETS[3403] = FavoriteMembershipUpdateMessageEvent;
-            INCOMING_PACKETS[3406] = _Str_7229;
+            INCOMING_PACKETS[3406] = TalentTrackMessageEvent;
             INCOMING_PACKETS[3429] = UserUnbannedFromRoomEvent;
             INCOMING_PACKETS[3431] = DiceValueMessageEvent;
             INCOMING_PACKETS[3433] = RecyclerStatusEvent;
