@@ -365,7 +365,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FlatAccessDeniedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
+	import com.sulake.habbo.communication.messages.incoming.navigator.CategoriesWithVisitorCountEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.PopularRoomTagsResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomsEvent;
@@ -1055,7 +1055,7 @@
             INCOMING_PACKETS[1450] = FigureSetIdsEvent;
             INCOMING_PACKETS[1452] = BuildersClubSubscriptionStatusMessageEvent;
             INCOMING_PACKETS[1453] = ObjectsDataUpdateMessageEvent;
-            INCOMING_PACKETS[1455] = _Str_5006;
+            INCOMING_PACKETS[1455] = CategoriesWithVisitorCountEvent;
             INCOMING_PACKETS[1456] = GuideSessionEndedEvent;
             INCOMING_PACKETS[1459] = GroupDetailsChangedMessageEvent;
             INCOMING_PACKETS[1474] = CarryObjectMessageEvent;

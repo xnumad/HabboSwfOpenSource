@@ -42,7 +42,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.UserEventCatsEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CategoriesWithVisitorCountEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
     import com.sulake.habbo.communication.messages.incoming.navigator.ConvertedRoomIdEvent;
@@ -156,7 +156,7 @@
             _local_2.addHabboConnectionMessageEvent(new NoSuchFlatEvent(this.onNoSuchFlat));
             _local_2.addHabboConnectionMessageEvent(new UserEventCatsEvent(this._Str_15947));
             _local_2.addHabboConnectionMessageEvent(new FavouriteChangedEvent(this._Str_16972));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837));
+            _local_2.addHabboConnectionMessageEvent(new CategoriesWithVisitorCountEvent(this._Str_18837));
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom));
             _local_2.addHabboConnectionMessageEvent(new ConvertedRoomIdEvent(this.onConvertedRoomId));
@@ -210,7 +210,7 @@
 
         private function _Str_18837(k:IMessageEvent):void
         {
-            var _local_2:CategoriesWithVisitorCountParser = _Str_5006(k).getParser();
+            var _local_2:CategoriesWithVisitorCountParser = CategoriesWithVisitorCountEvent(k).getParser();
             this.data._Str_7267 = _local_2.data;
             Logger.log(("Received Categories with user count: " + this.data._Str_7267.categoryToCurrentUserCountMap.length));
         }
