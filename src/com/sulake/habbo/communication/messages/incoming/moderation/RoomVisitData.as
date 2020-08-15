@@ -2,14 +2,14 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6952 
+    public class RoomVisitData
     {
         private var _roomId:int;
         private var _roomName:String;
         private var _Str_20266:int;
         private var _Str_20472:int;
 
-        public function _Str_6952(k:IMessageDataWrapper)
+        public function RoomVisitData(k:IMessageDataWrapper)
         {
             this._roomId = k.readInteger();
             this._roomName = k.readString();

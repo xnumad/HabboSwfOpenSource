@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.outgoing.moderator.GetRoomVisitsMessageComposer;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsData;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_6952;
+    import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitData;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -103,7 +103,7 @@
 
         private function populate():void
         {
-            var _local_2:_Str_6952;
+            var _local_2:RoomVisitData;
             var k:Boolean = true;
             for each (_local_2 in this._rooms)
             {
@@ -112,7 +112,7 @@
             }
         }
 
-        private function _Str_16455(k:_Str_6952, _arg_2:Boolean):void
+        private function _Str_16455(k:RoomVisitData, _arg_2:Boolean):void
         {
             var _local_3:IWindowContainer = this._Str_16012();
             var _local_4:uint = ((_arg_2) ? 4288861930 : 0xFFFFFFFF);

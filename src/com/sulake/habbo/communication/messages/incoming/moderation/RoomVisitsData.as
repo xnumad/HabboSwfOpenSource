@@ -18,7 +18,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._rooms.push(new _Str_6952(k));
+                this._rooms.push(new RoomVisitData(k));
                 _local_3++;
             }
         }
