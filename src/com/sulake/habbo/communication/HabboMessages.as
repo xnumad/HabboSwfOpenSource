@@ -146,7 +146,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9259;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9293;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9336;
+	import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetAddedToInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.NestBreedingSuccessEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.GuildForumThreadsEvent;
@@ -1084,7 +1084,7 @@
             INCOMING_PACKETS[1600] = GenericErrorEvent;
             INCOMING_PACKETS[1605] = MessengerInitEvent;
             INCOMING_PACKETS[1618] = BotCommandConfigurationEvent;
-            INCOMING_PACKETS[1625] = _Str_9336;
+            INCOMING_PACKETS[1625] = ConfirmBreedingResultEvent;
             INCOMING_PACKETS[1631] = ExpressionMessageEvent;
             INCOMING_PACKETS[1634] = RoomMessageNotificationMessageEvent;
             INCOMING_PACKETS[1640] = UserUpdateEvent;
