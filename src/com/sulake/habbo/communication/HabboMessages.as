@@ -100,7 +100,7 @@
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_9631;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceItemStatsEvent;
-	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6022;
+	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceMakeOfferResult;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
 	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketPlaceOwnOffersEvent;
@@ -1040,7 +1040,7 @@
             INCOMING_PACKETS[1347] = InitDiffieHandshakeEvent;
             INCOMING_PACKETS[1350] = MaintenanceStatusMessageEvent;
             INCOMING_PACKETS[1352] = BotAddedToInventoryEvent;
-            INCOMING_PACKETS[1359] = _Str_6022;
+            INCOMING_PACKETS[1359] = MarketplaceMakeOfferResult;
             INCOMING_PACKETS[1369] = ItemsEvent;
             INCOMING_PACKETS[1373] = TradingCloseEvent;
             INCOMING_PACKETS[138] = GuideSessionDetachedEvent;

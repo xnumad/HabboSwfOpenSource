@@ -112,7 +112,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubOffersMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6022;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceMakeOfferResult;
     import com.sulake.habbo.communication.messages.incoming.catalog.ProductOfferEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerStatusEvent;
@@ -574,7 +574,7 @@
             this.addMessageEvent(new ClubGiftInfoEvent(this.onClubGiftInfo));
             this.addMessageEvent(new HabboClubOffersMessageEvent(this.onHabboClubOffers));
             this.addMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionInfo));
-            this.addMessageEvent(new _Str_6022(this.onMarketplaceMakeOfferResult));
+            this.addMessageEvent(new MarketplaceMakeOfferResult(this.onMarketplaceMakeOfferResult));
             this.addMessageEvent(new ProductOfferEvent(this.onProductOffer));
             this.addMessageEvent(new _Str_6345(this.onMarketPlaceCancelResult));
             this.addMessageEvent(new RecyclerStatusEvent(this._Str_24950));
@@ -2221,7 +2221,7 @@
             this._marketplace.averagePricePeriod = _local_2.displayTime;
         }
 
-        private function onMarketplaceMakeOfferResult(k:_Str_6022):void
+        private function onMarketplaceMakeOfferResult(k:MarketplaceMakeOfferResult):void
         {
             if (((!(k)) || (!(this._marketplace))))
             {
