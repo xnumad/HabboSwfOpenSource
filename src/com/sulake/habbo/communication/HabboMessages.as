@@ -556,7 +556,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8333;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8339;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8535;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8552;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FindFriendsProcessResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.*;
@@ -1277,7 +1277,7 @@
             INCOMING_PACKETS[305] = AchievementsEvent;
             INCOMING_PACKETS[3052] = NavigatorMetaDataEvent;
             INCOMING_PACKETS[3058] = TradingYouAreNotAllowedEvent;
-            INCOMING_PACKETS[3082] = _Str_8552;
+            INCOMING_PACKETS[3082] = FriendNotificationEvent;
             INCOMING_PACKETS[3086] = BotInventoryEvent;
             INCOMING_PACKETS[3097] = _Str_6994;
             INCOMING_PACKETS[3099] = _Str_16667;
