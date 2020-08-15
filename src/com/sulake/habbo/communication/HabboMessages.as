@@ -553,7 +553,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5641;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7759;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8109;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8333;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.FollowFriendFailedEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.InstantMessageErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendNotificationEvent;
@@ -1273,7 +1273,7 @@
             INCOMING_PACKETS[3011] = _Str_8331;
             INCOMING_PACKETS[3027] = QuestCancelledMessageEvent;
             INCOMING_PACKETS[3035] = JoiningQueueFailedMessageEvent;
-            INCOMING_PACKETS[3048] = _Str_8333;
+            INCOMING_PACKETS[3048] = FollowFriendFailedEvent;
             INCOMING_PACKETS[305] = AchievementsEvent;
             INCOMING_PACKETS[3052] = NavigatorMetaDataEvent;
             INCOMING_PACKETS[3058] = TradingYouAreNotAllowedEvent;

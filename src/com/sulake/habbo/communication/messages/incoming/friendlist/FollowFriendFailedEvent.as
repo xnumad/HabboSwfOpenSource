@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.FollowFriendFailedMessageParser;
 
-    public class _Str_8333 extends MessageEvent implements IMessageEvent 
+    public class FollowFriendFailedEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8333(k:Function)
+        public function FollowFriendFailedEvent(k:Function)
         {
             super(k, FollowFriendFailedMessageParser);
         }

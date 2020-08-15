@@ -65,7 +65,7 @@
     import com.sulake.habbo.friendlist.domain._Str_11887;
     import com.sulake.habbo.friendlist.domain._Str_11703;
     import flash.events.Event;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8333;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FollowFriendFailedEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5641;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
@@ -526,7 +526,7 @@
 
         private function _Str_22421():void
         {
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_8333(this._Str_24032));
+            this._communicationManager.addHabboConnectionMessageEvent(new FollowFriendFailedEvent(this._Str_24032));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_5641(this._Str_24954));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_4841(this._Str_16886));
@@ -638,7 +638,7 @@
 
         private function _Str_24032(k:IMessageEvent):void
         {
-            var _local_2:FollowFriendFailedMessageParser = (k as _Str_8333).getParser();
+            var _local_2:FollowFriendFailedMessageParser = (k as FollowFriendFailedEvent).getParser();
             var _local_3:String = this._Str_25719(_local_2.errorCode);
             Logger.log(((("Received follow friend failed: " + _local_2.errorCode) + ", ") + _local_3));
             this.simpleAlert("${friendlist.alert.title}", _local_3);
