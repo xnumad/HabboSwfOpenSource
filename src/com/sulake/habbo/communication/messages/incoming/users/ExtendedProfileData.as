@@ -36,7 +36,7 @@
             var counter:int;
             while (counter < guildCount)
             {
-                this._guilds.push(new _Str_3266(k));
+                this._guilds.push(new HabboGroupEntryData(k));
                 counter++;
             }
             this._lastAccessSinceInSeconds = k.readInteger();

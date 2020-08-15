@@ -8,7 +8,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetGuildSelectedEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events._Str_3308;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3266;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupEntryData;
     import com.sulake.habbo.catalog.viewer.widgets.events._Str_4201;
     import com.sulake.habbo.catalog.viewer.Offer;
     import com.sulake.core.window.events.WindowEvent;
@@ -102,7 +102,7 @@
 
         public function _Str_24364(k:Array):void
         {
-            var _local_7:_Str_3266;
+            var _local_7:HabboGroupEntryData;
             var _local_2:int = -1;
             this._Str_14021 = this.filterGroupMemberships(k);
             var _local_3:* = (k.length > 0);
@@ -173,7 +173,7 @@
 
         private function _Str_24750(k:int):void
         {
-            var _local_2:_Str_3266;
+            var _local_2:HabboGroupEntryData;
             if (k > -1)
             {
                 _local_2 = this._Str_14021[k];
@@ -181,7 +181,7 @@
             }
         }
 
-        protected function selectGroup(k:_Str_3266):void
+        protected function selectGroup(k:HabboGroupEntryData):void
         {
             page.dispatchWidgetEvent(new CatalogWidgetGuildSelectedEvent(k.groupId, k._Str_5845, k._Str_6659, k.badgeCode));
             page.dispatchWidgetEvent(new SetRoomPreviewerStuffDataEvent(this._Str_17425(k.groupId, k._Str_5845, k._Str_6659, k.badgeCode)));
@@ -207,7 +207,7 @@
             return _local_3;
         }
 
-        private function _Str_23230(k:_Str_3266):IWindow
+        private function _Str_23230(k:HabboGroupEntryData):IWindow
         {
             var _local_2:BitmapData = this._Str_23401(parseInt(k._Str_5845, 16), parseInt(k._Str_6659, 16));
             var _local_3:XML = (page.viewer.catalog.assets.getAssetByName(GUILD_SELECTOR_WIDGET_ITEM).content as XML);

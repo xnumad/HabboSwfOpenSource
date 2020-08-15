@@ -8,7 +8,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.friendlist.RelationshipStatusEnum;
     import com.sulake.habbo.communication.messages.outgoing.users.GetExtendedProfileMessageComposer;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3266;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupEntryData;
     import com.sulake.habbo.communication.messages.outgoing.users.GetHabboGroupDetailsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetRelationshipStatusInfoMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.GetSelectedBadgesMessageComposer;
@@ -120,7 +120,7 @@
         public function _Str_18339(k:ExtendedProfileData):void
         {
             this._data = k;
-            var _local_2:_Str_3266 = this._Str_23684();
+            var _local_2:HabboGroupEntryData = this._Str_23684();
             if (_local_2 == null)
             {
                 if (this._data.guilds.length > 0)
@@ -146,9 +146,9 @@
             this._updateExpected = false;
         }
 
-        private function _Str_23684():_Str_3266
+        private function _Str_23684():HabboGroupEntryData
         {
-            var k:_Str_3266;
+            var k:HabboGroupEntryData;
             for each (k in this._data.guilds)
             {
                 if (k.groupId == this._selectedGroupId)
@@ -170,7 +170,7 @@
 
         private function _Str_25048():void
         {
-            var _local_2:_Str_3266;
+            var _local_2:HabboGroupEntryData;
             var _local_3:IWindowContainer;
             var _local_4:IBadgeImageWidget;
             var _local_5:IWindowContainer;

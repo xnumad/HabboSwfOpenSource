@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.users
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3266;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupEntryData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class GuildMembershipsMessageParser implements IMessageParser
@@ -26,7 +26,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._guilds.push(new _Str_3266(k));
+                this._guilds.push(new HabboGroupEntryData(k));
                 _local_3++;
             }
             return true;

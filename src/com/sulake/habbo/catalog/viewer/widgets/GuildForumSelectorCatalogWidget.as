@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.catalog.guilds.GuildMembershipsController;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3266;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupEntryData;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetShowWarningTextEvent;
 
@@ -15,7 +15,7 @@
 
         override protected function filterGroupMemberships(k:Array):Array
         {
-            var _local_5:_Str_3266;
+            var _local_5:HabboGroupEntryData;
             var _local_2:Array = new Array();
             var _local_3:int = _Str_5363.catalog.sessionDataManager.userId;
             var _local_4:Boolean = _Str_5363.catalog.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE);
@@ -32,7 +32,7 @@
             return _local_2;
         }
 
-        override protected function selectGroup(k:_Str_3266):void
+        override protected function selectGroup(k:HabboGroupEntryData):void
         {
             super.selectGroup(k);
             events.dispatchEvent(new CatalogWidgetShowWarningTextEvent(((k._Str_21674) ? "${catalog.alert.group_has_forum}" : "")));

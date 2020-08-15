@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3266 
+    public class HabboGroupEntryData
     {
         private var _groupId:int;
         private var _groupName:String;
@@ -13,7 +13,7 @@
         private var _ownerId:int;
         private var _Str_19808:Boolean;
 
-        public function _Str_3266(k:IMessageDataWrapper)
+        public function HabboGroupEntryData(k:IMessageDataWrapper)
         {
             this._groupId = k.readInteger();
             this._groupName = k.readString();
