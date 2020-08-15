@@ -8,8 +8,8 @@
 
     public class GuildEditorData 
     {
-        private var _baseParts:Vector.<_Str_3740>;
-        private var _layerParts:Vector.<_Str_3740>;
+        private var _baseParts:Vector.<BadgePartData>;
+        private var _layerParts:Vector.<BadgePartData>;
         private var _badgeColors:Vector.<GuildColorData>;
         private var _guildPrimaryColors:Vector.<GuildColorData>;
         private var _guildSecondaryColors:Vector.<GuildColorData>;
@@ -18,8 +18,8 @@
         {
             var _local_2:int;
             var _local_3:int;
-            this._baseParts = new Vector.<_Str_3740>();
-            this._layerParts = new Vector.<_Str_3740>();
+            this._baseParts = new Vector.<BadgePartData>();
+            this._layerParts = new Vector.<BadgePartData>();
             this._badgeColors = new Vector.<GuildColorData>();
             this._guildPrimaryColors = new Vector.<GuildColorData>();
             this._guildSecondaryColors = new Vector.<GuildColorData>();
@@ -28,14 +28,14 @@
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._baseParts.push(new _Str_3740(k));
+                this._baseParts.push(new BadgePartData(k));
                 _local_2++;
             }
             _local_3 = k.readInteger();
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._layerParts.push(new _Str_3740(k));
+                this._layerParts.push(new BadgePartData(k));
                 _local_2++;
             }
             _local_3 = k.readInteger();
@@ -61,12 +61,12 @@
             }
         }
 
-        public function get _Str_11328():Vector.<_Str_3740>
+        public function get _Str_11328():Vector.<BadgePartData>
         {
             return this._baseParts;
         }
 
-        public function get _Str_12125():Vector.<_Str_3740>
+        public function get _Str_12125():Vector.<BadgePartData>
         {
             return this._layerParts;
         }

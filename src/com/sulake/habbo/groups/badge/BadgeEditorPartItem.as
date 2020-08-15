@@ -5,7 +5,7 @@
     import com.sulake.habbo.groups.HabboGroupsManager;
     import flash.display.BitmapData;
     import flash.geom.ColorTransform;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3740;
+    import com.sulake.habbo.communication.messages.incoming.users.BadgePartData;
     import com.sulake.core.assets.IResourceManager;
     import com.sulake.core.assets.IAsset;
     import com.sulake.habbo.communication.messages.incoming.users.GuildColorData;
@@ -36,7 +36,7 @@
         private var _isLoaded:Boolean = false;
         private var _isStatic:Boolean = false;
 
-        public function BadgeEditorPartItem(k:HabboGroupsManager, _arg_2:BadgeSelectPartCtrl, _arg_3:int, _arg_4:int, _arg_5:_Str_3740=null)
+        public function BadgeEditorPartItem(k:HabboGroupsManager, _arg_2:BadgeSelectPartCtrl, _arg_3:int, _arg_4:int, _arg_5:BadgePartData=null)
         {
             this._colorTransform = new ColorTransform(1, 1, 1);
             super();

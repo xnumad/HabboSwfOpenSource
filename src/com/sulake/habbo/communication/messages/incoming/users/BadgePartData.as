@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3740 
+    public class BadgePartData
     {
         private var _id:int;
         private var _fileName:String;
         private var _Str_5291:String;
 
-        public function _Str_3740(k:IMessageDataWrapper=null)
+        public function BadgePartData(k:IMessageDataWrapper=null)
         {
             this._id = k.readInteger();
             this._fileName = k.readString();

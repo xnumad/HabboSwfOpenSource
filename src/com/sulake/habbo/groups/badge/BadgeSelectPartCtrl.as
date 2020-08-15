@@ -5,7 +5,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3740;
+    import com.sulake.habbo.communication.messages.incoming.users.BadgePartData;
     import flash.display.BitmapData;
     import flash.geom.Point;
     import com.sulake.core.window.components.IBorderWindow;
@@ -96,7 +96,7 @@
 
         public function loadData():void
         {
-            var k:_Str_3740;
+            var k:BadgePartData;
             if (((!(this._badgeBaseParts == null)) || (!(this._badgeLayerParts == null))))
             {
                 return;
