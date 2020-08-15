@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.moderation
 {
     import com.sulake.core.communication.connection.IConnection;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_9065;
+    import com.sulake.habbo.communication.messages.incoming.moderation.IssueInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorInitMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9150;
     import com.sulake.habbo.communication.messages.incoming.moderation.IssuePickFailedMessageEvent;
@@ -68,7 +68,7 @@
             super();
             this._moderationManager = k;
             var _local_2:IConnection = k.connection;
-            _local_2.addMessageEvent(new _Str_9065(this.onIssueInfo));
+            _local_2.addMessageEvent(new IssueInfoMessageEvent(this.onIssueInfo));
             _local_2.addMessageEvent(new ModeratorInitMessageEvent(this.onModeratorInit));
             _local_2.addMessageEvent(new _Str_9150(this.onModeratorToolPreferences));
             _local_2.addMessageEvent(new IssuePickFailedMessageEvent(this.onIssuePickFailed));
@@ -87,7 +87,7 @@
             _local_2.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
         }
 
-        private function onIssueInfo(k:_Str_9065):void
+        private function onIssueInfo(k:IssueInfoMessageEvent):void
         {
             if (((k == null) || (this._moderationManager == null)))
             {

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.moderation.IssueInfoMessageParser;
 
-    public class _Str_9065 extends MessageEvent implements IMessageEvent 
+    public class IssueInfoMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9065(k:Function)
+        public function IssueInfoMessageEvent(k:Function)
         {
             super(k, IssueInfoMessageParser);
         }

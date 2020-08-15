@@ -214,7 +214,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.CfhChatlogEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorRoomInfoEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9065;
+	import com.sulake.habbo.communication.messages.incoming.moderation.IssueInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9150;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
 	import com.sulake.habbo.communication.messages.incoming.moderation.UserBannedMessageEvent;
@@ -1341,7 +1341,7 @@
             INCOMING_PACKETS[3560] = WeeklyCompetitiveFriendsLeaderboardEvent;
             INCOMING_PACKETS[3575] = NewUserExperienceGiftOfferEvent;
             INCOMING_PACKETS[3595] = ThumbnailStatusMessageEvent;
-            INCOMING_PACKETS[3609] = _Str_9065;
+            INCOMING_PACKETS[3609] = IssueInfoMessageEvent;
             INCOMING_PACKETS[3625] = QuestsMessageEvent;
             INCOMING_PACKETS[3635] = CallForHelpResultMessageEvent;
             INCOMING_PACKETS[3639] = NewUserExperienceNotCompleteEvent;
