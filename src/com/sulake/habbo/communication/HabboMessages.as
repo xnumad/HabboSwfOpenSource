@@ -782,7 +782,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8674;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8731;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomMessageNotificationMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9325;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeControlVideoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.CustomStackingHeightUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.PresentOpenedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RequestSpamWallPostItMessageEvent;
@@ -1072,7 +1072,7 @@
             INCOMING_PACKETS[1548] = GuideOnDutyStatusMessageEvent;
             INCOMING_PACKETS[1551] = _Str_16338;
             INCOMING_PACKETS[1553] = PetBreedingResultEvent;
-            INCOMING_PACKETS[1554] = _Str_9325;
+            INCOMING_PACKETS[1554] = YoutubeControlVideoMessageEvent;
             INCOMING_PACKETS[1555] = RoomSettingsSaveErrorEvent;
             INCOMING_PACKETS[156] = _Str_7323;
             INCOMING_PACKETS[1562] = UserFlatCatsEvent;

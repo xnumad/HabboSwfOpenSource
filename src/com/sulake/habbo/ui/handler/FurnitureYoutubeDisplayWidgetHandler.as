@@ -8,7 +8,7 @@
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8731;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayPlaylistsEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9325;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeControlVideoMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.furniture.YoutubeDisplayVideoMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.furniture.YoutubeControlVideoMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.furniture.YoutubeDisplayPlaylistsMessageParser;
@@ -45,7 +45,7 @@
             this._container = k;
             //this.addMessageEvent(new _Str_8731(this.onVideo));
             //this.addMessageEvent(new YoutubeDisplayPlaylistsEvent(this.onPlaylists));
-            //this.addMessageEvent(new _Str_9325(this.onControlVideo));
+            //this.addMessageEvent(new YoutubeControlVideoMessageEvent(this.onControlVideo));
         }
 
         private function addMessageEvent(k:IMessageEvent):void
@@ -74,7 +74,7 @@
             this._widget.showVideo(_local_2.furniId, _local_2.videoId, _local_2._Str_25795, _local_2._Str_23507, _local_2.state);
         }
 
-        private function onControlVideo(k:_Str_9325):void
+        private function onControlVideo(k:YoutubeControlVideoMessageEvent):void
         {
             var _local_2:YoutubeControlVideoMessageParser = k.getParser();
             this._widget._Str_22371(_local_2.furniId, _local_2.commandId);
