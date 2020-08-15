@@ -213,7 +213,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.CfhChatlogEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_8695;
+	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorRoomInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9065;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9150;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
@@ -1036,7 +1036,7 @@
             INCOMING_PACKETS[1327] = _Str_5683;
             INCOMING_PACKETS[133] = CompetitionStatusMessageEvent;
             INCOMING_PACKETS[1331] = _Str_7272;
-            INCOMING_PACKETS[1333] = _Str_8695;
+            INCOMING_PACKETS[1333] = ModeratorRoomInfoEvent;
             INCOMING_PACKETS[1347] = InitDiffieHandshakeEvent;
             INCOMING_PACKETS[1350] = MaintenanceStatusMessageEvent;
             INCOMING_PACKETS[1352] = BotAddedToInventoryEvent;

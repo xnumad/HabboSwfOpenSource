@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.IssuePickFailedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9383;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_8695;
+    import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorRoomInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.CfhChatlogEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
@@ -74,7 +74,7 @@
             _local_2.addMessageEvent(new IssuePickFailedMessageEvent(this.onIssuePickFailed));
             _local_2.addMessageEvent(new _Str_9383(this.onIssueDeleted));
             _local_2.addMessageEvent(new _Str_9413(this.onUserInfo));
-            _local_2.addMessageEvent(new _Str_8695(this.onRoomInfo));
+            _local_2.addMessageEvent(new ModeratorRoomInfoEvent(this.onRoomInfo));
             _local_2.addMessageEvent(new CfhChatlogEvent(this.onCfhChatlog));
             _local_2.addMessageEvent(new UserChatlogEvent(this.onUserChatlog));
             _local_2.addMessageEvent(new _Str_7799(this.onRoomChatlog));
@@ -194,7 +194,7 @@
             }
         }
 
-        private function onRoomInfo(k:_Str_8695):void
+        private function onRoomInfo(k:ModeratorRoomInfoEvent):void
         {
             var _local_3:RoomToolCtrl;
             var _local_2:ModeratorRoomInfoMessageParser = k.getParser();
