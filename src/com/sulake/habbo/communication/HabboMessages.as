@@ -902,7 +902,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectActivatedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectsMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
+	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectAddedMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.AddItemsToTradeComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.CloseTradingComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.trading.UnacceptTradingComposer;
@@ -1254,7 +1254,7 @@
             INCOMING_PACKETS[2833] = MysteryBoxKeysMessageEvent;
             INCOMING_PACKETS[286] = PromoArticlesMessageEvent;
             INCOMING_PACKETS[2866] = _Str_9413;
-            INCOMING_PACKETS[2867] = _Str_6944;
+            INCOMING_PACKETS[2867] = AvatarEffectAddedMessageEvent;
             INCOMING_PACKETS[2873] = TradingNoSuchItemEvent;
             INCOMING_PACKETS[2875] = _Str_5633;
             INCOMING_PACKETS[2890] = PhoneCollectionStateMessageEvent;

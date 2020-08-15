@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect.AvatarEffectAddedMessageParser;
 
-    public class _Str_6944 extends MessageEvent 
+    public class AvatarEffectAddedMessageEvent extends MessageEvent
     {
-        public function _Str_6944(k:Function)
+        public function AvatarEffectAddedMessageEvent(k:Function)
         {
             super(k, AvatarEffectAddedMessageParser);
         }

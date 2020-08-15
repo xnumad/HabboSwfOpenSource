@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectSelectedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
+    import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectAddedMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.avatar.SaveWardrobeOutfitMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.avatar.CheckUserNameMessageComposer;
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
@@ -34,7 +34,7 @@
             this._communication.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             this._communication.addHabboConnectionMessageEvent(new AvatarEffectMessageEvent(this._Str_22375));
             this._communication.addHabboConnectionMessageEvent(new AvatarEffectSelectedMessageEvent(this._Str_22833));
-            this._communication.addHabboConnectionMessageEvent(new _Str_6944(this._Str_18461));
+            this._communication.addHabboConnectionMessageEvent(new AvatarEffectAddedMessageEvent(this._Str_18461));
         }
 
         public function dispose():void
