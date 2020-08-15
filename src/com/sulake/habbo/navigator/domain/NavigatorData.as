@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.navigator.domain
 {
     import com.sulake.habbo.navigator.HabboNavigator;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5733;
+    import com.sulake.habbo.communication.messages.incoming.navigator.MsgWithRequestId;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventData;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import flash.utils.Dictionary;
@@ -27,7 +27,7 @@
         private static const MAX_HISTORY_LENGTH:int = 10;
 
         private var _navigator:HabboNavigator;
-        private var _lastMsg:_Str_5733;
+        private var _lastMsg:MsgWithRequestId;
         private var _roomEventData:RoomEventData;
         private var _eventMod:Boolean;
         private var _roomPicker:Boolean;

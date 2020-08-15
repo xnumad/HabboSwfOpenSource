@@ -2,6 +2,6 @@
 {
     import com.sulake.core.runtime.IDisposable;
 
-    public interface _Str_5733 extends IDisposable 
+    public interface MsgWithRequestId extends IDisposable
     {    }
 }

@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class GuestRoomSearchResultData implements IDisposable, _Str_5733
+    public class GuestRoomSearchResultData implements IDisposable, MsgWithRequestId
     {
         private var _searchType:int;
         private var _searchParam:String;

@@ -4,7 +4,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class CategoriesWithVisitorCountData implements IDisposable, _Str_5733
+    public class CategoriesWithVisitorCountData implements IDisposable, MsgWithRequestId
     {
         private var _categoryToCurrentUserCountMap:Map;
         private var _categoryToMaxUserCountMap:Map;

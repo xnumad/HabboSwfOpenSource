@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5485 implements IDisposable, _Str_5733 
+    public class _Str_5485 implements IDisposable, MsgWithRequestId
     {
         private var _entries:Array;
         private var _disposed:Boolean;

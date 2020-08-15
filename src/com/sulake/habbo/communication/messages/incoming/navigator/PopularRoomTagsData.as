@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class PopularRoomTagsData implements IDisposable, _Str_5733
+    public class PopularRoomTagsData implements IDisposable, MsgWithRequestId
     {
         private var _tags:Array;
         private var _disposed:Boolean;
