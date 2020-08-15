@@ -29,7 +29,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5795;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_6109;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FavouritesEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.CollapsedCategoriesEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
@@ -137,7 +137,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FavouritesEvent(this._Str_8561)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new NoSuchFlatEvent(this.onNoSuchFlat)));
             this._messageListeners.push(k.connection.addMessageEvent(new CollapsedCategoriesEvent(this._Str_18969)));
             this._messageListeners.push(k.connection.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails)));
@@ -412,7 +412,7 @@
 
         private function _Str_8561(k:IMessageEvent):void
         {
-            var _local_2:FavouritesMessageParser = (k as _Str_6109).getParser();
+            var _local_2:FavouritesMessageParser = (k as FavouritesEvent).getParser();
             Logger.log(((("Received favourites: " + _local_2.limit) + ", ") + _local_2._Str_13809.length));
             this._navigator.data._Str_8561(_local_2);
         }

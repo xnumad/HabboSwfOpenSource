@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
     import com.sulake.habbo.communication.messages.incoming.room.session.FlatAccessibleMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_6109;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FavouritesEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventCancelEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
@@ -125,7 +125,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344));
             _local_2.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this.onDoorOpened));
             _local_2.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
-            _local_2.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561));
+            _local_2.addHabboConnectionMessageEvent(new FavouritesEvent(this._Str_8561));
             _local_2.addHabboConnectionMessageEvent(new RoomEventCancelEvent(this.onRoomEventCancel));
             _local_2.addHabboConnectionMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell));
@@ -543,7 +543,7 @@
 
         private function _Str_8561(k:IMessageEvent):void
         {
-            var _local_2:FavouritesMessageParser = (k as _Str_6109).getParser();
+            var _local_2:FavouritesMessageParser = (k as FavouritesEvent).getParser();
             Logger.log(((("Received favourites: " + _local_2.limit) + ", ") + _local_2._Str_13809.length));
             this._navigator.data._Str_8561(_local_2);
         }

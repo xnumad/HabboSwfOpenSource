@@ -377,7 +377,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5795;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_6109;
+	import com.sulake.habbo.communication.messages.incoming.navigator.FavouritesEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.ConvertedRoomIdEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventCancelEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
@@ -1064,7 +1064,7 @@
             INCOMING_PACKETS[1498] = _Str_5993;
             INCOMING_PACKETS[1501] = PostItPlacedEvent;
             INCOMING_PACKETS[1503] = ApproveNameMessageEvent;
-            INCOMING_PACKETS[151] = _Str_6109;
+            INCOMING_PACKETS[151] = FavouritesEvent;
             INCOMING_PACKETS[1517] = GiftReceiverNotFoundEvent;
             INCOMING_PACKETS[1533] = BonusRareInfoMessageEvent;
             INCOMING_PACKETS[1534] = ObjectAddMessageEvent;
