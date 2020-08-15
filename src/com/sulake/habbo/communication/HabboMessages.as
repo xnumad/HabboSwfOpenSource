@@ -416,7 +416,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.LimitedOfferAppearingNextMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.GiftReceiverNotFoundEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
+	import com.sulake.habbo.communication.messages.incoming.catalog.VoucherRedeemErrorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
 	import com.sulake.habbo.communication.messages.incoming.catalog.LimitedEditionSoldOutEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.SellablePetPalettesMessageEvent;
@@ -1423,7 +1423,7 @@
             INCOMING_PACKETS[680] = MarketPlaceOffersEvent;
             INCOMING_PACKETS[687] = GetGuestRoomResultEvent;
             INCOMING_PACKETS[69] = BotSkillListUpdateEvent;
-            INCOMING_PACKETS[714] = _Str_8418;
+            INCOMING_PACKETS[714] = VoucherRedeemErrorMessageEvent;
             INCOMING_PACKETS[717] = BadgesEvent;
             INCOMING_PACKETS[725] = _Str_5946;
             INCOMING_PACKETS[735] = ChatReviewSessionOfferedToGuideMessageEvent;

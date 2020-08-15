@@ -121,7 +121,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubExtendOfferMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
+    import com.sulake.habbo.communication.messages.incoming.catalog.VoucherRedeemErrorMessageEvent;
     import com.sulake.habbo.catalog.event.CatalogEvent;
     import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubQueryFurniCountMessageComposer;
     import com.sulake.habbo.catalog.navigation.ICatalogNavigator;
@@ -583,7 +583,7 @@
             this.addMessageEvent(new NotEnoughBalanceMessageEvent(this.onNotEnoughBalance));
             this.addMessageEvent(new HabboClubExtendOfferMessageEvent(this.onHabboClubExtendOffer));
             this.addMessageEvent(new BuildersClubFurniCountMessageEvent(this.onBuildersClubFurniCount));
-            this.addMessageEvent(new _Str_8418(this.onVoucherRedeemError));
+            this.addMessageEvent(new VoucherRedeemErrorMessageEvent(this.onVoucherRedeemError));
 			this.addMessageEvent(new FireworkChargeDataEvent(this.onFireworkChargeHandler));
             context.addLinkEventTracker(this);
             this._sessionDataManager.loadProductData(this);
@@ -2003,7 +2003,7 @@
             this._windowManager.alert("${catalog.alert.voucherredeem.ok.title}", _local_2, 0, this.alertDialogEventProcessor);
         }
 
-        private function onVoucherRedeemError(k:_Str_8418):void
+        private function onVoucherRedeemError(k:VoucherRedeemErrorMessageEvent):void
         {
             if (k == null)
             {
