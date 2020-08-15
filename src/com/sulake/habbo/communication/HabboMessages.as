@@ -415,7 +415,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubOffersMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseErrorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.LimitedOfferAppearingNextMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
+	import com.sulake.habbo.communication.messages.incoming.catalog.GiftReceiverNotFoundEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
 	import com.sulake.habbo.communication.messages.incoming.catalog.LimitedEditionSoldOutEvent;
@@ -1065,7 +1065,7 @@
             INCOMING_PACKETS[1501] = PostItPlacedEvent;
             INCOMING_PACKETS[1503] = ApproveNameMessageEvent;
             INCOMING_PACKETS[151] = _Str_6109;
-            INCOMING_PACKETS[1517] = _Str_8409;
+            INCOMING_PACKETS[1517] = GiftReceiverNotFoundEvent;
             INCOMING_PACKETS[1533] = _Str_6906;
             INCOMING_PACKETS[1534] = ObjectAddMessageEvent;
             INCOMING_PACKETS[1543] = CollapsedCategoriesEvent;

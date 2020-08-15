@@ -90,7 +90,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.VoucherRedeemOkMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
+    import com.sulake.habbo.communication.messages.incoming.catalog.GiftReceiverNotFoundEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.LimitedEditionSoldOutEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseNotAllowedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
@@ -552,7 +552,7 @@
             this.addMessageEvent(new HabboActivityPointNotificationMessageEvent(this.onActivityPointNotification));
             this.addMessageEvent(new VoucherRedeemOkMessageEvent(this.onVoucherRedeemOk));
             this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
-            this.addMessageEvent(new _Str_8409(this.onGiftReceiverNotFound));
+            this.addMessageEvent(new GiftReceiverNotFoundEvent(this.onGiftReceiverNotFound));
             this.addMessageEvent(new LimitedEditionSoldOutEvent(this.onLimitedEditionSoldOut));
             this.addMessageEvent(new PurchaseNotAllowedMessageEvent(this.onPurchaseNotAllowed));
             this.addMessageEvent(new GiftWrappingConfigurationEvent(this.onGiftWrappingConfiguration));
@@ -1916,7 +1916,7 @@
             this._purchaseConfirmationDialog = null;
         }
 
-        private function onGiftReceiverNotFound(k:_Str_8409):void
+        private function onGiftReceiverNotFound(k:GiftReceiverNotFoundEvent):void
         {
             if (this._purchaseConfirmationDialog != null)
             {

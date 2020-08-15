@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.GiftReceiverNotFoundParser;
 
-    public class _Str_8409 extends MessageEvent implements IMessageEvent 
+    public class GiftReceiverNotFoundEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8409(k:Function)
+        public function GiftReceiverNotFoundEvent(k:Function)
         {
             super(k, GiftReceiverNotFoundParser);
         }
