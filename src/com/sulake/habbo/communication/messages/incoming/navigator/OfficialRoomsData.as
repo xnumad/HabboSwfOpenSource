@@ -3,12 +3,12 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5078 implements IDisposable, MsgWithRequestId
+    public class OfficialRoomsData implements IDisposable, MsgWithRequestId
     {
         private var _entries:Array;
         private var _disposed:Boolean;
 
-        public function _Str_5078(k:IMessageDataWrapper)
+        public function OfficialRoomsData(k:IMessageDataWrapper)
         {
             this._entries = new Array();
             super();

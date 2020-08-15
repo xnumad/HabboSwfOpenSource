@@ -1,14 +1,14 @@
 ﻿package com.sulake.habbo.communication.messages.parser.navigator
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5078;
+    import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomsData;
     import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomEntryData;
     import com.sulake.habbo.communication.messages.incoming.navigator.PromotedRoomsData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class OfficialRoomsMessageParser implements IMessageParser
     {
-        private var _data:_Str_5078;
+        private var _data:OfficialRoomsData;
         private var _Str_8807:OfficialRoomEntryData;
         private var _Str_12284:PromotedRoomsData;
 
@@ -20,7 +20,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._data = new _Str_5078(k);
+            this._data = new OfficialRoomsData(k);
             var _local_2:int = k.readInteger();
             if (_local_2 > 0)
             {
@@ -30,7 +30,7 @@
             return true;
         }
 
-        public function get data():_Str_5078
+        public function get data():OfficialRoomsData
         {
             return this._data;
         }
