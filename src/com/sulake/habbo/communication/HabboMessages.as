@@ -208,7 +208,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.*;
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorInitMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
+	import com.sulake.habbo.communication.messages.incoming.moderation.RoomChatlogEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.IssuePickFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.CfhChatlogEvent;
@@ -1324,7 +1324,7 @@
             INCOMING_PACKETS[3429] = _Str_5655;
             INCOMING_PACKETS[3431] = _Str_8183;
             INCOMING_PACKETS[3433] = RecyclerStatusEvent;
-            INCOMING_PACKETS[3434] = _Str_7799;
+            INCOMING_PACKETS[3434] = RoomChatlogEvent;
             INCOMING_PACKETS[3441] = PetSupplementedNotificationEvent;
             INCOMING_PACKETS[3463] = GuideReportingStatusMessageEvent;
             INCOMING_PACKETS[3473] = AvatarEffectSelectedMessageEvent;

@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorRoomInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.CfhChatlogEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.UserChatlogEvent;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
+    import com.sulake.habbo.communication.messages.incoming.moderation.RoomChatlogEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.RoomVisitsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
@@ -77,7 +77,7 @@
             _local_2.addMessageEvent(new ModeratorRoomInfoEvent(this.onRoomInfo));
             _local_2.addMessageEvent(new CfhChatlogEvent(this.onCfhChatlog));
             _local_2.addMessageEvent(new UserChatlogEvent(this.onUserChatlog));
-            _local_2.addMessageEvent(new _Str_7799(this.onRoomChatlog));
+            _local_2.addMessageEvent(new RoomChatlogEvent(this.onRoomChatlog));
             _local_2.addMessageEvent(new RoomVisitsEvent(this.onRoomVisits));
             _local_2.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
@@ -215,7 +215,7 @@
             this.onChatlog(("Call For Help Evidence #" + _local_2.data._Str_20325), WindowTracker._Str_15411, _local_2.data.callId, _local_3, _local_4);
         }
 
-        private function onRoomChatlog(k:_Str_7799):void
+        private function onRoomChatlog(k:RoomChatlogEvent):void
         {
             var _local_2:RoomChatlogMessageParser = k.getParser();
             var _local_3:Array = new Array();

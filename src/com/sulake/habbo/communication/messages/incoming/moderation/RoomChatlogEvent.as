@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.moderation.RoomChatlogMessageParser;
 
-    public class _Str_7799 extends MessageEvent implements IMessageEvent 
+    public class RoomChatlogEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7799(k:Function)
+        public function RoomChatlogEvent(k:Function)
         {
             super(k, RoomChatlogMessageParser);
         }
