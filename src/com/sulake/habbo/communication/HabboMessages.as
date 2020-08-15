@@ -776,7 +776,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentOkMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomDimmerPresetsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8183;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8241;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.OpenPetPackageResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.WelcomeGiftStatusEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.OpenPetPackageRequestedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.GuildFurniContextMenuInfoMessageEvent;
@@ -1402,7 +1402,7 @@
             INCOMING_PACKETS[518] = NewNavigatorPreferencesEvent;
             INCOMING_PACKETS[52] = GuestRoomSearchResultEvent;
             INCOMING_PACKETS[54] = MarketplaceCanMakeOfferResult;
-            INCOMING_PACKETS[546] = _Str_8241;
+            INCOMING_PACKETS[546] = OpenPetPackageResultMessageEvent;
             INCOMING_PACKETS[558] = HeightMapUpdateMessageEvent;
             INCOMING_PACKETS[56] = PresentOpenedMessageEvent;
             INCOMING_PACKETS[563] = CheckUserNameResultMessageEvent;
