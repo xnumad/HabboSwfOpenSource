@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.sound.JukeboxPlayListFullMessageParser;
 
-    public class _Str_12108 extends MessageEvent implements IMessageEvent 
+    public class JukeboxPlayListFullMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_12108(k:Function)
+        public function JukeboxPlayListFullMessageEvent(k:Function)
         {
             super(k, JukeboxPlayListFullMessageParser);
         }

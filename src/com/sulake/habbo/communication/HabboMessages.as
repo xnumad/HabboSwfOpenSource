@@ -91,7 +91,7 @@
 	import com.sulake.habbo.communication.messages.incoming.callforhelp.SanctionStatusEvent;
 	import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhSanctionMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeBoxPlayListAddSongEvent;
-	import com.sulake.habbo.communication.messages.incoming.sound._Str_12108;
+	import com.sulake.habbo.communication.messages.incoming.sound.JukeboxPlayListFullMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7199;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7248;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_7922;
@@ -1001,7 +1001,7 @@
             INCOMING_PACKETS[1033] = YouAreSpectatorMessageEvent;
             INCOMING_PACKETS[1036] = ShoutMessageEvent;
             INCOMING_PACKETS[104] = FurniListAddOrUpdateEvent;
-            INCOMING_PACKETS[105] = _Str_12108;
+            INCOMING_PACKETS[105] = JukeboxPlayListFullMessageEvent;
             INCOMING_PACKETS[1050] = HotelWillCloseInMinutesEvent;
             INCOMING_PACKETS[1066] = SimplePollResultsEvent;
             INCOMING_PACKETS[1073] = GuildForumThreadsEvent;

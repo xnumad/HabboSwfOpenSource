@@ -8,7 +8,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.sound._Str_8016;
     import com.sulake.habbo.communication.messages.incoming.sound._Str_7248;
-    import com.sulake.habbo.communication.messages.incoming.sound._Str_12108;
+    import com.sulake.habbo.communication.messages.incoming.sound.JukeboxPlayListFullMessageEvent;
     import com.sulake.habbo.sound.events.SoundControllerEvent;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
     import com.sulake.habbo.sound.HabboMusicPrioritiesEnum;
@@ -46,7 +46,7 @@
             this._messageEvents = [];
             this._messageEvents.push(new _Str_8016(this._Str_25253));
             this._messageEvents.push(new _Str_7248(this._Str_24814));
-            this._messageEvents.push(new _Str_12108(this._Str_22626));
+            this._messageEvents.push(new JukeboxPlayListFullMessageEvent(this._Str_22626));
             for each (_local_5 in this._messageEvents)
             {
                 this._connection.addMessageEvent(_local_5);
