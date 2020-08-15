@@ -672,7 +672,7 @@
             }
         }
 
-        public function _Str_16195(k:BitmapData):void
+        public function setGameRewardImage(k:BitmapData):void
         {
             var _local_2:IBitmapWrapperWindow = (this._gameCenterViewWindow.findChildByName("reward_bitmap") as IBitmapWrapperWindow);
             this._Str_14846(_local_2, k);

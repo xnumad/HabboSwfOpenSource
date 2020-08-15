@@ -309,7 +309,7 @@
         {
             if ((((this._waitingRewardFurniId == k) && (this._gameRewardListener)) && (!((this._gameRewardListener as IDisposable).disposed))))
             {
-                this._gameRewardListener._Str_16195(_arg_2);
+                this._gameRewardListener.setGameRewardImage(_arg_2);
             }
             this._waitingRewardFurniId = -1;
             this._gameRewardListener = null;
