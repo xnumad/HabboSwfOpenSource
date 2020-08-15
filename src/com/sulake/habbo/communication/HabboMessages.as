@@ -218,7 +218,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorToolPreferencesEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorActionResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.UserBannedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9383;
+	import com.sulake.habbo.communication.messages.incoming.moderation.IssueDeletedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9413;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9583;
 	import com.sulake.habbo.communication.messages.outgoing.game.score.GetWeeklyGameRewardComposer;
@@ -1290,7 +1290,7 @@
             INCOMING_PACKETS[3151] = FurniListInvalidateEvent;
             INCOMING_PACKETS[3164] = RecyclerPrizesEvent;
             INCOMING_PACKETS[3191] = _Str_17782;
-            INCOMING_PACKETS[3192] = _Str_9383;
+            INCOMING_PACKETS[3192] = IssueDeletedMessageEvent;
             INCOMING_PACKETS[3201] = _Str_7564;
             INCOMING_PACKETS[3207] = SlideObjectBundleMessageEvent;
             INCOMING_PACKETS[3208] = ItemRemoveMessageEvent;
