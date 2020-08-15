@@ -558,7 +558,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8535;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8552;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8800;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_9229;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.*;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
@@ -1392,7 +1392,7 @@
             INCOMING_PACKETS[426] = _Str_9995;
             INCOMING_PACKETS[44] = LimitedOfferAppearingNextMessageEvent;
             INCOMING_PACKETS[448] = YouArePlayingGameMessageEvent;
-            INCOMING_PACKETS[462] = _Str_9229;
+            INCOMING_PACKETS[462] = RoomInviteErrorEvent;
             INCOMING_PACKETS[463] = CameraSnapshotMessageEvent;
             INCOMING_PACKETS[468] = RecyclerFinishedEvent;
             INCOMING_PACKETS[469] = _Str_8016;

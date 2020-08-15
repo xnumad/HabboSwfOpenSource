@@ -72,7 +72,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7759;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8535;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8109;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_9229;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.GetFriendRequestsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.FriendListUpdateMessageComposer;
@@ -533,7 +533,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_7759(this._Str_22373));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8535(this._Str_23472));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8109(this._Str_23021));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9229(this._Str_22762));
+            this._communicationManager.addHabboConnectionMessageEvent(new RoomInviteErrorEvent(this._Str_22762));
             this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
         }
 
@@ -625,7 +625,7 @@
 
         private function _Str_22762(k:IMessageEvent):void
         {
-            var _local_2:RoomInviteErrorMessageParser = (k as _Str_9229).getParser();
+            var _local_2:RoomInviteErrorMessageParser = (k as RoomInviteErrorEvent).getParser();
             var _local_3:String = ((("Received room invite error: errorCode: " + _local_2.errorCode) + ", recipients: ") + Util.arrayToString(_local_2._Str_25393));
             this.simpleAlert("${friendlist.alert.title}", _local_3);
         }
