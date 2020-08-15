@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.notifications.OfferRewardDeliveredMessageParser;
 
-    public class _Str_7261 extends MessageEvent implements IMessageEvent 
+    public class OfferRewardDeliveredMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7261(k:Function)
+        public function OfferRewardDeliveredMessageEvent(k:Function)
         {
             super(k, OfferRewardDeliveredMessageParser);
         }

@@ -790,7 +790,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
 	import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7261;
+	import com.sulake.habbo.communication.messages.incoming.notifications.OfferRewardDeliveredMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.InfoFeedEnableMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.MOTDNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ElementPointerMessageEvent;
@@ -1154,7 +1154,7 @@
             INCOMING_PACKETS[2103] = UnseenItemsEvent;
             INCOMING_PACKETS[2107] = AchievementEvent;
             INCOMING_PACKETS[2124] = CraftingRecipesAvailableEvent;
-            INCOMING_PACKETS[2125] = _Str_7261;
+            INCOMING_PACKETS[2125] = OfferRewardDeliveredMessageEvent;
             INCOMING_PACKETS[2142] = Game2StartingGameFailedMessageEvent;
             INCOMING_PACKETS[2156] = PetExperienceEvent;
             INCOMING_PACKETS[2159] = GuildCreationInfoMessageEvent;

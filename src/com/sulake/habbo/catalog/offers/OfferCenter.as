@@ -8,7 +8,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.core.window.IWindow;
     import flash.utils.Timer;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_7261;
+    import com.sulake.habbo.communication.messages.incoming.notifications.OfferRewardDeliveredMessageEvent;
     import flash.events.TimerEvent;
     import com.sulake.habbo.communication.messages.parser.notifications.OfferRewardDeliveredMessageParser;
     import com.sulake.core.window.components.IItemListWindow;
@@ -33,14 +33,14 @@
         private var _rewards:Vector.<OfferReward>;
         private var _rewardTemplate:IWindow;
         private var _pollTimer:Timer;
-        private var _offerRewardDeliveredMessageEvent:_Str_7261;
+        private var _offerRewardDeliveredMessageEvent:OfferRewardDeliveredMessageEvent;
 
         public function OfferCenter(k:IHabboWindowManager, _arg_2:IAssetLibrary, _arg_3:IHabboCatalog)
         {
             this._windowManager = k;
             this._assets = _arg_2;
             this._catalog = _arg_3;
-            this._offerRewardDeliveredMessageEvent = new _Str_7261(this._Str_22579);
+            this._offerRewardDeliveredMessageEvent = new OfferRewardDeliveredMessageEvent(this._Str_22579);
             this._catalog.connection.addMessageEvent(this._offerRewardDeliveredMessageEvent);
             this._providers = new Vector.<IOfferProvider>(0);
             this._providers.push(new SupersonicProvider(this));
@@ -85,7 +85,7 @@
             return null;
         }
 
-        private function _Str_22579(k:_Str_7261):void
+        private function _Str_22579(k:OfferRewardDeliveredMessageEvent):void
         {
             var _local_2:OfferRewardDeliveredMessageParser = k.getParser();
             this._Str_23174(_local_2.name, _local_2.contentType, _local_2.classId);
