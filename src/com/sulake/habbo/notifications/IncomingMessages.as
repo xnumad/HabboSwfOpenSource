@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftSelectedEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.MaintenanceStatusMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_9583;
+    import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorCautionEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelWillCloseInMinutesEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
@@ -99,7 +99,7 @@
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new ClubGiftSelectedEvent(this.onClubGiftSelected));
             this.addMessageEvent(new MaintenanceStatusMessageEvent(this.onHotelMaintenance));
-            this.addMessageEvent(new _Str_9583(this.onModCautionEvent));
+            this.addMessageEvent(new ModeratorCautionEvent(this.onModCautionEvent));
             this.addMessageEvent(new NotificationDialogMessageEvent(this.onNotificationDialogMessageEvent));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this.onHotelClosing));
             this.addMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
@@ -238,7 +238,7 @@
         private function onModCautionEvent(k:IMessageEvent):void
         {
             var _local_3:GenericNotificationItemData;
-            var _local_2:ModerationCautionParser = (k as _Str_9583).getParser();
+            var _local_2:ModerationCautionParser = (k as ModeratorCautionEvent).getParser();
             if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;

@@ -220,7 +220,7 @@
 	import com.sulake.habbo.communication.messages.incoming.moderation.UserBannedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.IssueDeletedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorUserInfoEvent;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_9583;
+	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorCautionEvent;
 	import com.sulake.habbo.communication.messages.outgoing.game.score.GetWeeklyGameRewardComposer;
 	import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11321;
 	import com.sulake.habbo.communication.messages.outgoing.game.score.GetWeeklyGameRewardWinnersComposer;
@@ -1123,7 +1123,7 @@
             INCOMING_PACKETS[1876] = GuildMemberFurniCountInHQMessageEvent;
             INCOMING_PACKETS[1878] = QuestDailyMessageEvent;
             INCOMING_PACKETS[1889] = SeasonalCalendarDailyOfferMessageEvent;
-            INCOMING_PACKETS[1890] = _Str_9583;
+            INCOMING_PACKETS[1890] = ModeratorCautionEvent;
             INCOMING_PACKETS[1907] = PetStatusUpdateEvent;
             INCOMING_PACKETS[1911] = MiniMailNewMessageEvent;
             INCOMING_PACKETS[1924] = PetFigureUpdateEvent;
