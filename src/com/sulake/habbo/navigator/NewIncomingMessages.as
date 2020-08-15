@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
@@ -111,7 +111,7 @@
             var k:IHabboCommunicationManager = this._navigator.communication;
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FriendListUpdateEvent(this.onFriendListUpdate)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5134(this._Str_16321)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592)));
             this._messageListeners.push(k.connection.addMessageEvent(new _Str_8763(this.onNavigatorPreferences)));

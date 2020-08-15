@@ -545,7 +545,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailNewMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailUnreadCountEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.NewFriendRequestEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.NewConsoleMessageEvent;
@@ -1244,7 +1244,7 @@
             INCOMING_PACKETS[2783] = CameraPurchaseOKMessageEvent;
             INCOMING_PACKETS[2788] = PetRespectNotificationEvent;
             INCOMING_PACKETS[280] = FriendRequestsEvent;
-            INCOMING_PACKETS[2800] = _Str_4035;
+            INCOMING_PACKETS[2800] = FriendListUpdateEvent;
             INCOMING_PACKETS[2803] = MiniMailUnreadCountEvent;
             INCOMING_PACKETS[2808] = GuildCreatedMessageEvent;
             INCOMING_PACKETS[2815] = RoomUserRespect;

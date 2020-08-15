@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.FriendListUpdateMessageParser;
 
-    public class _Str_4035 extends MessageEvent implements IMessageEvent 
+    public class FriendListUpdateEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_4035(k:Function)
+        public function FriendListUpdateEvent(k:Function)
         {
             super(k, FriendListUpdateMessageParser);
         }

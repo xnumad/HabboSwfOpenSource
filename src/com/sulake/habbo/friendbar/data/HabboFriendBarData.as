@@ -15,7 +15,7 @@
     import com.sulake.iid.IIDHabboMessenger;
     import com.sulake.iid.IIDHabboTracking;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestsEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FindFriendsProcessResultEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteEvent;
@@ -107,7 +107,7 @@
 
         override protected function initComponent():void
         {
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendListUpdateEvent(this.onFriendListUpdate));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendRequestsEvent(this._Str_22480));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FindFriendsProcessResultEvent(this._Str_24044));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new RoomInviteEvent(this.onRoomInvite));
@@ -440,7 +440,7 @@
             var _local_3:FriendEntity;
             var _local_4:FriendParser;
             var _local_8:int;
-            var _local_2:FriendListUpdateMessageParser = _Str_4035(k).getParser();
+            var _local_2:FriendListUpdateMessageParser = FriendListUpdateEvent(k).getParser();
             var _local_5:Array = _local_2.removedFriendIds;
             var _local_6:Array = _local_2.updatedFriends;
             var _local_7:Array = _local_2.addedFriends;

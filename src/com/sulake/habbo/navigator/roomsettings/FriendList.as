@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
     import com.sulake.habbo.communication.messages.parser.friendlist.FriendsListFragmentMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.FriendListUpdateMessageParser;
 
     public class FriendList 
@@ -37,7 +37,7 @@
         {
             var _local_3:int;
             var _local_4:FriendParser;
-            var _local_2:FriendListUpdateMessageParser = (k as _Str_4035).getParser();
+            var _local_2:FriendListUpdateMessageParser = (k as FriendListUpdateEvent).getParser();
             for each (_local_3 in _local_2.removedFriendIds)
             {
                 this._namesById[_local_3] = null;

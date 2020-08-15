@@ -3,7 +3,7 @@
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.parser.friendlist.FriendListUpdateMessageParser;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendParser;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendCategoryData;
@@ -115,7 +115,7 @@
             status = 0;
             try
             {
-                p = (event as _Str_4035).getParser();
+                p = (event as FriendListUpdateEvent).getParser();
                 status = 1;
                 this._Str_22561(p.cats);
                 status = 2;

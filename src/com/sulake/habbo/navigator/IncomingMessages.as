@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session.CantConnectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
@@ -148,7 +148,7 @@
             _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect));
             _local_2.addHabboConnectionMessageEvent(new _Str_6001(this.onRoomRating));
             _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
-            _local_2.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
+            _local_2.addHabboConnectionMessageEvent(new FriendListUpdateEvent(this.onFriendListUpdate));
             _local_2.addHabboConnectionMessageEvent(new CanCreateRoomMessageEvent(this._Str_25812));
             _local_2.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576));
             _local_2.addHabboConnectionMessageEvent(new _Str_5728(this._Str_16709));
