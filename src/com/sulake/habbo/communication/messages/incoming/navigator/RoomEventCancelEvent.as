@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.RoomEventCancelMessageParser;
 
-    public class _Str_8029 extends MessageEvent implements IMessageEvent 
+    public class RoomEventCancelEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8029(k:Function)
+        public function RoomEventCancelEvent(k:Function)
         {
             super(k, RoomEventCancelMessageParser);
         }

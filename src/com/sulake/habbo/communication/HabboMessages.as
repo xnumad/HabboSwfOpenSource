@@ -379,7 +379,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_6109;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_7272;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_8029;
+	import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventCancelEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.advertisement.InterstitialMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.advertisement.RoomAdErrorEvent;
@@ -1329,7 +1329,7 @@
             INCOMING_PACKETS[3463] = GuideReportingStatusMessageEvent;
             INCOMING_PACKETS[3473] = AvatarEffectSelectedMessageEvent;
             INCOMING_PACKETS[3475] = CreditBalanceEvent;
-            INCOMING_PACKETS[3479] = _Str_8029;
+            INCOMING_PACKETS[3479] = RoomEventCancelEvent;
             INCOMING_PACKETS[35] = _Str_7104;
             INCOMING_PACKETS[3506] = CompetitionVotingInfoMessageEvent;
             INCOMING_PACKETS[3512] = WeeklyCompetitiveLeaderboardEvent;
