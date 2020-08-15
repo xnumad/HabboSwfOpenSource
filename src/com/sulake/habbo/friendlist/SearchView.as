@@ -4,7 +4,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3696;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.HabboSearchResultData;
     import com.sulake.habbo.friendlist.domain.AvatarSearchResults;
     import com.sulake.habbo.utils._Str_3521;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -58,8 +58,8 @@
         public function _Str_3836():void
         {
             var _local_3:Boolean;
-            var _local_4:_Str_3696;
-            var _local_5:_Str_3696;
+            var _local_4:HabboSearchResultData;
+            var _local_5:HabboSearchResultData;
             var _local_6:Boolean;
             this._list.autoArrangeItems = false;
             var k:AvatarSearchResults = this._friendList.searchResults;
@@ -253,7 +253,7 @@
                 return;
             }
             Logger.log(("Ask for friend clicked: " + _arg_2.id));
-            var _local_3:_Str_3696 = this._friendList.searchResults._Str_21135(_arg_2.id);
+            var _local_3:HabboSearchResultData = this._friendList.searchResults._Str_21135(_arg_2.id);
             if (_local_3 == null)
             {
                 Logger.log(("No search result found with id: " + _arg_2.id));
@@ -293,7 +293,7 @@
             {
                 return;
             }
-            var _local_3:_Str_3696 = this._friendList.searchResults._Str_21135(_arg_2.id);
+            var _local_3:HabboSearchResultData = this._friendList.searchResults._Str_21135(_arg_2.id);
             if (_local_3 == null)
             {
                 Logger.log(("No search result found with id: " + _arg_2.id));

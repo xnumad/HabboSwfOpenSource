@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.friendlist
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3696;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.HabboSearchResultData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class HabboSearchResultMessageParser implements IMessageParser
@@ -23,14 +23,14 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._friends.push(new _Str_3696(k));
+                this._friends.push(new HabboSearchResultData(k));
                 _local_3++;
             }
             var _local_4:int = k.readInteger();
             _local_3 = 0;
             while (_local_3 < _local_4)
             {
-                this._others.push(new _Str_3696(k));
+                this._others.push(new HabboSearchResultData(k));
                 _local_3++;
             }
             return true;

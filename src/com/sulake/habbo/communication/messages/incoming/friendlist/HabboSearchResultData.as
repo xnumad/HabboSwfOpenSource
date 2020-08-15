@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3696 
+    public class HabboSearchResultData
     {
         private var _Str_3764:int;
         private var _Str_20176:String;
@@ -14,7 +14,7 @@
         private var _Str_25824:String;
         private var _realName:String;
 
-        public function _Str_3696(k:IMessageDataWrapper)
+        public function HabboSearchResultData(k:IMessageDataWrapper)
         {
             this._Str_3764 = k.readInteger();
             this._Str_20176 = k.readString();

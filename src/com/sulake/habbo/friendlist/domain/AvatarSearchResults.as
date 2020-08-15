@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.friendlist.domain
 {
     import flash.utils.Dictionary;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3696;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.HabboSearchResultData;
 
     public class AvatarSearchResults 
     {
@@ -17,10 +17,10 @@
             this._deps = k;
         }
 
-        public function _Str_21135(k:int):_Str_3696
+        public function _Str_21135(k:int):HabboSearchResultData
         {
-            var _local_2:_Str_3696;
-            var _local_3:_Str_3696;
+            var _local_2:HabboSearchResultData;
+            var _local_3:HabboSearchResultData;
             for each (_local_2 in this._friends)
             {
                 if (_local_2.avatarId == k)
