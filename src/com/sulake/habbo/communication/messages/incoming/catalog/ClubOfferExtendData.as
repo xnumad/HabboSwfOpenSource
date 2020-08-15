@@ -2,14 +2,14 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5335 extends ClubOfferData
+    public class ClubOfferExtendData extends ClubOfferData
     {
         private var _Str_16193:int;
         private var _Str_22071:int;
         private var _Str_21178:int;
         private var _Str_21024:int;
 
-        public function _Str_5335(k:IMessageDataWrapper)
+        public function ClubOfferExtendData(k:IMessageDataWrapper)
         {
             super(k);
             this._Str_16193 = k.readInteger();

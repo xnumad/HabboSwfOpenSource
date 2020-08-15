@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.catalog.club
 {
     import com.sulake.habbo.catalog.HabboCatalog;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5335;
+    import com.sulake.habbo.communication.messages.incoming.catalog.ClubOfferExtendData;
     import com.sulake.habbo.communication.messages.parser.catalog.HabboClubExtendOfferMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubExtendOfferMessageEvent;
@@ -14,7 +14,7 @@
     {
         private var _catalog:HabboCatalog;
         private var _confirmationDialog:ClubExtendConfirmationDialog;
-        private var _offer:_Str_5335;
+        private var _offer:ClubOfferExtendData;
         private var _disposed:Boolean = false;
 
         public function ClubExtendController(k:HabboCatalog)

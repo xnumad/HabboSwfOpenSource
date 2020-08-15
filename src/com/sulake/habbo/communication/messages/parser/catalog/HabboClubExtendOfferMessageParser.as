@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.communication.messages.parser.catalog
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5335;
+    import com.sulake.habbo.communication.messages.incoming.catalog.ClubOfferExtendData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class HabboClubExtendOfferMessageParser implements IMessageParser
     {
-        private var _offer:_Str_5335;
+        private var _offer:ClubOfferExtendData;
 
 
         public function flush():Boolean
@@ -17,11 +17,11 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._offer = new _Str_5335(k);
+            this._offer = new ClubOfferExtendData(k);
             return true;
         }
 
-        public function offer():_Str_5335
+        public function offer():ClubOfferExtendData
         {
             return this._offer;
         }

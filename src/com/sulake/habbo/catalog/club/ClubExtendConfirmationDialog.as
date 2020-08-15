@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.catalog.club
 {
     import com.sulake.core.window.components.IFrameWindow;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_5335;
+    import com.sulake.habbo.communication.messages.incoming.catalog.ClubOfferExtendData;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -39,7 +39,7 @@
 
         private var _controller:ClubExtendController;
         private var _view:IFrameWindow;
-        private var _offer:_Str_5335;
+        private var _offer:ClubOfferExtendData;
         private var _maybeLaterRegion:IRegionWindow;
         private var _maybeLaterLink:ITextWindow;
         private var _creditImageElement:IBitmapWrapperWindow;
@@ -51,7 +51,7 @@
         private var _disposed:Boolean = false;
         private var _localizationKey:String = "catalog.club.extend.";
 
-        public function ClubExtendConfirmationDialog(k:ClubExtendController, _arg_2:_Str_5335)
+        public function ClubExtendConfirmationDialog(k:ClubExtendController, _arg_2:ClubOfferExtendData)
         {
             this._controller = k;
             this._offer = _arg_2;
