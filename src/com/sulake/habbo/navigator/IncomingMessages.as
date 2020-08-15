@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.navigator
 {
     import com.sulake.habbo.communication.IHabboCommunicationManager;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5711;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomInfoUpdatedEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5212;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomSearchResultEvent;
@@ -115,7 +115,7 @@
         {
             this._navigator = k;
             var _local_2:IHabboCommunicationManager = this._navigator.communication;
-            _local_2.addHabboConnectionMessageEvent(new _Str_5711(this._Str_18125));
+            _local_2.addHabboConnectionMessageEvent(new RoomInfoUpdatedEvent(this._Str_18125));
             _local_2.addHabboConnectionMessageEvent(new _Str_5212(this._Str_17011));
             _local_2.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226));
             _local_2.addHabboConnectionMessageEvent(new GuestRoomSearchResultEvent(this.onGuestRoomSearch));
@@ -536,7 +536,7 @@
 
         private function _Str_18125(k:IMessageEvent):void
         {
-            var _local_2:RoomInfoUpdatedMessageParser = (k as _Str_5711).getParser();
+            var _local_2:RoomInfoUpdatedMessageParser = (k as RoomInfoUpdatedEvent).getParser();
             Logger.log(("ROOM UPDATED: " + _local_2.flatId));
             this._navigator.send(new GetGuestRoomMessageComposer(_local_2.flatId, false, false));
         }

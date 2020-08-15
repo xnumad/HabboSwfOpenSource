@@ -371,7 +371,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5212;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5633;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5711;
+	import com.sulake.habbo.communication.messages.incoming.navigator.RoomInfoUpdatedEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.UserFlatCatsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.UserEventCatsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsDataMessageEvent;
@@ -1306,7 +1306,7 @@
             INCOMING_PACKETS[3285] = GuideTicketCreationResultMessageEvent;
             INCOMING_PACKETS[3292] = FaqTextMessageEvent;
             INCOMING_PACKETS[3293] = _Str_8674;
-            INCOMING_PACKETS[3297] = _Str_5711;
+            INCOMING_PACKETS[3297] = RoomInfoUpdatedEvent;
             INCOMING_PACKETS[3315] = WardrobeMessageEvent;
             INCOMING_PACKETS[3319] = CommunityGoalEarnedPrizesMessageEvent;
             INCOMING_PACKETS[3331] = SellablePetPalettesMessageEvent;

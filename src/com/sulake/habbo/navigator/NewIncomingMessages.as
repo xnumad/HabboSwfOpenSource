@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSearchResultBlocksEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5711;
+    import com.sulake.habbo.communication.messages.incoming.navigator.RoomInfoUpdatedEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
@@ -132,7 +132,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorSearchResultBlocksEvent(this.onNavigatorSearchResultBlocks)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5711(this._Str_18125)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomInfoUpdatedEvent(this._Str_18125)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FavouriteChangedEvent(this._Str_16972)));
@@ -405,7 +405,7 @@
 
         private function _Str_18125(k:IMessageEvent):void
         {
-            var _local_2:RoomInfoUpdatedMessageParser = (k as _Str_5711).getParser();
+            var _local_2:RoomInfoUpdatedMessageParser = (k as RoomInfoUpdatedEvent).getParser();
             Logger.log(("ROOM UPDATED: " + _local_2.flatId));
             LegacyNavigator(this._navigator.legacyNavigator).send(new GetGuestRoomMessageComposer(_local_2.flatId, false, false));
         }
