@@ -156,7 +156,7 @@
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8905;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ThreadMessagesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ForumsListMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9518;
+	import com.sulake.habbo.communication.messages.incoming.groupforums.PostThreadMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9630;
 	import com.sulake.core.utils.Map;
 	import com.sulake.core.utils.SingleWriteMap;
@@ -1116,7 +1116,7 @@
             INCOMING_PACKETS[1830] = _Str_8791;
             INCOMING_PACKETS[1840] = _Str_5051;
             INCOMING_PACKETS[1847] = GuideSessionRequesterRoomEvent;
-            INCOMING_PACKETS[1862] = _Str_9518;
+            INCOMING_PACKETS[1862] = PostThreadMessageEvent;
             INCOMING_PACKETS[1866] = CatalogPublishedMessageEvent;
             INCOMING_PACKETS[1868] = _Str_7746;
             INCOMING_PACKETS[1869] = _Str_5881;

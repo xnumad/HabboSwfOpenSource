@@ -33,7 +33,7 @@
     import com.sulake.habbo.communication.messages.incoming.groupforums.ThreadMessagesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.ForumDataMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9630;
-    import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9518;
+    import com.sulake.habbo.communication.messages.incoming.groupforums.PostThreadMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8905;
     import flash.events.TimerEvent;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadMessageComposer;
@@ -190,7 +190,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new ThreadMessagesMessageEvent(this.onThreadMessageList));
             this._communicationManager.addHabboConnectionMessageEvent(new ForumDataMessageEvent(this._Str_25702));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9630(this.onPostMessageMessage));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9518(this.onPostThreadMessage));
+            this._communicationManager.addHabboConnectionMessageEvent(new PostThreadMessageEvent(this.onPostThreadMessage));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8905(this._Str_23952));
             context.addLinkEventTracker(this);
             this._Str_22401();
@@ -441,7 +441,7 @@
             }
         }
 
-        private function onPostThreadMessage(k:_Str_9518):void
+        private function onPostThreadMessage(k:PostThreadMessageEvent):void
         {
             var _local_3:ForumData;
             var _local_2:PostThreadMessageParser = PostThreadMessageParser(k.getParser());
