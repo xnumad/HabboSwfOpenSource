@@ -22,7 +22,7 @@
     import com.sulake.iid.IIDSessionDataManager;
     import com.sulake.iid.IIDHabboTracking;
     import com.sulake.iid.IIDHabboHelp;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
     import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailNewMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailUnreadCountEvent;
@@ -95,7 +95,7 @@
         override protected function initComponent():void
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new _Str_5567(this.onMessengerInit));
+            this.addMessageEvent(new MessengerInitEvent(this.onMessengerInit));
             this.addMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
             if (getBoolean("client.minimail.embed.enabled"))
             {

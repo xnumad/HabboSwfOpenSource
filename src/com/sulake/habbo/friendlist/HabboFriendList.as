@@ -31,7 +31,7 @@
     import com.sulake.iid.IIDSessionDataManager;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.MessengerInitMessageComposer;
     import flash.events.TimerEvent;
@@ -167,7 +167,7 @@
         override protected function initComponent():void
         {
             this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_5567(this.onMessengerInit));
+            this._communicationManager.addHabboConnectionMessageEvent(new MessengerInitEvent(this.onMessengerInit));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
             context.addLinkEventTracker(this);
             this.send(new MessengerInitMessageComposer());
@@ -470,7 +470,7 @@
             var _local_3:FriendCategoryData;
             var _local_4:FriendCategory;
             this._view = new FriendListView(this);
-            var _local_2:MessengerInitMessageParser = (k as _Str_5567).getParser();
+            var _local_2:MessengerInitMessageParser = (k as MessengerInitEvent).getParser();
             this._friendRequests = new _Str_9210(new _Str_11887(this), _local_2._Str_22808, _local_2._Str_23653);
             for each (_local_3 in _local_2.categories)
             {

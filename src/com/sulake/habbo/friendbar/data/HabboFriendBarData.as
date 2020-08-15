@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.GameInviteMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
@@ -113,7 +113,7 @@
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4696(this.onRoomInvite));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new GameInviteMessageEvent(this._Str_25411));
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_5567(this._Str_24730));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new MessengerInitEvent(this._Str_24730));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4841(this._Str_16886));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendNotificationEvent(this._Str_15197));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4851(this.onNewConsoleMessage));

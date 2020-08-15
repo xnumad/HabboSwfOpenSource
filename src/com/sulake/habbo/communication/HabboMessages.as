@@ -549,7 +549,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4851;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerInitEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestsEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.AcceptFriendResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.HabboSearchResultEvent;
@@ -1082,7 +1082,7 @@
             INCOMING_PACKETS[1591] = GuideSessionAttachedEvent;
             INCOMING_PACKETS[160] = RoomForwardMessageEvent;
             INCOMING_PACKETS[1600] = GenericErrorEvent;
-            INCOMING_PACKETS[1605] = _Str_5567;
+            INCOMING_PACKETS[1605] = MessengerInitEvent;
             INCOMING_PACKETS[1618] = BotCommandConfigurationEvent;
             INCOMING_PACKETS[1625] = _Str_9336;
             INCOMING_PACKETS[1631] = ExpressionMessageEvent;
