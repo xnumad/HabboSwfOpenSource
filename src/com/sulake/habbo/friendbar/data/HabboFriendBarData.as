@@ -17,7 +17,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5641;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8800;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FindFriendsProcessResultEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.GameInviteMessageEvent;
@@ -109,7 +109,7 @@
         {
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4035(this.onFriendListUpdate));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_5641(this._Str_22480));
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_8800(this._Str_24044));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new FindFriendsProcessResultEvent(this._Str_24044));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4696(this.onRoomInvite));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_3873(this.onFriendsListFragment));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new GameInviteMessageEvent(this._Str_25411));
@@ -507,7 +507,7 @@
             events.dispatchEvent(new FriendBarUpdateEvent());
         }
 
-        private function _Str_24044(k:_Str_8800):void
+        private function _Str_24044(k:FindFriendsProcessResultEvent):void
         {
             events.dispatchEvent(new FindFriendsNotificationEvent(k.success));
         }

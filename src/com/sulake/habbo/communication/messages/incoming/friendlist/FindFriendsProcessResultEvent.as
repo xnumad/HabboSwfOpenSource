@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.FindFriendsProcessResultMessageParser;
 
-    public class _Str_8800 extends MessageEvent implements IMessageEvent 
+    public class FindFriendsProcessResultEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8800(k:Function)
+        public function FindFriendsProcessResultEvent(k:Function)
         {
             super(k, FindFriendsProcessResultMessageParser);
         }

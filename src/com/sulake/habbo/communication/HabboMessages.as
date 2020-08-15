@@ -557,7 +557,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8339;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8535;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8552;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8800;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.FindFriendsProcessResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.*;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
@@ -1023,7 +1023,7 @@
             INCOMING_PACKETS[1191] = RoomChatSettingsMessageEvent;
             INCOMING_PACKETS[1200] = GuildMembersEvent;
             INCOMING_PACKETS[1203] = _Str_9397;
-            INCOMING_PACKETS[1210] = _Str_8800;
+            INCOMING_PACKETS[1210] = FindFriendsProcessResultEvent;
             INCOMING_PACKETS[122] = CloseConnectionMessageEvent;
             INCOMING_PACKETS[1237] = TargetedOfferNotFoundEvent;
             INCOMING_PACKETS[1243] = AccountSafetyLockStatusChangeMessageEvent;
