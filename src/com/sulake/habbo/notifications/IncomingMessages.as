@@ -7,7 +7,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.RoomUserRespect;
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboBroadcastMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
+    import com.sulake.habbo.communication.messages.incoming.notifications.HabboAchievementNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
@@ -81,7 +81,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
             this.addMessageEvent(new HabboBroadcastMessageEvent(this.onBroadcastMessageEvent));
-            this.addMessageEvent(new _Str_3660(this.onLevelUp));
+            this.addMessageEvent(new HabboAchievementNotificationMessageEvent(this.onLevelUp));
             this.addMessageEvent(new ClubGiftNotificationEvent(this.onClubGiftNotification));
             this.addMessageEvent(new ModeratorMessageEvent(this.onModMessageEvent));
             this.addMessageEvent(new HabboActivityPointNotificationMessageEvent(this.onActivityPointNotification));
@@ -166,7 +166,7 @@
 
         private function onLevelUp(k:IMessageEvent):void
         {
-            var _local_2:_Str_3660 = (k as _Str_3660);
+            var _local_2:HabboAchievementNotificationMessageEvent = (k as HabboAchievementNotificationMessageEvent);
             var _local_3:HabboAchievementNotificationMessageParser = _local_2.getParser();
             var _local_4:String = this._notifications.localization.getLocalization("achievements.levelup.desc", "");
             var _local_5:String = this._notifications.localization.getBadgeName(_local_3.data.badgeCode);

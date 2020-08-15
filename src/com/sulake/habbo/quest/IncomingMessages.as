@@ -18,7 +18,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.AchievementResolutionCompletedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
+    import com.sulake.habbo.communication.messages.incoming.notifications.HabboAchievementNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectAddMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.IsFirstLoginOfDayEvent;
@@ -71,7 +71,7 @@
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this.onSubscriptionUserInfoEvent));
             _local_2.addHabboConnectionMessageEvent(new RoomSettingsSavedEvent(this.onRoomSettingsSaved));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionCompletedMessageEvent(this._Str_24464));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3660(this.onLevelUp));
+            _local_2.addHabboConnectionMessageEvent(new HabboAchievementNotificationMessageEvent(this.onLevelUp));
             _local_2.addHabboConnectionMessageEvent(new HabboActivityPointNotificationMessageEvent(this._Str_24427));
             _local_2.addHabboConnectionMessageEvent(new ObjectAddMessageEvent(this._Str_19159));
             _local_2.addHabboConnectionMessageEvent(new IsFirstLoginOfDayEvent(this._Str_22814));
@@ -220,7 +220,7 @@
 
         private function onLevelUp(k:IMessageEvent):void
         {
-            var _local_2:_Str_3660 = (k as _Str_3660);
+            var _local_2:HabboAchievementNotificationMessageEvent = (k as HabboAchievementNotificationMessageEvent);
             var _local_3:HabboAchievementNotificationMessageParser = _local_2.getParser();
             var _local_4:String = this._questEngine.localization.getBadgeBaseName(_local_3.data.badgeCode);
             this._questEngine.send(new EventLogMessageComposer("Achievements", _local_4, "Leveled", "", _local_3.data.level));

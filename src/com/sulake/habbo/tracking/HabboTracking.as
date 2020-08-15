@@ -43,7 +43,7 @@
     import com.sulake.iid.IIDHabboToolbar;
     import com.sulake.habbo.communication.messages.incoming.handshake.AuthenticationOKMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
+    import com.sulake.habbo.communication.messages.incoming.notifications.HabboAchievementNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.tracking.LatencyPingResponseMessageEvent;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.communication.enum.HabboCommunicationEvent;
@@ -293,7 +293,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new AuthenticationOKMessageEvent(this.onAuthOK));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
-            this.addMessageEvent(new _Str_3660(this._Str_25489));
+            this.addMessageEvent(new HabboAchievementNotificationMessageEvent(this._Str_25489));
             this.addMessageEvent(new LatencyPingResponseMessageEvent(this._Str_17172));
             var k:IEventDispatcher = Component(context).events;
             k.addEventListener(HabboCommunicationEvent.INIT, this.onConnectionEvent);
@@ -551,7 +551,7 @@
             }
         }
 
-        private function _Str_25489(k:_Str_3660):void
+        private function _Str_25489(k:HabboAchievementNotificationMessageEvent):void
         {
             var _local_2:HabboAchievementNotificationMessageParser = k.getParser();
             this.legacyTrackGoogle("achievement", "achievement", [_local_2.data.badgeCode]);

@@ -787,7 +787,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9591;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9687;
 	import com.sulake.habbo.communication.messages.incoming.notifications.*;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
+	import com.sulake.habbo.communication.messages.incoming.notifications.HabboAchievementNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.OfferRewardDeliveredMessageEvent;
@@ -1438,7 +1438,7 @@
             INCOMING_PACKETS[793] = IsFirstLoginOfDayEvent;
             INCOMING_PACKETS[800] = TryPhoneNumberResultMessageEvent;
             INCOMING_PACKETS[804] = CatalogPageMessageEvent;
-            INCOMING_PACKETS[806] = _Str_3660;
+            INCOMING_PACKETS[806] = HabboAchievementNotificationMessageEvent;
             INCOMING_PACKETS[818] = GuildMemberMgmtFailedMessageEvent;
             INCOMING_PACKETS[826] = RemainingMutePeriodEvent;
             INCOMING_PACKETS[84] = NoSuchFlatEvent;

@@ -50,7 +50,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications.PetInventoryEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceMakeOfferResult;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
+    import com.sulake.habbo.communication.messages.incoming.notifications.HabboAchievementNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.GoToBreedingNestFailureEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.AvatarEffectExpiredMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
@@ -161,7 +161,7 @@
             this._com.addHabboConnectionMessageEvent(new PetInventoryEvent(this._Str_24135));
             this._com.addHabboConnectionMessageEvent(new FurniListAddOrUpdateEvent(this._Str_23121));
             this._com.addHabboConnectionMessageEvent(new MarketplaceMakeOfferResult(this.onMarketplaceMakeOfferResult));
-            this._com.addHabboConnectionMessageEvent(new _Str_3660(this._Str_25294));
+            this._com.addHabboConnectionMessageEvent(new HabboAchievementNotificationMessageEvent(this._Str_25294));
             this._com.addHabboConnectionMessageEvent(new GoToBreedingNestFailureEvent(this._Str_25173));
             this._com.addHabboConnectionMessageEvent(new AvatarEffectExpiredMessageEvent(this.onAvatarEffectExpired));
             this._com.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
@@ -471,7 +471,7 @@
 
         public function _Str_25294(k:IMessageEvent):void
         {
-            var _local_2:_Str_3660 = (k as _Str_3660);
+            var _local_2:HabboAchievementNotificationMessageEvent = (k as HabboAchievementNotificationMessageEvent);
             var _local_3:HabboAchievementNotificationMessageParser = _local_2.getParser();
             var _local_4:BadgesModel = this._inventory._Str_7962;
             if (_local_4 != null)

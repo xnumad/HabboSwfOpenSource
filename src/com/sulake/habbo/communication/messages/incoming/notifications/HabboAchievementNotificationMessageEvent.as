@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.notifications.HabboAchievementNotificationMessageParser;
 
-    public class _Str_3660 extends MessageEvent implements IMessageEvent 
+    public class HabboAchievementNotificationMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_3660(k:Function)
+        public function HabboAchievementNotificationMessageEvent(k:Function)
         {
             super(k, HabboAchievementNotificationMessageParser);
         }
