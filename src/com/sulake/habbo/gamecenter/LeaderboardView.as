@@ -369,7 +369,7 @@
             return this._selectedGame;
         }
 
-        public function _Str_21957(k:Boolean):void
+        public function setRewardingOn(k:Boolean):void
         {
             this._leaderboardWindow.findChildByName("weekly_top_container").visible = false;
         }

@@ -691,7 +691,7 @@
             return this._selectedGame;
         }
 
-        public function _Str_21957(k:Boolean):void
+        public function setRewardingOn(k:Boolean):void
         {
         }
 

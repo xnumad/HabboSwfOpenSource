@@ -8,6 +8,6 @@
         function setGameRewardImage(_arg_1:BitmapData):void;
         function setTimeRemaining(_arg_1:int):void;
         function getCurrentlySelectedGame():int;
-        function _Str_21957(_arg_1:Boolean):void;
+        function setRewardingOn(_arg_1:Boolean):void;
     }
 }
