@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventData;
     import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import flash.utils.Dictionary;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2632;
+    import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomEntryData;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5485;
     import com.sulake.habbo.navigator.roomsettings.FriendList;
     import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsData;
@@ -52,7 +52,7 @@
         private var _canRate:Boolean;
         private var _currentRoomIsStaffPick:Boolean;
         private var _adIndex:int = 0;
-        private var _adRoomData:_Str_2632;
+        private var _adRoomData:OfficialRoomEntryData;
         private var _promotedRooms:_Str_5485;
         private var _friendList:FriendList;
         private var _roomSessionTags:RoomSessionTags;
@@ -180,7 +180,7 @@
             this._lastMsg = null;
         }
 
-        public function set _Str_5653(k:_Str_2632):void
+        public function set _Str_5653(k:OfficialRoomEntryData):void
         {
             this._adRoomData = k;
         }
@@ -190,7 +190,7 @@
             this._promotedRooms = k;
         }
 
-        public function get _Str_5653():_Str_2632
+        public function get _Str_5653():OfficialRoomEntryData
         {
             return this._adRoomData;
         }

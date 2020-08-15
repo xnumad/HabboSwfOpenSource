@@ -4,7 +4,7 @@
     import com.sulake.habbo.navigator.HabboNavigator;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IItemListWindow;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2632;
+    import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomEntryData;
     import com.sulake.core.window.components.*;
     import com.sulake.habbo.navigator.*;
 
@@ -73,7 +73,7 @@
 
         private function _Str_24906():Array
         {
-            var _local_4:_Str_2632;
+            var _local_4:OfficialRoomEntryData;
             var k:Array = this._navigator.data._Str_5645.entries;
             var _local_2:Array = new Array();
             var _local_3:int;
@@ -95,7 +95,7 @@
             return _local_2;
         }
 
-        private function refreshEntry(k:Boolean, _arg_2:Boolean, _arg_3:IWindowContainer, _arg_4:_Str_2632):Boolean
+        private function refreshEntry(k:Boolean, _arg_2:Boolean, _arg_3:IWindowContainer, _arg_4:OfficialRoomEntryData):Boolean
         {
             if (_arg_3 == null)
             {

@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2632 implements IDisposable 
+    public class OfficialRoomEntryData implements IDisposable
     {
         public static const _Str_14955:int = 1;
         public static const _Str_12025:int = 2;
@@ -23,7 +23,7 @@
         private var _open:Boolean;
         private var _disposed:Boolean;
 
-        public function _Str_2632(k:IMessageDataWrapper)
+        public function OfficialRoomEntryData(k:IMessageDataWrapper)
         {
             this._index = k.readInteger();
             this._Str_20260 = k.readString();

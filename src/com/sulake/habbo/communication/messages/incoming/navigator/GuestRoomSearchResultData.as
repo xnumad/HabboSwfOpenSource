@@ -8,7 +8,7 @@
         private var _searchType:int;
         private var _searchParam:String;
         private var _rooms:Array;
-        private var _ad:_Str_2632;
+        private var _ad:OfficialRoomEntryData;
         private var _disposed:Boolean;
 
         public function GuestRoomSearchResultData(k:IMessageDataWrapper):void
@@ -27,7 +27,7 @@
             var _local_4:Boolean = k.readBoolean();
             if (_local_4)
             {
-                this._ad = new _Str_2632(k);
+                this._ad = new OfficialRoomEntryData(k);
             }
         }
 
@@ -74,7 +74,7 @@
             return this._rooms;
         }
 
-        public function get ad():_Str_2632
+        public function get ad():OfficialRoomEntryData
         {
             return this._ad;
         }

@@ -2,14 +2,14 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5078;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2632;
+    import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomEntryData;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5485;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class OfficialRoomsMessageParser implements IMessageParser
     {
         private var _data:_Str_5078;
-        private var _Str_8807:_Str_2632;
+        private var _Str_8807:OfficialRoomEntryData;
         private var _Str_12284:_Str_5485;
 
 
@@ -24,7 +24,7 @@
             var _local_2:int = k.readInteger();
             if (_local_2 > 0)
             {
-                this._Str_8807 = new _Str_2632(k);
+                this._Str_8807 = new OfficialRoomEntryData(k);
             }
             this._Str_12284 = new _Str_5485(k);
             return true;
@@ -35,7 +35,7 @@
             return this._data;
         }
 
-        public function get _Str_5653():_Str_2632
+        public function get _Str_5653():OfficialRoomEntryData
         {
             return this._Str_8807;
         }

@@ -7,7 +7,7 @@
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.navigator.Util;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2632;
+    import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomEntryData;
     import com.sulake.core.window.components.ITextWindow;
     import flash.display.BitmapData;
     import com.sulake.core.window.IWindow;
@@ -90,13 +90,13 @@
             return _local_2;
         }
 
-        public function refreshEntry(k:IWindowContainer, _arg_2:Boolean, _arg_3:_Str_2632):void
+        public function refreshEntry(k:IWindowContainer, _arg_2:Boolean, _arg_3:OfficialRoomEntryData):void
         {
             Util._Str_2930(k);
             if (_arg_2)
             {
                 k.id = _arg_3.index;
-                if (_arg_3.type == _Str_2632._Str_16098)
+                if (_arg_3.type == OfficialRoomEntryData._Str_16098)
                 {
                     this._Str_23826(k, _arg_3);
                 }
@@ -113,7 +113,7 @@
             }
         }
 
-        private function _Str_23189(k:IWindowContainer, _arg_2:_Str_2632):void
+        private function _Str_23189(k:IWindowContainer, _arg_2:OfficialRoomEntryData):void
         {
             this._Str_24261(k, _arg_2);
             this._Str_25008(k, _arg_2);
@@ -121,7 +121,7 @@
             k.height = 68;
         }
 
-        private function _Str_23826(k:IWindowContainer, _arg_2:_Str_2632):void
+        private function _Str_23826(k:IWindowContainer, _arg_2:OfficialRoomEntryData):void
         {
             var _local_3:IWindowContainer = IWindowContainer(k.findChildByName("folder_cont"));
             _local_3.visible = true;
@@ -146,12 +146,12 @@
             }
         }
 
-        private function refreshUserCount(k:IWindowContainer, _arg_2:_Str_2632):void
+        private function refreshUserCount(k:IWindowContainer, _arg_2:OfficialRoomEntryData):void
         {
             var _local_3:int;
             var _local_4:int;
             var _local_5:int;
-            if (((_arg_2._Str_5386) && (_arg_2.type == _Str_2632._Str_12025)))
+            if (((_arg_2._Str_5386) && (_arg_2.type == OfficialRoomEntryData._Str_12025)))
             {
                 _local_3 = 3;
                 _local_4 = 34;
@@ -160,7 +160,7 @@
             }
         }
 
-        private function _Str_24261(k:IWindowContainer, _arg_2:_Str_2632):void
+        private function _Str_24261(k:IWindowContainer, _arg_2:OfficialRoomEntryData):void
         {
             var _local_3:IWindowContainer = IWindowContainer(k.findChildByName("image_cont"));
             _local_3.visible = true;
@@ -169,7 +169,7 @@
             this._Str_25146(_local_3, _arg_2);
         }
 
-        private function _Str_23785(k:IWindowContainer, _arg_2:_Str_2632):void
+        private function _Str_23785(k:IWindowContainer, _arg_2:OfficialRoomEntryData):void
         {
             var _local_3:IWindowContainer = IWindowContainer(k.findChildByName("picTextContainer"));
             if (((_arg_2.picText == "") || (_arg_2._Str_5386)))
@@ -186,7 +186,7 @@
             _local_3.height = (_local_5.height + 4);
         }
 
-        private function _Str_24387(k:IWindowContainer, _arg_2:_Str_2632):void
+        private function _Str_24387(k:IWindowContainer, _arg_2:OfficialRoomEntryData):void
         {
             var _local_3:IBitmapWrapperWindow = IBitmapWrapperWindow(k.findChildByName("folder_image"));
             _local_3.visible = false;
@@ -196,7 +196,7 @@
             }
         }
 
-        private function _Str_25146(k:IWindowContainer, _arg_2:_Str_2632):void
+        private function _Str_25146(k:IWindowContainer, _arg_2:OfficialRoomEntryData):void
         {
             var _local_3:IBitmapWrapperWindow = IBitmapWrapperWindow(k.findChildByName("room_image"));
             _local_3.visible = false;
@@ -217,7 +217,7 @@
             }
         }
 
-        private function _Str_21174(k:_Str_2632, _arg_2:IBitmapWrapperWindow):void
+        private function _Str_21174(k:OfficialRoomEntryData, _arg_2:IBitmapWrapperWindow):void
         {
             var _local_3:String = ("customImage." + k._Str_10304);
             if (_arg_2.tags[0] == _local_3)
@@ -234,7 +234,7 @@
             _arg_2.tags.push(_local_3);
         }
 
-        private function _Str_24128(k:IWindowContainer, _arg_2:_Str_2632, _arg_3:IBitmapWrapperWindow):void
+        private function _Str_24128(k:IWindowContainer, _arg_2:OfficialRoomEntryData, _arg_3:IBitmapWrapperWindow):void
         {
             var _local_4:String = ("guestRoom." + _arg_2._Str_5019.thumbnail._Str_22978());
             if (_arg_3.tags[0] == _local_4)
@@ -252,7 +252,7 @@
             _arg_3.visible = true;
         }
 
-        private function _Str_24928(k:IWindowContainer, _arg_2:_Str_2632, _arg_3:IBitmapWrapperWindow):void
+        private function _Str_24928(k:IWindowContainer, _arg_2:OfficialRoomEntryData, _arg_3:IBitmapWrapperWindow):void
         {
             var _local_4:String = "empty";
             if (_arg_3.tags[0] == _local_4)
@@ -317,7 +317,7 @@
 
         private function _Str_25371(k:IWindow):void
         {
-            var _local_2:_Str_2632 = this.getEntry(k);
+            var _local_2:OfficialRoomEntryData = this.getEntry(k);
             if (_local_2 == null)
             {
                 return;
@@ -357,7 +357,7 @@
             }
         }
 
-        private function getEntry(k:IWindow):_Str_2632
+        private function getEntry(k:IWindow):OfficialRoomEntryData
         {
             var _local_2:IWindowContainer = (k as IWindowContainer);
             if (((_local_2 == null) || (!(_local_2.name == "cont"))))
@@ -369,14 +369,14 @@
             return (_local_2.parent.name == "ad_cont") ? this._Str_23608() : this._Str_23984(_local_2);
         }
 
-        private function _Str_23608():_Str_2632
+        private function _Str_23608():OfficialRoomEntryData
         {
             return this._navigator.data._Str_5653;
         }
 
-        private function _Str_23984(k:IWindowContainer):_Str_2632
+        private function _Str_23984(k:IWindowContainer):OfficialRoomEntryData
         {
-            var _local_3:_Str_2632;
+            var _local_3:OfficialRoomEntryData;
             if (this._navigator.data._Str_5645 == null)
             {
                 Logger.log("No official rooms data click");
@@ -395,7 +395,7 @@
             return null;
         }
 
-        private function _Str_25008(k:IWindowContainer, _arg_2:_Str_2632):void
+        private function _Str_25008(k:IWindowContainer, _arg_2:OfficialRoomEntryData):void
         {
             var _local_3:IWindowContainer = IWindowContainer(k.findChildByName("details_container"));
             _local_3.visible = _arg_2._Str_5386;
@@ -409,14 +409,14 @@
             this._Str_25192(_local_3, _arg_2);
         }
 
-        private function _Str_22428(k:IWindowContainer, _arg_2:_Str_2632):void
+        private function _Str_22428(k:IWindowContainer, _arg_2:OfficialRoomEntryData):void
         {
             var _local_3:ITextWindow = ITextWindow(k.getChildByName("entry_caption"));
             _local_3.visible = true;
             _local_3.text = this._Str_24014(_arg_2);
         }
 
-        private function _Str_25192(k:IWindowContainer, _arg_2:_Str_2632):void
+        private function _Str_25192(k:IWindowContainer, _arg_2:OfficialRoomEntryData):void
         {
             var _local_3:String = this._Str_22796(_arg_2);
             if (_local_3 == "")
@@ -429,7 +429,7 @@
             _local_5.visible = true;
         }
 
-        public function _Str_24014(k:_Str_2632):String
+        public function _Str_24014(k:OfficialRoomEntryData):String
         {
             if (((!(k._Str_9428 == null)) && (!(k._Str_9428 == ""))))
             {
@@ -446,7 +446,7 @@
             return "NA";
         }
 
-        public function _Str_22796(k:_Str_2632):String
+        public function _Str_22796(k:OfficialRoomEntryData):String
         {
             if (((!(k._Str_9428 == null)) && (!(k._Str_9428 == ""))))
             {
