@@ -15,7 +15,7 @@
     import com.sulake.habbo.communication.messages.incoming.availability.HotelClosesAndWillOpenAtEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.OpenConnectionMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_7321;
+    import com.sulake.habbo.communication.messages.incoming.notifications.MOTDNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.PetLevelNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomMessageNotificationMessageEvent;
@@ -89,7 +89,7 @@
             this.addMessageEvent(new HotelClosesAndWillOpenAtEvent(this.onHotelClosed));
             this.addMessageEvent(new PetReceivedMessageEvent(this.onPetReceived));
             this.addMessageEvent(new OpenConnectionMessageEvent(this.onRoomEnter));
-            this.addMessageEvent(new _Str_7321(this.onMOTD));
+            this.addMessageEvent(new MOTDNotificationEvent(this.onMOTD));
             this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
             this.addMessageEvent(new PetLevelNotificationEvent(this.onPetLevelNotification));
             this.addMessageEvent(new RoomMessageNotificationMessageEvent(this.onRoomMessagesNotification));
@@ -143,7 +143,7 @@
         {
             var _local_4:String;
             var _local_5:GenericNotificationItemData;
-            var _local_2:_Str_7321 = (k as _Str_7321);
+            var _local_2:MOTDNotificationEvent = (k as MOTDNotificationEvent);
             var _local_3:MOTDNotificationParser = (_local_2.getParser() as MOTDNotificationParser);
             if (((_local_3.messages) && (_local_3.messages.length > 0)))
             {

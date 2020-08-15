@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.notifications.MOTDNotificationParser;
 
-    public class _Str_7321 extends MessageEvent implements IMessageEvent 
+    public class MOTDNotificationEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7321(k:Function)
+        public function MOTDNotificationEvent(k:Function)
         {
             super(k, MOTDNotificationParser);
         }

@@ -792,7 +792,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7261;
 	import com.sulake.habbo.communication.messages.incoming.notifications.InfoFeedEnableMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7321;
+	import com.sulake.habbo.communication.messages.incoming.notifications.MOTDNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ElementPointerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.HabboBroadcastMessageEvent;
@@ -1143,7 +1143,7 @@
             INCOMING_PACKETS[2031] = RoomReadyMessageEvent;
             INCOMING_PACKETS[2032] = MarketplaceBuyOfferResultEvent;
             INCOMING_PACKETS[2033] = AvailabilityStatusMessageEvent;
-            INCOMING_PACKETS[2035] = _Str_7321;
+            INCOMING_PACKETS[2035] = MOTDNotificationEvent;
             INCOMING_PACKETS[2046] = RentableSpaceRentOkMessageEvent;
             INCOMING_PACKETS[2049] = PostMessageMessageEvent;
             INCOMING_PACKETS[2057] = CameraPublishStatusMessageEvent;
