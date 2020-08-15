@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListUpdateEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
+    import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
@@ -112,7 +112,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatControllersEvent(this._Str_8576)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FriendListUpdateEvent(this.onFriendListUpdate)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5134(this._Str_16321)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new OfficialRoomsEvent(this._Str_16321)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592)));
             this._messageListeners.push(k.connection.addMessageEvent(new _Str_8763(this.onNavigatorPreferences)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsSaveErrorEvent(this._Str_8265)));
@@ -257,7 +257,7 @@
 
         private function _Str_16321(k:IMessageEvent):void
         {
-            var _local_2:OfficialRoomsMessageParser = _Str_5134(k).getParser();
+            var _local_2:OfficialRoomsMessageParser = OfficialRoomsEvent(k).getParser();
             this.data._Str_5645 = _local_2.data;
             this.data._Str_5653 = _local_2._Str_5653;
             this.data.promotedRooms = _local_2.promotedRooms;

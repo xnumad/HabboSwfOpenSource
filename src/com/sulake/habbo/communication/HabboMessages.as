@@ -368,7 +368,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5017;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
+	import com.sulake.habbo.communication.messages.incoming.navigator.OfficialRoomsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.CanCreateRoomEventEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.NavigatorSettingsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomInfoUpdatedEvent;
@@ -1233,7 +1233,7 @@
             INCOMING_PACKETS[2710] = RoomDimmerPresetsEvent;
             INCOMING_PACKETS[2720] = TradingConfirmationEvent;
             INCOMING_PACKETS[2725] = UserObjectEvent;
-            INCOMING_PACKETS[2726] = _Str_5134;
+            INCOMING_PACKETS[2726] = OfficialRoomsEvent;
             INCOMING_PACKETS[2737] = ConcurrentUsersGoalProgressMessageEvent;
             INCOMING_PACKETS[2753] = HeightMapEvent;
             INCOMING_PACKETS[2756] = _Str_18296;
