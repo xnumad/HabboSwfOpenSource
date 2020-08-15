@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.room.IGetImageListener;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7104;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.FurniRentOrBuyoutOfferMessageEvent;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.session.furniture.IFurnitureData;
@@ -29,7 +29,7 @@
         private static const MODE_CATALOGUE:int = 3;
 
         private var _disposed:Boolean;
-        private var _offerMessageEvent:_Str_7104;
+        private var _offerMessageEvent:FurniRentOrBuyoutOfferMessageEvent;
         private var _window:IWindowContainer;
         private var _isBuyout:Boolean;
         private var _id:int = -1;
@@ -42,11 +42,11 @@
         public function RentConfirmationWindow(k:HabboCatalog)
         {
             this._catalog = k;
-            this._offerMessageEvent = new _Str_7104(this.onFurniRentOrBuyoutOffer);
+            this._offerMessageEvent = new FurniRentOrBuyoutOfferMessageEvent(this.onFurniRentOrBuyoutOffer);
             this._catalog.connection.addMessageEvent(this._offerMessageEvent);
         }
 
-        private function onFurniRentOrBuyoutOffer(k:_Str_7104):void
+        private function onFurniRentOrBuyoutOffer(k:FurniRentOrBuyoutOfferMessageEvent):void
         {
             var _local_3:ImageResult;
             if (this._furniData == null)

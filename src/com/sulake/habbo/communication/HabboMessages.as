@@ -769,7 +769,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.*;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayPlaylistsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_6132;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7104;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.FurniRentOrBuyoutOfferMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.OneWayDoorStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceRentFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RentableSpaceStatusMessageEvent;
@@ -1330,7 +1330,7 @@
             INCOMING_PACKETS[3473] = AvatarEffectSelectedMessageEvent;
             INCOMING_PACKETS[3475] = CreditBalanceEvent;
             INCOMING_PACKETS[3479] = RoomEventCancelEvent;
-            INCOMING_PACKETS[35] = _Str_7104;
+            INCOMING_PACKETS[35] = FurniRentOrBuyoutOfferMessageEvent;
             INCOMING_PACKETS[3506] = CompetitionVotingInfoMessageEvent;
             INCOMING_PACKETS[3512] = WeeklyCompetitiveLeaderboardEvent;
             INCOMING_PACKETS[3522] = PetInventoryEvent;
