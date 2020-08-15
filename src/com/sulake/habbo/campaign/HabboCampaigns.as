@@ -21,7 +21,7 @@
     import com.sulake.iid.IIDRoomEngine;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.campaign._Str_9003;
-    import com.sulake.habbo.communication.messages.incoming.campaign._Str_9045;
+    import com.sulake.habbo.communication.messages.incoming.campaign.CampaignCalendarDoorOpenedMessageEvent;
     import com.sulake.habbo.communication.messages.parser.campaign.CampaignCalendarDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.campaign.CampaignCalendarDoorOpenedMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorAsStaffComposer;
@@ -75,7 +75,7 @@
         override protected function initComponent():void
         {
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9003(this._Str_25846));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_9045(this._Str_24922));
+            this._communicationManager.addHabboConnectionMessageEvent(new CampaignCalendarDoorOpenedMessageEvent(this._Str_24922));
             context.addLinkEventTracker(this);
         }
 
@@ -85,7 +85,7 @@
             this._calendarData = _local_2.getCampaignCalenderData();
         }
 
-        private function _Str_24922(k:_Str_9045):void
+        private function _Str_24922(k:CampaignCalendarDoorOpenedMessageEvent):void
         {
             var _local_2:CampaignCalendarDoorOpenedMessageParser = k.getParser();
             if (_local_2._Str_22341)

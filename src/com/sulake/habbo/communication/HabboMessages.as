@@ -966,7 +966,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect.AvatarEffectSelectedComposer;
 	import com.sulake.habbo.communication.messages.incoming.campaign.*;
 	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9003;
-	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9045;
+	import com.sulake.habbo.communication.messages.incoming.campaign.CampaignCalendarDoorOpenedMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorComposer;
 	import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorAsStaffComposer;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftableProductsEvent;
@@ -1211,7 +1211,7 @@
             INCOMING_PACKETS[2531] = _Str_9003;
             INCOMING_PACKETS[2533] = _Str_5038;
             INCOMING_PACKETS[2547] = ObjectDataUpdateMessageEvent;
-            INCOMING_PACKETS[2551] = _Str_9045;
+            INCOMING_PACKETS[2551] = CampaignCalendarDoorOpenedMessageEvent;
             INCOMING_PACKETS[2568] = TradingAcceptEvent;
             INCOMING_PACKETS[2586] = PerkAllowancesEvent;
             INCOMING_PACKETS[2589] = _Str_8879;
