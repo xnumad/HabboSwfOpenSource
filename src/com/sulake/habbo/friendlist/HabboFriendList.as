@@ -70,7 +70,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5641;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_7759;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8535;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8109;
     import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
@@ -531,7 +531,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_5641(this._Str_24954));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_4841(this._Str_16886));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_7759(this._Str_22373));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_8535(this._Str_23472));
+            this._communicationManager.addHabboConnectionMessageEvent(new MessengerErrorEvent(this._Str_23472));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8109(this._Str_23021));
             this._communicationManager.addHabboConnectionMessageEvent(new RoomInviteErrorEvent(this._Str_22762));
             this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
@@ -596,7 +596,7 @@
 
         private function _Str_23472(k:IMessageEvent):void
         {
-            var _local_2:MessengerErrorMessageParser = (k as _Str_8535).getParser();
+            var _local_2:MessengerErrorMessageParser = (k as MessengerErrorEvent).getParser();
             this._Str_20985(_local_2.errorCode, _local_2._Str_23408);
         }
 

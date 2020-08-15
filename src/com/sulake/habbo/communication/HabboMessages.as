@@ -555,7 +555,7 @@
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8109;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8333;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8339;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8535;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.MessengerErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FriendNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.FindFriendsProcessResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.RoomInviteErrorEvent;
@@ -1448,7 +1448,7 @@
             INCOMING_PACKETS[872] = Game2InArenaQueueMessageEvent;
             INCOMING_PACKETS[876] = ExtendedProfileChangedMessageEvent;
             INCOMING_PACKETS[878] = FlatAccessDeniedMessageEvent;
-            INCOMING_PACKETS[892] = _Str_8535;
+            INCOMING_PACKETS[892] = MessengerErrorEvent;
             INCOMING_PACKETS[896] = _Str_7759;
             INCOMING_PACKETS[899] = CantConnectMessageEvent;
             INCOMING_PACKETS[904] = GameInviteMessageEvent;

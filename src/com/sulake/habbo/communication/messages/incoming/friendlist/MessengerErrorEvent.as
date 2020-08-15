@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.MessengerErrorMessageParser;
 
-    public class _Str_8535 extends MessageEvent implements IMessageEvent 
+    public class MessengerErrorEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8535(k:Function)
+        public function MessengerErrorEvent(k:Function)
         {
             super(k, MessengerErrorMessageParser);
         }
