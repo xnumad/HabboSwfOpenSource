@@ -179,7 +179,7 @@
                 return;
             }
             var _local_2:_Str_8022 = (k as _Str_8022);
-            this._Str_17910(this._thisWeekList, _local_2.getParser(), 10, false);
+            this.populateLeaderboard(this._thisWeekList, _local_2.getParser(), 10, false);
         }
 
         private function onWeeklyTopScoresLeaderboard(k:IMessageEvent):void
@@ -194,11 +194,11 @@
             var _local_3:Game2WeeklyLeaderboardParser = _local_2.getParser();
             if (_local_3.currentOffset == 0)
             {
-                this._Str_17910(this._thisWeekList, _local_3, 10, true);
+                this.populateLeaderboard(this._thisWeekList, _local_3, 10, true);
             }
             else
             {
-                _local_4 = this._Str_17910(this._lastWeekList, _local_3, 5, true);
+                _local_4 = this.populateLeaderboard(this._lastWeekList, _local_3, 5, true);
                 if (_local_4)
                 {
                     this._Str_20301(this._ownEntryList, _local_4, _Str_13218);
@@ -213,7 +213,7 @@
             }
         }
 
-        private function _Str_17910(k:IItemListWindow, _arg_2:Game2WeeklyLeaderboardParser, _arg_3:int, _arg_4:Boolean):LeaderboardEntry
+        private function populateLeaderboard(k:IItemListWindow, _arg_2:Game2WeeklyLeaderboardParser, _arg_3:int, _arg_4:Boolean):LeaderboardEntry
         {
             var _local_5:LeaderboardEntry;
             var _local_6:IWindowContainer;
