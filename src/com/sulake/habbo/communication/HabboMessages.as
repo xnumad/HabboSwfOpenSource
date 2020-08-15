@@ -173,9 +173,9 @@
 	import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyGameRewardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_16667;
-	import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyLeaderboardEvent;
+	import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyFriendsLeaderboardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_18906;
-	import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
+	import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyLeaderboardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyGameRewardWinnersEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyCompetitiveLeaderboardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyCompetitiveFriendsLeaderboardEvent;
@@ -1163,7 +1163,7 @@
             INCOMING_PACKETS[2187] = ItemAddMessageEvent;
             INCOMING_PACKETS[2188] = ClubGiftNotificationEvent;
             INCOMING_PACKETS[219] = GuideSessionInvitedToGuideRoomEvent;
-            INCOMING_PACKETS[2196] = _Str_5142;
+            INCOMING_PACKETS[2196] = Game2WeeklyLeaderboardEvent;
             INCOMING_PACKETS[2202] = ItemDataUpdateMessageEvent;
             INCOMING_PACKETS[2208] = RoomQueueStatusMessageEvent;
             INCOMING_PACKETS[2219] = NewFriendRequestEvent;
@@ -1176,7 +1176,7 @@
             INCOMING_PACKETS[2246] = Game2GameDirectoryStatusMessageEvent;
             INCOMING_PACKETS[2260] = JoinedQueueMessageEvent;
             INCOMING_PACKETS[2265] = UserGameAchievementsMessageEvent;
-            INCOMING_PACKETS[2270] = Game2WeeklyLeaderboardEvent;
+            INCOMING_PACKETS[2270] = Game2WeeklyFriendsLeaderboardEvent;
             INCOMING_PACKETS[2275] = HabboActivityPointNotificationMessageEvent;
             INCOMING_PACKETS[2278] = _Str_12157;
             INCOMING_PACKETS[2293] = _Str_8246;

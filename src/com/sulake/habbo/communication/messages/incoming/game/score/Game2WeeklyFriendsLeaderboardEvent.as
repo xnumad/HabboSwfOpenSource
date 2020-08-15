@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.game.score.Game2WeeklyLeaderboardParser;
 
-    public class _Str_5142 extends MessageEvent 
+    public class Game2WeeklyFriendsLeaderboardEvent extends MessageEvent
     {
-        public function _Str_5142(k:Function)
+        public function Game2WeeklyFriendsLeaderboardEvent(k:Function)
         {
             super(k, Game2WeeklyLeaderboardParser);
         }

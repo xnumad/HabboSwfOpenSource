@@ -11,7 +11,7 @@
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.habbo.game.WindowUtils;
     import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyCompetitiveLeaderboardEvent;
-    import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
+    import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyLeaderboardEvent;
     import com.sulake.habbo.communication.messages.outgoing.game.score.Game2GetWeeklyLeaderboardComposer;
     import com.sulake.habbo.communication.messages.outgoing.game.score._Str_11321;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -138,7 +138,7 @@
             {
                 this._entryWindow = (WindowUtils.createWindow("game_leaderboard_entry_small_xml") as IWindowContainer);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new WeeklyCompetitiveLeaderboardEvent(this.onWeeklyCompetitiveLeaderboard));
-                this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5142(this.onWeeklyTopScoresLeaderboard));
+                this._gameCenterView.communication.addHabboConnectionMessageEvent(new Game2WeeklyLeaderboardEvent(this.onWeeklyTopScoresLeaderboard));
                 this._initialized = true;
             }
         }
@@ -190,7 +190,7 @@
             {
                 return;
             }
-            var _local_2:_Str_5142 = (k as _Str_5142);
+            var _local_2:Game2WeeklyLeaderboardEvent = (k as Game2WeeklyLeaderboardEvent);
             var _local_3:Game2WeeklyLeaderboardParser = _local_2.getParser();
             if (_local_3.currentOffset == 0)
             {

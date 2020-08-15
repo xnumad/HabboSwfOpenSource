@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.game.score.Game2WeeklyLeaderboardParser;
 
-    public class Game2WeeklyLeaderboardEvent extends MessageEvent 
+    public class Game2WeeklyLeaderboardEvent extends MessageEvent
     {
         public function Game2WeeklyLeaderboardEvent(k:Function)
         {
