@@ -206,7 +206,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2StartingGameFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2AccountGameStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.*;
-	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7080;
+	import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorInitMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7632;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7889;
@@ -1226,7 +1226,7 @@
             INCOMING_PACKETS[2668] = CatalogPageExpirationEvent;
             INCOMING_PACKETS[2674] = GuideTicketResolutionMessageEvent;
             INCOMING_PACKETS[2690] = NavigatorSearchResultBlocksEvent;
-            INCOMING_PACKETS[2696] = _Str_7080;
+            INCOMING_PACKETS[2696] = ModeratorInitMessageEvent;
             INCOMING_PACKETS[2703] = ObjectRemoveMessageEvent;
             INCOMING_PACKETS[2704] = WhisperMessageEvent;
             INCOMING_PACKETS[2707] = _Str_8288;

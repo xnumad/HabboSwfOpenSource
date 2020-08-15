@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9065;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_7080;
+    import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorInitMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9150;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_7889;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9383;
@@ -69,7 +69,7 @@
             this._moderationManager = k;
             var _local_2:IConnection = k.connection;
             _local_2.addMessageEvent(new _Str_9065(this.onIssueInfo));
-            _local_2.addMessageEvent(new _Str_7080(this.onModeratorInit));
+            _local_2.addMessageEvent(new ModeratorInitMessageEvent(this.onModeratorInit));
             _local_2.addMessageEvent(new _Str_9150(this.onModeratorToolPreferences));
             _local_2.addMessageEvent(new _Str_7889(this.onIssuePickFailed));
             _local_2.addMessageEvent(new _Str_9383(this.onIssueDeleted));
@@ -103,7 +103,7 @@
             this._moderationManager.issueManager.addModActionView(_local_3);
         }
 
-        private function onModeratorInit(k:_Str_7080):void
+        private function onModeratorInit(k:ModeratorInitMessageEvent):void
         {
             var _local_6:IssueMessageData;
             if (((k == null) || (this._moderationManager == null)))
