@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.quest
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.quest._Str_11620;
+    import com.sulake.habbo.communication.messages.incoming.quest.PrizeData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class CommunityGoalEarnedPrizesParser implements IMessageParser 
@@ -21,7 +21,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._prizes.push(new _Str_11620(k));
+                this._prizes.push(new PrizeData(k));
                 _local_3++;
             }
             return true;

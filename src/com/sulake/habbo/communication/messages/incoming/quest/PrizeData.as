@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_11620 
+    public class PrizeData
     {
         private var _Str_19085:int;
         private var _Str_21282:String;
@@ -11,7 +11,7 @@
         private var _badge:Boolean;
         private var _Str_12218:String;
 
-        public function _Str_11620(k:IMessageDataWrapper)
+        public function PrizeData(k:IMessageDataWrapper)
         {
             this._Str_19085 = k.readInteger();
             this._Str_21282 = k.readString();
