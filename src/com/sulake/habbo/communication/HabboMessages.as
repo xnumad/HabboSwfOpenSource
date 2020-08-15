@@ -403,7 +403,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubSubscriptionStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
+	import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubExtendOfferMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_6906;
 	import com.sulake.habbo.communication.messages.incoming.catalog.PurchaseNotAllowedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.BundleDiscountRulesetMessageEvent;
@@ -1380,7 +1380,7 @@
             INCOMING_PACKETS[3928] = PingMessageEvent;
             INCOMING_PACKETS[3945] = EpicPopupMessageEvent;
             INCOMING_PACKETS[3954] = _Str_5767;
-            INCOMING_PACKETS[3964] = _Str_6375;
+            INCOMING_PACKETS[3964] = HabboClubExtendOfferMessageEvent;
             INCOMING_PACKETS[3965] = GuildEditInfoMessageEvent;
             INCOMING_PACKETS[3984] = NavigatorSavedSearchesEvent;
             INCOMING_PACKETS[3988] = GuildEditFailedMessageEvent;

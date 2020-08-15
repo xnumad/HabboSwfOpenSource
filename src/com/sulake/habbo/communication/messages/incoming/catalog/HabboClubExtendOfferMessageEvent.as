@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.HabboClubExtendOfferMessageParser;
 
-    public class _Str_6375 extends MessageEvent implements IMessageEvent 
+    public class HabboClubExtendOfferMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_6375(k:Function)
+        public function HabboClubExtendOfferMessageEvent(k:Function)
         {
             super(k, HabboClubExtendOfferMessageParser);
         }

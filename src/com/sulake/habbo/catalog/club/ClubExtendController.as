@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5335;
     import com.sulake.habbo.communication.messages.parser.catalog.HabboClubExtendOfferMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
+    import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubExtendOfferMessageEvent;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.core.assets.IAssetLibrary;
@@ -34,7 +34,7 @@
             this._disposed = true;
         }
 
-        public function _Str_24854(k:_Str_6375):void
+        public function _Str_24854(k:HabboClubExtendOfferMessageEvent):void
         {
             if (this._disposed)
             {

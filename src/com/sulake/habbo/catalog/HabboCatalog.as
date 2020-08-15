@@ -119,7 +119,7 @@
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerPrizesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
     import com.sulake.habbo.communication.messages.incoming.catalog.NotEnoughBalanceMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
+    import com.sulake.habbo.communication.messages.incoming.catalog.HabboClubExtendOfferMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8418;
     import com.sulake.habbo.catalog.event.CatalogEvent;
@@ -581,7 +581,7 @@
             this.addMessageEvent(new RecyclerPrizesEvent(this._Str_23749));
             this.addMessageEvent(new _Str_5946(this.onMarketplaceItemStats));
             this.addMessageEvent(new NotEnoughBalanceMessageEvent(this.onNotEnoughBalance));
-            this.addMessageEvent(new _Str_6375(this.onHabboClubExtendOffer));
+            this.addMessageEvent(new HabboClubExtendOfferMessageEvent(this.onHabboClubExtendOffer));
             this.addMessageEvent(new BuildersClubFurniCountMessageEvent(this.onBuildersClubFurniCount));
             this.addMessageEvent(new _Str_8418(this.onVoucherRedeemError));
 			this.addMessageEvent(new FireworkChargeDataEvent(this.onFireworkChargeHandler));
@@ -2247,7 +2247,7 @@
             }
         }
 
-        private function onHabboClubExtendOffer(k:_Str_6375):void
+        private function onHabboClubExtendOffer(k:HabboClubExtendOfferMessageEvent):void
         {
             if (!this._initialized)
             {
