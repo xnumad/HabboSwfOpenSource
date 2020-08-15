@@ -793,7 +793,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7261;
 	import com.sulake.habbo.communication.messages.incoming.notifications.InfoFeedEnableMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7321;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8054;
+	import com.sulake.habbo.communication.messages.incoming.notifications.ElementPointerMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.HabboBroadcastMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
@@ -1107,7 +1107,7 @@
             INCOMING_PACKETS[1774] = UseObjectMessageEvent;
             INCOMING_PACKETS[1778] = ObjectsMessageEvent;
             INCOMING_PACKETS[178] = _Str_4585;
-            INCOMING_PACKETS[1787] = _Str_8054;
+            INCOMING_PACKETS[1787] = ElementPointerMessageEvent;
             INCOMING_PACKETS[1797] = SleepMessageEvent;
             INCOMING_PACKETS[1808] = InterstitialMessageEvent;
             INCOMING_PACKETS[1815] = ChangeEmailResultEvent;

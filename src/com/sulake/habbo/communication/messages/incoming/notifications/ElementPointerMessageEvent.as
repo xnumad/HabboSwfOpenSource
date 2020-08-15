@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.notifications.ElementPointerMessageParser;
 
-    public class _Str_8054 extends MessageEvent implements IMessageEvent 
+    public class ElementPointerMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8054(k:Function)
+        public function ElementPointerMessageEvent(k:Function)
         {
             super(k, ElementPointerMessageParser);
         }
