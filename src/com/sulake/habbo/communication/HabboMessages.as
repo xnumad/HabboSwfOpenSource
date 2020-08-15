@@ -145,7 +145,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8524;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9259;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9293;
+	import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingRequestEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetAddedToInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.NestBreedingSuccessEvent;
@@ -1413,7 +1413,7 @@
             INCOMING_PACKETS[612] = EmailStatusResultEvent;
             INCOMING_PACKETS[618] = CraftingResultEvent;
             INCOMING_PACKETS[619] = ClubGiftInfoEvent;
-            INCOMING_PACKETS[634] = _Str_9293;
+            INCOMING_PACKETS[634] = ConfirmBreedingRequestEvent;
             INCOMING_PACKETS[638] = TalentLevelUpEvent;
             INCOMING_PACKETS[639] = BotErrorEvent;
             INCOMING_PACKETS[659] = ClubGiftSelectedEvent;
