@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.CompetitionRoomsDataMessageParser;
 
-    public class _Str_5767 extends MessageEvent implements IMessageEvent 
+    public class CompetitionRoomsDataMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_5767(k:Function)
+        public function CompetitionRoomsDataMessageEvent(k:Function)
         {
             super(k, CompetitionRoomsDataMessageParser);
         }

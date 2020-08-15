@@ -38,7 +38,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
+    import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsDataMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist.FriendListFragmentMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventCancelEvent;
@@ -146,7 +146,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorMetaDataEvent(this.onNavigatorMetaData)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5767(this.onCompetitionData)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new CompetitionRoomsDataMessageEvent(this.onCompetitionData)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FlatCreatedEvent(this.onFlatCreated)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FriendListFragmentMessageEvent(this.onFriendsListFragment)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomEventCancelEvent(this.onRoomEventCancel)));
@@ -518,7 +518,7 @@
             LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl.onFriendListUpdate();
         }
 
-        private function onCompetitionData(k:_Str_5767):void
+        private function onCompetitionData(k:CompetitionRoomsDataMessageEvent):void
         {
             this.data._Str_4079 = k.getParser().data;
         }

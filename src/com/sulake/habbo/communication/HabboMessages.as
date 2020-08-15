@@ -374,7 +374,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5711;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
+	import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsDataMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomRatingEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FavouritesEvent;
@@ -1379,7 +1379,7 @@
             INCOMING_PACKETS[3926] = SecondsUntilMessageEvent;
             INCOMING_PACKETS[3928] = PingMessageEvent;
             INCOMING_PACKETS[3945] = EpicPopupMessageEvent;
-            INCOMING_PACKETS[3954] = _Str_5767;
+            INCOMING_PACKETS[3954] = CompetitionRoomsDataMessageEvent;
             INCOMING_PACKETS[3964] = HabboClubExtendOfferMessageEvent;
             INCOMING_PACKETS[3965] = GuildEditInfoMessageEvent;
             INCOMING_PACKETS[3984] = NavigatorSavedSearchesEvent;
