@@ -6,7 +6,7 @@
     import flash.events.IEventDispatcher;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.sound.PlayListMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.sound.JukeBoxPlayListAddSongEvent;
+    import com.sulake.habbo.communication.messages.incoming.sound.PlayListSongAddedMessageEvent;
     import com.sulake.habbo.sound.events.SoundControllerEvent;
     import com.sulake.habbo.sound.events.SongInfoReceivedEvent;
     import com.sulake.habbo.room.events.RoomObjectSoundMachineEvent;
@@ -45,7 +45,7 @@
             this._musicController = _arg_2;
             this._messageEvents = [];
             this._messageEvents.push(new PlayListMessageEvent(this._Str_23522));
-            this._messageEvents.push(new JukeBoxPlayListAddSongEvent(this._Str_23767));
+            this._messageEvents.push(new PlayListSongAddedMessageEvent(this._Str_23767));
             for each (_local_6 in this._messageEvents)
             {
                 this._connection.addMessageEvent(_local_6);
@@ -381,7 +381,7 @@
 
         private function _Str_23767(k:IMessageEvent):void
         {
-            var _local_2:JukeBoxPlayListAddSongEvent = (k as JukeBoxPlayListAddSongEvent);
+            var _local_2:PlayListSongAddedMessageEvent = (k as PlayListSongAddedMessageEvent);
             var _local_3:PlayListSongAddedMessageParser = (_local_2.getParser() as PlayListSongAddedMessageParser);
             var _local_4:SongDataEntry = new SongDataEntry(_local_3.entry.id, _local_3.entry.length, _local_3.entry.name, _local_3.entry.creator, null);
             if (_local_4 == null)

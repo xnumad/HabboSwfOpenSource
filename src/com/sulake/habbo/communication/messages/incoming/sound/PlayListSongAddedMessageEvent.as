@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.sound.PlayListSongAddedMessageParser;
 
-    public class JukeBoxPlayListAddSongEvent extends MessageEvent implements IMessageEvent 
+    public class PlayListSongAddedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function JukeBoxPlayListAddSongEvent(k:Function)
+        public function PlayListSongAddedMessageEvent(k:Function)
         {
             super(k, PlayListSongAddedMessageParser);
         }

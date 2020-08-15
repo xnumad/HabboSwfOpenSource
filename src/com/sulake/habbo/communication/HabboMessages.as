@@ -90,7 +90,7 @@
 	import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
 	import com.sulake.habbo.communication.messages.incoming.callforhelp.SanctionStatusEvent;
 	import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhSanctionMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.sound.JukeBoxPlayListAddSongEvent;
+	import com.sulake.habbo.communication.messages.incoming.sound.PlayListSongAddedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeboxPlayListFullMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.TraxSongInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeboxSongDisksMessageEvent;
@@ -1012,7 +1012,7 @@
             INCOMING_PACKETS[1121] = CallForHelpPendingCallsEvent;
             INCOMING_PACKETS[1122] = SeasonalQuestsMessageEvent;
             INCOMING_PACKETS[1130] = PetScratchFailedEvent;
-            INCOMING_PACKETS[1140] = JukeBoxPlayListAddSongEvent;
+            INCOMING_PACKETS[1140] = PlayListSongAddedMessageEvent;
             INCOMING_PACKETS[1155] = WiredSavedEvent;
             INCOMING_PACKETS[1164] = PetTrainingPanelEvent;
             INCOMING_PACKETS[1167] = AvatarEffectMessageEvent;
