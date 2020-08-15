@@ -264,7 +264,7 @@
             return this._highlightedUserId;
         }
 
-        public function _Str_22019(k:int, _arg_2:_Str_5423):void
+        public function _Str_22019(k:int, _arg_2:BannedUserData):void
         {
             if (this._bannedUsersById == null)
             {
@@ -284,7 +284,7 @@
 
         public function get bannedUsersList():Array
         {
-            var k:_Str_5423;
+            var k:BannedUserData;
             if (this._bannedUsersList == null)
             {
                 this._bannedUsersList = new Array();

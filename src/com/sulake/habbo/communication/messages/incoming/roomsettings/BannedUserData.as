@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5423 implements _Str_4633 
+    public class BannedUserData implements _Str_4633
     {
         private var _userId:int;
         private var _userName:String;
 
-        public function _Str_5423(k:IMessageDataWrapper)
+        public function BannedUserData(k:IMessageDataWrapper)
         {
             this._userId = k.readInteger();
             this._userName = k.readString();

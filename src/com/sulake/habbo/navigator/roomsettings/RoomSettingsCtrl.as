@@ -16,7 +16,7 @@
     import flash.events.Event;
     import com.sulake.habbo.navigator.events.HabboRoomSettingsTrackingEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4114;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5423;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.BannedUserData;
     import com.sulake.habbo.communication.messages.parser.roomsettings.RoomSettingsSaveErrorMessageParser;
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.core.window.IWindow;
@@ -252,7 +252,7 @@
 
         public function _Str_8907(k:int, _arg_2:Array):void
         {
-            var _local_3:_Str_5423;
+            var _local_3:BannedUserData;
             if (this._Str_20138(k))
             {
                 for each (_local_3 in _arg_2)
