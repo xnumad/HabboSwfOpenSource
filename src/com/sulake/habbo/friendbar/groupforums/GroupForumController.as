@@ -28,7 +28,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.groupforums.ForumsListMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.GuildForumThreadsEvent;
-    import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8526;
+    import com.sulake.habbo.communication.messages.incoming.groupforums.UpdateThreadMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.UpdateMessageMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.ThreadMessagesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.groupforums.ForumDataMessageEvent;
@@ -185,7 +185,7 @@
         {
             this._communicationManager.addHabboConnectionMessageEvent(new ForumsListMessageEvent(this._Str_22851));
             this._communicationManager.addHabboConnectionMessageEvent(new GuildForumThreadsEvent(this._Str_24478));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_8526(this.onUpdateThread));
+            this._communicationManager.addHabboConnectionMessageEvent(new UpdateThreadMessageEvent(this.onUpdateThread));
             this._communicationManager.addHabboConnectionMessageEvent(new UpdateMessageMessageEvent(this._parser8));
             this._communicationManager.addHabboConnectionMessageEvent(new ThreadMessagesMessageEvent(this.onThreadMessageList));
             this._communicationManager.addHabboConnectionMessageEvent(new ForumDataMessageEvent(this._Str_25702));
@@ -549,7 +549,7 @@
             }
         }
 
-        private function onUpdateThread(k:_Str_8526):void
+        private function onUpdateThread(k:UpdateThreadMessageEvent):void
         {
             var _local_2:UpdateThreadMessageParser = k.getParser();
             if (((this._forumData == null) || (!(this._forumData.groupId == _local_2.groupId))))

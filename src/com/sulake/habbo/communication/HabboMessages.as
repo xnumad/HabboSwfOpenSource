@@ -151,7 +151,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9632;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.GuildForumThreadsEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ForumDataMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_8526;
+	import com.sulake.habbo.communication.messages.incoming.groupforums.UpdateThreadMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.UpdateMessageMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.UnreadForumsCountMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.groupforums.ThreadMessagesMessageEvent;
@@ -1207,7 +1207,7 @@
             INCOMING_PACKETS[2524] = _Str_5795;
             INCOMING_PACKETS[2525] = CommunityGoalProgressMessageEvent;
             INCOMING_PACKETS[2527] = _Str_9632;
-            INCOMING_PACKETS[2528] = _Str_8526;
+            INCOMING_PACKETS[2528] = UpdateThreadMessageEvent;
             INCOMING_PACKETS[2531] = CampaignCalendarDataMessageEvent;
             INCOMING_PACKETS[2533] = _Str_5038;
             INCOMING_PACKETS[2547] = ObjectDataUpdateMessageEvent;

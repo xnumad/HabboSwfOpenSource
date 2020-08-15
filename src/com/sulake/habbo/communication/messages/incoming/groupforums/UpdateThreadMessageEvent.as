@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.groupforums.UpdateThreadMessageParser;
 
-    public class _Str_8526 extends MessageEvent implements IMessageEvent 
+    public class UpdateThreadMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8526(k:Function)
+        public function UpdateThreadMessageEvent(k:Function)
         {
             super(k, UpdateThreadMessageParser);
         }
