@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5711;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5795;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
     import com.sulake.habbo.communication.messages.incoming.navigator.FavouritesEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
@@ -135,7 +135,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5711(this._Str_18125)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new FavouriteChangedEvent(this._Str_16972)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new FavouritesEvent(this._Str_8561)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new NoSuchFlatEvent(this.onNoSuchFlat)));
@@ -419,7 +419,7 @@
 
         private function _Str_16972(k:IMessageEvent):void
         {
-            var _local_2:FavouriteChangedMessageParser = (k as _Str_5795).getParser();
+            var _local_2:FavouriteChangedMessageParser = (k as FavouriteChangedEvent).getParser();
             Logger.log(((("Received favourite changed: " + _local_2.flatId) + ", ") + _local_2._Str_13819));
             this.data._Str_21350(_local_2.flatId, _local_2._Str_13819);
             LegacyNavigator(this._navigator.legacyNavigator).roomInfoViewCtrl.reload();

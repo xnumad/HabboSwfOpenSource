@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.FavouriteChangedMessageParser;
 
-    public class _Str_5795 extends MessageEvent implements IMessageEvent 
+    public class FavouriteChangedEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_5795(k:Function)
+        public function FavouriteChangedEvent(k:Function)
         {
             super(k, FavouriteChangedMessageParser);
         }

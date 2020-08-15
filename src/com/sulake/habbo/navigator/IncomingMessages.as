@@ -41,7 +41,7 @@
     import com.sulake.habbo.communication.messages.incoming.competition.NoOwnedRoomsAlertMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_5795;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
@@ -155,7 +155,7 @@
             _local_2.addHabboConnectionMessageEvent(new NoOwnedRoomsAlertMessageEvent(this.onNoOwnedRoomsAlert));
             _local_2.addHabboConnectionMessageEvent(new NoSuchFlatEvent(this.onNoSuchFlat));
             _local_2.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972));
+            _local_2.addHabboConnectionMessageEvent(new FavouriteChangedEvent(this._Str_16972));
             _local_2.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837));
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new _Str_5655(this.onUserUnbannedFromRoom));
@@ -550,7 +550,7 @@
 
         private function _Str_16972(k:IMessageEvent):void
         {
-            var _local_2:FavouriteChangedMessageParser = (k as _Str_5795).getParser();
+            var _local_2:FavouriteChangedMessageParser = (k as FavouriteChangedEvent).getParser();
             Logger.log(((("Received favourite changed: " + _local_2.flatId) + ", ") + _local_2._Str_13819));
             this._navigator.data._Str_21350(_local_2.flatId, _local_2._Str_13819);
             this._navigator.roomInfoViewCtrl.reload();

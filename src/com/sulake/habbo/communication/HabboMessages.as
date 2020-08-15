@@ -375,7 +375,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5728;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_5795;
+	import com.sulake.habbo.communication.messages.incoming.navigator.FavouriteChangedEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.RoomRatingEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.FavouritesEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.ConvertedRoomIdEvent;
@@ -1204,7 +1204,7 @@
             INCOMING_PACKETS[2501] = BadgePointLimitsEvent;
             INCOMING_PACKETS[2505] = TradingOpenEvent;
             INCOMING_PACKETS[2515] = CatalogPageWithEarliestExpiryMessageEvent;
-            INCOMING_PACKETS[2524] = _Str_5795;
+            INCOMING_PACKETS[2524] = FavouriteChangedEvent;
             INCOMING_PACKETS[2525] = CommunityGoalProgressMessageEvent;
             INCOMING_PACKETS[2527] = _Str_9632;
             INCOMING_PACKETS[2528] = UpdateThreadMessageEvent;
