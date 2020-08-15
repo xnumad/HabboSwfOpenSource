@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomDimmerPresetsEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_5478;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomDimmerPresetsMessageData;
     import com.sulake.habbo.communication.messages.parser.room.furniture.RoomDimmerPresetsMessageParser;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.events.RoomSessionDimmerPresetsEvent;
@@ -23,7 +23,7 @@
 
         private function onRoomDimmerPresets(k:IMessageEvent):void
         {
-            var _local_7:_Str_5478;
+            var _local_7:RoomDimmerPresetsMessageData;
             var _local_2:RoomDimmerPresetsEvent = (k as RoomDimmerPresetsEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {

@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.room.furniture
 {
-    public class _Str_5478 
+    public class RoomDimmerPresetsMessageData
     {
         private var _id:int = 0;
         private var _type:int = 0;
@@ -8,7 +8,7 @@
         private var _Str_3576:uint = 0;
         private var _isReadOnly:Boolean = false;
 
-        public function _Str_5478(k:int)
+        public function RoomDimmerPresetsMessageData(k:int)
         {
             this._id = k;
         }
