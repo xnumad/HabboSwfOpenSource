@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWindowContainer;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2792;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildColorData;
     import com.sulake.core.window.components.IItemGridWindow;
     import flash.display.BitmapData;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -18,7 +18,7 @@
         private var _manager:HabboGroupsManager;
         private var _parentWindow:IWindowContainer;
         private var _parentCallback:Function;
-        private var _colorData:Vector.<_Str_2792>;
+        private var _colorData:Vector.<GuildColorData>;
         private var _colorGrid:IItemGridWindow;
         private var _selectedColorIndex:int = -1;
         private var _selectedColorBitmap:BitmapData;
@@ -77,9 +77,9 @@
             }
         }
 
-        public function _Str_16890(k:IWindowContainer, _arg_2:String, _arg_3:Vector.<_Str_2792>):void
+        public function _Str_16890(k:IWindowContainer, _arg_2:String, _arg_3:Vector.<GuildColorData>):void
         {
-            var _local_4:_Str_2792;
+            var _local_4:GuildColorData;
             var _local_5:IWindowContainer;
             if (((((!(this._colorGrid == null)) || (k == null)) || (_arg_2 == null)) || (_arg_3 == null)))
             {
@@ -106,7 +106,7 @@
             }
         }
 
-        private function _Str_18553(k:IWindowContainer, _arg_2:String, _arg_3:BitmapData, _arg_4:Boolean, _arg_5:_Str_2792=null):void
+        private function _Str_18553(k:IWindowContainer, _arg_2:String, _arg_3:BitmapData, _arg_4:Boolean, _arg_5:GuildColorData=null):void
         {
             var _local_7:BitmapData;
             var _local_6:IBitmapWrapperWindow = (k.findChildByName(_arg_2) as IBitmapWrapperWindow);
@@ -161,7 +161,7 @@
 
         public function _Str_15044():int
         {
-            var k:_Str_2792 = this._Str_10058();
+            var k:GuildColorData = this._Str_10058();
             if (k != null)
             {
                 return k.id;
@@ -169,7 +169,7 @@
             return 0;
         }
 
-        public function _Str_10058():_Str_2792
+        public function _Str_10058():GuildColorData
         {
             if ((((!(this._colorData == null)) && (this._selectedColorIndex >= 0)) && (this._selectedColorIndex < this._colorData.length)))
             {

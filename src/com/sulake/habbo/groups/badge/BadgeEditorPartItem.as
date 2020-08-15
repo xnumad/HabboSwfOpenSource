@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_3740;
     import com.sulake.core.assets.IResourceManager;
     import com.sulake.core.assets.IAsset;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2792;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildColorData;
     import flash.geom.Point;
 
     public class BadgeEditorPartItem implements IDisposable, IAssetReceiver 
@@ -148,7 +148,7 @@
             {
                 return this._image;
             }
-            var _local_2:_Str_2792 = (this._manager.guildEditorData._Str_9008[k.colorIndex] as _Str_2792);
+            var _local_2:GuildColorData = (this._manager.guildEditorData._Str_9008[k.colorIndex] as GuildColorData);
             this._colorTransform.redMultiplier = (_local_2.red / 0xFF);
             this._colorTransform.greenMultiplier = (_local_2.green / 0xFF);
             this._colorTransform.blueMultiplier = (_local_2.blue / 0xFF);

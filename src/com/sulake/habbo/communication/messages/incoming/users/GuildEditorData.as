@@ -10,9 +10,9 @@
     {
         private var _baseParts:Vector.<_Str_3740>;
         private var _layerParts:Vector.<_Str_3740>;
-        private var _badgeColors:Vector.<_Str_2792>;
-        private var _guildPrimaryColors:Vector.<_Str_2792>;
-        private var _guildSecondaryColors:Vector.<_Str_2792>;
+        private var _badgeColors:Vector.<GuildColorData>;
+        private var _guildPrimaryColors:Vector.<GuildColorData>;
+        private var _guildSecondaryColors:Vector.<GuildColorData>;
 
         public function GuildEditorData(k:IMessageDataWrapper=null)
         {
@@ -20,9 +20,9 @@
             var _local_3:int;
             this._baseParts = new Vector.<_Str_3740>();
             this._layerParts = new Vector.<_Str_3740>();
-            this._badgeColors = new Vector.<_Str_2792>();
-            this._guildPrimaryColors = new Vector.<_Str_2792>();
-            this._guildSecondaryColors = new Vector.<_Str_2792>();
+            this._badgeColors = new Vector.<GuildColorData>();
+            this._guildPrimaryColors = new Vector.<GuildColorData>();
+            this._guildSecondaryColors = new Vector.<GuildColorData>();
             super();
             _local_3 = k.readInteger();
             _local_2 = 0;
@@ -42,21 +42,21 @@
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._badgeColors.push(new _Str_2792(k));
+                this._badgeColors.push(new GuildColorData(k));
                 _local_2++;
             }
             _local_3 = k.readInteger();
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._guildPrimaryColors.push(new _Str_2792(k));
+                this._guildPrimaryColors.push(new GuildColorData(k));
                 _local_2++;
             }
             _local_3 = k.readInteger();
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._guildSecondaryColors.push(new _Str_2792(k));
+                this._guildSecondaryColors.push(new GuildColorData(k));
                 _local_2++;
             }
         }
@@ -71,17 +71,17 @@
             return this._layerParts;
         }
 
-        public function get _Str_9008():Vector.<_Str_2792>
+        public function get _Str_9008():Vector.<GuildColorData>
         {
             return this._badgeColors;
         }
 
-        public function get _Str_17665():Vector.<_Str_2792>
+        public function get _Str_17665():Vector.<GuildColorData>
         {
             return this._guildPrimaryColors;
         }
 
-        public function get _Str_16298():Vector.<_Str_2792>
+        public function get _Str_16298():Vector.<GuildColorData>
         {
             return this._guildSecondaryColors;
         }
@@ -104,7 +104,7 @@
             return this._Str_21273(this._badgeColors[k], this._guildSecondaryColors);
         }
 
-        private function _Str_21273(k:_Str_2792, _arg_2:Vector.<_Str_2792>):int
+        private function _Str_21273(k:GuildColorData, _arg_2:Vector.<GuildColorData>):int
         {
             var _local_7:IVector3d;
             var _local_8:Number;

@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2792 
+    public class GuildColorData
     {
         private var _id:int;
         private var _color:uint;
 
-        public function _Str_2792(k:IMessageDataWrapper)
+        public function GuildColorData(k:IMessageDataWrapper)
         {
             this._id = k.readInteger();
             this._color = parseInt(k.readString(), 16);

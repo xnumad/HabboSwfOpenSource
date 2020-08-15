@@ -10,7 +10,7 @@
     import com.sulake.core.window.IWindow;
     import flash.display.BitmapData;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2792;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildColorData;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.communication.messages.incoming.users.GuildCreationData;
     import com.sulake.core.window.components.ITabContextWindow;
@@ -253,9 +253,9 @@
         {
             var k:BitmapData;
             var _local_2:IBitmapWrapperWindow;
-            var _local_3:_Str_2792;
+            var _local_3:GuildColorData;
             var _local_4:IWindow;
-            var _local_5:_Str_2792;
+            var _local_5:GuildColorData;
             var _local_6:IWindow;
             if (((this._manager.guildEditorData == null) || (this._window == null)))
             {
@@ -706,7 +706,7 @@
 
         public function onPrimaryColorSelected(k:ColorGridCtrl):void
         {
-            var _local_3:_Str_2792;
+            var _local_3:GuildColorData;
             var _local_2:IWindow = this._window.findChildByName("guild_color_primary_color_top");
             if (((((!(_local_2 == null)) && (!(this._manager.guildEditorData == null))) && (k._Str_4246 >= 0)) && (k._Str_4246 <= this._manager.guildEditorData._Str_17665.length)))
             {
@@ -717,7 +717,7 @@
 
         public function onSecondaryColorSelected(k:ColorGridCtrl):void
         {
-            var _local_3:_Str_2792;
+            var _local_3:GuildColorData;
             var _local_2:IWindow = this._window.findChildByName("guild_color_secondary_color_top");
             if ((((!(this._manager.guildEditorData == null)) && (k._Str_4246 >= 0)) && (k._Str_4246 <= this._manager.guildEditorData._Str_16298.length)))
             {
