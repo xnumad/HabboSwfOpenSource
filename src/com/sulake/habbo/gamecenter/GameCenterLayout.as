@@ -682,7 +682,7 @@
         {
         }
 
-        public function _Str_20559(k:int):void
+        public function setTimeRemaining(k:int):void
         {
         }
 

@@ -360,7 +360,7 @@
             this._leaderboardWindow.findChildByName("weekly_top_reward_name").caption = k;
         }
 
-        public function _Str_20559(k:int):void
+        public function setTimeRemaining(k:int):void
         {
         }
 
