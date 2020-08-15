@@ -208,7 +208,7 @@
                 this.setElementImage(this._gameSelectionIcon, this.getBitmap("game_center_icon_selected"));
                 this._gameCenterView.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
                 this._achievementList = (this._gameCenterViewWindow.findChildByName("achievements_list") as IItemListWindow);
-                this._gameCenterView.communication.addHabboConnectionMessageEvent(new UserGameAchievementsMessageEvent(this._Str_24687));
+                this._gameCenterView.communication.addHabboConnectionMessageEvent(new UserGameAchievementsMessageEvent(this.onUserGameAchievements));
                 this._leaderboardList = (this._gameCenterViewWindow.findChildByName("leaderboard_list") as IItemListWindow);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_8191(this._Str_25658));
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5142(this._Str_23128));
@@ -510,7 +510,7 @@
             return null;
         }
 
-        private function _Str_24687(k:IMessageEvent):void
+        private function onUserGameAchievements(k:IMessageEvent):void
         {
             var _local_4:IWindowContainer;
             var _local_5:Achievement;
