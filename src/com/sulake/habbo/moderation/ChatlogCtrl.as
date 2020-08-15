@@ -12,7 +12,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import flash.events.TimerEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation.ChatRecordData;
-    import com.sulake.habbo.communication.messages.incoming.moderation._Str_6779;
+    import com.sulake.habbo.communication.messages.incoming.moderation.ChatlineData;
     import com.sulake.core.window.components.IButtonWindow;
     import com.sulake.habbo.utils.StringUtil;
     import com.sulake.core.window.components.ITextWindow;
@@ -164,7 +164,7 @@
         private function _Str_23244(k:ChatRecordData):void
         {
             var _local_9:String;
-            var _local_10:_Str_6779;
+            var _local_10:ChatlineData;
             var _local_2:IWindowContainer = this._Str_23187();
             var _local_3:IWindow = _local_2.findChildByName("text");
             var _local_4:IButtonWindow = IButtonWindow(_local_2.findChildByName("btnHeaderAction"));
@@ -326,7 +326,7 @@
             return this._roomHeaderPrototype.clone() as IWindowContainer;
         }
 
-        private function _Str_23382(k:_Str_6779, _arg_2:Boolean):void
+        private function _Str_23382(k:ChatlineData, _arg_2:Boolean):void
         {
             var _local_9:TextFormat;
             var _local_3:IWindowContainer = this._Str_25638();

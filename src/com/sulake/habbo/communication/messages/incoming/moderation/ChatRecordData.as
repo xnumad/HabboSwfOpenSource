@@ -51,7 +51,7 @@
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                this._chatlog.push(new _Str_6779(k));
+                this._chatlog.push(new ChatlineData(k));
                 _local_5++;
             }
         }

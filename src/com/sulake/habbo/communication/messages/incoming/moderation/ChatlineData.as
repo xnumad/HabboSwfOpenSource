@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6779 
+    public class ChatlineData
     {
         private var _timeStamp:String;
         private var _Str_20918:int;
@@ -10,7 +10,7 @@
         private var _Str_5798:String;
         private var _Str_21220:Boolean;
 
-        public function _Str_6779(k:IMessageDataWrapper)
+        public function ChatlineData(k:IMessageDataWrapper)
         {
             this._timeStamp = k.readString();
             this._Str_20918 = k.readInteger();
