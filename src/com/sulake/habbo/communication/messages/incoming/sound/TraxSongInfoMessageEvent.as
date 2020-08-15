@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.sound.TraxSongInfoMessageParser;
 
-    public class _Str_7199 extends MessageEvent implements IMessageEvent 
+    public class TraxSongInfoMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7199(k:Function)
+        public function TraxSongInfoMessageEvent(k:Function)
         {
             super(k, TraxSongInfoMessageParser);
         }

@@ -10,7 +10,7 @@
     import com.sulake.habbo.sound.IPlayListController;
     import flash.utils.Timer;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.sound._Str_7199;
+    import com.sulake.habbo.communication.messages.incoming.sound.TraxSongInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.sound.UserSongDisksInventoryMessageEvent;
     import com.sulake.habbo.room.events.RoomObjectSoundMachineEvent;
     import flash.events.TimerEvent;
@@ -74,7 +74,7 @@
             this._events = _arg_2;
             this._roomEvents = _arg_3;
             this._connection = _arg_4;
-            this._messageEvents.push(new _Str_7199(this._Str_25546));
+            this._messageEvents.push(new TraxSongInfoMessageEvent(this._Str_25546));
             this._messageEvents.push(new UserSongDisksInventoryMessageEvent(this._Str_24559));
             for each (_local_5 in this._messageEvents)
             {
@@ -570,7 +570,7 @@
             var _local_10:SongDataEntry;
             var _local_11:int;
             var _local_12:int;
-            var _local_2:_Str_7199 = (k as _Str_7199);
+            var _local_2:TraxSongInfoMessageEvent = (k as TraxSongInfoMessageEvent);
             var _local_3:TraxSongInfoMessageParser = (_local_2.getParser() as TraxSongInfoMessageParser);
             var _local_4:Array = _local_3._Str_25090;
             var _local_5:int;

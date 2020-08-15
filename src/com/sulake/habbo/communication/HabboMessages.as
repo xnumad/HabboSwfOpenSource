@@ -92,7 +92,7 @@
 	import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhSanctionMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeBoxPlayListAddSongEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeboxPlayListFullMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.sound._Str_7199;
+	import com.sulake.habbo.communication.messages.incoming.sound.TraxSongInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeboxSongDisksMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.UserSongDisksInventoryMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.sound.NowPlayingMessageEvent;
@@ -1312,7 +1312,7 @@
             INCOMING_PACKETS[3331] = SellablePetPalettesMessageEvent;
             INCOMING_PACKETS[3336] = VoucherRedeemOkMessageEvent;
             INCOMING_PACKETS[3359] = InstantMessageErrorEvent;
-            INCOMING_PACKETS[3365] = _Str_7199;
+            INCOMING_PACKETS[3365] = TraxSongInfoMessageEvent;
             INCOMING_PACKETS[3370] = AchievementResolutionProgressMessageEvent;
             INCOMING_PACKETS[3377] = UserChatlogEvent;
             INCOMING_PACKETS[3388] = ProductOfferEvent;
