@@ -171,7 +171,7 @@
 	import com.sulake.habbo.communication.messages.incoming.competition.SecondsUntilMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceNotCompleteEvent;
 	import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOfferEvent;
-	import com.sulake.habbo.communication.messages.incoming.game.score._Str_11645;
+	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyGameRewardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_16667;
 	import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyLeaderboardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_18906;
@@ -1219,7 +1219,7 @@
             INCOMING_PACKETS[2602] = _Str_7922;
             INCOMING_PACKETS[2621] = _Str_8524;
             INCOMING_PACKETS[2624] = LoadGameUrlMessageEvent;
-            INCOMING_PACKETS[2641] = _Str_11645;
+            INCOMING_PACKETS[2641] = WeeklyGameRewardEvent;
             INCOMING_PACKETS[265] = GuildMembershipUpdatedMessageEvent;
             INCOMING_PACKETS[2661] = UserRemoveMessageEvent;
             INCOMING_PACKETS[2665] = QuestionEvent;

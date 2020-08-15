@@ -13,7 +13,7 @@
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.room.IRoomEngine;
     import flash.events.TimerEvent;
-    import com.sulake.habbo.communication.messages.incoming.game.score._Str_11645;
+    import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyGameRewardEvent;
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.game.score.GetWeeklyGameRewardComposer;
@@ -132,7 +132,7 @@
             {
                 this.activate(k, _arg_2);
             }
-            this.communication.addHabboConnectionMessageEvent(new _Str_11645(this._Str_23350));
+            this.communication.addHabboConnectionMessageEvent(new WeeklyGameRewardEvent(this._Str_23350));
         }
 
         public function activate(k:int, _arg_2:Boolean):void
