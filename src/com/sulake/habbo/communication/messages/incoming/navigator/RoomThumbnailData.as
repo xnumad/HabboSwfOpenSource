@@ -12,7 +12,7 @@
 
         public function RoomThumbnailData(k:IMessageDataWrapper)
         {
-            var _local_4:_Str_3666;
+            var _local_4:RoomThumbnailObjectData;
             this._Str_2549 = new Array();
             super();
             if (k == null)
@@ -25,7 +25,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                _local_4 = new _Str_3666();
+                _local_4 = new RoomThumbnailObjectData();
                 _local_4._Str_12651 = k.readInteger();
                 _local_4._Str_13964 = k.readInteger();
                 this._Str_2549.push(_local_4);
@@ -41,7 +41,7 @@
         {
             this._Str_6284 = 1;
             this._Str_7862 = 0;
-            var k:_Str_3666 = new _Str_3666();
+            var k:RoomThumbnailObjectData = new RoomThumbnailObjectData();
             k._Str_12651 = 4;
             k._Str_13964 = 1;
             this._Str_2549.push(k);
@@ -49,7 +49,7 @@
 
         public function _Str_20539():RoomThumbnailData
         {
-            var _local_2:_Str_3666;
+            var _local_2:RoomThumbnailObjectData;
             var k:RoomThumbnailData = new RoomThumbnailData(null);
             k._Str_6284 = this._Str_6284;
             k._Str_7862 = this._Str_7862;
@@ -72,7 +72,7 @@
 
         public function _Str_22978():String
         {
-            var _local_2:_Str_3666;
+            var _local_2:RoomThumbnailObjectData;
             var k:* = (this._Str_7862 + ";");
             k = (k + (this._Str_6284 + ";"));
             for each (_local_2 in this._Str_2549)

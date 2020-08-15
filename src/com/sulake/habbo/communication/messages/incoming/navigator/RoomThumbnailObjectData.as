@@ -1,14 +1,14 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.navigator
 {
-    public class _Str_3666 
+    public class RoomThumbnailObjectData
     {
         private var _Str_6304:int;
         private var _Str_12644:int;
 
 
-        public function _Str_20539():_Str_3666
+        public function _Str_20539():RoomThumbnailObjectData
         {
-            var k:_Str_3666 = new _Str_3666();
+            var k:RoomThumbnailObjectData = new RoomThumbnailObjectData();
             k._Str_6304 = this._Str_6304;
             k._Str_12644 = this._Str_12644;
             return k;
