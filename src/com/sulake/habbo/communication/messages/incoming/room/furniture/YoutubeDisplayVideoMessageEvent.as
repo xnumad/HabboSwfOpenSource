@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.furniture.YoutubeDisplayVideoMessageParser;
 
-    public class _Str_8731 extends MessageEvent 
+    public class YoutubeDisplayVideoMessageEvent extends MessageEvent
     {
-        public function _Str_8731(k:Function)
+        public function YoutubeDisplayVideoMessageEvent(k:Function)
         {
             super(k, YoutubeDisplayVideoMessageParser);
         }

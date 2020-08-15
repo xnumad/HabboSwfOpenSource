@@ -780,7 +780,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8288;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8382;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8674;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8731;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayVideoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomMessageNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeControlVideoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture.CustomStackingHeightUpdateMessageEvent;
@@ -1046,7 +1046,7 @@
             INCOMING_PACKETS[138] = GuideSessionDetachedEvent;
             INCOMING_PACKETS[1381] = _Str_9631;
             INCOMING_PACKETS[1404] = PurchaseErrorMessageEvent;
-            INCOMING_PACKETS[1411] = _Str_8731;
+            INCOMING_PACKETS[1411] = YoutubeDisplayVideoMessageEvent;
             INCOMING_PACKETS[143] = ChatReviewSessionStartedMessageEvent;
             INCOMING_PACKETS[1434] = WiredEffectDataEvent;
             INCOMING_PACKETS[1435] = CommunityGoalVoteMessageEvent;

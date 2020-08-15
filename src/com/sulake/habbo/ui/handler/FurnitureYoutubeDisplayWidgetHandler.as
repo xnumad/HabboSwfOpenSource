@@ -6,7 +6,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8731;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayVideoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeDisplayPlaylistsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.YoutubeControlVideoMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.furniture.YoutubeDisplayVideoMessageParser;
@@ -43,7 +43,7 @@
         public function set container(k:IRoomWidgetHandlerContainer):void
         {
             this._container = k;
-            //this.addMessageEvent(new _Str_8731(this.onVideo));
+            //this.addMessageEvent(new YoutubeDisplayVideoMessageEvent(this.onVideo));
             //this.addMessageEvent(new YoutubeDisplayPlaylistsEvent(this.onPlaylists));
             //this.addMessageEvent(new YoutubeControlVideoMessageEvent(this.onControlVideo));
         }
@@ -68,7 +68,7 @@
             }
         }
 
-        private function onVideo(k:_Str_8731):void
+        private function onVideo(k:YoutubeDisplayVideoMessageEvent):void
         {
             var _local_2:YoutubeDisplayVideoMessageParser = k.getParser();
             this._widget.showVideo(_local_2.furniId, _local_2.videoId, _local_2._Str_25795, _local_2._Str_23507, _local_2.state);
