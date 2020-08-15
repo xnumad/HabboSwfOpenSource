@@ -30,7 +30,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator.CompetitionRoomsDataMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCreatedEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsDataEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CantConnectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomRatingEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
@@ -144,7 +144,7 @@
             _local_2.addHabboConnectionMessageEvent(new CompetitionRoomsDataMessageEvent(this.onCompetitionData));
             _local_2.addHabboConnectionMessageEvent(new _Str_5038(this.onMuteAllEvent));
             _local_2.addHabboConnectionMessageEvent(new FlatCreatedEvent(this.onFlatCreated));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485));
+            _local_2.addHabboConnectionMessageEvent(new RoomSettingsDataEvent(this._Str_16485));
             _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect));
             _local_2.addHabboConnectionMessageEvent(new RoomRatingEvent(this.onRoomRating));
             _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
@@ -499,7 +499,7 @@
             var parser:RoomSettingsDataMessageParser;
             try
             {
-                parser = (event as _Str_5993).getParser();
+                parser = (event as RoomSettingsDataEvent).getParser();
                 this._navigator.roomSettingsCtrl.onRoomSettings(parser.data);
                 Logger.log(((((("GOT ROOM SETTINGS DATA: " + parser.data.name) + ", ") + parser.data.maximumVisitors) + ", ") + parser.data._Str_13128));
             }

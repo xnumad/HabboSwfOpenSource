@@ -567,7 +567,7 @@
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllersEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsDataEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsSaveErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.FlatControllerAddedEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.NoSuchFlatEvent;
@@ -1061,7 +1061,7 @@
             INCOMING_PACKETS[1474] = CarryObjectMessageEvent;
             INCOMING_PACKETS[1477] = LeftQueueMessageEvent;
             INCOMING_PACKETS[1488] = UniqueMachineIDEvent;
-            INCOMING_PACKETS[1498] = _Str_5993;
+            INCOMING_PACKETS[1498] = RoomSettingsDataEvent;
             INCOMING_PACKETS[1501] = PostItPlacedEvent;
             INCOMING_PACKETS[1503] = ApproveNameMessageEvent;
             INCOMING_PACKETS[151] = FavouritesEvent;

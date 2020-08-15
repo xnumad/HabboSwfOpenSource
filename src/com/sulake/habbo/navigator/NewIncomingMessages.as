@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.incoming.newnavigator.CollapsedCategoriesEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CantConnectMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsDataEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.UserEventCatsEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.RoomEventEvent;
@@ -142,7 +142,7 @@
             this._messageListeners.push(k.connection.addMessageEvent(new CollapsedCategoriesEvent(this._Str_18969)));
             this._messageListeners.push(k.connection.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this.onCantConnect)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomSettingsDataEvent(this._Str_16485)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new UserEventCatsEvent(this._Str_15947)));
             this._messageListeners.push(k.connection.addMessageEvent(new NavigatorMetaDataEvent(this.onNavigatorMetaData)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new RoomEventEvent(this._Str_17647)));
@@ -368,7 +368,7 @@
             var parser:RoomSettingsDataMessageParser;
             try
             {
-                parser = (event as _Str_5993).getParser();
+                parser = (event as RoomSettingsDataEvent).getParser();
                 LegacyNavigator(this._navigator.legacyNavigator).roomSettingsCtrl.onRoomSettings(parser.data);
                 Logger.log(((((("GOT ROOM SETTINGS DATA: " + parser.data.name) + ", ") + parser.data.maximumVisitors) + ", ") + parser.data._Str_13128));
             }
