@@ -542,7 +542,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyFriendsRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.MyRoomsSearchMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.*;
-	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11459;
+	import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailNewMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist.MiniMailUnreadCountEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
 	import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
@@ -1125,7 +1125,7 @@
             INCOMING_PACKETS[1889] = SeasonalCalendarDailyOfferMessageEvent;
             INCOMING_PACKETS[1890] = _Str_9583;
             INCOMING_PACKETS[1907] = PetStatusUpdateEvent;
-            INCOMING_PACKETS[1911] = _Str_11459;
+            INCOMING_PACKETS[1911] = MiniMailNewMessageEvent;
             INCOMING_PACKETS[1924] = PetFigureUpdateEvent;
             INCOMING_PACKETS[1927] = _Str_16380;
             INCOMING_PACKETS[195] = DirectSMSClubBuyAvailableMessageEvent;

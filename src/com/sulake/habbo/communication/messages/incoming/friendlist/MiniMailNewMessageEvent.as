@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendlist.MiniMailNewMessageMessageParser;
 
-    public class _Str_11459 extends MessageEvent implements IMessageEvent 
+    public class MiniMailNewMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_11459(k:Function)
+        public function MiniMailNewMessageEvent(k:Function)
         {
             super(k, MiniMailNewMessageMessageParser);
         }
