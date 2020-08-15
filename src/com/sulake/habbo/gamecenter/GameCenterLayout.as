@@ -17,7 +17,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.UserGameAchievementsMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
+    import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyCompetitiveFriendsLeaderboardEvent;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
     import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyGameRewardWinnersEvent;
     import com.sulake.habbo.communication.messages.incoming.game.directory.Game2AccountGameStatusMessageEvent;
@@ -210,7 +210,7 @@
                 this._achievementList = (this._gameCenterViewWindow.findChildByName("achievements_list") as IItemListWindow);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new UserGameAchievementsMessageEvent(this.onUserGameAchievements));
                 this._leaderboardList = (this._gameCenterViewWindow.findChildByName("leaderboard_list") as IItemListWindow);
-                this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_8191(this.onFriendLeaderboard));
+                this._gameCenterView.communication.addHabboConnectionMessageEvent(new WeeklyCompetitiveFriendsLeaderboardEvent(this.onFriendLeaderboard));
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5142(this.onTopScoresLeaderboard));
                 this._luckyLosersList = (this._gameCenterViewWindow.findChildByName("lucky_losers_list") as IItemListWindow);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new WeeklyGameRewardWinnersEvent(this.onWeeklyWinners));
@@ -553,7 +553,7 @@
             var _local_6:LeaderboardEntry;
             var _local_7:IWindowContainer;
             var _local_8:IBitmapWrapperWindow;
-            var _local_2:_Str_8191 = (k as _Str_8191);
+            var _local_2:WeeklyCompetitiveFriendsLeaderboardEvent = (k as WeeklyCompetitiveFriendsLeaderboardEvent);
             var _local_3:Game2LeaderboardParser = _local_2.getParser();
             if (((this._leaderboardList) && (_local_3.gameTypeId == this._selectedGame)))
             {

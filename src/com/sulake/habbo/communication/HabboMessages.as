@@ -178,7 +178,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
 	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyGameRewardWinnersEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyCompetitiveLeaderboardEvent;
-	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
+	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyCompetitiveFriendsLeaderboardEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.CameraPublishStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.CameraPurchaseOKMessageEvent;
@@ -1338,7 +1338,7 @@
             INCOMING_PACKETS[354] = HandItemReceivedMessageEvent;
             INCOMING_PACKETS[3547] = RoomVisualizationSettingsEvent;
             INCOMING_PACKETS[3559] = _Str_7811;
-            INCOMING_PACKETS[3560] = _Str_8191;
+            INCOMING_PACKETS[3560] = WeeklyCompetitiveFriendsLeaderboardEvent;
             INCOMING_PACKETS[3575] = NewUserExperienceGiftOfferEvent;
             INCOMING_PACKETS[3595] = ThumbnailStatusMessageEvent;
             INCOMING_PACKETS[3609] = _Str_9065;

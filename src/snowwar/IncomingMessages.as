@@ -25,7 +25,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyLeaderboardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
 	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyCompetitiveLeaderboardEvent;
-	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
+	import com.sulake.habbo.communication.messages.incoming.game.score.WeeklyCompetitiveFriendsLeaderboardEvent;
 	import com.sulake.core.utils.Map;
 	import com.sulake.habbo.catalog.enum._SafeStr_2308; //constants 2308
 	import snowwar._Str_336.SnowStormOnStageStartEvent;
@@ -117,7 +117,7 @@
         {
             this._snowWarEngine = k;
             var _local_2:IHabboCommunicationManager = this._snowWarEngine.communication;
-            _local_2.addHabboConnectionMessageEvent(new _Str_8191(this._SafeStr_18914));
+            _local_2.addHabboConnectionMessageEvent(new WeeklyCompetitiveFriendsLeaderboardEvent(this._SafeStr_18914));
             _local_2.addHabboConnectionMessageEvent(new SnowStormIntializedPlayersEvent(this._SafeStr_18915));
             _local_2.addHabboConnectionMessageEvent(new SnowStormOnStageStartEvent(this._SafeStr_18916));
             _local_2.addHabboConnectionMessageEvent(new SnowStormLevelDataEvent(this._SafeStr_18917));
@@ -738,7 +738,7 @@
             }
         }
 
-        private function _SafeStr_18914(k:_Str_8191):void
+        private function _SafeStr_18914(k:WeeklyCompetitiveFriendsLeaderboardEvent):void
         {
             var _local_2:Game2WeeklyLeaderboardParser = k.getParser();
             if (this._snowWarEngine.leaderboard)
