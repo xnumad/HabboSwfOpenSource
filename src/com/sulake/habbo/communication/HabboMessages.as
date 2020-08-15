@@ -144,7 +144,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7734;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8524;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9259;
+	import com.sulake.habbo.communication.messages.incoming.notifications.PetInventoryEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingRequestEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ConfirmBreedingResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetAddedToInventoryEvent;
@@ -1333,7 +1333,7 @@
             INCOMING_PACKETS[35] = _Str_7104;
             INCOMING_PACKETS[3506] = CompetitionVotingInfoMessageEvent;
             INCOMING_PACKETS[3512] = WeeklyCompetitiveLeaderboardEvent;
-            INCOMING_PACKETS[3522] = _Str_9259;
+            INCOMING_PACKETS[3522] = PetInventoryEvent;
             INCOMING_PACKETS[3523] = IdentityAccountsEvent;
             INCOMING_PACKETS[354] = HandItemReceivedMessageEvent;
             INCOMING_PACKETS[3547] = RoomVisualizationSettingsEvent;
