@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.CatalogPageExpirationParser;
 
-    public class _Str_17379 extends MessageEvent implements IMessageEvent 
+    public class CatalogPageExpirationEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_17379(k:Function)
+        public function CatalogPageExpirationEvent(k:Function)
         {
             super(k, CatalogPageExpirationParser);
         }

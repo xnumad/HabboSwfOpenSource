@@ -398,7 +398,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPagesListEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.IsOfferGiftableMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.DirectSMSClubBuyAvailableMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_17379;
+	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageExpirationEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPublishedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubSubscriptionStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftInfoEvent;
@@ -1223,7 +1223,7 @@
             INCOMING_PACKETS[265] = GuildMembershipUpdatedMessageEvent;
             INCOMING_PACKETS[2661] = UserRemoveMessageEvent;
             INCOMING_PACKETS[2665] = QuestionEvent;
-            INCOMING_PACKETS[2668] = _Str_17379;
+            INCOMING_PACKETS[2668] = CatalogPageExpirationEvent;
             INCOMING_PACKETS[2674] = GuideTicketResolutionMessageEvent;
             INCOMING_PACKETS[2690] = NavigatorSearchResultBlocksEvent;
             INCOMING_PACKETS[2696] = _Str_7080;
