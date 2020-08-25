@@ -2443,7 +2443,7 @@
             return "";
         }
 
-        public function getWallItemTypeId(k:String):int
+        public function getPetTypeId(k:String):int
         {
             var _local_3:Array;
             var _local_2:int = -1;

@@ -805,7 +805,7 @@
                     this._roomCreator.updateObjectUserFigure(this._currentRoomId, _local_5.roomIndex, _local_5.figure, _local_5.sex, _local_5.subType, _local_5.isRiding);
                     if (RoomObjectUserTypes.getName(_local_8) == RoomObjectUserTypes.PET)
                     {
-                        if (this._roomCreator.getWallItemTypeId(_local_5.figure) == PetTypeEnum.MONSTERPLANT)
+                        if (this._roomCreator.getPetTypeId(_local_5.figure) == PetTypeEnum.MONSTERPLANT)
                         {
                             this._roomCreator.updateObjectUserPosture(this._currentRoomId, _local_5.roomIndex, _local_5.petPosture);
                         }

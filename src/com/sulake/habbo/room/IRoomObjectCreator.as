@@ -34,6 +34,6 @@
         function updateObjectRoomVisibilities(_arg_1:int, _arg_2:Boolean, _arg_3:Boolean=true):Boolean;
         function updateObjectRoomPlaneThicknesses(_arg_1:int, _arg_2:Number, _arg_3:Number):Boolean;
         function setRoomObjectAlias(_arg_1:String, _arg_2:String):void;
-        function getWallItemTypeId(_arg_1:String):int;
+        function getPetTypeId(_arg_1:String):int;
     }
 }
