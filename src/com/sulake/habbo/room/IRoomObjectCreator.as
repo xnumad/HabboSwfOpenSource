@@ -19,7 +19,7 @@
         function disposeObjectWallItem(_arg_1:int, _arg_2:int, _arg_3:int=-1):void;
         function addObjectUser(_arg_1:int, _arg_2:int, _arg_3:IVector3d, _arg_4:IVector3d, _arg_5:Number, _arg_6:int, _arg_7:String=null):Boolean;
         function updateObjectUser(_arg_1:int, _arg_2:int, _arg_3:IVector3d, _arg_4:IVector3d, _arg_5:Boolean=false, _arg_6:Number=0, _arg_7:IVector3d=null, _arg_8:Number=NaN):Boolean;
-        function updateObjectPetGesture(_arg_1:int, _arg_2:int, _arg_3:String):Boolean;
+        function updateObjectUserFlatControl(_arg_1:int, _arg_2:int, _arg_3:String):Boolean;
         function updateObjectUserOwnUserAvatar(_arg_1:int, _arg_2:int):Boolean;
         function updateObjectUserFigure(_arg_1:int, _arg_2:int, _arg_3:String, _arg_4:String=null, _arg_5:String=null, _arg_6:Boolean=false):Boolean;
         function updateObjectUserAction(_arg_1:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:String=null):Boolean;

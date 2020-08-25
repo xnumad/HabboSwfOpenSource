@@ -874,7 +874,7 @@
                     _local_13 = false;
                     _local_14 = RoomObjectVariableEnum.STD;
                     _local_15 = "";
-                    this._roomCreator.updateObjectPetGesture(this._currentRoomId, _local_7.id, null);
+                    this._roomCreator.updateObjectUserFlatControl(this._currentRoomId, _local_7.id, null);
                     _local_16 = false;
                     _local_17 = false;
                     _local_18 = _local_7.actions.length;
@@ -883,7 +883,7 @@
                         switch (_local_19.actionType)
                         {
                             case "flatctrl":
-                                this._roomCreator.updateObjectPetGesture(this._currentRoomId, _local_7.id, _local_19.actionParameter);
+                                this._roomCreator.updateObjectUserFlatControl(this._currentRoomId, _local_7.id, _local_19.actionParameter);
                                 break;
                             case "sign":
                                 if (_local_18 == 1)
