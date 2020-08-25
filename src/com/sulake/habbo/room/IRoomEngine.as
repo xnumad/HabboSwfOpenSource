@@ -47,7 +47,7 @@
         function getRoomObjectCount(_arg_1:int, _arg_2:int):int;
         function getRoomObject(_arg_1:int, _arg_2:int, _arg_3:int):IRoomObject;
         function getRoomObjectWithIndex(_arg_1:int, _arg_2:int, _arg_3:int):IRoomObject;
-        function updateObjectWallItemData(_arg_1:int, _arg_2:int, _arg_3:String):Boolean;
+        function modifyRoomObject(_arg_1:int, _arg_2:int, _arg_3:String):Boolean;
         function modifyRoomObjectDataWithMap(_arg_1:int, _arg_2:int, _arg_3:String, _arg_4:Map):Boolean;
         function modifyRoomObjectData(_arg_1:int, _arg_2:int, _arg_3:String, _arg_4:String):Boolean;
         function deleteRoomObject(_arg_1:int, _arg_2:int):Boolean;

@@ -455,16 +455,16 @@
                     this._container.connection.send(new _Str_10794());
                     break;
                 case RoomWidgetFurniActionMessage.RWFUAM_ROTATE:
-                    this._container.roomEngine.updateObjectWallItemData(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
+                    this._container.roomEngine.modifyRoomObject(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_MOVE:
-                    this._container.roomEngine.updateObjectWallItemData(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_MOVE);
+                    this._container.roomEngine.modifyRoomObject(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_MOVE);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_PICKUP:
                     this.pickupObjectWithConfirmation(_local_5, _local_6);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_EJECT:
-                    this._container.roomEngine.updateObjectWallItemData(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_EJECT);
+                    this._container.roomEngine.modifyRoomObject(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_EJECT);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_USE:
                     this._container.roomEngine.useRoomObjectInActiveRoom(_local_5, _local_6);
@@ -605,7 +605,7 @@
                 {
                     if (this._widget.furniData.availableForBuildersClub)
                     {
-                        this._container.roomEngine.updateObjectWallItemData(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
+                        this._container.roomEngine.modifyRoomObject(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
                     }
                     else
                     {
@@ -614,14 +614,14 @@
                             k.dispose();
                             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
                             {
-                                _container.roomEngine.updateObjectWallItemData(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
+                                _container.roomEngine.modifyRoomObject(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
                             }
                         });
                     }
                 }
                 else
                 {
-                    this._container.roomEngine.updateObjectWallItemData(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
+                    this._container.roomEngine.modifyRoomObject(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
                 }
             }
         }

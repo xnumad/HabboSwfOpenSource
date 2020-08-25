@@ -558,7 +558,7 @@
                     _local_5 = this._roomEngine.getRoomObject(_local_3, this._placedItemId, _local_4);
                     if (_local_5 != null)
                     {
-                        this._roomEngine.updateObjectWallItemData(_local_5.getId(), _local_4, RoomObjectOperationEnum.OBJECT_PICKUP);
+                        this._roomEngine.modifyRoomObject(_local_5.getId(), _local_4, RoomObjectOperationEnum.OBJECT_PICKUP);
                     }
                 }
             }

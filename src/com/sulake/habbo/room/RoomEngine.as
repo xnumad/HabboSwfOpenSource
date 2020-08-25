@@ -2307,7 +2307,7 @@
             return [];
         }
 
-        public function updateObjectWallItemData(k:int, _arg_2:int, _arg_3:String):Boolean
+        public function modifyRoomObject(k:int, _arg_2:int, _arg_3:String):Boolean
         {
             if (this._roomObjectEventHandler != null)
             {

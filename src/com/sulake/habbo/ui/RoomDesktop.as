@@ -1182,13 +1182,13 @@
                 case RoomEngineObjectEvent.REQUEST_MOVE:
                     if (this.checkFurniManipulationRights(k.roomId, k.objectId, k.category))
                     {
-                        this._roomEngine.updateObjectWallItemData(k.objectId, k.category, RoomObjectOperationEnum.OBJECT_MOVE);
+                        this._roomEngine.modifyRoomObject(k.objectId, k.category, RoomObjectOperationEnum.OBJECT_MOVE);
                     }
                     break;
                 case RoomEngineObjectEvent.REQUEST_ROTATE:
                     if (this.checkFurniManipulationRights(k.roomId, k.objectId, k.category))
                     {
-                        this._roomEngine.updateObjectWallItemData(k.objectId, k.category, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
+                        this._roomEngine.modifyRoomObject(k.objectId, k.category, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
                     }
                     break;
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_CREDITFURNI:

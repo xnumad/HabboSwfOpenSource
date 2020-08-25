@@ -402,7 +402,7 @@
             var _local_2:IRoomObject = this._Str_8946(k);
             if (_local_2 != null)
             {
-                this._widget.handler.container.roomEngine.updateObjectWallItemData(_local_2.getId(), RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, RoomObjectOperationEnum.OBJECT_PICKUP);
+                this._widget.handler.container.roomEngine.modifyRoomObject(_local_2.getId(), RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, RoomObjectOperationEnum.OBJECT_PICKUP);
                 return true;
             }
             return false;
