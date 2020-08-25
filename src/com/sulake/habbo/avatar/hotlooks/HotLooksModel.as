@@ -73,10 +73,10 @@
             var k:String = _controller.manager.getProperty("avatareditor.promohabbos");
             var _local_2:URLRequest = new URLRequest(k);
             var _local_3:AssetLoaderStruct = _controller.manager.assets.loadAssetFromFile("hotLooksConfiguration", _local_2, "text/xml");
-            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_23272);
+            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onHotLooksConfiguration);
         }
 
-        private function _Str_23272(event:Event=null):void
+        private function onHotLooksConfiguration(event:Event=null):void
         {
             var habbos:XML;
             var processedHotLooks:int;
