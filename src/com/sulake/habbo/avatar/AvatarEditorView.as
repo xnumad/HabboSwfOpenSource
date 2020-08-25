@@ -366,7 +366,7 @@
                 this._editor._Str_8360();
             }
             this._Str_17697(_local_2);
-            this._Str_26459(this._currentViewId);
+            this.setViewToCategory(this._currentViewId);
         }
 
         public function _Str_5985(k:String, _arg_2:Boolean=false):void
@@ -374,7 +374,7 @@
             if (_arg_2)
             {
             }
-            this._Str_26459(k);
+            this.setViewToCategory(k);
         }
 
         private function _Str_24588():void
@@ -434,7 +434,7 @@
             }
         }
 
-        private function _Str_26459(k:String):void
+        private function setViewToCategory(k:String):void
         {
             if (k == null)
             {

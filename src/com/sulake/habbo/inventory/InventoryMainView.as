@@ -241,20 +241,20 @@
                 }
                 else
                 {
-                    this._Str_26459(k);
+                    this.setViewToCategory(k);
                 }
             }
             else
             {
                 if ((((_arg_3) && (!(this._lastViewId == null))) && (!(this._lastViewId == k))))
                 {
-                    this._Str_26459(k);
+                    this.setViewToCategory(k);
                 }
                 _local_4.visible = true;
                 _local_4.activate();
                 if (((!(k == this._lastViewId)) || (!(this._controller._Str_18826(k)))))
                 {
-                    this._Str_26459(k);
+                    this.setViewToCategory(k);
                 }
                 this._controller._Str_18877(k);
             }
@@ -451,7 +451,7 @@
             }
         }
 
-        private function _Str_26459(k:String):void
+        private function setViewToCategory(k:String):void
         {
             if (k == null)
             {
