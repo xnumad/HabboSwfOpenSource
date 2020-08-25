@@ -507,7 +507,7 @@
                             }
                             this._saveTimer.start();
                             this._editorContent.findChildByName("save").disable();
-                            this._editor._Str_22528();
+                            this._editor.saveCurrentSelection();
                             this._editor.manager.close(this._editor.instanceId);
                             return;
                         case "cancel":

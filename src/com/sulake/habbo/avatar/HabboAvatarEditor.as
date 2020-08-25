@@ -299,7 +299,7 @@
             return this._figures[this._gender];
         }
 
-        public function _Str_22528():void
+        public function saveCurrentSelection():void
         {
             var _local_3:_Str_4639;
             var k:String = this.figureData.getFigureString();
