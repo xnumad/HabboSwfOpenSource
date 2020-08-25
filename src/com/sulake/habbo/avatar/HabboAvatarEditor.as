@@ -330,7 +330,7 @@
             }
         }
 
-        public function _Str_24037(k:IAvatarEditorCategoryModel, _arg_2:String):CategoryData
+        public function generateDataContent(k:IAvatarEditorCategoryModel, _arg_2:String):CategoryData
         {
             var _local_5:int;
             var _local_6:IFigurePartSet;

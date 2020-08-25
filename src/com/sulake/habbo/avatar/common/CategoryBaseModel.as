@@ -67,7 +67,7 @@
             var _local_2:CategoryData = this._categories[k];
             if (_local_2 == null)
             {
-                _local_3 = this._controller._Str_24037(this, k);
+                _local_3 = this._controller.generateDataContent(this, k);
                 if (_local_3)
                 {
                     this._categories[k] = _local_3;
