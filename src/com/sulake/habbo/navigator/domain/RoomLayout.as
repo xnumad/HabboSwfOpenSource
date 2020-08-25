@@ -16,12 +16,12 @@
             this._name = _arg_3;
         }
 
-        public function get _Str_17446():int
+        public function get requiredClubLevel():int
         {
             return this._level;
         }
 
-        public function get _Str_15099():int
+        public function get tileSize():int
         {
             return this._tileSize;
         }

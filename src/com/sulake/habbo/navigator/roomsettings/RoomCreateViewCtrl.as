@@ -347,13 +347,13 @@
             k.width = (2 * _local_4.width);
             k.height = _local_4.height;
             _arg_2.view = _local_4;
-            ITextWindow(_arg_2.view.findChildByName("tile_size_txt")).text = ((_arg_2._Str_15099 + " ") + this._navigator.getText("navigator.createroom.tilesize"));
-            _local_4.findChildByName("club_icon").visible = ((_arg_2._Str_17446 == HabboClubLevelEnum._Str_2964) || (_arg_2._Str_17446 == HabboClubLevelEnum._Str_2575));
+            ITextWindow(_arg_2.view.findChildByName("tile_size_txt")).text = ((_arg_2.tileSize + " ") + this._navigator.getText("navigator.createroom.tilesize"));
+            _local_4.findChildByName("club_icon").visible = ((_arg_2.requiredClubLevel == HabboClubLevelEnum._Str_2964) || (_arg_2.requiredClubLevel == HabboClubLevelEnum._Str_2575));
         }
 
         private function isAllowed(k:RoomLayout, _arg_2:Boolean=true):Boolean
         {
-            switch (k._Str_17446)
+            switch (k.requiredClubLevel)
             {
                 case HabboClubLevelEnum._Str_3159:
                     return true;
