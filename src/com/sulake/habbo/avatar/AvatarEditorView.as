@@ -408,7 +408,7 @@
                 case AvatarEditorSideCategory.NOTHING:
                     break;
                 case AvatarEditorSideCategory.WARDROBE:
-                    _local_3 = this._editor._Str_25527(AvatarEditorSideCategory.WARDROBE);
+                    _local_3 = this._editor.getSideContentWindowContainer(AvatarEditorSideCategory.WARDROBE);
                     break;
             }
             var _local_4:IWindow = _local_2.removeChildAt(0);

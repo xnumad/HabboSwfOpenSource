@@ -258,7 +258,7 @@
             }
         }
 
-        public function _Str_25527(k:String):IWindowContainer
+        public function getSideContentWindowContainer(k:String):IWindowContainer
         {
             var _local_2:ISideContentModel = (this._sideContents.getValue(k) as ISideContentModel);
             if (_local_2 != null)
