@@ -201,7 +201,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17054;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17148;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2GameDirectoryStatusMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17782;
+	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2StopCounterMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2UserLeftGameMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2StartingGameFailedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2AccountGameStatusMessageEvent;
@@ -1289,7 +1289,7 @@
             INCOMING_PACKETS[3150] = IssuePickFailedMessageEvent;
             INCOMING_PACKETS[3151] = FurniListInvalidateEvent;
             INCOMING_PACKETS[3164] = RecyclerPrizesEvent;
-            INCOMING_PACKETS[3191] = _Str_17782;
+            INCOMING_PACKETS[3191] = Game2StopCounterMessageEvent;
             INCOMING_PACKETS[3192] = IssueDeletedMessageEvent;
             INCOMING_PACKETS[3201] = _Str_7564;
             INCOMING_PACKETS[3207] = SlideObjectBundleMessageEvent;

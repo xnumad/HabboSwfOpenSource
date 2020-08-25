@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_14882 implements IMessageParser 
+    public class Game2StopCounterMessageParser implements IMessageParser
     {
 
 
