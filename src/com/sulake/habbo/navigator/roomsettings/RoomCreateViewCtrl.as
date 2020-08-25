@@ -189,7 +189,7 @@
             this._selectableAndVisibleCategories = [];
             for each (_local_2 in this._navigator.data._Str_11717)
             {
-                if (((!(_local_2._Str_15540)) && ((!(_local_2._Str_13024)) || ((_local_2._Str_13024) && (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum._Str_8629))))))
+                if (((!(_local_2.automatic)) && ((!(_local_2._Str_13024)) || ((_local_2._Str_13024) && (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum._Str_8629))))))
                 {
                     this._selectableAndVisibleCategories.push(_local_2);
                     k.push(_local_2._Str_14718);
@@ -451,7 +451,7 @@
             {
                 if (this._categoryMenu.selection == i)
                 {
-                    selectedRoomCategory = roomCategory._Str_4760;
+                    selectedRoomCategory = roomCategory.nodeId;
                     break;
                 }
                 i++;

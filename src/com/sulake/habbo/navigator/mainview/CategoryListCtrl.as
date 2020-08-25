@@ -63,8 +63,8 @@
                         _local_8.id = _local_6;
                         _local_5.addChild(_local_8);
                     }
-                    _local_9 = _local_3.getValue(_local_7._Str_4760);
-                    _local_10 = _local_4.getValue(_local_7._Str_4760);
+                    _local_9 = _local_3.getValue(_local_7.nodeId);
+                    _local_10 = _local_4.getValue(_local_7.nodeId);
                     this._Str_2966(_local_8, _local_7, _local_9, _local_10);
                     _local_8.y = k;
                     k = (k + (_local_8.height + _Str_7717));
@@ -101,7 +101,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this._navigator.data.allCategories[_arg_2.id];
-                this._navigator._Str_2813._Str_2798(Tabs._Str_3866, Tabs._Str_5348, ("" + _local_3._Str_4760));
+                this._navigator._Str_2813._Str_2798(Tabs._Str_3866, Tabs._Str_5348, ("" + _local_3.nodeId));
             }
         }
 

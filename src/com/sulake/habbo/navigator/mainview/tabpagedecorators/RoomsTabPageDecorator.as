@@ -47,7 +47,7 @@
             }
             for each (_local_2 in this._navigator.data._Str_11717)
             {
-                k.push(_local_2._Str_20353);
+                k.push(_local_2.nodeName);
             }
             this._filter.populate(k);
             this._filter.selection = this._Str_18823;
@@ -119,7 +119,7 @@
                             Logger.log(((("No fc found: " + k) + ", ") + this._navigator.data._Str_11717.length));
                             return;
                         }
-                        _local_4 = _local_3._Str_4760;
+                        _local_4 = _local_3.nodeId;
                         Logger.log(("Searching with catId: " + _local_4));
                         this._navigator._Str_2813._Str_2798(Tabs._Str_3866, Tabs._Str_5348, ("" + _local_4));
                     }

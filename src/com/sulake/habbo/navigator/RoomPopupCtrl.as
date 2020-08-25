@@ -185,9 +185,9 @@
             var _local_2:FlatCategory;
             for each (_local_2 in navigator.data.allCategories)
             {
-                if (_local_2._Str_4760 == k)
+                if (_local_2.nodeId == k)
                 {
-                    return _local_2._Str_20353;
+                    return _local_2.nodeName;
                 }
             }
             return "";

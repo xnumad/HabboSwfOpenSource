@@ -49,7 +49,7 @@
             this._visibleAndSelectableCategories = [];
             for each (_local_5 in this._navigator.data._Str_11717)
             {
-                if (((!(_local_5._Str_15540)) && ((!(_local_5._Str_13024)) || ((_local_5._Str_13024) && (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum._Str_8629))))))
+                if (((!(_local_5.automatic)) && ((!(_local_5._Str_13024)) || ((_local_5._Str_13024) && (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum._Str_8629))))))
                 {
                     this._visibleAndSelectableCategories.push(_local_5);
                 }
@@ -81,7 +81,7 @@
                 switch (_arg_2.name)
                 {
                     case "ok":
-                        _local_3 = FlatCategory(this._visibleAndSelectableCategories[Math.max(0, this._categorySelection)])._Str_4760;
+                        _local_3 = FlatCategory(this._visibleAndSelectableCategories[Math.max(0, this._categorySelection)]).nodeId;
                         this._navigator.communication.connection.send(new _Str_11937(this._navigator.data._Str_20386, _local_3, this._tradeModeSelection));
                         this.close();
                         break;

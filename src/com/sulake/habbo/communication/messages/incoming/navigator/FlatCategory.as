@@ -23,12 +23,12 @@
             this._Str_22231 = k.readBoolean();
         }
 
-        public function get _Str_4760():int
+        public function get nodeId():int
         {
             return this._nodeId;
         }
 
-        public function get _Str_20353():String
+        public function get nodeName():String
         {
             return this._nodeName;
         }
@@ -38,7 +38,7 @@
             return this._visible;
         }
 
-        public function get _Str_15540():Boolean
+        public function get automatic():Boolean
         {
             return this._automatic;
         }
