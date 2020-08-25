@@ -500,7 +500,7 @@
             return new CategoryData(_local_3, _local_4);
         }
 
-        public function _Str_16133():Boolean
+        public function isSideContentEnabled():Boolean
         {
             return this._enableSideContent;
         }

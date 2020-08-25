@@ -344,15 +344,15 @@
             var k:IWindow = (this._editorContent.findChildByName("wardrobeButtonContainer") as IWindow);
             if (((k) && (this._editor.manager.sessionData)))
             {
-                k.visible = ((this._editor.manager.sessionData.clubLevel >= HabboClubLevelEnum._Str_2964) && (this._editor._Str_16133()));
-                k.visible = this._editor._Str_16133();
+                k.visible = ((this._editor.manager.sessionData.clubLevel >= HabboClubLevelEnum._Str_2964) && (this._editor.isSideContentEnabled()));
+                k.visible = this._editor.isSideContentEnabled();
             }
             var _local_2:String = AvatarEditorSideCategory.NOTHING;
             if (((this._currentSideContentType == AvatarEditorSideCategory.WARDROBE) || (this._showWardrobeOnUpdate)))
             {
                 _local_2 = AvatarEditorSideCategory.WARDROBE;
             }
-            if (!this._editor._Str_16133())
+            if (!this._editor.isSideContentEnabled())
             {
                 _local_2 = AvatarEditorSideCategory.NOTHING;
             }
