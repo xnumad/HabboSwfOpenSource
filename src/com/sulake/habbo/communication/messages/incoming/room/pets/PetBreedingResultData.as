@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.room.pets
 {
-    public class PetInfoMessageParser 
+    public class PetBreedingResultData
     {
         private var _stuffId:int;
         private var _classId:int;
@@ -10,7 +10,7 @@
         private var _rarityLevel:int;
         private var _Str_19401:Boolean;
 
-        public function PetInfoMessageParser(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:String, _arg_6:int, _arg_7:Boolean)
+        public function PetBreedingResultData(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:String, _arg_6:int, _arg_7:Boolean)
         {
             this._stuffId = k;
             this._classId = _arg_2;
