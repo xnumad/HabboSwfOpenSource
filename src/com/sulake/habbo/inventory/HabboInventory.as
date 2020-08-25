@@ -572,7 +572,7 @@
         public function toggleInventoryPage(k:String, _arg_2:String=null, _arg_3:Boolean=false):void
         {
             this._currentCategoryId = k;
-            var _local_4:Boolean = this._view._Str_5985(k, false, _arg_3);
+            var _local_4:Boolean = this._view.toggleCategoryView(k, false, _arg_3);
             if (_local_4)
             {
                 this._Str_18877(k);
@@ -601,7 +601,7 @@
             switch (k)
             {
                 case InventorySubCategory.TRADING:
-                    this._view._Str_5985(InventoryCategory.FURNI, false);
+                    this._view.toggleCategoryView(InventoryCategory.FURNI, false);
                     return;
             }
         }

@@ -369,7 +369,7 @@
             this.setViewToCategory(this._currentViewId);
         }
 
-        public function _Str_5985(k:String, _arg_2:Boolean=false):void
+        public function toggleCategoryView(k:String, _arg_2:Boolean=false):void
         {
             if (_arg_2)
             {

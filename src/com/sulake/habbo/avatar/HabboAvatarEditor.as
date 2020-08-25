@@ -272,7 +272,7 @@
         {
             if (this._view)
             {
-                this._view._Str_5985(k, false);
+                this._view.toggleCategoryView(k, false);
             }
         }
 

@@ -215,7 +215,7 @@
             this._controller._Str_18877((((this._lastSubViewId) && (this._lastSubViewId.length > 0)) ? this._lastSubViewId : this._lastViewId));
         }
 
-        public function _Str_5985(k:String, _arg_2:Boolean=true, _arg_3:Boolean=false):Boolean
+        public function toggleCategoryView(k:String, _arg_2:Boolean=true, _arg_3:Boolean=false):Boolean
         {
             var _local_4:IWindow = this._Str_5493();
             if (_local_4 == null)
@@ -645,31 +645,31 @@
             {
                 if (this._lastViewId == InventoryCategory.PETS)
                 {
-                    this._Str_5985(InventoryCategory.PETS);
+                    this.toggleCategoryView(InventoryCategory.PETS);
                 }
                 else
                 {
                     if (this._lastViewId == InventoryCategory.FURNI)
                     {
-                        this._Str_5985(InventoryCategory.FURNI);
+                        this.toggleCategoryView(InventoryCategory.FURNI);
                     }
                     else
                     {
                         if (this._lastViewId == InventoryCategory.RENTABLES)
                         {
-                            this._Str_5985(InventoryCategory.RENTABLES);
+                            this.toggleCategoryView(InventoryCategory.RENTABLES);
                         }
                         else
                         {
                             if (this._lastViewId == InventoryCategory.BADGES)
                             {
-                                this._Str_5985(InventoryCategory.BADGES);
+                                this.toggleCategoryView(InventoryCategory.BADGES);
                             }
                             else
                             {
                                 if (this._lastViewId == InventoryCategory.BOTS)
                                 {
-                                    this._Str_5985(InventoryCategory.BOTS);
+                                    this.toggleCategoryView(InventoryCategory.BOTS);
                                 }
                                 else
                                 {
