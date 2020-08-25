@@ -744,7 +744,7 @@
                 return;
             }
             var _local_3:ItemDataUpdateMessageParser = _local_2.getParser();
-            this._roomCreator.updateObjectUserFlatControl(this._currentRoomId, _local_3.id, _local_3.itemData);
+            this._roomCreator.updateObjectWallItemData(this._currentRoomId, _local_3.id, _local_3.itemData);
         }
 
         private function addWallItem(k:int, _arg_2:ItemMessageData):void

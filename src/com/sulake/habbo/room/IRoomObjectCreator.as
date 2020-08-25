@@ -13,7 +13,7 @@
         function disposeObjectFurniture(_arg_1:int, _arg_2:int, _arg_3:int=-1, _arg_4:Boolean=false):void;
         function addObjectWallItem(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:IVector3d, _arg_5:IVector3d, _arg_6:int, _arg_7:String, _arg_8:int=0, _arg_9:int=0, _arg_10:String="", _arg_11:int=-1, _arg_12:Boolean=true):Boolean;
         function updateObjectWallItem(_arg_1:int, _arg_2:int, _arg_3:IVector3d, _arg_4:IVector3d, _arg_5:int, _arg_6:String):Boolean;
-        function updateObjectUserFlatControl(_arg_1:int, _arg_2:int, _arg_3:String):Boolean;
+        function updateObjectWallItemData(_arg_1:int, _arg_2:int, _arg_3:String):Boolean;
         function updateObjectWallItemLocation(_arg_1:int, _arg_2:int, _arg_3:IVector3d):Boolean;
         function updateObjectWallItemExpiryTime(_arg_1:int, _arg_2:int, _arg_3:int):Boolean;
         function disposeObjectWallItem(_arg_1:int, _arg_2:int, _arg_3:int=-1):void;

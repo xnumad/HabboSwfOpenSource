@@ -2967,7 +2967,7 @@
             }
         }
 
-        public function updateObjectUserFlatControl(k:int, _arg_2:int, _arg_3:String):Boolean
+        public function updateObjectWallItemData(k:int, _arg_2:int, _arg_3:String):Boolean
         {
             var _local_4:IRoomObjectController = this.getObjectWallItem(k, _arg_2);
             if (_local_4 == null)
