@@ -73,7 +73,7 @@
         private var _shadowAsset:BitmapDataAsset;
         private var _currentHeadAngleDeg:int = -1;
         private var _angle:int = -1;
-        private var _expressionType:int = -1;
+        private var _currentHeadAngle:int = -1;
         private var _gesture:int = 2;
         private var _additions:Map;
         private var FLOOR_COLOR:int = -1;
@@ -718,11 +718,11 @@
                     _local_6 = ((_local_6 + 360) % 360);
                     this._activeAvatarImage.setDirectionAngle(AvatarSetType.FULL, _local_6);
                 }
-                if (((!(_local_7 == this._expressionType)) || (_arg_4)))
+                if (((!(_local_7 == this._currentHeadAngle)) || (_arg_4)))
                 {
                     _local_5 = true;
-                    this._expressionType = _local_7;
-                    if (this._expressionType != this._angle)
+                    this._currentHeadAngle = _local_7;
+                    if (this._currentHeadAngle != this._angle)
                     {
                         _local_7 = (_local_7 - (135 - 22.5));
                         _local_7 = ((_local_7 + 360) % 360);
