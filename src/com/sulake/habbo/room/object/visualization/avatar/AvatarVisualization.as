@@ -74,7 +74,7 @@
         private var _currentHeadAngleDeg:int = -1;
         private var _angle:int = -1;
         private var _currentHeadAngle:int = -1;
-        private var _gesture:int = 2;
+        private var _extraSpritesStartIndex:int = 2;
         private var _additions:Map;
         private var FLOOR_COLOR:int = -1;
         private var _posture:String = "";
@@ -888,7 +888,7 @@
                 this._Str_1620(this._activeAvatarImage);
                 if (this._additions)
                 {
-                    _local_14 = this._gesture;
+                    _local_14 = this._extraSpritesStartIndex;
                     for each (_local_18 in this._additions)
                     {
                         _local_18.update(getSprite(_local_14++), _local_7);
@@ -902,7 +902,7 @@
             }
             if (this._additions)
             {
-                _local_14 = this._gesture;
+                _local_14 = this._extraSpritesStartIndex;
                 for each (_local_18 in this._additions)
                 {
                     if (_local_18.animate(getSprite(_local_14++)))
@@ -1169,7 +1169,7 @@
             {
                 createSprites(_local_2);
             }
-            this._gesture = _local_2;
+            this._extraSpritesStartIndex = _local_2;
             if (this._additions)
             {
                 for each (_local_5 in this._additions)
