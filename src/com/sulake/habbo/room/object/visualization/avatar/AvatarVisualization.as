@@ -78,7 +78,7 @@
         private var _additions:Map;
         private var FLOOR_COLOR:int = -1;
         private var _posture:String = "";
-        private var _Str_13611:String = "";
+        private var _postureParameter:String = "";
         private var _isTalking:Boolean = false;
         private var _isSleeping:Boolean = false;
         private var _isBlinking:Boolean = false;
@@ -333,9 +333,9 @@
                     _local_4 = true;
                 }
                 _local_7 = k.getString(RoomObjectVariableEnum.FIGURE_POSTURE_PARAMETER);
-                if (_local_7 != this._Str_13611)
+                if (_local_7 != this._postureParameter)
                 {
-                    this._Str_13611 = _local_7;
+                    this._postureParameter = _local_7;
                     _local_4 = true;
                 }
                 _local_5 = (k.getNumber(RoomObjectVariableEnum.FIGURE_CAN_STAND_UP) > 0);
@@ -625,7 +625,7 @@
             if (this._posture == "lay")
             {
                 this._isSittingManual = true;
-                _local_2 = int(this._Str_13611);
+                _local_2 = int(this._postureParameter);
                 if (_local_2 < 0)
                 {
                     this._isLaying = true;
@@ -1107,7 +1107,7 @@
                 return;
             }
             k._Str_913();
-            k.appendAction(AvatarAction.POSTURE, this._posture, this._Str_13611);
+            k.appendAction(AvatarAction.POSTURE, this._posture, this._postureParameter);
             if (this._signType > 0)
             {
                 k.appendAction(AvatarAction.GESTURE, AvatarAction.getGesture(this._signType));
