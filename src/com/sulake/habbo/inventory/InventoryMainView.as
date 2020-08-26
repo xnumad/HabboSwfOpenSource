@@ -315,7 +315,7 @@
                 _local_3 = ITabContextWindow(_arg_2).selector.getSelected().name;
                 if (_local_3 != this._lastViewId)
                 {
-                    this._Str_25305(this._lastViewId);
+                    this.resetUnseenCounters(this._lastViewId);
                     this._controller.toggleInventoryPage(_local_3);
                 }
             }
@@ -429,7 +429,7 @@
             }
         }
 
-        private function _Str_25305(k:String):void
+        private function resetUnseenCounters(k:String):void
         {
             switch (k)
             {
