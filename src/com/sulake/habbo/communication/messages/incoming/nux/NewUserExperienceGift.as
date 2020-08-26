@@ -6,7 +6,7 @@
 
     public class NewUserExperienceGift 
     {
-        private var _productOfferList:Vector.<_Str_5589>;
+        private var _productOfferList:Vector.<NewUserExperienceGiftProduct>;
         private var _thumbnailUrl:String;
 
         public function NewUserExperienceGift(k:IMessageDataWrapper)
@@ -16,17 +16,17 @@
             {
                 this._thumbnailUrl = null;
             }
-            this._productOfferList = new Vector.<_Str_5589>();
+            this._productOfferList = new Vector.<NewUserExperienceGiftProduct>();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._productOfferList.push(new _Str_5589(k));
+                this._productOfferList.push(new NewUserExperienceGiftProduct(k));
                 _local_3++;
             }
         }
 
-        public function get _Str_13979():Vector.<_Str_5589>
+        public function get _Str_13979():Vector.<NewUserExperienceGiftProduct>
         {
             return this._productOfferList;
         }

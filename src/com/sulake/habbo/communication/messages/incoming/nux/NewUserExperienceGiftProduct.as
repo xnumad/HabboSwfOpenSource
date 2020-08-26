@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5589 
+    public class NewUserExperienceGiftProduct
     {
         private var _Str_2570:String;
         private var _Str_3286:String;
 
-        public function _Str_5589(k:IMessageDataWrapper)
+        public function NewUserExperienceGiftProduct(k:IMessageDataWrapper)
         {
             this._Str_2570 = k.readString();
             this._Str_3286 = k.readString();

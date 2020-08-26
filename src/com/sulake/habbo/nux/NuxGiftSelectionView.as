@@ -12,7 +12,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IButtonWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
-    import com.sulake.habbo.communication.messages.incoming.nux._Str_5589;
+    import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftProduct;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -100,7 +100,7 @@
             var _local_11:String;
             var _local_12:String;
             var _local_13:int;
-            var _local_14:_Str_5589;
+            var _local_14:NewUserExperienceGiftProduct;
             var _local_15:String;
             var _local_16:String;
             var _local_17:IProductData;
