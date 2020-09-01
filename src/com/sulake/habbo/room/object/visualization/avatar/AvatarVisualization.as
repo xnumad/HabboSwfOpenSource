@@ -885,7 +885,7 @@
                 }
                 this._Str_23519(_local_7);
                 _local_10 = this.updateObject(_local_5, k, _arg_3, true);
-                this._Str_1620(this._activeAvatarImage);
+                this.updateActions(this._activeAvatarImage);
                 if (this._additions)
                 {
                     _local_14 = this._extraSpritesStartIndex;
@@ -1096,7 +1096,7 @@
             }
         }
 
-        private function _Str_1620(k:IAvatarImage):void
+        private function updateActions(k:IAvatarImage):void
         {
             var _local_3:ISpriteDataContainer;
             var _local_4:String;

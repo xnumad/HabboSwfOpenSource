@@ -98,9 +98,9 @@
             this._defaultAction = this._actionManager.getDefaultAction();
         }
 
-        public function _Str_1620(k:XML):void
+        public function updateActions(k:XML):void
         {
-            this._actionManager._Str_1620(k);
+            this._actionManager.updateActions(k);
             this._defaultAction = this._actionManager.getDefaultAction();
         }
 

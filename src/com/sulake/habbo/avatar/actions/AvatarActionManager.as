@@ -13,10 +13,10 @@
         {
             this._assets = k;
             this._actions = new Dictionary();
-            this._Str_1620(_arg_2);
+            this.updateActions(_arg_2);
         }
 
-        public function _Str_1620(k:XML):void
+        public function updateActions(k:XML):void
         {
             var _local_2:XML;
             var _local_3:String;

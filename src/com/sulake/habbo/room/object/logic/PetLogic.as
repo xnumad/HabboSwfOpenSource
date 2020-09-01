@@ -291,11 +291,11 @@
             }
             if (((!(object == null)) && (!(object.getModelController() == null))))
             {
-                this._Str_1620(k, object.getModelController());
+                this.updateActions(k, object.getModelController());
             }
         }
 
-        private function _Str_1620(k:int, _arg_2:IRoomObjectModelController):void
+        private function updateActions(k:int, _arg_2:IRoomObjectModelController):void
         {
             if (((this._gestureEndTimeStamp > 0) && (k > this._gestureEndTimeStamp)))
             {

@@ -406,12 +406,12 @@
                 _local_4 = object.getModelController();
                 if (_local_4 != null)
                 {
-                    this._Str_1620(k, _local_4);
+                    this.updateActions(k, _local_4);
                 }
             }
         }
 
-        private function _Str_1620(k:int, _arg_2:IRoomObjectModelController):void
+        private function updateActions(k:int, _arg_2:IRoomObjectModelController):void
         {
             if (this._talkingEndTimeStamp > 0)
             {

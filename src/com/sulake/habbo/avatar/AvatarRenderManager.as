@@ -98,7 +98,7 @@
             }
             var _local_2:XML = <actions><action id="Default" precedence="1000" state="std" main="1" isdefault="1" geometrytype="vertical" activepartset="figure" assetpartdefinition="std"/></actions>
             ;
-            this._structure._Str_1620(((assets.hasAsset("HabboAvatarActions")) ? (assets.getAssetByName("HabboAvatarActions").content as XML) : _local_2));
+            this._structure.updateActions(((assets.hasAsset("HabboAvatarActions")) ? (assets.getAssetByName("HabboAvatarActions").content as XML) : _local_2));
             this._actionsAreReady = true;
             this.createStructure();
         }
