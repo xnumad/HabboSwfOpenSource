@@ -382,6 +382,7 @@
                 catch(e:Error)
                 {
                     Core.crash((getKeyValue([[65220, 65192, 65183, 65179], [65185, 65185, 65252, 65167], [65171, 65249, 65168, 65182], [65164, 65162, 65175, 65243], [65169, 65163, 65173, 65160], [65161, 65164, 65158, 65164], [65234, 65156, 65163, 65148], [65147, 65164, 65157, 65158], [65226, 65140, 65141, 65150, 65144, 65150]], 0) + getQualifiedClassName(parser)), e.errorID, e);
+                    //Core.crash(("Failed to parse incoming message using" + getQualifiedClassName(parser)), e.errorID, e);
                 }
             }
             return events;
@@ -434,6 +435,7 @@
         {
             this._timeOutTimer.stop();
             ErrorReportStorage.addDebugData(this.getKeyValue([[65223, 65178, 65178, 65177], [65185, 65186, 65168, 65178], [65171, 65171, 65196, 65174], [65169, 65176, 65162]], 0), (this.getKeyValue([[65223, 65178, 65178, 65177], [65185, 65186, 65168, 65182], [65182, 65249, 65175, 65169, 65246]], 0) + (getTimer() - this._timeOutStarted)));
+            //ErrorReportStorage.addDebugData("ConnectionTimer", ("Connected in " + (getTimer() - this._timeOutStarted)));
             dispatchEvent(k);
         }
 
@@ -441,6 +443,7 @@
         {
             this._timeOutTimer.stop();
             ErrorReportStorage.addDebugData(this.getKeyValue([[65223, 65178, 65178, 65177], [65185, 65186, 65168, 65178], [65171, 65171, 65196, 65174], [65169, 65176, 65162]], 0), (this.getKeyValue([[65223, 65181, 65177, 65172], [65185, 65185, 65252, 65178], [65172, 65249]], 0) + (getTimer() - this._timeOutStarted)));
+            //ErrorReportStorage.addDebugData("ConnectionTimer", ("Closed in " + (getTimer() - this._timeOutStarted)));
             dispatchEvent(k);
         }
 
@@ -448,6 +451,7 @@
         {
             this._timeOutTimer.stop();
             ErrorReportStorage.addDebugData(this.getKeyValue([[65223, 65178, 65178, 65177], [65185, 65186, 65168, 65178], [65171, 65171, 65196, 65174], [65169, 65176, 65162]], 0), (this.getKeyValue([[65223, 65178, 65179, 65175], [65178, 65184, 65168, 65182], [65182, 65249, 65175, 65169, 65246]], 0) + (getTimer() - this._timeOutStarted)));
+            //ErrorReportStorage.addDebugData("ConnectionTimer", ("Completed in " + (getTimer() - this._timeOutStarted)));
             dispatchEvent(k);
         }
 
@@ -455,6 +459,7 @@
         {
             this._timeOutTimer.stop();
             ErrorReportStorage.addDebugData(this.getKeyValue([[65223, 65178, 65178, 65177], [65185, 65186, 65168, 65178], [65171, 65171, 65196, 65174], [65169, 65176, 65162]], 0), (this.getKeyValue([[65207, 65188, 65189, 65170], [65172, 65180, 65168, 65162], [65213, 65167, 65166, 65168], [65164, 65245, 65171, 65165, 65242]], 0) + (getTimer() - this._timeOutStarted)));
+            //ErrorReportStorage.addDebugData("ConnectionTimer", ("SecurityError in " + (getTimer() - this._timeOutStarted)));
             dispatchEvent(k);
         }
 
@@ -462,6 +467,7 @@
         {
             this._timeOutTimer.stop();
             ErrorReportStorage.addDebugData(this.getKeyValue([[65223, 65178, 65178, 65177], [65185, 65186, 65168, 65178], [65171, 65171, 65196, 65174], [65169, 65176, 65162]], 0), (this.getKeyValue([[65217, 65210, 65219, 65173], [65172, 65174, 65170, 65251], [65177, 65171, 65248]], 0) + (getTimer() - this._timeOutStarted)));
+            //ErrorReportStorage.addDebugData("ConnectionTimer", ("IOError in " + (getTimer() - this._timeOutStarted)));
             switch (k.type)
             {
                 case IOErrorEvent.IO_ERROR:
@@ -480,8 +486,10 @@
         {
             this._timeOutTimer.stop();
             ErrorReportStorage.addDebugData(this.getKeyValue([[65223, 65178, 65178, 65177], [65185, 65186, 65168, 65178], [65171, 65171, 65196, 65174], [65169, 65176, 65162]], 0), (this.getKeyValue([[65206, 65184, 65179, 65186], [65207, 65168, 65168, 65251], [65177, 65171, 65248, 65247]], 0) + (getTimer() - this._timeOutStarted)));
+            //ErrorReportStorage.addDebugData("ConnectionTimer", ("TimeOut in  " + (getTimer() - this._timeOutStarted)));
             var ioErrorEvent:IOErrorEvent = new IOErrorEvent(IOErrorEvent.IO_ERROR);
             ioErrorEvent.text = ((this.getKeyValue([[65207, 65178, 65189, 65180], [65185, 65169, 65252, 65199], [65177, 65172, 65179, 65168], [65161, 65161, 65244, 65235]], 0) + this._timeOutTimer.delay) + this.getKeyValue([[65258, 65180, 65173, 65246], [65240, 65253, 65204, 65172], [65167, 65166, 65175, 65181], [65170, 65176, 65244, 65205], [65169, 65159, 65171, 65152], [65173, 65161, 65160, 65221]], 0));
+            //ioErrorEvent.text = (("Socket Timeout (" + this._timeOutTimer.delay) + " ms). Possible Firewall.");
             dispatchEvent(ioErrorEvent);
         }
 
