@@ -17,7 +17,7 @@
 
     public class ConcurrentUsersInfoElementHandler implements IElementHandler, IDisposable 
     {
-        private static const _Str_5992:int = 0;
+        private static const STATE_DISABLED:int = 0;
         private static const _Str_4158:int = 1;
         private static const _Str_17668:int = 2;
         private static const _Str_17429:int = 3;
@@ -96,7 +96,7 @@
             this._landingView.windowManager.registerLocalizationParameter("landing.view.concurrentusers.bodytext", "domain", this._landingView.localizationManager.getLocalization("landing.view.hotel.domain", "Habbo"));
             switch (this._state)
             {
-                case _Str_5992:
+                case STATE_DISABLED:
                     this._window.findChildByName("state.active").visible = true;
                     this._window.findChildByName("state.achieved").visible = false;
                     break;

@@ -9,7 +9,7 @@
     public class TileCursorLogic extends ObjectLogicBase 
     {
         private static const _Str_16101:int = 0;
-        private static const _Str_5992:int = 1;
+        private static const STATE_DISABLED:int = 1;
         private static const _Str_16978:int = 6;
 
         private var _Str_16735:String;
@@ -25,7 +25,7 @@
                 if (_local_2 != null)
                 {
                     _local_2.setNumber(RoomObjectVariableEnum.FURNITURE_ALPHA_MULTIPLIER, 1);
-                    object.setState(_Str_5992, 0);
+                    object.setState(STATE_DISABLED, 0);
                 }
             }
         }
@@ -52,13 +52,13 @@
             {
                 if (this._Str_17144)
                 {
-                    object.setState(_Str_5992, 0);
+                    object.setState(STATE_DISABLED, 0);
                 }
                 else
                 {
                     if (!_local_2.visible)
                     {
-                        object.setState(_Str_5992, 0);
+                        object.setState(STATE_DISABLED, 0);
                     }
                     else
                     {
