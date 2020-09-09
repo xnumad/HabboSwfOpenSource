@@ -469,7 +469,7 @@
             if ((((!(this._moderationManager == null)) && (!(this._moderationManager.issueManager == null))) && (!(this._issueBundle == null))))
             {
                 this._moderationManager.issueManager._Str_17098(this._issueBundle.id);
-                this._Str_3066("closeWindow");
+                this.trackAction("closeWindow");
             }
             this.dispose();
         }
@@ -477,7 +477,7 @@
         private function _Str_23692(k:WindowMouseEvent):void
         {
             Logger.log("Close useless clicked");
-            this._Str_3066("closeUseless");
+            this.trackAction("closeUseless");
             this._moderationManager.trackGoogle("actionCountUseless", this._actionCount);
             this._moderationManager.issueManager.closeBundle(this._issueBundle.id, IssueManager.RESOLUTION_USELESS);
             this._Str_13345();
@@ -487,7 +487,7 @@
         private function _Str_23537(k:WindowMouseEvent):void
         {
             Logger.log("Close resolved clicked");
-            this._Str_3066("closeResolved");
+            this.trackAction("closeResolved");
             this._moderationManager.trackGoogle("actionCountResolved", this._actionCount);
             this._moderationManager.issueManager.closeBundle(this._issueBundle.id, IssueManager.RESOLUTION_RESOLVED);
             this._Str_13345();
@@ -497,7 +497,7 @@
         private function _Str_23381(k:WindowMouseEvent):void
         {
             Logger.log("Close with default sanction clicked");
-            this._Str_3066("closeSanction");
+            this.trackAction("closeSanction");
             this._moderationManager.trackGoogle("actionCountSanction", this._actionCount);
             var _local_2:int = -1;
             var _local_3:int = this._topicDropdown.selection;
@@ -520,7 +520,7 @@
         private function _Str_15257(k:WindowMouseEvent):void
         {
             Logger.log("Release clicked");
-            this._Str_3066("release");
+            this.trackAction("release");
             this._moderationManager.issueManager.releaseBundle(this._issueBundle.id);
             this._Str_13345();
             this.dispose();
@@ -599,7 +599,7 @@
             return this._reportedUserInfo;
         }
 
-        internal function _Str_3066(k:String):void
+        internal function trackAction(k:String):void
         {
             if (((this._moderationManager == null) || (this._moderationManager.disposed)))
             {

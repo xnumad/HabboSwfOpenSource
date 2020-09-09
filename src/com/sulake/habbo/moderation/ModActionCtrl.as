@@ -109,11 +109,11 @@
             }
         }
 
-        private function _Str_3066(k:String):void
+        private function trackAction(k:String):void
         {
             if (((!(this._Str_9258 == null)) && (!(this._Str_9258.disposed))))
             {
-                this._Str_9258._Str_3066(("modAction_" + k));
+                this._Str_9258.trackAction(("modAction_" + k));
             }
         }
 
@@ -237,7 +237,7 @@
                 return;
             }
             Logger.log("Giving default sanction...");
-            this._Str_3066("defaultAction");
+            this.trackAction("defaultAction");
             this.logEvent("action.default");
             var _local_3:int = this._Str_5384[this._Str_3643.selection];
             this._Str_2327.connection.send(new DefaultSanctionMessageComposer(this._Str_4127, _local_3, this._Str_3121.text, this._Str_7121()));
@@ -273,11 +273,11 @@
                         this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this.onAlertClose);
                         return;
                     }
-                    this._Str_3066("sendCaution");
+                    this.trackAction("sendCaution");
                     this._Str_2327.connection.send(new ModAlertMessageComposer(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
                 case ModActionDefinition.MUTE:
-                    this._Str_3066("mute");
+                    this.trackAction("mute");
                     this._Str_2327.connection.send(new ModMuteMessageComposer(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
                 case ModActionDefinition.BAN:
@@ -286,7 +286,7 @@
                         this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this.onAlertClose);
                         return;
                     }
-                    this._Str_3066("ban");
+                    this.trackAction("ban");
                     _local_5 = (_local_4.actionId == 106);
                     this._Str_2327.connection.send(new ModBanMessageComposer(this._Str_4127, this._Str_3121.text, _local_3, _local_4._Str_22995, _local_5, this._Str_7121()));
                     break;
@@ -296,11 +296,11 @@
                         this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this.onAlertClose);
                         return;
                     }
-                    this._Str_3066("kick");
+                    this.trackAction("kick");
                     this._Str_2327.connection.send(new ModKickMessageComposer(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
                 case ModActionDefinition.TRADING_LOCK:
-                    this._Str_3066("trading_lock");
+                    this.trackAction("trading_lock");
                     _local_6 = (_local_4._Str_25670 * 60);
                     this._Str_2327.connection.send(new ModTradingLockMessageComposer(this._Str_4127, this._Str_3121.text, _local_6, _local_3, this._Str_7121()));
                     break;
@@ -310,7 +310,7 @@
                         this._Str_2327.windowManager.alert("Alert", "Please write a message to user.", 0, this.onAlertClose);
                         return;
                     }
-                    this._Str_3066("sendCaution");
+                    this.trackAction("sendCaution");
                     this._Str_2327.connection.send(new ModMessageMessageComposer(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
             }
@@ -324,7 +324,7 @@
             {
                 return;
             }
-            this._Str_3066("close");
+            this.trackAction("close");
             this.dispose();
         }
 

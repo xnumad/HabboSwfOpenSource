@@ -202,7 +202,7 @@
             {
                 return;
             }
-            this._Str_3066("chatLog");
+            this.trackAction("chatLog");
             this._main.windowTracker.show(new ChatlogCtrl(new GetUserChatlogMessageComposer(this._data.userId), this._main, WindowTracker._Str_15435, this._data.userId), this._callerFrame, this._openToolsBelow, false, true);
         }
 
@@ -221,7 +221,7 @@
             {
                 return;
             }
-            this._Str_3066("openInfoTool");
+            this.trackAction("openInfoTool");
             this._main.openHkPage("habboinfotool.url", this._data.userName);
         }
 
@@ -231,7 +231,7 @@
             {
                 return;
             }
-            this._Str_3066("openSendMessage");
+            this.trackAction("openSendMessage");
             this._main.windowTracker.show(new SendMsgsCtrl(this._main, this._data.userId, this._data.userName, this._issue), this._callerFrame, this._openToolsBelow, false, true);
         }
 
@@ -241,7 +241,7 @@
             {
                 return;
             }
-            this._Str_3066("openModAction");
+            this.trackAction("openModAction");
             this._main.windowTracker.show(new ModActionCtrl(this._main, this._data.userId, this._data.userName, this._issue, this), this._callerFrame, this._openToolsBelow, false, true);
         }
 
@@ -251,7 +251,7 @@
             {
                 return;
             }
-            this._Str_3066("viewCautions");
+            this.trackAction("viewCautions");
             this._Str_17807();
         }
 
@@ -261,7 +261,7 @@
             {
                 return;
             }
-            this._Str_3066("viewBans");
+            this.trackAction("viewBans");
             this._Str_17807();
         }
 
@@ -271,7 +271,7 @@
             {
                 return;
             }
-            this._Str_3066("viewTradingLocks");
+            this.trackAction("viewTradingLocks");
             this._Str_17807();
         }
 
@@ -281,7 +281,7 @@
             {
                 return;
             }
-            this._Str_3066("viewIdentityInfo");
+            this.trackAction("viewIdentityInfo");
             this._Str_25391();
         }
 
@@ -303,7 +303,7 @@
             }
         }
 
-        internal function _Str_3066(k:String):void
+        internal function trackAction(k:String):void
         {
             if (((this._issueHandler == null) || (this._issueHandler.disposed)))
             {
@@ -313,17 +313,17 @@
             {
                 if (this == this._issueHandler._Str_22269)
                 {
-                    this._issueHandler._Str_3066(("callerUserInfo_" + k));
+                    this._issueHandler.trackAction(("callerUserInfo_" + k));
                 }
                 else
                 {
                     if (this == this._issueHandler._Str_25718)
                     {
-                        this._issueHandler._Str_3066(("reportedUserInfo_" + k));
+                        this._issueHandler.trackAction(("reportedUserInfo_" + k));
                     }
                     else
                     {
-                        this._issueHandler._Str_3066(("userInfo_" + k));
+                        this._issueHandler.trackAction(("userInfo_" + k));
                     }
                 }
             }
