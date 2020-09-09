@@ -3,7 +3,7 @@
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.window.IHabboWindowManager;
 
-    public class _Str_14579 
+    public class PerkChecker
     {
 
 

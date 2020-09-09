@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOtherNotAllowedEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingYouAreNotAllowedEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.utils._Str_14579;
+    import com.sulake.habbo.utils.PerkChecker;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
     import com.sulake.habbo.communication.messages.outgoing.inventory.trading.OpenTradingComposer;
     import __AS3__.vec.Vector;
@@ -670,7 +670,7 @@
 
         public function requestOpenTrading(k:int):void
         {
-            if (_Str_14579.isPerkAllowed(this._inventory.sessionData, this._inventory.windowManager, PerkEnum.TRADE))
+            if (PerkChecker.isPerkAllowed(this._inventory.sessionData, this._inventory.windowManager, PerkEnum.TRADE))
             {
                 this._communication.connection.send(new OpenTradingComposer(k));
             }
