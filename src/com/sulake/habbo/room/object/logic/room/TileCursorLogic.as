@@ -8,7 +8,7 @@
 
     public class TileCursorLogic extends ObjectLogicBase 
     {
-        private static const _Str_16101:int = 0;
+        private static const STATE_ENABLED:int = 0;
         private static const STATE_DISABLED:int = 1;
         private static const _Str_16978:int = 6;
 
@@ -64,7 +64,7 @@
                     {
                         _local_3 = _local_2.height;
                         object.getModelController().setNumber(RoomObjectVariableEnum.TILE_CURSOR_HEIGHT, _local_3);
-                        _local_4 = ((_local_3 > 0.8) ? _Str_16978 : _Str_16101);
+                        _local_4 = ((_local_3 > 0.8) ? _Str_16978 : STATE_ENABLED);
                         object.setState(_local_4, 0);
                     }
                 }
