@@ -20,7 +20,7 @@
         private static const STATE_DISABLED:int = 0;
         private static const STATE_ACTIVE:int = 1;
         private static const STATE_REDEEM:int = 2;
-        private static const _Str_17429:int = 3;
+        private static const STATE_REWARDED:int = 3;
         private static const _Str_9724:int = 5000;
 
         private var _landingView:HabboLandingView;
@@ -116,7 +116,7 @@
                     this._window.findChildByName("state.achieved").visible = true;
                     this._window.findChildByName("action_button").visible = true;
                     break;
-                case _Str_17429:
+                case STATE_REWARDED:
                     if (this._updateTimer)
                     {
                         this._updateTimer.stop();
