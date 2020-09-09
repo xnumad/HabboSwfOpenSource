@@ -19,7 +19,7 @@
     {
         private static const STATE_DISABLED:int = 0;
         private static const STATE_ACTIVE:int = 1;
-        private static const _Str_17668:int = 2;
+        private static const STATE_REDEEM:int = 2;
         private static const _Str_17429:int = 3;
         private static const _Str_9724:int = 5000;
 
@@ -104,7 +104,7 @@
                     this._window.findChildByName("state.active").visible = true;
                     this._window.findChildByName("state.achieved").visible = false;
                     break;
-                case _Str_17668:
+                case STATE_REDEEM:
                     if (this._updateTimer)
                     {
                         this._updateTimer.stop();
