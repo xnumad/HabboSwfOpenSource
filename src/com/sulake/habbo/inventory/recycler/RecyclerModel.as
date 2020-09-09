@@ -15,7 +15,7 @@
     public class RecyclerModel implements IInventoryModel 
     {
         public static const _Str_599:uint = 0;
-        public static const _Str_4158:uint = 1;
+        public static const STATE_ACTIVE:uint = 1;
 
         private var _habboInventory:HabboInventory;
         private var _assetLibrary:IAssetLibrary;
@@ -38,7 +38,7 @@
 
         public function get running():Boolean
         {
-            return this._state == _Str_4158;
+            return this._state == STATE_ACTIVE;
         }
 
         public function get state():uint
@@ -76,7 +76,7 @@
             {
                 return;
             }
-            this._state = _Str_4158;
+            this._state = STATE_ACTIVE;
             this._itemList = new Map();
             this._habboInventory._Str_2834._Str_14978(true);
         }

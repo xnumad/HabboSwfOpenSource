@@ -18,7 +18,7 @@
     public class ConcurrentUsersInfoElementHandler implements IElementHandler, IDisposable 
     {
         private static const STATE_DISABLED:int = 0;
-        private static const _Str_4158:int = 1;
+        private static const STATE_ACTIVE:int = 1;
         private static const _Str_17668:int = 2;
         private static const _Str_17429:int = 3;
         private static const _Str_9724:int = 5000;
@@ -100,7 +100,7 @@
                     this._window.findChildByName("state.active").visible = true;
                     this._window.findChildByName("state.achieved").visible = false;
                     break;
-                case _Str_4158:
+                case STATE_ACTIVE:
                     this._window.findChildByName("state.active").visible = true;
                     this._window.findChildByName("state.achieved").visible = false;
                     break;

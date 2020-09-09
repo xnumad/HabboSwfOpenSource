@@ -13,7 +13,7 @@
         public static const _Str_14486:int = 0;
         public static const _Str_13915:int = 1;
         public static const _Str_7947:int = 0;
-        public static const _Str_4158:int = 1;
+        public static const STATE_ACTIVE:int = 1;
         public static const _Str_11423:int = 2;
         private static const _Str_13665:Point = new Point(1, 1);
 
@@ -60,9 +60,9 @@
 
         public function activate():void
         {
-            if (((!(this._state == _Str_4158)) && (!(this._state == _Str_11423))))
+            if (((!(this._state == STATE_ACTIVE)) && (!(this._state == _Str_11423))))
             {
-                this._state = _Str_4158;
+                this._state = STATE_ACTIVE;
             }
             this.updateWindow();
         }
@@ -88,7 +88,7 @@
                 case _Str_11423:
                     this._window.bitmap = this._bitmapHilite;
                     break;
-                case _Str_4158:
+                case STATE_ACTIVE:
                     this._window.bitmap = this._bitmapActive;
                     break;
             }
@@ -118,7 +118,7 @@
                     case WindowMouseEvent.OUT:
                         if (this._state != _Str_7947)
                         {
-                            this._state = _Str_4158;
+                            this._state = STATE_ACTIVE;
                         }
                         break;
                     case WindowMouseEvent.DOWN:
