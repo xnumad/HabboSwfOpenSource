@@ -21,7 +21,7 @@
         private static const STATE_ACTIVE:int = 1;
         private static const STATE_REDEEM:int = 2;
         private static const STATE_REWARDED:int = 3;
-        private static const _Str_9724:int = 5000;
+        private static const UPDATE_INTERVAL_MS:int = 5000;
 
         private var _landingView:HabboLandingView;
         private var _widget:GenericWidget;
@@ -35,7 +35,7 @@
 
         public function ConcurrentUsersInfoElementHandler()
         {
-            this._updateTimer = new Timer(_Str_9724);
+            this._updateTimer = new Timer(UPDATE_INTERVAL_MS);
             this._updateTimer.addEventListener(TimerEvent.TIMER, this._Str_11704);
         }
 
