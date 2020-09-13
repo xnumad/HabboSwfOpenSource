@@ -4,20 +4,20 @@
 
     public class GuildBadgeSettings
     {
-        private var _Str_2046:int;
+        private var _partId:int;
         private var _Str_21054:int;
         private var _position:int;
 
         public function GuildBadgeSettings(k:IMessageDataWrapper)
         {
-            this._Str_2046 = k.readInteger();
+            this._partId = k.readInteger();
             this._Str_21054 = k.readInteger();
             this._position = k.readInteger();
         }
 
         public function get _Str_1502():int
         {
-            return this._Str_2046;
+            return this._partId;
         }
 
         public function get _Str_25271():int
