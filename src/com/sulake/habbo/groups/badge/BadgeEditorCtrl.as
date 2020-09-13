@@ -213,7 +213,7 @@
             _local_2 = 0;
             while (_local_2 < this._manager.guildEditorData._Str_9008.length)
             {
-                if (this._manager.guildEditorData._Str_9008[_local_2].id == _local_3._Str_25271)
+                if (this._manager.guildEditorData._Str_9008[_local_2].id == _local_3.colorId)
                 {
                     _local_4.colorIndex = _local_2;
                     break;

@@ -20,7 +20,7 @@
             return this._partId;
         }
 
-        public function get _Str_25271():int
+        public function get colorId():int
         {
             return this._colorId;
         }
