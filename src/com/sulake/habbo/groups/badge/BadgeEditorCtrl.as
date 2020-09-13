@@ -307,7 +307,7 @@
             }
         }
 
-        public function _Str_15937():Array
+        public function getBadgeSettings():Array
         {
             var _local_2:BadgeLayerCtrl;
             var _local_3:int;
