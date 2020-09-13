@@ -327,7 +327,7 @@
                         _local_14 = -1;
                         if (_local_15 != null)
                         {
-                            _local_14 = _local_15._Str_1502;
+                            _local_14 = _local_15.partId;
                         }
                         _local_9.push(new PetCustomPart(_local_6[_local_10], _local_14, _local_8[_local_10]));
                         _local_10++;

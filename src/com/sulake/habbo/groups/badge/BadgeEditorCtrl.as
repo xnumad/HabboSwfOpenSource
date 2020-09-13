@@ -225,7 +225,7 @@
                 _local_2 = 0;
                 while (_local_2 < this._manager.guildEditorData._Str_11328.length)
                 {
-                    if (this._manager.guildEditorData._Str_11328[_local_2].id == _local_3._Str_1502)
+                    if (this._manager.guildEditorData._Str_11328[_local_2].id == _local_3.partId)
                     {
                         _local_4._Str_3324 = _local_2;
                         break;
@@ -238,7 +238,7 @@
                 _local_2 = 0;
                 while (_local_2 < this._manager.guildEditorData._Str_12125.length)
                 {
-                    if (this._manager.guildEditorData._Str_12125[_local_2].id == _local_3._Str_1502)
+                    if (this._manager.guildEditorData._Str_12125[_local_2].id == _local_3.partId)
                     {
                         _local_4._Str_3324 = _local_2;
                         break;

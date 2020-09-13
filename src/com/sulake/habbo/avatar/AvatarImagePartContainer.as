@@ -80,10 +80,10 @@
                 if ((this._frames[_local_2] is AnimationFrame))
                 {
                     _local_3 = (this._frames[_local_2] as AnimationFrame);
-                    return (((this._Str_1502 + ":") + _local_3.assetPartDefinition) + ":") + _local_3.number;
+                    return (((this.partId + ":") + _local_3.assetPartDefinition) + ":") + _local_3.number;
                 }
             }
-            return (this._Str_1502 + ":") + _local_2;
+            return (this.partId + ":") + _local_2;
         }
 
         public function get bodyPartId():String
@@ -96,7 +96,7 @@
             return this._partType;
         }
 
-        public function get _Str_1502():String
+        public function get partId():String
         {
             return this._partId;
         }

@@ -361,11 +361,11 @@
                 partContainer = (_arg_2[_local_9] as AvatarImagePartContainer);
                 if (!((k == 7) && ((partContainer.partType == "fc") || (partContainer.partType == "ey"))))
                 {
-                    if (!((partContainer.partType == "ri") && (partContainer._Str_1502 == null)))
+                    if (!((partContainer.partType == "ri") && (partContainer.partId == null)))
                     {
                         _local_19 = partContainer.bodyPartId;
                         _local_20 = partContainer.partType;
-                        _local_21 = partContainer._Str_1502;
+                        _local_21 = partContainer.partId;
                         animationFrame = partContainer.getAnimationFrame(_arg_3);
                         if (animationFrame)
                         {

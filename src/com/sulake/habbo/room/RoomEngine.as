@@ -3461,7 +3461,7 @@
                 _local_12 = (_local_12 + (" " + _arg_9.length));
                 for each (_local_13 in _arg_9)
                 {
-                    _local_12 = (_local_12 + (((((" " + _local_13._Str_11008) + " ") + _local_13._Str_1502) + " ") + _local_13.paletteId));
+                    _local_12 = (_local_12 + (((((" " + _local_13._Str_11008) + " ") + _local_13.partId) + " ") + _local_13.paletteId));
                 }
             }
             if (this._roomContentLoader != null)

@@ -15,7 +15,7 @@
             this._position = k.readInteger();
         }
 
-        public function get _Str_1502():int
+        public function get partId():int
         {
             return this._partId;
         }

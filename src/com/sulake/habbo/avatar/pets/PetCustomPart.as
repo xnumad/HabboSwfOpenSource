@@ -23,12 +23,12 @@
             this._paletteId = k;
         }
 
-        public function get _Str_1502():int
+        public function get partId():int
         {
             return this._partId;
         }
 
-        public function set _Str_1502(k:int):void
+        public function set partId(k:int):void
         {
             this._partId = k;
         }

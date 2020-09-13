@@ -98,7 +98,7 @@
             k = (k + (" " + this._Str_3542.length));
             for each (_local_2 in this._Str_3542)
             {
-                k = (k + (((((" " + _local_2._Str_11008) + " ") + _local_2._Str_1502) + " ") + _local_2.paletteId));
+                k = (k + (((((" " + _local_2._Str_11008) + " ") + _local_2.partId) + " ") + _local_2.paletteId));
             }
             return k;
         }
