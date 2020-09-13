@@ -4,7 +4,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class SimplePollResultsMessageParser implements IMessageParser 
+    public class QuestionFinishedParser implements IMessageParser
     {
         private var _pollId:int;
         private var _results:Map;
