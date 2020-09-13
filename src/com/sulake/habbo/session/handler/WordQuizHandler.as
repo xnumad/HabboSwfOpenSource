@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.communication.messages.incoming.poll.QuestionEvent;
     import com.sulake.habbo.communication.messages.incoming.poll.QuestionAnsweredEvent;
-    import com.sulake.habbo.communication.messages.incoming.poll.SimplePollResultsEvent;
+    import com.sulake.habbo.communication.messages.incoming.poll.QuestionFinishedEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.session.events.RoomSessionWordQuizEvent;
@@ -22,7 +22,7 @@
             }
             k.addMessageEvent(new QuestionEvent(this._Str_23470));
             k.addMessageEvent(new QuestionAnsweredEvent(this._Str_23131));
-            k.addMessageEvent(new SimplePollResultsEvent(this._Str_24658));
+            k.addMessageEvent(new QuestionFinishedEvent(this._Str_24658));
         }
 
         private function _Str_23470(k:QuestionEvent):void
@@ -67,7 +67,7 @@
             listener.events.dispatchEvent(_local_4);
         }
 
-        private function _Str_24658(k:SimplePollResultsEvent):void
+        private function _Str_24658(k:QuestionFinishedEvent):void
         {
             var _local_4:RoomSessionWordQuizEvent;
             if (!k)

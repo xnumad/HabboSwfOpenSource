@@ -921,7 +921,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.action.UseObjectMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.*;
 	import com.sulake.habbo.communication.messages.incoming.poll.QuestionEvent;
-	import com.sulake.habbo.communication.messages.incoming.poll.SimplePollResultsEvent;
+	import com.sulake.habbo.communication.messages.incoming.poll.QuestionFinishedEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.PollOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.PollErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.PollContentsEvent;
@@ -1003,7 +1003,7 @@
             INCOMING_PACKETS[104] = FurniListAddOrUpdateEvent;
             INCOMING_PACKETS[105] = JukeboxPlayListFullMessageEvent;
             INCOMING_PACKETS[1050] = HotelWillCloseInMinutesEvent;
-            INCOMING_PACKETS[1066] = SimplePollResultsEvent;
+            INCOMING_PACKETS[1066] = QuestionFinishedEvent;
             INCOMING_PACKETS[1073] = GuildForumThreadsEvent;
             INCOMING_PACKETS[1087] = UserBadgesEvent;
             INCOMING_PACKETS[1108] = WiredConditionDataEvent;
