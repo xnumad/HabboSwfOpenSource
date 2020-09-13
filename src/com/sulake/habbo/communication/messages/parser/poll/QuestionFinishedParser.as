@@ -6,13 +6,13 @@
 
     public class QuestionFinishedParser implements IMessageParser
     {
-        private var _pollId:int;
+        private var _questionId:int;
         private var _results:Map;
 
 
-        public function get pollId():int
+        public function get questionId():int
         {
-            return this._pollId;
+            return this._questionId;
         }
 
         public function get results():Map
@@ -22,7 +22,7 @@
 
         public function flush():Boolean
         {
-            this._pollId = -1;
+            this._questionId = -1;
             this._results = null;
             return false;
         }
@@ -31,7 +31,7 @@
         {
             var key:String;
             var value:int;
-            this._pollId = k.readInteger();
+            this._questionId = k.readInteger();
             this._results = new Map();
             var count:int = k.readInteger();
             var index:int;

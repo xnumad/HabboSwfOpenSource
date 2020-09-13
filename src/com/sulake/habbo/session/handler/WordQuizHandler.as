@@ -81,7 +81,7 @@
             }
             var _local_3:QuestionFinishedParser = k.getParser();
             _local_4 = new RoomSessionWordQuizEvent(RoomSessionWordQuizEvent.RWPUW_QUESION_FINSIHED, _local_2);
-            _local_4.questionId = _local_3.pollId;
+            _local_4.questionId = _local_3.questionId;
             _local_4.answerCounts = _local_3.results;
             listener.events.dispatchEvent(_local_4);
         }
