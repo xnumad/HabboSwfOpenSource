@@ -5,13 +5,13 @@
     public class GuildBadgeSettings
     {
         private var _partId:int;
-        private var _Str_21054:int;
+        private var _colorId:int;
         private var _position:int;
 
         public function GuildBadgeSettings(k:IMessageDataWrapper)
         {
             this._partId = k.readInteger();
-            this._Str_21054 = k.readInteger();
+            this._colorId = k.readInteger();
             this._position = k.readInteger();
         }
 
@@ -22,7 +22,7 @@
 
         public function get _Str_25271():int
         {
-            return this._Str_21054;
+            return this._colorId;
         }
 
         public function get position():int
