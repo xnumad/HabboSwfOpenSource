@@ -7,7 +7,7 @@
     public class QuestionFinishedParser implements IMessageParser
     {
         private var _questionId:int;
-        private var _results:Map;
+        private var _answerCounts:Map;
 
 
         public function get questionId():int
@@ -15,15 +15,15 @@
             return this._questionId;
         }
 
-        public function get results():Map
+        public function get answerCounts():Map
         {
-            return this._results;
+            return this._answerCounts;
         }
 
         public function flush():Boolean
         {
             this._questionId = -1;
-            this._results = null;
+            this._answerCounts = null;
             return false;
         }
 
@@ -32,14 +32,14 @@
             var key:String;
             var value:int;
             this._questionId = k.readInteger();
-            this._results = new Map();
+            this._answerCounts = new Map();
             var count:int = k.readInteger();
             var index:int;
             while (index < count)
             {
                 key = k.readString();
                 value = k.readInteger();
-                this._results.add(key, value);
+                this._answerCounts.add(key, value);
                 index++;
             }
             return true;
