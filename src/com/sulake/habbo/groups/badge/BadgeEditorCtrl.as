@@ -71,7 +71,7 @@
             return this._badgeSelectPartCtrl;
         }
 
-        public function get _Str_6443():Boolean
+        public function get isIntialized():Boolean
         {
             return (!(this._window == null)) && (!(this._badgeInitData == null));
         }
@@ -179,7 +179,7 @@
 
         public function _Str_15567(k:Array):void
         {
-            if (!this._Str_6443)
+            if (!this.isIntialized)
             {
                 return;
             }
@@ -299,7 +299,7 @@
 
         public function _Str_23176():void
         {
-            if (((this._Str_6443) && (this._partSelectContainer.visible)))
+            if (((this.isIntialized) && (this._partSelectContainer.visible)))
             {
                 this._Str_3060(this._currentLayerOptions);
                 this._partEditContainer.visible = true;
