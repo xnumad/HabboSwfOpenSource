@@ -18,7 +18,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
 
-    public class _Str_4142 implements IOutfit, IAvatarImageListener 
+    public class WardrobeSlot implements IOutfit, IAvatarImageListener
     {
         private var _habboAvatarEditor:HabboAvatarEditor;
         private var _figure:String;
@@ -29,7 +29,7 @@
         private var _id:int;
         private var _disposed:Boolean;
 
-        public function _Str_4142(k:IWindow, _arg_2:HabboAvatarEditor, _arg_3:int, _arg_4:Boolean, _arg_5:String=null, _arg_6:String=null)
+        public function WardrobeSlot(k:IWindow, _arg_2:HabboAvatarEditor, _arg_3:int, _arg_4:Boolean, _arg_5:String=null, _arg_6:String=null)
         {
             this._habboAvatarEditor = _arg_2;
             this._id = _arg_3;

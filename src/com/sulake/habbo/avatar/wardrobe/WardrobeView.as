@@ -47,7 +47,7 @@
 
         public function update():void
         {
-            var _local_2:_Str_4142;
+            var _local_2:WardrobeSlot;
             if (this._slotList)
             {
                 this._slotList.removeListItems();

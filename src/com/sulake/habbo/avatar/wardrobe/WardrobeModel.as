@@ -22,7 +22,7 @@
 
         public function dispose():void
         {
-            var k:_Str_4142;
+            var k:WardrobeSlot;
             this._controller = null;
             for each (k in this._slots)
             {
@@ -45,7 +45,7 @@
 
         private function init():void
         {
-            var _local_2:_Str_4142;
+            var _local_2:WardrobeSlot;
             if (this._view)
             {
                 this._view.dispose();
@@ -67,7 +67,7 @@
             var k:int = 1;
             while (k <= 10)
             {
-                this._slots.add(k, new _Str_4142(this._view._Str_23743, this._controller, k, this._Str_21478(k)));
+                this._slots.add(k, new WardrobeSlot(this._view._Str_23743, this._controller, k, this._Str_21478(k)));
                 k++;
             }
             this._isInitialized = true;
@@ -95,7 +95,7 @@
 
         public function _Str_15301(k:int, _arg_2:Array):void
         {
-            var _local_3:_Str_4142;
+            var _local_3:WardrobeSlot;
             var _local_4:OutfitData;
             if (!this._isInitialized)
             {
@@ -111,7 +111,7 @@
             }
             for each (_local_4 in _arg_2)
             {
-                _local_3 = (this._slots.getValue(_local_4.slotId) as _Str_4142);
+                _local_3 = (this._slots.getValue(_local_4.slotId) as WardrobeSlot);
                 if (_local_3)
                 {
                     _local_3.update(_local_4.figureString, _local_4.gender, this._Str_21478(_local_3.id));
