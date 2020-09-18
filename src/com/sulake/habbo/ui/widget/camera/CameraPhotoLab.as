@@ -484,7 +484,7 @@
             switch (_arg_2.name)
             {
                 case "cancel_button":
-                    this._widget._Str_10821("effectEditorCancel");
+                    this._widget.startTakingPhoto("effectEditorCancel");
                     this.dispose();
                     break;
                 case "header_button_close":

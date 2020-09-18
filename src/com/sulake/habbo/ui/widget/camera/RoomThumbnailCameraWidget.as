@@ -93,7 +93,7 @@
             }
         }
 
-        public function _Str_10821():void
+        public function startTakingPhoto():void
         {
             if (((this.roomEngine) && (!(this.roomEngine.getRoomCanvasScale() == 1))))
             {
@@ -202,7 +202,7 @@
             }
             if (_local_2[1] == "open")
             {
-                this._Str_10821();
+                this.startTakingPhoto();
             }
         }
     }

@@ -102,7 +102,7 @@
             var PhotoImage:BitmapData = this._widget.photoLab.getPreviewImage();
             if(PhotoImage == null)
             {
-                this._widget._Str_10821("photoPurchaseCancel");
+                this._widget.startTakingPhoto("photoPurchaseCancel");
                 this.hide();
                 return;
             }
@@ -121,7 +121,7 @@
             var PhotoId:String = evt.target.data;
             if(PhotoId == "" || PhotoId.length != 32)
             {
-                this._widget._Str_10821("photoPurchaseCancel");
+                this._widget.startTakingPhoto("photoPurchaseCancel");
                 this.hide();
                 return;
             }
@@ -513,7 +513,7 @@
                     return;
                 case "header_button_close":
                 case "cancel_button":
-                    this._widget._Str_10821("photoPurchaseCancel");
+                    this._widget.startTakingPhoto("photoPurchaseCancel");
                     this.hide();
                     return;
             }

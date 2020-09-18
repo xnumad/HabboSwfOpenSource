@@ -96,7 +96,7 @@
             return (this.container) ? this.container.roomEngine : null;
         }
 
-        public function _Str_10821(k:String):void
+        public function startTakingPhoto(k:String):void
         {
             if (((this.roomEngine) && (!(this.roomEngine.getRoomCanvasScale() == 1))))
             {
