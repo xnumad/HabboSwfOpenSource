@@ -1,8 +1,8 @@
 ﻿package com.sulake.habbo.navigator.roomsettings
 {
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4633;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.IFlatUser;
 
-    public class FriendEntryData implements _Str_4633 
+    public class FriendEntryData implements IFlatUser
     {
         private var _userId:int;
         private var _userName:String;

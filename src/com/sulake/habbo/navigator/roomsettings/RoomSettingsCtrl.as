@@ -42,7 +42,7 @@
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetFlatControllersMessageComposer;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.GetBannedUsersFromRoomMessageComposer;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4633;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.IFlatUser;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveAllRightsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.UnbanUserFromRoomMessageComposer;
     import com.sulake.habbo.navigator.*;
@@ -1193,7 +1193,7 @@
 
         private function _Str_24611():Array
         {
-            var _local_3:_Str_4633;
+            var _local_3:IFlatUser;
             var k:Dictionary = this._roomSettingsData._Str_13003;
             var _local_2:Array = new Array();
             if (k.length == 0)

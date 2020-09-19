@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.navigator.IHabboTransitionalNavigator;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_4633;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.IFlatUser;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IRegionWindow;
@@ -40,7 +40,7 @@
 
         public function refresh(k:IItemListWindow, _arg_2:Array, _arg_3:String, _arg_4:int):void
         {
-            var _local_6:_Str_4633;
+            var _local_6:IFlatUser;
             var _local_7:int;
             var _local_8:Boolean;
             var _local_5:Array = new Array();
@@ -93,7 +93,7 @@
             return (_arg_2) ? 4290173439 : (((k % 2) != 0) ? 0xFFFFFFFF : 4293519841);
         }
 
-        private function refreshEntry(k:IItemListWindow, _arg_2:int, _arg_3:_Str_4633, _arg_4:int):Boolean
+        private function refreshEntry(k:IItemListWindow, _arg_2:int, _arg_3:IFlatUser, _arg_4:int):Boolean
         {
             var _local_5:IWindowContainer = IWindowContainer(k.getListItemAt(_arg_2));
             if (_local_5 == null)
@@ -120,7 +120,7 @@
             return false;
         }
 
-        private function refreshEntryDetails(k:IWindowContainer, _arg_2:_Str_4633):void
+        private function refreshEntryDetails(k:IWindowContainer, _arg_2:IFlatUser):void
         {
             k.findChildByName("user_name_txt").caption = _arg_2.userName;
             var _local_3:IRegionWindow = IRegionWindow(k.findChildByName("bg_region"));

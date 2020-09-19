@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class FlatControllerData implements _Str_4633
+    public class FlatControllerData implements IFlatUser
     {
         private var _userId:int;
         private var _userName:String;

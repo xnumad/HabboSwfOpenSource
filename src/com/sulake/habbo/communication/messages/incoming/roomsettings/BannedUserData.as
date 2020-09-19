@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class BannedUserData implements _Str_4633
+    public class BannedUserData implements IFlatUser
     {
         private var _userId:int;
         private var _userName:String;
