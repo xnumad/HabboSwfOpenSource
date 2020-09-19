@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users._Str_7457;
 
-    public class _Str_8246 extends MessageEvent implements IMessageEvent 
+    public class WelcomeGiftChangeEmailResultEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8246(k:Function)
+        public function WelcomeGiftChangeEmailResultEvent(k:Function)
         {
             super(k, _Str_7457);
         }

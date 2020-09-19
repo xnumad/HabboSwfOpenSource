@@ -5,7 +5,7 @@
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture.WelcomeGiftStatusEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_8246;
+    import com.sulake.habbo.communication.messages.incoming.users.WelcomeGiftChangeEmailResultEvent;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7719;
     import com.sulake.habbo.ui.widget.events._Str_5438;
     import com.sulake.habbo.communication.messages.parser.users._Str_7457;
@@ -60,7 +60,7 @@
             }
             this._messageEvents = [];
             this._messageEvents.push(new WelcomeGiftStatusEvent(this._Str_23237));
-            this._messageEvents.push(new _Str_8246(this.onChangeEmailResult));
+            this._messageEvents.push(new WelcomeGiftChangeEmailResultEvent(this.onChangeEmailResult));
             for each (k in this._messageEvents)
             {
                 this._container.connection.addMessageEvent(k);
@@ -94,7 +94,7 @@
             this._container.events.dispatchEvent(_local_3);
         }
 
-        private function onChangeEmailResult(k:_Str_8246):void
+        private function onChangeEmailResult(k:WelcomeGiftChangeEmailResultEvent):void
         {
             var _local_2:_Str_7457 = k.getParser();
             this._container.events.dispatchEvent(new _Str_6843(_local_2.result));

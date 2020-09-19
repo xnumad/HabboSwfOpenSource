@@ -344,7 +344,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users.GuildEditInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.GuildEditorDataMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.GuildCreationInfoMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_8246;
+	import com.sulake.habbo.communication.messages.incoming.users.WelcomeGiftChangeEmailResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.PetRespectNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
 	import com.sulake.habbo.communication.messages.incoming.users.InClientLinkMessageEvent;
@@ -1179,7 +1179,7 @@
             INCOMING_PACKETS[2270] = Game2WeeklyFriendsLeaderboardEvent;
             INCOMING_PACKETS[2275] = HabboActivityPointNotificationMessageEvent;
             INCOMING_PACKETS[2278] = CitizenshipVipOfferPromoEnabledEvent;
-            INCOMING_PACKETS[2293] = _Str_8246;
+            INCOMING_PACKETS[2293] = WelcomeGiftChangeEmailResultEvent;
             INCOMING_PACKETS[230] = QuestMessageEvent;
             INCOMING_PACKETS[2309] = DoorbellMessageEvent;
             INCOMING_PACKETS[2313] = _Str_16135;
