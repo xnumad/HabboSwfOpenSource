@@ -32,7 +32,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.AccountSafetyLockStatusChangeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.mysterybox.MysteryBoxKeysMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
+    import com.sulake.habbo.communication.messages.incoming.users.UserTagsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.NoobnessLevelMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.InClientLinkMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
@@ -180,7 +180,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent((new RoomReadyMessageEvent(this.onRoomReady) as IMessageEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
                 this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this.onMysteryBoxKeys));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_8527(this._Str_7983));
+                this._communicationManager.addHabboConnectionMessageEvent(new UserTagsMessageEvent(this._Str_7983));
                 this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this.onNoobnessLevelEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new InClientLinkMessageEvent(this.onInClientLink));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
@@ -396,7 +396,7 @@
             events.dispatchEvent(new MysteryBoxKeysUpdateEvent(this._mysteryBoxColor, this._mysteryKeyColor));
         }
 
-        private function _Str_7983(k:_Str_8527):void
+        private function _Str_7983(k:UserTagsMessageEvent):void
         {
             if (this._Str_7432)
             {

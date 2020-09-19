@@ -346,7 +346,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users.GuildCreationInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.WelcomeGiftChangeEmailResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.PetRespectNotificationEvent;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
+	import com.sulake.habbo.communication.messages.incoming.users.UserTagsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.InClientLinkMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.HandItemReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ApproveNameMessageEvent;
@@ -1028,7 +1028,7 @@
             INCOMING_PACKETS[1237] = TargetedOfferNotFoundEvent;
             INCOMING_PACKETS[1243] = AccountSafetyLockStatusChangeMessageEvent;
             INCOMING_PACKETS[1254] = TradingOtherNotAllowedEvent;
-            INCOMING_PACKETS[1255] = _Str_8527;
+            INCOMING_PACKETS[1255] = UserTagsMessageEvent;
             INCOMING_PACKETS[126] = IgnoredUsersMessageEvent;
             INCOMING_PACKETS[1284] = FlatControllersEvent;
             INCOMING_PACKETS[1301] = FloorHeightMapEvent;
