@@ -812,7 +812,7 @@
             }
         }
 
-        private function _Str_24635():void
+        private function giveGift():void
         {
             var k:IWindow = this._window.findChildByName("name_input");
             if (k == null)
@@ -875,7 +875,7 @@
 
         private function _Str_23085(k:WindowEvent):void
         {
-            this._Str_24635();
+            this.giveGift();
             this._Str_4401(false);
             this._catalog.giftReceiver = null;
             this._catalog.resetPlacedOfferData();
