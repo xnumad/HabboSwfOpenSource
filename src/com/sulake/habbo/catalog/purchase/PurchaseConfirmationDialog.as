@@ -666,7 +666,7 @@
                 this._Str_13320();
                 _local_6.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this.onMessageInputChange);
                 _local_6.addEventListener(WindowEvent.WINDOW_EVENT_FOCUSED, this.onMessageInputFocus);
-                _local_6.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_23611);
+                _local_6.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this.onMessageInputUnfocus);
             }
             var _local_7:IWindow = this._window.findChildByName("message_from");
             if (_local_7 != null)
@@ -1122,7 +1122,7 @@
             this.showSuggestions(false);
         }
 
-        private function _Str_23611(k:WindowEvent):void
+        private function onMessageInputUnfocus(k:WindowEvent):void
         {
             this._Str_13320();
         }
