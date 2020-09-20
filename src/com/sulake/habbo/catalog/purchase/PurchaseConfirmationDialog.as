@@ -664,7 +664,7 @@
             if (_local_6 != null)
             {
                 this._Str_13320();
-                _local_6.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_23135);
+                _local_6.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this.onMessageInputChange);
                 _local_6.addEventListener(WindowEvent.WINDOW_EVENT_FOCUSED, this._Str_25377);
                 _local_6.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_23611);
             }
@@ -1086,7 +1086,7 @@
             }
         }
 
-        private function _Str_23135(k:WindowEvent):void
+        private function onMessageInputChange(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
             if (_local_2 == null)
