@@ -6,19 +6,19 @@
     {
         private var _array:Array;
 
-        public function PurchaseFromCatalogAsGiftComposer(k:int, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:Boolean)
+        public function PurchaseFromCatalogAsGiftComposer(pageId:int, offerCode:int, extraParam:String, receiverName:String, message:String, boxStuffTypeId:int, boxTypeId:int, ribbonTypeId:int, showPurchaserName:Boolean)
         {
             this._array = [];
             super();
-            this._array.push(k);
-            this._array.push(_arg_2);
-            this._array.push(_arg_3);
-            this._array.push(_arg_4);
-            this._array.push(_arg_5);
-            this._array.push(_arg_6);
-            this._array.push(_arg_7);
-            this._array.push(_arg_8);
-            this._array.push(_arg_9);
+            this._array.push(pageId);
+            this._array.push(offerCode);
+            this._array.push(extraParam);
+            this._array.push(receiverName);
+            this._array.push(message);
+            this._array.push(boxStuffTypeId);
+            this._array.push(boxTypeId);
+            this._array.push(ribbonTypeId);
+            this._array.push(showPurchaserName);
         }
 
         public function dispose():void
