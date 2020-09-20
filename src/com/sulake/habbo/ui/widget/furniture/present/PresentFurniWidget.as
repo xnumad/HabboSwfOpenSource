@@ -607,7 +607,7 @@
             this._Str_19121();
             if (this._Str_4649())
             {
-                this._Str_18043();
+                this.updateUnknownSenderAvatarImage();
             }
             else
             {
@@ -794,7 +794,7 @@
             }
         }
 
-        private function _Str_18043():void
+        private function updateUnknownSenderAvatarImage():void
         {
             var _local_2:BitmapData;
             var k:BitmapDataAsset = (_assets.getAssetByName("gift_incognito") as BitmapDataAsset);

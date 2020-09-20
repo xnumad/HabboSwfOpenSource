@@ -455,7 +455,7 @@
                 }
                 else
                 {
-                    this._Str_18043();
+                    this.updateUnknownSenderAvatarImage();
                 }
             }
             var _local_3:ITextWindow = (this._window.findChildByName("message_from") as ITextWindow);
@@ -474,7 +474,7 @@
             }
         }
 
-        private function _Str_18043():void
+        private function updateUnknownSenderAvatarImage():void
         {
             var _local_2:BitmapData;
             var k:BitmapDataAsset = (this._assets.getAssetByName("gift_incognito") as BitmapDataAsset);
