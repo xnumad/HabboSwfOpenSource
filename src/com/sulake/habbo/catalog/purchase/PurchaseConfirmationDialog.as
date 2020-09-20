@@ -697,7 +697,7 @@
             {
                 this._boxIndex = 0;
             }
-            this._Str_24942();
+            this.initColorGrid();
             this._Str_19479();
             this.updatePreview();
         }
@@ -783,7 +783,7 @@
             this.updateGiftDialogLabels();
         }
 
-        private function _Str_24942():void
+        private function initColorGrid():void
         {
             var _local_3:int;
             var _local_4:IFurnitureData;
