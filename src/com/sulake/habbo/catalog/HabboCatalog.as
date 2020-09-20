@@ -943,7 +943,7 @@
             if (this._skipToGifting)
             {
                 this._skipToGifting = false;
-                this._purchaseConfirmationDialog._Str_25849();
+                this._purchaseConfirmationDialog.turnIntoGifting();
             }
         }
 

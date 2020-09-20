@@ -1521,7 +1521,7 @@
             }
         }
 
-        public function _Str_25849():void
+        public function turnIntoGifting():void
         {
             var k:IWindow = this._window.findChildByName("buy_button");
             k.removeEventListener(WindowMouseEvent.CLICK, this.onBuyButtonClick);
