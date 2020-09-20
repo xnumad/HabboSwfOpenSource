@@ -515,7 +515,7 @@
             this.enableGiftDialogAvatarImage(false);
         }
 
-        private function _Str_23569():Boolean
+        private function isShowPurchaserName():Boolean
         {
             var k:ICheckBoxWindow;
             if (this.isModerator())
@@ -826,7 +826,7 @@
             var _local_6:int = ((_local_5) ? this._defaultStuffType : this._selectedTypeId);
             var _local_7:int = ((_local_5) ? 0 : this._boxTypes[this._boxIndex]);
             var _local_8:int = ((_local_5) ? 0 : this._ribbonTypes[this._ribbonIndex]);
-            var _local_9:Boolean = this._Str_23569();
+            var _local_9:Boolean = this.isShowPurchaserName();
             this._catalog.purchaseProductAsGift(this._pageId, this._offerId, this._extraParameter, _local_2, _local_4, _local_6, _local_7, _local_8, _local_9);
         }
 
