@@ -624,7 +624,7 @@
                     this._Str_23182();
                 }
                 this._Str_11342();
-                _local_2.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_25788);
+                _local_2.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this.onNameInputChange);
                 _local_2.addEventListener(WindowMouseEvent.DOWN, this._Str_24553);
                 _local_2.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this._Str_23371);
                 _local_2.addEventListener(WindowEvent.WINDOW_EVENT_FOCUSED, this._Str_24214);
@@ -911,7 +911,7 @@
             this.updatePreview();
         }
 
-        private function _Str_25788(k:WindowEvent):void
+        private function onNameInputChange(k:WindowEvent):void
         {
             var _local_5:String;
             var _local_2:IWindow = k.target;
