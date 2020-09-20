@@ -1181,7 +1181,7 @@
             }
         }
 
-        private function _Str_22696(k:Boolean):void
+        private function enableRibbonSelectors(k:Boolean):void
         {
             if (this._window == null)
             {
@@ -1198,7 +1198,7 @@
         private function _Str_17818(k:Boolean):void
         {
             this._Str_21183(k);
-            this._Str_22696(k);
+            this.enableRibbonSelectors(k);
         }
 
         private function _Str_21183(k:Boolean):void
