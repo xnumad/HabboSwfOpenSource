@@ -938,7 +938,7 @@
                 }
             }
             this._receiverName = _local_2.caption;
-            this._Str_20993(_local_4);
+            this.updateSuggestions(_local_4);
         }
 
         private function onNameInputMouseDown(k:WindowEvent):void
@@ -1002,7 +1002,7 @@
                         break;
                     }
                 }
-                this._Str_20993(k);
+                this.updateSuggestions(k);
                 this.showSuggestions(true);
                 return true;
             }
@@ -1261,7 +1261,7 @@
             }
         }
 
-        private function _Str_20993(k:Array):void
+        private function updateSuggestions(k:Array):void
         {
             var _local_4:String;
             var _local_5:IWindowContainer;
