@@ -1473,10 +1473,10 @@
             {
                 return;
             }
-            this._catalog.windowManager.alert(("$" + "{catalog.gift_wrapping.receiver_not_found.title}"), ("$" + "{catalog.gift_wrapping.receiver_not_found.info}"), 0, this._Str_18087);
+            this._catalog.windowManager.alert(("$" + "{catalog.gift_wrapping.receiver_not_found.title}"), ("$" + "{catalog.gift_wrapping.receiver_not_found.info}"), 0, this.alertHandler);
         }
 
-        private function _Str_18087(k:IAlertDialog, _arg_2:WindowEvent):void
+        private function alertHandler(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
             this._Str_4401(true);

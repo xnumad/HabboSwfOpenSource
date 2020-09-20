@@ -227,10 +227,10 @@
 
         public function _Str_25543():void
         {
-            this.windowManager.alert(("$" + "{playlist.editor.alert.playlist.full.title}"), ("$" + "{playlist.editor.alert.playlist.full}"), 0, this._Str_18087);
+            this.windowManager.alert(("$" + "{playlist.editor.alert.playlist.full.title}"), ("$" + "{playlist.editor.alert.playlist.full}"), 0, this.alertHandler);
         }
 
-        private function _Str_18087(k:IAlertDialog, _arg_2:WindowEvent):void
+        private function alertHandler(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
         }
