@@ -504,7 +504,7 @@
             _local_2.height = k.height;
         }
 
-        private function _Str_23505(k:WindowEvent):void
+        private function onShowFaceSelected(k:WindowEvent):void
         {
             this.enableGiftDialogAvatarImage(true);
             this.updateGiftDialogAvatarImage();
@@ -646,7 +646,7 @@
                 {
                     _local_4.visible = true;
                     _local_4.select();
-                    _local_4.addEventListener(WindowEvent.WINDOW_EVENT_SELECT, this._Str_23505);
+                    _local_4.addEventListener(WindowEvent.WINDOW_EVENT_SELECT, this.onShowFaceSelected);
                     _local_4.addEventListener(WindowEvent.WINDOW_EVENT_UNSELECT, this._Str_23528);
                 }
                 else
