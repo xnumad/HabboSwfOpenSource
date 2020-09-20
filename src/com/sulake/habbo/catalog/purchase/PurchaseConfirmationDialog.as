@@ -444,7 +444,7 @@
             this.setImage(_local_3, true);
         }
 
-        private function _Str_21654(k:Boolean):void
+        private function enableGiftDialogAvatarImage(k:Boolean):void
         {
             var _local_2:IBitmapWrapperWindow = (this._window.findChildByName("avatar_image") as IBitmapWrapperWindow);
             if (_local_2 != null)
@@ -506,13 +506,13 @@
 
         private function _Str_23505(k:WindowEvent):void
         {
-            this._Str_21654(true);
+            this.enableGiftDialogAvatarImage(true);
             this._Str_6509();
         }
 
         private function _Str_23528(k:WindowEvent):void
         {
-            this._Str_21654(false);
+            this.enableGiftDialogAvatarImage(false);
         }
 
         private function _Str_23569():Boolean
