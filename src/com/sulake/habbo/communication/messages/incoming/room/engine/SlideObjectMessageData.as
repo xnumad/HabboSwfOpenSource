@@ -13,12 +13,12 @@
         private var _moveType:String;
         private var _isReadOnly:Boolean = false;
 
-        public function SlideObjectMessageData(k:int, _arg_2:Vector3d, _arg_3:Vector3d, _arg_4:String=null)
+        public function SlideObjectMessageData(id:int, loc:Vector3d, target:Vector3d, moveType:String=null)
         {
-            this._id = k;
-            this._loc = _arg_2;
-            this._target = _arg_3;
-            this._moveType = _arg_4;
+            this._id = id;
+            this._loc = loc;
+            this._target = target;
+            this._moveType = moveType;
         }
 
         public function setReadOnly():void
