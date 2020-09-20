@@ -982,7 +982,7 @@
                     this._Str_25600();
                     return;
                 case Keyboard.TAB:
-                    this._Str_20500();
+                    this.focusMessageField();
                     return;
             }
         }
@@ -1024,7 +1024,7 @@
             k.focus();
         }
 
-        private function _Str_20500():void
+        private function focusMessageField():void
         {
             if (this._window == null)
             {
@@ -1417,7 +1417,7 @@
             }
             _local_2.caption = k;
             this._Str_11342();
-            this._Str_20500();
+            this.focusMessageField();
         }
 
         private function _Str_22731(k:WindowEvent):void
