@@ -218,7 +218,7 @@
             this._heightMapEditor = new HeightMapEditor(this);
             k = (new _Str_12857() as ByteArray);
             this._importExportDialog = new ImportExportDialog(this, new XML(k.readUTFBytes(k.length)));
-            this._floorPlanPreviewer._Str_3190();
+            this._floorPlanPreviewer.updatePreview();
             this._heightMapEditor._Str_9032();
             this._Str_23811(this._heightMapEditor._Str_17977);
             this._Str_20209("add_tile");
@@ -250,7 +250,7 @@
             this._msSinceLastPreviewUpdate = (this._msSinceLastPreviewUpdate + k);
             if (((this._msSinceLastPreviewUpdate > _Str_15936) && (this._floorPlanPreviewer)))
             {
-                this._floorPlanPreviewer._Str_3190();
+                this._floorPlanPreviewer.updatePreview();
                 this._msSinceLastPreviewUpdate = 0;
             }
         }
@@ -271,7 +271,7 @@
                         this.visible = false;
                         break;
                     case "refresh":
-                        this._floorPlanPreviewer._Str_3190();
+                        this._floorPlanPreviewer.updatePreview();
                         break;
                     case "save":
                         this._floorThickness = IDropMenuWindow(this._editorWindow.findChildByName("floor_thickness_drop")).selection;
@@ -282,7 +282,7 @@
                         this._floorPlanCache.onFloorHeightMap(this._lastReceivedMapEvent);
                         if (this._floorPlanPreviewer)
                         {
-                            this._floorPlanPreviewer._Str_3190();
+                            this._floorPlanPreviewer.updatePreview();
                         }
                         if (this._heightMapEditor)
                         {
@@ -477,7 +477,7 @@
             this._fixedWallsHeight = k.getParser().fixedWallsHeight;
             if (this._floorPlanPreviewer)
             {
-                this._floorPlanPreviewer._Str_3190();
+                this._floorPlanPreviewer.updatePreview();
             }
             if (this._heightMapEditor)
             {

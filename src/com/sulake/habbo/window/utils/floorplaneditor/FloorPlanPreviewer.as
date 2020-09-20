@@ -62,7 +62,7 @@
         }
 
 
-        public function _Str_3190():void
+        public function updatePreview():void
         {
             var _local_6:int;
             var _local_7:int;

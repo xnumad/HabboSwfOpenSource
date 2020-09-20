@@ -699,7 +699,7 @@
             }
             this._Str_24942();
             this._Str_19479();
-            this._Str_3190();
+            this.updatePreview();
         }
 
         private function isModerator():Boolean
@@ -712,7 +712,7 @@
             return this._boxTypes[this._boxIndex] == this._defaultStuffType;
         }
 
-        private function _Str_3190():void
+        private function updatePreview():void
         {
             if (this._ribbonIndex < 0)
             {
@@ -890,25 +890,25 @@
         private function _Str_23680(k:WindowEvent):void
         {
             this._ribbonIndex--;
-            this._Str_3190();
+            this.updatePreview();
         }
 
         private function _Str_25226(k:WindowEvent):void
         {
             this._ribbonIndex++;
-            this._Str_3190();
+            this.updatePreview();
         }
 
         private function _Str_24477(k:WindowEvent):void
         {
             this._boxIndex--;
-            this._Str_3190();
+            this.updatePreview();
         }
 
         private function _Str_24629(k:WindowEvent):void
         {
             this._boxIndex++;
-            this._Str_3190();
+            this.updatePreview();
         }
 
         private function _Str_25788(k:WindowEvent):void
@@ -1424,7 +1424,7 @@
         {
             this._selectedTypeId = k.target.id;
             this._Str_19479();
-            this._Str_3190();
+            this.updatePreview();
         }
 
         private function _Str_19479():void

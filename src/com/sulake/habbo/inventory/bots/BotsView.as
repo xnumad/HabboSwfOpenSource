@@ -82,7 +82,7 @@
                 return;
             }
             this._Str_7044();
-            this._Str_3190(this._selectedGridItem);
+            this.updatePreview(this._selectedGridItem);
             this._Str_6511();
         }
 
@@ -168,7 +168,7 @@
             {
                 this._selectedGridItem.setSelected(true);
             }
-            this._Str_3190(k);
+            this.updatePreview(k);
         }
 
         public function _Str_3820():void
@@ -203,7 +203,7 @@
             if (this._currentState == this._Str_4660)
             {
                 this._Str_7044();
-                this._Str_3190();
+                this.updatePreview();
             }
         }
 
@@ -250,7 +250,7 @@
         {
             if (((this._gridItems == null) || (this._gridItems.length == 0)))
             {
-                this._Str_3190();
+                this.updatePreview();
                 return;
             }
             this._Str_7828(this._gridItems.getWithIndex(0));
@@ -360,7 +360,7 @@
             }
         }
 
-        private function _Str_3190(k:BotGridItem=null):void
+        private function updatePreview(k:BotGridItem=null):void
         {
             var _local_2:BitmapData;
             var _local_3:String;
@@ -467,7 +467,7 @@
             {
                 _local_2.addEventListener(WindowMouseEvent.DOWN, this._Str_9841);
             }
-            this._Str_3190();
+            this.updatePreview();
             this._Str_3820();
             this._Str_9010();
             this._isInitialized = true;
