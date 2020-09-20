@@ -533,7 +533,7 @@
             return true;
         }
 
-        private function _Str_24887():void
+        private function updateGiftDialogLabels():void
         {
             var _local_9:IWindow;
             if (((this._window == null) || (this._window.disposed)))
@@ -780,7 +780,7 @@
             this._imageId = _local_6.id;
             this.setImage(_local_6.data, true);
             this._Str_6969(false);
-            this._Str_24887();
+            this.updateGiftDialogLabels();
         }
 
         private function _Str_24942():void
