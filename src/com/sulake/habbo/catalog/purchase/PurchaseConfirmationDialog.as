@@ -804,7 +804,7 @@
                 }
                 else
                 {
-                    _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_22731);
+                    _local_5.addEventListener(WindowMouseEvent.CLICK, this.onColorItemClick);
                     _local_5.findChildByName("color").color = _local_4.colours[0];
                     _local_5.id = _local_3;
                     k.addGridItem(_local_5);
@@ -1420,7 +1420,7 @@
             this.focusMessageField();
         }
 
-        private function _Str_22731(k:WindowEvent):void
+        private function onColorItemClick(k:WindowEvent):void
         {
             this._selectedTypeId = k.target.id;
             this._Str_19479();
