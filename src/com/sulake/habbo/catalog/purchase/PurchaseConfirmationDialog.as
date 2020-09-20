@@ -969,7 +969,7 @@
                         {
                             if (((this._suggestionContainer == null) || (!(this._suggestionContainer.visible))))
                             {
-                                _local_4 = this._Str_22293();
+                                _local_4 = this.showAllFriendSuggestions();
                                 if (_local_4)
                                 {
                                     this._Str_10725(0);
@@ -987,7 +987,7 @@
             }
         }
 
-        private function _Str_22293():Boolean
+        private function showAllFriendSuggestions():Boolean
         {
             var k:Array;
             var _local_2:String;
