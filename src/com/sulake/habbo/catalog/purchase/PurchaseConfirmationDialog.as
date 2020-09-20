@@ -628,7 +628,7 @@
                 _local_2.addEventListener(WindowMouseEvent.DOWN, this.onNameInputMouseDown);
                 _local_2.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this.onNameInputKeyUp);
                 _local_2.addEventListener(WindowEvent.WINDOW_EVENT_FOCUSED, this.onNameInputFocus);
-                _local_2.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_22761);
+                _local_2.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this.onNameInputUnfocus);
             }
             var _local_3:IStaticBitmapWrapperWindow = (this._window.findChildByName("gift_card") as IStaticBitmapWrapperWindow);
             if (_local_3)
@@ -1106,7 +1106,7 @@
             this._Str_11342();
         }
 
-        private function _Str_22761(k:WindowEvent):void
+        private function onNameInputUnfocus(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
             if (_local_2 == null)
