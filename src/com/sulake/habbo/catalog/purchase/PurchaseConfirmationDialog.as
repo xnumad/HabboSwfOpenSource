@@ -768,7 +768,7 @@
                     this.enableBoxColorAndRibbonSelectors(true);
                     if (((k >= 3) && (k <= 6)))
                     {
-                        this._Str_21183(false);
+                        this.enableBoxColorSelectors(false);
                     }
                 }
             }
@@ -1197,11 +1197,11 @@
 
         private function enableBoxColorAndRibbonSelectors(k:Boolean):void
         {
-            this._Str_21183(k);
+            this.enableBoxColorSelectors(k);
             this.enableRibbonSelectors(k);
         }
 
-        private function _Str_21183(k:Boolean):void
+        private function enableBoxColorSelectors(k:Boolean):void
         {
             if (this._window == null)
             {
