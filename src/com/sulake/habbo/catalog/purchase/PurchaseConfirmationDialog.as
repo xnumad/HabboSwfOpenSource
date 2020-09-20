@@ -959,10 +959,10 @@
             switch (_local_2.keyCode)
             {
                 case Keyboard.UP:
-                    this._Str_10725((this._highlightIndex - 1));
+                    this.highlightSuggestion((this._highlightIndex - 1));
                     return;
                 case Keyboard.DOWN:
-                    this._Str_10725((this._highlightIndex + 1));
+                    this.highlightSuggestion((this._highlightIndex + 1));
                     if (_local_3 != null)
                     {
                         if (_local_3.caption.length == 0)
@@ -972,7 +972,7 @@
                                 _local_4 = this.showAllFriendSuggestions();
                                 if (_local_4)
                                 {
-                                    this._Str_10725(0);
+                                    this.highlightSuggestion(0);
                                 }
                             }
                         }
@@ -1332,7 +1332,7 @@
                 }
             }
             this.showMessageInput((k.length < 2));
-            this._Str_10725(0);
+            this.highlightSuggestion(0);
         }
 
         private function onSuggestionsClick(k:WindowEvent):void
@@ -1363,10 +1363,10 @@
             {
                 return;
             }
-            this._Str_10725(_local_3.getListItemIndex(_local_2));
+            this.highlightSuggestion(_local_3.getListItemIndex(_local_2));
         }
 
-        private function _Str_10725(k:int):void
+        private function highlightSuggestion(k:int):void
         {
             var _local_3:IWindowContainer;
             if (this._suggestionContainer == null)
