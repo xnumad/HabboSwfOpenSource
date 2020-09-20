@@ -1073,11 +1073,11 @@
             this._suggestionContainer.visible = k;
             if (!k)
             {
-                this._Str_21511(true);
+                this.showMessageInput(true);
             }
         }
 
-        private function _Str_21511(k:Boolean):void
+        private function showMessageInput(k:Boolean):void
         {
             var _local_2:IWindow = this._window.findChildByName("message_input");
             if (_local_2 != null)
@@ -1331,7 +1331,7 @@
                     _local_3++;
                 }
             }
-            this._Str_21511((k.length < 2));
+            this.showMessageInput((k.length < 2));
             this._Str_10725(0);
         }
 
