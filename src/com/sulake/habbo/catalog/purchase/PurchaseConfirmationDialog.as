@@ -698,7 +698,7 @@
                 this._boxIndex = 0;
             }
             this.initColorGrid();
-            this._Str_19479();
+            this.updateColorGrid();
             this.updatePreview();
         }
 
@@ -1423,11 +1423,11 @@
         private function onColorItemClick(k:WindowEvent):void
         {
             this._selectedTypeId = k.target.id;
-            this._Str_19479();
+            this.updateColorGrid();
             this.updatePreview();
         }
 
-        private function _Str_19479():void
+        private function updateColorGrid():void
         {
             var _local_2:IWindowContainer;
             var _local_3:IWindow;
