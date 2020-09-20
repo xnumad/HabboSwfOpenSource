@@ -625,7 +625,7 @@
                 }
                 this._Str_11342();
                 _local_2.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this.onNameInputChange);
-                _local_2.addEventListener(WindowMouseEvent.DOWN, this._Str_24553);
+                _local_2.addEventListener(WindowMouseEvent.DOWN, this.onNameInputMouseDown);
                 _local_2.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this._Str_23371);
                 _local_2.addEventListener(WindowEvent.WINDOW_EVENT_FOCUSED, this._Str_24214);
                 _local_2.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_22761);
@@ -941,7 +941,7 @@
             this._Str_20993(_local_4);
         }
 
-        private function _Str_24553(k:WindowEvent):void
+        private function onNameInputMouseDown(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
             if (_local_2 == null)
