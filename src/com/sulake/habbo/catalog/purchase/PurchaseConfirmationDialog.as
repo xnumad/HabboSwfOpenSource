@@ -663,7 +663,7 @@
             var _local_6:IWindow = this._window.findChildByName("message_input");
             if (_local_6 != null)
             {
-                this._Str_13320();
+                this.updateMessageHint();
                 _local_6.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this.onMessageInputChange);
                 _local_6.addEventListener(WindowEvent.WINDOW_EVENT_FOCUSED, this.onMessageInputFocus);
                 _local_6.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this.onMessageInputUnfocus);
@@ -1093,7 +1093,7 @@
             {
                 return;
             }
-            this._Str_13320();
+            this.updateMessageHint();
         }
 
         private function onNameInputFocus(k:WindowEvent):void
@@ -1118,13 +1118,13 @@
 
         private function onMessageInputFocus(k:WindowEvent):void
         {
-            this._Str_13320();
+            this.updateMessageHint();
             this.showSuggestions(false);
         }
 
         private function onMessageInputUnfocus(k:WindowEvent):void
         {
-            this._Str_13320();
+            this.updateMessageHint();
         }
 
         private function updateNameHint():void
@@ -1149,7 +1149,7 @@
             }
         }
 
-        private function _Str_13320():void
+        private function updateMessageHint():void
         {
             if (this._window == null)
             {
