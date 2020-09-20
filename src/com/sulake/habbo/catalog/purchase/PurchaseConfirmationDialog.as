@@ -617,7 +617,7 @@
             {
                 if (this._userName != null)
                 {
-                    this._Str_16023(this._userName);
+                    this.setReceiverName(this._userName);
                 }
                 else
                 {
@@ -1060,7 +1060,7 @@
             {
                 return;
             }
-            this._Str_16023(_local_3.caption);
+            this.setReceiverName(_local_3.caption);
             this.showSuggestions(false);
         }
 
@@ -1347,7 +1347,7 @@
             {
                 return;
             }
-            this._Str_16023(_local_3.text);
+            this.setReceiverName(_local_3.text);
             this.showSuggestions(false);
         }
 
@@ -1404,7 +1404,7 @@
             return ((k % 2) == 0) ? this._Str_14861 : this._Str_15515;
         }
 
-        private function _Str_16023(k:String):void
+        private function setReceiverName(k:String):void
         {
             if (this._window == null)
             {
