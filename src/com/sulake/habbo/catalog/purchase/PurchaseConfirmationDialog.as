@@ -1300,7 +1300,7 @@
                 _local_5 = (this._suggestionsListItem.clone() as IWindowContainer);
                 if (_local_5 != null)
                 {
-                    _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_24462);
+                    _local_5.addEventListener(WindowMouseEvent.CLICK, this.onSuggestionsClick);
                     _local_5.addEventListener(WindowMouseEvent.OVER, this._Str_25764);
                     _local_6 = (_local_5.findChildByName("name_text") as ITextWindow);
                     if (_local_6 != null)
@@ -1335,7 +1335,7 @@
             this._Str_10725(0);
         }
 
-        private function _Str_24462(k:WindowEvent):void
+        private function onSuggestionsClick(k:WindowEvent):void
         {
             var _local_2:IWindowContainer = (k.target as IWindowContainer);
             if (_local_2 == null)
