@@ -626,7 +626,7 @@
             }
         }
 
-        private function _Str_5244(k:IWindow):void
+        private function enableWindow(k:IWindow):void
         {
             if (k != null)
             {
@@ -747,10 +747,10 @@
             }
             else
             {
-                this._Str_5244(this._Str_5830);
-                this._Str_5244(this._Str_6424);
-                this._Str_5244(this._Str_6508);
-                this._Str_5244(this._Str_14390);
+                this.enableWindow(this._Str_5830);
+                this.enableWindow(this._Str_6424);
+                this.enableWindow(this._Str_6508);
+                this.enableWindow(this._Str_14390);
             }
             if (this._Str_5830)
             {

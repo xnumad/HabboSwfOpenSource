@@ -1188,11 +1188,11 @@
                 return;
             }
             var _local_2:IWindow = this._window.findChildByName("ribbon_prev");
-            this._Str_5244(_local_2, k);
+            this.enableWindow(_local_2, k);
             var _local_3:IWindow = this._window.findChildByName("ribbon_next");
-            this._Str_5244(_local_3, k);
+            this.enableWindow(_local_3, k);
             var _local_4:IWindow = this._window.findChildByName("pick_ribbon_title");
-            this._Str_5244(_local_4, k);
+            this.enableWindow(_local_4, k);
         }
 
         private function enableBoxColorAndRibbonSelectors(k:Boolean):void
@@ -1208,15 +1208,15 @@
                 return;
             }
             var _local_2:IWindow = this._window.findChildByName("box_color_title");
-            this._Str_5244(_local_2, k);
+            this.enableWindow(_local_2, k);
             var _local_3:IWindowContainer = (this._window.findChildByName("color_picker_container") as IWindowContainer);
             if (_local_3 != null)
             {
-                this._Str_5244(_local_3, k);
+                this.enableWindow(_local_3, k);
             }
         }
 
-        private function _Str_5244(k:IWindow, _arg_2:Boolean):void
+        private function enableWindow(k:IWindow, _arg_2:Boolean):void
         {
             var _local_3:IIterator;
             var _local_4:int;
@@ -1238,7 +1238,7 @@
                             this.enableElement(_local_6, _arg_2);
                             if ((_local_6 is IIterable))
                             {
-                                this._Str_5244(_local_6, _arg_2);
+                                this.enableWindow(_local_6, _arg_2);
                             }
                         }
                         _local_5++;
