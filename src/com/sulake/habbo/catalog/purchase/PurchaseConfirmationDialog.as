@@ -433,7 +433,7 @@
             }
             if (k == this._catalog.sessionDataManager.figure)
             {
-                this._Str_6509();
+                this.updateGiftDialogAvatarImage();
             }
             var _local_2:IAvatarImage = this._catalog.avatarRenderManager.createAvatarImage(k, AvatarScaleType.LARGE, null, this);
             _local_2.setDirection(AvatarSetType.FULL, 3);
@@ -451,7 +451,7 @@
             {
                 if (k)
                 {
-                    this._Str_6509();
+                    this.updateGiftDialogAvatarImage();
                 }
                 else
                 {
@@ -465,7 +465,7 @@
             }
         }
 
-        private function _Str_6509():void
+        private function updateGiftDialogAvatarImage():void
         {
             var k:BitmapData = this.getAvatarFaceBitmap(this._catalog.sessionDataManager.figure);
             if (k != null)
@@ -507,7 +507,7 @@
         private function _Str_23505(k:WindowEvent):void
         {
             this.enableGiftDialogAvatarImage(true);
-            this._Str_6509();
+            this.updateGiftDialogAvatarImage();
         }
 
         private function _Str_23528(k:WindowEvent):void
@@ -659,7 +659,7 @@
             {
                 _local_5.visible = false;
             }
-            this._Str_6509();
+            this.updateGiftDialogAvatarImage();
             var _local_6:IWindow = this._window.findChildByName("message_input");
             if (_local_6 != null)
             {
