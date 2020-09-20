@@ -250,7 +250,7 @@
             {
                 return;
             }
-            this._Str_23404(k);
+            this.updateLocalizations(k);
             var _local_3:IWindowContainer = (this._window.findChildByName("purchase_cost_box") as IWindowContainer);
             this._catalog.utils._Str_6455(_local_3, k, this._quantity);
             this.addClickListener("buy_button", this._Str_13434);
@@ -389,7 +389,7 @@
             }
         }
 
-        private function _Str_23404(k:IPurchasableOffer):void
+        private function updateLocalizations(k:IPurchasableOffer):void
         {
             if (k == null)
             {
