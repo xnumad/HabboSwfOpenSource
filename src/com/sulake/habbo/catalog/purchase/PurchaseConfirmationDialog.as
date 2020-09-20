@@ -1301,7 +1301,7 @@
                 if (_local_5 != null)
                 {
                     _local_5.addEventListener(WindowMouseEvent.CLICK, this.onSuggestionsClick);
-                    _local_5.addEventListener(WindowMouseEvent.OVER, this._Str_25764);
+                    _local_5.addEventListener(WindowMouseEvent.OVER, this.onSuggestionsMouseOver);
                     _local_6 = (_local_5.findChildByName("name_text") as ITextWindow);
                     if (_local_6 != null)
                     {
@@ -1351,7 +1351,7 @@
             this.showSuggestions(false);
         }
 
-        private function _Str_25764(k:WindowEvent):void
+        private function onSuggestionsMouseOver(k:WindowEvent):void
         {
             var _local_2:IWindowContainer = (k.target as IWindowContainer);
             if (_local_2 == null)
