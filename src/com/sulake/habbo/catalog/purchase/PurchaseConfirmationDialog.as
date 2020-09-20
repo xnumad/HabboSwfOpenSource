@@ -753,7 +753,7 @@
             var _local_5:Boolean = this.isDefaultBoxSelected();
             if (_local_5)
             {
-                this._Str_17818(false);
+                this.enableBoxColorAndRibbonSelectors(false);
                 _local_4 = this._defaultStuffType;
                 _local_3 = "";
             }
@@ -761,11 +761,11 @@
             {
                 if (_Str_13980(k))
                 {
-                    this._Str_17818(false);
+                    this.enableBoxColorAndRibbonSelectors(false);
                 }
                 else
                 {
-                    this._Str_17818(true);
+                    this.enableBoxColorAndRibbonSelectors(true);
                     if (((k >= 3) && (k <= 6)))
                     {
                         this._Str_21183(false);
@@ -1195,7 +1195,7 @@
             this._Str_5244(_local_4, k);
         }
 
-        private function _Str_17818(k:Boolean):void
+        private function enableBoxColorAndRibbonSelectors(k:Boolean):void
         {
             this._Str_21183(k);
             this.enableRibbonSelectors(k);
