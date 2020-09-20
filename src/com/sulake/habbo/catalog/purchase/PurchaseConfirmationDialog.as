@@ -609,7 +609,7 @@
                 return;
             }
             this._window.center();
-            this.addClickListener("give_gift_button", this._Str_23085);
+            this.addClickListener("give_gift_button", this.onGiveGiftButtonClick);
             this.addClickListener("cancel_link_region", this._Str_21578);
             this.addClickListener("header_button_close", this._Str_21578);
             var _local_2:IWindow = this._window.findChildByName("name_input");
@@ -873,7 +873,7 @@
             this.dispose();
         }
 
-        private function _Str_23085(k:WindowEvent):void
+        private function onGiveGiftButtonClick(k:WindowEvent):void
         {
             this.giveGift();
             this._Str_4401(false);
