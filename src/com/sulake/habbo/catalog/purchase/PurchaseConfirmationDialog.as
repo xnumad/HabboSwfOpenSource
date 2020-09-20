@@ -676,7 +676,7 @@
                 this._localization.registerParameter(_local_10, "name", _local_9);
                 _local_7.caption = this._localization.getLocalization(_local_10, _local_9);
             }
-            this.addClickListener("ribbon_prev", this._Str_23680);
+            this.addClickListener("ribbon_prev", this.onPreviousGiftWrap);
             this.addClickListener("ribbon_next", this._Str_25226);
             this.addClickListener("box_prev", this._Str_24477);
             this.addClickListener("box_next", this._Str_24629);
@@ -887,7 +887,7 @@
             this.dispose();
         }
 
-        private function _Str_23680(k:WindowEvent):void
+        private function onPreviousGiftWrap(k:WindowEvent):void
         {
             this._ribbonIndex--;
             this.updatePreview();
