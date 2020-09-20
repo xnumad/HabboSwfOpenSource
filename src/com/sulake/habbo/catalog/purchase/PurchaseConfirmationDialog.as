@@ -540,7 +540,7 @@
             {
                 return;
             }
-            var k:Boolean = this._Str_18066();
+            var k:Boolean = this.isDefaultBoxSelected();
             var _local_2:String = "";
             var _local_3:String = "";
             var _local_4:ILocalization;
@@ -707,7 +707,7 @@
             return this._catalog.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR);
         }
 
-        private function _Str_18066():Boolean
+        private function isDefaultBoxSelected():Boolean
         {
             return this._boxTypes[this._boxIndex] == this._defaultStuffType;
         }
@@ -750,7 +750,7 @@
             }
             var _local_3:String = _local_2.toString();
             var _local_4:int = this._selectedTypeId;
-            var _local_5:Boolean = this._Str_18066();
+            var _local_5:Boolean = this.isDefaultBoxSelected();
             if (_local_5)
             {
                 this._Str_17818(false);
@@ -822,7 +822,7 @@
             var _local_2:String = k.caption;
             var _local_3:IWindow = this._window.findChildByName("message_input");
             var _local_4:String = ((_local_3 == null) ? "" : _local_3.caption);
-            var _local_5:Boolean = this._Str_18066();
+            var _local_5:Boolean = this.isDefaultBoxSelected();
             var _local_6:int = ((_local_5) ? this._defaultStuffType : this._selectedTypeId);
             var _local_7:int = ((_local_5) ? 0 : this._boxTypes[this._boxIndex]);
             var _local_8:int = ((_local_5) ? 0 : this._ribbonTypes[this._ribbonIndex]);
