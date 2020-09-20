@@ -610,8 +610,8 @@
             }
             this._window.center();
             this.addClickListener("give_gift_button", this.onGiveGiftButtonClick);
-            this.addClickListener("cancel_link_region", this._Str_21578);
-            this.addClickListener("header_button_close", this._Str_21578);
+            this.addClickListener("cancel_link_region", this.onCancelGift);
+            this.addClickListener("header_button_close", this.onCancelGift);
             var _local_2:IWindow = this._window.findChildByName("name_input");
             if (_local_2 != null)
             {
@@ -881,7 +881,7 @@
             this._catalog.resetPlacedOfferData();
         }
 
-        private function _Str_21578(k:WindowEvent):void
+        private function onCancelGift(k:WindowEvent):void
         {
             this._catalog.resetPlacedOfferData();
             this.dispose();
