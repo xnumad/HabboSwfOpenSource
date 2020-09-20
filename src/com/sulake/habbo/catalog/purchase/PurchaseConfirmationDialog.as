@@ -131,7 +131,7 @@
                     return;
                 }
             }
-            this._Str_22636(_arg_3, _arg_10);
+            this.showConfirmationDialog(_arg_3, _arg_10);
             this._catalog.syncPlacedOfferWithPurchase(_arg_3);
         }
 
@@ -223,7 +223,7 @@
             }
         }
 
-        private function _Str_22636(k:IPurchasableOffer, _arg_2:BitmapData):void
+        private function showConfirmationDialog(k:IPurchasableOffer, _arg_2:BitmapData):void
         {
             var _local_7:IProductData;
             var _local_8:IItemListWindow;
