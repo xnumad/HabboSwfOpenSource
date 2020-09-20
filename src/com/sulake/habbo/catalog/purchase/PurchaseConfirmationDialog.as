@@ -510,7 +510,7 @@
             this.updateGiftDialogAvatarImage();
         }
 
-        private function _Str_23528(k:WindowEvent):void
+        private function onShowFaceUnselected(k:WindowEvent):void
         {
             this.enableGiftDialogAvatarImage(false);
         }
@@ -647,7 +647,7 @@
                     _local_4.visible = true;
                     _local_4.select();
                     _local_4.addEventListener(WindowEvent.WINDOW_EVENT_SELECT, this.onShowFaceSelected);
-                    _local_4.addEventListener(WindowEvent.WINDOW_EVENT_UNSELECT, this._Str_23528);
+                    _local_4.addEventListener(WindowEvent.WINDOW_EVENT_UNSELECT, this.onShowFaceUnselected);
                 }
                 else
                 {
