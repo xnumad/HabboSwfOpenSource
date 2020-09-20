@@ -861,7 +861,7 @@
             }
         }
 
-        private function _Str_24474(k:WindowEvent):void
+        private function onGiftButtonClick(k:WindowEvent):void
         {
             this.showGiftDialog();
             HabboTracking.getInstance().trackEventLog("Catalog", "clickConfirm", "client.buy_as_gift.clicked");
@@ -1525,7 +1525,7 @@
         {
             var k:IWindow = this._window.findChildByName("buy_button");
             k.removeEventListener(WindowMouseEvent.CLICK, this.onBuyButtonClick);
-            k.addEventListener(WindowMouseEvent.CLICK, this._Str_24474);
+            k.addEventListener(WindowMouseEvent.CLICK, this.onGiftButtonClick);
             k.caption = "${catalog.purchase_confirmation.gift}";
             this._window.caption = "${catalog.purchase_confirmation.gift.title}";
         }
