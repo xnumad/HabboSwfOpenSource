@@ -678,7 +678,7 @@
             }
             this.addClickListener("ribbon_prev", this.onPreviousGiftWrap);
             this.addClickListener("ribbon_next", this.onNextGiftWrap);
-            this.addClickListener("box_prev", this._Str_24477);
+            this.addClickListener("box_prev", this.onPreviousGiftBox);
             this.addClickListener("box_next", this._Str_24629);
             this._localization.registerParameter("catalog.gift_wrapping_new.price", "price", k.price.toString());
             if (k.defaultStuffTypes.length > 0)
@@ -899,7 +899,7 @@
             this.updatePreview();
         }
 
-        private function _Str_24477(k:WindowEvent):void
+        private function onPreviousGiftBox(k:WindowEvent):void
         {
             this._boxIndex--;
             this.updatePreview();
