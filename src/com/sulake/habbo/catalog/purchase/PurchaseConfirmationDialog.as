@@ -1141,11 +1141,11 @@
             var _local_2:String = k.caption;
             if (((_local_2 == null) || (_local_2.length == 0)))
             {
-                this._Str_15786(true, "name_input_hint", "catalog.gift_wrapping_new.name_hint");
+                this.enableHint(true, "name_input_hint", "catalog.gift_wrapping_new.name_hint");
             }
             else
             {
-                this._Str_15786(false, "name_input_hint", "catalog.gift_wrapping_new.name_hint");
+                this.enableHint(false, "name_input_hint", "catalog.gift_wrapping_new.name_hint");
             }
         }
 
@@ -1163,15 +1163,15 @@
             var _local_2:String = k.caption;
             if (((_local_2 == null) || (_local_2.length == 0)))
             {
-                this._Str_15786(true, "message_input_hint", "catalog.gift_wrapping_new.message_hint");
+                this.enableHint(true, "message_input_hint", "catalog.gift_wrapping_new.message_hint");
             }
             else
             {
-                this._Str_15786(false, "message_input_hint", "catalog.gift_wrapping_new.message_hint");
+                this.enableHint(false, "message_input_hint", "catalog.gift_wrapping_new.message_hint");
             }
         }
 
-        private function _Str_15786(k:Boolean, _arg_2:String, _arg_3:String):void
+        private function enableHint(k:Boolean, _arg_2:String, _arg_3:String):void
         {
             var _local_4:ITextWindow = (this._window.findChildByName(_arg_2) as ITextWindow);
             if (_local_4 != null)
