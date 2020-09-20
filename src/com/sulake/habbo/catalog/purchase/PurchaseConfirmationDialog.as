@@ -470,7 +470,7 @@
             var k:BitmapData = this.getAvatarFaceBitmap(this._catalog.sessionDataManager.figure);
             if (k != null)
             {
-                this._Str_9900(k);
+                this.updateAvatarImage(k);
             }
         }
 
@@ -483,12 +483,12 @@
                 _local_2 = (k.content as BitmapData);
                 if (_local_2 != null)
                 {
-                    this._Str_9900(_local_2.clone());
+                    this.updateAvatarImage(_local_2.clone());
                 }
             }
         }
 
-        private function _Str_9900(k:BitmapData):void
+        private function updateAvatarImage(k:BitmapData):void
         {
             if (k == null)
             {
