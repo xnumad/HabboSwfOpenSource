@@ -253,7 +253,7 @@
             this.updateLocalizations(k);
             var _local_3:IWindowContainer = (this._window.findChildByName("purchase_cost_box") as IWindowContainer);
             this._catalog.utils._Str_6455(_local_3, k, this._quantity);
-            this.addClickListener("buy_button", this._Str_13434);
+            this.addClickListener("buy_button", this.onBuyButtonClick);
             this.addClickListener("cancel_button", this.onClose);
             this.addClickListener("header_button_close", this.onClose);
             this._window.center();
@@ -848,7 +848,7 @@
             }
         }
 
-        private function _Str_13434(k:WindowEvent):void
+        private function onBuyButtonClick(k:WindowEvent):void
         {
             this.safeDisable("buy_button");
             this.safeDisable("cancel_button");
@@ -1524,7 +1524,7 @@
         public function _Str_25849():void
         {
             var k:IWindow = this._window.findChildByName("buy_button");
-            k.removeEventListener(WindowMouseEvent.CLICK, this._Str_13434);
+            k.removeEventListener(WindowMouseEvent.CLICK, this.onBuyButtonClick);
             k.addEventListener(WindowMouseEvent.CLICK, this._Str_24474);
             k.caption = "${catalog.purchase_confirmation.gift}";
             this._window.caption = "${catalog.purchase_confirmation.gift.title}";

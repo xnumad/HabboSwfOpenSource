@@ -31,7 +31,7 @@
             this._catalogPageName = k.controller.manager.getProperty("avatareditor.effects.buy.button.catalog.page.name");
             this._secondsCounterTimer = new Timer(1000);
             this._secondsCounterTimer.addEventListener(TimerEvent.TIMER, this._Str_19275);
-            this._container.findChildByName("get_more_button").addEventListener(WindowMouseEvent.CLICK, this._Str_13434);
+            this._container.findChildByName("get_more_button").addEventListener(WindowMouseEvent.CLICK, this.onBuyButtonClick);
             this._Str_2491(null);
         }
 
@@ -140,7 +140,7 @@
             _local_9.text = _local_10;
         }
 
-        private function _Str_13434(k:WindowMouseEvent):void
+        private function onBuyButtonClick(k:WindowMouseEvent):void
         {
             this._model.controller.manager.catalog.openCatalogPage(this._catalogPageName);
         }
