@@ -677,7 +677,7 @@
                 _local_7.caption = this._localization.getLocalization(_local_10, _local_9);
             }
             this.addClickListener("ribbon_prev", this.onPreviousGiftWrap);
-            this.addClickListener("ribbon_next", this._Str_25226);
+            this.addClickListener("ribbon_next", this.onNextGiftWrap);
             this.addClickListener("box_prev", this._Str_24477);
             this.addClickListener("box_next", this._Str_24629);
             this._localization.registerParameter("catalog.gift_wrapping_new.price", "price", k.price.toString());
@@ -893,7 +893,7 @@
             this.updatePreview();
         }
 
-        private function _Str_25226(k:WindowEvent):void
+        private function onNextGiftWrap(k:WindowEvent):void
         {
             this._ribbonIndex++;
             this.updatePreview();
