@@ -621,7 +621,7 @@
                 }
                 else
                 {
-                    this._Str_23182();
+                    this.focusNameField();
                 }
                 this._Str_11342();
                 _local_2.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this.onNameInputChange);
@@ -1009,7 +1009,7 @@
             return false;
         }
 
-        private function _Str_23182():void
+        private function focusNameField():void
         {
             if (this._window == null)
             {
