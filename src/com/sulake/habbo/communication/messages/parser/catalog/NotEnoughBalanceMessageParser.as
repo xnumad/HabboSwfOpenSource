@@ -10,7 +10,7 @@
         private var _activityPointType:int = 0;
 
 
-        public function get _Str_16424():Boolean
+        public function get notEnoughCredits():Boolean
         {
             return this._Str_17433;
         }

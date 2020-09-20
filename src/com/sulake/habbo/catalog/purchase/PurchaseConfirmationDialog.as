@@ -1502,7 +1502,7 @@
             }
         }
 
-        public function _Str_16424():void
+        public function notEnoughCredits():void
         {
             if (this.disposed)
             {

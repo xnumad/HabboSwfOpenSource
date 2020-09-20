@@ -1928,7 +1928,7 @@
         {
             var _local_2:NotEnoughBalanceMessageEvent = (k as NotEnoughBalanceMessageEvent);
             var _local_3:NotEnoughBalanceMessageParser = _local_2.getParser();
-            if (_local_3._Str_16424)
+            if (_local_3.notEnoughCredits)
             {
                 this.showNotEnoughCreditsAlert();
             }
@@ -1941,7 +1941,7 @@
             }
             if (this._purchaseConfirmationDialog != null)
             {
-                this._purchaseConfirmationDialog._Str_16424();
+                this._purchaseConfirmationDialog.notEnoughCredits();
             }
         }
 
