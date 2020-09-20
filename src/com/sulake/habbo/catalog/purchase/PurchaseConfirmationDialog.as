@@ -830,7 +830,7 @@
             this._catalog.purchaseProductAsGift(this._pageId, this._offerId, this._extraParameter, _local_2, _local_4, _local_6, _local_7, _local_8, _local_9);
         }
 
-        private function _Str_18873(k:String):void
+        private function safeDisable(k:String):void
         {
             var _local_2:IWindow = this._window.findChildByName(k);
             if (_local_2 != null)
@@ -850,9 +850,9 @@
 
         private function _Str_13434(k:WindowEvent):void
         {
-            this._Str_18873("buy_button");
-            this._Str_18873("cancel_button");
-            this._Str_18873("publish_check");
+            this.safeDisable("buy_button");
+            this.safeDisable("cancel_button");
+            this.safeDisable("publish_check");
             this._catalog.purchaseProduct(this._pageId, this._offerId, this._extraParameter, this._quantity);
             var _local_2:ICatalogPage = this._catalog.currentPage;
             if (_local_2 != null)
