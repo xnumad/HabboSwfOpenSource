@@ -37,59 +37,60 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            var _local_7:int;
-            var _local_8:SlideObjectMessageData;
-            var _local_9:Vector3d;
-            var _local_10:Vector3d;
-            var _local_11:Number;
-            var _local_12:Number;
+            var userIndex:int;
+            var movedObject:SlideObjectMessageData;
+            var oldVector:Vector3d;
+            var newVector:Vector3d;
+            var oldZ:Number;
+            var newZ:Number;
             if (k == null)
             {
                 return false;
             }
-            var _local_2:Number = k.readInteger();
-            var _local_3:Number = k.readInteger();
-            var _local_4:Number = k.readInteger();
-            var _local_5:Number = k.readInteger();
-            var _local_6:int = k.readInteger();
+            var oldX:Number = k.readInteger();
+            var oldY:Number = k.readInteger();
+            var newX:Number = k.readInteger();
+            var newY:Number = k.readInteger();
+            var movedObjects:int = k.readInteger();
             this._objectList = new Array();
             var _local_13:int;
-            while (_local_13 < _local_6)
+            while (_local_13 < movedObjects)
             {
-                _local_7 = k.readInteger();
-                _local_11 = Number(k.readString());
-                _local_12 = Number(k.readString());
-                _local_9 = new Vector3d(_local_2, _local_3, _local_11);
-                _local_10 = new Vector3d(_local_4, _local_5, _local_12);
-                _local_8 = new SlideObjectMessageData(_local_7, _local_9, _local_10);
-                this._objectList.push(_local_8);
+                userIndex = k.readInteger();
+                oldZ = Number(k.readString());
+                newZ = Number(k.readString());
+                oldVector = new Vector3d(oldX, oldY, oldZ);
+                newVector = new Vector3d(newX, newY, newZ);
+                movedObject = new SlideObjectMessageData(userIndex, oldVector, newVector);
+                this._objectList.push(movedObject);
                 _local_13++;
             }
-            this._id = k.readInteger();
+            this._id = k.readInteger(); //furni itemId
             if (!k.bytesAvailable)
             {
                 return true;
             }
-            var _local_14:int = k.readInteger();
-            switch (_local_14)
+            //Moved avatar
+            var type:int = k.readInteger();
+            switch (type)
             {
                 case 0:
                     break;
                 case 1:
-                    _local_7 = k.readInteger();
-                    _local_11 = Number(k.readString());
-                    _local_12 = Number(k.readString());
-                    _local_9 = new Vector3d(_local_2, _local_3, _local_11);
-                    _local_10 = new Vector3d(_local_4, _local_5, _local_12);
-                    this._avatar = new SlideObjectMessageData(_local_7, _local_9, _local_10, SlideObjectMessageData.MV);
+                    userIndex = k.readInteger();
+                    oldZ = Number(k.readString());
+                    newZ = Number(k.readString());
+                    oldVector = new Vector3d(oldX, oldY, oldZ);
+                    newVector = new Vector3d(newX, newY, newZ);
+                    this._avatar = new SlideObjectMessageData(userIndex, oldVector, newVector, SlideObjectMessageData.MV);
                     break;
                 case 2:
-                    _local_7 = k.readInteger();
-                    _local_11 = Number(k.readString());
-                    _local_12 = Number(k.readString());
-                    _local_9 = new Vector3d(_local_2, _local_3, _local_11);
-                    _local_10 = new Vector3d(_local_4, _local_5, _local_12);
-                    this._avatar = new SlideObjectMessageData(_local_7, _local_9, _local_10, SlideObjectMessageData.SLD);
+                    userIndex = k.readInteger();
+                    oldZ = Number(k.readString());
+                    newZ = Number(k.readString());
+                    oldVector = new Vector3d(oldX, oldY, oldZ);
+                    newVector = new Vector3d(newX, newY, newZ);
+                    this._avatar = new SlideObjectMessageData(userIndex, oldVector, newVector, SlideObjectMessageData.SLD);
                     break;
                 default:
                     Logger.log("** Incompatible character movetype!");
