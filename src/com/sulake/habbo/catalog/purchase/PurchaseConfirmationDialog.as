@@ -876,7 +876,7 @@
         private function onGiveGiftButtonClick(k:WindowEvent):void
         {
             this.giveGift();
-            this._Str_4401(false);
+            this.enableGiftButton(false);
             this._catalog.giftReceiver = null;
             this._catalog.resetPlacedOfferData();
         }
@@ -1468,7 +1468,7 @@
             {
                 return;
             }
-            this._Str_4401(true);
+            this.enableGiftButton(true);
             if (((!(this._catalog)) || (!(this._catalog.windowManager))))
             {
                 return;
@@ -1479,10 +1479,10 @@
         private function alertHandler(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             k.dispose();
-            this._Str_4401(true);
+            this.enableGiftButton(true);
         }
 
-        private function _Str_4401(k:Boolean):void
+        private function enableGiftButton(k:Boolean):void
         {
             if (this._window == null)
             {
@@ -1512,7 +1512,7 @@
             {
                 return;
             }
-            this._Str_4401(true);
+            this.enableGiftButton(true);
             this.safeEnable("header_button_close");
             var k:ICheckBoxWindow = (this._window.findChildByName("use_free_checkbox") as ICheckBoxWindow);
             if (k != null)

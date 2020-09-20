@@ -147,7 +147,7 @@
             if (this._stub == null)
             {
                 this._Str_10113(this._Str_7923);
-                this._Str_4401(this._Str_7923);
+                this.enableGiftButton(this._Str_7923);
                 _Str_11981._Str_21471(this._offer, _window.findChildByName("purchase_label"));
                 _local_2 = _window.findChildByName("gift_button");
                 if (_local_2 != null)
@@ -156,20 +156,20 @@
                 }
                 if (!this._offer.giftable)
                 {
-                    this._Str_4401(false);
+                    this.enableGiftButton(false);
                 }
                 _local_3 = this._Str_24901(this._offer);
                 if (_local_3)
                 {
                     this._Str_10113(false);
-                    this._Str_4401(false);
+                    this.enableGiftButton(false);
                 }
                 window.visible = this._enabled;
             }
             else
             {
                 this._Str_10113(false);
-                this._Str_4401(false);
+                this.enableGiftButton(false);
             }
         }
 
@@ -201,7 +201,7 @@
             this._Str_8735("buy_button", k);
         }
 
-        private function _Str_4401(k:Boolean):void
+        private function enableGiftButton(k:Boolean):void
         {
             if (this._catalog.sessionDataManager.isAccountSafetyLocked())
             {
@@ -237,7 +237,7 @@
         {
             this._additionalParameters = k.parameter;
             this._Str_10113(this._Str_7923);
-            this._Str_4401(((((!(this._offer == null)) && (this._offer.giftable)) && (this._Str_7923)) && (this._quantity == 1)));
+            this.enableGiftButton(((((!(this._offer == null)) && (this._offer.giftable)) && (this._Str_7923)) && (this._quantity == 1)));
         }
 
         private function _Str_8396(event:WindowMouseEvent, isGift:Boolean=false):void
@@ -311,13 +311,13 @@
             this._quantity = k.value;
             if (this._quantity > 1)
             {
-                this._Str_4401(false);
+                this.enableGiftButton(false);
             }
             else
             {
                 if (((!(this._offer == null)) && (this._Str_7923)))
                 {
-                    this._Str_4401(this._offer.giftable);
+                    this.enableGiftButton(this._offer.giftable);
                 }
             }
         }
@@ -326,7 +326,7 @@
         {
             this._extraParamRequired = true;
             this._Str_10113(this._Str_7923);
-            this._Str_4401((((!(this._offer == null)) && (this._Str_7923)) && (this._quantity == 1)));
+            this.enableGiftButton((((!(this._offer == null)) && (this._Str_7923)) && (this._quantity == 1)));
         }
     }
 }
