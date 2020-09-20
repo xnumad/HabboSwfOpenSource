@@ -1892,7 +1892,7 @@
             events.dispatchEvent(new CatalogFurniPurchaseEvent(_local_3.offer.localizationId));
             if (this._purchaseConfirmationDialog != null)
             {
-                if (((!(this._isObjectMoverRequested)) && (!(this._purchaseConfirmationDialog._Str_23564()))))
+                if (((!(this._isObjectMoverRequested)) && (!(this._purchaseConfirmationDialog.isGiftPurchase()))))
                 {
                     _local_4 = this._purchaseConfirmationDialog.getIconWrapper();
                     if (_local_4)

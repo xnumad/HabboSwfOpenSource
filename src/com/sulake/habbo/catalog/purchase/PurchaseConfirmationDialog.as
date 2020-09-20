@@ -176,7 +176,7 @@
             return (this._window) ? (this._window.findChildByName("product_image") as IBitmapWrapperWindow) : null;
         }
 
-        public function _Str_23564():Boolean
+        public function isGiftPurchase():Boolean
         {
             return (!(this._receiverName == null)) && (!(this._receiverName == ""));
         }
