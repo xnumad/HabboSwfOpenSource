@@ -186,7 +186,7 @@
             if (k == this._imageId)
             {
                 this._imageId = 0;
-                this._Str_3523(_arg_2, true);
+                this.setImage(_arg_2, true);
             }
         }
 
@@ -194,7 +194,7 @@
         {
         }
 
-        private function _Str_3523(k:BitmapData, _arg_2:Boolean):void
+        private function setImage(k:BitmapData, _arg_2:Boolean):void
         {
             if ((((this._window == null) || (k == null)) || (this.disposed)))
             {
@@ -300,7 +300,7 @@
                     _local_11 = (this._assets.getAssetByName(_local_10) as BitmapDataAsset);
                     if (_local_11)
                     {
-                        this._Str_3523((_local_11.content as BitmapData), false);
+                        this.setImage((_local_11.content as BitmapData), false);
                         _local_9 = true;
                     }
                 }
@@ -353,7 +353,7 @@
                     {
                         _local_14 = _arg_2;
                     }
-                    this._Str_3523(_local_14, true);
+                    this.setImage(_local_14, true);
                     _Str_11981._Str_21471(k, (this._window.findChildByName("buy_button") as IButtonWindow));
                 }
             }
@@ -441,7 +441,7 @@
             _local_2.appendAction(AvatarAction.GESTURE, AvatarAction.GESTURE_SMILE);
             var _local_3:BitmapData = _local_2.getImage(AvatarSetType.FULL, true);
             _local_2.dispose();
-            this._Str_3523(_local_3, true);
+            this.setImage(_local_3, true);
         }
 
         private function _Str_21654(k:Boolean):void
@@ -778,7 +778,7 @@
                 return;
             }
             this._imageId = _local_6.id;
-            this._Str_3523(_local_6.data, true);
+            this.setImage(_local_6.data, true);
             this._Str_6969(false);
             this._Str_24887();
         }

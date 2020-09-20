@@ -45,7 +45,7 @@
             this._window = (_arg_3.buildFromXML((_local_6.content as XML)) as IWindowContainer);
             this._window.procedure = this.eventHandler;
             var _local_7:BitmapData = k._Str_20649(_arg_2);
-            this._Str_3523(_local_7);
+            this.setImage(_local_7);
             this._Str_7681();
         }
 
@@ -84,7 +84,7 @@
             }
         }
 
-        public function _Str_3523(k:BitmapData):void
+        public function setImage(k:BitmapData):void
         {
             if (!this._window)
             {

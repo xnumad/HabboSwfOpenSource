@@ -148,7 +148,7 @@
                 _local_10.visible = true;
                 _local_11.rarityLevel = _arg_2.stuffData.rarityLevel;
             }
-            this._Str_3523();
+            this.setImage();
             if ((this._catalog as HabboCatalog).getBoolean("disclaimer.credit_spending.enabled"))
             {
                 this._Str_3515(false);
@@ -162,7 +162,7 @@
             }
         }
 
-        private function _Str_3523():void
+        private function setImage():void
         {
             var k:ImageResult;
             var _local_2:IBitmapWrapperWindow;
@@ -245,7 +245,7 @@
             if (((this._offer) && (this._offer.imageCallback == k)))
             {
                 this._offer.image = _arg_2;
-                this._Str_3523();
+                this.setImage();
             }
         }
 

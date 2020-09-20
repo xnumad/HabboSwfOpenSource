@@ -241,7 +241,7 @@
             {
                 if (_local_2.data.figure == k)
                 {
-                    _local_2._Str_3523(this._Str_20649(_local_2.data));
+                    _local_2.setImage(this._Str_20649(_local_2.data));
                 }
             }
         }

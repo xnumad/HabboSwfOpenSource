@@ -277,10 +277,10 @@
 
         public function set _Str_24341(k:BitmapData):void
         {
-            this._Str_3523(k, "image");
+            this.setImage(k, "image");
         }
 
-        private function _Str_3523(k:BitmapData, _arg_2:String):void
+        private function setImage(k:BitmapData, _arg_2:String):void
         {
             var _local_3:IBitmapWrapperWindow = (this._border.findChildByName(_arg_2) as IBitmapWrapperWindow);
             if (_local_3 == null)

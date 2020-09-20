@@ -86,7 +86,7 @@
             this._catalog = null;
         }
 
-        private function _Str_3523(k:String, _arg_2:BitmapData):void
+        private function setImage(k:String, _arg_2:BitmapData):void
         {
             if (this._window == null)
             {

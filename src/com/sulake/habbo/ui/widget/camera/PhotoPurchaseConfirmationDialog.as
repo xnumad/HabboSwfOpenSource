@@ -278,13 +278,13 @@
             var _local_2:Bitmap = (BitmapFileLoader(k.target).content as Bitmap);
             if (_local_2)
             {
-                this._Str_3523(_local_2.bitmapData);
+                this.setImage(_local_2.bitmapData);
             }
             this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("camera.confirm_phase.info");
             this.setState(IMAGE_LOADED);
         }
 
-        private function _Str_3523(k:BitmapData):void
+        private function setImage(k:BitmapData):void
         {
             if (((this._window == null) || (k == null)))
             {

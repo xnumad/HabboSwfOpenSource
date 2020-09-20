@@ -32,7 +32,7 @@
             var _local_2:AssetLoaderStruct;
             if (this._navigator.assets.hasAsset(this._picRef))
             {
-                this._Str_3523();
+                this.setImage();
             }
             else
             {
@@ -55,10 +55,10 @@
                 Logger.log((("Loading pic from url: " + this._url) + " failed. loaderStruct == null"));
                 return;
             }
-            this._Str_3523();
+            this.setImage();
         }
 
-        private function _Str_3523():void
+        private function setImage():void
         {
             var k:BitmapData;
             if (((((this._navigator) && (!(this._navigator.disposed))) && (this._bitmapWrapper)) && (!(this._bitmapWrapper.disposed))))
