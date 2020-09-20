@@ -779,7 +779,7 @@
             }
             this._imageId = _local_6.id;
             this.setImage(_local_6.data, true);
-            this._Str_6969(false);
+            this.showSuggestions(false);
             this.updateGiftDialogLabels();
         }
 
@@ -948,7 +948,7 @@
             {
                 return;
             }
-            this._Str_6969(false);
+            this.showSuggestions(false);
         }
 
         private function onNameInputKeyUp(k:WindowEvent):void
@@ -1003,7 +1003,7 @@
                     }
                 }
                 this._Str_20993(k);
-                this._Str_6969(true);
+                this.showSuggestions(true);
                 return true;
             }
             return false;
@@ -1061,10 +1061,10 @@
                 return;
             }
             this._Str_16023(_local_3.caption);
-            this._Str_6969(false);
+            this.showSuggestions(false);
         }
 
-        private function _Str_6969(k:Boolean):void
+        private function showSuggestions(k:Boolean):void
         {
             if (this._suggestionContainer == null)
             {
@@ -1119,7 +1119,7 @@
         private function _Str_25377(k:WindowEvent):void
         {
             this._Str_13320();
-            this._Str_6969(false);
+            this.showSuggestions(false);
         }
 
         private function _Str_23611(k:WindowEvent):void
@@ -1290,10 +1290,10 @@
             _local_2.removeListItems();
             if (k.length == 0)
             {
-                this._Str_6969(false);
+                this.showSuggestions(false);
                 return;
             }
-            this._Str_6969(true);
+            this.showSuggestions(true);
             var _local_3:int;
             for each (_local_4 in k)
             {
@@ -1348,7 +1348,7 @@
                 return;
             }
             this._Str_16023(_local_3.text);
-            this._Str_6969(false);
+            this.showSuggestions(false);
         }
 
         private function _Str_25764(k:WindowEvent):void
