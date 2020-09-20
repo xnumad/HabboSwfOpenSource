@@ -1462,7 +1462,7 @@
             }
         }
 
-        public function _Str_23672():void
+        public function receiverNotFound():void
         {
             if (this.disposed)
             {

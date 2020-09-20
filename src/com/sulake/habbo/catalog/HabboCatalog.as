@@ -1920,7 +1920,7 @@
         {
             if (this._purchaseConfirmationDialog != null)
             {
-                this._purchaseConfirmationDialog._Str_23672();
+                this._purchaseConfirmationDialog.receiverNotFound();
             }
         }
 
