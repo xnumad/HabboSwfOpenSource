@@ -979,7 +979,7 @@
                     }
                     return;
                 case Keyboard.ENTER:
-                    this._Str_25600();
+                    this.selectHighlighted();
                     return;
                 case Keyboard.TAB:
                     this.focusMessageField();
@@ -1039,7 +1039,7 @@
             k.focus();
         }
 
-        private function _Str_25600():void
+        private function selectHighlighted():void
         {
             if (((this._suggestionContainer == null) || (!(this._suggestionContainer.visible))))
             {
