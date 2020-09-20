@@ -839,7 +839,7 @@
             }
         }
 
-        private function _Str_25035(k:String):void
+        private function safeEnable(k:String):void
         {
             var _local_2:IWindow = this._window.findChildByName(k);
             if (_local_2 != null)
@@ -1513,7 +1513,7 @@
                 return;
             }
             this._Str_4401(true);
-            this._Str_25035("header_button_close");
+            this.safeEnable("header_button_close");
             var k:ICheckBoxWindow = (this._window.findChildByName("use_free_checkbox") as ICheckBoxWindow);
             if (k != null)
             {
