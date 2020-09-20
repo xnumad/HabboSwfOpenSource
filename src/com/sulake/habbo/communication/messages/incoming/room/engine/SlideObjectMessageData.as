@@ -10,7 +10,7 @@
         private var _id:int = 0;
         private var _loc:Vector3d;
         private var _target:Vector3d;
-        private var _Str_16956:String;
+        private var _moveType:String;
         private var _isReadOnly:Boolean = false;
 
         public function SlideObjectMessageData(k:int, _arg_2:Vector3d, _arg_3:Vector3d, _arg_4:String=null)
@@ -18,7 +18,7 @@
             this._id = k;
             this._loc = _arg_2;
             this._target = _arg_3;
-            this._Str_16956 = _arg_4;
+            this._moveType = _arg_4;
         }
 
         public function setReadOnly():void
@@ -59,14 +59,14 @@
 
         public function get _Str_21300():String
         {
-            return this._Str_16956;
+            return this._moveType;
         }
 
         public function set _Str_21300(k:String):void
         {
             if (!this._isReadOnly)
             {
-                this._Str_16956 = k;
+                this._moveType = k;
             }
         }
     }
