@@ -623,7 +623,7 @@
                 {
                     this.focusNameField();
                 }
-                this._Str_11342();
+                this.updateNameHint();
                 _local_2.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this.onNameInputChange);
                 _local_2.addEventListener(WindowMouseEvent.DOWN, this.onNameInputMouseDown);
                 _local_2.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this.onNameInputKeyUp);
@@ -919,7 +919,7 @@
             {
                 return;
             }
-            this._Str_11342();
+            this.updateNameHint();
             if (this._receiverName == _local_2.caption)
             {
                 return;
@@ -1103,7 +1103,7 @@
             {
                 return;
             }
-            this._Str_11342();
+            this.updateNameHint();
         }
 
         private function onNameInputUnfocus(k:WindowEvent):void
@@ -1113,7 +1113,7 @@
             {
                 return;
             }
-            this._Str_11342();
+            this.updateNameHint();
         }
 
         private function onMessageInputFocus(k:WindowEvent):void
@@ -1127,7 +1127,7 @@
             this._Str_13320();
         }
 
-        private function _Str_11342():void
+        private function updateNameHint():void
         {
             if (this._window == null)
             {
@@ -1416,7 +1416,7 @@
                 return;
             }
             _local_2.caption = k;
-            this._Str_11342();
+            this.updateNameHint();
             this.focusMessageField();
         }
 
