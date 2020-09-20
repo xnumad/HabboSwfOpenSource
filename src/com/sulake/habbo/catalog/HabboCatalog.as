@@ -1894,7 +1894,7 @@
             {
                 if (((!(this._isObjectMoverRequested)) && (!(this._purchaseConfirmationDialog._Str_23564()))))
                 {
-                    _local_4 = this._purchaseConfirmationDialog._Str_23480();
+                    _local_4 = this._purchaseConfirmationDialog.getIconWrapper();
                     if (_local_4)
                     {
                         _local_5 = _local_4.bitmap;

@@ -171,7 +171,7 @@
             return this._productType;
         }
 
-        public function _Str_23480():IBitmapWrapperWindow
+        public function getIconWrapper():IBitmapWrapperWindow
         {
             return (this._window) ? (this._window.findChildByName("product_image") as IBitmapWrapperWindow) : null;
         }
