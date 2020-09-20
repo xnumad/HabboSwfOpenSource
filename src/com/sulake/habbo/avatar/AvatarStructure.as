@@ -179,7 +179,7 @@
             {
                 return null;
             }
-            return _local_6._Str_751(_local_4[_arg_3]);
+            return _local_6.getColor(_local_4[_arg_3]);
         }
 
         public function getBodyPartData(k:String, _arg_2:int, _arg_3:String):AnimationLayerData
@@ -477,7 +477,7 @@
                                     }
                                     if (((_local_29) && (_local_29.length > (_local_33._Str_827 - 1))))
                                     {
-                                        _local_36 = _local_31._Str_751(_local_29[(_local_33._Str_827 - 1)]);
+                                        _local_36 = _local_31.getColor(_local_29[(_local_33._Str_827 - 1)]);
                                     }
                                     _local_37 = (_local_33._Str_827 > 0);
                                     _local_18 = new AvatarImagePartContainer(k, _local_33.type, _local_33.id.toString(), _local_36, _local_20, _local_34, _local_37, _local_33.paletteMap, _local_35);

@@ -1327,7 +1327,7 @@
                         }
                         _local_2.addListItem(_local_5);
                     }
-                    _local_5.color = this._Str_751(_local_3);
+                    _local_5.color = this.getColor(_local_3);
                     _local_3++;
                 }
             }
@@ -1381,7 +1381,7 @@
             _local_3 = (_local_2.getListItemAt(this._highlightIndex) as IWindowContainer);
             if (_local_3 != null)
             {
-                _local_3.color = this._Str_751(this._highlightIndex);
+                _local_3.color = this.getColor(this._highlightIndex);
             }
             this._highlightIndex = k;
             if (this._highlightIndex < 0)
@@ -1399,7 +1399,7 @@
             }
         }
 
-        private function _Str_751(k:int):uint
+        private function getColor(k:int):uint
         {
             return ((k % 2) == 0) ? this._Str_14861 : this._Str_15515;
         }

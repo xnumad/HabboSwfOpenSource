@@ -32,7 +32,7 @@
             this._colors[_arg_2] = k;
         }
 
-        public function _Str_751(k:int):uint
+        public function getColor(k:int):uint
         {
             if (((k < 0) || (k >= this._colors.length)))
             {

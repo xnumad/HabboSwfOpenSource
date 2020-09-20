@@ -354,12 +354,12 @@
             return LayerData.DEFAULT_ALPHA;
         }
 
-        public function _Str_751(k:int, _arg_2:int):uint
+        public function getColor(k:int, _arg_2:int):uint
         {
             var _local_3:ColorData = (this._colors.getValue(String(_arg_2)) as ColorData);
             if (_local_3 != null)
             {
-                return _local_3._Str_751(k);
+                return _local_3.getColor(k);
             }
             return ColorData.DEFAULT_COLOR;
         }

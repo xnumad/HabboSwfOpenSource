@@ -15,7 +15,7 @@
         {
             this._typeId = this._Str_19576(k);
             this._paletteId = this.getPaletteId(k);
-            this._color = this._Str_751(k);
+            this._color = this.getColor(k);
             this._headOnly = this.getHeadOnly(k);
             var _local_2:Array = this.getCustomData(k);
             this._customLayerIds = this.getCustomLayerIds(_local_2);
@@ -190,7 +190,7 @@
             return 0;
         }
 
-        private function _Str_751(k:String):int
+        private function getColor(k:String):int
         {
             var _local_2:Array;
             if (k != null)

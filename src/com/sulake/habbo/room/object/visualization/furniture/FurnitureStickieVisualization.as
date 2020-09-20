@@ -20,7 +20,7 @@
             {
                 return ColorData.DEFAULT_COLOR;
             }
-            var _local_4:int = this._data._Str_751(k, _arg_2, _arg_3);
+            var _local_4:int = this._data.getColor(k, _arg_2, _arg_3);
             return _local_4;
         }
     }

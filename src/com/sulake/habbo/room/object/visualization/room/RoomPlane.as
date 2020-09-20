@@ -553,7 +553,7 @@
                             {
                                 normal = geometry.getCoordinatePosition(this._normal);
                                 cm = layer.material().getMaterialCellMatrix(normal);
-                                data = new PlaneDrawingData(maskData, blend(this._color, layer._Str_751()), cm._Str_14945());
+                                data = new PlaneDrawingData(maskData, blend(this._color, layer.getColor()), cm._Str_14945());
                                 Randomizer.setSeed(this._randomSeed);
                                 for each (column in cm._Str_23721(this._Str_24802(geometry)))
                                 {
@@ -582,7 +582,7 @@
                             }
                             else
                             {
-                                data = new PlaneDrawingData(maskData, blend(this._color, layer._Str_751()));
+                                data = new PlaneDrawingData(maskData, blend(this._color, layer.getColor()));
                                 drawingDatas.push(data);
                             }
                         }

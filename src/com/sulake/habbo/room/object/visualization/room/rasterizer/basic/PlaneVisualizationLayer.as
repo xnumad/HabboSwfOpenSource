@@ -159,7 +159,7 @@
             return this._material;
         }
 
-        public function _Str_751():uint
+        public function getColor():uint
         {
             return this._color;
         }

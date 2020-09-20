@@ -285,12 +285,12 @@
             return LayerData.DEFAULT_ALPHA;
         }
 
-        public function _Str_751(k:int, _arg_2:int, _arg_3:int):int
+        public function getColor(k:int, _arg_2:int, _arg_3:int):int
         {
             var _local_4:SizeData = this.getSizeData(k);
             if (_local_4 != null)
             {
-                return _local_4._Str_751(_arg_2, _arg_3);
+                return _local_4.getColor(_arg_2, _arg_3);
             }
             return ColorData.DEFAULT_COLOR;
         }

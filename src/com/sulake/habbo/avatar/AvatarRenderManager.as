@@ -466,7 +466,7 @@
                     _local_13 = k._Str_815(_local_6);
                     for each (_local_14 in _local_13)
                     {
-                        _local_15 = _local_12._Str_751(_local_14);
+                        _local_15 = _local_12.getColor(_local_14);
                         _local_4 = Math.max(_local_15.clubLevel, _local_4);
                     }
                 }

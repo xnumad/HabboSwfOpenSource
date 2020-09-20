@@ -28,7 +28,7 @@
             return this._id;
         }
 
-        public function _Str_751(k:int):IPartColor
+        public function getColor(k:int):IPartColor
         {
             return this._colors[String(k)];
         }
