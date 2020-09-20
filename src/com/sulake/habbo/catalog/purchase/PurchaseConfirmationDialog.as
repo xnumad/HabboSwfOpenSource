@@ -261,12 +261,12 @@
             {
                 this._window.findChildByName("spending_disclaimer").addEventListener(WindowMouseEvent.CLICK, this.onSpendingDisclaimerClicked);
                 this._window.findChildByName("spending_disclaimer").addEventListener(WindowMouseEvent.DOUBLE_CLICK, this.onSpendingDisclaimerClicked);
-                this._Str_3515(false);
+                this.setDisclaimerAccepted(false);
             }
             else
             {
                 this._window.findChildByName("disclaimer").dispose();
-                this._Str_3515(true);
+                this.setDisclaimerAccepted(true);
             }
             var _local_4:ITextWindow = (this._window.findChildByName("product_name") as ITextWindow);
             if (_local_4 != null)
@@ -364,11 +364,11 @@
             var _local_2:ICheckBoxWindow = (k.target as ICheckBoxWindow);
             if (_local_2 != null)
             {
-                this._Str_3515(_local_2.Selected);
+                this.setDisclaimerAccepted(_local_2.Selected);
             }
         }
 
-        private function _Str_3515(k:Boolean):void
+        private function setDisclaimerAccepted(k:Boolean):void
         {
             if (this._window == null)
             {
