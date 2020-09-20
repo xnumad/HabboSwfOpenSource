@@ -592,7 +592,7 @@
             }
         }
 
-        public function _Str_25056():void
+        public function showGiftDialog():void
         {
             var _local_8:String;
             var _local_9:String;
@@ -863,7 +863,7 @@
 
         private function _Str_24474(k:WindowEvent):void
         {
-            this._Str_25056();
+            this.showGiftDialog();
             HabboTracking.getInstance().trackEventLog("Catalog", "clickConfirm", "client.buy_as_gift.clicked");
         }
 
