@@ -259,8 +259,8 @@
             this._window.center();
             if (this._catalog.getBoolean("disclaimer.credit_spending.enabled"))
             {
-                this._window.findChildByName("spending_disclaimer").addEventListener(WindowMouseEvent.CLICK, this._Str_21435);
-                this._window.findChildByName("spending_disclaimer").addEventListener(WindowMouseEvent.DOUBLE_CLICK, this._Str_21435);
+                this._window.findChildByName("spending_disclaimer").addEventListener(WindowMouseEvent.CLICK, this.onSpendingDisclaimerClicked);
+                this._window.findChildByName("spending_disclaimer").addEventListener(WindowMouseEvent.DOUBLE_CLICK, this.onSpendingDisclaimerClicked);
                 this._Str_3515(false);
             }
             else
@@ -359,7 +359,7 @@
             }
         }
 
-        private function _Str_21435(k:WindowMouseEvent):void
+        private function onSpendingDisclaimerClicked(k:WindowMouseEvent):void
         {
             var _local_2:ICheckBoxWindow = (k.target as ICheckBoxWindow);
             if (_local_2 != null)
