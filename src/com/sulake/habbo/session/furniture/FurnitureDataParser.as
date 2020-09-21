@@ -69,7 +69,7 @@
             }
             else
             {
-                this._Str_18569(_local_3);
+                this.parseLingoFormat(_local_3);
             }
         }
 
@@ -147,7 +147,7 @@
             return _local_3;
         }
 
-        private function _Str_18569(k:String):void
+        private function parseLingoFormat(k:String):void
         {
             var _local_7:String;
             var _local_8:Array;

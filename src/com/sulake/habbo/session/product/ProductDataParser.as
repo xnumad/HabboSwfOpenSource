@@ -55,7 +55,7 @@
             }
             else
             {
-                this._Str_18569(_local_3);
+                this.parseLingoFormat(_local_3);
             }
         }
 
@@ -85,7 +85,7 @@
             dispatchEvent(new Event(PDP_PRODUCT_DATA_READY));
         }
 
-        private function _Str_18569(k:String):void
+        private function parseLingoFormat(k:String):void
         {
             var _local_8:String;
             var _local_9:Array;
