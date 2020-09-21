@@ -57,7 +57,7 @@
     {
         private const MAX_SUGGESTIONS:int = 10;
         private const COLOR_EVEN:uint = 4293848814;
-        private const _Str_15515:uint = 0xFFFFFFFF;
+        private const COLOR_ODD:uint = 0xFFFFFFFF;
         private const _Str_22602:uint = 4291613146;
 
         private var _catalog:HabboCatalog;
@@ -1401,7 +1401,7 @@
 
         private function getColor(k:int):uint
         {
-            return ((k % 2) == 0) ? this.COLOR_EVEN : this._Str_15515;
+            return ((k % 2) == 0) ? this.COLOR_EVEN : this.COLOR_ODD;
         }
 
         private function setReceiverName(k:String):void
