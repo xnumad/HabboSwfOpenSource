@@ -56,7 +56,7 @@
     public class PurchaseConfirmationDialog implements IAvatarImageListener, IGetImageListener 
     {
         private const MAX_SUGGESTIONS:int = 10;
-        private const _Str_14861:uint = 4293848814;
+        private const COLOR_EVEN:uint = 4293848814;
         private const _Str_15515:uint = 0xFFFFFFFF;
         private const _Str_22602:uint = 4291613146;
 
@@ -1401,7 +1401,7 @@
 
         private function getColor(k:int):uint
         {
-            return ((k % 2) == 0) ? this._Str_14861 : this._Str_15515;
+            return ((k % 2) == 0) ? this.COLOR_EVEN : this._Str_15515;
         }
 
         private function setReceiverName(k:String):void
