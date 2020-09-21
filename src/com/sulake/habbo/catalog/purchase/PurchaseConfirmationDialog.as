@@ -58,7 +58,7 @@
         private const MAX_SUGGESTIONS:int = 10;
         private const COLOR_EVEN:uint = 4293848814;
         private const COLOR_ODD:uint = 0xFFFFFFFF;
-        private const _Str_22602:uint = 4291613146;
+        private const COLOR_HIGHLIGHT:uint = 4291613146;
 
         private var _catalog:HabboCatalog;
         private var _roomEngine:IRoomEngine;
@@ -1395,7 +1395,7 @@
             _local_3 = (_local_2.getListItemAt(this._highlightIndex) as IWindowContainer);
             if (_local_3 != null)
             {
-                _local_3.color = this._Str_22602;
+                _local_3.color = this.COLOR_HIGHLIGHT;
             }
         }
 
