@@ -98,7 +98,7 @@
             this._assets = _arg_2;
         }
 
-        private static function _Str_13980(k:int):Boolean
+        private static function isValentinesBox(k:int):Boolean
         {
             return k == 8;
         }
@@ -731,7 +731,7 @@
                 this._boxIndex = 0;
             }
             var k:int = this._boxTypes[this._boxIndex];
-            if (_Str_13980(k))
+            if (isValentinesBox(k))
             {
                 this._ribbonIndex = 10;
                 if (this._ribbonIndex > (this._ribbonTypes.length - 1))
@@ -759,7 +759,7 @@
             }
             else
             {
-                if (_Str_13980(k))
+                if (isValentinesBox(k))
                 {
                     this.enableBoxColorAndRibbonSelectors(false);
                 }
