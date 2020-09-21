@@ -55,7 +55,7 @@
 
     public class PurchaseConfirmationDialog implements IAvatarImageListener, IGetImageListener 
     {
-        private const _Str_21592:int = 10;
+        private const MAX_SUGGESTIONS:int = 10;
         private const _Str_14861:uint = 4293848814;
         private const _Str_15515:uint = 0xFFFFFFFF;
         private const _Str_22602:uint = 4291613146;
@@ -932,7 +932,7 @@
                 {
                     _local_4.push(_local_5);
                 }
-                if (_local_4.length >= this._Str_21592)
+                if (_local_4.length >= this.MAX_SUGGESTIONS)
                 {
                     break;
                 }
@@ -997,7 +997,7 @@
                 for each (_local_2 in this._friends)
                 {
                     k.push(_local_2);
-                    if (k.length >= this._Str_21592)
+                    if (k.length >= this.MAX_SUGGESTIONS)
                     {
                         break;
                     }
