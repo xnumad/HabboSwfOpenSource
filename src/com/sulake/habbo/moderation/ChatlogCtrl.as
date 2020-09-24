@@ -295,7 +295,7 @@
             this._headers.push(k);
         }
 
-        private function _Str_25638():IWindowContainer
+        private function createContentLine():IWindowContainer
         {
             if (_Str_8544.length > 0)
             {
@@ -329,7 +329,7 @@
         private function _Str_23382(k:ChatlineData, _arg_2:Boolean):void
         {
             var _local_9:TextFormat;
-            var _local_3:IWindowContainer = this._Str_25638();
+            var _local_3:IWindowContainer = this.createContentLine();
             var _local_4:IWindow = _local_3.findChildByName("time_txt");
             var _local_5:ITextWindow = ITextWindow(_local_3.findChildByName("chatter_txt"));
             var _local_6:ITextWindow = (_local_3.findChildByName("msg_txt") as ITextWindow);
