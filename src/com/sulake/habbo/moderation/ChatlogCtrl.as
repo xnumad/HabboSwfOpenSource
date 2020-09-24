@@ -265,7 +265,7 @@
             while (_local_8 < k.chatlog.length)
             {
                 _local_10 = k.chatlog[_local_8];
-                this._Str_23382(_local_10, _local_6);
+                this.populateContentLine(_local_10, _local_6);
                 _local_6 = (!(_local_6));
                 if (((_local_10._Str_19967) && (_local_7 == -1)))
                 {
@@ -326,7 +326,7 @@
             return this._roomHeaderPrototype.clone() as IWindowContainer;
         }
 
-        private function _Str_23382(k:ChatlineData, _arg_2:Boolean):void
+        private function populateContentLine(k:ChatlineData, _arg_2:Boolean):void
         {
             var _local_9:TextFormat;
             var _local_3:IWindowContainer = this.createContentLine();
