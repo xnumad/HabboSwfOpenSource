@@ -16,7 +16,7 @@
 
     public class RoomVisitsCtrl implements IDisposable, ITrackedWindow 
     {
-        private static var _Str_8375:Array = [];
+        private static var ROOM_ROW_POOL:Array = [];
         private static var _Str_17861:int = 200;
 
         private var _main:ModerationManager;
@@ -137,9 +137,9 @@
 
         private function _Str_16012():IWindowContainer
         {
-            if (_Str_8375.length > 0)
+            if (ROOM_ROW_POOL.length > 0)
             {
-                return _Str_8375.pop() as IWindowContainer;
+                return ROOM_ROW_POOL.pop() as IWindowContainer;
             }
             return IWindowContainer(this._row.clone());
         }
@@ -148,7 +148,7 @@
         {
             var _local_2:IWindow;
             var _local_3:IWindow;
-            if (_Str_8375.length < _Str_17861)
+            if (ROOM_ROW_POOL.length < _Str_17861)
             {
                 _local_2 = k.findChildByName("room_name_txt");
                 _local_2.procedure = null;
@@ -156,7 +156,7 @@
                 _local_3.procedure = null;
                 k.width = this._row.width;
                 k.height = this._row.height;
-                _Str_8375.push(k);
+                ROOM_ROW_POOL.push(k);
             }
             else
             {
