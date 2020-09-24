@@ -109,7 +109,7 @@
             }
             for each (_local_6 in this._contentLines)
             {
-                this._Str_21790(_local_6);
+                this.recycleContentLine(_local_6);
             }
             for each (_local_6 in this._headers)
             {
@@ -304,7 +304,7 @@
             return IWindowContainer(this._contentLinePrototype.clone());
         }
 
-        private function _Str_21790(k:IWindowContainer):void
+        private function recycleContentLine(k:IWindowContainer):void
         {
             var _local_2:ITextWindow;
             if (_Str_8544.length < _Str_16618)
@@ -503,7 +503,7 @@
             {
                 for each (k in this._contentLines)
                 {
-                    this._Str_21790(k);
+                    this.recycleContentLine(k);
                 }
                 for each (k in this._headers)
                 {
