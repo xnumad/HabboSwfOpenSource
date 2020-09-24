@@ -27,7 +27,7 @@
             return this._roomName;
         }
 
-        public function get _Str_22929():int
+        public function get enterHour():int
         {
             return this._enterHour;
         }
