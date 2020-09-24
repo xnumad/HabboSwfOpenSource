@@ -139,7 +139,7 @@
             return "" + this._id;
         }
 
-        public function _Str_25842(k:int):void
+        public function setId(k:int):void
         {
             this._id = k;
         }

@@ -545,7 +545,7 @@
                         this._callerUserInfo = new UserInfoCtrl(this._window, this._moderationManager, _local_2, this);
                         this._callerUserInfo.load(IWindowContainer(this._window.findChildByName("caller_user_info")), _local_3);
                         this._moderationManager.connection.send(new GetCfhChatlogMessageComposer(_local_2._Str_2869));
-                        this._chatLogCtrl._Str_25842(_local_2._Str_2869);
+                        this._chatLogCtrl.setId(_local_2._Str_2869);
                         this._moderationManager.moderationMessageHandler.addChatlogListener(this._chatLogCtrl);
                     }
                     break;
