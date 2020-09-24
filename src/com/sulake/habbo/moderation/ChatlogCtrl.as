@@ -419,7 +419,7 @@
         private function onResizeTimer(k:TimerEvent):void
         {
             this.refreshListDims();
-            var _local_2:Boolean = this._Str_16245();
+            var _local_2:Boolean = this.refreshScrollBarVisibility();
         }
 
         private function refreshListDims():void
@@ -444,7 +444,7 @@
             this._list.autoArrangeItems = true;
         }
 
-        private function _Str_16245():Boolean
+        private function refreshScrollBarVisibility():Boolean
         {
             var k:IWindowContainer = IWindowContainer(this._list.parent);
             var _local_2:IWindow = (k.getChildByName("scroller") as IWindow);

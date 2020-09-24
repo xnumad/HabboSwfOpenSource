@@ -76,7 +76,7 @@
                     k.view = (this._Str_22949(k) as IWindowContainer);
                 }
                 this._Str_24172(k.view);
-                this._Str_16245(k.view);
+                this.refreshScrollBarVisibility(k.view);
                 _arg_2.addChild(k.view);
             }
             else
@@ -220,7 +220,7 @@
             _local_2.width = _local_7;
         }
 
-        private function _Str_16245(k:IWindowContainer):void
+        private function refreshScrollBarVisibility(k:IWindowContainer):void
         {
             var _local_2:IWindowContainer = (k.getChildByName("list") as IWindowContainer);
             var _local_3:IWindow = (_local_2.getChildByName("scroller") as IWindow);
