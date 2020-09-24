@@ -144,7 +144,7 @@
             return IWindowContainer(this._row.clone());
         }
 
-        private function _Str_24242(k:IWindowContainer):void
+        private function storeRoomRowWindow(k:IWindowContainer):void
         {
             var _local_2:IWindow;
             var _local_3:IWindow;
@@ -238,7 +238,7 @@
             }
             for each (k in this._roomRows)
             {
-                this._Str_24242(k);
+                this.storeRoomRowWindow(k);
             }
             if (this._row != null)
             {
