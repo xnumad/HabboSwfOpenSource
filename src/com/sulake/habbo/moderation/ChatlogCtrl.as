@@ -77,7 +77,7 @@
             this._contentLinePrototype = (_local_2.getListItemAt(1) as IWindowContainer);
             _local_2.removeListItems();
             this._resizeTimer = new Timer(1000, 1);
-            this._resizeTimer.addEventListener(TimerEvent.TIMER, this._Str_3774);
+            this._resizeTimer.addEventListener(TimerEvent.TIMER, this.onResizeTimer);
             if (!this._embedded)
             {
                 this._frame = k;
@@ -121,7 +121,7 @@
             this._rooms = _arg_4;
             this._hilitedUserIds = _arg_5;
             this.populate();
-            this._Str_3774(null);
+            this.onResizeTimer(null);
             if (!this._embedded)
             {
                 this._frame.caption = k;
@@ -416,7 +416,7 @@
             this._resizeTimer.start();
         }
 
-        private function _Str_3774(k:TimerEvent):void
+        private function onResizeTimer(k:TimerEvent):void
         {
             this._Str_24989();
             var _local_2:Boolean = this._Str_16245();
@@ -496,7 +496,7 @@
             if (this._resizeTimer != null)
             {
                 this._resizeTimer.stop();
-                this._resizeTimer.removeEventListener(TimerEvent.TIMER, this._Str_3774);
+                this._resizeTimer.removeEventListener(TimerEvent.TIMER, this.onResizeTimer);
                 this._resizeTimer = null;
             }
             if (!this._embedded)

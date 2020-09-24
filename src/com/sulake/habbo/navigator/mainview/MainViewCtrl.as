@@ -94,7 +94,7 @@
             this._roomAds = new RoomAdListCtrl(this._navigator, 0, false);
             this._categoryListCtrl = new CategoryListCtrl(this._navigator);
             this._resizeTimer = new Timer(300, 1);
-            this._resizeTimer.addEventListener(TimerEvent.TIMER, this._Str_3774);
+            this._resizeTimer.addEventListener(TimerEvent.TIMER, this.onResizeTimer);
         }
 
         private static function _Str_9327(k:IViewCtrl, _arg_2:Boolean):void
@@ -185,7 +185,7 @@
                 }
                 if (this._resizeTimer)
                 {
-                    this._resizeTimer.removeEventListener(TimerEvent.TIMER, this._Str_3774);
+                    this._resizeTimer.removeEventListener(TimerEvent.TIMER, this.onResizeTimer);
                     this._resizeTimer.reset();
                     this._resizeTimer = null;
                 }
@@ -356,7 +356,7 @@
             this._listContent.height = ((((this._listContent.height + k) - this._listContent.y) - this._footer.height) + this._footerHeight);
             Util.moveChildrenToColumn(this._content, ["list_content", "custom_footer"], this._listContent.y, 0);
             this._footerHeight = this._footer.height;
-            this._Str_3774(null);
+            this.onResizeTimer(null);
         }
 
         private function _Str_23841():void
@@ -729,7 +729,7 @@
             }
         }
 
-        private function _Str_3774(k:TimerEvent):void
+        private function onResizeTimer(k:TimerEvent):void
         {
             _Str_9327(this._popularTags, false);
             _Str_9327(this._guestRooms, false);

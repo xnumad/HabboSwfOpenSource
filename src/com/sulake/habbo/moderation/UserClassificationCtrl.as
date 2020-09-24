@@ -44,7 +44,7 @@
         public function show():void
         {
             this._resizeTimer = new Timer(300, 1);
-            this._resizeTimer.addEventListener(TimerEvent.TIMER, this._Str_3774);
+            this._resizeTimer.addEventListener(TimerEvent.TIMER, this.onResizeTimer);
             this._main.moderationMessageHandler.addUserClassificationListener(this);
             this._frame = IFrameWindow(this._main.getXmlWindow("userclassification_frame"));
             this._list = IItemListWindow(this._frame.findChildByName("userclassification_list"));
@@ -68,7 +68,7 @@
             this._classifications = _arg_2;
             this._frame.caption = "";
             this.populate();
-            this._Str_3774(null);
+            this.onResizeTimer(null);
             this._frame.visible = true;
             this._main.moderationMessageHandler.removeUserClassificationListener(this);
         }
@@ -166,7 +166,7 @@
             }
         }
 
-        private function _Str_3774(k:TimerEvent):void
+        private function onResizeTimer(k:TimerEvent):void
         {
             var _local_2:IWindowContainer = IWindowContainer(this._list.parent);
             var _local_3:IWindow = (_local_2.getChildByName("scroller") as IWindow);
@@ -213,7 +213,7 @@
             if (this._resizeTimer != null)
             {
                 this._resizeTimer.stop();
-                this._resizeTimer.removeEventListener(TimerEvent.TIMER, this._Str_3774);
+                this._resizeTimer.removeEventListener(TimerEvent.TIMER, this.onResizeTimer);
                 this._resizeTimer = null;
             }
             for each (k in this._classificationRows)

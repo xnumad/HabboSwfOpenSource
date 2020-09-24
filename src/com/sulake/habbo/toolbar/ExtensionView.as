@@ -209,11 +209,11 @@
         private function _Str_21932():void
         {
             var k:Timer = new Timer(25, 1);
-            k.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_3774);
+            k.addEventListener(TimerEvent.TIMER_COMPLETE, this.onResizeTimer);
             k.start();
         }
 
-        private function _Str_3774(k:TimerEvent):void
+        private function onResizeTimer(k:TimerEvent):void
         {
             if (this._toolbar)
             {
