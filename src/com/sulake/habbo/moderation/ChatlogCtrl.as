@@ -310,7 +310,7 @@
             if (_Str_8544.length < _Str_16618)
             {
                 _local_2 = ITextWindow(k.findChildByName("chatter_txt"));
-                _local_2.removeEventListener(WindowMouseEvent.CLICK, this._Str_19641);
+                _local_2.removeEventListener(WindowMouseEvent.CLICK, this.onUserClick);
                 k.width = this._contentLinePrototype.width;
                 k.height = (this._contentLinePrototype.height - 10);
                 _Str_8544.push(k);
@@ -354,7 +354,7 @@
             {
                 _local_5.text = k._Str_18796;
                 _local_5.underline = true;
-                _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_19641);
+                _local_5.addEventListener(WindowMouseEvent.CLICK, this.onUserClick);
                 if (!this._chatLogUserIds.getValue(k._Str_18796))
                 {
                     this._chatLogUserIds.add(k._Str_18796, k._Str_13143);
@@ -390,7 +390,7 @@
             this.addContentLineToList(_local_3);
         }
 
-        private function _Str_19641(k:WindowMouseEvent):void
+        private function onUserClick(k:WindowMouseEvent):void
         {
             var _local_2:String = k.target.caption;
             var _local_3:int = this._chatLogUserIds.getValue(_local_2);
