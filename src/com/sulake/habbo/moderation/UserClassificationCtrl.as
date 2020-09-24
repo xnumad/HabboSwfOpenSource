@@ -86,7 +86,7 @@
 
         private function populateRoomRow(k:UserClassificationData, _arg_2:Boolean):void
         {
-            var _local_3:IWindowContainer = this._Str_16012();
+            var _local_3:IWindowContainer = this.getRoomRowWindow();
             var _local_4:uint = ((_arg_2) ? 4288861930 : 0xFFFFFFFF);
             _local_3.color = _local_4;
             var _local_5:IWindow = _local_3.findChildByName("user_name_txt");
@@ -115,7 +115,7 @@
             this._classificationRows.push(k);
         }
 
-        private function _Str_16012():IWindowContainer
+        private function getRoomRowWindow():IWindowContainer
         {
             if (_Str_8819.length > 0)
             {
