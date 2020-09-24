@@ -156,12 +156,12 @@
             this._list.removeListItems();
             for each (k in this._rooms)
             {
-                this._Str_23244(k);
+                this.populateEvidence(k);
             }
             this._list.autoArrangeItems = true;
         }
 
-        private function _Str_23244(k:ChatRecordData):void
+        private function populateEvidence(k:ChatRecordData):void
         {
             var _local_9:String;
             var _local_10:ChatlineData;
