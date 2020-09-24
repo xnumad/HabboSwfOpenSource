@@ -122,7 +122,7 @@
             new OpenRoomTool(this._frame, this._main, _local_5, k.roomId);
             _local_5.color = _local_4;
             var _local_6:ITextWindow = ITextWindow(_local_3.findChildByName("time_txt"));
-            _local_6.text = getFormattedTime(k.enterHour, k._Str_25550);
+            _local_6.text = getFormattedTime(k.enterHour, k.enterMinute);
             var _local_7:ITextWindow = ITextWindow(_local_3.findChildByName("view_room_txt"));
             new OpenRoomInSpectatorMode(this._main, _local_7, k.roomId);
             _local_7.color = _local_4;

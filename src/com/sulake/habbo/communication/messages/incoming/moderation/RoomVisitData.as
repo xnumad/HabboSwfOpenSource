@@ -32,7 +32,7 @@
             return this._enterHour;
         }
 
-        public function get _Str_25550():int
+        public function get enterMinute():int
         {
             return this._enterMinute;
         }
