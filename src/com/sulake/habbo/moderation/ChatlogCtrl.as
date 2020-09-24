@@ -23,7 +23,7 @@
 
     public class ChatlogCtrl implements IDisposable, ITrackedWindow, IChatLogListener 
     {
-        private static var _Str_8544:Array = [];
+        private static var CHAT_LINE_POOL:Array = [];
         private static var _Str_16618:int = 1000;
         private static const _Str_16391:uint = 4293973667;
         private static const _Str_16679:uint = 4288921072;
@@ -297,9 +297,9 @@
 
         private function createContentLine():IWindowContainer
         {
-            if (_Str_8544.length > 0)
+            if (CHAT_LINE_POOL.length > 0)
             {
-                return _Str_8544.pop() as IWindowContainer;
+                return CHAT_LINE_POOL.pop() as IWindowContainer;
             }
             return IWindowContainer(this._contentLinePrototype.clone());
         }
@@ -307,13 +307,13 @@
         private function recycleContentLine(k:IWindowContainer):void
         {
             var _local_2:ITextWindow;
-            if (_Str_8544.length < _Str_16618)
+            if (CHAT_LINE_POOL.length < _Str_16618)
             {
                 _local_2 = ITextWindow(k.findChildByName("chatter_txt"));
                 _local_2.removeEventListener(WindowMouseEvent.CLICK, this.onUserClick);
                 k.width = this._contentLinePrototype.width;
                 k.height = (this._contentLinePrototype.height - 10);
-                _Str_8544.push(k);
+                CHAT_LINE_POOL.push(k);
             }
             else
             {
