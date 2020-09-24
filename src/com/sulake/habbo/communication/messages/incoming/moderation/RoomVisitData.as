@@ -7,14 +7,14 @@
         private var _roomId:int;
         private var _roomName:String;
         private var _enterHour:int;
-        private var _Str_20472:int;
+        private var _enterMinute:int;
 
         public function RoomVisitData(k:IMessageDataWrapper)
         {
             this._roomId = k.readInteger();
             this._roomName = k.readString();
             this._enterHour = k.readInteger();
-            this._Str_20472 = k.readInteger();
+            this._enterMinute = k.readInteger();
         }
 
         public function get roomId():int
@@ -34,7 +34,7 @@
 
         public function get _Str_25550():int
         {
-            return this._Str_20472;
+            return this._enterMinute;
         }
     }
 }
