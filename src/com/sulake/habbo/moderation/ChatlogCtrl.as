@@ -283,7 +283,7 @@
             }
         }
 
-        private function _Str_24350(k:IWindowContainer):void
+        private function addContentLineToList(k:IWindowContainer):void
         {
             this._list.addListItem(k);
             this._contentLines.push(k);
@@ -387,7 +387,7 @@
             _local_5.height = _local_8;
             _local_4.height = _local_8;
             _local_3.height = _local_8;
-            this._Str_24350(_local_3);
+            this.addContentLineToList(_local_3);
         }
 
         private function _Str_19641(k:WindowMouseEvent):void
