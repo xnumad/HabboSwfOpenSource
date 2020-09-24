@@ -39,10 +39,10 @@
 
         public static function getFormattedTime(k:int, _arg_2:int):String
         {
-            return (_Str_12660(k) + ":") + _Str_12660(_arg_2);
+            return (padToTwoDigits(k) + ":") + padToTwoDigits(_arg_2);
         }
 
-        public static function _Str_12660(k:int):String
+        public static function padToTwoDigits(k:int):String
         {
             return (k < 10) ? ("0" + k) : ("" + k);
         }
