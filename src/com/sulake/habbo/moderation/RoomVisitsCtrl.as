@@ -17,7 +17,7 @@
     public class RoomVisitsCtrl implements IDisposable, ITrackedWindow 
     {
         private static var ROOM_ROW_POOL:Array = [];
-        private static var _Str_17861:int = 200;
+        private static var ROOM_ROW_POOL_MAX_SIZE:int = 200;
 
         private var _main:ModerationManager;
         private var _frame:IFrameWindow;
@@ -148,7 +148,7 @@
         {
             var _local_2:IWindow;
             var _local_3:IWindow;
-            if (ROOM_ROW_POOL.length < _Str_17861)
+            if (ROOM_ROW_POOL.length < ROOM_ROW_POOL_MAX_SIZE)
             {
                 _local_2 = k.findChildByName("room_name_txt");
                 _local_2.procedure = null;
