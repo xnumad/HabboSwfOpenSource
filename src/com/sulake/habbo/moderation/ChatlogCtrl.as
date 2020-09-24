@@ -25,7 +25,7 @@
     {
         private static var CHAT_LINE_POOL:Array = [];
         private static var CHAT_LINE_POOL_MAX_SIZE:int = 1000;
-        private static const _Str_16391:uint = 4293973667;
+        private static const CHAT_REPORTED_USER_COLOUR:uint = 4293973667;
         private static const _Str_16679:uint = 4288921072;
 
         private var _type:int;
@@ -337,7 +337,7 @@
             var _local_7:* = this._hilitedUserIds[k._Str_13143];
             if (_local_7 != null)
             {
-                _local_3.color = (((_local_7 as int) == 0) ? _Str_16391 : _Str_16679);
+                _local_3.color = (((_local_7 as int) == 0) ? CHAT_REPORTED_USER_COLOUR : _Str_16679);
             }
             else
             {
