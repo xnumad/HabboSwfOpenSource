@@ -79,12 +79,12 @@
             var k:Boolean = true;
             for each (_local_2 in this._classifications)
             {
-                this._Str_16455(_local_2, k);
+                this.populateRoomRow(_local_2, k);
                 k = (!(k));
             }
         }
 
-        private function _Str_16455(k:UserClassificationData, _arg_2:Boolean):void
+        private function populateRoomRow(k:UserClassificationData, _arg_2:Boolean):void
         {
             var _local_3:IWindowContainer = this._Str_16012();
             var _local_4:uint = ((_arg_2) ? 4288861930 : 0xFFFFFFFF);
