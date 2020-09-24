@@ -418,11 +418,11 @@
 
         private function onResizeTimer(k:TimerEvent):void
         {
-            this._Str_24989();
+            this.refreshListDims();
             var _local_2:Boolean = this._Str_16245();
         }
 
-        private function _Str_24989():void
+        private function refreshListDims():void
         {
             var k:IWindowContainer;
             var _local_2:ITextWindow;
