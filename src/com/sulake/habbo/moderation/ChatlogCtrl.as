@@ -258,7 +258,7 @@
                     }
                     break;
             }
-            this._Str_23835(_local_2);
+            this.addHeaderLineToList(_local_2);
             var _local_6:Boolean = true;
             var _local_7:int = -1;
             var _local_8:int;
@@ -289,7 +289,7 @@
             this._contentLines.push(k);
         }
 
-        private function _Str_23835(k:IWindowContainer):void
+        private function addHeaderLineToList(k:IWindowContainer):void
         {
             this._list.addListItem(k);
             this._headers.push(k);
