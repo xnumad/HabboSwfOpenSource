@@ -126,10 +126,10 @@
             var _local_7:ITextWindow = ITextWindow(_local_3.findChildByName("view_room_txt"));
             new OpenRoomInSpectatorMode(this._main, _local_7, k.roomId);
             _local_7.color = _local_4;
-            this._Str_25322(_local_3, this._list);
+            this.addRoomRowToList(_local_3, this._list);
         }
 
-        private function _Str_25322(k:IWindowContainer, _arg_2:IItemListWindow):void
+        private function addRoomRowToList(k:IWindowContainer, _arg_2:IItemListWindow):void
         {
             _arg_2.addListItem(k);
             this._roomRows.push(k);
