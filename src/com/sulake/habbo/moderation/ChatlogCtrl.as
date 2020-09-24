@@ -165,7 +165,7 @@
         {
             var _local_9:String;
             var _local_10:ChatlineData;
-            var _local_2:IWindowContainer = this._Str_23187();
+            var _local_2:IWindowContainer = this.createHeaderLine();
             var _local_3:IWindow = _local_2.findChildByName("text");
             var _local_4:IButtonWindow = IButtonWindow(_local_2.findChildByName("btnHeaderAction"));
             var _local_5:IButtonWindow = IButtonWindow(_local_2.findChildByName("btnHeaderAction2"));
@@ -321,7 +321,7 @@
             }
         }
 
-        private function _Str_23187():IWindowContainer
+        private function createHeaderLine():IWindowContainer
         {
             return this._roomHeaderPrototype.clone() as IWindowContainer;
         }
