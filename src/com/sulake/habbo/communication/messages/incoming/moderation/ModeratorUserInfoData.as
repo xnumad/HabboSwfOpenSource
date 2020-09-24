@@ -16,7 +16,7 @@
         private var _Str_21386:int;
         private var _Str_20848:String;
         private var _Str_21819:String;
-        private var _Str_20982:int;
+        private var _identityId:int;
         private var _Str_19460:int;
         private var _Str_22254:String;
         private var _figure:String;
@@ -39,7 +39,7 @@
             this._Str_21386 = k.readInteger();
             this._Str_20848 = k.readString();
             this._Str_21819 = k.readString();
-            this._Str_20982 = k.readInteger();
+            this._identityId = k.readInteger();
             this._Str_19460 = k.readInteger();
             this._Str_22254 = k.readString();
             this._Str_20625 = k.readString();
@@ -117,7 +117,7 @@
 
         public function get _Str_25657():int
         {
-            return this._Str_20982;
+            return this._identityId;
         }
 
         public function get _Str_22700():int
