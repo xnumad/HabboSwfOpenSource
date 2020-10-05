@@ -150,7 +150,7 @@
                             if (!StringUtils.isEmpty(_local_12))
                             {
                                 _local_13 = (this._tradingModel.getInventory().getProperty("stories.image_url_base") + _local_12);
-                                this._Str_19468(_local_13);
+                                this.loadImage(_local_13);
                             }
                         }
                     }
@@ -192,7 +192,7 @@
                 try
                 {
                     _local_3 = new JSONDecoder(_local_2, false).getValue();
-                    this._Str_19468(_local_3.url);
+                    this.loadImage(_local_3.url);
                 }
                 catch(error:Error)
                 {
@@ -200,7 +200,7 @@
             }
         }
 
-        private function _Str_19468(k:String):void
+        private function loadImage(k:String):void
         {
             var _local_2:BitmapFileLoader;
             if (!StringUtils.isEmpty(k))
