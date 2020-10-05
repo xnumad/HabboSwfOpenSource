@@ -485,7 +485,7 @@
             var _local_2:UserFlatCatsMessageParser = (k as UserFlatCatsEvent).getParser();
             this._navigator.data.categories = _local_2.nodes;
             var _local_3:RoomsTabPageDecorator = RoomsTabPageDecorator(this._navigator.tabs.getTab(Tabs.TAB_ROOMS)._Str_5252);
-            _local_3._Str_19000();
+            _local_3.prepareRoomCategories();
         }
 
         private function _Str_15947(k:IMessageEvent):void

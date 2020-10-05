@@ -26,13 +26,13 @@
             if (((this._filter == null) || (this._filter.disposed)))
             {
                 this._filter = IDropMenuWindow(_local_3.findChildByName("roomCtgFilter"));
-                this._Str_19000();
+                this.prepareRoomCategories();
                 this._filter.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_5118);
             }
             _local_3.visible = true;
         }
 
-        public function _Str_19000():void
+        public function prepareRoomCategories():void
         {
             var _local_2:FlatCategory;
             if (((this._filter == null) || (this._filter.disposed)))
