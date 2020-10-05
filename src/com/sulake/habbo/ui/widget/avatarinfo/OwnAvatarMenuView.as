@@ -27,7 +27,7 @@
     {
         private static const MODE_NORMAL:int = 0;
         private static const MODE_CLUB_DANCES:int = 1;
-        private static const _Str_14313:int = 2;
+        private static const MODE_NAME_CHANGE:int = 2;
         private static const _Str_14565:int = 3;
         private static const _Str_13243:int = 4;
         private static const _Str_16983:int = 5;
@@ -60,7 +60,7 @@
                 {
                     if (((_arg_6.allowNameChange) && (k.widget._Str_13909)))
                     {
-                        k._mode = _Str_14313;
+                        k._mode = MODE_NAME_CHANGE;
                     }
                     else
                     {
@@ -183,7 +183,7 @@
                     showButton("dance_4");
                     showButton("back");
                     break;
-                case _Str_14313:
+                case MODE_NAME_CHANGE:
                     showButton("change_name");
                     showButton("more");
                     break;
