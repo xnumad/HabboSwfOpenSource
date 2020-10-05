@@ -265,7 +265,7 @@
         {
             var _local_2:_Str_3858;
             var _local_3:RoomUserData;
-            this._Str_8003();
+            this.removeUseProductViews();
             this._Str_13975();
             this._Str_8286();
             for each (_local_2 in k)
@@ -555,7 +555,7 @@
                     {
                         this.removeView(this._view, false);
                     }
-                    this._Str_8003();
+                    this.removeUseProductViews();
                     this._Str_11447();
                     break;
                 case RoomWidgetFurniInfostandUpdateEvent.FURNI:
@@ -563,7 +563,7 @@
                     {
                         this.removeView(this._view, false);
                     }
-                    this._Str_8003();
+                    this.removeUseProductViews();
                     this._Str_11447();
                     break;
                 case RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OVER:
@@ -929,7 +929,7 @@
             {
                 this.removeView(this._view, false);
             }
-            this._Str_8003();
+            this.removeUseProductViews();
             if ((((((((_arg_6) || (((!(this._view == null)) && (this._view.userId == k)) && (!(_arg_5)))) || (this._view == null)) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_3))) || (!(this._view.userType == RoomObjectTypeEnum.RENTABLE_BOT))))
             {
                 if (this._view)
@@ -971,7 +971,7 @@
             {
                 this.removeView(this._view, false);
             }
-            this._Str_8003();
+            this.removeUseProductViews();
             if ((((((this._view == null) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_3))) || (!(this._view.userType == RoomObjectTypeEnum.PET))))
             {
                 if (this._view)
@@ -1020,7 +1020,7 @@
             {
                 this.removeView(this._view, false);
             }
-            this._Str_8003();
+            this.removeUseProductViews();
             if (((((((this._view == null) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_4))) || (!(this._view.userType == RoomObjectTypeEnum.HABBO))) || (_arg_5)))
             {
                 if (this._view)
@@ -1162,7 +1162,7 @@
             }
         }
 
-        public function _Str_8003():void
+        public function removeUseProductViews():void
         {
             var k:UseProductView;
             for each (k in this._useProductBubbles)

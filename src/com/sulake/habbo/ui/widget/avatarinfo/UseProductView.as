@@ -243,7 +243,7 @@
             }
             if (_local_3)
             {
-                this.widget._Str_8003();
+                this.widget.removeUseProductViews();
             }
         }
 
