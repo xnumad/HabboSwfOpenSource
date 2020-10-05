@@ -50,10 +50,10 @@
                 k.push(_local_2.nodeName);
             }
             this._filter.populate(k);
-            this._filter.selection = this._Str_18823;
+            this._filter.selection = this.defaultSelection;
         }
 
-        private function get _Str_18823():int
+        private function get defaultSelection():int
         {
             return (this._personalizedRoomsEnabled) ? 2 : 0;
         }
@@ -63,7 +63,7 @@
             if (((!(this._filter == null)) && (!(this._filter.disposed))))
             {
                 this._filter.removeEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_5118);
-                this._filter.selection = this._Str_18823;
+                this._filter.selection = this.defaultSelection;
                 this._filter.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_5118);
             }
         }
@@ -88,7 +88,7 @@
             var _local_2:int;
             var _local_3:FlatCategory;
             var _local_4:int;
-            var k:int = (((this._filter) && (!(this._filter.disposed))) ? this._filter.selection : this._Str_18823);
+            var k:int = (((this._filter) && (!(this._filter.disposed))) ? this._filter.selection : this.defaultSelection);
             Logger.log(("Room filter changed: " + k));
             if (k == 0)
             {
