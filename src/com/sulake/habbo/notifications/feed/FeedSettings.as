@@ -9,7 +9,7 @@
         public static const FEED_SECTION_ACTIONS:int = 1;
         public static const FEED_SECTION_PERSISTENT:int = 2;
         public static const FEED_SECTION_NOTIFICATIONS:int = 3;
-        public static const _Str_15660:int = 0;
+        public static const FEED_CATEGORY_ME:int = 0;
         public static const _Str_14283:int = 1;
         public static const _Str_14828:int = 2;
 
@@ -20,7 +20,7 @@
         {
             this._visibleFeedCategories = new Vector.<int>();
             this._visibleFeedCategories.push(FeedSettings._Str_14283);
-            this._visibleFeedCategories.push(FeedSettings._Str_15660);
+            this._visibleFeedCategories.push(FeedSettings.FEED_CATEGORY_ME);
             this._visibleFeedCategories.push(FeedSettings._Str_14828);
         }
 
