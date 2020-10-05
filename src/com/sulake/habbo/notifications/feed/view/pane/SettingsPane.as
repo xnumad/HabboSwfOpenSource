@@ -43,7 +43,7 @@
                             _local_4 = FeedSettings.FEED_CATEGORY_ME;
                             break;
                         case "HOTEL":
-                            _local_4 = FeedSettings._Str_14828;
+                            _local_4 = FeedSettings.FEED_CATEGORY_HOTEL;
                             break;
                         case "FRIENDS":
                             _local_4 = FeedSettings.FEED_CATEGORY_FRIENDS;

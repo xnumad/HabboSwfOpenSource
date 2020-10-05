@@ -11,7 +11,7 @@
         public static const FEED_SECTION_NOTIFICATIONS:int = 3;
         public static const FEED_CATEGORY_ME:int = 0;
         public static const FEED_CATEGORY_FRIENDS:int = 1;
-        public static const _Str_14828:int = 2;
+        public static const FEED_CATEGORY_HOTEL:int = 2;
 
         private var _feed:NotificationController;
         private var _visibleFeedCategories:Vector.<int>;
@@ -21,7 +21,7 @@
             this._visibleFeedCategories = new Vector.<int>();
             this._visibleFeedCategories.push(FeedSettings.FEED_CATEGORY_FRIENDS);
             this._visibleFeedCategories.push(FeedSettings.FEED_CATEGORY_ME);
-            this._visibleFeedCategories.push(FeedSettings._Str_14828);
+            this._visibleFeedCategories.push(FeedSettings.FEED_CATEGORY_HOTEL);
         }
 
         public function dispose():void
