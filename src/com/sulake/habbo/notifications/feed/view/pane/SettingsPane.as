@@ -46,7 +46,7 @@
                             _local_4 = FeedSettings._Str_14828;
                             break;
                         case "FRIENDS":
-                            _local_4 = FeedSettings._Str_14283;
+                            _local_4 = FeedSettings.FEED_CATEGORY_FRIENDS;
                             break;
                     }
                     _local_3._Str_24684(_local_4);
