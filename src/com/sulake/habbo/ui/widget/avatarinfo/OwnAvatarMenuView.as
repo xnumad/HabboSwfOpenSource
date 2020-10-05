@@ -30,7 +30,7 @@
         private static const MODE_NAME_CHANGE:int = 2;
         private static const MODE_EXPRESSIONS:int = 3;
         private static const MODE_SIGNS:int = 4;
-        private static const _Str_16983:int = 5;
+        private static const MODE_CHANGE_LOOKS:int = 5;
         private static var _newIdentityChangeLooksMenuHasBeenShown:Boolean = false;
 
         private var _data:AvatarInfoData;
@@ -187,7 +187,7 @@
                     showButton("change_name");
                     showButton("more");
                     break;
-                case _Str_16983:
+                case MODE_CHANGE_LOOKS:
                     showButton("change_looks");
                     showButton("more");
                     break;
