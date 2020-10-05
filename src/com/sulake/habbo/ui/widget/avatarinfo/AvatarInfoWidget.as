@@ -896,7 +896,7 @@
             return false;
         }
 
-        public function get _Str_12708():Boolean
+        public function get isSwimming():Boolean
         {
             var _local_2:IRoomObjectModel;
             var _local_3:Number;
