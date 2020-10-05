@@ -29,7 +29,7 @@
         private static const MODE_CLUB_DANCES:int = 1;
         private static const MODE_NAME_CHANGE:int = 2;
         private static const MODE_EXPRESSIONS:int = 3;
-        private static const _Str_13243:int = 4;
+        private static const MODE_SIGNS:int = 4;
         private static const _Str_16983:int = 5;
         private static var _newIdentityChangeLooksMenuHasBeenShown:Boolean = false;
 
@@ -203,7 +203,7 @@
                     }
                     showButton("back");
                     break;
-                case _Str_13243:
+                case MODE_SIGNS:
                     showButtonGrid("signs_grid");
                     showButton("back");
                     break;
@@ -349,7 +349,7 @@
                             break;
                         case "signs":
                             _local_3 = false;
-                            this._Str_6337(_Str_13243);
+                            this._Str_6337(MODE_SIGNS);
                             break;
                         case "back":
                             _local_3 = false;
