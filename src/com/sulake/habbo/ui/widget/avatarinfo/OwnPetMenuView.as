@@ -30,7 +30,7 @@
         private static const MODE_NORMAL:int = 0;
         private static const MODE_SADDLED_UP:int = 1;
         private static const MODE_RIDING:int = 2;
-        private static const _Str_10946:int = 3;
+        private static const MODE_MONSTERPLANT:int = 3;
 
         private var _data:PetInfoData;
         private var _mode:int;
@@ -54,7 +54,7 @@
             var _local_8:Boolean = k.widget.isRiding;
             if (k.widget._Str_20290())
             {
-                k._mode = _Str_10946;
+                k._mode = MODE_MONSTERPLANT;
             }
             else
             {
@@ -211,7 +211,7 @@
                     showButton("dismount");
                     showButton("respect", (this._data.petRespectLeft > 0));
                     break;
-                case _Str_10946:
+                case MODE_MONSTERPLANT:
                     showButton("pick_up");
                     if (this._data.dead)
                     {
@@ -437,7 +437,7 @@
                             }
                             else
                             {
-                                if (this._mode == _Str_10946)
+                                if (this._mode == MODE_MONSTERPLANT)
                                 {
                                     _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_REQUEST_BREED_PET, this.petId);
                                 }
