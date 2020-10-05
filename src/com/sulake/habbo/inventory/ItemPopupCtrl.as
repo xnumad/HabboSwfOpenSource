@@ -206,11 +206,11 @@
             if (!StringUtils.isEmpty(k))
             {
                 _local_2 = new BitmapFileLoader("image/png", new URLRequest(k));
-                _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_23616);
+                _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onExtImageLoaded);
             }
         }
 
-        private function _Str_23616(k:AssetLoaderEvent):void
+        private function onExtImageLoaded(k:AssetLoaderEvent):void
         {
             if (((!(this._popupWindow)) || (!(this._expectingExtImage))))
             {
