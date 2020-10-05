@@ -48,7 +48,7 @@
             var _local_2:ISessionDataManager = this._handler.container.sessionDataManager;
             _local_2.events.addEventListener(MysteryBoxKeysUpdateEvent.MBKE_UPDATE, this.onKeysUpdated);
             this.setMinimised(this.minimised);
-            this._Str_21472(_local_2.mysteryBoxColor, _local_2.mysteryKeyColor);
+            this.setKeyColors(_local_2.mysteryBoxColor, _local_2.mysteryKeyColor);
         }
 
         private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
@@ -71,7 +71,7 @@
             }
         }
 
-        private function _Str_21472(k:String, _arg_2:String):void
+        private function setKeyColors(k:String, _arg_2:String):void
         {
             var _local_5:uint;
             var _local_6:uint;
@@ -105,7 +105,7 @@
 
         private function onKeysUpdated(k:MysteryBoxKeysUpdateEvent):void
         {
-            this._Str_21472(k.boxColor, k.keyColor);
+            this.setKeyColors(k.boxColor, k.keyColor);
         }
 
         private function get minimised():Boolean
