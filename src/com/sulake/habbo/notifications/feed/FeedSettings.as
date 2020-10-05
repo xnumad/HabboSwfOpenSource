@@ -7,7 +7,7 @@
     {
         public static const FEED_SECTION_URGENT:int = 0;
         public static const FEED_SECTION_ACTIONS:int = 1;
-        public static const _Str_16132:int = 2;
+        public static const FEED_SECTION_PERSISTENT:int = 2;
         public static const _Str_9534:int = 3;
         public static const _Str_15660:int = 0;
         public static const _Str_14283:int = 1;

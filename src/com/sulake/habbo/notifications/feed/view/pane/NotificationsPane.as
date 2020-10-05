@@ -50,7 +50,7 @@
                 case FeedSettings.FEED_SECTION_ACTIONS:
                     _local_2 = LIST_ACTIONS;
                     break;
-                case FeedSettings._Str_16132:
+                case FeedSettings.FEED_SECTION_PERSISTENT:
                     _local_2 = LIST_PERSISTENT;
                     break;
                 case FeedSettings._Str_9534:
