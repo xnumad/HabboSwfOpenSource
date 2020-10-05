@@ -47,7 +47,7 @@
             this._handler.container.toolbar.extensionView.attachExtension(ToolbarDisplayExtensionIds.MYSTERY_BOX, this._window);
             var _local_2:ISessionDataManager = this._handler.container.sessionDataManager;
             _local_2.events.addEventListener(MysteryBoxKeysUpdateEvent.MBKE_UPDATE, this._Str_19397);
-            this._Str_16216(this._Str_18883);
+            this.setMinimised(this._Str_18883);
             this._Str_21472(_local_2.mysteryBoxColor, _local_2.mysteryKeyColor);
         }
 
@@ -60,10 +60,10 @@
             switch (k.target.name)
             {
                 case "minimize_region":
-                    this._Str_16216(true);
+                    this.setMinimised(true);
                     return;
                 case "maximize_region":
-                    this._Str_16216(false);
+                    this.setMinimised(false);
                     return;
                 case "faq_link":
                     HabboWebTools.openWebPage(this._handler.container.config.getProperty("mysterybox.faq.url"), "habboMain");
@@ -113,7 +113,7 @@
             return (!(this._handler == null)) && (this._handler.container.config.getBoolean(MYSTERY_BOX_TOOLBAR_EXTENSION_MINIMISED));
         }
 
-        private function _Str_16216(k:Boolean):void
+        private function setMinimised(k:Boolean):void
         {
             if (((!(this._handler == null)) && (!(this._window == null))))
             {
