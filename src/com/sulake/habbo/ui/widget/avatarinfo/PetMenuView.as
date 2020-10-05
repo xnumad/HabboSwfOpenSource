@@ -23,7 +23,7 @@
         protected static const MODE_NORMAL:uint = 0;
         private static const MODE_SADDLED_UP:int = 1;
         private static const MODE_RIDING:int = 2;
-        private static const _Str_13388:int = 3;
+        private static const MODE_MONSTER_PLANT:int = 3;
 
         private var _data:PetInfoData;
         private var _mode:int = 0;
@@ -41,7 +41,7 @@
             var _local_8:Boolean = k.widget.isRiding;
             if (k.widget._Str_20290())
             {
-                k._mode = _Str_13388;
+                k._mode = MODE_MONSTER_PLANT;
             }
             else
             {
@@ -127,7 +127,7 @@
                     }
                     showButton("respect", (this._data.petRespectLeft > 0));
                     break;
-                case _Str_13388:
+                case MODE_MONSTER_PLANT:
                     if (!this._data.dead)
                     {
                         showButton("respect", false);
