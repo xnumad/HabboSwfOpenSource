@@ -28,7 +28,7 @@
         private static const MODE_NORMAL:int = 0;
         private static const MODE_CLUB_DANCES:int = 1;
         private static const MODE_NAME_CHANGE:int = 2;
-        private static const _Str_14565:int = 3;
+        private static const MODE_EXPRESSIONS:int = 3;
         private static const _Str_13243:int = 4;
         private static const _Str_16983:int = 5;
         private static var _newIdentityChangeLooksMenuHasBeenShown:Boolean = false;
@@ -191,7 +191,7 @@
                     showButton("change_looks");
                     showButton("more");
                     break;
-                case _Str_14565:
+                case MODE_EXPRESSIONS:
                     showButton("wave", true, (!(this.widget.isSwimming)));
                     showButton("laugh", true, (((!(this.widget._Str_4878)) && (!(this.widget.isSwimming))) && (this.widget.hasVip)), (!(this.widget.hasVip)));
                     showButton("blow", true, (((!(this.widget._Str_4878)) && (!(this.widget.isSwimming))) && (this.widget.hasVip)), (!(this.widget.hasVip)));
@@ -296,7 +296,7 @@
                             break;
                         case "expressions":
                             _local_3 = false;
-                            this._Str_6337(_Str_14565);
+                            this._Str_6337(MODE_EXPRESSIONS);
                             break;
                         case "sit":
                             _local_4 = new RoomWidgetChangePostureMessage(RoomWidgetChangePostureMessage._Str_2016);
