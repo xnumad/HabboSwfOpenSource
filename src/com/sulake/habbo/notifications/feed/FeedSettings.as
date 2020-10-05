@@ -5,7 +5,7 @@
 
     public class FeedSettings 
     {
-        public static const _Str_17770:int = 0;
+        public static const FEED_SECTION_URGENT:int = 0;
         public static const _Str_16008:int = 1;
         public static const _Str_16132:int = 2;
         public static const _Str_9534:int = 3;

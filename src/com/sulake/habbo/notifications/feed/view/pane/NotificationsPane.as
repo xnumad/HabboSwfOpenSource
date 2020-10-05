@@ -44,7 +44,7 @@
             var _local_2:String;
             switch (k)
             {
-                case FeedSettings._Str_17770:
+                case FeedSettings.FEED_SECTION_URGENT:
                     _local_2 = LIST_URGENT;
                     break;
                 case FeedSettings._Str_16008:
