@@ -20,7 +20,7 @@
 
     public class PetMenuView extends AvatarContextInfoButtonView 
     {
-        protected static const _Str_2906:uint = 0;
+        protected static const MODE_NORMAL:uint = 0;
         private static const _Str_5818:int = 1;
         private static const _Str_5938:int = 2;
         private static const _Str_13388:int = 3;
@@ -57,7 +57,7 @@
                     }
                     else
                     {
-                        k._mode = _Str_2906;
+                        k._mode = MODE_NORMAL;
                     }
                 }
             }
@@ -110,7 +110,7 @@
             }
             switch (this._mode)
             {
-                case _Str_2906:
+                case MODE_NORMAL:
                     showButton("respect", (this._data.petRespectLeft > 0));
                     break;
                 case _Str_5818:

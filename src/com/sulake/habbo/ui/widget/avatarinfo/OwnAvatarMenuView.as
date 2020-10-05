@@ -25,7 +25,7 @@
 
     public class OwnAvatarMenuView extends AvatarContextInfoButtonView 
     {
-        private static const _Str_2906:int = 0;
+        private static const MODE_NORMAL:int = 0;
         private static const _Str_12150:int = 1;
         private static const _Str_14313:int = 2;
         private static const _Str_14565:int = 3;
@@ -47,7 +47,7 @@
             k._data = _arg_6;
             if ((((!(_newIdentityChangeLooksMenuHasBeenShown)) && (k.widget.configuration.getInteger("new.identity", 0) > 0)) && (k.widget.configuration.getBoolean("new.user.reception.enabled"))))
             {
-                k._Str_1069 = _Str_2906;
+                k._Str_1069 = MODE_NORMAL;
                 OwnAvatarMenuView._newIdentityChangeLooksMenuHasBeenShown = true;
             }
             else
@@ -64,7 +64,7 @@
                     }
                     else
                     {
-                        k._Str_1069 = _Str_2906;
+                        k._Str_1069 = MODE_NORMAL;
                     }
                 }
             }
@@ -158,7 +158,7 @@
             var _local_3:Boolean = this.widget._Str_25831;
             switch (this._Str_1069)
             {
-                case _Str_2906:
+                case MODE_NORMAL:
                     showButton("change_name", this._data.allowNameChange);
                     showButton("decorate", ((this._Str_22241()) && ((this._data.myRoomControllerLevel >= RoomControllerLevel.GUEST) || (this._data.amIOwner))));
                     showButton("change_looks");
@@ -353,12 +353,12 @@
                             break;
                         case "back":
                             _local_3 = false;
-                            this._Str_6337(_Str_2906);
+                            this._Str_6337(MODE_NORMAL);
                             break;
                         case "more":
                             _local_3 = false;
                             this.widget._Str_13909 = false;
-                            this._Str_6337(_Str_2906);
+                            this._Str_6337(MODE_NORMAL);
                             break;
                         case "handitem":
                             _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_DROP_CARRY_ITEM, _Str_2306);

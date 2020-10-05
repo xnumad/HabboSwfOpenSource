@@ -11,7 +11,7 @@
 
     public class BreedPetView extends AvatarContextInfoButtonView 
     {
-        private static const _Str_2906:int = 0;
+        private static const MODE_NORMAL:int = 0;
 
         private var _mode:int;
         private var _useProductItem:_Str_3858;
@@ -59,7 +59,7 @@
         private function _Str_18845():void
         {
             var k:int = this.widget.handler.roomSession.roomId;
-            this._mode = _Str_2906;
+            this._mode = MODE_NORMAL;
         }
 
         override protected function updateWindow():void
@@ -115,7 +115,7 @@
             }
             switch (this._mode)
             {
-                case _Str_2906:
+                case MODE_NORMAL:
                     if (this._canBreed)
                     {
                         showButton("breed");

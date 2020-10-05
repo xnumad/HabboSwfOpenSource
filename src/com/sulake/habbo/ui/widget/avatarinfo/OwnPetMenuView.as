@@ -27,7 +27,7 @@
 
     public class OwnPetMenuView extends AvatarContextInfoButtonView 
     {
-        private static const _Str_2906:int = 0;
+        private static const MODE_NORMAL:int = 0;
         private static const _Str_5818:int = 1;
         private static const _Str_5938:int = 2;
         private static const _Str_10946:int = 3;
@@ -70,7 +70,7 @@
                     }
                     else
                     {
-                        k._Str_1069 = _Str_2906;
+                        k._Str_1069 = MODE_NORMAL;
                     }
                 }
             }
@@ -147,7 +147,7 @@
             var _local_3:AvatarInfoWidgetHandler = this.widget.handler;
             switch (this._Str_1069)
             {
-                case _Str_2906:
+                case MODE_NORMAL:
                     showButton("respect", (this._data.petRespectLeft > 0));
                     showButton("train");
                     showButton("pick_up");
@@ -428,7 +428,7 @@
                             _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_SADDLE_OFF, this.petId);
                             break;
                         case "breed":
-                            if (this._Str_1069 == _Str_2906)
+                            if (this._Str_1069 == MODE_NORMAL)
                             {
                                 _local_7 = RoomWidgetPetCommandMessage._Str_16282;
                                 _local_8 = ("pet.command." + _local_7);

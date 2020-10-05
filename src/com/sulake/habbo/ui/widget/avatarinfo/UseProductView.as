@@ -15,7 +15,7 @@
 
     public class UseProductView extends AvatarContextInfoButtonView 
     {
-        private static const _Str_2906:int = 0;
+        private static const MODE_NORMAL:int = 0;
         private static const _Str_13718:int = 1;
         private static const _Str_14146:int = 2;
         private static const _Str_15667:int = 3;
@@ -82,7 +82,7 @@
             {
                 return;
             }
-            this._mode = _Str_2906;
+            this._mode = MODE_NORMAL;
             switch (_local_3.category)
             {
                 case FurniCategory.PET_SHAMPOO:
@@ -164,7 +164,7 @@
             }
             switch (this._mode)
             {
-                case _Str_2906:
+                case MODE_NORMAL:
                     showButton("use_product");
                     break;
                 case _Str_13718:

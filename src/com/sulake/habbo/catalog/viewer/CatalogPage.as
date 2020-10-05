@@ -68,7 +68,7 @@
     public class CatalogPage implements ICatalogPage 
     {
         protected static const LAYOUT_:String = "layout_";
-        public static const _Str_2906:int = 0;
+        public static const MODE_NORMAL:int = 0;
         public static const _Str_7035:int = 1;
 
         protected var _Str_2897:XML;
@@ -106,7 +106,7 @@
             this._acceptSeasonCurrencyAsCredits = _arg_7;
             if (_arg_8 == -1)
             {
-                this._mode = _Str_2906;
+                this._mode = MODE_NORMAL;
             }
             else
             {
