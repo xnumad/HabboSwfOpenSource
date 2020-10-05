@@ -33,7 +33,7 @@
         private static const _Str_10946:int = 3;
 
         private var _data:PetInfoData;
-        private var _Str_1069:int;
+        private var _mode:int;
         private var _Str_11220:IFurnitureData;
         private var _Str_18260:IFurnitureData;
         protected var _catalog:IHabboCatalog;
@@ -54,23 +54,23 @@
             var _local_8:Boolean = k.widget.isRiding;
             if (k.widget._Str_20290())
             {
-                k._Str_1069 = _Str_10946;
+                k._mode = _Str_10946;
             }
             else
             {
                 if (((_local_7) && (!(_local_8))))
                 {
-                    k._Str_1069 = _Str_5818;
+                    k._mode = _Str_5818;
                 }
                 else
                 {
                     if (_local_8)
                     {
-                        k._Str_1069 = _Str_5938;
+                        k._mode = _Str_5938;
                     }
                     else
                     {
-                        k._Str_1069 = MODE_NORMAL;
+                        k._mode = MODE_NORMAL;
                     }
                 }
             }
@@ -145,7 +145,7 @@
             }
             this._Str_11220 = null;
             var _local_3:AvatarInfoWidgetHandler = this.widget.handler;
-            switch (this._Str_1069)
+            switch (this._mode)
             {
                 case MODE_NORMAL:
                     showButton("respect", (this._data.petRespectLeft > 0));
@@ -428,7 +428,7 @@
                             _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_SADDLE_OFF, this.petId);
                             break;
                         case "breed":
-                            if (this._Str_1069 == MODE_NORMAL)
+                            if (this._mode == MODE_NORMAL)
                             {
                                 _local_7 = RoomWidgetPetCommandMessage._Str_16282;
                                 _local_8 = ("pet.command." + _local_7);
@@ -437,7 +437,7 @@
                             }
                             else
                             {
-                                if (this._Str_1069 == _Str_10946)
+                                if (this._mode == _Str_10946)
                                 {
                                     _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_REQUEST_BREED_PET, this.petId);
                                 }
@@ -506,7 +506,7 @@
 
         private function _Str_6337(k:int):void
         {
-            this._Str_1069 = k;
+            this._mode = k;
             this._Str_2771();
         }
 

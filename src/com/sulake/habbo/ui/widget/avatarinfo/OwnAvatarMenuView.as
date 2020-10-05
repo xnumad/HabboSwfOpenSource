@@ -34,7 +34,7 @@
         private static var _newIdentityChangeLooksMenuHasBeenShown:Boolean = false;
 
         private var _data:AvatarInfoData;
-        private var _Str_1069:int;
+        private var _mode:int;
 
         public function OwnAvatarMenuView(k:AvatarInfoWidget)
         {
@@ -47,24 +47,24 @@
             k._data = _arg_6;
             if ((((!(_newIdentityChangeLooksMenuHasBeenShown)) && (k.widget.configuration.getInteger("new.identity", 0) > 0)) && (k.widget.configuration.getBoolean("new.user.reception.enabled"))))
             {
-                k._Str_1069 = MODE_NORMAL;
+                k._mode = MODE_NORMAL;
                 OwnAvatarMenuView._newIdentityChangeLooksMenuHasBeenShown = true;
             }
             else
             {
                 if ((((k.widget._Str_4107) && (k.widget._Str_6454)) && (!(k.widget._Str_4878))))
                 {
-                    k._Str_1069 = _Str_12150;
+                    k._mode = _Str_12150;
                 }
                 else
                 {
                     if (((_arg_6.allowNameChange) && (k.widget._Str_13909)))
                     {
-                        k._Str_1069 = _Str_14313;
+                        k._mode = _Str_14313;
                     }
                     else
                     {
-                        k._Str_1069 = MODE_NORMAL;
+                        k._mode = MODE_NORMAL;
                     }
                 }
             }
@@ -156,7 +156,7 @@
                 _local_2++;
             }
             var _local_3:Boolean = this.widget._Str_25831;
-            switch (this._Str_1069)
+            switch (this._mode)
             {
                 case MODE_NORMAL:
                     showButton("change_name", this._data.allowNameChange);
@@ -392,7 +392,7 @@
 
         private function _Str_6337(k:int):void
         {
-            this._Str_1069 = k;
+            this._mode = k;
             this._Str_2771();
         }
 

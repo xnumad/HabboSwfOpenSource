@@ -32,7 +32,7 @@
         protected static var _Str_14054:uint = _Str_10122;//1
 
         protected var _data:AvatarInfoData;
-        protected var _Str_1069:uint = 1;
+        protected var _mode:uint = 1;
         protected var _Str_7982:Boolean;
 
         public function AvatarMenuView(k:AvatarInfoWidget)
@@ -86,7 +86,7 @@
                 k.getListItemAt(_local_3).visible = false;
                 _local_3++;
             }
-            if (this._Str_1069 == _Str_10122)
+            if (this._mode == _Str_10122)
             {
                 showButton("moderate", this.moderateMenuHasContent());
                 showButton("friend", this._data.canBeAskedForAFriend);
@@ -129,7 +129,7 @@
                 showButton("relationship", ((this.widget.configuration.getBoolean("relationship.status.enabled")) && (this._data.isFriend)));
                 showButton("ambassador", this.ambassadorMenuHasContent());
             }
-            if (this._Str_1069 == _Str_15297)
+            if (this._mode == _Str_15297)
             {
                 showButton("kick", this._data.canBeKicked);
                 showButton("ban_with_duration", this._data.canBeBanned);
@@ -138,27 +138,27 @@
                 showButton("remove_rights", this.isShowRemoveRights());
                 showButton("actions");
             }
-            if (this._Str_1069 == _Str_15024)
+            if (this._mode == _Str_15024)
             {
                 showButton("ban_hour");
                 showButton("ban_day");
                 showButton("perm_ban");
                 showButton("actions");
             }
-            if (this._Str_1069 == _Str_14752)
+            if (this._mode == _Str_14752)
             {
                 showButton("mute_2min");
                 showButton("mute_5min");
                 showButton("mute_10min");
                 showButton("actions");
             }
-            if (this._Str_1069 == _Str_15459)
+            if (this._mode == _Str_15459)
             {
                 showButtonGrid("relationship_grid");
                 showButton("no_relationship");
                 showButton("actions");
             }
-            if (this._Str_1069 == _Str_15427)
+            if (this._mode == _Str_15427)
             {
                 showButton("ambassador_kick");
                 showButton("ambassador_alert");
@@ -168,7 +168,7 @@
             }
             k.autoArrangeItems = true;
             k.visible = true;
-            _Str_14054 = this._Str_1069;
+            _Str_14054 = this._mode;
             this._Str_7982 = false;
         }
 
@@ -324,12 +324,12 @@
                             _local_5 = RoomWidgetUserActionMessage.MUTE_USER_10MIN;
                             break;
                         case "ban_with_duration":
-                            this._Str_1069 = _Str_15024;
+                            this._mode = _Str_15024;
                             this._Str_7982 = true;
                             _local_3 = false;
                             break;
                         case "mute":
-                            this._Str_1069 = _Str_14752;
+                            this._mode = _Str_14752;
                             this._Str_7982 = true;
                             _local_3 = false;
                             break;
@@ -349,7 +349,7 @@
                             _local_5 = RoomWidgetUserActionMessage.RWUAM_START_TRADING;
                             break;
                         case "moderate":
-                            this._Str_1069 = _Str_15297;
+                            this._mode = _Str_15297;
                             this._Str_7982 = true;
                             _local_3 = false;
                             break;
@@ -357,12 +357,12 @@
                             _local_5 = RoomWidgetUserActionMessage.RWUAM_REPORT_CFH_OTHER;
                             break;
                         case "actions":
-                            this._Str_1069 = _Str_10122;
+                            this._mode = _Str_10122;
                             this._Str_7982 = true;
                             _local_3 = false;
                             break;
                         case "relationship":
-                            this._Str_1069 = _Str_15459;
+                            this._mode = _Str_15459;
                             this._Str_7982 = true;
                             _local_3 = false;
                             break;
@@ -382,7 +382,7 @@
                             this.setRelationship(RelationshipStatusEnum.NONE);
                             break;
                         case "ambassador":
-                            this._Str_1069 = _Str_15427;
+                            this._mode = _Str_15427;
                             this._Str_7982 = true;
                             _local_3 = false;
                             break;

@@ -7,7 +7,7 @@
         public static const LINEAR:String = "linear";
         public static const NONLINEAR:String = "nonLinear";
 
-        protected var _Str_1069:String = null;
+        protected var _mode:String = null;
         protected var _width:int = 0;
         protected var _height:int = 0;
         protected var _Str_19252:Boolean = false;
@@ -28,7 +28,7 @@
             super();
             if ((k is String))
             {
-                this._Str_1069 = k;
+                this._mode = k;
             }
             else
             {
@@ -248,7 +248,7 @@
 
         public function toString():String
         {
-            return ((((("{ mode: " + this._Str_1069) + ", width: ") + this.width) + ", height: ") + this.height) + " }";
+            return ((((("{ mode: " + this._mode) + ", width: ") + this.width) + ", height: ") + this.height) + " }";
         }
     }
 }
