@@ -31,7 +31,7 @@
         private static const _Str_14565:int = 3;
         private static const _Str_13243:int = 4;
         private static const _Str_16983:int = 5;
-        private static var _Str_14704:Boolean = false;
+        private static var _newIdentityChangeLooksMenuHasBeenShown:Boolean = false;
 
         private var _data:AvatarInfoData;
         private var _Str_1069:int;
@@ -45,10 +45,10 @@
         public static function setup(k:OwnAvatarMenuView, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:AvatarInfoData):void
         {
             k._data = _arg_6;
-            if ((((!(_Str_14704)) && (k.widget.configuration.getInteger("new.identity", 0) > 0)) && (k.widget.configuration.getBoolean("new.user.reception.enabled"))))
+            if ((((!(_newIdentityChangeLooksMenuHasBeenShown)) && (k.widget.configuration.getInteger("new.identity", 0) > 0)) && (k.widget.configuration.getBoolean("new.user.reception.enabled"))))
             {
                 k._Str_1069 = _Str_2906;
-                OwnAvatarMenuView._Str_14704 = true;
+                OwnAvatarMenuView._newIdentityChangeLooksMenuHasBeenShown = true;
             }
             else
             {
