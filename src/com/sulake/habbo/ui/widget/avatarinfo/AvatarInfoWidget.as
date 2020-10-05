@@ -733,7 +733,7 @@
                     {
                         this._rentableBotInfoData._Str_19891(_local_17.botSkillData);
                     }
-                    this._Str_16991(_local_15.id, _local_15.name, _local_15.userRoomId, this._rentableBotInfoData);
+                    this.updateRentableBotView(_local_15.id, _local_15.name, _local_15.userRoomId, this._rentableBotInfoData);
                     break;
                 case _Str_5375.RWRBSLUE_SKILL_LIST:
                     _local_18 = (k as _Str_5375);
@@ -741,14 +741,14 @@
                     if (this._rentableBotInfoData)
                     {
                         this._rentableBotInfoData._Str_19891(_local_18._Str_10833);
-                        this._Str_16991(this._rentableBotInfoData.id, this._rentableBotInfoData.name, this._rentableBotInfoData.roomIndex, this._rentableBotInfoData, true);
+                        this.updateRentableBotView(this._rentableBotInfoData.id, this._rentableBotInfoData.name, this._rentableBotInfoData.roomIndex, this._rentableBotInfoData, true);
                     }
                     break;
                 case RoomWidgetRentableBotForceOpenContextMenuEvent.OPEN:
                     _local_19 = (k as RoomWidgetRentableBotForceOpenContextMenuEvent);
                     if (this._rentableBotInfoData)
                     {
-                        this._Str_16991(this._rentableBotInfoData.id, this._rentableBotInfoData.name, this._rentableBotInfoData.roomIndex, this._rentableBotInfoData, false, true);
+                        this.updateRentableBotView(this._rentableBotInfoData.id, this._rentableBotInfoData.name, this._rentableBotInfoData.roomIndex, this._rentableBotInfoData, false, true);
                     }
                     else
                     {
@@ -913,7 +913,7 @@
             return false;
         }
 
-        private function _Str_16991(k:int, _arg_2:String, _arg_3:int, _arg_4:RentableBotInfoData, _arg_5:Boolean=false, _arg_6:Boolean=false):void
+        private function updateRentableBotView(k:int, _arg_2:String, _arg_3:int, _arg_4:RentableBotInfoData, _arg_5:Boolean=false, _arg_6:Boolean=false):void
         {
             if (!_arg_4)
             {
