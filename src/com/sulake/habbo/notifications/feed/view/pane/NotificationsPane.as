@@ -53,7 +53,7 @@
                 case FeedSettings.FEED_SECTION_PERSISTENT:
                     _local_2 = LIST_PERSISTENT;
                     break;
-                case FeedSettings._Str_9534:
+                case FeedSettings.FEED_SECTION_NOTIFICATIONS:
                     _local_2 = LIST_NOTIFICATIONS;
                     break;
             }
