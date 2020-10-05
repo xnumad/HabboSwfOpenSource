@@ -22,7 +22,7 @@
     {
         protected static const MODE_NORMAL:uint = 0;
         private static const MODE_SADDLED_UP:int = 1;
-        private static const _Str_5938:int = 2;
+        private static const MODE_RIDING:int = 2;
         private static const _Str_13388:int = 3;
 
         private var _data:PetInfoData;
@@ -53,7 +53,7 @@
                 {
                     if (_local_8)
                     {
-                        k._mode = _Str_5938;
+                        k._mode = MODE_RIDING;
                     }
                     else
                     {
@@ -120,7 +120,7 @@
                     }
                     showButton("respect", (this._data.petRespectLeft > 0));
                     break;
-                case _Str_5938:
+                case MODE_RIDING:
                     if (this.widget.configuration.getBoolean("sharedhorseriding.enabled"))
                     {
                         showButton("dismount");

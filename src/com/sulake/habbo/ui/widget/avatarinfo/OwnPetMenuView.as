@@ -29,7 +29,7 @@
     {
         private static const MODE_NORMAL:int = 0;
         private static const MODE_SADDLED_UP:int = 1;
-        private static const _Str_5938:int = 2;
+        private static const MODE_RIDING:int = 2;
         private static const _Str_10946:int = 3;
 
         private var _data:PetInfoData;
@@ -66,7 +66,7 @@
                 {
                     if (_local_8)
                     {
-                        k._mode = _Str_5938;
+                        k._mode = MODE_RIDING;
                     }
                     else
                     {
@@ -207,7 +207,7 @@
                     showButton("pick_up");
                     showButton("saddle_off");
                     break;
-                case _Str_5938:
+                case MODE_RIDING:
                     showButton("dismount");
                     showButton("respect", (this._data.petRespectLeft > 0));
                     break;
