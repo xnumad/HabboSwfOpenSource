@@ -47,7 +47,7 @@
             this._handler.container.toolbar.extensionView.attachExtension(ToolbarDisplayExtensionIds.MYSTERY_BOX, this._window);
             var _local_2:ISessionDataManager = this._handler.container.sessionDataManager;
             _local_2.events.addEventListener(MysteryBoxKeysUpdateEvent.MBKE_UPDATE, this._Str_19397);
-            this.setMinimised(this._Str_18883);
+            this.setMinimised(this.minimised);
             this._Str_21472(_local_2.mysteryBoxColor, _local_2.mysteryKeyColor);
         }
 
@@ -82,7 +82,7 @@
             var _local_3:Boolean = ((!(k == null)) && (!(k == "")));
             this._window.findChildByName("box_colour").visible = _local_3;
             this._window.findChildByName("box_overlay").visible = _local_3;
-            this._window.findChildByName("small_box").visible = ((_local_3) && (this._Str_18883));
+            this._window.findChildByName("small_box").visible = ((_local_3) && (this.minimised));
             IRegionWindow(this._window.findChildByName("box_region")).toolTipCaption = ((_local_3) ? (("${mysterybox.tracker.box." + k.toLowerCase()) + "}") : "");
             if (_local_3)
             {
@@ -93,7 +93,7 @@
             var _local_4:Boolean = ((!(_arg_2 == null)) && (!(_arg_2 == "")));
             this._window.findChildByName("key_colour").visible = _local_4;
             this._window.findChildByName("key_overlay").visible = _local_4;
-            this._window.findChildByName("small_key").visible = ((_local_4) && (this._Str_18883));
+            this._window.findChildByName("small_key").visible = ((_local_4) && (this.minimised));
             IRegionWindow(this._window.findChildByName("key_region")).toolTipCaption = ((_local_4) ? (("${mysterybox.tracker.key." + _arg_2.toLowerCase()) + "}") : "");
             if (_local_4)
             {
@@ -108,7 +108,7 @@
             this._Str_21472(k.boxColor, k.keyColor);
         }
 
-        private function get _Str_18883():Boolean
+        private function get minimised():Boolean
         {
             return (!(this._handler == null)) && (this._handler.container.config.getBoolean(MYSTERY_BOX_TOOLBAR_EXTENSION_MINIMISED));
         }
