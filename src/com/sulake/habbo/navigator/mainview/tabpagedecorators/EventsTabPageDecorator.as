@@ -25,7 +25,7 @@
             {
                 this._filter = (_local_2.getChildByName("roomAdFilter") as IDropMenuWindow);
                 this._Str_22411();
-                this._filter.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_5118);
+                this._filter.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this.onFilterSelected);
             }
             _local_2.visible = true;
         }
@@ -34,9 +34,9 @@
         {
             if (((!(this._filter == null)) && (!(this._filter.disposed))))
             {
-                this._filter.removeEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_5118);
+                this._filter.removeEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this.onFilterSelected);
                 this._filter.selection = 0;
-                this._filter.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_5118);
+                this._filter.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this.onFilterSelected);
             }
         }
 
@@ -69,7 +69,7 @@
             this._filter.selection = 0;
         }
 
-        private function _Str_5118(k:WindowEvent):void
+        private function onFilterSelected(k:WindowEvent):void
         {
             this.startSearch();
         }

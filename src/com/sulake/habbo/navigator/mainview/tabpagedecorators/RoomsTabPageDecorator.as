@@ -27,7 +27,7 @@
             {
                 this._filter = IDropMenuWindow(_local_3.findChildByName("roomCtgFilter"));
                 this.prepareRoomCategories();
-                this._filter.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_5118);
+                this._filter.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this.onFilterSelected);
             }
             _local_3.visible = true;
         }
@@ -62,9 +62,9 @@
         {
             if (((!(this._filter == null)) && (!(this._filter.disposed))))
             {
-                this._filter.removeEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_5118);
+                this._filter.removeEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this.onFilterSelected);
                 this._filter.selection = this.defaultSelection;
-                this._filter.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_5118);
+                this._filter.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this.onFilterSelected);
             }
         }
 
@@ -78,7 +78,7 @@
             this.startSearch();
         }
 
-        private function _Str_5118(k:WindowEvent):void
+        private function onFilterSelected(k:WindowEvent):void
         {
             this.startSearch();
         }
