@@ -46,7 +46,7 @@
             this._window.procedure = this.windowProcedure;
             this._handler.container.toolbar.extensionView.attachExtension(ToolbarDisplayExtensionIds.MYSTERY_BOX, this._window);
             var _local_2:ISessionDataManager = this._handler.container.sessionDataManager;
-            _local_2.events.addEventListener(MysteryBoxKeysUpdateEvent.MBKE_UPDATE, this._Str_19397);
+            _local_2.events.addEventListener(MysteryBoxKeysUpdateEvent.MBKE_UPDATE, this.onKeysUpdated);
             this.setMinimised(this.minimised);
             this._Str_21472(_local_2.mysteryBoxColor, _local_2.mysteryKeyColor);
         }
@@ -103,7 +103,7 @@
             }
         }
 
-        private function _Str_19397(k:MysteryBoxKeysUpdateEvent):void
+        private function onKeysUpdated(k:MysteryBoxKeysUpdateEvent):void
         {
             this._Str_21472(k.boxColor, k.keyColor);
         }
@@ -151,7 +151,7 @@
             if (this._handler != null)
             {
                 this._handler.container.toolbar.extensionView.detachExtension(ToolbarDisplayExtensionIds.MYSTERY_BOX);
-                this._handler.container.sessionDataManager.events.removeEventListener(MysteryBoxKeysUpdateEvent.MBKE_UPDATE, this._Str_19397);
+                this._handler.container.sessionDataManager.events.removeEventListener(MysteryBoxKeysUpdateEvent.MBKE_UPDATE, this.onKeysUpdated);
                 this._handler = null;
             }
             this._disposed = true;
