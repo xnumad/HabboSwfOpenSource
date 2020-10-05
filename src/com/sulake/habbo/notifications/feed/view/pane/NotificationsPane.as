@@ -47,7 +47,7 @@
                 case FeedSettings.FEED_SECTION_URGENT:
                     _local_2 = LIST_URGENT;
                     break;
-                case FeedSettings._Str_16008:
+                case FeedSettings.FEED_SECTION_ACTIONS:
                     _local_2 = LIST_ACTIONS;
                     break;
                 case FeedSettings._Str_16132:
