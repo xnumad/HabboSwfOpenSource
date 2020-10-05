@@ -388,7 +388,7 @@
             return this._inventory._Str_2834;
         }
 
-        public function _Str_8308():HabboInventory
+        public function getInventory():HabboInventory
         {
             return this._inventory;
         }

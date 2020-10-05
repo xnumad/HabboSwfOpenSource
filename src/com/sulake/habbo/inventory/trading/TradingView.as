@@ -296,7 +296,7 @@
                 {
                     return;
                 }
-                if (this._tradingModel._Str_8308().getBoolean("trading.warning.enabled"))
+                if (this._tradingModel.getInventory().getBoolean("trading.warning.enabled"))
                 {
                     if (this._tradingModel._Str_24618())
                     {
@@ -403,7 +403,7 @@
         private function _Str_20764(k:String, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:Boolean):void
         {
             var _local_6:ITextWindow;
-            if (!this._tradingModel._Str_8308().getBoolean("trading.warning.enabled"))
+            if (!this._tradingModel.getInventory().getBoolean("trading.warning.enabled"))
             {
                 return;
             }
@@ -869,11 +869,11 @@
 
         private function _Str_24946(k:FurnitureItem):Boolean
         {
-            if (!this._tradingModel._Str_8308())
+            if (!this._tradingModel.getInventory())
             {
                 return false;
             }
-            var _local_2:IFurnitureData = this._tradingModel._Str_8308().getFurnitureData(k.type, ProductTypeEnum.WALL);
+            var _local_2:IFurnitureData = this._tradingModel.getInventory().getFurnitureData(k.type, ProductTypeEnum.WALL);
             return (_local_2) && (_local_2.isExternalImageType);
         }
 

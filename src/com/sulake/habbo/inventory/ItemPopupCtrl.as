@@ -149,7 +149,7 @@
                             _local_12 = _arg_4.getJSONValue("w");
                             if (!StringUtils.isEmpty(_local_12))
                             {
-                                _local_13 = (this._tradingModel._Str_8308().getProperty("stories.image_url_base") + _local_12);
+                                _local_13 = (this._tradingModel.getInventory().getProperty("stories.image_url_base") + _local_12);
                                 this._Str_19468(_local_13);
                             }
                         }
@@ -178,7 +178,7 @@
 
         private function loadExtraData(k:String):void
         {
-            var _local_2:String = (this._tradingModel._Str_8308().getProperty("extra_data_service_url") + k);
+            var _local_2:String = (this._tradingModel.getInventory().getProperty("extra_data_service_url") + k);
             var _local_3:URLLoader = new URLLoader(new URLRequest(_local_2));
             _local_3.addEventListener(Event.COMPLETE, this.onImageLoaded);
         }
