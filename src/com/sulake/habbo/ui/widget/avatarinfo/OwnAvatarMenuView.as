@@ -26,7 +26,7 @@
     public class OwnAvatarMenuView extends AvatarContextInfoButtonView 
     {
         private static const MODE_NORMAL:int = 0;
-        private static const _Str_12150:int = 1;
+        private static const MODE_CLUB_DANCES:int = 1;
         private static const _Str_14313:int = 2;
         private static const _Str_14565:int = 3;
         private static const _Str_13243:int = 4;
@@ -54,7 +54,7 @@
             {
                 if ((((k.widget._Str_4107) && (k.widget._Str_6454)) && (!(k.widget._Str_4878))))
                 {
-                    k._mode = _Str_12150;
+                    k._mode = MODE_CLUB_DANCES;
                 }
                 else
                 {
@@ -175,7 +175,7 @@
                     _local_5 = this.widget.configuration.getBoolean("avatar.signs.enabled");
                     showButton("signs", _local_5);
                     break;
-                case _Str_12150:
+                case MODE_CLUB_DANCES:
                     showButton("dance_stop", true, this.widget._Str_4107);
                     showButton("dance_1");
                     showButton("dance_2");
@@ -326,7 +326,7 @@
                             break;
                         case "dance_menu":
                             _local_3 = false;
-                            this._Str_6337(_Str_12150);
+                            this._Str_6337(MODE_CLUB_DANCES);
                             break;
                         case "dance":
                             _local_4 = new RoomWidgetDanceMessage(1);
