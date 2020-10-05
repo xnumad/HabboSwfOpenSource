@@ -767,7 +767,7 @@
                     {
                         _local_26 = (k as RoomWidgetPetInfostandUpdateEvent);
                         this._petInfoData.populate(_local_26);
-                        this._Str_24751(_local_26.id, _local_26.name, _local_26.roomIndex, this._petInfoData);
+                        this.updatePetView(_local_26.id, _local_26.name, _local_26.roomIndex, this._petInfoData);
                     }
                     break;
                 case _Str_7783.RWUDUE_USER_DATA_UPDATED:
@@ -961,7 +961,7 @@
             }
         }
 
-        private function _Str_24751(k:int, _arg_2:String, _arg_3:int, _arg_4:PetInfoData):void
+        private function updatePetView(k:int, _arg_2:String, _arg_3:int, _arg_4:PetInfoData):void
         {
             if (!_arg_4)
             {
