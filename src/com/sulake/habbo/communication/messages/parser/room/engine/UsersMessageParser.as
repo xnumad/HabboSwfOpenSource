@@ -74,124 +74,124 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            var _local_4:int;
-            var _local_5:String;
-            var _local_6:String;
-            var _local_7:String;
-            var _local_8:int;
-            var _local_9:int;
-            var _local_10:int;
-            var _local_11:String;
-            var _local_12:int;
-            var _local_13:int;
-            var _local_14:UserMessageData;
+            var id:int;
+            var name:String;
+            var custom:String;
+            var figure:String;
+            var index:int;
+            var x:int;
+            var y:int;
+            var z:String;
+            var dir:int;
+            var type:int;
+            var userMessageData:UserMessageData;
             var _local_15:String;
-            var _local_16:int;
-            var _local_17:Array;
-            var _local_18:int;
+            var botSkillsAmount:int;
+            var botSkills:Array;
+            var currentBotSkill:int;
             this._users = [];
-            var _local_2:int = k.readInteger();
-            var _local_3:int;
-            while (_local_3 < _local_2)
+            var usersAmount:int = k.readInteger();
+            var currentUser:int;
+            while (currentUser < usersAmount)
             {
-                _local_4 = k.readInteger();
-                _local_5 = k.readString();
-                _local_6 = k.readString();
-                _local_7 = k.readString();
-                _local_8 = k.readInteger();
-                _local_9 = k.readInteger();
-                _local_10 = k.readInteger();
-                _local_11 = k.readString();
-                _local_12 = k.readInteger();
-                _local_13 = k.readInteger();
-                _local_14 = new UserMessageData(_local_8);
-                _local_14.dir = _local_12;
-                _local_14.name = _local_5;
-                _local_14.custom = _local_6;
-                _local_14.x = _local_9;
-                _local_14.y = _local_10;
-                _local_14.z = Number(_local_11);
-                this._users.push(_local_14);
-                if (_local_13 == 1)
+                id = k.readInteger();
+                name = k.readString();
+                custom = k.readString();
+                figure = k.readString();
+                index = k.readInteger();
+                x = k.readInteger();
+                y = k.readInteger();
+                z = k.readString();
+                dir = k.readInteger();
+                type = k.readInteger();
+                userMessageData = new UserMessageData(index);
+                userMessageData.dir = dir;
+                userMessageData.name = name;
+                userMessageData.custom = custom;
+                userMessageData.x = x;
+                userMessageData.y = y;
+                userMessageData.z = Number(z);
+                this._users.push(userMessageData);
+                if (type == 1)
                 {
-                    _local_14.id = _local_4;
-                    _local_14.userType = RoomObjectTypeEnum.HABBO;
-                    _local_14.sex = this.resolveSex(k.readString());
-                    _local_14.groupID = ("" + k.readInteger());
-                    _local_14.groupStatus = k.readInteger();
-                    _local_14.groupName = k.readString();
+                    userMessageData.id = id;
+                    userMessageData.userType = RoomObjectTypeEnum.HABBO;
+                    userMessageData.sex = this.resolveSex(k.readString());
+                    userMessageData.groupID = ("" + k.readInteger());
+                    userMessageData.groupStatus = k.readInteger();
+                    userMessageData.groupName = k.readString();
                     _local_15 = k.readString();
                     if (_local_15 != "")
                     {
-                        _local_7 = this.convertSwimFigure(_local_15, _local_7, _local_14.sex);
+                        figure = this.convertSwimFigure(_local_15, figure, userMessageData.sex);
                     }
-                    _local_14.figure = _local_7;
-                    _local_14.activityPoints = k.readInteger();
-                    _local_14.isModerator = k.readBoolean();
+                    userMessageData.figure = figure;
+                    userMessageData.activityPoints = k.readInteger();
+                    userMessageData.isModerator = k.readBoolean();
                 }
                 else
                 {
-                    if (_local_13 == 2)
+                    if (type == 2)
                     {
-                        _local_14.userType = RoomObjectTypeEnum.PET;
-                        _local_14.figure = _local_7;
-                        _local_14.id = _local_4;
-                        _local_14.subType = k.readInteger().toString();
-                        _local_14.ownerId = k.readInteger();
-                        _local_14.ownerName = k.readString();
-                        _local_14.rarityLevel = k.readInteger();
-                        _local_14.hasSaddle = k.readBoolean();
-                        _local_14.isRiding = k.readBoolean();
-                        _local_14.canBreed = k.readBoolean();
-                        _local_14.canHarvest = k.readBoolean();
-                        _local_14.canRevive = k.readBoolean();
-                        _local_14.hasBreedingPermission = k.readBoolean();
-                        _local_14.petLevel = k.readInteger();
-                        _local_14.petPosture = k.readString();
+                        userMessageData.userType = RoomObjectTypeEnum.PET;
+                        userMessageData.figure = figure;
+                        userMessageData.id = id;
+                        userMessageData.subType = k.readInteger().toString();
+                        userMessageData.ownerId = k.readInteger();
+                        userMessageData.ownerName = k.readString();
+                        userMessageData.rarityLevel = k.readInteger();
+                        userMessageData.hasSaddle = k.readBoolean();
+                        userMessageData.isRiding = k.readBoolean();
+                        userMessageData.canBreed = k.readBoolean();
+                        userMessageData.canHarvest = k.readBoolean();
+                        userMessageData.canRevive = k.readBoolean();
+                        userMessageData.hasBreedingPermission = k.readBoolean();
+                        userMessageData.petLevel = k.readInteger();
+                        userMessageData.petPosture = k.readString();
                     }
                     else
                     {
-                        if (_local_13 == 3)
+                        if (type == 3)
                         {
-                            _local_14.userType = RoomObjectTypeEnum.BOT;
-                            _local_14.id = (_local_8 * -1);
-                            if (_local_7.indexOf("/") == -1)
+                            userMessageData.userType = RoomObjectTypeEnum.BOT;
+                            userMessageData.id = (index * -1);
+                            if (figure.indexOf("/") == -1)
                             {
-                                _local_14.figure = _local_7;
+                                userMessageData.figure = figure;
                             }
                             else
                             {
-                                _local_14.figure = "hr-100-.hd-180-1.ch-876-66.lg-270-94.sh-300-64";
+                                userMessageData.figure = "hr-100-.hd-180-1.ch-876-66.lg-270-94.sh-300-64";
                             }
-                            _local_14.sex = UserMessageData.USER_SEX_MALE;
+                            userMessageData.sex = UserMessageData.USER_SEX_MALE;
                         }
                         else
                         {
-                            if (_local_13 == 4)
+                            if (type == 4)
                             {
-                                _local_14.userType = RoomObjectTypeEnum.RENTABLE_BOT;
-                                _local_14.id = _local_4;
-                                _local_14.sex = this.resolveSex(k.readString());
-                                _local_14.figure = _local_7;
-                                _local_14.ownerId = k.readInteger();
-                                _local_14.ownerName = k.readString();
-                                _local_16 = k.readInteger();
-                                if (_local_16 > 0)
+                                userMessageData.userType = RoomObjectTypeEnum.RENTABLE_BOT;
+                                userMessageData.id = id;
+                                userMessageData.sex = this.resolveSex(k.readString());
+                                userMessageData.figure = figure;
+                                userMessageData.ownerId = k.readInteger();
+                                userMessageData.ownerName = k.readString();
+                                botSkillsAmount = k.readInteger();
+                                if (botSkillsAmount > 0)
                                 {
-                                    _local_17 = new Array();
-                                    _local_18 = 0;
-                                    while (_local_18 < _local_16)
+                                    botSkills = new Array();
+                                    currentBotSkill = 0;
+                                    while (currentBotSkill < botSkillsAmount)
                                     {
-                                        _local_17.push(k.readShort());
-                                        _local_18++;
+                                        botSkills.push(k.readShort());
+                                        currentBotSkill++;
                                     }
-                                    _local_14.botSkills = _local_17;
+                                    userMessageData.botSkills = botSkills;
                                 }
                             }
                         }
                     }
                 }
-                _local_3++;
+                currentUser++;
             }
             return true;
         }
