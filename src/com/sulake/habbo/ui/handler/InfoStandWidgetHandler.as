@@ -368,7 +368,7 @@
                 case RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_INFO:
                     return this.handleGetObjectInfoMessage((k as RoomWidgetRoomObjectMessage));
                 case RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_NAME:
-                    return this._Str_24376((k as RoomWidgetRoomObjectMessage));
+                    return this.handleGetObjectNameMessage((k as RoomWidgetRoomObjectMessage));
                 case RoomWidgetUserActionMessage.RWUAM_SEND_FRIEND_REQUEST:
                     this._container.friendList._Str_14642(_local_2, _local_3.name);
                     break;
@@ -626,7 +626,7 @@
             }
         }
 
-        private function _Str_24376(k:RoomWidgetRoomObjectMessage):RoomWidgetUpdateEvent
+        private function handleGetObjectNameMessage(k:RoomWidgetRoomObjectMessage):RoomWidgetUpdateEvent
         {
             var _local_2:int;
             var _local_4:int;
