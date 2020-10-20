@@ -29,7 +29,7 @@
                 this._roomSettingsData.tags.push(k.readString());
                 _local_3++;
             }
-            this._roomSettingsData._Str_3827 = k.readInteger();
+            this._roomSettingsData.tradeMode = k.readInteger();
             this._roomSettingsData._Str_5667 = (k.readInteger() == 1);
             this._roomSettingsData._Str_7595 = (k.readInteger() == 1);
             this._roomSettingsData._Str_7273 = (k.readInteger() == 1);

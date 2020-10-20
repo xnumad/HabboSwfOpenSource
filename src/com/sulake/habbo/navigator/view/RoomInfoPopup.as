@@ -242,7 +242,7 @@
                 _local_7++;
             }
             this._Str_25406();
-            this._Str_16458("properties", "${navigator.roompopup.property.trading}", RoomTradingLevelEnum._Str_22614(this._guestRoomData._Str_3827));
+            this._Str_16458("properties", "${navigator.roompopup.property.trading}", RoomTradingLevelEnum._Str_22614(this._guestRoomData.tradeMode));
             if (this._navigator.context.configuration.getBoolean("room.ranking.enabled"))
             {
                 this._Str_16458("properties", "${navigator.roompopup.property.ranking}", this._guestRoomData.ranking.toString());

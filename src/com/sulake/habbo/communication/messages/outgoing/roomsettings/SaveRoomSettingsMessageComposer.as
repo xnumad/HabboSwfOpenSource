@@ -41,7 +41,7 @@
             {
                 this.messageArray.push(0);
             }
-            this.messageArray.push(k._Str_3827);
+            this.messageArray.push(k.tradeMode);
             this.messageArray.push(k._Str_5667);
             this.messageArray.push(k._Str_7595);
             this.messageArray.push(k._Str_7273);

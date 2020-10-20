@@ -29,12 +29,12 @@
         private var _Str_19561:int;
 
 
-        public function get _Str_3827():int
+        public function get tradeMode():int
         {
             return this._Str_4667;
         }
 
-        public function set _Str_3827(k:int):void
+        public function set tradeMode(k:int):void
         {
             this._Str_4667 = k;
         }

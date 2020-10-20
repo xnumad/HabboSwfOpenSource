@@ -61,9 +61,9 @@
         function set isGuildRoom(_arg_1:Boolean):void;
         function get _Str_19282():Boolean;
         function set _Str_2738(_arg_1:int):void;
-        function get _Str_3827():int;
+        function get tradeMode():int;
         function get _Str_7411():Boolean;
-        function set _Str_3827(_arg_1:int):void;
+        function set tradeMode(_arg_1:int):void;
         function get userDataManager():UserDataManager;
         function get isSpectatorMode():Boolean;
         function set isSpectatorMode(_arg_1:Boolean):void;

@@ -150,7 +150,7 @@
             return this._description;
         }
 
-        public function get _Str_3827():int
+        public function get tradeMode():int
         {
             return this._tradeMode;
         }

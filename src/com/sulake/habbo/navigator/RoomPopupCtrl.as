@@ -51,7 +51,7 @@
             this._Str_23089();
             this._Str_24547(this._room);
             this._Str_24426();
-            this._Str_15598(this._details, "trading_allowed", (this._room._Str_3827 == RoomTradingLevelEnum._Str_9173));
+            this._Str_15598(this._details, "trading_allowed", (this._room.tradeMode == RoomTradingLevelEnum._Str_9173));
             this._Str_15598(this._details, "doormode_doorbell", (this._room._Str_2738 == 1));
             this._Str_15598(this._details, "doormode_password", (this._room._Str_2738 == 2));
             this._Str_15598(this._details, "doormode_invisible", (this._room._Str_2738 == 3));

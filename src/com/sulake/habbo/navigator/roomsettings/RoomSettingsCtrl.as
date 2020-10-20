@@ -690,7 +690,7 @@
             }
             Logger.log(("CATEGORY ID: " + k._Str_2712));
             this._Str_24436(k._Str_2712);
-            this._Str_24623(k._Str_3827);
+            this._Str_24623(k.tradeMode);
             this._Str_10439(k);
             setTag(this._tag1Input, k.tags[0]);
             setTag(this._tag2Input, k.tags[1]);
@@ -971,7 +971,7 @@
             var _local_5:FlatCategory = this._Str_25335(this._roomSettingsData._Str_2712, _local_4.selection);
             k._Str_2712 = _local_5.nodeId;
             var _local_6:IDropMenuWindow = (this._window.findChildByName("tradesettings") as IDropMenuWindow);
-            k._Str_3827 = _local_6.selection;
+            k.tradeMode = _local_6.selection;
             var _local_7:IDropMenuWindow = (this._window.findChildByName("maxvisitors") as IDropMenuWindow);
             k._Str_5552 = _local_7.items()[_local_7.selection];
             k._Str_5667 = this._Str_7157.Selected;

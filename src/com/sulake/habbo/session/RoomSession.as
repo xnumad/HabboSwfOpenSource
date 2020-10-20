@@ -575,7 +575,7 @@
             return this._roomControllerLevel;
         }
 
-        public function get _Str_3827():int
+        public function get tradeMode():int
         {
             return this._tradeMode;
         }
@@ -585,7 +585,7 @@
             return true;
         }
 
-        public function set _Str_3827(k:int):void
+        public function set tradeMode(k:int):void
         {
             this._tradeMode = k;
         }

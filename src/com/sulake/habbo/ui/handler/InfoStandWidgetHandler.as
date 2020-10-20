@@ -871,7 +871,7 @@
                 _local_6.isIgnored = this._container.sessionDataManager.isIgnored(_arg_4.name);
                 _local_6.respectLeft = this._container.sessionDataManager.respectLeft;
                 _local_10 = (!(this._container.sessionDataManager.systemShutDown));
-                _local_11 = this._container.roomSession._Str_3827;
+                _local_11 = this._container.roomSession.tradeMode;
                 if (!_local_10)
                 {
                     _local_6.canTrade = false;
