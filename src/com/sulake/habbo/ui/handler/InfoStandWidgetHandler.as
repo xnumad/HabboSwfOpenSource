@@ -156,7 +156,7 @@
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetBreedingResultEvent.RSPFUE_PET_BREEDING_RESULT, this.onPetBreedingResult);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetBreedingEvent.RSPFUE_PET_BREEDING, this.onPetBreedingEvent);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionConfirmPetBreedingEvent.RSPFUE_CONFIRM_PET_BREEDING, this.onConfirmPetBreedingEvent);
-                    this._container.roomSessionManager.events.removeEventListener(RoomSessionConfirmPetBreedingResultEvent.RSPFUE_CONFIRM_PET_BREEDING_RESULT, this._Str_20716);
+                    this._container.roomSessionManager.events.removeEventListener(RoomSessionConfirmPetBreedingResultEvent.RSPFUE_CONFIRM_PET_BREEDING_RESULT, this.onConfirmPetBreedingResultEvent);
                 }
                 if (this._container.connection != null)
                 {
@@ -193,7 +193,7 @@
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetBreedingResultEvent.RSPFUE_PET_BREEDING_RESULT, this.onPetBreedingResult);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetBreedingEvent.RSPFUE_PET_BREEDING, this.onPetBreedingEvent);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionConfirmPetBreedingEvent.RSPFUE_CONFIRM_PET_BREEDING, this.onConfirmPetBreedingEvent);
-                this._container.roomSessionManager.events.addEventListener(RoomSessionConfirmPetBreedingResultEvent.RSPFUE_CONFIRM_PET_BREEDING_RESULT, this._Str_20716);
+                this._container.roomSessionManager.events.addEventListener(RoomSessionConfirmPetBreedingResultEvent.RSPFUE_CONFIRM_PET_BREEDING_RESULT, this.onConfirmPetBreedingResultEvent);
             }
             if (this._container.connection)
             {
@@ -1370,7 +1370,7 @@
             }
         }
 
-        private function _Str_20716(k:RoomSessionConfirmPetBreedingResultEvent):void
+        private function onConfirmPetBreedingResultEvent(k:RoomSessionConfirmPetBreedingResultEvent):void
         {
             var _local_2:_Str_3962;
             if (((!(this._container == null)) && (!(this._container.events == null))))
