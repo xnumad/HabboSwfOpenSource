@@ -266,7 +266,7 @@
             }
         }
 
-        public function _Str_22140(k:String):void
+        public function sendChangeMottoMessage(k:String):void
         {
             this._connection.send(new _Str_11637(k));
         }

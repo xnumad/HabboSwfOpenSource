@@ -9,7 +9,7 @@
         function get state():String;
         function start():Boolean;
         function _Str_17917(_arg_1:String, _arg_2:int=0):void;
-        function _Str_22140(_arg_1:String):void;
+        function sendChangeMottoMessage(_arg_1:String):void;
         function sendShoutMessage(_arg_1:String, _arg_2:int=0):void;
         function sendWhisperMessage(_arg_1:String, _arg_2:String, _arg_3:int=0):void;
         function sendChatTypingMessage(_arg_1:Boolean):void;

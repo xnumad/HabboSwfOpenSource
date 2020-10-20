@@ -546,7 +546,7 @@
                     break;
                 case RoomWidgetChangeMottoMessage.RWVM_CHANGE_MOTTO_MESSAGE:
                     _local_16 = (k as RoomWidgetChangeMottoMessage);
-                    this._container.roomSession._Str_22140(_local_16.motto);
+                    this._container.roomSession.sendChangeMottoMessage(_local_16.motto);
                     break;
                 case RoomWidgetOpenProfileMessage.RWOPEM_OPEN_USER_PROFILE:
                     _local_17 = (k as RoomWidgetOpenProfileMessage);
