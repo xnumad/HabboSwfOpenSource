@@ -769,7 +769,7 @@
             }
             _local_6.amIOwner = this._container.roomSession.isRoomController;
             _local_6.isGuildRoom = this._container.roomSession.isGuildRoom;
-            _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
+            _local_6.myRoomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_6.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             _local_6.canBeKicked = this._container.roomSession.isRoomController;
             var _local_8:Array = new Array();
@@ -844,7 +844,7 @@
             }
             _local_6.amIOwner = this._container.roomSession.isRoomController;
             _local_6.isGuildRoom = this._container.roomSession.isGuildRoom;
-            _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
+            _local_6.myRoomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_6.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             _local_6._Str_18096 = this._container.sessionDataManager.isAmbassador;
             if (_local_5 == RoomWidgetUserInfoUpdateEvent.PEER)
@@ -884,7 +884,7 @@
                             _local_6.canTrade = false;
                             break;
                         case RoomTradingLevelEnum._Str_14475:
-                            _local_15 = ((!(_local_6.roomControllerLevel == RoomControllerLevel.NONE)) && (!(_local_6.roomControllerLevel == RoomControllerLevel.GUILD_MEMBER)));
+                            _local_15 = ((!(_local_6.myRoomControllerLevel == RoomControllerLevel.NONE)) && (!(_local_6.myRoomControllerLevel == RoomControllerLevel.GUILD_MEMBER)));
                             _local_16 = ((!(_local_6.targetRoomControllerLevel == RoomControllerLevel.NONE)) && (!(_local_6.targetRoomControllerLevel == RoomControllerLevel.GUILD_MEMBER)));
                             _local_6.canTrade = ((_local_15) || (_local_16));
                             break;
@@ -926,7 +926,7 @@
                     case _Str_2817._Str_5047:
                         return _Str_9213(k);
                     default:
-                        return k.roomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
+                        return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
                 }
             }
             return this._Str_18027(userInfo, settingsFunction);
@@ -943,7 +943,7 @@
                     case _Str_2817._Str_5047:
                         return _Str_9213(k);
                     default:
-                        return k.roomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
+                        return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
                 }
             }
             return this._Str_18027(userInfo, settingsFunction);
@@ -958,7 +958,7 @@
                     case _Str_2817._Str_5047:
                         return _Str_9213(k);
                     default:
-                        return k.roomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
+                        return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
                 }
             }
             return this._Str_18027(userInfo, settingsFunction);
@@ -983,9 +983,9 @@
         {
             if (k.isGuildRoom)
             {
-                return k.roomControllerLevel >= RoomControllerLevel.GUILD_ADMIN;
+                return k.myRoomControllerLevel >= RoomControllerLevel.GUILD_ADMIN;
             }
-            return k.roomControllerLevel >= RoomControllerLevel.GUEST;
+            return k.myRoomControllerLevel >= RoomControllerLevel.GUEST;
         }
 
         private function _Str_23142(k:RoomWidgetRoomObjectMessage, _arg_2:int):void

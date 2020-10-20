@@ -197,7 +197,7 @@
         public function populate(k:RoomWidgetUserInfoUpdateEvent):void
         {
             this._amIAnyRoomController = k.amIAnyRoomController;
-            this._myRoomControllerLevel = k.roomControllerLevel;
+            this._myRoomControllerLevel = k.myRoomControllerLevel;
             this._amIOwner = k.amIOwner;
             this._canBeAskedAsFriend = k.canBeAskedForAFriend;
             this._canBeKicked = k.canBeKicked;
