@@ -49,7 +49,7 @@
             return this._sharedKey.toRadix(k);
         }
 
-        public function _Str_20000():Boolean
+        public function isValidServerPublicKey():Boolean
         {
             return this._serverPublicKey.compareTo(this._minimumPublicKey) >= 0;
         }
