@@ -37,7 +37,7 @@
         private var _isIgnored:Boolean = false;
         private var _isGuildRoom:Boolean = false;
         private var _canTrade:Boolean = false;
-        private var _Str_8910:int = 0;
+        private var _canTradeReason:int = 0;
         private var _Str_8858:int = 0;
         private var _isFriend:Boolean = false;
         private var isAmbassador:Boolean = false;
@@ -240,12 +240,12 @@
 
         public function set canTradeReason(k:int):void
         {
-            this._Str_8910 = k;
+            this._canTradeReason = k;
         }
 
         public function get canTradeReason():int
         {
-            return this._Str_8910;
+            return this._canTradeReason;
         }
 
         public function set canBeKicked(k:Boolean):void
