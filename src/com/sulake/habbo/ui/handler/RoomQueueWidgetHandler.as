@@ -61,7 +61,7 @@
             switch (k.type)
             {
                 case RoomWidgetRoomQueueMessage.RWRQM_EXIT_QUEUE:
-                    this._container.roomSession._Str_20268();
+                    this._container.roomSession.quit();
                     break;
                 case RoomWidgetRoomQueueMessage.RWRQM_CHANGE_TO_SPECTATOR_QUEUE:
                     this._container.roomSession.changeQueue(RoomSessionQueueEvent.QUEUE_TARGET_SPECTATOR);

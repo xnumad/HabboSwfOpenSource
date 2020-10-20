@@ -47,7 +47,7 @@
         function _Str_21895(_arg_1:int):void;
         function _Str_21525(_arg_1:int, _arg_2:int):void;
         function _Str_21289(_arg_1:int):void;
-        function _Str_20268():void;
+        function quit():void;
         function changeQueue(_arg_1:int):void;
         function sendUpdateClothingChangeFurniture(_arg_1:int, _arg_2:String, _arg_3:String):void;
         function receivedChatWithTrackingId(_arg_1:int):void;

@@ -503,7 +503,7 @@
             this._connection.send(new _Str_10856());
         }
 
-        public function _Str_20268():void
+        public function quit():void
         {
             if (this._connection != null)
             {
