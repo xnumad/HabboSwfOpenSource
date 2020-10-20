@@ -226,7 +226,7 @@
                     this.windowContainer.findChildByName("right_pane_dimmer").visible = false;
                 }
             }
-            this._Str_25199();
+            this.setOrgWindowSize();
             this.setupBottomSlotWidgetName();
         }
 
@@ -239,7 +239,7 @@
             }
         }
 
-        protected function _Str_25199():void
+        protected function setOrgWindowSize():void
         {
             this._orgWindowWidth = this.windowContainer.width;
             this._orgWindowHeight = this.windowContainer.height;
