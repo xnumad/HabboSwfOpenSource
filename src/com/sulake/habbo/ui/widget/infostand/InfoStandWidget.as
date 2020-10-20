@@ -121,7 +121,7 @@
         public function _Str_22447(k:int, _arg_2:int, _arg_3:int, _arg_4:String):void
         {
             var _local_6:String;
-            if (((!(this.userData)) || (!(this.userData._Str_3313 == k))))
+            if (((!(this.userData)) || (!(this.userData.userRoomId == k))))
             {
                 return;
             }
@@ -515,7 +515,7 @@
                 case RoomWidgetRoomObjectUpdateEvent.USER_REMOVED:
                     if ((((!(this._userView == null)) && (!(this._userView.window == null))) && (this._userView.window.visible)))
                     {
-                        _local_2 = (k.id == this._userData._Str_3313);
+                        _local_2 = (k.id == this._userData.userRoomId);
                         break;
                     }
                     if ((((!(this._petView == null)) && (!(this._petView.window == null))) && (this._petView.window.visible)))
@@ -525,12 +525,12 @@
                     }
                     if ((((!(this._botView == null)) && (!(this._botView.window == null))) && (this._botView.window.visible)))
                     {
-                        _local_2 = (k.id == this._userData._Str_3313);
+                        _local_2 = (k.id == this._userData.userRoomId);
                         break;
                     }
                     if ((((!(this._rentableBotView == null)) && (!(this._rentableBotView.window == null))) && (this._rentableBotView.window.visible)))
                     {
-                        _local_2 = (k.id == this._rentableBotdata._Str_3313);
+                        _local_2 = (k.id == this._rentableBotdata.userRoomId);
                         break;
                     }
             }

@@ -709,7 +709,7 @@
                     _local_13 = (k as RoomWidgetUserInfoUpdateEvent);
                     this._userInfoData.populate(_local_13);
                     _local_14 = ((_local_13.isSpectatorMode) ? null : this._userInfoData);
-                    this._Str_12674(_local_13.id, _local_13.name, _local_13.userType, _local_13._Str_3313, this._userInfoData.allowNameChange, _local_14);
+                    this._Str_12674(_local_13.id, _local_13.name, _local_13.userType, _local_13.userRoomId, this._userInfoData.allowNameChange, _local_14);
                     break;
                 case RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT:
                     _local_15 = (k as RoomWidgetRentableBotInfoUpdateEvent);
@@ -733,7 +733,7 @@
                     {
                         this._rentableBotInfoData._Str_19891(_local_17._Str_7594);
                     }
-                    this._Str_16991(_local_15.id, _local_15.name, _local_15._Str_3313, this._rentableBotInfoData);
+                    this._Str_16991(_local_15.id, _local_15.name, _local_15.userRoomId, this._rentableBotInfoData);
                     break;
                 case _Str_5375.RWRBSLUE_SKILL_LIST:
                     _local_18 = (k as _Str_5375);
@@ -760,7 +760,7 @@
                     break;
                 case RoomWidgetUserInfoUpdateEvent.BOT:
                     _local_20 = (k as RoomWidgetUserInfoUpdateEvent);
-                    this._Str_12674(_local_20.id, _local_20.name, _local_20.userType, _local_20._Str_3313, false, null);
+                    this._Str_12674(_local_20.id, _local_20.name, _local_20.userType, _local_20.userRoomId, false, null);
                     break;
                 case RoomWidgetPetInfostandUpdateEvent.PET_INFO:
                     if (this._handlePetInfo)

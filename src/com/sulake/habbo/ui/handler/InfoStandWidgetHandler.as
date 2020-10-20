@@ -760,7 +760,7 @@
             _local_6.name = _arg_4.name;
             _local_6.motto = _arg_4.custom;
             _local_6.id = _arg_4.id;
-            _local_6._Str_3313 = _arg_2;
+            _local_6.userRoomId = _arg_2;
             _local_6.userType = _arg_4.type;
             var _local_7:IRoomObject = this._container.roomEngine.getRoomObject(k, _arg_2, _arg_3);
             if (_local_7 != null)
@@ -785,7 +785,7 @@
             _local_5.name = _arg_4.name;
             _local_5.motto = _arg_4.custom;
             _local_5.id = _arg_4.id;
-            _local_5._Str_3313 = _arg_2;
+            _local_5.userRoomId = _arg_2;
             _local_5.ownerId = _arg_4.ownerId;
             _local_5.ownerName = _arg_4.ownerName;
             _local_5.botSkills = _arg_4.botSkills;
@@ -830,7 +830,7 @@
                 _local_6.activityPoints = _arg_4.activityPoints;
             }
             _local_6.id = _arg_4.id;
-            _local_6._Str_3313 = _arg_2;
+            _local_6.userRoomId = _arg_2;
             _local_6.userType = RoomObjectTypeEnum.HABBO;
             var _local_7:IRoomObject = this._container.roomEngine.getRoomObject(k, _arg_2, _arg_3);
             if (_local_7 != null)

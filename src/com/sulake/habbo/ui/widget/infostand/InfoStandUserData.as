@@ -62,7 +62,7 @@
             this._carryItem = k;
         }
 
-        public function set _Str_3313(k:int):void
+        public function set userRoomId(k:int):void
         {
             this._userRoomId = k;
         }
@@ -117,7 +117,7 @@
             return this._carryItem;
         }
 
-        public function get _Str_3313():int
+        public function get userRoomId():int
         {
             return this._userRoomId;
         }
@@ -147,7 +147,7 @@
             this.groupBadgeId = k.groupBadgeId;
             this.respectLeft = k.respectLeft;
             this.carryItem = k.carryItem;
-            this._Str_3313 = k._Str_3313;
+            this.userRoomId = k.userRoomId;
             this.type = k.type;
         }
     }

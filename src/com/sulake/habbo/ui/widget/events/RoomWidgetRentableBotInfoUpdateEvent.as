@@ -135,12 +135,12 @@
             return this._carryItem;
         }
 
-        public function set _Str_3313(k:int):void
+        public function set userRoomId(k:int):void
         {
             this._userRoomId = k;
         }
 
-        public function get _Str_3313():int
+        public function get userRoomId():int
         {
             return this._userRoomId;
         }

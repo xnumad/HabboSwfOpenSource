@@ -113,7 +113,7 @@
                 this._botSkillsWithCommands = new Array(0);
             }
             this.id = k.id;
-            this.roomIndex = k._Str_3313;
+            this.roomIndex = k.userRoomId;
             this.amIOwner = k.amIOwner;
             this.amIAnyRoomController = k.amIAnyRoomController;
             this.carryItemType = k.carryItem;
