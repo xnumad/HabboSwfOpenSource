@@ -385,7 +385,7 @@
             this._connection.send(new PollAnswerComposer(k, _arg_2, _arg_3));
         }
 
-        public function _Str_21574(k:String):void
+        public function sendPeerUsersClassificationMessage(k:String):void
         {
             this._connection.send(new _Str_9884(k));
         }

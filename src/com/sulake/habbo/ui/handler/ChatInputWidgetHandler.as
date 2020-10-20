@@ -287,7 +287,7 @@
                                         {
                                             if (commandArgument == "hotel")
                                             {
-                                                this._container.roomSession._Str_21574(_local_10[2]);
+                                                this._container.roomSession.sendPeerUsersClassificationMessage(_local_10[2]);
                                             }
                                             else
                                             {
