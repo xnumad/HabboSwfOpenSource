@@ -70,7 +70,7 @@
             this._sessions = new Map();
         }
 
-        public function get _Str_3961():Boolean
+        public function get initialized():Boolean
         {
             return (allRequiredDependenciesInjected) && (this._roomEngineReady);
         }
@@ -181,7 +181,7 @@
 
         private function executePendingSessionRequest():void
         {
-            if (((this._Str_3961) && (!(this._pendingSessionRequest == null))))
+            if (((this.initialized) && (!(this._pendingSessionRequest == null))))
             {
                 this.createSession(this._pendingSessionRequest);
                 this._pendingSessionRequest = null;
@@ -266,7 +266,7 @@
 
         private function createSession(k:RoomSession):Boolean
         {
-            if (!this._Str_3961)
+            if (!this.initialized)
             {
                 this._pendingSessionRequest = k;
                 return false;

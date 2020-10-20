@@ -584,7 +584,7 @@
 
         private function _Str_24183():void
         {
-            GameConfigurations._Str_3961 = false;
+            GameConfigurations.initialized = false;
             this.send(new _Str_7312());
             this.send(new _Str_8040());
         }

@@ -978,7 +978,7 @@
         {
             this._Str_5298();
             this.toggleCatalog(((_arg_2 == null) ? CatalogType.NORMAL : _arg_2), true, false);
-            if ((((!(this._initialized)) || (this._Str_5309 == null)) || (!(this._Str_3361._Str_3961))))
+            if ((((!(this._initialized)) || (this._Str_5309 == null)) || (!(this._Str_3361.initialized))))
             {
                 this._requestedPage._Str_23666 = k;
                 return;
@@ -1013,7 +1013,7 @@
 
         public function openCatalogPageById(k:int, _arg_2:int, _arg_3:String):void
         {
-            if ((((this._initialized) && (!(this._Str_5309 == null))) && (this.getCatalogNavigator(_arg_3)._Str_3961)))
+            if ((((this._initialized) && (!(this._Str_5309 == null))) && (this.getCatalogNavigator(_arg_3).initialized)))
             {
                 this.toggleCatalog(_arg_3, true, false);
                 this._catalogViewer._Str_21608();
@@ -1321,7 +1321,7 @@
                     return;
                 }
             }
-            if (((this._Str_3361 == null) || (!(this._Str_3361._Str_3961))))
+            if (((this._Str_3361 == null) || (!(this._Str_3361.initialized))))
             {
                 this._Str_16894(this._catalogType);
             }
@@ -2448,7 +2448,7 @@
             {
                 return;
             }
-            if (((this.buildersClubEnabled) && ((!(this._initialized)) || (!(this.getCatalogNavigator(CatalogType.BUILDER)._Str_3961)))))
+            if (((this.buildersClubEnabled) && ((!(this._initialized)) || (!(this.getCatalogNavigator(CatalogType.BUILDER).initialized)))))
             {
                 this.init();
                 this._Str_16894(CatalogType.BUILDER);
@@ -3085,7 +3085,7 @@
             }
             if (this._utils)
             {
-                if (!this.getCatalogNavigator(CatalogType.NORMAL)._Str_3961)
+                if (!this.getCatalogNavigator(CatalogType.NORMAL).initialized)
                 {
                     this._Str_16894(CatalogType.NORMAL);
                 }

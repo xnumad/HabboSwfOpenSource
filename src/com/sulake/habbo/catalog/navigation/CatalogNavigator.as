@@ -98,7 +98,7 @@
         }
 
 
-        public function get _Str_3961():Boolean
+        public function get initialized():Boolean
         {
             return !(this._index == null);
         }
@@ -302,7 +302,7 @@
         {
             var _local_3:ICatalogNode;
             var _local_4:Vector.<ICatalogNode>;
-            if (!this._Str_3961)
+            if (!this.initialized)
             {
                 this._catalog.openCatalogPageById(k, _arg_2, this._catalogType);
             }
@@ -332,7 +332,7 @@
         {
             var _local_2:Vector.<ICatalogNode>;
             var _local_3:ICatalogNode;
-            if (!this._Str_3961)
+            if (!this.initialized)
             {
                 this._catalog.openCatalogPageById(_Str_5778, k, this._catalogType);
             }

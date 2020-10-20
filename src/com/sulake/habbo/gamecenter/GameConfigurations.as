@@ -197,12 +197,12 @@
             checkInitialization(k);
         }
 
-        public static function get _Str_3961():Boolean
+        public static function get initialized():Boolean
         {
             return (_gameListInitialized) && (_gameAchievementsInitialized);
         }
 
-        public static function set _Str_3961(k:Boolean):void
+        public static function set initialized(k:Boolean):void
         {
             _gameListInitialized = k;
             _gameAchievementsInitialized = k;
@@ -210,7 +210,7 @@
 
         private static function checkInitialization(k:IEventDispatcher):void
         {
-            if (_Str_3961)
+            if (initialized)
             {
                 k.dispatchEvent(new GameCenterEvent(GameCenterEvent.GAME_CONFIGURATIONS_INITIALIZED));
             }

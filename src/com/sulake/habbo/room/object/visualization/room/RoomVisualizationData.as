@@ -27,7 +27,7 @@
             this._maskManager = new PlaneMaskManager();
         }
 
-        public function get _Str_3961():Boolean
+        public function get initialized():Boolean
         {
             return this._initialized;
         }
