@@ -31,7 +31,7 @@
             return true;
         }
 
-        public function get _Str_23632():int
+        public function get statusCode():int
         {
             return this._statusCode;
         }

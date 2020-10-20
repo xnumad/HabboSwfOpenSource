@@ -646,7 +646,7 @@
         private function onGuideReportingStatus(k:GuideReportingStatusMessageEvent):void
         {
             var _local_2:GuideReportingStatusMessageParser = k.getParser();
-            switch (_local_2._Str_23632)
+            switch (_local_2.statusCode)
             {
                 case GuideReportingStatusMessageParser.GUIDE_REPORTING_STATUS_OK:
                     this._Str_14807();
