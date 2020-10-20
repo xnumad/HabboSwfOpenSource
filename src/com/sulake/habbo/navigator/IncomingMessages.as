@@ -281,7 +281,7 @@
             this._navigator._Str_5048.refresh();
             this._navigator._Str_6939.close();
             this._navigator._Str_3188.close();
-            this._navigator._Str_6472.close();
+            this._navigator.roomFilterCtrl.close();
             HabboWebTools.closeNews();
         }
 
@@ -472,7 +472,7 @@
             this._navigator._Str_5048.close();
             this._navigator._Str_6939.close();
             this._navigator._Str_3188.close();
-            this._navigator._Str_6472.close();
+            this._navigator.roomFilterCtrl.close();
             var _local_2:Boolean = this._navigator.getBoolean("news.auto_popup.enabled");
             if (_local_2)
             {
@@ -512,7 +512,7 @@
         private function _Str_9592(k:IMessageEvent):void
         {
             var _local_2:RoomFilterSettingsMessageParser = (k as RoomFilterSettingsMessageEvent).getParser();
-            this._navigator._Str_6472._Str_9592(_local_2.badWords);
+            this._navigator.roomFilterCtrl._Str_9592(_local_2.badWords);
             Logger.log(("GOT ROOM FILTER SETTINGS: " + _local_2.badWords));
         }
 

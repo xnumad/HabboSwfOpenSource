@@ -341,7 +341,7 @@
             LegacyNavigator(this._navigator._Str_2559)._Str_5048.close();
             LegacyNavigator(this._navigator._Str_2559)._Str_6939.close();
             LegacyNavigator(this._navigator._Str_2559)._Str_3188.close();
-            LegacyNavigator(this._navigator._Str_2559)._Str_6472.close();
+            LegacyNavigator(this._navigator._Str_2559).roomFilterCtrl.close();
             var _local_2:Boolean = this._navigator.getBoolean("news.auto_popup.enabled");
             if (_local_2)
             {
@@ -381,7 +381,7 @@
         private function _Str_9592(k:IMessageEvent):void
         {
             var _local_2:RoomFilterSettingsMessageParser = (k as RoomFilterSettingsMessageEvent).getParser();
-            LegacyNavigator(this._navigator._Str_2559)._Str_6472._Str_9592(_local_2.badWords);
+            LegacyNavigator(this._navigator._Str_2559).roomFilterCtrl._Str_9592(_local_2.badWords);
             Logger.log(("GOT ROOM FILTER SETTINGS: " + _local_2.badWords));
         }
 

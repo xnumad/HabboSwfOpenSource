@@ -47,7 +47,7 @@
         function get toolbar():IHabboToolbar;
         function get habboHelp():IHabboHelp;
         function get _Str_5048():RoomEventInfoCtrl;
-        function get _Str_6472():RoomFilterCtrl;
+        function get roomFilterCtrl():RoomFilterCtrl;
         function get roomSessionManager():IRoomSessionManager;
         function get _Str_17937():EnforceCategoryCtrl;
         function send(_arg_1:IMessageComposer, _arg_2:Boolean=false):void;

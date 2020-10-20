@@ -205,7 +205,7 @@
             return this._roomEventInfoCtrl;
         }
 
-        public function get _Str_6472():RoomFilterCtrl
+        public function get roomFilterCtrl():RoomFilterCtrl
         {
             return this._roomFilterCtrl;
         }
