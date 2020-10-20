@@ -14,7 +14,7 @@
     import com.sulake.habbo.friendbar.landingview.interfaces.ILandingViewWidget;
     import com.sulake.habbo.friendbar.landingview.interfaces.ISlotAwareWidget;
 
-    public class _Str_3695 implements IUpdateReceiver 
+    public class WidgetContainerLayout implements IUpdateReceiver
     {
         private static const COLORABLE:String = "COLORABLE";
         private static const _Str_3446:int = 0;
@@ -33,7 +33,7 @@
         private var _Str_3157:CommonWidgetSettings;
         private var _Str_4271:String;
 
-        public function _Str_3695(k:HabboLandingView)
+        public function WidgetContainerLayout(k:HabboLandingView)
         {
             this._registeredWidgets = [];
             super();

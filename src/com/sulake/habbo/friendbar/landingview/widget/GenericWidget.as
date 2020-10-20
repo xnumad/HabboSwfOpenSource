@@ -18,7 +18,7 @@
     import com.sulake.habbo.friendbar.landingview.interfaces.elements.ILayoutNameProvider;
     import com.sulake.habbo.friendbar.landingview.interfaces.elements.IFloatingElement;
     import com.sulake.habbo.friendbar.landingview.widget.elements.TitleElementHandler;
-    import com.sulake.habbo.friendbar.landingview.layout._Str_3695;
+    import com.sulake.habbo.friendbar.landingview.layout.WidgetContainerLayout;
     import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
     import com.sulake.habbo.friendbar.landingview.interfaces.elements.IDisableAwareElement;
     import com.sulake.habbo.friendbar.landingview.*;
@@ -216,7 +216,7 @@
 
         public function set settings(k:CommonWidgetSettings):void
         {
-            _Str_3695._Str_5630(this._container, k);
+            WidgetContainerLayout._Str_5630(this._container, k);
         }
 
         public function disable():void

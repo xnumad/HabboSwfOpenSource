@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.friendbar.landingview.layout._Str_3695;
+    import com.sulake.habbo.friendbar.landingview.layout.WidgetContainerLayout;
     import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -73,7 +73,7 @@
 
         public function set settings(k:CommonWidgetSettings):void
         {
-            _Str_3695._Str_5630(this._container, k);
+            WidgetContainerLayout._Str_5630(this._container, k);
         }
 
         private function _Str_22535(k:WindowEvent, _arg_2:IWindow):void

@@ -19,7 +19,7 @@
         private static const _Str_16031:int = 6;
         private static const _Str_16857:int = 360;
 
-        private var _layout:_Str_3695;
+        private var _layout:WidgetContainerLayout;
         private var _fromTop:IItemListWindow;
         private var _center:IItemListWindow;
         private var _leftPane:IItemListWindow;
@@ -46,7 +46,7 @@
         private var _initialized:Boolean = false;
         private var _currentlyResizingWindow:IWindow = null;
 
-        public function DynamicLayoutManager(k:_Str_3695, _arg_2:CommonWidgetSettings)
+        public function DynamicLayoutManager(k:WidgetContainerLayout, _arg_2:CommonWidgetSettings)
         {
             this._slots = new Vector.<IWindowContainer>(_Str_5206);
             super();

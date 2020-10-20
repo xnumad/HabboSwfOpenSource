@@ -16,7 +16,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.friendbar.landingview.layout._Str_3695;
+    import com.sulake.habbo.friendbar.landingview.layout.WidgetContainerLayout;
     import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
     import com.sulake.habbo.friendbar.landingview.*;
 
@@ -240,7 +240,7 @@
 
         public function set settings(k:CommonWidgetSettings):void
         {
-            _Str_3695._Str_5630(this._Str_3186, k);
+            WidgetContainerLayout._Str_5630(this._Str_3186, k);
         }
 
         protected function get _Str_6672():CommunityGoalProgress

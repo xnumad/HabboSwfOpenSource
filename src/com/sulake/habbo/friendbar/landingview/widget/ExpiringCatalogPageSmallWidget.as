@@ -14,7 +14,7 @@
     import com.sulake.habbo.window.widgets._Str_2961;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_4625;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.friendbar.landingview.layout._Str_3695;
+    import com.sulake.habbo.friendbar.landingview.layout.WidgetContainerLayout;
     import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
 
     public class ExpiringCatalogPageSmallWidget implements ILandingViewWidget, ISettingsAwareWidget 
@@ -111,7 +111,7 @@
 
         public function set settings(k:CommonWidgetSettings):void
         {
-            _Str_3695._Str_5630(this._container, k);
+            WidgetContainerLayout._Str_5630(this._container, k);
         }
     }
 }

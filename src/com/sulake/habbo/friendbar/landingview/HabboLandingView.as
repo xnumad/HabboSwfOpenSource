@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.friendbar.view.AbstractView;
     import com.sulake.habbo.friendbar.IHabboLandingView;
-    import com.sulake.habbo.friendbar.landingview.layout._Str_3695;
+    import com.sulake.habbo.friendbar.landingview.layout.WidgetContainerLayout;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.session.IRoomSessionManager;
     import com.sulake.habbo.catalog.IHabboCatalog;
@@ -58,7 +58,7 @@
 
     public class HabboLandingView extends AbstractView implements IHabboLandingView 
     {
-        private var _landingViewLayout:_Str_3695;
+        private var _landingViewLayout:WidgetContainerLayout;
         private var _communicationManager:IHabboCommunicationManager;
         private var _roomSessionManager:IRoomSessionManager;
         private var _catalog:IHabboCatalog;
@@ -231,7 +231,7 @@
                 setProperty("landing.view.dynamic.leftPaneWidth", "400");
                 setProperty("landing.view.dynamic.rightPaneWidth", "400");
             }
-            this._landingViewLayout = new _Str_3695(this);
+            this._landingViewLayout = new WidgetContainerLayout(this);
             this.activate();
             if (this._Str_13959())
             {
