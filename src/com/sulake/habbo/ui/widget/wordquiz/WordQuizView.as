@@ -46,7 +46,7 @@
             {
                 if (this._mainWindow.desktop)
                 {
-                    this._mainWindow.desktop.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+                    this._mainWindow.desktop.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
                 }
                 this._mainWindow.dispose();
                 this._mainWindow = null;
@@ -119,7 +119,7 @@
             this._mainWindow.findChildByName("quiz_topic").width = Math.min(660, (this._Str_23335(k, this._Str_17234) + 6));
             this._mainWindow.findChildByName("quiz_topic").y = 3;
             this._Str_15735();
-            this._mainWindow.desktop.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+            this._mainWindow.desktop.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
         }
 
         public function removeWindow():void
@@ -134,7 +134,7 @@
             }
             else
             {
-                this._mainWindow.desktop.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+                this._mainWindow.desktop.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
                 this._mainWindow.dispose();
                 this._mainWindow = null;
             }
@@ -207,7 +207,7 @@
             this._widget._Str_20809(0);
         }
 
-        private function _Str_3630(k:WindowEvent):void
+        private function onDesktopResized(k:WindowEvent):void
         {
             this._Str_15735();
         }

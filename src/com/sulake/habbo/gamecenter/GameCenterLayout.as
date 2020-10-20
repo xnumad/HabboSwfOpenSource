@@ -144,7 +144,7 @@
                 }
                 if (((this._gameCenterView.windowManager) && (!(this._gameCenterView.windowManager.disposed))))
                 {
-                    this._gameCenterView.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+                    this._gameCenterView.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
                 }
                 if (this._gameCenterView._Str_3479.inventory.events)
                 {
@@ -206,7 +206,7 @@
                 this._filterTextField.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_25099);
                 this._Str_16015();
                 this.setElementImage(this._gameSelectionIcon, this.getBitmap("game_center_icon_selected"));
-                this._gameCenterView.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+                this._gameCenterView.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
                 this._achievementList = (this._gameCenterViewWindow.findChildByName("achievements_list") as IItemListWindow);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new UserGameAchievementsMessageEvent(this._Str_24687));
                 this._leaderboardList = (this._gameCenterViewWindow.findChildByName("leaderboard_list") as IItemListWindow);
@@ -343,7 +343,7 @@
             this._Str_20470();
         }
 
-        private function _Str_3630(k:WindowEvent):void
+        private function onDesktopResized(k:WindowEvent):void
         {
             this.resizeWindow();
         }

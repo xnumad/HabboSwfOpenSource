@@ -236,7 +236,7 @@
             if (_local_5)
             {
                 _local_4._Str_19842(_local_5);
-                _local_4._Str_5493().desktop.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+                _local_4._Str_5493().desktop.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
                 _local_4._Str_21122(this._Str_15620(_local_4, true));
                 this._Str_25089(_local_3, _local_4);
             }
@@ -272,7 +272,7 @@
             this._Str_17912();
         }
 
-        private function _Str_3630(k:WindowEvent=null):void
+        private function onDesktopResized(k:WindowEvent=null):void
         {
             var _local_2:_Str_4171;
             var _local_3:Rectangle;

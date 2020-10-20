@@ -174,7 +174,7 @@
                 registeredWidget.refresh(this.windowContainer);
             }
             this.resizeWindow();
-            this.landingView.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+            this.landingView.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
             this.windowContainer.invalidate();
             if (this._Str_21419 != null)
             {
@@ -321,7 +321,7 @@
             }
         }
 
-        protected function _Str_3630(k:WindowEvent):void
+        protected function onDesktopResized(k:WindowEvent):void
         {
             this.resizeWindow();
         }

@@ -154,7 +154,7 @@
             this._window = IWindowContainer(this._dialog._Str_2429);
             this._window.procedure = this._Str_3061;
             this._dialog.background.procedure = this._Str_22317;
-            this._habboTalent.windowManager.getWindowContext(_Str_4923).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+            this._habboTalent.windowManager.getWindowContext(_Str_4923).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
             this._panoramaList = IItemListWindow(this._window.findChildByName("panorama"));
             this._levelTemplate = IWindowContainer(this._panoramaList.removeListItem(this._panoramaList.getListItemByName("level_pane")));
             var k:IItemListWindow = IItemListWindow(this._levelTemplate.findChildByName("reward_list"));
@@ -578,7 +578,7 @@
                 this._dialog.dispose();
                 this._dialog = null;
                 this._window = null;
-                this._habboTalent.windowManager.getWindowContext(_Str_4923).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+                this._habboTalent.windowManager.getWindowContext(_Str_4923).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
             }
         }
 
@@ -598,7 +598,7 @@
             this._window.invalidate();
         }
 
-        private function _Str_3630(k:WindowEvent):void
+        private function onDesktopResized(k:WindowEvent):void
         {
             this.resizeWindow();
         }

@@ -238,7 +238,7 @@
                 }
                 if (((!(_windowManager == null)) && (!(_windowManager.disposed))))
                 {
-                    _windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+                    _windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
                 }
                 this._Str_15295.dispose();
                 this._Str_15295 = null;
@@ -540,7 +540,7 @@
             {
                 this._Str_11102.addEventListener(WindowMouseEvent.CLICK, this._Str_20689);
             }
-            _windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+            _windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
             this.populate();
             if (this._Str_21460)
             {
@@ -1149,7 +1149,7 @@
             return _local_3;
         }
 
-        private function _Str_3630(k:WindowEvent):void
+        private function onDesktopResized(k:WindowEvent):void
         {
             this._Str_6258(true);
         }
