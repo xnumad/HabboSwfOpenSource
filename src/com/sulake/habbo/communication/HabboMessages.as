@@ -894,7 +894,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11024;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79.DanceMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79.ChangeMottoMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11695;
+	import com.sulake.habbo.communication.messages.outgoing._Str_79.SignMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11770;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79.AvatarExpressionMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.*;
@@ -1634,7 +1634,7 @@
             OUTGOING_PACKETS[1954] = _Str_9950;
             OUTGOING_PACKETS[196] = _Str_3075;
             OUTGOING_PACKETS[1969] = SaveRoomSettingsMessageComposer;
-            OUTGOING_PACKETS[1975] = _Str_11695;
+            OUTGOING_PACKETS[1975] = SignMessageComposer;
             OUTGOING_PACKETS[1982] = RenderRoomThumbnailMessageComposer;
             OUTGOING_PACKETS[1986] = _Str_12054;
             OUTGOING_PACKETS[1990] = _Str_11935;

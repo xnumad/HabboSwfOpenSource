@@ -18,7 +18,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.chat.CancelTypingMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_79.AvatarExpressionMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11695;
+    import com.sulake.habbo.communication.messages.outgoing._Str_79.SignMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_79.DanceMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_79.ChangePostureMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
@@ -319,7 +319,7 @@
         {
             if (((k >= 0) && (k <= 17)))
             {
-                this._connection.send(new _Str_11695(k));
+                this._connection.send(new SignMessageComposer(k));
             }
         }
 
