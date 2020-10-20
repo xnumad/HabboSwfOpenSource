@@ -335,7 +335,7 @@
             return true;
         }
 
-        public function _Str_24970():void
+        public function startGameSession():void
         {
             var k:RoomSession = new RoomSession();
             k.roomId = 1;

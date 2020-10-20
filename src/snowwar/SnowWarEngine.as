@@ -565,7 +565,7 @@
                 this._synchronizedGameArena.initialize(this, _arg_3);
                 this._gameArenaView = new GameArenaView(this);
                 this._roomSessionManager.disposeSession(-1, false);
-                this._roomSessionManager._Str_24970();
+                this._roomSessionManager.startGameSession();
                 registerUpdateReceiver(this, 1);
                 this._SafeStr_13145 = 0;
                 this._currentSubTurn = 0;
