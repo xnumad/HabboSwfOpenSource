@@ -493,7 +493,7 @@
             return getInteger("new.identity", 0) > 0;
         }
 
-        public function get _Str_11168():int
+        public function get dynamicLayoutLeftPaneWidth():int
         {
             return getInteger("landing.view.dynamic.leftPaneWidth", 500);
         }

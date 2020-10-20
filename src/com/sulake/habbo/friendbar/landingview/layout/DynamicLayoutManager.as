@@ -78,7 +78,7 @@
             }
             this._fromTopScrollbar = IScrollbarWindow(this._window.findChildByName("center_container_scrollbar"));
             this._scrollExtraSpace = IWindowContainer(this._window.findChildByName("scroll_extra_space_container"));
-            var _local_6:int = this._layout.landingView._Str_11168;
+            var _local_6:int = this._layout.landingView.dynamicLayoutLeftPaneWidth;
             var _local_7:int = this._layout.landingView._Str_9931;
             this._leftPane.width = _local_6;
             this._leftPane.limits.maxWidth = _local_6;
@@ -267,7 +267,7 @@
                 if (this._Str_5410(3))
                 {
                     this._slots[3].getChildAt(0).y = 0;
-                    this._slots[3].width = this._layout.landingView._Str_11168;
+                    this._slots[3].width = this._layout.landingView.dynamicLayoutLeftPaneWidth;
                 }
                 if (this._Str_5410(4))
                 {
@@ -291,7 +291,7 @@
                 if (this._Str_5410(1))
                 {
                     this._slots[1].getChildAt(0).y = 0;
-                    this._slots[1].width = this._layout.landingView._Str_11168;
+                    this._slots[1].width = this._layout.landingView.dynamicLayoutLeftPaneWidth;
                 }
                 if (this._Str_5410(2))
                 {
