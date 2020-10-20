@@ -216,7 +216,7 @@
             {
                 return;
             }
-            var k:String = this._Str_14617();
+            var k:String = this.getLayout();
             this.windowContainer = IWindowContainer(this.landingView.getXmlWindow(k, 0));
             this._Str_23921();
             if (this.landingView.getBoolean("landing.view.right_pane_dimmer.hidden"))
@@ -263,14 +263,14 @@
             }
         }
 
-        private function _Str_14617():String
+        private function getLayout():String
         {
             return (this.landingView.propertyExists("landing.view.layoutxml")) ? this.landingView.getProperty("landing.view.layoutxml") : LANDING_VIEW_DEFAULT_DYNAMIC_LAYOUT;
         }
 
         private function _Str_24641():Boolean
         {
-            return this._Str_14617() == LANDING_VIEW_GENERIC_RECEPTION;
+            return this.getLayout() == LANDING_VIEW_GENERIC_RECEPTION;
         }
 
         protected function resizeWindow():void

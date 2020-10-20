@@ -389,7 +389,7 @@
 
         private function _Str_23552(k:WindowEvent, _arg_2:IWindow):void
         {
-            var _local_3:RoomLayout = this._Str_14617(_arg_2);
+            var _local_3:RoomLayout = this.getLayout(_arg_2);
             if (this.isAllowed(_local_3, true))
             {
                 this._selectedLayout = _local_3;
@@ -401,7 +401,7 @@
             }
         }
 
-        private function _Str_14617(k:IWindow):RoomLayout
+        private function getLayout(k:IWindow):RoomLayout
         {
             var _local_2:RoomLayout = this._Str_23514(k.tags[0]);
             return _local_2;
