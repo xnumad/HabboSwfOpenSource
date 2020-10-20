@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IHabboConfigurationManager;
 
-    public class _Str_3198 
+    public class CommonWidgetSettings
     {
         private static const _Str_16303:uint = 0xFF000000;
         private static const _Str_18953:uint = 0xFFFFFFFF;
@@ -15,7 +15,7 @@
         private var _etchingColor:uint = 0xFFFFFFFF;
         private var _etchingPosition:String = "bottom";
 
-        public function _Str_3198(k:IHabboConfigurationManager)
+        public function CommonWidgetSettings(k:IHabboConfigurationManager)
         {
             if (k.getProperty(LANDING_VIEW_COMMON_TEXTCOLOR) != "")
             {

@@ -13,7 +13,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets._Str_2483;
     import com.sulake.habbo.friendbar.landingview.layout._Str_3695;
-    import com.sulake.habbo.friendbar.landingview.layout._Str_3198;
+    import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
     import com.sulake.habbo.friendbar.landingview.*;
 
     public class CommunityGoalPrizesWidget implements ILandingViewWidget, ISettingsAwareWidget 
@@ -157,7 +157,7 @@
             _local_2.figure = this._figure;
         }
 
-        public function set settings(k:_Str_3198):void
+        public function set settings(k:CommonWidgetSettings):void
         {
             _Str_3695._Str_5630(this._container, k);
         }

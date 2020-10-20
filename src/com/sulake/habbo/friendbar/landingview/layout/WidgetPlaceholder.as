@@ -14,9 +14,9 @@
         private var _Str_17931:String;
         private var _Str_18534:IWindowContainer;
         private var _initialized:Boolean;
-        private var _Str_3157:_Str_3198;
+        private var _Str_3157:CommonWidgetSettings;
 
-        public function WidgetPlaceholder(k:ILandingViewWidget, _arg_2:String, _arg_3:_Str_3198, _arg_4:IWindowContainer=null)
+        public function WidgetPlaceholder(k:ILandingViewWidget, _arg_2:String, _arg_3:CommonWidgetSettings, _arg_4:IWindowContainer=null)
         {
             this._widget = k;
             this._Str_17931 = _arg_2;

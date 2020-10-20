@@ -30,7 +30,7 @@
         protected var _Str_19814:int;
         protected var _Str_20591:int;
         private var _registeredWidgets:Array;
-        private var _Str_3157:_Str_3198;
+        private var _Str_3157:CommonWidgetSettings;
         private var _Str_4271:String;
 
         public function _Str_3695(k:HabboLandingView)
@@ -40,7 +40,7 @@
             this.habboLandingView = k;
             this._Str_22860();
             this.movingBackgroundObjects = new MovingBackgroundObjects(this.landingView);
-            this._Str_3157 = new _Str_3198(this.landingView);
+            this._Str_3157 = new CommonWidgetSettings(this.landingView);
             k.registerUpdateReceiver(this, 1000);
         }
 
@@ -90,7 +90,7 @@
             }
         }
 
-        public static function _Str_5630(search:IWindowContainer, _arg_2:_Str_3198):void
+        public static function _Str_5630(search:IWindowContainer, _arg_2:CommonWidgetSettings):void
         {
             var _local_3:ITextWindow;
             if (search == null)

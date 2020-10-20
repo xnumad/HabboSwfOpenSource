@@ -17,7 +17,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.friendbar.landingview.layout._Str_3695;
-    import com.sulake.habbo.friendbar.landingview.layout._Str_3198;
+    import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
     import com.sulake.habbo.friendbar.landingview.*;
 
     public class CommunityGoalWidget implements IUpdateReceiver, ILandingViewWidget, ISettingsAwareWidget 
@@ -238,7 +238,7 @@
             }
         }
 
-        public function set settings(k:_Str_3198):void
+        public function set settings(k:CommonWidgetSettings):void
         {
             _Str_3695._Str_5630(this._Str_3186, k);
         }

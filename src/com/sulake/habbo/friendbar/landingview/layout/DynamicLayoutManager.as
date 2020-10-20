@@ -34,7 +34,7 @@
         private var _fromTopScrollbar:IScrollbarWindow;
         private var _window:IWindowContainer;
         private var _ignoreBottomRightSlot:Boolean = false;
-        private var _commonWidgetSettings:_Str_3198;
+        private var _commonWidgetSettings:CommonWidgetSettings;
         private var _minWhiteSpaceVerticalMiddle:int = 10;
         private var _maxWhiteSpaceVerticalMiddle:int = 50;
         private var _minWhiteSpaceVerticalTop:int = 10;
@@ -46,7 +46,7 @@
         private var _initialized:Boolean = false;
         private var _currentlyResizingWindow:IWindow = null;
 
-        public function DynamicLayoutManager(k:_Str_3695, _arg_2:_Str_3198)
+        public function DynamicLayoutManager(k:_Str_3695, _arg_2:CommonWidgetSettings)
         {
             this._slots = new Vector.<IWindowContainer>(_Str_5206);
             super();

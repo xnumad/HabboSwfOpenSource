@@ -5,7 +5,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindowContainer;
     import flash.utils.Dictionary;
-    import com.sulake.habbo.friendbar.landingview.layout._Str_3198;
+    import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
     import com.sulake.habbo.friendbar.landingview.layout.WidgetPlaceholder;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
@@ -19,7 +19,7 @@
         private var _landingView:HabboLandingView;
         private var _container:IWindowContainer;
         private var _widgets:Dictionary;
-        private var _commonWidgetSettings:_Str_3198;
+        private var _commonWidgetSettings:CommonWidgetSettings;
         private var _slot:int;
         private var _schedulingStr:String;
         private var _currentWidget:WidgetPlaceholder;
@@ -61,7 +61,7 @@
         public function initialize():void
         {
             this._container = IWindowContainer(this._landingView.getXmlWindow("widget_container_widget"));
-            this._commonWidgetSettings = new _Str_3198(this._landingView);
+            this._commonWidgetSettings = new CommonWidgetSettings(this._landingView);
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_4748(this._Str_12291));
             this._schedulingStr = this._landingView.getProperty((("landing.view.dynamic.slot." + this._slot) + ".conf"));
         }

@@ -19,7 +19,7 @@
     import com.sulake.habbo.friendbar.landingview.interfaces.elements.IFloatingElement;
     import com.sulake.habbo.friendbar.landingview.widget.elements.TitleElementHandler;
     import com.sulake.habbo.friendbar.landingview.layout._Str_3695;
-    import com.sulake.habbo.friendbar.landingview.layout._Str_3198;
+    import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
     import com.sulake.habbo.friendbar.landingview.interfaces.elements.IDisableAwareElement;
     import com.sulake.habbo.friendbar.landingview.*;
 
@@ -214,7 +214,7 @@
             return this._landingView == null;
         }
 
-        public function set settings(k:_Str_3198):void
+        public function set settings(k:CommonWidgetSettings):void
         {
             _Str_3695._Str_5630(this._container, k);
         }
