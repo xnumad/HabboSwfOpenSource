@@ -64,7 +64,7 @@
             return null;
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             var k:Array = [];
             k.push(RoomEngineTriggerWidgetEvent.RETWE_REQUEST_MANNEQUIN);

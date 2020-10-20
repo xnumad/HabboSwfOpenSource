@@ -45,7 +45,7 @@
             return null;
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             var k:Array = [];
             k.push(_Str_3227.RWLBUE_SHOW_LOADING_BAR);

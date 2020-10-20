@@ -53,7 +53,7 @@
             return null;
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             return [RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_REQUESTED, RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_RESULT];
         }

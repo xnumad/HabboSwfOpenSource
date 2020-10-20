@@ -938,7 +938,7 @@
                         _local_11.push(widgetHandler);
                     }
                 }
-                _local_13 = widgetHandler._Str_2609();
+                _local_13 = widgetHandler.getProcessedEvents();
                 if (_local_13 != null)
                 {
                     _local_13.push(RoomEngineTriggerWidgetEvent.OPEN_WIDGET);

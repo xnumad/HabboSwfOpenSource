@@ -114,7 +114,7 @@
             return null;
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             return [];
         }

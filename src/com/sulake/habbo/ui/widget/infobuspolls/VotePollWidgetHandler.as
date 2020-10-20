@@ -60,7 +60,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
             return null;
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             var _local_1:Array = [];
             _local_1.push(RoomSessionPollEvent.VOTE_QUESTION);

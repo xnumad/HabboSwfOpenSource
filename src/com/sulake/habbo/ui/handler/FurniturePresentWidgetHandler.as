@@ -145,7 +145,7 @@
         {
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             return [RoomSessionPresentEvent.RSPE_PRESENT_OPENED];
         }

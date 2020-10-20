@@ -120,7 +120,7 @@
             this._container.events.dispatchEvent(new _Str_4178(_Str_4178.RWCCE_USER_CHOOSER_CONTENT, _local_2));
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             return null;
         }

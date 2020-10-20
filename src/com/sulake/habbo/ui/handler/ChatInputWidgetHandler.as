@@ -441,7 +441,7 @@
             return null;
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             return [RoomSessionChatEvent.RSCE_FLOOD_EVENT, _Str_6310.HRWE_HIDE_ROOM_WIDGET, FriendBarResizeEvent.FBE_BAR_RESIZE_EVENT];
         }

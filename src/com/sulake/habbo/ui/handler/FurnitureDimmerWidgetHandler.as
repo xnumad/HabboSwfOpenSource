@@ -97,7 +97,7 @@
             return ((k) || (_local_3)) || (_local_2);
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             var k:Array = [];
             k.push(RoomSessionDimmerPresetsEvent.RSDPE_PRESETS);

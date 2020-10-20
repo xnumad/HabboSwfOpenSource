@@ -1129,7 +1129,7 @@
             }
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             return [RoomSessionUserBadgesEvent.RSUBE_BADGES];
         }

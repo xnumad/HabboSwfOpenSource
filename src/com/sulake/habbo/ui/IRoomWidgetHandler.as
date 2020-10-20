@@ -11,7 +11,7 @@
         function set container(_arg_1:IRoomWidgetHandlerContainer):void;
         function _Str_2607():Array;
         function processWidgetMessage(_arg_1:RoomWidgetMessage):RoomWidgetUpdateEvent;
-        function _Str_2609():Array;
+        function getProcessedEvents():Array;
         function _Str_2485(_arg_1:Event):void;
         function update():void;
     }

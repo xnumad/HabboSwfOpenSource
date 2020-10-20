@@ -167,7 +167,7 @@
             return null;
         }
 
-        public function _Str_2609():Array
+        public function getProcessedEvents():Array
         {
             return [RoomEngineTriggerWidgetEvent.RETWE_OPEN_FURNI_CONTEXT_MENU, RoomEngineTriggerWidgetEvent.RETWE_CLOSE_FURNI_CONTEXT_MENU];
         }
