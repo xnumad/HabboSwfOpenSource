@@ -10,7 +10,7 @@
     public interface IRoomDesktop 
     {
         function get events():IEventDispatcher;
-        function _Str_2485(_arg_1:Event):void;
+        function processEvent(_arg_1:Event):void;
         function get roomSession():IRoomSession;
         function processWidgetMessage(_arg_1:RoomWidgetMessage):RoomWidgetUpdateEvent;
         function _Str_11511(_arg_1:String):IRoomWidget;

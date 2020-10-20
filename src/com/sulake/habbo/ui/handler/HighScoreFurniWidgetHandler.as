@@ -64,7 +64,7 @@
             return [RoomEngineTriggerWidgetEvent.RETWE_REQUEST_HIGH_SCORE_DISPLAY, RoomEngineTriggerWidgetEvent.RETWE_REQUEST_HIDE_HIGH_SCORE_DISPLAY];
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             var _local_2:RoomEngineObjectEvent;
             var _local_3:IRoomObject;

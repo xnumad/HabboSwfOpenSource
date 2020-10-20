@@ -58,7 +58,7 @@
             return [RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_REQUESTED, RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_RESULT];
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             var _local_2:RoomSessionPetPackageEvent;
             var _local_3:_Str_3085;

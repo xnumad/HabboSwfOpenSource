@@ -172,7 +172,7 @@
             return [RoomEngineTriggerWidgetEvent.RETWE_OPEN_FURNI_CONTEXT_MENU, RoomEngineTriggerWidgetEvent.RETWE_CLOSE_FURNI_CONTEXT_MENU];
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             if (this._widget == null)
             {

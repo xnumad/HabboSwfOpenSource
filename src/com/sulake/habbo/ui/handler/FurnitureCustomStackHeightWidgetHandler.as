@@ -65,7 +65,7 @@
             return [];
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             var _local_2:RoomEngineTriggerWidgetEvent;
             var _local_3:IRoomObject;

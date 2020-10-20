@@ -60,7 +60,7 @@
             return [RoomSessionDoorbellEvent.RSDE_DOORBELL, RoomSessionDoorbellEvent.REJECTED, RoomSessionDoorbellEvent.RSDE_ACCEPTED];
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             var _local_2:RoomSessionDoorbellEvent;
             switch (k.type)

@@ -12,7 +12,7 @@
         function getWidgetMessages():Array;
         function processWidgetMessage(_arg_1:RoomWidgetMessage):RoomWidgetUpdateEvent;
         function getProcessedEvents():Array;
-        function _Str_2485(_arg_1:Event):void;
+        function processEvent(_arg_1:Event):void;
         function update():void;
     }
 }

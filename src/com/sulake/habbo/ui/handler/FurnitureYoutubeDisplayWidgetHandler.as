@@ -106,7 +106,7 @@
             return [];
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             return;
 

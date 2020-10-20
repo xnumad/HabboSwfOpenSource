@@ -51,7 +51,7 @@
             return [RoomEngineUseProductEvent.ROSM_USE_PRODUCT_FROM_INVENTORY];
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             var _local_4:RoomEngineUseProductEvent;
             if (this._container.roomEngine == null)

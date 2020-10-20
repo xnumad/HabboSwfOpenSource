@@ -84,7 +84,7 @@
             return [RoomSessionQueueEvent.RSQE_QUEUE_STATUS];
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             var _local_2:RoomSessionQueueEvent;
             var _local_3:String;

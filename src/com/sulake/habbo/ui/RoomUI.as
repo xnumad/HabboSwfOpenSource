@@ -701,7 +701,7 @@
                 _local_3 = this.getDesktop(_local_2);
                 if (_local_3 != null)
                 {
-                    _local_3._Str_2485(k);
+                    _local_3.processEvent(k);
                 }
             }
         }
@@ -764,7 +764,7 @@
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 != null)
             {
-                _local_3._Str_2485(k);
+                _local_3.processEvent(k);
             }
             this._interstitialActive = true;
         }
@@ -780,7 +780,7 @@
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 != null)
             {
-                _local_3._Str_2485(k);
+                _local_3.processEvent(k);
             }
         }
 
@@ -801,7 +801,7 @@
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 != null)
             {
-                _local_3._Str_2485(k);
+                _local_3.processEvent(k);
                 _local_4 = this._roomSessionManager.getSession(this._roomEngine.activeRoomId);
                 if (_local_4 != null)
                 {
@@ -816,7 +816,7 @@
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 != null)
             {
-                _local_3._Str_2485(k);
+                _local_3.processEvent(k);
             }
         }
 
@@ -837,7 +837,7 @@
                 _local_4 = (this.getDesktop(_local_3) as RoomDesktop);
                 if (_local_4 != null)
                 {
-                    _local_4._Str_2485(new _Str_9973(k.getParser().isPerkAllowed(PerkEnum.MOUSE_ZOOM)));
+                    _local_4.processEvent(new _Str_9973(k.getParser().isPerkAllowed(PerkEnum.MOUSE_ZOOM)));
                 }
             }
         }
@@ -1028,7 +1028,7 @@
                     this._roomEngine._Str_5041(this._roomEngine.activeRoomId, this._Str_17538(this._roomEngine.activeRoomId), ((_local_6.level < 1) ? 0.5 : (1 << (Math.floor(_local_6.level) - 1))), null, null, _local_6._Str_25423);
                     return;
                 case RoomEngineDimmerStateEvent.REDSE_ROOM_COLOR:
-                    _local_3._Str_2485(k);
+                    _local_3.processEvent(k);
                     return;
                 case RoomObjectHSLColorEnabledEvent.ROOM_BACKGROUND_COLOR:
                     _local_7 = RoomObjectHSLColorEnabledEvent(k);
@@ -1063,7 +1063,7 @@
             var _local_2:RoomDesktop = (this.getDesktop(this.getRoomIdentifier(0)) as RoomDesktop);
             if (_local_2)
             {
-                _local_2._Str_2485(k);
+                _local_2.processEvent(k);
             }
         }
 
@@ -1195,7 +1195,7 @@
             var _local_2:RoomDesktop = this._desktops.getValue(this.getRoomIdentifier(this._roomEngine.activeRoomId));
             if (_local_2 != null)
             {
-                _local_2._Str_2485(new _Str_6310(k));
+                _local_2.processEvent(new _Str_6310(k));
             }
         }
 

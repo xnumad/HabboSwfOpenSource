@@ -52,7 +52,7 @@
             return [];
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             var _local_4:Boolean;
             var _local_5:String;

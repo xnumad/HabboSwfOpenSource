@@ -278,7 +278,7 @@
             return [RoomEngineTriggerWidgetEvent.OPEN_WIDGET, RoomEngineTriggerWidgetEvent.CLOSE_WIDGET];
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             if (((this._container.roomEngine == null) || (this._widget == null)))
             {

@@ -68,7 +68,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
             return _local_1;
         }
 
-        public function _Str_2485(_arg_1:Event):void
+        public function processEvent(_arg_1:Event):void
         {
             var _local_3:RoomWidgetPollUpdateEvent;
             if (((this._container == null) || (this._container.events == null)))

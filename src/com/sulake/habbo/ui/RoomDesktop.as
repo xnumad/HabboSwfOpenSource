@@ -432,8 +432,8 @@
             this._friendList = k;
             if (this._friendList)
             {
-                this._friendList.events.addEventListener(_Str_2948.FRE_ACCEPTED, this._Str_2485);
-                this._friendList.events.addEventListener(_Str_2948.FRE_DECLINED, this._Str_2485);
+                this._friendList.events.addEventListener(_Str_2948.FRE_ACCEPTED, this.processEvent);
+                this._friendList.events.addEventListener(_Str_2948.FRE_DECLINED, this.processEvent);
             }
         }
 
@@ -621,8 +621,8 @@
             this._events = null;
             if (((this._friendList) && (this._friendList.events)))
             {
-                this._friendList.events.removeEventListener(_Str_2948.FRE_ACCEPTED, this._Str_2485);
-                this._friendList.events.removeEventListener(_Str_2948.FRE_DECLINED, this._Str_2485);
+                this._friendList.events.removeEventListener(_Str_2948.FRE_ACCEPTED, this.processEvent);
+                this._friendList.events.removeEventListener(_Str_2948.FRE_DECLINED, this.processEvent);
             }
             this._friendList = null;
             this._layoutManager.dispose();
@@ -690,7 +690,7 @@
                 if (this._pendingResources.length > 0)
                 {
                     this._loadingComplete = false;
-                    this._Str_2485(new _Str_3227(_Str_3227.RWLBUE_SHOW_LOADING_BAR));
+                    this.processEvent(new _Str_3227(_Str_3227.RWLBUE_SHOW_LOADING_BAR));
                 }
             }
         }
@@ -1046,7 +1046,7 @@
             return null;
         }
 
-        public function _Str_2485(k:Event):void
+        public function processEvent(k:Event):void
         {
             var _local_3:IRoomWidgetHandler;
             var _local_4:Boolean;
@@ -1076,7 +1076,7 @@
                     }
                     if (_local_4)
                     {
-                        _local_3._Str_2485(k);
+                        _local_3.processEvent(k);
                     }
                 }
             }
@@ -1275,7 +1275,7 @@
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_HIDE_HIGH_SCORE_DISPLAY:
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_INTERNAL_LINK:
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_ROOM_LINK:
-                    this._Str_2485(k);
+                    this.processEvent(k);
                     break;
             }
             if (_local_4 != null)
@@ -1833,7 +1833,7 @@
             if ((((!(this._roomSessionManager == null)) && (!(this._session == null))) && (this._loadingComplete)))
             {
                 this._roomSessionManager.startSession(this._session);
-                this._Str_2485(new _Str_3227(_Str_3227.RWLBUW_HIDE_LOADING_BAR));
+                this.processEvent(new _Str_3227(_Str_3227.RWLBUW_HIDE_LOADING_BAR));
                 return true;
             }
             return false;
