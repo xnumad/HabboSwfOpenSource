@@ -67,7 +67,7 @@
                     if (this._Str_6826())
                     {
                         _local_4 = (k as RoomWidgetDimmerSavePresetMessage);
-                        this._container.roomSession._Str_21317(_local_4._Str_25037, _local_4._Str_24446, _local_4.color, _local_4._Str_5123, _local_4.apply);
+                        this._container.roomSession.sendRoomDimmerSavePresetMessage(_local_4._Str_25037, _local_4._Str_24446, _local_4.color, _local_4._Str_5123, _local_4.apply);
                     }
                     break;
                 case RoomWidgetDimmerChangeStateMessage.RWCDSM_CHANGE_STATE:

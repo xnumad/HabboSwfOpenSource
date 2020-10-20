@@ -353,7 +353,7 @@
             this._connection.send(new _Str_11262());
         }
 
-        public function _Str_21317(k:int, _arg_2:int, _arg_3:uint, _arg_4:int, _arg_5:Boolean):void
+        public function sendRoomDimmerSavePresetMessage(k:int, _arg_2:int, _arg_3:uint, _arg_4:int, _arg_5:Boolean):void
         {
             var _local_6:String = ("000000" + _arg_3.toString(16).toUpperCase());
             var _local_7:String = ("#" + _local_6.substr((_local_6.length - 6)));
