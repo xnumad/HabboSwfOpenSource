@@ -139,12 +139,12 @@
             this._roomId = k;
         }
 
-        public function get _Str_18062():String
+        public function get roomPassword():String
         {
             return this._password;
         }
 
-        public function set _Str_18062(k:String):void
+        public function set roomPassword(k:String):void
         {
             this._password = k;
         }

@@ -248,7 +248,7 @@
         {
             var _local_4:RoomSession = new RoomSession();
             _local_4.roomId = k;
-            _local_4._Str_18062 = _arg_2;
+            _local_4.roomPassword = _arg_2;
             _local_4.roomResources = _arg_3;
             _local_4.habboTracking = this._habboTracking;
             return this.createSession(_local_4);
@@ -258,7 +258,7 @@
         {
             var _local_3:RoomSession = new RoomSession();
             _local_3.roomId = 1;
-            _local_3._Str_18062 = "";
+            _local_3.roomPassword = "";
             _local_3.habboTracking = this._habboTracking;
             _local_3.openConnectionComposer = new _Str_9845(k, _arg_2);
             return this.createSession(_local_3);
