@@ -15,7 +15,7 @@
             return this._isInMaintenance;
         }
 
-        public function get _Str_23709():int
+        public function get minutesUntilMaintenance():int
         {
             return this._minutesUntilMaintenance;
         }
