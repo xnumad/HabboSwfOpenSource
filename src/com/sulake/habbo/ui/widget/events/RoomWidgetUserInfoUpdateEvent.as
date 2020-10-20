@@ -28,7 +28,7 @@
         private var _Str_3947:Boolean = false;
         private var _amIOwner:Boolean = false;
         private var _amIAnyRoomController:Boolean = false;
-        private var _roomControllerLevel:int = 0;
+        private var _myRoomControllerLevel:int = 0;
         private var _canBeAskedForAFriend:Boolean = false;
         private var _Str_9070:Boolean = false;
         private var _Str_8457:Boolean = false;
@@ -210,12 +210,12 @@
 
         public function set roomControllerLevel(k:int):void
         {
-            this._roomControllerLevel = k;
+            this._myRoomControllerLevel = k;
         }
 
         public function get roomControllerLevel():int
         {
-            return this._roomControllerLevel;
+            return this._myRoomControllerLevel;
         }
 
         public function set amIAnyRoomController(k:Boolean):void
