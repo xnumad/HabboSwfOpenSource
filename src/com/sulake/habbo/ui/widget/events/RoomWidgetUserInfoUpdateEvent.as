@@ -20,7 +20,7 @@
         private var _badges:Array;
         private var _groupId:int = 0;
         private var _groupName:String = "";
-        private var _Str_11289:String = "";
+        private var _groupBadgeId:String = "";
         private var _carryItem:int = 0;
         private var _userRoomId:int = 0;
         private var _Str_8522:Boolean = false;
@@ -150,12 +150,12 @@
 
         public function set _Str_5235(k:String):void
         {
-            this._Str_11289 = k;
+            this._groupBadgeId = k;
         }
 
         public function get _Str_5235():String
         {
-            return this._Str_11289;
+            return this._groupBadgeId;
         }
 
         public function set canBeAskedAsFriend(k:Boolean):void
