@@ -326,7 +326,7 @@
             this.resizeWindow();
         }
 
-        private function _Str_22475(k:String):void
+        private function setBackgroundGraphics(k:String):void
         {
             var _local_2:String;
             var _local_3:IStaticBitmapWrapperWindow;
@@ -433,7 +433,7 @@
         {
             if (((k.getParser().schedulingStr == this._schedulingStr) && (this.landingView)))
             {
-                this._Str_22475(k.getParser().code);
+                this.setBackgroundGraphics(k.getParser().code);
                 this.movingBackgroundObjects._Str_23132 = k.getParser().code;
                 this.movingBackgroundObjects.initialize(this.windowContainer);
             }
