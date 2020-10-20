@@ -67,10 +67,10 @@
                 this._assets.removeAsset(this._assets.getAssetByName(_local_2));
             }
             var _local_4:AssetLoaderStruct = this._assets.loadAssetFromFile(_local_2, _local_3, "text/plain");
-            _local_4.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_24600);
+            _local_4.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.clientURLComplete);
         }
 
-        private function _Str_24600(event:Event=null):void
+        private function clientURLComplete(event:Event=null):void
         {
             var facebookData:Object;
             var loaderStruct:AssetLoaderStruct = (event.target as AssetLoaderStruct);
