@@ -14,7 +14,7 @@
         private var _Str_5131:int = 0;
         private var _ownerId:int;
         private var _ownerName:String;
-        private var _Str_4026:Boolean = false;
+        private var _amIOwner:Boolean = false;
         private var _amIAnyRoomController:Boolean = false;
         private var _roomControllerLevel:int = 0;
         private var _botSkills:Array;
@@ -97,12 +97,12 @@
 
         public function set amIOwner(k:Boolean):void
         {
-            this._Str_4026 = k;
+            this._amIOwner = k;
         }
 
         public function get amIOwner():Boolean
         {
-            return this._Str_4026;
+            return this._amIOwner;
         }
 
         public function set roomControllerLevel(k:int):void

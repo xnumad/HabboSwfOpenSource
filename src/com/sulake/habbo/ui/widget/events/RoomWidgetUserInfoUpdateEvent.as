@@ -26,7 +26,7 @@
         private var _Str_8522:Boolean = false;
         private var _realName:String = "";
         private var _Str_3947:Boolean = false;
-        private var _Str_4026:Boolean = false;
+        private var _amIOwner:Boolean = false;
         private var _amIAnyRoomController:Boolean = false;
         private var _roomControllerLevel:int = 0;
         private var _canBeAskedForAFriend:Boolean = false;
@@ -190,12 +190,12 @@
 
         public function set amIOwner(k:Boolean):void
         {
-            this._Str_4026 = k;
+            this._amIOwner = k;
         }
 
         public function get amIOwner():Boolean
         {
-            return this._Str_4026;
+            return this._amIOwner;
         }
 
         public function set isGuildRoom(k:Boolean):void
