@@ -708,7 +708,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10141;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10243;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10477;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10673;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10710;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10762;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10913;
@@ -1806,7 +1806,7 @@
             OUTGOING_PACKETS[31] = _Str_11384;
             OUTGOING_PACKETS[3107] = _Str_8008;
             OUTGOING_PACKETS[3110] = _Str_9939;
-            OUTGOING_PACKETS[3115] = _Str_10673;
+            OUTGOING_PACKETS[3115] = CreditFurniRedeemMessageComposer;
             OUTGOING_PACKETS[312] = _Str_5612;
             OUTGOING_PACKETS[3129] = _Str_7484;
             OUTGOING_PACKETS[3133] = _Str_7541;

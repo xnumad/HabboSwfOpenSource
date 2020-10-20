@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10673 implements IMessageComposer 
+    public class CreditFurniRedeemMessageComposer implements IMessageComposer
     {
         private var _objectId:int;
 
-        public function _Str_10673(k:int)
+        public function CreditFurniRedeemMessageComposer(k:int)
         {
             this._objectId = k;
         }

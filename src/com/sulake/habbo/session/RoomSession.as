@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11695;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11206;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10078;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10673;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10141;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10243;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11262;
@@ -335,7 +335,7 @@
 
         public function sendCreditFurniRedeemMessage(k:int):void
         {
-            this._connection.send(new _Str_10673(k));
+            this._connection.send(new CreditFurniRedeemMessageComposer(k));
         }
 
         public function sendPresentOpenMessage(k:int):void
