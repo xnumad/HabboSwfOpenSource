@@ -552,7 +552,7 @@
                     _local_17 = (k as RoomWidgetOpenProfileMessage);
                     if (this._container.habboTracking)
                     {
-                        this._container.habboTracking.trackGoogle("extendedProfile", _local_17._Str_22577);
+                        this._container.habboTracking.trackGoogle("extendedProfile", _local_17.trackingLocation);
                     }
                     this._container.connection.send(new _Str_2553(_local_17.userId));
                     break;

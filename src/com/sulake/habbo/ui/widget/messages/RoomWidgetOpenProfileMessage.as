@@ -19,7 +19,7 @@
             return this._userId;
         }
 
-        public function get _Str_22577():String
+        public function get trackingLocation():String
         {
             return this._trackingLocation;
         }
