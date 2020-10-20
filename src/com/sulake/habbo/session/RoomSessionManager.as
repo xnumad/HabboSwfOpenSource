@@ -275,7 +275,7 @@
             this._sessionStarting = true;
             if (this._sessions.getValue(_local_2) != null)
             {
-                this._Str_7613(k.roomId, false);
+                this.disposeSession(k.roomId, false);
             }
             k.connection = ((this._communication) ? this._communication.connection : null);
             this._sessions.add(_local_2, k);
@@ -328,7 +328,7 @@
             }
             else
             {
-                this._Str_7613(k.roomId);
+                this.disposeSession(k.roomId);
                 this._sessionStarting = false;
                 return false;
             }
@@ -352,7 +352,7 @@
             var _local_2:RoomSession = this._sessions.getValue(k);
             if (((_local_2) && (_local_2.isGameSession)))
             {
-                this._Str_7613(1, false);
+                this.disposeSession(1, false);
             }
         }
 
@@ -368,7 +368,7 @@
                     case RoomSessionHandler.RS_READY:
                         return;
                     case RoomSessionHandler.RS_DISCONNECTED:
-                        this._Str_7613(k);
+                        this.disposeSession(k);
                         return;
                 }
             }
@@ -398,7 +398,7 @@
             return this._sessions.getValue(_local_2) as IRoomSession;
         }
 
-        public function _Str_7613(k:int, _arg_2:Boolean=true):void
+        public function disposeSession(k:int, _arg_2:Boolean=true):void
         {
             var _local_3:String = this.getRoomIdentifier(k);
             var _local_4:RoomSession = (this._sessions.remove(_local_3) as RoomSession);

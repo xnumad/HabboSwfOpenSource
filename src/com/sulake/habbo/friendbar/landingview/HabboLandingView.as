@@ -289,7 +289,7 @@
                     if (this._roomSessionManager.getSession(-1))
                     {
                         this.send(new _Str_3719());
-                        this._roomSessionManager._Str_7613(-1);
+                        this._roomSessionManager.disposeSession(-1);
                     }
                     return;
                 case HabboToolbarIconEnum.GAMES:

@@ -564,7 +564,7 @@
                 this._synchronizedGameArena.registerExtension(new _SafeStr_4034());
                 this._synchronizedGameArena.initialize(this, _arg_3);
                 this._gameArenaView = new GameArenaView(this);
-                this._roomSessionManager._Str_7613(-1, false);
+                this._roomSessionManager.disposeSession(-1, false);
                 this._roomSessionManager._Str_24970();
                 registerUpdateReceiver(this, 1);
                 this._SafeStr_13145 = 0;
