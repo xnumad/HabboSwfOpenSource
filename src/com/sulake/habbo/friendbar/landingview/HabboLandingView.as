@@ -243,7 +243,7 @@
         {
             if (!this._isInitialized)
             {
-                this._Str_15971();
+                this.tryInitialize();
             }
             if (this._toolbar)
             {
@@ -306,7 +306,7 @@
             if (!this._gameCenterOK)
             {
                 this._gameCenterOK = true;
-                this._Str_15971();
+                this.tryInitialize();
             }
         }
 
@@ -336,11 +336,11 @@
         {
             if (k.getParser()._Str_17213 <= 0)
             {
-                this._Str_15971();
+                this.tryInitialize();
             }
         }
 
-        private function _Str_15971():void
+        private function tryInitialize():void
         {
             if (((!(this._Str_13959())) || (this._gameCenterOK)))
             {
