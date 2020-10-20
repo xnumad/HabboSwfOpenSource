@@ -5,7 +5,7 @@
     public interface IRoomSession 
     {
         function get roomId():int;
-        function get _Str_17752():String;
+        function get roomResources():String;
         function get state():String;
         function start():Boolean;
         function sendChatMessage(_arg_1:String, _arg_2:int=0):void;

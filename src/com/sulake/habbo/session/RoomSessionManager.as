@@ -249,7 +249,7 @@
             var _local_4:RoomSession = new RoomSession();
             _local_4.roomId = k;
             _local_4._Str_18062 = _arg_2;
-            _local_4._Str_17752 = _arg_3;
+            _local_4.roomResources = _arg_3;
             _local_4.habboTracking = this._habboTracking;
             return this.createSession(_local_4);
         }
