@@ -78,7 +78,7 @@
         private function _Str_12291(k:CurrentTimingCodeMessageEvent):void
         {
             var _local_2:String = k.getParser().code;
-            if ((((k.getParser()._Str_18517 == this._schedulingStr) && (!(_local_2 == ""))) && (!(disposed))))
+            if ((((k.getParser().schedulingStr == this._schedulingStr) && (!(_local_2 == ""))) && (!(disposed))))
             {
                 this._Str_23146(_local_2);
                 landingView.send(new _Str_11298(k.getParser().code));

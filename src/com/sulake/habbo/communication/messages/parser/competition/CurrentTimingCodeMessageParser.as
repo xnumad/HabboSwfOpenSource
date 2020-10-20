@@ -21,7 +21,7 @@
             return true;
         }
 
-        public function get _Str_18517():String
+        public function get schedulingStr():String
         {
             return this._schedulingStr;
         }

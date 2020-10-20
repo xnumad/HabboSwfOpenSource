@@ -431,7 +431,7 @@
 
         private function _Str_12291(k:CurrentTimingCodeMessageEvent):void
         {
-            if (((k.getParser()._Str_18517 == this._schedulingStr) && (this.landingView)))
+            if (((k.getParser().schedulingStr == this._schedulingStr) && (this.landingView)))
             {
                 this._Str_22475(k.getParser().code);
                 this.movingBackgroundObjects._Str_23132 = k.getParser().code;

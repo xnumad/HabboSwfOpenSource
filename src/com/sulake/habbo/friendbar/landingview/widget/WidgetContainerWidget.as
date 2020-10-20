@@ -111,7 +111,7 @@
 
         private function _Str_12291(k:CurrentTimingCodeMessageEvent):void
         {
-            if (((k.getParser()._Str_18517 == this._schedulingStr) && (!(this.disposed))))
+            if (((k.getParser().schedulingStr == this._schedulingStr) && (!(this.disposed))))
             {
                 this._Str_22315(k.getParser().code);
                 this.refreshContent();
