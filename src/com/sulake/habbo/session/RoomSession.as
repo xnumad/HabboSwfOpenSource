@@ -15,7 +15,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11637;
     import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_12180;
     import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_10169;
-    import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_9917;
+    import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.chat.CancelTypingMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_9976;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11695;
@@ -302,7 +302,7 @@
         {
             if (k)
             {
-                this._connection.send(new _Str_9917());
+                this._connection.send(new StartTypingMessageComposer());
             }
             else
             {
