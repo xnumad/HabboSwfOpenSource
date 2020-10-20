@@ -785,7 +785,7 @@
         {
             var _local_2:IRadioButtonWindow;
             var _local_3:ISelectorWindow = (this._window.findChildByName("moderation_mute_selector") as ISelectorWindow);
-            switch (k._Str_4418._Str_7688)
+            switch (k.roomModerationSettings._Str_7688)
             {
                 case RoomModerationSettings._Str_5047:
                     _local_2 = (this._window.findChildByName("moderation_mute_rights") as IRadioButtonWindow);
@@ -795,7 +795,7 @@
             }
             _local_3.setSelected(_local_2);
             var _local_4:ISelectorWindow = (this._window.findChildByName("moderation_kick_selector") as ISelectorWindow);
-            switch (k._Str_4418._Str_6332)
+            switch (k.roomModerationSettings._Str_6332)
             {
                 case RoomModerationSettings._Str_11537:
                     _local_2 = (this._window.findChildByName("moderation_kick_all") as IRadioButtonWindow);
@@ -808,7 +808,7 @@
             }
             _local_4.setSelected(_local_2);
             var _local_5:ISelectorWindow = (this._window.findChildByName("moderation_ban_selector") as ISelectorWindow);
-            switch (k._Str_4418._Str_7772)
+            switch (k.roomModerationSettings._Str_7772)
             {
                 case RoomModerationSettings._Str_5047:
                     _local_2 = (this._window.findChildByName("moderation_ban_rights") as IRadioButtonWindow);

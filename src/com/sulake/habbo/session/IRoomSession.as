@@ -73,8 +73,8 @@
         function get _Str_5249():Boolean;
         function set _Str_5249(_arg_1:Boolean):void;
         function get isGameSession():Boolean;
-        function get _Str_4418():RoomModerationSettings;
-        function set _Str_4418(_arg_1:RoomModerationSettings):void;
+        function get roomModerationSettings():RoomModerationSettings;
+        function set roomModerationSettings(_arg_1:RoomModerationSettings):void;
         function get _Str_16924():Boolean;
         function set _Str_16924(_arg_1:Boolean):void;
         function _Str_19090(_arg_1:int):void;

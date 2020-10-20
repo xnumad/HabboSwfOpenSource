@@ -217,12 +217,12 @@
             }
         }
 
-        public function get _Str_4418():RoomModerationSettings
+        public function get roomModerationSettings():RoomModerationSettings
         {
             return this._roomModerationSettings;
         }
 
-        public function set _Str_4418(k:RoomModerationSettings):void
+        public function set roomModerationSettings(k:RoomModerationSettings):void
         {
             this._roomModerationSettings = k;
         }

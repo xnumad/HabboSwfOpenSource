@@ -971,7 +971,7 @@
                 return false;
             }
             var _local_3:Boolean;
-            var _local_4:RoomModerationSettings = this._container.roomSession._Str_4418;
+            var _local_4:RoomModerationSettings = this._container.roomSession.roomModerationSettings;
             if (_local_4 != null)
             {
                 _local_3 = _arg_2(k, _local_4);

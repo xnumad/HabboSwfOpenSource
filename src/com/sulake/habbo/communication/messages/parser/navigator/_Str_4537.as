@@ -73,7 +73,7 @@
             return this._isGroupMember;
         }
 
-        public function get _Str_4418():RoomModerationSettings
+        public function get roomModerationSettings():RoomModerationSettings
         {
             return this._roomModerationSettings;
         }
