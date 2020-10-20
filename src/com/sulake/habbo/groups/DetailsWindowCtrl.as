@@ -46,13 +46,13 @@
             return ((!(this._window == null)) && (this._window.visible)) && (k == this._groupId);
         }
 
-        public function _Str_3702(k:HabboGroupDetailsData):void
+        public function onGroupDetails(k:HabboGroupDetailsData):void
         {
             if (((((!(this._window == null)) && (this._window.visible)) && (k.groupId == this._groupId)) || (k._Str_8199)))
             {
                 this._groupId = k.groupId;
                 this._Str_2755();
-                this._groupDetailsCtrl._Str_3702(IWindowContainer(this._window.findChildByName("group_cont")), k);
+                this._groupDetailsCtrl.onGroupDetails(IWindowContainer(this._window.findChildByName("group_cont")), k);
                 if (k._Str_8199)
                 {
                     this._window.visible = true;

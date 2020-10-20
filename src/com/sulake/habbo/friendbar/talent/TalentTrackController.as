@@ -107,7 +107,7 @@
         public function initialize():void
         {
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_7229(this._Str_24186));
-            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new HabboGroupDetailsMessageEvent(this._Str_3702));
+            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this.onEmailStatus));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new ChangeEmailResultEvent(this._Str_17386));
         }
@@ -135,7 +135,7 @@
             this.createWindow();
         }
 
-        private function _Str_3702(k:HabboGroupDetailsMessageEvent):void
+        private function onGroupDetails(k:HabboGroupDetailsMessageEvent):void
         {
             var _local_2:HabboGroupDetailsData = k.data;
             if (_local_2.groupId == this._expectedGroupID)

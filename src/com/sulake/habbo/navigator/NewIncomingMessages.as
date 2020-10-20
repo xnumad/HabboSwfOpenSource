@@ -140,7 +140,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_7883(this._Str_17243)));
             this._messageListeners.push(k.connection.addMessageEvent(new CollapsedCategoriesEvent(this._Str_18969)));
-            this._messageListeners.push(k.connection.addMessageEvent(new HabboGroupDetailsMessageEvent(this._Str_3702)));
+            this._messageListeners.push(k.connection.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this._Str_18891)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947)));
@@ -189,9 +189,9 @@
             this._navigator._Str_11632(k.getParser());
         }
 
-        private function _Str_3702(k:HabboGroupDetailsMessageEvent):void
+        private function onGroupDetails(k:HabboGroupDetailsMessageEvent):void
         {
-            this._navigator._Str_3702(k.data);
+            this._navigator.onGroupDetails(k.data);
         }
 
         private function _Str_18969(k:CollapsedCategoriesEvent):void

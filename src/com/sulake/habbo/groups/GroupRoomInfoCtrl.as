@@ -76,7 +76,7 @@
             }
         }
 
-        public function _Str_3702(k:HabboGroupDetailsData):void
+        public function onGroupDetails(k:HabboGroupDetailsData):void
         {
             if (!this._manager._Str_13386)
             {

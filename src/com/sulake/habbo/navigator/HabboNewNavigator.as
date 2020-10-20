@@ -278,7 +278,7 @@
             this._navigatorView._Str_11632(this._contextContainer._Str_8597);
         }
 
-        public function _Str_3702(k:HabboGroupDetailsData):void
+        public function onGroupDetails(k:HabboGroupDetailsData):void
         {
             if (this._groupDetails.hasKey(k.groupId))
             {

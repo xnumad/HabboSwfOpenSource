@@ -197,14 +197,14 @@
             }
             if (this._container.connection)
             {
-                this._groupDetailsMessageEvent = new HabboGroupDetailsMessageEvent(this._Str_3702);
+                this._groupDetailsMessageEvent = new HabboGroupDetailsMessageEvent(this.onGroupDetails);
                 this._container.connection.addMessageEvent(this._groupDetailsMessageEvent);
                 this._relationshipStatusMessageEvent = new RelationshipStatusInfo(this._Str_22283);
                 this._container.connection.addMessageEvent(this._relationshipStatusMessageEvent);
             }
         }
 
-        private function _Str_3702(k:HabboGroupDetailsMessageEvent):void
+        private function onGroupDetails(k:HabboGroupDetailsMessageEvent):void
         {
             var _local_2:HabboGroupDetailsData = k.data;
             if (this._widget.furniData.groupId == _local_2.groupId)

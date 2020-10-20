@@ -292,7 +292,7 @@
             }
         }
 
-        public function _Str_3702(k:HabboGroupDetailsData):void
+        public function onGroupDetails(k:HabboGroupDetailsData):void
         {
             var _local_2:IWindowContainer;
             if (this._selectedGroupId == k.groupId)
@@ -300,7 +300,7 @@
                 _local_2 = IWindowContainer(this._window.findChildByName("group_cont"));
                 _local_2.removeChildAt(0);
                 _local_2.invalidate();
-                this._groupDetailsCtrl._Str_3702(_local_2, k);
+                this._groupDetailsCtrl.onGroupDetails(_local_2, k);
             }
         }
 

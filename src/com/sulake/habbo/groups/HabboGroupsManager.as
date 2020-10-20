@@ -170,7 +170,7 @@
             this.addMessageEvent(new GroupMembershipRequestedMessageEvent(this._guildMembersWindowCtrl._Str_22705));
             this.addMessageEvent(new GuildMemberMgmtFailedMessageEvent(this._guildMembersWindowCtrl._Str_23412));
             this.addMessageEvent(new RelationshipStatusInfo(this._Str_18561));
-            this.addMessageEvent(new HabboGroupDetailsMessageEvent(this._Str_3702));
+            this.addMessageEvent(new HabboGroupDetailsMessageEvent(this.onGroupDetails));
             this.addMessageEvent(new _Str_3992(this._Str_7358));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new GuildCreatedMessageEvent(this._Str_24985));
@@ -321,12 +321,12 @@
             this._groupRoomInfoCtrl._Str_26461(_local_2);
         }
 
-        private function _Str_3702(k:IMessageEvent):void
+        private function onGroupDetails(k:IMessageEvent):void
         {
             var _local_2:HabboGroupDetailsData = HabboGroupDetailsMessageEvent(k).data;
-            this._detailsWindowCtrl._Str_3702(_local_2);
-            this._extendedProfileWindowCtrl._Str_3702(_local_2);
-            this._groupRoomInfoCtrl._Str_3702(_local_2);
+            this._detailsWindowCtrl.onGroupDetails(_local_2);
+            this._extendedProfileWindowCtrl.onGroupDetails(_local_2);
+            this._groupRoomInfoCtrl.onGroupDetails(_local_2);
         }
 
         private function _Str_24027(k:IMessageEvent):void

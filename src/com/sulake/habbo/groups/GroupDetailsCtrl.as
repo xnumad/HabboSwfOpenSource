@@ -74,7 +74,7 @@
             }
         }
 
-        public function _Str_3702(k:IWindowContainer, _arg_2:HabboGroupDetailsData):void
+        public function onGroupDetails(k:IWindowContainer, _arg_2:HabboGroupDetailsData):void
         {
             this._selectedGroup = _arg_2;
             this._Str_2755(k);
