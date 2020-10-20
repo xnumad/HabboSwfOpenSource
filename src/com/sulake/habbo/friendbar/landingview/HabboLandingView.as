@@ -313,7 +313,7 @@
         override protected function initComponent():void
         {
             this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
-            this._catalog.events.addEventListener(CatalogEvent.CATALOG_INVISIBLE_PAGE_VISITED, this._Str_24288);
+            this._catalog.events.addEventListener(CatalogEvent.CATALOG_INVISIBLE_PAGE_VISITED, this.onExpiredLinkCLick);
             if (this._Str_13959())
             {
                 this._gameManager.events.addEventListener(GameCenterEvent.GAME_CONFIGURATIONS_INITIALIZED, this.onGameConfigurationsInitialized);
@@ -324,7 +324,7 @@
             }
         }
 
-        private function _Str_24288(k:CatalogEvent):void
+        private function onExpiredLinkCLick(k:CatalogEvent):void
         {
             if (((((this._isInitialized) && (!(this._landingViewLayout == null))) && (!(this._landingViewLayout.window == null))) && (this._landingViewLayout.window.visible)))
             {
