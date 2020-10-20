@@ -4,16 +4,16 @@
 
     public class SignMessageComposer implements IMessageComposer
     {
-        private var _Str_22216:int;
+        private var _signID:int;
 
         public function SignMessageComposer(k:int)
         {
-            this._Str_22216 = k;
+            this._signID = k;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_22216];
+            return [this._signID];
         }
 
         public function dispose():void
