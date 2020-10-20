@@ -932,7 +932,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_5756;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.*;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.SetActivatedBadgesComposer;
-	import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_11090;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.badges.RequestABadgeComposer;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_7854;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_7891;
 	import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_9250;
@@ -1797,7 +1797,7 @@
             OUTGOING_PACKETS[3050] = _Str_11834;
             OUTGOING_PACKETS[3060] = _Str_7634;
             OUTGOING_PACKETS[3074] = _Str_12509;
-            OUTGOING_PACKETS[3077] = _Str_11090;
+            OUTGOING_PACKETS[3077] = RequestABadgeComposer;
             OUTGOING_PACKETS[3082] = _Str_11484;
             OUTGOING_PACKETS[3086] = GetCraftingRecipesAvailableComposer;
             OUTGOING_PACKETS[309] = _Str_5262;

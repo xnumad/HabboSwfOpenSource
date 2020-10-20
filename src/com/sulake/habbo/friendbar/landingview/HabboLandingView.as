@@ -52,7 +52,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12081;
     import com.sulake.habbo.session.product.IProductDataListener;
     import com.sulake.habbo.session.product.IProductData;
-    import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_11090;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.badges.RequestABadgeComposer;
     import com.sulake.habbo.communication.messages.outgoing.landingview.votes.CommunityGoalVoteMessageComposer;
     import com.sulake.habbo.session.ISessionDataManager;
 
@@ -442,7 +442,7 @@
 
         public function requestBadge(k:String):void
         {
-            this.send(new _Str_11090(k));
+            this.send(new RequestABadgeComposer(k));
         }
 
         public function communityGoalVote(k:int):void
