@@ -233,7 +233,7 @@
             }
             this._landingViewLayout = new WidgetContainerLayout(this);
             this.activate();
-            if (this._Str_13959())
+            if (this.isForwardingToGameCenter())
             {
                 this._Str_23627();
             }
@@ -314,7 +314,7 @@
         {
             this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
             this._catalog.events.addEventListener(CatalogEvent.CATALOG_INVISIBLE_PAGE_VISITED, this.onExpiredLinkCLick);
-            if (this._Str_13959())
+            if (this.isForwardingToGameCenter())
             {
                 this._gameManager.events.addEventListener(GameCenterEvent.GAME_CONFIGURATIONS_INITIALIZED, this.onGameConfigurationsInitialized);
             }
@@ -342,7 +342,7 @@
 
         private function tryInitialize():void
         {
-            if (((!(this._Str_13959())) || (this._gameCenterOK)))
+            if (((!(this.isForwardingToGameCenter())) || (this._gameCenterOK)))
             {
                 this._errorLayout = this.getXmlWindow("initialization_error");
                 this._errorLayout.visible = false;
@@ -455,7 +455,7 @@
             return _sessionDataManager;
         }
 
-        private function _Str_13959():Boolean
+        private function isForwardingToGameCenter():Boolean
         {
             return propertyExists("game.name");
         }
@@ -465,7 +465,7 @@
             var k:String;
             if (this._gameManager)
             {
-                if (this._Str_13959())
+                if (this.isForwardingToGameCenter())
                 {
                     k = getProperty("game.name");
                     if (((k) && (!(k == "default"))))
