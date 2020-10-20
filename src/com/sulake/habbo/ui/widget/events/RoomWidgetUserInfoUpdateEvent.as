@@ -23,7 +23,7 @@
         private var _groupBadgeId:String = "";
         private var _carryItem:int = 0;
         private var _userRoomId:int = 0;
-        private var _Str_8522:Boolean = false;
+        private var _isSpectatorMode:Boolean = false;
         private var _realName:String = "";
         private var _Str_3947:Boolean = false;
         private var _amIOwner:Boolean = false;
@@ -310,12 +310,12 @@
 
         public function set _Str_4780(k:Boolean):void
         {
-            this._Str_8522 = k;
+            this._isSpectatorMode = k;
         }
 
         public function get _Str_4780():Boolean
         {
-            return this._Str_8522;
+            return this._isSpectatorMode;
         }
 
         public function set realName(k:String):void
