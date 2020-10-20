@@ -16,7 +16,7 @@
         function _Str_5941(_arg_1:int):void;
         function _Str_16233(_arg_1:int):void;
         function _Str_20495(_arg_1:int):void;
-        function _Str_18552(_arg_1:int):void;
+        function sendChangePostureMessage(_arg_1:int):void;
         function sendCreditFurniRedeemMessage(_arg_1:int):void;
         function sendPresentOpenMessage(_arg_1:int):void;
         function sendOpenPetPackageMessage(_arg_1:int, _arg_2:String):void;

@@ -255,7 +255,7 @@
                         _local_8 = (k as RoomWidgetChangePostureMessage);
                         if (_local_8 != null)
                         {
-                            this._container.roomSession._Str_18552(_local_8.posture);
+                            this._container.roomSession.sendChangePostureMessage(_local_8.posture);
                         }
                     }
                     break;

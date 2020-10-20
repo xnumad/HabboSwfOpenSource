@@ -805,7 +805,7 @@
                 _local_4 = this._roomSessionManager.getSession(this._roomEngine.activeRoomId);
                 if (_local_4 != null)
                 {
-                    _local_4._Str_18552(RoomWidgetChangePostureMessage._Str_1553);
+                    _local_4.sendChangePostureMessage(RoomWidgetChangePostureMessage._Str_1553);
                 }
             }
         }

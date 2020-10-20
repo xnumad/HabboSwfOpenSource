@@ -328,7 +328,7 @@
             this._connection.send(new _Str_11206(k));
         }
 
-        public function _Str_18552(k:int):void
+        public function sendChangePostureMessage(k:int):void
         {
             this._connection.send(new _Str_10078(k));
         }
