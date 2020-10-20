@@ -186,7 +186,7 @@
                                         HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "respect");
                                         return null;
                                     case ":sign":
-                                        this._container.roomSession._Str_16233(int(commandArgument));
+                                        this._container.roomSession.sendSignMessage(int(commandArgument));
                                         HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "sign", null, int(commandArgument));
                                         return null;
                                     case ":chooser":

@@ -315,7 +315,7 @@
             this._connection.send(new _Str_9976(k));
         }
 
-        public function _Str_16233(k:int):void
+        public function sendSignMessage(k:int):void
         {
             if (((k >= 0) && (k <= 17)))
             {

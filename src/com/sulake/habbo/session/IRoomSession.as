@@ -14,7 +14,7 @@
         function _Str_19359(_arg_1:String, _arg_2:String, _arg_3:int=0):void;
         function _Str_21148(_arg_1:Boolean):void;
         function _Str_5941(_arg_1:int):void;
-        function _Str_16233(_arg_1:int):void;
+        function sendSignMessage(_arg_1:int):void;
         function sendDanceMessage(_arg_1:int):void;
         function sendChangePostureMessage(_arg_1:int):void;
         function sendCreditFurniRedeemMessage(_arg_1:int):void;
