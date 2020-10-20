@@ -630,7 +630,7 @@
             this._arePetsAllowed = k;
         }
 
-        public function get _Str_18311():Boolean
+        public function get areBotsAllowed():Boolean
         {
             return this._isRoomOwner;
         }

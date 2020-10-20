@@ -196,7 +196,7 @@
             {
                 return false;
             }
-            if (!this._controller.roomSession._Str_18311)
+            if (!this._controller.roomSession.areBotsAllowed)
             {
                 return false;
             }

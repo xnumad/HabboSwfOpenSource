@@ -69,7 +69,7 @@
         function set isSpectatorMode(_arg_1:Boolean):void;
         function get _Str_9439():Boolean;
         function set _Str_9439(_arg_1:Boolean):void;
-        function get _Str_18311():Boolean;
+        function get areBotsAllowed():Boolean;
         function get isUserDecorating():Boolean;
         function set isUserDecorating(_arg_1:Boolean):void;
         function get isGameSession():Boolean;
