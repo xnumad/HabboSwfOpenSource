@@ -36,7 +36,7 @@
             return !(this._textColor == _Str_16303);
         }
 
-        public function get _Str_16698():Boolean
+        public function get isEtchingColorSet():Boolean
         {
             return !(this._etchingColor == _Str_18953);
         }

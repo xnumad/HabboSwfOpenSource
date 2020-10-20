@@ -153,7 +153,7 @@
                     {
                         _local_4.textColor = this._commonWidgetSettings.textColor;
                     }
-                    if (this._commonWidgetSettings._Str_16698)
+                    if (this._commonWidgetSettings.isEtchingColorSet)
                     {
                         _local_4.etchingColor = this._commonWidgetSettings.etchingColor;
                     }

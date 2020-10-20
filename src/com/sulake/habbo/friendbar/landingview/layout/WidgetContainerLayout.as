@@ -97,12 +97,12 @@
             {
                 return;
             }
-            if ((((_arg_2._Str_16938) || (_arg_2._Str_16698)) || (_arg_2.isEtchingPositionSet)))
+            if ((((_arg_2._Str_16938) || (_arg_2.isEtchingColorSet)) || (_arg_2.isEtchingPositionSet)))
             {
                 for each (_local_3 in findColorableChildren(search))
                 {
                     _local_3.textColor = ((_arg_2._Str_16938) ? _arg_2.textColor : _local_3.textColor);
-                    _local_3.etchingColor = ((_arg_2._Str_16698) ? _arg_2.etchingColor : _local_3.etchingColor);
+                    _local_3.etchingColor = ((_arg_2.isEtchingColorSet) ? _arg_2.etchingColor : _local_3.etchingColor);
                     _local_3.etchingPosition = ((_arg_2.isEtchingPositionSet) ? _arg_2.etchingPosition : _local_3.etchingPosition);
                 }
             }
