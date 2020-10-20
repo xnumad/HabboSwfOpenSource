@@ -101,7 +101,7 @@
                 this._Str_5447.dispose();
                 this._Str_5447 = null;
             }
-            this._Str_5127();
+            this.resizeWindow();
         }
 
         public function dispose():void
@@ -188,10 +188,10 @@
             this._Str_13821.width = this._Str_7458.right;
             this._window.width = (this._Str_7458.right + (2 * _Str_4658));
             this._Str_7458.limits.minHeight = (this._Str_5447.height + _Str_4658);
-            this._Str_5127();
+            this.resizeWindow();
         }
 
-        private function _Str_5127():void
+        private function resizeWindow():void
         {
             this._Str_7458.arrangeListItems();
             this._Str_13821.arrangeListItems();

@@ -293,7 +293,7 @@
             this._gameCenterViewWindow.invalidate();
             this._gameCenterViewWindow.visible = true;
             this.selectGame(k, _arg_2);
-            this._Str_5127();
+            this.resizeWindow();
         }
 
         public function disable():void
@@ -305,7 +305,7 @@
             this._gameCenterViewWindow.visible = false;
         }
 
-        private function _Str_5127():void
+        private function resizeWindow():void
         {
             if (!this._gameCenterViewWindow)
             {
@@ -345,7 +345,7 @@
 
         private function _Str_3630(k:WindowEvent):void
         {
-            this._Str_5127();
+            this.resizeWindow();
         }
 
         private function _Str_23441(k:WindowMouseEvent):void

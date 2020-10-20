@@ -212,7 +212,7 @@
             }
             this._talentProgressMeter = new TalentProgressMeter(this._habboTalent, this);
             this._panoramaList.setListItemIndex(this._panoramaList.getListItemByName("end_padding"), (this._panoramaList.numListItems - 1));
-            this._Str_5127();
+            this.resizeWindow();
             this._Str_19216(_local_5);
         }
 
@@ -582,7 +582,7 @@
             }
         }
 
-        private function _Str_5127():void
+        private function resizeWindow():void
         {
             if (((this._dialog == null) || (this._dialog.disposed)))
             {
@@ -600,7 +600,7 @@
 
         private function _Str_3630(k:WindowEvent):void
         {
-            this._Str_5127();
+            this.resizeWindow();
         }
 
         private function _Str_3061(k:WindowEvent, _arg_2:IWindow):void

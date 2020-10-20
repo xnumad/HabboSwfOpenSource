@@ -173,7 +173,7 @@
             {
                 registeredWidget.refresh(this.windowContainer);
             }
-            this._Str_5127();
+            this.resizeWindow();
             this.landingView.windowManager.getWindowContext(_Str_3446).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
             this.windowContainer.invalidate();
             if (this._Str_21419 != null)
@@ -273,7 +273,7 @@
             return this._Str_14617() == LANDING_VIEW_GENERIC_RECEPTION;
         }
 
-        protected function _Str_5127():void
+        protected function resizeWindow():void
         {
             var k:WidgetPlaceholder;
             if (this.windowContainer != null)
@@ -323,7 +323,7 @@
 
         protected function _Str_3630(k:WindowEvent):void
         {
-            this._Str_5127();
+            this.resizeWindow();
         }
 
         private function _Str_22475(k:String):void
