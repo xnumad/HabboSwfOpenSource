@@ -348,12 +348,12 @@
             this._isFriend = k;
         }
 
-        public function get _Str_18096():Boolean
+        public function get amIAnAmbassador():Boolean
         {
             return this.isAmbassador;
         }
 
-        public function set _Str_18096(k:Boolean):void
+        public function set amIAnAmbassador(k:Boolean):void
         {
             this.isAmbassador = k;
         }

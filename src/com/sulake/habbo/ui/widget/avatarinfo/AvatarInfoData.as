@@ -213,7 +213,7 @@
             this._targetRoomControllerLevel = k.targetRoomControllerLevel;
             this._carryItemType = k.carryItem;
             this._isFriend = k.isFriend;
-            this._isAmbassador = k._Str_18096;
+            this._isAmbassador = k.amIAnAmbassador;
         }
     }
 }
