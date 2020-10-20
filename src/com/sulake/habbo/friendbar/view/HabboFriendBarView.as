@@ -552,9 +552,9 @@
         {
             var _local_2:BitmapData;
             var _local_3:IAvatarImage;
-            if (_Str_3470)
+            if (_avatarManager)
             {
-                _local_3 = _Str_3470.createAvatarImage(k, AvatarScaleType.LARGE, null, this);
+                _local_3 = _avatarManager.createAvatarImage(k, AvatarScaleType.LARGE, null, this);
                 if (_local_3)
                 {
                     _local_2 = _local_3._Str_818(AvatarSetType.HEAD);

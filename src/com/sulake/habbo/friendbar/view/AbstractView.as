@@ -21,7 +21,7 @@
     public class AbstractView extends Component 
     {
         protected var _windowManager:IHabboWindowManager;
-        protected var _Str_3470:IAvatarRenderManager;
+        protected var _avatarManager:IAvatarRenderManager;
         protected var _localizationManager:IHabboLocalizationManager;
         protected var _Str_2318:ISessionDataManager;
         protected var _tracking:IHabboTracking;
@@ -39,7 +39,7 @@
                 _Str_2318 = k;
             }), new ComponentDependency(new IIDAvatarRenderManager(), function (k:IAvatarRenderManager):void
             {
-                _Str_3470 = k;
+                _avatarManager = k;
             }), new ComponentDependency(new IIDHabboWindowManager(), function (k:IHabboWindowManager):void
             {
                 _windowManager = k;

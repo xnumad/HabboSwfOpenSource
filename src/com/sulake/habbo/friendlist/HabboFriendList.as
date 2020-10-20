@@ -106,7 +106,7 @@
         private var _communicationManager:IHabboCommunicationManager;
         private var _messenger:IHabboMessenger;
         private var _localizationManager:IHabboLocalizationManager;
-        private var _Str_3470:IAvatarRenderManager;
+        private var _avatarManager:IAvatarRenderManager;
         private var _sessionDataManager:ISessionDataManager;
         private var _tracking:IHabboTracking;
         private var _Str_19590:_Str_8767;
@@ -148,7 +148,7 @@
                 _messenger = k;
             }, false), new ComponentDependency(new IIDAvatarRenderManager(), function (k:IAvatarRenderManager):void
             {
-                _Str_3470 = k;
+                _avatarManager = k;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
                 _localizationManager = k;
@@ -405,7 +405,7 @@
         public function getAvatarFaceBitmap(k:String):BitmapData
         {
             var _local_2:Boolean = getBoolean("zoom.enabled");
-            var _local_3:IAvatarImage = this._Str_3470.createAvatarImage(k, ((_local_2) ? AvatarScaleType.LARGE : AvatarScaleType.SMALL), null, this);
+            var _local_3:IAvatarImage = this._avatarManager.createAvatarImage(k, ((_local_2) ? AvatarScaleType.LARGE : AvatarScaleType.SMALL), null, this);
             if (!_local_3)
             {
                 return null;
