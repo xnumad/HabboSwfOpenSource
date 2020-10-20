@@ -139,7 +139,7 @@
             {
                 _local_6 = this.handler.container.sessionDataManager.getGroupBadgeId(_arg_2);
                 this.userData.groupId = _arg_2;
-                this.userData._Str_5235 = _local_6;
+                this.userData.groupBadgeId = _local_6;
                 this.userData.groupName = _arg_4;
                 this._userView._Str_16673(_local_6);
             }
@@ -492,7 +492,7 @@
                 }
                 return;
             }
-            if (k == this.userData._Str_5235)
+            if (k == this.userData.groupBadgeId)
             {
                 this._userView._Str_16673(k);
             }

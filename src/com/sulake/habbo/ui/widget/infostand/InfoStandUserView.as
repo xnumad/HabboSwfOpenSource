@@ -516,7 +516,7 @@
         {
             this._Str_10630();
             this._Str_21116();
-            this._Str_16673(k._Str_5235);
+            this._Str_16673(k.groupBadgeId);
             this._Str_17290([]);
             this._Str_11602(k);
         }

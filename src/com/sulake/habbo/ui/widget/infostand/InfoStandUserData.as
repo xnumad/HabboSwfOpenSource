@@ -47,7 +47,7 @@
             this._groupName = k;
         }
 
-        public function set _Str_5235(k:String):void
+        public function set groupBadgeId(k:String):void
         {
             this._groupBadgeId = k;
         }
@@ -102,7 +102,7 @@
             return this._groupName;
         }
 
-        public function get _Str_5235():String
+        public function get groupBadgeId():String
         {
             return this._groupBadgeId;
         }
@@ -144,7 +144,7 @@
             this.badges = k.badges;
             this.groupId = k.groupId;
             this.groupName = k.groupName;
-            this._Str_5235 = k._Str_5235;
+            this.groupBadgeId = k.groupBadgeId;
             this.respectLeft = k.respectLeft;
             this.carryItem = k.carryItem;
             this._Str_3313 = k._Str_3313;

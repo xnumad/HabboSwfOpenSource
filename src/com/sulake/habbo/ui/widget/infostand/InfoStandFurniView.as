@@ -879,7 +879,7 @@
             }
         }
 
-        public function set _Str_5235(k:String):void
+        public function set groupBadgeId(k:String):void
         {
             var _local_2:IWidgetWindow = (this._Str_2341.findChildByName("group_badge_image") as IWidgetWindow);
             var _local_3:_Str_2402 = (_local_2.widget as _Str_2402);

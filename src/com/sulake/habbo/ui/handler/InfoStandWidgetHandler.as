@@ -209,7 +209,7 @@
             var _local_2:HabboGroupDetailsData = k.data;
             if (this._widget.furniData.groupId == _local_2.groupId)
             {
-                this._widget._Str_21463._Str_5235 = _local_2.badgeCode;
+                this._widget._Str_21463.groupBadgeId = _local_2.badgeCode;
                 this._widget._Str_21463.groupName = _local_2.groupName;
             }
         }
@@ -906,7 +906,7 @@
                 this._Str_16287(_local_12, _local_13);
             }
             _local_6.groupId = int(_arg_4.groupID);
-            _local_6._Str_5235 = this._container.sessionDataManager.getGroupBadgeId(int(_arg_4.groupID));
+            _local_6.groupBadgeId = this._container.sessionDataManager.getGroupBadgeId(int(_arg_4.groupID));
             _local_6.groupName = _arg_4.groupName;
             _local_6.badges = this._container.roomSession.userDataManager.getUserBadges(_arg_4.id);
             _local_6.figure = _arg_4.figure;

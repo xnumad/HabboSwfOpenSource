@@ -148,12 +148,12 @@
             return this._groupName;
         }
 
-        public function set _Str_5235(k:String):void
+        public function set groupBadgeId(k:String):void
         {
             this._groupBadgeId = k;
         }
 
-        public function get _Str_5235():String
+        public function get groupBadgeId():String
         {
             return this._groupBadgeId;
         }
