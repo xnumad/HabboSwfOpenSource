@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10169 implements IMessageComposer 
+    public class WhisperMessageComposer implements IMessageComposer
     {
         private var _text:String;
         private var _Str_10061:String;
         private var _Str_3567:int = 0;
 
-        public function _Str_10169(k:String, _arg_2:String, _arg_3:int=0)
+        public function WhisperMessageComposer(k:String, _arg_2:String, _arg_3:int=0)
         {
             this._Str_10061 = k;
             this._text = _arg_2;

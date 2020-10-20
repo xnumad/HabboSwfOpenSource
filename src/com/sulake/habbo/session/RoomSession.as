@@ -14,7 +14,7 @@
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11637;
     import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_12180;
-    import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_10169;
+    import com.sulake.habbo.communication.messages.outgoing.room.chat.WhisperMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.chat.CancelTypingMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_9976;
@@ -295,7 +295,7 @@
 
         public function sendWhisperMessage(k:String, _arg_2:String, _arg_3:int=0):void
         {
-            this._connection.send(new _Str_10169(k, _arg_2, _arg_3));
+            this._connection.send(new WhisperMessageComposer(k, _arg_2, _arg_3));
         }
 
         public function sendChatTypingMessage(k:Boolean):void
