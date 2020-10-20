@@ -948,7 +948,7 @@
 	import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8980;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_10169;
-	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_10643;
+	import com.sulake.habbo.communication.messages.outgoing.room.chat.CancelTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_12180;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_9917;
@@ -1580,7 +1580,7 @@
             OUTGOING_PACKETS[1458] = JoinPlayerQueueMessageComposer;
             OUTGOING_PACKETS[1461] = _Str_11774;
             OUTGOING_PACKETS[1472] = _Str_12318;
-            OUTGOING_PACKETS[1474] = _Str_10643;
+            OUTGOING_PACKETS[1474] = CancelTypingMessageComposer;
             OUTGOING_PACKETS[1477] = _Str_11568;
             OUTGOING_PACKETS[1481] = _Str_11737;
             OUTGOING_PACKETS[15] = PickIssuesMessageComposer;
