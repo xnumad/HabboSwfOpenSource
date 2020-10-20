@@ -1093,7 +1093,7 @@
 
         public function _SafeStr_13209():void
         {
-            this._roomSessionManager._Str_22920();
+            this._roomSessionManager.disposeGameSession();
             if (this._gameArenaView)
             {
                 this._gameArenaView.dispose();

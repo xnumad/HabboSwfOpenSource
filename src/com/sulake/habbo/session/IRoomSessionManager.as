@@ -12,7 +12,7 @@
         function get events():IEventDispatcher;
         function get _Str_22809():Boolean;
         function _Str_24970():void;
-        function _Str_22920():void;
+        function disposeGameSession():void;
         function disposeSession(_arg_1:int, _arg_2:Boolean=true):void;
     }
 }

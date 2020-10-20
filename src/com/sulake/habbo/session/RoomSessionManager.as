@@ -346,7 +346,7 @@
             events.dispatchEvent(new RoomSessionEvent(RoomSessionEvent.CREATED, k));
         }
 
-        public function _Str_22920():void
+        public function disposeGameSession():void
         {
             var k:String = this.getRoomIdentifier(1);
             var _local_2:RoomSession = this._sessions.getValue(k);
