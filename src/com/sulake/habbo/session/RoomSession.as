@@ -458,7 +458,7 @@
             this._connection.send(new _Str_12318(k));
         }
 
-        public function _Str_21562(k:int):void
+        public function togglePetBreedingPermission(k:int):void
         {
             this._connection.send(new _Str_12394(k));
         }

@@ -78,7 +78,7 @@
         function get isNuxNotComplete():Boolean;
         function set isNuxNotComplete(_arg_1:Boolean):void;
         function harvestPet(_arg_1:int):void;
-        function _Str_21562(_arg_1:int):void;
+        function togglePetBreedingPermission(_arg_1:int):void;
         function _Str_21305(_arg_1:int):void;
         function _Str_19996():void;
     }
