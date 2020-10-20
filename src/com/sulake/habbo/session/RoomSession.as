@@ -365,7 +365,7 @@
             this._connection.send(new _Str_10045());
         }
 
-        public function _Str_21689(k:String, _arg_2:String, _arg_3:String, _arg_4:String=null, _arg_5:int=0):void
+        public function sendConversionPoint(k:String, _arg_2:String, _arg_3:String, _arg_4:String=null, _arg_5:int=0):void
         {
             this._connection.send(new EventLogMessageComposer(k, _arg_2, _arg_3, _arg_4, _arg_5));
         }

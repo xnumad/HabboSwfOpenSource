@@ -51,7 +51,7 @@
                     {
                         return null;
                     }
-                    this._container.roomSession._Str_21689(_local_2.category, _local_2._Str_23854, _local_2.action, _local_2._Str_22656, _local_2._Str_24399);
+                    this._container.roomSession.sendConversionPoint(_local_2.category, _local_2._Str_23854, _local_2.action, _local_2._Str_22656, _local_2._Str_24399);
                     break;
             }
             return null;
