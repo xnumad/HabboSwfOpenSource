@@ -706,7 +706,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10097;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10101;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10141;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10243;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10477;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10710;
@@ -1889,7 +1889,7 @@
             OUTGOING_PACKETS[3637] = _Str_11661;
             OUTGOING_PACKETS[3666] = _Str_10640;
             OUTGOING_PACKETS[367] = _Str_7664;
-            OUTGOING_PACKETS[3698] = _Str_10243;
+            OUTGOING_PACKETS[3698] = OpenPetPackageMessageComposer;
             OUTGOING_PACKETS[3720] = PostQuizAnswersComposer;
             OUTGOING_PACKETS[3736] = _Str_9845;
             OUTGOING_PACKETS[3742] = _Str_12485;

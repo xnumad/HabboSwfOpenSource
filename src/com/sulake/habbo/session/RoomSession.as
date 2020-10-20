@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10078;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10141;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10243;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11262;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9899;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10045;
@@ -345,7 +345,7 @@
 
         public function sendOpenPetPackageMessage(k:int, _arg_2:String):void
         {
-            this._connection.send(new _Str_10243(k, _arg_2));
+            this._connection.send(new OpenPetPackageMessageComposer(k, _arg_2));
         }
 
         public function sendRoomDimmerGetPresetsMessage():void
