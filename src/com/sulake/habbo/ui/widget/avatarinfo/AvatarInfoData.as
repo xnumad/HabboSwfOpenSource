@@ -211,7 +211,7 @@
             this._allowNameChange = k.allowNameChange;
             this._isGuildRoom = k.isGuildRoom;
             this._targetRoomControllerLevel = k.targetRoomControllerLevel;
-            this._carryItemType = k._Str_3249;
+            this._carryItemType = k.carryItem;
             this._isFriend = k.isFriend;
             this._isAmbassador = k._Str_18096;
         }

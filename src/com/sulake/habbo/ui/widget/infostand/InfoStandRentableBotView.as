@@ -120,7 +120,7 @@
                 this._Str_9667(OWNER_TEXT, false, "");
             }
             this._Str_25241();
-            this._Str_22346(k._Str_3249);
+            this._Str_22346(k.carryItem);
             var _local_2:Array = k.badges;
             this._Str_5605((((_local_2) && (_local_2.length > 0)) ? _local_2[0] : null));
             this._Str_7907(k.figure);

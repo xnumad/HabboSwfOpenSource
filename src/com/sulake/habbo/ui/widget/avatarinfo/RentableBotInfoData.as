@@ -116,7 +116,7 @@
             this.roomIndex = k._Str_3313;
             this.amIOwner = k.amIOwner;
             this.amIAnyRoomController = k.amIAnyRoomController;
-            this.carryItemType = k._Str_3249;
+            this.carryItemType = k.carryItem;
             this.botSkills = k.botSkills;
             this._name = k.name;
         }

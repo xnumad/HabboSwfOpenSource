@@ -230,7 +230,7 @@
             _local_2.text = k.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         }
 
-        public function set _Str_3249(k:int):void
+        public function set carryItem(k:int):void
         {
             var _local_6:String;
             var _local_2:ITextWindow = (this._infoElements.getListItemByName("handitem_txt") as ITextWindow);
@@ -285,7 +285,7 @@
             this.name = k.name;
             this._Str_12782(k.motto);
             this.activityPoints = k.activityPoints;
-            this._Str_3249 = k._Str_3249;
+            this.carryItem = k.carryItem;
             this._Str_7907(k.figure);
             this._Str_25101(k.badges);
         }

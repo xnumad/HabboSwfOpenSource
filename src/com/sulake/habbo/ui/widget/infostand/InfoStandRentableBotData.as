@@ -34,7 +34,7 @@
             this._badges = k;
         }
 
-        public function set _Str_3249(k:int):void
+        public function set carryItem(k:int):void
         {
             this._carryItem = k;
         }
@@ -69,7 +69,7 @@
             return this._badges.slice();
         }
 
-        public function get _Str_3249():int
+        public function get carryItem():int
         {
             return this._carryItem;
         }
@@ -104,7 +104,7 @@
             this.userId = k.id;
             this.name = k.name;
             this.badges = k.badges;
-            this._Str_3249 = k._Str_3249;
+            this.carryItem = k.carryItem;
             this._Str_3313 = k._Str_3313;
             this.amIOwner = k.amIOwner;
             this.amIAnyRoomController = k.amIAnyRoomController;

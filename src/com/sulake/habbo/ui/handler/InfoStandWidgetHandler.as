@@ -765,7 +765,7 @@
             var _local_7:IRoomObject = this._container.roomEngine.getRoomObject(k, _arg_2, _arg_3);
             if (_local_7 != null)
             {
-                _local_6._Str_3249 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
+                _local_6.carryItem = _local_7.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
             }
             _local_6.amIOwner = this._container.roomSession.isRoomController;
             _local_6.isGuildRoom = this._container.roomSession.isGuildRoom;
@@ -792,7 +792,7 @@
             var _local_6:IRoomObject = this._container.roomEngine.getRoomObject(k, _arg_2, _arg_3);
             if (_local_6 != null)
             {
-                _local_5._Str_3249 = _local_6.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
+                _local_5.carryItem = _local_6.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
             }
             _local_5.amIOwner = this._container.roomSession.isRoomController;
             _local_5.roomControllerLevel = this._container.roomSession.roomControllerLevel;
@@ -835,7 +835,7 @@
             var _local_7:IRoomObject = this._container.roomEngine.getRoomObject(k, _arg_2, _arg_3);
             if (_local_7 != null)
             {
-                _local_6._Str_3249 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
+                _local_6.carryItem = _local_7.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
             }
             if (_local_5 == RoomWidgetUserInfoUpdateEvent.OWN_USER)
             {

@@ -57,7 +57,7 @@
             this._respectLeft = k;
         }
 
-        public function set _Str_3249(k:int):void
+        public function set carryItem(k:int):void
         {
             this._carryItem = k;
         }
@@ -112,7 +112,7 @@
             return this._respectLeft;
         }
 
-        public function get _Str_3249():int
+        public function get carryItem():int
         {
             return this._carryItem;
         }
@@ -146,7 +146,7 @@
             this.groupName = k.groupName;
             this._Str_5235 = k._Str_5235;
             this.respectLeft = k.respectLeft;
-            this._Str_3249 = k._Str_3249;
+            this.carryItem = k.carryItem;
             this._Str_3313 = k._Str_3313;
             this.type = k.type;
         }
