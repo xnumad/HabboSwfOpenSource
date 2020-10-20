@@ -335,7 +335,7 @@
                                         {
 											if (commandArgument != null && commandArgument != "")
 											{
-												this._container.roomSession._Str_19906(parseInt(commandArgument));
+												this._container.roomSession.sendVisitFlatMessage(parseInt(commandArgument));
 											}
                                         }
                                         return null;

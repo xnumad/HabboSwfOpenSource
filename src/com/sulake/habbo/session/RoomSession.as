@@ -395,7 +395,7 @@
             this._connection.send(new _Str_9928(k));
         }
 
-        public function _Str_19906(k:int):void
+        public function sendVisitFlatMessage(k:int):void
         {
             this._connection.send(new _Str_5756(k));
         }
