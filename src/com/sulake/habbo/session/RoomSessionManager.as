@@ -46,7 +46,7 @@
     {
         public static const SETUP_WITHOUT_COMMUNICATION:uint = 2;
         public static const SETUP_WITHOUT_TRACKING:uint = 3;
-        public static const _Str_17871:uint = 4;
+        public static const SETUP_WITHOUT_ROOMENGINE:uint = 4;
 
         private var _communication:IHabboCommunicationManager = null;
         private var _handlers:Array = null;
@@ -94,7 +94,7 @@
             }, false), new ComponentDependency(new IIDHabboConfigurationManager(), null), new ComponentDependency(new IIDRoomEngine(), function (k:IRoomEngine):void
             {
                 _roomEngine = k;
-            }, ((flags & _Str_17871) == 0), [{
+            }, ((flags & SETUP_WITHOUT_ROOMENGINE) == 0), [{
                 "type":RoomEngineEvent.ENGINE_INITIALIZED,
                 "callback":this.onRoomEngineInitialized
             }])]));
