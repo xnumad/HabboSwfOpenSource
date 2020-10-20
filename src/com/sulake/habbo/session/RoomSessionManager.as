@@ -260,7 +260,7 @@
             _local_3.roomId = 1;
             _local_3._Str_18062 = "";
             _local_3.habboTracking = this._habboTracking;
-            _local_3._Str_21443 = new _Str_9845(k, _arg_2);
+            _local_3.openConnectionComposer = new _Str_9845(k, _arg_2);
             return this.createSession(_local_3);
         }
 

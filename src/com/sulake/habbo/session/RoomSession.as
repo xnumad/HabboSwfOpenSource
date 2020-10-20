@@ -159,12 +159,12 @@
             this._roomResources = k;
         }
 
-        public function get _Str_21443():IMessageComposer
+        public function get openConnectionComposer():IMessageComposer
         {
             return this._openConnectionComposer;
         }
 
-        public function set _Str_21443(k:IMessageComposer):void
+        public function set openConnectionComposer(k:IMessageComposer):void
         {
             this._openConnectionComposer = k;
         }
