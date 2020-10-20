@@ -443,7 +443,7 @@
             this._connection.send(new _Str_10476(k, _arg_2));
         }
 
-        public function _Str_13781(k:int):void
+        public function pickUpPet(k:int):void
         {
             this._connection.send(new _Str_10764(k));
         }

@@ -419,7 +419,7 @@
                     this._container.sessionDataManager.openHabboHomePage(_local_3.id, _local_3.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_PICKUP_PET:
-                    this._container.roomSession._Str_13781(_local_2);
+                    this._container.roomSession.pickUpPet(_local_2);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_MOUNT_PET:
                     this._container.roomSession.mountPet(_local_2);

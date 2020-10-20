@@ -2136,7 +2136,7 @@
                         if (_local_10 != null)
                         {
                             _local_11 = _local_10.userDataManager.getUserDataByIndex(_arg_2);
-                            _local_10._Str_13781(_local_11.id);
+                            _local_10.pickUpPet(_local_11.id);
                         }
                     }
                     break;

@@ -549,7 +549,7 @@
             {
                 if (this._placedItemType == ProductTypeEnum.PET)
                 {
-                    (_Str_2470 as FurniturePresentWidgetHandler).container.roomSession._Str_13781(this._placedItemId);
+                    (_Str_2470 as FurniturePresentWidgetHandler).container.roomSession.pickUpPet(this._placedItemId);
                 }
                 else
                 {
