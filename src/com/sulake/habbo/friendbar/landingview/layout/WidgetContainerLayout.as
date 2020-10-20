@@ -38,7 +38,7 @@
             this._registeredWidgets = [];
             super();
             this.habboLandingView = k;
-            this._Str_22860();
+            this.registerFixedWidgets();
             this.movingBackgroundObjects = new MovingBackgroundObjects(this.landingView);
             this._commonWidgetSettings = new CommonWidgetSettings(this.landingView);
             k.registerUpdateReceiver(this, 1000);
@@ -354,7 +354,7 @@
             }
         }
 
-        private function _Str_22860():void
+        private function registerFixedWidgets():void
         {
             this.addWidgetPlaceholder(HabboLandingViewWidgets.AVATAR_IMAGE);
             this.addWidgetPlaceholder(HabboLandingViewWidgets.EXPIRING_CATALOG_PAGE);
