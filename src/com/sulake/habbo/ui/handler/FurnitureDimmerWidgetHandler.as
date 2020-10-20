@@ -73,7 +73,7 @@
                 case RoomWidgetDimmerChangeStateMessage.RWCDSM_CHANGE_STATE:
                     if (this._Str_6826())
                     {
-                        this._container.roomSession._Str_20755();
+                        this._container.roomSession.sendRoomDimmerChangeStateMessage();
                     }
                     break;
                 case RoomWidgetDimmerPreviewMessage.RWDPM_PREVIEW_DIMMER_PRESET:

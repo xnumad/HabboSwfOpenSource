@@ -360,7 +360,7 @@
             this._connection.send(new _Str_9899(k, _arg_2, _local_7, _arg_4, _arg_5));
         }
 
-        public function _Str_20755():void
+        public function sendRoomDimmerChangeStateMessage():void
         {
             this._connection.send(new _Str_10045());
         }
