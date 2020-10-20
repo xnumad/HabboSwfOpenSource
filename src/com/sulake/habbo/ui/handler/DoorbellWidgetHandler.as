@@ -49,7 +49,7 @@
             {
                 case RoomWidgetLetUserInMessage.RWLUIM_LET_USER_IN:
                     _local_2 = (k as RoomWidgetLetUserInMessage);
-                    this._container.roomSession._Str_20488(_local_2.userName, _local_2._Str_23117);
+                    this._container.roomSession.letUserIn(_local_2.userName, _local_2._Str_23117);
                     break;
             }
             return null;

@@ -438,7 +438,7 @@
             this._connection.send(_local_3);
         }
 
-        public function _Str_20488(k:String, _arg_2:Boolean):void
+        public function letUserIn(k:String, _arg_2:Boolean):void
         {
             this._connection.send(new _Str_10476(k, _arg_2));
         }

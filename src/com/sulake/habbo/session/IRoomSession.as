@@ -38,7 +38,7 @@
         function muteUser(userId:int, minutes:int):void;
         function _Str_20139(_arg_1:int):void;
         function _Str_21257(_arg_1:int):void;
-        function _Str_20488(_arg_1:String, _arg_2:Boolean):void;
+        function letUserIn(_arg_1:String, _arg_2:Boolean):void;
         function pickUpPet(_arg_1:int):void;
         function mountPet(_arg_1:int):void;
         function togglePetRidingPermission(_arg_1:int):void;
