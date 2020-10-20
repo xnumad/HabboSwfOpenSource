@@ -29,7 +29,7 @@
             return this._Str_9800;
         }
 
-        public function get _Str_7772():int
+        public function get whoCanBan():int
         {
             return this._whoCanBan;
         }

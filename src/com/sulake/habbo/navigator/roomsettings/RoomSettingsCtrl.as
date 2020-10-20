@@ -808,7 +808,7 @@
             }
             _local_4.setSelected(_local_2);
             var _local_5:ISelectorWindow = (this._window.findChildByName("moderation_ban_selector") as ISelectorWindow);
-            switch (k.roomModerationSettings._Str_7772)
+            switch (k.roomModerationSettings.whoCanBan)
             {
                 case RoomModerationSettings._Str_5047:
                     _local_2 = (this._window.findChildByName("moderation_ban_rights") as IRadioButtonWindow);
@@ -1040,10 +1040,10 @@
             switch (_local_2.name)
             {
                 case "moderation_ban_rights":
-                    k._Str_7772 = RoomModerationSettings._Str_5047;
+                    k.whoCanBan = RoomModerationSettings._Str_5047;
                     return;
                 default:
-                    k._Str_7772 = RoomModerationSettings._Str_10707;
+                    k.whoCanBan = RoomModerationSettings._Str_10707;
             }
         }
 

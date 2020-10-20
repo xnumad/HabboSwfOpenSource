@@ -209,12 +209,12 @@
             this._Str_9800 = k;
         }
 
-        public function get _Str_7772():int
+        public function get whoCanBan():int
         {
             return this._whoCanBan;
         }
 
-        public function set _Str_7772(k:int):void
+        public function set whoCanBan(k:int):void
         {
             this._whoCanBan = k;
         }

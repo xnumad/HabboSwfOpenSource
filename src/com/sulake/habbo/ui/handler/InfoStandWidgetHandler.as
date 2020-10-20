@@ -953,7 +953,7 @@
         {
             var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:RoomModerationSettings):Boolean
             {
-                switch (_arg_2._Str_7772)
+                switch (_arg_2.whoCanBan)
                 {
                     case RoomModerationSettings._Str_5047:
                         return _Str_9213(k);
