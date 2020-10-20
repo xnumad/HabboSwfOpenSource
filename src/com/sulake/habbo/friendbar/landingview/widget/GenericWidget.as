@@ -48,7 +48,7 @@
             var _local_7:IStaticBitmapWrapperWindow = IStaticBitmapWrapperWindow(_arg_4.findChildByName("bitmap"));
             var _local_8:IWindow = _arg_4.findChildByName("content_container");
             _local_8.x = ((_Str_6981(_arg_2)) ? DynamicLayoutManager._Str_16813 : 0);
-            _arg_4.width = ((_Str_6981(_arg_2)) ? k.dynamicLayoutLeftPaneWidth : k._Str_9931);
+            _arg_4.width = ((_Str_6981(_arg_2)) ? k.dynamicLayoutLeftPaneWidth : k.dynamicLayoutRightPaneWidth);
             for each (_local_9 in _local_6)
             {
                 _local_10 = _local_9.split(",");
@@ -189,7 +189,7 @@
                 {
                     if ((handler is TitleElementHandler))
                     {
-                        elementWindow.width = ((_Str_6981(this._slot)) ? this._landingView.dynamicLayoutLeftPaneWidth : this._landingView._Str_9931);
+                        elementWindow.width = ((_Str_6981(this._slot)) ? this._landingView.dynamicLayoutLeftPaneWidth : this._landingView.dynamicLayoutRightPaneWidth);
                     }
                     this._container.addChild(elementWindow);
                 }

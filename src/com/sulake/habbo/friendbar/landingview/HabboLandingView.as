@@ -498,7 +498,7 @@
             return getInteger("landing.view.dynamic.leftPaneWidth", 500);
         }
 
-        public function get _Str_9931():int
+        public function get dynamicLayoutRightPaneWidth():int
         {
             return getInteger("landing.view.dynamic.rightPaneWidth", 250);
         }
