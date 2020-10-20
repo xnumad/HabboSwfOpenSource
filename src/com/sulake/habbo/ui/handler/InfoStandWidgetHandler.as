@@ -711,7 +711,7 @@
             {
                 case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
                 case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
-                    this._Str_23142(k, _local_2);
+                    this.handleGetFurniInfoMessage(k, _local_2);
                     break;
                 case RoomObjectCategoryEnum.OBJECT_CATEGORY_USER:
                     if ((((((this._container.roomSession == null) || (this._container.sessionDataManager == null)) || (this._container.events == null)) || (this._container.roomEngine == null)) || (this._container.friendList == null)))
@@ -988,7 +988,7 @@
             return k.myRoomControllerLevel >= RoomControllerLevel.GUEST;
         }
 
-        private function _Str_23142(k:RoomWidgetRoomObjectMessage, _arg_2:int):void
+        private function handleGetFurniInfoMessage(k:RoomWidgetRoomObjectMessage, _arg_2:int):void
         {
             var _local_13:int;
             var _local_14:int;
