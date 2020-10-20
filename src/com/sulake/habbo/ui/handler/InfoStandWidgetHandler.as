@@ -151,7 +151,7 @@
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionUserFigureUpdateEvent.RSUBE_FIGURE, this.onFigureUpdate);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetInfoUpdateEvent.PET_INFO, this.onPetInfo);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetCommandsUpdateEvent.PET_COMMANDS, this.onPetCommands);
-                    this._container.roomSessionManager.events.removeEventListener(RoomSessionFavouriteGroupUpdateEvent.RSFGUE_FAVOURITE_GROUP_UPDATE, this._Str_20602);
+                    this._container.roomSessionManager.events.removeEventListener(RoomSessionFavouriteGroupUpdateEvent.RSFGUE_FAVOURITE_GROUP_UPDATE, this.onFavouriteGroupUpdated);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetFigureUpdateEvent.PET_FIGURE_UPDATE, this.onPetFigureUpdate);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetBreedingResultEvent.RSPFUE_PET_BREEDING_RESULT, this.onPetBreedingResult);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetBreedingEvent.RSPFUE_PET_BREEDING, this.onPetBreedingEvent);
@@ -188,7 +188,7 @@
                 this._container.roomSessionManager.events.addEventListener(RoomSessionUserFigureUpdateEvent.RSUBE_FIGURE, this.onFigureUpdate);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetInfoUpdateEvent.PET_INFO, this.onPetInfo);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetCommandsUpdateEvent.PET_COMMANDS, this.onPetCommands);
-                this._container.roomSessionManager.events.addEventListener(RoomSessionFavouriteGroupUpdateEvent.RSFGUE_FAVOURITE_GROUP_UPDATE, this._Str_20602);
+                this._container.roomSessionManager.events.addEventListener(RoomSessionFavouriteGroupUpdateEvent.RSFGUE_FAVOURITE_GROUP_UPDATE, this.onFavouriteGroupUpdated);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetFigureUpdateEvent.PET_FIGURE_UPDATE, this.onPetFigureUpdate);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetBreedingResultEvent.RSPFUE_PET_BREEDING_RESULT, this.onPetBreedingResult);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetBreedingEvent.RSPFUE_PET_BREEDING, this.onPetBreedingEvent);
@@ -1390,7 +1390,7 @@
             }
         }
 
-        private function _Str_20602(k:RoomSessionFavouriteGroupUpdateEvent):void
+        private function onFavouriteGroupUpdated(k:RoomSessionFavouriteGroupUpdateEvent):void
         {
             if (this._widget)
             {
