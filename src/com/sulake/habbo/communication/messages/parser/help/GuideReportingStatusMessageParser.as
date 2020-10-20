@@ -12,12 +12,12 @@
         public static const GUIDE_REPORTING_STATUS_REPORTING_TOO_QUICKLY:int = 3;
 
         private var _statusCode:int;
-        private var _Str_17655:PendingGuideTicket;
+        private var _pendingTicket:PendingGuideTicket;
 
 
         public function flush():Boolean
         {
-            this._Str_17655 = null;
+            this._pendingTicket = null;
             return true;
         }
 
@@ -26,7 +26,7 @@
             this._statusCode = k.readInteger();
             if (this._statusCode == GUIDE_REPORTING_STATUS_PENDING_TICKET)
             {
-                this._Str_17655 = new PendingGuideTicket(k);
+                this._pendingTicket = new PendingGuideTicket(k);
             }
             return true;
         }
@@ -38,7 +38,7 @@
 
         public function get _Str_25474():PendingGuideTicket
         {
-            return this._Str_17655;
+            return this._pendingTicket;
         }
 
         public function get localizationCode():String
