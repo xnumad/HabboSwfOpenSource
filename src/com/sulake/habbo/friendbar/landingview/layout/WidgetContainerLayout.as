@@ -284,7 +284,7 @@
                 }
                 else
                 {
-                    this._Str_23814();
+                    this.resizeCustomLayout();
                 }
                 this.windowContainer.invalidate();
             }
@@ -305,7 +305,7 @@
             this.dynamicLayoutManager._Str_22592 = Math.min(this.windowContainer.width, (k.width + this.window.x));
         }
 
-        private function _Str_23814():void
+        private function resizeCustomLayout():void
         {
             this.windowContainer.x = 0;
             this.windowContainer.y = 0;
