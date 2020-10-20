@@ -251,7 +251,7 @@
             return true;
         }
 
-        public function _Str_17917(k:String, _arg_2:int=0):void
+        public function sendChatMessage(k:String, _arg_2:int=0):void
         {
             if (this._isGameSession)
             {

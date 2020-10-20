@@ -542,7 +542,7 @@
                     break;
                 case RoomWidgetPetCommandMessage.RWPCM_PET_COMMAND:
                     _local_15 = (k as RoomWidgetPetCommandMessage);
-                    this._container.roomSession._Str_17917(_local_15.value);
+                    this._container.roomSession.sendChatMessage(_local_15.value);
                     break;
                 case RoomWidgetChangeMottoMessage.RWVM_CHANGE_MOTTO_MESSAGE:
                     _local_16 = (k as RoomWidgetChangeMottoMessage);

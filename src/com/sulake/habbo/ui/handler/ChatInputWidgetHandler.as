@@ -412,7 +412,7 @@
                                 switch (_local_7.chatType)
                                 {
                                     case RoomWidgetChatMessage.CHAT_TYPE_SPEAK:
-                                        this._container.roomSession._Str_17917(_local_8, _local_11);
+                                        this._container.roomSession.sendChatMessage(_local_8, _local_11);
                                         break;
                                     case RoomWidgetChatMessage.CHAT_TYPE_SHOUT:
                                         this._container.roomSession.sendShoutMessage(_local_8, _local_11);
