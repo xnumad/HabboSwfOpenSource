@@ -218,7 +218,7 @@
             }
             var k:String = this.getLayout();
             this.windowContainer = IWindowContainer(this.landingView.getXmlWindow(k, 0));
-            this._Str_23921();
+            this.hideWarningIfPresent();
             if (this.landingView.getBoolean("landing.view.right_pane_dimmer.hidden"))
             {
                 if (this.windowContainer.findChildByName("right_pane_dimmer") != null)
@@ -230,7 +230,7 @@
             this.setupBottomSlotWidgetName();
         }
 
-        private function _Str_23921():void
+        private function hideWarningIfPresent():void
         {
             var k:IWindow = this.windowContainer.findChildByName("warning");
             if (k != null)
