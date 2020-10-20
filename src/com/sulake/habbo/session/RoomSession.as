@@ -415,7 +415,7 @@
             this._connection.send(new RoomUserKickMessageComposer(k));
         }
 
-        public function _Str_20746(k:int, _arg_2:String):void
+        public function banUserWithDuration(k:int, _arg_2:String):void
         {
             this._connection.send(new _Str_11568(k, _arg_2, this.roomId));
         }

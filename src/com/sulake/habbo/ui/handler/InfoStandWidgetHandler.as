@@ -394,7 +394,7 @@
                 case RoomWidgetUserActionMessage.RWUAM_BAN_USER_DAY:
                 case RoomWidgetUserActionMessage.RWUAM_BAN_USER_HOUR:
                 case RoomWidgetUserActionMessage.RWUAM_BAN_USER_PERM:
-                    this._container.roomSession._Str_20746(_local_3.id, k.type);
+                    this._container.roomSession.banUserWithDuration(_local_3.id, k.type);
                     break;
                 case RoomWidgetUserActionMessage.MUTE_USER_2MIN:
                     this._container.roomSession.muteUser(_local_3.id, 2);

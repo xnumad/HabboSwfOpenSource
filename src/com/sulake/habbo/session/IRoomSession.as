@@ -34,7 +34,7 @@
         function visit(_arg_1:String):void;
         function ambassadorAlert(_arg_1:int):void;
         function kickUser(_arg_1:int):void;
-        function _Str_20746(_arg_1:int, _arg_2:String):void;
+        function banUserWithDuration(_arg_1:int, _arg_2:String):void;
         function muteUser(userId:int, minutes:int):void;
         function assignRights(_arg_1:int):void;
         function removeRights(_arg_1:int):void;
