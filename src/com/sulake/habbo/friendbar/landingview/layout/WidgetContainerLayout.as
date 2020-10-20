@@ -4,7 +4,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
+    import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_5974;
     import flash.geom.Point;
@@ -166,7 +166,7 @@
             {
                 this.createWindow();
                 this.initializeDynamicWidgetList();
-                this.landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_4748(this._Str_12291));
+                this.landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this._Str_12291));
                 this._Str_4271 = this.landingView.getProperty("landing.view.bgtiming");
             }
             for each (registeredWidget in this._registeredWidgets)
@@ -429,7 +429,7 @@
             return this.habboLandingView;
         }
 
-        private function _Str_12291(k:_Str_4748):void
+        private function _Str_12291(k:CurrentTimingCodeMessageEvent):void
         {
             if (((k.getParser()._Str_18517 == this._Str_4271) && (this.landingView)))
             {

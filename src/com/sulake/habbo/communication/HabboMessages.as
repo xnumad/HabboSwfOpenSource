@@ -163,7 +163,7 @@
 	import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
 	import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerStatusEvent;
 	import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerPrizesEvent;
-	import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
+	import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionVotingInfoMessageEvent;
@@ -1099,7 +1099,7 @@
             INCOMING_PACKETS[1717] = UserTypingMessageEvent;
             INCOMING_PACKETS[1723] = _Str_6253;
             INCOMING_PACKETS[1730] = _Str_16653;
-            INCOMING_PACKETS[1745] = _Str_4748;
+            INCOMING_PACKETS[1745] = CurrentTimingCodeMessageEvent;
             INCOMING_PACKETS[1746] = _Str_7734;
             INCOMING_PACKETS[1748] = _Str_8135;
             INCOMING_PACKETS[1752] = _Str_7632;

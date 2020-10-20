@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.competition._Str_9068;
 
-    public class _Str_4748 extends MessageEvent implements IMessageEvent 
+    public class CurrentTimingCodeMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_4748(k:Function)
+        public function CurrentTimingCodeMessageEvent(k:Function)
         {
             super(k, _Str_9068);
         }

@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalHallOfFameData;
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalHallOfFameMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
+    import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_5974;
     import com.sulake.habbo.communication.messages.incoming.quest._Str_6257;
     import com.sulake.habbo.communication.messages.incoming.quest._Str_4106;
@@ -31,7 +31,7 @@
         override protected function registerMessageListeners():void
         {
             landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalHallOfFameMessageEvent(this._Str_22591));
-            landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_4748(this._Str_12291));
+            landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this._Str_12291));
         }
 
         override public function refresh():void
@@ -75,7 +75,7 @@
             landingView.send(new _Str_11657(this._data.goalCode, k.userId));
         }
 
-        private function _Str_12291(k:_Str_4748):void
+        private function _Str_12291(k:CurrentTimingCodeMessageEvent):void
         {
             var _local_2:String = k.getParser().code;
             if ((((k.getParser()._Str_18517 == this._schedulingStr) && (!(_local_2 == ""))) && (!(disposed))))

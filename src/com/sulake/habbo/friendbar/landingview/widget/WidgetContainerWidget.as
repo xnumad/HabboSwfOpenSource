@@ -8,7 +8,7 @@
     import com.sulake.habbo.friendbar.landingview.layout.CommonWidgetSettings;
     import com.sulake.habbo.friendbar.landingview.layout.WidgetPlaceholder;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
+    import com.sulake.habbo.communication.messages.incoming.competition.CurrentTimingCodeMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_5974;
     import com.sulake.habbo.friendbar.landingview.layout.HabboLandingViewWidgets;
     import com.sulake.habbo.friendbar.landingview.interfaces._Str_6397;
@@ -62,7 +62,7 @@
         {
             this._container = IWindowContainer(this._landingView.getXmlWindow("widget_container_widget"));
             this._commonWidgetSettings = new CommonWidgetSettings(this._landingView);
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_4748(this._Str_12291));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this._Str_12291));
             this._schedulingStr = this._landingView.getProperty((("landing.view.dynamic.slot." + this._slot) + ".conf"));
         }
 
@@ -109,7 +109,7 @@
             return _local_4;
         }
 
-        private function _Str_12291(k:_Str_4748):void
+        private function _Str_12291(k:CurrentTimingCodeMessageEvent):void
         {
             if (((k.getParser()._Str_18517 == this._schedulingStr) && (!(this.disposed))))
             {
