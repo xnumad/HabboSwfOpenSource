@@ -46,7 +46,7 @@
                     _local_2 = (k as RoomWidgetOpenPetPackageMessage);
                     if (((!(this._container == null)) && (!(this._container.roomSession == null))))
                     {
-                        this._container.roomSession._Str_20560(_local_2.objectId, _local_2.name);
+                        this._container.roomSession.sendOpenPetPackageMessage(_local_2.objectId, _local_2.name);
                     }
                     break;
             }

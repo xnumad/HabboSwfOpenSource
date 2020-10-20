@@ -343,7 +343,7 @@
             this._connection.send(new _Str_10141(k));
         }
 
-        public function _Str_20560(k:int, _arg_2:String):void
+        public function sendOpenPetPackageMessage(k:int, _arg_2:String):void
         {
             this._connection.send(new _Str_10243(k, _arg_2));
         }
