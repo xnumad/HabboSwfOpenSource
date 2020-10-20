@@ -936,7 +936,7 @@
         {
             var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:RoomModerationSettings):Boolean
             {
-                switch (_arg_2._Str_6332)
+                switch (_arg_2.whoCanKick)
                 {
                     case RoomModerationSettings._Str_11537:
                         return true;

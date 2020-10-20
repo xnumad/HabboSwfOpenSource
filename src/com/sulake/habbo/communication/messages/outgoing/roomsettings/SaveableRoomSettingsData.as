@@ -199,12 +199,12 @@
             this._Str_10533 = k;
         }
 
-        public function get _Str_6332():int
+        public function get whoCanKick():int
         {
             return this._whoCanKick;
         }
 
-        public function set _Str_6332(k:int):void
+        public function set whoCanKick(k:int):void
         {
             this._whoCanKick = k;
         }

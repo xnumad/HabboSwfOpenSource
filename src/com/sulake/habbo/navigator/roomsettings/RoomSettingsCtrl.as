@@ -795,7 +795,7 @@
             }
             _local_3.setSelected(_local_2);
             var _local_4:ISelectorWindow = (this._window.findChildByName("moderation_kick_selector") as ISelectorWindow);
-            switch (k.roomModerationSettings._Str_6332)
+            switch (k.roomModerationSettings.whoCanKick)
             {
                 case RoomModerationSettings._Str_11537:
                     _local_2 = (this._window.findChildByName("moderation_kick_all") as IRadioButtonWindow);
@@ -1027,13 +1027,13 @@
             switch (_local_2.name)
             {
                 case "moderation_kick_rights":
-                    k._Str_6332 = RoomModerationSettings._Str_5047;
+                    k.whoCanKick = RoomModerationSettings._Str_5047;
                     break;
                 case "moderation_kick_all":
-                    k._Str_6332 = RoomModerationSettings._Str_11537;
+                    k.whoCanKick = RoomModerationSettings._Str_11537;
                     break;
                 default:
-                    k._Str_6332 = RoomModerationSettings._Str_10707;
+                    k.whoCanKick = RoomModerationSettings._Str_10707;
             }
             var _local_5:ISelectorWindow = (this._window.findChildByName("moderation_ban_selector") as ISelectorWindow);
             _local_2 = _local_5.getSelected();

@@ -24,7 +24,7 @@
             return this._Str_10533;
         }
 
-        public function get _Str_6332():int
+        public function get whoCanKick():int
         {
             return this._whoCanKick;
         }
