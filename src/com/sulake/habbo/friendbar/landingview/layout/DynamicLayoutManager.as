@@ -149,7 +149,7 @@
                 _local_4.caption = (("${" + _arg_2) + "}");
                 if (this._commonWidgetSettings != null)
                 {
-                    if (this._commonWidgetSettings._Str_16938)
+                    if (this._commonWidgetSettings.isTextColorSet)
                     {
                         _local_4.textColor = this._commonWidgetSettings.textColor;
                     }

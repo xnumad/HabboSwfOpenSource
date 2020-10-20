@@ -31,7 +31,7 @@
             }
         }
 
-        public function get _Str_16938():Boolean
+        public function get isTextColorSet():Boolean
         {
             return !(this._textColor == _Str_16303);
         }
