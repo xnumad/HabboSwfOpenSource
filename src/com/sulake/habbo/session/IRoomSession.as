@@ -59,7 +59,7 @@
         function get roomControllerLevel():int;
         function get isGuildRoom():Boolean;
         function set isGuildRoom(_arg_1:Boolean):void;
-        function get _Str_19282():Boolean;
+        function get isNoobRoom():Boolean;
         function set doorMode(_arg_1:int):void;
         function get tradeMode():int;
         function get isPrivateRoom():Boolean;

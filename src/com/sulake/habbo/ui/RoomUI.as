@@ -672,7 +672,7 @@
         {
             if (((getBoolean("nux.lobbies.enabled")) && (this._sessionDataManager.isRealNoob)))
             {
-                if (((k) && (k._Str_19282)))
+                if (((k) && (k.isNoobRoom)))
                 {
                     this._toolbar.updateVisibility(HabboToolbarEnum.HTE_STATE_NOOB_NOT_HOME);
                 }

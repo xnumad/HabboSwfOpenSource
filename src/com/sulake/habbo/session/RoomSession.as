@@ -600,7 +600,7 @@
             this._isGuildRoom = k;
         }
 
-        public function get _Str_19282():Boolean
+        public function get isNoobRoom():Boolean
         {
             return this._doorMode == RoomSettingsData.DOORMODE_NOOBS_ONLY;
         }
