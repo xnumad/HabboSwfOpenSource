@@ -705,7 +705,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10045;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10097;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10101;
-	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10141;
+	import com.sulake.habbo.communication.messages.outgoing.room.furniture.PresentOpenMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10477;
 	import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
@@ -1873,7 +1873,7 @@
             OUTGOING_PACKETS[3529] = PostMessageMessageComposer;
             OUTGOING_PACKETS[3536] = CommunityGoalVoteMessageComposer;
             OUTGOING_PACKETS[3549] = _Str_10887;
-            OUTGOING_PACKETS[3558] = _Str_10141;
+            OUTGOING_PACKETS[3558] = PresentOpenMessageComposer;
             OUTGOING_PACKETS[3559] = _Str_8089;
             OUTGOING_PACKETS[3567] = _Str_10962;
             OUTGOING_PACKETS[357] = _Str_8322;

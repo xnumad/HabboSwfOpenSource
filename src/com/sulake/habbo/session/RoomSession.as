@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11206;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10078;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10141;
+    import com.sulake.habbo.communication.messages.outgoing.room.furniture.PresentOpenMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_11262;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_9899;
@@ -340,7 +340,7 @@
 
         public function sendPresentOpenMessage(k:int):void
         {
-            this._connection.send(new _Str_10141(k));
+            this._connection.send(new PresentOpenMessageComposer(k));
         }
 
         public function sendOpenPetPackageMessage(k:int, _arg_2:String):void

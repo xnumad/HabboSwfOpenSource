@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10141 implements IMessageComposer 
+    public class PresentOpenMessageComposer implements IMessageComposer
     {
         private var _objectId:int;
 
-        public function _Str_10141(k:int)
+        public function PresentOpenMessageComposer(k:int)
         {
             this._objectId = k;
         }
