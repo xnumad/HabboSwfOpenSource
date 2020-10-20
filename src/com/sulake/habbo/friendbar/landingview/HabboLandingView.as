@@ -235,7 +235,7 @@
             this.activate();
             if (this.isForwardingToGameCenter())
             {
-                this._Str_23627();
+                this.forwardToGameCenter();
             }
         }
 
@@ -460,7 +460,7 @@
             return propertyExists("game.name");
         }
 
-        private function _Str_23627():void
+        private function forwardToGameCenter():void
         {
             var k:String;
             if (this._gameManager)
