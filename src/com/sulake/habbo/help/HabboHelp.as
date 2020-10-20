@@ -655,7 +655,7 @@
                     this._guideHelpManager.showPendingTicket(_local_2._Str_25474);
                     return;
                 default:
-                    this._guideHelpManager.showFeedback(_local_2._Str_5961);
+                    this._guideHelpManager.showFeedback(_local_2.localizationCode);
             }
         }
 

@@ -56,7 +56,7 @@
             return this._Str_15344;
         }
 
-        public function get _Str_5961():String
+        public function get localizationCode():String
         {
             return this._Str_16765;
         }

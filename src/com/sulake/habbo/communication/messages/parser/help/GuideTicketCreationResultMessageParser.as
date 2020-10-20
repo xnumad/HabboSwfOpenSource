@@ -25,7 +25,7 @@
             return true;
         }
 
-        public function get _Str_5961():String
+        public function get localizationCode():String
         {
             switch (this._result)
             {

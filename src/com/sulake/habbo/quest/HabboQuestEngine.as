@@ -550,14 +550,14 @@
         public function _Str_19955(k:IWindowContainer, _arg_2:QuestMessageData):void
         {
             var _local_3:IStaticBitmapWrapperWindow = (k.findChildByName("quest_pic_bitmap") as IStaticBitmapWrapperWindow);
-            var _local_4:String = ((_arg_2._Str_3935 > 0) ? ("quest_timer_questionmark") : ((((_arg_2._Str_6549 + "_") + _arg_2._Str_5961) + _arg_2._Str_22072) + ((this._Str_17760(_arg_2)) ? "_a" : "")).toLowerCase());
+            var _local_4:String = ((_arg_2._Str_3935 > 0) ? ("quest_timer_questionmark") : ((((_arg_2._Str_6549 + "_") + _arg_2.localizationCode) + _arg_2._Str_22072) + ((this._Str_17760(_arg_2)) ? "_a" : "")).toLowerCase());
             _local_3.assetUri = (("${image.library.questing.url}" + _local_4) + ".png");
         }
 
         public function _Str_22546(k:IWindowContainer, _arg_2:QuestMessageData, _arg_3:String):void
         {
             var _local_4:IStaticBitmapWrapperWindow = (k.findChildByName(("prompt_pic_" + _arg_3)) as IStaticBitmapWrapperWindow);
-            _local_4.assetUri = (("${image.library.questing.url}" + (((((_arg_2._Str_6549 + "_") + _arg_2._Str_5961) + _arg_2._Str_22072) + "_") + _arg_3).toLowerCase()) + ".png");
+            _local_4.assetUri = (("${image.library.questing.url}" + (((((_arg_2._Str_6549 + "_") + _arg_2.localizationCode) + _arg_2._Str_22072) + "_") + _arg_3).toLowerCase()) + ".png");
         }
 
         public function _Str_24530(k:IWindowContainer, _arg_2:int):void
@@ -591,7 +591,7 @@
 
         public function _Str_17760(k:QuestMessageData):Boolean
         {
-            return _Str_18303.indexOf(k._Str_5961) > -1;
+            return _Str_18303.indexOf(k.localizationCode) > -1;
         }
 
         public function _Str_19816(k:Boolean, _arg_2:IWindowContainer, _arg_3:int, _arg_4:int):void

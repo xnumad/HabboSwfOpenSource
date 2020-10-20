@@ -38,12 +38,12 @@
 
         private function _Str_25116(k:GuideTicketResolutionMessageEvent):void
         {
-            this.show(k.getParser()._Str_5961);
+            this.show(k.getParser().localizationCode);
         }
 
         private function _Str_22825(k:GuideTicketCreationResultMessageEvent):void
         {
-            this.show(k.getParser()._Str_5961);
+            this.show(k.getParser().localizationCode);
         }
 
         public function show(k:String):void

@@ -24,7 +24,7 @@
             return true;
         }
 
-        public function get _Str_5961():String
+        public function get localizationCode():String
         {
             if (((this._Str_13064 == _Str_17022) || (this._Str_13064 == _Str_16537)))
             {

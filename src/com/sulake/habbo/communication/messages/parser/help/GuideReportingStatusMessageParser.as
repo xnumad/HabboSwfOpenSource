@@ -41,7 +41,7 @@
             return this._Str_17655;
         }
 
-        public function get _Str_5961():String
+        public function get localizationCode():String
         {
             switch (this._Str_14988)
             {
