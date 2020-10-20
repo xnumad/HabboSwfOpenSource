@@ -22,7 +22,7 @@
     {
         protected var _windowManager:IHabboWindowManager;
         protected var _Str_3470:IAvatarRenderManager;
-        protected var _Str_2904:IHabboLocalizationManager;
+        protected var _localizationManager:IHabboLocalizationManager;
         protected var _Str_2318:ISessionDataManager;
         protected var habboTracking:IHabboTracking;
 		protected var configurationManager:IHabboConfigurationManager;
@@ -45,7 +45,7 @@
                 _windowManager = k;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
-                _Str_2904 = k;
+                _localizationManager = k;
             }), new ComponentDependency(new IIDHabboConfigurationManager(), function (k:IHabboConfigurationManager):void
             {
                 configurationManager = k;

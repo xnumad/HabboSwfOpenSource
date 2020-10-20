@@ -136,7 +136,7 @@
 
         public function get localizationManager():IHabboLocalizationManager
         {
-            return _Str_2904;
+            return _localizationManager;
         }
 
         override protected function get dependencies():Vector.<ComponentDependency>

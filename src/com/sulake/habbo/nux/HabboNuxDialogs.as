@@ -42,7 +42,7 @@
         protected var _Str_2355:IHabboCommunicationManager;
         protected var _Str_2272:IHabboNavigator;
         protected var _windowManager:IHabboWindowManager;
-        protected var _Str_2904:IHabboLocalizationManager;
+        protected var _localizationManager:IHabboLocalizationManager;
         protected var _Str_2276:IHabboCatalog;
         protected var _Str_2318:ISessionDataManager;
         protected var _Str_2422:IRoomSessionManager;
@@ -70,7 +70,7 @@
                 _Str_2272 = k;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
-                _Str_2904 = k;
+                _localizationManager = k;
             }), new ComponentDependency(new IIDHabboCatalog(), function (k:IHabboCatalog):void
             {
                 _Str_2276 = k;
@@ -206,7 +206,7 @@
 
         public function get localizationManager():IHabboLocalizationManager
         {
-            return this._Str_2904;
+            return this._localizationManager;
         }
 
         public function get sessionDataManager():ISessionDataManager

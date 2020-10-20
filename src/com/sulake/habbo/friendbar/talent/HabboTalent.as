@@ -55,7 +55,7 @@
 
         public function get localizationManager():IHabboLocalizationManager
         {
-            return _Str_2904;
+            return _localizationManager;
         }
 
         public function get _Str_20410():ISessionDataManager

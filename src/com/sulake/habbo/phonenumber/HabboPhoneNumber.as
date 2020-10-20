@@ -30,7 +30,7 @@
     public class HabboPhoneNumber extends Component 
     {
         protected var _Str_2355:IHabboCommunicationManager;
-        protected var _Str_2904:IHabboLocalizationManager;
+        protected var _localizationManager:IHabboLocalizationManager;
         protected var _Str_2318:ISessionDataManager;
         protected var _Str_2290:IHabboToolbar;
         protected var _windowManager:IHabboWindowManager;
@@ -59,7 +59,7 @@
                 _windowManager = k;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
-                _Str_2904 = k;
+                _localizationManager = k;
             }), new ComponentDependency(new IIDHabboToolbar(), function (k:IHabboToolbar):void
             {
                 _Str_2290 = k;
@@ -243,7 +243,7 @@
 
         public function get localizationManager():IHabboLocalizationManager
         {
-            return this._Str_2904;
+            return this._localizationManager;
         }
 
         public function get _Str_20480():int
