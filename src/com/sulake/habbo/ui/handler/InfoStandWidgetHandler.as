@@ -924,7 +924,7 @@
                 switch (_arg_2.whoCanMute)
                 {
                     case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
-                        return _Str_9213(k);
+                        return checkUserWithRightsModerationLevel(k);
                     default:
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
                 }
@@ -941,7 +941,7 @@
                     case RoomModerationSettings.MODERATION_LEVEL_ALL:
                         return true;
                     case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
-                        return _Str_9213(k);
+                        return checkUserWithRightsModerationLevel(k);
                     default:
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
                 }
@@ -956,7 +956,7 @@
                 switch (_arg_2.whoCanBan)
                 {
                     case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
-                        return _Str_9213(k);
+                        return checkUserWithRightsModerationLevel(k);
                     default:
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
                 }
@@ -979,7 +979,7 @@
             return (_local_3) && (k.targetRoomControllerLevel < RoomControllerLevel.ROOM_OWNER);
         }
 
-        private function _Str_9213(k:RoomWidgetUserInfoUpdateEvent):Boolean
+        private function checkUserWithRightsModerationLevel(k:RoomWidgetUserInfoUpdateEvent):Boolean
         {
             if (k.isGuildRoom)
             {
