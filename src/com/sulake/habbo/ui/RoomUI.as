@@ -875,7 +875,7 @@
                         _local_4 = this._roomSessionManager.getSession(this._interstitialRoomId);
                         if (_local_4 != null)
                         {
-                            _local_4._Str_5941(AvatarExpressionEnum.IDLE.ordinal);
+                            _local_4.sendAvatarExpressionMessage(AvatarExpressionEnum.IDLE.ordinal);
                         }
                     }
                     this._interstitialActive = false;

@@ -310,7 +310,7 @@
             }
         }
 
-        public function _Str_5941(k:int):void
+        public function sendAvatarExpressionMessage(k:int):void
         {
             this._connection.send(new _Str_9976(k));
         }

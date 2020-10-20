@@ -153,18 +153,18 @@
                                     case ";d":
                                         if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum._Str_2575)
                                         {
-                                            this._container.roomSession._Str_5941(AvatarExpressionEnum.LAUGH.ordinal);
+                                            this._container.roomSession.sendAvatarExpressionMessage(AvatarExpressionEnum.LAUGH.ordinal);
                                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "laugh");
                                         }
                                         break;
                                     case "o/":
                                     case "_o/":
-                                        this._container.roomSession._Str_5941(AvatarExpressionEnum.WAVE.ordinal);
+                                        this._container.roomSession.sendAvatarExpressionMessage(AvatarExpressionEnum.WAVE.ordinal);
                                         return null;
                                     case ":kiss":
                                         if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum._Str_2575)
                                         {
-                                            this._container.roomSession._Str_5941(AvatarExpressionEnum.BLOW.ordinal);
+                                            this._container.roomSession.sendAvatarExpressionMessage(AvatarExpressionEnum.BLOW.ordinal);
                                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "blow");
                                             return null;
                                         }
@@ -172,17 +172,17 @@
                                     case ":jump":
                                         if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum._Str_2575)
                                         {
-                                            this._container.roomSession._Str_5941(AvatarExpressionEnum.JUMP.ordinal);
+                                            this._container.roomSession.sendAvatarExpressionMessage(AvatarExpressionEnum.JUMP.ordinal);
                                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "jump");
                                             return null;
                                         }
                                         break;
                                     case ":idle":
-                                        this._container.roomSession._Str_5941(AvatarExpressionEnum.IDLE.ordinal);
+                                        this._container.roomSession.sendAvatarExpressionMessage(AvatarExpressionEnum.IDLE.ordinal);
                                         HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "idle");
                                         return null;
                                     case "_b":
-                                        this._container.roomSession._Str_5941(AvatarExpressionEnum.RESPECT.ordinal);
+                                        this._container.roomSession.sendAvatarExpressionMessage(AvatarExpressionEnum.RESPECT.ordinal);
                                         HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "respect");
                                         return null;
                                     case ":sign":

@@ -236,7 +236,7 @@
                 case RoomWidgetAvatarExpressionMessage.RWCM_MESSAGE_AVATAR_EXPRESSION:
                     if (((!(this._container == null)) && (!(this._container.roomSession == null))))
                     {
-                        this._container.roomSession._Str_5941(RoomWidgetAvatarExpressionMessage(k).animation.ordinal);
+                        this._container.roomSession.sendAvatarExpressionMessage(RoomWidgetAvatarExpressionMessage(k).animation.ordinal);
                     }
                     break;
                 case RoomWidgetDanceMessage.RWCM_MESSAGE_DANCE:
