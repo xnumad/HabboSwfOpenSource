@@ -493,7 +493,7 @@
             this._connection.send(new _Str_10642(k, _arg_2));
         }
 
-        public function _Str_21289(k:int):void
+        public function plantSeed(k:int):void
         {
             this._connection.send(new _Str_3382(k));
         }
