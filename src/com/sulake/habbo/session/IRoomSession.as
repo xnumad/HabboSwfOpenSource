@@ -43,7 +43,7 @@
         function _Str_21066(_arg_1:int):void;
         function _Str_21025(_arg_1:int):void;
         function _Str_19075(_arg_1:int):void;
-        function _Str_21635(_arg_1:int):void;
+        function removeSaddleFromPet(_arg_1:int):void;
         function requestPetCommands(_arg_1:int):void;
         function useProductForPet(_arg_1:int, _arg_2:int):void;
         function plantSeed(_arg_1:int):void;

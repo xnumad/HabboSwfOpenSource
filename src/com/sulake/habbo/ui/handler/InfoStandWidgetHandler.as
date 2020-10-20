@@ -434,7 +434,7 @@
                     this._container.roomSession._Str_19075(_local_2);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_SADDLE_OFF:
-                    this._container.roomSession._Str_21635(_local_2);
+                    this._container.roomSession.removeSaddleFromPet(_local_2);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_PASS_CARRY_ITEM:
                     this._container.connection.send(new _Str_11770(_local_2));

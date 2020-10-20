@@ -468,7 +468,7 @@
             this._connection.send(new _Str_7691(k, false));
         }
 
-        public function _Str_21635(k:int):void
+        public function removeSaddleFromPet(k:int):void
         {
             this._connection.send(new _Str_10983(k));
         }
