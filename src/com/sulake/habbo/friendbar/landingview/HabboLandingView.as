@@ -268,7 +268,7 @@
             }
         }
 
-        public function get _Str_24563():Boolean
+        public function get isLandingViewVisible():Boolean
         {
             return ((!(this._landingViewLayout == null)) && (!(this._landingViewLayout.window == null))) && (this._landingViewLayout.window.visible);
         }

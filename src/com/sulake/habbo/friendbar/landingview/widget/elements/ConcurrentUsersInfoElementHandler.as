@@ -41,7 +41,7 @@
 
         private function _Str_11704(k:TimerEvent):void
         {
-            if ((((this._window == null) || (this._window.visible == false)) || (!(this._landingView._Str_24563))))
+            if ((((this._window == null) || (this._window.visible == false)) || (!(this._landingView.isLandingViewVisible))))
             {
                 return;
             }
