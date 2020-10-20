@@ -36,7 +36,7 @@
             return this._statusCode;
         }
 
-        public function get _Str_25474():PendingGuideTicket
+        public function get pendingTicket():PendingGuideTicket
         {
             return this._pendingTicket;
         }

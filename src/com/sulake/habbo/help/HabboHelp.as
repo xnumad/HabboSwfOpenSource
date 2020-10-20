@@ -652,7 +652,7 @@
                     this._Str_14807();
                     return;
                 case GuideReportingStatusMessageParser.GUIDE_REPORTING_STATUS_PENDING_TICKET:
-                    this._guideHelpManager.showPendingTicket(_local_2._Str_25474);
+                    this._guideHelpManager.showPendingTicket(_local_2.pendingTicket);
                     return;
                 default:
                     this._guideHelpManager.showFeedback(_local_2.localizationCode);
