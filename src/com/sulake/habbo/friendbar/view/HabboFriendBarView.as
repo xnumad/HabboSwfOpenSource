@@ -489,7 +489,7 @@
             Tab._Str_3684 = _windowManager;
             Tab._Str_3840 = _localizationManager;
             Tab._Str_9890 = this._Str_15295;
-            Tab._Str_4533 = habboTracking;
+            Tab._Str_4533 = _tracking;
             Token._Str_3684 = _windowManager;
             Token._Str_2787 = assets;
             Token.GAMES = this._gameManager;

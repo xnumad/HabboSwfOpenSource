@@ -24,7 +24,7 @@
         protected var _Str_3470:IAvatarRenderManager;
         protected var _localizationManager:IHabboLocalizationManager;
         protected var _Str_2318:ISessionDataManager;
-        protected var habboTracking:IHabboTracking;
+        protected var _tracking:IHabboTracking;
 		protected var configurationManager:IHabboConfigurationManager;
 
         public function AbstractView(k:IContext, _arg_2:uint, _arg_3:IAssetLibrary)
@@ -51,7 +51,7 @@
                 configurationManager = k;
             }), new ComponentDependency(new IIDHabboTracking(), function (k:IHabboTracking):void
             {
-                habboTracking = k;
+                _tracking = k;
             })]));
         }
     }

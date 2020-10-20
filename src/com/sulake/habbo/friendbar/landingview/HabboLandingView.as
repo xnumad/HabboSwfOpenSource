@@ -121,7 +121,7 @@
 
         public function get tracking():IHabboTracking
         {
-            return habboTracking;
+            return _tracking;
         }
 
         public function get windowManager():IHabboWindowManager

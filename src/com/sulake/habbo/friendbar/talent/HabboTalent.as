@@ -65,7 +65,7 @@
 
         public function get tracking():IHabboTracking
         {
-            return habboTracking;
+            return _tracking;
         }
 
         public function get windowManager():IHabboWindowManager
@@ -254,11 +254,11 @@
                         switch (_local_3)
                         {
                             case TalentEnum.CITIZENSHIP:
-                                habboTracking.trackTalentTrackOpen(TalentEnum.CITIZENSHIP, "citizenshiplink");
+                                _tracking.trackTalentTrackOpen(TalentEnum.CITIZENSHIP, "citizenshiplink");
                                 this.send(new _Str_3075(TalentEnum.CITIZENSHIP));
                                 break;
                             case TalentEnum.HELPER:
-                                habboTracking.trackTalentTrackOpen(TalentEnum.HELPER, "helperlink");
+                                _tracking.trackTalentTrackOpen(TalentEnum.HELPER, "helperlink");
                                 this.send(new _Str_3075(TalentEnum.HELPER));
                                 break;
                         }
