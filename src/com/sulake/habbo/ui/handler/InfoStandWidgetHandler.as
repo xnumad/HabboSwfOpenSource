@@ -929,7 +929,7 @@
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
                 }
             }
-            return this._Str_18027(userInfo, settingsFunction);
+            return this.determineModerationLevel(userInfo, settingsFunction);
         }
 
         private function determineCanBeKicked(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
@@ -946,7 +946,7 @@
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
                 }
             }
-            return this._Str_18027(userInfo, settingsFunction);
+            return this.determineModerationLevel(userInfo, settingsFunction);
         }
 
         private function determineCanBeBanned(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
@@ -961,10 +961,10 @@
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
                 }
             }
-            return this._Str_18027(userInfo, settingsFunction);
+            return this.determineModerationLevel(userInfo, settingsFunction);
         }
 
-        private function _Str_18027(k:RoomWidgetUserInfoUpdateEvent, _arg_2:Function):Boolean
+        private function determineModerationLevel(k:RoomWidgetUserInfoUpdateEvent, _arg_2:Function):Boolean
         {
             if (!this._container.roomSession.isPrivateRoom)
             {
