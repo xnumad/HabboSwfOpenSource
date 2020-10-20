@@ -158,12 +158,12 @@
             return this._Str_11289;
         }
 
-        public function set canBeAskedForAFriend(k:Boolean):void
+        public function set canBeAskedAsFriend(k:Boolean):void
         {
             this._canBeAskedAsFriend = k;
         }
 
-        public function get canBeAskedForAFriend():Boolean
+        public function get canBeAskedAsFriend():Boolean
         {
             return this._canBeAskedAsFriend;
         }

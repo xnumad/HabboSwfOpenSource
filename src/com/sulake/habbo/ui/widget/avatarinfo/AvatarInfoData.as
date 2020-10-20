@@ -199,7 +199,7 @@
             this._amIAnyRoomController = k.amIAnyRoomController;
             this._myRoomControllerLevel = k.myRoomControllerLevel;
             this._amIOwner = k.amIOwner;
-            this._canBeAskedAsFriend = k.canBeAskedForAFriend;
+            this._canBeAskedAsFriend = k.canBeAskedAsFriend;
             this._canBeKicked = k.canBeKicked;
             this._canBeBanned = k.canBeBanned;
             this._canBeMuted = k.canBeMuted;

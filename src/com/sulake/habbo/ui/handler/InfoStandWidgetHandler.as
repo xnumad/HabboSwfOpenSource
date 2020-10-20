@@ -849,7 +849,7 @@
             _local_6._Str_18096 = this._container.sessionDataManager.isAmbassador;
             if (_local_5 == RoomWidgetUserInfoUpdateEvent.PEER)
             {
-                _local_6.canBeAskedForAFriend = this._container.friendList.canBeAskedForAFriend(_arg_4.id);
+                _local_6.canBeAskedAsFriend = this._container.friendList.canBeAskedForAFriend(_arg_4.id);
                 _local_9 = this._container.friendList.getFriend(_arg_4.id);
                 if (_local_9 != null)
                 {
