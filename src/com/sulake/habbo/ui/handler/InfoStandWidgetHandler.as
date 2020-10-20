@@ -1421,12 +1421,12 @@
 
         private function getPetType(k:String):int
         {
-            return this._Str_19610(k, 0);
+            return this.getSpaceSeparatedInteger(k, 0);
         }
 
         private function getPetRace(k:String):int
         {
-            return this._Str_19610(k, 1);
+            return this.getSpaceSeparatedInteger(k, 1);
         }
 
         private function getPetColor(k:String):int
@@ -1439,7 +1439,7 @@
             return 0xFFFFFF;
         }
 
-        private function _Str_19610(k:String, _arg_2:int):int
+        private function getSpaceSeparatedInteger(k:String, _arg_2:int):int
         {
             var _local_3:Array;
             if (k != null)
