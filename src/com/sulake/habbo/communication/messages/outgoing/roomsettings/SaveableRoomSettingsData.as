@@ -20,7 +20,7 @@
         private var _Str_5084:int;
         private var _Str_5119:int;
         private var _Str_10533:int;
-        private var _Str_9800:int;
+        private var _whoCanKick:int;
         private var _whoCanBan:int;
         private var _Str_20703:int;
         private var _Str_21851:int;
@@ -201,12 +201,12 @@
 
         public function get _Str_6332():int
         {
-            return this._Str_9800;
+            return this._whoCanKick;
         }
 
         public function set _Str_6332(k:int):void
         {
-            this._Str_9800 = k;
+            this._whoCanKick = k;
         }
 
         public function get whoCanBan():int
