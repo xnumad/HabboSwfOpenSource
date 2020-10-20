@@ -336,13 +336,13 @@
                         case "give_rights":
                             _arg_2.parent.visible = false;
                             window.findChildByName("remove_rights").visible = true;
-                            this._data.roomControllerLevel = RoomControllerLevel.GUEST;
+                            this._data.myRoomControllerLevel = RoomControllerLevel.GUEST;
                             _local_5 = RoomWidgetUserActionMessage.RWUAM_GIVE_RIGHTS;
                             break;
                         case "remove_rights":
                             _arg_2.parent.visible = false;
                             window.findChildByName("give_rights").visible = true;
-                            this._data.roomControllerLevel = RoomControllerLevel.NONE;
+                            this._data.myRoomControllerLevel = RoomControllerLevel.NONE;
                             _local_5 = RoomWidgetUserActionMessage.RWUAM_TAKE_RIGHTS;
                             break;
                         case "trade":

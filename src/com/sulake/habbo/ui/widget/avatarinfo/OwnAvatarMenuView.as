@@ -160,7 +160,7 @@
             {
                 case _Str_2906:
                     showButton("change_name", this._data.allowNameChange);
-                    showButton("decorate", ((this._Str_22241()) && ((this._data.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._data.amIOwner))));
+                    showButton("decorate", ((this._Str_22241()) && ((this._data.myRoomControllerLevel >= RoomControllerLevel.GUEST) || (this._data.amIOwner))));
                     showButton("change_looks");
                     showButton("dance_menu", ((this.widget._Str_6454) && (!(_local_3))), (!(this.widget._Str_4878)));
                     showButton("dance", (((!(this.widget._Str_6454)) && (!(this.widget._Str_4107))) && (!(_local_3))), (!(this.widget._Str_4878)));
