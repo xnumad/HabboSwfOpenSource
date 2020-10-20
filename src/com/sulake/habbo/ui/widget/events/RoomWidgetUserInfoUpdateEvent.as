@@ -40,7 +40,7 @@
         private var _canTradeReason:int = 0;
         private var _targetRoomControllerLevel:int = 0;
         private var _isFriend:Boolean = false;
-        private var isAmbassador:Boolean = false;
+        private var _isAmbassador:Boolean = false;
 
         public function RoomWidgetUserInfoUpdateEvent(k:String, _arg_2:Boolean=false, _arg_3:Boolean=false)
         {
@@ -350,12 +350,12 @@
 
         public function get amIAnAmbassador():Boolean
         {
-            return this.isAmbassador;
+            return this._isAmbassador;
         }
 
         public function set amIAnAmbassador(k:Boolean):void
         {
-            this.isAmbassador = k;
+            this._isAmbassador = k;
         }
     }
 }

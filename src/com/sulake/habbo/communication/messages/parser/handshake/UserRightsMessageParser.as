@@ -7,7 +7,7 @@
     {
         private var _clubLevel:int;
         private var _securityLevel:int;
-        private var isAmbassador:Boolean;
+        private var _isAmbassador:Boolean;
 
 
         public function flush():Boolean
@@ -19,7 +19,7 @@
         {
             this._clubLevel = k.readInteger();
             this._securityLevel = k.readInteger();
-            this.isAmbassador = k.readBoolean();
+            this._isAmbassador = k.readBoolean();
             return true;
         }
 
@@ -35,7 +35,7 @@
 
         public function get isAmbassador():Boolean
         {
-            return this.isAmbassador;
+            return this._isAmbassador;
         }
     }
 }
