@@ -23,11 +23,11 @@
             this._socket.addEventListener(IOErrorEvent.IO_ERROR, this.onIOError);
             this._socket.connect(k, _arg_2);
             this._timeOutTimer = new Timer(3500, 1);
-            this._timeOutTimer.addEventListener(TimerEvent.TIMER, this._Str_14338);
+            this._timeOutTimer.addEventListener(TimerEvent.TIMER, this.onTimeOutTimer);
             this._timeOutTimer.start();
         }
 
-        private function _Str_14338(k:TimerEvent):void
+        private function onTimeOutTimer(k:TimerEvent):void
         {
             this.dispose();
             this._connectionMadeAndClosed = true;
