@@ -5,14 +5,14 @@
 
     public class MaintenanceStatusMessageParser implements IMessageParser
     {
-        private var _Str_20855:Boolean;
+        private var _isInMaintenance:Boolean;
         private var _Str_20082:int;
         private var _duration:int = 15;
 
 
         public function get isInMaintenance():Boolean
         {
-            return this._Str_20855;
+            return this._isInMaintenance;
         }
 
         public function get _Str_23709():int
@@ -32,7 +32,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_20855 = k.readBoolean();
+            this._isInMaintenance = k.readBoolean();
             this._Str_20082 = k.readInteger();
             if (k.bytesAvailable)
             {
