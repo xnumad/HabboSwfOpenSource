@@ -35,7 +35,7 @@
         private var _canBeMuted:Boolean = false;
         private var _respectLeft:int = 0;
         private var _isIgnored:Boolean = false;
-        private var _Str_6139:Boolean = false;
+        private var _isGuildRoom:Boolean = false;
         private var _Str_8973:Boolean = false;
         private var _Str_8910:int = 0;
         private var _Str_8858:int = 0;
@@ -200,12 +200,12 @@
 
         public function set isGuildRoom(k:Boolean):void
         {
-            this._Str_6139 = k;
+            this._isGuildRoom = k;
         }
 
         public function get isGuildRoom():Boolean
         {
-            return this._Str_6139;
+            return this._isGuildRoom;
         }
 
         public function set myRoomControllerLevel(k:int):void
