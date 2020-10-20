@@ -70,8 +70,8 @@
         function get _Str_9439():Boolean;
         function set _Str_9439(_arg_1:Boolean):void;
         function get _Str_18311():Boolean;
-        function get _Str_5249():Boolean;
-        function set _Str_5249(_arg_1:Boolean):void;
+        function get isUserDecorating():Boolean;
+        function set isUserDecorating(_arg_1:Boolean):void;
         function get isGameSession():Boolean;
         function get roomModerationSettings():RoomModerationSettings;
         function set roomModerationSettings(_arg_1:RoomModerationSettings):void;

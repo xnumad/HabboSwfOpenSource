@@ -1033,7 +1033,7 @@
                     {
                         if (_arg_6.isOwnUser)
                         {
-                            if (this._Str_5249)
+                            if (this.isUserDecorating)
                             {
                                 return;
                             }
@@ -1611,18 +1611,18 @@
             return null;
         }
 
-        internal function get _Str_5249():Boolean
+        internal function get isUserDecorating():Boolean
         {
-            return this.handler.roomSession._Str_5249;
+            return this.handler.roomSession.isUserDecorating;
         }
 
-        internal function set _Str_5249(k:Boolean):void
+        internal function set isUserDecorating(k:Boolean):void
         {
             var _local_2:int;
             var _local_3:_Str_3174;
             var _local_4:String;
             var _local_5:int;
-            this.handler.roomSession._Str_5249 = k;
+            this.handler.roomSession.isUserDecorating = k;
             if (k)
             {
                 _local_2 = this.handler.container.sessionDataManager.userId;

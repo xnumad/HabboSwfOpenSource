@@ -287,7 +287,7 @@
                         case "decorate":
                             if (this._Str_22241())
                             {
-                                this.widget._Str_5249 = true;
+                                this.widget.isUserDecorating = true;
                             }
                             break;
                         case "change_looks":

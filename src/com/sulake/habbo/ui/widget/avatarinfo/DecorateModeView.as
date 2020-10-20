@@ -95,7 +95,7 @@
                     switch (_arg_2.parent.name)
                     {
                         case "decorate":
-                            this.widget._Str_5249 = false;
+                            this.widget.isUserDecorating = false;
                             break;
                     }
                 }

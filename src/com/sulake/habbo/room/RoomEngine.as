@@ -4285,7 +4285,7 @@
                 return false;
             }
             var k:IRoomSession = this._roomSessionManager.getSession(this._activeRoomId);
-            return (k) && (k._Str_5249);
+            return (k) && (k.isUserDecorating);
         }
 
         public function get setIsSelectedObjectInValidPosition():Boolean

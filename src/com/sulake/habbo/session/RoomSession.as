@@ -635,12 +635,12 @@
             return this._isRoomOwner;
         }
 
-        public function get _Str_5249():Boolean
+        public function get isUserDecorating():Boolean
         {
             return this._isUserDecorating;
         }
 
-        public function set _Str_5249(k:Boolean):void
+        public function set isUserDecorating(k:Boolean):void
         {
             this._isUserDecorating = k;
         }
