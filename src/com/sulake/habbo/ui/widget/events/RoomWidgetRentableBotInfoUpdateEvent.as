@@ -16,7 +16,7 @@
         private var _ownerName:String;
         private var _amIOwner:Boolean = false;
         private var _amIAnyRoomController:Boolean = false;
-        private var _roomControllerLevel:int = 0;
+        private var _myRoomControllerLevel:int = 0;
         private var _botSkills:Array;
 
         public function RoomWidgetRentableBotInfoUpdateEvent(k:Boolean=false, _arg_2:Boolean=false)
@@ -107,12 +107,12 @@
 
         public function set roomControllerLevel(k:int):void
         {
-            this._roomControllerLevel = k;
+            this._myRoomControllerLevel = k;
         }
 
         public function get roomControllerLevel():int
         {
-            return this._roomControllerLevel;
+            return this._myRoomControllerLevel;
         }
 
         public function set amIAnyRoomController(k:Boolean):void
