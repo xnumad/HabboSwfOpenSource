@@ -33,7 +33,7 @@
         private var _highlightedUserId:int;
         private var _bannedUsersById:Dictionary;
         private var _bannedUsersList:Array;
-        private var _roomModerationSettings:_Str_2817;
+        private var _roomModerationSettings:RoomModerationSettings;
         private var _chatSettings:RoomChatSettings;
         private var _allowNavigatorDynamicCats:Boolean;
 
@@ -217,12 +217,12 @@
             }
         }
 
-        public function get _Str_4418():_Str_2817
+        public function get _Str_4418():RoomModerationSettings
         {
             return this._roomModerationSettings;
         }
 
-        public function set _Str_4418(k:_Str_2817):void
+        public function set _Str_4418(k:RoomModerationSettings):void
         {
             this._roomModerationSettings = k;
         }

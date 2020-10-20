@@ -4,7 +4,7 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.tracking.IHabboTracking;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_2817;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomModerationSettings;
     import com.sulake.habbo.session.events.RoomSessionEvent;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.session.enum.RoomTradingLevelEnum;
@@ -83,7 +83,7 @@
         private var _isUserDecorating:Boolean = false;
         private var _isGameSession:Boolean = false;
         private var _nuxNotComplete:Boolean = false;
-        private var _roomModerationSettings:_Str_2817 = null;
+        private var _roomModerationSettings:RoomModerationSettings = null;
 
         public function RoomSession()
         {
@@ -194,12 +194,12 @@
             this._isGameSession = k;
         }
 
-        public function get _Str_4418():_Str_2817
+        public function get _Str_4418():RoomModerationSettings
         {
             return this._roomModerationSettings;
         }
 
-        public function set _Str_4418(k:_Str_2817):void
+        public function set _Str_4418(k:RoomModerationSettings):void
         {
             this._roomModerationSettings = k;
         }

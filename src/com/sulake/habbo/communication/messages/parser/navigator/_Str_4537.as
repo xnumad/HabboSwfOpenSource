@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_2817;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomModerationSettings;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
@@ -14,7 +14,7 @@
         private var _staffPick:Boolean;
         private var _data:_Str_2370;
         private var _isGroupMember:Boolean;
-        private var _roomModerationSettings:_Str_2817;
+        private var _roomModerationSettings:RoomModerationSettings;
         private var _chatSettings:RoomChatSettings;
 
 
@@ -31,7 +31,7 @@
             this._staffPick = k.readBoolean();
             this._isGroupMember = k.readBoolean();
             var _local_2:Boolean = k.readBoolean();
-            this._roomModerationSettings = new _Str_2817(k);
+            this._roomModerationSettings = new RoomModerationSettings(k);
             this._data._Str_12127 = _local_2;
             this._data._Str_16504 = k.readBoolean();
             this._chatSettings = new RoomChatSettings(k);
@@ -73,7 +73,7 @@
             return this._isGroupMember;
         }
 
-        public function get _Str_4418():_Str_2817
+        public function get _Str_4418():RoomModerationSettings
         {
             return this._roomModerationSettings;
         }

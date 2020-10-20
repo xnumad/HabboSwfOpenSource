@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsData;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_2817;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomModerationSettings;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_4697 implements IMessageParser 
@@ -38,7 +38,7 @@
             this._roomSettingsData._Str_6205 = k.readInteger();
             this._roomSettingsData.chatSettings = new RoomChatSettings(k);
             this._roomSettingsData._Str_17884 = k.readBoolean();
-            this._roomSettingsData._Str_4418 = new _Str_2817(k);
+            this._roomSettingsData._Str_4418 = new RoomModerationSettings(k);
             return true;
         }
 

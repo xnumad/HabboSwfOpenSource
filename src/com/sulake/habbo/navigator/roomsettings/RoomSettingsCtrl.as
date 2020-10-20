@@ -28,7 +28,7 @@
     import com.sulake.habbo.navigator.Util;
     import com.sulake.core.window.components.ISelectorWindow;
     import com.sulake.habbo.session.SecurityLevelEnum;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_2817;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomModerationSettings;
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveableRoomSettingsData;
@@ -787,7 +787,7 @@
             var _local_3:ISelectorWindow = (this._window.findChildByName("moderation_mute_selector") as ISelectorWindow);
             switch (k._Str_4418._Str_7688)
             {
-                case _Str_2817._Str_5047:
+                case RoomModerationSettings._Str_5047:
                     _local_2 = (this._window.findChildByName("moderation_mute_rights") as IRadioButtonWindow);
                     break;
                 default:
@@ -797,10 +797,10 @@
             var _local_4:ISelectorWindow = (this._window.findChildByName("moderation_kick_selector") as ISelectorWindow);
             switch (k._Str_4418._Str_6332)
             {
-                case _Str_2817._Str_11537:
+                case RoomModerationSettings._Str_11537:
                     _local_2 = (this._window.findChildByName("moderation_kick_all") as IRadioButtonWindow);
                     break;
-                case _Str_2817._Str_5047:
+                case RoomModerationSettings._Str_5047:
                     _local_2 = (this._window.findChildByName("moderation_kick_rights") as IRadioButtonWindow);
                     break;
                 default:
@@ -810,7 +810,7 @@
             var _local_5:ISelectorWindow = (this._window.findChildByName("moderation_ban_selector") as ISelectorWindow);
             switch (k._Str_4418._Str_7772)
             {
-                case _Str_2817._Str_5047:
+                case RoomModerationSettings._Str_5047:
                     _local_2 = (this._window.findChildByName("moderation_ban_rights") as IRadioButtonWindow);
                     break;
                 default:
@@ -1017,33 +1017,33 @@
             switch (_local_2.name)
             {
                 case "moderation_mute_rights":
-                    k._Str_7688 = _Str_2817._Str_5047;
+                    k._Str_7688 = RoomModerationSettings._Str_5047;
                     break;
                 default:
-                    k._Str_7688 = _Str_2817._Str_10707;
+                    k._Str_7688 = RoomModerationSettings._Str_10707;
             }
             var _local_4:ISelectorWindow = (this._window.findChildByName("moderation_kick_selector") as ISelectorWindow);
             _local_2 = _local_4.getSelected();
             switch (_local_2.name)
             {
                 case "moderation_kick_rights":
-                    k._Str_6332 = _Str_2817._Str_5047;
+                    k._Str_6332 = RoomModerationSettings._Str_5047;
                     break;
                 case "moderation_kick_all":
-                    k._Str_6332 = _Str_2817._Str_11537;
+                    k._Str_6332 = RoomModerationSettings._Str_11537;
                     break;
                 default:
-                    k._Str_6332 = _Str_2817._Str_10707;
+                    k._Str_6332 = RoomModerationSettings._Str_10707;
             }
             var _local_5:ISelectorWindow = (this._window.findChildByName("moderation_ban_selector") as ISelectorWindow);
             _local_2 = _local_5.getSelected();
             switch (_local_2.name)
             {
                 case "moderation_ban_rights":
-                    k._Str_7772 = _Str_2817._Str_5047;
+                    k._Str_7772 = RoomModerationSettings._Str_5047;
                     return;
                 default:
-                    k._Str_7772 = _Str_2817._Str_10707;
+                    k._Str_7772 = RoomModerationSettings._Str_10707;
             }
         }
 

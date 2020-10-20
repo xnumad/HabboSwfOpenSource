@@ -62,7 +62,7 @@
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.session.enum.RoomTradingLevelEnum;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_8049;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_2817;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomModerationSettings;
     import com.sulake.habbo.sound.IPlayListController;
     import com.sulake.habbo.sound.ISongInfo;
     import com.sulake.habbo.ui.widget.events.RoomWidgetFurniInfostandUpdateEvent;
@@ -919,11 +919,11 @@
 
         private function _Str_23100(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
         {
-            var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:_Str_2817):Boolean
+            var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:RoomModerationSettings):Boolean
             {
                 switch (_arg_2._Str_7688)
                 {
-                    case _Str_2817._Str_5047:
+                    case RoomModerationSettings._Str_5047:
                         return _Str_9213(k);
                     default:
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
@@ -934,13 +934,13 @@
 
         private function _Str_22729(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
         {
-            var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:_Str_2817):Boolean
+            var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:RoomModerationSettings):Boolean
             {
                 switch (_arg_2._Str_6332)
                 {
-                    case _Str_2817._Str_11537:
+                    case RoomModerationSettings._Str_11537:
                         return true;
-                    case _Str_2817._Str_5047:
+                    case RoomModerationSettings._Str_5047:
                         return _Str_9213(k);
                     default:
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
@@ -951,11 +951,11 @@
 
         private function _Str_23573(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
         {
-            var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:_Str_2817):Boolean
+            var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:RoomModerationSettings):Boolean
             {
                 switch (_arg_2._Str_7772)
                 {
-                    case _Str_2817._Str_5047:
+                    case RoomModerationSettings._Str_5047:
                         return _Str_9213(k);
                     default:
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
@@ -971,7 +971,7 @@
                 return false;
             }
             var _local_3:Boolean;
-            var _local_4:_Str_2817 = this._container.roomSession._Str_4418;
+            var _local_4:RoomModerationSettings = this._container.roomSession._Str_4418;
             if (_local_4 != null)
             {
                 _local_3 = _arg_2(k, _local_4);
