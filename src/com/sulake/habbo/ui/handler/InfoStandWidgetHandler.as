@@ -921,7 +921,7 @@
         {
             var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:RoomModerationSettings):Boolean
             {
-                switch (_arg_2._Str_7688)
+                switch (_arg_2.whoCanMute)
                 {
                     case RoomModerationSettings._Str_5047:
                         return _Str_9213(k);

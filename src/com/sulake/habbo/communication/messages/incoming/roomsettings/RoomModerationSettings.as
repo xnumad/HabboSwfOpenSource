@@ -19,7 +19,7 @@
             this._whoCanBan = k.readInteger();
         }
 
-        public function get _Str_7688():int
+        public function get whoCanMute():int
         {
             return this._whoCanMute;
         }

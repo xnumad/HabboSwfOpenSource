@@ -189,12 +189,12 @@
             this._Str_8850 = k;
         }
 
-        public function get _Str_7688():int
+        public function get whoCanMute():int
         {
             return this._whoCanMute;
         }
 
-        public function set _Str_7688(k:int):void
+        public function set whoCanMute(k:int):void
         {
             this._whoCanMute = k;
         }

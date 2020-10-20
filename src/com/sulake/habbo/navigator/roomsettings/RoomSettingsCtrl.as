@@ -785,7 +785,7 @@
         {
             var _local_2:IRadioButtonWindow;
             var _local_3:ISelectorWindow = (this._window.findChildByName("moderation_mute_selector") as ISelectorWindow);
-            switch (k.roomModerationSettings._Str_7688)
+            switch (k.roomModerationSettings.whoCanMute)
             {
                 case RoomModerationSettings._Str_5047:
                     _local_2 = (this._window.findChildByName("moderation_mute_rights") as IRadioButtonWindow);
@@ -1017,10 +1017,10 @@
             switch (_local_2.name)
             {
                 case "moderation_mute_rights":
-                    k._Str_7688 = RoomModerationSettings._Str_5047;
+                    k.whoCanMute = RoomModerationSettings._Str_5047;
                     break;
                 default:
-                    k._Str_7688 = RoomModerationSettings._Str_10707;
+                    k.whoCanMute = RoomModerationSettings._Str_10707;
             }
             var _local_4:ISelectorWindow = (this._window.findChildByName("moderation_kick_selector") as ISelectorWindow);
             _local_2 = _local_4.getSelected();
