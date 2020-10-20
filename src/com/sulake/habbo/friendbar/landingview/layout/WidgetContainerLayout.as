@@ -30,7 +30,7 @@
         protected var _orgWindowWidth:int;
         protected var _orgWindowHeight:int;
         private var _registeredWidgets:Array;
-        private var _Str_3157:CommonWidgetSettings;
+        private var _commonWidgetSettings:CommonWidgetSettings;
         private var _schedulingStr:String;
 
         public function WidgetContainerLayout(k:HabboLandingView)
@@ -40,7 +40,7 @@
             this.habboLandingView = k;
             this._Str_22860();
             this.movingBackgroundObjects = new MovingBackgroundObjects(this.landingView);
-            this._Str_3157 = new CommonWidgetSettings(this.landingView);
+            this._commonWidgetSettings = new CommonWidgetSettings(this.landingView);
             k.registerUpdateReceiver(this, 1000);
         }
 
@@ -153,9 +153,9 @@
                 this.dynamicLayoutManager.dispose();
                 this.dynamicLayoutManager = null;
             }
-            if (this._Str_3157)
+            if (this._commonWidgetSettings)
             {
-                this._Str_3157 = null;
+                this._commonWidgetSettings = null;
             }
         }
 
@@ -377,7 +377,7 @@
         private function addWidgetPlaceholder(widgetCode:String):void
         {
             var widget:ILandingViewWidget = HabboLandingViewWidgets.createWidget(widgetCode, this.landingView);
-            this._registeredWidgets.push(new WidgetPlaceholder(widget, (WIDGET_PLACEHOLDER_ + widgetCode), this._Str_3157));
+            this._registeredWidgets.push(new WidgetPlaceholder(widget, (WIDGET_PLACEHOLDER_ + widgetCode), this._commonWidgetSettings));
         }
 
         private function initializeDynamicWidgetList():void
@@ -389,7 +389,7 @@
                 Logger.log("ERROR! Tried to initialize dynamic widget list for landing view without the dynamic element present");
                 return;
             }
-            this.dynamicLayoutManager = new DynamicLayoutManager(this, this._Str_3157);
+            this.dynamicLayoutManager = new DynamicLayoutManager(this, this._commonWidgetSettings);
             var k:int;
             while (k < 6)
             {
@@ -401,7 +401,7 @@
                     {
                         ISlotAwareWidget(widget).slot = (k + 1);
                     }
-                    this._registeredWidgets.push(new WidgetPlaceholder(widget, null, this._Str_3157, this.dynamicLayoutManager._Str_23980(k)));
+                    this._registeredWidgets.push(new WidgetPlaceholder(widget, null, this._commonWidgetSettings, this.dynamicLayoutManager._Str_23980(k)));
                 }
                 k++;
             }

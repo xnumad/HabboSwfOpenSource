@@ -14,13 +14,13 @@
         private var _Str_17931:String;
         private var _Str_18534:IWindowContainer;
         private var _initialized:Boolean;
-        private var _Str_3157:CommonWidgetSettings;
+        private var _commonWidgetSettings:CommonWidgetSettings;
 
         public function WidgetPlaceholder(k:ILandingViewWidget, _arg_2:String, _arg_3:CommonWidgetSettings, _arg_4:IWindowContainer=null)
         {
             this._widget = k;
             this._Str_17931 = _arg_2;
-            this._Str_3157 = _arg_3;
+            this._commonWidgetSettings = _arg_3;
             this._Str_18534 = _arg_4;
         }
 
@@ -31,15 +31,15 @@
                 this._widget.dispose();
                 this._widget = null;
             }
-            if (this._Str_3157)
+            if (this._commonWidgetSettings)
             {
-                this._Str_3157 = null;
+                this._commonWidgetSettings = null;
             }
         }
 
         public function get disposed():Boolean
         {
-            return (this._widget == null) && (this._Str_3157 == null);
+            return (this._widget == null) && (this._commonWidgetSettings == null);
         }
 
         public function refresh(k:IWindowContainer):void
@@ -78,9 +78,9 @@
             }
             if (this._widget.container != null)
             {
-                if (((this._widget is ISettingsAwareWidget) && (!(this._Str_3157 == null))))
+                if (((this._widget is ISettingsAwareWidget) && (!(this._commonWidgetSettings == null))))
                 {
-                    ISettingsAwareWidget(this._widget).settings = this._Str_3157;
+                    ISettingsAwareWidget(this._widget).settings = this._commonWidgetSettings;
                 }
                 this._widget.refresh();
             }
