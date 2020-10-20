@@ -287,7 +287,7 @@
                 this._viewerSession = k;
                 if (this._pendingResources.length == 0)
                 {
-                    this._Str_12778(k);
+                    this.startSession(k);
                 }
             }
             return true;
@@ -306,11 +306,11 @@
             }
             if (this._pendingResources.length == 0)
             {
-                this._Str_12778(this._viewerSession);
+                this.startSession(this._viewerSession);
             }
         }
 
-        public function _Str_12778(k:IRoomSession):Boolean
+        public function startSession(k:IRoomSession):Boolean
         {
             if (k.state == RoomSessionEvent.STARTED)
             {

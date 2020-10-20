@@ -7,7 +7,7 @@
     {
         function _Str_10094(_arg_1:int, _arg_2:String="", _arg_3:String=""):Boolean;
         function _Str_21545(_arg_1:int, _arg_2:int):Boolean;
-        function _Str_12778(_arg_1:IRoomSession):Boolean;
+        function startSession(_arg_1:IRoomSession):Boolean;
         function getSession(_arg_1:int):IRoomSession;
         function get events():IEventDispatcher;
         function get sessionStarting():Boolean;

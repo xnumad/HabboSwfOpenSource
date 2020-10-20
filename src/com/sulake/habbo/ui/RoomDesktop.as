@@ -1832,7 +1832,7 @@
         {
             if ((((!(this._roomSessionManager == null)) && (!(this._session == null))) && (this._loadingComplete)))
             {
-                this._roomSessionManager._Str_12778(this._session);
+                this._roomSessionManager.startSession(this._session);
                 this._Str_2485(new _Str_3227(_Str_3227.RWLBUW_HIDE_LOADING_BAR));
                 return true;
             }
