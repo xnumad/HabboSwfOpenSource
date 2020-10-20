@@ -10,7 +10,7 @@
         private var i:uint = 0;
         private var j:uint = 0;
         private var sbox:Vector.<uint>;
-        private var _Str_20933:uint;
+        private var markI:uint;
         private var _Str_22001:uint;
         private var _Str_21636:Vector.<uint>;
 
@@ -85,14 +85,14 @@
 
         public function mark():void
         {
-            this._Str_20933 = this.i;
+            this.markI = this.i;
             this._Str_22001 = this.j;
             this._Str_21636 = this.sbox.concat();
         }
 
         public function reset():void
         {
-            this.i = this._Str_20933;
+            this.i = this.markI;
             this.j = this._Str_22001;
             this.sbox = this._Str_21636.concat();
         }
