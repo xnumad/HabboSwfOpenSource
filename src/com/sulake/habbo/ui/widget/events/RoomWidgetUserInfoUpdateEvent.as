@@ -36,7 +36,7 @@
         private var _respectLeft:int = 0;
         private var _isIgnored:Boolean = false;
         private var _isGuildRoom:Boolean = false;
-        private var _Str_8973:Boolean = false;
+        private var _canTrade:Boolean = false;
         private var _Str_8910:int = 0;
         private var _Str_8858:int = 0;
         private var _isFriend:Boolean = false;
@@ -230,12 +230,12 @@
 
         public function set canTrade(k:Boolean):void
         {
-            this._Str_8973 = k;
+            this._canTrade = k;
         }
 
         public function get canTrade():Boolean
         {
-            return this._Str_8973;
+            return this._canTrade;
         }
 
         public function set canTradeReason(k:int):void
