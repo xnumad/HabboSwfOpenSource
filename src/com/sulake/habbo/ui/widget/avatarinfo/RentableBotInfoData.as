@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.avatarinfo
 {
-    import com.sulake.habbo.ui.widget.events.RoomWidgetRentrableBotInfostandUpdateEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRentableBotInfoUpdateEvent;
     import com.sulake.habbo.communication.messages.parser.room.bots._Str_6169;
 
     public class RentableBotInfoData 
@@ -106,7 +106,7 @@
             return this._name;
         }
 
-        public function populate(k:RoomWidgetRentrableBotInfostandUpdateEvent):void
+        public function populate(k:RoomWidgetRentableBotInfoUpdateEvent):void
         {
             if (k.id != this.id)
             {

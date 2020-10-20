@@ -22,7 +22,7 @@
     import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetFurniInfostandUpdateEvent;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetRentrableBotInfostandUpdateEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRentableBotInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUserTagsUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetPetInfostandUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetPetCommandsUpdateEvent;
@@ -235,7 +235,7 @@
             eventDispatcher.addEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this.userInstandUpdateHandler);
             eventDispatcher.addEventListener(RoomWidgetUserInfoUpdateEvent.BOT, this.botInfostandUpdateHandler);
             eventDispatcher.addEventListener(RoomWidgetFurniInfostandUpdateEvent.FURNI, this.furniUpdateHandler);
-            eventDispatcher.addEventListener(RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT, this.rentableBotInfostandUpdateHandler);
+            eventDispatcher.addEventListener(RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT, this.rentableBotInfostandUpdateHandler);
             eventDispatcher.addEventListener(RoomWidgetUserTagsUpdateEvent.USER_TAGS, this.userTagsUpdatedHandler);
             eventDispatcher.addEventListener(RoomWidgetPetInfostandUpdateEvent.PET_INFO, this.petInfostandUpdateHandler);
             eventDispatcher.addEventListener(RoomWidgetPetCommandsUpdateEvent.PET_COMMANDS, this.petCommandsUpdateHandler);
@@ -261,7 +261,7 @@
             eventDispatcher.removeEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this.userInstandUpdateHandler);
             eventDispatcher.removeEventListener(RoomWidgetUserInfoUpdateEvent.BOT, this.botInfostandUpdateHandler);
             eventDispatcher.removeEventListener(RoomWidgetFurniInfostandUpdateEvent.FURNI, this.furniUpdateHandler);
-            eventDispatcher.removeEventListener(RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT, this.rentableBotInfostandUpdateHandler);
+            eventDispatcher.removeEventListener(RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT, this.rentableBotInfostandUpdateHandler);
             eventDispatcher.removeEventListener(RoomWidgetUserTagsUpdateEvent.USER_TAGS, this.userTagsUpdatedHandler);
             eventDispatcher.removeEventListener(RoomWidgetPetInfostandUpdateEvent.PET_INFO, this.petInfostandUpdateHandler);
             eventDispatcher.removeEventListener(RoomWidgetPetCommandsUpdateEvent.PET_COMMANDS, this.petCommandsUpdateHandler);
@@ -323,7 +323,7 @@
             }
         }
 
-        private function rentableBotInfostandUpdateHandler(updateEvent:RoomWidgetRentrableBotInfostandUpdateEvent):void
+        private function rentableBotInfostandUpdateHandler(updateEvent:RoomWidgetRentableBotInfoUpdateEvent):void
         {
             this.botData._Str_5479(updateEvent);
             this._rentableBotView.update(updateEvent);

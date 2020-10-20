@@ -6,7 +6,7 @@
     import com.sulake.core.window.components.IBorderWindow;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.tracking.HabboTracking;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetRentrableBotInfostandUpdateEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRentableBotInfoUpdateEvent;
     import com.sulake.core.window.components.ITextWindow;
     import flash.display.BitmapData;
     import flash.geom.Rectangle;
@@ -105,7 +105,7 @@
             this._widget._Str_10301();
         }
 
-        public function update(k:RoomWidgetRentrableBotInfostandUpdateEvent):void
+        public function update(k:RoomWidgetRentableBotInfoUpdateEvent):void
         {
             this._botId = k.id;
             this._Str_9667(NAME_TEXT, true, k.name);

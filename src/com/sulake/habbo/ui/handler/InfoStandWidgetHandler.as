@@ -57,7 +57,7 @@
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
     import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_11301;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetRentrableBotInfostandUpdateEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRentableBotInfoUpdateEvent;
     import com.sulake.habbo.friendlist.IFriend;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.session.enum.RoomTradingLevelEnum;
@@ -781,7 +781,7 @@
 
         private function _Str_23115(k:int, _arg_2:int, _arg_3:int, _arg_4:RoomUserData):void
         {
-            var _local_5:RoomWidgetRentrableBotInfostandUpdateEvent = new RoomWidgetRentrableBotInfostandUpdateEvent();
+            var _local_5:RoomWidgetRentableBotInfoUpdateEvent = new RoomWidgetRentableBotInfoUpdateEvent();
             _local_5.name = _arg_4.name;
             _local_5.motto = _arg_4.custom;
             _local_5.id = _arg_4.id;

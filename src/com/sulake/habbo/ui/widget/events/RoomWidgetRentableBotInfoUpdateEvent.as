@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.events
 {
-    public class RoomWidgetRentrableBotInfostandUpdateEvent extends RoomWidgetUpdateEvent 
+    public class RoomWidgetRentableBotInfoUpdateEvent extends RoomWidgetUpdateEvent
     {
         public static const RENTABLE_BOT:String = "RWRBIUE_RENTABLE_BOT";
         public static const _Str_7492:String = "RENTABLE_BOT";
@@ -19,7 +19,7 @@
         private var _roomControllerLevel:int = 0;
         private var _botSkills:Array;
 
-        public function RoomWidgetRentrableBotInfostandUpdateEvent(k:Boolean=false, _arg_2:Boolean=false)
+        public function RoomWidgetRentableBotInfoUpdateEvent(k:Boolean=false, _arg_2:Boolean=false)
         {
             this._badges = [];
             super(RENTABLE_BOT, k, _arg_2);

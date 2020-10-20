@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.infostand
 {
-    import com.sulake.habbo.ui.widget.events.RoomWidgetRentrableBotInfostandUpdateEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRentableBotInfoUpdateEvent;
 
     public class InfoStandRentableBotData 
     {
@@ -99,7 +99,7 @@
             this._botSkills = k;
         }
 
-        public function _Str_5479(k:RoomWidgetRentrableBotInfostandUpdateEvent):void
+        public function _Str_5479(k:RoomWidgetRentableBotInfoUpdateEvent):void
         {
             this.userId = k.id;
             this.name = k.name;

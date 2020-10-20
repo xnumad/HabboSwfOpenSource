@@ -24,7 +24,7 @@
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotSkillConfigurationViewBase;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRequestBotForceOpenContextMenuEvent;
     import com.sulake.habbo.ui.widget.events._Str_5375;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetRentrableBotInfostandUpdateEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRentableBotInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.events._Str_5393;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectUpdateEvent;
@@ -423,7 +423,7 @@
             }
             k.addEventListener(RoomWidgetRequestBotForceOpenContextMenuEvent.OPEN, this._Str_2557);
             k.addEventListener(_Str_5375.RWRBSLUE_SKILL_LIST, this._Str_2557);
-            k.addEventListener(RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT, this._Str_2557);
+            k.addEventListener(RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT, this._Str_2557);
             k.addEventListener(_Str_5393.RWAIE_AVATAR_INFO, this._Str_2557);
             k.addEventListener(RoomWidgetUserInfoUpdateEvent.OWN_USER, this._Str_2557);
             k.addEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this._Str_2557);
@@ -458,7 +458,7 @@
             }
             k.removeEventListener(RoomWidgetRequestBotForceOpenContextMenuEvent.OPEN, this._Str_2557);
             k.removeEventListener(_Str_5375.RWRBSLUE_SKILL_LIST, this._Str_2557);
-            k.removeEventListener(RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT, this._Str_2557);
+            k.removeEventListener(RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT, this._Str_2557);
             k.removeEventListener(_Str_5393.RWAIE_AVATAR_INFO, this._Str_2557);
             k.removeEventListener(RoomWidgetUserInfoUpdateEvent.OWN_USER, this._Str_2557);
             k.removeEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this._Str_2557);
@@ -499,7 +499,7 @@
             var _local_12:_Str_3962;
             var _local_13:RoomWidgetUserInfoUpdateEvent;
             var _local_14:AvatarInfoData;
-            var _local_15:RoomWidgetRentrableBotInfostandUpdateEvent;
+            var _local_15:RoomWidgetRentableBotInfoUpdateEvent;
             var _local_16:IRoomSession;
             var _local_17:RoomUserData;
             var _local_18:_Str_5375;
@@ -711,8 +711,8 @@
                     _local_14 = ((_local_13._Str_4780) ? null : this._userInfoData);
                     this._Str_12674(_local_13.id, _local_13.name, _local_13.userType, _local_13._Str_3313, this._userInfoData.allowNameChange, _local_14);
                     break;
-                case RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT:
-                    _local_15 = (k as RoomWidgetRentrableBotInfostandUpdateEvent);
+                case RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT:
+                    _local_15 = (k as RoomWidgetRentableBotInfoUpdateEvent);
                     if (!this._rentableBotInfoData)
                     {
                         this._rentableBotInfoData = new RentableBotInfoData();
