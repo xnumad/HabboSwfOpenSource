@@ -4,11 +4,11 @@
 
     public class ChangeMottoMessageComposer implements IMessageComposer
     {
-        private var _Str_3056:String;
+        private var _motto:String;
 
         public function ChangeMottoMessageComposer(k:String)
         {
-            this._Str_3056 = k;
+            this._motto = k;
         }
 
         public function dispose():void
@@ -17,7 +17,7 @@
 
         public function getMessageArray():Array
         {
-            return [this._Str_3056];
+            return [this._motto];
         }
     }
 }
