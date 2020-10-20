@@ -1503,7 +1503,7 @@
             return ((!(this._container == null)) && (this._container.config)) && (this._container.config.getBoolean("activity.point.display.enabled"));
         }
 
-        public function _Str_23922(k:Map):void
+        public function setObjectData(k:Map):void
         {
             if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))
             {

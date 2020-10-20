@@ -186,7 +186,7 @@
                         _local_3[_local_6.name] = _local_6.findChildByName("value").caption;
                         _local_5++;
                     }
-                    this._widget.handler._Str_23922(_local_3);
+                    this._widget.handler.setObjectData(_local_3);
                     return;
             }
         }
