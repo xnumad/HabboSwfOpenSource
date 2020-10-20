@@ -24,7 +24,7 @@
         function _Str_21317(_arg_1:int, _arg_2:int, _arg_3:uint, _arg_4:int, _arg_5:Boolean):void;
         function _Str_20755():void;
         function _Str_21689(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String=null, _arg_5:int=0):void;
-        function _Str_21176(_arg_1:int):void;
+        function sendPollStartMessage(_arg_1:int):void;
         function sendPollRejectMessage(_arg_1:int):void;
 		function votePoll(counter:int):void;
         function sendPollAnswerMessage(_arg_1:int, _arg_2:int, _arg_3:Array):void;

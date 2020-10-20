@@ -370,7 +370,7 @@
             this._connection.send(new EventLogMessageComposer(k, _arg_2, _arg_3, _arg_4, _arg_5));
         }
 
-        public function _Str_21176(k:int):void
+        public function sendPollStartMessage(k:int):void
         {
             this._connection.send(new _Str_11290(k));
         }
