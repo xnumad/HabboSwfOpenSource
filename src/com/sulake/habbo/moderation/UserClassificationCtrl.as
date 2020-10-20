@@ -52,7 +52,7 @@
             this._list.removeListItems();
             this._frame.procedure = this._Str_7142;
             var k:IWindow = this._frame.findChildByTag("close");
-            k.procedure = this._Str_2392;
+            k.procedure = this.onClose;
         }
 
         public function _Str_22627(k:int, _arg_2:Array):void
@@ -144,7 +144,7 @@
             }
         }
 
-        private function _Str_2392(k:WindowEvent, _arg_2:IWindow):void
+        private function onClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

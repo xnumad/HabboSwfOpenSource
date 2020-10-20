@@ -64,7 +64,7 @@
         {
         }
 
-        internal function _Str_2392(k:WindowEvent, _arg_2:IWindow):void
+        internal function onClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
@@ -77,7 +77,7 @@
         {
             var k:IFrameWindow = IFrameWindow(this._habboFriendList.getXmlWindow(this._Str_4188));
             var _local_2:IWindow = k.findChildByTag("close");
-            _local_2.procedure = this._Str_2392;
+            _local_2.procedure = this.onClose;
             return k;
         }
 

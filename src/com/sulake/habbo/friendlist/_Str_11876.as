@@ -33,7 +33,7 @@
             friendList.registerParameter("friendlist.invite.summary", "count", ("" + this._Str_1007.length));
             this._Str_8618 = ITextFieldWindow(k.findChildByName("message_input"));
             this._Str_8618.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_23962);
-            k.findChildByName("cancel").procedure = _Str_2392;
+            k.findChildByName("cancel").procedure = onClose;
             k.findChildByName("ok").procedure = this._Str_23191;
         }
 

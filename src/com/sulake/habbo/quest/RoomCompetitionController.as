@@ -158,7 +158,7 @@
                             if (this._result == CompetitionEntrySubmitResultMessageParser.SUBMITTED)
                             {
                                 this._Str_6512(this._Str_16143);
-                                this._Str_4365().procedure = this._Str_2392;
+                                this._Str_4365().procedure = this.onClose;
                             }
                             else
                             {
@@ -348,7 +348,7 @@
             {
                 k = 1;
                 this._window = IWindowContainer(this._questEngine.getXmlWindow("RoomCompetition", k));
-                this._window.findChildByName("close_region").procedure = this._Str_2392;
+                this._window.findChildByName("close_region").procedure = this.onClose;
                 this._questEngine.windowManager.getWindowContext(k).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
                 this._window.findChildByName("dont_show_again_region").procedure = this._Str_24295;
             }
@@ -426,7 +426,7 @@
             }
         }
 
-        private function _Str_2392(k:WindowEvent, _arg_2:IWindow=null):void
+        private function onClose(k:WindowEvent, _arg_2:IWindow=null):void
         {
             var _local_3:String;
             if (k.type == WindowMouseEvent.CLICK)

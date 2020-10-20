@@ -48,12 +48,12 @@
                 return;
             }
             this._window = IFrameWindow(this._manager.getXmlWindow("group_created_window"));
-            this._window.findChildByTag("close").procedure = this._Str_2392;
-            this._window.findChildByName("ok_button").procedure = this._Str_2392;
+            this._window.findChildByTag("close").procedure = this.onClose;
+            this._window.findChildByName("ok_button").procedure = this.onClose;
             this._window.center();
         }
 
-        private function _Str_2392(k:WindowEvent, _arg_2:IWindow):void
+        private function onClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

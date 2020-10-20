@@ -84,7 +84,7 @@
             return ITextFieldWindow(this._window.findChildByName(k));
         }
 
-        private function _Str_2392(k:WindowEvent):void
+        private function onClose(k:WindowEvent):void
         {
             this.close();
         }
@@ -163,7 +163,7 @@
                 return;
             }
             this._window = IFrameWindow(this._Str_2272.getXmlWindow("iro_event_settings"));
-            this._Str_2786(this._window.findChildByTag("close"), this._Str_2392);
+            this._Str_2786(this._window.findChildByTag("close"), this.onClose);
             this._Str_5340 = new TextFieldManager(this._Str_2272, this._Str_2453("event_name"), 25);
             this._Str_5951 = new TextFieldManager(this._Str_2272, this._Str_2453("event_desc"), 100);
             this._Str_5340.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);

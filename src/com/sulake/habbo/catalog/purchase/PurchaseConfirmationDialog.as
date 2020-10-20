@@ -254,8 +254,8 @@
             var _local_3:IWindowContainer = (this._window.findChildByName("purchase_cost_box") as IWindowContainer);
             this._catalog.utils._Str_6455(_local_3, k, this._quantity);
             this._Str_2471("buy_button", this._Str_13434);
-            this._Str_2471("cancel_button", this._Str_2392);
-            this._Str_2471("header_button_close", this._Str_2392);
+            this._Str_2471("cancel_button", this.onClose);
+            this._Str_2471("header_button_close", this.onClose);
             this._window.center();
             if (this._catalog.getBoolean("disclaimer.credit_spending.enabled"))
             {
@@ -867,7 +867,7 @@
             HabboTracking.getInstance().trackEventLog("Catalog", "clickConfirm", "client.buy_as_gift.clicked");
         }
 
-        private function _Str_2392(k:WindowEvent):void
+        private function onClose(k:WindowEvent):void
         {
             this._catalog._Str_4663();
             this.dispose();

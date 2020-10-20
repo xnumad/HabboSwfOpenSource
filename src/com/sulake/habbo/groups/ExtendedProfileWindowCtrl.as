@@ -94,7 +94,7 @@
                 this._noGroupsContainer.findChildByName("view_groups_button").procedure = this._Str_24557;
             }
             this._window = IFrameWindow(this._manager.getXmlWindow("new_extended_profile"));
-            this._window.findChildByTag("close").procedure = this._Str_2392;
+            this._window.findChildByTag("close").procedure = this.onClose;
             this._window.findChildByName("addasfriend_button").procedure = this._Str_23485;
             this._window.findChildByName("rooms_button").procedure = this._Str_23821;
             this._groupsList = IItemListWindow(this._window.findChildByName("groups_list"));
@@ -430,7 +430,7 @@
             this._selectedGroupId = _arg_2.id;
         }
 
-        private function _Str_2392(k:WindowEvent, _arg_2:IWindow):void
+        private function onClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

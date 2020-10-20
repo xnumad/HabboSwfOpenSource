@@ -108,7 +108,7 @@
             return this._frame;
         }
 
-        private function _Str_2392(k:WindowEvent, _arg_2:IWindow):void
+        private function onClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
@@ -187,7 +187,7 @@
         {
             this._list = IItemListWindow(this._frame.findChildByName("list_cont"));
             var k:IWindow = this._frame.findChildByTag("close");
-            k.procedure = this._Str_2392;
+            k.procedure = this.onClose;
             this._msgInput = ITextFieldWindow(this._frame.findChildByName("message_input"));
             this._msgInput.procedure = this._Str_12396;
             this._msgSelect = IDropMenuWindow(this._frame.findChildByName("msgTemplatesSelect"));

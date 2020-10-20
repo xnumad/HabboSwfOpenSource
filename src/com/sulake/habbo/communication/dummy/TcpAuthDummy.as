@@ -18,7 +18,7 @@
             this._socket = new Socket();
             this._socket.addEventListener(Event.CONNECT, this.onConnect);
             this._socket.addEventListener(Event.COMPLETE, this.onComplete);
-            this._socket.addEventListener(Event.CLOSE, this._Str_2392);
+            this._socket.addEventListener(Event.CLOSE, this.onClose);
             this._socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this.onSecurityError);
             this._socket.addEventListener(IOErrorEvent.IO_ERROR, this.onIOError);
             this._socket.connect(k, _arg_2);
@@ -39,7 +39,7 @@
             this._Str_11469();
         }
 
-        private function _Str_2392(k:Event):void
+        private function onClose(k:Event):void
         {
             Logger.log("TcpAuth control socket closed");
             this._Str_11469();

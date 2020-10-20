@@ -84,7 +84,7 @@
                 this._frame.procedure = this._Str_7142;
                 this._frame.visible = true;
                 _local_3 = this._frame.findChildByTag("close");
-                _local_3.procedure = this._Str_2392;
+                _local_3.procedure = this.onClose;
                 this._list = _local_2;
             }
             else
@@ -397,7 +397,7 @@
             this._main.windowTracker.show(new UserInfoFrameCtrl(this._main, _local_3, this._issue), (this._frame as IFrameWindow), false, false, true);
         }
 
-        private function _Str_2392(k:WindowEvent, _arg_2:IWindow):void
+        private function onClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

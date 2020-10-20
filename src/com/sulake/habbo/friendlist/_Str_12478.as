@@ -29,7 +29,7 @@
             var _local_3:Friend;
             var _local_4:String;
             var _local_5:Dictionary;
-            k.findChildByName("cancel").procedure = _Str_2392;
+            k.findChildByName("cancel").procedure = onClose;
             k.findChildByName("ok").procedure = this._Str_22491;
             var _local_2:Array = new Array();
             for each (_local_3 in this._Str_1007)

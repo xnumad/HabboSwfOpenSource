@@ -33,7 +33,7 @@
             this._frame = IFrameWindow(this._main.getXmlWindow("user_info_frame"));
             this._frame.caption = "User Info";
             var k:IWindow = this._frame.findChildByTag("close");
-            k.procedure = this._Str_2392;
+            k.procedure = this.onClose;
             this._userInfoCtrl = new UserInfoCtrl(this._frame, this._main, this._issue, null, true);
             this._userInfoCtrl.load(this._frame.content, this._userId);
             this._frame.visible = true;
@@ -54,7 +54,7 @@
             return this._frame;
         }
 
-        private function _Str_2392(k:WindowEvent, _arg_2:IWindow):void
+        private function onClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

@@ -50,7 +50,7 @@
             this._Str_23308(this._msgSelect);
             this._msgSelect.procedure = this._Str_19008;
             var k:IWindow = this._frame.findChildByTag("close");
-            k.procedure = this._Str_2392;
+            k.procedure = this.onClose;
             this._frame.visible = true;
         }
 
@@ -105,7 +105,7 @@
             this.dispose();
         }
 
-        private function _Str_2392(k:WindowEvent, _arg_2:IWindow):void
+        private function onClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
