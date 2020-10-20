@@ -45,7 +45,7 @@
     public class RoomSessionManager extends Component implements IRoomSessionManager, IRoomHandlerListener 
     {
         public static const SETUP_WITHOUT_COMMUNICATION:uint = 2;
-        public static const _Str_16758:uint = 3;
+        public static const SETUP_WITHOUT_TRACKING:uint = 3;
         public static const _Str_17871:uint = 4;
 
         private var _communication:IHabboCommunicationManager = null;
@@ -88,7 +88,7 @@
             }, ((flags & SETUP_WITHOUT_COMMUNICATION) == 0)), new ComponentDependency(new IIDHabboTracking(), function (k:IHabboTracking):void
             {
                 _habboTracking = k;
-            }, ((flags & _Str_16758) == 0)), new ComponentDependency(new IIDHabboFreeFlowChat(), function (k:IHabboFreeFlowChat):void
+            }, ((flags & SETUP_WITHOUT_TRACKING) == 0)), new ComponentDependency(new IIDHabboFreeFlowChat(), function (k:IHabboFreeFlowChat):void
             {
                 _freeFlowChat = k;
             }, false), new ComponentDependency(new IIDHabboConfigurationManager(), null), new ComponentDependency(new IIDRoomEngine(), function (k:IRoomEngine):void
