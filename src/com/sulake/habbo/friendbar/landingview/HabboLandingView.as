@@ -301,7 +301,7 @@
             }
         }
 
-        private function _Str_23862(k:GameCenterEvent):void
+        private function onGameConfigurationsInitialized(k:GameCenterEvent):void
         {
             if (!this._gameCenterOK)
             {
@@ -316,7 +316,7 @@
             this._catalog.events.addEventListener(CatalogEvent.CATALOG_INVISIBLE_PAGE_VISITED, this._Str_24288);
             if (this._Str_13959())
             {
-                this._gameManager.events.addEventListener(GameCenterEvent.GAME_CONFIGURATIONS_INITIALIZED, this._Str_23862);
+                this._gameManager.events.addEventListener(GameCenterEvent.GAME_CONFIGURATIONS_INITIALIZED, this.onGameConfigurationsInitialized);
             }
             else
             {
