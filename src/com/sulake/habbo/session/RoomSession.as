@@ -520,7 +520,7 @@
             this._connection.send(new _Str_10314(k));
         }
 
-        public function _Str_21093(k:int, _arg_2:String, _arg_3:String):void
+        public function sendUpdateClothingChangeFurniture(k:int, _arg_2:String, _arg_3:String):void
         {
             if (this._connection == null)
             {

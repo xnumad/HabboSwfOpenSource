@@ -145,7 +145,7 @@
             {
                 return;
             }
-            this._container.roomSession._Str_21093(this._objectId, _arg_2, k);
+            this._container.roomSession.sendUpdateClothingChangeFurniture(this._objectId, _arg_2, k);
             this._container.avatarEditor.close(AvatarEditorInstanceId.FURNITURE_AVATAR_EDITOR);
         }
     }
