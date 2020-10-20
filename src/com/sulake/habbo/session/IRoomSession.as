@@ -20,7 +20,7 @@
         function _Str_22199(_arg_1:int):void;
         function _Str_17139(_arg_1:int):void;
         function _Str_20560(_arg_1:int, _arg_2:String):void;
-        function _Str_21175():void;
+        function sendRoomDimmerGetPresetsMessage():void;
         function sendRoomDimmerSavePresetMessage(_arg_1:int, _arg_2:int, _arg_3:uint, _arg_4:int, _arg_5:Boolean):void;
         function sendRoomDimmerChangeStateMessage():void;
         function sendConversionPoint(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String=null, _arg_5:int=0):void;

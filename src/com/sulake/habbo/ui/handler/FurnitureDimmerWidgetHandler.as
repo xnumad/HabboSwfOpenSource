@@ -60,7 +60,7 @@
                 case RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_DIMMER:
                     if (this._Str_6826())
                     {
-                        this._container.roomSession._Str_21175();
+                        this._container.roomSession.sendRoomDimmerGetPresetsMessage();
                     }
                     break;
                 case RoomWidgetDimmerSavePresetMessage.RWSDPM_SAVE_PRESET:

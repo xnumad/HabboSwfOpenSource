@@ -348,7 +348,7 @@
             this._connection.send(new _Str_10243(k, _arg_2));
         }
 
-        public function _Str_21175():void
+        public function sendRoomDimmerGetPresetsMessage():void
         {
             this._connection.send(new _Str_11262());
         }
