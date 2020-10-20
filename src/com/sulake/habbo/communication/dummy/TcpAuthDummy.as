@@ -36,31 +36,31 @@
         private function onConnect(k:Event):void
         {
             Logger.log("TcpAuth control socket connected");
-            this._Str_11469();
+            this.gracefulClose();
         }
 
         private function onClose(k:Event):void
         {
             Logger.log("TcpAuth control socket closed");
-            this._Str_11469();
+            this.gracefulClose();
         }
 
         private function onComplete(k:Event):void
         {
             Logger.log("TcpAuth control socket complete");
-            this._Str_11469();
+            this.gracefulClose();
         }
 
         private function onSecurityError(k:SecurityErrorEvent):void
         {
             Logger.log("TcpAuth control socket security error");
-            this._Str_11469();
+            this.gracefulClose();
         }
 
         private function onIOError(k:IOErrorEvent):void
         {
             Logger.log("TcpAuth control socket io error");
-            this._Str_11469();
+            this.gracefulClose();
         }
 
         public function get connected():Boolean
@@ -68,7 +68,7 @@
             return (!(this._socket == null)) && (this._socket.connected);
         }
 
-        public function _Str_11469():void
+        public function gracefulClose():void
         {
             if (this.connected)
             {
