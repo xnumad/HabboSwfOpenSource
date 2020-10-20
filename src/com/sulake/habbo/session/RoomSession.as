@@ -448,7 +448,7 @@
             this._connection.send(new _Str_10764(k));
         }
 
-        public function _Str_21066(k:int):void
+        public function mountPet(k:int):void
         {
             this._connection.send(new _Str_7691(k, true));
         }
