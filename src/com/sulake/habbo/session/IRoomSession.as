@@ -75,8 +75,8 @@
         function get isGameSession():Boolean;
         function get roomModerationSettings():RoomModerationSettings;
         function set roomModerationSettings(_arg_1:RoomModerationSettings):void;
-        function get _Str_16924():Boolean;
-        function set _Str_16924(_arg_1:Boolean):void;
+        function get isNuxNotComplete():Boolean;
+        function set isNuxNotComplete(_arg_1:Boolean):void;
         function _Str_19090(_arg_1:int):void;
         function _Str_21562(_arg_1:int):void;
         function _Str_21305(_arg_1:int):void;

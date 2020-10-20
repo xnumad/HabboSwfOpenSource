@@ -645,12 +645,12 @@
             this._isUserDecorating = k;
         }
 
-        public function get _Str_16924():Boolean
+        public function get isNuxNotComplete():Boolean
         {
             return this._nuxNotComplete;
         }
 
-        public function set _Str_16924(k:Boolean):void
+        public function set isNuxNotComplete(k:Boolean):void
         {
             this._nuxNotComplete = k;
         }
