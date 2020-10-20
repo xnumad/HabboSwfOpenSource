@@ -8,7 +8,7 @@
     {
         public static const GUIDE_REPORTING_STATUS_OK:int = 0;
         public static const GUIDE_REPORTING_STATUS_PENDING_TICKET:int = 1;
-        public static const _Str_18403:int = 2;
+        public static const GUIDE_REPORTING_STATUS_ABUSIVE:int = 2;
         public static const _Str_17955:int = 3;
 
         private var _Str_14988:int;
@@ -45,7 +45,7 @@
         {
             switch (this._Str_14988)
             {
-                case _Str_18403:
+                case GUIDE_REPORTING_STATUS_ABUSIVE:
                     return "blocked";
                 case _Str_17955:
                     return "tooquick";
