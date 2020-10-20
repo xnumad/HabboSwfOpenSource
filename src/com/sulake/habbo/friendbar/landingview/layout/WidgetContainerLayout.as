@@ -227,7 +227,7 @@
                 }
             }
             this._Str_25199();
-            this._Str_25610();
+            this.setupBottomSlotWidgetName();
         }
 
         private function _Str_23921():void
@@ -245,7 +245,7 @@
             this._orgWindowHeight = this.windowContainer.height;
         }
 
-        protected function _Str_25610():void
+        protected function setupBottomSlotWidgetName():void
         {
             var _local_2:String;
             var k:IWindow = this.windowContainer.findChildByName("widget_placeholder_bottom_slot");
