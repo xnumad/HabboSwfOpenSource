@@ -298,7 +298,7 @@
             this._connection.send(new _Str_10169(k, _arg_2, _arg_3));
         }
 
-        public function _Str_21148(k:Boolean):void
+        public function sendChatTypingMessage(k:Boolean):void
         {
             if (k)
             {

@@ -110,7 +110,7 @@
                     _local_5 = (k as RoomWidgetChatTypingMessage);
                     if (_local_5 != null)
                     {
-                        this._container.roomSession._Str_21148(_local_5.isTyping);
+                        this._container.roomSession.sendChatTypingMessage(_local_5.isTyping);
                     }
                     break;
                 case RoomWidgetChatMessage.RWCM_MESSAGE_CHAT:
