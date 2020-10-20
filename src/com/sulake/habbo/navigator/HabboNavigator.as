@@ -12,7 +12,7 @@
     import com.sulake.habbo.help.IHabboHelp;
     import com.sulake.habbo.avatar.IAvatarRenderManager;
     import com.sulake.habbo.navigator.mainview.MainViewCtrl;
-    import com.sulake.habbo.navigator.inroom.RoomEventViewCtrl;
+    import com.sulake.habbo.navigator.inroom.RoomInfoViewCtrl;
     import com.sulake.habbo.navigator.roomsettings.RoomCreateViewCtrl;
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.navigator.domain.Tabs;
@@ -20,7 +20,7 @@
     import com.sulake.habbo.toolbar.IHabboToolbar;
     import com.sulake.habbo.navigator.roomsettings.RoomSettingsCtrl;
     import com.sulake.habbo.navigator.mainview.OfficialRoomEntryManager;
-    import com.sulake.habbo.navigator.inroom.RoomInfoViewCtrl;
+    import com.sulake.habbo.navigator.inroom.RoomEventViewCtrl;
     import com.sulake.habbo.navigator.inroom.RoomEventInfoCtrl;
     import com.sulake.habbo.navigator.roomsettings.RoomFilterCtrl;
     import com.sulake.habbo.navigator.toolbar._Str_8760;
@@ -83,7 +83,7 @@
         private var _habboHelp:IHabboHelp;
         private var _avatarManager:IAvatarRenderManager;
         private var _mainViewCtrl:MainViewCtrl;
-        private var _roomInfoViewCtrl:RoomEventViewCtrl;
+        private var _roomInfoViewCtrl:RoomInfoViewCtrl;
         private var _roomCreateViewCtrl:RoomCreateViewCtrl;
         private var _data:NavigatorData;
         private var _tabs:Tabs;
@@ -94,7 +94,7 @@
         private var _passwordInput:GuestRoomPasswordInput;
         private var _doorbell:GuestRoomDoorbell;
         private var _officialRoomEntryManager:OfficialRoomEntryManager;
-        private var _roomEventViewCtrl:RoomInfoViewCtrl;
+        private var _roomEventViewCtrl:RoomEventViewCtrl;
         private var _roomEventInfoCtrl:RoomEventInfoCtrl;
         private var _roomFilterCtrl:RoomFilterCtrl;
         private var _toolbarHover:_Str_8760;
@@ -108,13 +108,13 @@
             this._assetLibrary = new AssetLibraryCollection("NavigatorComponent");
             this._data = new NavigatorData(this);
             this._mainViewCtrl = new MainViewCtrl(this);
-            this._roomInfoViewCtrl = new RoomEventViewCtrl(this);
+            this._roomInfoViewCtrl = new RoomInfoViewCtrl(this);
             this._roomCreateViewCtrl = new RoomCreateViewCtrl(this);
             this._passwordInput = new GuestRoomPasswordInput(this);
             this._doorbell = new GuestRoomDoorbell(this);
             this._tabs = new Tabs(this);
             this._officialRoomEntryManager = new OfficialRoomEntryManager(this);
-            this._roomEventViewCtrl = new RoomInfoViewCtrl(this);
+            this._roomEventViewCtrl = new RoomEventViewCtrl(this);
             this._roomEventInfoCtrl = new RoomEventInfoCtrl(this);
             this._roomFilterCtrl = new RoomFilterCtrl(this);
             this._enforceCategoryCtrl = new EnforceCategoryCtrl(this);
@@ -140,7 +140,7 @@
             return this._tabs;
         }
 
-        public function get _Str_4012():RoomEventViewCtrl
+        public function get _Str_4012():RoomInfoViewCtrl
         {
             return this._roomInfoViewCtrl;
         }
@@ -180,7 +180,7 @@
             return this._doorbell;
         }
 
-        public function get _Str_6939():RoomInfoViewCtrl
+        public function get _Str_6939():RoomEventViewCtrl
         {
             return this._roomEventViewCtrl;
         }
