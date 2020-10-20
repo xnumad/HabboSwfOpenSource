@@ -11,7 +11,7 @@
         public static const GUIDE_REPORTING_STATUS_ABUSIVE:int = 2;
         public static const GUIDE_REPORTING_STATUS_REPORTING_TOO_QUICKLY:int = 3;
 
-        private var _Str_14988:int;
+        private var _statusCode:int;
         private var _Str_17655:PendingGuideTicket;
 
 
@@ -23,8 +23,8 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_14988 = k.readInteger();
-            if (this._Str_14988 == GUIDE_REPORTING_STATUS_PENDING_TICKET)
+            this._statusCode = k.readInteger();
+            if (this._statusCode == GUIDE_REPORTING_STATUS_PENDING_TICKET)
             {
                 this._Str_17655 = new PendingGuideTicket(k);
             }
@@ -33,7 +33,7 @@
 
         public function get _Str_23632():int
         {
-            return this._Str_14988;
+            return this._statusCode;
         }
 
         public function get _Str_25474():PendingGuideTicket
@@ -43,7 +43,7 @@
 
         public function get localizationCode():String
         {
-            switch (this._Str_14988)
+            switch (this._statusCode)
             {
                 case GUIDE_REPORTING_STATUS_ABUSIVE:
                     return "blocked";
