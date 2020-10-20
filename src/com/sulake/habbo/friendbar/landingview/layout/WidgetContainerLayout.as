@@ -280,7 +280,7 @@
             {
                 if (this.dynamicLayoutManager != null)
                 {
-                    this._Str_24915();
+                    this.resizeDynamicLayout();
                 }
                 else
                 {
@@ -294,7 +294,7 @@
             }
         }
 
-        private function _Str_24915():void
+        private function resizeDynamicLayout():void
         {
             var k:Rectangle = this.windowContainer.desktop.rectangle;
             this.windowContainer.width = k.width;
