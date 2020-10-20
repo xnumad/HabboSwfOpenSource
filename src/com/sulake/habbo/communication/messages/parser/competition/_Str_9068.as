@@ -5,7 +5,7 @@
 
     public class _Str_9068 implements IMessageParser 
     {
-        private var _Str_4271:String;
+        private var _schedulingStr:String;
         private var _code:String;
 
 
@@ -16,14 +16,14 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_4271 = k.readString();
+            this._schedulingStr = k.readString();
             this._code = k.readString();
             return true;
         }
 
         public function get _Str_18517():String
         {
-            return this._Str_4271;
+            return this._schedulingStr;
         }
 
         public function get code():String

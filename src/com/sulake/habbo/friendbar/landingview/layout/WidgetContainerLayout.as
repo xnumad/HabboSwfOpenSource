@@ -31,7 +31,7 @@
         protected var _orgWindowHeight:int;
         private var _registeredWidgets:Array;
         private var _Str_3157:CommonWidgetSettings;
-        private var _Str_4271:String;
+        private var _schedulingStr:String;
 
         public function WidgetContainerLayout(k:HabboLandingView)
         {
@@ -167,7 +167,7 @@
                 this.createWindow();
                 this.initializeDynamicWidgetList();
                 this.landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this._Str_12291));
-                this._Str_4271 = this.landingView.getProperty("landing.view.bgtiming");
+                this._schedulingStr = this.landingView.getProperty("landing.view.bgtiming");
             }
             for each (registeredWidget in this._registeredWidgets)
             {
@@ -180,7 +180,7 @@
             {
                 this.landingView.navigator.openNavigator(this._Str_21419);
             }
-            this.landingView.send(new _Str_5974(this._Str_4271));
+            this.landingView.send(new _Str_5974(this._schedulingStr));
             this.windowContainer.visible = true;
         }
 
@@ -431,7 +431,7 @@
 
         private function _Str_12291(k:CurrentTimingCodeMessageEvent):void
         {
-            if (((k.getParser()._Str_18517 == this._Str_4271) && (this.landingView)))
+            if (((k.getParser()._Str_18517 == this._schedulingStr) && (this.landingView)))
             {
                 this._Str_22475(k.getParser().code);
                 this.movingBackgroundObjects._Str_23132 = k.getParser().code;
