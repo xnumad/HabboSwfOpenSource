@@ -264,7 +264,7 @@
 
         private function _Str_23993():Boolean
         {
-            var k:Array = this._habboHelp._Str_5721.chatReportController.collectSelectedEntries(this._contentModerationType, this._habboHelp.reportedUserId);
+            var k:Array = this._habboHelp.callForHelpManager.chatReportController.collectSelectedEntries(this._contentModerationType, this._habboHelp.reportedUserId);
             if (((k == null) || (k.length == 0)))
             {
                 this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.chatmissing}", 0, null);
@@ -424,16 +424,16 @@
                     this._habboHelp.sendMessage(new CallForHelpFromPhotoMessageComposer(this._habboHelp._Str_11455, this._habboHelp._Str_3469, this._habboHelp.reportedUserId, this._currentTopic.id, this._habboHelp._Str_10658));
                     return;
                 case HabboHelp.REPORT_TYPE_IM:
-                    this._habboHelp.sendMessage(new CallForHelpFromIMMessageComposer(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_5721.chatReportController.collectSelectedEntries(HabboHelp.REPORT_TYPE_IM, this._habboHelp.reportedUserId)));
+                    this._habboHelp.sendMessage(new CallForHelpFromIMMessageComposer(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp.callForHelpManager.chatReportController.collectSelectedEntries(HabboHelp.REPORT_TYPE_IM, this._habboHelp.reportedUserId)));
                     return;
                 case HabboHelp.REPORT_TYPE_ROOM:
                     this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, -1, this._habboHelp._Str_3469, []));
                     return;
                 case HabboHelp.REPORT_TYPE_THREAD:
-                    this._habboHelp.sendMessage(new CallForHelpFromForumThreadMessageComposer(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._currentTopic.id, this._message));
+                    this._habboHelp.sendMessage(new CallForHelpFromForumThreadMessageComposer(this._habboHelp.callForHelpManager._Str_11420, this._habboHelp.callForHelpManager._Str_10392, this._currentTopic.id, this._message));
                     return;
                 case HabboHelp.REPORT_TYPE_MESSAGE:
-                    this._habboHelp.sendMessage(new CallForHelpFromForumMessageMessageComposer(this._habboHelp._Str_5721._Str_11420, this._habboHelp._Str_5721._Str_10392, this._habboHelp._Str_5721._Str_16155, this._currentTopic.id, this._message));
+                    this._habboHelp.sendMessage(new CallForHelpFromForumMessageMessageComposer(this._habboHelp.callForHelpManager._Str_11420, this._habboHelp.callForHelpManager._Str_10392, this._habboHelp.callForHelpManager._Str_16155, this._currentTopic.id, this._message));
                     return;
                 default:
                     if (((((k) && (this._currentTopic.name == BULLYING)) && (this._habboHelp.getBoolean("guides.enabled"))) && (this._habboHelp._Str_16486)))
@@ -442,7 +442,7 @@
                     }
                     else
                     {
-                        this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_3469, this._habboHelp._Str_5721.chatReportController.collectSelectedEntries(HabboHelp.REPORT_TYPE_EMERGENCY, -1)));
+                        this._habboHelp.sendMessage(new CallForHelpMessageComposer(this._message, this._currentTopic.id, this._habboHelp.reportedUserId, this._habboHelp._Str_3469, this._habboHelp.callForHelpManager.chatReportController.collectSelectedEntries(HabboHelp.REPORT_TYPE_EMERGENCY, -1)));
                     }
             }
         }
@@ -792,7 +792,7 @@
                 case HabboHelp.REPORT_TYPE_ROOM:
                     this._view.findChildByName("reported_user_avatar").visible = false;
                     this._view.findChildByName("user_info_title").visible = false;
-                    this._view.findChildByName("reported_user_name").caption = this._habboHelp._Str_5721._Str_16366;
+                    this._view.findChildByName("reported_user_name").caption = this._habboHelp.callForHelpManager._Str_16366;
                     return;
                 case HabboHelp.REPORT_TYPE_THREAD:
                 case HabboHelp.REPORT_TYPE_MESSAGE:

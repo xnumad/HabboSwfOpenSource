@@ -847,7 +847,7 @@
             }
         }
 
-        public function get _Str_5721():CallForHelpManager
+        public function get callForHelpManager():CallForHelpManager
         {
             return this._callForHelpManager;
         }
