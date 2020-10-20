@@ -10,13 +10,13 @@
 
         private var _Str_10533:int;
         private var _Str_9800:int;
-        private var _Str_12155:int;
+        private var _whoCanBan:int;
 
         public function RoomModerationSettings(k:IMessageDataWrapper)
         {
             this._Str_10533 = k.readInteger();
             this._Str_9800 = k.readInteger();
-            this._Str_12155 = k.readInteger();
+            this._whoCanBan = k.readInteger();
         }
 
         public function get _Str_7688():int
@@ -31,7 +31,7 @@
 
         public function get _Str_7772():int
         {
-            return this._Str_12155;
+            return this._whoCanBan;
         }
     }
 }

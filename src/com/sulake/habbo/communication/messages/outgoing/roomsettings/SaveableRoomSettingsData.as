@@ -21,7 +21,7 @@
         private var _Str_5119:int;
         private var _Str_10533:int;
         private var _Str_9800:int;
-        private var _Str_12155:int;
+        private var _whoCanBan:int;
         private var _Str_20703:int;
         private var _Str_21851:int;
         private var _Str_20461:int;
@@ -211,12 +211,12 @@
 
         public function get _Str_7772():int
         {
-            return this._Str_12155;
+            return this._whoCanBan;
         }
 
         public function set _Str_7772(k:int):void
         {
-            this._Str_12155 = k;
+            this._whoCanBan = k;
         }
 
         public function get _Str_18654():int
