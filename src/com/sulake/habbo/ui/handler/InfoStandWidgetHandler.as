@@ -425,7 +425,7 @@
                     this._container.roomSession._Str_21066(_local_2);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_RIDING_PERMISSION:
-                    this._container.roomSession._Str_21025(_local_2);
+                    this._container.roomSession.togglePetRidingPermission(_local_2);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_BREEDING_PERMISSION:
                     this._container.roomSession._Str_21562(_local_2);

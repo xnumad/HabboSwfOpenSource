@@ -453,7 +453,7 @@
             this._connection.send(new _Str_7691(k, true));
         }
 
-        public function _Str_21025(k:int):void
+        public function togglePetRidingPermission(k:int):void
         {
             this._connection.send(new _Str_12318(k));
         }

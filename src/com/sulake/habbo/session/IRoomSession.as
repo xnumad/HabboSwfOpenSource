@@ -41,7 +41,7 @@
         function _Str_20488(_arg_1:String, _arg_2:Boolean):void;
         function _Str_13781(_arg_1:int):void;
         function _Str_21066(_arg_1:int):void;
-        function _Str_21025(_arg_1:int):void;
+        function togglePetRidingPermission(_arg_1:int):void;
         function dismountPet(_arg_1:int):void;
         function removeSaddleFromPet(_arg_1:int):void;
         function requestPetCommands(_arg_1:int):void;
