@@ -34,7 +34,7 @@
         private var _canBeBanned:Boolean = false;
         private var _canBeMuted:Boolean = false;
         private var _respectLeft:int = 0;
-        private var _Str_6028:Boolean = false;
+        private var _isIgnored:Boolean = false;
         private var _Str_6139:Boolean = false;
         private var _Str_8973:Boolean = false;
         private var _Str_8910:int = 0;
@@ -180,12 +180,12 @@
 
         public function set isIgnored(k:Boolean):void
         {
-            this._Str_6028 = k;
+            this._isIgnored = k;
         }
 
         public function get isIgnored():Boolean
         {
-            return this._Str_6028;
+            return this._isIgnored;
         }
 
         public function set amIOwner(k:Boolean):void
