@@ -264,7 +264,7 @@
             if (this._landingViewLayout != null)
             {
                 this._landingViewLayout.disable();
-                this._Str_17047 = false;
+                this.toolbarExtensionExtraMargin = false;
             }
         }
 
@@ -480,7 +480,7 @@
             }
         }
 
-        public function set _Str_17047(k:Boolean):void
+        public function set toolbarExtensionExtraMargin(k:Boolean):void
         {
             if (((this._toolbar) && (this._toolbar.extensionView)))
             {

@@ -363,13 +363,13 @@
                 this._fromTopScrollbar.scrollV = 0;
                 this._scrollExtraSpace.y = this._Str_17991;
                 this._scrollExtraSpace.height = 25;
-                this._layout.landingView._Str_17047 = true;
+                this._layout.landingView.toolbarExtensionExtraMargin = true;
             }
             else
             {
                 this._scrollExtraSpace.y = 0;
                 this._scrollExtraSpace.height = 1;
-                this._layout.landingView._Str_17047 = false;
+                this._layout.landingView.toolbarExtensionExtraMargin = false;
             }
         }
 
