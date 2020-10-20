@@ -26,7 +26,7 @@
             this._itemGridWindow = _arg_2;
             this._widget = k;
             this._selectedItem = null;
-            this._musicController.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
+            this._musicController.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
         }
 
         public function get _Str_11307():int
@@ -45,7 +45,7 @@
             {
                 if (this._musicController.events != null)
                 {
-                    this._musicController.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
+                    this._musicController.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
                 }
                 this._musicController = null;
             }
@@ -202,7 +202,7 @@
             this._Str_22162();
         }
 
-        private function _Str_3530(k:SongInfoReceivedEvent):void
+        private function onSongInfoReceivedEvent(k:SongInfoReceivedEvent):void
         {
             var _local_2:ISongInfo;
             var _local_3:String;

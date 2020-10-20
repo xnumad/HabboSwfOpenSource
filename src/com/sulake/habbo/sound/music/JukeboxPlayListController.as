@@ -52,7 +52,7 @@
                 this._connection.addMessageEvent(_local_5);
             }
             this._events.addEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this._Str_7805);
-            this._musicController.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
+            this._musicController.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
         }
 
         public function get priority():int
@@ -97,7 +97,7 @@
                 this._Str_8507();
                 if (this._musicController.events)
                 {
-                    this._musicController.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
+                    this._musicController.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
                 }
                 this._musicController = null;
                 this._soundManager = null;
@@ -213,7 +213,7 @@
             this._events.dispatchEvent(new PlayListStatusEvent(PlayListStatusEvent.PLUE_PLAY_LIST_FULL));
         }
 
-        private function _Str_3530(k:SongInfoReceivedEvent):void
+        private function onSongInfoReceivedEvent(k:SongInfoReceivedEvent):void
         {
             var _local_4:ISongInfo;
             var _local_5:int;

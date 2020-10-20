@@ -75,7 +75,7 @@
             var _local_9:IWindowContainer = (this._windowManager.buildFromXML((_local_8.content as XML)) as IWindowContainer);
             _local_9.visible = false;
             this._popupCtrl = new ItemPopupCtrl(_local_9, this._assetLibrary, this._windowManager, this._tradingModel);
-            this._soundManager.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
+            this._soundManager.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
         }
 
         public function get disposed():Boolean
@@ -117,7 +117,7 @@
                 {
                     if (this._soundManager.events != null)
                     {
-                        this._soundManager.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
+                        this._soundManager.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
                     }
                     this._soundManager = null;
                 }
@@ -916,7 +916,7 @@
             }
         }
 
-        private function _Str_3530(k:SongInfoReceivedEvent):void
+        private function onSongInfoReceivedEvent(k:SongInfoReceivedEvent):void
         {
             var _local_2:Boolean;
             var _local_3:GroupItem;

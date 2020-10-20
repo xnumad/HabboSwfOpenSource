@@ -48,7 +48,7 @@
             this._soundManager = _arg_2.soundManager;
             if (this._soundManager != null)
             {
-                this._soundManager.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
+                this._soundManager.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
             }
             this._connection = _arg_2.connection;
             if (((this._connection) && (!(this._officialSongIdListener))))
@@ -69,7 +69,7 @@
                 this._soundManager._Str_2774.stop(HabboMusicPrioritiesEnum._Str_5352);
                 if (this._soundManager.events != null)
                 {
-                    this._soundManager.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
+                    this._soundManager.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
                 }
                 this._soundManager = null;
                 if (((this._connection) && (this._officialSongIdListener)))
@@ -223,7 +223,7 @@
             return -1;
         }
 
-        private function _Str_3530(k:SongInfoReceivedEvent):void
+        private function onSongInfoReceivedEvent(k:SongInfoReceivedEvent):void
         {
             if (k.id == this._selectedSongId)
             {

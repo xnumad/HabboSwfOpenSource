@@ -87,7 +87,7 @@
                     this._description = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.landscape.desc");
                     break;
             }
-            this._Str_2307._Str_2476.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
+            this._Str_2307._Str_2476.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
         }
 
         public function get _Str_23694():Boolean
@@ -259,7 +259,7 @@
             {
                 if (this._Str_2307._Str_2476.events != null)
                 {
-                    this._Str_2307._Str_2476.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
+                    this._Str_2307._Str_2476.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
                 }
             }
             this._Str_2307 = null;
@@ -1027,7 +1027,7 @@
             }
         }
 
-        private function _Str_3530(k:SongInfoReceivedEvent):void
+        private function onSongInfoReceivedEvent(k:SongInfoReceivedEvent):void
         {
             if (k.id == this._Str_14420)
             {
