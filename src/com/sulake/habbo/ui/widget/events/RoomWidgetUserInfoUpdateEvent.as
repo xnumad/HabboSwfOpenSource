@@ -38,7 +38,7 @@
         private var _isGuildRoom:Boolean = false;
         private var _canTrade:Boolean = false;
         private var _canTradeReason:int = 0;
-        private var _Str_8858:int = 0;
+        private var _targetRoomControllerLevel:int = 0;
         private var _isFriend:Boolean = false;
         private var isAmbassador:Boolean = false;
 
@@ -280,12 +280,12 @@
 
         public function set targetRoomControllerLevel(k:int):void
         {
-            this._Str_8858 = k;
+            this._targetRoomControllerLevel = k;
         }
 
         public function get targetRoomControllerLevel():int
         {
-            return this._Str_8858;
+            return this._targetRoomControllerLevel;
         }
 
         public function set carryItem(k:int):void
