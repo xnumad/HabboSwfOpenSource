@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10078 implements IMessageComposer 
+    public class ChangePostureMessageComposer implements IMessageComposer
     {
         private var _Str_3147:int;
 
-        public function _Str_10078(k:int)
+        public function ChangePostureMessageComposer(k:int)
         {
             this._Str_3147 = k;
         }

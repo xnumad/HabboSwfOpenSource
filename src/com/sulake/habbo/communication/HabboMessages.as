@@ -887,7 +887,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9307;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9636;
 	import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9939;
-	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10078;
+	import com.sulake.habbo.communication.messages.outgoing._Str_79.ChangePostureMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10187;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10602;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10794;
@@ -1672,7 +1672,7 @@
             OUTGOING_PACKETS[2228] = ChangeMottoMessageComposer;
             OUTGOING_PACKETS[223] = _Str_11294;
             OUTGOING_PACKETS[2230] = _Str_3570;
-            OUTGOING_PACKETS[2235] = _Str_10078;
+            OUTGOING_PACKETS[2235] = ChangePostureMessageComposer;
             OUTGOING_PACKETS[2248] = _Str_11777;
             OUTGOING_PACKETS[2249] = _Str_7285;
             OUTGOING_PACKETS[2257] = OpenCampaignCalendarDoorAsStaffComposer;

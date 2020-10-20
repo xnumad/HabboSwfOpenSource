@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_79.AvatarExpressionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11695;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11206;
-    import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10078;
+    import com.sulake.habbo.communication.messages.outgoing._Str_79.ChangePostureMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.CreditFurniRedeemMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.PresentOpenMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture.OpenPetPackageMessageComposer;
@@ -330,7 +330,7 @@
 
         public function sendChangePostureMessage(k:int):void
         {
-            this._connection.send(new _Str_10078(k));
+            this._connection.send(new ChangePostureMessageComposer(k));
         }
 
         public function sendCreditFurniRedeemMessage(k:int):void
