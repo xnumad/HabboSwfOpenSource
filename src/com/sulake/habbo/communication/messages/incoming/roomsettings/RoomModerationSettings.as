@@ -6,7 +6,7 @@
     {
         public static const MODERATION_LEVEL_NONE:int = 0;
         public static const MODERATION_LEVEL_USER_WITH_RIGHTS:int = 1;
-        public static const _Str_11537:int = 2;
+        public static const MODERATION_LEVEL_ALL:int = 2;
 
         private var _whoCanMute:int;
         private var _whoCanKick:int;

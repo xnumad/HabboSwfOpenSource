@@ -938,7 +938,7 @@
             {
                 switch (_arg_2.whoCanKick)
                 {
-                    case RoomModerationSettings._Str_11537:
+                    case RoomModerationSettings.MODERATION_LEVEL_ALL:
                         return true;
                     case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
                         return _Str_9213(k);

@@ -797,7 +797,7 @@
             var _local_4:ISelectorWindow = (this._window.findChildByName("moderation_kick_selector") as ISelectorWindow);
             switch (k.roomModerationSettings.whoCanKick)
             {
-                case RoomModerationSettings._Str_11537:
+                case RoomModerationSettings.MODERATION_LEVEL_ALL:
                     _local_2 = (this._window.findChildByName("moderation_kick_all") as IRadioButtonWindow);
                     break;
                 case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
@@ -1030,7 +1030,7 @@
                     k.whoCanKick = RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS;
                     break;
                 case "moderation_kick_all":
-                    k.whoCanKick = RoomModerationSettings._Str_11537;
+                    k.whoCanKick = RoomModerationSettings.MODERATION_LEVEL_ALL;
                     break;
                 default:
                     k.whoCanKick = RoomModerationSettings.MODERATION_LEVEL_NONE;
