@@ -157,7 +157,7 @@
                     {
                         _local_4.etchingColor = this._commonWidgetSettings.etchingColor;
                     }
-                    if (this._commonWidgetSettings._Str_18420)
+                    if (this._commonWidgetSettings.isEtchingPositionSet)
                     {
                         _local_4.etchingPosition = this._commonWidgetSettings.etchingPosition;
                     }

@@ -41,7 +41,7 @@
             return !(this._etchingColor == _Str_18953);
         }
 
-        public function get _Str_18420():Boolean
+        public function get isEtchingPositionSet():Boolean
         {
             return !(this._etchingPosition == BOTTOM);
         }
