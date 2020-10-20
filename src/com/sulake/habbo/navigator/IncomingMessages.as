@@ -316,19 +316,19 @@
             {
                 if (_local_2._Str_18882)
                 {
-                    if (((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_CLOSED) && ((!(this._navigator.sessionData.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
+                    if (((_local_2.data.doorMode == RoomSettingsData.DOORMODE_CLOSED) && ((!(this._navigator.sessionData.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
                     {
                         this._navigator.doorbell.show(_local_2.data);
                     }
                     else
                     {
-                        if (((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_PASSWORD) && ((!(this._navigator.sessionData.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
+                        if (((_local_2.data.doorMode == RoomSettingsData.DOORMODE_PASSWORD) && ((!(this._navigator.sessionData.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
                         {
                             this._navigator._Str_7174.show(_local_2.data);
                         }
                         else
                         {
-                            if (((((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_NOOBS_ONLY) && (!(this._navigator.sessionData.isAmbassador))) && (!(this._navigator.sessionData.isRealNoob))) && (!(this._navigator.sessionData.isAnyRoomController))))
+                            if (((((_local_2.data.doorMode == RoomSettingsData.DOORMODE_NOOBS_ONLY) && (!(this._navigator.sessionData.isAmbassador))) && (!(this._navigator.sessionData.isRealNoob))) && (!(this._navigator.sessionData.isAnyRoomController))))
                             {
                                 return;
                             }

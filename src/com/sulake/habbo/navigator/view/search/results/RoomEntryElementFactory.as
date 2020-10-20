@@ -109,7 +109,7 @@
             k.findChildByName("info_popup_click_region").addEventListener(WindowMouseEvent.CLICK, this._Str_24506);
             k.findChildByName("info_popup_click_region").addEventListener(WindowMouseEvent.OVER, this._Str_25237);
             IBorderWindow(k.findChildByName("room_info_usercount_border")).color = _Str_18430._Str_25426(_arg_2.userCount, _arg_2._Str_9029);
-            IStaticBitmapWrapperWindow(k.findChildByName("doormode_icon")).assetUri = RoomEntryUtils._Str_25339(_arg_2._Str_2738);
+            IStaticBitmapWrapperWindow(k.findChildByName("doormode_icon")).assetUri = RoomEntryUtils._Str_25339(_arg_2.doorMode);
         }
 
         public function _Str_25258():IItemListWindow

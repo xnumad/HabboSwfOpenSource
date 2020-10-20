@@ -130,7 +130,7 @@
             return this._ownerName;
         }
 
-        public function get _Str_2738():int
+        public function get doorMode():int
         {
             return this._doorMode;
         }

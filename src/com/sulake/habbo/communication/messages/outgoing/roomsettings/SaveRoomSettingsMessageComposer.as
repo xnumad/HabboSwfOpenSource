@@ -17,7 +17,7 @@
             this.messageArray.push(k.roomId);
             this.messageArray.push(k.name);
             this.messageArray.push(k.description);
-            this.messageArray.push(k._Str_2738);
+            this.messageArray.push(k.doorMode);
             this.messageArray.push(((k.password !== null) ? k.password : ""));
             this.messageArray.push(k._Str_5552);
             this.messageArray.push(k._Str_2712);

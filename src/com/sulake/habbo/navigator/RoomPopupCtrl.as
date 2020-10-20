@@ -52,9 +52,9 @@
             this._Str_24547(this._room);
             this._Str_24426();
             this._Str_15598(this._details, "trading_allowed", (this._room.tradeMode == RoomTradingLevelEnum._Str_9173));
-            this._Str_15598(this._details, "doormode_doorbell", (this._room._Str_2738 == 1));
-            this._Str_15598(this._details, "doormode_password", (this._room._Str_2738 == 2));
-            this._Str_15598(this._details, "doormode_invisible", (this._room._Str_2738 == 3));
+            this._Str_15598(this._details, "doormode_doorbell", (this._room.doorMode == 1));
+            this._Str_15598(this._details, "doormode_password", (this._room.doorMode == 2));
+            this._Str_15598(this._details, "doormode_invisible", (this._room.doorMode == 3));
             Util._Str_4679(this._details, ["guild_info", "roomname", "roomctg_cont", "roomowner_cont", "roomdesc", "extra_cont", "doormode_doorbell", "doormode_password", "doormode_invisible", "trading_allowed", "eventinfo_cont", "roomsettings_cont"], 0, 0);
             this._details.findChildByName("guild_info").x = 2;
             this._details.height = Util._Str_2647(this._details);

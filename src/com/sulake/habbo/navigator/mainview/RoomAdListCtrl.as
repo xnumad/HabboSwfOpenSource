@@ -40,9 +40,9 @@
             var _local_3:ITextWindow = ITextWindow(k.getChildByName("adname"));
             _local_3.visible = true;
             Util._Str_21212(_local_3, _arg_2._Str_8163, k.width);
-            _Str_2272.refreshButton(k, "doormode_doorbell_small", (_arg_2._Str_2738 == _Str_3560.DOORMODE_CLOSED), null, 0);
-            _Str_2272.refreshButton(k, "doormode_password_small", (_arg_2._Str_2738 == _Str_3560.DOORMODE_PASSWORD), null, 0);
-            _Str_2272.refreshButton(k, "doormode_invisible_small", (_arg_2._Str_2738 == _Str_3560.DOORMODE_INVISIBLE), null, 0);
+            _Str_2272.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
+            _Str_2272.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
+            _Str_2272.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
             _Str_3220.refreshUserCount(_arg_2._Str_9029, k, _arg_2.userCount, "${navigator.usercounttooltip.users}", 308, 2);
         }
 

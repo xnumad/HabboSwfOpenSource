@@ -192,12 +192,12 @@
             k.visible = true;
             Util._Str_2930(k);
             this._Str_23295(k, _arg_2);
-            var _local_3:String = ((((_arg_2._Str_2738 == _Str_3560.DOORMODE_CLOSED) || (_arg_2._Str_2738 == _Str_3560.DOORMODE_PASSWORD)) || (_arg_2._Str_2738 == _Str_3560.DOORMODE_INVISIBLE)) ? "group_base_icon" : "group_base_icon_no_doormode");
+            var _local_3:String = ((((_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED) || (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD)) || (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE)) ? "group_base_icon" : "group_base_icon_no_doormode");
             this._Str_2272.refreshButton(k, _local_3, (_arg_2.habboGroupId > 0), null, 0, "group_base_icon");
             this._Str_2272.refreshButton(k, "home", this._Str_10475(_arg_2), null, 0);
-            this._Str_2272.refreshButton(k, "doormode_doorbell_small", (_arg_2._Str_2738 == _Str_3560.DOORMODE_CLOSED), null, 0);
-            this._Str_2272.refreshButton(k, "doormode_password_small", (_arg_2._Str_2738 == _Str_3560.DOORMODE_PASSWORD), null, 0);
-            this._Str_2272.refreshButton(k, "doormode_invisible_small", (_arg_2._Str_2738 == _Str_3560.DOORMODE_INVISIBLE), null, 0);
+            this._Str_2272.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
+            this._Str_2272.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
+            this._Str_2272.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
             if (this._Str_16040)
             {
                 k.findChildByName("room_number").visible = true;
@@ -279,7 +279,7 @@
                     return;
                 }
                 _local_5 = new Point((k as WindowMouseEvent).stageX, (k as WindowMouseEvent).stageY);
-                switch (_local_4._Str_2738)
+                switch (_local_4.doorMode)
                 {
                     case _Str_3560.DOORMODE_PASSWORD:
                         this._Str_2272._Str_7174.show(_local_4, _local_5);

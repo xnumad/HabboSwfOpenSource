@@ -666,7 +666,7 @@
             if (this._Str_2272.data._Str_2678)
             {
                 this._window.findChildByName("doormode_override_info").visible = ((this._Str_2272.isDoorModeOverriddenInCurrentRoom) && (!(this._Str_2272.sessionData.hasSecurity(SecurityLevelEnum.EMPLOYEE))));
-                switch (k._Str_2738)
+                switch (k.doorMode)
                 {
                     case RoomSettingsData.DOORMODE_CLOSED:
                         _local_3 = (this._window.findChildByName("doormode_doorbell") as IRadioButtonWindow);
@@ -686,7 +686,7 @@
                         _local_6 = (this._window.findChildByName("doormode_open") as IRadioButtonWindow);
                         _local_2.setSelected(_local_6);
                 }
-                this._Str_16749((k._Str_2738 == RoomSettingsData.DOORMODE_PASSWORD));
+                this._Str_16749((k.doorMode == RoomSettingsData.DOORMODE_PASSWORD));
             }
             Logger.log(("CATEGORY ID: " + k._Str_2712));
             this._Str_24436(k._Str_2712);
@@ -932,26 +932,26 @@
             var _local_3:IWindow = _local_2.getSelected();
             if (_local_3 == null)
             {
-                k._Str_2738 = this._roomSettingsData._Str_2738;
+                k.doorMode = this._roomSettingsData.doorMode;
             }
             else
             {
                 switch (_local_3.name)
                 {
                     case "doormode_doorbell":
-                        k._Str_2738 = _Str_3560.DOORMODE_CLOSED;
+                        k.doorMode = _Str_3560.DOORMODE_CLOSED;
                         break;
                     case "doormode_password":
-                        k._Str_2738 = _Str_3560.DOORMODE_PASSWORD;
+                        k.doorMode = _Str_3560.DOORMODE_PASSWORD;
                         break;
                     case "doormode_invisible":
-                        k._Str_2738 = _Str_3560.DOORMODE_INVISIBLE;
+                        k.doorMode = _Str_3560.DOORMODE_INVISIBLE;
                         break;
                     default:
-                        k._Str_2738 = _Str_3560.DOORMODE_OPEN;
+                        k.doorMode = _Str_3560.DOORMODE_OPEN;
                 }
             }
-            if (k._Str_2738 == _Str_3560.DOORMODE_PASSWORD)
+            if (k.doorMode == _Str_3560.DOORMODE_PASSWORD)
             {
                 _local_8 = this._Str_4194.getText();
                 _local_9 = this._Str_7349.getText();

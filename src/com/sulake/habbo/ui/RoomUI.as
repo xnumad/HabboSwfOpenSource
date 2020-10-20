@@ -645,7 +645,7 @@
                             {
                                 if (((getBoolean("nux.lobbies.enabled")) && (this._sessionDataManager.isRealNoob)))
                                 {
-                                    if (((this._navigator.enteredGuestRoomData) && (this._navigator.enteredGuestRoomData._Str_2738 == RoomSettingsData.DOORMODE_NOOBS_ONLY)))
+                                    if (((this._navigator.enteredGuestRoomData) && (this._navigator.enteredGuestRoomData.doorMode == RoomSettingsData.DOORMODE_NOOBS_ONLY)))
                                     {
                                         this._navigator.goToHomeRoom();
                                     }

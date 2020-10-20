@@ -129,12 +129,12 @@
             this._description = k;
         }
 
-        public function get _Str_2738():int
+        public function get doorMode():int
         {
             return this._Str_4321;
         }
 
-        public function set _Str_2738(k:int):void
+        public function set doorMode(k:int):void
         {
             this._Str_4321 = k;
         }

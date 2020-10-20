@@ -17,7 +17,7 @@
             this._roomSettingsData.roomId = k.readInteger();
             this._roomSettingsData.name = k.readString();
             this._roomSettingsData.description = k.readString();
-            this._roomSettingsData._Str_2738 = k.readInteger();
+            this._roomSettingsData.doorMode = k.readInteger();
             this._roomSettingsData._Str_2712 = k.readInteger();
             this._roomSettingsData._Str_5552 = k.readInteger();
             this._roomSettingsData._Str_13128 = k.readInteger();

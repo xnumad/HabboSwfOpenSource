@@ -605,7 +605,7 @@
             return this._doorMode == RoomSettingsData.DOORMODE_NOOBS_ONLY;
         }
 
-        public function set _Str_2738(k:int):void
+        public function set doorMode(k:int):void
         {
             this._doorMode = k;
         }
