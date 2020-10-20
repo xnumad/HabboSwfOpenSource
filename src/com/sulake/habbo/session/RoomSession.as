@@ -463,7 +463,7 @@
             this._connection.send(new _Str_12394(k));
         }
 
-        public function _Str_19075(k:int):void
+        public function dismountPet(k:int):void
         {
             this._connection.send(new _Str_7691(k, false));
         }
