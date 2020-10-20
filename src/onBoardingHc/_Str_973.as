@@ -29,8 +29,8 @@
             var _local_5:Sprite;
             var _local_6:Bitmap;
             var _local_7:TextField;
-            _Str_616 = LoaderUI._Str_1585;
-            _Str_907 = LoaderUI._Str_1487("", "", new Rectangle((-(_Str_2083) / 2), 0, _Str_2083, 1), _Str_616);
+            _style = LoaderUI._Str_1585;
+            _Str_907 = LoaderUI._Str_1487("", "", new Rectangle((-(_Str_2083) / 2), 0, _Str_2083, 1), _style);
             _container.addChild(_Str_907);
             var k:int;
             _local_2 = 330;
@@ -84,7 +84,7 @@
             _Str_2194.x = _Str_1047.x;
             _Str_2194.y = _Str_1047.y;
             _Str_2183 = false;
-            _Str_1263 = new WaitIndicator(_Str_616);
+            _Str_1263 = new WaitIndicator(_style);
             _Str_907.addChild(_Str_1263);
             _Str_1263.y = ((_local_5.y + int((_local_5.height / 2))) + 2);
             _Str_1263.x = (((_local_5.x + _local_5.width) - int((_Str_1047.width / 2))) - 7);

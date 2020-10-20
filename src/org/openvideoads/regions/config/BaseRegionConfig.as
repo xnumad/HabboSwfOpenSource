@@ -8,7 +8,7 @@
     public class BaseRegionConfig extends Debuggable 
     {
         protected var _Str_19957:String;
-        protected var _Str_616:String = null;
+        protected var _style:String = null;
         protected var _id:String = null;
         protected var _Str_2341:String = null;
         protected var _Str_10333:int = -1;
@@ -134,12 +134,12 @@
 
         public function set style(k:String):void
         {
-            this._Str_616 = k;
+            this._style = k;
         }
 
         public function get style():String
         {
-            return this._Str_616;
+            return this._style;
         }
 
         public function set stylesheet(k:String):void

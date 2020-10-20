@@ -21,7 +21,7 @@
         private var _Str_1150:BitmapData;
         private var _Str_1190:BitmapData;
         private var _Str_1111:uint;
-        private var _Str_616:int;
+        private var _style:int;
 
         public function _Str_862(k:String, _arg_2:RadioButtonGroup, _arg_3:int=1, _arg_4:BitmapData=null, _arg_5:BitmapData=null, _arg_6:uint=0)
         {
@@ -32,7 +32,7 @@
             super();
             this._Str_622 = k;
             this._group = _arg_2;
-            this._Str_616 = _arg_3;
+            this._style = _arg_3;
             mouseChildren = false;
             buttonMode = true;
             this._Str_1111 = _arg_6;
@@ -131,7 +131,7 @@
                     }
                     else
                     {
-                        _local_2._Str_848.textColor = ((this._Str_616 == LoaderUI._Str_1585) ? 15201722 : 0);
+                        _local_2._Str_848.textColor = ((this._style == LoaderUI._Str_1585) ? 15201722 : 0);
                         _local_2._Str_848.alpha = 0.7;
                     }
                 }

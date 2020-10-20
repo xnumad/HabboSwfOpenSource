@@ -30,7 +30,7 @@
         private static const NEWUSERRECEPTIONCHECKNAMEFAILED:String = "newUserReceptionCheckNameFailed";
 
         private var _Str_1310:Class;
-        protected var _Str_616:int;
+        protected var _style:int;
         private var _disposed:Boolean;
         protected var _context:_Str_996;
         private var _Str_670:Boolean;
@@ -55,7 +55,7 @@
         public function NameChangeDialog(k:_Str_996, _arg_2:Sprite, _arg_3:int)
         {
             this._Str_1310 = _Str_937;
-            this._Str_616 = LoaderUI._Str_2056;
+            this._style = LoaderUI._Str_2056;
             super();
             this._context = k;
             this._container = _arg_2;
@@ -76,7 +76,7 @@
         protected function init():void
         {
             var _local_10:Bitmap;
-            this._Str_907 = LoaderUI._Str_1487(this._context.getString("rename.title", "Pick a name for your character"), "", new Rectangle((-(this._Str_2083) / 2), 0, this._Str_2083, 1), this._Str_616);
+            this._Str_907 = LoaderUI._Str_1487(this._context.getString("rename.title", "Pick a name for your character"), "", new Rectangle((-(this._Str_2083) / 2), 0, this._Str_2083, 1), this._style);
             var k:int = 23;
             var _local_2:int = (this._Str_2083 - (k * 2));
             var _local_3:int = (this._Str_2083 - 12);
@@ -121,7 +121,7 @@
             this._Str_1880.width = (_local_7.width - 30);
             this._Str_1880.addEventListener(MouseEvent.CLICK, this._Str_2136);
             this._Str_1880.addEventListener(Event.CHANGE, this._Str_1552);
-            this._Str_1263 = new WaitIndicator(this._Str_616);
+            this._Str_1263 = new WaitIndicator(this._style);
             this._Str_907.addChild(this._Str_1263);
             this._Str_1263.y = (_local_7.y + int((_local_7.height / 2)));
             this._Str_1263.x = (((_local_7.x + _local_7.width) - int((this._Str_1047.width / 2))) - 15);
@@ -167,7 +167,7 @@
                 return;
             }
             this._Str_1513 = true;
-            this._Str_1880.textColor = ((this._Str_616 == LoaderUI._Str_1585) ? 0x666666 : 0);
+            this._Str_1880.textColor = ((this._style == LoaderUI._Str_1585) ? 0x666666 : 0);
             this._Str_1880.removeEventListener(MouseEvent.CLICK, this._Str_2136);
             this._Str_1552(null);
         }
@@ -367,7 +367,7 @@
             if (this._Str_1757 != null)
             {
                 this._Str_1757.active = true;
-                if (this._Str_616 == LoaderUI._Str_1585)
+                if (this._style == LoaderUI._Str_1585)
                 {
                     this._Str_1757.visible = true;
                     this._Str_1757.active = ((this._Str_1379) ? k : true);
@@ -379,7 +379,7 @@
             }
             if (this._Str_1155 != null)
             {
-                if (this._Str_616 == LoaderUI._Str_1585)
+                if (this._style == LoaderUI._Str_1585)
                 {
                     this._Str_1155.visible = this._Str_1379;
                 }
@@ -393,13 +393,13 @@
             var _local_6:Shape;
             var _local_2:int = this._Str_1260.width;
             var _local_3:int = this._Str_1260.height;
-            this._Str_1260.bitmapData = ((this._Str_616 == LoaderUI._Str_1585) ? NineSplitSprite._Str_2104.render(_local_2, _local_3).bitmapData : NineSplitSprite._Str_1995.render(_local_2, _local_3).bitmapData);
+            this._Str_1260.bitmapData = ((this._style == LoaderUI._Str_1585) ? NineSplitSprite._Str_2104.render(_local_2, _local_3).bitmapData : NineSplitSprite._Str_1995.render(_local_2, _local_3).bitmapData);
             this._Str_1722();
             if (this._Str_2194 != null)
             {
                 this._Str_2194.visible = true;
             }
-            if (this._Str_616 == LoaderUI._Str_2056)
+            if (this._style == LoaderUI._Str_2056)
             {
                 _local_4 = LoaderUI._Str_1132(k, 9, 0xFFFFFF, true);
                 _local_5 = LoaderUI._Str_2206((_local_4.width + 30), (_local_4.height + 17), -1, true, 11411485);
@@ -427,7 +427,7 @@
                 _local_4.y = int(((_local_6.height - _local_4.height) / 2));
             }
             this._Str_907.addChild(this._Str_1018);
-            if (this._Str_616 == LoaderUI._Str_2056)
+            if (this._style == LoaderUI._Str_2056)
             {
                 this._Str_1018.x = int(((this._Str_907.width - this._Str_1018.width) / 2));
                 this._Str_1018.y = (this._Str_1260.parent.y + this._Str_1260.height);
@@ -448,7 +448,7 @@
             {
                 k = this._Str_1260.width;
                 _local_2 = this._Str_1260.height;
-                this._Str_1260.bitmapData = ((this._Str_616 == LoaderUI._Str_1585) ? NineSplitSprite._Str_1531.render(k, _local_2).bitmapData : NineSplitSprite._Str_1594.render(k, _local_2).bitmapData);
+                this._Str_1260.bitmapData = ((this._style == LoaderUI._Str_1585) ? NineSplitSprite._Str_1531.render(k, _local_2).bitmapData : NineSplitSprite._Str_1594.render(k, _local_2).bitmapData);
                 this._Str_907.removeChild(this._Str_1018);
             }
             this._Str_1047.visible = false;

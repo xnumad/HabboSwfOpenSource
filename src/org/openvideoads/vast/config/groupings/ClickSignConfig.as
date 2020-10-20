@@ -19,7 +19,7 @@
             _Str_11028 = 0.5;
             _Str_10333 = 20;
             _backgroundColor = "#000000";
-            _Str_616 = ".smalltext { font-size:12; }";
+            _style = ".smalltext { font-size:12; }";
             _Str_4544 = '<p class="smalltext" align="center">CLICK FOR MORE INFORMATION</p>';
             _Str_12703 = 0.75;
             _Str_2728 = new org.openvideoads.regions.config.CloseButtonConfig({"enabled":false});
