@@ -709,7 +709,7 @@
                         this._roomEngine.showUseProductSelection(_local_4.ref, _local_4.type, _local_4.id);
                         break;
                     case "goto_room_btn":
-                        this._model._Str_10094();
+                        this._model.gotoRoom();
                         break;
                     case "offertotrade_btn":
                         _local_5 = Math.max(1, int(this._offerInTradingCountButton.caption));

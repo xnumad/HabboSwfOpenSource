@@ -404,7 +404,7 @@
                 {
                     this._mainViewCtrl.close();
                 }
-                this._roomSessionManager._Str_10094(k, _arg_3);
+                this._roomSessionManager.gotoRoom(k, _arg_3);
                 if (this.tabs.getSelected())
                 {
                     _local_5 = ((_arg_4 > -1) ? (_arg_4 + 1) : 0);

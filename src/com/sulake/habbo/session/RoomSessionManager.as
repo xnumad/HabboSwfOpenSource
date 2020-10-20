@@ -244,7 +244,7 @@
             this._roomEngine.modifyRoomCanvas(_local_2.roomId, 1, context.displayObjectContainer.width, context.displayObjectContainer.height);
         }
 
-        public function _Str_10094(k:int, _arg_2:String="", _arg_3:String=""):Boolean
+        public function gotoRoom(k:int, _arg_2:String="", _arg_3:String=""):Boolean
         {
             var _local_4:RoomSession = new RoomSession();
             _local_4.roomId = k;

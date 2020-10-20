@@ -808,7 +808,7 @@
             this._view._Str_2944();
         }
 
-        public function _Str_10094():void
+        public function gotoRoom():void
         {
             var k:GroupItem = this._Str_3968();
             if (k == null)

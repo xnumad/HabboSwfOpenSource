@@ -446,7 +446,7 @@
             var _local_2:GuideSessionRequesterRoomMessageParser = (k.parser as GuideSessionRequesterRoomMessageParser);
             if (_local_2.getRequesterRoomId() > 0)
             {
-                this._habboHelp.roomSessionManager._Str_10094(_local_2.getRequesterRoomId());
+                this._habboHelp.roomSessionManager.gotoRoom(_local_2.getRequesterRoomId());
             }
             else
             {
