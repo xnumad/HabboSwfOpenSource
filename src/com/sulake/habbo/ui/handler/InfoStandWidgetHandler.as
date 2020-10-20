@@ -773,7 +773,7 @@
             _local_6.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             _local_6.canBeKicked = this._container.roomSession.isRoomController;
             var _local_8:Array = new Array();
-            _local_8.push(RoomWidgetUserInfoUpdateEvent._Str_7492);
+            _local_8.push(RoomWidgetUserInfoUpdateEvent.DEFAULT_BOT_BADGE_ID);
             _local_6.badges = _local_8;
             _local_6.figure = _arg_4.figure;
             this._container.events.dispatchEvent(_local_6);
@@ -798,7 +798,7 @@
             _local_5.myRoomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_5.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             var _local_7:Array = new Array();
-            _local_7.push(RoomWidgetUserInfoUpdateEvent._Str_7492);
+            _local_7.push(RoomWidgetUserInfoUpdateEvent.DEFAULT_BOT_BADGE_ID);
             _local_5.badges = _local_7;
             _local_5.figure = _arg_4.figure;
             this._container.events.dispatchEvent(_local_5);

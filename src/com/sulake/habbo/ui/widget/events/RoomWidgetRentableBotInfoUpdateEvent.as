@@ -3,7 +3,7 @@
     public class RoomWidgetRentableBotInfoUpdateEvent extends RoomWidgetUpdateEvent
     {
         public static const RENTABLE_BOT:String = "RWRBIUE_RENTABLE_BOT";
-        public static const _Str_7492:String = "RENTABLE_BOT";
+        public static const DEFAULT_BOT_BADGE_ID:String = "RENTABLE_BOT";
 
         private var _name:String = "";
         private var _motto:String = "";

@@ -8,7 +8,7 @@
         public static const _Str_18400:int = 0;
         public static const _Str_14161:int = 2;
         public static const _Str_13798:int = 3;
-        public static const _Str_7492:String = "BOT";
+        public static const DEFAULT_BOT_BADGE_ID:String = "BOT";
 
         private var _name:String = "";
         private var _motto:String = "";
