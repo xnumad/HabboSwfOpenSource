@@ -27,7 +27,7 @@
         protected var windowContainer:IWindowContainer;
         protected var dynamicLayoutManager:DynamicLayoutManager;
         protected var movingBackgroundObjects:MovingBackgroundObjects;
-        protected var _Str_19814:int;
+        protected var _orgWindowWidth:int;
         protected var _Str_20591:int;
         private var _registeredWidgets:Array;
         private var _Str_3157:CommonWidgetSettings;
@@ -241,7 +241,7 @@
 
         protected function _Str_25199():void
         {
-            this._Str_19814 = this.windowContainer.width;
+            this._orgWindowWidth = this.windowContainer.width;
             this._Str_20591 = this.windowContainer.height;
         }
 
@@ -300,7 +300,7 @@
             this.windowContainer.width = k.width;
             this.windowContainer.height = k.height;
             var _local_2:int = (this._Str_20591 - k.height);
-            var _local_3:int = (this._Str_19814 - k.width);
+            var _local_3:int = (this._orgWindowWidth - k.width);
             this.dynamicLayoutManager._Str_24842((this.dynamicLayoutManager._Str_19568 - _local_3), (this.dynamicLayoutManager._Str_19625 - _local_2));
             this.dynamicLayoutManager._Str_22592 = Math.min(this.windowContainer.width, (k.width + this.window.x));
         }
