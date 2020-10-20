@@ -31,7 +31,7 @@
         private function onRoomEnter(k:IMessageEvent):void
         {
             var _local_2:Timer;
-            if ((((this._habboTalent._Str_7478) && (!(this._seenPopupDuringSession))) && (this._habboTalent.getBoolean("new.user.citizenship.popup.enabled"))))
+            if ((((this._habboTalent.newIdentity) && (!(this._seenPopupDuringSession))) && (this._habboTalent.getBoolean("new.user.citizenship.popup.enabled"))))
             {
                 _local_2 = new Timer(10000, 1);
                 _local_2.addEventListener(TimerEvent.TIMER, this._Str_22885);

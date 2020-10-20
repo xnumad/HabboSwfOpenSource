@@ -173,7 +173,7 @@
             return getBoolean("guide.help.new.user.tour.enabled");
         }
 
-        public function get _Str_7478():Boolean
+        public function get newIdentity():Boolean
         {
             return getInteger("new.identity", 0) > 0;
         }

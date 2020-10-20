@@ -210,7 +210,7 @@
                 k.removeChild(_local_2);
                 _local_2.dispose();
             }
-            if (((this._Str_7478) && (getBoolean("landing.view.new_identity_override_enabled"))))
+            if (((this.newIdentity) && (getBoolean("landing.view.new_identity_override_enabled"))))
             {
                 _local_3 = getProperty("landing.view.new_identity_widgets").split(",");
                 _local_4 = 1;
@@ -488,7 +488,7 @@
             }
         }
 
-        public function get _Str_7478():Boolean
+        public function get newIdentity():Boolean
         {
             return getInteger("new.identity", 0) > 0;
         }
