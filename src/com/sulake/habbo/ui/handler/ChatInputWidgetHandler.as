@@ -418,7 +418,7 @@
                                         this._container.roomSession._Str_21231(_local_8, _local_11);
                                         break;
                                     case RoomWidgetChatMessage.CHAT_TYPE_WHISPER:
-                                        this._container.roomSession._Str_19359(_local_7._Str_23716, _local_8, _local_11);
+                                        this._container.roomSession.sendWhisperMessage(_local_7._Str_23716, _local_8, _local_11);
                                         break;
                                 }
                             }

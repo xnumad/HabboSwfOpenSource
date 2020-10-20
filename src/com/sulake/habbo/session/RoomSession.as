@@ -293,7 +293,7 @@
             this._connection.send(new _Str_12180(k, _arg_2));
         }
 
-        public function _Str_19359(k:String, _arg_2:String, _arg_3:int=0):void
+        public function sendWhisperMessage(k:String, _arg_2:String, _arg_3:int=0):void
         {
             this._connection.send(new _Str_10169(k, _arg_2, _arg_3));
         }
