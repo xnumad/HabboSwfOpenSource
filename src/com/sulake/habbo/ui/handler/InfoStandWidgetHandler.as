@@ -199,7 +199,7 @@
             {
                 this._groupDetailsMessageEvent = new HabboGroupDetailsMessageEvent(this.onGroupDetails);
                 this._container.connection.addMessageEvent(this._groupDetailsMessageEvent);
-                this._relationshipStatusMessageEvent = new RelationshipStatusInfo(this._Str_22283);
+                this._relationshipStatusMessageEvent = new RelationshipStatusInfo(this.onRelationshipStatusEvent);
                 this._container.connection.addMessageEvent(this._relationshipStatusMessageEvent);
             }
         }
@@ -1490,7 +1490,7 @@
             }
         }
 
-        private function _Str_22283(k:RelationshipStatusInfo):void
+        private function onRelationshipStatusEvent(k:RelationshipStatusInfo):void
         {
             if (((this._widget) && (this._widget.mainWindow.visible)))
             {
