@@ -892,7 +892,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10602;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10794;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11024;
-	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11206;
+	import com.sulake.habbo.communication.messages.outgoing._Str_79.DanceMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79.ChangeMottoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11695;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11770;
@@ -1648,7 +1648,7 @@
             OUTGOING_PACKETS[2068] = PublishPhotoMessageComposer;
             OUTGOING_PACKETS[2069] = _Str_9987;
             OUTGOING_PACKETS[2077] = _Str_10525;
-            OUTGOING_PACKETS[2080] = _Str_11206;
+            OUTGOING_PACKETS[2080] = DanceMessageComposer;
             OUTGOING_PACKETS[2085] = ShoutMessageComposer;
             OUTGOING_PACKETS[2091] = _Str_6996;
             OUTGOING_PACKETS[21] = _Str_10770;
