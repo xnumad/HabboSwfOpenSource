@@ -899,7 +899,7 @@
                 }
                 if (_local_11 != RoomTradingLevelEnum._Str_9173)
                 {
-                    _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent._Str_13798;
+                    _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent.TRADE_REASON_NO_TRADINGROOM;
                 }
                 _local_12 = this._container.sessionDataManager.userId;
                 _local_13 = this._container.sessionDataManager.getUserTags(_local_12);

@@ -7,7 +7,7 @@
         public static const PEER:String = "RWUIUE_PEER";
         public static const TRADE_REASON_OK:int = 0;
         public static const TRADE_REASON_SHUTDOWN:int = 2;
-        public static const _Str_13798:int = 3;
+        public static const TRADE_REASON_NO_TRADINGROOM:int = 3;
         public static const DEFAULT_BOT_BADGE_ID:String = "BOT";
 
         private var _name:String = "";

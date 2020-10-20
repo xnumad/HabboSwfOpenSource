@@ -104,7 +104,7 @@
                     case RoomWidgetUserInfoUpdateEvent.TRADE_REASON_SHUTDOWN:
                         _local_7 = "${infostand.button.trade.tooltip.shutdown}";
                         break;
-                    case RoomWidgetUserInfoUpdateEvent._Str_13798:
+                    case RoomWidgetUserInfoUpdateEvent.TRADE_REASON_NO_TRADINGROOM:
                         _local_7 = "${infostand.button.trade.tooltip.tradingroom}";
                         break;
                     default:
