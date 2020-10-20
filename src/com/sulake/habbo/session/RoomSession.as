@@ -478,7 +478,7 @@
             this._connection.send(new _Str_10547(k));
         }
 
-        public function _Str_21305(k:int):void
+        public function compostPlant(k:int):void
         {
             this._connection.send(new _Str_10852(k));
         }

@@ -316,7 +316,7 @@
                         k.dispose();
                         if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
                         {
-                            _container.roomSession._Str_21305(userId);
+                            _container.roomSession.compostPlant(userId);
                         }
                     });
                     break;
