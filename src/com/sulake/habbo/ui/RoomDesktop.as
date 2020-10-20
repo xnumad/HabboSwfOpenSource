@@ -1417,7 +1417,7 @@
             }
             _local_13.setDisplayObject(_local_12);
             _local_13.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_22744);
-            if (this._session._Str_4780)
+            if (this._session.isSpectatorMode)
             {
                 _local_22 = this._Str_24343();
                 if (_local_22 != null)

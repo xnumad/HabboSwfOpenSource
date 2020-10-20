@@ -308,12 +308,12 @@
             return this._userRoomId;
         }
 
-        public function set _Str_4780(k:Boolean):void
+        public function set isSpectatorMode(k:Boolean):void
         {
             this._isSpectatorMode = k;
         }
 
-        public function get _Str_4780():Boolean
+        public function get isSpectatorMode():Boolean
         {
             return this._isSpectatorMode;
         }

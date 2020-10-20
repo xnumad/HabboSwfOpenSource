@@ -708,7 +708,7 @@
                 case RoomWidgetUserInfoUpdateEvent.PEER:
                     _local_13 = (k as RoomWidgetUserInfoUpdateEvent);
                     this._userInfoData.populate(_local_13);
-                    _local_14 = ((_local_13._Str_4780) ? null : this._userInfoData);
+                    _local_14 = ((_local_13.isSpectatorMode) ? null : this._userInfoData);
                     this._Str_12674(_local_13.id, _local_13.name, _local_13.userType, _local_13._Str_3313, this._userInfoData.allowNameChange, _local_14);
                     break;
                 case RoomWidgetRentableBotInfoUpdateEvent.RENTABLE_BOT:

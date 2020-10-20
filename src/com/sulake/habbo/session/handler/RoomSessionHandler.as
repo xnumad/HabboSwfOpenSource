@@ -188,7 +188,7 @@
             {
                 return;
             }
-            _local_2._Str_4780 = true;
+            _local_2.isSpectatorMode = true;
         }
     }
 }

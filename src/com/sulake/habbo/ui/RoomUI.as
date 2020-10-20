@@ -939,7 +939,7 @@
                     _local_3._Str_2548(RoomWidgetEnum.INFOSTAND);
                     _local_3._Str_2548(RoomWidgetEnum.LOCATION_WIDGET);
                     _local_3._Str_2548(RoomWidgetEnum.ROOM_TOOLS);
-                    if (!_local_3.session._Str_4780)
+                    if (!_local_3.session.isSpectatorMode)
                     {
                         _local_3._Str_2548(RoomWidgetEnum.ME_MENU);
                         _local_3._Str_2548(RoomWidgetEnum.CHAT_INPUT_WIDGET);

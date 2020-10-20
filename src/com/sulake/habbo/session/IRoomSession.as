@@ -65,8 +65,8 @@
         function get _Str_7411():Boolean;
         function set _Str_3827(_arg_1:int):void;
         function get userDataManager():UserDataManager;
-        function get _Str_4780():Boolean;
-        function set _Str_4780(_arg_1:Boolean):void;
+        function get isSpectatorMode():Boolean;
+        function set isSpectatorMode(_arg_1:Boolean):void;
         function get _Str_9439():Boolean;
         function set _Str_9439(_arg_1:Boolean):void;
         function get _Str_18311():Boolean;

@@ -822,7 +822,7 @@
                 _local_5 = RoomWidgetUserInfoUpdateEvent.PEER;
             }
             _local_6 = new RoomWidgetUserInfoUpdateEvent(_local_5);
-            _local_6._Str_4780 = this._container.roomSession._Str_4780;
+            _local_6.isSpectatorMode = this._container.roomSession.isSpectatorMode;
             _local_6.name = _arg_4.name;
             _local_6.motto = _arg_4.custom;
             if (this._Str_7745)

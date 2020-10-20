@@ -2424,7 +2424,7 @@
                 return;
             }
             var _local_3:IRoomSession = this._roomEngine.roomSessionManager.getSession(k);
-            if (((!(_local_3 == null)) && (_local_3._Str_4780)))
+            if (((!(_local_3 == null)) && (_local_3.isSpectatorMode)))
             {
                 return;
             }
