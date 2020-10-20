@@ -301,7 +301,7 @@
                     useProductMessage = (message as RoomWidgetUseProductMessage);
                     if (useProductMessage)
                     {
-                        this._container.roomSession._Str_21525(useProductMessage._Str_2713, useProductMessage.petId);
+                        this._container.roomSession.useProductForPet(useProductMessage._Str_2713, useProductMessage.petId);
                     }
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_HARVEST_PET:

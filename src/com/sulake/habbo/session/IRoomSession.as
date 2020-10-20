@@ -45,7 +45,7 @@
         function _Str_19075(_arg_1:int):void;
         function _Str_21635(_arg_1:int):void;
         function _Str_21895(_arg_1:int):void;
-        function _Str_21525(_arg_1:int, _arg_2:int):void;
+        function useProductForPet(_arg_1:int, _arg_2:int):void;
         function plantSeed(_arg_1:int):void;
         function quit():void;
         function changeQueue(_arg_1:int):void;

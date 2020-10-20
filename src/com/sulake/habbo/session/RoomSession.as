@@ -488,7 +488,7 @@
             this._connection.send(new _Str_10067(k));
         }
 
-        public function _Str_21525(k:int, _arg_2:int):void
+        public function useProductForPet(k:int, _arg_2:int):void
         {
             this._connection.send(new _Str_10642(k, _arg_2));
         }
