@@ -14,7 +14,7 @@
         protected var _Str_2306:int;
         protected var _Str_2360:String;
         protected var _userType:int;
-        protected var _Str_3947:Boolean;
+        protected var _allowNameChange:Boolean;
         protected var _roomIndex:int;
 
         public function AvatarContextInfoButtonView(k:IContextMenuParentWidget)
@@ -28,7 +28,7 @@
             k._Str_2360 = _arg_3;
             k._userType = _arg_5;
             k._roomIndex = _arg_4;
-            k._Str_3947 = _arg_6;
+            k._allowNameChange = _arg_6;
             k._Str_3403 = _arg_7;
             _Str_8532(k);
         }
@@ -56,7 +56,7 @@
 
         public function get allowNameChange():Boolean
         {
-            return this._Str_3947;
+            return this._allowNameChange;
         }
 
         override protected function updateWindow():void
@@ -79,7 +79,7 @@
             var k:IWindow = _window.findChildByName("name");
             k.caption = this._Str_2360;
             this._Str_11603();
-            if (!this._Str_3947)
+            if (!this._allowNameChange)
             {
                 _window.findChildByName("change_name_container").visible = false;
                 _window.height = 39;

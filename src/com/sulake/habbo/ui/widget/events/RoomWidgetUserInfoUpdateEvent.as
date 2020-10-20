@@ -25,7 +25,7 @@
         private var _userRoomId:int = 0;
         private var _isSpectatorMode:Boolean = false;
         private var _realName:String = "";
-        private var _Str_3947:Boolean = false;
+        private var _allowNameChange:Boolean = false;
         private var _amIOwner:Boolean = false;
         private var _amIAnyRoomController:Boolean = false;
         private var _myRoomControllerLevel:int = 0;
@@ -330,12 +330,12 @@
 
         public function set allowNameChange(k:Boolean):void
         {
-            this._Str_3947 = k;
+            this._allowNameChange = k;
         }
 
         public function get allowNameChange():Boolean
         {
-            return this._Str_3947;
+            return this._allowNameChange;
         }
 
         public function get isFriend():Boolean

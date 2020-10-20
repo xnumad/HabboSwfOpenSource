@@ -7,7 +7,7 @@
         private var _userId:int;
         private var _userName:String;
         private var _userType:int;
-        private var _Str_3947:Boolean;
+        private var _allowNameChange:Boolean;
         private var _roomIndex:int;
 
         public function _Str_5393(k:int, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:Boolean, _arg_6:Boolean=false, _arg_7:Boolean=false)
@@ -17,7 +17,7 @@
             this._userName = _arg_2;
             this._userType = _arg_3;
             this._roomIndex = _arg_4;
-            this._Str_3947 = _arg_5;
+            this._allowNameChange = _arg_5;
         }
 
         public function get userId():int
@@ -42,7 +42,7 @@
 
         public function get allowNameChange():Boolean
         {
-            return this._Str_3947;
+            return this._allowNameChange;
         }
     }
 }
