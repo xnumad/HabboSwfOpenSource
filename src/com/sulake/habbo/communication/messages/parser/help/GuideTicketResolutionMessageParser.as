@@ -9,24 +9,24 @@
         private static const _Str_16537:int = 1;
         private static const _Str_22033:int = 2;
 
-        private var _Str_13064:int = -1;
+        private var _resolution:int = -1;
 
 
         public function flush():Boolean
         {
-            this._Str_13064 = -1;
+            this._resolution = -1;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_13064 = k.readInteger();
+            this._resolution = k.readInteger();
             return true;
         }
 
         public function get localizationCode():String
         {
-            if (((this._Str_13064 == _Str_17022) || (this._Str_13064 == _Str_16537)))
+            if (((this._resolution == _Str_17022) || (this._resolution == _Str_16537)))
             {
                 return "valid";
             }
