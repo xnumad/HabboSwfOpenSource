@@ -117,7 +117,7 @@
             this._Str_3306._Str_8651 = true;
             this._Str_2755();
             Util._Str_2930(this._window.content);
-            this._Str_22543(this._navigator.data._Str_2678);
+            this.refreshRoomDetails(this._navigator.data._Str_2678);
             this._Str_22403();
             this._Str_6891.refresh(this._window.content, this._navigator.data._Str_2678);
             this._Str_4295(this._navigator.data._Str_2678);
@@ -162,7 +162,7 @@
             }
         }
 
-        private function _Str_22543(k:GuestRoomData):void
+        private function refreshRoomDetails(k:GuestRoomData):void
         {
             if (k == null)
             {
