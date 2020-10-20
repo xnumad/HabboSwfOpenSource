@@ -538,7 +538,7 @@
                     break;
                 case RoomWidgetPetCommandMessage.RWPCM_REQUEST_PET_COMMANDS:
                     _local_14 = (k as RoomWidgetPetCommandMessage);
-                    this._container.roomSession._Str_21895(_local_14.id);
+                    this._container.roomSession.requestPetCommands(_local_14.id);
                     break;
                 case RoomWidgetPetCommandMessage.RWPCM_PET_COMMAND:
                     _local_15 = (k as RoomWidgetPetCommandMessage);

@@ -483,7 +483,7 @@
             this._connection.send(new _Str_10852(k));
         }
 
-        public function _Str_21895(k:int):void
+        public function requestPetCommands(k:int):void
         {
             this._connection.send(new _Str_10067(k));
         }
