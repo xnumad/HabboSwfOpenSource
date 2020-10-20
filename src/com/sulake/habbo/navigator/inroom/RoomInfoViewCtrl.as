@@ -412,7 +412,7 @@
                 return;
             }
             this._navigator.trackGoogle("roomInfo", "editRoomFilter");
-            this._navigator.roomFilterCtrl._Str_23256(_local_2.flatId);
+            this._navigator.roomFilterCtrl.startRoomFilterEdit(_local_2.flatId);
             this.close();
         }
 

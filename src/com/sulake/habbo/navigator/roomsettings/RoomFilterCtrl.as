@@ -28,7 +28,7 @@
             this._badWords = new Array();
         }
 
-        public function _Str_23256(k:int):void
+        public function startRoomFilterEdit(k:int):void
         {
             this._flatId = k;
             this._navigator.send(new _Str_7286(this._flatId));
