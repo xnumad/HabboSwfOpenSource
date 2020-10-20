@@ -1213,7 +1213,7 @@
             }
             var _local_4:String = _local_3.figure;
             var _local_5:int = this.getPetType(_local_4);
-            var _local_6:int = this._Str_25548(_local_4);
+            var _local_6:int = this.getPetRace(_local_4);
             var _local_7:String;
             if (_local_5 == PetTypeEnum.MONSTERPLANT)
             {
@@ -1424,7 +1424,7 @@
             return this._Str_19610(k, 0);
         }
 
-        private function _Str_25548(k:String):int
+        private function getPetRace(k:String):int
         {
             return this._Str_19610(k, 1);
         }
