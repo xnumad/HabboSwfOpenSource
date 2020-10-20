@@ -461,7 +461,7 @@
                     this._container.roomEngine.updateObjectWallItemData(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_MOVE);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_PICKUP:
-                    this._Str_24845(_local_5, _local_6);
+                    this.pickupObjectWithConfirmation(_local_5, _local_6);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_EJECT:
                     this._container.roomEngine.updateObjectWallItemData(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_EJECT);
@@ -597,7 +597,7 @@
             return null;
         }
 
-        private function _Str_24845(furniId:int, furniCategory:int):void
+        private function pickupObjectWithConfirmation(furniId:int, furniCategory:int):void
         {
             if (this._container != null)
             {
