@@ -105,12 +105,12 @@
             return this._amIOwner;
         }
 
-        public function set roomControllerLevel(k:int):void
+        public function set myRoomControllerLevel(k:int):void
         {
             this._myRoomControllerLevel = k;
         }
 
-        public function get roomControllerLevel():int
+        public function get myRoomControllerLevel():int
         {
             return this._myRoomControllerLevel;
         }

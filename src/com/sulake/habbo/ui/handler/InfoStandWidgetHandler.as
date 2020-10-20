@@ -795,7 +795,7 @@
                 _local_5.carryItem = _local_6.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
             }
             _local_5.amIOwner = this._container.roomSession.isRoomController;
-            _local_5.roomControllerLevel = this._container.roomSession.roomControllerLevel;
+            _local_5.myRoomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_5.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             var _local_7:Array = new Array();
             _local_7.push(RoomWidgetUserInfoUpdateEvent._Str_7492);
