@@ -27,7 +27,7 @@
         function _Str_21176(_arg_1:int):void;
         function _Str_20499(_arg_1:int):void;
 		function votePoll(counter:int):void;
-        function _Str_19069(_arg_1:int, _arg_2:int, _arg_3:Array):void;
+        function sendPollAnswerMessage(_arg_1:int, _arg_2:int, _arg_3:Array):void;
         function sendPeerUsersClassificationMessage(_arg_1:String):void;
         function sendRoomUsersClassificationMessage(_arg_1:String):void;
         function sendVisitFlatMessage(_arg_1:int):void;

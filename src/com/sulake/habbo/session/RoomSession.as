@@ -380,7 +380,7 @@
             this._connection.send(new _Str_12165(k));
         }
 
-        public function _Str_19069(k:int, _arg_2:int, _arg_3:Array):void
+        public function sendPollAnswerMessage(k:int, _arg_2:int, _arg_3:Array):void
         {
             this._connection.send(new PollAnswerComposer(k, _arg_2, _arg_3));
         }
