@@ -36,7 +36,7 @@
         function kickUser(_arg_1:int):void;
         function _Str_20746(_arg_1:int, _arg_2:String):void;
         function muteUser(userId:int, minutes:int):void;
-        function _Str_20139(_arg_1:int):void;
+        function assignRights(_arg_1:int):void;
         function removeRights(_arg_1:int):void;
         function letUserIn(_arg_1:String, _arg_2:Boolean):void;
         function pickUpPet(_arg_1:int):void;

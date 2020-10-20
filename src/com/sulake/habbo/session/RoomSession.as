@@ -425,7 +425,7 @@
             this._connection.send(new RoomUserMuteMessageComposer(userId, minutes, this.roomId));
         }
 
-        public function _Str_20139(k:int):void
+        public function assignRights(k:int):void
         {
             this._connection.send(new _Str_7856(k));
         }

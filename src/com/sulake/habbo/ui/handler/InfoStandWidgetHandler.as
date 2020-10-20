@@ -406,7 +406,7 @@
                     this._container.roomSession.muteUser(_local_3.id, 10);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_GIVE_RIGHTS:
-                    this._container.roomSession._Str_20139(_local_3.id);
+                    this._container.roomSession.assignRights(_local_3.id);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_TAKE_RIGHTS:
                     this._container.roomSession.removeRights(_local_3.id);
