@@ -305,7 +305,7 @@
                     }
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_HARVEST_PET:
-                    this._container.roomSession._Str_19090(userId);
+                    this._container.roomSession.harvestPet(userId);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_REVIVE_PET:
                     break;

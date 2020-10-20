@@ -473,7 +473,7 @@
             this._connection.send(new _Str_10983(k));
         }
 
-        public function _Str_19090(k:int):void
+        public function harvestPet(k:int):void
         {
             this._connection.send(new _Str_10547(k));
         }

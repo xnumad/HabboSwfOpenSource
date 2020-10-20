@@ -77,7 +77,7 @@
         function set roomModerationSettings(_arg_1:RoomModerationSettings):void;
         function get isNuxNotComplete():Boolean;
         function set isNuxNotComplete(_arg_1:Boolean):void;
-        function _Str_19090(_arg_1:int):void;
+        function harvestPet(_arg_1:int):void;
         function _Str_21562(_arg_1:int):void;
         function _Str_21305(_arg_1:int):void;
         function _Str_19996():void;
