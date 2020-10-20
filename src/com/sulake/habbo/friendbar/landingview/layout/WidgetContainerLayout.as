@@ -21,7 +21,7 @@
         private static const LANDING_VIEW_DEFAULT_DYNAMIC_LAYOUT:String = "landing_view_default_dynamic_layout";
         private static const LANDING_VIEW_GENERIC_RECEPTION:String = "landing_view_generic_reception";
         private static const WIDGET_PLACEHOLDER_:String = "widget_placeholder_";
-        private static const _Str_16487:Array = ["background_back", "background_front", "background_gradient_top", "background_hotel_top", "background_gradient", "background_right", "background_horizon", "background_left", "background_left_bottom"];
+        private static const OVERRIDE_GRAPHICS:Array = ["background_back", "background_front", "background_gradient_top", "background_hotel_top", "background_gradient", "background_right", "background_horizon", "background_left", "background_left_bottom"];
 
         protected var habboLandingView:HabboLandingView;
         protected var windowContainer:IWindowContainer;
@@ -332,7 +332,7 @@
             var _local_3:IStaticBitmapWrapperWindow;
             var _local_4:String;
             k = (((k == null) || (k == "")) ? "" : (k + "."));
-            for each (_local_2 in _Str_16487)
+            for each (_local_2 in OVERRIDE_GRAPHICS)
             {
                 _local_3 = IStaticBitmapWrapperWindow(this.windowContainer.findChildByName(_local_2));
                 if (_local_3)
