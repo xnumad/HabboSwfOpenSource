@@ -12,7 +12,7 @@
         private var sbox:Vector.<uint>;
         private var markI:uint;
         private var markJ:uint;
-        private var _Str_21636:Vector.<uint>;
+        private var markBox:Vector.<uint>;
 
         public function ArcFour()
         {
@@ -87,14 +87,14 @@
         {
             this.markI = this.i;
             this.markJ = this.j;
-            this._Str_21636 = this.sbox.concat();
+            this.markBox = this.sbox.concat();
         }
 
         public function reset():void
         {
             this.i = this.markI;
             this.j = this.markJ;
-            this.sbox = this._Str_21636.concat();
+            this.sbox = this.markBox.concat();
         }
     }
 }
