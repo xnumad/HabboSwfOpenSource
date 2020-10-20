@@ -137,7 +137,7 @@
                 switch (k.iconId)
                 {
                     case HabboToolbarIconEnum.HELP:
-                        this._habboHelp._Str_14807();
+                        this._habboHelp.toggleNewHelpWindow();
                         return;
                     case HabboToolbarIconEnum.GUIDE:
                         this.showGuideTool();

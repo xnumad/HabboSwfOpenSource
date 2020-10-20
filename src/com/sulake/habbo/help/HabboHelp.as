@@ -649,7 +649,7 @@
             switch (_local_2.statusCode)
             {
                 case GuideReportingStatusMessageParser.GUIDE_REPORTING_STATUS_OK:
-                    this._Str_14807();
+                    this.toggleNewHelpWindow();
                     return;
                 case GuideReportingStatusMessageParser.GUIDE_REPORTING_STATUS_PENDING_TICKET:
                     this._guideHelpManager.showPendingTicket(_local_2.pendingTicket);
@@ -852,7 +852,7 @@
             return this._callForHelpManager;
         }
 
-        public function _Str_14807():void
+        public function toggleNewHelpWindow():void
         {
             this._topicsFlowHelpController._Str_19572();
         }

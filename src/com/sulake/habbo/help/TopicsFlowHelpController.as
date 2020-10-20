@@ -365,7 +365,7 @@
                     return;
                 case "bully_button":
                     this.closeWindow();
-                    this._habboHelp._Str_14807();
+                    this._habboHelp.toggleNewHelpWindow();
                     this._habboHelp.trackGoogle("helpWindow", "click_reportBully");
                     return;
                 case "instructions_button":
