@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.competition._Str_9068;
+    import com.sulake.habbo.communication.messages.parser.competition.CurrentTimingCodeMessageParser;
 
     public class CurrentTimingCodeMessageEvent extends MessageEvent implements IMessageEvent
     {
         public function CurrentTimingCodeMessageEvent(k:Function)
         {
-            super(k, _Str_9068);
+            super(k, CurrentTimingCodeMessageParser);
         }
 
-        public function getParser():_Str_9068
+        public function getParser():CurrentTimingCodeMessageParser
         {
-            return _parser as _Str_9068;
+            return _parser as CurrentTimingCodeMessageParser;
         }
     }
 }

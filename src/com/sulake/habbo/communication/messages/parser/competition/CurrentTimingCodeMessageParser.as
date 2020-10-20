@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9068 implements IMessageParser 
+    public class CurrentTimingCodeMessageParser implements IMessageParser
     {
         private var _schedulingStr:String;
         private var _code:String;
