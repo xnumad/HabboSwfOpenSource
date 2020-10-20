@@ -865,7 +865,7 @@
                     }
                     _local_6.canBeMuted = this.determineCanBeMuted(_local_6);
                     _local_6.canBeKicked = this.determineCanBeKicked(_local_6);
-                    _local_6.canBeBanned = this._Str_23573(_local_6);
+                    _local_6.canBeBanned = this.determineCanBeBanned(_local_6);
                     Logger.log(((((((("Set moderation levels to " + _local_6.name) + "Muted: ") + _local_6.canBeMuted) + ", Kicked: ") + _local_6.canBeKicked) + ", Banned: ") + _local_6.canBeBanned));
                 }
                 _local_6.isIgnored = this._container.sessionDataManager.isIgnored(_arg_4.name);
@@ -949,7 +949,7 @@
             return this._Str_18027(userInfo, settingsFunction);
         }
 
-        private function _Str_23573(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
+        private function determineCanBeBanned(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
         {
             var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:RoomModerationSettings):Boolean
             {
