@@ -892,7 +892,7 @@
                             _local_6.canTrade = true;
                     }
                 }
-                _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent._Str_18400;
+                _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent.TRADE_REASON_OK;
                 if (!_local_10)
                 {
                     _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent._Str_14161;
