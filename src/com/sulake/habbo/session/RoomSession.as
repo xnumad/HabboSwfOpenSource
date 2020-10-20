@@ -271,7 +271,7 @@
             this._connection.send(new _Str_11637(k));
         }
 
-        public function _Str_20236(k:int):void
+        public function receivedChatWithTrackingId(k:int):void
         {
             var _local_3:int;
             var _local_2:Object = this._messageLagTrackingMap.remove(k);

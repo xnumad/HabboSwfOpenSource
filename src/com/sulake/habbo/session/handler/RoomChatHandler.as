@@ -64,7 +64,7 @@
                     _local_6 = _local_2.getParser();
                     if (_local_6.animationLength != -1)
                     {
-                        _local_3._Str_20236(_local_6.animationLength);
+                        _local_3.receivedChatWithTrackingId(_local_6.animationLength);
                     }
                     listener.events.dispatchEvent(new RoomSessionChatEvent(_local_4, _local_3, _local_6.userId, _local_6.text, _local_5, _local_6.styleId, _local_6.links));
                 }
