@@ -69,7 +69,7 @@
     public class HabboFriendBarView extends AbstractView implements IHabboFriendBarView, IAvatarImageListener, ILinkEventTracker 
     {
         private static const _Str_18952:int = 127;
-        private static const _Str_3446:int = 1;
+        private static const WINDOW_LAYER_INDEX:int = 1;
         private static const _Str_17134:Boolean = false;
         private static const _Str_9726:int = 3;
         private static const NEW_BAR_XML:String = "new_bar_xml";
@@ -238,7 +238,7 @@
                 }
                 if (((!(_windowManager == null)) && (!(_windowManager.disposed))))
                 {
-                    _windowManager.getWindowContext(_Str_3446).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+                    _windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
                 }
                 this._Str_15295.dispose();
                 this._Str_15295 = null;
@@ -494,14 +494,14 @@
             Token._Str_2787 = assets;
             Token.GAMES = this._gameManager;
             var k:IAsset = assets.getAssetByName(NEW_BAR_XML);
-            this._Str_2563 = (_windowManager.buildFromXML((k.content as XML), _Str_3446) as IWindowContainer);
+            this._Str_2563 = (_windowManager.buildFromXML((k.content as XML), WINDOW_LAYER_INDEX) as IWindowContainer);
             this._Str_2563.y = (this._Str_2563.parent.height - (this._Str_2563.height + _Str_16889));
             this._Str_2563.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_MOVE, true);
             this._Str_2563.procedure = this._Str_22794;
             if (_Str_17134)
             {
                 k = assets.getAssetByName(TOGGLE_XML);
-                this._Str_3984 = (_windowManager.buildFromXML((k.content as XML), _Str_3446) as IWindowContainer);
+                this._Str_3984 = (_windowManager.buildFromXML((k.content as XML), WINDOW_LAYER_INDEX) as IWindowContainer);
                 this._Str_3984.x = this._Str_2563.x;
                 this._Str_3984.y = this._Str_2563.y;
                 this._Str_3984.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_MOVE, true);
@@ -540,7 +540,7 @@
             {
                 this._Str_11102.addEventListener(WindowMouseEvent.CLICK, this._Str_20689);
             }
-            _windowManager.getWindowContext(_Str_3446).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+            _windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
             this.populate();
             if (this._Str_21460)
             {

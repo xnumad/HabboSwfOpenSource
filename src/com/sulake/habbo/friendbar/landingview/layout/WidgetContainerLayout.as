@@ -17,7 +17,7 @@
     public class WidgetContainerLayout implements IUpdateReceiver
     {
         private static const COLORABLE:String = "COLORABLE";
-        private static const _Str_3446:int = 0;
+        private static const WINDOW_LAYER_INDEX:int = 0;
         private static const LANDING_VIEW_DEFAULT_DYNAMIC_LAYOUT:String = "landing_view_default_dynamic_layout";
         private static const LANDING_VIEW_GENERIC_RECEPTION:String = "landing_view_generic_reception";
         private static const WIDGET_PLACEHOLDER_:String = "widget_placeholder_";
@@ -174,7 +174,7 @@
                 registeredWidget.refresh(this.windowContainer);
             }
             this.resizeWindow();
-            this.landingView.windowManager.getWindowContext(_Str_3446).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+            this.landingView.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
             this.windowContainer.invalidate();
             if (this._Str_21419 != null)
             {

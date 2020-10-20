@@ -15,7 +15,7 @@
     {
         private static const _Str_3163:Point = new Point(110, 50);
         private static const _Str_16690:int = 110;
-        private static const _Str_3446:int = 1;
+        private static const WINDOW_LAYER_INDEX:int = 1;
 
         private var _habboFriendList:HabboFriendList;
         private var _Str_18526:_Str_8553;
@@ -199,7 +199,7 @@
         {
             var _local_2:Point = k.clone();
             _local_2.y = (_local_2.y - this._mainWindow.height);
-            var _local_3:int = this._habboFriendList.windowManager.getWindowContext(_Str_3446).getDesktopWindow().width;
+            var _local_3:int = this._habboFriendList.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().width;
             _local_2.x = Math.min((_local_3 - this._mainWindow.width), _local_2.x);
             _local_2.x = Math.max(_Str_16690, _local_2.x);
             this._mainWindow.position = _local_2;
