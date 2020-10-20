@@ -729,7 +729,7 @@
                             this.handleGetPetInfoMessage(_local_3.id);
                             break;
                         case RoomObjectTypeEnum.HABBO:
-                            this._Str_22722(_local_2, k.id, k.category, _local_3);
+                            this.handleGetUserInfoMessage(_local_2, k.id, k.category, _local_3);
                             break;
                         case RoomObjectTypeEnum.BOT:
                             this.handleGetBotInfoMessage(_local_2, k.id, k.category, _local_3);
@@ -804,7 +804,7 @@
             this._container.events.dispatchEvent(_local_5);
         }
 
-        private function _Str_22722(k:int, _arg_2:int, _arg_3:int, _arg_4:RoomUserData):void
+        private function handleGetUserInfoMessage(k:int, _arg_2:int, _arg_3:int, _arg_4:RoomUserData):void
         {
             var _local_5:String;
             var _local_6:RoomWidgetUserInfoUpdateEvent;
