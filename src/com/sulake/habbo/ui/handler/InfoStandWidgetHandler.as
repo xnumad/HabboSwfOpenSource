@@ -735,7 +735,7 @@
                             this.handleGetBotInfoMessage(_local_2, k.id, k.category, _local_3);
                             break;
                         case RoomObjectTypeEnum.RENTABLE_BOT:
-                            this._Str_23115(_local_2, k.id, k.category, _local_3);
+                            this.handleGetRentableBotInfoMessage(_local_2, k.id, k.category, _local_3);
                             break;
                     }
                     break;
@@ -779,7 +779,7 @@
             this._container.events.dispatchEvent(_local_6);
         }
 
-        private function _Str_23115(k:int, _arg_2:int, _arg_3:int, _arg_4:RoomUserData):void
+        private function handleGetRentableBotInfoMessage(k:int, _arg_2:int, _arg_3:int, _arg_4:RoomUserData):void
         {
             var _local_5:RoomWidgetRentableBotInfoUpdateEvent = new RoomWidgetRentableBotInfoUpdateEvent();
             _local_5.name = _arg_4.name;
