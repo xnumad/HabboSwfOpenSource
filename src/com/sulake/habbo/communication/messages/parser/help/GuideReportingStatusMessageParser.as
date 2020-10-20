@@ -7,7 +7,7 @@
     public class GuideReportingStatusMessageParser implements IMessageParser
     {
         public static const GUIDE_REPORTING_STATUS_OK:int = 0;
-        public static const _Str_15134:int = 1;
+        public static const GUIDE_REPORTING_STATUS_PENDING_TICKET:int = 1;
         public static const _Str_18403:int = 2;
         public static const _Str_17955:int = 3;
 
@@ -24,7 +24,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._Str_14988 = k.readInteger();
-            if (this._Str_14988 == _Str_15134)
+            if (this._Str_14988 == GUIDE_REPORTING_STATUS_PENDING_TICKET)
             {
                 this._Str_17655 = new PendingGuideTicket(k);
             }
