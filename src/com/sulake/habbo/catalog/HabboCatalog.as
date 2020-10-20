@@ -1645,7 +1645,7 @@
             switch (k.type)
             {
                 case RoomSessionEvent.STARTED:
-                    this._Str_17838 = k.session._Str_7411;
+                    this._Str_17838 = k.session.isPrivateRoom;
                     this._roomSession = k.session;
                     if (this._recyclerLogic != null)
                     {

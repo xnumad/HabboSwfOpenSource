@@ -121,13 +121,13 @@
             return this._controller._Str_18332() == InventorySubCategory.TRADING;
         }
 
-        public function get _Str_7411():Boolean
+        public function get isPrivateRoom():Boolean
         {
             if (((!(this._controller)) || (!(this._controller.roomSession))))
             {
                 return false;
             }
-            return this._controller.roomSession._Str_7411;
+            return this._controller.roomSession.isPrivateRoom;
         }
 
         public function get furniData():Vector.<GroupItem>

@@ -62,7 +62,7 @@
         function get _Str_19282():Boolean;
         function set _Str_2738(_arg_1:int):void;
         function get tradeMode():int;
-        function get _Str_7411():Boolean;
+        function get isPrivateRoom():Boolean;
         function set tradeMode(_arg_1:int):void;
         function get userDataManager():UserDataManager;
         function get isSpectatorMode():Boolean;

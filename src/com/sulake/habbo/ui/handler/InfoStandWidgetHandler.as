@@ -966,7 +966,7 @@
 
         private function _Str_18027(k:RoomWidgetUserInfoUpdateEvent, _arg_2:Function):Boolean
         {
-            if (!this._container.roomSession._Str_7411)
+            if (!this._container.roomSession.isPrivateRoom)
             {
                 return false;
             }

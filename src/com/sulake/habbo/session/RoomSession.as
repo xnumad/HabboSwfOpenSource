@@ -580,7 +580,7 @@
             return this._tradeMode;
         }
 
-        public function get _Str_7411():Boolean
+        public function get isPrivateRoom():Boolean
         {
             return true;
         }
