@@ -498,7 +498,7 @@
             this._connection.send(new _Str_3382(k));
         }
 
-        public function _Str_19996():void
+        public function sendScriptProceed():void
         {
             this._connection.send(new _Str_10856());
         }

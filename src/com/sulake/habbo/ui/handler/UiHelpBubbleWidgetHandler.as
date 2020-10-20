@@ -50,7 +50,7 @@
             switch (k.type)
             {
                 case RoomWidgetScriptProceedMessage.RWPM_ANSWER:
-                    this._container.roomSession._Str_19996();
+                    this._container.roomSession.sendScriptProceed();
                     break;
             }
             return null;
