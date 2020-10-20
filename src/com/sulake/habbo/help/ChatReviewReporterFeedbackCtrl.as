@@ -17,7 +17,7 @@
         public function ChatReviewReporterFeedbackCtrl(k:HabboHelp)
         {
             this._habboHelp = k;
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideTicketResolutionMessageEvent(this._Str_25116));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideTicketResolutionMessageEvent(this.onTicketResolved));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideTicketCreationResultMessageEvent(this._Str_22825));
         }
 
@@ -36,7 +36,7 @@
             return this._habboHelp == null;
         }
 
-        private function _Str_25116(k:GuideTicketResolutionMessageEvent):void
+        private function onTicketResolved(k:GuideTicketResolutionMessageEvent):void
         {
             this.show(k.getParser().localizationCode);
         }
