@@ -620,12 +620,12 @@
             this._isSpectatorMode = k;
         }
 
-        public function get _Str_9439():Boolean
+        public function get arePetsAllowed():Boolean
         {
             return this._arePetsAllowed;
         }
 
-        public function set _Str_9439(k:Boolean):void
+        public function set arePetsAllowed(k:Boolean):void
         {
             this._arePetsAllowed = k;
         }

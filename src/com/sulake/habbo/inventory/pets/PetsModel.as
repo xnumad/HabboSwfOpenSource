@@ -217,7 +217,7 @@
                 this._controller._Str_13252();
                 return this._isPlacing;
             }
-            if (!this._controller.roomSession._Str_9439)
+            if (!this._controller.roomSession.arePetsAllowed)
             {
                 return false;
             }
