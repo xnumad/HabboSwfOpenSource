@@ -405,7 +405,7 @@
             this._connection.send(new FollowFriendMessageComposer(k));
         }
 
-        public function sendAmbassadorAlert(k:int):void
+        public function ambassadorAlert(k:int):void
         {
             this._connection.send(new AmbassadorAlertMessageComposer(k));
         }

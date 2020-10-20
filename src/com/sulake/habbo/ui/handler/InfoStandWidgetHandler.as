@@ -571,7 +571,7 @@
                     }
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_AMBASSADOR_ALERT_USER:
-                    this._container.roomSession.sendAmbassadorAlert(_local_3.id);
+                    this._container.roomSession.ambassadorAlert(_local_3.id);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_AMBASSADOR_KICK_USER:
                     this._container.roomSession.kickUser(_local_3.id);
