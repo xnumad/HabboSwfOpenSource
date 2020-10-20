@@ -21,7 +21,7 @@
         private var _groupId:int = 0;
         private var _groupName:String = "";
         private var _Str_11289:String = "";
-        private var _Str_5228:int = 0;
+        private var _carryItem:int = 0;
         private var _Str_5131:int = 0;
         private var _Str_8522:Boolean = false;
         private var _realName:String = "";
@@ -290,12 +290,12 @@
 
         public function set _Str_3249(k:int):void
         {
-            this._Str_5228 = k;
+            this._carryItem = k;
         }
 
         public function get _Str_3249():int
         {
-            return this._Str_5228;
+            return this._carryItem;
         }
 
         public function set _Str_3313(k:int):void

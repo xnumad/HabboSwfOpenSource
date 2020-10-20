@@ -10,7 +10,7 @@
         private var _id:int = 0;
         private var _figure:String = "";
         private var _badges:Array;
-        private var _Str_5228:int = 0;
+        private var _carryItem:int = 0;
         private var _Str_5131:int = 0;
         private var _ownerId:int;
         private var _ownerName:String;
@@ -127,12 +127,12 @@
 
         public function set _Str_3249(k:int):void
         {
-            this._Str_5228 = k;
+            this._carryItem = k;
         }
 
         public function get _Str_3249():int
         {
-            return this._Str_5228;
+            return this._carryItem;
         }
 
         public function set _Str_3313(k:int):void
