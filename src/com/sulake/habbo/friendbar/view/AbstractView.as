@@ -20,7 +20,7 @@
 
     public class AbstractView extends Component 
     {
-        protected var _Str_2277:IHabboWindowManager;
+        protected var _windowManager:IHabboWindowManager;
         protected var _Str_3470:IAvatarRenderManager;
         protected var _Str_2904:IHabboLocalizationManager;
         protected var _Str_2318:ISessionDataManager;
@@ -42,7 +42,7 @@
                 _Str_3470 = k;
             }), new ComponentDependency(new IIDHabboWindowManager(), function (k:IHabboWindowManager):void
             {
-                _Str_2277 = k;
+                _windowManager = k;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
                 _Str_2904 = k;

@@ -33,7 +33,7 @@
         protected var _Str_2904:IHabboLocalizationManager;
         protected var _Str_2318:ISessionDataManager;
         protected var _Str_2290:IHabboToolbar;
-        protected var _Str_2277:IHabboWindowManager;
+        protected var _windowManager:IHabboWindowManager;
         private var _Str_2310:IConnection;
         private var _Str_9469:PhoneNumberCollectView;
         private var _Str_7950:PhoneNumberCollectMinimizedView;
@@ -56,7 +56,7 @@
                 _Str_2318 = k;
             }), new ComponentDependency(new IIDHabboWindowManager(), function (k:IHabboWindowManager):void
             {
-                _Str_2277 = k;
+                _windowManager = k;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
                 _Str_2904 = k;
@@ -161,7 +161,7 @@
                             this._Str_17799(false);
                         }
                     }
-                    this._Str_2277.alert("${generic.alert.title}", (("${phone.number.collect.error." + k.getParser().resultCode) + "}"), 0, null);
+                    this._windowManager.alert("${generic.alert.title}", (("${phone.number.collect.error." + k.getParser().resultCode) + "}"), 0, null);
                     this._Str_9469._Str_16661(k.getParser().resultCode);
                     return;
             }
@@ -238,7 +238,7 @@
 
         public function get windowManager():IHabboWindowManager
         {
-            return this._Str_2277;
+            return this._windowManager;
         }
 
         public function get localizationManager():IHabboLocalizationManager

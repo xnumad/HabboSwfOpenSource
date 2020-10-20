@@ -70,7 +70,7 @@
 
         public function get windowManager():IHabboWindowManager
         {
-            return _Str_2277;
+            return _windowManager;
         }
 
         public function get habboHelp():IHabboHelp
@@ -198,11 +198,11 @@
             {
                 asset = assets.getAssetByName((name + "_xml"));
                 xmlAsset = XmlAsset(asset);
-                window = _Str_2277.buildFromXML(XML(xmlAsset.content), layer);
+                window = _windowManager.buildFromXML(XML(xmlAsset.content), layer);
             }
             catch(e:Error)
             {
-                ErrorReportStorage.addDebugData("HabboTalent", (((((("Failed to build window " + name) + "_xml, ") + asset) + ", ") + _Str_2277) + "!"));
+                ErrorReportStorage.addDebugData("HabboTalent", (((((("Failed to build window " + name) + "_xml, ") + asset) + ", ") + _windowManager) + "!"));
                 throw (e);
             }
             return window;
@@ -217,11 +217,11 @@
             {
                 asset = assets.getAssetByName((name + "_xml"));
                 xmlAsset = XmlAsset(asset);
-                dialog = _Str_2277.buildModalDialogFromXML(XML(xmlAsset.content));
+                dialog = _windowManager.buildModalDialogFromXML(XML(xmlAsset.content));
             }
             catch(e:Error)
             {
-                ErrorReportStorage.addDebugData("HabboTalent", (((((("Failed to build window " + name) + "_xml, ") + asset) + ", ") + _Str_2277) + "!"));
+                ErrorReportStorage.addDebugData("HabboTalent", (((((("Failed to build window " + name) + "_xml, ") + asset) + ", ") + _windowManager) + "!"));
                 throw (e);
             }
             return dialog;

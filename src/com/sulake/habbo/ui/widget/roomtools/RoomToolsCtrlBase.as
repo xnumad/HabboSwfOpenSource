@@ -15,7 +15,7 @@
 
         protected var _window:IWindowContainer;
         protected var _widget:RoomToolsWidget;
-        protected var _Str_2277:IHabboWindowManager;
+        protected var _windowManager:IHabboWindowManager;
         protected var _assets:IAssetLibrary;
         protected var _Str_3510:Boolean = true;
         protected var _Str_5637:Timer;
@@ -25,7 +25,7 @@
         public function RoomToolsCtrlBase(k:RoomToolsWidget, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary)
         {
             this._widget = k;
-            this._Str_2277 = _arg_2;
+            this._windowManager = _arg_2;
             this._assets = _arg_3;
             this._Str_20667 = this.handler.container.config.getInteger("room.enter.info.collapse.delay", 5000);
         }

@@ -22,7 +22,7 @@
         private static const _Str_17795:Number = 0.025;
 
         protected var _window:IWindowContainer;
-        protected var _Str_2277:IHabboWindowManager;
+        protected var _windowManager:IHabboWindowManager;
         protected var _assets:IAssetLibrary;
         private var _disposed:Boolean = false;
         private var _Str_11528:IStaticBitmapWrapperWindow;
@@ -45,7 +45,7 @@
             this._Str_4381 = new Vector.<String>();
             super();
             this._window = null;
-            this._Str_2277 = k;
+            this._windowManager = k;
             this._assets = _arg_2;
             this._Str_3923 = null;
             this._Str_7792 = new Timer(40);
@@ -133,7 +133,7 @@
             var _local_3:XmlAsset = (this._assets.getAssetByName(k) as XmlAsset);
             if (_local_3)
             {
-                this._window = (this._Str_2277.buildFromXML((_local_3.content as XML), 1) as IWindowContainer);
+                this._window = (this._windowManager.buildFromXML((_local_3.content as XML), 1) as IWindowContainer);
                 if (this._window)
                 {
                     this._window.addEventListener(WindowMouseEvent.CLICK, this.onContainerClick);

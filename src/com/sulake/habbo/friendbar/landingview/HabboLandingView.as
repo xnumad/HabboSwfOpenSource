@@ -126,7 +126,7 @@
 
         public function get windowManager():IHabboWindowManager
         {
-            return _Str_2277;
+            return _windowManager;
         }
 
         public function get communicationManager():IHabboCommunicationManager
@@ -203,7 +203,7 @@
             var _local_4:int;
             var _local_5:String;
             this._isInitialized = true;
-            var k:IDesktopWindow = _Str_2277.getDesktop(0);
+            var k:IDesktopWindow = _windowManager.getDesktop(0);
             var _local_2:IWindow = k.getChildByName("hotel_view_welcome_window");
             if (_local_2 != null)
             {
@@ -377,7 +377,7 @@
                 {
                     return null;
                 }
-                window = _Str_2277.buildFromXML(XML(xmlAsset.content), layer);
+                window = _windowManager.buildFromXML(XML(xmlAsset.content), layer);
             }
             catch(e:Error)
             {

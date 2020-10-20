@@ -22,7 +22,7 @@
         private static const _Str_4923:int = 3;
         private static const _Str_5846:ColorTransform = new ColorTransform(0.25, 0.25, 0.25);
         private static var _Str_2691:Stage = null;
-        private static var _Str_2277:HabboWindowManagerComponent;
+        private static var _windowManager:HabboWindowManagerComponent;
         private static var _container:IWindowContainer;
         private static var _Str_7821:int;
 
@@ -34,7 +34,7 @@
         {
             _Str_22219(k);
             this._background = (_Str_20664.create("", "", WindowType.WINDOW_TYPE_BITMAP_WRAPPER, 0, WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, new Rectangle(0, 0, 1, 1), null, _container, 0) as IBitmapWrapperWindow);
-            this._Str_7545 = _Str_2277.buildFromXML(_arg_2, _Str_4923);
+            this._Str_7545 = _windowManager.buildFromXML(_arg_2, _Str_4923);
             _container.addChild(this._Str_7545);
             this._Str_7545.center();
             _container.visible = true;
@@ -45,8 +45,8 @@
         {
             if (_Str_2691 == null)
             {
-                _Str_2277 = k;
-                _Str_2691 = _Str_2277.context.displayObjectContainer.stage;
+                _windowManager = k;
+                _Str_2691 = _windowManager.context.displayObjectContainer.stage;
                 _container = (_Str_20664.create("", "", WindowType.WINDOW_TYPE_CONTAINER, 0, 0, new Rectangle(0, 0, 1, 1), null, null, 0) as IWindowContainer);
                 _Str_2691.addEventListener(Event.RESIZE, onResize);
                 _Str_2691.addEventListener(Event.ENTER_FRAME, _Str_749);
@@ -55,7 +55,7 @@
 
         private static function get _Str_20664():IWindowContext
         {
-            return _Str_2277.getWindowContext(_Str_4923);
+            return _windowManager.getWindowContext(_Str_4923);
         }
 
         private static function refresh():void
@@ -74,7 +74,7 @@
             i = 0;
             while (i < _Str_4923)
             {
-                desktop = _Str_2277.getWindowContext(i).getDesktopWindow();
+                desktop = _windowManager.getWindowContext(i).getDesktopWindow();
                 desktop.visible = noModalDialogs;
                 if (noModalDialogs)
                 {
@@ -110,7 +110,7 @@
             i = 0;
             while (i < _Str_4923)
             {
-                context = _Str_2277.getWindowContext(i);
+                context = _windowManager.getWindowContext(i);
                 if (context != null)
                 {
                     try

@@ -59,7 +59,7 @@
             {
                 this._activeFrame.dispose();
             }
-            this._activeFrame = (_Str_2277.buildFromXML((assets.getAssetByName("epic_popup_frame_xml").content as XML)) as IWindowContainer);
+            this._activeFrame = (_windowManager.buildFromXML((assets.getAssetByName("epic_popup_frame_xml").content as XML)) as IWindowContainer);
             IStaticBitmapWrapperWindow(this._activeFrame.findChildByName("content_static_bitmap")).assetUri = k;
             this._activeFrame.procedure = this._Str_12416;
             this._activeFrame.center();

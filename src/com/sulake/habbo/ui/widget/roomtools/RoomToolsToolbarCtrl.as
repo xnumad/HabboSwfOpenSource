@@ -95,7 +95,7 @@
             }
             else
             {
-                this._roomToolsHistory = new RoomToolsHistory(_Str_2277, _assets, handler);
+                this._roomToolsHistory = new RoomToolsHistory(_windowManager, _assets, handler);
                 this._roomToolsHistory.populate(_widget.visitedRooms);
                 this._Str_3714();
             }

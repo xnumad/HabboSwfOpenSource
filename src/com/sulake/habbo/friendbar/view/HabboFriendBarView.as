@@ -236,9 +236,9 @@
                 {
                     _Str_2318.events.removeEventListener(SessionDataPreferencesEvent.APUE_UPDATED, this._Str_10326);
                 }
-                if (((!(_Str_2277 == null)) && (!(_Str_2277.disposed))))
+                if (((!(_windowManager == null)) && (!(_windowManager.disposed))))
                 {
-                    _Str_2277.getWindowContext(_Str_3446).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+                    _windowManager.getWindowContext(_Str_3446).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
                 }
                 this._Str_15295.dispose();
                 this._Str_15295 = null;
@@ -279,7 +279,7 @@
 
         private function _Str_25736():void
         {
-            var k:IWindow = _Str_2277.createWindow("bar_dimmer", "", WindowType.WINDOW_TYPE_BORDER, _Str_3108._Str_9798, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, this._Str_2563.width, this._Str_2563.height), null, 0);
+            var k:IWindow = _windowManager.createWindow("bar_dimmer", "", WindowType.WINDOW_TYPE_BORDER, _Str_3108._Str_9798, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, this._Str_2563.width, this._Str_2563.height), null, 0);
             k.color = 0;
             k.blend = 0.3;
             this._Str_2563.addChild(k);
@@ -300,7 +300,7 @@
             if (_local_2 != null)
             {
                 this._Str_2563.removeChild(_local_2);
-                _Str_2277.destroy(_local_2);
+                _windowManager.destroy(_local_2);
             }
         }
 
@@ -486,22 +486,22 @@
             Tab.FRIENDS = this._friendsList;
             Tab._Str_3553 = this;
             Tab._Str_2787 = assets;
-            Tab._Str_3684 = _Str_2277;
+            Tab._Str_3684 = _windowManager;
             Tab._Str_3840 = _Str_2904;
             Tab._Str_9890 = this._Str_15295;
             Tab._Str_4533 = habboTracking;
-            Token._Str_3684 = _Str_2277;
+            Token._Str_3684 = _windowManager;
             Token._Str_2787 = assets;
             Token.GAMES = this._gameManager;
             var k:IAsset = assets.getAssetByName(NEW_BAR_XML);
-            this._Str_2563 = (_Str_2277.buildFromXML((k.content as XML), _Str_3446) as IWindowContainer);
+            this._Str_2563 = (_windowManager.buildFromXML((k.content as XML), _Str_3446) as IWindowContainer);
             this._Str_2563.y = (this._Str_2563.parent.height - (this._Str_2563.height + _Str_16889));
             this._Str_2563.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_MOVE, true);
             this._Str_2563.procedure = this._Str_22794;
             if (_Str_17134)
             {
                 k = assets.getAssetByName(TOGGLE_XML);
-                this._Str_3984 = (_Str_2277.buildFromXML((k.content as XML), _Str_3446) as IWindowContainer);
+                this._Str_3984 = (_windowManager.buildFromXML((k.content as XML), _Str_3446) as IWindowContainer);
                 this._Str_3984.x = this._Str_2563.x;
                 this._Str_3984.y = this._Str_2563.y;
                 this._Str_3984.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_MOVE, true);
@@ -540,7 +540,7 @@
             {
                 this._Str_11102.addEventListener(WindowMouseEvent.CLICK, this._Str_20689);
             }
-            _Str_2277.getWindowContext(_Str_3446).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
+            _windowManager.getWindowContext(_Str_3446).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
             this.populate();
             if (this._Str_21460)
             {
@@ -719,7 +719,7 @@
         {
             var title:String = ((event.success) ? "${friendbar.find.success.title}" : "${friendbar.find.error.title}");
             var text:String = ((event.success) ? "${friendbar.find.success.text}" : "${friendbar.find.error.text}");
-            _Str_2277.notify(title, text, function (k:_Str_2418, _arg_2:WindowEvent):void
+            _windowManager.notify(title, text, function (k:_Str_2418, _arg_2:WindowEvent):void
             {
                 k.dispose();
             }, _Str_3023.BUTTON_OK);
@@ -966,7 +966,7 @@
             var _local_2:IRegionWindow;
             if (!this._Str_4452)
             {
-                this._Str_4452 = _Str_2277.createUnseenItemCounter();
+                this._Str_4452 = _windowManager.createUnseenItemCounter();
             }
             if (this._Str_4452)
             {

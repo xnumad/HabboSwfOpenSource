@@ -20,7 +20,7 @@
     public class WindowUtils 
     {
         private static var _assets:IAssetLibrary;
-        private static var _Str_2277:IHabboWindowManager;
+        private static var _windowManager:IHabboWindowManager;
 
 
         public static function _Str_4180(k:IWindow, _arg_2:String):void
@@ -51,7 +51,7 @@
         public static function init(k:IAssetLibrary, _arg_2:IHabboWindowManager):void
         {
             _assets = k;
-            _Str_2277 = _arg_2;
+            _windowManager = _arg_2;
         }
 
         public static function setElementImage(k:IWindow, _arg_2:BitmapData, _arg_3:int=0, _arg_4:int=0, _arg_5:int=0):void
@@ -99,7 +99,7 @@
             var _local_6:IWindow;
             var _local_7:IBitmapWrapperWindow;
             HabboGamesCom.log(("CreateWindow: " + k));
-            if (((!(_assets)) || (!(_Str_2277))))
+            if (((!(_assets)) || (!(_windowManager))))
             {
                 return null;
             }
@@ -109,7 +109,7 @@
                 HabboGamesCom.log(("CreateWindow() could not find the asset for window: " + k));
                 return null;
             }
-            var _local_4:IWindow = _Str_2277.buildFromXML((_local_3.content as XML), _arg_2);
+            var _local_4:IWindow = _windowManager.buildFromXML((_local_3.content as XML), _arg_2);
             var _local_5:Array = [];
             if ((_local_4 is IWindowContainer))
             {

@@ -17,7 +17,7 @@
     public class GuildFurnitureContextMenuView extends FurnitureContextInfoView 
     {
         protected var _Str_17990:IHabboGroupsManager;
-        protected var _Str_2277:IHabboWindowManager;
+        protected var _windowManager:IHabboWindowManager;
         public var _guildId:int = -1;
         public var _Str_8815:int = -1;
         public var _Str_7536:Boolean = false;
@@ -28,13 +28,13 @@
             super(k);
             _Str_3403 = false;
             this._Str_17990 = _arg_2;
-            this._Str_2277 = _arg_3;
+            this._windowManager = _arg_3;
         }
 
         override public function dispose():void
         {
             this._Str_17990 = null;
-            this._Str_2277 = null;
+            this._windowManager = null;
             super.dispose();
         }
 

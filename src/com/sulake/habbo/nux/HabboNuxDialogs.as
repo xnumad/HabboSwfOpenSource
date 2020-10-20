@@ -41,7 +41,7 @@
     {
         protected var _Str_2355:IHabboCommunicationManager;
         protected var _Str_2272:IHabboNavigator;
-        protected var _Str_2277:IHabboWindowManager;
+        protected var _windowManager:IHabboWindowManager;
         protected var _Str_2904:IHabboLocalizationManager;
         protected var _Str_2276:IHabboCatalog;
         protected var _Str_2318:ISessionDataManager;
@@ -64,7 +64,7 @@
                 _Str_2355 = k;
             }, true), new ComponentDependency(new IIDHabboWindowManager(), function (k:IHabboWindowManager):void
             {
-                _Str_2277 = k;
+                _windowManager = k;
             }), new ComponentDependency(new IIDHabboNavigator(), function (k:IHabboNavigator):void
             {
                 _Str_2272 = k;
@@ -92,9 +92,9 @@
         override public function dispose():void
         {
             context.removeLinkEventTracker(this);
-            if (this._Str_2277)
+            if (this._windowManager)
             {
-                this._Str_2277 = null;
+                this._windowManager = null;
             }
             this._Str_17452();
             this._Str_11922();
@@ -149,7 +149,7 @@
 
         public function _Str_19003():void
         {
-            this._Str_2277.confirm("${phone.number.never.again.confirm.title}", "${phone.number.never.again.confirm.text}", 0, this._Str_16253);
+            this._windowManager.confirm("${phone.number.never.again.confirm.title}", "${phone.number.never.again.confirm.text}", 0, this._Str_16253);
         }
 
         private function _Str_16253(k:_Str_2910, _arg_2:WindowEvent):void
@@ -201,7 +201,7 @@
 
         public function get windowManager():IHabboWindowManager
         {
-            return this._Str_2277;
+            return this._windowManager;
         }
 
         public function get localizationManager():IHabboLocalizationManager
