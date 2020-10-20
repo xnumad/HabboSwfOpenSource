@@ -390,7 +390,7 @@
                 {
                     _local_3 = this._data.homeRoomId;
                 }
-                this._roomSessionManager._Str_21545(k, _local_3);
+                this._roomSessionManager.gotoRoomNetwork(k, _local_3);
             }
         }
 

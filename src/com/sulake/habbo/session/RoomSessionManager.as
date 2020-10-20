@@ -254,7 +254,7 @@
             return this.createSession(_local_4);
         }
 
-        public function _Str_21545(k:int, _arg_2:int):Boolean
+        public function gotoRoomNetwork(k:int, _arg_2:int):Boolean
         {
             var _local_3:RoomSession = new RoomSession();
             _local_3.roomId = 1;
