@@ -949,7 +949,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.WhisperMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.CancelTypingMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_12180;
+	import com.sulake.habbo.communication.messages.outgoing.room.chat.ShoutMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
 	import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming._Str_89._Str_5266;
@@ -1649,7 +1649,7 @@
             OUTGOING_PACKETS[2069] = _Str_9987;
             OUTGOING_PACKETS[2077] = _Str_10525;
             OUTGOING_PACKETS[2080] = _Str_11206;
-            OUTGOING_PACKETS[2085] = _Str_12180;
+            OUTGOING_PACKETS[2085] = ShoutMessageComposer;
             OUTGOING_PACKETS[2091] = _Str_6996;
             OUTGOING_PACKETS[21] = _Str_10770;
             OUTGOING_PACKETS[210] = _Str_12401;
