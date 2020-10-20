@@ -648,7 +648,7 @@
             var _local_2:GuideReportingStatusMessageParser = k.getParser();
             switch (_local_2._Str_23632)
             {
-                case GuideReportingStatusMessageParser._Str_17350:
+                case GuideReportingStatusMessageParser.GUIDE_REPORTING_STATUS_OK:
                     this._Str_14807();
                     return;
                 case GuideReportingStatusMessageParser._Str_15134:

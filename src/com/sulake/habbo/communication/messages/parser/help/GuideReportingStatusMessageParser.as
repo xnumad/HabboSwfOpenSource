@@ -6,7 +6,7 @@
 
     public class GuideReportingStatusMessageParser implements IMessageParser
     {
-        public static const _Str_17350:int = 0;
+        public static const GUIDE_REPORTING_STATUS_OK:int = 0;
         public static const _Str_15134:int = 1;
         public static const _Str_18403:int = 2;
         public static const _Str_17955:int = 3;
