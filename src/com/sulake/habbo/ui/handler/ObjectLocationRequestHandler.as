@@ -40,7 +40,7 @@
             this._container = k;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             var k:Array = [];
             k.push(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION);

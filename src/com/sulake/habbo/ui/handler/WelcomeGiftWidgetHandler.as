@@ -100,7 +100,7 @@
             this._container.events.dispatchEvent(new _Str_6843(_local_2.result));
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             var k:Array = [];
             k.push(RoomWidgetFurniActionMessage.RWFAM_OPEN_WELCOME_GIFT);

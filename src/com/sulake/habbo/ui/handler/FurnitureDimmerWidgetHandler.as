@@ -45,7 +45,7 @@
             this._container = null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_DIMMER, RoomWidgetDimmerSavePresetMessage.RWSDPM_SAVE_PRESET, RoomWidgetDimmerChangeStateMessage.RWCDSM_CHANGE_STATE, RoomWidgetDimmerPreviewMessage.RWDPM_PREVIEW_DIMMER_PRESET];
         }

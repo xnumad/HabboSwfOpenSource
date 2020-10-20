@@ -48,7 +48,7 @@
             this._container.connection.addMessageEvent(this._rentableSpaceRentFailedMessageEvent);
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return null;
         }

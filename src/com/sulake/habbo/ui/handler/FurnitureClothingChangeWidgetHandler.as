@@ -55,7 +55,7 @@
             this._container = null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_CLOTHING_CHANGE, RoomWidgetClothingChangeMessage.RWCCM_REQUEST_EDITOR, RoomWidgetAvatarEditorMessage.RWCM_OPEN_AVATAR_EDITOR];
         }

@@ -39,7 +39,7 @@
             this._container = null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetFurniToWidgetMessage.RWFWM_WIDGET_MESSAGE_REQUEST_ACHIEVEMENT_RESOLUTION_ENGRAVING, RoomWidgetFurniToWidgetMessage.RWFWM_WIDGET_MESSAGE_REQUEST_ACHIEVEMENT_RESOLUTION_FAILED, RoomWidgetFurniToWidgetMessage.RWFWM_WIDGET_MESSAGE_REQUEST_BADGE_DISPLAY_ENGRAVING];
         }

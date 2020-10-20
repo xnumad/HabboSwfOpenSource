@@ -104,7 +104,7 @@
             }
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_PLAYLIST_EDITOR, RoomWidgetPlayListModificationMessage.RWPLAM_ADD_TO_PLAYLIST, RoomWidgetPlayListModificationMessage.RWPLAM_REMOVE_FROM_PLAYLIST, RoomWidgetPlayListPlayStateMessage.RWPLPS_TOGGLE_PLAY_PAUSE, RoomWidgetPlayListUserActionMessage.RWPLUA_OPEN_CATALOGUE_BUTTON_PRESSED];
         }

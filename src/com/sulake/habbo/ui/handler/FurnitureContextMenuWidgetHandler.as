@@ -142,7 +142,7 @@
             return _local_2;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetUseProductMessage.MONSTERPLANT_SEED];
         }

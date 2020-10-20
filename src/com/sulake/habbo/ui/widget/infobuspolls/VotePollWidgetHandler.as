@@ -38,7 +38,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
             this._container = null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetVoteMessage.VOTE_MESSAGE];
         }

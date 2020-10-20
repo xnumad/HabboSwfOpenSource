@@ -55,7 +55,7 @@
             return (this._container) ? this._container.roomEngine : null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [_Str_3149.RWPUW_QUESTION_ANSWERED, _Str_3149.RWPUW_QUESION_FINSIHED, _Str_3149.RWPUW_NEW_QUESTION];
         }

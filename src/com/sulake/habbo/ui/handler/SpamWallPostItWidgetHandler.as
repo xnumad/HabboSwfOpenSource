@@ -88,7 +88,7 @@
             }
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [_Str_5436.RWSWPUE_OPEN_EDITOR, RoomWidgetSpamWallPostItFinishEditingMessage.RWSWPFEE_SEND_POSTIT_DATA];
         }

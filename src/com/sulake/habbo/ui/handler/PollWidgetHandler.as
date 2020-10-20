@@ -37,7 +37,7 @@
             this._container = null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetPollMessage.RWPM_ANSWER, RoomWidgetPollMessage.RWPM_REJECT, RoomWidgetPollMessage.RWPM_START];
         }

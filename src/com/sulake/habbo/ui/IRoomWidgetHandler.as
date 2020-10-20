@@ -9,7 +9,7 @@
     {
         function get type():String;
         function set container(_arg_1:IRoomWidgetHandlerContainer):void;
-        function _Str_2607():Array;
+        function getWidgetMessages():Array;
         function processWidgetMessage(_arg_1:RoomWidgetMessage):RoomWidgetUpdateEvent;
         function getProcessedEvents():Array;
         function _Str_2485(_arg_1:Event):void;

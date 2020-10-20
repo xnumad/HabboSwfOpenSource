@@ -32,7 +32,7 @@
             this._container = k;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetOpenPetPackageMessage.RWOPPM_OPEN_PET_PACKAGE];
         }

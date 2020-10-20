@@ -37,7 +37,7 @@
             this._container = null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetLetUserInMessage.RWLUIM_LET_USER_IN];
         }

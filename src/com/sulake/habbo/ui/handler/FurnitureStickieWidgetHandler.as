@@ -41,7 +41,7 @@
             this._container = null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_STICKIE, RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_DELETE, RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_UPDATE];
         }

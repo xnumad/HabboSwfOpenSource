@@ -244,7 +244,7 @@
             this.container = null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             var k:Array = [];
             k.push(RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_INFO);

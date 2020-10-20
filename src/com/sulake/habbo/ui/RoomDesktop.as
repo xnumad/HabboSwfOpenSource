@@ -920,7 +920,7 @@
             {
                 widgetHandler.container = this;
                 _local_11 = null;
-                _local_12 = widgetHandler._Str_2607();
+                _local_12 = widgetHandler.getWidgetMessages();
                 if (_local_12 != null)
                 {
                     for each (_local_14 in _local_12)

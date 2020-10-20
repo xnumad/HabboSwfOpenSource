@@ -93,7 +93,7 @@
             }
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return null;
         }

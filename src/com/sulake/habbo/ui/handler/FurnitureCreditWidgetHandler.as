@@ -40,7 +40,7 @@
             this._container = null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_CREDITFURNI, RoomWidgetCreditFurniRedeemMessage.RWFCRM_REDEEM];
         }

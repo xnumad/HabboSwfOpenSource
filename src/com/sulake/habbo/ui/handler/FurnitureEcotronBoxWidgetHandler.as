@@ -48,7 +48,7 @@
             this._container = null;
         }
 
-        public function _Str_2607():Array
+        public function getWidgetMessages():Array
         {
             return [RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_ECOTRONBOX, RoomWidgetEcotronBoxOpenMessage.RWEBOM_OPEN_ECOTRONBOX, RoomWidgetEcotronBoxOpenedMessage.RWEBOM_ECOTRONBOX_OPENED];
         }
