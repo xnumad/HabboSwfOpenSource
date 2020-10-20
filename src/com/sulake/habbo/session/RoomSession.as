@@ -60,7 +60,7 @@
 
     public class RoomSession implements IRoomSession 
     {
-        private const _Str_23360:int = 2500;
+        private const CHAT_LAG_WARNING_LIMIT:int = 2500;
 
         private var _connection:IConnection;
         private var _roomId:int = 0;
@@ -278,7 +278,7 @@
             if (_local_2 != null)
             {
                 _local_3 = getTimer();
-                if ((_local_3 - int(_local_2)) > this._Str_23360)
+                if ((_local_3 - int(_local_2)) > this.CHAT_LAG_WARNING_LIMIT)
                 {
                     if (this._habboTracking != null)
                     {
