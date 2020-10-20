@@ -84,7 +84,7 @@
             k.addMessageEvent(new PetInfoMessageEvent(this.onPetInfo));
             k.addMessageEvent(new PetTrainingPanelEvent(this.onEnabledPetCommands));
             k.addMessageEvent(new PetPlacingErrorEvent(this.onPetPlacingError));
-            k.addMessageEvent(new PetFigureUpdateEvent(this._Str_6212));
+            k.addMessageEvent(new PetFigureUpdateEvent(this.onPetFigureUpdate));
             k.addMessageEvent(new PetBreedingResultEvent(this.onPetBreedingResult));
             k.addMessageEvent(new _Str_7734(this.onPetBreedingEvent));
             k.addMessageEvent(new PetStatusUpdateEvent(this.onPetStatusUpdate));
@@ -305,7 +305,7 @@
             listener.events.dispatchEvent(new RoomSessionPetInfoUpdateEvent(_local_2, _local_5));
         }
 
-        private function _Str_6212(k:IMessageEvent):void
+        private function onPetFigureUpdate(k:IMessageEvent):void
         {
             var _local_2:PetFigureUpdateEvent = (k as PetFigureUpdateEvent);
             if (_local_2 == null)

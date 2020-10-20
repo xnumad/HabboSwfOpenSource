@@ -221,7 +221,7 @@
                 k.addMessageEvent(new PetExperienceEvent(this.onPetExperience));
                 k.addMessageEvent(new YouArePlayingGameMessageEvent(this._Str_24325));
                 k.addMessageEvent(new GamePlayerValueMessageEvent(this.onGamePlayerNumberValue));
-                k.addMessageEvent(new PetFigureUpdateEvent(this._Str_6212));
+                k.addMessageEvent(new PetFigureUpdateEvent(this.onPetFigureUpdate));
                 k.addMessageEvent(new IgnoreResultMessageEvent(this.onIgnoreResult));
                 k.addMessageEvent(new GuideSessionStartedEvent(this.onGuideSessionStarted));
                 k.addMessageEvent(new GuideSessionEndedEvent(this.onGuideSessionEnded));
@@ -968,7 +968,7 @@
             this._roomCreator.updateObjectUserFigure(this._currentRoomId, _local_2.id, _local_2.figure, _local_2.sex);
         }
 
-        private function _Str_6212(k:IMessageEvent):void
+        private function onPetFigureUpdate(k:IMessageEvent):void
         {
             var _local_2:PetFigureUpdateEvent = (k as PetFigureUpdateEvent);
             if (_local_2 == null)
