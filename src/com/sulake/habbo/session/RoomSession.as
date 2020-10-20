@@ -430,7 +430,7 @@
             this._connection.send(new _Str_7856(k));
         }
 
-        public function _Str_21257(k:int):void
+        public function removeRights(k:int):void
         {
             var _local_2:Array = [];
             _local_2.push(k);

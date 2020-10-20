@@ -409,7 +409,7 @@
                     this._container.roomSession._Str_20139(_local_3.id);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_TAKE_RIGHTS:
-                    this._container.roomSession._Str_21257(_local_3.id);
+                    this._container.roomSession.removeRights(_local_3.id);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_START_TRADING:
                     _local_9 = this._container.roomSession.userDataManager.getUserData(_local_4.userId);
