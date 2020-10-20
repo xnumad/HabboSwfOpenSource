@@ -422,7 +422,7 @@
             }
         }
 
-        public function _Str_26103(k:int):void
+        public function openGameCenterByGameTypeId(k:int):void
         {
             if (this._gameManager)
             {
