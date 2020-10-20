@@ -448,7 +448,7 @@
             {
                 this._userView._Str_7907(_arg_2);
                 this._userView._Str_12782(_arg_4, _arg_5);
-                if (this.handler._Str_7745)
+                if (this.handler.isActivityDisplayEnabled)
                 {
                     this._userView.activityPoints = _arg_3;
                 }

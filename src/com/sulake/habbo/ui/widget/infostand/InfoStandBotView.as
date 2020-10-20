@@ -218,7 +218,7 @@
 
         public function set activityPoints(k:int):void
         {
-            if (!this._widget.handler._Str_7745)
+            if (!this._widget.handler.isActivityDisplayEnabled)
             {
                 return;
             }

@@ -582,7 +582,7 @@
             return (this._Str_13386) && (getBoolean("groupRoomInfo.attach.enabled"));
         }
 
-        public function get _Str_7745():Boolean
+        public function get isActivityDisplayEnabled():Boolean
         {
             return getBoolean("activity.point.display.enabled");
         }

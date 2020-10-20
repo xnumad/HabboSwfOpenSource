@@ -825,7 +825,7 @@
             _local_6.isSpectatorMode = this._container.roomSession.isSpectatorMode;
             _local_6.name = _arg_4.name;
             _local_6.motto = _arg_4.custom;
-            if (this._Str_7745)
+            if (this.isActivityDisplayEnabled)
             {
                 _local_6.activityPoints = _arg_4.activityPoints;
             }
@@ -1498,7 +1498,7 @@
             }
         }
 
-        public function get _Str_7745():Boolean
+        public function get isActivityDisplayEnabled():Boolean
         {
             return ((!(this._container == null)) && (this._container.config)) && (this._container.config.getBoolean("activity.point.display.enabled"));
         }

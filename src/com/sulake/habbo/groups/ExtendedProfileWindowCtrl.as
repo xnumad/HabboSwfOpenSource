@@ -101,7 +101,7 @@
             this._window.center();
             this._window.findChildByName("change_looks").procedure = this._Str_22609;
             this._window.findChildByName("change_badges").procedure = this._Str_24847;
-            this._window.findChildByName("user_activity_points").visible = this._manager._Str_7745;
+            this._window.findChildByName("user_activity_points").visible = this._manager.isActivityDisplayEnabled;
             for each (k in RelationshipStatusEnum._Str_15184)
             {
                 this._window.findChildByName((RelationshipStatusEnum._Str_7401(k) + "_friend_name_link_region")).procedure = this._Str_24644;

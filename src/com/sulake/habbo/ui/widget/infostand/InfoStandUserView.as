@@ -162,7 +162,7 @@
             {
                 _local_6.procedure = this._Str_21251;
             }
-            if (this._widget.handler._Str_7745)
+            if (this._widget.handler.isActivityDisplayEnabled)
             {
                 this._Str_2341.findChildByName("score_spacer").visible = true;
                 this._Str_2341.findChildByName("score_value").visible = true;
@@ -392,7 +392,7 @@
 
         public function set activityPoints(k:int):void
         {
-            if (!this._widget.handler._Str_7745)
+            if (!this._widget.handler.isActivityDisplayEnabled)
             {
                 return;
             }
