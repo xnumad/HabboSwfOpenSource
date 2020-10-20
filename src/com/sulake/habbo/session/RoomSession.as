@@ -390,7 +390,7 @@
             this._connection.send(new _Str_9884(k));
         }
 
-        public function _Str_16989(k:String):void
+        public function sendRoomUsersClassificationMessage(k:String):void
         {
             this._connection.send(new _Str_9928(k));
         }

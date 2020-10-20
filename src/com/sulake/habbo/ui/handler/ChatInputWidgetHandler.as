@@ -291,14 +291,14 @@
                                             }
                                             else
                                             {
-                                                this._container.roomSession._Str_16989(commandArgument);
+                                                this._container.roomSession.sendRoomUsersClassificationMessage(commandArgument);
                                             }
                                         }
                                         return null;
                                     case ":anew":
                                         if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))))
                                         {
-                                            this._container.roomSession._Str_16989("new");
+                                            this._container.roomSession.sendRoomUsersClassificationMessage("new");
                                         }
                                         return null;
                                     case ":avisit":
