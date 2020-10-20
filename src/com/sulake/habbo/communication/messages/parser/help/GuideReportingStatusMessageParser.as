@@ -9,7 +9,7 @@
         public static const GUIDE_REPORTING_STATUS_OK:int = 0;
         public static const GUIDE_REPORTING_STATUS_PENDING_TICKET:int = 1;
         public static const GUIDE_REPORTING_STATUS_ABUSIVE:int = 2;
-        public static const _Str_17955:int = 3;
+        public static const GUIDE_REPORTING_STATUS_REPORTING_TOO_QUICKLY:int = 3;
 
         private var _Str_14988:int;
         private var _Str_17655:PendingGuideTicket;
@@ -47,7 +47,7 @@
             {
                 case GUIDE_REPORTING_STATUS_ABUSIVE:
                     return "blocked";
-                case _Str_17955:
+                case GUIDE_REPORTING_STATUS_REPORTING_TOO_QUICKLY:
                     return "tooquick";
                 default:
                     return "";
