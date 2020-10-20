@@ -133,7 +133,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this._Str_11640));
             _local_2.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5633(this._Str_18511));
+            _local_2.addHabboConnectionMessageEvent(new _Str_5633(this.onNavigatorSettings));
             _local_2.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647));
             _local_2.addHabboConnectionMessageEvent(new _Str_6030(this._Str_8265));
             _local_2.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onError));
@@ -397,7 +397,7 @@
             }
         }
 
-        private function _Str_18511(k:IMessageEvent):void
+        private function onNavigatorSettings(k:IMessageEvent):void
         {
             var _local_6:Boolean;
             var _local_7:Boolean;

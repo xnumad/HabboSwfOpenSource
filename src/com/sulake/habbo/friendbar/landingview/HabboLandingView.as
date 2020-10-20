@@ -320,7 +320,7 @@
             }
             else
             {
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_5633(this._Str_18511));
+                this._communicationManager.addHabboConnectionMessageEvent(new _Str_5633(this.onNavigatorSettings));
             }
         }
 
@@ -332,7 +332,7 @@
             }
         }
 
-        private function _Str_18511(k:_Str_5633):void
+        private function onNavigatorSettings(k:_Str_5633):void
         {
             if (k.getParser()._Str_17213 <= 0)
             {
