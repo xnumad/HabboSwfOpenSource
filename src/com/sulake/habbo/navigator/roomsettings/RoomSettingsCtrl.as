@@ -1020,7 +1020,7 @@
                     k.whoCanMute = RoomModerationSettings._Str_5047;
                     break;
                 default:
-                    k.whoCanMute = RoomModerationSettings._Str_10707;
+                    k.whoCanMute = RoomModerationSettings.MODERATION_LEVEL_NONE;
             }
             var _local_4:ISelectorWindow = (this._window.findChildByName("moderation_kick_selector") as ISelectorWindow);
             _local_2 = _local_4.getSelected();
@@ -1033,7 +1033,7 @@
                     k.whoCanKick = RoomModerationSettings._Str_11537;
                     break;
                 default:
-                    k.whoCanKick = RoomModerationSettings._Str_10707;
+                    k.whoCanKick = RoomModerationSettings.MODERATION_LEVEL_NONE;
             }
             var _local_5:ISelectorWindow = (this._window.findChildByName("moderation_ban_selector") as ISelectorWindow);
             _local_2 = _local_5.getSelected();
@@ -1043,7 +1043,7 @@
                     k.whoCanBan = RoomModerationSettings._Str_5047;
                     return;
                 default:
-                    k.whoCanBan = RoomModerationSettings._Str_10707;
+                    k.whoCanBan = RoomModerationSettings.MODERATION_LEVEL_NONE;
             }
         }
 
