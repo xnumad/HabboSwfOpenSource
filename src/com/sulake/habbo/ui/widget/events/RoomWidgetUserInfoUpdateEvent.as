@@ -22,7 +22,7 @@
         private var _groupName:String = "";
         private var _Str_11289:String = "";
         private var _carryItem:int = 0;
-        private var _Str_5131:int = 0;
+        private var _userRoomId:int = 0;
         private var _Str_8522:Boolean = false;
         private var _realName:String = "";
         private var _Str_3947:Boolean = false;
@@ -300,12 +300,12 @@
 
         public function set _Str_3313(k:int):void
         {
-            this._Str_5131 = k;
+            this._userRoomId = k;
         }
 
         public function get _Str_3313():int
         {
-            return this._Str_5131;
+            return this._userRoomId;
         }
 
         public function set _Str_4780(k:Boolean):void

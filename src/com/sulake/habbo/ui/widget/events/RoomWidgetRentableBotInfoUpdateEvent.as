@@ -11,7 +11,7 @@
         private var _figure:String = "";
         private var _badges:Array;
         private var _carryItem:int = 0;
-        private var _Str_5131:int = 0;
+        private var _userRoomId:int = 0;
         private var _ownerId:int;
         private var _ownerName:String;
         private var _amIOwner:Boolean = false;
@@ -137,12 +137,12 @@
 
         public function set _Str_3313(k:int):void
         {
-            this._Str_5131 = k;
+            this._userRoomId = k;
         }
 
         public function get _Str_3313():int
         {
-            return this._Str_5131;
+            return this._userRoomId;
         }
 
         public function get botSkills():Array
