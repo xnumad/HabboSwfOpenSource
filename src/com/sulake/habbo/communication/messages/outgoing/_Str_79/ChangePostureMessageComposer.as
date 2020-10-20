@@ -4,16 +4,16 @@
 
     public class ChangePostureMessageComposer implements IMessageComposer
     {
-        private var _Str_3147:int;
+        private var _posture:int;
 
         public function ChangePostureMessageComposer(k:int)
         {
-            this._Str_3147 = k;
+            this._posture = k;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_3147];
+            return [this._posture];
         }
 
         public function dispose():void
