@@ -166,7 +166,7 @@
             {
                 this.createWindow();
                 this.initializeDynamicWidgetList();
-                this.landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this._Str_12291));
+                this.landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this.onTimingCode));
                 this._schedulingStr = this.landingView.getProperty("landing.view.bgtiming");
             }
             for each (registeredWidget in this._registeredWidgets)
@@ -429,7 +429,7 @@
             return this.habboLandingView;
         }
 
-        private function _Str_12291(k:CurrentTimingCodeMessageEvent):void
+        private function onTimingCode(k:CurrentTimingCodeMessageEvent):void
         {
             if (((k.getParser().schedulingStr == this._schedulingStr) && (this.landingView)))
             {

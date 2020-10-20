@@ -31,7 +31,7 @@
         override protected function registerMessageListeners():void
         {
             landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalHallOfFameMessageEvent(this._Str_22591));
-            landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this._Str_12291));
+            landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this.onTimingCode));
         }
 
         override public function refresh():void
@@ -75,7 +75,7 @@
             landingView.send(new _Str_11657(this._data.goalCode, k.userId));
         }
 
-        private function _Str_12291(k:CurrentTimingCodeMessageEvent):void
+        private function onTimingCode(k:CurrentTimingCodeMessageEvent):void
         {
             var _local_2:String = k.getParser().code;
             if ((((k.getParser().schedulingStr == this._schedulingStr) && (!(_local_2 == ""))) && (!(disposed))))

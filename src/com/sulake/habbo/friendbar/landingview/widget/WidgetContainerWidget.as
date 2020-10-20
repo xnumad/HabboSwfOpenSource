@@ -62,7 +62,7 @@
         {
             this._container = IWindowContainer(this._landingView.getXmlWindow("widget_container_widget"));
             this._commonWidgetSettings = new CommonWidgetSettings(this._landingView);
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this._Str_12291));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new CurrentTimingCodeMessageEvent(this.onTimingCode));
             this._schedulingStr = this._landingView.getProperty((("landing.view.dynamic.slot." + this._slot) + ".conf"));
         }
 
@@ -109,7 +109,7 @@
             return _local_4;
         }
 
-        private function _Str_12291(k:CurrentTimingCodeMessageEvent):void
+        private function onTimingCode(k:CurrentTimingCodeMessageEvent):void
         {
             if (((k.getParser().schedulingStr == this._schedulingStr) && (!(this.disposed))))
             {
