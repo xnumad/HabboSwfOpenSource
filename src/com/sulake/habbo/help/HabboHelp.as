@@ -854,7 +854,7 @@
 
         public function toggleNewHelpWindow():void
         {
-            this._topicsFlowHelpController._Str_19572();
+            this._topicsFlowHelpController.toggleWindow();
         }
 
         public function requestSanctionInfo(k:Boolean):void

@@ -173,7 +173,7 @@
             this._currentContainer = START_CONTAINER;
         }
 
-        public function _Str_19572():void
+        public function toggleWindow():void
         {
             if (this._helpDialog == null)
             {

@@ -33,7 +33,7 @@
             }
         }
 
-        public function _Str_19572():void
+        public function toggleWindow():void
         {
             if (((!(this._window == null)) && (this._window.visible)))
             {
