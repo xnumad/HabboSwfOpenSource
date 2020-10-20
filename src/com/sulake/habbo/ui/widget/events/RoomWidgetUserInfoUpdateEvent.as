@@ -32,7 +32,7 @@
         private var _canBeAskedAsFriend:Boolean = false;
         private var _canBeKicked:Boolean = false;
         private var _canBeBanned:Boolean = false;
-        private var _Str_8831:Boolean = false;
+        private var _canBeMuted:Boolean = false;
         private var _respectLeft:int = 0;
         private var _Str_6028:Boolean = false;
         private var _Str_6139:Boolean = false;
@@ -270,12 +270,12 @@
 
         public function get canBeMuted():Boolean
         {
-            return this._Str_8831;
+            return this._canBeMuted;
         }
 
         public function set canBeMuted(k:Boolean):void
         {
-            this._Str_8831 = k;
+            this._canBeMuted = k;
         }
 
         public function set targetRoomControllerLevel(k:int):void
