@@ -18,7 +18,7 @@
         {
             this._habboHelp = k;
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideTicketResolutionMessageEvent(this.onTicketResolved));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideTicketCreationResultMessageEvent(this._Str_22825));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideTicketCreationResultMessageEvent(this.onCreateResult));
         }
 
         public function dispose():void
@@ -41,7 +41,7 @@
             this.show(k.getParser().localizationCode);
         }
 
-        private function _Str_22825(k:GuideTicketCreationResultMessageEvent):void
+        private function onCreateResult(k:GuideTicketCreationResultMessageEvent):void
         {
             this.show(k.getParser().localizationCode);
         }
