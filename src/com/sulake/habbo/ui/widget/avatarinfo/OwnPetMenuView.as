@@ -217,7 +217,7 @@
                     {
                         this._Str_18260 = this._Str_20669(FurniCategory.MONSTERPLANT_REVIVAL, PetTypeEnum.MONSTERPLANT);
                         showButton("revive");
-                        if (((this.widget.configuration.getBoolean("monsterplants.composting.enabled")) && (_local_3.container.roomSession.isRoomController)))
+                        if (((this.widget.configuration.getBoolean("monsterplants.composting.enabled")) && (_local_3.container.roomSession.isRoomOwner)))
                         {
                             showButton("compost");
                         }

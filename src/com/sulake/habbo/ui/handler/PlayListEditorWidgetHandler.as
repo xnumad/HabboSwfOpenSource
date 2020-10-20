@@ -127,7 +127,7 @@
                     if (_local_3 != null)
                     {
                         _local_7 = this._container.isOwnerOfFurniture(_local_3);
-                        _local_8 = (((this._container.roomSession.isRoomController) || (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)) || (this._container.sessionDataManager.isAnyRoomController));
+                        _local_8 = (((this._container.roomSession.isRoomOwner) || (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)) || (this._container.sessionDataManager.isAnyRoomController));
                         if (_local_7)
                         {
                             _local_9 = new _Str_2693(_Str_2693.RWPLEE_SHOW_PLAYLIST_EDITOR, _local_2.id);

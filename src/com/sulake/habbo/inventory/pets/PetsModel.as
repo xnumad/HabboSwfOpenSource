@@ -210,7 +210,7 @@
                     _local_4 = ("grw" + _local_3.level);
                 }
             }
-            if (this._controller.roomSession.isRoomController)
+            if (this._controller.roomSession.isRoomOwner)
             {
                 _local_5 = (_local_3.id * -1);
                 this._isPlacing = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, _local_5, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, RoomObjectTypeEnum.PET, _local_3.figureString, null, -1, -1, _local_4);

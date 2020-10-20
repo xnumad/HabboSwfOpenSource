@@ -108,12 +108,12 @@
             return this._Str_21073;
         }
 
-        public function set isRoomController(k:Boolean):void
+        public function set isRoomOwner(k:Boolean):void
         {
             this._Str_7750 = k;
         }
 
-        public function get isRoomController():Boolean
+        public function get isRoomOwner():Boolean
         {
             return this._Str_7750;
         }

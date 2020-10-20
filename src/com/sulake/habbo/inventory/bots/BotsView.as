@@ -412,7 +412,7 @@
             if (this._model.roomSession != null)
             {
                 _local_8 = this._model.roomSession._Str_18311;
-                _local_9 = this._model.roomSession.isRoomController;
+                _local_9 = this._model.roomSession.isRoomOwner;
             }
             var _local_10:String = "";
             if (!_local_9)

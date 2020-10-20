@@ -94,9 +94,9 @@
             }
         }
 
-        public function isRoomController():Boolean
+        public function isRoomOwner():Boolean
         {
-            return this._container.roomSession.isRoomController;
+            return this._container.roomSession.isRoomOwner;
         }
 
         public function _Str_19701():Boolean

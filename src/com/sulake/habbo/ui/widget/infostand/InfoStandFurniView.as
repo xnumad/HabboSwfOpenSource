@@ -493,7 +493,7 @@
             var _local_3:Boolean;
             var _local_4:Boolean;
             var _local_5:Boolean;
-            if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k.isOwner)) || (k.isRoomController)) || (k.isGodMode)))
+            if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k.isOwner)) || (k.isRoomOwner)) || (k.isGodMode)))
             {
                 _local_2 = true;
                 _local_3 = (!(k._Str_2770));
@@ -562,7 +562,7 @@
             }
             else
             {
-                if (((k.isRoomController) || (k.roomControllerLevel >= RoomControllerLevel.GUILD_ADMIN)))
+                if (((k.isRoomOwner) || (k.roomControllerLevel >= RoomControllerLevel.GUILD_ADMIN)))
                 {
                     this._Str_5729 = this._Str_20473;
                 }

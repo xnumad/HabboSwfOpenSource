@@ -824,7 +824,7 @@
             {
                 return;
             }
-            if ((((session.isRoomController) || (this.isAnyRoomController)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((session.isRoomOwner) || (this.isAnyRoomController)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 this._windowManager.confirm("${generic.alert.title}", "${room.confirm.pick_all}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
                 {
@@ -848,7 +848,7 @@
             {
                 return;
             }
-            if ((((session.isRoomController) || (this.isAnyRoomController)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((session.isRoomOwner) || (this.isAnyRoomController)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 this._windowManager.confirm("${generic.alert.title}", "${room.confirm.eject_all}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
                 {
@@ -872,7 +872,7 @@
             {
                 return;
             }
-            if (((_local_2.isRoomController) || (this.isAnyRoomController)))
+            if (((_local_2.isRoomOwner) || (this.isAnyRoomController)))
             {
                 this.sendSpecialCommandMessage(":ejectpets");
             }
@@ -889,7 +889,7 @@
             {
                 return;
             }
-            if ((((session.isRoomController) || (this.isAnyRoomController)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((session.isRoomOwner) || (this.isAnyRoomController)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 this._windowManager.confirm("${generic.alert.title}", "${room.confirm.pick_all_bc}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
                 {

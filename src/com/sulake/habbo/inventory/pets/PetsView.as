@@ -443,7 +443,7 @@
             if (this._model.roomSession != null)
             {
                 _local_12 = this._model.roomSession._Str_9439;
-                _local_13 = this._model.roomSession.isRoomController;
+                _local_13 = this._model.roomSession.isRoomOwner;
             }
             var _local_14:String = "";
             if (!_local_13)

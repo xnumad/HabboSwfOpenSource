@@ -65,7 +65,7 @@
             {
                 return;
             }
-            _local_3.isRoomController = true;
+            _local_3.isRoomOwner = true;
         }
     }
 }

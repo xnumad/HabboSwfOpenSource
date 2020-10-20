@@ -547,12 +547,12 @@
             this._ownUserRoomId = k;
         }
 
-        public function set isRoomController(k:Boolean):void
+        public function set isRoomOwner(k:Boolean):void
         {
             this._isRoomOwner = k;
         }
 
-        public function get isRoomController():Boolean
+        public function get isRoomOwner():Boolean
         {
             return this._isRoomOwner;
         }

@@ -200,7 +200,7 @@
             {
                 return false;
             }
-            if (this._controller.roomSession.isRoomController)
+            if (this._controller.roomSession.isRoomOwner)
             {
                 _local_4 = (_local_3.id * -1);
                 this._isPlacing = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, _local_4, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, RoomObjectTypeEnum.RENTABLE_BOT, _local_3.figure);

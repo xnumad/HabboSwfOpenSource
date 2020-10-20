@@ -374,7 +374,7 @@
             if (this._roomSessionManager)
             {
                 _local_2 = this._roomSessionManager.getSession(k);
-                return (_local_2.roomControllerLevel == RoomControllerLevel.GUEST) && (!(_local_2.isRoomController));
+                return (_local_2.roomControllerLevel == RoomControllerLevel.GUEST) && (!(_local_2.isRoomOwner));
             }
             return false;
         }
