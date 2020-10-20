@@ -732,7 +732,7 @@
                             this._Str_22722(_local_2, k.id, k.category, _local_3);
                             break;
                         case RoomObjectTypeEnum.BOT:
-                            this._Str_22312(_local_2, k.id, k.category, _local_3);
+                            this.handleGetBotInfoMessage(_local_2, k.id, k.category, _local_3);
                             break;
                         case RoomObjectTypeEnum.RENTABLE_BOT:
                             this._Str_23115(_local_2, k.id, k.category, _local_3);
@@ -753,7 +753,7 @@
             this._container.roomSession.userDataManager.requestPetInfo(k);
         }
 
-        private function _Str_22312(k:int, _arg_2:int, _arg_3:int, _arg_4:RoomUserData):void
+        private function handleGetBotInfoMessage(k:int, _arg_2:int, _arg_3:int, _arg_4:RoomUserData):void
         {
             var _local_5:String = RoomWidgetUserInfoUpdateEvent.BOT;
             var _local_6:RoomWidgetUserInfoUpdateEvent = new RoomWidgetUserInfoUpdateEvent(_local_5);
