@@ -268,7 +268,7 @@
             return (this.landingView.propertyExists("landing.view.layoutxml")) ? this.landingView.getProperty("landing.view.layoutxml") : LANDING_VIEW_DEFAULT_DYNAMIC_LAYOUT;
         }
 
-        private function _Str_24641():Boolean
+        private function isGenericReceptionLayout():Boolean
         {
             return this.getLayout() == LANDING_VIEW_GENERIC_RECEPTION;
         }
@@ -311,7 +311,7 @@
             this.windowContainer.y = 0;
             var k:Rectangle = this.windowContainer.desktop.rectangle;
             this.windowContainer.x = Math.max(0, ((k.width - this.windowContainer.width) / 2));
-            if (((k.height > this.windowContainer.height) || (this._Str_24641())))
+            if (((k.height > this.windowContainer.height) || (this.isGenericReceptionLayout())))
             {
                 this.windowContainer.y = Math.max(0, ((k.height - this.windowContainer.height) / 2));
             }
