@@ -896,7 +896,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11637;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11695;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11770;
-	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_9976;
+	import com.sulake.habbo.communication.messages.outgoing._Str_79.AvatarExpressionMessageComposer;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect.*;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_12022;
 	import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5345;
@@ -1708,7 +1708,7 @@
             OUTGOING_PACKETS[2445] = _Str_9636;
             OUTGOING_PACKETS[2448] = _Str_11750;
             OUTGOING_PACKETS[2455] = _Str_6216;
-            OUTGOING_PACKETS[2456] = _Str_9976;
+            OUTGOING_PACKETS[2456] = AvatarExpressionMessageComposer;
             OUTGOING_PACKETS[2462] = _Str_7218;
             OUTGOING_PACKETS[2468] = _Str_18849;
             OUTGOING_PACKETS[248] = _Str_7684;

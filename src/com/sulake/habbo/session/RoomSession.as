@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.chat.WhisperMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.chat.CancelTypingMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_9976;
+    import com.sulake.habbo.communication.messages.outgoing._Str_79.AvatarExpressionMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11695;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11206;
     import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10078;
@@ -312,7 +312,7 @@
 
         public function sendAvatarExpressionMessage(k:int):void
         {
-            this._connection.send(new _Str_9976(k));
+            this._connection.send(new AvatarExpressionMessageComposer(k));
         }
 
         public function sendSignMessage(k:int):void
