@@ -95,7 +95,7 @@
             this._Str_13370(-1, false);
             this._currentTopic = this._Str_21261(HABBO_NAME);
             this._view.findChildByName("message_phase_title").caption = ((this._habboHelp.localization.getLocalization("generic.reason") + " ") + this._habboHelp.localization.getLocalization(("help.cfh.topic." + this._currentTopic.id)));
-            this._Str_3615(MESSAGE_CONTAINER);
+            this.showContainer(MESSAGE_CONTAINER);
         }
 
         public function _Str_25197():void
@@ -105,7 +105,7 @@
             {
                 return;
             }
-            this._Str_3615(CHAT_CONTAINER);
+            this.showContainer(CHAT_CONTAINER);
             this._Str_22227();
         }
 
@@ -123,7 +123,7 @@
         public function _Str_23015():void
         {
             this._Str_13370(HabboHelp.REPORT_TYPE_IM, false);
-            this._Str_3615(CHAT_CONTAINER);
+            this.showContainer(CHAT_CONTAINER);
             this._Str_23695();
             if (this._chatList.numListItems == 0)
             {
@@ -179,7 +179,7 @@
             {
                 this._contentModerationType = -1;
                 this.openWindow();
-                this._Str_3615(START_CONTAINER);
+                this.showContainer(START_CONTAINER);
             }
             else
             {
@@ -187,7 +187,7 @@
             }
         }
 
-        private function _Str_3615(k:String):void
+        private function showContainer(k:String):void
         {
             var _local_2:String;
             for each (_local_2 in this._containers)
@@ -288,28 +288,28 @@
                     switch (this._currentContainer)
                     {
                         case REASON_CONTAINER:
-                            this._Str_3615(CHAT_CONTAINER);
+                            this.showContainer(CHAT_CONTAINER);
                             break;
                         case TOPIC_CONTAINER:
                         case MESSAGE_CONTAINER:
-                            this._Str_3615(REASON_CONTAINER);
+                            this.showContainer(REASON_CONTAINER);
                             this._Str_18243();
                             break;
                         case CHAT_CONTAINER:
                             if (this._Str_16001())
                             {
-                                this._Str_3615(USERS_CONTAINER);
+                                this.showContainer(USERS_CONTAINER);
                             }
                             else
                             {
-                                this._Str_3615(START_CONTAINER);
+                                this.showContainer(START_CONTAINER);
                             }
                             break;
                         case SUMMARY_CONTAINER:
-                            this._Str_3615(MESSAGE_CONTAINER);
+                            this.showContainer(MESSAGE_CONTAINER);
                             break;
                         default:
-                            this._Str_3615(START_CONTAINER);
+                            this.showContainer(START_CONTAINER);
                     }
                     return;
                 case "continue_button":
@@ -318,35 +318,35 @@
                         case USERS_CONTAINER:
                             if (this._Str_19840())
                             {
-                                this._Str_3615(CHAT_CONTAINER);
+                                this.showContainer(CHAT_CONTAINER);
                                 this._Str_22227();
                             }
                             break;
                         case MESSAGE_CONTAINER:
                             if (this._Str_25494())
                             {
-                                this._Str_3615(SUMMARY_CONTAINER);
+                                this.showContainer(SUMMARY_CONTAINER);
                             }
                             break;
                         case CHAT_CONTAINER:
                             if (this._Str_23993())
                             {
-                                this._Str_3615(REASON_CONTAINER);
+                                this.showContainer(REASON_CONTAINER);
                                 this._Str_18243();
                             }
                             break;
                         default:
-                            this._Str_3615(START_CONTAINER);
+                            this.showContainer(START_CONTAINER);
                     }
                     return;
                 case "button_habbo_help":
-                    this._Str_3615(HELP_CONTAINER);
+                    this.showContainer(HELP_CONTAINER);
                     return;
                 case "button_user_report":
                 case "change_user":
                     if (this._Str_16001())
                     {
-                        this._Str_3615(USERS_CONTAINER);
+                        this.showContainer(USERS_CONTAINER);
                     }
                     else
                     {
@@ -736,7 +736,7 @@
                 this.openWindow();
             }
             this._currentTopic = this._Str_21261(k.target.name);
-            this._Str_3615(MESSAGE_CONTAINER);
+            this.showContainer(MESSAGE_CONTAINER);
         }
 
         private function _Str_24715():Boolean
@@ -748,7 +748,7 @@
         {
             if (((this._Str_24715()) || (this._Str_19840())))
             {
-                this._Str_3615(REASON_CONTAINER);
+                this.showContainer(REASON_CONTAINER);
                 this._Str_18243();
                 return true;
             }
