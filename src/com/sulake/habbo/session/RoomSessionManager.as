@@ -75,7 +75,7 @@
             return (allRequiredDependenciesInjected) && (this._roomEngineReady);
         }
 
-        public function get _Str_22809():Boolean
+        public function get sessionStarting():Boolean
         {
             return this._sessionStarting;
         }
