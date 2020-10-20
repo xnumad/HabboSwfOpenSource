@@ -113,7 +113,7 @@
             this._musicController = k;
             if (this._musicController != null)
             {
-                this._musicController.events.addEventListener(NowPlayingEvent.NPE_SONG_CHANGED, this._Str_14970);
+                this._musicController.events.addEventListener(NowPlayingEvent.NPE_SONG_CHANGED, this.onNowPlayingChanged);
                 this._musicController.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
             }
         }
@@ -236,7 +236,7 @@
             }
             if (this._musicController != null)
             {
-                this._musicController.events.removeEventListener(NowPlayingEvent.NPE_SONG_CHANGED, this._Str_14970);
+                this._musicController.events.removeEventListener(NowPlayingEvent.NPE_SONG_CHANGED, this.onNowPlayingChanged);
                 this._musicController.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this._Str_3530);
                 this._musicController = null;
             }
@@ -1453,7 +1453,7 @@
             return -1;
         }
 
-        private function _Str_14970(k:NowPlayingEvent):void
+        private function onNowPlayingChanged(k:NowPlayingEvent):void
         {
             var _local_2:int;
             var _local_3:String;

@@ -320,7 +320,7 @@
         {
             if (this._Str_2314)
             {
-                this._Str_2314._Str_14970(k);
+                this._Str_2314.onNowPlayingChanged(k);
             }
         }
     }

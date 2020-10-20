@@ -331,7 +331,7 @@
             this._myMusicScrollBar.visible = (this._musicInventoryView._Str_11307 > _Str_17484);
         }
 
-        public function _Str_14970(k:_Str_3301):void
+        public function onNowPlayingChanged(k:_Str_3301):void
         {
             var _local_2:ISongInfo;
             var _local_3:ISongInfo;
