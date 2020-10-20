@@ -787,7 +787,7 @@
             var _local_3:ISelectorWindow = (this._window.findChildByName("moderation_mute_selector") as ISelectorWindow);
             switch (k.roomModerationSettings.whoCanMute)
             {
-                case RoomModerationSettings._Str_5047:
+                case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
                     _local_2 = (this._window.findChildByName("moderation_mute_rights") as IRadioButtonWindow);
                     break;
                 default:
@@ -800,7 +800,7 @@
                 case RoomModerationSettings._Str_11537:
                     _local_2 = (this._window.findChildByName("moderation_kick_all") as IRadioButtonWindow);
                     break;
-                case RoomModerationSettings._Str_5047:
+                case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
                     _local_2 = (this._window.findChildByName("moderation_kick_rights") as IRadioButtonWindow);
                     break;
                 default:
@@ -810,7 +810,7 @@
             var _local_5:ISelectorWindow = (this._window.findChildByName("moderation_ban_selector") as ISelectorWindow);
             switch (k.roomModerationSettings.whoCanBan)
             {
-                case RoomModerationSettings._Str_5047:
+                case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
                     _local_2 = (this._window.findChildByName("moderation_ban_rights") as IRadioButtonWindow);
                     break;
                 default:
@@ -1017,7 +1017,7 @@
             switch (_local_2.name)
             {
                 case "moderation_mute_rights":
-                    k.whoCanMute = RoomModerationSettings._Str_5047;
+                    k.whoCanMute = RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS;
                     break;
                 default:
                     k.whoCanMute = RoomModerationSettings.MODERATION_LEVEL_NONE;
@@ -1027,7 +1027,7 @@
             switch (_local_2.name)
             {
                 case "moderation_kick_rights":
-                    k.whoCanKick = RoomModerationSettings._Str_5047;
+                    k.whoCanKick = RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS;
                     break;
                 case "moderation_kick_all":
                     k.whoCanKick = RoomModerationSettings._Str_11537;
@@ -1040,7 +1040,7 @@
             switch (_local_2.name)
             {
                 case "moderation_ban_rights":
-                    k.whoCanBan = RoomModerationSettings._Str_5047;
+                    k.whoCanBan = RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS;
                     return;
                 default:
                     k.whoCanBan = RoomModerationSettings.MODERATION_LEVEL_NONE;

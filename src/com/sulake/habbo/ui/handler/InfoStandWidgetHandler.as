@@ -923,7 +923,7 @@
             {
                 switch (_arg_2.whoCanMute)
                 {
-                    case RoomModerationSettings._Str_5047:
+                    case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
                         return _Str_9213(k);
                     default:
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
@@ -940,7 +940,7 @@
                 {
                     case RoomModerationSettings._Str_11537:
                         return true;
-                    case RoomModerationSettings._Str_5047:
+                    case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
                         return _Str_9213(k);
                     default:
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
@@ -955,7 +955,7 @@
             {
                 switch (_arg_2.whoCanBan)
                 {
-                    case RoomModerationSettings._Str_5047:
+                    case RoomModerationSettings.MODERATION_LEVEL_USER_WITH_RIGHTS:
                         return _Str_9213(k);
                     default:
                         return k.myRoomControllerLevel >= RoomControllerLevel.ROOM_OWNER;
