@@ -333,7 +333,7 @@
             this._connection.send(new _Str_10078(k));
         }
 
-        public function _Str_22199(k:int):void
+        public function sendCreditFurniRedeemMessage(k:int):void
         {
             this._connection.send(new _Str_10673(k));
         }
