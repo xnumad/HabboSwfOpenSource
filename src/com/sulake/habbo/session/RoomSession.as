@@ -12,7 +12,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_12300;
     import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
     import flash.utils.getTimer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11637;
+    import com.sulake.habbo.communication.messages.outgoing._Str_79.ChangeMottoMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.chat.ShoutMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.chat.WhisperMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.chat.StartTypingMessageComposer;
@@ -268,7 +268,7 @@
 
         public function sendChangeMottoMessage(k:String):void
         {
-            this._connection.send(new _Str_11637(k));
+            this._connection.send(new ChangeMottoMessageComposer(k));
         }
 
         public function receivedChatWithTrackingId(k:int):void

@@ -893,7 +893,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10794;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11024;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11206;
-	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11637;
+	import com.sulake.habbo.communication.messages.outgoing._Str_79.ChangeMottoMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11695;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11770;
 	import com.sulake.habbo.communication.messages.outgoing._Str_79.AvatarExpressionMessageComposer;
@@ -1669,7 +1669,7 @@
             OUTGOING_PACKETS[2209] = _Str_10762;
             OUTGOING_PACKETS[2214] = UpdateForumSettingsMessageComposer;
             OUTGOING_PACKETS[2226] = _Str_11429;
-            OUTGOING_PACKETS[2228] = _Str_11637;
+            OUTGOING_PACKETS[2228] = ChangeMottoMessageComposer;
             OUTGOING_PACKETS[223] = _Str_11294;
             OUTGOING_PACKETS[2230] = _Str_3570;
             OUTGOING_PACKETS[2235] = _Str_10078;
