@@ -637,7 +637,7 @@
 
         public function _Str_3304(k:HabboToolbarEvent):void
         {
-            if (k._Str_3378 != HabboToolbarIconEnum.INVENTORY)
+            if (k.iconId != HabboToolbarIconEnum.INVENTORY)
             {
                 return;
             }

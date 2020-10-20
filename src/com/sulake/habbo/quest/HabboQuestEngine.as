@@ -435,11 +435,11 @@
         {
             if (k.type == HabboToolbarEvent.HTE_TOOLBAR_CLICK)
             {
-                if (k._Str_3378 == HabboToolbarIconEnum.QUESTS)
+                if (k.iconId == HabboToolbarIconEnum.QUESTS)
                 {
                     this._questController.onToolbarClick();
                 }
-                if (k._Str_3378 == HabboToolbarIconEnum.ACHIEVEMENTS)
+                if (k.iconId == HabboToolbarIconEnum.ACHIEVEMENTS)
                 {
                     this._achievementController.onToolbarClick();
                 }

@@ -597,7 +597,7 @@
             }
             LegacyNavigator(this._navigator._Str_2559).send(new _Str_3719());
             var _local_4:HabboToolbarEvent = new HabboToolbarEvent(HabboToolbarEvent.HTE_TOOLBAR_CLICK);
-            _local_4._Str_3378 = HabboToolbarIconEnum.RECEPTION;
+            _local_4.iconId = HabboToolbarIconEnum.RECEPTION;
             LegacyNavigator(this._navigator._Str_2559).toolbar.events.dispatchEvent(_local_4);
         }
     }

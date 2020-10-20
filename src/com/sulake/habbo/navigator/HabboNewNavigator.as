@@ -206,7 +206,7 @@
         {
             if (k.type == HabboToolbarEvent.HTE_TOOLBAR_CLICK)
             {
-                switch (k._Str_3378)
+                switch (k.iconId)
                 {
                     case HabboToolbarIconEnum.NAVIGATOR:
                         this.toggle();

@@ -283,7 +283,7 @@
 
         private function onToolbarClick(k:HabboToolbarEvent):void
         {
-            switch (k._Str_3378)
+            switch (k.iconId)
             {
                 case HabboToolbarIconEnum.RECEPTION:
                     if (this._roomSessionManager.getSession(-1))

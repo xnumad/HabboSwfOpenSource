@@ -501,7 +501,7 @@
 
         private function onToolbarClick(k:HabboToolbarEvent):void
         {
-            switch (k._Str_3378)
+            switch (k.iconId)
             {
                 case HabboToolbarIconEnum.GAMES:
                     if (this.gameCenterEnabled)
@@ -884,7 +884,7 @@
                         this._landingView.activate();
                     }
                     _local_4 = new HabboToolbarEvent(HabboToolbarEvent.HTE_TOOLBAR_CLICK);
-                    _local_4._Str_3378 = HabboToolbarIconEnum.RECEPTION;
+                    _local_4.iconId = HabboToolbarIconEnum.RECEPTION;
                     this._toolbar.events.dispatchEvent(_local_4);
                 }
                 else

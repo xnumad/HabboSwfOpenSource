@@ -177,7 +177,7 @@
 
         private function onToolbarClicked(k:HabboToolbarEvent):void
         {
-            if (k._Str_3378 == HabboToolbarIconEnum.MEMENU)
+            if (k.iconId == HabboToolbarIconEnum.MEMENU)
             {
                 if (this.container.config.getBoolean("simple.memenu.enabled"))
                 {

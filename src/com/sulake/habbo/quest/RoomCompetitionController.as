@@ -376,7 +376,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = new HabboToolbarEvent(HabboToolbarEvent.HTE_TOOLBAR_CLICK);
-                _local_3._Str_3378 = HabboToolbarIconEnum.RECEPTION;
+                _local_3.iconId = HabboToolbarIconEnum.RECEPTION;
                 this._questEngine.toolbar.events.dispatchEvent(_local_3);
             }
         }

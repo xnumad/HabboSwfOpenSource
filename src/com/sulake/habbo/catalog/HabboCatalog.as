@@ -1275,7 +1275,7 @@
             {
                 return;
             }
-            switch (k._Str_3378)
+            switch (k.iconId)
             {
                 case HabboToolbarIconEnum.CATALOGUE:
                     this.toggleCatalog(CatalogType.NORMAL);

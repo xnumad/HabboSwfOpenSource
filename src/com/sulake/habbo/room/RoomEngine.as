@@ -1193,7 +1193,7 @@
         private function onToolbarClicked(k:HabboToolbarEvent):void
         {
             var _local_2:RoomCamera;
-            if (k._Str_3378 == HabboToolbarIconEnum.MEMENU)
+            if (k.iconId == HabboToolbarIconEnum.MEMENU)
             {
                 _local_2 = this.getActiveRoomCamera();
                 if (_local_2)

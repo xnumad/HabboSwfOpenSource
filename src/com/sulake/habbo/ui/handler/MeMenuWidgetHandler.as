@@ -161,7 +161,7 @@
             }
             if (k.type == HabboToolbarEvent.HTE_TOOLBAR_CLICK)
             {
-                switch (k._Str_3378)
+                switch (k.iconId)
                 {
                     case HabboToolbarIconEnum.MEMENU:
                         return;
@@ -226,7 +226,7 @@
                     if ((((!(this._container == null)) && (!(this._container.toolbar == null))) && (!(this._container.toolbar.events == null))))
                     {
                         _local_6 = new HabboToolbarEvent(HabboToolbarEvent.HTE_TOOLBAR_CLICK);
-                        _local_6._Str_3378 = HabboToolbarIconEnum.MEMENU;
+                        _local_6.iconId = HabboToolbarIconEnum.MEMENU;
                         if (((((!(this.disposed)) && (this._container)) && (this._container.toolbar)) && (this._container.toolbar.events)))
                         {
                             this._container.toolbar.events.dispatchEvent(_local_6);

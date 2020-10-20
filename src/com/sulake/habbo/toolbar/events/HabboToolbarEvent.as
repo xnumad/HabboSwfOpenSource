@@ -23,12 +23,12 @@
             super(type, bubbles, cancelable);
         }
 
-        public function set _Str_3378(k:String):void
+        public function set iconId(k:String):void
         {
             this._iconId = k;
         }
 
-        public function get _Str_3378():String
+        public function get iconId():String
         {
             return this._iconId;
         }

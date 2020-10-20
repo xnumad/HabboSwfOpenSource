@@ -562,7 +562,7 @@
             else
             {
                 _local_5 = new HabboToolbarEvent(HabboToolbarEvent.HTE_TOOLBAR_CLICK);
-                _local_5._Str_3378 = _local_2;
+                _local_5.iconId = _local_2;
                 _local_5._Str_4856 = k;
                 events.dispatchEvent(_local_5);
             }

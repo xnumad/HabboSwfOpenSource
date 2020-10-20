@@ -114,7 +114,7 @@
             {
                 return;
             }
-            if (k._Str_3378 == HabboToolbarIconEnum.MEMENU)
+            if (k.iconId == HabboToolbarIconEnum.MEMENU)
             {
                 this.toggleVisibility();
             }
