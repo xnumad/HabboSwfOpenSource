@@ -55,7 +55,7 @@
                     this._container.roomSession._Str_21176(_local_2.id);
                     break;
                 case RoomWidgetPollMessage.RWPM_REJECT:
-                    this._container.roomSession._Str_20499(_local_2.id);
+                    this._container.roomSession.sendPollRejectMessage(_local_2.id);
                     break;
                 case RoomWidgetPollMessage.RWPM_ANSWER:
                     this._container.roomSession.sendPollAnswerMessage(_local_2.id, _local_2.questionId, _local_2.answers);

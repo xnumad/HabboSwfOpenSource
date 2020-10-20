@@ -375,7 +375,7 @@
             this._connection.send(new _Str_11290(k));
         }
 
-        public function _Str_20499(k:int):void
+        public function sendPollRejectMessage(k:int):void
         {
             this._connection.send(new _Str_12165(k));
         }
