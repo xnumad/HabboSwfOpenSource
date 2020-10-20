@@ -245,7 +245,7 @@
                         _local_7 = (k as RoomWidgetDanceMessage);
                         if (_local_7 != null)
                         {
-                            this._container.roomSession._Str_20495(_local_7.style);
+                            this._container.roomSession.sendDanceMessage(_local_7.style);
                         }
                     }
                     break;

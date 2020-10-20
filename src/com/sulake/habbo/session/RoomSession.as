@@ -323,7 +323,7 @@
             }
         }
 
-        public function _Str_20495(k:int):void
+        public function sendDanceMessage(k:int):void
         {
             this._connection.send(new _Str_11206(k));
         }
