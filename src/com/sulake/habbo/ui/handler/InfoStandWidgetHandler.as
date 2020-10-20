@@ -726,7 +726,7 @@
                     switch (_local_3.type)
                     {
                         case RoomObjectTypeEnum.PET:
-                            this._Str_25299(_local_3.id);
+                            this.handleGetPetInfoMessage(_local_3.id);
                             break;
                         case RoomObjectTypeEnum.HABBO:
                             this._Str_22722(_local_2, k.id, k.category, _local_3);
@@ -743,7 +743,7 @@
             return null;
         }
 
-        private function _Str_25299(k:int):void
+        private function handleGetPetInfoMessage(k:int):void
         {
             var _local_2:Boolean = this.container.config.getBoolean("petSelect.enabled");
             if (_local_2)
