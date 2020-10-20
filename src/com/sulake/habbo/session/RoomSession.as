@@ -338,7 +338,7 @@
             this._connection.send(new _Str_10673(k));
         }
 
-        public function _Str_17139(k:int):void
+        public function sendPresentOpenMessage(k:int):void
         {
             this._connection.send(new _Str_10141(k));
         }
