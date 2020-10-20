@@ -44,7 +44,7 @@
         protected var _windowManager:IHabboWindowManager;
         protected var _localizationManager:IHabboLocalizationManager;
         protected var _Str_2276:IHabboCatalog;
-        protected var _Str_2318:ISessionDataManager;
+        protected var _sessionDataManager:ISessionDataManager;
         protected var _Str_2422:IRoomSessionManager;
         private var _Str_2310:IConnection;
         private var _Str_14050:NuxOfferOldUserView;
@@ -76,7 +76,7 @@
                 _Str_2276 = k;
             }), new ComponentDependency(new IIDSessionDataManager(), function (k:ISessionDataManager):void
             {
-                _Str_2318 = k;
+                _sessionDataManager = k;
             }), new ComponentDependency(new IIDHabboRoomSessionManager(), function (k:IRoomSessionManager):void
             {
                 _Str_2422 = k;
@@ -182,7 +182,7 @@
         private function onRoomSessionEvent(k:RoomSessionEvent):void
         {
             var _local_2:uint;
-            if (((!(getBoolean("nux.lobbies.enabled"))) || (!(this._Str_2318.isRealNoob))))
+            if (((!(getBoolean("nux.lobbies.enabled"))) || (!(this._sessionDataManager.isRealNoob))))
             {
                 return;
             }
@@ -211,7 +211,7 @@
 
         public function get sessionDataManager():ISessionDataManager
         {
-            return this._Str_2318;
+            return this._sessionDataManager;
         }
 
         public function get configuration():IHabboConfigurationManager
@@ -260,7 +260,7 @@
 
         private function _Str_21884(k:TimerEvent=null):void
         {
-            if (((!(getBoolean("nux.lobbies.enabled"))) || (!(this._Str_2318.isRealNoob))))
+            if (((!(getBoolean("nux.lobbies.enabled"))) || (!(this._sessionDataManager.isRealNoob))))
             {
                 return;
             }

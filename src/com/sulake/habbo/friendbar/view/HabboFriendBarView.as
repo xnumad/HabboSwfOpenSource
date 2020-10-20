@@ -232,9 +232,9 @@
                     this._Str_2780.events.removeEventListener(NotificationEvent.FBE_NOTIFICATION_EVENT, this._Str_15197);
                     this._Str_2780.events.removeEventListener(ActiveConversationsCountEvent.AMC_EVENT, this._Str_21657);
                 }
-                if (_Str_2318)
+                if (_sessionDataManager)
                 {
-                    _Str_2318.events.removeEventListener(SessionDataPreferencesEvent.APUE_UPDATED, this._Str_10326);
+                    _sessionDataManager.events.removeEventListener(SessionDataPreferencesEvent.APUE_UPDATED, this._Str_10326);
                 }
                 if (((!(_windowManager == null)) && (!(_windowManager.disposed))))
                 {
@@ -255,7 +255,7 @@
             this._Str_2780.events.addEventListener(NewMessageEvent.FBE_MESSAGE, this._Str_20447);
             this._Str_2780.events.addEventListener(NotificationEvent.FBE_NOTIFICATION_EVENT, this._Str_15197);
             this._Str_2780.events.addEventListener(ActiveConversationsCountEvent.AMC_EVENT, this._Str_21657);
-            _Str_2318.events.addEventListener(SessionDataPreferencesEvent.APUE_UPDATED, this._Str_10326);
+            _sessionDataManager.events.addEventListener(SessionDataPreferencesEvent.APUE_UPDATED, this._Str_10326);
         }
 
         public function set visible(k:Boolean):void
@@ -566,7 +566,7 @@
 
         public function getGroupIconBitmap(k:String):BitmapData
         {
-            return _Str_2318.getGroupBadgeImage(k);
+            return _sessionDataManager.getGroupBadgeImage(k);
         }
 
         public function avatarImageReady(k:String):void
@@ -921,7 +921,7 @@
         private function _Str_20336():void
         {
             this._Str_3312 = (!(this._Str_3312));
-            _Str_2318.setFriendBarState((!(this._Str_3312)));
+            _sessionDataManager.setFriendBarState((!(this._Str_3312)));
             this.deSelect(true);
             this._Str_6258(true);
             this._Str_20124();

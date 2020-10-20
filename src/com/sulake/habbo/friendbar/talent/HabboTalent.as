@@ -60,7 +60,7 @@
 
         public function get _Str_20410():ISessionDataManager
         {
-            return _Str_2318;
+            return _sessionDataManager;
         }
 
         public function get tracking():IHabboTracking

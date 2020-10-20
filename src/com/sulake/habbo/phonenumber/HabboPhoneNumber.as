@@ -31,7 +31,7 @@
     {
         protected var _Str_2355:IHabboCommunicationManager;
         protected var _localizationManager:IHabboLocalizationManager;
-        protected var _Str_2318:ISessionDataManager;
+        protected var _sessionDataManager:ISessionDataManager;
         protected var _Str_2290:IHabboToolbar;
         protected var _windowManager:IHabboWindowManager;
         private var _Str_2310:IConnection;
@@ -53,7 +53,7 @@
                 _Str_2355 = k;
             }, true), new ComponentDependency(new IIDSessionDataManager(), function (k:ISessionDataManager):void
             {
-                _Str_2318 = k;
+                _sessionDataManager = k;
             }), new ComponentDependency(new IIDHabboWindowManager(), function (k:IHabboWindowManager):void
             {
                 _windowManager = k;

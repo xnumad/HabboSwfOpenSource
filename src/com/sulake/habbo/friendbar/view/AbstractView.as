@@ -23,7 +23,7 @@
         protected var _windowManager:IHabboWindowManager;
         protected var _avatarManager:IAvatarRenderManager;
         protected var _localizationManager:IHabboLocalizationManager;
-        protected var _Str_2318:ISessionDataManager;
+        protected var _sessionDataManager:ISessionDataManager;
         protected var _tracking:IHabboTracking;
 		protected var configurationManager:IHabboConfigurationManager;
 
@@ -36,7 +36,7 @@
         {
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDSessionDataManager(), function (k:ISessionDataManager):void
             {
-                _Str_2318 = k;
+                _sessionDataManager = k;
             }), new ComponentDependency(new IIDAvatarRenderManager(), function (k:IAvatarRenderManager):void
             {
                 _avatarManager = k;

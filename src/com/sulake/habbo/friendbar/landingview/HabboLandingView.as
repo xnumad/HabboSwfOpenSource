@@ -401,9 +401,9 @@
 
         public function getProductData(k:String, _arg_2:IProductDataListener):IProductData
         {
-            if (_Str_2318.loadProductData(_arg_2))
+            if (_sessionDataManager.loadProductData(_arg_2))
             {
-                return _Str_2318.getProductData(k);
+                return _sessionDataManager.getProductData(k);
             }
             return null;
         }
@@ -452,7 +452,7 @@
 
         public function get sessionDataManager():ISessionDataManager
         {
-            return _Str_2318;
+            return _sessionDataManager;
         }
 
         private function _Str_13959():Boolean
