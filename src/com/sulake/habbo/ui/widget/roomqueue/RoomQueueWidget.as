@@ -126,7 +126,7 @@
             _local_2 = this._window.findChildByName("change_button");
             if (_local_2 != null)
             {
-                _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_11375);
+                _local_2.addEventListener(WindowMouseEvent.CLICK, this.changeQueue);
             }
             this._window.center();
             return true;
@@ -182,7 +182,7 @@
             messageListener.processWidgetMessage(new RoomWidgetRoomQueueMessage(RoomWidgetRoomQueueMessage.RWRQM_CLUB_LINK));
         }
 
-        private function _Str_11375(k:WindowMouseEvent):void
+        private function changeQueue(k:WindowMouseEvent):void
         {
             var _local_2:RoomWidgetRoomQueueMessage;
             if (messageListener == null)

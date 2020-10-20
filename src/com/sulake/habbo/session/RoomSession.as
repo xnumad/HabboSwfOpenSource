@@ -511,7 +511,7 @@
             }
         }
 
-        public function _Str_11375(k:int):void
+        public function changeQueue(k:int):void
         {
             if (this._connection == null)
             {

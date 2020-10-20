@@ -64,10 +64,10 @@
                     this._container.roomSession._Str_20268();
                     break;
                 case RoomWidgetRoomQueueMessage.RWRQM_CHANGE_TO_SPECTATOR_QUEUE:
-                    this._container.roomSession._Str_11375(RoomSessionQueueEvent.QUEUE_TARGET_SPECTATOR);
+                    this._container.roomSession.changeQueue(RoomSessionQueueEvent.QUEUE_TARGET_SPECTATOR);
                     break;
                 case RoomWidgetRoomQueueMessage.RWRQM_CHANGE_TO_VISITOR_QUEUE:
-                    this._container.roomSession._Str_11375(RoomSessionQueueEvent.QUEUE_TARGET_VISITOR);
+                    this._container.roomSession.changeQueue(RoomSessionQueueEvent.QUEUE_TARGET_VISITOR);
                     break;
                 case RoomWidgetRoomQueueMessage.RWRQM_CLUB_LINK:
                     if (this._container.catalog != null)
