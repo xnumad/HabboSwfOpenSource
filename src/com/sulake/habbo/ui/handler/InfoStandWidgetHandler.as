@@ -864,7 +864,7 @@
                         _local_6.targetRoomControllerLevel = _local_14;
                     }
                     _local_6.canBeMuted = this._Str_23100(_local_6);
-                    _local_6.canBeKicked = this._Str_22729(_local_6);
+                    _local_6.canBeKicked = this.determineCanBeKicked(_local_6);
                     _local_6.canBeBanned = this._Str_23573(_local_6);
                     Logger.log(((((((("Set moderation levels to " + _local_6.name) + "Muted: ") + _local_6.canBeMuted) + ", Kicked: ") + _local_6.canBeKicked) + ", Banned: ") + _local_6.canBeBanned));
                 }
@@ -932,7 +932,7 @@
             return this._Str_18027(userInfo, settingsFunction);
         }
 
-        private function _Str_22729(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
+        private function determineCanBeKicked(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
         {
             var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:RoomModerationSettings):Boolean
             {
