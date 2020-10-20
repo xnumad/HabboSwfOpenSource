@@ -54,7 +54,7 @@
             return this._serverPublicKey.compareTo(this._minimumPublicKey) >= 0;
         }
 
-        public function _Str_21716():Boolean
+        public function isValidSharedKey():Boolean
         {
             return this._sharedKey.compareTo(this._minimumSharedSecret) >= 0;
         }

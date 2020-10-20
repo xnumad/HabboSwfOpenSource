@@ -370,7 +370,7 @@
             this._rsa.dispose();
             this._keyExchange.generateSharedKey(_local_5.toString(), 10);
             var _local_6:String = this._keyExchange.getSharedKey(16).toUpperCase();
-            if (((!(this._keyExchange.isValidServerPublicKey())) || (!(this._keyExchange._Str_21716()))))
+            if (((!(this._keyExchange.isValidServerPublicKey())) || (!(this._keyExchange.isValidSharedKey()))))
             {
                 return;
             }

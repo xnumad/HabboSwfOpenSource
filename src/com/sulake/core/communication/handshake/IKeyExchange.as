@@ -7,6 +7,6 @@
         function getSharedKey(_arg_1:uint=16):String;
         function getPublicKey(_arg_1:uint=16):String;
         function isValidServerPublicKey():Boolean;
-        function _Str_21716():Boolean;
+        function isValidSharedKey():Boolean;
     }
 }
