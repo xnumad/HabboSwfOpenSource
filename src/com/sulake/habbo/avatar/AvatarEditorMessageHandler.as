@@ -185,7 +185,7 @@
                 return;
             }
             var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
-            if ((((_local_2) && (!(this._controller.roomDesktop == null))) && (k.getParser().userId == this._controller.roomDesktop.roomSession._Str_3871)))
+            if ((((_local_2) && (!(this._controller.roomDesktop == null))) && (k.getParser().userId == this._controller.roomDesktop.roomSession.ownUserRoomId)))
             {
                 _local_2.figureData.avatarEffectType = k.getParser().effectId;
                 _local_2.figureData._Str_2491();

@@ -516,7 +516,7 @@
             {
                 case _Str_5393.RWAIE_AVATAR_INFO:
                     _local_2 = (k as _Str_5393);
-                    this._isRoomEnteredOwnAvatarHighlight = (((!(this._isInitialized)) && (!(this.handler.container.roomSession == null))) && (_local_2.roomIndex == this.handler.container.roomSession._Str_3871));
+                    this._isRoomEnteredOwnAvatarHighlight = (((!(this._isInitialized)) && (!(this.handler.container.roomSession == null))) && (_local_2.roomIndex == this.handler.container.roomSession.ownUserRoomId));
                     if (_local_2.allowNameChange)
                     {
                         this._Str_13909 = true;
@@ -1629,7 +1629,7 @@
                 if (!this._decoModeView)
                 {
                     _local_4 = this.handler.container.sessionDataManager.userName;
-                    _local_5 = this.handler.container.roomSession._Str_3871;
+                    _local_5 = this.handler.container.roomSession.ownUserRoomId;
                     this._decoModeView = new DecorateModeView(this, _local_2, _local_4, _local_5);
                 }
                 this._decoModeView.show();

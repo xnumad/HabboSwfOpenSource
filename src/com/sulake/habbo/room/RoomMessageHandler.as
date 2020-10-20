@@ -1152,7 +1152,7 @@
                 if ((k is WhisperMessageEvent))
                 {
                     _local_2 = (k as WhisperMessageEvent).getParser();
-                    if ((((_local_2) && (_local_3)) && (_local_2.userId == _local_3._Str_3871)))
+                    if ((((_local_2) && (_local_3)) && (_local_2.userId == _local_3.ownUserRoomId)))
                     {
                         return;
                     }

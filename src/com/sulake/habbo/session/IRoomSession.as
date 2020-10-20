@@ -51,8 +51,8 @@
         function _Str_11375(_arg_1:int):void;
         function _Str_21093(_arg_1:int, _arg_2:String, _arg_3:String):void;
         function _Str_20236(_arg_1:int):void;
-        function get _Str_3871():int;
-        function set _Str_3871(_arg_1:int):void;
+        function get ownUserRoomId():int;
+        function set ownUserRoomId(_arg_1:int):void;
         function get isRoomOwner():Boolean;
         function set isRoomOwner(_arg_1:Boolean):void;
         function set roomControllerLevel(_arg_1:int):void;

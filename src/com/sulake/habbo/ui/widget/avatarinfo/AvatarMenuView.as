@@ -115,7 +115,7 @@
                 showButton("group");
                 if (this.widget.configuration.getBoolean("handitem.give.enabled"))
                 {
-                    _local_8 = _local_5.container.roomSession._Str_3871;
+                    _local_8 = _local_5.container.roomSession.ownUserRoomId;
                     _local_9 = _local_5.container.roomEngine.getRoomObject(_local_5.roomSession.roomId, _local_8, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                     if (_local_9 != null)
                     {

@@ -141,7 +141,7 @@
             if (this.widget.configuration.getBoolean("handitem.give.pet.enabled"))
             {
                 _local_8 = this.widget.handler;
-                _local_9 = _local_8.container.roomSession._Str_3871;
+                _local_9 = _local_8.container.roomSession.ownUserRoomId;
                 _local_10 = _local_8.container.roomEngine.getRoomObject(_local_8.roomSession.roomId, _local_9, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                 if (_local_10 != null)
                 {

@@ -1643,7 +1643,7 @@
             var _local_3:IRoomSession = this._roomSessionManager.getSession(k);
             if (_local_3)
             {
-                _local_3._Str_3871 = _arg_2;
+                _local_3.ownUserRoomId = _arg_2;
             }
             var _local_4:RoomCamera = this.getRoomCamera(k);
             if (_local_4 != null)
@@ -3113,7 +3113,7 @@
             }
             var _local_10:RoomObjectUpdateMessage = new RoomObjectAvatarUpdateMessage(this.fixedUserLocation(k, _arg_3), this.fixedUserLocation(k, _arg_4), _arg_7, _arg_8, _arg_5, _arg_6);
             _local_9.getEventHandler().processUpdateMessage(_local_10);
-            if ((((this.roomSessionManager) && (this.roomSessionManager.getSession(k))) && (_arg_2 == this.roomSessionManager.getSession(k)._Str_3871)))
+            if ((((this.roomSessionManager) && (this.roomSessionManager.getSession(k))) && (_arg_2 == this.roomSessionManager.getSession(k).ownUserRoomId)))
             {
                 this._roomObjectFactory.events.dispatchEvent(new RoomToObjectOwnAvatarMoveEvent(RoomToObjectOwnAvatarMoveEvent.ROAME_MOVE_TO, _arg_4));
             }
@@ -4321,7 +4321,7 @@
             {
                 return;
             }
-            this.updateObjectUserEffect(this.activeRoomId, _local_2._Str_3871, k);
+            this.updateObjectUserEffect(this.activeRoomId, _local_2.ownUserRoomId, k);
         }
 
         public function get playerUnderCursor():int
@@ -4403,7 +4403,7 @@
             var _local_8:int = -1;
             if (((!(_arg_4)) && (!(this._roomSessionManager.getSession(this._activeRoomId) == null))))
             {
-                _local_8 = this._roomSessionManager.getSession(this._activeRoomId)._Str_3871;
+                _local_8 = this._roomSessionManager.getSession(this._activeRoomId).ownUserRoomId;
             }
             var _local_9:SpriteDataCollector = new SpriteDataCollector();
             var _local_10:String = _local_9.getFurniData(k, _local_7, this, _local_8);

@@ -193,7 +193,7 @@
                 _local_2 = listener.getSession(_xxxRoomId);
                 if (_local_2)
                 {
-                    listener.events.dispatchEvent(new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, _local_2, _local_2._Str_3871, "", RoomSessionChatEvent._Str_8909, SystemChatStyleEnum.GENERIC, null, k.secondsRemaining));
+                    listener.events.dispatchEvent(new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, _local_2, _local_2.ownUserRoomId, "", RoomSessionChatEvent._Str_8909, SystemChatStyleEnum.GENERIC, null, k.secondsRemaining));
                 }
             }
         }

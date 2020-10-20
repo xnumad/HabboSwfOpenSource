@@ -537,12 +537,12 @@
             return this._userDataManager;
         }
 
-        public function get _Str_3871():int
+        public function get ownUserRoomId():int
         {
             return this._ownUserRoomId;
         }
 
-        public function set _Str_3871(k:int):void
+        public function set ownUserRoomId(k:int):void
         {
             this._ownUserRoomId = k;
         }
