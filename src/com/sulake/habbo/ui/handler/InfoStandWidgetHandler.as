@@ -895,7 +895,7 @@
                 _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent.TRADE_REASON_OK;
                 if (!_local_10)
                 {
-                    _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent._Str_14161;
+                    _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent.TRADE_REASON_SHUTDOWN;
                 }
                 if (_local_11 != RoomTradingLevelEnum._Str_9173)
                 {

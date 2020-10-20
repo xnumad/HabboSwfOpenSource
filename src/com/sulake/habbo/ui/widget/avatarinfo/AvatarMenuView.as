@@ -101,7 +101,7 @@
                 showButton("trade", ((this.citizenshipTalentTrackEnabled) || ((!(_local_6)) && (this._data.canTrade))));
                 switch (this._data.canTradeReason)
                 {
-                    case RoomWidgetUserInfoUpdateEvent._Str_14161:
+                    case RoomWidgetUserInfoUpdateEvent.TRADE_REASON_SHUTDOWN:
                         _local_7 = "${infostand.button.trade.tooltip.shutdown}";
                         break;
                     case RoomWidgetUserInfoUpdateEvent._Str_13798:
