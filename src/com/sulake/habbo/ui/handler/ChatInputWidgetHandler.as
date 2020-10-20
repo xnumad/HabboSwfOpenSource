@@ -327,7 +327,7 @@
                                     case ":visit":
                                         if (this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964)
                                         {
-                                            this._container.roomSession.visit(commandArgument);
+                                            this._container.roomSession.sendVisitUserMessage(commandArgument);
                                         }
                                         return null;
                                     case ":roomid":
