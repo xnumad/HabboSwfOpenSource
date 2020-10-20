@@ -415,7 +415,7 @@
                                         this._container.roomSession._Str_17917(_local_8, _local_11);
                                         break;
                                     case RoomWidgetChatMessage.CHAT_TYPE_SHOUT:
-                                        this._container.roomSession._Str_21231(_local_8, _local_11);
+                                        this._container.roomSession.sendShoutMessage(_local_8, _local_11);
                                         break;
                                     case RoomWidgetChatMessage.CHAT_TYPE_WHISPER:
                                         this._container.roomSession.sendWhisperMessage(_local_7._Str_23716, _local_8, _local_11);

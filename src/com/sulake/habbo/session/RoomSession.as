@@ -288,7 +288,7 @@
             }
         }
 
-        public function _Str_21231(k:String, _arg_2:int=0):void
+        public function sendShoutMessage(k:String, _arg_2:int=0):void
         {
             this._connection.send(new _Str_12180(k, _arg_2));
         }
