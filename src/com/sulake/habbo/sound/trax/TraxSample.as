@@ -118,7 +118,7 @@
             return (this._sampleData.length * this._samplesPerValue) * this._sampleRepeats;
         }
 
-        public function get _Str_10605():int
+        public function get usageCount():int
         {
             return this._usageList.length;
         }

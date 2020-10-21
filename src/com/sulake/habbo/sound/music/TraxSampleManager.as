@@ -170,7 +170,7 @@
             {
                 _local_5 = this._traxSamples.getKey(_local_4);
                 _local_6 = this._traxSamples.getWithIndex(_local_4);
-                if (((!(_local_6._Str_10605 == 0)) && (_local_3.indexOf(_local_5) == -1)))
+                if (((!(_local_6.usageCount == 0)) && (_local_3.indexOf(_local_5) == -1)))
                 {
                     _local_2.push(_local_6);
                 }
@@ -207,11 +207,11 @@
 
         private function _Str_23844(k:TraxSample, _arg_2:TraxSample):int
         {
-            if (k._Str_10605 < _arg_2._Str_10605)
+            if (k.usageCount < _arg_2.usageCount)
             {
                 return -1;
             }
-            if (k._Str_10605 > _arg_2._Str_10605)
+            if (k.usageCount > _arg_2.usageCount)
             {
                 return 1;
             }
