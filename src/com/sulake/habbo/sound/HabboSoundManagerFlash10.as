@@ -291,7 +291,7 @@
         private function createTraxInstance(k:int, _arg_2:String, _arg_3:Boolean=true):TraxSequencer
         {
             var _local_4:TraxData = new TraxData(_arg_2);
-            var _local_5:TraxSequencer = new TraxSequencer(k, _local_4, this._traxSampleManager._Str_21843, events);
+            var _local_5:TraxSequencer = new TraxSequencer(k, _local_4, this._traxSampleManager.traxSamples, events);
             _local_5._Str_3206 = this._genericVolume;
             this._Str_21484(_local_5, _arg_3);
             return _local_5;
@@ -305,7 +305,7 @@
             var _local_6:int;
             while (_local_6 < _local_4.length)
             {
-                if (this._traxSampleManager._Str_21843.getValue(int(_local_4[_local_6])) == null)
+                if (this._traxSampleManager.traxSamples.getValue(int(_local_4[_local_6])) == null)
                 {
                     if (_arg_2)
                     {

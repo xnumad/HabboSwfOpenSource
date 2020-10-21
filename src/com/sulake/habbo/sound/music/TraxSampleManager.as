@@ -68,7 +68,7 @@
             }
         }
 
-        public function get _Str_21843():Map
+        public function get traxSamples():Map
         {
             return this._traxSamples;
         }
