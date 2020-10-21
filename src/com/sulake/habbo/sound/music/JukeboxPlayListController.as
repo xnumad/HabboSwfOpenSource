@@ -51,7 +51,7 @@
             {
                 this._connection.addMessageEvent(_local_5);
             }
-            this._events.addEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this._Str_7805);
+            this._events.addEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this.onSongFinishedPlayingEvent);
             this._musicController.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
         }
 
@@ -113,7 +113,7 @@
                 }
                 if (this._events)
                 {
-                    this._events.removeEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this._Str_7805);
+                    this._events.removeEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this.onSongFinishedPlayingEvent);
                     this._events = null;
                 }
                 this._disposed = true;
@@ -146,7 +146,7 @@
             return this._entries[k];
         }
 
-        protected function _Str_7805(k:SoundControllerEvent):void
+        protected function onSongFinishedPlayingEvent(k:SoundControllerEvent):void
         {
         }
 

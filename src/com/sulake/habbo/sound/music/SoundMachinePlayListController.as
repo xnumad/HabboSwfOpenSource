@@ -50,7 +50,7 @@
             {
                 this._connection.addMessageEvent(_local_6);
             }
-            this._events.addEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this._Str_7805);
+            this._events.addEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this.onSongFinishedPlayingEvent);
             this._events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
             this._roomEvents.addEventListener(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_ON, this._Str_21084);
             this._roomEvents.addEventListener(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_OFF, this._Str_21376);
@@ -118,7 +118,7 @@
                 this._musicController = null;
                 if (this._events)
                 {
-                    this._events.removeEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this._Str_7805);
+                    this._events.removeEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this.onSongFinishedPlayingEvent);
                     this._events = null;
                 }
                 if (this._roomEvents)
@@ -197,7 +197,7 @@
         {
         }
 
-        private function _Str_7805(k:SoundControllerEvent):void
+        private function onSongFinishedPlayingEvent(k:SoundControllerEvent):void
         {
             if (k.id == this._currentEntryId)
             {
