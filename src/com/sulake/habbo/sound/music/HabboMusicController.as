@@ -331,7 +331,7 @@
             if (_local_2)
             {
                 this.resetSongStartRequest(k);
-                this._Str_21539(k);
+                this.stopSongAtPriority(k);
             }
             else
             {
@@ -343,7 +343,7 @@
             }
         }
 
-        private function _Str_21539(k:int):Boolean
+        private function stopSongAtPriority(k:int):Boolean
         {
             var _local_2:int;
             var _local_3:SongDataEntry;
@@ -617,7 +617,7 @@
                 return false;
             }
             var _local_3:Boolean;
-            if (this._Str_21539(this._priorityPlaying))
+            if (this.stopSongAtPriority(this._priorityPlaying))
             {
                 _local_3 = true;
             }
