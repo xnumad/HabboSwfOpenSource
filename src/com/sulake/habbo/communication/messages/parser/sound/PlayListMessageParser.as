@@ -15,7 +15,7 @@
             return this._synchronizationCount;
         }
 
-        public function get _Str_24122():Array
+        public function get playList():Array
         {
             return this._playlist;
         }
