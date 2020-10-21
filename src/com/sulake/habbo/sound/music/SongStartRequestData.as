@@ -35,7 +35,7 @@
             return this._startPos + ((getTimer() - this._playRequestTime) / 1000);
         }
 
-        public function get _Str_24522():Number
+        public function get playLength():Number
         {
             return this._playLength;
         }

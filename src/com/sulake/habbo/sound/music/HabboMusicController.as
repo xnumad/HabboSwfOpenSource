@@ -646,7 +646,7 @@
             if (_local_10 != null)
             {
                 _local_6 = _local_10.startPos;
-                _local_7 = _local_10._Str_24522;
+                _local_7 = _local_10.playLength;
                 _local_8 = _local_10._Str_6653;
                 _local_9 = _local_10._Str_4908;
             }
