@@ -855,7 +855,7 @@
                 {
                     _local_8 = this._Str_19943(_local_4, _local_8, true, _arg_2.id, _arg_3);
                 }
-                this._popupCtrl.updateContent((_arg_2 as IWindowContainer), _local_8, _local_7, _local_4._Str_3205().stuffData, ItemPopupCtrl._Str_9535, this._Str_24946(_local_5));
+                this._popupCtrl.updateContent((_arg_2 as IWindowContainer), _local_8, _local_7, _local_4._Str_3205().stuffData, ItemPopupCtrl._Str_9535, this.isExternalImagetype(_local_5));
                 this._popupCtrl.show();
             }
             else
@@ -867,7 +867,7 @@
             }
         }
 
-        private function _Str_24946(k:FurnitureItem):Boolean
+        private function isExternalImagetype(k:FurnitureItem):Boolean
         {
             if (!this._tradingModel.getInventory())
             {
