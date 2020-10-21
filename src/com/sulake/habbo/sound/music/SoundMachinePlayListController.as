@@ -164,7 +164,7 @@
             var _local_2:SongDataEntry;
             if (this._currentEntryId == k)
             {
-                this._Str_15819(this._currentEntryId);
+                this.playCurrentSongAndNotify(this._currentEntryId);
                 _local_2 = this.getNextEntry();
                 if (_local_2 != null)
                 {
@@ -236,11 +236,11 @@
             if (k != null)
             {
                 this._currentEntryId = k.id;
-                this._Str_15819(this._currentEntryId);
+                this.playCurrentSongAndNotify(this._currentEntryId);
             }
         }
 
-        private function _Str_15819(k:int):void
+        private function playCurrentSongAndNotify(k:int):void
         {
             var _local_2:SongDataEntry = (this.getEntryWithId(k) as SongDataEntry);
             if (_local_2 == null)
@@ -375,7 +375,7 @@
             this._events.dispatchEvent(new PlayListStatusEvent(PlayListStatusEvent.PLUE_PLAY_LIST_UPDATED));
             if (((!(_local_6 == null)) && (this._isPlaying)))
             {
-                this._Str_15819(_local_6.id);
+                this.playCurrentSongAndNotify(_local_6.id);
             }
         }
 
@@ -396,7 +396,7 @@
             }
             if (this._playListEntries.length == 1)
             {
-                this._Str_15819(_local_4.id);
+                this.playCurrentSongAndNotify(_local_4.id);
             }
             else
             {
