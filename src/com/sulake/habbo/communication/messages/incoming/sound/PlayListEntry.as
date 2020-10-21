@@ -36,12 +36,12 @@
             return this._creator;
         }
 
-        public function get _Str_14463():Number
+        public function get startPlayHeadPos():Number
         {
             return this._startPlayHead;
         }
 
-        public function set _Str_14463(k:Number):void
+        public function set startPlayHeadPos(k:Number):void
         {
             this._startPlayHead = k;
         }

@@ -247,8 +247,8 @@
             {
                 return;
             }
-            var _local_3:Number = _local_2._Str_14463;
-            _local_2._Str_14463 = 0;
+            var _local_3:Number = _local_2.startPlayHeadPos;
+            _local_2.startPlayHeadPos = 0;
             if (this._musicController.playSong(k, HabboMusicPrioritiesEnum._Str_4350, _local_3, 0, 0, 0))
             {
                 Logger.log(((("Trax song started by playlist: " + _local_2.name) + " by ") + _local_2.creator));
@@ -367,7 +367,7 @@
                 else
                 {
                     this._currentEntryId = _local_6.id;
-                    _local_6._Str_14463 = (Number(_local_4) / 1000);
+                    _local_6.startPlayHeadPos = (Number(_local_4) / 1000);
                     break;
                 }
                 _local_8++;
