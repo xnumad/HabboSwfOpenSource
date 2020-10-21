@@ -50,7 +50,7 @@
     import com.sulake.habbo.room.events.RoomEngineRoomAdEvent;
     import com.sulake.habbo.room.events.RoomObjectSoundMachineEvent;
     import com.sulake.habbo.room.events.RoomEngineDimmerStateEvent;
-    import com.sulake.habbo.room.events.RoomEnginePlaySoundEvent;
+    import com.sulake.habbo.room.events.RoomEngineObjectPlaySoundEvent;
     import com.sulake.habbo.room.events.RoomEngineObjectSamplePlaybackEvent;
     import com.sulake.habbo.room.events.RoomObjectHSLColorEnabledEvent;
     import com.sulake.room.messages.RoomObjectUpdateMessage;
@@ -1605,10 +1605,10 @@
                 switch (k.type)
                 {
                     case RoomObjectPlaySoundIdEvent.ROPSIE_PLAY_SOUND:
-                        this._roomEngine.events.dispatchEvent(new RoomEnginePlaySoundEvent(RoomEnginePlaySoundEvent.PLAY_SOUND, _arg_2, k.objectId, _local_3, k.soundId, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectPlaySoundEvent(RoomEngineObjectPlaySoundEvent.PLAY_SOUND, _arg_2, k.objectId, _local_3, k.soundId, k._Str_4740));
                         return;
                     case RoomObjectPlaySoundIdEvent.ROPSIE_PLAY_SOUND_AT_PITCH:
-                        this._roomEngine.events.dispatchEvent(new RoomEnginePlaySoundEvent(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, _arg_2, k.objectId, _local_3, k.soundId, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectPlaySoundEvent(RoomEngineObjectPlaySoundEvent.PLAY_SOUND_AT_PITCH, _arg_2, k.objectId, _local_3, k.soundId, k._Str_4740));
                         return;
                 }
             }

@@ -16,7 +16,7 @@
     import com.sulake.habbo.sound.events.TraxSongLoadEvent;
     import com.sulake.core.runtime.IContext;
     import com.sulake.core.assets.IAssetLibrary;
-    import com.sulake.habbo.room.events.RoomEnginePlaySoundEvent;
+    import com.sulake.habbo.room.events.RoomEngineObjectPlaySoundEvent;
     import flash.media.Sound;
     import com.sulake.core.assets.IAsset;
     import com.sulake.habbo.sound.trax.TraxData;
@@ -137,8 +137,8 @@
             }
             if (this._roomEngine)
             {
-                this._roomEngine.events.removeEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND, this.onRoomEngineObjectPlaySound);
-                this._roomEngine.events.removeEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, this.onRoomEngineObjectPlaySound);
+                this._roomEngine.events.removeEventListener(RoomEngineObjectPlaySoundEvent.PLAY_SOUND, this.onRoomEngineObjectPlaySound);
+                this._roomEngine.events.removeEventListener(RoomEngineObjectPlaySoundEvent.PLAY_SOUND_AT_PITCH, this.onRoomEngineObjectPlaySound);
                 this._roomEngine.release(new IIDRoomEngine());
                 this._roomEngine = null;
             }
@@ -390,8 +390,8 @@
             this._musicController = new HabboMusicController(this, events, this._roomEngine.events, this._connection);
             this._traxSampleManager = new TraxSampleManager(this, this._Str_25112);
             this._onDemandSamplePlaybackManager = new FurniSamplePlaybackManager(this, this._roomEngine.events);
-            this._roomEngine.events.addEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND, this.onRoomEngineObjectPlaySound);
-            this._roomEngine.events.addEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, this.onRoomEngineObjectPlaySound);
+            this._roomEngine.events.addEventListener(RoomEngineObjectPlaySoundEvent.PLAY_SOUND, this.onRoomEngineObjectPlaySound);
+            this._roomEngine.events.addEventListener(RoomEngineObjectPlaySoundEvent.PLAY_SOUND_AT_PITCH, this.onRoomEngineObjectPlaySound);
             this._connection.addMessageEvent(new AccountPreferencesEvent(this._Str_24903));
             this._connection.send(new GetSoundSettingsComposer());
         }
@@ -488,12 +488,12 @@
 
         private function onRoomEngineObjectPlaySound(k:Event):void
         {
-            var _local_2:RoomEnginePlaySoundEvent = RoomEnginePlaySoundEvent(k);
-            if (k.type == RoomEnginePlaySoundEvent.PLAY_SOUND)
+            var _local_2:RoomEngineObjectPlaySoundEvent = RoomEngineObjectPlaySoundEvent(k);
+            if (k.type == RoomEngineObjectPlaySoundEvent.PLAY_SOUND)
             {
                 this.playSound(_local_2.soundId);
             }
-            if (k.type == RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH)
+            if (k.type == RoomEngineObjectPlaySoundEvent.PLAY_SOUND_AT_PITCH)
             {
                 this.playSoundAtPitch(_local_2.soundId, _local_2._Str_4740);
             }
