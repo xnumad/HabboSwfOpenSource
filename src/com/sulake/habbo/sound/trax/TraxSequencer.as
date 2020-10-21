@@ -18,7 +18,7 @@
 
     public class TraxSequencer implements IHabboSound, IDisposable 
     {
-        private static const _Str_4502:Number = 44100;
+        private static const SAMPLES_PER_SECOND:Number = 44100;
         private static const _Str_5149:uint = 0x2000;
         private static const _Str_14348:uint = 88000;
         private static const _Str_10958:uint = 88000;
@@ -80,7 +80,7 @@
 
         public function set position(k:Number):void
         {
-            this._playHead = uint((k * _Str_4502));
+            this._playHead = uint((k * SAMPLES_PER_SECOND));
         }
 
         public function get volume():Number
@@ -90,7 +90,7 @@
 
         public function get position():Number
         {
-            return this._playHead / _Str_4502;
+            return this._playHead / SAMPLES_PER_SECOND;
         }
 
         public function get ready():Boolean
@@ -110,22 +110,22 @@
 
         public function get fadeOutSeconds():Number
         {
-            return this._fadeOutLengthSamples / _Str_4502;
+            return this._fadeOutLengthSamples / SAMPLES_PER_SECOND;
         }
 
         public function set fadeOutSeconds(k:Number):void
         {
-            this._fadeOutLengthSamples = int((k * _Str_4502));
+            this._fadeOutLengthSamples = int((k * SAMPLES_PER_SECOND));
         }
 
         public function get fadeInSeconds():Number
         {
-            return this._fadeInLengthSamples / _Str_4502;
+            return this._fadeInLengthSamples / SAMPLES_PER_SECOND;
         }
 
         public function set fadeInSeconds(k:Number):void
         {
-            this._fadeInLengthSamples = int((k * _Str_4502));
+            this._fadeInLengthSamples = int((k * SAMPLES_PER_SECOND));
         }
 
         public function get _Str_17466():TraxData
@@ -144,7 +144,7 @@
 
         public function get length():Number
         {
-            return this._lengthSamples / _Str_4502;
+            return this._lengthSamples / SAMPLES_PER_SECOND;
         }
 
         public function get disposed():Boolean
@@ -361,7 +361,7 @@
             this._fadeOutSampleCounter = 0;
             this._finished = false;
             this._sound.addEventListener(SampleDataEvent.SAMPLE_DATA, this._Str_18381);
-            this._playLengthSamples = (k * _Str_4502);
+            this._playLengthSamples = (k * SAMPLES_PER_SECOND);
             this._expectedStreamPosition = 0;
             this._bufferUnderRunCount = 0;
             this._soundChannel = this._sound.play();
@@ -415,7 +415,7 @@
             {
                 this._fadeOutActive = true;
                 this._fadeOutSampleCounter = 0;
-                this._fadeoutStopTimer = new Timer((this._latencyMs + (this._fadeOutLengthSamples / (_Str_4502 / 1000))), 1);
+                this._fadeoutStopTimer = new Timer((this._latencyMs + (this._fadeOutLengthSamples / (SAMPLES_PER_SECOND / 1000))), 1);
                 this._fadeoutStopTimer.start();
                 this._fadeoutStopTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_21147);
             }
@@ -565,7 +565,7 @@
         private function _Str_23628():void
         {
             var k:int = ((this._lengthSamples < this._playLengthSamples) ? this._lengthSamples : ((this._playLengthSamples > 0) ? this._playLengthSamples : this._lengthSamples));
-            if (((this._playHead > (k + (this._latencyMs * (_Str_4502 / 1000)))) && (!(this._finished))))
+            if (((this._playHead > (k + (this._latencyMs * (SAMPLES_PER_SECOND / 1000)))) && (!(this._finished))))
             {
                 this._finished = true;
                 if (this._stopTimer != null)
@@ -618,7 +618,7 @@
             this._expectedStreamPosition = (this._expectedStreamPosition + _Str_5149);
             if (this._soundChannel != null)
             {
-                this._latencyMs = (((k.position / _Str_4502) * 1000) - this._soundChannel.position);
+                this._latencyMs = (((k.position / SAMPLES_PER_SECOND) * 1000) - this._soundChannel.position);
             }
             this._Str_23628();
         }
