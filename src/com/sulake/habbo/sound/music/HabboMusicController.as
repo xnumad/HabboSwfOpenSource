@@ -34,7 +34,7 @@
     public class HabboMusicController implements IHabboMusicController, IDisposable 
     {
         public static const _Str_14214:int = -1;
-        private static const _Str_16526:int = HabboMusicPrioritiesEnum._Str_4350;//0
+        private static const _Str_16526:int = HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST;//0
 
         private var _soundManager:HabboSoundManagerFlash10;
         private var _connection:IConnection;
@@ -669,7 +669,7 @@
             {
                 this._Str_24450(_local_4);
             }
-            if (k > HabboMusicPrioritiesEnum._Str_4350)
+            if (k > HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST)
             {
                 this._events.dispatchEvent(new NowPlayingEvent(NowPlayingEvent.NPE_USER_PLAY_SONG, k, _local_4.id, -1));
             }

@@ -176,7 +176,7 @@
         public function _Str_25259(k:int):void
         {
             var _local_3:ISongInfo;
-            var _local_2:int = this._soundManager._Str_2774.getSongIdPlayingAtPriority(HabboMusicPrioritiesEnum._Str_4350);
+            var _local_2:int = this._soundManager._Str_2774.getSongIdPlayingAtPriority(HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST);
             if (_local_2 != -1)
             {
                 _local_3 = this._soundManager._Str_2774.getSongInfo(_local_2);

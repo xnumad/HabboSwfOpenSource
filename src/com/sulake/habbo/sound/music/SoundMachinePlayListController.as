@@ -63,7 +63,7 @@
 
         public function get priority():int
         {
-            return HabboMusicPrioritiesEnum._Str_4350;
+            return HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST;
         }
 
         public function get length():int
@@ -177,7 +177,7 @@
         {
             this._currentEntryId = -1;
             this._isPlaying = false;
-            this._musicController.stop(HabboMusicPrioritiesEnum._Str_4350);
+            this._musicController.stop(HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST);
         }
 
         public function updateVolume(k:Number):void
@@ -249,7 +249,7 @@
             }
             var _local_3:Number = _local_2.startPlayHeadPos;
             _local_2.startPlayHeadPos = 0;
-            if (this._musicController.playSong(k, HabboMusicPrioritiesEnum._Str_4350, _local_3, 0, 0, 0))
+            if (this._musicController.playSong(k, HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST, _local_3, 0, 0, 0))
             {
                 Logger.log(((("Trax song started by playlist: " + _local_2.name) + " by ") + _local_2.creator));
             }
