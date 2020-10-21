@@ -353,14 +353,14 @@
                 if (_local_2 >= 0)
                 {
                     _local_3 = this._Str_9498(_local_2);
-                    this._Str_24403(_local_3);
+                    this.stopSongDataEntry(_local_3);
                     return true;
                 }
             }
             return false;
         }
 
-        private function _Str_24403(k:SongDataEntry):void
+        private function stopSongDataEntry(k:SongDataEntry):void
         {
             var _local_2:IHabboSound;
             if (k != null)
