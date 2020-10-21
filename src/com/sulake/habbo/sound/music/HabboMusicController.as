@@ -208,7 +208,7 @@
             return true;
         }
 
-        private function _parser7(k:int):SongStartRequestData
+        private function getSongStartRequest(k:int):SongStartRequestData
         {
             return this._songRequestsPerPriority[k];
         }
@@ -642,7 +642,7 @@
             var _local_7:Number = 0;
             var _local_8:Number = 2;
             var _local_9:Number = 1;
-            var _local_10:SongStartRequestData = this._parser7(k);
+            var _local_10:SongStartRequestData = this.getSongStartRequest(k);
             if (_local_10 != null)
             {
                 _local_6 = _local_10.startPos;
