@@ -189,7 +189,7 @@
             return -1;
         }
 
-        public function _Str_26405(k:int, _arg_2:int):void
+        public function moveItem(k:int, _arg_2:int):void
         {
         }
 
