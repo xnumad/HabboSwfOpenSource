@@ -242,7 +242,7 @@
 
         private function _Str_15819(k:int):void
         {
-            var _local_2:SongDataEntry = (this._Str_24778(k) as SongDataEntry);
+            var _local_2:SongDataEntry = (this.getEntryWithId(k) as SongDataEntry);
             if (_local_2 == null)
             {
                 return;
@@ -290,7 +290,7 @@
             return this._playListEntries[k];
         }
 
-        public function _Str_24778(k:int):ISongInfo
+        public function getEntryWithId(k:int):ISongInfo
         {
             var _local_2:SongDataEntry;
             if (((this._playListEntries == null) || (this._playListEntries.length == 0)))
