@@ -639,7 +639,7 @@
             return _local_2;
         }
 
-        protected function _Str_25988():IWindowContainer
+        protected function createThumbnailContainer():IWindowContainer
         {
             var k:XML = (XmlAsset(this._assetLibrary.getAssetByName("inventory_thumb_xml")).content as XML);
             return this._windowManager.buildFromXML(k) as IWindowContainer;
