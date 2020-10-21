@@ -33,7 +33,7 @@
 
     public class HabboMusicController implements IHabboMusicController, IDisposable 
     {
-        public static const _Str_14214:int = -1;
+        public static const SKIP_POSITION_SET:int = -1;
         private static const _Str_16526:int = HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST;//0
 
         private var _soundManager:HabboSoundManagerFlash10;
@@ -638,7 +638,7 @@
                 return true;
             }
             _local_5._Str_3206 = this._soundManager.traxVolume;
-            var _local_6:Number = _Str_14214;
+            var _local_6:Number = SKIP_POSITION_SET;
             var _local_7:Number = 0;
             var _local_8:Number = 2;
             var _local_9:Number = 1;
@@ -654,7 +654,7 @@
             {
                 return false;
             }
-            if (_local_6 == _Str_14214)
+            if (_local_6 == SKIP_POSITION_SET)
             {
                 _local_6 = 0;
             }
