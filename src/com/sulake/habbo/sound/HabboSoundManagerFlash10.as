@@ -263,7 +263,7 @@
             return _local_2.content as Sound;
         }
 
-        public function _Str_17576(k:int, _arg_2:String):IHabboSound
+        public function loadTraxSong(k:int, _arg_2:String):IHabboSound
         {
             if (this._loadingSong != null)
             {

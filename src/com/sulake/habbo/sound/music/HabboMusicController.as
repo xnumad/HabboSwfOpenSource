@@ -273,7 +273,7 @@
             }
             if (_local_3.soundObject == null)
             {
-                _local_3.soundObject = this._soundManager._Str_17576(_local_3.id, _local_3.songData);
+                _local_3.soundObject = this._soundManager.loadTraxSong(_local_3.id, _local_3.songData);
             }
             var _local_4:IHabboSound = _local_3.soundObject;
             if (!_local_4.ready)
@@ -584,7 +584,7 @@
                     _local_9 = null;
                     if (_local_8)
                     {
-                        _local_9 = this._soundManager._Str_17576(_local_6.id, _local_6.data);
+                        _local_9 = this._soundManager.loadTraxSong(_local_6.id, _local_6.data);
                     }
                     _local_10 = new SongDataEntry(_local_6.id, _local_6.length, _local_6.name, _local_6.creator, _local_9);
                     _local_10.songData = _local_6.data;
