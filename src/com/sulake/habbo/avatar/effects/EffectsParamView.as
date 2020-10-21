@@ -32,7 +32,7 @@
             this._secondsCounterTimer = new Timer(1000);
             this._secondsCounterTimer.addEventListener(TimerEvent.TIMER, this._Str_19275);
             this._container.findChildByName("get_more_button").addEventListener(WindowMouseEvent.CLICK, this.onBuyButtonClick);
-            this._Str_2491(null);
+            this.updateView(null);
         }
 
         public function dispose():void
@@ -52,7 +52,7 @@
             return this._model == null;
         }
 
-        public function _Str_2491(k:IHabboAvatarEditorAvatarEffect):void
+        public function updateView(k:IHabboAvatarEditorAvatarEffect):void
         {
             this._storedEffect = k;
             this._container.visible = true;

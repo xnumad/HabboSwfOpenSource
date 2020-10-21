@@ -54,7 +54,7 @@
                 this._currentProgressWidth = this._Str_19753(this._currentAmount);
             }
             this._update = true;
-            this._Str_2491();
+            this.updateView();
         }
 
         public function set visible(k:Boolean):void
@@ -66,7 +66,7 @@
             }
         }
 
-        public function _Str_2491():void
+        public function updateView():void
         {
             var _local_11:int;
             if (!this._update)

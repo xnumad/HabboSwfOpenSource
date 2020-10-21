@@ -708,11 +708,11 @@
         {
             if (this._inLevelProgressBar != null)
             {
-                this._inLevelProgressBar._Str_2491();
+                this._inLevelProgressBar.updateView();
             }
             if (this._totalProgressBar != null)
             {
-                this._totalProgressBar._Str_2491();
+                this._totalProgressBar.updateView();
             }
         }
 

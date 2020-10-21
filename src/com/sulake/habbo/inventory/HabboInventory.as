@@ -415,7 +415,7 @@
                         }
                         if (this._Str_2834 != null)
                         {
-                            this._Str_2834._Str_2491();
+                            this._Str_2834.updateView();
                         }
                     }
                     return;
@@ -475,14 +475,14 @@
             return _local_2.getWindowContainer();
         }
 
-        public function _Str_2491(k:String):void
+        public function updateView(k:String):void
         {
             var _local_2:IInventoryModel = IInventoryModel(this._inventories.getValue(k));
             if (_local_2 == null)
             {
                 return;
             }
-            return _local_2._Str_2491();
+            return _local_2.updateView();
         }
 
         public function _Str_24435(k:String):IWindowContainer

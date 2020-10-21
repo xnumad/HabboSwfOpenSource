@@ -296,13 +296,13 @@
                     }
                     else
                     {
-                        this._Str_2491();
+                        this.updateView();
                     }
                     return;
             }
         }
 
-        private function _Str_2491():void
+        private function updateView():void
         {
             if (!this._view)
             {

@@ -71,7 +71,7 @@
                 k++;
             }
             this._isInitialized = true;
-            this._Str_2491();
+            this.updateView();
         }
 
         public function get controller():HabboAvatarEditor
@@ -88,7 +88,7 @@
             return this._view.getWindowContainer();
         }
 
-        private function _Str_2491():void
+        private function updateView():void
         {
             this._view.update();
         }

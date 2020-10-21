@@ -243,7 +243,7 @@
                 }
             }
             _local_3._Str_7636();
-            _local_3._Str_2491();
+            _local_3.updateView();
         }
 
         public function _Str_25700(k:IMessageEvent):void
@@ -435,7 +435,7 @@
                 _local_3.updateBadge(_local_5, _local_8, _local_9);
             }
             _local_3._Str_22395();
-            _local_3._Str_2491();
+            _local_3.updateView();
             this._inventory._Str_5943(InventoryCategory.BADGES);
         }
 
@@ -466,7 +466,7 @@
             {
                 _local_3.updateBadge(_local_4, true);
             }
-            _local_3._Str_2491();
+            _local_3.updateView();
         }
 
         public function _Str_25294(k:IMessageEvent):void
@@ -478,7 +478,7 @@
             {
                 _local_4.updateBadge(_local_3.data.badgeCode, false, _local_3.data.badgeId);
                 _local_4._Str_24079(_local_3.data._Str_24720);
-                _local_4._Str_2491();
+                _local_4.updateView();
             }
         }
 
@@ -489,7 +489,7 @@
             if (_local_3 != null)
             {
                 _local_3.updateBadge(_local_2.badgeCode, false, _local_2.badgeId);
-                _local_3._Str_2491();
+                _local_3.updateView();
             }
         }
 
@@ -885,7 +885,7 @@
             var _local_4:FurniModel = this._inventory._Str_2834;
             if (_local_4 != null)
             {
-                _local_4._Str_2491();
+                _local_4.updateView();
             }
         }
 

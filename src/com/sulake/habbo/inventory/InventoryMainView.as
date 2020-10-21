@@ -356,7 +356,7 @@
                 this._unseenFurniCounter = this._Str_11957(InventoryCategory.FURNI);
             }
             this._Str_6423(this._unseenFurniCounter, k);
-            this._controller._Str_2834._Str_2491();
+            this._controller._Str_2834.updateView();
         }
 
         public function _Str_25138(k:int):void
@@ -370,7 +370,7 @@
                 this._unseenRentedFurniCounter = this._Str_11957(InventoryCategory.RENTABLES);
             }
             this._Str_6423(this._unseenRentedFurniCounter, k);
-            this._controller._Str_2834._Str_2491();
+            this._controller._Str_2834.updateView();
         }
 
         public function _Str_22445(k:int):void
@@ -384,7 +384,7 @@
                 this._unseenPetsCounter = this._Str_11957(InventoryCategory.PETS);
             }
             this._Str_6423(this._unseenPetsCounter, k);
-            this._controller._Str_4524._Str_2491();
+            this._controller._Str_4524.updateView();
         }
 
         public function _Str_24193(k:int):void
@@ -398,7 +398,7 @@
                 this._unseenBadgeCounter = this._Str_11957(InventoryCategory.BADGES);
             }
             this._Str_6423(this._unseenBadgeCounter, k);
-            this._controller._Str_7962._Str_2491();
+            this._controller._Str_7962.updateView();
         }
 
         public function _Str_24185(k:int):void
@@ -412,7 +412,7 @@
                 this._unseenBotCounter = this._Str_11957(InventoryCategory.BOTS);
             }
             this._Str_6423(this._unseenBotCounter, k);
-            this._controller._Str_8302._Str_2491();
+            this._controller._Str_8302.updateView();
         }
 
         public function _Str_9043(k:String):IWindowContainer
@@ -484,7 +484,7 @@
             _local_2.visible = true;
             this.mainContainer.addChild(_local_2);
             _local_2.height = this.mainContainer.height;
-            this._controller._Str_2491(k);
+            this._controller.updateView(k);
             this._lastView = _local_2;
             this._lastViewId = k;
             var _local_3:ITabContextWindow = (this._mainWindow.findChildByName("tabs") as ITabContextWindow);

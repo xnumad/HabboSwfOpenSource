@@ -368,7 +368,7 @@
             }
         }
 
-        public function _Str_2491():void
+        public function updateView():void
         {
             if (((this._view) && (!(this._view.disposed))))
             {

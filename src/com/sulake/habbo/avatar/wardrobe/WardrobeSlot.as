@@ -60,7 +60,7 @@
             this._figure = k;
             this._gender = _arg_2;
             this._Str_3886 = _arg_3;
-            this._Str_2491();
+            this.updateView();
         }
 
         private function _Str_13142(k:IWindow):void
@@ -90,7 +90,7 @@
             return this._disposed;
         }
 
-        public function _Str_2491():void
+        public function updateView():void
         {
             var k:BitmapData;
             var _local_6:IAvatarImage;
@@ -165,7 +165,7 @@
                     this._figure = this._habboAvatarEditor.figureData.getFigureString();
                     this._gender = this._habboAvatarEditor.gender;
                     this._habboAvatarEditor.handler._Str_25374(this._id, this);
-                    this._Str_2491();
+                    this.updateView();
                     return;
                 case "get_button":
                 case "get_figure":
@@ -194,7 +194,7 @@
 
         public function avatarImageReady(k:String):void
         {
-            this._Str_2491();
+            this.updateView();
         }
     }
 }

@@ -68,7 +68,7 @@
                 {
                     _arg_2 = 0;
                     controller.setAvatarEffectType(-1);
-                    this._effectsParamView._Str_2491(null);
+                    this._effectsParamView.updateView(null);
                 }
                 else
                 {
@@ -79,7 +79,7 @@
             }
             this._selectedIndex[k] = _arg_2;
             this._Str_20089(k, _arg_2, true);
-            this._effectsParamView._Str_2491(_local_5);
+            this._effectsParamView.updateView(_local_5);
         }
 
         private function _Str_20089(k:String, _arg_2:int, _arg_3:Boolean):void

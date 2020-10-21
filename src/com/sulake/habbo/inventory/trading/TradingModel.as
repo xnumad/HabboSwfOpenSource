@@ -800,7 +800,7 @@
             return this._inventory.getBoolean("talent.track.citizenship.enabled");
         }
 
-        public function _Str_2491():void
+        public function updateView():void
         {
         }
 

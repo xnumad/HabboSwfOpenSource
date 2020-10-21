@@ -280,7 +280,7 @@
             {
                 return;
             }
-            this._progressBar._Str_2491();
+            this._progressBar.updateView();
             switch (this._trackerAnimationStatus)
             {
                 case _Str_26462:

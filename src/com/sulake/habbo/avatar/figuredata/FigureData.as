@@ -48,7 +48,7 @@
             this._colors = new Dictionary();
             this._gender = _arg_2;
             this._Str_958(k);
-            this._Str_2491();
+            this.updateView();
         }
 
         public function dispose():void
@@ -196,7 +196,7 @@
             }
             if (_arg_3)
             {
-                this._Str_2491();
+                this.updateView();
             }
         }
 
@@ -222,7 +222,7 @@
             }
             if (_arg_3)
             {
-                this._Str_2491();
+                this.updateView();
             }
         }
 
@@ -274,7 +274,7 @@
             return _local_3;
         }
 
-        public function _Str_2491():void
+        public function updateView():void
         {
             this._view.update(this.getFigureString(), this._avatarEffectType, this._direction);
         }
@@ -291,7 +291,7 @@
 
         public function avatarImageReady(k:String):void
         {
-            this._Str_2491();
+            this.updateView();
         }
 
         public function set avatarEffectType(k:int):void
@@ -317,7 +317,7 @@
         public function set direction(k:int):void
         {
             this._direction = k;
-            this._Str_2491();
+            this.updateView();
         }
     }
 }

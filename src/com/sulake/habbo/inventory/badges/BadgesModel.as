@@ -86,7 +86,7 @@
             return this._Str_23733;
         }
 
-        public function _Str_2491():void
+        public function updateView():void
         {
             if (this._view != null)
             {
@@ -198,7 +198,7 @@
                 {
                     this._badges.splice(_local_2, 1);
                     this._Str_16521(_local_3);
-                    this._Str_2491();
+                    this.updateView();
                     return;
                 }
                 _local_2++;
@@ -265,7 +265,7 @@
             {
                 k = (_local_2[0] as Badge);
                 k.Selected = true;
-                this._Str_2491();
+                this.updateView();
                 return;
             }
             var _local_3:Array = this._Str_5453(_Str_6557);
@@ -273,7 +273,7 @@
             {
                 k = (_local_3[0] as Badge);
                 k.Selected = true;
-                this._Str_2491();
+                this.updateView();
             }
         }
 
@@ -381,7 +381,7 @@
             {
                 k._Str_3613 = false;
             }
-            this._Str_2491();
+            this.updateView();
             this._controller._Str_6956();
         }
 

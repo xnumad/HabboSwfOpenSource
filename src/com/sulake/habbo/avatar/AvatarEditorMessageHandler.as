@@ -154,7 +154,7 @@
             {
                 _local_2.effects.reset();
                 _local_2.figureData.avatarEffectType = k.getParser().type;
-                _local_2.figureData._Str_2491();
+                _local_2.figureData.updateView();
             }
         }
 
@@ -173,7 +173,7 @@
                 if (_local_2.figureData.avatarEffectType == _local_3)
                 {
                     _local_2.figureData.avatarEffectType = -1;
-                    _local_2.figureData._Str_2491();
+                    _local_2.figureData.updateView();
                 }
             }
         }
@@ -188,7 +188,7 @@
             if ((((_local_2) && (!(this._controller.roomDesktop == null))) && (k.getParser().userId == this._controller.roomDesktop.roomSession.ownUserRoomId)))
             {
                 _local_2.figureData.avatarEffectType = k.getParser().effectId;
-                _local_2.figureData._Str_2491();
+                _local_2.figureData.updateView();
             }
         }
 
@@ -202,7 +202,7 @@
             if (_local_2)
             {
                 _local_2.figureData.avatarEffectType = k.getParser().type;
-                _local_2.figureData._Str_2491();
+                _local_2.figureData.updateView();
             }
         }
     }

@@ -156,10 +156,10 @@
             {
                 this._selectedSongId = -1;
             }
-            this._Str_2491();
+            this.updateView();
         }
 
-        private function _Str_2491():void
+        private function updateView():void
         {
             var _local_3:int;
             var _local_4:int;
@@ -227,7 +227,7 @@
         {
             if (k.id == this._selectedSongId)
             {
-                this._Str_2491();
+                this.updateView();
             }
         }
 
@@ -236,7 +236,7 @@
             if (k.getParser()._Str_25744 == this._officialSongId)
             {
                 this._selectedSongId = k.getParser().songId;
-                this._Str_2491();
+                this.updateView();
             }
         }
     }

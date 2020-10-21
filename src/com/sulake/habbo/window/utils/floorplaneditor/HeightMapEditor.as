@@ -131,7 +131,7 @@
         {
             this._Str_23079 = this._Str_2594._Str_4964;
             this._Str_4248 = new Point(-1000, -1000);
-            this._Str_2491();
+            this.updateView();
         }
 
         private function _Str_16600(k:WindowEvent, _arg_2:IWindow):void
@@ -177,14 +177,14 @@
                         _local_6 = this._Str_23087(_local_5);
                         if ((((this._Str_14057) || (Math.abs(_local_6.x) > 0)) || (Math.abs(_local_6.y) > 0)))
                         {
-                            this._Str_2491();
+                            this.updateView();
                         }
                         this._Str_14057 = false;
                     }
                     else
                     {
                         this._Str_14762(_local_5.x, _local_5.y);
-                        this._Str_2491();
+                        this.updateView();
                     }
                     this._Str_4248 = _local_5;
                 }
@@ -266,7 +266,7 @@
             }
         }
 
-        private function _Str_2491():void
+        private function updateView():void
         {
             var _local_6:int;
             var _local_7:int;

@@ -542,7 +542,7 @@
             {
                 k._Str_15298(this.clubMemberLevel);
             }
-            this.figureData._Str_2491();
+            this.figureData.updateView();
         }
 
         public function _Str_8360():void
@@ -552,7 +552,7 @@
             {
                 k._Str_8360();
             }
-            this.figureData._Str_2491();
+            this.figureData.updateView();
         }
 
         public function _Str_24919(k:String):int
@@ -764,7 +764,7 @@
         public function setAvatarEffectType(k:int):void
         {
             this.figureData.avatarEffectType = k;
-            this.figureData._Str_2491();
+            this.figureData.updateView();
             this._avatarEffectChanged = true;
         }
 
