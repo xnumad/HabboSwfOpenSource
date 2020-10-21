@@ -360,7 +360,7 @@
             this._fadeOutActive = false;
             this._fadeOutSampleCounter = 0;
             this._finished = false;
-            this._sound.addEventListener(SampleDataEvent.SAMPLE_DATA, this._Str_18381);
+            this._sound.addEventListener(SampleDataEvent.SAMPLE_DATA, this.onSampleData);
             this._playLengthSamples = (k * SAMPLES_PER_SECOND);
             this._expectedStreamPosition = 0;
             this._bufferUnderRunCount = 0;
@@ -377,7 +377,7 @@
             }
             while ((!(this._finished)))
             {
-                this._Str_18381(k);
+                this.onSampleData(k);
             }
             return true;
         }
@@ -405,7 +405,7 @@
             }
             if (this._sound != null)
             {
-                this._sound.removeEventListener(SampleDataEvent.SAMPLE_DATA, this._Str_18381);
+                this._sound.removeEventListener(SampleDataEvent.SAMPLE_DATA, this.onSampleData);
             }
         }
 
@@ -588,7 +588,7 @@
             }
         }
 
-        private function _Str_18381(k:SampleDataEvent):void
+        private function onSampleData(k:SampleDataEvent):void
         {
             if (k.position > this._expectedStreamPosition)
             {
