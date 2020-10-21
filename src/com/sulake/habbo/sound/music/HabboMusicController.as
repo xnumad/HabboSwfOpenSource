@@ -667,7 +667,7 @@
             this._songIdPlaying = _arg_2;
             if (this._priorityPlaying <= _Str_16526)
             {
-                this._Str_24450(_local_4);
+                this.notifySongPlaying(_local_4);
             }
             if (k > HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST)
             {
@@ -677,7 +677,7 @@
             return true;
         }
 
-        private function _Str_24450(k:SongDataEntry):void
+        private function notifySongPlaying(k:SongDataEntry):void
         {
             var _local_2:* = 8000;
             var _local_3:int = getTimer();
