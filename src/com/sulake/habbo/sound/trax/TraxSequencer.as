@@ -562,7 +562,7 @@
             }
         }
 
-        private function _Str_23628():void
+        private function checkSongFinishing():void
         {
             var k:int = ((this._lengthSamples < this._playLengthSamples) ? this._lengthSamples : ((this._playLengthSamples > 0) ? this._playLengthSamples : this._lengthSamples));
             if (((this._playHead > (k + (this._latencyMs * (SAMPLES_PER_SECOND / 1000)))) && (!(this._finished))))
@@ -620,7 +620,7 @@
             {
                 this._latencyMs = (((k.position / SAMPLES_PER_SECOND) * 1000) - this._soundChannel.position);
             }
-            this._Str_23628();
+            this.checkSongFinishing();
         }
 
         private function _Str_24218(k:ByteArray, _arg_2:int):void
