@@ -22,7 +22,7 @@
         private static const BUFFER_LENGTH:uint = 0x2000;
         private static const SAMPLES_BAR_LENGTH:uint = 88000;
         private static const BAR_LENGTH:uint = 88000;
-        private static const _Str_6865:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
+        private static const MIXING_BUFFER:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
         private static const _Str_19164:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
 
         private var _disposed:Boolean = false;
@@ -523,7 +523,7 @@
                     {
                         if (_local_3 != null)
                         {
-                            _local_3._Str_17440(_Str_6865, _local_9, _local_12);
+                            _local_3._Str_17440(MIXING_BUFFER, _local_9, _local_12);
                             _local_9 = (_local_9 + _local_12);
                         }
                         else
@@ -532,7 +532,7 @@
                             while (_local_14 < _local_12)
                             {
                                 var _local_15:* = _local_9++;
-                                _Str_6865[_local_15] = 0;
+                                MIXING_BUFFER[_local_15] = 0;
                                 _local_14++;
                             }
                         }
@@ -541,7 +541,7 @@
                     {
                         if (_local_3 != null)
                         {
-                            _local_3._Str_16849(_Str_6865, _local_9, _local_12);
+                            _local_3._Str_16849(MIXING_BUFFER, _local_9, _local_12);
                         }
                         _local_9 = (_local_9 + _local_12);
                     }
@@ -677,7 +677,7 @@
             var _local_4:int;
             while (_local_4 < _arg_2)
             {
-                _local_3 = (Number(_Str_6865[_local_4]) * TraxSample._Str_11575);
+                _local_3 = (Number(MIXING_BUFFER[_local_4]) * TraxSample._Str_11575);
                 k.writeFloat(_local_3);
                 k.writeFloat(_local_3);
                 _local_4++;
@@ -695,7 +695,7 @@
                 {
                     break;
                 }
-                _local_5 = ((Number(_Str_6865[_local_6]) * TraxSample._Str_11575) * _arg_3);
+                _local_5 = ((Number(MIXING_BUFFER[_local_6]) * TraxSample._Str_11575) * _arg_3);
                 _arg_3 = (_arg_3 + _arg_4);
                 k.writeFloat(_local_5);
                 k.writeFloat(_local_5);
@@ -716,7 +716,7 @@
                 {
                     while (_local_6 < _arg_2)
                     {
-                        _local_5 = (Number(_Str_6865[_local_6]) * TraxSample._Str_11575);
+                        _local_5 = (Number(MIXING_BUFFER[_local_6]) * TraxSample._Str_11575);
                         _arg_3 = (_arg_3 + _arg_4);
                         k.writeFloat(_local_5);
                         k.writeFloat(_local_5);
