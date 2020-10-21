@@ -432,7 +432,7 @@
             this._usageTimeStamp = _arg_2;
         }
 
-        public function _Str_26183(k:int):Boolean
+        public function isUsedFromSong(k:int):Boolean
         {
             if (this._usageList == null)
             {
