@@ -293,11 +293,11 @@
             var _local_4:TraxData = new TraxData(_arg_2);
             var _local_5:TraxSequencer = new TraxSequencer(k, _local_4, this._traxSampleManager.traxSamples, events);
             _local_5.volume = this._genericVolume;
-            this._Str_21484(_local_5, _arg_3);
+            this.validateSampleAvailability(_local_5, _arg_3);
             return _local_5;
         }
 
-        private function _Str_21484(k:TraxSequencer, _arg_2:Boolean):void
+        private function validateSampleAvailability(k:TraxSequencer, _arg_2:Boolean):void
         {
             var _local_3:TraxData = k._Str_17466;
             var _local_4:Array = _local_3.getSampleIds();
@@ -472,7 +472,7 @@
                 _local_2 = this._loadingSongQueue.remove(k);
                 if (((!(_local_2 == null)) && (!(_local_2.disposed))))
                 {
-                    this._Str_21484(_local_2, true);
+                    this.validateSampleAvailability(_local_2, true);
                     if (_local_2.ready)
                     {
                         events.dispatchEvent(new TraxSongLoadEvent(TraxSongLoadEvent.TSLE_TRAX_LOAD_COMPLETE, k));
