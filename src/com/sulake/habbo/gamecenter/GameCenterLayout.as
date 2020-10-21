@@ -750,7 +750,7 @@
                     this._playNowUnlimitedButton.visible = this._gameEnabled;
                     this._playNowLimitedButton.visible = false;
                 }
-                if (this._gameCenterView._Str_18932)
+                if (this._gameCenterView.startPlaying)
                 {
                     this._Str_21892();
                 }

@@ -319,7 +319,7 @@
         {
         }
 
-        internal function get _Str_18932():Boolean
+        internal function get startPlaying():Boolean
         {
             return this._startPlaying;
         }

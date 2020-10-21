@@ -133,7 +133,7 @@
 
         private function _Str_21084(k:Event):void
         {
-            this._Str_18932();
+            this.startPlaying();
         }
 
         private function _Str_21376(k:Event):void
@@ -141,7 +141,7 @@
             this.stopPlaying();
         }
 
-        public function _Str_18932():void
+        public function startPlaying():void
         {
             if (this._isPlaying)
             {
