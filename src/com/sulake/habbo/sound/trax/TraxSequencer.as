@@ -456,7 +456,7 @@
             return k;
         }
 
-        private function _Str_23903():void
+        private function mixChannelsIntoBuffer():void
         {
             var _local_5:Map;
             var _local_6:int;
@@ -598,7 +598,7 @@
             }
             if (this.volume > 0)
             {
-                this._Str_23903();
+                this.mixChannelsIntoBuffer();
             }
             var _local_2:int = BUFFER_LENGTH;
             if ((this._lengthSamples - this._playHead) < _local_2)
