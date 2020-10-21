@@ -106,7 +106,7 @@
             return !(this._metaData["meta"] == null);
         }
 
-        public function get _Str_22931():Boolean
+        public function get metaCutMode():Boolean
         {
             return this._metaData["c"] == "1";
         }

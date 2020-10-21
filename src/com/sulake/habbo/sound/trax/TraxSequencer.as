@@ -180,7 +180,7 @@
                     this._useCutMode = false;
                     if (this._traxData.hasMetaData)
                     {
-                        this._useCutMode = this._traxData._Str_22931;
+                        this._useCutMode = this._traxData.metaCutMode;
                     }
                     if (this._useCutMode)
                     {
