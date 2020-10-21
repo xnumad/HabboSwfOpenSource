@@ -142,7 +142,7 @@
             }
         }
 
-        public function _Str_17440(k:Vector.<int>, _arg_2:int, _arg_3:int, _arg_4:int):int
+        public function setSample(k:Vector.<int>, _arg_2:int, _arg_3:int, _arg_4:int):int
         {
             var _local_8:int;
             var _local_9:int;
