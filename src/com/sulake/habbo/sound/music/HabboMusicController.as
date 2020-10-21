@@ -502,7 +502,7 @@
                 _local_4 = (_local_3.soundObject as TraxSequencer);
                 if ((((!(_local_3.id == this._songIdPlaying)) && (!(_local_4 == null))) && (_local_4.ready)))
                 {
-                    _local_5 = _local_4._Str_17466._Str_18878();
+                    _local_5 = _local_4._Str_17466.getSampleIds();
                     _local_6 = 0;
                     while (_local_6 < k.length)
                     {
@@ -537,7 +537,7 @@
                         _local_5 = (_local_4.soundObject as TraxSequencer);
                         if (_local_5 != null)
                         {
-                            k = k.concat(_local_5._Str_17466._Str_18878());
+                            k = k.concat(_local_5._Str_17466.getSampleIds());
                         }
                     }
                 }

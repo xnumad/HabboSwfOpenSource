@@ -76,7 +76,7 @@
             return this._channels;
         }
 
-        public function _Str_18878():Array
+        public function getSampleIds():Array
         {
             var _local_3:TraxChannel;
             var _local_4:int;
