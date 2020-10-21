@@ -7,7 +7,7 @@
 
     public class HabboSoundBase implements IHabboSound 
     {
-        private var _Str_3467:SoundChannel = null;
+        private var _soundChannel:SoundChannel = null;
         private var _Str_3136:Boolean;
         private var _Str_3026:Number;
         private var _Str_5454:int;
@@ -29,12 +29,12 @@
 
         protected function _Str_15495():SoundChannel
         {
-            return this._Str_3467;
+            return this._soundChannel;
         }
 
         protected function _Str_20695(k:SoundChannel):void
         {
-            this._Str_3467 = k;
+            this._soundChannel = k;
         }
 
         protected function _Str_22198(k:Boolean):void
@@ -45,23 +45,23 @@
         public function dispose():void
         {
             this.stop();
-            this._Str_3467 = null;
+            this._soundChannel = null;
             this._Str_4166 = null;
         }
 
         public function play(k:Number=0):Boolean
         {
             this._Str_3136 = false;
-            this._Str_3467 = this._Str_4166.play(0, this._Str_5454);
+            this._soundChannel = this._Str_4166.play(0, this._Str_5454);
             this._Str_3206 = this._Str_3026;
             return true;
         }
 
         public function stop():Boolean
         {
-            if (this._Str_3467)
+            if (this._soundChannel)
             {
-                this._Str_3467.stop();
+                this._soundChannel.stop();
             }
             return true;
         }
@@ -79,15 +79,15 @@
 
         protected function _Str_7399(k:Number):void
         {
-            if (this._Str_3467 != null)
+            if (this._soundChannel != null)
             {
-                this._Str_3467.soundTransform = new SoundTransform(k);
+                this._soundChannel.soundTransform = new SoundTransform(k);
             }
         }
 
         public function get position():Number
         {
-            return this._Str_3467.position;
+            return this._soundChannel.position;
         }
 
         public function set position(k:Number):void
