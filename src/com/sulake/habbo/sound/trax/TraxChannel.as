@@ -5,9 +5,9 @@
         private var _id:int;
         private var _items:Array;
 
-        public function TraxChannel(k:int)
+        public function TraxChannel(id:int)
         {
-            this._id = k;
+            this._id = id;
             this._items = [];
         }
 
