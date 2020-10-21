@@ -726,28 +726,28 @@
 
         private function onSoundMachineInit(k:Event):void
         {
-            this._Str_14053();
+            this.disposeRoomPlaylist();
             this._roomItemPlaylist = (new SoundMachinePlayListController(this._soundManager, this, this._events, this._roomEvents, this._connection) as IPlayListController);
         }
 
         private function onSoundMachineDispose(k:Event):void
         {
-            this._Str_14053();
+            this.disposeRoomPlaylist();
         }
 
         private function onJukeboxInit(k:Event):void
         {
-            this._Str_14053();
+            this.disposeRoomPlaylist();
             this._roomItemPlaylist = (new JukeboxPlayListController(this._soundManager, this, this._events, this._connection) as IPlayListController);
             this._connection.send(new GetNowPlayingMessageComposer());
         }
 
         private function onJukeboxDispose(k:Event):void
         {
-            this._Str_14053();
+            this.disposeRoomPlaylist();
         }
 
-        private function _Str_14053():void
+        private function disposeRoomPlaylist():void
         {
             if (this._roomItemPlaylist != null)
             {
