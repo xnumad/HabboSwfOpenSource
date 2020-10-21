@@ -45,7 +45,7 @@
             this._musicController = _arg_2;
             this._messageEvents = [];
             this._messageEvents.push(new PlayListMessageEvent(this.onPlayListMessage));
-            this._messageEvents.push(new PlayListSongAddedMessageEvent(this._Str_23767));
+            this._messageEvents.push(new PlayListSongAddedMessageEvent(this.onPlayListSongAddedMessage));
             for each (_local_6 in this._messageEvents)
             {
                 this._connection.addMessageEvent(_local_6);
@@ -379,7 +379,7 @@
             }
         }
 
-        private function _Str_23767(k:IMessageEvent):void
+        private function onPlayListSongAddedMessage(k:IMessageEvent):void
         {
             var _local_2:PlayListSongAddedMessageEvent = (k as PlayListSongAddedMessageEvent);
             var _local_3:PlayListSongAddedMessageParser = (_local_2.getParser() as PlayListSongAddedMessageParser);
