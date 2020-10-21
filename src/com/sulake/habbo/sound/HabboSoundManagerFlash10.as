@@ -167,7 +167,7 @@
             _local_3.play();
         }
 
-        public function _Str_20382(k:String, _arg_2:Number):IHabboSound
+        public function playSoundAtPitch(k:String, _arg_2:Number):IHabboSound
         {
             var _local_3:Sound = this._Str_21864(k);
             if (_local_3 == null)
@@ -495,7 +495,7 @@
             }
             if (k.type == RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH)
             {
-                this._Str_20382(_local_2.soundId, _local_2._Str_4740);
+                this.playSoundAtPitch(_local_2.soundId, _local_2._Str_4740);
             }
         }
 
