@@ -430,7 +430,7 @@
             return Math.ceil((k / SAMPLES_BAR_LENGTH));
         }
 
-        private function _Str_22396():Array
+        private function getChannelSequenceOffsets():Array
         {
             var _local_2:int;
             var _local_3:int;
@@ -472,7 +472,7 @@
             {
                 return;
             }
-            var k:Array = this._Str_22396();
+            var k:Array = this.getChannelSequenceOffsets();
             var _local_2:int = this._sequence.length;
             var _local_3:TraxChannelSample;
             var _local_4:int = (_local_2 - 1);
