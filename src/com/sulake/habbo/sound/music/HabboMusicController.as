@@ -113,7 +113,7 @@
             Logger.log((("Song " + k.id) + " finished playing"));
             if (this.getSongIdPlayingAtPriority(this._priorityPlaying) == k.id)
             {
-                if (((this._Str_10224() == this._priorityPlaying) && (this.getSongRequestCountAtPriority(this._priorityPlaying) == this._requestNumberPlaying)))
+                if (((this.getTopRequestPriority() == this._priorityPlaying) && (this.getSongRequestCountAtPriority(this._priorityPlaying) == this._requestNumberPlaying)))
                 {
                     this._Str_16722(this._priorityPlaying);
                 }
@@ -236,7 +236,7 @@
             return this._songRequestCountsPerPriority[k];
         }
 
-        private function _Str_10224():int
+        private function getTopRequestPriority():int
         {
             var k:int = (this._songRequestsPerPriority.length - 1);
             while (k >= 0)
@@ -311,7 +311,7 @@
             this._priorityPlaying = -1;
             this._songIdPlaying = -1;
             this._requestNumberPlaying = -1;
-            var k:int = this._Str_10224();
+            var k:int = this.getTopRequestPriority();
             var _local_2:int = k;
             while (_local_2 >= 0)
             {
@@ -327,7 +327,7 @@
         public function stop(k:int):void
         {
             var _local_2:* = (k == this._priorityPlaying);
-            var _local_3:* = (this._Str_10224() == k);
+            var _local_3:* = (this.getTopRequestPriority() == k);
             if (_local_2)
             {
                 this._Str_16722(k);
@@ -408,7 +408,7 @@
         {
             var _local_3:int;
             Logger.log(("Song loaded : " + k));
-            var _local_2:int = this._Str_10224();
+            var _local_2:int = this.getTopRequestPriority();
             if (_local_2 >= 0)
             {
                 _local_3 = this.getSongIdRequestedAtPriority(_local_2);
@@ -589,7 +589,7 @@
                     _local_10 = new SongDataEntry(_local_6.id, _local_6.length, _local_6.name, _local_6.creator, _local_9);
                     _local_10._Str_7824 = _local_6.data;
                     this._availableSongs.add(_local_6.id, _local_10);
-                    _local_11 = this._Str_10224();
+                    _local_11 = this.getTopRequestPriority();
                     _local_12 = this.getSongIdRequestedAtPriority(_local_11);
                     if ((((!(_local_9 == null)) && (_local_9.ready)) && (_local_6.id == _local_12)))
                     {
