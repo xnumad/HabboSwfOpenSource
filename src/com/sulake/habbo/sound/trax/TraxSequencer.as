@@ -156,7 +156,7 @@
         {
             if (!this._disposed)
             {
-                this._Str_16744();
+                this.stopImmediately();
                 this._traxData = null;
                 this._samples = null;
                 this._sequence = null;
@@ -350,7 +350,7 @@
             this._Str_21321();
             if (this._soundChannel != null)
             {
-                this._Str_16744();
+                this.stopImmediately();
             }
             if (this._fadeInLengthSamples > 0)
             {
@@ -395,7 +395,7 @@
             return true;
         }
 
-        private function _Str_16744():void
+        private function stopImmediately():void
         {
             this._Str_24945();
             if (this._soundChannel != null)
@@ -742,7 +742,7 @@
 
         private function _Str_18840():void
         {
-            this._Str_16744();
+            this.stopImmediately();
             this._events.dispatchEvent(new SoundControllerEvent(SoundControllerEvent.TRAX_SONG_COMPLETE, this._songId));
         }
 
