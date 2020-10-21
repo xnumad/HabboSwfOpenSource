@@ -571,11 +571,11 @@
                 if (this._stopTimer != null)
                 {
                     this._stopTimer.reset();
-                    this._stopTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_17559);
+                    this._stopTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onPlayingComplete);
                 }
                 this._stopTimer = new Timer(2, 1);
                 this._stopTimer.start();
-                this._stopTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_17559);
+                this._stopTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onPlayingComplete);
             }
             else
             {
@@ -726,7 +726,7 @@
             }
         }
 
-        private function _Str_17559(k:TimerEvent):void
+        private function onPlayingComplete(k:TimerEvent):void
         {
             if (this._finished)
             {
@@ -761,7 +761,7 @@
             if (this._stopTimer != null)
             {
                 this._stopTimer.reset();
-                this._stopTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_17559);
+                this._stopTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onPlayingComplete);
                 this._stopTimer = null;
             }
         }
