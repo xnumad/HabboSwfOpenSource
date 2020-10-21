@@ -263,7 +263,7 @@
             this._songRequestCountsPerPriority[k] = (this._songRequestCountsPerPriority[k] + 1);
         }
 
-        private function _Str_22961(k:int, _arg_2:Boolean=true):Boolean
+        private function processSongEntryForPlaying(k:int, _arg_2:Boolean=true):Boolean
         {
             var _local_3:SongDataEntry = this._Str_9498(k);
             if (_local_3 == null)
@@ -290,7 +290,7 @@
             {
                 return false;
             }
-            if (!this._Str_22961(k))
+            if (!this.processSongEntryForPlaying(k))
             {
                 return false;
             }
