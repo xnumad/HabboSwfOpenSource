@@ -103,7 +103,7 @@
             this._ready = k;
         }
 
-        public function get _Str_21060():Boolean
+        public function get finished():Boolean
         {
             return this._finished;
         }

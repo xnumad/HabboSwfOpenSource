@@ -104,7 +104,7 @@
             return !(this._soundObject.isBuffering);
         }
 
-        public function get _Str_21060():Boolean
+        public function get finished():Boolean
         {
             return !(this._complete);
         }

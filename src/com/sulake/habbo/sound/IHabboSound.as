@@ -10,7 +10,7 @@
         function get position():Number;
         function get length():Number;
         function get ready():Boolean;
-        function get _Str_21060():Boolean;
+        function get finished():Boolean;
         function get fadeOutSeconds():Number;
         function set fadeOutSeconds(_arg_1:Number):void;
         function get fadeInSeconds():Number;
