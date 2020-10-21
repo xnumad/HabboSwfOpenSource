@@ -215,11 +215,11 @@
             {
                 return 1;
             }
-            if (k._Str_14695 < _arg_2._Str_14695)
+            if (k.usageTimeStamp < _arg_2.usageTimeStamp)
             {
                 return -1;
             }
-            if (k._Str_14695 > _arg_2._Str_14695)
+            if (k.usageTimeStamp > _arg_2.usageTimeStamp)
             {
                 return 1;
             }

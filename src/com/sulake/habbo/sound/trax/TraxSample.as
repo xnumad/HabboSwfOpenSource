@@ -123,7 +123,7 @@
             return this._usageList.length;
         }
 
-        public function get _Str_14695():int
+        public function get usageTimeStamp():int
         {
             return this._usageTimeStamp;
         }
