@@ -658,7 +658,7 @@
                             }
                         }
                     }
-                    this._Str_25194(k, _arg_2, _local_6, _local_5);
+                    this.writeMixingBufferToOutputStreamWithFade(k, _arg_2, _local_6, _local_5);
                 }
             }
             var _local_3:Number = 0;
@@ -684,7 +684,7 @@
             }
         }
 
-        private function _Str_25194(k:ByteArray, _arg_2:int, _arg_3:Number, _arg_4:Number):void
+        private function writeMixingBufferToOutputStreamWithFade(k:ByteArray, _arg_2:int, _arg_3:Number, _arg_4:Number):void
         {
             var _local_5:Number = 0;
             var _local_6:int;
