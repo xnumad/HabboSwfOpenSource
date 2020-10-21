@@ -118,12 +118,12 @@
             this._fadeOutLengthSamples = int((k * _Str_4502));
         }
 
-        public function get _Str_6653():Number
+        public function get fadeInSeconds():Number
         {
             return this._fadeInLengthSamples / _Str_4502;
         }
 
-        public function set _Str_6653(k:Number):void
+        public function set fadeInSeconds(k:Number):void
         {
             this._fadeInLengthSamples = int((k * _Str_4502));
         }

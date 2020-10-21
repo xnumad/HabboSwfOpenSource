@@ -40,7 +40,7 @@
             return this._playLength;
         }
 
-        public function get _Str_6653():Number
+        public function get fadeInSeconds():Number
         {
             return this._fadeInSeconds;
         }

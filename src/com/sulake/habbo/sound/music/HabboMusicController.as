@@ -647,7 +647,7 @@
             {
                 _local_6 = _local_10.startPos;
                 _local_7 = _local_10.playLength;
-                _local_8 = _local_10._Str_6653;
+                _local_8 = _local_10.fadeInSeconds;
                 _local_9 = _local_10._Str_4908;
             }
             if (_local_6 >= (_local_4.length / 1000))
@@ -658,7 +658,7 @@
             {
                 _local_6 = 0;
             }
-            _local_5._Str_6653 = _local_8;
+            _local_5.fadeInSeconds = _local_8;
             _local_5._Str_4908 = _local_9;
             _local_5.position = _local_6;
             _local_5.play(_local_7);

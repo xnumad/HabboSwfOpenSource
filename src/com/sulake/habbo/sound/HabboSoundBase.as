@@ -118,12 +118,12 @@
         {
         }
 
-        public function get _Str_6653():Number
+        public function get fadeInSeconds():Number
         {
             return 0;
         }
 
-        public function set _Str_6653(k:Number):void
+        public function set fadeInSeconds(k:Number):void
         {
         }
 

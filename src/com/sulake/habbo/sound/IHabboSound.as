@@ -13,7 +13,7 @@
         function get _Str_21060():Boolean;
         function get _Str_4908():Number;
         function set _Str_4908(_arg_1:Number):void;
-        function get _Str_6653():Number;
-        function set _Str_6653(_arg_1:Number):void;
+        function get fadeInSeconds():Number;
+        function set fadeInSeconds(_arg_1:Number):void;
     }
 }
