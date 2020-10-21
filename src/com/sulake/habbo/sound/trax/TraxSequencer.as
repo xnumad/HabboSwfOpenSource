@@ -347,7 +347,7 @@
             {
                 return false;
             }
-            this._Str_21321();
+            this.removeFadeoutStopTimer();
             if (this._soundChannel != null)
             {
                 this.stopImmediately();
@@ -736,7 +736,7 @@
 
         private function onFadeOutComplete(k:TimerEvent):void
         {
-            this._Str_21321();
+            this.removeFadeoutStopTimer();
             this.playingComplete();
         }
 
@@ -746,7 +746,7 @@
             this._events.dispatchEvent(new SoundControllerEvent(SoundControllerEvent.TRAX_SONG_COMPLETE, this._songId));
         }
 
-        private function _Str_21321():void
+        private function removeFadeoutStopTimer():void
         {
             if (this._fadeoutStopTimer != null)
             {
