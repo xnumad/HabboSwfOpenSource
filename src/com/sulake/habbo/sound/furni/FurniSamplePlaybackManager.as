@@ -90,7 +90,7 @@
                 {
                     this._initialPitch.remove(k.objectId);
                 }
-                this._initialPitch.add(k.objectId, k._Str_4740);
+                this._initialPitch.add(k.objectId, k.pitch);
             }
         }
 
@@ -111,7 +111,7 @@
         {
             if (this._loadedSamples.getValue(k.objectId) != null)
             {
-                this._Str_25082(k.objectId, k._Str_4740);
+                this._Str_25082(k.objectId, k.pitch);
             }
         }
 

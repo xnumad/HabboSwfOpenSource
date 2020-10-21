@@ -1605,10 +1605,10 @@
                 switch (k.type)
                 {
                     case RoomObjectPlaySoundIdEvent.ROPSIE_PLAY_SOUND:
-                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectPlaySoundEvent(RoomEngineObjectPlaySoundEvent.PLAY_SOUND, _arg_2, k.objectId, _local_3, k.soundId, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectPlaySoundEvent(RoomEngineObjectPlaySoundEvent.PLAY_SOUND, _arg_2, k.objectId, _local_3, k.soundId, k.pitch));
                         return;
                     case RoomObjectPlaySoundIdEvent.ROPSIE_PLAY_SOUND_AT_PITCH:
-                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectPlaySoundEvent(RoomEngineObjectPlaySoundEvent.PLAY_SOUND_AT_PITCH, _arg_2, k.objectId, _local_3, k.soundId, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectPlaySoundEvent(RoomEngineObjectPlaySoundEvent.PLAY_SOUND_AT_PITCH, _arg_2, k.objectId, _local_3, k.soundId, k.pitch));
                         return;
                 }
             }
@@ -1626,16 +1626,16 @@
                 switch (k.type)
                 {
                     case RoomObjectSamplePlaybackEvent.ROPSPE_ROOM_OBJECT_INITIALIZED:
-                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_ROOM_OBJECT_INITIALIZED, _arg_2, k.objectId, _local_3, k._Str_6992, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_ROOM_OBJECT_INITIALIZED, _arg_2, k.objectId, _local_3, k._Str_6992, k.pitch));
                         return;
                     case RoomObjectSamplePlaybackEvent.ROPSPE_ROOM_OBJECT_DISPOSED:
-                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_ROOM_OBJECT_DISPOSED, _arg_2, k.objectId, _local_3, k._Str_6992, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_ROOM_OBJECT_DISPOSED, _arg_2, k.objectId, _local_3, k._Str_6992, k.pitch));
                         return;
                     case RoomObjectSamplePlaybackEvent.ROPSPE_PLAY_SAMPLE:
-                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_PLAY_SAMPLE, _arg_2, k.objectId, _local_3, k._Str_6992, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_PLAY_SAMPLE, _arg_2, k.objectId, _local_3, k._Str_6992, k.pitch));
                         return;
                     case RoomObjectSamplePlaybackEvent.ROPSPE_CHANGE_PITCH:
-                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_CHANGE_PITCH, _arg_2, k.objectId, _local_3, k._Str_6992, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_CHANGE_PITCH, _arg_2, k.objectId, _local_3, k._Str_6992, k.pitch));
                         return;
                 }
             }

@@ -495,7 +495,7 @@
             }
             if (k.type == RoomEngineObjectPlaySoundEvent.PLAY_SOUND_AT_PITCH)
             {
-                this.playSoundAtPitch(_local_2.soundId, _local_2._Str_4740);
+                this.playSoundAtPitch(_local_2.soundId, _local_2.pitch);
             }
         }
 

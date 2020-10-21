@@ -24,7 +24,7 @@
             return this._sampleId;
         }
 
-        public function get _Str_4740():Number
+        public function get pitch():Number
         {
             return this._pitch;
         }
