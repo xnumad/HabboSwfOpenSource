@@ -165,7 +165,7 @@
             if (this._currentEntryId == k)
             {
                 this._Str_15819(this._currentEntryId);
-                _local_2 = this._Str_20355();
+                _local_2 = this.getNextEntry();
                 if (_local_2 != null)
                 {
                     this._musicController.addSongInfoRequest(_local_2.id);
@@ -232,7 +232,7 @@
 
         private function _Str_20412():void
         {
-            var k:SongDataEntry = this._Str_20355();
+            var k:SongDataEntry = this.getNextEntry();
             if (k != null)
             {
                 this._currentEntryId = k.id;
@@ -255,7 +255,7 @@
             }
         }
 
-        private function _Str_20355():SongDataEntry
+        private function getNextEntry():SongDataEntry
         {
             var _local_2:SongDataEntry;
             if (((this._playListEntries == null) || (this._playListEntries.length == 0)))
