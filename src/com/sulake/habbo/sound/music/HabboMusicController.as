@@ -265,7 +265,7 @@
 
         private function processSongEntryForPlaying(k:int, _arg_2:Boolean=true):Boolean
         {
-            var _local_3:SongDataEntry = this._Str_9498(k);
+            var _local_3:SongDataEntry = this.getSongDataEntry(k);
             if (_local_3 == null)
             {
                 this.addSongInfoRequest(k);
@@ -352,7 +352,7 @@
                 _local_2 = this.getSongIdPlayingAtPriority(k);
                 if (_local_2 >= 0)
                 {
-                    _local_3 = this._Str_9498(_local_2);
+                    _local_3 = this.getSongDataEntry(_local_2);
                     this.stopSongDataEntry(_local_3);
                     return true;
                 }
@@ -374,7 +374,7 @@
             }
         }
 
-        private function _Str_9498(k:int):SongDataEntry
+        private function getSongDataEntry(k:int):SongDataEntry
         {
             var _local_2:SongDataEntry;
             if (this._availableSongs != null)
@@ -394,7 +394,7 @@
                 _local_3 = this.getSongIdPlayingAtPriority(_local_2);
                 if (_local_3 >= 0)
                 {
-                    _local_4 = (this._Str_9498(_local_3) as SongDataEntry);
+                    _local_4 = (this.getSongDataEntry(_local_3) as SongDataEntry);
                     if (((!(_local_4 == null)) && (!(_local_4._Str_3502 == null))))
                     {
                         _local_4._Str_3502._Str_3206 = k;
@@ -440,7 +440,7 @@
 
         public function getSongInfo(k:int):ISongInfo
         {
-            var _local_2:SongDataEntry = this._Str_9498(k);
+            var _local_2:SongDataEntry = this.getSongDataEntry(k);
             if (_local_2 == null)
             {
                 this.requestSongInfoWithoutSamples(k);
@@ -577,7 +577,7 @@
             while (_local_5 < _local_4.length)
             {
                 _local_6 = _local_4[_local_5];
-                _local_7 = (this._Str_9498(_local_6.id) == null);
+                _local_7 = (this.getSongDataEntry(_local_6.id) == null);
                 _local_8 = this.areSamplesRequested(_local_6.id);
                 if (_local_7)
                 {
@@ -621,7 +621,7 @@
             {
                 _local_3 = true;
             }
-            var _local_4:SongDataEntry = this._Str_9498(_arg_2);
+            var _local_4:SongDataEntry = this.getSongDataEntry(_arg_2);
             if (_local_4 == null)
             {
                 Logger.log((("WARNING: Unable to find song entry id " + _arg_2) + " that was supposed to be loaded."));
