@@ -578,7 +578,7 @@
             {
                 _local_6 = _local_4[_local_5];
                 _local_7 = (this._Str_9498(_local_6.id) == null);
-                _local_8 = this._Str_24413(_local_6.id);
+                _local_8 = this.areSamplesRequested(_local_6.id);
                 if (_local_7)
                 {
                     _local_9 = null;
@@ -689,7 +689,7 @@
             }
         }
 
-        private function _Str_24413(k:int):Boolean
+        private function areSamplesRequested(k:int):Boolean
         {
             if (this._requestedSongs.getValue(k) == null)
             {
