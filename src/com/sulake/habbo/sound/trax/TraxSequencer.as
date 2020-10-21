@@ -631,7 +631,7 @@
             {
                 if (((!(this._fadeInActive)) && (!(this._fadeOutActive))))
                 {
-                    this._Str_25471(k, _arg_2);
+                    this.writeMixingBufferToOutputStream(k, _arg_2);
                 }
                 else
                 {
@@ -671,7 +671,7 @@
             }
         }
 
-        private function _Str_25471(k:ByteArray, _arg_2:int):void
+        private function writeMixingBufferToOutputStream(k:ByteArray, _arg_2:int):void
         {
             var _local_3:Number = 0;
             var _local_4:int;
