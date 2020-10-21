@@ -200,7 +200,7 @@
                 return false;
             }
             this._data = (k as RoomVisualizationData);
-            this._data._Str_6703(assetCollection);
+            this._data.initializeAssetCollection(assetCollection);
             return true;
         }
 

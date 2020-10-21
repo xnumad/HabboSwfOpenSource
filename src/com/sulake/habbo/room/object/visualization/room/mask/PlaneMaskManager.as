@@ -53,7 +53,7 @@
             this._data = k;
         }
 
-        public function _Str_6703(k:IGraphicAssetCollection):void
+        public function initializeAssetCollection(k:IGraphicAssetCollection):void
         {
             if (this.data == null)
             {

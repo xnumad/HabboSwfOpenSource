@@ -147,17 +147,17 @@
             return true;
         }
 
-        public function _Str_6703(k:IGraphicAssetCollection):void
+        public function initializeAssetCollection(k:IGraphicAssetCollection):void
         {
             if (this._initialized)
             {
                 return;
             }
-            this._wallRasterizer._Str_6703(k);
-            this._floorRasterizer._Str_6703(k);
-            this._wallAdRasterizer._Str_6703(k);
-            this._landscapeRasterizer._Str_6703(k);
-            this._maskManager._Str_6703(k);
+            this._wallRasterizer.initializeAssetCollection(k);
+            this._floorRasterizer.initializeAssetCollection(k);
+            this._wallAdRasterizer.initializeAssetCollection(k);
+            this._landscapeRasterizer.initializeAssetCollection(k);
+            this._maskManager.initializeAssetCollection(k);
             this._initialized = true;
         }
 
