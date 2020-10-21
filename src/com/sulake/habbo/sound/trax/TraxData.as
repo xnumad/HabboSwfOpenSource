@@ -62,7 +62,7 @@
                         }
                         _local_15 = int(_local_14[0]);
                         _local_16 = int(_local_14[1]);
-                        _local_12._Str_25570(new TraxChannelItem(_local_15, _local_16));
+                        _local_12.addChannelItem(new TraxChannelItem(_local_15, _local_16));
                         _local_13++;
                     }
                     this._channels.push(_local_12);

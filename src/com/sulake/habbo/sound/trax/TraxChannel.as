@@ -16,7 +16,7 @@
             return this._items.length;
         }
 
-        public function _Str_25570(k:TraxChannelItem):void
+        public function addChannelItem(k:TraxChannelItem):void
         {
             this._items.push(k);
         }
