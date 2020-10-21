@@ -34,7 +34,7 @@
     public class HabboMusicController implements IHabboMusicController, IDisposable 
     {
         public static const SKIP_POSITION_SET:int = -1;
-        private static const _Str_16526:int = HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST;//0
+        private static const MAXIMUM_NOTIFY_PRIORITY:int = HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST;//0
 
         private var _soundManager:HabboSoundManagerFlash10;
         private var _connection:IConnection;
@@ -665,7 +665,7 @@
             this._priorityPlaying = k;
             this._requestNumberPlaying = this._Str_19565(k);
             this._songIdPlaying = _arg_2;
-            if (this._priorityPlaying <= _Str_16526)
+            if (this._priorityPlaying <= MAXIMUM_NOTIFY_PRIORITY)
             {
                 this.notifySongPlaying(_local_4);
             }
