@@ -328,7 +328,7 @@
         {
             this._musicInventoryView.refresh();
             this._Str_18647();
-            this._myMusicScrollBar.visible = (this._musicInventoryView._Str_11307 > _Str_17484);
+            this._myMusicScrollBar.visible = (this._musicInventoryView.itemCount > _Str_17484);
         }
 
         public function onNowPlayingChanged(k:_Str_3301):void

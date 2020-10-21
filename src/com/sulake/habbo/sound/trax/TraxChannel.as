@@ -11,7 +11,7 @@
             this._items = [];
         }
 
-        public function get _Str_11307():int
+        public function get itemCount():int
         {
             return this._items.length;
         }

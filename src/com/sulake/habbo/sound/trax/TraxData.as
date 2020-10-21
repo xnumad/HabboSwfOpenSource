@@ -87,7 +87,7 @@
             {
                 _local_3 = (this._channels[_local_2] as TraxChannel);
                 _local_4 = 0;
-                while (_local_4 < _local_3._Str_11307)
+                while (_local_4 < _local_3.itemCount)
                 {
                     _local_5 = _local_3.getItem(_local_4);
                     if (k.indexOf(_local_5.id) == -1)

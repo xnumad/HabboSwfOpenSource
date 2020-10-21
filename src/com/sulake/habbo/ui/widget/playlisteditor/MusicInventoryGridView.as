@@ -29,7 +29,7 @@
             this._musicController.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
         }
 
-        public function get _Str_11307():int
+        public function get itemCount():int
         {
             return this._items.length;
         }
