@@ -853,7 +853,7 @@
                 }
                 if (_local_5.category == FurniCategory.TRAX_SONG)
                 {
-                    _local_8 = this._Str_19943(_local_4, _local_8, true, _arg_2.id, _arg_3);
+                    _local_8 = this.getTraxSongFurniName(_local_4, _local_8, true, _arg_2.id, _arg_3);
                 }
                 this._popupCtrl.updateContent((_arg_2 as IWindowContainer), _local_8, _local_7, _local_4._Str_3205().stuffData, ItemPopupCtrl._Str_9535, this.isExternalImagetype(_local_5));
                 this._popupCtrl.show();
@@ -877,7 +877,7 @@
             return (_local_2) && (_local_2.isExternalImageType);
         }
 
-        private function _Str_19943(k:GroupItem, _arg_2:String, _arg_3:Boolean, _arg_4:int=-1, _arg_5:Boolean=false):String
+        private function getTraxSongFurniName(k:GroupItem, _arg_2:String, _arg_3:Boolean, _arg_4:int=-1, _arg_5:Boolean=false):String
         {
             var _local_6:IFurnitureItem = k._Str_3205();
             var _local_7:ISongInfo = this._soundManager._Str_2774.getSongInfo(_local_6._Str_2794);
@@ -935,7 +935,7 @@
                 {
                     if ((((_local_2) && (this._tradingModel._Str_5319.getWithIndex(_local_4) == _local_3)) || ((!(_local_2)) && (this._tradingModel._Str_5629.getWithIndex(_local_4) == _local_3))))
                     {
-                        _local_6 = this._Str_19943(_local_3, "", false);
+                        _local_6 = this.getTraxSongFurniName(_local_3, "", false);
                         _local_7 = this._tradingModel._Str_9836(_local_5);
                         _local_8 = ((_local_2) ? (this._Str_18316().getGridItemAt(_local_4)) : this._Str_16996().getGridItemAt(_local_4));
                         this._popupCtrl.updateContent((_local_8 as IWindowContainer), _local_6, _local_7);
