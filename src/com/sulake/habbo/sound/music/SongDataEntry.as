@@ -47,7 +47,7 @@
             return this._soundObject;
         }
 
-        public function get _Str_7824():String
+        public function get songData():String
         {
             return this._songData;
         }
@@ -62,7 +62,7 @@
             this._soundObject = k;
         }
 
-        public function set _Str_7824(k:String):void
+        public function set songData(k:String):void
         {
             this._songData = k;
         }

@@ -8,7 +8,7 @@
         function get length():int;
         function get name():String;
         function get creator():String;
-        function get _Str_7824():String;
+        function get songData():String;
         function get _Str_3502():IHabboSound;
     }
 }

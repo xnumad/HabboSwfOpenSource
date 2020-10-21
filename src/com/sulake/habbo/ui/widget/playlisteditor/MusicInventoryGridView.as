@@ -89,7 +89,7 @@
                 if (_local_9 != null)
                 {
                     _local_10 = _local_9.name;
-                    _local_11 = this._widget._Str_18331(_local_9._Str_7824);
+                    _local_11 = this._widget._Str_18331(_local_9.songData);
                 }
                 if (_local_3.indexOf(_local_7) == -1)
                 {
@@ -214,7 +214,7 @@
                 if (_local_2 != null)
                 {
                     _local_3 = _local_2.name;
-                    _local_4 = this._widget._Str_18331(_local_2._Str_7824);
+                    _local_4 = this._widget._Str_18331(_local_2.songData);
                     _local_5 = this._items[k.id];
                     if (_local_5 != null)
                     {

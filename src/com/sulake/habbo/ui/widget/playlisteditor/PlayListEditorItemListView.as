@@ -59,7 +59,7 @@
             {
                 _local_4 = _local_3.name;
                 _local_5 = _local_3.creator;
-                _local_6 = this._widget._Str_18331(_local_3._Str_7824);
+                _local_6 = this._widget._Str_18331(_local_3.songData);
                 _local_7 = new PlayListEditorItem(this._widget, _local_4, _local_5, _local_6);
                 _local_7.window.procedure = this._Str_13002;
                 _local_7._Str_25542.procedure = this._Str_13002;
