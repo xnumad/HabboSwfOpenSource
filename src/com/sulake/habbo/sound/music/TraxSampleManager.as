@@ -164,7 +164,7 @@
             var _local_12:TraxSample;
             var k:uint;
             var _local_2:Array = [];
-            var _local_3:Array = this._soundManager._Str_2774.samplesIdsInUse;
+            var _local_3:Array = this._soundManager.musicController.samplesIdsInUse;
             var _local_4:int;
             while (_local_4 < this._traxSamples.length)
             {
@@ -200,7 +200,7 @@
                         _local_12.dispose();
                         this._traxSamples.remove(_local_11);
                     }
-                    this._soundManager._Str_2774.samplesUnloaded(_local_7);
+                    this._soundManager.musicController.samplesUnloaded(_local_7);
                 }
             }
         }

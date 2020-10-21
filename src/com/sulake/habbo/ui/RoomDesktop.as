@@ -759,7 +759,7 @@
                     _local_3 = true;
                     break;
                 case RoomWidgetEnum.INFOSTAND:
-                    widgetHandler = new InfoStandWidgetHandler(this._soundManager._Str_2774);
+                    widgetHandler = new InfoStandWidgetHandler(this._soundManager.musicController);
                     break;
                 case RoomWidgetEnum.CHAT_INPUT_WIDGET:
                     _local_3 = true;

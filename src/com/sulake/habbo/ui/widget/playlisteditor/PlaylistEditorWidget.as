@@ -138,7 +138,7 @@
         {
             var _local_3:int;
             var _local_4:RoomWidgetPlayListModificationMessage;
-            var _local_2:IPlayListController = this._soundManager._Str_2774.getRoomItemPlaylist();
+            var _local_2:IPlayListController = this._soundManager.musicController.getRoomItemPlaylist();
             if (_local_2 != null)
             {
                 _local_3 = _local_2.length;
@@ -176,21 +176,21 @@
         public function _Str_25259(k:int):void
         {
             var _local_3:ISongInfo;
-            var _local_2:int = this._soundManager._Str_2774.getSongIdPlayingAtPriority(HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST);
+            var _local_2:int = this._soundManager.musicController.getSongIdPlayingAtPriority(HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST);
             if (_local_2 != -1)
             {
-                _local_3 = this._soundManager._Str_2774.getSongInfo(_local_2);
+                _local_3 = this._soundManager.musicController.getSongInfo(_local_2);
                 if (_local_3.soundObject != null)
                 {
                     _local_3.soundObject.fadeOutSeconds = 0;
                 }
             }
-            this._soundManager._Str_2774.playSong(k, HabboMusicPrioritiesEnum.PRIORITY_SONG_PLAY, 0, 0, 0, 0);
+            this._soundManager.musicController.playSong(k, HabboMusicPrioritiesEnum.PRIORITY_SONG_PLAY, 0, 0, 0, 0);
         }
 
         public function _Str_16919():void
         {
-            this._soundManager._Str_2774.stop(HabboMusicPrioritiesEnum.PRIORITY_SONG_PLAY);
+            this._soundManager.musicController.stop(HabboMusicPrioritiesEnum.PRIORITY_SONG_PLAY);
         }
 
         public function _Str_8169(k:String):BitmapData
@@ -241,14 +241,14 @@
             this._furniId = k.furniId;
             if (!this._Str_2314)
             {
-                this._Str_2314 = new MainWindowHandler(this, this._soundManager._Str_2774);
+                this._Str_2314 = new MainWindowHandler(this, this._soundManager.musicController);
                 this._Str_2314.window.visible = false;
             }
             if (!this._Str_2314.window.visible)
             {
                 this._Str_2314.show();
-                this._soundManager._Str_2774.requestUserSongDisks();
-                _local_2 = this._soundManager._Str_2774.getRoomItemPlaylist();
+                this._soundManager.musicController.requestUserSongDisks();
+                _local_2 = this._soundManager.musicController.getRoomItemPlaylist();
                 if (_local_2 != null)
                 {
                     _local_2.requestPlayList();
@@ -275,7 +275,7 @@
             }
             if (this._Str_2314.window.visible)
             {
-                this._soundManager._Str_2774.requestUserSongDisks();
+                this._soundManager.musicController.requestUserSongDisks();
             }
         }
 

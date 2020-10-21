@@ -11,7 +11,7 @@
         function get genericVolume():Number;
         function get traxVolume():Number;
         function get furniVolume():Number;
-        function get _Str_2774():IHabboMusicController;
+        function get musicController():IHabboMusicController;
         function playSound(_arg_1:String, _arg_2:int=0):void;
         function _Str_25775(_arg_1:String):void;
         function _Str_20382(_arg_1:String, _arg_2:Number):IHabboSound;

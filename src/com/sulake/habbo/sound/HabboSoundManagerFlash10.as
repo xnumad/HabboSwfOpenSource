@@ -64,7 +64,7 @@
             Logger.log("Sound manager 10 init");
         }
 
-        public function get _Str_2774():IHabboMusicController
+        public function get musicController():IHabboMusicController
         {
             return this._musicController;
         }

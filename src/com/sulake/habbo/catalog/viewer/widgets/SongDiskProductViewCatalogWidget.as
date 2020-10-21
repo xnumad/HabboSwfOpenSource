@@ -64,9 +64,9 @@
             {
                 this._playButton.removeEventListener(WindowMouseEvent.CLICK, this.onClickPlay);
             }
-            if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
+            if (((!(this._soundManager == null)) && (!(this._soundManager.musicController == null))))
             {
-                this._soundManager._Str_2774.stop(HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW);
+                this._soundManager.musicController.stop(HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW);
                 if (this._soundManager.events != null)
                 {
                     this._soundManager.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
@@ -85,9 +85,9 @@
         override public function closed():void
         {
             super.closed();
-            if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
+            if (((!(this._soundManager == null)) && (!(this._soundManager.musicController == null))))
             {
-                this._soundManager._Str_2774.stop(HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW);
+                this._soundManager.musicController.stop(HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW);
             }
         }
 
@@ -107,21 +107,21 @@
 
         private function onClickPlay(k:WindowMouseEvent):void
         {
-            if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
+            if (((!(this._soundManager == null)) && (!(this._soundManager.musicController == null))))
             {
                 this.forceNoFadeoutOnPlayingSong(HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST);
                 this.forceNoFadeoutOnPlayingSong(HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW);
-                this._soundManager._Str_2774.playSong(this._selectedSongId, HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW, 15, 40, 0.5, 2);
+                this._soundManager.musicController.playSong(this._selectedSongId, HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW, 15, 40, 0.5, 2);
             }
         }
 
         private function forceNoFadeoutOnPlayingSong(k:int):void
         {
             var _local_3:ISongInfo;
-            var _local_2:int = this._soundManager._Str_2774.getSongIdPlayingAtPriority(k);
+            var _local_2:int = this._soundManager.musicController.getSongIdPlayingAtPriority(k);
             if (_local_2 != -1)
             {
-                _local_3 = this._soundManager._Str_2774.getSongInfo(_local_2);
+                _local_3 = this._soundManager.musicController.getSongInfo(_local_2);
                 if (_local_3.soundObject != null)
                 {
                     _local_3.soundObject.fadeOutSeconds = 0;
@@ -211,14 +211,14 @@
         private function getSongLength():int
         {
             var k:ISongInfo;
-            if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
+            if (((!(this._soundManager == null)) && (!(this._soundManager.musicController == null))))
             {
-                k = this._soundManager._Str_2774.getSongInfo(this._selectedSongId);
+                k = this._soundManager.musicController.getSongInfo(this._selectedSongId);
                 if (k != null)
                 {
                     return k.length / 1000;
                 }
-                this._soundManager._Str_2774.requestSongInfoWithoutSamples(this._selectedSongId);
+                this._soundManager.musicController.requestSongInfoWithoutSamples(this._selectedSongId);
             }
             return -1;
         }
