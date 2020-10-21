@@ -572,7 +572,7 @@
             var _local_12:int;
             var _local_2:TraxSongInfoMessageEvent = (k as TraxSongInfoMessageEvent);
             var _local_3:TraxSongInfoMessageParser = (_local_2.getParser() as TraxSongInfoMessageParser);
-            var _local_4:Array = _local_3._Str_25090;
+            var _local_4:Array = _local_3.songs;
             var _local_5:int;
             while (_local_5 < _local_4.length)
             {

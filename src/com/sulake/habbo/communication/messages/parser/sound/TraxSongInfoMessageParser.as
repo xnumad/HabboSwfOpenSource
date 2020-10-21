@@ -9,7 +9,7 @@
         private var _songs:Array;
 
 
-        public function get _Str_25090():Array
+        public function get songs():Array
         {
             return this._songs;
         }
