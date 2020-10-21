@@ -111,7 +111,7 @@
             return this._metaData["c"] == "1";
         }
 
-        public function get _Str_26274():int
+        public function get metaTempo():int
         {
             return this._metaData["t"] as int;
         }
