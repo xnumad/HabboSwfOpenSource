@@ -101,7 +101,7 @@
             {
                 if (this._isPlaying)
                 {
-                    this._Str_8507();
+                    this.stopPlaying();
                 }
                 this._soundManager = null;
                 if (this._connection)
@@ -138,7 +138,7 @@
 
         private function _Str_21376(k:Event):void
         {
-            this._Str_8507();
+            this.stopPlaying();
         }
 
         public function _Str_18932():void
@@ -153,7 +153,7 @@
                 this._isPlaying = true;
                 return;
             }
-            this._Str_8507();
+            this.stopPlaying();
             this._currentEntryId = -1;
             this._isPlaying = true;
             this.playNextSong();
@@ -173,7 +173,7 @@
             }
         }
 
-        public function _Str_8507():void
+        public function stopPlaying():void
         {
             this._currentEntryId = -1;
             this._isPlaying = false;

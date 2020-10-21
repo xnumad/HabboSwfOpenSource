@@ -94,7 +94,7 @@
             var k:IMessageEvent;
             if (!this._disposed)
             {
-                this._Str_8507();
+                this.stopPlaying();
                 if (this._musicController.events)
                 {
                     this._musicController.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
@@ -120,7 +120,7 @@
             }
         }
 
-        public function _Str_8507():void
+        public function stopPlaying():void
         {
             this._musicController.stop(this.priority);
             this._currentEntryId = -1;
@@ -163,7 +163,7 @@
             }
             else
             {
-                this._Str_8507();
+                this.stopPlaying();
             }
             if (_local_3.nextSongId >= 0)
             {
