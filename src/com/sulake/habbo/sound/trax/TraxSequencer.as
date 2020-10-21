@@ -20,7 +20,7 @@
     {
         private static const SAMPLES_PER_SECOND:Number = 44100;
         private static const BUFFER_LENGTH:uint = 0x2000;
-        private static const _Str_14348:uint = 88000;
+        private static const SAMPLES_BAR_LENGTH:uint = 88000;
         private static const _Str_10958:uint = 88000;
         private static const _Str_6865:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
         private static const _Str_19164:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
@@ -425,9 +425,9 @@
         {
             if (this._useCutMode)
             {
-                return Math.round((k / _Str_14348));
+                return Math.round((k / SAMPLES_BAR_LENGTH));
             }
-            return Math.ceil((k / _Str_14348));
+            return Math.ceil((k / SAMPLES_BAR_LENGTH));
         }
 
         private function _Str_22396():Array
