@@ -157,7 +157,7 @@
             }
             else
             {
-                this._widget.widget.toolbar._Str_2476._Str_15711(_local_6, _local_5, _local_7);
+                this._widget.widget.toolbar._Str_2476.previewVolume(_local_6, _local_5, _local_7);
             }
         }
 

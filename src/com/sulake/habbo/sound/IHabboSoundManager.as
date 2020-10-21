@@ -17,7 +17,7 @@
         function playSoundAtPitch(_arg_1:String, _arg_2:Number):IHabboSound;
         function loadTraxSong(_arg_1:int, _arg_2:String):IHabboSound;
         function mute(_arg_1:Boolean):void;
-        function _Str_15711(_arg_1:Number, _arg_2:Number, _arg_3:Number):void;
+        function previewVolume(_arg_1:Number, _arg_2:Number, _arg_3:Number):void;
         function get events():IEventDispatcher;
     }
 }

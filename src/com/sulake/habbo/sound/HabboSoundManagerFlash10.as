@@ -102,7 +102,7 @@
             this._Str_16207();
         }
 
-        public function _Str_15711(k:Number, _arg_2:Number, _arg_3:Number):void
+        public function previewVolume(k:Number, _arg_2:Number, _arg_3:Number):void
         {
             this._Str_9171(k, _arg_2, _arg_3);
         }
