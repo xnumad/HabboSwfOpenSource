@@ -221,10 +221,10 @@
             }
             var k:uint = getTimer();
             var _local_2:int;
-            while (_local_2 < this._traxData._Str_15653.length)
+            while (_local_2 < this._traxData.channels.length)
             {
                 _local_3 = new Map();
-                _local_4 = (this._traxData._Str_15653[_local_2] as TraxChannel);
+                _local_4 = (this._traxData.channels[_local_2] as TraxChannel);
                 _local_5 = 0;
                 _local_6 = 0;
                 _local_7 = 0;
@@ -287,10 +287,10 @@
             }
             var k:uint = getTimer();
             var _local_2:int;
-            while (_local_2 < this._traxData._Str_15653.length)
+            while (_local_2 < this._traxData.channels.length)
             {
                 _local_3 = new Map();
-                _local_4 = (this._traxData._Str_15653[_local_2] as TraxChannel);
+                _local_4 = (this._traxData.channels[_local_2] as TraxChannel);
                 _local_5 = 0;
                 _local_6 = 0;
                 _local_7 = false;

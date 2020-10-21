@@ -71,7 +71,7 @@
             }
         }
 
-        public function get _Str_15653():Array
+        public function get channels():Array
         {
             return this._channels;
         }
