@@ -5,10 +5,10 @@
         private var _id:int;
         private var _length:int;
 
-        public function TraxChannelItem(k:int, _arg_2:int)
+        public function TraxChannelItem(id:int, length:int)
         {
-            this._id = k;
-            this._length = _arg_2;
+            this._id = id;
+            this._length = length;
         }
 
         public function get id():int
