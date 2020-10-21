@@ -267,7 +267,7 @@
         {
             if (this._loadingSong != null)
             {
-                return this._Str_24239(k, _arg_2);
+                return this.addTraxSongForDownload(k, _arg_2);
             }
             var _local_3:TraxSequencer = this._Str_19163(k, _arg_2);
             if (!_local_3.ready)
@@ -278,7 +278,7 @@
             return _local_3 as IHabboSound;
         }
 
-        private function _Str_24239(k:int, _arg_2:String):IHabboSound
+        private function addTraxSongForDownload(k:int, _arg_2:String):IHabboSound
         {
             var _local_3:TraxSequencer = this._Str_19163(k, _arg_2, false);
             if (!_local_3.ready)
