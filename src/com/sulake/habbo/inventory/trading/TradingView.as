@@ -695,9 +695,9 @@
             {
                 _local_4 = _local_3.getGridItemAt(_local_6);
                 _local_4.id = _local_6;
-                _local_4.procedure = this._Str_16472;
-                _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_16472);
-                _local_4.addEventListener(WindowMouseEvent.OUT, this._Str_16472);
+                _local_4.procedure = this.ownThumbEventProc;
+                _local_4.addEventListener(WindowMouseEvent.OVER, this.ownThumbEventProc);
+                _local_4.addEventListener(WindowMouseEvent.OUT, this.ownThumbEventProc);
                 _local_6++;
             }
             _local_3 = (_local_2.findChildByTag("OTHER_USER_GRID") as IItemGridWindow);
@@ -783,7 +783,7 @@
             }
         }
 
-        private function _Str_16472(k:WindowEvent, _arg_2:IWindow):void
+        private function ownThumbEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             this.thumbEventProc(k, _arg_2, true);
         }
