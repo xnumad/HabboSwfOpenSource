@@ -37,7 +37,7 @@
             }
             if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
             {
-                this._soundManager._Str_2774.stop(HabboMusicPrioritiesEnum._Str_5352);
+                this._soundManager._Str_2774.stop(HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW);
                 this._soundManager = null;
             }
             super.dispose();
@@ -62,7 +62,7 @@
             super.closed();
             if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
             {
-                this._soundManager._Str_2774.stop(HabboMusicPrioritiesEnum._Str_5352);
+                this._soundManager._Str_2774.stop(HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW);
             }
         }
 
@@ -97,8 +97,8 @@
             if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
             {
                 this.forceNoFadeoutOnPlayingSong(HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST);
-                this.forceNoFadeoutOnPlayingSong(HabboMusicPrioritiesEnum._Str_5352);
-                this._soundManager._Str_2774.playSong(this._selectedSongId, HabboMusicPrioritiesEnum._Str_5352, 15, 40, 0, 2);
+                this.forceNoFadeoutOnPlayingSong(HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW);
+                this._soundManager._Str_2774.playSong(this._selectedSongId, HabboMusicPrioritiesEnum.PRIORITY_PURCHASE_PREVIEW, 15, 40, 0, 2);
             }
         }
 
