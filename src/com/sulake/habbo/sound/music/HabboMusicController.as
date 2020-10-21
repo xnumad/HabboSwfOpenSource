@@ -258,7 +258,7 @@
             }
         }
 
-        private function _Str_24039(k:int):void
+        private function reRequestSongAtPriority(k:int):void
         {
             this._songRequestCountsPerPriority[k] = (this._songRequestCountsPerPriority[k] + 1);
         }
@@ -338,7 +338,7 @@
                 this.resetSongStartRequest(k);
                 if (_local_3)
                 {
-                    this._Str_24039(this._priorityPlaying);
+                    this.reRequestSongAtPriority(this._priorityPlaying);
                 }
             }
         }
