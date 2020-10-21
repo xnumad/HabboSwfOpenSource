@@ -166,12 +166,12 @@
                 }
                 return _local_5;
             }
-            _local_5 = this.createCanvas3d(k, _arg_2, _arg_3, _arg_4);
+            _local_5 = this.createCanvasInstance(k, _arg_2, _arg_3, _arg_4);
             this._canvases.add(String(k), _local_5);
             return _local_5;
         }
 
-        protected function createCanvas3d(k:int, _arg_2:int, _arg_3:int, _arg_4:int):IRoomRenderingCanvas
+        protected function createCanvasInstance(k:int, _arg_2:int, _arg_3:int, _arg_4:int):IRoomRenderingCanvas
         {
             return new RoomSpriteCanvas(this, k, _arg_2, _arg_3, _arg_4);
         }
