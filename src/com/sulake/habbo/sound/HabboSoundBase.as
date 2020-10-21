@@ -10,7 +10,7 @@
         private var _soundChannel:SoundChannel = null;
         private var _complete:Boolean;
         private var _volume:Number;
-        private var _Str_5454:int;
+        private var _loopCount:int;
         protected var _Str_4166:Sound = null;
 
         public function HabboSoundBase(k:Sound, _arg_2:int=0)
@@ -19,7 +19,7 @@
             this._Str_4166.addEventListener(Event.COMPLETE, this.onComplete);
             this._volume = 1;
             this._complete = false;
-            this._Str_5454 = _arg_2;
+            this._loopCount = _arg_2;
         }
 
         protected function _Str_26043():Sound
@@ -52,7 +52,7 @@
         public function play(k:Number=0):Boolean
         {
             this._complete = false;
-            this._soundChannel = this._Str_4166.play(0, this._Str_5454);
+            this._soundChannel = this._Str_4166.play(0, this._loopCount);
             this._Str_3206 = this._volume;
             return true;
         }
