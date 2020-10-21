@@ -390,7 +390,7 @@
             }
             else
             {
-                this._Str_18840();
+                this.playingComplete();
             }
             return true;
         }
@@ -730,17 +730,17 @@
         {
             if (this._finished)
             {
-                this._Str_18840();
+                this.playingComplete();
             }
         }
 
         private function onFadeOutComplete(k:TimerEvent):void
         {
             this._Str_21321();
-            this._Str_18840();
+            this.playingComplete();
         }
 
-        private function _Str_18840():void
+        private function playingComplete():void
         {
             this.stopImmediately();
             this._events.dispatchEvent(new SoundControllerEvent(SoundControllerEvent.TRAX_SONG_COMPLETE, this._songId));
