@@ -235,7 +235,7 @@
                     _local_9.setUsageFromSong(this._songId, k);
                     if (_local_9 != null)
                     {
-                        _local_10 = this._Str_20071(_local_9.length);
+                        _local_10 = this.getSampleBars(_local_9.length);
                         _local_11 = (_local_4.getItem(_local_7).length / _local_10);
                         _local_12 = 0;
                         while (_local_12 < _local_11)
@@ -304,7 +304,7 @@
                     {
                         _local_11 = _local_6;
                         _local_12 = _local_5;
-                        _local_13 = this._Str_20071(_local_10.length);
+                        _local_13 = this.getSampleBars(_local_10.length);
                         _local_14 = _local_4.getItem(_local_8).length;
                         while (_local_11 < (_local_6 + _local_14))
                         {
@@ -421,7 +421,7 @@
             }
         }
 
-        private function _Str_20071(k:uint):int
+        private function getSampleBars(k:uint):int
         {
             if (this._useCutMode)
             {
