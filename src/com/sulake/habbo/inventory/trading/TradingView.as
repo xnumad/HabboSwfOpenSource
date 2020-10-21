@@ -663,7 +663,7 @@
             }
         }
 
-        protected function _Str_26268(k:uint):void
+        protected function selectOthersTradeItem(k:uint):void
         {
             var _local_2:GroupItem;
             if (((this._tradingModel == null) || (this._tradingModel._Str_5629 == null)))
