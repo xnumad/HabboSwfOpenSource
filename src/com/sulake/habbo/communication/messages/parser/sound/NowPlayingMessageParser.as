@@ -27,7 +27,7 @@
             return this._nextSongId;
         }
 
-        public function get _Str_26352():int
+        public function get nextPosition():int
         {
             return this._nextPosition;
         }
