@@ -397,7 +397,7 @@
 
         private function stopImmediately():void
         {
-            this._Str_24945();
+            this.removeStopTimer();
             if (this._soundChannel != null)
             {
                 this._soundChannel.stop();
@@ -756,7 +756,7 @@
             }
         }
 
-        private function _Str_24945():void
+        private function removeStopTimer():void
         {
             if (this._stopTimer != null)
             {
