@@ -481,7 +481,7 @@
         {
             this._view = this._model.controller.view._Str_9043(InventoryCategory.FURNI);
             this._view.visible = false;
-            this._view.procedure = this._Str_3328;
+            this._view.procedure = this.windowEventProc;
             var k:IItemGridWindow = (this._view.findChildByName("item_grid") as IItemGridWindow);
             var _local_2:IItemListWindow = (this._view.findChildByName("item_grid_pages") as IItemListWindow);
             this._grid = new FurniGridView(k, _local_2);
@@ -676,7 +676,7 @@
             this._Str_2944();
         }
 
-        private function _Str_3328(k:WindowEvent, _arg_2:IWindow):void
+        private function windowEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:GroupItem;
             var _local_4:FurnitureItem;

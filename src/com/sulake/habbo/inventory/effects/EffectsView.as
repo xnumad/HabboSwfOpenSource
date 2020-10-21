@@ -37,14 +37,14 @@
             var _local_8:XmlAsset = XmlAsset(_local_7);
             this._view = IWindowContainer(this._windowManager.buildFromXML(XML(_local_8.content)));
             this._view.visible = false;
-            this._view.procedure = this._Str_3328;
+            this._view.procedure = this.windowEventProc;
             this._listManagerActive = new ThumbListManager(this._assetLibrary, _arg_5, "thumb_bg_png", "thumb_bg_selected_png", this._Str_20128(), this._Str_21763());
             this._listManagerInactive = new ThumbListManager(this._assetLibrary, _arg_6, "thumb_bg_png", "thumb_bg_selected_png", this._Str_20128(), this._Str_21763());
             var _local_9:IBitmapWrapperWindow = (this._view.findChildByName("active_items_image") as IBitmapWrapperWindow);
             _local_9.procedure = this._Str_22937;
             var _local_10:IBitmapWrapperWindow = (this._view.findChildByName("inactive_items_image") as IBitmapWrapperWindow);
             _local_10.procedure = this._Str_25828;
-            this._view.procedure = this._Str_3328;
+            this._view.procedure = this.windowEventProc;
         }
 
         public function get disposed():Boolean
@@ -279,7 +279,7 @@
             }
         }
 
-        private function _Str_3328(k:WindowEvent, _arg_2:IWindow):void
+        private function windowEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:Effect;
             if (k.type == WindowMouseEvent.CLICK)

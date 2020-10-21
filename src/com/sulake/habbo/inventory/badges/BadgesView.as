@@ -134,7 +134,7 @@
         private function init():void
         {
             this._view = this._model.controller.view._Str_9043(InventoryCategory.BADGES);
-            this._view.procedure = this._Str_3328;
+            this._view.procedure = this.windowEventProc;
             this._view.visible = false;
             var k:IWindow = this._view.findChildByName("wearBadge_button");
             if (k != null)
@@ -247,7 +247,7 @@
             }
         }
 
-        private function _Str_3328(k:WindowEvent, _arg_2:IWindow):void
+        private function windowEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:WindowKeyboardEvent;
             if (k.type == WindowMouseEvent.CLICK)

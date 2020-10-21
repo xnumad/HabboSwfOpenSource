@@ -134,7 +134,7 @@
                 {
                     this._mainWindow.position = this._Str_6092;
                     this._mainWindow.visible = false;
-                    this._mainWindow.procedure = this._Str_3328;
+                    this._mainWindow.procedure = this.windowEventProc;
                     this._mainWindow.setParamFlag(WindowParam.WINDOW_PARAM_MOUSE_SCALING_TARGET, this._controller.getBoolean("inventory.allow.scaling"));
                     this._Str_15287(InventoryCategory.FURNI);
                     this._Str_15287(InventoryCategory.PETS);
@@ -307,7 +307,7 @@
             this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3304);
         }
 
-        public function _Str_3328(k:WindowEvent, _arg_2:IWindow):void
+        public function windowEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:String;
             if (k.type == WindowEvent.WINDOW_EVENT_SELECTED)

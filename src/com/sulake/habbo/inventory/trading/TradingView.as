@@ -711,7 +711,7 @@
                 _local_4.addEventListener(WindowMouseEvent.OUT, this.othersThumbEventProc);
                 _local_6++;
             }
-            _local_2.procedure = this._Str_3328;
+            _local_2.procedure = this.windowEventProc;
             return _local_2;
         }
 
@@ -739,7 +739,7 @@
             }
         }
 
-        private function _Str_3328(k:WindowEvent, _arg_2:IWindow):void
+        private function windowEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

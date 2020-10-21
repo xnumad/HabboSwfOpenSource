@@ -63,7 +63,7 @@
             return this._window;
         }
 
-        private function _Str_3328(k:WindowEvent, _arg_2:IWindow=null):void
+        private function windowEventProc(k:WindowEvent, _arg_2:IWindow=null):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

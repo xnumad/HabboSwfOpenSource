@@ -22,7 +22,7 @@
             {
                 window = (_model.controller.view.getCategoryContainer(AvatarEditorFigureCategory.TORSO) as IWindowContainer);
                 window.visible = false;
-                window.procedure = this._Str_3328;
+                window.procedure = this.windowEventProc;
             }
             _isInitialized = true;
             if (((_model) && (_Str_2889 == "")))
@@ -75,7 +75,7 @@
             updateGridView(_Str_2889);
         }
 
-        private function _Str_3328(k:WindowEvent, _arg_2:IWindow):void
+        private function windowEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

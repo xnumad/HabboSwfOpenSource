@@ -172,7 +172,7 @@
                 this._frameWindow.header.title.text = _arg_2;
             }
             this._frameWindow.position = DEFAULT_LOCATION;
-            this._frameWindow.findChildByName("header_button_close").procedure = this._Str_3328;
+            this._frameWindow.findChildByName("header_button_close").procedure = this.windowEventProc;
             return this._frameWindow;
         }
 
@@ -303,7 +303,7 @@
                     this._editorContent.findChildByName("avatar_name_change").visible = true;
                 }
             }
-            this._editorContent.procedure = this._Str_3328;
+            this._editorContent.procedure = this.windowEventProc;
             this._tabContainer = (this._editorContent.findChildByName("mainTabs") as ITabContextWindow);
             var k:Vector.<String> = new Vector.<String>(0);
             var _local_2:int = (this._tabContainer._Str_4277 - 1);
@@ -473,7 +473,7 @@
             this._tabContainer.selector.setSelected(this._tabContainer._Str_19493(k));
         }
 
-        public function _Str_3328(k:WindowEvent, _arg_2:IWindow):void
+        public function windowEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:String;
             if (k.type == WindowEvent.WINDOW_EVENT_SELECTED)
