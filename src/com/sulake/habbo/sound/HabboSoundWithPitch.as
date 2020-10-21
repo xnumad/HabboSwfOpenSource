@@ -110,7 +110,7 @@
             var _local_2:int;
             var _local_3:Number;
             var k:ByteArray = new ByteArray();
-            _Str_4166.extract(k, int((_Str_4166.length * 44.1)), 0);
+            _soundObject.extract(k, int((_soundObject.length * 44.1)), 0);
             this._loadedSamples = new ByteArray();
             this._numSamples = (k.length / 8);
             k.position = 0;

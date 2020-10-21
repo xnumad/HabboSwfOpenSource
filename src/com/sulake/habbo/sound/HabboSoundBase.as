@@ -11,12 +11,12 @@
         private var _complete:Boolean;
         private var _volume:Number;
         private var _loopCount:int;
-        protected var _Str_4166:Sound = null;
+        protected var _soundObject:Sound = null;
 
         public function HabboSoundBase(k:Sound, _arg_2:int=0)
         {
-            this._Str_4166 = k;
-            this._Str_4166.addEventListener(Event.COMPLETE, this.onComplete);
+            this._soundObject = k;
+            this._soundObject.addEventListener(Event.COMPLETE, this.onComplete);
             this._volume = 1;
             this._complete = false;
             this._loopCount = _arg_2;
@@ -24,7 +24,7 @@
 
         protected function _Str_26043():Sound
         {
-            return this._Str_4166;
+            return this._soundObject;
         }
 
         protected function _Str_15495():SoundChannel
@@ -46,13 +46,13 @@
         {
             this.stop();
             this._soundChannel = null;
-            this._Str_4166 = null;
+            this._soundObject = null;
         }
 
         public function play(k:Number=0):Boolean
         {
             this._complete = false;
-            this._soundChannel = this._Str_4166.play(0, this._loopCount);
+            this._soundChannel = this._soundObject.play(0, this._loopCount);
             this._Str_3206 = this._volume;
             return true;
         }
@@ -96,12 +96,12 @@
 
         public function get length():Number
         {
-            return this._Str_4166.length;
+            return this._soundObject.length;
         }
 
         public function get ready():Boolean
         {
-            return !(this._Str_4166.isBuffering);
+            return !(this._soundObject.isBuffering);
         }
 
         public function get _Str_21060():Boolean
