@@ -23,7 +23,7 @@
         private static const SAMPLES_BAR_LENGTH:uint = 88000;
         private static const BAR_LENGTH:uint = 88000;
         private static const MIXING_BUFFER:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
-        private static const _Str_19164:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
+        private static const INTERPOLATION_BUFFER:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
 
         private var _disposed:Boolean = false;
         private var _events:IEventDispatcher;
