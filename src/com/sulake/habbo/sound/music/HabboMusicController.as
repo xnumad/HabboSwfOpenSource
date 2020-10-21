@@ -115,7 +115,7 @@
             {
                 if (((this.getTopRequestPriority() == this._priorityPlaying) && (this.getSongRequestCountAtPriority(this._priorityPlaying) == this._requestNumberPlaying)))
                 {
-                    this._Str_16722(this._priorityPlaying);
+                    this.resetSongStartRequest(this._priorityPlaying);
                 }
                 _local_2 = this._priorityPlaying;
                 this._Str_23655();
@@ -250,7 +250,7 @@
             return -1;
         }
 
-        private function _Str_16722(k:int):void
+        private function resetSongStartRequest(k:int):void
         {
             if (((k >= 0) && (k < HabboMusicPrioritiesEnum.PRIORITY_COUNT)))
             {
@@ -330,12 +330,12 @@
             var _local_3:* = (this.getTopRequestPriority() == k);
             if (_local_2)
             {
-                this._Str_16722(k);
+                this.resetSongStartRequest(k);
                 this._Str_21539(k);
             }
             else
             {
-                this._Str_16722(k);
+                this.resetSongStartRequest(k);
                 if (_local_3)
                 {
                     this._Str_24039(this._priorityPlaying);
