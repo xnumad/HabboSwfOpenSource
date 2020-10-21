@@ -73,7 +73,7 @@
             return this._traxSamples;
         }
 
-        public function _Str_16532(k:int):void
+        public function loadSample(k:int):void
         {
             var _local_2:String = this._soundManager.getProperty("flash.dynamic.download.url");
             _local_2 = (_local_2 + this._soundManager.getProperty("flash.dynamic.download.samples.template"));

@@ -119,7 +119,7 @@
         {
             if (((this._loadedSamples.getValue(k) == null) && (this._loadingSamples.getValues().indexOf(_arg_2) == -1)))
             {
-                this._Str_16532(_arg_2, k);
+                this.loadSample(_arg_2, k);
             }
         }
 
@@ -153,7 +153,7 @@
             }
         }
 
-        private function _Str_16532(k:int, _arg_2:int):void
+        private function loadSample(k:int, _arg_2:int):void
         {
             var _local_3:String = this._soundManager.getProperty("flash.dynamic.download.url");
             _local_3 = (_local_3 + this._soundManager.getProperty("flash.dynamic.download.samples.template"));

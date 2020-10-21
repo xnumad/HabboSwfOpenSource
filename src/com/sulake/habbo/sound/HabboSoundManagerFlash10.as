@@ -309,7 +309,7 @@
                 {
                     if (_arg_2)
                     {
-                        this._traxSampleManager._Str_16532(int(_local_4[_local_6]));
+                        this._traxSampleManager.loadSample(int(_local_4[_local_6]));
                     }
                     _local_5 = true;
                 }
