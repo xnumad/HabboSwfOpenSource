@@ -96,13 +96,13 @@
         {
             if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
             {
-                this._Str_9908(HabboMusicPrioritiesEnum._Str_4350);
-                this._Str_9908(HabboMusicPrioritiesEnum._Str_5352);
+                this.forceNoFadeoutOnPlayingSong(HabboMusicPrioritiesEnum._Str_4350);
+                this.forceNoFadeoutOnPlayingSong(HabboMusicPrioritiesEnum._Str_5352);
                 this._soundManager._Str_2774.playSong(this._selectedSongId, HabboMusicPrioritiesEnum._Str_5352, 15, 40, 0, 2);
             }
         }
 
-        private function _Str_9908(k:int):void
+        private function forceNoFadeoutOnPlayingSong(k:int):void
         {
             var _local_3:ISongInfo;
             var _local_2:int = this._soundManager._Str_2774.getSongIdPlayingAtPriority(k);
