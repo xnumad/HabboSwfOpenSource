@@ -86,19 +86,19 @@
             }
         }
 
-        public function _Str_3355():void
+        public function clearCache():void
         {
             if (this._wallRasterizer != null)
             {
-                this._wallRasterizer._Str_3355();
+                this._wallRasterizer.clearCache();
             }
             if (this._floorRasterizer != null)
             {
-                this._floorRasterizer._Str_3355();
+                this._floorRasterizer.clearCache();
             }
             if (this._landscapeRasterizer != null)
             {
-                this._landscapeRasterizer._Str_3355();
+                this._landscapeRasterizer.clearCache();
             }
         }
 

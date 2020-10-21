@@ -100,7 +100,7 @@
             this._assetCollection = null;
         }
 
-        public function _Str_3355():void
+        public function clearCache():void
         {
             var _local_2:Plane;
             var _local_3:PlaneMaterial;
@@ -111,7 +111,7 @@
                 _local_2 = (this._planes.getWithIndex(k) as Plane);
                 if (_local_2 != null)
                 {
-                    _local_2._Str_3355();
+                    _local_2.clearCache();
                 }
                 k++;
             }
@@ -121,7 +121,7 @@
                 _local_3 = (this._materials.getWithIndex(k) as PlaneMaterial);
                 if (_local_3 != null)
                 {
-                    _local_3._Str_3355();
+                    _local_3.clearCache();
                 }
                 k++;
             }

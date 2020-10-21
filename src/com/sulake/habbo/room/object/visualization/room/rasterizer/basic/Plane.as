@@ -46,7 +46,7 @@
             this._sizes = null;
         }
 
-        public function _Str_3355():void
+        public function clearCache():void
         {
             var _local_2:PlaneVisualization;
             var k:int;
@@ -55,7 +55,7 @@
                 _local_2 = (this._planeVisualizations.getWithIndex(k) as PlaneVisualization);
                 if (_local_2 != null)
                 {
-                    _local_2._Str_3355();
+                    _local_2.clearCache();
                 }
                 k++;
             }

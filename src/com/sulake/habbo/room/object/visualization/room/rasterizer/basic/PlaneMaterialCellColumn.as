@@ -99,7 +99,7 @@
             }
         }
 
-        public function _Str_3355():void
+        public function clearCache():void
         {
             var k:int;
             var _local_2:PlaneMaterialCell;
@@ -126,7 +126,7 @@
                     _local_2 = (this._cells[k] as PlaneMaterialCell);
                     if (_local_2 != null)
                     {
-                        _local_2._Str_3355();
+                        _local_2.clearCache();
                     }
                     k++;
                 }

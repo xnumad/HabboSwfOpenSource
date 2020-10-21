@@ -111,7 +111,7 @@
             }
         }
 
-        public function _Str_3355():void
+        public function clearCache():void
         {
             var _local_2:PlaneMaterialCellColumn;
             if (!this._isCached)
@@ -136,7 +136,7 @@
                 _local_2 = (this._columns[k] as PlaneMaterialCellColumn);
                 if (_local_2 != null)
                 {
-                    _local_2._Str_3355();
+                    _local_2.clearCache();
                 }
                 k++;
             }

@@ -80,7 +80,7 @@
             this._extraItemOffsets = null;
         }
 
-        public function _Str_3355():void
+        public function clearCache():void
         {
             if (this._cachedBitmapData != null)
             {

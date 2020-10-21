@@ -144,7 +144,7 @@
             }
             if (this._data != null)
             {
-                this._data._Str_3355();
+                this._data.clearCache();
                 this._data = null;
             }
         }

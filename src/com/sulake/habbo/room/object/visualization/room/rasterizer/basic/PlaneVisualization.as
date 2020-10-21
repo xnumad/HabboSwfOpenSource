@@ -75,7 +75,7 @@
             }
         }
 
-        public function _Str_3355():void
+        public function clearCache():void
         {
             var k:int;
             var _local_2:PlaneVisualizationLayer;
@@ -102,13 +102,13 @@
                     _local_3 = (this._layers[k] as PlaneVisualizationAnimationLayer);
                     if (_local_2 != null)
                     {
-                        _local_2._Str_3355();
+                        _local_2.clearCache();
                     }
                     else
                     {
                         if (_local_3 != null)
                         {
-                            _local_3._Str_3355();
+                            _local_3.clearCache();
                         }
                     }
                     k++;
