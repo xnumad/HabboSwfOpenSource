@@ -8,12 +8,12 @@
         protected var _creator:String;
         private var _Str_19548:Number = 0;
 
-        public function SongEntry(k:int, _arg_2:int, _arg_3:String, _arg_4:String)
+        public function SongEntry(id:int, length:int, name:String, creator:String)
         {
-            this._id = k;
-            this._length = _arg_2;
-            this._name = _arg_3;
-            this._creator = _arg_4;
+            this._id = id;
+            this._length = length;
+            this._name = name;
+            this._creator = creator;
         }
 
         public function get id():int
