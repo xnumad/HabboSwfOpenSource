@@ -159,7 +159,7 @@
             this.playNextSong();
         }
 
-        public function _Str_24473(k:int):void
+        public function checkSongPlayState(k:int):void
         {
             var _local_2:SongDataEntry;
             if (this._currentEntryId == k)
@@ -400,7 +400,7 @@
             }
             else
             {
-                this._Str_24473(_local_4.id);
+                this.checkSongPlayState(_local_4.id);
             }
         }
     }
