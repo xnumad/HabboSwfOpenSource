@@ -156,7 +156,7 @@
             this._Str_8507();
             this._currentEntryId = -1;
             this._isPlaying = true;
-            this._Str_20412();
+            this.playNextSong();
         }
 
         public function _Str_24473(k:int):void
@@ -201,7 +201,7 @@
         {
             if (k.id == this._currentEntryId)
             {
-                this._Str_20412();
+                this.playNextSong();
             }
         }
 
@@ -230,7 +230,7 @@
             }
         }
 
-        private function _Str_20412():void
+        private function playNextSong():void
         {
             var k:SongDataEntry = this.getNextEntry();
             if (k != null)
