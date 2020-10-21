@@ -421,15 +421,15 @@
 
         public function addSongInfoRequest(k:int):void
         {
-            this._Str_21555(k, true);
+            this.requestSong(k, true);
         }
 
         public function requestSongInfoWithoutSamples(k:int):void
         {
-            this._Str_21555(k, false);
+            this.requestSong(k, false);
         }
 
-        private function _Str_21555(k:int, _arg_2:Boolean):void
+        private function requestSong(k:int, _arg_2:Boolean):void
         {
             if (this._requestedSongs.getValue(k) == null)
             {
