@@ -269,7 +269,7 @@
             {
                 return this.addTraxSongForDownload(k, _arg_2);
             }
-            var _local_3:TraxSequencer = this._Str_19163(k, _arg_2);
+            var _local_3:TraxSequencer = this.createTraxInstance(k, _arg_2);
             if (!_local_3.ready)
             {
                 this._loadingSong = _local_3;
@@ -280,7 +280,7 @@
 
         private function addTraxSongForDownload(k:int, _arg_2:String):IHabboSound
         {
-            var _local_3:TraxSequencer = this._Str_19163(k, _arg_2, false);
+            var _local_3:TraxSequencer = this.createTraxInstance(k, _arg_2, false);
             if (!_local_3.ready)
             {
                 this._loadingSongQueue.add(k, _local_3);
@@ -288,7 +288,7 @@
             return _local_3;
         }
 
-        private function _Str_19163(k:int, _arg_2:String, _arg_3:Boolean=true):TraxSequencer
+        private function createTraxInstance(k:int, _arg_2:String, _arg_3:Boolean=true):TraxSequencer
         {
             var _local_4:TraxData = new TraxData(_arg_2);
             var _local_5:TraxSequencer = new TraxSequencer(k, _local_4, this._traxSampleManager._Str_21843, events);
