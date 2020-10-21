@@ -336,7 +336,7 @@
             var _local_8:int;
             var _local_2:PlayListMessageEvent = (k as PlayListMessageEvent);
             var _local_3:PlayListMessageParser = (_local_2.getParser() as PlayListMessageParser);
-            var _local_4:int = _local_3._Str_23052;
+            var _local_4:int = _local_3.synchronizationCount;
             var _local_5:Array = this.convertParserPlayList(_local_3._Str_24122);
             if (((_local_5 == null) || (_local_5.length == 0)))
             {

@@ -10,7 +10,7 @@
         private var _playlist:Array;
 
 
-        public function get _Str_23052():int
+        public function get synchronizationCount():int
         {
             return this._synchronizationCount;
         }
