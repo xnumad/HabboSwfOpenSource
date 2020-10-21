@@ -195,7 +195,7 @@
             var _local_2:uint;
             var _local_9:* = (k == this._tradingModel._Str_21380);
             var _local_10:Map = ((_local_9) ? this._tradingModel._Str_5629 : this._tradingModel._Str_5319);
-            var _local_11:IItemGridWindow = ((_local_9) ? this.getOtherUsersItemGrid() : this._Str_18316());
+            var _local_11:IItemGridWindow = ((_local_9) ? this.getOtherUsersItemGrid() : this.getOwnUsersItemGrid());
             while (_local_2 < _local_10.length)
             {
                 _local_3 = (_local_10.getWithIndex(_local_2) as GroupItem);
@@ -232,7 +232,7 @@
             var k:IItemGridWindow;
             var _local_2:IWindowContainer;
             var _local_3:uint;
-            k = this._Str_18316();
+            k = this.getOwnUsersItemGrid();
             _local_3 = 0;
             while (_local_3 < k.numGridItems)
             {
@@ -605,7 +605,7 @@
             }
         }
 
-        protected function _Str_18316():IItemGridWindow
+        protected function getOwnUsersItemGrid():IItemGridWindow
         {
             return this._windowFull.findChildByTag("OWN_USER_GRID") as IItemGridWindow;
         }
@@ -937,7 +937,7 @@
                     {
                         _local_6 = this.getTraxSongFurniName(_local_3, "", false);
                         _local_7 = this._tradingModel._Str_9836(_local_5);
-                        _local_8 = ((_local_2) ? (this._Str_18316().getGridItemAt(_local_4)) : this.getOtherUsersItemGrid().getGridItemAt(_local_4));
+                        _local_8 = ((_local_2) ? (this.getOwnUsersItemGrid().getGridItemAt(_local_4)) : this.getOtherUsersItemGrid().getGridItemAt(_local_4));
                         this._popupCtrl.updateContent((_local_8 as IWindowContainer), _local_6, _local_7);
                     }
                 }
