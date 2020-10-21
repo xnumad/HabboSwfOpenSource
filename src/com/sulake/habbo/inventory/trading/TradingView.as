@@ -719,11 +719,11 @@
         {
             var k:XML = (XmlAsset(this._assetLibrary.getAssetByName("inventory_trading_minimized_xml")).content as XML);
             var _local_2:IWindowContainer = (this._windowManager.buildFromXML(k) as IWindowContainer);
-            _local_2.procedure = this._Str_24001;
+            _local_2.procedure = this.windowMininizedEventProc;
             return _local_2;
         }
 
-        private function _Str_24001(k:WindowEvent, _arg_2:IWindow):void
+        private function windowMininizedEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
