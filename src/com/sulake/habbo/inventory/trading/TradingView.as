@@ -166,7 +166,7 @@
             }
             if (this._windowMin == null)
             {
-                this._windowMin = this._Str_25632();
+                this._windowMin = this.createMinimizedWindow();
             }
             if (!this._isMinimized)
             {
@@ -715,7 +715,7 @@
             return _local_2;
         }
 
-        private function _Str_25632():IWindowContainer
+        private function createMinimizedWindow():IWindowContainer
         {
             var k:XML = (XmlAsset(this._assetLibrary.getAssetByName("inventory_trading_minimized_xml")).content as XML);
             var _local_2:IWindowContainer = (this._windowManager.buildFromXML(k) as IWindowContainer);
