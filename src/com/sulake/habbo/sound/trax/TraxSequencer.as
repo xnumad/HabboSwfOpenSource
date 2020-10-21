@@ -192,7 +192,7 @@
                     }
                     else
                     {
-                        if (!this._Str_25172())
+                        if (!this.prepareLegacySequence())
                         {
                             Logger.log("Cannot start playback, prepare legacy sequence failed!");
                             return false;
@@ -203,7 +203,7 @@
             return true;
         }
 
-        private function _Str_25172():Boolean
+        private function prepareLegacySequence():Boolean
         {
             var _local_3:Map;
             var _local_4:TraxChannel;
