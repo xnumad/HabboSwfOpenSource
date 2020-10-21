@@ -296,7 +296,7 @@
             }
             if (_arg_2 >= this._priorityPlaying)
             {
-                this._Str_12727(_arg_2, k);
+                this.playSongObject(_arg_2, k);
             }
             else
             {
@@ -316,7 +316,7 @@
             while (_local_2 >= 0)
             {
                 _local_3 = this.getSongIdRequestedAtPriority(_local_2);
-                if (((_local_3 >= 0) && (this._Str_12727(_local_2, _local_3))))
+                if (((_local_3 >= 0) && (this.playSongObject(_local_2, _local_3))))
                 {
                     return;
                 }
@@ -414,7 +414,7 @@
                 _local_3 = this.getSongIdRequestedAtPriority(_local_2);
                 if (k == _local_3)
                 {
-                    this._Str_12727(_local_2, k);
+                    this.playSongObject(_local_2, k);
                 }
             }
         }
@@ -593,7 +593,7 @@
                     _local_12 = this.getSongIdRequestedAtPriority(_local_11);
                     if ((((!(_local_9 == null)) && (_local_9.ready)) && (_local_6.id == _local_12)))
                     {
-                        this._Str_12727(_local_11, _local_12);
+                        this.playSongObject(_local_11, _local_12);
                     }
                     this._events.dispatchEvent(new SongInfoReceivedEvent(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, _local_6.id));
                     while (this._diskInventoryMissingData.indexOf(_local_6.id) != -1)
@@ -610,7 +610,7 @@
             }
         }
 
-        private function _Str_12727(k:int, _arg_2:int):Boolean
+        private function playSongObject(k:int, _arg_2:int):Boolean
         {
             if ((((_arg_2 == -1) || (k < 0)) || (k >= HabboMusicPrioritiesEnum.PRIORITY_COUNT)))
             {
