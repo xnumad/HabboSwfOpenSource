@@ -178,7 +178,7 @@
                 if (this._traxData != null)
                 {
                     this._useCutMode = false;
-                    if (this._traxData._Str_25573)
+                    if (this._traxData.hasMetaData)
                     {
                         this._useCutMode = this._traxData._Str_22931;
                     }

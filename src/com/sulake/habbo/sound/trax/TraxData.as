@@ -101,7 +101,7 @@
             return k;
         }
 
-        public function get _Str_25573():Boolean
+        public function get hasMetaData():Boolean
         {
             return !(this._metaData["meta"] == null);
         }
