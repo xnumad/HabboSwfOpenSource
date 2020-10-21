@@ -89,7 +89,7 @@
             this._songRequestTimer.addEventListener(TimerEvent.TIMER, this.onTimerEvent);
             this._events.addEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this.onTraxSongComplete);
             _local_6 = 0;
-            while (_local_6 < HabboMusicPrioritiesEnum._Str_5905)
+            while (_local_6 < HabboMusicPrioritiesEnum.PRIORITY_COUNT)
             {
                 this._songRequestsPerPriority[_local_6] = null;
                 this._songRequestCountsPerPriority[_local_6] = 0;
@@ -198,7 +198,7 @@
 
         private function addSongStartRequest(k:int, _arg_2:int, _arg_3:Number, _arg_4:Number, _arg_5:Number, _arg_6:Number):Boolean
         {
-            if (((k < 0) || (k >= HabboMusicPrioritiesEnum._Str_5905)))
+            if (((k < 0) || (k >= HabboMusicPrioritiesEnum.PRIORITY_COUNT)))
             {
                 return false;
             }
@@ -215,7 +215,7 @@
 
         private function _Str_16037(k:int):int
         {
-            if (((k < 0) || (k >= HabboMusicPrioritiesEnum._Str_5905)))
+            if (((k < 0) || (k >= HabboMusicPrioritiesEnum.PRIORITY_COUNT)))
             {
                 return -1;
             }
@@ -229,7 +229,7 @@
 
         private function _Str_19565(k:int):int
         {
-            if (((k < 0) || (k >= HabboMusicPrioritiesEnum._Str_5905)))
+            if (((k < 0) || (k >= HabboMusicPrioritiesEnum.PRIORITY_COUNT)))
             {
                 return -1;
             }
@@ -252,7 +252,7 @@
 
         private function _Str_16722(k:int):void
         {
-            if (((k >= 0) && (k < HabboMusicPrioritiesEnum._Str_5905)))
+            if (((k >= 0) && (k < HabboMusicPrioritiesEnum.PRIORITY_COUNT)))
             {
                 this._songRequestsPerPriority[k] = null;
             }
@@ -389,7 +389,7 @@
             var _local_3:int;
             var _local_4:SongDataEntry;
             var _local_2:int;
-            while (_local_2 < HabboMusicPrioritiesEnum._Str_5905)
+            while (_local_2 < HabboMusicPrioritiesEnum.PRIORITY_COUNT)
             {
                 _local_3 = this.getSongIdPlayingAtPriority(_local_2);
                 if (_local_3 >= 0)
@@ -612,7 +612,7 @@
 
         private function _Str_12727(k:int, _arg_2:int):Boolean
         {
-            if ((((_arg_2 == -1) || (k < 0)) || (k >= HabboMusicPrioritiesEnum._Str_5905)))
+            if ((((_arg_2 == -1) || (k < 0)) || (k >= HabboMusicPrioritiesEnum.PRIORITY_COUNT)))
             {
                 return false;
             }
