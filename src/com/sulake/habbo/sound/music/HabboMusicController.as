@@ -118,7 +118,7 @@
                     this.resetSongStartRequest(this._priorityPlaying);
                 }
                 _local_2 = this._priorityPlaying;
-                this._Str_23655();
+                this.playSongWithHighestPriority();
                 if (_local_2 >= HabboMusicPrioritiesEnum.PRIORITY_SONG_PLAY)
                 {
                     this._events.dispatchEvent(new NowPlayingEvent(NowPlayingEvent.NPW_USER_STOP_SONG, _local_2, k.id, -1));
@@ -305,7 +305,7 @@
             return true;
         }
 
-        private function _Str_23655():void
+        private function playSongWithHighestPriority():void
         {
             var _local_3:int;
             this._priorityPlaying = -1;
