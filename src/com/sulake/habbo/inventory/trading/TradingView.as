@@ -706,9 +706,9 @@
             {
                 _local_4 = _local_3.getGridItemAt(_local_6);
                 _local_4.id = _local_6;
-                _local_4.procedure = this._Str_16416;
-                _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_16416);
-                _local_4.addEventListener(WindowMouseEvent.OUT, this._Str_16416);
+                _local_4.procedure = this.othersThumbEventProc;
+                _local_4.addEventListener(WindowMouseEvent.OVER, this.othersThumbEventProc);
+                _local_4.addEventListener(WindowMouseEvent.OUT, this.othersThumbEventProc);
                 _local_6++;
             }
             _local_2.procedure = this._Str_3328;
@@ -788,7 +788,7 @@
             this.thumbEventProc(k, _arg_2, true);
         }
 
-        private function _Str_16416(k:WindowEvent, _arg_2:IWindow):void
+        private function othersThumbEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             this.thumbEventProc(k, _arg_2, false);
         }
