@@ -74,7 +74,7 @@
             this._events = _arg_2;
             this._roomEvents = _arg_3;
             this._connection = _arg_4;
-            this._messageEvents.push(new TraxSongInfoMessageEvent(this._Str_25546));
+            this._messageEvents.push(new TraxSongInfoMessageEvent(this.onSongInfoMessage));
             this._messageEvents.push(new UserSongDisksInventoryMessageEvent(this.onSongDiskInventoryMessage));
             for each (_local_5 in this._messageEvents)
             {
@@ -561,7 +561,7 @@
             this._songRequestList = new Array();
         }
 
-        private function _Str_25546(k:IMessageEvent):void
+        private function onSongInfoMessage(k:IMessageEvent):void
         {
             var _local_6:SongInfoEntry;
             var _local_7:Boolean;
