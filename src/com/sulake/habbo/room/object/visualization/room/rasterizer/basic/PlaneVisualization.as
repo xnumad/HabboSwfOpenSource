@@ -152,7 +152,7 @@
             return true;
         }
 
-        public function _Str_8988():Array
+        public function getLayers():Array
         {
             return this._layers;
         }

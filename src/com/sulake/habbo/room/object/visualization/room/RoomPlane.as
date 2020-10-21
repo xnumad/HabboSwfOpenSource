@@ -542,7 +542,7 @@
                 try
                 {
                     maskData = this._Str_23649(geometry);
-                    layers = this._rasterizer._Str_8988(this._id);
+                    layers = this._rasterizer.getLayers(this._id);
                     i = 0;
                     while (i < layers.length)
                     {

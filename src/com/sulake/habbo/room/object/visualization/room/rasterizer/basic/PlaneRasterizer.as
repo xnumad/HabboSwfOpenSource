@@ -725,14 +725,14 @@
             return String(k);
         }
 
-        public function _Str_8988(k:String):Array
+        public function getLayers(k:String):Array
         {
             var _local_2:Plane = this.getPlane(k);
             if (_local_2 == null)
             {
                 _local_2 = this.getPlane(DEFAULT);
             }
-            return _local_2._Str_8988();
+            return _local_2.getLayers();
         }
     }
 }

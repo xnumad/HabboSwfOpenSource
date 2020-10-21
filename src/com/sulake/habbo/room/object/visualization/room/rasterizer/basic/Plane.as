@@ -113,9 +113,9 @@
             return this._lastPlaneVisualization;
         }
 
-        public function _Str_8988():Array
+        public function getLayers():Array
         {
-            return this.getPlaneVisualization(this._lastSize)._Str_8988();
+            return this.getPlaneVisualization(this._lastSize).getLayers();
         }
     }
 }
