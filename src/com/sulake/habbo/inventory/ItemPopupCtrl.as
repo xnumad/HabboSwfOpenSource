@@ -97,7 +97,7 @@
             this._arrowImgRight = null;
         }
 
-        public function _Str_17992(k:IWindowContainer, _arg_2:String, _arg_3:BitmapData, _arg_4:IStuffData=null, _arg_5:int=2, _arg_6:Boolean=false):void
+        public function updateContent(k:IWindowContainer, _arg_2:String, _arg_3:BitmapData, _arg_4:IStuffData=null, _arg_5:int=2, _arg_6:Boolean=false):void
         {
             var _local_10:BitmapData;
             var _local_11:String;

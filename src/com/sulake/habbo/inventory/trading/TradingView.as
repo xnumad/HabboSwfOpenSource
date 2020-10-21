@@ -823,7 +823,7 @@
                 _local_6 = (_local_4 as CreditTradingItem);
                 if (((!(_local_6 == null)) && (!(_arg_3))))
                 {
-                    this._popupCtrl._Str_17992((_arg_2 as IWindowContainer), _local_6._Str_22574(), _local_6._Str_21010(), null, ItemPopupCtrl._Str_9535, false);
+                    this._popupCtrl.updateContent((_arg_2 as IWindowContainer), _local_6._Str_22574(), _local_6._Str_21010(), null, ItemPopupCtrl._Str_9535, false);
                     this._popupCtrl.show();
                     return;
                 }
@@ -855,7 +855,7 @@
                 {
                     _local_8 = this._Str_19943(_local_4, _local_8, true, _arg_2.id, _arg_3);
                 }
-                this._popupCtrl._Str_17992((_arg_2 as IWindowContainer), _local_8, _local_7, _local_4._Str_3205().stuffData, ItemPopupCtrl._Str_9535, this._Str_24946(_local_5));
+                this._popupCtrl.updateContent((_arg_2 as IWindowContainer), _local_8, _local_7, _local_4._Str_3205().stuffData, ItemPopupCtrl._Str_9535, this._Str_24946(_local_5));
                 this._popupCtrl.show();
             }
             else
@@ -938,7 +938,7 @@
                         _local_6 = this._Str_19943(_local_3, "", false);
                         _local_7 = this._tradingModel._Str_9836(_local_5);
                         _local_8 = ((_local_2) ? (this._Str_18316().getGridItemAt(_local_4)) : this._Str_16996().getGridItemAt(_local_4));
-                        this._popupCtrl._Str_17992((_local_8 as IWindowContainer), _local_6, _local_7);
+                        this._popupCtrl.updateContent((_local_8 as IWindowContainer), _local_6, _local_7);
                     }
                 }
                 else
