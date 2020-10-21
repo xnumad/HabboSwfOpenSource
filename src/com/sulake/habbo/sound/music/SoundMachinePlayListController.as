@@ -319,7 +319,7 @@
             this._connection.send(new GetSoundMachinePlayListMessageComposer());
         }
 
-        private function _Str_22257(k:Array):Array
+        private function convertParserPlayList(k:Array):Array
         {
             var _local_3:PlayListEntry;
             var _local_2:Array = new Array();
@@ -337,7 +337,7 @@
             var _local_2:PlayListMessageEvent = (k as PlayListMessageEvent);
             var _local_3:PlayListMessageParser = (_local_2.getParser() as PlayListMessageParser);
             var _local_4:int = _local_3._Str_23052;
-            var _local_5:Array = this._Str_22257(_local_3._Str_24122);
+            var _local_5:Array = this.convertParserPlayList(_local_3._Str_24122);
             if (((_local_5 == null) || (_local_5.length == 0)))
             {
                 return;
