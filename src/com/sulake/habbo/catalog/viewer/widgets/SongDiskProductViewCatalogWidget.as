@@ -168,7 +168,7 @@
             var _local_7:IHabboLocalizationManager;
             var _local_8:String;
             var k:Boolean;
-            var _local_2:int = this._Str_25216();
+            var _local_2:int = this.getSongLength();
             if (_local_2 >= 0)
             {
                 _local_3 = (_local_2 / 60);
@@ -208,7 +208,7 @@
             }
         }
 
-        private function _Str_25216():int
+        private function getSongLength():int
         {
             var k:ISongInfo;
             if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
