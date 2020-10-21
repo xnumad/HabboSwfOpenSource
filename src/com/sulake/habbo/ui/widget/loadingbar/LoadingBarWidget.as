@@ -434,7 +434,7 @@
 
         private function _Str_20632(k:VideoControlsEvent):void
         {
-            if (this._videoPlayer._Str_3206 == 0)
+            if (this._videoPlayer.volume == 0)
             {
                 this._videoMute = true;
                 this._Str_24150();

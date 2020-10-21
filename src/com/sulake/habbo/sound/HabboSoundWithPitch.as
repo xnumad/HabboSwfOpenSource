@@ -66,13 +66,13 @@
             {
                 if ((((this._startMs > 0) && (_local_2 >= this._Str_19531)) && (_local_2 < this._Str_19780)))
                 {
-                    _Str_7399((_Str_3206 * (Number(_local_2) / this._Str_19780)));
+                    _Str_7399((volume * (Number(_local_2) / this._Str_19780)));
                 }
                 else
                 {
                     if (!this._fadeComplete)
                     {
-                        _Str_7399(_Str_3206);
+                        _Str_7399(volume);
                         this._fadeComplete = true;
                     }
                 }

@@ -83,7 +83,7 @@
             this._playHead = uint((k * _Str_4502));
         }
 
-        public function get _Str_3206():Number
+        public function get volume():Number
         {
             return this._volume;
         }
@@ -133,7 +133,7 @@
             return this._traxData;
         }
 
-        public function set _Str_3206(k:Number):void
+        public function set volume(k:Number):void
         {
             this._volume = k;
             if (this._soundChannel != null)
@@ -365,7 +365,7 @@
             this._expectedStreamPosition = 0;
             this._bufferUnderRunCount = 0;
             this._soundChannel = this._sound.play();
-            this._Str_3206 = this._volume;
+            this.volume = this._volume;
             return true;
         }
 
@@ -596,7 +596,7 @@
                 Logger.log("Audio buffer under run...");
                 this._expectedStreamPosition = k.position;
             }
-            if (this._Str_3206 > 0)
+            if (this.volume > 0)
             {
                 this._Str_23903();
             }
@@ -609,7 +609,7 @@
                     _local_2 = 0;
                 }
             }
-            if (this._Str_3206 <= 0)
+            if (this.volume <= 0)
             {
                 _local_2 = 0;
             }

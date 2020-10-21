@@ -77,7 +77,7 @@
             this._volume = k;
             for each (_local_2 in this._loadedSamples.getValues())
             {
-                _local_2._Str_3206 = this._volume;
+                _local_2.volume = this._volume;
             }
         }
 
@@ -180,7 +180,7 @@
             var _local_3:int = this._loadingSamples.getValue(_local_2);
             var _local_4:HabboSoundWithPitch = new HabboSoundWithPitch(_local_2, this._initialPitch.getValue(_local_3));
             this._soundManager.registerUpdateReceiver(_local_4, 0);
-            _local_4._Str_3206 = this._volume;
+            _local_4.volume = this._volume;
             this._loadedSamples.add(_local_3, _local_4);
             this._loadingSamples.remove(_local_2);
         }

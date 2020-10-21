@@ -333,7 +333,7 @@
 
         private function _Str_23756(k:VideoControlsEvent):void
         {
-            this._Str_3206 = (k.data as Number);
+            this.volume = (k.data as Number);
         }
 
         private function _Str_23822(k:MouseEvent):void
@@ -543,16 +543,16 @@
             dispatchEvent(new VideoControlsEvent(VideoControlsEvent.STATEUPDATE, true, true, k));
         }
 
-        public function get _Str_3206():Number
+        public function get volume():Number
         {
             return this._volume;
         }
 
-        public function set _Str_3206(k:Number):void
+        public function set volume(k:Number):void
         {
             this._volume = k;
             SoundMixer.soundTransform = new SoundTransform(k);
-            this._Str_3319._Str_3206 = k;
+            this._Str_3319.volume = k;
         }
 
         public function get _Str_9635():int

@@ -53,7 +53,7 @@
         {
             this._complete = false;
             this._soundChannel = this._soundObject.play(0, this._loopCount);
-            this._Str_3206 = this._volume;
+            this.volume = this._volume;
             return true;
         }
 
@@ -66,12 +66,12 @@
             return true;
         }
 
-        public function get _Str_3206():Number
+        public function get volume():Number
         {
             return this._volume;
         }
 
-        public function set _Str_3206(k:Number):void
+        public function set volume(k:Number):void
         {
             this._volume = k;
             this._Str_7399(k);

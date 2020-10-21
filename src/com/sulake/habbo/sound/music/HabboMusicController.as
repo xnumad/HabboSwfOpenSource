@@ -397,7 +397,7 @@
                     _local_4 = (this.getSongDataEntry(_local_3) as SongDataEntry);
                     if (((!(_local_4 == null)) && (!(_local_4.soundObject == null))))
                     {
-                        _local_4.soundObject._Str_3206 = k;
+                        _local_4.soundObject.volume = k;
                     }
                 }
                 _local_2++;
@@ -637,7 +637,7 @@
                 Logger.log(("Waiting previous song to stop before playing song " + _arg_2));
                 return true;
             }
-            _local_5._Str_3206 = this._soundManager.traxVolume;
+            _local_5.volume = this._soundManager.traxVolume;
             var _local_6:Number = SKIP_POSITION_SET;
             var _local_7:Number = 0;
             var _local_8:Number = 2;

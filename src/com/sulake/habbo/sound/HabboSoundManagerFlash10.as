@@ -163,7 +163,7 @@
                     this._genericSamples.add(k, IHabboSound(_local_3));
                 }
             }
-            _local_3._Str_3206 = this._genericVolume;
+            _local_3.volume = this._genericVolume;
             _local_3.play();
         }
 
@@ -175,7 +175,7 @@
                 return null;
             }
             var _local_4:HabboSoundWithPitch = new HabboSoundWithPitch(_local_3, _arg_2);
-            _local_4._Str_3206 = this._genericVolume;
+            _local_4.volume = this._genericVolume;
             _local_4.play();
             return _local_4;
         }
@@ -292,7 +292,7 @@
         {
             var _local_4:TraxData = new TraxData(_arg_2);
             var _local_5:TraxSequencer = new TraxSequencer(k, _local_4, this._traxSampleManager.traxSamples, events);
-            _local_5._Str_3206 = this._genericVolume;
+            _local_5.volume = this._genericVolume;
             this._Str_21484(_local_5, _arg_3);
             return _local_5;
         }

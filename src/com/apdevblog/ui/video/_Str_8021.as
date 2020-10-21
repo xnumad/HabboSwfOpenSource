@@ -114,7 +114,7 @@
             this._play._Str_3820(k);
         }
 
-        public function set _Str_3206(k:Number):void
+        public function set volume(k:Number):void
         {
             this._mute._Str_3820(k);
         }
