@@ -22,24 +22,24 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            var _local_2:int;
+            var id:int;
             var _local_3:String;
-            var _local_4:String;
-            var _local_5:String;
-            var _local_6:int;
-            var _local_7:String;
+            var name:String;
+            var data:String;
+            var length:int;
+            var creator:String;
             var _local_10:SongInfoEntry;
             var _local_8:int = k.readInteger();
             var _local_9:int;
             while (_local_9 < _local_8)
             {
-                _local_2 = k.readInteger();
+                id = k.readInteger();
                 _local_3 = k.readString();
-                _local_4 = k.readString();
-                _local_5 = k.readString();
-                _local_6 = k.readInteger();
-                _local_7 = k.readString();
-                _local_10 = new SongInfoEntry(_local_2, _local_6, _local_4, _local_7, _local_5);
+                name = k.readString();
+                data = k.readString();
+                length = k.readInteger();
+                creator = k.readString();
+                _local_10 = new SongInfoEntry(id, length, name, creator, data);
                 this._Str_16563.push(_local_10);
                 _local_9++;
             }
