@@ -169,8 +169,8 @@
             {
                 this._musicController.addSongInfoRequest(_local_3._Str_17943);
             }
-            this._playPosition = _local_3._Str_21591;
-            this._soundManager.events.dispatchEvent(new NowPlayingEvent(NowPlayingEvent.NPE_SONG_CHANGED, HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST, _local_3.currentSongId, _local_3._Str_21591));
+            this._playPosition = _local_3.currentPosition;
+            this._soundManager.events.dispatchEvent(new NowPlayingEvent(NowPlayingEvent.NPE_SONG_CHANGED, HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST, _local_3.currentSongId, _local_3.currentPosition));
         }
 
         private function _Str_24814(k:IMessageEvent):void

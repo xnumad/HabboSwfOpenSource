@@ -17,7 +17,7 @@
             return this._currentSongId;
         }
 
-        public function get _Str_21591():int
+        public function get currentPosition():int
         {
             return this._currentPosition;
         }
