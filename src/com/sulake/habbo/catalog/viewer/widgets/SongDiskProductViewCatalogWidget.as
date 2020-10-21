@@ -233,7 +233,7 @@
 
         private function onOfficialSongIdMessageEvent(k:OfficialSongIdMessageEvent):void
         {
-            if (k.getParser()._Str_25744 == this._officialSongId)
+            if (k.getParser().officialSongId == this._officialSongId)
             {
                 this._selectedSongId = k.getParser().songId;
                 this.updateView();

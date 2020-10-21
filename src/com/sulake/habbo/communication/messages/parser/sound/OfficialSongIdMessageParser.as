@@ -28,7 +28,7 @@
             return this._songId;
         }
 
-        public function get _Str_25744():String
+        public function get officialSongId():String
         {
             return this._officialSongId;
         }
