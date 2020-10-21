@@ -615,7 +615,7 @@
             return this._windowFull.findChildByTag("OTHER_USER_GRID") as IItemGridWindow;
         }
 
-        protected function _Str_26379(k:GroupItem):BitmapData
+        protected function resolveItemThumbnail(k:GroupItem):BitmapData
         {
             var _local_3:ImageResult;
             var _local_2:BitmapData = k._Str_3093;
