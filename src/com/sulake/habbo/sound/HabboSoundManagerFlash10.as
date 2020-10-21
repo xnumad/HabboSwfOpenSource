@@ -180,7 +180,7 @@
             return _local_4;
         }
 
-        public function _Str_25775(k:String):void
+        public function stopSound(k:String):void
         {
             var _local_2:IHabboSound = this._genericSamples.getValue(k);
             if (_local_2 != null)

@@ -239,7 +239,7 @@
         public function _SafeStr_13225():void
         {
             this._SafeStr_22116();
-            SnowWarEngine._Str_25775(HabboSoundTypesEnum.GAMES_SW_MAKE_SNOWBALL);
+            SnowWarEngine.stopSound(HabboSoundTypesEnum.GAMES_SW_MAKE_SNOWBALL);
             if (this._SafeStr_22101)
             {
                 this.onButtonDownEvent(null);

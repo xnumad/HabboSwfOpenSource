@@ -306,7 +306,7 @@
                 if (((!(_local_7)) && (this._SafeStr_18726)))
                 {
                     this._SafeStr_18726 = false;
-                    SnowWarEngine._Str_25775(HabboSoundTypesEnum.GAMES_SW_WALK);
+                    SnowWarEngine.stopSound(HabboSoundTypesEnum.GAMES_SW_WALK);
                 }
             }
             var _local_9:HumanGameObject = this._snowWarEngine._SafeStr_13187();

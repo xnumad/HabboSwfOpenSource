@@ -201,11 +201,11 @@
             }
         }
 
-        public static function _Str_25775(k:String):void //_SafeStr_7041
+        public static function stopSound(k:String):void //_SafeStr_7041
         {
             if (soundManager != null)
             {
-                soundManager._Str_25775(k);
+                soundManager.stopSound(k);
             }
         }
 
@@ -1087,7 +1087,7 @@
                 this._synchronizedGameArena.dispose();
                 this._synchronizedGameArena = null;
             }
-            _Str_25775(HabboSoundTypesEnum.GAMES_SW_WALK);
+            stopSound(HabboSoundTypesEnum.GAMES_SW_WALK);
             this.send(new _SafeStr_3624(HabboGames._SafeStr_7697));
         }
 
