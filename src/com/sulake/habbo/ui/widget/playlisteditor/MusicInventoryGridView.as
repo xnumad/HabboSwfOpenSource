@@ -152,7 +152,7 @@
                     {
                         this._selectedItem.deselect();
                         this._Str_16797();
-                        this._widget._Str_23659(this._selectedItem._Str_5848);
+                        this._widget._Str_23659(this._selectedItem.diskId);
                         this._selectedItem = null;
                     }
                 }

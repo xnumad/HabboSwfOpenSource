@@ -52,7 +52,7 @@
             return this._songData;
         }
 
-        public function get _Str_5848():int
+        public function get diskId():int
         {
             return this._jukeboxDiskId;
         }
@@ -67,7 +67,7 @@
             this._songData = k;
         }
 
-        public function set _Str_5848(k:int):void
+        public function set diskId(k:int):void
         {
             this._jukeboxDiskId = k;
         }

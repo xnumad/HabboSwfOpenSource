@@ -45,7 +45,7 @@
             return this._window as IWindow;
         }
 
-        public function get _Str_5848():int
+        public function get diskId():int
         {
             return this._diskId;
         }

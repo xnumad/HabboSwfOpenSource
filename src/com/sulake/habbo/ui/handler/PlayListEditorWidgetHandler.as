@@ -149,7 +149,7 @@
                     _local_4 = (k as RoomWidgetPlayListModificationMessage);
                     if (this._connection != null)
                     {
-                        this._connection.send(new AddJukeboxDiskComposer(_local_4._Str_5848, _local_4._Str_20440));
+                        this._connection.send(new AddJukeboxDiskComposer(_local_4.diskId, _local_4._Str_20440));
                     }
                     break;
                 case RoomWidgetPlayListModificationMessage.RWPLAM_REMOVE_FROM_PLAYLIST:

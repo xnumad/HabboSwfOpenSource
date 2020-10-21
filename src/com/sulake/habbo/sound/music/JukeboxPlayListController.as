@@ -197,7 +197,7 @@
                         this._musicController.requestSongInfoWithoutSamples(_local_5);
                     }
                 }
-                _local_7._Str_5848 = _local_6;
+                _local_7.diskId = _local_6;
                 this._entries.push(_local_7);
                 _local_4++;
             }
@@ -224,11 +224,11 @@
                 _local_4 = this._entries[_local_2];
                 if (_local_4.id == k.id)
                 {
-                    _local_5 = _local_4._Str_5848;
+                    _local_5 = _local_4.diskId;
                     _local_6 = (this._musicController.getSongInfo(k.id) as SongDataEntry);
                     if (_local_6 != null)
                     {
-                        _local_6._Str_5848 = _local_5;
+                        _local_6.diskId = _local_5;
                         this._entries[_local_2] = _local_6;
                     }
                     break;

@@ -15,7 +15,7 @@
             this._diskId = _arg_3;
         }
 
-        public function get _Str_5848():int
+        public function get diskId():int
         {
             return this._diskId;
         }
