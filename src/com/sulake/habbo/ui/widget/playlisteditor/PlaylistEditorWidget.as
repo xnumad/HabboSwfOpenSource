@@ -185,12 +185,12 @@
                     _local_3._Str_3502.fadeOutSeconds = 0;
                 }
             }
-            this._soundManager._Str_2774.playSong(k, HabboMusicPrioritiesEnum._Str_7215, 0, 0, 0, 0);
+            this._soundManager._Str_2774.playSong(k, HabboMusicPrioritiesEnum.PRIORITY_SONG_PLAY, 0, 0, 0, 0);
         }
 
         public function _Str_16919():void
         {
-            this._soundManager._Str_2774.stop(HabboMusicPrioritiesEnum._Str_7215);
+            this._soundManager._Str_2774.stop(HabboMusicPrioritiesEnum.PRIORITY_SONG_PLAY);
         }
 
         public function _Str_8169(k:String):BitmapData

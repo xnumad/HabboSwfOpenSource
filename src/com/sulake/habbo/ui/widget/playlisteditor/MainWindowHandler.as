@@ -82,7 +82,7 @@
         {
             if (this._musicController)
             {
-                this._musicController.stop(HabboMusicPrioritiesEnum._Str_7215);
+                this._musicController.stop(HabboMusicPrioritiesEnum.PRIORITY_SONG_PLAY);
                 this._musicController = null;
             }
             if (this._musicInventoryView)
@@ -369,7 +369,7 @@
 
         private function _Str_23997():Boolean
         {
-            return !(this._musicController.getSongIdPlayingAtPriority(HabboMusicPrioritiesEnum._Str_7215) == -1);
+            return !(this._musicController.getSongIdPlayingAtPriority(HabboMusicPrioritiesEnum.PRIORITY_SONG_PLAY) == -1);
         }
     }
 }

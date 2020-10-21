@@ -119,7 +119,7 @@
                 }
                 _local_2 = this._priorityPlaying;
                 this._Str_23655();
-                if (_local_2 >= HabboMusicPrioritiesEnum._Str_7215)
+                if (_local_2 >= HabboMusicPrioritiesEnum.PRIORITY_SONG_PLAY)
                 {
                     this._events.dispatchEvent(new NowPlayingEvent(NowPlayingEvent.NPW_USER_STOP_SONG, _local_2, k.id, -1));
                 }
