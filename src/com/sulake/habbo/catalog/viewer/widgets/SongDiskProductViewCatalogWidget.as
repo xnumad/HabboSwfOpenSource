@@ -122,9 +122,9 @@
             if (_local_2 != -1)
             {
                 _local_3 = this._soundManager._Str_2774.getSongInfo(_local_2);
-                if (_local_3._Str_3502 != null)
+                if (_local_3.soundObject != null)
                 {
-                    _local_3._Str_3502.fadeOutSeconds = 0;
+                    _local_3.soundObject.fadeOutSeconds = 0;
                 }
             }
         }

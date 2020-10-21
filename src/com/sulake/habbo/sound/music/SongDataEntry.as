@@ -42,7 +42,7 @@
             return (this._soundObject == null) ? false : this._soundObject.ready;
         }
 
-        public function get _Str_3502():IHabboSound
+        public function get soundObject():IHabboSound
         {
             return this._soundObject;
         }
@@ -57,7 +57,7 @@
             return this._jukeboxDiskId;
         }
 
-        public function set _Str_3502(k:IHabboSound):void
+        public function set soundObject(k:IHabboSound):void
         {
             this._soundObject = k;
         }

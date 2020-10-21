@@ -9,6 +9,6 @@
         function get name():String;
         function get creator():String;
         function get songData():String;
-        function get _Str_3502():IHabboSound;
+        function get soundObject():IHabboSound;
     }
 }

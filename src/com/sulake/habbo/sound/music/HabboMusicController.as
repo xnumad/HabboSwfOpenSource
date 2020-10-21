@@ -157,12 +157,12 @@
                     while (_local_2 < this._availableSongs.length)
                     {
                         _local_3 = (this._availableSongs.getWithIndex(_local_2) as SongDataEntry);
-                        _local_4 = (_local_3._Str_3502 as IHabboSound);
+                        _local_4 = (_local_3.soundObject as IHabboSound);
                         if (_local_4 != null)
                         {
                             _local_4.stop();
                         }
-                        _local_3._Str_3502 = null;
+                        _local_3.soundObject = null;
                         _local_2++;
                     }
                     this._availableSongs.dispose();
@@ -271,11 +271,11 @@
                 this.addSongInfoRequest(k);
                 return false;
             }
-            if (_local_3._Str_3502 == null)
+            if (_local_3.soundObject == null)
             {
-                _local_3._Str_3502 = this._soundManager._Str_17576(_local_3.id, _local_3.songData);
+                _local_3.soundObject = this._soundManager._Str_17576(_local_3.id, _local_3.songData);
             }
-            var _local_4:IHabboSound = _local_3._Str_3502;
+            var _local_4:IHabboSound = _local_3.soundObject;
             if (!_local_4.ready)
             {
                 return false;
@@ -366,7 +366,7 @@
             if (k != null)
             {
                 Logger.log(("Stopping current song " + k.id));
-                _local_2 = k._Str_3502;
+                _local_2 = k.soundObject;
                 if (_local_2 != null)
                 {
                     _local_2.stop();
@@ -395,9 +395,9 @@
                 if (_local_3 >= 0)
                 {
                     _local_4 = (this.getSongDataEntry(_local_3) as SongDataEntry);
-                    if (((!(_local_4 == null)) && (!(_local_4._Str_3502 == null))))
+                    if (((!(_local_4 == null)) && (!(_local_4.soundObject == null))))
                     {
-                        _local_4._Str_3502._Str_3206 = k;
+                        _local_4.soundObject._Str_3206 = k;
                     }
                 }
                 _local_2++;
@@ -499,7 +499,7 @@
             while (_local_2 < this._availableSongs.length)
             {
                 _local_3 = (this._availableSongs.getWithIndex(_local_2) as SongDataEntry);
-                _local_4 = (_local_3._Str_3502 as TraxSequencer);
+                _local_4 = (_local_3.soundObject as TraxSequencer);
                 if ((((!(_local_3.id == this._songIdPlaying)) && (!(_local_4 == null))) && (_local_4.ready)))
                 {
                     _local_5 = _local_4._Str_17466._Str_18878();
@@ -508,7 +508,7 @@
                     {
                         if (_local_5.indexOf(k[_local_6]) != -1)
                         {
-                            _local_3._Str_3502 = null;
+                            _local_3.soundObject = null;
                             _local_4.dispose();
                             Logger.log(((("Unloaded " + _local_3.name) + " by ") + _local_3.creator));
                         }
@@ -534,7 +534,7 @@
                     _local_4 = this._availableSongs.getValue(_local_3.songId);
                     if (_local_4 != null)
                     {
-                        _local_5 = (_local_4._Str_3502 as TraxSequencer);
+                        _local_5 = (_local_4.soundObject as TraxSequencer);
                         if (_local_5 != null)
                         {
                             k = k.concat(_local_5._Str_17466._Str_18878());
@@ -627,7 +627,7 @@
                 Logger.log((("WARNING: Unable to find song entry id " + _arg_2) + " that was supposed to be loaded."));
                 return false;
             }
-            var _local_5:IHabboSound = _local_4._Str_3502;
+            var _local_5:IHabboSound = _local_4.soundObject;
             if (((_local_5 == null) || (!(_local_5.ready))))
             {
                 return false;
