@@ -7,7 +7,7 @@
     public class PlayListMessageParser implements IMessageParser
     {
         private var _synchronizationCount:int;
-        private var _Str_2519:Array;
+        private var _playlist:Array;
 
 
         public function get _Str_23052():int
@@ -17,13 +17,13 @@
 
         public function get _Str_24122():Array
         {
-            return this._Str_2519;
+            return this._playlist;
         }
 
         public function flush():Boolean
         {
             this._synchronizationCount = -1;
-            this._Str_2519 = [];
+            this._playlist = [];
             return true;
         }
 
@@ -42,7 +42,7 @@
                 _local_5 = k.readInteger();
                 _local_6 = k.readString();
                 _local_7 = k.readString();
-                this._Str_2519.push(new PlayListEntry(_local_4, _local_5, _local_6, _local_7));
+                this._playlist.push(new PlayListEntry(_local_4, _local_5, _local_6, _local_7));
                 _local_3++;
             }
             return true;
