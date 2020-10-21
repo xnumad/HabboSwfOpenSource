@@ -161,7 +161,7 @@
         {
             if (this._windowFull == null)
             {
-                this._windowFull = this._Str_25571();
+                this._windowFull = this.createNormalWindow();
                 this._Str_17273(null);
             }
             if (this._windowMin == null)
@@ -681,7 +681,7 @@
             }
         }
 
-        private function _Str_25571():IWindowContainer
+        private function createNormalWindow():IWindowContainer
         {
             var _local_3:IItemGridWindow;
             var _local_4:IWindow;
