@@ -87,7 +87,7 @@
 
         public function _Str_7269():void
         {
-            this._genericVolume = this._widget.widget.toolbar._Str_2476._Str_3960;
+            this._genericVolume = this._widget.widget.toolbar._Str_2476.genericVolume;
             this._furniVolume = this._widget.widget.toolbar._Str_2476.furniVolume;
             this._traxVolume = this._widget.widget.toolbar._Str_2476.traxVolume;
             if (this._uiSoundsSettings != null)
@@ -152,7 +152,7 @@
                     return;
                 }
                 this._widget.widget.toolbar._Str_2476.furniVolume = _local_5;
-                this._widget.widget.toolbar._Str_2476._Str_3960 = _local_6;
+                this._widget.widget.toolbar._Str_2476.genericVolume = _local_6;
                 this._widget.widget.toolbar._Str_2476.traxVolume = _local_7;
             }
             else

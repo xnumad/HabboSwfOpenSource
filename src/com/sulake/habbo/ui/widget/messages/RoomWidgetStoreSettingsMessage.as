@@ -37,12 +37,12 @@
             this._furniVolume = k;
         }
 
-        public function get _Str_3960():Number
+        public function get genericVolume():Number
         {
             return this._genericVolume;
         }
 
-        public function set _Str_3960(k:Number):void
+        public function set genericVolume(k:Number):void
         {
             this._genericVolume = k;
         }

@@ -375,18 +375,18 @@
                     }
                     break;
                 case RoomWidgetGetSettingsMessage.RWGSM_GET_SETTINGS:
-                    this._container.events.dispatchEvent(new _Str_3963(_Str_3963.RWSUE_SETTINGS, this._container._Str_2476.traxVolume, this._container._Str_2476.furniVolume, this._container._Str_2476._Str_3960));
+                    this._container.events.dispatchEvent(new _Str_3963(_Str_3963.RWSUE_SETTINGS, this._container._Str_2476.traxVolume, this._container._Str_2476.furniVolume, this._container._Str_2476.genericVolume));
                     break;
                 case RoomWidgetStoreSettingsMessage.RWSSM_STORE_SOUND:
                     this._container._Str_2476.traxVolume = (k as RoomWidgetStoreSettingsMessage).traxVolume;
                     this._container._Str_2476.furniVolume = (k as RoomWidgetStoreSettingsMessage).furniVolume;
-                    this._container._Str_2476._Str_3960 = (k as RoomWidgetStoreSettingsMessage)._Str_3960;
-                    this._container.events.dispatchEvent(new _Str_3963(_Str_3963.RWSUE_SETTINGS, this._container._Str_2476.traxVolume, this._container._Str_2476.furniVolume, this._container._Str_2476._Str_3960));
+                    this._container._Str_2476.genericVolume = (k as RoomWidgetStoreSettingsMessage).genericVolume;
+                    this._container.events.dispatchEvent(new _Str_3963(_Str_3963.RWSUE_SETTINGS, this._container._Str_2476.traxVolume, this._container._Str_2476.furniVolume, this._container._Str_2476.genericVolume));
                     break;
                 case RoomWidgetStoreSettingsMessage.RWSSM_PREVIEW_SOUND:
                     _local_5 = (k as RoomWidgetStoreSettingsMessage);
-                    this._container._Str_2476._Str_15711(_local_5._Str_3960, _local_5.furniVolume, _local_5.traxVolume);
-                    this._container.events.dispatchEvent(new _Str_3963(_Str_3963.RWSUE_SETTINGS, this._container._Str_2476.traxVolume, this._container._Str_2476.furniVolume, this._container._Str_2476._Str_3960));
+                    this._container._Str_2476._Str_15711(_local_5.genericVolume, _local_5.furniVolume, _local_5.traxVolume);
+                    this._container.events.dispatchEvent(new _Str_3963(_Str_3963.RWSUE_SETTINGS, this._container._Str_2476.traxVolume, this._container._Str_2476.furniVolume, this._container._Str_2476.genericVolume));
                     break;
                 case RoomWidgetAvatarEditorMessage.RWAEM_AVATAR_EDITOR_VIEW_DISPOSED:
                     if (((this._container.habboHelp) && (this._container.habboHelp.events)))

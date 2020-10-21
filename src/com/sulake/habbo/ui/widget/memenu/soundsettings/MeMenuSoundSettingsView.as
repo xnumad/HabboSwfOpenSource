@@ -176,7 +176,7 @@
             {
                 _local_5 = new RoomWidgetStoreSettingsMessage(RoomWidgetStoreSettingsMessage.RWSSM_PREVIEW_SOUND);
             }
-            _local_5._Str_3960 = ((k != -1) ? k : this._genericVolume);
+            _local_5.genericVolume = ((k != -1) ? k : this._genericVolume);
             _local_5.furniVolume = ((_arg_2 != -1) ? _arg_2 : this._furniVolume);
             _local_5.traxVolume = ((_arg_3 != -1) ? _arg_3 : this._traxVolume);
             this._widget.messageListener.processWidgetMessage(_local_5);
