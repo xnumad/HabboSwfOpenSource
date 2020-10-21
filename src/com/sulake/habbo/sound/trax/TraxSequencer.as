@@ -386,7 +386,7 @@
         {
             if (((this._fadeOutLengthSamples > 0) && (!(this._finished))))
             {
-                this._Str_24766();
+                this.stopWithFadeout();
             }
             else
             {
@@ -409,7 +409,7 @@
             }
         }
 
-        private function _Str_24766():void
+        private function stopWithFadeout():void
         {
             if (this._fadeoutStopTimer == null)
             {
