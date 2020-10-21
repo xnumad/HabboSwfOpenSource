@@ -196,7 +196,7 @@
             return this._roomItemPlaylist;
         }
 
-        private function _Str_25630(k:int, _arg_2:int, _arg_3:Number, _arg_4:Number, _arg_5:Number, _arg_6:Number):Boolean
+        private function addSongStartRequest(k:int, _arg_2:int, _arg_3:Number, _arg_4:Number, _arg_5:Number, _arg_6:Number):Boolean
         {
             if (((k < 0) || (k >= HabboMusicPrioritiesEnum._Str_5905)))
             {
@@ -286,7 +286,7 @@
         public function playSong(k:int, _arg_2:int, _arg_3:Number=0, _arg_4:Number=0, _arg_5:Number=0.5, _arg_6:Number=0.5):Boolean
         {
             Logger.log((("Requesting " + k) + " for playing"));
-            if (!this._Str_25630(_arg_2, k, _arg_3, _arg_4, _arg_5, _arg_6))
+            if (!this.addSongStartRequest(_arg_2, k, _arg_3, _arg_4, _arg_5, _arg_6))
             {
                 return false;
             }
