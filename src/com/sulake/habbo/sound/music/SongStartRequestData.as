@@ -26,7 +26,7 @@
             return this._songId;
         }
 
-        public function get _Str_23958():Number
+        public function get startPos():Number
         {
             if (this._startPos < 0)
             {
