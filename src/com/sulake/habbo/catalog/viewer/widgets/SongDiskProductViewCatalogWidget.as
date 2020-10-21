@@ -37,7 +37,7 @@
             this._songLengthText = _window.findChildByName("ctlg_song_length");
             if (this._playButton != null)
             {
-                this._playButton.addEventListener(WindowMouseEvent.CLICK, this._Str_10844);
+                this._playButton.addEventListener(WindowMouseEvent.CLICK, this.onClickPlay);
                 this._playButton.disable();
             }
             this._playPreviewContainer = (_window.findChildByName("playPreviewContainer") as IWindowContainer);
@@ -62,7 +62,7 @@
         {
             if (this._playButton != null)
             {
-                this._playButton.removeEventListener(WindowMouseEvent.CLICK, this._Str_10844);
+                this._playButton.removeEventListener(WindowMouseEvent.CLICK, this.onClickPlay);
             }
             if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
             {
@@ -105,7 +105,7 @@
             return true;
         }
 
-        private function _Str_10844(k:WindowMouseEvent):void
+        private function onClickPlay(k:WindowMouseEvent):void
         {
             if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
             {

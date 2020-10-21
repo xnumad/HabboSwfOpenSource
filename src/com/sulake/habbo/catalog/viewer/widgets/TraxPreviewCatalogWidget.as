@@ -23,7 +23,7 @@
             Logger.log(("Trax listener found button: " + this._playButton));
             if (this._playButton != null)
             {
-                this._playButton.addEventListener(WindowMouseEvent.CLICK, this._Str_10844);
+                this._playButton.addEventListener(WindowMouseEvent.CLICK, this.onClickPlay);
                 this._playButton.disable();
             }
             this._soundManager = _arg_2;
@@ -33,7 +33,7 @@
         {
             if (this._playButton != null)
             {
-                this._playButton.removeEventListener(WindowMouseEvent.CLICK, this._Str_10844);
+                this._playButton.removeEventListener(WindowMouseEvent.CLICK, this.onClickPlay);
             }
             if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
             {
@@ -92,7 +92,7 @@
             }
         }
 
-        private function _Str_10844(k:WindowMouseEvent):void
+        private function onClickPlay(k:WindowMouseEvent):void
         {
             if (((!(this._soundManager == null)) && (!(this._soundManager._Str_2774 == null))))
             {
