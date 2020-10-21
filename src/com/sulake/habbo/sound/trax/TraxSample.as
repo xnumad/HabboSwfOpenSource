@@ -286,7 +286,7 @@
             return _arg_4 * _local_5;
         }
 
-        public function _Str_16849(k:Vector.<int>, _arg_2:int, _arg_3:int, _arg_4:int):int
+        public function addSample(k:Vector.<int>, _arg_2:int, _arg_3:int, _arg_4:int):int
         {
             var _local_7:int;
             var _local_8:int;

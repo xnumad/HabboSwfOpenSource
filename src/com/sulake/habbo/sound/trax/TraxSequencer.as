@@ -541,7 +541,7 @@
                     {
                         if (_local_3 != null)
                         {
-                            _local_3._Str_16849(MIXING_BUFFER, _local_9, _local_12);
+                            _local_3.addSample(MIXING_BUFFER, _local_9, _local_12);
                         }
                         _local_9 = (_local_9 + _local_12);
                     }
