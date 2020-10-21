@@ -182,7 +182,7 @@
                 _local_3 = this._soundManager._Str_2774.getSongInfo(_local_2);
                 if (_local_3._Str_3502 != null)
                 {
-                    _local_3._Str_3502._Str_4908 = 0;
+                    _local_3._Str_3502.fadeOutSeconds = 0;
                 }
             }
             this._soundManager._Str_2774.playSong(k, HabboMusicPrioritiesEnum._Str_7215, 0, 0, 0, 0);

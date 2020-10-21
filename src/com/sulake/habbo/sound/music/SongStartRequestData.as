@@ -45,7 +45,7 @@
             return this._fadeInSeconds;
         }
 
-        public function get _Str_4908():Number
+        public function get fadeOutSeconds():Number
         {
             return this._fadeOutSeconds;
         }

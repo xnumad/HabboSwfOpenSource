@@ -109,12 +109,12 @@
             return !(this._Str_3136);
         }
 
-        public function get _Str_4908():Number
+        public function get fadeOutSeconds():Number
         {
             return 0;
         }
 
-        public function set _Str_4908(k:Number):void
+        public function set fadeOutSeconds(k:Number):void
         {
         }
 

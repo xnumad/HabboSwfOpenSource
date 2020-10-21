@@ -108,12 +108,12 @@
             return this._finished;
         }
 
-        public function get _Str_4908():Number
+        public function get fadeOutSeconds():Number
         {
             return this._fadeOutLengthSamples / _Str_4502;
         }
 
-        public function set _Str_4908(k:Number):void
+        public function set fadeOutSeconds(k:Number):void
         {
             this._fadeOutLengthSamples = int((k * _Str_4502));
         }

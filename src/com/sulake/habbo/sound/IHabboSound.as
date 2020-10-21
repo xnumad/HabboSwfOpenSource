@@ -11,8 +11,8 @@
         function get length():Number;
         function get ready():Boolean;
         function get _Str_21060():Boolean;
-        function get _Str_4908():Number;
-        function set _Str_4908(_arg_1:Number):void;
+        function get fadeOutSeconds():Number;
+        function set fadeOutSeconds(_arg_1:Number):void;
         function get fadeInSeconds():Number;
         function set fadeInSeconds(_arg_1:Number):void;
     }
