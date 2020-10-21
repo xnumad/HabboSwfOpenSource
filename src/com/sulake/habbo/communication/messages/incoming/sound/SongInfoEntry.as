@@ -4,10 +4,10 @@
     {
         private var _data:String = "";
 
-        public function SongInfoEntry(k:int, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String)
+        public function SongInfoEntry(id:int, length:int, name:String, creator:String, data:String)
         {
-            super(k, _arg_2, _arg_3, _arg_4);
-            this._data = _arg_5;
+            super(id, length, name, creator);
+            this._data = data;
         }
 
         public function get data():String
