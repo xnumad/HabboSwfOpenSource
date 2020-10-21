@@ -9,65 +9,65 @@
 
         public function TraxData(k:String)
         {
-            var _local_2:Array;
-            var _local_6:Array;
-            var _local_7:int;
-            var _local_8:String;
-            var _local_9:String;
-            var _local_10:int;
-            var _local_11:Array;
-            var _local_12:TraxChannel;
-            var _local_13:int;
-            var _local_14:Array;
-            var _local_15:int;
-            var _local_16:int;
+            var channelLines:Array;
+            var metaDatas:Array;
+            var m:int;
+            var metaDataKey:String;
+            var metaDataValue:String;
+            var channelId:int;
+            var channelItemSets:Array;
+            var channel:TraxChannel;
+            var i:int;
+            var channelItem:Array;
+            var channelItemId:int;
+            var channelItemLength:int;
             this._metaData = new Map();
             super();
             this._channels = [];
-            var _local_3:Array = k.split(":");
-            var _local_4:String = String(_local_3[(_local_3.length - 1)]);
-            if (_local_4.indexOf("meta") != -1)
+            var lines:Array = k.split(":");
+            var lastLine:String = String(lines[(lines.length - 1)]);
+            if (lastLine.indexOf("meta") != -1)
             {
-                _local_6 = _local_4.split(";");
-                _local_7 = 0;
-                while (_local_7 < _local_6.length)
+                metaDatas = lastLine.split(";");
+                m = 0;
+                while (m < metaDatas.length)
                 {
-                    _local_8 = String(_local_6[_local_7]).split(",")[0];
-                    _local_9 = String(_local_6[_local_7]).split(",")[1];
-                    this._metaData.add(_local_8, _local_9);
-                    _local_7++;
+                    metaDataKey = String(metaDatas[m]).split(",")[0];
+                    metaDataValue = String(metaDatas[m]).split(",")[1];
+                    this._metaData.add(metaDataKey, metaDataValue);
+                    m++;
                 }
-                _local_2 = _local_3.slice(0, (_local_3.length - 1));
+                channelLines = lines.slice(0, (lines.length - 1));
             }
             else
             {
-                _local_2 = _local_3;
+                channelLines = lines;
             }
-            var _local_5:int;
-            while (_local_5 < (_local_2.length / 2))
+            var c:int;
+            while (c < (channelLines.length / 2))
             {
-                if (_local_2[(_local_5 * 2)].toString().length > 0)
+                if (channelLines[(c * 2)].toString().length > 0)
                 {
-                    _local_10 = int(_local_2[(_local_5 * 2)]);
-                    _local_11 = _local_2[((_local_5 * 2) + 1)].toString().split(";");
-                    _local_12 = new TraxChannel(_local_10);
-                    _local_13 = 0;
-                    while (_local_13 < _local_11.length)
+                    channelId = int(channelLines[(c * 2)]);
+                    channelItemSets = channelLines[((c * 2) + 1)].toString().split(";");
+                    channel = new TraxChannel(channelId);
+                    i = 0;
+                    while (i < channelItemSets.length)
                     {
-                        _local_14 = _local_11[_local_13].toString().split(",");
-                        if (_local_14.length != 2)
+                        channelItem = channelItemSets[i].toString().split(",");
+                        if (channelItem.length != 2)
                         {
                             Logger.log("Trax load error: invalid song data string");
                             return;
                         }
-                        _local_15 = int(_local_14[0]);
-                        _local_16 = int(_local_14[1]);
-                        _local_12.addChannelItem(new TraxChannelItem(_local_15, _local_16));
-                        _local_13++;
+                        channelItemId = int(channelItem[0]);
+                        channelItemLength = int(channelItem[1]);
+                        channel.addChannelItem(new TraxChannelItem(channelItemId, channelItemLength));
+                        i++;
                     }
-                    this._channels.push(_local_12);
+                    this._channels.push(channel);
                 }
-                _local_5++;
+                c++;
             }
         }
 
