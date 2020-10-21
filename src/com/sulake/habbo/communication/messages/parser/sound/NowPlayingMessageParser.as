@@ -5,7 +5,7 @@
 
     public class NowPlayingMessageParser implements IMessageParser
     {
-        private var _Str_18881:int;
+        private var _currentSongId:int;
         private var _Str_17672:int;
         private var _Str_17103:int;
         private var _Str_17651:int;
@@ -14,7 +14,7 @@
 
         public function get _Str_9166():int
         {
-            return this._Str_18881;
+            return this._currentSongId;
         }
 
         public function get _Str_21591():int
@@ -39,7 +39,7 @@
 
         public function flush():Boolean
         {
-            this._Str_18881 = -1;
+            this._currentSongId = -1;
             this._Str_17672 = -1;
             this._Str_17103 = -1;
             this._Str_17651 = -1;
@@ -49,7 +49,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_18881 = k.readInteger();
+            this._currentSongId = k.readInteger();
             this._Str_17672 = k.readInteger();
             this._Str_17103 = k.readInteger();
             this._Str_17651 = k.readInteger();
