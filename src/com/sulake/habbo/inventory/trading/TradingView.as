@@ -645,7 +645,7 @@
             return this._windowManager.buildFromXML(k) as IWindowContainer;
         }
 
-        protected function _Str_26039(k:uint):void
+        protected function selectOwnTradeItem(k:uint):void
         {
             var _local_2:GroupItem;
             if (((this._tradingModel == null) || (this._tradingModel._Str_5319 == null)))
