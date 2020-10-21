@@ -48,7 +48,7 @@
                     this._Str_8367.dispose();
                     this._Str_8367 = null;
                 }
-                events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+                events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
                 events.removeEventListener(CatalogWidgetEvent.PRODUCT_OFFER_UPDATED, this._Str_20503);
                 super.dispose();
             }
@@ -63,14 +63,14 @@
             var k:IWidgetWindow = IWidgetWindow(_window.findChildByName("unique_item_overlay_container"));
             this._Str_17834 = _Str_9620(k.widget);
             window.visible = false;
-            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             events.addEventListener(CatalogWidgetEvent.PRODUCT_OFFER_UPDATED, this._Str_20503);
             this._Str_6632 = new Timer(_Str_18612);
             this._Str_6632.addEventListener(TimerEvent.TIMER, this._Str_19874);
             return true;
         }
 
-        private function _Str_3115(k:SelectProductEvent):void
+        private function onSelectProduct(k:SelectProductEvent):void
         {
             if (k == null)
             {

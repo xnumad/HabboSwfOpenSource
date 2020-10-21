@@ -42,7 +42,7 @@
                 this._youAreOwnerMessageEvent = null;
                 this._catalog = null;
             }
-            events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             super.dispose();
         }
 
@@ -60,7 +60,7 @@
             _Str_2819(CatalogWidgetEnum.BUILDER);
             this._Str_2771(false);
             _window.procedure = this.windowProcedure;
-            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             events.addEventListener(CatalogWidgetEvent.ROOM_CHANGED, this._Str_24491);
             return true;
         }
@@ -96,7 +96,7 @@
             }
         }
 
-        private function _Str_3115(k:SelectProductEvent):void
+        private function onSelectProduct(k:SelectProductEvent):void
         {
             this._offer = k.offer;
             this._Str_2771(false);

@@ -105,7 +105,7 @@
                 this._selectedPaletteIndex = -1;
             }
             this._offers.add(this._selectedTypeIndex, k);
-            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             events.addEventListener(CatalogWidgetEvent.COLOUR_INDEX, this._Str_7756);
             events.addEventListener(CatalogWidgetEvent.APPROVE_RESULT, this.onApproveNameResult);
             events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
@@ -216,7 +216,7 @@
             this._catalog.approveName(_local_2, 1);
         }
 
-        private function _Str_3115(k:SelectProductEvent):void
+        private function onSelectProduct(k:SelectProductEvent):void
         {
             if (k == null)
             {

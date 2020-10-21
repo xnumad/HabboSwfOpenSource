@@ -101,7 +101,7 @@
             {
                 return false;
             }
-            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             return true;
         }
 
@@ -129,7 +129,7 @@
             }
         }
 
-        private function _Str_3115(k:SelectProductEvent):void
+        private function onSelectProduct(k:SelectProductEvent):void
         {
             if (((k == null) || (k.offer == null)))
             {

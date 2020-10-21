@@ -17,7 +17,7 @@
         {
             if (!disposed)
             {
-                events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+                events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
                 super.dispose();
             }
         }
@@ -29,11 +29,11 @@
                 return false;
             }
             _Str_2819(CatalogWidgetEnum.ADD_ON_BADGE_VIEW);
-            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             return true;
         }
 
-        private function _Str_3115(k:SelectProductEvent):void
+        private function onSelectProduct(k:SelectProductEvent):void
         {
             var _local_2:IBadgeImageWidget;
             if (((!(disposed)) && (k.offer.badgeCode)))

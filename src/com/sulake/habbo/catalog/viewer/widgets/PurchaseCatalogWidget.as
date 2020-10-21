@@ -51,7 +51,7 @@
             {
                 return;
             }
-            events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             events.removeEventListener(CatalogWidgetEvent.SET_EXTRA_PARM, this._Str_19234);
             events.removeEventListener(CatalogWidgetEvent.PURCHASE_OVERRIDE, this._Str_21783);
             events.removeEventListener(CatalogWidgetEvent.SET_PREVIEWER_STUFFDATA, this._Str_20167);
@@ -101,7 +101,7 @@
             {
                 this._stubPurchaseVipXML = (_local_2.content as XML);
             }
-            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             events.addEventListener(CatalogWidgetEvent.SET_EXTRA_PARM, this._Str_19234);
             events.addEventListener(CatalogWidgetEvent.PURCHASE_OVERRIDE, this._Str_21783);
             events.addEventListener(CatalogWidgetEvent.INIT_PURCHASE, this._Str_25569);
@@ -134,7 +134,7 @@
             return !((this._extraParamRequired) && (this._additionalParameters == ""));
         }
 
-        private function _Str_3115(k:SelectProductEvent):void
+        private function onSelectProduct(k:SelectProductEvent):void
         {
             var _local_2:IWindow;
             var _local_3:Boolean;

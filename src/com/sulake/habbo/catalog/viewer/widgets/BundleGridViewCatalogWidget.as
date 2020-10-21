@@ -35,7 +35,7 @@
             {
                 return false;
             }
-            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
             var k:XmlAsset = (page.viewer.catalog.assets.getAssetByName("gridItem") as XmlAsset);
             this._gridItemLayout = (k.content as XML);
@@ -47,7 +47,7 @@
         {
             if (!disposed)
             {
-                events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+                events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
                 events.removeEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
                 super.dispose();
             }
@@ -66,7 +66,7 @@
             }
         }
 
-        private function _Str_3115(k:SelectProductEvent):void
+        private function onSelectProduct(k:SelectProductEvent):void
         {
             this._offer = k.offer;
             this._itemGrid.destroyGridItems();

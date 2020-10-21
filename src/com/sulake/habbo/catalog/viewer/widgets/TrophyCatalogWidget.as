@@ -71,7 +71,7 @@
                 return false;
             }
             this._previewImage = (window.findChildByName("ctlg_teaserimg_1") as IBitmapWrapperWindow);
-            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             events.addEventListener(CatalogWidgetEvent.COLOUR_INDEX, this._Str_7756);
             events.addEventListener(CatalogWidgetEvent.TEXT_INPUT, this._Str_25854);
             var k:IContainerButtonWindow = (window.findChildByName("ctlg_nextmodel_button") as IContainerButtonWindow);
@@ -139,7 +139,7 @@
             events.dispatchEvent(new CatalogWidgetColoursEvent(_local_2, "ctlg_clr_40x32_1", "ctlg_clr_40x32_2", "ctlg_clr_40x32_3"));
         }
 
-        private function _Str_3115(k:SelectProductEvent):void
+        private function onSelectProduct(k:SelectProductEvent):void
         {
             var _local_4:BitmapData;
             var _local_5:IProduct;

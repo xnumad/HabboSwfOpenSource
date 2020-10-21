@@ -23,11 +23,11 @@
             {
                 return false;
             }
-            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);
+            events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             return true;
         }
 
-        private function _Str_3115(k:SelectProductEvent):void
+        private function onSelectProduct(k:SelectProductEvent):void
         {
             this._priceWidget = this._catalog.utils._Str_7075(k.offer, (_window as IWindowContainer), this._priceWidget, _window.findChildByName("fake_productimage"), 0, true, 0);
         }
