@@ -132,7 +132,7 @@
             this._data = k;
         }
 
-        public function _Str_24005():void
+        public function reinitialize():void
         {
             this.resetTextures();
             this.resetMaterials();
