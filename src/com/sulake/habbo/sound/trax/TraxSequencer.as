@@ -613,7 +613,7 @@
             {
                 _local_2 = 0;
             }
-            this._Str_24218(k.data, _local_2);
+            this.writeAudioToOutputStream(k.data, _local_2);
             this._playHead = (this._playHead + BUFFER_LENGTH);
             this._expectedStreamPosition = (this._expectedStreamPosition + BUFFER_LENGTH);
             if (this._soundChannel != null)
@@ -623,7 +623,7 @@
             this.checkSongFinishing();
         }
 
-        private function _Str_24218(k:ByteArray, _arg_2:int):void
+        private function writeAudioToOutputStream(k:ByteArray, _arg_2:int):void
         {
             var _local_5:Number;
             var _local_6:Number;
