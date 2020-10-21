@@ -32,7 +32,7 @@
             return this._nextPosition;
         }
 
-        public function get _Str_19692():int
+        public function get syncCount():int
         {
             return this._syncCount;
         }

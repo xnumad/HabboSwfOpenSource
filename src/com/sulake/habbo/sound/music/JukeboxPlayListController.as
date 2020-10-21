@@ -154,11 +154,11 @@
         {
             var _local_2:NowPlayingMessageEvent = (k as NowPlayingMessageEvent);
             var _local_3:NowPlayingMessageParser = (_local_2.getParser() as NowPlayingMessageParser);
-            Logger.log(((((("Received Now Playing message with: " + _local_3.currentSongId) + ", ") + _local_3.nextSongId) + ", ") + _local_3._Str_19692));
+            Logger.log(((((("Received Now Playing message with: " + _local_3.currentSongId) + ", ") + _local_3.nextSongId) + ", ") + _local_3.syncCount));
             this._isPlaying = (!(_local_3.currentSongId == -1));
             if (_local_3.currentSongId >= 0)
             {
-                this._musicController.playSong(_local_3.currentSongId, HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST, (_local_3._Str_19692 / 1000), 0, 1, 1);
+                this._musicController.playSong(_local_3.currentSongId, HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST, (_local_3.syncCount / 1000), 0, 1, 1);
                 this._currentEntryId = _local_3.currentSongId;
             }
             else
