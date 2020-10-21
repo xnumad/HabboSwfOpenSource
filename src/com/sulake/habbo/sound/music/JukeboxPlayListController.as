@@ -154,12 +154,12 @@
         {
             var _local_2:NowPlayingMessageEvent = (k as NowPlayingMessageEvent);
             var _local_3:NowPlayingMessageParser = (_local_2.getParser() as NowPlayingMessageParser);
-            Logger.log(((((("Received Now Playing message with: " + _local_3._Str_9166) + ", ") + _local_3._Str_17943) + ", ") + _local_3._Str_19692));
-            this._isPlaying = (!(_local_3._Str_9166 == -1));
-            if (_local_3._Str_9166 >= 0)
+            Logger.log(((((("Received Now Playing message with: " + _local_3.currentSongId) + ", ") + _local_3._Str_17943) + ", ") + _local_3._Str_19692));
+            this._isPlaying = (!(_local_3.currentSongId == -1));
+            if (_local_3.currentSongId >= 0)
             {
-                this._musicController.playSong(_local_3._Str_9166, HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST, (_local_3._Str_19692 / 1000), 0, 1, 1);
-                this._currentEntryId = _local_3._Str_9166;
+                this._musicController.playSong(_local_3.currentSongId, HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST, (_local_3._Str_19692 / 1000), 0, 1, 1);
+                this._currentEntryId = _local_3.currentSongId;
             }
             else
             {
@@ -170,7 +170,7 @@
                 this._musicController.addSongInfoRequest(_local_3._Str_17943);
             }
             this._playPosition = _local_3._Str_21591;
-            this._soundManager.events.dispatchEvent(new NowPlayingEvent(NowPlayingEvent.NPE_SONG_CHANGED, HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST, _local_3._Str_9166, _local_3._Str_21591));
+            this._soundManager.events.dispatchEvent(new NowPlayingEvent(NowPlayingEvent.NPE_SONG_CHANGED, HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST, _local_3.currentSongId, _local_3._Str_21591));
         }
 
         private function _Str_24814(k:IMessageEvent):void

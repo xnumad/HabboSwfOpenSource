@@ -12,7 +12,7 @@
         private var _syncCount:int;
 
 
-        public function get _Str_9166():int
+        public function get currentSongId():int
         {
             return this._currentSongId;
         }
