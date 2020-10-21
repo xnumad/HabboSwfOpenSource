@@ -419,7 +419,7 @@
             return _arg_4 * _local_5;
         }
 
-        public function _Str_21520(k:int, _arg_2:uint):void
+        public function setUsageFromSong(k:int, _arg_2:uint):void
         {
             if (this._usageList == null)
             {

@@ -232,7 +232,7 @@
                 {
                     _local_8 = _local_4.getItem(_local_7).id;
                     _local_9 = (this._samples.getValue(_local_8) as TraxSample);
-                    _local_9._Str_21520(this._songId, k);
+                    _local_9.setUsageFromSong(this._songId, k);
                     if (_local_9 != null)
                     {
                         _local_10 = this._Str_20071(_local_9.length);
@@ -299,7 +299,7 @@
                 {
                     _local_9 = _local_4.getItem(_local_8).id;
                     _local_10 = (this._samples.getValue(_local_9) as TraxSample);
-                    _local_10._Str_21520(this._songId, k);
+                    _local_10.setUsageFromSong(this._songId, k);
                     if (_local_10 != null)
                     {
                         _local_11 = _local_6;
