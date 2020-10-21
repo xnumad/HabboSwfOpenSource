@@ -1,15 +1,15 @@
 ﻿package com.sulake.habbo.communication.messages.parser.sound
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.sound.SongEntry;
+    import com.sulake.habbo.communication.messages.incoming.sound.PlayListEntry;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class PlayListSongAddedMessageParser implements IMessageParser
     {
-        private var _entry:SongEntry;
+        private var _entry:PlayListEntry;
 
 
-        public function get entry():SongEntry
+        public function get entry():PlayListEntry
         {
             return this._entry;
         }
@@ -22,7 +22,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._entry = new SongEntry(k.readInteger(), k.readInteger(), k.readString(), k.readString());
+            this._entry = new PlayListEntry(k.readInteger(), k.readInteger(), k.readString(), k.readString());
             return true;
         }
     }

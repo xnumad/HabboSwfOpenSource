@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.sound
 {
-    public class SongInfoEntry extends SongEntry
+    public class SongInfoEntry extends PlayListEntry
     {
         private var _data:String = "";
 

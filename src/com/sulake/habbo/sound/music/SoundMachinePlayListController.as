@@ -14,7 +14,7 @@
     import flash.events.Event;
     import com.sulake.habbo.sound.ISongInfo;
     import com.sulake.habbo.communication.messages.outgoing.sound.GetSoundMachinePlayListMessageComposer;
-    import com.sulake.habbo.communication.messages.incoming.sound.SongEntry;
+    import com.sulake.habbo.communication.messages.incoming.sound.PlayListEntry;
     import com.sulake.habbo.communication.messages.parser.sound.PlayListMessageParser;
     import com.sulake.habbo.sound.events.PlayListStatusEvent;
     import com.sulake.habbo.communication.messages.parser.sound.PlayListSongAddedMessageParser;
@@ -321,7 +321,7 @@
 
         private function _Str_22257(k:Array):Array
         {
-            var _local_3:SongEntry;
+            var _local_3:PlayListEntry;
             var _local_2:Array = new Array();
             for each (_local_3 in k)
             {

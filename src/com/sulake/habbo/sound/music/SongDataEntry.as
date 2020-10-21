@@ -1,10 +1,10 @@
 ﻿package com.sulake.habbo.sound.music
 {
-    import com.sulake.habbo.communication.messages.incoming.sound.SongEntry;
+    import com.sulake.habbo.communication.messages.incoming.sound.PlayListEntry;
     import com.sulake.habbo.sound.ISongInfo;
     import com.sulake.habbo.sound.IHabboSound;
 
-    public class SongDataEntry extends SongEntry implements ISongInfo 
+    public class SongDataEntry extends PlayListEntry implements ISongInfo
     {
         private var _soundObject:IHabboSound = null;
         private var _songData:String;

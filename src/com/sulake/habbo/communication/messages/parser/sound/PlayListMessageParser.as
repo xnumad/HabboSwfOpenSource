@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.sound
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.sound.SongEntry;
+    import com.sulake.habbo.communication.messages.incoming.sound.PlayListEntry;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class PlayListMessageParser implements IMessageParser
@@ -42,7 +42,7 @@
                 _local_5 = k.readInteger();
                 _local_6 = k.readString();
                 _local_7 = k.readString();
-                this._Str_2519.push(new SongEntry(_local_4, _local_5, _local_6, _local_7));
+                this._Str_2519.push(new PlayListEntry(_local_4, _local_5, _local_6, _local_7));
                 _local_3++;
             }
             return true;

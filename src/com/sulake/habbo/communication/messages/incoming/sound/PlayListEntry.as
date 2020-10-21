@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.sound
 {
-    public class SongEntry 
+    public class PlayListEntry
     {
         protected var _id:int;
         protected var _length:int;
@@ -8,7 +8,7 @@
         protected var _creator:String;
         private var _Str_19548:Number = 0;
 
-        public function SongEntry(id:int, length:int, name:String, creator:String)
+        public function PlayListEntry(id:int, length:int, name:String, creator:String)
         {
             this._id = id;
             this._length = length;
