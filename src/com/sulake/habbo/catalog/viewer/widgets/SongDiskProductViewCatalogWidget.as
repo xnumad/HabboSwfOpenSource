@@ -53,7 +53,7 @@
             this._connection = _arg_2.connection;
             if (((this._connection) && (!(this._officialSongIdListener))))
             {
-                this._officialSongIdListener = new OfficialSongIdMessageEvent(this._Str_22652);
+                this._officialSongIdListener = new OfficialSongIdMessageEvent(this.onOfficialSongIdMessageEvent);
                 this._connection.addMessageEvent(this._officialSongIdListener);
             }
         }
@@ -231,7 +231,7 @@
             }
         }
 
-        private function _Str_22652(k:OfficialSongIdMessageEvent):void
+        private function onOfficialSongIdMessageEvent(k:OfficialSongIdMessageEvent):void
         {
             if (k.getParser()._Str_25744 == this._officialSongId)
             {
