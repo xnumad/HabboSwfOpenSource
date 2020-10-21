@@ -6,17 +6,17 @@
 
     public class TraxSongInfoMessageParser implements IMessageParser
     {
-        private var _Str_16563:Array;
+        private var _songs:Array;
 
 
         public function get _Str_25090():Array
         {
-            return this._Str_16563;
+            return this._songs;
         }
 
         public function flush():Boolean
         {
-            this._Str_16563 = new Array();
+            this._songs = new Array();
             return true;
         }
 
@@ -40,7 +40,7 @@
                 length = k.readInteger();
                 creator = k.readString();
                 _local_10 = new SongInfoEntry(id, length, name, creator, data);
-                this._Str_16563.push(_local_10);
+                this._songs.push(_local_10);
                 _local_9++;
             }
             return true;
