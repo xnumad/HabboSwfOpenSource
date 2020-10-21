@@ -417,7 +417,7 @@
                 this._fadeOutSampleCounter = 0;
                 this._fadeoutStopTimer = new Timer((this._latencyMs + (this._fadeOutLengthSamples / (SAMPLES_PER_SECOND / 1000))), 1);
                 this._fadeoutStopTimer.start();
-                this._fadeoutStopTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_21147);
+                this._fadeoutStopTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onFadeOutComplete);
             }
         }
 
@@ -734,7 +734,7 @@
             }
         }
 
-        private function _Str_21147(k:TimerEvent):void
+        private function onFadeOutComplete(k:TimerEvent):void
         {
             this._Str_21321();
             this._Str_18840();
@@ -750,7 +750,7 @@
         {
             if (this._fadeoutStopTimer != null)
             {
-                this._fadeoutStopTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_21147);
+                this._fadeoutStopTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onFadeOutComplete);
                 this._fadeoutStopTimer.reset();
                 this._fadeoutStopTimer = null;
             }
