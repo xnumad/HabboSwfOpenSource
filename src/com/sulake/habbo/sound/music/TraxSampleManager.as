@@ -88,7 +88,7 @@
 
         public function update(k:uint):void
         {
-            this._Str_23313();
+            this.processLoadedSamples();
         }
 
         private function _Str_18059(k:Event):void
@@ -122,7 +122,7 @@
             }
         }
 
-        private function _Str_23313():void
+        private function processLoadedSamples():void
         {
             var k:int;
             var _local_2:int;
