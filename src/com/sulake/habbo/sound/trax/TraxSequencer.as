@@ -21,7 +21,7 @@
         private static const SAMPLES_PER_SECOND:Number = 44100;
         private static const BUFFER_LENGTH:uint = 0x2000;
         private static const SAMPLES_BAR_LENGTH:uint = 88000;
-        private static const _Str_10958:uint = 88000;
+        private static const BAR_LENGTH:uint = 88000;
         private static const _Str_6865:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
         private static const _Str_19164:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
 
@@ -245,7 +245,7 @@
                                 _local_3.add(_local_5, _local_9);
                             }
                             _local_6 = (_local_6 + _local_10);
-                            _local_5 = (_local_6 * _Str_10958);
+                            _local_5 = (_local_6 * BAR_LENGTH);
                             _local_12++;
                         }
                     }
@@ -314,14 +314,14 @@
                                 _local_7 = false;
                             }
                             _local_11 = (_local_11 + _local_13);
-                            _local_12 = (_local_11 * _Str_10958);
+                            _local_12 = (_local_11 * BAR_LENGTH);
                             if (_local_11 > (_local_6 + _local_14))
                             {
                                 _local_7 = true;
                             }
                         }
                         _local_6 = (_local_6 + _local_4.getItem(_local_8).length);
-                        _local_5 = (_local_6 * _Str_10958);
+                        _local_5 = (_local_6 * BAR_LENGTH);
                     }
                     else
                     {
