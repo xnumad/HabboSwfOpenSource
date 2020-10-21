@@ -52,7 +52,7 @@
             }
             this._events.addEventListener(SoundControllerEvent.TRAX_SONG_COMPLETE, this.onSongFinishedPlayingEvent);
             this._events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
-            this._roomEvents.addEventListener(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_ON, this._Str_21084);
+            this._roomEvents.addEventListener(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_ON, this.onSoundMachinePlayEvent);
             this._roomEvents.addEventListener(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_OFF, this.onSoundMachineStopEvent);
         }
 
@@ -123,7 +123,7 @@
                 }
                 if (this._roomEvents)
                 {
-                    this._roomEvents.removeEventListener(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_ON, this._Str_21084);
+                    this._roomEvents.removeEventListener(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_ON, this.onSoundMachinePlayEvent);
                     this._roomEvents.removeEventListener(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_OFF, this.onSoundMachineStopEvent);
                     this._roomEvents = null;
                 }
@@ -131,7 +131,7 @@
             }
         }
 
-        private function _Str_21084(k:Event):void
+        private function onSoundMachinePlayEvent(k:Event):void
         {
             this.startPlaying();
         }
