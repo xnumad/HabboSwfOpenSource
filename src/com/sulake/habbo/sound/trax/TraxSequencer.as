@@ -184,7 +184,7 @@
                     }
                     if (this._useCutMode)
                     {
-                        if (!this._Str_23486())
+                        if (!this.prepareSequence())
                         {
                             Logger.log("Cannot start playback, prepare sequence failed!");
                             return false;
@@ -267,7 +267,7 @@
             return true;
         }
 
-        private function _Str_23486():Boolean
+        private function prepareSequence():Boolean
         {
             var _local_3:Map;
             var _local_4:TraxChannel;
