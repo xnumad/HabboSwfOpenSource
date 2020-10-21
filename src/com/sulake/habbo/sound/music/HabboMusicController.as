@@ -213,7 +213,7 @@
             return this._songRequestsPerPriority[k];
         }
 
-        private function _Str_16037(k:int):int
+        private function getSongIdRequestedAtPriority(k:int):int
         {
             if (((k < 0) || (k >= HabboMusicPrioritiesEnum.PRIORITY_COUNT)))
             {
@@ -315,7 +315,7 @@
             var _local_2:int = k;
             while (_local_2 >= 0)
             {
-                _local_3 = this._Str_16037(_local_2);
+                _local_3 = this.getSongIdRequestedAtPriority(_local_2);
                 if (((_local_3 >= 0) && (this._Str_12727(_local_2, _local_3))))
                 {
                     return;
@@ -411,7 +411,7 @@
             var _local_2:int = this._Str_10224();
             if (_local_2 >= 0)
             {
-                _local_3 = this._Str_16037(_local_2);
+                _local_3 = this.getSongIdRequestedAtPriority(_local_2);
                 if (k == _local_3)
                 {
                     this._Str_12727(_local_2, k);
@@ -590,7 +590,7 @@
                     _local_10._Str_7824 = _local_6.data;
                     this._availableSongs.add(_local_6.id, _local_10);
                     _local_11 = this._Str_10224();
-                    _local_12 = this._Str_16037(_local_11);
+                    _local_12 = this.getSongIdRequestedAtPriority(_local_11);
                     if ((((!(_local_9 == null)) && (_local_9.ready)) && (_local_6.id == _local_12)))
                     {
                         this._Str_12727(_local_11, _local_12);
