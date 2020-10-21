@@ -299,7 +299,7 @@
 
         private function validateSampleAvailability(k:TraxSequencer, _arg_2:Boolean):void
         {
-            var _local_3:TraxData = k._Str_17466;
+            var _local_3:TraxData = k.traxData;
             var _local_4:Array = _local_3.getSampleIds();
             var _local_5:Boolean;
             var _local_6:int;

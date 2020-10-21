@@ -128,7 +128,7 @@
             this._fadeInLengthSamples = int((k * SAMPLES_PER_SECOND));
         }
 
-        public function get _Str_17466():TraxData
+        public function get traxData():TraxData
         {
             return this._traxData;
         }
