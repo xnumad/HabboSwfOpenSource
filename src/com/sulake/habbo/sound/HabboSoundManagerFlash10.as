@@ -137,8 +137,8 @@
             }
             if (this._roomEngine)
             {
-                this._roomEngine.events.removeEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND, this._Str_15803);
-                this._roomEngine.events.removeEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, this._Str_15803);
+                this._roomEngine.events.removeEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND, this.onRoomEngineObjectPlaySound);
+                this._roomEngine.events.removeEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, this.onRoomEngineObjectPlaySound);
                 this._roomEngine.release(new IIDRoomEngine());
                 this._roomEngine = null;
             }
@@ -390,8 +390,8 @@
             this._musicController = new HabboMusicController(this, events, this._roomEngine.events, this._connection);
             this._traxSampleManager = new TraxSampleManager(this, this._Str_25112);
             this._onDemandSamplePlaybackManager = new FurniSamplePlaybackManager(this, this._roomEngine.events);
-            this._roomEngine.events.addEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND, this._Str_15803);
-            this._roomEngine.events.addEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, this._Str_15803);
+            this._roomEngine.events.addEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND, this.onRoomEngineObjectPlaySound);
+            this._roomEngine.events.addEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, this.onRoomEngineObjectPlaySound);
             this._connection.addMessageEvent(new AccountPreferencesEvent(this._Str_24903));
             this._connection.send(new GetSoundSettingsComposer());
         }
@@ -486,7 +486,7 @@
             }
         }
 
-        private function _Str_15803(k:Event):void
+        private function onRoomEngineObjectPlaySound(k:Event):void
         {
             var _local_2:RoomEnginePlaySoundEvent = RoomEnginePlaySoundEvent(k);
             if (k.type == RoomEnginePlaySoundEvent.PLAY_SOUND)
