@@ -19,11 +19,11 @@
     public class TraxSequencer implements IHabboSound, IDisposable 
     {
         private static const SAMPLES_PER_SECOND:Number = 44100;
-        private static const _Str_5149:uint = 0x2000;
+        private static const BUFFER_LENGTH:uint = 0x2000;
         private static const _Str_14348:uint = 88000;
         private static const _Str_10958:uint = 88000;
-        private static const _Str_6865:Vector.<int> = new Vector.<int>(_Str_5149, true);
-        private static const _Str_19164:Vector.<int> = new Vector.<int>(_Str_5149, true);
+        private static const _Str_6865:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
+        private static const _Str_19164:Vector.<int> = new Vector.<int>(BUFFER_LENGTH, true);
 
         private var _disposed:Boolean = false;
         private var _events:IEventDispatcher;
@@ -498,7 +498,7 @@
                         _local_3 = new TraxChannelSample(_local_7, _local_11);
                     }
                 }
-                _local_8 = _Str_5149;
+                _local_8 = BUFFER_LENGTH;
                 if ((this._lengthSamples - this._playHead) < _local_8)
                 {
                     _local_8 = (this._lengthSamples - this._playHead);
@@ -600,7 +600,7 @@
             {
                 this._Str_23903();
             }
-            var _local_2:int = _Str_5149;
+            var _local_2:int = BUFFER_LENGTH;
             if ((this._lengthSamples - this._playHead) < _local_2)
             {
                 _local_2 = (this._lengthSamples - this._playHead);
@@ -614,8 +614,8 @@
                 _local_2 = 0;
             }
             this._Str_24218(k.data, _local_2);
-            this._playHead = (this._playHead + _Str_5149);
-            this._expectedStreamPosition = (this._expectedStreamPosition + _Str_5149);
+            this._playHead = (this._playHead + BUFFER_LENGTH);
+            this._expectedStreamPosition = (this._expectedStreamPosition + BUFFER_LENGTH);
             if (this._soundChannel != null)
             {
                 this._latencyMs = (((k.position / SAMPLES_PER_SECOND) * 1000) - this._soundChannel.position);
@@ -639,7 +639,7 @@
                     {
                         _local_5 = (1 / this._fadeInLengthSamples);
                         _local_6 = (this._fadeInSampleCounter / Number(this._fadeInLengthSamples));
-                        this._fadeInSampleCounter = (this._fadeInSampleCounter + _Str_5149);
+                        this._fadeInSampleCounter = (this._fadeInSampleCounter + BUFFER_LENGTH);
                         if (this._fadeInSampleCounter > this._fadeInLengthSamples)
                         {
                             this._fadeInActive = false;
@@ -651,7 +651,7 @@
                         {
                             _local_5 = (-1 / this._fadeOutLengthSamples);
                             _local_6 = (1 - (this._fadeOutSampleCounter / Number(this._fadeOutLengthSamples)));
-                            this._fadeOutSampleCounter = (this._fadeOutSampleCounter + _Str_5149);
+                            this._fadeOutSampleCounter = (this._fadeOutSampleCounter + BUFFER_LENGTH);
                             if (this._fadeOutSampleCounter > this._fadeOutLengthSamples)
                             {
                                 this._fadeOutSampleCounter = this._fadeOutLengthSamples;
@@ -663,7 +663,7 @@
             }
             var _local_3:Number = 0;
             var _local_4:int = _arg_2;
-            while (_local_4 < _Str_5149)
+            while (_local_4 < BUFFER_LENGTH)
             {
                 k.writeFloat(_local_3);
                 k.writeFloat(_local_3);
