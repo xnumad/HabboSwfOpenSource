@@ -6,7 +6,7 @@
         protected var _length:int;
         protected var _name:String;
         protected var _creator:String;
-        private var _Str_19548:Number = 0;
+        private var _startPlayHead:Number = 0;
 
         public function PlayListEntry(id:int, length:int, name:String, creator:String)
         {
@@ -38,12 +38,12 @@
 
         public function get _Str_14463():Number
         {
-            return this._Str_19548;
+            return this._startPlayHead;
         }
 
         public function set _Str_14463(k:Number):void
         {
-            this._Str_19548 = k;
+            this._startPlayHead = k;
         }
     }
 }
