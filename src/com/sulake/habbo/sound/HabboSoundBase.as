@@ -8,7 +8,7 @@
     public class HabboSoundBase implements IHabboSound 
     {
         private var _soundChannel:SoundChannel = null;
-        private var _Str_3136:Boolean;
+        private var _complete:Boolean;
         private var _Str_3026:Number;
         private var _Str_5454:int;
         protected var _Str_4166:Sound = null;
@@ -18,7 +18,7 @@
             this._Str_4166 = k;
             this._Str_4166.addEventListener(Event.COMPLETE, this.onComplete);
             this._Str_3026 = 1;
-            this._Str_3136 = false;
+            this._complete = false;
             this._Str_5454 = _arg_2;
         }
 
@@ -39,7 +39,7 @@
 
         protected function _Str_22198(k:Boolean):void
         {
-            this._Str_3136 = k;
+            this._complete = k;
         }
 
         public function dispose():void
@@ -51,7 +51,7 @@
 
         public function play(k:Number=0):Boolean
         {
-            this._Str_3136 = false;
+            this._complete = false;
             this._soundChannel = this._Str_4166.play(0, this._Str_5454);
             this._Str_3206 = this._Str_3026;
             return true;
@@ -106,7 +106,7 @@
 
         public function get _Str_21060():Boolean
         {
-            return !(this._Str_3136);
+            return !(this._complete);
         }
 
         public function get fadeOutSeconds():Number
@@ -129,7 +129,7 @@
 
         private function onComplete(k:Event):void
         {
-            this._Str_3136 = true;
+            this._complete = true;
         }
     }
 }
