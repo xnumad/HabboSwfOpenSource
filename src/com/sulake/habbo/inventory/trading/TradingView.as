@@ -785,15 +785,15 @@
 
         private function _Str_16472(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._Str_21377(k, _arg_2, true);
+            this.thumbEventProc(k, _arg_2, true);
         }
 
         private function _Str_16416(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._Str_21377(k, _arg_2, false);
+            this.thumbEventProc(k, _arg_2, false);
         }
 
-        private function _Str_21377(k:WindowEvent, _arg_2:IWindow, _arg_3:Boolean):void
+        private function thumbEventProc(k:WindowEvent, _arg_2:IWindow, _arg_3:Boolean):void
         {
             var _local_4:GroupItem;
             var _local_5:FurnitureItem;
