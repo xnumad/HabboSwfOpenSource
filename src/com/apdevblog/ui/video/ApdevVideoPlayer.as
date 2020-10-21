@@ -48,7 +48,7 @@
         private var _Str_8940:String;
         private var _Str_21382:VideoMetadataVo;
         private var _Str_3319:_Str_8021;
-        private var _Str_3026:Number;
+        private var _volume:Number;
         private var _Str_4901:int;
         private var _Str_4960:int;
         private var _Str_18277:Boolean;
@@ -545,12 +545,12 @@
 
         public function get _Str_3206():Number
         {
-            return this._Str_3026;
+            return this._volume;
         }
 
         public function set _Str_3206(k:Number):void
         {
-            this._Str_3026 = k;
+            this._volume = k;
             SoundMixer.soundTransform = new SoundTransform(k);
             this._Str_3319._Str_3206 = k;
         }

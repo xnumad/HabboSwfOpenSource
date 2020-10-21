@@ -9,7 +9,7 @@
     {
         private var _soundChannel:SoundChannel = null;
         private var _complete:Boolean;
-        private var _Str_3026:Number;
+        private var _volume:Number;
         private var _Str_5454:int;
         protected var _Str_4166:Sound = null;
 
@@ -17,7 +17,7 @@
         {
             this._Str_4166 = k;
             this._Str_4166.addEventListener(Event.COMPLETE, this.onComplete);
-            this._Str_3026 = 1;
+            this._volume = 1;
             this._complete = false;
             this._Str_5454 = _arg_2;
         }
@@ -53,7 +53,7 @@
         {
             this._complete = false;
             this._soundChannel = this._Str_4166.play(0, this._Str_5454);
-            this._Str_3206 = this._Str_3026;
+            this._Str_3206 = this._volume;
             return true;
         }
 
@@ -68,12 +68,12 @@
 
         public function get _Str_3206():Number
         {
-            return this._Str_3026;
+            return this._volume;
         }
 
         public function set _Str_3206(k:Number):void
         {
-            this._Str_3026 = k;
+            this._volume = k;
             this._Str_7399(k);
         }
 
