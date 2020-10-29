@@ -11,7 +11,7 @@
 
         private var _type:int;
         private var _position:int;
-        private var _Str_10488:String;
+        private var _itemName:String;
         private var _Str_21319:String;
         private var _Str_21451:String;
         private var _productCode:String;
@@ -25,7 +25,7 @@
                 return;
             }
             this._position = k.readInteger();
-            this._Str_10488 = k.readString();
+            this._itemName = k.readString();
             this._Str_21319 = k.readString();
             this._type = k.readInteger();
             switch (this._type)
@@ -51,7 +51,7 @@
 
         public function get itemName():String
         {
-            return this._Str_10488;
+            return this._itemName;
         }
 
         public function get _Str_15933():String
