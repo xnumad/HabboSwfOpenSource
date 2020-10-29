@@ -64,7 +64,7 @@
             return this._cataloguePageLocation;
         }
 
-        public function get _Str_26011():Boolean
+        public function get offerExpires():Boolean
         {
             return this._expirationTime > 0;
         }
