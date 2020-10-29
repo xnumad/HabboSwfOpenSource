@@ -15,7 +15,7 @@
         private var _itemPromoImage:String;
         private var _cataloguePageLocation:String;
         private var _productCode:String;
-        private var _Str_19890:int;
+        private var _productOfferID:int;
         private var _Str_4678:int;
 
         public function FrontPageItem(k:IMessageDataWrapper)
@@ -37,7 +37,7 @@
                     this._productCode = k.readString();
                     break;
                 case _Str_15225:
-                    this._Str_19890 = k.readInteger();
+                    this._productOfferID = k.readInteger();
                     break;
             }
             var _local_2:int = k.readInteger();
@@ -86,7 +86,7 @@
 
         public function get _Str_24645():int
         {
-            return this._Str_19890;
+            return this._productOfferID;
         }
     }
 }
