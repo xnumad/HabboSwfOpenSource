@@ -12,7 +12,7 @@
         private var _type:int;
         private var _position:int;
         private var _itemName:String;
-        private var _Str_21319:String;
+        private var _itemPromoImage:String;
         private var _Str_21451:String;
         private var _productCode:String;
         private var _Str_19890:int;
@@ -26,7 +26,7 @@
             }
             this._position = k.readInteger();
             this._itemName = k.readString();
-            this._Str_21319 = k.readString();
+            this._itemPromoImage = k.readString();
             this._type = k.readInteger();
             switch (this._type)
             {
@@ -56,7 +56,7 @@
 
         public function get _Str_15933():String
         {
-            return this._Str_21319;
+            return this._itemPromoImage;
         }
 
         public function get _Str_17029():String
