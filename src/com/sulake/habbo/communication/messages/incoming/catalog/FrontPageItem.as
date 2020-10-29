@@ -7,7 +7,7 @@
     {
         public static const ITEM_CATALOGUE_PAGE:int = 0;
         public static const ITEM_PRODUCT_OFFER:int = 1;
-        public static const _Str_17904:int = 2;
+        public static const ITEM_IAP:int = 2;
 
         private var _type:int;
         private var _position:int;
@@ -33,7 +33,7 @@
                 case ITEM_CATALOGUE_PAGE:
                     this._cataloguePageLocation = k.readString();
                     break;
-                case _Str_17904:
+                case ITEM_IAP:
                     this._productCode = k.readString();
                     break;
                 case ITEM_PRODUCT_OFFER:
