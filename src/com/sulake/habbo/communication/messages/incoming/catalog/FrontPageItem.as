@@ -59,7 +59,7 @@
             return this._itemPromoImage;
         }
 
-        public function get _Str_17029():String
+        public function get cataloguePageLocation():String
         {
             return this._cataloguePageLocation;
         }

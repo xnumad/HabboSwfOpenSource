@@ -98,15 +98,15 @@
                 switch (_local_4.type)
                 {
                     case FrontPageItem._Str_13638:
-                        if (_local_4._Str_17029 == CatalogPageName.ROOM_BUNDLES_MOBILE)
+                        if (_local_4.cataloguePageLocation == CatalogPageName.ROOM_BUNDLES_MOBILE)
                         {
                             return this._catalog.openCatalogPage(CatalogPageName.ROOM_BUNDLES, CatalogType.NORMAL);
                         }
-                        if (_local_4._Str_17029 == CatalogPageName.MOBILE_SUBSCRIPTIONS)
+                        if (_local_4.cataloguePageLocation == CatalogPageName.MOBILE_SUBSCRIPTIONS)
                         {
                             return this._catalog.openCatalogPage(CatalogPageName.HC_MEMBERSHIP, CatalogType.NORMAL);
                         }
-                        this._catalog.openCatalogPage(_local_4._Str_17029, CatalogType.NORMAL);
+                        this._catalog.openCatalogPage(_local_4.cataloguePageLocation, CatalogType.NORMAL);
                         return;
                     case FrontPageItem._Str_15225:
                         this._catalog.openCatalogPageByOfferId(_local_4._Str_24645, CatalogType.NORMAL);
