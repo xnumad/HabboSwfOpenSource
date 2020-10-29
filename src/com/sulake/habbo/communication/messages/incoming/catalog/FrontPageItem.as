@@ -16,7 +16,7 @@
         private var _cataloguePageLocation:String;
         private var _productCode:String;
         private var _productOfferID:int;
-        private var _Str_4678:int;
+        private var _expirationTime:int;
 
         public function FrontPageItem(k:IMessageDataWrapper)
         {
@@ -41,7 +41,7 @@
                     break;
             }
             var _local_2:int = k.readInteger();
-            this._Str_4678 = ((_local_2 > 0) ? ((_local_2 * 1000) + getTimer()) : 0);
+            this._expirationTime = ((_local_2 > 0) ? ((_local_2 * 1000) + getTimer()) : 0);
         }
 
         public function get position():int
@@ -66,12 +66,12 @@
 
         public function get _Str_26011():Boolean
         {
-            return this._Str_4678 > 0;
+            return this._expirationTime > 0;
         }
 
         public function get secondsToExpiration():int
         {
-            return this._Str_4678 - getTimer();
+            return this._expirationTime - getTimer();
         }
 
         public function get type():int

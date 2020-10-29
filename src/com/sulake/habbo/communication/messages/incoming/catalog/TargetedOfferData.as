@@ -16,7 +16,7 @@
         protected var _Str_18782:String;
         protected var _productCode:String;
         protected var _Str_9772:int;
-        protected var _Str_4678:uint;
+        protected var _expirationTime:uint;
         protected var _Str_3594:int;
         protected var _Str_3539:int;
         protected var _Str_2956:int;
@@ -36,7 +36,7 @@
                 this._Str_18782 = k._Str_13452;
                 this._productCode = k.productCode;
                 this._Str_9772 = k.purchaseLimit;
-                this._Str_4678 = k.expirationTime;
+                this._expirationTime = k.expirationTime;
                 this._Str_3594 = k.priceInCredits;
                 this._Str_3539 = k.priceInActivityPoints;
                 this._Str_2956 = k.activityPointType;
@@ -56,7 +56,7 @@
             this._Str_2956 = k.readInteger();
             this._Str_9772 = k.readInteger();
             var _local_2:int = k.readInteger();
-            this._Str_4678 = ((_local_2 > 0) ? ((_local_2 * 1000) + getTimer()) : 0);
+            this._expirationTime = ((_local_2 > 0) ? ((_local_2 * 1000) + getTimer()) : 0);
             this._title = k.readString();
             this._Str_1858 = k.readString();
             this._Str_2991 = k.readString();
@@ -125,7 +125,7 @@
 
         public function get expirationTime():int
         {
-            return this._Str_4678;
+            return this._expirationTime;
         }
 
         public function get priceInCredits():int

@@ -117,12 +117,12 @@
 
         public function isExpired():Boolean
         {
-            return (_Str_4678 > 0) && (this._Str_18165() <= 0);
+            return (_expirationTime > 0) && (this._Str_18165() <= 0);
         }
 
         public function _Str_18165():int
         {
-            var k:uint = (((_Str_4678 - getTimer()) / 1000) - _Str_16647);
+            var k:uint = (((_expirationTime - getTimer()) / 1000) - _Str_16647);
             return Math.max(0, k);
         }
 
