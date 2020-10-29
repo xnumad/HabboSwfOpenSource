@@ -84,7 +84,7 @@
             return this._productCode;
         }
 
-        public function get _Str_24645():int
+        public function get productOfferID():int
         {
             return this._productOfferID;
         }
