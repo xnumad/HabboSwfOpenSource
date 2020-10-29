@@ -5,7 +5,7 @@
 
     public class FrontPageItem
     {
-        public static const _Str_13638:int = 0;
+        public static const ITEM_CATALOGUE_PAGE:int = 0;
         public static const _Str_15225:int = 1;
         public static const _Str_17904:int = 2;
 
@@ -30,7 +30,7 @@
             this._type = k.readInteger();
             switch (this._type)
             {
-                case _Str_13638:
+                case ITEM_CATALOGUE_PAGE:
                     this._cataloguePageLocation = k.readString();
                     break;
                 case _Str_17904:

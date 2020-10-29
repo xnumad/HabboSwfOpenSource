@@ -97,7 +97,7 @@
                 _local_4 = this._catalog.frontPageItems[_local_3];
                 switch (_local_4.type)
                 {
-                    case FrontPageItem._Str_13638:
+                    case FrontPageItem.ITEM_CATALOGUE_PAGE:
                         if (_local_4.cataloguePageLocation == CatalogPageName.ROOM_BUNDLES_MOBILE)
                         {
                             return this._catalog.openCatalogPage(CatalogPageName.ROOM_BUNDLES, CatalogType.NORMAL);
