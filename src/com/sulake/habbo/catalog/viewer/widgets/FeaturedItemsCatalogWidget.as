@@ -72,11 +72,11 @@
             var _local_6:IStaticBitmapWrapperWindow;
             var _local_3:ITextWindow = (_arg_2.findChildByName("item_title") as ITextWindow);
             _local_3.text = k.itemName;
-            if (((!(k._Str_15933 == null)) && (!(k._Str_15933 == ""))))
+            if (((!(k.itemPromoImage == null)) && (!(k.itemPromoImage == ""))))
             {
                 _local_5 = this._catalog.context.configuration.getProperty("image.library.url");
                 _local_6 = (_arg_2.findChildByName("item_image") as IStaticBitmapWrapperWindow);
-                _local_6.assetUri = (_local_5 + k._Str_15933);
+                _local_6.assetUri = (_local_5 + k.itemPromoImage);
             }
             var _local_4:IWindow = _arg_2.getChildByName("event_catcher_region");
             if (_local_4 != null)

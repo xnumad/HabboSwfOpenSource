@@ -54,7 +54,7 @@
             return this._itemName;
         }
 
-        public function get _Str_15933():String
+        public function get itemPromoImage():String
         {
             return this._itemPromoImage;
         }
