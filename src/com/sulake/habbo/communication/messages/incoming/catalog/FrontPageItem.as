@@ -13,7 +13,7 @@
         private var _position:int;
         private var _itemName:String;
         private var _itemPromoImage:String;
-        private var _Str_21451:String;
+        private var _cataloguePageLocation:String;
         private var _productCode:String;
         private var _Str_19890:int;
         private var _Str_4678:int;
@@ -31,7 +31,7 @@
             switch (this._type)
             {
                 case _Str_13638:
-                    this._Str_21451 = k.readString();
+                    this._cataloguePageLocation = k.readString();
                     break;
                 case _Str_17904:
                     this._productCode = k.readString();
@@ -61,7 +61,7 @@
 
         public function get _Str_17029():String
         {
-            return this._Str_21451;
+            return this._cataloguePageLocation;
         }
 
         public function get _Str_26011():Boolean
