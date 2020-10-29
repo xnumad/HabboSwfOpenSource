@@ -108,7 +108,7 @@
                         }
                         this._catalog.openCatalogPage(_local_4.cataloguePageLocation, CatalogType.NORMAL);
                         return;
-                    case FrontPageItem._Str_15225:
+                    case FrontPageItem.ITEM_PRODUCT_OFFER:
                         this._catalog.openCatalogPageByOfferId(_local_4.productOfferID, CatalogType.NORMAL);
                         return;
                 }

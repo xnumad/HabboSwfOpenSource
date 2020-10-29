@@ -6,7 +6,7 @@
     public class FrontPageItem
     {
         public static const ITEM_CATALOGUE_PAGE:int = 0;
-        public static const _Str_15225:int = 1;
+        public static const ITEM_PRODUCT_OFFER:int = 1;
         public static const _Str_17904:int = 2;
 
         private var _type:int;
@@ -36,7 +36,7 @@
                 case _Str_17904:
                     this._productCode = k.readString();
                     break;
-                case _Str_15225:
+                case ITEM_PRODUCT_OFFER:
                     this._productOfferID = k.readInteger();
                     break;
             }
