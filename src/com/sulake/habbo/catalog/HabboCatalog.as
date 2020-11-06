@@ -777,7 +777,7 @@
             var _local_4:ICatalogNavigator = this.getCatalogNavigator(CatalogType.NORMAL);
             if (_local_4 != null)
             {
-                _local_5 = _local_4._Str_5719(k, true);
+                _local_5 = _local_4.getNodesByOfferId(k, true);
                 if (_local_5 != null)
                 {
                     this.purchaseProduct(_local_5[0].pageId, k, _arg_2, _arg_3);
@@ -877,7 +877,7 @@
             var _local_14:ICatalogNode;
             if (_arg_2 == CatalogNavigator.DUMMY_PAGE_ID_FOR_OFFER_SEARCH)
             {
-                _local_11 = this.currentCatalogNavigator._Str_5719(k.offerId, true);
+                _local_11 = this.currentCatalogNavigator.getNodesByOfferId(k.offerId, true);
                 if (_local_11 != null)
                 {
                     _arg_2 = _local_11[0].pageId;
@@ -1609,8 +1609,8 @@
                         }
                         else
                         {
-                            _local_7 = this.currentCatalogNavigator._Str_5719(_local_5.purchaseOfferId, true);
-                            _local_8 = this.currentCatalogNavigator._Str_5719(_local_5.rentOfferId, true);
+                            _local_7 = this.currentCatalogNavigator.getNodesByOfferId(_local_5.purchaseOfferId, true);
+                            _local_8 = this.currentCatalogNavigator.getNodesByOfferId(_local_5.rentOfferId, true);
                             if (((!(_local_7 == null)) || ((this._catalogType == CatalogType.NORMAL) && (!(_local_8 == null)))))
                             {
                                 if (_local_6.indexOf(_local_4) >= 0)
@@ -2613,7 +2613,7 @@
                         _local_7 = this._purchasableOffer.page.pageId;
                         if (_local_7 == CatalogNavigator.DUMMY_PAGE_ID_FOR_OFFER_SEARCH)
                         {
-                            _local_8 = this.currentCatalogNavigator._Str_5719(this._purchasableOffer.offerId, true);
+                            _local_8 = this.currentCatalogNavigator.getNodesByOfferId(this._purchasableOffer.offerId, true);
                             if (_local_8 != null)
                             {
                                 _local_7 = _local_8[0].pageId;

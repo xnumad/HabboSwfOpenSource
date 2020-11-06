@@ -310,7 +310,7 @@
             {
                 if (k == DUMMY_PAGE_ID_FOR_OFFER_SEARCH)
                 {
-                    _local_4 = this._Str_5719(_arg_2, true);
+                    _local_4 = this.getNodesByOfferId(_arg_2, true);
                     if (_local_4 != null)
                     {
                         _local_3 = _local_4[0];
@@ -338,7 +338,7 @@
             }
             else
             {
-                _local_2 = this._Str_5719(k);
+                _local_2 = this.getNodesByOfferId(k);
                 if (_local_2 != null)
                 {
                     _local_3 = _local_2[0];
@@ -466,7 +466,7 @@
             return _local_5;
         }
 
-        public function _Str_5719(k:int, _arg_2:Boolean=false):Vector.<ICatalogNode>
+        public function getNodesByOfferId(k:int, _arg_2:Boolean=false):Vector.<ICatalogNode>
         {
             var _local_3:Vector.<ICatalogNode>;
             var _local_4:ICatalogNode;

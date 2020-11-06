@@ -14,7 +14,7 @@
         function activateNode(_arg_1:ICatalogNode):void;
         function loadFrontPage():void;
         function get initialized():Boolean;
-        function _Str_5719(_arg_1:int, _arg_2:Boolean=false):Vector.<ICatalogNode>;
+        function getNodesByOfferId(_arg_1:int, _arg_2:Boolean=false):Vector.<ICatalogNode>;
         function getNodeByName(_arg_1:String):ICatalogNode;
         function getOptionalNodeByName(_arg_1:String):ICatalogNode;
         function getNodeById(_arg_1:int, _arg_2:ICatalogNode=null):ICatalogNode;
