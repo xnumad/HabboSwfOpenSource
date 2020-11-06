@@ -405,7 +405,7 @@
             {
                 return;
             }
-            var k:ICatalogNode = this._Str_19504(this._index);
+            var k:ICatalogNode = this.getFirstNavigable(this._index);
             if (k == null)
             {
                 return;
@@ -414,7 +414,7 @@
             this._catalog.loadCatalogPage(k.pageId, -1, this._catalogType);
         }
 
-        private function _Str_19504(k:ICatalogNode):ICatalogNode
+        private function getFirstNavigable(k:ICatalogNode):ICatalogNode
         {
             var _local_2:ICatalogNode;
             var _local_3:ICatalogNode;
@@ -424,7 +424,7 @@
             }
             for each (_local_2 in k.children)
             {
-                _local_3 = this._Str_19504(_local_2);
+                _local_3 = this.getFirstNavigable(_local_2);
                 if (_local_3 != null)
                 {
                     return _local_3;
