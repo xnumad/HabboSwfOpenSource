@@ -63,12 +63,12 @@
             this._activeWindow = k;
         }
 
-        public function get _Str_3989():uint
+        public function get requestType():uint
         {
             return this._requestType;
         }
 
-        public function set _Str_3989(k:uint):void
+        public function set requestType(k:uint):void
         {
             this._requestType = k;
         }

@@ -34,7 +34,7 @@
             this._requestedOfferId = -1;
         }
 
-        public function get _Str_3989():int
+        public function get requestType():int
         {
             return this._requestType;
         }

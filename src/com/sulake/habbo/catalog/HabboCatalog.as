@@ -1754,7 +1754,7 @@
             {
                 _local_2.showIndex();
             }
-            switch (this._requestedPage._Str_3989)
+            switch (this._requestedPage.requestType)
             {
                 case RequestedPage.REQUEST_TYPE_NONE:
                     if (((((this._Str_7793) && (this._Str_19190)) && (!(this.newAdditionsPageOpenDisabled))) && (k.catalogType == CatalogType.NORMAL)))

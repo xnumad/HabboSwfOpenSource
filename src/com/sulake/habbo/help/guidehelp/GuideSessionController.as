@@ -246,7 +246,7 @@
             {
                 this._sessionData._Str_17222 = GuideSessionData._Str_11013;
                 this._sessionData._Str_3201 = GuideSessionStateEnum.USER_CREATE;
-                this._sessionData._Str_3989 = k;
+                this._sessionData.requestType = k;
                 this._habboHelp.sendMessage(new GuideSessionCreateMessageComposer(k, this._habboHelp.localization.getLocalization("guide.help.request.tour.description")));
             }
             else
@@ -310,7 +310,7 @@
             }
             if (this._resubmitDescription)
             {
-                _local_2 = this._sessionData._Str_3989;
+                _local_2 = this._sessionData.requestType;
                 _local_3 = this._sessionData._Str_8937;
                 this._Str_20660();
                 this._Str_22204(_local_2, _local_3);
@@ -657,7 +657,7 @@
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUIDE_ACCEPT;
             this._sessionData._Str_17222 = GuideSessionData._Str_15093;
             this._sessionData._Str_8937 = _arg_2;
-            this._sessionData._Str_3989 = k;
+            this._sessionData.requestType = k;
             this.openWindow(this.onGuideAcceptEvent, false);
             this._habboHelp._Str_2476.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
             if (((k == _Str_2849._Str_4749) || (k == _Str_2849._Str_4268)))
@@ -727,7 +727,7 @@
             inputWidget.submitHandler = this;
             inputWidget.emptyMessage = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.input.empty", "", "name", this._sessionData.userName);
             inputWidget.maxChars = this._habboHelp.getInteger("guide.help.request.max.chat.message.length", 150);
-            if (((this._sessionData._Str_3989 == _Str_2849._Str_4749) || (this._sessionData._Str_3989 == _Str_2849._Str_4268)))
+            if (((this._sessionData.requestType == _Str_2849._Str_4749) || (this._sessionData.requestType == _Str_2849._Str_4268)))
             {
                 title = "${guide.help.request.join.room.title}";
                 summary = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.join.room.summary", "", "name", this._sessionData.userName);
@@ -820,7 +820,7 @@
             }
             this._sessionData._Str_17222 = GuideSessionData._Str_11013;
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_CREATE;
-            this._sessionData._Str_3989 = k;
+            this._sessionData.requestType = k;
             this.openWindow(this.onUserCreateEvent, true);
             var _local_3:IIlluminaInputWidget = IIlluminaInputWidget(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
             _local_3.maxChars = this._habboHelp.getInteger("guide.help.request.max.description.length", 0xFF);
@@ -848,7 +848,7 @@
                     }
                     else
                     {
-                        this._habboHelp.sendMessage(new GuideSessionCreateMessageComposer(this._sessionData._Str_3989, _local_3));
+                        this._habboHelp.sendMessage(new GuideSessionCreateMessageComposer(this._sessionData.requestType, _local_3));
                         this._habboHelp.trackGoogle("guideHelp", (this._window.name + "_clickCreate"));
                         this.closeWindow();
                     }
@@ -869,7 +869,7 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_PENDING;
-            this._sessionData._Str_3989 = k;
+            this._sessionData.requestType = k;
             this._sessionData._Str_8937 = _arg_2;
             this.openWindow(this._Str_23008, false);
             this._window.findChildByName("request_type").caption = this._Str_20710(k);
@@ -903,7 +903,7 @@
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_ONGOING;
             this.openWindow(this._Str_22821, false);
             this._Str_14185(_Str_14376, this._habboHelp.localization.getLocalization("guide.help.requester.disclaimer"));
-            if (((this._sessionData._Str_3989 == _Str_2849._Str_4268) || (this._sessionData._Str_3989 == _Str_2849._Str_4749)))
+            if (((this._sessionData.requestType == _Str_2849._Str_4268) || (this._sessionData.requestType == _Str_2849._Str_4749)))
             {
                 this._Str_14185(_Str_13767, this._habboHelp.localization.getLocalization("guide.help.request.tour.reminder"));
             }
@@ -1369,7 +1369,7 @@
             this._Str_10865(false);
             this._sessionData._Str_3201 = GuideSessionStateEnum.REJECTED;
             this.openWindow(this._Str_22562, true);
-            if (((this._sessionData._Str_3989 == _Str_2849._Str_4268) || (this._sessionData._Str_3989 == _Str_2849._Str_4749)))
+            if (((this._sessionData.requestType == _Str_2849._Str_4268) || (this._sessionData.requestType == _Str_2849._Str_4749)))
             {
                 this._window.caption = "${guide.help.request.no_tour_guides.title}";
                 this._window.findChildByName("heading").caption = "${guide.help.request.no_tour_guides.heading}";
