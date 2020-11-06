@@ -1772,7 +1772,7 @@
                     this._requestedPage.resetRequest();
                     return;
                 case RequestedPage.REQUEST_TYPE_NAME:
-                    _local_2.openPage(this._requestedPage._Str_22486);
+                    _local_2.openPage(this._requestedPage.requestName);
                     this._requestedPage.resetRequest();
                     return;
             }

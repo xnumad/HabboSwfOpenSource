@@ -54,7 +54,7 @@
             this._requestedOfferId = k;
         }
 
-        public function get _Str_22486():String
+        public function get requestName():String
         {
             return this._requestName;
         }
