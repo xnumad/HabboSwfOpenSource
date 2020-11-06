@@ -286,7 +286,7 @@
             if (((!(_local_2 == null)) && (_local_2.visible)))
             {
                 this._catalog.loadCatalogPage(_local_2.pageId, -1, this._catalogType);
-                this._Str_18195(_local_2);
+                this.openNavigatorAtNode(_local_2);
             }
             else
             {
@@ -323,7 +323,7 @@
                 if (_local_3 != null)
                 {
                     this._catalog.loadCatalogPage(_local_3.pageId, _arg_2, this._catalogType);
-                    this._Str_18195(_local_3);
+                    this.openNavigatorAtNode(_local_3);
                 }
             }
         }
@@ -343,7 +343,7 @@
                 {
                     _local_3 = _local_2[0];
                     this._catalog.loadCatalogPage(_local_3.pageId, k, this._catalogType);
-                    this._Str_18195(_local_3);
+                    this.openNavigatorAtNode(_local_3);
                 }
             }
         }
@@ -375,7 +375,7 @@
             }
         }
 
-        private function _Str_18195(k:ICatalogNode):void
+        private function openNavigatorAtNode(k:ICatalogNode):void
         {
             if (k == null)
             {
