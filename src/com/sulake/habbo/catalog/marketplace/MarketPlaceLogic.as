@@ -325,7 +325,7 @@
             {
                 if (parser.result == 2)
                 {
-                    item = this._latestOffers.remove(parser._Str_7501);
+                    item = this._latestOffers.remove(parser.requestedOfferId);
                     if (item != null)
                     {
                         item.dispose();
@@ -346,7 +346,7 @@
                 {
                     if (parser.result == 3)
                     {
-                        updateItem = (this._latestOffers.getValue(parser._Str_7501) as MarketPlaceOfferData);
+                        updateItem = (this._latestOffers.getValue(parser.requestedOfferId) as MarketPlaceOfferData);
                         if (updateItem)
                         {
                             updateItem.offerId = parser.offerId;
@@ -354,7 +354,7 @@
                             updateItem.offerCount--;
                             this._latestOffers.add(parser.offerId, updateItem);
                         }
-                        this._latestOffers.remove(parser._Str_7501);
+                        this._latestOffers.remove(parser.requestedOfferId);
                         this.showConfirmation(this._Str_22006, updateItem);
                         if (this._visualization != null)
                         {

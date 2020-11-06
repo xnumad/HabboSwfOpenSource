@@ -26,7 +26,7 @@
             return this._Str_20780;
         }
 
-        public function get _Str_7501():int
+        public function get requestedOfferId():int
         {
             return this._Str_8508;
         }

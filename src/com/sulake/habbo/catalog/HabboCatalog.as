@@ -1023,7 +1023,7 @@
             {
                 this.toggleCatalog(_arg_3);
                 this._requestedPage.requestById = k;
-                this._requestedPage._Str_7501 = _arg_2;
+                this._requestedPage.requestedOfferId = _arg_2;
             }
         }
 
@@ -1768,7 +1768,7 @@
                     }
                     return;
                 case RequestedPage.REQUEST_TYPE_ID:
-                    _local_2.openPageById(this._requestedPage.requestId, this._requestedPage._Str_7501);
+                    _local_2.openPageById(this._requestedPage.requestId, this._requestedPage.requestedOfferId);
                     this._requestedPage.resetRequest();
                     return;
                 case RequestedPage.REQUEST_TYPE_NAME:

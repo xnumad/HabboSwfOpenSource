@@ -44,12 +44,12 @@
             return this._requestId;
         }
 
-        public function get _Str_7501():int
+        public function get requestedOfferId():int
         {
             return this._requestedOfferId;
         }
 
-        public function set _Str_7501(k:int):void
+        public function set requestedOfferId(k:int):void
         {
             this._requestedOfferId = k;
         }
