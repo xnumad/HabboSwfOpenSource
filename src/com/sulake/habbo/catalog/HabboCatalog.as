@@ -1767,7 +1767,7 @@
                         _local_2.loadFrontPage();
                     }
                     return;
-                case RequestedPage._Str_13019:
+                case RequestedPage.REQUEST_TYPE_ID:
                     _local_2.openPageById(this._requestedPage.requestId, this._requestedPage._Str_7501);
                     this._requestedPage._Str_21345();
                     return;

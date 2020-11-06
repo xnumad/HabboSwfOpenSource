@@ -3,7 +3,7 @@
     public class RequestedPage 
     {
         public static const REQUEST_TYPE_NONE:int = 0;
-        public static const _Str_13019:int = 1;
+        public static const REQUEST_TYPE_ID:int = 1;
         public static const _Str_15706:int = 2;
 
         private var _requestType:int;
@@ -18,7 +18,7 @@
 
         public function set _Str_22771(k:int):void
         {
-            this._requestType = _Str_13019;
+            this._requestType = REQUEST_TYPE_ID;
             this._requestId = k;
         }
 
