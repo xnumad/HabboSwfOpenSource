@@ -1022,7 +1022,7 @@
             else
             {
                 this.toggleCatalog(_arg_3);
-                this._requestedPage._Str_22771 = k;
+                this._requestedPage.requestById = k;
                 this._requestedPage._Str_7501 = _arg_2;
             }
         }

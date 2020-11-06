@@ -16,7 +16,7 @@
             this._requestType = REQUEST_TYPE_NONE;
         }
 
-        public function set _Str_22771(k:int):void
+        public function set requestById(k:int):void
         {
             this._requestType = REQUEST_TYPE_ID;
             this._requestId = k;
