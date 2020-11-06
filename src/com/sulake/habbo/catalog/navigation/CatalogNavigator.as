@@ -17,7 +17,7 @@
 
     public class CatalogNavigator implements ICatalogNavigator 
     {
-        public static const _Str_5778:int = -12345678;
+        public static const DUMMY_PAGE_ID_FOR_OFFER_SEARCH:int = -12345678;
 
         private var _catalog:HabboCatalog;
         private var _container:IWindowContainer;
@@ -308,7 +308,7 @@
             }
             else
             {
-                if (k == _Str_5778)
+                if (k == DUMMY_PAGE_ID_FOR_OFFER_SEARCH)
                 {
                     _local_4 = this._Str_5719(_arg_2, true);
                     if (_local_4 != null)
@@ -334,7 +334,7 @@
             var _local_3:ICatalogNode;
             if (!this.initialized)
             {
-                this._catalog.openCatalogPageById(_Str_5778, k, this._catalogType);
+                this._catalog.openCatalogPageById(DUMMY_PAGE_ID_FOR_OFFER_SEARCH, k, this._catalogType);
             }
             else
             {

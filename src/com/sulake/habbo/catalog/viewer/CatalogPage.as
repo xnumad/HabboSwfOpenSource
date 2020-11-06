@@ -127,7 +127,7 @@
 
         public function get pageId():int
         {
-            return (this._mode == _Str_7035) ? CatalogNavigator._Str_5778 : this._Str_2709;
+            return (this._mode == _Str_7035) ? CatalogNavigator.DUMMY_PAGE_ID_FOR_OFFER_SEARCH : this._Str_2709;
         }
 
         public function get layoutCode():String

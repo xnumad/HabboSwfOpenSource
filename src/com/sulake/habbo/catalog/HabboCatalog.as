@@ -875,7 +875,7 @@
             var _local_12:Array;
             var _local_13:String;
             var _local_14:ICatalogNode;
-            if (_arg_2 == CatalogNavigator._Str_5778)
+            if (_arg_2 == CatalogNavigator.DUMMY_PAGE_ID_FOR_OFFER_SEARCH)
             {
                 _local_11 = this.currentCatalogNavigator._Str_5719(k.offerId, true);
                 if (_local_11 != null)
@@ -1008,7 +1008,7 @@
 
         public function openCatalogPageByOfferId(k:int, _arg_2:String):void
         {
-            this.openCatalogPageById(CatalogNavigator._Str_5778, k, _arg_2);
+            this.openCatalogPageById(CatalogNavigator.DUMMY_PAGE_ID_FOR_OFFER_SEARCH, k, _arg_2);
         }
 
         public function openCatalogPageById(k:int, _arg_2:int, _arg_3:String):void
@@ -2611,7 +2611,7 @@
                         return;
                     case CatalogType.BUILDER:
                         _local_7 = this._purchasableOffer.page.pageId;
-                        if (_local_7 == CatalogNavigator._Str_5778)
+                        if (_local_7 == CatalogNavigator.DUMMY_PAGE_ID_FOR_OFFER_SEARCH)
                         {
                             _local_8 = this.currentCatalogNavigator._Str_5719(this._purchasableOffer.offerId, true);
                             if (_local_8 != null)

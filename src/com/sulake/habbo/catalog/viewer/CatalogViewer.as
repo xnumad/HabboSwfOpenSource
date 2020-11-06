@@ -63,7 +63,7 @@
             }
             var _local_7:ICatalogPage = new CatalogPage(this, k, _arg_2, _arg_3, _arg_4, this._catalog, _arg_6);
             this._page = _local_7;
-            this._previousPageId = ((k > CatalogNavigator._Str_5778) ? k : this._previousPageId);
+            this._previousPageId = ((k > CatalogNavigator.DUMMY_PAGE_ID_FOR_OFFER_SEARCH) ? k : this._previousPageId);
             if (_local_7.window != null)
             {
                 this._container.addChild(_local_7.window);
