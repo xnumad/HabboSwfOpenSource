@@ -2,7 +2,7 @@
 {
     public class RequestedPage 
     {
-        public static const _Str_10657:int = 0;
+        public static const REQUEST_TYPE_NONE:int = 0;
         public static const _Str_13019:int = 1;
         public static const _Str_15706:int = 2;
 
@@ -13,7 +13,7 @@
 
         public function RequestedPage()
         {
-            this._requestType = _Str_10657;
+            this._requestType = REQUEST_TYPE_NONE;
         }
 
         public function set _Str_22771(k:int):void
@@ -30,7 +30,7 @@
 
         public function _Str_21345():void
         {
-            this._requestType = _Str_10657;
+            this._requestType = REQUEST_TYPE_NONE;
             this._requestedOfferId = -1;
         }
 

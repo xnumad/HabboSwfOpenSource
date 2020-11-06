@@ -1756,7 +1756,7 @@
             }
             switch (this._requestedPage._Str_3989)
             {
-                case RequestedPage._Str_10657:
+                case RequestedPage.REQUEST_TYPE_NONE:
                     if (((((this._Str_7793) && (this._Str_19190)) && (!(this.newAdditionsPageOpenDisabled))) && (k.catalogType == CatalogType.NORMAL)))
                     {
                         events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_NEW_ITEMS_SHOW));
