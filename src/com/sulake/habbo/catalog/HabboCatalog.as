@@ -1769,11 +1769,11 @@
                     return;
                 case RequestedPage.REQUEST_TYPE_ID:
                     _local_2.openPageById(this._requestedPage.requestId, this._requestedPage._Str_7501);
-                    this._requestedPage._Str_21345();
+                    this._requestedPage.resetRequest();
                     return;
                 case RequestedPage.REQUEST_TYPE_NAME:
                     _local_2.openPage(this._requestedPage._Str_22486);
-                    this._requestedPage._Str_21345();
+                    this._requestedPage.resetRequest();
                     return;
             }
         }

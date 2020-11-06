@@ -28,7 +28,7 @@
             this._requestName = k;
         }
 
-        public function _Str_21345():void
+        public function resetRequest():void
         {
             this._requestType = REQUEST_TYPE_NONE;
             this._requestedOfferId = -1;
