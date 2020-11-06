@@ -1771,7 +1771,7 @@
                     _local_2.openPageById(this._requestedPage.requestId, this._requestedPage._Str_7501);
                     this._requestedPage._Str_21345();
                     return;
-                case RequestedPage._Str_15706:
+                case RequestedPage.REQUEST_TYPE_NAME:
                     _local_2.openPage(this._requestedPage._Str_22486);
                     this._requestedPage._Str_21345();
                     return;

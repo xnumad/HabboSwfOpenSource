@@ -4,7 +4,7 @@
     {
         public static const REQUEST_TYPE_NONE:int = 0;
         public static const REQUEST_TYPE_ID:int = 1;
-        public static const _Str_15706:int = 2;
+        public static const REQUEST_TYPE_NAME:int = 2;
 
         private var _requestType:int;
         private var _requestId:int;
@@ -24,7 +24,7 @@
 
         public function set _Str_23666(k:String):void
         {
-            this._requestType = _Str_15706;
+            this._requestType = REQUEST_TYPE_NAME;
             this._requestName = k;
         }
 
