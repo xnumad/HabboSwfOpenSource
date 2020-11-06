@@ -22,7 +22,7 @@
             this._requestId = k;
         }
 
-        public function set _Str_23666(k:String):void
+        public function set requestByName(k:String):void
         {
             this._requestType = REQUEST_TYPE_NAME;
             this._requestName = k;

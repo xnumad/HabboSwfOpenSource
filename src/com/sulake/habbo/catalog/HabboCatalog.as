@@ -980,7 +980,7 @@
             this.toggleCatalog(((_arg_2 == null) ? CatalogType.NORMAL : _arg_2), true, false);
             if ((((!(this._initialized)) || (this._catalogNavigators == null)) || (!(this.currentCatalogNavigator.initialized))))
             {
-                this._requestedPage._Str_23666 = k;
+                this._requestedPage.requestByName = k;
                 return;
             }
             this.currentCatalogNavigator.openPage(k);
