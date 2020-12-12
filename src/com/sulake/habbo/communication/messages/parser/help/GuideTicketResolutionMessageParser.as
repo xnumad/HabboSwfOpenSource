@@ -5,7 +5,7 @@
 
     public class GuideTicketResolutionMessageParser implements IMessageParser
     {
-        private static const _Str_17022:int = 0;
+        private static const RESOLUTION_GUARDIANS_TOOK_ACTION:int = 0;
         private static const _Str_16537:int = 1;
         private static const _Str_22033:int = 2;
 
@@ -26,7 +26,7 @@
 
         public function get localizationCode():String
         {
-            if (((this._resolution == _Str_17022) || (this._resolution == _Str_16537)))
+            if (((this._resolution == RESOLUTION_GUARDIANS_TOOK_ACTION) || (this._resolution == _Str_16537)))
             {
                 return "valid";
             }
