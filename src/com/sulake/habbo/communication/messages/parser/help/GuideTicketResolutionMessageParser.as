@@ -7,7 +7,7 @@
     {
         private static const RESOLUTION_GUARDIANS_TOOK_ACTION:int = 0;
         private static const RESOLUTION_FORWARDED_TO_MODERATORS:int = 1;
-        private static const _Str_22033:int = 2;
+        private static const RESOLUTION_REPORTER_IS_ABUSIVE:int = 2;
 
         private var _resolution:int = -1;
 
