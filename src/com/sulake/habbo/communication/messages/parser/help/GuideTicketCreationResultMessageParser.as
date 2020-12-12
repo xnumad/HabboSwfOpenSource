@@ -5,7 +5,7 @@
 
     public class GuideTicketCreationResultMessageParser implements IMessageParser
     {
-        private static const _Str_15967:int = 0;
+        private static const CREATION_RESULT_OK:int = 0;
         private static const _Str_18979:int = 1;
         private static const _Str_18566:int = 2;
         private static const _Str_18164:int = 3;
@@ -29,7 +29,7 @@
         {
             switch (this._result)
             {
-                case _Str_15967:
+                case CREATION_RESULT_OK:
                     return "sent";
                 case _Str_18979:
                     return "blocked";
