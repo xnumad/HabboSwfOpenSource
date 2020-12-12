@@ -7,7 +7,7 @@
     {
         private static const CREATION_RESULT_OK:int = 0;
         private static const CREATION_RESULT_UNABLE_TO_REPORT:int = 1;
-        private static const _Str_18566:int = 2;
+        private static const CREATION_RESULT_NO_CHATLOG_FOUND:int = 2;
         private static const _Str_18164:int = 3;
 
         private var _result:int = -1;
@@ -33,7 +33,7 @@
                     return "sent";
                 case CREATION_RESULT_UNABLE_TO_REPORT:
                     return "blocked";
-                case _Str_18566:
+                case CREATION_RESULT_NO_CHATLOG_FOUND:
                     return "nochat";
                 case _Str_18164:
                     return "alreadyreported";
