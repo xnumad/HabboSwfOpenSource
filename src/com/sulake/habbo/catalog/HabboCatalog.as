@@ -2481,7 +2481,7 @@
                 _local_4 = this._Str_8970;
                 if (_local_4 != null)
                 {
-                    _local_4._Str_8347(true, _local_3);
+                    _local_4.onDragAndDropDone(true, _local_3);
                 }
                 this.resetObjectMover(false);
                 this.cancelFurniInMover();
@@ -2525,7 +2525,7 @@
                 _local_4 = this._Str_8970;
                 if (_local_4 != null)
                 {
-                    _local_4._Str_8347(true, _local_2);
+                    _local_4.onDragAndDropDone(true, _local_2);
                 }
                 this.resetObjectMover(false);
                 this.cancelFurniInMover();
@@ -2578,7 +2578,7 @@
                 _local_5 = this._Str_8970;
                 if (_local_5 != null)
                 {
-                    _local_5._Str_8347(true, null);
+                    _local_5.onDragAndDropDone(true, null);
                 }
                 switch (this._catalogType)
                 {

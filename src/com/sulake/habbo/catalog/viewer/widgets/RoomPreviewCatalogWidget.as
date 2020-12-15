@@ -121,7 +121,7 @@
             }
         }
 
-        public function _Str_8347(k:Boolean, _arg_2:String):void
+        public function onDragAndDropDone(k:Boolean, _arg_2:String):void
         {
             if (disposed)
             {
