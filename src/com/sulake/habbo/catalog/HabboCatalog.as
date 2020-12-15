@@ -36,7 +36,7 @@
     import com.sulake.habbo.catalog.club.ClubOfferHandler;
     import com.sulake.habbo.catalog.club.ClubExtendController;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.catalog.viewer._Str_4431;
+    import com.sulake.habbo.catalog.viewer.IDragAndDropDoneReceiver;
     import com.sulake.habbo.catalog.purchase.PlacedObjectPurchaseData;
     import com.sulake.habbo.room.preview.RoomPreviewer;
     import com.sulake.habbo.catalog.guilds.GuildMembershipsController;
@@ -304,7 +304,7 @@
         private var _sellablePetPalettes:Map;
         private var _isObjectMoverRequested:Boolean = false;
         private var _purchasableOffer:IPurchasableOffer;
-        private var _Str_8970:_Str_4431;
+        private var _Str_8970:IDragAndDropDoneReceiver;
         private var _placedObjectPurchaseData:PlacedObjectPurchaseData;
         private var _Str_7793:Boolean;
         private var _Str_19190:Boolean;
@@ -2413,7 +2413,7 @@
             }
         }
 
-        public function requestSelectedItemToMover(k:_Str_4431, _arg_2:IPurchasableOffer, _arg_3:Boolean=false):void
+        public function requestSelectedItemToMover(k:IDragAndDropDoneReceiver, _arg_2:IPurchasableOffer, _arg_3:Boolean=false):void
         {
             var _local_5:int;
             if (!this.isDraggable(_arg_2))
@@ -2467,7 +2467,7 @@
         {
             var _local_2:int;
             var _local_3:String;
-            var _local_4:_Str_4431;
+            var _local_4:IDragAndDropDoneReceiver;
             if (((this._isObjectMoverRequested) && (k.type == FriendBarSelectionEvent.FBVE_FRIEND_SELECTED)))
             {
                 this.resetPlacedOfferData(true);
@@ -2507,7 +2507,7 @@
         {
             var _local_2:String;
             var _local_3:RoomUserData;
-            var _local_4:_Str_4431;
+            var _local_4:IDragAndDropDoneReceiver;
             if (((this._isObjectMoverRequested) && (k.type == RoomEngineObjectEvent.PLACED_ON_USER)))
             {
                 this.resetPlacedOfferData(true);
@@ -2537,7 +2537,7 @@
             var _local_2:int;
             var _local_3:IProduct;
             var _local_4:Boolean;
-            var _local_5:_Str_4431;
+            var _local_5:IDragAndDropDoneReceiver;
             var _local_6:IRoomObjectController;
             var _local_7:int;
             var _local_8:Vector.<ICatalogNode>;

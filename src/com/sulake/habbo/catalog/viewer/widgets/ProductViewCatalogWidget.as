@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.catalog.viewer.widgets
 {
     import com.sulake.habbo.room.IGetImageListener;
-    import com.sulake.habbo.catalog.viewer._Str_4431;
+    import com.sulake.habbo.catalog.viewer.IDragAndDropDoneReceiver;
     import flash.display.BitmapData;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -53,7 +53,7 @@
     import flash.events.Event;
     import __AS3__.vec.*;
 
-    public class ProductViewCatalogWidget extends CatalogWidget implements IGetImageListener, _Str_4431 
+    public class ProductViewCatalogWidget extends CatalogWidget implements IGetImageListener, IDragAndDropDoneReceiver
     {
         private static const WALL_PAPER:int = 2;
         private static const FLOOR:int = 3;

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.catalog.viewer.widgets
 {
     import com.sulake.habbo.catalog.viewer._Str_4311;
-    import com.sulake.habbo.catalog.viewer._Str_4431;
+    import com.sulake.habbo.catalog.viewer.IDragAndDropDoneReceiver;
     import com.sulake.core.window.components.IItemGridWindow;
     import com.sulake.habbo.catalog.viewer.IGridItem;
     import flash.utils.Timer;
@@ -30,7 +30,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetColourIndexEvent;
     import __AS3__.vec.*;
 
-    public class ItemGridCatalogWidget extends CatalogWidget implements _Str_4311, _Str_4431 
+    public class ItemGridCatalogWidget extends CatalogWidget implements _Str_4311, IDragAndDropDoneReceiver
     {
         protected var _itemGrid:IItemGridWindow;
         protected var _Str_3370:XML;

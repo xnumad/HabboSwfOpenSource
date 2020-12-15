@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.catalog.viewer.widgets
 {
     import com.sulake.habbo.room.IGetImageListener;
-    import com.sulake.habbo.catalog.viewer._Str_4431;
+    import com.sulake.habbo.catalog.viewer.IDragAndDropDoneReceiver;
     import flash.display.BitmapData;
     import com.sulake.habbo.catalog.IPurchasableOffer;
     import com.sulake.core.window.IWindowContainer;
@@ -18,7 +18,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetUpdateRoomPreviewEvent;
     import flash.geom.Point;
 
-    public class RoomPreviewCatalogWidget extends CatalogWidget implements IGetImageListener, _Str_4431 
+    public class RoomPreviewCatalogWidget extends CatalogWidget implements IGetImageListener, IDragAndDropDoneReceiver
     {
         private var _imageResultIdRoom:int = -1;
         private var _imageResultIdWindow:int = -1;
