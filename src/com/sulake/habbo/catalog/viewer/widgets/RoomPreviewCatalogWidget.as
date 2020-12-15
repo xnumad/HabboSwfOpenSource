@@ -142,8 +142,8 @@
             var _local_5:BitmapData;
             var _local_6:BitmapData;
             var _local_2:String = "ads_twi_windw";
-            var _local_3:ImageResult = page.viewer.roomEngine.getRoomImage(k.floorType, k.wallType, k.landscapeType, k._Str_15099, this, _local_2);
-            var _local_4:ImageResult = page.viewer.roomEngine.getGenericRoomObjectImage(_local_2, "", new Vector3d(180, 0, 0), k._Str_15099, this);
+            var _local_3:ImageResult = page.viewer.roomEngine.getRoomImage(k.floorType, k.wallType, k.landscapeType, k.tileSize, this, _local_2);
+            var _local_4:ImageResult = page.viewer.roomEngine.getGenericRoomObjectImage(_local_2, "", new Vector3d(180, 0, 0), k.tileSize, this);
             if (((!(_local_3 == null)) && (!(_local_4 == null))))
             {
                 this._imageResultIdRoom = _local_3.id;

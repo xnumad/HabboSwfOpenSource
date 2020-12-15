@@ -33,7 +33,7 @@
             return this._landscapeType;
         }
 
-        public function get _Str_15099():int
+        public function get tileSize():int
         {
             return this._tileSize;
         }
