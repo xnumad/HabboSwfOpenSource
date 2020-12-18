@@ -566,7 +566,7 @@
             }
         }
 
-        public function _Str_25749(k:IMessageComposer):void
+        public function setReportMessage(k:IMessageComposer):void
         {
             this._reportMessage = k;
         }
