@@ -15,7 +15,7 @@
         private var _Str_2326:IWidgetWindow;
         private var _habboWindowManagerComponent:HabboWindowManagerComponent;
         private var _root:IWindowContainer;
-        private var _Str_12147:int;
+        private var _serialNumber:int;
         private var _Str_11520:int;
 
         public function LimitedItemPreviewOverlayWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
@@ -28,7 +28,7 @@
 
         public function set _Str_3442(k:int):void
         {
-            this._Str_12147 = k;
+            this._serialNumber = k;
             var _local_2:IBitmapWrapperWindow = IBitmapWrapperWindow(this._root.findChildByName("unique_item_serial_number_bitmap"));
             _local_2.bitmap = LimitedItemOverlayNumberBitmapGenerator._Str_14181(this._habboWindowManagerComponent.assets, this._Str_3442, _local_2.width, _local_2.height);
         }
@@ -42,7 +42,7 @@
 
         public function get _Str_3442():int
         {
-            return this._Str_12147;
+            return this._serialNumber;
         }
 
         public function get _Str_4345():int

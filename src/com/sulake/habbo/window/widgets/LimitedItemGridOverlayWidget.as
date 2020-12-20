@@ -26,7 +26,7 @@
         private var _root:IWindowContainer;
         private var _Str_11590:BitmapData;
         private var _Str_5779:IBitmapWrapperWindow;
-        private var _Str_12147:int;
+        private var _serialNumber:int;
         private var _Str_7480:uint;
         private var _Str_13683:uint;
         private var _animated:Boolean = false;
@@ -75,7 +75,7 @@
 
         public function set _Str_3442(k:int):void
         {
-            this._Str_12147 = k;
+            this._serialNumber = k;
             var _local_2:IBitmapWrapperWindow = IBitmapWrapperWindow(this._root.findChildByName("unique_item_overlay_plaque_number_bitmap"));
             _local_2.bitmap = LimitedItemOverlayNumberBitmapGenerator._Str_14181(this._habboWindowManagerComponent.assets, this._Str_3442, _local_2.width, _local_2.height);
         }
@@ -86,7 +86,7 @@
 
         public function get _Str_3442():int
         {
-            return this._Str_12147;
+            return this._serialNumber;
         }
 
         public function get _Str_4345():int
