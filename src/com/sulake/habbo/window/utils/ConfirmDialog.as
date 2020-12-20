@@ -20,19 +20,19 @@
                 switch (_arg_2.name)
                 {
                     case _ALERT_BUTTON_OK:
-                        if (_Str_2715 != null)
+                        if (_callback != null)
                         {
                             _local_3 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_OK, null, null);
-                            _Str_2715(this, _local_3);
+                            _callback(this, _local_3);
                             _local_3.recycle();
                         }
                         return;
                     case _ALERT_BUTTON_CANCEL:
                     case HEADER_BUTTON_CLOSE:
-                        if (_Str_2715 != null)
+                        if (_callback != null)
                         {
                             _local_3 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_CANCEL, null, null);
-                            _Str_2715(this, _local_3);
+                            _callback(this, _local_3);
                             _local_3.recycle();
                         }
                         return;

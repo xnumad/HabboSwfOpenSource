@@ -13,7 +13,7 @@
         protected var window:IWindow;
         protected var _timer:Timer;
         protected var _Str_829:uint = 0;
-        protected var _Str_2715:Function;
+        protected var _callback:Function;
         protected var _Str_5257:int;
         protected var _Str_4979:int;
 
@@ -41,7 +41,7 @@
             {
                 this.window = k;
                 this.window.addEventListener(WindowEvent.WINDOW_EVENT_DESTROYED, this._Str_10813);
-                this._Str_2715 = _arg_2;
+                this._callback = _arg_2;
                 this._Str_5527 = true;
                 this._Str_5257 = _arg_4;
                 this._Str_4979 = _arg_5;
@@ -62,9 +62,9 @@
             }
             else
             {
-                if (this._Str_2715 != null)
+                if (this._callback != null)
                 {
-                    this._Str_2715(this._Str_5257, this._Str_4979);
+                    this._callback(this._Str_5257, this._Str_4979);
                 }
             }
         }

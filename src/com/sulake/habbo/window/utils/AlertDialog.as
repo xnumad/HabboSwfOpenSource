@@ -24,7 +24,7 @@
         protected var _title:String = "";
         protected var _Str_4444:String = "";
         protected var _disposed:Boolean = false;
-        protected var _Str_2715:Function = null;
+        protected var _callback:Function = null;
         protected var window:IFrameWindow;
         protected var _dialog:IModalDialog;
 
@@ -87,7 +87,7 @@
                     this.window.dispose();
                     this.window = null;
                 }
-                this._Str_2715 = null;
+                this._callback = null;
                 this._disposed = true;
             }
         }
@@ -100,10 +100,10 @@
                 switch (_arg_2.name)
                 {
                     case _ALERT_BUTTON_OK:
-                        if (this._Str_2715 != null)
+                        if (this._callback != null)
                         {
                             _local_3 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_OK, null, null);
-                            this._Str_2715(this, _local_3);
+                            this._callback(this, _local_3);
                             _local_3.recycle();
                         }
                         else
@@ -113,10 +113,10 @@
                         return;
                     case HEADER_BUTTON_CLOSE:
                     case _ALERT_BUTTON_CANCEL:
-                        if (this._Str_2715 != null)
+                        if (this._callback != null)
                         {
                             _local_3 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_CANCEL, null, null);
-                            this._Str_2715(this, _local_3);
+                            this._callback(this, _local_3);
                             _local_3.recycle();
                         }
                         else
@@ -203,12 +203,12 @@
 
         public function set callback(k:Function):void
         {
-            this._Str_2715 = k;
+            this._callback = k;
         }
 
         public function get callback():Function
         {
-            return this._Str_2715;
+            return this._callback;
         }
 
         public function get disposed():Boolean
