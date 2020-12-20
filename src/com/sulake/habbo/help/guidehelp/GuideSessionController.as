@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideOnDutyStatusMessageEvent;
@@ -156,7 +156,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionErrorMessageEvent(this.onGuideSessionError));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionEvent(this.onGuideSessionMessage));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionRequesterRoomMessageEvent(this.onGuideSessionRequesterRoom));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionInvitedToGuideRoomEvent(this.onGuideSessionInvitedToGuideRoom));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionInvitedToGuideRoomMessageEvent(this.onGuideSessionInvitedToGuideRoom));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionPartnerIsTypingMessageEvent(this.onGuideSessionPartnerIsTyping));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideOnDutyStatusMessageEvent(this.onGuideOnDutyStatus));

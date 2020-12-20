@@ -675,7 +675,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
-	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedMessageEvent;
@@ -1162,7 +1162,7 @@
             INCOMING_PACKETS[2182] = UserNameChangedMessageEvent;
             INCOMING_PACKETS[2187] = ItemAddMessageEvent;
             INCOMING_PACKETS[2188] = ClubGiftNotificationEvent;
-            INCOMING_PACKETS[219] = GuideSessionInvitedToGuideRoomEvent;
+            INCOMING_PACKETS[219] = GuideSessionInvitedToGuideRoomMessageEvent;
             INCOMING_PACKETS[2196] = Game2WeeklyLeaderboardEvent;
             INCOMING_PACKETS[2202] = ItemDataUpdateMessageEvent;
             INCOMING_PACKETS[2208] = RoomQueueStatusMessageEvent;
