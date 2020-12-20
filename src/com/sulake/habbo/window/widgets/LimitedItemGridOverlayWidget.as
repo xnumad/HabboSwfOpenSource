@@ -13,7 +13,7 @@
     import flash.geom.Rectangle;
     import flash.geom.Point;
 
-    public class LimitedItemOverlayGridWidget implements _Str_3353, IUpdateReceiver 
+    public class LimitedItemGridOverlayWidget implements _Str_3353, IUpdateReceiver
     {
         public static const LIMITED_ITEM_OVERLAY_GRID:String = "limited_item_overlay_grid";
 
@@ -31,7 +31,7 @@
         private var _Str_13683:uint;
         private var _animated:Boolean = false;
 
-        public function LimitedItemOverlayGridWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
+        public function LimitedItemGridOverlayWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
         {
             this._Str_7480 = getTimer();
             this._Str_13683 = this._Str_7480;
