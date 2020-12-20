@@ -548,7 +548,7 @@
                     _local_3._Str_3614.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
                     _local_4 = ICON_TAG_NOTIFY;
                     break;
-                case FriendNotification._Str_6485:
+                case FriendNotification.TYPE_MESSENGER:
                     break;
                 case FriendNotification._Str_5815:
                     _local_3 = new GameToken(this.friend, k);

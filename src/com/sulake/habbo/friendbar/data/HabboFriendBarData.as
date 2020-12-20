@@ -561,7 +561,7 @@
             }
             if (_local_3)
             {
-                this._Str_14341(String(this._lastMessageSenderId), FriendNotification._Str_6485, null, false, false);
+                this._Str_14341(String(this._lastMessageSenderId), FriendNotification.TYPE_MESSENGER, null, false, false);
             }
         }
 
@@ -577,7 +577,7 @@
             if (((this._habboMessengerComponent) && (!(this._habboMessengerComponent.isOpen()))))
             {
                 events.dispatchEvent(new NewMessageEvent(true, this._lastMessageSenderId));
-                this._Str_14341(String(this._lastMessageSenderId), FriendNotification._Str_6485, null, true, false);
+                this._Str_14341(String(this._lastMessageSenderId), FriendNotification.TYPE_MESSENGER, null, true, false);
             }
         }
 

@@ -956,7 +956,7 @@
             {
                 if ((k is FriendEntityTab))
                 {
-                    FriendEntityTab(k)._Str_5518(FriendNotification._Str_6485, true);
+                    FriendEntityTab(k)._Str_5518(FriendNotification.TYPE_MESSENGER, true);
                 }
             }
         }

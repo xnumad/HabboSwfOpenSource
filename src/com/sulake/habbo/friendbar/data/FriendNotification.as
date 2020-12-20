@@ -2,7 +2,7 @@
 {
     public class FriendNotification implements IFriendNotification 
     {
-        public static const _Str_6485:int = -1;
+        public static const TYPE_MESSENGER:int = -1;
         public static const _Str_12027:int = 0;
         public static const _Str_10801:int = 1;
         public static const _Str_10634:int = 2;
@@ -25,7 +25,7 @@
         {
             switch (k)
             {
-                case _Str_6485:
+                case TYPE_MESSENGER:
                     return "instant_message";
                 case _Str_12027:
                     return "room_event";

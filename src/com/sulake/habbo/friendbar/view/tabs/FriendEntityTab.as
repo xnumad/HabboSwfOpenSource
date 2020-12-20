@@ -536,7 +536,7 @@
                     _local_3._Str_3614.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
                     _local_4 = ICON_TAG_NOTIFY;
                     break;
-                case FriendNotification._Str_6485:
+                case FriendNotification.TYPE_MESSENGER:
                     _local_3 = new MessengerToken(this.friend, k);
                     _local_3._Str_3614.name = ICON_MESSAGE;
                     _local_3._Str_3614.addEventListener(WindowMouseEvent.CLICK, this._Str_3369);
