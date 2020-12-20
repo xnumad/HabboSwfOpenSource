@@ -6,7 +6,7 @@
         public static const TYPE_ROOM_EVENT:int = 0;
         public static const TYPE_ACHIEVEMENT:int = 1;
         public static const TYPE_QUEST:int = 2;
-        public static const _Str_5815:int = 3;
+        public static const TYPE_PLAYING_GAME:int = 3;
         public static const _Str_9572:int = 4;
         public static const _Str_6669:int = 5;
 
@@ -33,7 +33,7 @@
                     return "achievement";
                 case TYPE_QUEST:
                     return "quest";
-                case _Str_5815:
+                case TYPE_PLAYING_GAME:
                     return "playing_game";
                 case _Str_9572:
                     return "finished_game";

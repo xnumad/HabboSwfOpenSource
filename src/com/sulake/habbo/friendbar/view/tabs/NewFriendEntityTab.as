@@ -550,7 +550,7 @@
                     break;
                 case FriendNotification.TYPE_MESSENGER:
                     break;
-                case FriendNotification._Str_5815:
+                case FriendNotification.TYPE_PLAYING_GAME:
                     _local_3 = new GameToken(this.friend, k);
                     _local_3._Str_3614.name = ICON_GAME;
                     _local_3._Str_3614.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
@@ -559,7 +559,7 @@
                     this._Str_4018 = _local_3.notification.message;
                     break;
                 case FriendNotification._Str_9572:
-                    this._Str_5518(FriendNotification._Str_5815, true);
+                    this._Str_5518(FriendNotification.TYPE_PLAYING_GAME, true);
                     this._Str_5783 = false;
                     return;
                 case FriendNotification._Str_6669:
