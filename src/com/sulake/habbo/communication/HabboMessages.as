@@ -676,7 +676,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
-	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingEvent;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionDetachedMessageEvent;
@@ -996,7 +996,7 @@
             INCOMING_PACKETS[1000] = CraftableProductsEvent;
             INCOMING_PACKETS[1001] = TradingCompletedEvent;
             INCOMING_PACKETS[1004] = ErrorReportEvent;
-            INCOMING_PACKETS[1016] = GuideSessionPartnerIsTypingEvent;
+            INCOMING_PACKETS[1016] = GuideSessionPartnerIsTypingMessageEvent;
             INCOMING_PACKETS[1032] = CatalogPagesListEvent;
             INCOMING_PACKETS[1033] = YouAreSpectatorMessageEvent;
             INCOMING_PACKETS[1036] = ShoutMessageEvent;

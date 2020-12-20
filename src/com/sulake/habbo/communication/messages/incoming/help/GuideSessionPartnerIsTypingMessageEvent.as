@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionPartnerIsTypingMessageParser;
 
-    public class GuideSessionPartnerIsTypingEvent extends MessageEvent implements IMessageEvent 
+    public class GuideSessionPartnerIsTypingMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function GuideSessionPartnerIsTypingEvent(k:Function)
+        public function GuideSessionPartnerIsTypingMessageEvent(k:Function)
         {
             super(k, GuideSessionPartnerIsTypingMessageParser);
         }

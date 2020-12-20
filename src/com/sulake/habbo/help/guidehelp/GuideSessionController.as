@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
-    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingEvent;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideOnDutyStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionOfferedToGuideMessageEvent;
@@ -157,7 +157,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionEvent(this.onGuideSessionMessage));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionRequesterRoomMessageEvent(this.onGuideSessionRequesterRoom));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionInvitedToGuideRoomEvent(this.onGuideSessionInvitedToGuideRoom));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionPartnerIsTypingEvent(this.onGuideSessionPartnerIsTyping));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionPartnerIsTypingMessageEvent(this.onGuideSessionPartnerIsTyping));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideOnDutyStatusMessageEvent(this.onGuideOnDutyStatus));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChatReviewSessionOfferedToGuideMessageEvent(this.onChatReviewSessionOfferedToGuide));
@@ -485,7 +485,7 @@
         private function onGuideSessionPartnerIsTyping(k:IMessageEvent):void
         {
             Logger.log("onGuideSessionPartnerIsTyping");
-            var _local_2:GuideSessionPartnerIsTypingMessageParser = GuideSessionPartnerIsTypingEvent(k).getParser();
+            var _local_2:GuideSessionPartnerIsTypingMessageParser = GuideSessionPartnerIsTypingMessageEvent(k).getParser();
             this._Str_19579(_local_2.isTyping);
         }
 
