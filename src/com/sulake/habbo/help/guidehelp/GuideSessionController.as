@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionDetachedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
@@ -153,7 +153,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionDetachedMessageEvent(this.onGuideSessionDetached));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionStartedMessageEvent(this.onGuideSessionStarted));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionEndedMessageEvent(this.onGuideSessionEnded));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionErrorEvent(this.onGuideSessionError));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionErrorMessageEvent(this.onGuideSessionError));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionEvent(this.onGuideSessionMessage));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionRequesterRoomMessageEvent(this.onGuideSessionRequesterRoom));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionInvitedToGuideRoomEvent(this.onGuideSessionInvitedToGuideRoom));
@@ -378,7 +378,7 @@
             }
         }
 
-        private function onGuideSessionError(k:GuideSessionErrorEvent):void
+        private function onGuideSessionError(k:GuideSessionErrorMessageEvent):void
         {
             Logger.log("onGuideSessionError");
             if (this._disposed)

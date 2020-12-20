@@ -673,7 +673,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionAttachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionDetachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingMessageEvent;
@@ -1419,7 +1419,7 @@
             INCOMING_PACKETS[659] = ClubGiftSelectedEvent;
             INCOMING_PACKETS[66] = AchievementResolutionsMessageEvent;
             INCOMING_PACKETS[662] = PollErrorEvent;
-            INCOMING_PACKETS[673] = GuideSessionErrorEvent;
+            INCOMING_PACKETS[673] = GuideSessionErrorMessageEvent;
             INCOMING_PACKETS[680] = MarketPlaceOffersEvent;
             INCOMING_PACKETS[687] = GetGuestRoomResultEvent;
             INCOMING_PACKETS[69] = BotSkillListUpdateEvent;

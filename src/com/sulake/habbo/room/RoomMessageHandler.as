@@ -46,7 +46,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.IgnoreResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorMessageEvent;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
@@ -225,7 +225,7 @@
                 k.addMessageEvent(new IgnoreResultMessageEvent(this.onIgnoreResult));
                 k.addMessageEvent(new GuideSessionStartedMessageEvent(this.onGuideSessionStarted));
                 k.addMessageEvent(new GuideSessionEndedMessageEvent(this.onGuideSessionEnded));
-                k.addMessageEvent(new GuideSessionErrorEvent(this.onGuideSessionError));
+                k.addMessageEvent(new GuideSessionErrorMessageEvent(this.onGuideSessionError));
             }
         }
 
