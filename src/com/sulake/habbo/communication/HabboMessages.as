@@ -682,7 +682,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionDetachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsDeletedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.FaqCategoryMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_16338;
+	import com.sulake.habbo.communication.messages.incoming.help.FaqSearchResultsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.FaqTextMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.HotelMergeNameChangeEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.FaqCategoriesMessageEvent;
@@ -1070,7 +1070,7 @@
             INCOMING_PACKETS[1534] = ObjectAddMessageEvent;
             INCOMING_PACKETS[1543] = CollapsedCategoriesEvent;
             INCOMING_PACKETS[1548] = GuideOnDutyStatusMessageEvent;
-            INCOMING_PACKETS[1551] = _Str_16338;
+            INCOMING_PACKETS[1551] = FaqSearchResultsMessageEvent;
             INCOMING_PACKETS[1553] = PetBreedingResultEvent;
             INCOMING_PACKETS[1554] = YoutubeControlVideoMessageEvent;
             INCOMING_PACKETS[1555] = RoomSettingsSaveErrorEvent;
