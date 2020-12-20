@@ -685,7 +685,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help._Str_16338;
 	import com.sulake.habbo.communication.messages.incoming.help.FaqTextMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.HotelMergeNameChangeEvent;
-	import com.sulake.habbo.communication.messages.incoming.help._Str_18296;
+	import com.sulake.habbo.communication.messages.incoming.help.FaqCategoriesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.FaqClientFaqsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpReplyMessageEvent;
@@ -1236,7 +1236,7 @@
             INCOMING_PACKETS[2726] = OfficialRoomsEvent;
             INCOMING_PACKETS[2737] = ConcurrentUsersGoalProgressMessageEvent;
             INCOMING_PACKETS[2753] = HeightMapEvent;
-            INCOMING_PACKETS[2756] = _Str_18296;
+            INCOMING_PACKETS[2756] = FaqCategoriesMessageEvent;
             INCOMING_PACKETS[2771] = HotelClosesAndWillOpenAtEvent;
             INCOMING_PACKETS[2772] = QuizResultsMessageEvent;
             INCOMING_PACKETS[2774] = CraftingRecipeEvent;

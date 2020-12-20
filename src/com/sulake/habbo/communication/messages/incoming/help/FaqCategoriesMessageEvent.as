@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.FaqCategoriesMessageParser;
 
-    public class _Str_18296 extends MessageEvent implements IMessageEvent 
+    public class FaqCategoriesMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_18296(k:Function)
+        public function FaqCategoriesMessageEvent(k:Function)
         {
             super(k, FaqCategoriesMessageParser);
         }
