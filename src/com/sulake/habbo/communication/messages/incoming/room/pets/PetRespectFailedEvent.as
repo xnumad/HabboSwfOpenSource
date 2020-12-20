@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.room.pets.PetScratchFailedMessageParser;
+    import com.sulake.habbo.communication.messages.parser.room.pets.PetRespectFailedParser;
 
     public class PetRespectFailedEvent extends MessageEvent implements IMessageEvent
     {
         public function PetRespectFailedEvent(k:Function)
         {
-            super(k, PetScratchFailedMessageParser);
+            super(k, PetRespectFailedParser);
         }
 
-        public function getParser():PetScratchFailedMessageParser
+        public function getParser():PetRespectFailedParser
         {
-            return _parser as PetScratchFailedMessageParser;
+            return _parser as PetRespectFailedParser;
         }
     }
 }

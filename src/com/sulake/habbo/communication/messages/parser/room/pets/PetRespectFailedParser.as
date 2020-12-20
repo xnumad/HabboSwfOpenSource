@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class PetScratchFailedMessageParser implements IMessageParser 
+    public class PetRespectFailedParser implements IMessageParser
     {
         private var _currentAge:int;
         private var _requiredAge:int;

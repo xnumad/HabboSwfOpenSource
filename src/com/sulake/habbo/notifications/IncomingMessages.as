@@ -57,7 +57,7 @@
     import com.sulake.habbo.communication.messages.parser.notifications.HabboBroadcastMessageParser;
     import com.sulake.habbo.window.enum.FrankIllustration;
     import com.sulake.habbo.communication.messages.parser.notifications.NotificationDialogMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.pets.PetScratchFailedMessageParser;
+    import com.sulake.habbo.communication.messages.parser.room.pets.PetRespectFailedParser;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.communication.messages.parser.notifications.ClubGiftNotificationParser;
@@ -404,7 +404,7 @@
 
         private function onPetRespectFailed(k:IMessageEvent):void
         {
-            var _local_2:PetScratchFailedMessageParser = (k as PetRespectFailedEvent).getParser();
+            var _local_2:PetRespectFailedParser = (k as PetRespectFailedEvent).getParser();
             this._notifications.localization.registerParameter("room.error.pets.respectfailed", "required_age", ("" + _local_2.currentAge));
             this._notifications.localization.registerParameter("room.error.pets.respectfailed", "avatar_age", ("" + _local_2.requiredAge));
             this._notifications.windowManager.alert("${error.title}", "${room.error.pets.respectfailed}", 0, this.onAlert);
