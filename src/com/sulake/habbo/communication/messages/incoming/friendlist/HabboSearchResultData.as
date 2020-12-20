@@ -4,7 +4,7 @@
 
     public class HabboSearchResultData
     {
-        private var _Str_3764:int;
+        private var _avatarId:int;
         private var _Str_20176:String;
         private var _Str_20869:String;
         private var _Str_22211:Boolean;
@@ -16,7 +16,7 @@
 
         public function HabboSearchResultData(k:IMessageDataWrapper)
         {
-            this._Str_3764 = k.readInteger();
+            this._avatarId = k.readInteger();
             this._Str_20176 = k.readString();
             this._Str_20869 = k.readString();
             this._Str_22211 = k.readBoolean();
@@ -29,7 +29,7 @@
 
         public function get avatarId():int
         {
-            return this._Str_3764;
+            return this._avatarId;
         }
 
         public function get _Str_8751():String

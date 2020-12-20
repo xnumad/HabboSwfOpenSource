@@ -113,7 +113,7 @@
         private var _tabs:FriendListTabs;
         private var _view:FriendListView;
         private var _Str_16825:_Str_9313;
-        private var _Str_3764:int;
+        private var _avatarId:int;
         internal var _categories:FriendCategories;
         private var _friendRequests:_Str_9210;
         private var _avatarSearchResults:AvatarSearchResults;
@@ -424,7 +424,7 @@
         private function onUserObject(k:IMessageEvent):void
         {
             var _local_2:UserObjectMessageParser = (k as UserObjectEvent).getParser();
-            this._Str_3764 = int(_local_2.id);
+            this._avatarId = int(_local_2.id);
         }
 
         private function onFriendsListFragment(k:IMessageEvent):void
@@ -829,7 +829,7 @@
 
         public function get avatarId():int
         {
-            return this._Str_3764;
+            return this._avatarId;
         }
 
         public function get notifications():IHabboNotifications
@@ -1042,7 +1042,7 @@
                     {
                         return;
                     }
-                    if (int(_local_3[0]) == this._Str_3764)
+                    if (int(_local_3[0]) == this._avatarId)
                     {
                         _local_4 = int(_local_3[1]);
                     }
