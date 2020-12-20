@@ -671,7 +671,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.*;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionAttachedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionDetachedEvent;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionDetachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
@@ -1043,7 +1043,7 @@
             INCOMING_PACKETS[1359] = MarketplaceMakeOfferResult;
             INCOMING_PACKETS[1369] = ItemsEvent;
             INCOMING_PACKETS[1373] = TradingCloseEvent;
-            INCOMING_PACKETS[138] = GuideSessionDetachedEvent;
+            INCOMING_PACKETS[138] = GuideSessionDetachedMessageEvent;
             INCOMING_PACKETS[1381] = OfficialSongIdMessageEvent;
             INCOMING_PACKETS[1404] = PurchaseErrorMessageEvent;
             INCOMING_PACKETS[1411] = YoutubeDisplayVideoMessageEvent;
