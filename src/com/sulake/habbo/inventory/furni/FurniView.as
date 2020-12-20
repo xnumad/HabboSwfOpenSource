@@ -7,7 +7,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.inventory.marketplace.MarketplaceModel;
     import com.sulake.habbo.room.IRoomEngine;
-    import com.sulake.habbo.window.widgets._Str_3338;
+    import com.sulake.habbo.window.widgets.ILimitedItemPreviewOverlayWidget;
     import com.sulake.habbo.window.widgets._Str_4520;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.IButtonWindow;
@@ -57,7 +57,7 @@
         private var _roomEngine:IRoomEngine;
         private var _disposed:Boolean = false;
         private var _currentState:int = 0;
-        private var _limitedItemOverlay:_Str_3338;
+        private var _limitedItemOverlay:ILimitedItemPreviewOverlayWidget;
         private var _rarityItemOverlay:_Str_4520;
         private var _buttonList:IItemListWindow;
         private var _placeInRoomButton:IButtonWindow;
@@ -322,7 +322,7 @@
                 {
                     if (this._limitedItemOverlay == null)
                     {
-                        this._limitedItemOverlay = _Str_3338(_local_14.widget);
+                        this._limitedItemOverlay = ILimitedItemPreviewOverlayWidget(_local_14.widget);
                     }
                     this._limitedItemOverlay.serialNumber = _local_2.stuffData.uniqueSerialNumber;
                     this._limitedItemOverlay.seriesSize = _local_2.stuffData.uniqueSeriesSize;

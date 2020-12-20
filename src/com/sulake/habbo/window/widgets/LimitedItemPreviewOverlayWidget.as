@@ -8,7 +8,7 @@
     import com.sulake.core.window.iterators.EmptyIterator;
     import com.sulake.core.window.utils.IIterator;
 
-    public class LimitedItemPreviewOverlayWidget implements _Str_3338
+    public class LimitedItemPreviewOverlayWidget implements ILimitedItemPreviewOverlayWidget
     {
         public static const LIMITED_ITEM_OVERLAY_PREVIEW:String = "limited_item_overlay_preview";
 

@@ -26,7 +26,7 @@
     import com.sulake.habbo.window.widgets._Str_3083;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.window.widgets._Str_3338;
+    import com.sulake.habbo.window.widgets.ILimitedItemPreviewOverlayWidget;
     import flash.geom.Matrix;
     import com.sulake.core.window.components.ITextFieldWindow;
 
@@ -574,7 +574,7 @@
         {
             var _local_10:ImageResult;
             var _local_11:IBitmapWrapperWindow;
-            var _local_12:_Str_3338;
+            var _local_12:ILimitedItemPreviewOverlayWidget;
             var _local_13:_Str_3083;
             var _local_14:IWindow;
             if ((((!(k)) || (!(_window))) || (!(this.marketPlace))))
@@ -650,7 +650,7 @@
             var _local_8:IWidgetWindow = IWidgetWindow(_local_3.findChildByName("unique_item_overlay_widget"));
             if (k.isUniqueLimitedItem)
             {
-                _local_12 = _Str_3338(_local_8.widget);
+                _local_12 = ILimitedItemPreviewOverlayWidget(_local_8.widget);
                 _local_12.serialNumber = k.stuffData.uniqueSerialNumber;
                 _local_12.seriesSize = k.stuffData.uniqueSeriesSize;
                 _local_8.visible = true;

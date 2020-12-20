@@ -8,7 +8,7 @@
     import com.sulake.habbo.window.IHabboWindowManager;
     import flash.events.TimerEvent;
     import com.sulake.core.assets.BitmapDataAsset;
-    import com.sulake.habbo.window.widgets._Str_3338;
+    import com.sulake.habbo.window.widgets.ILimitedItemPreviewOverlayWidget;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -103,7 +103,7 @@
             var _local_11:String;
             var _local_12:String;
             var _local_13:String;
-            var _local_14:_Str_3338;
+            var _local_14:ILimitedItemPreviewOverlayWidget;
             if (this._popupWindow == null)
             {
                 return;
@@ -166,7 +166,7 @@
             }
             if (((!(_arg_4 == null)) && (_arg_4.uniqueSerialNumber > 0)))
             {
-                _local_14 = _Str_3338(_local_8.widget);
+                _local_14 = ILimitedItemPreviewOverlayWidget(_local_8.widget);
                 _local_14.serialNumber = _arg_4.uniqueSerialNumber;
                 _local_14.seriesSize = _arg_4.uniqueSeriesSize;
             }

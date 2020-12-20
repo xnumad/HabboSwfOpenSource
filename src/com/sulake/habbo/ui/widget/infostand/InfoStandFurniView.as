@@ -34,7 +34,7 @@
     import com.sulake.habbo.ui.widget.events.RoomWidgetFurniInfostandUpdateEvent;
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_3338;
+    import com.sulake.habbo.window.widgets.ILimitedItemPreviewOverlayWidget;
     import com.sulake.habbo.room.IStuffData;
     import com.sulake.habbo.window.widgets._Str_4520;
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
@@ -834,7 +834,7 @@
         private function _Str_22365(k:Boolean, _arg_2:IStuffData):void
         {
             var _local_5:IWidgetWindow;
-            var _local_6:_Str_3338;
+            var _local_6:ILimitedItemPreviewOverlayWidget;
             var _local_3:IWindowContainer = (this._border.findChildByName("unique_item_background_container") as IWindowContainer);
             var _local_4:IWindowContainer = (this._border.findChildByName("unique_item_overlay_container") as IWindowContainer);
             if (((!(_local_3)) || (!(_local_4))))
@@ -851,7 +851,7 @@
                 _local_3.visible = true;
                 _local_4.visible = true;
                 _local_5 = IWidgetWindow(_local_4.findChildByName("unique_item_plaque_widget"));
-                _local_6 = _Str_3338(_local_5.widget);
+                _local_6 = ILimitedItemPreviewOverlayWidget(_local_5.widget);
                 _local_6.serialNumber = _arg_2.uniqueSerialNumber;
                 _local_6.seriesSize = _arg_2.uniqueSeriesSize;
             }

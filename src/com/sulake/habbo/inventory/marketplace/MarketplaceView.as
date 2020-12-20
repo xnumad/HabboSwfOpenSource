@@ -9,7 +9,7 @@
     import com.sulake.habbo.inventory.HabboInventory;
     import com.sulake.habbo.room.ImageResult;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_3338;
+    import com.sulake.habbo.window.widgets.ILimitedItemPreviewOverlayWidget;
     import com.sulake.habbo.window.widgets._Str_3083;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.room.utils.Vector3d;
@@ -105,7 +105,7 @@
             var _local_5:String;
             var _local_6:String;
             var _local_8:IWidgetWindow;
-            var _local_9:_Str_3338;
+            var _local_9:ILimitedItemPreviewOverlayWidget;
             var _local_10:IWidgetWindow;
             var _local_11:_Str_3083;
             if (((((!(k)) || (!(this._localization))) || (!(this._roomEngine))) || (!(this._model))))
@@ -170,7 +170,7 @@
             {
                 _local_8 = IWidgetWindow(this._view.findChildByName("unique_item_overlay_widget"));
                 _local_8.visible = true;
-                _local_9 = _Str_3338(_local_8.widget);
+                _local_9 = ILimitedItemPreviewOverlayWidget(_local_8.widget);
                 _local_9.serialNumber = k.stuffData.uniqueSerialNumber;
                 _local_9.seriesSize = k.stuffData.uniqueSeriesSize;
             }
