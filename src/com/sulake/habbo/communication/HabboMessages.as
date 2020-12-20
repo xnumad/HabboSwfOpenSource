@@ -672,7 +672,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionAttachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionDetachedMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedEvent;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
@@ -1056,7 +1056,7 @@
             INCOMING_PACKETS[1452] = BuildersClubSubscriptionStatusMessageEvent;
             INCOMING_PACKETS[1453] = ObjectsDataUpdateMessageEvent;
             INCOMING_PACKETS[1455] = CategoriesWithVisitorCountEvent;
-            INCOMING_PACKETS[1456] = GuideSessionEndedEvent;
+            INCOMING_PACKETS[1456] = GuideSessionEndedMessageEvent;
             INCOMING_PACKETS[1459] = GroupDetailsChangedMessageEvent;
             INCOMING_PACKETS[1474] = CarryObjectMessageEvent;
             INCOMING_PACKETS[1477] = LeftQueueMessageEvent;
