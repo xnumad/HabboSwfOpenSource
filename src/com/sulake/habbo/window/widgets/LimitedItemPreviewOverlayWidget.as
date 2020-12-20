@@ -8,7 +8,7 @@
     import com.sulake.core.window.iterators.EmptyIterator;
     import com.sulake.core.window.utils.IIterator;
 
-    public class LimitedItemOverlayPreviewWidget implements _Str_3338 
+    public class LimitedItemPreviewOverlayWidget implements _Str_3338
     {
         public static const LIMITED_ITEM_OVERLAY_PREVIEW:String = "limited_item_overlay_preview";
 
@@ -18,7 +18,7 @@
         private var _Str_12147:int;
         private var _Str_11520:int;
 
-        public function LimitedItemOverlayPreviewWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
+        public function LimitedItemPreviewOverlayWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
         {
             this._Str_2326 = k;
             this._habboWindowManagerComponent = _arg_2;

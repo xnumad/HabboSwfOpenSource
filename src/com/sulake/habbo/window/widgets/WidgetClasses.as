@@ -19,7 +19,7 @@
             _Str_3059[IlluminaInputWidget.ILLUMINA_INPUT] = IlluminaInputWidget;
             _Str_3059[ProgressIndicatorWidget.PROGRESS_INDICATOR] = ProgressIndicatorWidget;
             _Str_3059[LimitedItemGridOverlayWidget.LIMITED_ITEM_OVERLAY_GRID] = LimitedItemGridOverlayWidget;
-            _Str_3059[LimitedItemOverlayPreviewWidget.LIMITED_ITEM_OVERLAY_PREVIEW] = LimitedItemOverlayPreviewWidget;
+            _Str_3059[LimitedItemPreviewOverlayWidget.LIMITED_ITEM_OVERLAY_PREVIEW] = LimitedItemPreviewOverlayWidget;
             _Str_3059[LimitedItemSupplyLeftOverlayWidget.LIMITED_ITEM_OVERLAY_SUPPLY] = LimitedItemSupplyLeftOverlayWidget;
             _Str_3059[RarityItemOverlayGridWidget.RARITY_ITEM_OVERLAY_GRID] = RarityItemOverlayGridWidget;
             _Str_3059[RarityItemOverlayPreviewWidget.RARITY_ITEM_OVERLAY_PREVIEW] = RarityItemOverlayPreviewWidget;
