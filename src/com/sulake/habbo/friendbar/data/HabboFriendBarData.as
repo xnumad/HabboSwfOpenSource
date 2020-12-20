@@ -515,7 +515,7 @@
         private function _Str_16886(k:NewFriendRequestEvent):void
         {
             var _local_2:FriendRequestData;
-            if (this._Str_19444)
+            if (this.showFriendRequests)
             {
                 _local_2 = k.getParser().req;
                 this._friendRequests.push(new FriendRequest(_local_2.requestId, _local_2.requesterName, _local_2.figureString));
@@ -527,7 +527,7 @@
         {
             var _local_2:Array;
             var _local_3:FriendRequestData;
-            if (this._Str_19444)
+            if (this.showFriendRequests)
             {
                 _local_2 = k.getParser()._Str_17539;
                 for each (_local_3 in _local_2)
@@ -712,7 +712,7 @@
             return getBoolean("friendbar.notifications.enabled");
         }
 
-        public function get _Str_19444():Boolean
+        public function get showFriendRequests():Boolean
         {
             return getBoolean("friendbar.requests.enabled");
         }
