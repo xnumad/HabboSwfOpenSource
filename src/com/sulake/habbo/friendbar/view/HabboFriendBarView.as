@@ -489,7 +489,7 @@
             Tab._Str_3684 = _windowManager;
             Tab._Str_3840 = _localizationManager;
             Tab._Str_9890 = this._Str_15295;
-            Tab._Str_4533 = _tracking;
+            Tab.TRACKING = _tracking;
             Token._Str_3684 = _windowManager;
             Token.ASSETS = assets;
             Token.GAMES = this._gameManager;

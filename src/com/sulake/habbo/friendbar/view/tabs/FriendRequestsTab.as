@@ -279,11 +279,11 @@
                         _Str_2925.declineFriendRequest(_arg_2.parent.id);
                         break;
                     case REGION_PROFILE:
-                        _Str_4533.trackGoogle("extendedProfile", "friendBar_multipleFriendRequestsAvatar");
+                        TRACKING.trackGoogle("extendedProfile", "friendBar_multipleFriendRequestsAvatar");
                         _Str_2925.showProfile(_arg_2.parent.id);
                         break;
                     case REGION_PROFILE_NAME:
-                        _Str_4533.trackGoogle("extendedProfile", "friendBar_multipleFriendRequestsName");
+                        TRACKING.trackGoogle("extendedProfile", "friendBar_multipleFriendRequestsName");
                         _Str_2925.showProfile(_arg_2.parent.id);
                         break;
                 }

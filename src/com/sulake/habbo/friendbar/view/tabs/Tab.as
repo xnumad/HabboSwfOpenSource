@@ -24,7 +24,7 @@
         public static var ASSETS:IAssetLibrary;
         public static var _Str_3684:IHabboWindowManager;
         public static var _Str_3840:IHabboLocalizationManager;
-        public static var _Str_4533:IHabboTracking;
+        public static var TRACKING:IHabboTracking;
         public static var _Str_9890:TextCropper;
         protected static const _Str_11139:Boolean = false;
         protected static const _Str_6722:int = 80;

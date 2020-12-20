@@ -271,9 +271,9 @@
                 super.select(k);
                 if (k)
                 {
-                    if (_Str_4533)
+                    if (TRACKING)
                     {
-                        _Str_4533.trackEventLog("FriendBar", "", "clicked", "", ((this.friend.logEventId > 0) ? this.friend.logEventId : 0));
+                        TRACKING.trackEventLog("FriendBar", "", "clicked", "", ((this.friend.logEventId > 0) ? this.friend.logEventId : 0));
                     }
                     this.friend.logEventId = -1;
                 }
@@ -450,7 +450,7 @@
                     case BUTTON_PROFILE:
                         if (((_Str_2925) && (this._friend)))
                         {
-                            _Str_4533.trackGoogle("extendedProfile", "friendToolbar_friendButton");
+                            TRACKING.trackGoogle("extendedProfile", "friendToolbar_friendButton");
                             _Str_2925.showProfile(this._friend.id);
                             this.deselect(true);
                         }
@@ -493,7 +493,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _Str_4533.trackGoogle("extendedProfile", "friendBar_friendAvatar");
+                TRACKING.trackGoogle("extendedProfile", "friendBar_friendAvatar");
                 _Str_2925.showProfile(this._friend.id);
                 this.deselect(true);
             }

@@ -222,7 +222,7 @@
                         }
                         break;
                     case BUTTON_PROFILE:
-                        _Str_4533.trackGoogle("extendedProfile", "friendBar_friendRequestButton");
+                        TRACKING.trackGoogle("extendedProfile", "friendBar_friendRequestButton");
                         _Str_2925.showProfile(_friend.id);
                         break;
                     case CLICK_REGION_REJECT:
