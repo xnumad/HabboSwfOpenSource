@@ -677,7 +677,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingEvent;
-	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomEvent;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionDetachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsDeletedMessageEvent;
@@ -1115,7 +1115,7 @@
             INCOMING_PACKETS[1829] = ChatReviewSessionVotingStatusMessageEvent;
             INCOMING_PACKETS[1830] = OpenEvent;
             INCOMING_PACKETS[1840] = RoomEventEvent;
-            INCOMING_PACKETS[1847] = GuideSessionRequesterRoomEvent;
+            INCOMING_PACKETS[1847] = GuideSessionRequesterRoomMessageEvent;
             INCOMING_PACKETS[1862] = PostThreadMessageEvent;
             INCOMING_PACKETS[1866] = CatalogPublishedMessageEvent;
             INCOMING_PACKETS[1868] = RentableSpaceRentFailedMessageEvent;
