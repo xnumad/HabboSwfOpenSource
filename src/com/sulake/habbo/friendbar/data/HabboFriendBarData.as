@@ -112,7 +112,7 @@
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FindFriendsProcessResultEvent(this._Str_24044));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new RoomInviteEvent(this.onRoomInvite));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendListFragmentMessageEvent(this.onFriendsListFragment));
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new GameInviteMessageEvent(this._Str_25411));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new GameInviteMessageEvent(this.onGameInvite));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new MessengerInitEvent(this._Str_24730));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new NewFriendRequestEvent(this._Str_16886));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new FriendNotificationEvent(this._Str_15197));
@@ -581,7 +581,7 @@
             }
         }
 
-        private function _Str_25411(k:GameInviteMessageEvent):void
+        private function onGameInvite(k:GameInviteMessageEvent):void
         {
             var _local_2:GameInviteMessageParser = k.getParser();
             var _local_3:String = GameConfigurations.getNameId(_local_2.gameTypeId);
