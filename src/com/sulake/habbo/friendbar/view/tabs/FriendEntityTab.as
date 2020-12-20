@@ -521,7 +521,7 @@
             var _local_4:String = _Str_5837;
             switch (k._Str_3293)
             {
-                case FriendNotification._Str_12027:
+                case FriendNotification.TYPE_ROOM_EVENT:
                     _local_3 = new RoomEventToken(this.friend, k);
                     _local_3._Str_3614.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
                     _local_4 = ICON_TAG_NOTIFY;

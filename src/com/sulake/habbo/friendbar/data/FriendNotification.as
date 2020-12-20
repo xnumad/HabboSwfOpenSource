@@ -3,7 +3,7 @@
     public class FriendNotification implements IFriendNotification 
     {
         public static const TYPE_MESSENGER:int = -1;
-        public static const _Str_12027:int = 0;
+        public static const TYPE_ROOM_EVENT:int = 0;
         public static const _Str_10801:int = 1;
         public static const _Str_10634:int = 2;
         public static const _Str_5815:int = 3;
@@ -27,7 +27,7 @@
             {
                 case TYPE_MESSENGER:
                     return "instant_message";
-                case _Str_12027:
+                case TYPE_ROOM_EVENT:
                     return "room_event";
                 case _Str_10801:
                     return "achievement";
