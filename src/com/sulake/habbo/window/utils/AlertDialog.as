@@ -22,7 +22,7 @@
         private static var _counter:uint = 0;
 
         protected var _title:String = "";
-        protected var _Str_4444:String = "";
+        protected var _summary:String = "";
         protected var _disposed:Boolean = false;
         protected var _callback:Function = null;
         protected var window:IFrameWindow;
@@ -189,16 +189,16 @@
 
         public function set summary(k:String):void
         {
-            this._Str_4444 = k;
+            this._summary = k;
             if (this.window)
             {
-                ITextWindow(this.window.findChildByTag("DESCRIPTION")).text = this._Str_4444;
+                ITextWindow(this.window.findChildByTag("DESCRIPTION")).text = this._summary;
             }
         }
 
         public function get summary():String
         {
-            return this._Str_4444;
+            return this._summary;
         }
 
         public function set callback(k:Function):void
