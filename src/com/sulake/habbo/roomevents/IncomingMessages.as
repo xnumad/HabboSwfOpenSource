@@ -36,7 +36,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             var _local_2:IHabboCommunicationManager = this._roomEvents.communication;
             this.addMessageEvent(new WiredTriggerDataEvent(this._Str_22337));
-            this.addMessageEvent(new OpenEvent(this._Str_24104));
+            this.addMessageEvent(new OpenEvent(this.onOpen));
             this.addMessageEvent(new WiredRewardResultMessageEvent(this._Str_23600));
             this.addMessageEvent(new WiredConditionDataEvent(this._Str_23144));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
@@ -52,7 +52,7 @@
             this._messageEvents.push(this._roomEvents.communication.addHabboConnectionMessageEvent(k));
         }
 
-        private function _Str_24104(k:IMessageEvent):void
+        private function onOpen(k:IMessageEvent):void
         {
             var _local_2:OpenMessageParser = (k as OpenEvent).getParser();
             this._roomEvents.send(new OpenMessageComposer(_local_2.stuffId));
