@@ -25,7 +25,7 @@
             this._Str_2326.rootWindow = this._root;
         }
 
-        public function set _Str_13963(k:int):void
+        public function set supplyLeft(k:int):void
         {
             this._Str_19162 = k;
             var _local_2:ITextWindow = (this._root.findChildByName("items_left_count") as ITextWindow);
@@ -34,7 +34,7 @@
             this._root.findChildByName("unique_item_sold_out_bitmap").visible = _local_3;
         }
 
-        public function get _Str_13963():int
+        public function get supplyLeft():int
         {
             return this._Str_19162;
         }

@@ -92,7 +92,7 @@
             if (((k.pricingModel == Offer.PRICING_MODEL_SINGLE) && (k.product.isUniqueLimitedItem)))
             {
                 _local_3 = k.product;
-                this._Str_17834._Str_13963 = _local_3.uniqueLimitedItemsLeft;
+                this._Str_17834.supplyLeft = _local_3.uniqueLimitedItemsLeft;
                 this._Str_17834.seriesSize = _local_3.uniqueLimitedItemSeriesSize;
                 window.visible = true;
                 if (_arg_2)
