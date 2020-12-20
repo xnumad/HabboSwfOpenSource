@@ -44,7 +44,7 @@
             }
             if (_arg_5 == HabboAlertDialogFlag.NULL)
             {
-                _arg_5 = ((HabboAlertDialogFlag.BUTTON_OK | HabboAlertDialogFlag._Str_18202) | HabboAlertDialogFlag.TEXT_SUMMARY);
+                _arg_5 = ((HabboAlertDialogFlag.BUTTON_OK | HabboAlertDialogFlag.TEXT_TITLE) | HabboAlertDialogFlag.TEXT_SUMMARY);
             }
             var _local_8:IItemListWindow = (this.window.findChildByName(_ALERT_BUTTON_LIST) as IItemListWindow);
             if (_local_8)

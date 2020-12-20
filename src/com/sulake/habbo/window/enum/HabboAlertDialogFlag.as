@@ -3,7 +3,7 @@
     public class HabboAlertDialogFlag
     {
         public static const NULL:int = 0;
-        public static const _Str_18202:int = 1;
+        public static const TEXT_TITLE:int = 1;
         public static const TEXT_SUMMARY:int = 2;
         public static const _Str_20307:int = 4;
         public static const _Str_19787:int = 8;
