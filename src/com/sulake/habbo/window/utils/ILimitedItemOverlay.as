@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
 
-    public interface _Str_14136 extends IDisposable 
+    public interface ILimitedItemOverlay extends IDisposable
     {
         function get window():IWindowContainer;
         function set _Str_3442(_arg_1:int):void;

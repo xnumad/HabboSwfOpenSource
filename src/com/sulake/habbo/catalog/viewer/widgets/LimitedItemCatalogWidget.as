@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.catalog.viewer.widgets
 {
     import com.sulake.habbo.catalog.HabboCatalog;
-    import com.sulake.habbo.window.utils._Str_14136;
+    import com.sulake.habbo.window.utils.ILimitedItemOverlay;
     import com.sulake.habbo.catalog.IPurchasableOffer;
     import flash.utils.Timer;
     import com.sulake.habbo.window.widgets._Str_9620;
@@ -19,7 +19,7 @@
         private static const _Str_18612:int = 20000;
 
         private var _habboCatalog:HabboCatalog;
-        private var _Str_8367:_Str_14136;
+        private var _Str_8367:ILimitedItemOverlay;
         private var _Str_12055:IPurchasableOffer;
         private var _Str_6632:Timer;
         private var _Str_17834:_Str_9620;
