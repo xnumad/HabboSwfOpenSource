@@ -561,7 +561,7 @@
             }
             if (_local_3)
             {
-                this._Str_14341(String(this._lastMessageSenderId), FriendNotification.TYPE_MESSENGER, null, false, false);
+                this.makeNotification(String(this._lastMessageSenderId), FriendNotification.TYPE_MESSENGER, null, false, false);
             }
         }
 
@@ -577,7 +577,7 @@
             if (((this._habboMessengerComponent) && (!(this._habboMessengerComponent.isOpen()))))
             {
                 events.dispatchEvent(new NewMessageEvent(true, this._lastMessageSenderId));
-                this._Str_14341(String(this._lastMessageSenderId), FriendNotification.TYPE_MESSENGER, null, true, false);
+                this.makeNotification(String(this._lastMessageSenderId), FriendNotification.TYPE_MESSENGER, null, true, false);
             }
         }
 
@@ -587,7 +587,7 @@
             var _local_3:String = GameConfigurations.getNameId(_local_2.gameTypeId);
             if (_local_3)
             {
-                this._Str_14341(String(_local_2.inviterId), FriendNotification.TYPE_GAME_INVITE, _local_3, false, true);
+                this.makeNotification(String(_local_2.inviterId), FriendNotification.TYPE_GAME_INVITE, _local_3, false, true);
             }
         }
 
@@ -597,10 +597,10 @@
             var _local_3:* = (!(_local_2.typeCode == FriendNotification.TYPE_PLAYING_GAME));
             var _local_4:* = (!(_local_2.typeCode == FriendNotification.TYPE_FINISHED_GAME));
             var _local_5:* = (!(_local_2.typeCode == FriendNotification.TYPE_PLAYING_GAME));
-            this._Str_14341(_local_2.avatarId, _local_2.typeCode, _local_2.message, _local_3, _local_4, _local_5);
+            this.makeNotification(_local_2.avatarId, _local_2.typeCode, _local_2.message, _local_3, _local_4, _local_5);
         }
 
-        private function _Str_14341(k:String, _arg_2:int, _arg_3:String, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Boolean=true):void
+        private function makeNotification(k:String, _arg_2:int, _arg_3:String, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Boolean=true):void
         {
             var _local_7:IFriendEntity;
             var _local_8:FriendNotification;
