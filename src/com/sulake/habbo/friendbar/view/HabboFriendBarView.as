@@ -229,7 +229,7 @@
                     this._friendBarData.events.removeEventListener(FindFriendsNotificationEvent.FIND_FRIENDS_RESULT, this._Str_19962);
                     this._friendBarData.events.removeEventListener(FriendRequestUpdateEvent.FBE_REQUESTS, this._Str_21633);
                     this._friendBarData.events.removeEventListener(NewMessageEvent.FBE_MESSAGE, this._Str_20447);
-                    this._friendBarData.events.removeEventListener(NotificationEvent.FBE_NOTIFICATION_EVENT, this._Str_15197);
+                    this._friendBarData.events.removeEventListener(NotificationEvent.FBE_NOTIFICATION_EVENT, this.onFriendNotification);
                     this._friendBarData.events.removeEventListener(ActiveConversationsCountEvent.AMC_EVENT, this._Str_21657);
                 }
                 if (_sessionDataManager)
@@ -253,7 +253,7 @@
             this._friendBarData.events.addEventListener(FindFriendsNotificationEvent.FIND_FRIENDS_RESULT, this._Str_19962);
             this._friendBarData.events.addEventListener(FriendRequestUpdateEvent.FBE_REQUESTS, this._Str_21633);
             this._friendBarData.events.addEventListener(NewMessageEvent.FBE_MESSAGE, this._Str_20447);
-            this._friendBarData.events.addEventListener(NotificationEvent.FBE_NOTIFICATION_EVENT, this._Str_15197);
+            this._friendBarData.events.addEventListener(NotificationEvent.FBE_NOTIFICATION_EVENT, this.onFriendNotification);
             this._friendBarData.events.addEventListener(ActiveConversationsCountEvent.AMC_EVENT, this._Str_21657);
             _sessionDataManager.events.addEventListener(SessionDataPreferencesEvent.APUE_UPDATED, this._Str_10326);
         }
@@ -821,7 +821,7 @@
             }
         }
 
-        private function _Str_15197(k:NotificationEvent):void
+        private function onFriendNotification(k:NotificationEvent):void
         {
             var _local_2:FriendEntityTab = this._Str_21564(k._Str_9566);
             if (!_local_2)
