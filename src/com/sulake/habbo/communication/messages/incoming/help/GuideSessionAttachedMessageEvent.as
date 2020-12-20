@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionAttachedMessageParser;
 
-    public class GuideSessionAttachedEvent extends MessageEvent implements IMessageEvent 
+    public class GuideSessionAttachedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function GuideSessionAttachedEvent(k:Function)
+        public function GuideSessionAttachedMessageEvent(k:Function)
         {
             super(k, GuideSessionAttachedMessageParser);
         }

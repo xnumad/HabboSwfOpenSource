@@ -670,7 +670,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseVipMembershipExtensionComposer;
 	import com.sulake.habbo.communication.messages.incoming.help.*;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionAttachedEvent;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionAttachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionDetachedEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
@@ -1079,7 +1079,7 @@
             INCOMING_PACKETS[1576] = ModeratorToolPreferencesEvent;
             INCOMING_PACKETS[1587] = NewConsoleMessageEvent;
             INCOMING_PACKETS[159] = FurniListRemoveEvent;
-            INCOMING_PACKETS[1591] = GuideSessionAttachedEvent;
+            INCOMING_PACKETS[1591] = GuideSessionAttachedMessageEvent;
             INCOMING_PACKETS[160] = RoomForwardMessageEvent;
             INCOMING_PACKETS[1600] = GenericErrorEvent;
             INCOMING_PACKETS[1605] = MessengerInitEvent;

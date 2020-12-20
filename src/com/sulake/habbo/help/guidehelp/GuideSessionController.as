@@ -12,7 +12,7 @@
     import flash.events.MouseEvent;
     import flash.events.TimerEvent;
     import flash.utils.getTimer;
-    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionAttachedEvent;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionAttachedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionDetachedEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedEvent;
@@ -149,7 +149,7 @@
             this._idleCheckTimer = new Timer(5000);
             this._idleCheckTimer.addEventListener(TimerEvent.TIMER, this._Str_19672);
             this._idleCheckTimer.start();
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionAttachedEvent(this.onGuideSessionAttached));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionAttachedMessageEvent(this.onGuideSessionAttached));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionDetachedEvent(this.onGuideSessionDetached));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionStartedMessageEvent(this.onGuideSessionStarted));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionEndedEvent(this.onGuideSessionEnded));
