@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation.ModeratorCautionEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelWillCloseInMinutesEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.pets.PetRespectFailedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelClosedAndOpensEvent;
     import com.sulake.habbo.notifications.feed.data.GenericNotificationItemData;
@@ -102,7 +102,7 @@
             this.addMessageEvent(new ModeratorCautionEvent(this.onModCautionEvent));
             this.addMessageEvent(new NotificationDialogMessageEvent(this.onNotificationDialogMessageEvent));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this.onHotelClosing));
-            this.addMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
+            this.addMessageEvent(new PetRespectFailedEvent(this.onPetRespectFailed));
             this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new HotelClosedAndOpensEvent(this.onLoginFailedHotelClosed));
 			this.addMessageEvent(new SimpleAlertMessageEvent(this.alertMessageHandler));
@@ -404,7 +404,7 @@
 
         private function onPetRespectFailed(k:IMessageEvent):void
         {
-            var _local_2:PetScratchFailedMessageParser = (k as PetScratchFailedEvent).getParser();
+            var _local_2:PetScratchFailedMessageParser = (k as PetRespectFailedEvent).getParser();
             this._notifications.localization.registerParameter("room.error.pets.respectfailed", "required_age", ("" + _local_2.currentAge));
             this._notifications.localization.registerParameter("room.error.pets.respectfailed", "avatar_age", ("" + _local_2.requiredAge));
             this._notifications.windowManager.alert("${error.title}", "${room.error.pets.respectfailed}", 0, this.onAlert);

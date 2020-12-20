@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.pets.PetRespectFailedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.AccountSafetyLockStatusChangeMessageEvent;
@@ -176,7 +176,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeUserNameResultMessageEvent(this.onChangeUserNameResult));
                 this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this.onAvailabilityStatus));
-                this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
+                this._communicationManager.addHabboConnectionMessageEvent(new PetRespectFailedEvent(this.onPetRespectFailed));
                 this._communicationManager.addHabboConnectionMessageEvent((new RoomReadyMessageEvent(this.onRoomReady) as IMessageEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
                 this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this.onMysteryBoxKeys));
@@ -445,7 +445,7 @@
             }
         }
 
-        private function onPetRespectFailed(k:PetScratchFailedEvent):void
+        private function onPetRespectFailed(k:PetRespectFailedEvent):void
         {
             if (k == null)
             {

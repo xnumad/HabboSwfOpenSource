@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetScratchFailedMessageParser;
 
-    public class PetScratchFailedEvent extends MessageEvent implements IMessageEvent 
+    public class PetRespectFailedEvent extends MessageEvent implements IMessageEvent
     {
-        public function PetScratchFailedEvent(k:Function)
+        public function PetRespectFailedEvent(k:Function)
         {
             super(k, PetScratchFailedMessageParser);
         }

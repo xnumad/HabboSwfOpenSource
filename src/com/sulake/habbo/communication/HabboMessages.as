@@ -41,7 +41,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.quest.OpenQuestTrackerMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.StartCampaignMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.quest.GetConcurrentUsersGoalProgressMessageComposer;
-	import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.pets.PetRespectFailedEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.pets.PetTrainingPanelEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.pets.PetFigureUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.pets.PetStatusUpdateEvent;
@@ -1011,7 +1011,7 @@
             INCOMING_PACKETS[1112] = YoutubeDisplayPlaylistsEvent;
             INCOMING_PACKETS[1121] = CallForHelpPendingCallsEvent;
             INCOMING_PACKETS[1122] = SeasonalQuestsMessageEvent;
-            INCOMING_PACKETS[1130] = PetScratchFailedEvent;
+            INCOMING_PACKETS[1130] = PetRespectFailedEvent;
             INCOMING_PACKETS[1140] = PlayListSongAddedMessageEvent;
             INCOMING_PACKETS[1155] = WiredSavedEvent;
             INCOMING_PACKETS[1164] = PetTrainingPanelEvent;
