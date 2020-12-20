@@ -587,7 +587,7 @@
             var _local_3:String = GameConfigurations.getNameId(_local_2.gameTypeId);
             if (_local_3)
             {
-                this._Str_14341(String(_local_2.inviterId), FriendNotification._Str_6669, _local_3, false, true);
+                this._Str_14341(String(_local_2.inviterId), FriendNotification.TYPE_GAME_INVITE, _local_3, false, true);
             }
         }
 

@@ -8,7 +8,7 @@
         public static const TYPE_QUEST:int = 2;
         public static const TYPE_PLAYING_GAME:int = 3;
         public static const TYPE_FINISHED_GAME:int = 4;
-        public static const _Str_6669:int = 5;
+        public static const TYPE_GAME_INVITE:int = 5;
 
         private var _typeCode:int = -1;
         private var _message:String;
@@ -37,7 +37,7 @@
                     return "playing_game";
                 case TYPE_FINISHED_GAME:
                     return "finished_game";
-                case _Str_6669:
+                case TYPE_GAME_INVITE:
                     return "game_invite";
             }
             return "unknown";

@@ -562,7 +562,7 @@
                     this._Str_5518(FriendNotification.TYPE_PLAYING_GAME, true);
                     this._Str_5783 = false;
                     return;
-                case FriendNotification._Str_6669:
+                case FriendNotification.TYPE_GAME_INVITE:
                     _local_3 = new GameInviteToken(this.friend, k);
                     _local_3._Str_3614.name = ICON_GAME_INVITE;
                     _local_3._Str_3614.addEventListener(WindowMouseEvent.CLICK, this._Str_3369);
@@ -638,7 +638,7 @@
                     case BUBBLE_BUTTON_CLOSE:
                     case BUBBLE_CLICK_REGION_REJECT:
                         this._Str_4947 = false;
-                        this._Str_5518(FriendNotification._Str_6669, true);
+                        this._Str_5518(FriendNotification.TYPE_GAME_INVITE, true);
                         this.deselect(true);
                         return;
                 }
