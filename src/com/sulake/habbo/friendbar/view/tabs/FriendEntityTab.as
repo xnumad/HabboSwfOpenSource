@@ -550,7 +550,7 @@
                     this._Str_5783 = true;
                     this._Str_4018 = _local_3.notification.message;
                     break;
-                case FriendNotification._Str_9572:
+                case FriendNotification.TYPE_FINISHED_GAME:
                     this._Str_5518(FriendNotification.TYPE_PLAYING_GAME, true);
                     this._Str_5783 = false;
                     return;

@@ -595,7 +595,7 @@
         {
             var _local_2:FriendNotificationMessageParser = k.getParser();
             var _local_3:* = (!(_local_2._Str_3293 == FriendNotification.TYPE_PLAYING_GAME));
-            var _local_4:* = (!(_local_2._Str_3293 == FriendNotification._Str_9572));
+            var _local_4:* = (!(_local_2._Str_3293 == FriendNotification.TYPE_FINISHED_GAME));
             var _local_5:* = (!(_local_2._Str_3293 == FriendNotification.TYPE_PLAYING_GAME));
             this._Str_14341(_local_2.avatarId, _local_2._Str_3293, _local_2.message, _local_3, _local_4, _local_5);
         }
