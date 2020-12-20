@@ -168,7 +168,7 @@
             {
                 _local_14 = _Str_3338(_local_8.widget);
                 _local_14.serialNumber = _arg_4.uniqueSerialNumber;
-                _local_14._Str_4345 = _arg_4.uniqueSeriesSize;
+                _local_14.seriesSize = _arg_4.uniqueSeriesSize;
             }
             else
             {

@@ -652,7 +652,7 @@
             {
                 _local_12 = _Str_3338(_local_8.widget);
                 _local_12.serialNumber = k.stuffData.uniqueSerialNumber;
-                _local_12._Str_4345 = k.stuffData.uniqueSeriesSize;
+                _local_12.seriesSize = k.stuffData.uniqueSeriesSize;
                 _local_8.visible = true;
             }
             else

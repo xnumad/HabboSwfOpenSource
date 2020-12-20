@@ -172,7 +172,7 @@
                 _local_8.visible = true;
                 _local_9 = _Str_3338(_local_8.widget);
                 _local_9.serialNumber = k.stuffData.uniqueSerialNumber;
-                _local_9._Str_4345 = k.stuffData.uniqueSeriesSize;
+                _local_9.seriesSize = k.stuffData.uniqueSeriesSize;
             }
             if (((!(k.stuffData == null)) && (k.stuffData.rarityLevel >= 0)))
             {

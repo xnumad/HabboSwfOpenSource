@@ -5,8 +5,8 @@
     public interface ILimitedItemOverlayWidget extends IWidget
     {
         function set serialNumber(_arg_1:int):void;
-        function set _Str_4345(_arg_1:int):void;
+        function set seriesSize(_arg_1:int):void;
         function get serialNumber():int;
-        function get _Str_4345():int;
+        function get seriesSize():int;
     }
 }

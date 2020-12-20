@@ -33,7 +33,7 @@
             _local_2.bitmap = LimitedItemOverlayNumberBitmapGenerator._Str_14181(this._habboWindowManagerComponent.assets, this.serialNumber, _local_2.width, _local_2.height);
         }
 
-        public function set _Str_4345(k:int):void
+        public function set seriesSize(k:int):void
         {
             this._Str_11520 = k;
             var _local_2:IBitmapWrapperWindow = IBitmapWrapperWindow(this._root.findChildByName("unique_item_edition_size_bitmap"));
@@ -45,7 +45,7 @@
             return this._serialNumber;
         }
 
-        public function get _Str_4345():int
+        public function get seriesSize():int
         {
             return this._Str_11520;
         }

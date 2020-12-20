@@ -43,7 +43,7 @@
         {
         }
 
-        public function set _Str_4345(k:int):void
+        public function set seriesSize(k:int):void
         {
             this._Str_11520 = k;
             var _local_2:ITextWindow = (this._root.findChildByName("items_total_count") as ITextWindow);
@@ -55,7 +55,7 @@
             return 0;
         }
 
-        public function get _Str_4345():int
+        public function get seriesSize():int
         {
             return this._Str_11520;
         }

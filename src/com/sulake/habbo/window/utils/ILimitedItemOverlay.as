@@ -7,6 +7,6 @@
     {
         function get window():IWindowContainer;
         function set serialNumber(_arg_1:int):void;
-        function set _Str_4345(_arg_1:int):void;
+        function set seriesSize(_arg_1:int):void;
     }
 }

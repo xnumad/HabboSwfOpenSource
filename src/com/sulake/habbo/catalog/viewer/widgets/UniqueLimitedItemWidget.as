@@ -93,7 +93,7 @@
             {
                 _local_3 = k.product;
                 this._Str_17834._Str_13963 = _local_3.uniqueLimitedItemsLeft;
-                this._Str_17834._Str_4345 = _local_3.uniqueLimitedItemSeriesSize;
+                this._Str_17834.seriesSize = _local_3.uniqueLimitedItemSeriesSize;
                 window.visible = true;
                 if (_arg_2)
                 {
