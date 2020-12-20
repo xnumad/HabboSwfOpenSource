@@ -21,7 +21,7 @@
             this._viewOnce = _arg_3;
         }
 
-        public static function _Str_23838(k:int):String
+        public static function typeCodeToString(k:int):String
         {
             switch (k)
             {

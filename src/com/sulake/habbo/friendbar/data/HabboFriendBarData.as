@@ -644,7 +644,7 @@
                     }
                     if (this._tracking)
                     {
-                        this._tracking.trackEventLog("FriendBar", FriendNotification._Str_23838(_arg_2), "notified", "", ((_local_7.logEventId > 0) ? _local_7.logEventId : 0));
+                        this._tracking.trackEventLog("FriendBar", FriendNotification.typeCodeToString(_arg_2), "notified", "", ((_local_7.logEventId > 0) ? _local_7.logEventId : 0));
                     }
                 }
             }
