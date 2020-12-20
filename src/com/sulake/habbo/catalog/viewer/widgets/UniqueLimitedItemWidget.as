@@ -14,7 +14,7 @@
     import com.sulake.habbo.catalog.viewer.IProduct;
     import com.sulake.habbo.catalog.viewer.Offer;
 
-    public class LimitedItemCatalogWidget extends CatalogWidget
+    public class UniqueLimitedItemWidget extends CatalogWidget
     {
         private static const _Str_18612:int = 20000;
 
@@ -24,7 +24,7 @@
         private var _Str_6632:Timer;
         private var _Str_17834:_Str_9620;
 
-        public function LimitedItemCatalogWidget(k:IWindowContainer, _arg_2:HabboCatalog)
+        public function UniqueLimitedItemWidget(k:IWindowContainer, _arg_2:HabboCatalog)
         {
             super(k);
             this._habboCatalog = _arg_2;

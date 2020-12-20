@@ -46,7 +46,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.SpinnerCatalogWidget;
     import com.sulake.habbo.catalog.viewer.widgets.BundlePurchaseExtraInfoCatalogWidget;
     import com.sulake.habbo.catalog.viewer.widgets.TotalPriceCatalogWidget;
-    import com.sulake.habbo.catalog.viewer.widgets.LimitedItemCatalogWidget;
+    import com.sulake.habbo.catalog.viewer.widgets.UniqueLimitedItemWidget;
     import com.sulake.habbo.catalog.viewer.widgets.SoldLtdItemsCatalogWidget;
     import com.sulake.habbo.catalog.viewer.widgets.UserBadgeSelectorCatalogWidget;
     import com.sulake.habbo.catalog.viewer.widgets.BundleGridViewCatalogWidget;
@@ -442,7 +442,7 @@
                     this._widgets.push(new TotalPriceCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.LIMITED_ITEM:
-                    this._widgets.push(new LimitedItemCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new UniqueLimitedItemWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.SOLD_LTD_ITEMS:
                     this._widgets.push(new SoldLtdItemsCatalogWidget(k, this._habboCatalog));
