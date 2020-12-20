@@ -40,7 +40,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsEvent;
+    import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsDeletedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpDisabledNotifyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideReportingStatusMessageEvent;
@@ -432,7 +432,7 @@
             this.addMessageEvent(new UsersEvent(this.onUsers));
             this.addMessageEvent(new RoomReadyMessageEvent(this.onRoomReady));
             this.addMessageEvent(new GetGuestRoomResultEvent(this.onGuestRoomResult));
-            this.addMessageEvent(new CallForHelpPendingCallsEvent(this.onPendingCallsForHelp));
+            this.addMessageEvent(new CallForHelpPendingCallsMessageEvent(this.onPendingCallsForHelp));
             this.addMessageEvent(new CallForHelpPendingCallsDeletedMessageEvent(this.onPendingCallsForHelpDeleted));
             this.addMessageEvent(new CallForHelpDisabledNotifyMessageEvent(this.onCallForHelpDisabledNotify));
             this.addMessageEvent(new GuideReportingStatusMessageEvent(this.onGuideReportingStatus));
@@ -616,7 +616,7 @@
         {
             var _local_3:String;
             var _local_4:int;
-            var _local_2:CallForHelpPendingCallsMessageParser = CallForHelpPendingCallsEvent(k).getParser();
+            var _local_2:CallForHelpPendingCallsMessageParser = CallForHelpPendingCallsMessageEvent(k).getParser();
             if (((_local_2.count == 0) || ((this._reportType == REPORT_TYPE_PHOTO) && (_local_2.count < 3))))
             {
                 this.proceedWithReporting();

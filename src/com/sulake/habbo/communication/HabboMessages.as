@@ -669,7 +669,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetLimitedOfferAppearingNextComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.PurchaseVipMembershipExtensionComposer;
 	import com.sulake.habbo.communication.messages.incoming.help.*;
-	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsEvent;
+	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionAttachedEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionDetachedEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedEvent;
@@ -1009,7 +1009,7 @@
             INCOMING_PACKETS[1108] = WiredConditionDataEvent;
             INCOMING_PACKETS[1111] = PetReceivedMessageEvent;
             INCOMING_PACKETS[1112] = YoutubeDisplayPlaylistsEvent;
-            INCOMING_PACKETS[1121] = CallForHelpPendingCallsEvent;
+            INCOMING_PACKETS[1121] = CallForHelpPendingCallsMessageEvent;
             INCOMING_PACKETS[1122] = SeasonalQuestsMessageEvent;
             INCOMING_PACKETS[1130] = PetRespectFailedEvent;
             INCOMING_PACKETS[1140] = PlayListSongAddedMessageEvent;

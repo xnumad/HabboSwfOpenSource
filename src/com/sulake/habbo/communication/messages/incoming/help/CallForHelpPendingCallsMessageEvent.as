@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.CallForHelpPendingCallsMessageParser;
 
-    public class CallForHelpPendingCallsEvent extends MessageEvent implements IMessageEvent 
+    public class CallForHelpPendingCallsMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function CallForHelpPendingCallsEvent(k:Function)
+        public function CallForHelpPendingCallsMessageEvent(k:Function)
         {
             super(k, CallForHelpPendingCallsMessageParser);
         }
