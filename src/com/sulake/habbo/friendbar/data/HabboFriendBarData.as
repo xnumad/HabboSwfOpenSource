@@ -605,7 +605,7 @@
             var _local_7:IFriendEntity;
             var _local_8:FriendNotification;
             var _local_9:Vector.<IFriendNotification>;
-            if (this._Str_22383)
+            if (this.showFriendNotifications)
             {
                 _local_7 = this.getFriendByID(parseInt(k));
                 if (_local_7)
@@ -707,7 +707,7 @@
             return _local_2;
         }
 
-        public function get _Str_22383():Boolean
+        public function get showFriendNotifications():Boolean
         {
             return getBoolean("friendbar.notifications.enabled");
         }
