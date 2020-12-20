@@ -7,7 +7,7 @@
     import com.sulake.core.localization.ILocalization;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_3353;
+    import com.sulake.habbo.window.widgets.ILimitedItemGridOverlayWidget;
     import com.sulake.habbo.window.widgets._Str_3083;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.catalog.HabboCatalog;
@@ -55,7 +55,7 @@
             var _local_6:String;
             var _local_7:IWindow;
             var _local_8:IWidgetWindow;
-            var _local_9:_Str_3353;
+            var _local_9:ILimitedItemGridOverlayWidget;
             var _local_10:IWidgetWindow;
             var _local_11:_Str_3083;
             var _local_12:IWindow;
@@ -136,7 +136,7 @@
                 _local_7 = this._window.findChildByName("unique_item_background_bitmap");
                 _local_7.visible = true;
                 _local_8 = IWidgetWindow(this._window.findChildByName("unique_item_overlay_widget"));
-                _local_9 = _Str_3353(_local_8.widget);
+                _local_9 = ILimitedItemGridOverlayWidget(_local_8.widget);
                 _local_8.visible = true;
                 _local_9._Str_3442 = _arg_2.stuffData.uniqueSerialNumber;
                 _local_9.animated = true;

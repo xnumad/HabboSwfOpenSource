@@ -22,7 +22,7 @@
     import com.sulake.habbo.room.ImageResult;
     import flash.geom.Point;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_3353;
+    import com.sulake.habbo.window.widgets.ILimitedItemGridOverlayWidget;
     import com.sulake.habbo.window.widgets._Str_3083;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -387,7 +387,7 @@
             var _local_11:Point;
             var _local_12:IWindow;
             var _local_13:IWidgetWindow;
-            var _local_14:_Str_3353;
+            var _local_14:ILimitedItemGridOverlayWidget;
             var _local_15:IWidgetWindow;
             var _local_16:_Str_3083;
             var _local_17:IWindow;
@@ -452,7 +452,7 @@
             {
                 _local_12 = _local_2.findChildByName("unique_item_background_bitmap");
                 _local_13 = IWidgetWindow(_local_2.findChildByName("unique_item_overlay_widget"));
-                _local_14 = _Str_3353(_local_13.widget);
+                _local_14 = ILimitedItemGridOverlayWidget(_local_13.widget);
                 _local_14._Str_3442 = k.stuffData.uniqueSerialNumber;
                 _local_14.animated = true;
                 _local_12.visible = true;

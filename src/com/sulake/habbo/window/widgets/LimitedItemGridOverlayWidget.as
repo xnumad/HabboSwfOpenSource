@@ -13,7 +13,7 @@
     import flash.geom.Rectangle;
     import flash.geom.Point;
 
-    public class LimitedItemGridOverlayWidget implements _Str_3353, IUpdateReceiver
+    public class LimitedItemGridOverlayWidget implements ILimitedItemGridOverlayWidget, IUpdateReceiver
     {
         public static const LIMITED_ITEM_OVERLAY_GRID:String = "limited_item_overlay_grid";
 

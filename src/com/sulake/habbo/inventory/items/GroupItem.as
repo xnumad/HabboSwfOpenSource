@@ -16,7 +16,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_3353;
+    import com.sulake.habbo.window.widgets.ILimitedItemGridOverlayWidget;
     import com.sulake.habbo.window.widgets._Str_3083;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -824,7 +824,7 @@
         private function _Str_11831():void
         {
             var k:IWidgetWindow;
-            var _local_2:_Str_3353;
+            var _local_2:ILimitedItemGridOverlayWidget;
             var _local_4:IWidgetWindow;
             var _local_5:_Str_3083;
             if (!this._window)
@@ -834,7 +834,7 @@
             if (this.stuffData.uniqueSerialNumber > 0)
             {
                 k = IWidgetWindow(this._window.findChildByName("unique_item_overlay_container"));
-                _local_2 = _Str_3353(k.widget);
+                _local_2 = ILimitedItemGridOverlayWidget(k.widget);
                 k.visible = true;
                 _local_2._Str_3442 = this.stuffData.uniqueSerialNumber;
                 _local_2.animated = true;

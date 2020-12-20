@@ -7,7 +7,7 @@
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.habbo.room.IStuffData;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_3353;
+    import com.sulake.habbo.window.widgets.ILimitedItemGridOverlayWidget;
     import com.sulake.core.assets.AssetLoaderStruct;
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import com.sulake.core.window.IWindowContainer;
@@ -30,7 +30,7 @@
         {
             _view.findChildByName("unique_item_background_bitmap").visible = true;
             var k:IWidgetWindow = IWidgetWindow(_view.findChildByName("unique_item_overlay_container"));
-            var _local_2:_Str_3353 = _Str_3353(k.widget);
+            var _local_2:ILimitedItemGridOverlayWidget = ILimitedItemGridOverlayWidget(k.widget);
             k.visible = true;
             _local_2._Str_3442 = _Str_6851.uniqueLimitedItemSeriesSize;
             _local_2.animated = true;

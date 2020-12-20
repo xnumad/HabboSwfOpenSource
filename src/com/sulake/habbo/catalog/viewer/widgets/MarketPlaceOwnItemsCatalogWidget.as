@@ -15,7 +15,7 @@
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import flash.geom.Point;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_3353;
+    import com.sulake.habbo.window.widgets.ILimitedItemGridOverlayWidget;
     import com.sulake.habbo.window.widgets._Str_3083;
     import flash.display.BitmapData;
     import com.sulake.core.window.components.IButtonWindow;
@@ -162,7 +162,7 @@
             var _local_27:Point;
             var _local_28:IWindow;
             var _local_29:IWidgetWindow;
-            var _local_30:_Str_3353;
+            var _local_30:ILimitedItemGridOverlayWidget;
             var _local_31:IWidgetWindow;
             var _local_32:_Str_3083;
             if ((((!(k)) || (!(this.marketPlace))) || (!(window))))
@@ -281,7 +281,7 @@
                         {
                             _local_28 = _local_12.findChildByName("unique_item_background_bitmap");
                             _local_29 = IWidgetWindow(_local_12.findChildByName("unique_item_overlay_widget"));
-                            _local_30 = _Str_3353(_local_29.widget);
+                            _local_30 = ILimitedItemGridOverlayWidget(_local_29.widget);
                             _local_30._Str_3442 = _local_11.stuffData.uniqueSerialNumber;
                             _local_30.animated = true;
                             _local_28.visible = true;
