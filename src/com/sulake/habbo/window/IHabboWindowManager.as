@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.IWindowContext;
     import com.sulake.habbo.window.utils.IAlertDialog;
-    import com.sulake.habbo.window.utils._Str_10548;
+    import com.sulake.habbo.window.utils.IAlertDialogWithLink;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.core.window.IInputEventTracker;
     import com.sulake.core.window.IWindowContainer;
@@ -25,7 +25,7 @@
         function getWindowContext(_arg_1:uint):IWindowContext;
         function alert(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IAlertDialog;
         function alertWithModal(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IAlertDialog;
-        function alertWithLink(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function):_Str_10548;
+        function alertWithLink(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function):IAlertDialogWithLink;
         function confirm(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IConfirmDialog;
         function confirmWithModal(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IConfirmDialog;
         function registerLocalizationParameter(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String="%"):void;

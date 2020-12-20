@@ -59,7 +59,7 @@
     import com.sulake.core.window.utils.INotify;
     import com.sulake.habbo.window.utils.IAlertDialog;
     import com.sulake.habbo.window.utils._Str_12599;
-    import com.sulake.habbo.window.utils._Str_10548;
+    import com.sulake.habbo.window.utils.IAlertDialogWithLink;
     import com.sulake.habbo.window.utils.ConfirmDialog;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.core.window.utils.MouseCursorControl;
@@ -394,7 +394,7 @@
             return new AlertDialog(this, _local_6, k, _arg_2, _arg_3, _arg_4, true);
         }
 
-        public function alertWithLink(k:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function):_Str_10548
+        public function alertWithLink(k:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function):IAlertDialogWithLink
         {
             var alertAsset:IAsset = assets.getAssetByName("habbo_window_alert_link_xml");
             if (!alertAsset)
