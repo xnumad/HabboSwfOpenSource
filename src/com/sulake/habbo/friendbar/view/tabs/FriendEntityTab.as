@@ -531,7 +531,7 @@
                     _local_3._Str_3614.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
                     _local_4 = ICON_TAG_NOTIFY;
                     break;
-                case FriendNotification._Str_10634:
+                case FriendNotification.TYPE_QUEST:
                     _local_3 = new QuestToken(this.friend, k);
                     _local_3._Str_3614.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
                     _local_4 = ICON_TAG_NOTIFY;
