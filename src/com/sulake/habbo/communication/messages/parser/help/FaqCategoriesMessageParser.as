@@ -4,7 +4,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9101 implements IMessageParser 
+    public class FaqCategoriesMessageParser implements IMessageParser
     {
         private var _data:Map;
 
@@ -26,23 +26,23 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            var _local_2:Map;
-            var _local_3:int;
+            var category:Map;
+            var category_id:int;
             var name:String;
             var count:int;
             this._data = new Map();
-            var _local_6:int = k.readInteger();
-            var _local_7:int;
-            while (_local_7 < _local_6)
+            var category_amount:int = k.readInteger();
+            var iterator:int;
+            while (iterator < category_amount)
             {
-                _local_2 = new Map();
-                _local_3 = k.readInteger();
+                category = new Map();
+                category_id = k.readInteger();
                 name = k.readString();
                 count = k.readInteger();
-                _local_2.add("name", name);
-                _local_2.add("count", count);
-                this._data.add(_local_3, _local_2);
-                _local_7++;
+                category.add("name", name);
+                category.add("count", count);
+                this._data.add(category_id, category);
+                iterator++;
             }
             return true;
         }
