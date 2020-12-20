@@ -18,7 +18,7 @@
         private static const _Str_4658:int = 10;
 
         private var _disposed:Boolean;
-        private var _Str_2440:IModalDialog;
+        private var _dialog:IModalDialog;
         private var _Str_577:String;
         private var _window:IWindowContainer;
         private var _list:IItemListWindow;
@@ -42,8 +42,8 @@
             this._Str_15643 = _arg_10;
             this._habboWindowManagerComponent = k;
             var _local_11:IAsset = k.assets.getAssetByName("simple_alert_xml");
-            this._Str_2440 = k.buildModalDialogFromXML((_local_11.content as XML));
-            this._window = IWindowContainer(this._Str_2440.rootWindow);
+            this._dialog = k.buildModalDialogFromXML((_local_11.content as XML));
+            this._window = IWindowContainer(this._dialog.rootWindow);
             this._list = IItemListWindow(this._window.findChildByName("list"));
             this._Str_7458 = IItemListWindow(this._window.findChildByName("list_top"));
             this._Str_13821 = IItemListWindow(this._window.findChildByName("list_bottom"));
@@ -125,7 +125,7 @@
             {
                 this._Str_15643();
             }
-            if (this._Str_2440 != null)
+            if (this._dialog != null)
             {
                 if (this._Str_1676 != null)
                 {
@@ -145,8 +145,8 @@
                 this._Str_10246 = null;
                 this._Str_13273 = null;
                 this._Str_15643 = null;
-                this._Str_2440.dispose();
-                this._Str_2440 = null;
+                this._dialog.dispose();
+                this._dialog = null;
             }
         }
 

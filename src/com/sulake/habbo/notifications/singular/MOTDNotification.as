@@ -15,7 +15,7 @@
     public class MOTDNotification implements IDisposable 
     {
         private var _habboNotifications:HabboNotifications;
-        private var _Str_2440:IModalDialog;
+        private var _dialog:IModalDialog;
         private var _type:String;
         private var _Str_4071:Map;
 
@@ -41,8 +41,8 @@
                 }
             }
             var _local_9:IAsset = this._habboNotifications.assets.getAssetByName("layout_notification_popup_xml");
-            this._Str_2440 = this._habboNotifications.windowManager.buildModalDialogFromXML((_local_9.content as XML));
-            var _local_10:IWindowContainer = (this._Str_2440.rootWindow as IWindowContainer);
+            this._dialog = this._habboNotifications.windowManager.buildModalDialogFromXML((_local_9.content as XML));
+            var _local_10:IWindowContainer = (this._dialog.rootWindow as IWindowContainer);
             _local_10.procedure = this.windowProcedure;
             _local_10.caption = _local_4;
             if (_local_6 != null)
@@ -70,8 +70,8 @@
             {
                 return;
             }
-            this._Str_2440.dispose();
-            this._Str_2440 = null;
+            this._dialog.dispose();
+            this._dialog = null;
             this._habboNotifications = null;
             this._type = null;
             this._Str_4071 = null;
@@ -79,7 +79,7 @@
 
         public function get disposed():Boolean
         {
-            return this._Str_2440 == null;
+            return this._dialog == null;
         }
 
         private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void

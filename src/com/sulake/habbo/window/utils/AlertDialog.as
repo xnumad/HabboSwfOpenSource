@@ -26,7 +26,7 @@
         protected var _disposed:Boolean = false;
         protected var _Str_2715:Function = null;
         protected var window:IFrameWindow;
-        protected var _Str_2440:IModalDialog;
+        protected var _dialog:IModalDialog;
 
         public function AlertDialog(k:IHabboWindowManager, _arg_2:XML, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function, _arg_7:Boolean)
         {
@@ -35,8 +35,8 @@
             _counter++;
             if (_arg_7)
             {
-                this._Str_2440 = k.buildModalDialogFromXML(_arg_2);
-                this.window = (this._Str_2440.rootWindow as IFrameWindow);
+                this._dialog = k.buildModalDialogFromXML(_arg_2);
+                this.window = (this._dialog.rootWindow as IFrameWindow);
             }
             else
             {
@@ -76,10 +76,10 @@
         {
             if (!this._disposed)
             {
-                if (((this._Str_2440) && (!(this._Str_2440.disposed))))
+                if (((this._dialog) && (!(this._dialog.disposed))))
                 {
-                    this._Str_2440.dispose();
-                    this._Str_2440 = null;
+                    this._dialog.dispose();
+                    this._dialog = null;
                     this.window = null;
                 }
                 if (((this.window) && (!(this.window.disposed))))
