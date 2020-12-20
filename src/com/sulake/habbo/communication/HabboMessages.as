@@ -674,7 +674,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionDetachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionMessageMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomMessageEvent;
@@ -1442,7 +1442,7 @@
             INCOMING_PACKETS[818] = GuildMemberMgmtFailedMessageEvent;
             INCOMING_PACKETS[826] = RemainingMutePeriodEvent;
             INCOMING_PACKETS[84] = NoSuchFlatEvent;
-            INCOMING_PACKETS[841] = GuideSessionEvent;
+            INCOMING_PACKETS[841] = GuideSessionMessageMessageEvent;
             INCOMING_PACKETS[859] = PetLevelNotificationEvent;
             INCOMING_PACKETS[869] = PurchaseOKMessageEvent;
             INCOMING_PACKETS[872] = Game2InArenaQueueMessageEvent;

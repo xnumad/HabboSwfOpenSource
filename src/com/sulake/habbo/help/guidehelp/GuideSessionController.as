@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionMessageMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingMessageEvent;
@@ -154,7 +154,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionStartedMessageEvent(this.onGuideSessionStarted));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionEndedMessageEvent(this.onGuideSessionEnded));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionErrorMessageEvent(this.onGuideSessionError));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionEvent(this.onGuideSessionMessage));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionMessageMessageEvent(this.onGuideSessionMessage));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionRequesterRoomMessageEvent(this.onGuideSessionRequesterRoom));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionInvitedToGuideRoomMessageEvent(this.onGuideSessionInvitedToGuideRoom));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionPartnerIsTypingMessageEvent(this.onGuideSessionPartnerIsTyping));
