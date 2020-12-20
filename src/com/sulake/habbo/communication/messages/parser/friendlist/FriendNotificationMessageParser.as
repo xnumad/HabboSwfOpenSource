@@ -10,7 +10,7 @@
         private var _message:String;
 
 
-        public function get _Str_3293():int
+        public function get typeCode():int
         {
             return this._typeCode;
         }

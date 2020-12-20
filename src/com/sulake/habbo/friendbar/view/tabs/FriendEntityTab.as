@@ -297,7 +297,7 @@
                             _local_4 = this._Str_2765[_local_3];
                             if (_local_4._Str_6239)
                             {
-                                this._Str_5518(_local_4._Str_3293, k);
+                                this._Str_5518(_local_4.typeCode, k);
                             }
                             _local_3--;
                         }
@@ -505,7 +505,7 @@
             var _local_5:Vector.<Token>;
             var _local_6:IItemListWindow;
             var _local_7:IWindow;
-            this._Str_5518(k._Str_3293, false);
+            this._Str_5518(k.typeCode, false);
             if (!this._Str_2765)
             {
                 this._Str_2765 = new Vector.<Token>();
@@ -519,7 +519,7 @@
                 this._Str_2765 = _local_5;
             }
             var _local_4:String = _Str_5837;
-            switch (k._Str_3293)
+            switch (k.typeCode)
             {
                 case FriendNotification.TYPE_ROOM_EVENT:
                     _local_3 = new RoomEventToken(this.friend, k);
@@ -563,7 +563,7 @@
                     this._Str_4018 = _local_3.notification.message;
                     break;
                 default:
-                    throw (new Error((("Unknown friend notification type: " + k._Str_3293) + "!")));
+                    throw (new Error((("Unknown friend notification type: " + k.typeCode) + "!")));
             }
             if (_local_3)
             {
@@ -599,7 +599,7 @@
             while (_local_3 > -1)
             {
                 _local_4 = this._Str_2765[_local_3];
-                if (_local_4._Str_3293 == k)
+                if (_local_4.typeCode == k)
                 {
                     this._Str_2765.splice(_local_3, 1);
                     if (_arg_2)

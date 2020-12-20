@@ -51,9 +51,9 @@
         }
 
 
-        public function get _Str_3293():int
+        public function get typeCode():int
         {
-            return this._Str_4287._Str_3293;
+            return this._Str_4287.typeCode;
         }
 
         public function get _Str_6239():Boolean
@@ -102,9 +102,9 @@
             this.window = (_Str_12043.buildFromXML((_ASSET_LIBRARY.getAssetByName(_arg_3).content as XML)) as IWindowContainer);
             this.window.findChildByName(TITLE).caption = k;
             this.window.findChildByName(MESSAGE).caption = ((_arg_2) ? _arg_2 : "");
-            this._icon = (_Str_12043.create(("ICON_" + this._Str_3293), WindowType.WINDOW_TYPE_REGION, WindowStyle.WINDOW_STYLE_DEFAULT, WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, Token.ICON_RECTANGLE) as IRegionWindow);
+            this._icon = (_Str_12043.create(("ICON_" + this.typeCode), WindowType.WINDOW_TYPE_REGION, WindowStyle.WINDOW_STYLE_DEFAULT, WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, Token.ICON_RECTANGLE) as IRegionWindow);
             this._icon.mouseThreshold = 0;
-            var _local_5:IStaticBitmapWrapperWindow = (_Str_12043.create(("BITMAP_" + this._Str_3293), WindowType.WINDOW_TYPE_STATIC_BITMAP_WRAPPER, WindowStyle.WINDOW_STYLE_DEFAULT, WindowParam.WINDOW_PARAM_NULL, Token.ICON_RECTANGLE) as IStaticBitmapWrapperWindow);
+            var _local_5:IStaticBitmapWrapperWindow = (_Str_12043.create(("BITMAP_" + this.typeCode), WindowType.WINDOW_TYPE_STATIC_BITMAP_WRAPPER, WindowStyle.WINDOW_STYLE_DEFAULT, WindowParam.WINDOW_PARAM_NULL, Token.ICON_RECTANGLE) as IStaticBitmapWrapperWindow);
             _local_5.assetUri = _arg_4;
             this._icon.addChild(_local_5);
             if (Motions._Str_9810(this._icon) == null)

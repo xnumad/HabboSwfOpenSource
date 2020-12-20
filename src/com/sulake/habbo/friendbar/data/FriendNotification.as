@@ -44,12 +44,12 @@
         }
 
 
-        public function get _Str_3293():int
+        public function get typeCode():int
         {
             return this._typeCode;
         }
 
-        public function set _Str_3293(k:int):void
+        public function set typeCode(k:int):void
         {
             this._typeCode = k;
         }

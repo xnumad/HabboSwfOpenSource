@@ -594,10 +594,10 @@
         private function _Str_15197(k:FriendNotificationEvent):void
         {
             var _local_2:FriendNotificationMessageParser = k.getParser();
-            var _local_3:* = (!(_local_2._Str_3293 == FriendNotification.TYPE_PLAYING_GAME));
-            var _local_4:* = (!(_local_2._Str_3293 == FriendNotification.TYPE_FINISHED_GAME));
-            var _local_5:* = (!(_local_2._Str_3293 == FriendNotification.TYPE_PLAYING_GAME));
-            this._Str_14341(_local_2.avatarId, _local_2._Str_3293, _local_2.message, _local_3, _local_4, _local_5);
+            var _local_3:* = (!(_local_2.typeCode == FriendNotification.TYPE_PLAYING_GAME));
+            var _local_4:* = (!(_local_2.typeCode == FriendNotification.TYPE_FINISHED_GAME));
+            var _local_5:* = (!(_local_2.typeCode == FriendNotification.TYPE_PLAYING_GAME));
+            this._Str_14341(_local_2.avatarId, _local_2.typeCode, _local_2.message, _local_3, _local_4, _local_5);
         }
 
         private function _Str_14341(k:String, _arg_2:int, _arg_3:String, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Boolean=true):void
@@ -613,7 +613,7 @@
                     _local_9 = _local_7.notifications;
                     for each (_local_8 in _local_9)
                     {
-                        if (_local_8._Str_3293 == _arg_2)
+                        if (_local_8.typeCode == _arg_2)
                         {
                             _local_8.message = _arg_3;
                             _local_8._Str_6239 = _arg_4;
