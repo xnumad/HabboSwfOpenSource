@@ -25,7 +25,7 @@
         protected var _summary:String = "";
         protected var _disposed:Boolean = false;
         protected var _callback:Function = null;
-        protected var window:IFrameWindow;
+        protected var _window:IFrameWindow;
         protected var _dialog:IModalDialog;
 
         public function AlertDialog(k:IHabboWindowManager, _arg_2:XML, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function, _arg_7:Boolean)
@@ -36,17 +36,17 @@
             if (_arg_7)
             {
                 this._dialog = k.buildModalDialogFromXML(_arg_2);
-                this.window = (this._dialog.rootWindow as IFrameWindow);
+                this._window = (this._dialog.rootWindow as IFrameWindow);
             }
             else
             {
-                this.window = (k.buildFromXML(_arg_2, 2) as IFrameWindow);
+                this._window = (k.buildFromXML(_arg_2, 2) as IFrameWindow);
             }
             if (_arg_5 == HabboAlertDialogFlag.NULL)
             {
                 _arg_5 = ((HabboAlertDialogFlag.BUTTON_OK | HabboAlertDialogFlag.TEXT_TITLE) | HabboAlertDialogFlag.TEXT_SUMMARY);
             }
-            var _local_8:IItemListWindow = (this.window.findChildByName(_ALERT_BUTTON_LIST) as IItemListWindow);
+            var _local_8:IItemListWindow = (this._window.findChildByName(_ALERT_BUTTON_LIST) as IItemListWindow);
             if (_local_8)
             {
                 if (!(_arg_5 & HabboAlertDialogFlag.BUTTON_OK))
@@ -65,8 +65,8 @@
                     _local_9.dispose();
                 }
             }
-            this.window.procedure = this.dialogEventProc;
-            this.window.center();
+            this._window.procedure = this.dialogEventProc;
+            this._window.center();
             this.title = _arg_3;
             this.summary = _arg_4;
             this.callback = _arg_6;
@@ -80,12 +80,12 @@
                 {
                     this._dialog.dispose();
                     this._dialog = null;
-                    this.window = null;
+                    this._window = null;
                 }
-                if (((this.window) && (!(this.window.disposed))))
+                if (((this._window) && (!(this._window.disposed))))
                 {
-                    this.window.dispose();
-                    this.window = null;
+                    this._window.dispose();
+                    this._window = null;
                 }
                 this._callback = null;
                 this._disposed = true;
@@ -136,13 +136,13 @@
                 switch (k)
                 {
                     case HabboAlertDialogFlag.BUTTON_OK:
-                        _local_2 = (this.window.findChildByName(_ALERT_BUTTON_OK) as IInteractiveWindow);
+                        _local_2 = (this._window.findChildByName(_ALERT_BUTTON_OK) as IInteractiveWindow);
                         break;
                     case HabboAlertDialogFlag.BUTTON_CANCEL:
-                        _local_2 = (this.window.findChildByName(_ALERT_BUTTON_CANCEL) as IInteractiveWindow);
+                        _local_2 = (this._window.findChildByName(_ALERT_BUTTON_CANCEL) as IInteractiveWindow);
                         break;
                     case HabboAlertDialogFlag.BUTTON_CUSTOM:
-                        _local_2 = (this.window.findChildByName(_ALERT_BUTTON_CUSTOM) as IInteractiveWindow);
+                        _local_2 = (this._window.findChildByName(_ALERT_BUTTON_CUSTOM) as IInteractiveWindow);
                         break;
                 }
             }
@@ -157,13 +157,13 @@
                 switch (k)
                 {
                     case HabboAlertDialogFlag.BUTTON_OK:
-                        _local_3 = (this.window.findChildByName(_ALERT_BUTTON_OK) as IInteractiveWindow);
+                        _local_3 = (this._window.findChildByName(_ALERT_BUTTON_OK) as IInteractiveWindow);
                         break;
                     case HabboAlertDialogFlag.BUTTON_CANCEL:
-                        _local_3 = (this.window.findChildByName(_ALERT_BUTTON_CANCEL) as IInteractiveWindow);
+                        _local_3 = (this._window.findChildByName(_ALERT_BUTTON_CANCEL) as IInteractiveWindow);
                         break;
                     case HabboAlertDialogFlag.BUTTON_CUSTOM:
-                        _local_3 = (this.window.findChildByName(_ALERT_BUTTON_CUSTOM) as IInteractiveWindow);
+                        _local_3 = (this._window.findChildByName(_ALERT_BUTTON_CUSTOM) as IInteractiveWindow);
                         break;
                 }
             }
@@ -176,9 +176,9 @@
         public function set title(k:String):void
         {
             this._title = k;
-            if (this.window)
+            if (this._window)
             {
-                this.window.caption = this._title;
+                this._window.caption = this._title;
             }
         }
 
@@ -190,9 +190,9 @@
         public function set summary(k:String):void
         {
             this._summary = k;
-            if (this.window)
+            if (this._window)
             {
-                ITextWindow(this.window.findChildByTag("DESCRIPTION")).text = this._summary;
+                ITextWindow(this._window.findChildByTag("DESCRIPTION")).text = this._summary;
             }
         }
 

@@ -36,9 +36,9 @@
         public function set linkTitle(k:String):void
         {
             this._Str_17547 = k;
-            if (window)
+            if (_window)
             {
-                IButtonWindow(window.findChildByTag("LINK")).caption = this._Str_17547;
+                IButtonWindow(_window.findChildByTag("LINK")).caption = this._Str_17547;
             }
         }
 
