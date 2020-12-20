@@ -64,12 +64,12 @@
             this._message = k;
         }
 
-        public function get _Str_6239():Boolean
+        public function get viewOnce():Boolean
         {
             return this._viewOnce;
         }
 
-        public function set _Str_6239(k:Boolean):void
+        public function set viewOnce(k:Boolean):void
         {
             this._viewOnce = k;
         }

@@ -616,7 +616,7 @@
                         if (_local_8.typeCode == _arg_2)
                         {
                             _local_8.message = _arg_3;
-                            _local_8._Str_6239 = _arg_4;
+                            _local_8.viewOnce = _arg_4;
                             break;
                         }
                         _local_8 = null;

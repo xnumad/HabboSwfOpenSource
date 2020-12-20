@@ -300,7 +300,7 @@
                         while (_local_3 > -1)
                         {
                             _local_4 = this._Str_2765[_local_3];
-                            if (_local_4._Str_6239)
+                            if (_local_4.viewOnce)
                             {
                                 this._Str_5518(_local_4.typeCode, k);
                             }

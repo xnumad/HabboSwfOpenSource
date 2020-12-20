@@ -56,9 +56,9 @@
             return this._Str_4287.typeCode;
         }
 
-        public function get _Str_6239():Boolean
+        public function get viewOnce():Boolean
         {
-            return this._Str_4287._Str_6239;
+            return this._Str_4287.viewOnce;
         }
 
         public function get notification():IFriendNotification
