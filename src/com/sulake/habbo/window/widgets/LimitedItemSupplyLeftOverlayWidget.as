@@ -39,7 +39,7 @@
             return this._Str_19162;
         }
 
-        public function set _Str_3442(k:int):void
+        public function set serialNumber(k:int):void
         {
         }
 
@@ -50,7 +50,7 @@
             _local_2.text = k.toString();
         }
 
-        public function get _Str_3442():int
+        public function get serialNumber():int
         {
             return 0;
         }

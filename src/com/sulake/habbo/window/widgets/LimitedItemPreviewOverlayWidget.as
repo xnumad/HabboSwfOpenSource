@@ -26,11 +26,11 @@
             this._Str_2326.rootWindow = this._root;
         }
 
-        public function set _Str_3442(k:int):void
+        public function set serialNumber(k:int):void
         {
             this._serialNumber = k;
             var _local_2:IBitmapWrapperWindow = IBitmapWrapperWindow(this._root.findChildByName("unique_item_serial_number_bitmap"));
-            _local_2.bitmap = LimitedItemOverlayNumberBitmapGenerator._Str_14181(this._habboWindowManagerComponent.assets, this._Str_3442, _local_2.width, _local_2.height);
+            _local_2.bitmap = LimitedItemOverlayNumberBitmapGenerator._Str_14181(this._habboWindowManagerComponent.assets, this.serialNumber, _local_2.width, _local_2.height);
         }
 
         public function set _Str_4345(k:int):void
@@ -40,7 +40,7 @@
             _local_2.bitmap = LimitedItemOverlayNumberBitmapGenerator._Str_14181(this._habboWindowManagerComponent.assets, k, _local_2.width, _local_2.height);
         }
 
-        public function get _Str_3442():int
+        public function get serialNumber():int
         {
             return this._serialNumber;
         }

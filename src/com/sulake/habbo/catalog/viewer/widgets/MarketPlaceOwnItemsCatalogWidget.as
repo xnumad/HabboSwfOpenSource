@@ -282,7 +282,7 @@
                             _local_28 = _local_12.findChildByName("unique_item_background_bitmap");
                             _local_29 = IWidgetWindow(_local_12.findChildByName("unique_item_overlay_widget"));
                             _local_30 = ILimitedItemGridOverlayWidget(_local_29.widget);
-                            _local_30._Str_3442 = _local_11.stuffData.uniqueSerialNumber;
+                            _local_30.serialNumber = _local_11.stuffData.uniqueSerialNumber;
                             _local_30.animated = true;
                             _local_28.visible = true;
                             _local_29.visible = true;

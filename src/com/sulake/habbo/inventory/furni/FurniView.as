@@ -324,7 +324,7 @@
                     {
                         this._limitedItemOverlay = _Str_3338(_local_14.widget);
                     }
-                    this._limitedItemOverlay._Str_3442 = _local_2.stuffData.uniqueSerialNumber;
+                    this._limitedItemOverlay.serialNumber = _local_2.stuffData.uniqueSerialNumber;
                     this._limitedItemOverlay._Str_4345 = _local_2.stuffData.uniqueSeriesSize;
                     _local_14.visible = true;
                 }

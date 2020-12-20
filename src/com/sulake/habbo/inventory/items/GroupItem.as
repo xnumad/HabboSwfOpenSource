@@ -836,7 +836,7 @@
                 k = IWidgetWindow(this._window.findChildByName("unique_item_overlay_container"));
                 _local_2 = ILimitedItemGridOverlayWidget(k.widget);
                 k.visible = true;
-                _local_2._Str_3442 = this.stuffData.uniqueSerialNumber;
+                _local_2.serialNumber = this.stuffData.uniqueSerialNumber;
                 _local_2.animated = true;
                 this._window.findChildByName("unique_item_background_bitmap").visible = true;
             }

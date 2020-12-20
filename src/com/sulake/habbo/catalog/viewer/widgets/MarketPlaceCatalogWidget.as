@@ -453,7 +453,7 @@
                 _local_12 = _local_2.findChildByName("unique_item_background_bitmap");
                 _local_13 = IWidgetWindow(_local_2.findChildByName("unique_item_overlay_widget"));
                 _local_14 = ILimitedItemGridOverlayWidget(_local_13.widget);
-                _local_14._Str_3442 = k.stuffData.uniqueSerialNumber;
+                _local_14.serialNumber = k.stuffData.uniqueSerialNumber;
                 _local_14.animated = true;
                 _local_12.visible = true;
                 _local_13.visible = true;
@@ -651,7 +651,7 @@
             if (k.isUniqueLimitedItem)
             {
                 _local_12 = _Str_3338(_local_8.widget);
-                _local_12._Str_3442 = k.stuffData.uniqueSerialNumber;
+                _local_12.serialNumber = k.stuffData.uniqueSerialNumber;
                 _local_12._Str_4345 = k.stuffData.uniqueSeriesSize;
                 _local_8.visible = true;
             }

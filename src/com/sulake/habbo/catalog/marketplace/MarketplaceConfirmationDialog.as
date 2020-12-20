@@ -138,7 +138,7 @@
                 _local_8 = IWidgetWindow(this._window.findChildByName("unique_item_overlay_widget"));
                 _local_9 = ILimitedItemGridOverlayWidget(_local_8.widget);
                 _local_8.visible = true;
-                _local_9._Str_3442 = _arg_2.stuffData.uniqueSerialNumber;
+                _local_9.serialNumber = _arg_2.stuffData.uniqueSerialNumber;
                 _local_9.animated = true;
             }
             if (((_arg_2.stuffData) && (_arg_2.stuffData.rarityLevel >= 0)))

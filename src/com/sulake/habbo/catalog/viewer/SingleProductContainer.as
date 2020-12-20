@@ -32,7 +32,7 @@
             var k:IWidgetWindow = IWidgetWindow(_view.findChildByName("unique_item_overlay_container"));
             var _local_2:ILimitedItemGridOverlayWidget = ILimitedItemGridOverlayWidget(k.widget);
             k.visible = true;
-            _local_2._Str_3442 = _Str_6851.uniqueLimitedItemSeriesSize;
+            _local_2.serialNumber = _Str_6851.uniqueLimitedItemSeriesSize;
             _local_2.animated = true;
             if (_Str_6851.uniqueLimitedItemsLeft == 0)
             {
