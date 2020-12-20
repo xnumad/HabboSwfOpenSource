@@ -22,7 +22,7 @@
     import com.sulake.habbo.window.utils.floorplaneditor.BCFloorPlanEditor;
     import com.sulake.habbo.window.utils.habbopedia._Str_7787;
     import com.sulake.habbo.window.handlers.HabbletLinkHandler;
-    import com.sulake.habbo.window.utils._Str_9474;
+    import com.sulake.habbo.window.utils.ElementPointerHandler;
     import com.sulake.core.utils.FontEnum;
     import com.sulake.core.window.components.HTMLTextController;
     import com.sulake.core.runtime.IContext;
@@ -109,7 +109,7 @@
         private var _bcfloorPlanEditor:BCFloorPlanEditor;
         private var _habboPedia:_Str_7787;
         private var _habbleLinkHandler:HabbletLinkHandler;
-        private var _elementPointerHandler:_Str_9474;
+        private var _elementPointerHandler:ElementPointerHandler;
 
         public function HabboWindowManagerComponent(k:IContext, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
@@ -155,7 +155,7 @@
             if (this._communication != null)
             {
                 this._bcfloorPlanEditor = new BCFloorPlanEditor(this);
-                this._elementPointerHandler = new _Str_9474(this);
+                this._elementPointerHandler = new ElementPointerHandler(this);
             }
         }
 

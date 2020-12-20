@@ -3,12 +3,12 @@
     import com.sulake.habbo.window.HabboWindowManagerComponent;
     import com.sulake.habbo.communication.messages.incoming.notifications.ElementPointerMessageEvent;
 
-    public class _Str_9474 
+    public class ElementPointerHandler
     {
         private var _habboWindowManagerComponent:HabboWindowManagerComponent;
         private var _Str_16606:ElementPointerMessageEvent;
 
-        public function _Str_9474(k:HabboWindowManagerComponent)
+        public function ElementPointerHandler(k:HabboWindowManagerComponent)
         {
             this._habboWindowManagerComponent = k;
             if (this._habboWindowManagerComponent.communication != null)
