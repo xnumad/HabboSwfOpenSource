@@ -4,7 +4,7 @@
     {
         public static const TYPE_MESSENGER:int = -1;
         public static const TYPE_ROOM_EVENT:int = 0;
-        public static const _Str_10801:int = 1;
+        public static const TYPE_ACHIEVEMENT:int = 1;
         public static const _Str_10634:int = 2;
         public static const _Str_5815:int = 3;
         public static const _Str_9572:int = 4;
@@ -29,7 +29,7 @@
                     return "instant_message";
                 case TYPE_ROOM_EVENT:
                     return "room_event";
-                case _Str_10801:
+                case TYPE_ACHIEVEMENT:
                     return "achievement";
                 case _Str_10634:
                     return "quest";

@@ -538,7 +538,7 @@
                     _local_3._Str_3614.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
                     _local_4 = ICON_TAG_NOTIFY;
                     break;
-                case FriendNotification._Str_10801:
+                case FriendNotification.TYPE_ACHIEVEMENT:
                     _local_3 = new AchievementToken(this.friend, k, _Str_3840);
                     _local_3._Str_3614.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
                     _local_4 = ICON_TAG_NOTIFY;
