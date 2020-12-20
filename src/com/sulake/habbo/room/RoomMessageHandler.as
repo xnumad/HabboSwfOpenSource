@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session.GamePlayerValueMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetFigureUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.users.IgnoreResultMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedEvent;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
@@ -223,7 +223,7 @@
                 k.addMessageEvent(new GamePlayerValueMessageEvent(this.onGamePlayerNumberValue));
                 k.addMessageEvent(new PetFigureUpdateEvent(this.onPetFigureUpdate));
                 k.addMessageEvent(new IgnoreResultMessageEvent(this.onIgnoreResult));
-                k.addMessageEvent(new GuideSessionStartedEvent(this.onGuideSessionStarted));
+                k.addMessageEvent(new GuideSessionStartedMessageEvent(this.onGuideSessionStarted));
                 k.addMessageEvent(new GuideSessionEndedEvent(this.onGuideSessionEnded));
                 k.addMessageEvent(new GuideSessionErrorEvent(this.onGuideSessionError));
             }

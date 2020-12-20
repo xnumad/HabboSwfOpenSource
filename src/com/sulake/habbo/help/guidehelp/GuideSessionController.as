@@ -14,7 +14,7 @@
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionAttachedEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionDetachedEvent;
-    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedEvent;
+    import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEvent;
@@ -151,7 +151,7 @@
             this._idleCheckTimer.start();
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionAttachedEvent(this.onGuideSessionAttached));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionDetachedEvent(this.onGuideSessionDetached));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionStartedEvent(this.onGuideSessionStarted));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionStartedMessageEvent(this.onGuideSessionStarted));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionEndedEvent(this.onGuideSessionEnded));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionErrorEvent(this.onGuideSessionError));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionEvent(this.onGuideSessionMessage));

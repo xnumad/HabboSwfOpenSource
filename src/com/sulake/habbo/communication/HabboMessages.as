@@ -678,7 +678,7 @@
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomEvent;
-	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedEvent;
+	import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.ChatReviewSessionDetachedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsDeletedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.help.FaqCategoryMessageEvent;
@@ -1294,7 +1294,7 @@
             INCOMING_PACKETS[3201] = _Str_7564;
             INCOMING_PACKETS[3207] = SlideObjectBundleMessageEvent;
             INCOMING_PACKETS[3208] = ItemRemoveMessageEvent;
-            INCOMING_PACKETS[3209] = GuideSessionStartedEvent;
+            INCOMING_PACKETS[3209] = GuideSessionStartedMessageEvent;
             INCOMING_PACKETS[324] = UpdateMessageMessageEvent;
             INCOMING_PACKETS[3244] = UserEventCatsEvent;
             INCOMING_PACKETS[325] = CfhTopicsInitEvent;
