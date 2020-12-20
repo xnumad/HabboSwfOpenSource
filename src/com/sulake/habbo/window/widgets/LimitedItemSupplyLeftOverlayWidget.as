@@ -7,7 +7,7 @@
     import com.sulake.core.window.iterators.EmptyIterator;
     import com.sulake.core.window.utils.IIterator;
 
-    public class LimitedItemSupplyLeftOverlayWidget implements _Str_9620 
+    public class LimitedItemSupplyLeftOverlayWidget implements ILimitedItemSupplyLeftOverlayWidget
     {
         public static const LIMITED_ITEM_OVERLAY_SUPPLY:String = "limited_item_overlay_supply";
 

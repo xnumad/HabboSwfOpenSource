@@ -4,7 +4,7 @@
     import com.sulake.habbo.window.utils.ILimitedItemOverlay;
     import com.sulake.habbo.catalog.IPurchasableOffer;
     import flash.utils.Timer;
-    import com.sulake.habbo.window.widgets._Str_9620;
+    import com.sulake.habbo.window.widgets.ILimitedItemSupplyLeftOverlayWidget;
     import com.sulake.core.window.IWindowContainer;
     import flash.events.TimerEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
@@ -22,7 +22,7 @@
         private var _Str_8367:ILimitedItemOverlay;
         private var _Str_12055:IPurchasableOffer;
         private var _Str_6632:Timer;
-        private var _Str_17834:_Str_9620;
+        private var _Str_17834:ILimitedItemSupplyLeftOverlayWidget;
 
         public function UniqueLimitedItemWidget(k:IWindowContainer, _arg_2:HabboCatalog)
         {
@@ -61,7 +61,7 @@
                 return false;
             }
             var k:IWidgetWindow = IWidgetWindow(_window.findChildByName("unique_item_overlay_container"));
-            this._Str_17834 = _Str_9620(k.widget);
+            this._Str_17834 = ILimitedItemSupplyLeftOverlayWidget(k.widget);
             window.visible = false;
             events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             events.addEventListener(CatalogWidgetEvent.PRODUCT_OFFER_UPDATED, this._Str_20503);
