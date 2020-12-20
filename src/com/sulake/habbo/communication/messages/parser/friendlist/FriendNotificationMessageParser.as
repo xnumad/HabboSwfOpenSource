@@ -5,14 +5,14 @@
 
     public class FriendNotificationMessageParser implements IMessageParser
     {
-        private var _Str_5400:int = -1;
+        private var _typeCode:int = -1;
         private var _Str_3764:String;
         private var _message:String;
 
 
         public function get _Str_3293():int
         {
-            return this._Str_5400;
+            return this._typeCode;
         }
 
         public function get avatarId():String
@@ -33,7 +33,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._Str_3764 = k.readString();
-            this._Str_5400 = k.readInteger();
+            this._typeCode = k.readInteger();
             this._message = k.readString();
             return true;
         }
