@@ -7,12 +7,12 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IButtonWindow;
 
-    public class _Str_12599 extends AlertDialog implements IAlertDialogWithLink
+    public class AlertDialogWithLink extends AlertDialog implements IAlertDialogWithLink
     {
         protected var _Str_17547:String = "";
         protected var _Str_15928:String = "";
 
-        public function _Str_12599(k:IHabboWindowManager, _arg_2:XML, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:String, _arg_7:uint, _arg_8:Function)
+        public function AlertDialogWithLink(k:IHabboWindowManager, _arg_2:XML, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:String, _arg_7:uint, _arg_8:Function)
         {
             super(k, _arg_2, _arg_3, _arg_4, _arg_7, _arg_8, false);
             this.linkTitle = _arg_5;

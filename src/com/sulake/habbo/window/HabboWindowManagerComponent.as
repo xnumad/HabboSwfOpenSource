@@ -58,7 +58,7 @@
     import com.sulake.habbo.window.utils.AlertDialog;
     import com.sulake.core.window.utils.INotify;
     import com.sulake.habbo.window.utils.IAlertDialog;
-    import com.sulake.habbo.window.utils._Str_12599;
+    import com.sulake.habbo.window.utils.AlertDialogWithLink;
     import com.sulake.habbo.window.utils.IAlertDialogWithLink;
     import com.sulake.habbo.window.utils.ConfirmDialog;
     import com.sulake.habbo.window.utils.IConfirmDialog;
@@ -402,7 +402,7 @@
                 throw (new Error("Failed to initialize alert dialog; missing asset!"));
             }
             var _local_8:XML = (alertAsset.content as XML);
-            return new _Str_12599(this, _local_8, k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
+            return new AlertDialogWithLink(this, _local_8, k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
         }
 
         public function confirm(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):IConfirmDialog
