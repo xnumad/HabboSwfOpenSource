@@ -60,7 +60,7 @@
     import com.sulake.habbo.friendbar.view.tabs.FriendRequestTab;
     import flash.events.Event;
     import com.sulake.habbo.window.utils.IAlertDialog;
-    import com.sulake.habbo.window.enum._Str_3023;
+    import com.sulake.habbo.window.enum.HabboAlertDialogFlag;
     import com.sulake.habbo.session.UIFlags;
     import com.sulake.habbo.friendbar.events.FriendBarResizeEvent;
     import com.sulake.habbo.friendbar.data.FriendNotification;
@@ -722,7 +722,7 @@
             _windowManager.notify(title, text, function (k:IAlertDialog, _arg_2:WindowEvent):void
             {
                 k.dispose();
-            }, _Str_3023.BUTTON_OK);
+            }, HabboAlertDialogFlag.BUTTON_OK);
         }
 
         private function _Str_21633(k:FriendRequestUpdateEvent):void

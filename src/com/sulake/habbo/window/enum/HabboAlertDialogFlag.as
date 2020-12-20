@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.window.enum
 {
-    public class _Str_3023 
+    public class HabboAlertDialogFlag
     {
         public static const NULL:int = 0;
         public static const _Str_18202:int = 1;

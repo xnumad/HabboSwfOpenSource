@@ -3,7 +3,7 @@
     import com.sulake.core.window.utils.INotify;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.window.enum._Str_3023;
+    import com.sulake.habbo.window.enum.HabboAlertDialogFlag;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.window.events.WindowEvent;
@@ -42,24 +42,24 @@
             {
                 this.window = (k.buildFromXML(_arg_2, 2) as IFrameWindow);
             }
-            if (_arg_5 == _Str_3023.NULL)
+            if (_arg_5 == HabboAlertDialogFlag.NULL)
             {
-                _arg_5 = ((_Str_3023.BUTTON_OK | _Str_3023._Str_18202) | _Str_3023.TEXT_SUMMARY);
+                _arg_5 = ((HabboAlertDialogFlag.BUTTON_OK | HabboAlertDialogFlag._Str_18202) | HabboAlertDialogFlag.TEXT_SUMMARY);
             }
             var _local_8:IItemListWindow = (this.window.findChildByName(_ALERT_BUTTON_LIST) as IItemListWindow);
             if (_local_8)
             {
-                if (!(_arg_5 & _Str_3023.BUTTON_OK))
+                if (!(_arg_5 & HabboAlertDialogFlag.BUTTON_OK))
                 {
                     _local_9 = _local_8.getListItemByName(_ALERT_BUTTON_OK);
                     _local_9.dispose();
                 }
-                if (!(_arg_5 & _Str_3023.BUTTON_CANCEL))
+                if (!(_arg_5 & HabboAlertDialogFlag.BUTTON_CANCEL))
                 {
                     _local_9 = _local_8.getListItemByName(_ALERT_BUTTON_CANCEL);
                     _local_9.dispose();
                 }
-                if (!(_arg_5 & _Str_3023.BUTTON_CUSTOM))
+                if (!(_arg_5 & HabboAlertDialogFlag.BUTTON_CUSTOM))
                 {
                     _local_9 = _local_8.getListItemByName(_ALERT_BUTTON_CUSTOM);
                     _local_9.dispose();
@@ -135,13 +135,13 @@
             {
                 switch (k)
                 {
-                    case _Str_3023.BUTTON_OK:
+                    case HabboAlertDialogFlag.BUTTON_OK:
                         _local_2 = (this.window.findChildByName(_ALERT_BUTTON_OK) as IInteractiveWindow);
                         break;
-                    case _Str_3023.BUTTON_CANCEL:
+                    case HabboAlertDialogFlag.BUTTON_CANCEL:
                         _local_2 = (this.window.findChildByName(_ALERT_BUTTON_CANCEL) as IInteractiveWindow);
                         break;
-                    case _Str_3023.BUTTON_CUSTOM:
+                    case HabboAlertDialogFlag.BUTTON_CUSTOM:
                         _local_2 = (this.window.findChildByName(_ALERT_BUTTON_CUSTOM) as IInteractiveWindow);
                         break;
                 }
@@ -156,13 +156,13 @@
             {
                 switch (k)
                 {
-                    case _Str_3023.BUTTON_OK:
+                    case HabboAlertDialogFlag.BUTTON_OK:
                         _local_3 = (this.window.findChildByName(_ALERT_BUTTON_OK) as IInteractiveWindow);
                         break;
-                    case _Str_3023.BUTTON_CANCEL:
+                    case HabboAlertDialogFlag.BUTTON_CANCEL:
                         _local_3 = (this.window.findChildByName(_ALERT_BUTTON_CANCEL) as IInteractiveWindow);
                         break;
-                    case _Str_3023.BUTTON_CUSTOM:
+                    case HabboAlertDialogFlag.BUTTON_CUSTOM:
                         _local_3 = (this.window.findChildByName(_ALERT_BUTTON_CUSTOM) as IInteractiveWindow);
                         break;
                 }

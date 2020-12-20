@@ -20,7 +20,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.outgoing.users.IgnoreUserIdMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.ChatReviewSessionCreateMessageComposer;
-    import com.sulake.habbo.window.enum._Str_3023;
+    import com.sulake.habbo.window.enum.HabboAlertDialogFlag;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromIMMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.help.CallForHelpFromForumThreadMessageComposer;
@@ -595,7 +595,7 @@
             }
             if (this._habboHelp.friendList.getFriend(this._reportedUserId) != null)
             {
-                this._habboHelp.windowManager.confirm("${help.cfh.unfriend.confirm.title}", "${help.cfh.unfriend.confirm.message}", (_Str_3023.BUTTON_OK | _Str_3023.BUTTON_CANCEL), this.onFriendReportConfirmation);
+                this._habboHelp.windowManager.confirm("${help.cfh.unfriend.confirm.title}", "${help.cfh.unfriend.confirm.message}", (HabboAlertDialogFlag.BUTTON_OK | HabboAlertDialogFlag.BUTTON_CANCEL), this.onFriendReportConfirmation);
                 return false;
             }
             return true;

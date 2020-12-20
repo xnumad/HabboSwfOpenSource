@@ -11,7 +11,7 @@
     import flash.events.Event;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.communication.messages.outgoing.camera.RenderRoomThumbnailMessageComposer;
-    import com.sulake.habbo.window.enum._Str_3023;
+    import com.sulake.habbo.window.enum.HabboAlertDialogFlag;
 
     public class RoomThumbnailCameraWidgetHandler implements IRoomWidgetHandler, IDisposable 
     {
@@ -103,7 +103,7 @@
             this._widget.destroy();
             if (k.getParser().isOk())
             {
-                this._container.windowManager.alert("${navigator.thumbnail.camera.title}", "${navigator.thumbnail.camera.success}", _Str_3023.BUTTON_OK, null);
+                this._container.windowManager.alert("${navigator.thumbnail.camera.title}", "${navigator.thumbnail.camera.success}", HabboAlertDialogFlag.BUTTON_OK, null);
             }
             else
             {

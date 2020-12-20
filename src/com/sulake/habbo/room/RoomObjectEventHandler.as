@@ -67,7 +67,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.engine.RemoveBotFromFlatMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.engine.MoveWallItemMessageComposer;
     import com.sulake.habbo.room.events.RoomEngineObjectPlacedOnUserEvent;
-    import com.sulake.habbo.window.enum._Str_3023;
+    import com.sulake.habbo.window.enum.HabboAlertDialogFlag;
     import com.sulake.habbo.room.enum.RoomObjectPlacementSource;
     import com.sulake.habbo.catalog.enum.CatalogType;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
@@ -2288,7 +2288,7 @@
                     _local_12 = ((((_local_12 / 45) % 8) + 8) % 8);
                     if (((_local_7.getType() == "free_placement_room") && (this.roomEngine.getRoom(k).getObjectCountForType("free_placement_room", RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) > 1)))
                     {
-                        this.roomEngine.windowManager.alert("One free placement furni already in room!", "There can be only one free_placement_room furni in a room. See intraweb for instructions on how to use it.", _Str_3023.NULL, null);
+                        this.roomEngine.windowManager.alert("One free placement furni already in room!", "There can be only one free_placement_room furni in a room. See intraweb for instructions on how to use it.", HabboAlertDialogFlag.NULL, null);
                         return;
                     }
                     if (((_local_5 < 0) && (_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)))
