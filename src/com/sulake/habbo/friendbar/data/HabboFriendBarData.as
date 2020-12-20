@@ -166,7 +166,7 @@
             return null;
         }
 
-        public function _Str_24339(k:IFriendEntity, _arg_2:int):void
+        public function setFriendAt(k:IFriendEntity, _arg_2:int):void
         {
             var _local_3:int = this._friendEntityList.indexOf(k);
             if (((_local_3 > -1) && (!(_local_3 == _arg_2))))
@@ -636,7 +636,7 @@
                     events.dispatchEvent(new NotificationEvent(_local_7.id, _local_8));
                     if (_arg_5)
                     {
-                        this._Str_24339(_local_7, 0);
+                        this.setFriendAt(_local_7, 0);
                     }
                     if (_local_7.logEventId < 0)
                     {
