@@ -214,7 +214,7 @@
             return this._roomObjectCache._Str_14588();
         }
 
-        public function _Str_13261(k:Number, _arg_2:Point=null, _arg_3:Point=null, _arg_4:Boolean=false):void
+        public function setScale(k:Number, _arg_2:Point=null, _arg_3:Point=null, _arg_4:Boolean=false):void
         {
             if ((((!(this._master)) || (!(this._master.stage))) || (!(this._display))))
             {
@@ -263,7 +263,7 @@
             var _local_3:int = this._screenOffsetY;
             var _local_4:String = this._display.stage.quality;
             var _local_5:Number = this._display.rotationX;
-            this._Str_13261(1);
+            this.setScale(1);
             this._screenOffsetX = 0;
             this._screenOffsetY = 0;
             this._display.stage.quality = StageQuality.LOW;
@@ -273,7 +273,7 @@
             var _local_7:Rectangle = this._display.getBounds(this._display);
             _local_6.draw(this._display, new Matrix(1, 0, 0, 1, -(_local_7.x), -(_local_7.y)));
             this._noSpriteVisibilityChecking = false;
-            this._Str_13261(k);
+            this.setScale(k);
             this._screenOffsetX = _local_2;
             this._screenOffsetY = _local_3;
             this._display.stage.quality = _local_4;

@@ -1734,7 +1734,7 @@
             var _local_9:IRoomRenderingCanvas = this.getRoomCanvas(k, _arg_2);
             if (_local_9 != null)
             {
-                _local_9._Str_13261(_arg_3, _arg_4, _arg_5, _arg_8);
+                _local_9.setScale(_arg_3, _arg_4, _arg_5, _arg_8);
                 _local_10 = this.getRoomInstanceData(this._activeRoomId);
                 if (_local_10 != null)
                 {
