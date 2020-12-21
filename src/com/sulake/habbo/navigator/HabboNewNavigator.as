@@ -264,7 +264,7 @@
         public function onLiftedRooms(k:NavigatorLiftedRoomsParser):void
         {
             this._liftDataContainer.setLiftedRooms(k.liftedRooms);
-            this._navigatorView._Str_24377();
+            this._navigatorView.refreshLiftedRooms();
         }
 
         public function _Str_23415(k:NewNavigatorPreferencesParser):void

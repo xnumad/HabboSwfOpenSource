@@ -229,7 +229,7 @@
             return null;
         }
 
-        public function _Str_24377():void
+        public function refreshLiftedRooms():void
         {
             if (this._Str_16068)
             {
