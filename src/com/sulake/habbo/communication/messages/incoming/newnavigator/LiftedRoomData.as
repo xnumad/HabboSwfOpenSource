@@ -22,7 +22,7 @@
             return this._flatId;
         }
 
-        public function get _Str_26306():int
+        public function get areaId():int
         {
             return this._areaId;
         }
