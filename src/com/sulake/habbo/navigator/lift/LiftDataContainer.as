@@ -29,7 +29,7 @@
             return this._liftedRooms;
         }
 
-        public function _Str_25136(k:int):String
+        public function getUrlForLiftImageAtIndex(k:int):String
         {
             if (((k < 0) || (k > (this._liftedRooms.length - 1))))
             {

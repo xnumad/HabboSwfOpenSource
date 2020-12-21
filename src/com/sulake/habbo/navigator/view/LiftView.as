@@ -84,7 +84,7 @@
         private function _Str_21713():void
         {
             this._Str_21803();
-            IStaticBitmapWrapperWindow(this._borderWindow.findChildByName("room_image")).assetUri = this._navigator._Str_7977._Str_25136(this._selectedPage);
+            IStaticBitmapWrapperWindow(this._borderWindow.findChildByName("room_image")).assetUri = this._navigator._Str_7977.getUrlForLiftImageAtIndex(this._selectedPage);
             if (this._selectedPage < this._navigator._Str_7977.liftedRooms.length)
             {
                 this._borderWindow.findChildByName("caption_text").caption = this._navigator._Str_7977.liftedRooms[this._selectedPage].caption;
