@@ -19,7 +19,7 @@
             this._navigator = k;
         }
 
-        public function _Str_24253(k:Vector.<LiftedRoomData>):void
+        public function setLiftedRooms(k:Vector.<LiftedRoomData>):void
         {
             this._liftedRooms = k;
         }
