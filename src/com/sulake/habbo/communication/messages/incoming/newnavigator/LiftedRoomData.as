@@ -5,14 +5,14 @@
     public class LiftedRoomData
     {
         private var _flatId:int;
-        private var _Str_20569:int;
+        private var _areaId:int;
         private var _image:String;
         private var _caption:String;
 
         public function LiftedRoomData(k:IMessageDataWrapper)
         {
             this._flatId = k.readInteger();
-            this._Str_20569 = k.readInteger();
+            this._areaId = k.readInteger();
             this._image = k.readString();
             this._caption = k.readString();
         }
@@ -24,7 +24,7 @@
 
         public function get _Str_26306():int
         {
-            return this._Str_20569;
+            return this._areaId;
         }
 
         public function get image():String
