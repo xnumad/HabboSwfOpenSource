@@ -7,7 +7,7 @@
 
     public class LiftDataContainer 
     {
-        private static const _Str_18604:String = "${image.library.url}officialrooms_hq/nav_teaser_wl.png";
+        private static const DEFAULT_IMAGE:String = "${image.library.url}officialrooms_hq/nav_teaser_wl.png";
 
         private var _navigator:HabboNewNavigator;
         private var _liftedRooms:Vector.<LiftedRoomData>;
@@ -37,7 +37,7 @@
             }
             if (this._liftedRooms[k].image == "")
             {
-                return _Str_18604;
+                return DEFAULT_IMAGE;
             }
             return this._navigator._Str_25225 + this._liftedRooms[k].image;
         }
