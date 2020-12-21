@@ -176,7 +176,7 @@
 
         private function onNavigatorLiftedRooms(k:NavigatorLiftedRoomsEvent):void
         {
-            this._navigator._Str_23125(k.getParser());
+            this._navigator.onLiftedRooms(k.getParser());
         }
 
         private function onNavigatorPreferences(k:NewNavigatorPreferencesEvent):void

@@ -261,7 +261,7 @@
             this._newResultsRendered = k;
         }
 
-        public function _Str_23125(k:NavigatorLiftedRoomsParser):void
+        public function onLiftedRooms(k:NavigatorLiftedRoomsParser):void
         {
             this._liftDataContainer._Str_24253(k._Str_6772);
             this._navigatorView._Str_24377();
