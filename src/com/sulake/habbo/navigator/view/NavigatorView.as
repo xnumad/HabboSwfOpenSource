@@ -36,7 +36,7 @@
         private static const _Str_17599:int = 7;
 
         private var _habboNewNavigator:HabboNewNavigator;
-        private var _Str_16068:LiftView;
+        private var _liftView:LiftView;
         private var _Str_8068:QuickLinksView;
         private var _Str_9680:SearchView;
         private var _Str_3208:BlockResultsView;
@@ -168,7 +168,7 @@
             {
                 this._Str_8068 = new QuickLinksView(this._habboNewNavigator);
             }
-            if (this._Str_16068 == null)
+            if (this._liftView == null)
             {
             }
             if (this._Str_4000 == null)
@@ -231,9 +231,9 @@
 
         public function refreshLiftedRooms():void
         {
-            if (this._Str_16068)
+            if (this._liftView)
             {
-                this._Str_16068.refresh();
+                this._liftView.refresh();
             }
         }
 
