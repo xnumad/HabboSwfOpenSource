@@ -263,7 +263,7 @@
 
         public function onLiftedRooms(k:NavigatorLiftedRoomsParser):void
         {
-            this._liftDataContainer._Str_24253(k._Str_6772);
+            this._liftDataContainer._Str_24253(k.liftedRooms);
             this._navigatorView._Str_24377();
         }
 

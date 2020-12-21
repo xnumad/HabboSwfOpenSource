@@ -24,7 +24,7 @@
             this._liftedRooms = k;
         }
 
-        public function get _Str_6772():Vector.<LiftedRoomData>
+        public function get liftedRooms():Vector.<LiftedRoomData>
         {
             return this._liftedRooms;
         }

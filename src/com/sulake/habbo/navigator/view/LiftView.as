@@ -58,7 +58,7 @@
             this._pagerItemList.destroyListItems();
             this._selectedPage = ((k) ? 0 : this._selectedPage);
             var _local_2:int;
-            while (_local_2 < this._navigator._Str_7977._Str_6772.length)
+            while (_local_2 < this._navigator._Str_7977.liftedRooms.length)
             {
                 this._pagerItemList.addListItem(this._pagerIconTemplate.clone());
                 _local_2++;
@@ -85,16 +85,16 @@
         {
             this._Str_21803();
             IStaticBitmapWrapperWindow(this._borderWindow.findChildByName("room_image")).assetUri = this._navigator._Str_7977._Str_25136(this._selectedPage);
-            if (this._selectedPage < this._navigator._Str_7977._Str_6772.length)
+            if (this._selectedPage < this._navigator._Str_7977.liftedRooms.length)
             {
-                this._borderWindow.findChildByName("caption_text").caption = this._navigator._Str_7977._Str_6772[this._selectedPage].caption;
+                this._borderWindow.findChildByName("caption_text").caption = this._navigator._Str_7977.liftedRooms[this._selectedPage].caption;
             }
         }
 
         private function _Str_23757():void
         {
             this._selectedPage++;
-            if (this._selectedPage > (this._navigator._Str_7977._Str_6772.length - 1))
+            if (this._selectedPage > (this._navigator._Str_7977.liftedRooms.length - 1))
             {
                 this._selectedPage = 0;
             }
@@ -129,9 +129,9 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                if (this._navigator._Str_7977._Str_6772.length > this._selectedPage)
+                if (this._navigator._Str_7977.liftedRooms.length > this._selectedPage)
                 {
-                    this._navigator.goToRoom(this._navigator._Str_7977._Str_6772[this._selectedPage].flatId, "promotion");
+                    this._navigator.goToRoom(this._navigator._Str_7977.liftedRooms[this._selectedPage].flatId, "promotion");
                 }
             }
         }
