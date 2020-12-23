@@ -4,16 +4,16 @@
 
     public class SearchFaqsMessageComposer implements IMessageComposer
     {
-        private var _Str_12166:String;
+        private var _searchString:String;
 
         public function SearchFaqsMessageComposer(k:String)
         {
-            this._Str_12166 = k;
+            this._searchString = k;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_12166];
+            return [this._searchString];
         }
 
         public function dispose():void
