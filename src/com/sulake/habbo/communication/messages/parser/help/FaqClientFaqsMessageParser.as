@@ -7,7 +7,7 @@
     public class FaqClientFaqsMessageParser implements IMessageParser
     {
         private var _urgentData:Map;
-        private var _Str_8840:Map;
+        private var _normalData:Map;
 
 
         public function get _Str_26124():Map
@@ -17,7 +17,7 @@
 
         public function get _Str_26404():Map
         {
-            return this._Str_8840;
+            return this._normalData;
         }
 
         public function flush():Boolean
@@ -27,11 +27,11 @@
                 this._urgentData.dispose();
             }
             this._urgentData = null;
-            if (this._Str_8840 != null)
+            if (this._normalData != null)
             {
-                this._Str_8840.dispose();
+                this._normalData.dispose();
             }
-            this._Str_8840 = null;
+            this._normalData = null;
             return true;
         }
 
@@ -42,7 +42,7 @@
             var _local_4:int;
             var _local_5:int;
             this._urgentData = new Map();
-            this._Str_8840 = new Map();
+            this._normalData = new Map();
             _local_5 = k.readInteger();
             _local_4 = 0;
             while (_local_4 < _local_5)
@@ -58,7 +58,7 @@
             {
                 _local_2 = k.readInteger();
                 _local_3 = k.readString();
-                this._Str_8840.add(_local_2, _local_3);
+                this._normalData.add(_local_2, _local_3);
                 _local_4++;
             }
             return true;
