@@ -6,7 +6,7 @@
     public class FaqTextMessageParser implements IMessageParser
     {
         private var _questionId:int;
-        private var _Str_17066:String;
+        private var _answerText:String;
 
 
         public function get questionId():int
@@ -16,20 +16,20 @@
 
         public function get _Str_26387():String
         {
-            return this._Str_17066;
+            return this._answerText;
         }
 
         public function flush():Boolean
         {
             this._questionId = -1;
-            this._Str_17066 = null;
+            this._answerText = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._questionId = k.readInteger();
-            this._Str_17066 = k.readString();
+            this._answerText = k.readString();
             return true;
         }
     }
