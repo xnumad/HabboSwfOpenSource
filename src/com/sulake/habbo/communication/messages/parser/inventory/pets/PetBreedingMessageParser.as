@@ -10,7 +10,7 @@
         public static const _Str_22195:int = 3;
 
         private var _state:int;
-        private var _Str_6614:int;
+        private var _ownPetId:int;
         private var _Str_6649:int;
 
 
@@ -22,7 +22,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._state = k.readInteger();
-            this._Str_6614 = k.readInteger();
+            this._ownPetId = k.readInteger();
             this._Str_6649 = k.readInteger();
             return true;
         }
@@ -34,7 +34,7 @@
 
         public function get ownPetId():int
         {
-            return this._Str_6614;
+            return this._ownPetId;
         }
 
         public function get otherPetId():int

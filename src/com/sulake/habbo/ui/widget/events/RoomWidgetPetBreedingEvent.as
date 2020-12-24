@@ -9,7 +9,7 @@
         public static const PET_BREEDING:String = "RWPPBE_PET_BREEDING_";
 
         private var _state:int;
-        private var _Str_6614:int;
+        private var _ownPetId:int;
         private var _Str_6649:int;
 
         public function RoomWidgetPetBreedingEvent(k:Boolean=false, _arg_2:Boolean=false)
@@ -29,12 +29,12 @@
 
         public function get ownPetId():int
         {
-            return this._Str_6614;
+            return this._ownPetId;
         }
 
         public function set ownPetId(k:int):void
         {
-            this._Str_6614 = k;
+            this._ownPetId = k;
         }
 
         public function get otherPetId():int
