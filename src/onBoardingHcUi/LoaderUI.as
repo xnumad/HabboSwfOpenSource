@@ -240,7 +240,7 @@
             return _local_5;
         }
 
-        public static function _Str_1398():Shape
+        public static function createTextBorder():Shape
         {
             return createScale9GridShapeFromImage(Bitmap(new _Str_1249()).bitmapData, new Rectangle(10, 10, 10, 10));
         }
