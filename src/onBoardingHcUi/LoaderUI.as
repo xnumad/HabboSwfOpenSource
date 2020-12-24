@@ -206,7 +206,7 @@
             return _local_5;
         }
 
-        public static function _Str_1472(k:Sprite, _arg_2:int, _arg_3:int):void
+        public static function resizeFrame(k:Sprite, _arg_2:int, _arg_3:int):void
         {
             k.removeChildAt(0);
             k.addChildAt(NineSplitSprite._Str_2163.render(_arg_2, _arg_3), 0);

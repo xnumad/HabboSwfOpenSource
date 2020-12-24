@@ -128,7 +128,7 @@
             this._Str_1263.visible = false;
             _local_7.addEventListener(MouseEvent.CLICK, this._Str_2173);
             var _local_11:int = -50;
-            LoaderUI._Str_1472(this._nameChangeDialog, this._Str_2083, _local_11);
+            LoaderUI.resizeFrame(this._nameChangeDialog, this._Str_2083, _local_11);
             this._nameChangeDialog.y = -(int((_local_11 / 2)));
             this._dimmer = new Dimmer();
             this._container.addChild(this._nameChangeDialog);
