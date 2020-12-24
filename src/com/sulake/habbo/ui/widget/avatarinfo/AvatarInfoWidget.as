@@ -443,7 +443,7 @@
             k.addEventListener(_Str_4828.RWPIUE_PET_STATUS_UPDATE, this.updateEventHandler);
             k.addEventListener(_Str_4818.RWPLUE_PET_LEVEL_UPDATE, this.updateEventHandler);
             k.addEventListener(_Str_4736.RWPBRE_PET_BREEDING_RESULT, this.updateEventHandler);
-            k.addEventListener(RoomWidgetPetBreedingEvent.RWPPBE_PET_BREEDING_, this.updateEventHandler);
+            k.addEventListener(RoomWidgetPetBreedingEvent.PET_BREEDING, this.updateEventHandler);
             k.addEventListener(RoomWidgetInventoryUpdatedMessage.RWIUM_INVENTORY_UPDATED, this.updateEventHandler);
             k.addEventListener(_Str_4624.RWPPBE_CONFIRM_PET_BREEDING_, this.updateEventHandler);
             k.addEventListener(_Str_3962.RWPPBE_CONFIRM_PET_BREEDING_RESULT, this.updateEventHandler);
@@ -478,7 +478,7 @@
             k.removeEventListener(_Str_4828.RWPIUE_PET_STATUS_UPDATE, this.updateEventHandler);
             k.removeEventListener(_Str_4818.RWPLUE_PET_LEVEL_UPDATE, this.updateEventHandler);
             k.removeEventListener(_Str_4736.RWPBRE_PET_BREEDING_RESULT, this.updateEventHandler);
-            k.removeEventListener(RoomWidgetPetBreedingEvent.RWPPBE_PET_BREEDING_, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetPetBreedingEvent.PET_BREEDING, this.updateEventHandler);
             k.removeEventListener(RoomWidgetInventoryUpdatedMessage.RWIUM_INVENTORY_UPDATED, this.updateEventHandler);
             k.removeEventListener(_Str_4624.RWPPBE_CONFIRM_PET_BREEDING_, this.updateEventHandler);
             k.removeEventListener(_Str_3962.RWPPBE_CONFIRM_PET_BREEDING_RESULT, this.updateEventHandler);
@@ -650,7 +650,7 @@
                     _local_7._Str_4788 = _local_5.resultData2._Str_4788;
                     this._Str_23663(_local_6, _local_7);
                     break;
-                case RoomWidgetPetBreedingEvent.RWPPBE_PET_BREEDING_:
+                case RoomWidgetPetBreedingEvent.PET_BREEDING:
                     _local_8 = (k as RoomWidgetPetBreedingEvent);
                     _local_9 = this._Str_12418(_local_8.ownPetId);
                     _local_10 = this._Str_12418(_local_8.otherPetId);

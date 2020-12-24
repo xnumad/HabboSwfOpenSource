@@ -6,7 +6,7 @@
         public static const TYPE_CANCEL:int = 1;
         public static const TYPE_ACCEPT:int = 2;
         public static const TYPE_REQUEST:int = 3;
-        public static const RWPPBE_PET_BREEDING_:String = "RWPPBE_PET_BREEDING_";
+        public static const PET_BREEDING:String = "RWPPBE_PET_BREEDING_";
 
         private var _state:int;
         private var _Str_6614:int;
@@ -14,7 +14,7 @@
 
         public function RoomWidgetPetBreedingEvent(k:Boolean=false, _arg_2:Boolean=false)
         {
-            super(RWPPBE_PET_BREEDING_, k, _arg_2);
+            super(PET_BREEDING, k, _arg_2);
         }
 
         public function get state():int
