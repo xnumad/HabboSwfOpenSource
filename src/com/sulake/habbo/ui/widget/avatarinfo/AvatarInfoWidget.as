@@ -78,7 +78,7 @@
         private static const EFFECT_TYPE_DEEP_WATER_DARK:int = 185;
         private static const AVATAR_HIGHLIGHT_DURATION_MSEC:int = 5000;
         private static const AVATAR:String = "avatar";
-        private static const USE_MINIMIZED_OWN_AVATAR_MENU:String = "use_minimized_own_avatar_menu";
+        private static const MINIMIZED_MENU_KEY:String = "use_minimized_own_avatar_menu";
 
         private var _component:Component;
         private var _configuration:IHabboConfigurationManager;
@@ -1419,12 +1419,12 @@
 
         public function get _Str_13909():Boolean
         {
-            return this.handler.container.config.getBoolean(USE_MINIMIZED_OWN_AVATAR_MENU);
+            return this.handler.container.config.getBoolean(MINIMIZED_MENU_KEY);
         }
 
         public function set _Str_13909(k:Boolean):void
         {
-            this.handler.container.config.setProperty(USE_MINIMIZED_OWN_AVATAR_MENU, ((k) ? "1" : "0"));
+            this.handler.container.config.setProperty(MINIMIZED_MENU_KEY, ((k) ? "1" : "0"));
         }
 
         public function _Str_25303(k:int):void
