@@ -41,7 +41,7 @@
             this._Str_848.alpha = ((_arg_3 == LoaderUI._Str_1585) ? 0.7 : 1);
             if (_arg_3 == LoaderUI._Str_2056)
             {
-                LoaderUI._Str_1516(this._Str_848);
+                LoaderUI.addEtching(this._Str_848);
             }
             switch (_arg_3)
             {

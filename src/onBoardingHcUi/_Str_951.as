@@ -70,7 +70,7 @@
                 this._Str_848 = LoaderUI.createTextField(this._Str_622, 18, this.textColour, true, false, false, this.italic, TextFormatAlign.LEFT, false, this.underline);
                 if (this.etching)
                 {
-                    LoaderUI._Str_1516(this._Str_848);
+                    LoaderUI.addEtching(this._Str_848);
                 }
                 if (this._Str_1690)
                 {

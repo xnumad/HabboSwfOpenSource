@@ -84,12 +84,12 @@
             var _local_4:Boolean;
             var _local_5:TextField = LoaderUI.createTextField(this._context.getString("rename.subtitle", " \tYou are a unique and beautiful snowflake."), 20, 0, true, false, false, _local_4);
             _local_5.x = k;
-            LoaderUI._Str_1516(_local_5);
+            LoaderUI.addEtching(_local_5);
             var _local_6:TextField = LoaderUI.createTextField(this._context.getString("rename.description", "In Habbo, we all sign in using a unique name, so go ahead and enter yours. There's no need to use your real one - stage names are perfectly ok."), 12, 0, false, true, false, _local_4);
             this._nameChangeDialog.addChild(_local_6);
             _local_6.x = k;
             _local_6.width = _local_2;
-            LoaderUI._Str_1516(_local_6);
+            LoaderUI.addEtching(_local_6);
             var _local_7:Sprite = new Sprite();
             this._Str_1260 = NineSplitSprite._Str_1852.render(_local_2, 50);
             _local_7.addChild(this._Str_1260);
@@ -98,10 +98,10 @@
             var _local_8:TextField = LoaderUI.createTextField(this._context.getString("rename.accepted", "WE ACCEPT LETTERS AND NUMBERS. NOT VISA OR MASTERCARD."), 9, 0x424242, true, false, false, _local_4);
             this._nameChangeDialog.addChild(_local_8);
             _local_8.x = (k + 5);
-            LoaderUI._Str_1516(_local_8);
+            LoaderUI.addEtching(_local_8);
             var _local_9:TextField = LoaderUI.createTextField(this._context.getString("rename.warning", "Once you've selected a name for your character, you can't change it anymore, so please pay a bit of attention to your selection."), 16, 0x424242, false, true, false, false);
             _local_9.width = (_local_2 - 66);
-            LoaderUI._Str_1516(_local_9);
+            LoaderUI.addEtching(_local_9);
             _local_10 = NineSplitSprite._Str_1605.render(_local_2, (_local_9.height + 24));
             this._Str_1482 = new Sprite();
             if (_local_10)

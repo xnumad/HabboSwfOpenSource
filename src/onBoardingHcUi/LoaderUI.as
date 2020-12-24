@@ -62,7 +62,7 @@
             return _local_12;
         }
 
-        public static function _Str_1516(k:DisplayObject, _arg_2:Boolean=false):void
+        public static function addEtching(k:DisplayObject, _arg_2:Boolean=false):void
         {
             k.filters = [((_arg_2) ? NEGATIVE_ETCHING_FILTER.clone() : ETCHING_FILTER.clone())];
         }
