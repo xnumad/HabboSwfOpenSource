@@ -228,7 +228,7 @@
                         case "revive_monsterplant":
                         case "rebreed_monsterplant":
                         case "fertilize_monsterplant":
-                            this.widget._Str_22872(this._useProductItem._Str_3710, this._useProductItem._Str_5563, this._useProductItem._Str_24139);
+                            this.widget.showUseProductConfirmation(this._useProductItem._Str_3710, this._useProductItem._Str_5563, this._useProductItem._Str_24139);
                             break;
                     }
                 }

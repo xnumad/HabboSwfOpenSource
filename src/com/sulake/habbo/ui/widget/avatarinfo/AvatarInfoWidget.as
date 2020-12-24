@@ -1432,7 +1432,7 @@
             this.handler.container.roomSession.sendSignMessage(k);
         }
 
-        public function _Str_22872(k:int, _arg_2:int, _arg_3:int):void
+        public function showUseProductConfirmation(k:int, _arg_2:int, _arg_3:int):void
         {
             if (!this._useProductConfirmationView)
             {
