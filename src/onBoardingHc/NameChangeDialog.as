@@ -38,7 +38,7 @@
         private var _dimmer:Dimmer;
         protected var _inputField:TextField;
         protected var _submitButton:_Str_951;
-        protected var _Str_1155:_Str_951;
+        protected var _skipButton:_Str_951;
         private var _Str_1018:Sprite;
         protected var _Str_1047:Bitmap;
         protected var _Str_2194:Bitmap;
@@ -209,7 +209,7 @@
             this._dimmer = null;
             this._inputField = null;
             this._submitButton = null;
-            this._Str_1155 = null;
+            this._skipButton = null;
             this._Str_1018 = null;
             this._Str_1047 = null;
             this._Str_1260 = null;
@@ -377,11 +377,11 @@
                     this._submitButton.visible = ((k) && (this._Str_1379));
                 }
             }
-            if (this._Str_1155 != null)
+            if (this._skipButton != null)
             {
                 if (this._style == LoaderUI._Str_1585)
                 {
-                    this._Str_1155.visible = this._Str_1379;
+                    this._skipButton.visible = this._Str_1379;
                 }
             }
         }
