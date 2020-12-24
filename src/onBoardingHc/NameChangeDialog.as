@@ -39,7 +39,7 @@
         protected var _inputField:TextField;
         protected var _submitButton:_Str_951;
         protected var _skipButton:_Str_951;
-        private var _Str_1018:Sprite;
+        private var _errorBalloon:Sprite;
         protected var _Str_1047:Bitmap;
         protected var _Str_2194:Bitmap;
         private var _Str_1513:Boolean;
@@ -210,7 +210,7 @@
             this._inputField = null;
             this._submitButton = null;
             this._skipButton = null;
-            this._Str_1018 = null;
+            this._errorBalloon = null;
             this._Str_1047 = null;
             this._Str_1260 = null;
             this._nameChangeDialog = null;
@@ -403,9 +403,9 @@
             {
                 _local_4 = LoaderUI._Str_1132(k, 9, 0xFFFFFF, true);
                 _local_5 = LoaderUI._Str_2206((_local_4.width + 30), (_local_4.height + 17), -1, true, 11411485);
-                this._Str_1018 = new Sprite();
-                this._Str_1018.addChild(_local_5);
-                this._Str_1018.addChild(_local_4);
+                this._errorBalloon = new Sprite();
+                this._errorBalloon.addChild(_local_5);
+                this._errorBalloon.addChild(_local_4);
                 _local_4.x = 15;
                 _local_4.y = 14;
             }
@@ -420,23 +420,23 @@
                 }
                 _local_6.width = _local_2;
                 _local_6.height = (this._Str_1260.height - 11);
-                this._Str_1018 = new Sprite();
-                this._Str_1018.addChild(_local_6);
-                this._Str_1018.addChild(_local_4);
+                this._errorBalloon = new Sprite();
+                this._errorBalloon.addChild(_local_6);
+                this._errorBalloon.addChild(_local_4);
                 _local_4.x = 16;
                 _local_4.y = int(((_local_6.height - _local_4.height) / 2));
             }
-            this._nameChangeDialog.addChild(this._Str_1018);
+            this._nameChangeDialog.addChild(this._errorBalloon);
             if (this._style == LoaderUI._Str_2056)
             {
-                this._Str_1018.x = int(((this._nameChangeDialog.width - this._Str_1018.width) / 2));
-                this._Str_1018.y = (this._Str_1260.parent.y + this._Str_1260.height);
-                this._Str_1018.filters = [new GlowFilter(0, 0.24, 6, 6)];
+                this._errorBalloon.x = int(((this._nameChangeDialog.width - this._errorBalloon.width) / 2));
+                this._errorBalloon.y = (this._Str_1260.parent.y + this._Str_1260.height);
+                this._errorBalloon.filters = [new GlowFilter(0, 0.24, 6, 6)];
             }
             else
             {
-                this._Str_1018.x = this._Str_1260.parent.x;
-                this._Str_1018.y = ((this._Str_1260.parent.y + this._Str_1260.height) + 4);
+                this._errorBalloon.x = this._Str_1260.parent.x;
+                this._errorBalloon.y = ((this._Str_1260.parent.y + this._Str_1260.height) + 4);
             }
         }
 
@@ -444,12 +444,12 @@
         {
             var k:int;
             var _local_2:int;
-            if (((!(this._Str_1018 == null)) && (this._nameChangeDialog.contains(this._Str_1018))))
+            if (((!(this._errorBalloon == null)) && (this._nameChangeDialog.contains(this._errorBalloon))))
             {
                 k = this._Str_1260.width;
                 _local_2 = this._Str_1260.height;
                 this._Str_1260.bitmapData = ((this._style == LoaderUI._Str_1585) ? NineSplitSprite._Str_1531.render(k, _local_2).bitmapData : NineSplitSprite._Str_1594.render(k, _local_2).bitmapData);
-                this._nameChangeDialog.removeChild(this._Str_1018);
+                this._nameChangeDialog.removeChild(this._errorBalloon);
             }
             this._Str_1047.visible = false;
             if (this._Str_2194 != null)
