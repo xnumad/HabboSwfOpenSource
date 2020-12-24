@@ -36,7 +36,7 @@
     import com.sulake.habbo.ui.widget.events._Str_4828;
     import com.sulake.habbo.ui.widget.events._Str_4818;
     import com.sulake.habbo.ui.widget.events._Str_4736;
-    import com.sulake.habbo.ui.widget.events._Str_3919;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetPetBreedingEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetInventoryUpdatedMessage;
     import com.sulake.habbo.ui.widget.events._Str_4624;
     import com.sulake.habbo.ui.widget.events._Str_3962;
@@ -443,7 +443,7 @@
             k.addEventListener(_Str_4828.RWPIUE_PET_STATUS_UPDATE, this.updateEventHandler);
             k.addEventListener(_Str_4818.RWPLUE_PET_LEVEL_UPDATE, this.updateEventHandler);
             k.addEventListener(_Str_4736.RWPBRE_PET_BREEDING_RESULT, this.updateEventHandler);
-            k.addEventListener(_Str_3919.RWPPBE_PET_BREEDING_, this.updateEventHandler);
+            k.addEventListener(RoomWidgetPetBreedingEvent.RWPPBE_PET_BREEDING_, this.updateEventHandler);
             k.addEventListener(RoomWidgetInventoryUpdatedMessage.RWIUM_INVENTORY_UPDATED, this.updateEventHandler);
             k.addEventListener(_Str_4624.RWPPBE_CONFIRM_PET_BREEDING_, this.updateEventHandler);
             k.addEventListener(_Str_3962.RWPPBE_CONFIRM_PET_BREEDING_RESULT, this.updateEventHandler);
@@ -478,7 +478,7 @@
             k.removeEventListener(_Str_4828.RWPIUE_PET_STATUS_UPDATE, this.updateEventHandler);
             k.removeEventListener(_Str_4818.RWPLUE_PET_LEVEL_UPDATE, this.updateEventHandler);
             k.removeEventListener(_Str_4736.RWPBRE_PET_BREEDING_RESULT, this.updateEventHandler);
-            k.removeEventListener(_Str_3919.RWPPBE_PET_BREEDING_, this.updateEventHandler);
+            k.removeEventListener(RoomWidgetPetBreedingEvent.RWPPBE_PET_BREEDING_, this.updateEventHandler);
             k.removeEventListener(RoomWidgetInventoryUpdatedMessage.RWIUM_INVENTORY_UPDATED, this.updateEventHandler);
             k.removeEventListener(_Str_4624.RWPPBE_CONFIRM_PET_BREEDING_, this.updateEventHandler);
             k.removeEventListener(_Str_3962.RWPPBE_CONFIRM_PET_BREEDING_RESULT, this.updateEventHandler);
@@ -492,7 +492,7 @@
             var _local_5:_Str_4736;
             var _local_6:BreedPetsResultData;
             var _local_7:BreedPetsResultData;
-            var _local_8:_Str_3919;
+            var _local_8:RoomWidgetPetBreedingEvent;
             var _local_9:int;
             var _local_10:int;
             var _local_11:_Str_4624;
@@ -650,22 +650,22 @@
                     _local_7._Str_4788 = _local_5.resultData2._Str_4788;
                     this._Str_23663(_local_6, _local_7);
                     break;
-                case _Str_3919.RWPPBE_PET_BREEDING_:
-                    _local_8 = (k as _Str_3919);
+                case RoomWidgetPetBreedingEvent.RWPPBE_PET_BREEDING_:
+                    _local_8 = (k as RoomWidgetPetBreedingEvent);
                     _local_9 = this._Str_12418(_local_8.ownPetId);
                     _local_10 = this._Str_12418(_local_8.otherPetId);
                     switch (_local_8.state)
                     {
-                        case _Str_3919._Str_18166:
+                        case RoomWidgetPetBreedingEvent._Str_18166:
                             this._Str_16495(_local_9, _local_10, false);
                             break;
-                        case _Str_3919._Str_16941:
+                        case RoomWidgetPetBreedingEvent._Str_16941:
                             this.cancelBreedingPets(_local_9, _local_10);
                             break;
-                        case _Str_3919._Str_17835:
+                        case RoomWidgetPetBreedingEvent._Str_17835:
                             this.acceptBreedingPets(_local_9, _local_10);
                             break;
-                        case _Str_3919._Str_16930:
+                        case RoomWidgetPetBreedingEvent._Str_16930:
                             this._Str_16495(_local_9, _local_10, true);
                             break;
                     }

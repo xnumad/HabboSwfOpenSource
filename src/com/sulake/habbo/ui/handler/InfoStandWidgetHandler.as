@@ -85,7 +85,7 @@
     import com.sulake.habbo.ui.widget.events.RoomWidgetPetFigureUpdateEvent;
     import com.sulake.habbo.ui.widget.events._Str_3801;
     import com.sulake.habbo.ui.widget.events._Str_4736;
-    import com.sulake.habbo.ui.widget.events._Str_3919;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetPetBreedingEvent;
     import com.sulake.habbo.ui.widget.events.ConfirmPetBreedingPetData;
     import com.sulake.habbo.communication.messages.incoming.room.pets.RarityCategoryData;
     import com.sulake.habbo.ui.widget.events._Str_4624;
@@ -1324,10 +1324,10 @@
 
         private function onPetBreedingEvent(k:RoomSessionPetBreedingEvent):void
         {
-            var _local_2:_Str_3919;
+            var _local_2:RoomWidgetPetBreedingEvent;
             if (((!(this._container == null)) && (!(this._container.events == null))))
             {
-                _local_2 = new _Str_3919();
+                _local_2 = new RoomWidgetPetBreedingEvent();
                 _local_2.state = k.state;
                 _local_2.ownPetId = k.ownPetId;
                 _local_2.otherPetId = k.otherPetId;

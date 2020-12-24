@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.events
 {
-    public class _Str_3919 extends RoomWidgetUpdateEvent 
+    public class RoomWidgetPetBreedingEvent extends RoomWidgetUpdateEvent
     {
         public static const _Str_18166:int = 0;
         public static const _Str_16941:int = 1;
@@ -12,7 +12,7 @@
         private var _Str_6614:int;
         private var _Str_6649:int;
 
-        public function _Str_3919(k:Boolean=false, _arg_2:Boolean=false)
+        public function RoomWidgetPetBreedingEvent(k:Boolean=false, _arg_2:Boolean=false)
         {
             super(RWPPBE_PET_BREEDING_, k, _arg_2);
         }
