@@ -37,7 +37,7 @@
         protected var _nameChangeDialog:Sprite;
         private var _dimmer:Dimmer;
         protected var _inputField:TextField;
-        protected var _Str_1757:_Str_951;
+        protected var _submitButton:_Str_951;
         protected var _Str_1155:_Str_951;
         private var _Str_1018:Sprite;
         protected var _Str_1047:Bitmap;
@@ -208,7 +208,7 @@
             }
             this._dimmer = null;
             this._inputField = null;
-            this._Str_1757 = null;
+            this._submitButton = null;
             this._Str_1155 = null;
             this._Str_1018 = null;
             this._Str_1047 = null;
@@ -364,17 +364,17 @@
             {
                 this._Str_2194.visible = (!(k));
             }
-            if (this._Str_1757 != null)
+            if (this._submitButton != null)
             {
-                this._Str_1757.active = true;
+                this._submitButton.active = true;
                 if (this._style == LoaderUI._Str_1585)
                 {
-                    this._Str_1757.visible = true;
-                    this._Str_1757.active = ((this._Str_1379) ? k : true);
+                    this._submitButton.visible = true;
+                    this._submitButton.active = ((this._Str_1379) ? k : true);
                 }
                 else
                 {
-                    this._Str_1757.visible = ((k) && (this._Str_1379));
+                    this._submitButton.visible = ((k) && (this._Str_1379));
                 }
             }
             if (this._Str_1155 != null)
