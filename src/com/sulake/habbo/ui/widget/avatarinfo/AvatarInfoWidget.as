@@ -271,7 +271,7 @@
             for each (_local_2 in k)
             {
                 _local_3 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_2.id);
-                this._Str_22799(_local_3, _local_2);
+                this.showUseProductMenu(_local_3, _local_2);
             }
         }
 
@@ -1208,7 +1208,7 @@
             }
         }
 
-        private function _Str_22799(k:RoomUserData, _arg_2:_Str_3858):void
+        private function showUseProductMenu(k:RoomUserData, _arg_2:_Str_3858):void
         {
             var _local_3:UseProductView;
             if (this._useProductBubbles[k.id.toString()] == null)
