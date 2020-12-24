@@ -32,7 +32,7 @@
         private var input_error_alert_hitch_png:Class;
         protected var _style:int;
         private var _disposed:Boolean;
-        protected var _context:_Str_996;
+        protected var _context:IUIContext;
         private var _nameClaimed:Boolean;
         protected var _nameChangeDialog:Sprite;
         private var _dimmer:Dimmer;
@@ -52,7 +52,7 @@
         protected var _Str_1482:Sprite;
         protected var _Str_2083:int;
 
-        public function NameChangeDialog(k:_Str_996, _arg_2:Sprite, _arg_3:int)
+        public function NameChangeDialog(k:IUIContext, _arg_2:Sprite, _arg_3:int)
         {
             this.input_error_alert_hitch_png = _Str_937;
             this._style = LoaderUI._Str_2056;

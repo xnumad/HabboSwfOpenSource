@@ -3,7 +3,7 @@
     import flash.display.Stage;
     import flash.text.TextField;
 
-    public interface _Str_996 
+    public interface IUIContext
     {
         function getString(_arg_1:String, _arg_2:String):String;
         function get stage():Stage;

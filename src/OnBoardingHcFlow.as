@@ -1,7 +1,7 @@
 ﻿package 
 {
     import flash.display.Sprite;
-    import onBoardingHc._Str_996;
+    import onBoardingHc.IUIContext;
     import com.sulake.core.runtime.IDisposable;
     import onBoardingHcSteps.Background;
     import onBoardingHcSteps.AvatarEditor;
@@ -26,7 +26,7 @@
     import binaryData.*;
     import fonts.*;
 
-    public class OnBoardingHcFlow extends Sprite implements _Str_996, IDisposable 
+    public class OnBoardingHcFlow extends Sprite implements IUIContext, IDisposable
     {
         public static const NEWUSERFLOWFINISHED:String = "NewUserFlowFinished";
         private static const _Str_2052:int = 95;
