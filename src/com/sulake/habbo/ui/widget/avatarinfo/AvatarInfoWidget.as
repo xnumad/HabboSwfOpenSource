@@ -1453,12 +1453,12 @@
         public function showBreedingPetsWaitingConfirmationAlert(k:int, _arg_2:int):void
         {
             this._Str_16695();
-            this._breedingConfirmationAlert = windowManager.confirm("${breedpets.confirmation.notification.title}", "${breedpets.confirmation.notification.text}", 0, this._Str_23917);
+            this._breedingConfirmationAlert = windowManager.confirm("${breedpets.confirmation.notification.title}", "${breedpets.confirmation.notification.text}", 0, this.onWaitingConfirmationAlert);
             this._breedingConfirmationAlertRequestRoomObjectId = k;
             this._breedingConfirmationAlertTargetRoomObjectId = _arg_2;
         }
 
-        public function _Str_23917(k:IAlertDialog, _arg_2:WindowEvent):void
+        public function onWaitingConfirmationAlert(k:IAlertDialog, _arg_2:WindowEvent):void
         {
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
