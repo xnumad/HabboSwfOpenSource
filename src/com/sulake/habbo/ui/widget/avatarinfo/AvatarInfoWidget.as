@@ -312,7 +312,7 @@
             {
                 return;
             }
-            this._Str_15939();
+            this.removeAvatarHighlightTimer();
             for each (k in this._avatarNameBubbles)
             {
                 k.dispose();
@@ -1119,7 +1119,7 @@
         public function removeView(k:ContextInfoView, _arg_2:Boolean):void
         {
             this._isRoomEnteredOwnAvatarHighlight = false;
-            this._Str_15939();
+            this.removeAvatarHighlightTimer();
             if (k)
             {
                 if (this._recycleViews)
@@ -1239,7 +1239,7 @@
             this._avatarHighlightTimer.start();
         }
 
-        private function _Str_15939():void
+        private function removeAvatarHighlightTimer():void
         {
             this._isRoomEnteredOwnAvatarHighlight = false;
             this._catalog.windowManager.unregisterHintWindow(AVATAR);
@@ -1253,7 +1253,7 @@
 
         private function _Str_25227(k:TimerEvent):void
         {
-            this._Str_15939();
+            this.removeAvatarHighlightTimer();
         }
 
         public function _Str_4556():void
