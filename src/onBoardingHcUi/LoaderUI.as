@@ -39,7 +39,7 @@
         public static const _Str_1232:uint = 8309486;
         public static const _Str_1545:uint = 0xFFFFFF;
         private static const _Str_2023:DropShadowFilter = new DropShadowFilter(1, 90, 0xD1D400, 1, 1, 1);
-        private static const _Str_2237:DropShadowFilter = new DropShadowFilter(1, 270, 0, 0.7, 1, 1);
+        private static const NEGATIVE_ETCHING_FILTER:DropShadowFilter = new DropShadowFilter(1, 270, 0, 0.7, 1, 1);
 
 
         public static function createTextField(k:String, _arg_2:int, _arg_3:uint, _arg_4:Boolean=false, _arg_5:Boolean=false, _arg_6:Boolean=false, _arg_7:Boolean=false, _arg_8:String="left", _arg_9:Boolean=false, _arg_10:Boolean=false):TextField
@@ -64,7 +64,7 @@
 
         public static function _Str_1516(k:DisplayObject, _arg_2:Boolean=false):void
         {
-            k.filters = [((_arg_2) ? _Str_2237.clone() : _Str_2023.clone())];
+            k.filters = [((_arg_2) ? NEGATIVE_ETCHING_FILTER.clone() : _Str_2023.clone())];
         }
 
         public static function _Str_2098(k:DisplayObject, ... _args):void
