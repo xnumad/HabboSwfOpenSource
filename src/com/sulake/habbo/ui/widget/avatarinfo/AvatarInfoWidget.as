@@ -1427,7 +1427,7 @@
             this.handler.container.config.setProperty(MINIMIZED_MENU_KEY, ((k) ? "1" : "0"));
         }
 
-        public function _Str_25303(k:int):void
+        public function sendSignRequest(k:int):void
         {
             this.handler.container.roomSession.sendSignMessage(k);
         }

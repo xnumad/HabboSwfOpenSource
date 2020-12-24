@@ -239,7 +239,7 @@
                     switch (_local_6)
                     {
                         case "sign":
-                            this.widget._Str_25303(_local_7);
+                            this.widget.sendSignRequest(_local_7);
                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "click", "sign", null, _local_7);
                             break;
                     }
