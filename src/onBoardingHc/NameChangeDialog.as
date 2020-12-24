@@ -21,7 +21,7 @@
 
     public class NameChangeDialog implements IDisposable 
     {
-        private static const _Str_2057:int = 500;
+        private static const IDLE_TIME_MS:int = 500;
         private static const NEWUSERRECEPTION_CLAIMNAME:String = "NewUserReception.claimName";
         private static const NEWUSERRECEPTIONCLAIMNAMERESPONSE:String = "newUserReceptionClaimNameResponse";
         private static const NEWUSERRECEPTIONCLAIMNAMEFAILED:String = "newUserReceptionClaimNameFailed";
@@ -67,7 +67,7 @@
                 ExternalInterface.addCallback(NEWUSERRECEPTIONCLAIMNAMEFAILED, this._Str_1587);
                 ExternalInterface.addCallback(NEWUSERRECEPTIONCHECKNAMERESPONSE, this._Str_1434);
                 ExternalInterface.addCallback(NEWUSERRECEPTIONCHECKNAMEFAILED, this._Str_1671);
-                this._Str_1987 = new Timer(_Str_2057, 1);
+                this._Str_1987 = new Timer(IDLE_TIME_MS, 1);
                 this._Str_1987.addEventListener(TimerEvent.TIMER, this._Str_1333);
             }
             this._Str_1552(null);
