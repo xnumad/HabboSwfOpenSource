@@ -665,7 +665,7 @@
                         case RoomWidgetPetBreedingEvent.TYPE_ACCEPT:
                             this.acceptBreedingPets(_local_9, _local_10);
                             break;
-                        case RoomWidgetPetBreedingEvent._Str_16930:
+                        case RoomWidgetPetBreedingEvent.TYPE_REQUEST:
                             this._Str_16495(_local_9, _local_10, true);
                             break;
                     }
