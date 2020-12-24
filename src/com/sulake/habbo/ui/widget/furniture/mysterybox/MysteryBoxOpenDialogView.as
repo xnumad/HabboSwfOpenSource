@@ -87,7 +87,7 @@
             {
                 return;
             }
-            var _local_6:uint = MysteryBoxToolbarExtension._Str_4471[_local_5.toLowerCase()];
+            var _local_6:uint = MysteryBoxToolbarExtension.KEY_COLORS[_local_5.toLowerCase()];
             this._window.findChildByName("reward_base").color = _local_6;
             this._window.findChildByName("needed_base").color = _local_6;
         }

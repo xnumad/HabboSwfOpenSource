@@ -16,21 +16,21 @@
     public class MysteryBoxToolbarExtension implements IDisposable 
     {
         private static const MYSTERY_BOX_TOOLBAR_EXTENSION_MINIMISED:String = "mystery_box_toolbar_extension_minimised";
-        public static const _Str_4471:Dictionary = new Dictionary();
+        public static const KEY_COLORS:Dictionary = new Dictionary();
 
         private var _disposed:Boolean;
         private var _window:IWindowContainer;
         private var _handler:FurnitureContextMenuWidgetHandler;
 
         {
-            _Str_4471["purple"] = 9452386;
-            _Str_4471["blue"] = 3891856;
-            _Str_4471["green"] = 6459451;
-            _Str_4471["yellow"] = 10658089;
-            _Str_4471["lilac"] = 6897548;
-            _Str_4471["orange"] = 10841125;
-            _Str_4471["turquoise"] = 2661026;
-            _Str_4471["red"] = 10104881;
+            KEY_COLORS["purple"] = 9452386;
+            KEY_COLORS["blue"] = 3891856;
+            KEY_COLORS["green"] = 6459451;
+            KEY_COLORS["yellow"] = 10658089;
+            KEY_COLORS["lilac"] = 6897548;
+            KEY_COLORS["orange"] = 10841125;
+            KEY_COLORS["turquoise"] = 2661026;
+            KEY_COLORS["red"] = 10104881;
         }
 
         public function MysteryBoxToolbarExtension(k:FurnitureContextMenuWidgetHandler)
@@ -86,7 +86,7 @@
             IRegionWindow(this._window.findChildByName("box_region")).toolTipCaption = ((_local_3) ? (("${mysterybox.tracker.box." + k.toLowerCase()) + "}") : "");
             if (_local_3)
             {
-                _local_5 = _Str_4471[k.toLowerCase()];
+                _local_5 = KEY_COLORS[k.toLowerCase()];
                 this._window.findChildByName("box_colour").color = _local_5;
                 this._window.findChildByName("small_box").color = _local_5;
             }
@@ -97,7 +97,7 @@
             IRegionWindow(this._window.findChildByName("key_region")).toolTipCaption = ((_local_4) ? (("${mysterybox.tracker.key." + _arg_2.toLowerCase()) + "}") : "");
             if (_local_4)
             {
-                _local_6 = _Str_4471[_arg_2.toLowerCase()];
+                _local_6 = KEY_COLORS[_arg_2.toLowerCase()];
                 this._window.findChildByName("key_colour").color = _local_6;
                 this._window.findChildByName("small_key").color = _local_6;
             }
