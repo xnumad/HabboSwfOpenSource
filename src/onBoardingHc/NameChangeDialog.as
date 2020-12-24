@@ -412,7 +412,7 @@
             else
             {
                 _local_4 = LoaderUI.createTextField(k, 10, 0xFFFFFF);
-                _local_6 = LoaderUI._Str_2038(Bitmap(new this.input_error_alert_hitch_png()).bitmapData, new Rectangle(3, 3, 5, 5));
+                _local_6 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new this.input_error_alert_hitch_png()).bitmapData, new Rectangle(3, 3, 5, 5));
                 _local_2 = this._Str_1260.width;
                 if (_local_4.width > _local_2)
                 {

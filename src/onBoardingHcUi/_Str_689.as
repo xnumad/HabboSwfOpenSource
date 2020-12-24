@@ -35,22 +35,22 @@
             switch (k)
             {
                 case RED:
-                    this._Str_1365 = LoaderUI._Str_2038(Bitmap(new _Str_1339()).bitmapData, new Rectangle(8, 10, 6, 4));
-                    this._Str_1064 = LoaderUI._Str_2038(Bitmap(new _Str_1841()).bitmapData, new Rectangle(8, 10, 6, 4));
-                    this._Str_1212 = LoaderUI._Str_2038(Bitmap(new _Str_1463()).bitmapData, new Rectangle(8, 10, 6, 4));
-                    this._Str_1465 = LoaderUI._Str_2038(Bitmap(new _Str_1174()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1365 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1339()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1064 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1841()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1212 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1463()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1465 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1174()).bitmapData, new Rectangle(8, 10, 6, 4));
                     break;
                 case GFREEN:
-                    this._Str_1365 = LoaderUI._Str_2038(Bitmap(new _Str_2147()).bitmapData, new Rectangle(8, 10, 6, 4));
-                    this._Str_1064 = LoaderUI._Str_2038(Bitmap(new _Str_1718()).bitmapData, new Rectangle(8, 10, 6, 4));
-                    this._Str_1212 = LoaderUI._Str_2038(Bitmap(new _Str_2246()).bitmapData, new Rectangle(8, 10, 6, 4));
-                    this._Str_1465 = LoaderUI._Str_2038(Bitmap(new _Str_1543()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1365 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_2147()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1064 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1718()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1212 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_2246()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1465 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1543()).bitmapData, new Rectangle(8, 10, 6, 4));
                     break;
                 case YELLOW:
-                    this._Str_1365 = LoaderUI._Str_2038(Bitmap(new static()).bitmapData, new Rectangle(8, 10, 6, 4));
-                    this._Str_1064 = LoaderUI._Str_2038(Bitmap(new _Str_1275()).bitmapData, new Rectangle(8, 10, 6, 4));
-                    this._Str_1212 = LoaderUI._Str_2038(Bitmap(new _Str_1851()).bitmapData, new Rectangle(8, 10, 6, 4));
-                    this._Str_1465 = LoaderUI._Str_2038(Bitmap(new _Str_1191()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1365 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new static()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1064 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1275()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1212 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1851()).bitmapData, new Rectangle(8, 10, 6, 4));
+                    this._Str_1465 = LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1191()).bitmapData, new Rectangle(8, 10, 6, 4));
                     this._icon = Bitmap(new icon_hc());
                     break;
             }

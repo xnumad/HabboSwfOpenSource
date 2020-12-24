@@ -212,7 +212,7 @@
             k.addChildAt(NineSplitSprite._Str_2163.render(_arg_2, _arg_3), 0);
         }
 
-        public static function _Str_2038(k:BitmapData, _arg_2:Rectangle):Shape
+        public static function createScale9GridShapeFromImage(k:BitmapData, _arg_2:Rectangle):Shape
         {
             var _local_8:Number;
             var _local_9:int;
@@ -242,7 +242,7 @@
 
         public static function _Str_1398():Shape
         {
-            return _Str_2038(Bitmap(new _Str_1249()).bitmapData, new Rectangle(10, 10, 10, 10));
+            return createScale9GridShapeFromImage(Bitmap(new _Str_1249()).bitmapData, new Rectangle(10, 10, 10, 10));
         }
     }
 }

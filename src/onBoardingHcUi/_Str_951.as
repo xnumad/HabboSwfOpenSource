@@ -277,22 +277,22 @@
 
         protected function get defaultBackground():DisplayObject
         {
-            return LoaderUI._Str_2038(Bitmap(new _Str_1272()).bitmapData, new Rectangle(5, 5, 1, 2));
+            return LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1272()).bitmapData, new Rectangle(5, 5, 1, 2));
         }
 
         protected function get pressedBackground():DisplayObject
         {
-            return LoaderUI._Str_2038(Bitmap(new _Str_1046()).bitmapData, new Rectangle(6, 10, 1, 3));
+            return LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1046()).bitmapData, new Rectangle(6, 10, 1, 3));
         }
 
         protected function get inactiveBackground():DisplayObject
         {
-            return LoaderUI._Str_2038(Bitmap(new _Str_1828()).bitmapData, new Rectangle(5, 6, 1, 2));
+            return LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1828()).bitmapData, new Rectangle(5, 6, 1, 2));
         }
 
         protected function get currentlyActive():DisplayObject
         {
-            return LoaderUI._Str_2038(Bitmap(new _Str_1272()).bitmapData, new Rectangle(5, 6, 1, 2));
+            return LoaderUI.createScale9GridShapeFromImage(Bitmap(new _Str_1272()).bitmapData, new Rectangle(5, 6, 1, 2));
         }
 
         protected function get rolloverBackground():DisplayObject
