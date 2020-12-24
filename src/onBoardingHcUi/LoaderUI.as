@@ -181,7 +181,7 @@
             return _local_11;
         }
 
-        public static function _Str_1487(k:String, _arg_2:String, _arg_3:Rectangle, _arg_4:int=1):Sprite
+        public static function createFrame(k:String, _arg_2:String, _arg_3:Rectangle, _arg_4:int=1):Sprite
         {
             var _local_7:TextField;
             var _local_5:Sprite = new Sprite();

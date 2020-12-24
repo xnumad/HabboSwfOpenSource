@@ -76,7 +76,7 @@
         protected function init():void
         {
             var _local_10:Bitmap;
-            this._nameChangeDialog = LoaderUI._Str_1487(this._context.getString("rename.title", "Pick a name for your character"), "", new Rectangle((-(this._Str_2083) / 2), 0, this._Str_2083, 1), this._style);
+            this._nameChangeDialog = LoaderUI.createFrame(this._context.getString("rename.title", "Pick a name for your character"), "", new Rectangle((-(this._Str_2083) / 2), 0, this._Str_2083, 1), this._style);
             var k:int = 23;
             var _local_2:int = (this._Str_2083 - (k * 2));
             var _local_3:int = (this._Str_2083 - 12);

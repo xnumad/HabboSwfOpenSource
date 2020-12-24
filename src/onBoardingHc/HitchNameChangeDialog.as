@@ -30,7 +30,7 @@
             var _local_6:Bitmap;
             var _local_7:TextField;
             _style = LoaderUI._Str_1585;
-            _nameChangeDialog = LoaderUI._Str_1487("", "", new Rectangle((-(_Str_2083) / 2), 0, _Str_2083, 1), _style);
+            _nameChangeDialog = LoaderUI.createFrame("", "", new Rectangle((-(_Str_2083) / 2), 0, _Str_2083, 1), _style);
             _container.addChild(_nameChangeDialog);
             var k:int;
             _local_2 = 330;
