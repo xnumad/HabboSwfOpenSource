@@ -2,7 +2,7 @@
 {
     public class RoomWidgetPetBreedingEvent extends RoomWidgetUpdateEvent
     {
-        public static const _Str_18166:int = 0;
+        public static const TYPE_START:int = 0;
         public static const _Str_16941:int = 1;
         public static const _Str_17835:int = 2;
         public static const _Str_16930:int = 3;

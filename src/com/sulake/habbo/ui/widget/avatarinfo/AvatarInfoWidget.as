@@ -656,7 +656,7 @@
                     _local_10 = this._Str_12418(_local_8.otherPetId);
                     switch (_local_8.state)
                     {
-                        case RoomWidgetPetBreedingEvent._Str_18166:
+                        case RoomWidgetPetBreedingEvent.TYPE_START:
                             this._Str_16495(_local_9, _local_10, false);
                             break;
                         case RoomWidgetPetBreedingEvent._Str_16941:
