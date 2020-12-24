@@ -519,7 +519,7 @@
                     this._isRoomEnteredOwnAvatarHighlight = (((!(this._isInitialized)) && (!(this.handler.container.roomSession == null))) && (_local_2.roomIndex == this.handler.container.roomSession.ownUserRoomId));
                     if (_local_2.allowNameChange)
                     {
-                        this._Str_13909 = true;
+                        this.useMinimizedOwnAvatarMenu = true;
                         this._Str_19679();
                     }
                     else
@@ -1417,12 +1417,12 @@
             this.handler.container.events.dispatchEvent(new RoomWidgetUpdateEvent(RoomWidgetPetCommandsUpdateEvent.CLOSE_PET_TRAINING));
         }
 
-        public function get _Str_13909():Boolean
+        public function get useMinimizedOwnAvatarMenu():Boolean
         {
             return this.handler.container.config.getBoolean(MINIMIZED_MENU_KEY);
         }
 
-        public function set _Str_13909(k:Boolean):void
+        public function set useMinimizedOwnAvatarMenu(k:Boolean):void
         {
             this.handler.container.config.setProperty(MINIMIZED_MENU_KEY, ((k) ? "1" : "0"));
         }

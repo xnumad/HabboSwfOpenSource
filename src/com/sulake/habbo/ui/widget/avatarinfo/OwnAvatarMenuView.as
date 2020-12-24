@@ -58,7 +58,7 @@
                 }
                 else
                 {
-                    if (((_arg_6.allowNameChange) && (k.widget._Str_13909)))
+                    if (((_arg_6.allowNameChange) && (k.widget.useMinimizedOwnAvatarMenu)))
                     {
                         k._mode = MODE_NAME_CHANGE;
                     }
@@ -357,7 +357,7 @@
                             break;
                         case "more":
                             _local_3 = false;
-                            this.widget._Str_13909 = false;
+                            this.widget.useMinimizedOwnAvatarMenu = false;
                             this._Str_6337(MODE_NORMAL);
                             break;
                         case "handitem":
