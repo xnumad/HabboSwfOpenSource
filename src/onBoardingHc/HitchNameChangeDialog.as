@@ -11,12 +11,12 @@
     import onBoardingHcUi.WaitIndicator;
     import onBoardingHc.images.*;
 
-    public class _Str_973 extends NameChangeDialog 
+    public class HitchNameChangeDialog extends NameChangeDialog
     {
         private var _Str_1473:Class;
         private var _Str_1461:Class;
 
-        public function _Str_973(k:IUIContext, _arg_2:Sprite, _arg_3:int)
+        public function HitchNameChangeDialog(k:IUIContext, _arg_2:Sprite, _arg_3:int)
         {
             this._Str_1473 = _Str_752;
             this._Str_1461 = _Str_811;

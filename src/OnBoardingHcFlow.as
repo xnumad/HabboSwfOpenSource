@@ -21,7 +21,7 @@
     import onBoardingHcUi.LoaderUI;
     import flash.text.TextFormatAlign;
     import flash.filters.GlowFilter;
-    import onBoardingHc._Str_973;
+    import onBoardingHc.HitchNameChangeDialog;
     import images.*;
     import binaryData.*;
     import fonts.*;
@@ -332,7 +332,7 @@
         {
             if (!this._nameChangeDialog)
             {
-                this._nameChangeDialog = new _Str_973(this, this._Str_1952, this._Str_2203());
+                this._nameChangeDialog = new HitchNameChangeDialog(this, this._Str_1952, this._Str_2203());
             }
             if (this._Str_1611)
             {
