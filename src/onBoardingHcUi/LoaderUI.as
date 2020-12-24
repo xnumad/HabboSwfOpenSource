@@ -131,7 +131,7 @@
             }
         }
 
-        public static function _Str_2206(k:int, _arg_2:int, _arg_3:int, _arg_4:Boolean, _arg_5:uint=0xFFFFFF, _arg_6:String="up"):Bitmap
+        public static function createBalloon(k:int, _arg_2:int, _arg_3:int, _arg_4:Boolean, _arg_5:uint=0xFFFFFF, _arg_6:String="up"):Bitmap
         {
             var _local_8:Bitmap;
             var _local_9:int;

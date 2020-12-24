@@ -47,7 +47,7 @@
             var _local_8:TextField = LoaderUI.createTextField(_context.getString("onboarding.creative.tip", "be creative! You can also use these special characters"), 18, LoaderUI._Str_1232, false, true, false, false);
             _local_8.width = (_local_2 - 32);
             _Str_1482 = new Sprite();
-            var _local_9:Bitmap = LoaderUI._Str_2206(295, 230, 45, false, 995918, "down");
+            var _local_9:Bitmap = LoaderUI.createBalloon(295, 230, 45, false, 995918, "down");
             _local_9.y = 90;
             _Str_1482.addChild(_local_9);
             _Str_1482.addChild(_local_7);

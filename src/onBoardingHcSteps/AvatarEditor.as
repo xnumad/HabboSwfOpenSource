@@ -229,7 +229,7 @@
             var k:Bitmap = Bitmap(new _Str_1203());
             this._balloonBox = new Sprite();
             addChild(this._balloonBox);
-            var _local_2:Bitmap = LoaderUI._Str_2206(650, 160, 0, false, 861246, "none");
+            var _local_2:Bitmap = LoaderUI.createBalloon(650, 160, 0, false, 861246, "none");
             this._balloonBox.addChild(_local_2);
             this._balloonBox.addChild(k);
             k.x = 20;

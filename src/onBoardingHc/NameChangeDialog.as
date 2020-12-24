@@ -402,7 +402,7 @@
             if (this._style == LoaderUI._Str_2056)
             {
                 _local_4 = LoaderUI.createTextField(k, 9, 0xFFFFFF, true);
-                _local_5 = LoaderUI._Str_2206((_local_4.width + 30), (_local_4.height + 17), -1, true, 11411485);
+                _local_5 = LoaderUI.createBalloon((_local_4.width + 30), (_local_4.height + 17), -1, true, 11411485);
                 this._errorBalloon = new Sprite();
                 this._errorBalloon.addChild(_local_5);
                 this._errorBalloon.addChild(_local_4);

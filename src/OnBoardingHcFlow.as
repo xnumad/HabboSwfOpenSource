@@ -267,7 +267,7 @@
         {
             var _local_2:TextField = LoaderUI.createTextField(k, 9, 0xFFFFFF, true);
             LoaderUI.addEtching(_local_2, true);
-            var _local_3:Bitmap = LoaderUI._Str_2206((_local_2.width + 30), (_local_2.height + 17), -1, true, 11411485);
+            var _local_3:Bitmap = LoaderUI.createBalloon((_local_2.width + 30), (_local_2.height + 17), -1, true, 11411485);
             if (this._Str_1018)
             {
                 removeChild(this._Str_1018);

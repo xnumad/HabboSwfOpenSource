@@ -132,7 +132,7 @@
             this._chooserPanel = new Sprite();
             this._container.addChild(this._chooserPanel);
             this._selectButton = new _Str_689(_Str_689.GFREEN, this._newUserFlow.getString("room.select", "Select"), new Rectangle(0, 0, 0, 40), true, this._Str_1782);
-            var _local_3:Bitmap = LoaderUI._Str_2206(640, 100, 0, false, 995918, "none");
+            var _local_3:Bitmap = LoaderUI.createBalloon(640, 100, 0, false, 995918, "none");
             this._chooserPanel.addChild(_local_3);
             _local_3.x = this._spaceBetweenImages;
             LoaderUI.lineUpVertically(_local_5, 20, _local_3);
