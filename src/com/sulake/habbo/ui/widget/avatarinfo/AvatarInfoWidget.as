@@ -799,7 +799,7 @@
                     this._isGameMode = true;
                     break;
             }
-            this._Str_4556();
+            this.checkUpdateNeed();
         }
 
         private function _Str_12418(k:int):int
@@ -1145,19 +1145,19 @@
                 {
                     this._avatarNameBubbles.remove((k as UserNameView).userName);
                     k.dispose();
-                    this._Str_4556();
+                    this.checkUpdateNeed();
                 }
                 if ((k is UseProductView))
                 {
                     this._useProductBubbles.remove((k as UseProductView).userId);
                     k.dispose();
-                    this._Str_4556();
+                    this.checkUpdateNeed();
                 }
                 if ((k is BreedPetView))
                 {
                     this._breedPetBubbles.remove((k as BreedPetView).userId);
                     k.dispose();
-                    this._Str_4556();
+                    this.checkUpdateNeed();
                 }
             }
         }
@@ -1170,7 +1170,7 @@
                 k.dispose();
             }
             this._useProductBubbles.reset();
-            this._Str_4556();
+            this.checkUpdateNeed();
         }
 
         public function _Str_11447():void
@@ -1181,7 +1181,7 @@
                 k.dispose();
             }
             this._breedPetBubbles.reset();
-            this._Str_4556();
+            this.checkUpdateNeed();
         }
 
         public function _Str_21156(k:RoomUserData, _arg_2:int):void
@@ -1192,7 +1192,7 @@
                 _local_3 = new UserNameView(this);
                 UserNameView.setup(_local_3, k.id, k.name, -1, RoomObjectTypeEnum.HABBO, _arg_2);
                 this._avatarNameBubbles[k.name] = _local_3;
-                this._Str_4556();
+                this.checkUpdateNeed();
             }
         }
 
@@ -1204,7 +1204,7 @@
                 _local_5 = new UserNameView(this, true);
                 UserNameView.setup(_local_5, k, _arg_2, k, RoomObjectTypeEnum.HABBO, k, _arg_3, _arg_4);
                 this._avatarNameBubbles[_arg_2] = _local_5;
-                this._Str_4556();
+                this.checkUpdateNeed();
             }
         }
 
@@ -1216,7 +1216,7 @@
                 _local_3 = new UseProductView(this);
                 UseProductView.setup(_local_3, k.id, k.name, -1, RoomObjectTypeEnum.PET, _arg_2);
                 this._useProductBubbles[k.id.toString()] = _local_3;
-                this._Str_4556();
+                this.checkUpdateNeed();
             }
         }
 
@@ -1228,7 +1228,7 @@
                 _local_3 = new BreedPetView(this);
                 BreedPetView.setup(_local_3, k.id, k.name, -1, RoomObjectTypeEnum.PET, _arg_2, k.canBreed);
                 this._breedPetBubbles[k.id.toString()] = _local_3;
-                this._Str_4556();
+                this.checkUpdateNeed();
             }
         }
 
@@ -1256,7 +1256,7 @@
             this.removeAvatarHighlightTimer();
         }
 
-        public function _Str_4556():void
+        public function checkUpdateNeed():void
         {
             if (!this._component)
             {

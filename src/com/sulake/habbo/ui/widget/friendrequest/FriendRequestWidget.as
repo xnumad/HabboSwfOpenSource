@@ -89,10 +89,10 @@
                     this._Str_7667(k.requestId);
                     break;
             }
-            this._Str_4556();
+            this.checkUpdateNeed();
         }
 
-        public function _Str_4556():void
+        public function checkUpdateNeed():void
         {
             if (!this._component)
             {
@@ -182,7 +182,7 @@
             }
             this._requests.remove(k);
             _local_2.dispose();
-            this._Str_4556();
+            this.checkUpdateNeed();
         }
 
         public function showProfile(k:int, _arg_2:String):void
