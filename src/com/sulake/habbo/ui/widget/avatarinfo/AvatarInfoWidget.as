@@ -227,7 +227,7 @@
                 {
                     if (((k.objectId == this._useProductConfirmationView._Str_20466) || (k.objectId == this._useProductConfirmationView._Str_5563)))
                     {
-                        this._Str_13975();
+                        this.removeUseProductConfirmationView();
                     }
                 }
             }
@@ -238,7 +238,7 @@
                 {
                     if (this._useProductConfirmationView._Str_20466 == _local_6)
                     {
-                        this._Str_13975();
+                        this.removeUseProductConfirmationView();
                     }
                 }
                 if (this._breedPetsResultView != null)
@@ -266,7 +266,7 @@
             var _local_2:_Str_3858;
             var _local_3:RoomUserData;
             this.removeUseProductViews();
-            this._Str_13975();
+            this.removeUseProductConfirmationView();
             this._Str_8286();
             for each (_local_2 in k)
             {
@@ -280,7 +280,7 @@
             var _local_2:_Str_3858;
             var _local_3:RoomUserData;
             this._Str_11447();
-            this._Str_13975();
+            this.removeUseProductConfirmationView();
             this._Str_8286();
             for each (_local_2 in k)
             {
@@ -1441,7 +1441,7 @@
             this._useProductConfirmationView.open(k, _arg_2, _arg_3);
         }
 
-        private function _Str_13975():void
+        private function removeUseProductConfirmationView():void
         {
             if (this._useProductConfirmationView)
             {
