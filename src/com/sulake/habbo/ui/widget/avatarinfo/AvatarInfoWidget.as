@@ -662,7 +662,7 @@
                         case RoomWidgetPetBreedingEvent.TYPE_CANCEL:
                             this.cancelBreedingPets(_local_9, _local_10);
                             break;
-                        case RoomWidgetPetBreedingEvent._Str_17835:
+                        case RoomWidgetPetBreedingEvent.TYPE_ACCEPT:
                             this.acceptBreedingPets(_local_9, _local_10);
                             break;
                         case RoomWidgetPetBreedingEvent._Str_16930:
