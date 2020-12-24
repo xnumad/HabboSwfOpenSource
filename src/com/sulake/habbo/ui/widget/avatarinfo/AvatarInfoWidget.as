@@ -285,7 +285,7 @@
             for each (_local_2 in k)
             {
                 _local_3 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_2.id);
-                this._Str_24936(_local_3, _local_2);
+                this.showBreedPetMenu(_local_3, _local_2);
             }
         }
 
@@ -1220,7 +1220,7 @@
             }
         }
 
-        private function _Str_24936(k:RoomUserData, _arg_2:_Str_3858):void
+        private function showBreedPetMenu(k:RoomUserData, _arg_2:_Str_3858):void
         {
             var _local_3:BreedPetView;
             if (this._breedPetBubbles[k.id.toString()] == null)
