@@ -72,7 +72,7 @@
 
     public class AvatarInfoWidget extends RoomWidgetBase implements IUpdateReceiver, IContextMenuParentWidget
     {
-        private static const _Str_17951:int = 77;
+        private static const EFFECT_TYPE_RIDE:int = 77;
         private static const EFFECT_TYPE_DEEP_WATER:int = 29;
         private static const EFFECT_TYPE_SHALLOW_WATER:int = 30;
         private static const EFFECT_TYPE_DEEP_WATER_DARK:int = 185;
@@ -1398,7 +1398,7 @@
                 if (_local_2 != null)
                 {
                     _local_3 = _local_2.getNumber(RoomObjectVariableEnum.FIGURE_EFFECT);
-                    if (_local_3 == _Str_17951)
+                    if (_local_3 == EFFECT_TYPE_RIDE)
                     {
                         return true;
                     }
