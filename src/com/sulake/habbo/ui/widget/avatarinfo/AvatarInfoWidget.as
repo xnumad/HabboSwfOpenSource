@@ -1092,7 +1092,7 @@
                                     this._catalog.windowManager.showHint(AVATAR);
                                     if (!this.handler.container.sessionDataManager.isNoob)
                                     {
-                                        this._Str_24286();
+                                        this.setAvatarHightlightTimer();
                                     }
                                 }
                             }
@@ -1232,7 +1232,7 @@
             }
         }
 
-        private function _Str_24286():void
+        private function setAvatarHightlightTimer():void
         {
             this._avatarHighlightTimer = new Timer(_Str_18641);
             this._avatarHighlightTimer.addEventListener(TimerEvent.TIMER, this._Str_25227);
