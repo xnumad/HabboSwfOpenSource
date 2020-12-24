@@ -33,7 +33,7 @@
         protected var _style:int;
         private var _disposed:Boolean;
         protected var _context:_Str_996;
-        private var _Str_670:Boolean;
+        private var _nameClaimed:Boolean;
         protected var _Str_907:Sprite;
         private var _Str_1714:_Str_1467;
         protected var _Str_1880:TextField;
@@ -141,7 +141,7 @@
 
         public function _Str_1255(k:Boolean):void
         {
-            this._Str_670 = k;
+            this._nameClaimed = k;
         }
 
         protected function _Str_1552(k:Event):void
@@ -270,7 +270,7 @@
         {
             if (ExternalInterface.available)
             {
-                if (this._Str_670)
+                if (this._nameClaimed)
                 {
                     this._context._Str_943();
                 }

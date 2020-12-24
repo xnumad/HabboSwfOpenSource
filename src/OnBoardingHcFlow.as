@@ -49,7 +49,7 @@
         private var _Str_1429:IContext;
         private var _Str_1018:Sprite;
         private var _Str_865:Boolean;
-        private var _Str_670:Boolean;
+        private var _nameClaimed:Boolean;
         private var _Str_845:Sprite;
         private var _Str_1170:Sprite;
         private var _Str_2082:String;
@@ -358,7 +358,7 @@
 
         public function _Str_943(k:Boolean=true):void
         {
-            this._Str_670 = k;
+            this._nameClaimed = k;
             this._Str_1095._Str_943(k);
         }
 
