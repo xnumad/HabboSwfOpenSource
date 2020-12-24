@@ -30,8 +30,8 @@
             var _local_6:Bitmap;
             var _local_7:TextField;
             _style = LoaderUI._Str_1585;
-            _Str_907 = LoaderUI._Str_1487("", "", new Rectangle((-(_Str_2083) / 2), 0, _Str_2083, 1), _style);
-            _container.addChild(_Str_907);
+            _nameChangeDialog = LoaderUI._Str_1487("", "", new Rectangle((-(_Str_2083) / 2), 0, _Str_2083, 1), _style);
+            _container.addChild(_nameChangeDialog);
             var k:int;
             _local_2 = 330;
             var _local_3:int = (_Str_2083 - 12);
@@ -39,7 +39,7 @@
             _local_5 = new Sprite();
             _Str_1260 = NineSplitSprite._Str_2099.render(_local_2, 31);
             _local_5.addChild(_Str_1260);
-            _Str_907.addChild(_local_5);
+            _nameChangeDialog.addChild(_local_5);
             _local_5.x = k;
             _local_6 = null;
             _local_7 = LoaderUI._Str_1132(_context.getString("onboarding.characters.tip", "TIP: There are tons of Habbos created every day"), 18, LoaderUI._Str_1232, false, true, false, false);
@@ -65,32 +65,32 @@
                 _local_6.x = 16;
                 _local_6.y = int(((_Str_1482.height - _local_6.height) / 2));
             }
-            _Str_907.addChild(_Str_1482);
+            _nameChangeDialog.addChild(_Str_1482);
             _Str_1482.x = k;
             _Str_1156 = _context.getString("name", "Enter name here");
             _Str_1880 = LoaderUI._Str_1132(_Str_1156, 18, 0x666666, true, false, true, false);
-            _Str_907.addChild(_Str_1880);
+            _nameChangeDialog.addChild(_Str_1880);
             _Str_1880.x = (_local_5.x + 16);
             _Str_1880.y = (_local_5.y + int(((_local_5.height - _Str_1880.height) / 2)));
             _Str_1880.width = (_local_5.width - 30);
             _Str_1880.addEventListener(MouseEvent.CLICK, _Str_2136);
             _Str_1880.addEventListener(Event.CHANGE, _Str_1552);
             _Str_1047 = new this._Str_1473();
-            _Str_907.addChild(_Str_1047);
+            _nameChangeDialog.addChild(_Str_1047);
             _Str_1047.y = (_local_5.y + int(((_local_5.height - _Str_1047.height) / 2)));
             _Str_1047.x = (((_local_5.x + _local_5.width) - _Str_1047.width) - 7);
             _Str_2194 = new this._Str_1461();
-            _Str_907.addChild(_Str_2194);
+            _nameChangeDialog.addChild(_Str_2194);
             _Str_2194.x = _Str_1047.x;
             _Str_2194.y = _Str_1047.y;
             _Str_2183 = false;
             _Str_1263 = new WaitIndicator(_style);
-            _Str_907.addChild(_Str_1263);
+            _nameChangeDialog.addChild(_Str_1263);
             _Str_1263.y = ((_local_5.y + int((_local_5.height / 2))) + 2);
             _Str_1263.x = (((_local_5.x + _local_5.width) - int((_Str_1047.width / 2))) - 7);
             _Str_1263.visible = false;
             _local_5.addEventListener(MouseEvent.CLICK, _Str_2173);
-            _Str_907.y = -50;
+            _nameChangeDialog.y = -50;
         }
     }
 }

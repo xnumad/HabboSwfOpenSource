@@ -41,7 +41,7 @@
         private var _Str_803:Background;
         private var _Str_1095:AvatarEditor;
         private var _Str_1952:Sprite;
-        private var _Str_907:NameChangeDialog;
+        private var _nameChangeDialog:NameChangeDialog;
         private var _Str_1611:Sprite;
         private var _roomPicker:RoomPicker;
         private var _disposed:Boolean;
@@ -317,9 +317,9 @@
 
         public function _Str_1171():void
         {
-            if (((!(this._Str_907 == null)) && (this._Str_1952.visible)))
+            if (((!(this._nameChangeDialog == null)) && (this._Str_1952.visible)))
             {
-                this._Str_907._Str_1171(this._Str_1885);
+                this._nameChangeDialog._Str_1171(this._Str_1885);
             }
             else
             {
@@ -330,9 +330,9 @@
 
         private function startNameChange():void
         {
-            if (!this._Str_907)
+            if (!this._nameChangeDialog)
             {
-                this._Str_907 = new _Str_973(this, this._Str_1952, this._Str_2203());
+                this._nameChangeDialog = new _Str_973(this, this._Str_1952, this._Str_2203());
             }
             if (this._Str_1611)
             {
@@ -340,7 +340,7 @@
             }
             this._Str_1952.visible = true;
             this._Str_1952.x = this._Str_1351;
-            this._Str_907._Str_1663 = this._Str_1095.gender;
+            this._nameChangeDialog._Str_1663 = this._Str_1095.gender;
             this._Str_1606();
             this._Str_1391();
         }
