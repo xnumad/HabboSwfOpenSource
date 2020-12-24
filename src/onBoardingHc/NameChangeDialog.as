@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import flash.display.Sprite;
-    import onBoardingHcUi._Str_1467;
+    import onBoardingHcUi.Dimmer;
     import flash.text.TextField;
     import onBoardingHcUi._Str_951;
     import flash.display.Bitmap;
@@ -35,7 +35,7 @@
         protected var _context:_Str_996;
         private var _nameClaimed:Boolean;
         protected var _nameChangeDialog:Sprite;
-        private var _dimmer:_Str_1467;
+        private var _dimmer:Dimmer;
         protected var _Str_1880:TextField;
         protected var _Str_1757:_Str_951;
         protected var _Str_1155:_Str_951;
@@ -130,7 +130,7 @@
             var _local_11:int = -50;
             LoaderUI._Str_1472(this._nameChangeDialog, this._Str_2083, _local_11);
             this._nameChangeDialog.y = -(int((_local_11 / 2)));
-            this._dimmer = new _Str_1467();
+            this._dimmer = new Dimmer();
             this._container.addChild(this._nameChangeDialog);
         }
 

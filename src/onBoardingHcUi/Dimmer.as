@@ -4,11 +4,11 @@
     import flash.display.BitmapData;
     import flash.events.Event;
 
-    public class _Str_1467 extends Sprite 
+    public class Dimmer extends Sprite
     {
         private var _Str_1129:BitmapData;
 
-        public function _Str_1467()
+        public function Dimmer()
         {
             var k:Number = 0.75;
             var _local_2:Number = 0.06;
