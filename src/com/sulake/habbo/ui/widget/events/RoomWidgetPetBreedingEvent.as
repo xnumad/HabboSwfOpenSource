@@ -3,7 +3,7 @@
     public class RoomWidgetPetBreedingEvent extends RoomWidgetUpdateEvent
     {
         public static const TYPE_START:int = 0;
-        public static const _Str_16941:int = 1;
+        public static const TYPE_CANCEL:int = 1;
         public static const _Str_17835:int = 2;
         public static const _Str_16930:int = 3;
         public static const RWPPBE_PET_BREEDING_:String = "RWPPBE_PET_BREEDING_";
