@@ -1452,7 +1452,7 @@
 
         public function showBreedingPetsWaitingConfirmationAlert(k:int, _arg_2:int):void
         {
-            this._Str_16695();
+            this.removeBreedingPetsWaitingConfirmationAlert();
             this._breedingConfirmationAlert = windowManager.confirm("${breedpets.confirmation.notification.title}", "${breedpets.confirmation.notification.text}", 0, this.onWaitingConfirmationAlert);
             this._breedingConfirmationAlertRequestRoomObjectId = k;
             this._breedingConfirmationAlertTargetRoomObjectId = _arg_2;
@@ -1470,10 +1470,10 @@
                     this._Str_19339(this._breedingConfirmationAlertRequestRoomObjectId, this._breedingConfirmationAlertTargetRoomObjectId);
                 }
             }
-            this._Str_16695();
+            this.removeBreedingPetsWaitingConfirmationAlert();
         }
 
-        private function _Str_16695():void
+        private function removeBreedingPetsWaitingConfirmationAlert():void
         {
             if (this._breedingConfirmationAlert != null)
             {
@@ -1508,7 +1508,7 @@
                     this._Str_8286();
                 }
             }
-            this._Str_16695();
+            this.removeBreedingPetsWaitingConfirmationAlert();
             windowManager.alert("${breedpets.cancel.notification.title}", "${breedpets.cancel.notification.text}", 0, this._Str_25650);
         }
 
