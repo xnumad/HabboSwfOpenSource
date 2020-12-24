@@ -103,7 +103,7 @@
             var _local_5:Sprite;
             var _local_6:Loader;
             var _local_7:int;
-            var k:TextField = LoaderUI._Str_1132("headerText", 24, LoaderUI._Str_1232, false, true, false, false);
+            var k:TextField = LoaderUI.createTextField("headerText", 24, LoaderUI._Str_1232, false, true, false, false);
             k.width = 500;
             k.thickness = 50;
             this._container.addChild(k);
@@ -143,8 +143,8 @@
             _local_4.y = 360;
             if (!this._roomDescription)
             {
-                this._roomDescription = LoaderUI._Str_1132(this._newUserFlow.getString("receptionist.start.title", "Hiya!"), 18, LoaderUI._Str_1232, false);
-                this._roomName = LoaderUI._Str_1132(this._newUserFlow.getString("onboarding.hint.hc", "Room name"), 20, 0xFFFFFF, false, true, false, false);
+                this._roomDescription = LoaderUI.createTextField(this._newUserFlow.getString("receptionist.start.title", "Hiya!"), 18, LoaderUI._Str_1232, false);
+                this._roomName = LoaderUI.createTextField(this._newUserFlow.getString("onboarding.hint.hc", "Room name"), 20, 0xFFFFFF, false, true, false, false);
                 this._roomName.width = 260;
                 this._roomName.x = 50;
                 this._roomDescription.x = 50;

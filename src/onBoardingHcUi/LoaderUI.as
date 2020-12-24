@@ -42,7 +42,7 @@
         private static const _Str_2237:DropShadowFilter = new DropShadowFilter(1, 270, 0, 0.7, 1, 1);
 
 
-        public static function _Str_1132(k:String, _arg_2:int, _arg_3:uint, _arg_4:Boolean=false, _arg_5:Boolean=false, _arg_6:Boolean=false, _arg_7:Boolean=false, _arg_8:String="left", _arg_9:Boolean=false, _arg_10:Boolean=false):TextField
+        public static function createTextField(k:String, _arg_2:int, _arg_3:uint, _arg_4:Boolean=false, _arg_5:Boolean=false, _arg_6:Boolean=false, _arg_7:Boolean=false, _arg_8:String="left", _arg_9:Boolean=false, _arg_10:Boolean=false):TextField
         {
             var _local_11:TextFormat = new TextFormat("Ubuntu", _arg_2, _arg_3, _arg_4, _arg_7, _arg_10);
             _local_11.align = _arg_8;
@@ -191,13 +191,13 @@
             {
                 _local_5.addChild(NineSplitSprite._Str_2163.render(_arg_3.width, _arg_3.height));
             }
-            var _local_6:TextField = _Str_1132(k, 40, 0xFFFFFF, false, false, false, false);
+            var _local_6:TextField = createTextField(k, 40, 0xFFFFFF, false, false, false, false);
             _local_6.y = -48;
             _local_6.autoSize = TextFieldAutoSize.LEFT;
             _local_5.addChild(_local_6);
             if (((!(_arg_2 == null)) && (!(_arg_2 == ""))))
             {
-                _local_7 = _Str_1132(_arg_2, 10, 0xAAAAAA, true);
+                _local_7 = createTextField(_arg_2, 10, 0xAAAAAA, true);
                 _local_7.x = 8;
                 _local_7.y = -54;
                 _local_7.autoSize = TextFieldAutoSize.LEFT;

@@ -201,7 +201,7 @@
             }
             if (!this._Str_2073)
             {
-                this._Str_2073 = LoaderUI._Str_1132("intro", 40, LoaderUI._Str_1545, false, true, false, false, TextFormatAlign.LEFT);
+                this._Str_2073 = LoaderUI.createTextField("intro", 40, LoaderUI._Str_1545, false, true, false, false, TextFormatAlign.LEFT);
                 this._Str_2073.x = 185;
                 this._Str_2073.y = 45;
                 this._Str_2073.width = 500;
@@ -265,7 +265,7 @@
 
         public function _Str_657(k:String):void
         {
-            var _local_2:TextField = LoaderUI._Str_1132(k, 9, 0xFFFFFF, true);
+            var _local_2:TextField = LoaderUI.createTextField(k, 9, 0xFFFFFF, true);
             LoaderUI._Str_1516(_local_2, true);
             var _local_3:Bitmap = LoaderUI._Str_2206((_local_2.width + 30), (_local_2.height + 17), -1, true, 11411485);
             if (this._Str_1018)

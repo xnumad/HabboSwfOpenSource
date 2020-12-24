@@ -82,10 +82,10 @@
             var _local_3:int = (this._Str_2083 - 12);
             this._nameChangeDialog.x = 5;
             var _local_4:Boolean;
-            var _local_5:TextField = LoaderUI._Str_1132(this._context.getString("rename.subtitle", " \tYou are a unique and beautiful snowflake."), 20, 0, true, false, false, _local_4);
+            var _local_5:TextField = LoaderUI.createTextField(this._context.getString("rename.subtitle", " \tYou are a unique and beautiful snowflake."), 20, 0, true, false, false, _local_4);
             _local_5.x = k;
             LoaderUI._Str_1516(_local_5);
-            var _local_6:TextField = LoaderUI._Str_1132(this._context.getString("rename.description", "In Habbo, we all sign in using a unique name, so go ahead and enter yours. There's no need to use your real one - stage names are perfectly ok."), 12, 0, false, true, false, _local_4);
+            var _local_6:TextField = LoaderUI.createTextField(this._context.getString("rename.description", "In Habbo, we all sign in using a unique name, so go ahead and enter yours. There's no need to use your real one - stage names are perfectly ok."), 12, 0, false, true, false, _local_4);
             this._nameChangeDialog.addChild(_local_6);
             _local_6.x = k;
             _local_6.width = _local_2;
@@ -95,11 +95,11 @@
             _local_7.addChild(this._Str_1260);
             this._nameChangeDialog.addChild(_local_7);
             _local_7.x = k;
-            var _local_8:TextField = LoaderUI._Str_1132(this._context.getString("rename.accepted", "WE ACCEPT LETTERS AND NUMBERS. NOT VISA OR MASTERCARD."), 9, 0x424242, true, false, false, _local_4);
+            var _local_8:TextField = LoaderUI.createTextField(this._context.getString("rename.accepted", "WE ACCEPT LETTERS AND NUMBERS. NOT VISA OR MASTERCARD."), 9, 0x424242, true, false, false, _local_4);
             this._nameChangeDialog.addChild(_local_8);
             _local_8.x = (k + 5);
             LoaderUI._Str_1516(_local_8);
-            var _local_9:TextField = LoaderUI._Str_1132(this._context.getString("rename.warning", "Once you've selected a name for your character, you can't change it anymore, so please pay a bit of attention to your selection."), 16, 0x424242, false, true, false, false);
+            var _local_9:TextField = LoaderUI.createTextField(this._context.getString("rename.warning", "Once you've selected a name for your character, you can't change it anymore, so please pay a bit of attention to your selection."), 16, 0x424242, false, true, false, false);
             _local_9.width = (_local_2 - 66);
             LoaderUI._Str_1516(_local_9);
             _local_10 = NineSplitSprite._Str_1605.render(_local_2, (_local_9.height + 24));
@@ -114,7 +114,7 @@
             this._nameChangeDialog.addChild(this._Str_1482);
             this._Str_1482.x = k;
             this._Str_1156 = this._context.getString("name", "Click here to type a name");
-            this._inputField = LoaderUI._Str_1132(this._Str_1156, 14, 0x888888, true, false, true, false);
+            this._inputField = LoaderUI.createTextField(this._Str_1156, 14, 0x888888, true, false, true, false);
             this._nameChangeDialog.addChild(this._inputField);
             this._inputField.x = (_local_7.x + 16);
             this._inputField.y = (_local_7.y + int(((_local_7.height - this._inputField.height) / 2)));
@@ -401,7 +401,7 @@
             }
             if (this._style == LoaderUI._Str_2056)
             {
-                _local_4 = LoaderUI._Str_1132(k, 9, 0xFFFFFF, true);
+                _local_4 = LoaderUI.createTextField(k, 9, 0xFFFFFF, true);
                 _local_5 = LoaderUI._Str_2206((_local_4.width + 30), (_local_4.height + 17), -1, true, 11411485);
                 this._errorBalloon = new Sprite();
                 this._errorBalloon.addChild(_local_5);
@@ -411,7 +411,7 @@
             }
             else
             {
-                _local_4 = LoaderUI._Str_1132(k, 10, 0xFFFFFF);
+                _local_4 = LoaderUI.createTextField(k, 10, 0xFFFFFF);
                 _local_6 = LoaderUI._Str_2038(Bitmap(new this.input_error_alert_hitch_png()).bitmapData, new Rectangle(3, 3, 5, 5));
                 _local_2 = this._Str_1260.width;
                 if (_local_4.width > _local_2)

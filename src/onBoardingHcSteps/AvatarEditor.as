@@ -167,21 +167,21 @@
 
         private function _Str_2062():void
         {
-            var k:TextField = LoaderUI._Str_1132("headerText", 24, LoaderUI._Str_1232, false, true, false, false);
+            var k:TextField = LoaderUI.createTextField("headerText", 24, LoaderUI._Str_1232, false, true, false, false);
             k.width = 300;
             k.thickness = 50;
             addChild(k);
             k.htmlText = this._context.getString("onboarding.your.looks", "Choose looks");
             k.x = 35;
             k.y = 5;
-            var _local_2:TextField = LoaderUI._Str_1132("headerText", 24, LoaderUI._Str_1232, false, true, false, false);
+            var _local_2:TextField = LoaderUI.createTextField("headerText", 24, LoaderUI._Str_1232, false, true, false, false);
             _local_2.width = 300;
             _local_2.thickness = 50;
             addChild(_local_2);
             _local_2.htmlText = this._context.getString("onboarding.your.colour", "Choose colour");
             _local_2.x = 370;
             _local_2.y = 5;
-            var _local_3:TextField = LoaderUI._Str_1132("headerText", 24, LoaderUI._Str_1232, false, true, false, false);
+            var _local_3:TextField = LoaderUI.createTextField("headerText", 24, LoaderUI._Str_1232, false, true, false, false);
             _local_3.width = 300;
             _local_3.thickness = 50;
             addChild(_local_3);
@@ -216,7 +216,7 @@
             this._randomizeButton = new _Str_650(0, -10, this._Str_2106, 0xD8D8D8);
             _local_7.addChild(this._randomizeButton);
             LoaderUI._Str_2098(this._maleButton, 60, this._femaleButton, 30, this._randomizeButton);
-            var _local_8:TextField = LoaderUI._Str_1132("bottomText", 12, LoaderUI._Str_1545, true, true, false, false);
+            var _local_8:TextField = LoaderUI.createTextField("bottomText", 12, LoaderUI._Str_1545, true, true, false, false);
             _local_8.htmlText = this._context.getString("onboarding.cant.decide", "Can't decide? Don't worry, you can change your clothes later!");
             _local_8.width = 300;
             _local_8.x = 715;
@@ -237,9 +237,9 @@
             this._balloonBox.x = 41;
             this._balloonBox.y = 385;
             this._balloonBox.visible = true;
-            var _local_3:TextField = LoaderUI._Str_1132(this._context.getString("onboard.what.is.hc.header", "Much more inside... "), 24, LoaderUI._Str_1232, true, true, false, false);
+            var _local_3:TextField = LoaderUI.createTextField(this._context.getString("onboard.what.is.hc.header", "Much more inside... "), 24, LoaderUI._Str_1232, true, true, false, false);
             var _local_4:String = this._context.getString("onboard.what.is.hc.description", "onboard.what.is.hc.description");
-            var _local_5:TextField = LoaderUI._Str_1132(_local_4, 12, LoaderUI._Str_1545, true, true, false, false);
+            var _local_5:TextField = LoaderUI.createTextField(_local_4, 12, LoaderUI._Str_1545, true, true, false, false);
             _local_5.multiline = true;
             _local_5.width = 300;
             _local_3.width = 300;

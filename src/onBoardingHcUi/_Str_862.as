@@ -37,7 +37,7 @@
             buttonMode = true;
             this._Str_1111 = _arg_6;
             var _local_7:* = (_arg_3 == LoaderUI._Str_1585);
-            this._Str_848 = LoaderUI._Str_1132(this._Str_622, 20, ((_arg_3 == LoaderUI._Str_1585) ? 15201722 : 0), true, false, false, _local_7);
+            this._Str_848 = LoaderUI.createTextField(this._Str_622, 20, ((_arg_3 == LoaderUI._Str_1585) ? 15201722 : 0), true, false, false, _local_7);
             this._Str_848.alpha = ((_arg_3 == LoaderUI._Str_1585) ? 0.7 : 1);
             if (_arg_3 == LoaderUI._Str_2056)
             {

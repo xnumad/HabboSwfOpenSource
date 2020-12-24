@@ -42,9 +42,9 @@
             _nameChangeDialog.addChild(_local_5);
             _local_5.x = k;
             _local_6 = null;
-            _local_7 = LoaderUI._Str_1132(_context.getString("onboarding.characters.tip", "TIP: There are tons of Habbos created every day"), 18, LoaderUI._Str_1232, false, true, false, false);
+            _local_7 = LoaderUI.createTextField(_context.getString("onboarding.characters.tip", "TIP: There are tons of Habbos created every day"), 18, LoaderUI._Str_1232, false, true, false, false);
             _local_7.width = (_local_2 - 32);
-            var _local_8:TextField = LoaderUI._Str_1132(_context.getString("onboarding.creative.tip", "be creative! You can also use these special characters"), 18, LoaderUI._Str_1232, false, true, false, false);
+            var _local_8:TextField = LoaderUI.createTextField(_context.getString("onboarding.creative.tip", "be creative! You can also use these special characters"), 18, LoaderUI._Str_1232, false, true, false, false);
             _local_8.width = (_local_2 - 32);
             _Str_1482 = new Sprite();
             var _local_9:Bitmap = LoaderUI._Str_2206(295, 230, 45, false, 995918, "down");
@@ -68,7 +68,7 @@
             _nameChangeDialog.addChild(_Str_1482);
             _Str_1482.x = k;
             _Str_1156 = _context.getString("name", "Enter name here");
-            _inputField = LoaderUI._Str_1132(_Str_1156, 18, 0x666666, true, false, true, false);
+            _inputField = LoaderUI.createTextField(_Str_1156, 18, 0x666666, true, false, true, false);
             _nameChangeDialog.addChild(_inputField);
             _inputField.x = (_local_5.x + 16);
             _inputField.y = (_local_5.y + int(((_local_5.height - _inputField.height) / 2)));

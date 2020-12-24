@@ -796,7 +796,7 @@
             if (this._Str_2297 != null)
             {
                 this._Str_2297.html = ((k == null) ? "" : k);
-                this._Str_1132();
+                this.createTextField();
                 this._Str_8978();
             }
         }
@@ -1043,7 +1043,7 @@
             this._Str_4922 = null;
         }
 
-        private function _Str_1132():void
+        private function createTextField():void
         {
             if (this._text)
             {

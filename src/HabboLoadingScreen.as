@@ -74,10 +74,10 @@
             {
                 _local_8 = _arg_3;
             }
-            var _local_9:TextField = LoaderUI._Str_1132(_local_8, _Str_1968, LoaderUI._Str_1545, true, false, false, false, TextFormatAlign.CENTER);
+            var _local_9:TextField = LoaderUI.createTextField(_local_8, _Str_1968, LoaderUI._Str_1545, true, false, false, false, TextFormatAlign.CENTER);
             _local_9.name = TEXTFIELD;
             addChild(_local_9);
-            var _local_10:TextField = LoaderUI._Str_1132("0%", 14, 0x999999, true, false, false, false, TextFormatAlign.CENTER);
+            var _local_10:TextField = LoaderUI.createTextField("0%", 14, 0x999999, true, false, false, false, TextFormatAlign.CENTER);
             _local_10.name = LOADINGNUMBERTEXTFIELD;
             addChild(_local_10);
             _local_7 = new Sprite();
@@ -121,7 +121,7 @@
                     if (_local_3 != null)
                     {
                         this._Str_1397(TEXTFIELD);
-                        _local_4 = LoaderUI._Str_1132(_local_2[this._Str_1541], _Str_1968, LoaderUI._Str_1545, true, false, false, false, TextFormatAlign.CENTER);
+                        _local_4 = LoaderUI.createTextField(_local_2[this._Str_1541], _Str_1968, LoaderUI._Str_1545, true, false, false, false, TextFormatAlign.CENTER);
                         _local_4.x = ((width - _local_4.width) / 2);
                         _local_4.y = _local_3.y;
                         _local_4.name = TEXTFIELD;
