@@ -83,7 +83,7 @@
             }
         }
 
-        public static function _Str_2047(k:DisplayObject, ... _args):void
+        public static function lineUpVertically(k:DisplayObject, ... _args):void
         {
             var _local_5:int;
             var _local_6:DisplayObject;

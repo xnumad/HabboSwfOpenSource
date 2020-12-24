@@ -135,7 +135,7 @@
             var _local_3:Bitmap = LoaderUI._Str_2206(640, 100, 0, false, 995918, "none");
             this._chooserPanel.addChild(_local_3);
             _local_3.x = this._spaceBetweenImages;
-            LoaderUI._Str_2047(_local_5, 20, _local_3);
+            LoaderUI.lineUpVertically(_local_5, 20, _local_3);
             _local_4 = new Sprite();
             _local_4.addChild(this._selectButton);
             this._container.addChild(_local_4);
@@ -149,8 +149,8 @@
                 this._roomName.x = 50;
                 this._roomDescription.x = 50;
                 this._roomDescription.width = 260;
-                LoaderUI._Str_2047(_local_5, 30, this._roomName);
-                LoaderUI._Str_2047(_local_5, 55, this._roomDescription);
+                LoaderUI.lineUpVertically(_local_5, 30, this._roomName);
+                LoaderUI.lineUpVertically(_local_5, 55, this._roomDescription);
                 this._chooserPanel.addChild(this._roomDescription);
                 this._chooserPanel.addChild(this._roomName);
             }
