@@ -1450,7 +1450,7 @@
             }
         }
 
-        public function _Str_23724(k:int, _arg_2:int):void
+        public function showBreedingPetsWaitingConfirmationAlert(k:int, _arg_2:int):void
         {
             this._Str_16695();
             this._breedingConfirmationAlert = windowManager.confirm("${breedpets.confirmation.notification.title}", "${breedpets.confirmation.notification.text}", 0, this._Str_23917);

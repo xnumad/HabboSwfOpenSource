@@ -266,7 +266,7 @@
                     this._widget._Str_22619(this._Str_3748, this._Str_4105);
                     if (this._roomUserData.ownerId != this._petData2.ownerId)
                     {
-                        this._widget._Str_23724(this._Str_3710, this._Str_4105);
+                        this._widget.showBreedingPetsWaitingConfirmationAlert(this._Str_3710, this._Str_4105);
                     }
                     this.close();
                     return;
