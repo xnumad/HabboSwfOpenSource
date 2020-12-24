@@ -35,7 +35,7 @@
         protected var _context:_Str_996;
         private var _nameClaimed:Boolean;
         protected var _nameChangeDialog:Sprite;
-        private var _Str_1714:_Str_1467;
+        private var _dimmer:_Str_1467;
         protected var _Str_1880:TextField;
         protected var _Str_1757:_Str_951;
         protected var _Str_1155:_Str_951;
@@ -130,7 +130,7 @@
             var _local_11:int = -50;
             LoaderUI._Str_1472(this._nameChangeDialog, this._Str_2083, _local_11);
             this._nameChangeDialog.y = -(int((_local_11 / 2)));
-            this._Str_1714 = new _Str_1467();
+            this._dimmer = new _Str_1467();
             this._container.addChild(this._nameChangeDialog);
         }
 
@@ -193,9 +193,9 @@
                 ExternalInterface.addCallback(NEWUSERRECEPTIONCLAIMNAMERESPONSE, null);
                 ExternalInterface.addCallback(NEWUSERRECEPTIONCLAIMNAMEFAILED, null);
             }
-            if (this._Str_1714)
+            if (this._dimmer)
             {
-                this._container.removeChild(this._Str_1714);
+                this._container.removeChild(this._dimmer);
             }
             if (this._nameChangeDialog)
             {
@@ -206,7 +206,7 @@
                 this._Str_1263.dispose();
                 this._Str_1263 = null;
             }
-            this._Str_1714 = null;
+            this._dimmer = null;
             this._Str_1880 = null;
             this._Str_1757 = null;
             this._Str_1155 = null;
