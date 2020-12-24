@@ -29,7 +29,7 @@
         private static const NEWUSERRECEPTIONCHECKNAMERESPONSE:String = "newUserReceptionCheckNameResponse";
         private static const NEWUSERRECEPTIONCHECKNAMEFAILED:String = "newUserReceptionCheckNameFailed";
 
-        private var _Str_1310:Class;
+        private var input_error_alert_hitch_png:Class;
         protected var _style:int;
         private var _disposed:Boolean;
         protected var _context:_Str_996;
@@ -54,7 +54,7 @@
 
         public function NameChangeDialog(k:_Str_996, _arg_2:Sprite, _arg_3:int)
         {
-            this._Str_1310 = _Str_937;
+            this.input_error_alert_hitch_png = _Str_937;
             this._style = LoaderUI._Str_2056;
             super();
             this._context = k;
@@ -412,7 +412,7 @@
             else
             {
                 _local_4 = LoaderUI._Str_1132(k, 10, 0xFFFFFF);
-                _local_6 = LoaderUI._Str_2038(Bitmap(new this._Str_1310()).bitmapData, new Rectangle(3, 3, 5, 5));
+                _local_6 = LoaderUI._Str_2038(Bitmap(new this.input_error_alert_hitch_png()).bitmapData, new Rectangle(3, 3, 5, 5));
                 _local_2 = this._Str_1260.width;
                 if (_local_4.width > _local_2)
                 {
