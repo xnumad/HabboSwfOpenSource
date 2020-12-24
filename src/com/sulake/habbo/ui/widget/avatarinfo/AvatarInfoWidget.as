@@ -75,7 +75,7 @@
         private static const _Str_17951:int = 77;
         private static const _Str_18968:int = 29;
         private static const _Str_16970:int = 30;
-        private static const _Str_18857:int = 185;
+        private static const EFFECT_TYPE_DEEP_WATER_DARK:int = 185;
         private static const AVATAR_HIGHLIGHT_DURATION_MSEC:int = 5000;
         private static const AVATAR:String = "avatar";
         private static const USE_MINIMIZED_OWN_AVATAR_MENU:String = "use_minimized_own_avatar_menu";
@@ -907,7 +907,7 @@
                 if (_local_2 != null)
                 {
                     _local_3 = _local_2.getNumber(RoomObjectVariableEnum.FIGURE_EFFECT);
-                    return ((_local_3 == _Str_18968) || (_local_3 == _Str_16970)) || (_local_3 == _Str_18857);
+                    return ((_local_3 == _Str_18968) || (_local_3 == _Str_16970)) || (_local_3 == EFFECT_TYPE_DEEP_WATER_DARK);
                 }
             }
             return false;
