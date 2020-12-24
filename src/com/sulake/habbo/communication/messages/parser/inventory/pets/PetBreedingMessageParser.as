@@ -11,7 +11,7 @@
 
         private var _state:int;
         private var _ownPetId:int;
-        private var _Str_6649:int;
+        private var _otherPetId:int;
 
 
         public function flush():Boolean
@@ -23,7 +23,7 @@
         {
             this._state = k.readInteger();
             this._ownPetId = k.readInteger();
-            this._Str_6649 = k.readInteger();
+            this._otherPetId = k.readInteger();
             return true;
         }
 
@@ -39,7 +39,7 @@
 
         public function get otherPetId():int
         {
-            return this._Str_6649;
+            return this._otherPetId;
         }
     }
 }

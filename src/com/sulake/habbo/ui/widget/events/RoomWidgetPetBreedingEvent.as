@@ -10,7 +10,7 @@
 
         private var _state:int;
         private var _ownPetId:int;
-        private var _Str_6649:int;
+        private var _otherPetId:int;
 
         public function RoomWidgetPetBreedingEvent(k:Boolean=false, _arg_2:Boolean=false)
         {
@@ -39,12 +39,12 @@
 
         public function get otherPetId():int
         {
-            return this._Str_6649;
+            return this._otherPetId;
         }
 
         public function set otherPetId(k:int):void
         {
-            this._Str_6649 = k;
+            this._otherPetId = k;
         }
     }
 }
