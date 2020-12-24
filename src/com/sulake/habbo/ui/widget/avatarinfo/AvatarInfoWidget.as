@@ -76,7 +76,7 @@
         private static const _Str_18968:int = 29;
         private static const _Str_16970:int = 30;
         private static const _Str_18857:int = 185;
-        private static const _Str_18641:int = 5000;
+        private static const AVATAR_HIGHLIGHT_DURATION_MSEC:int = 5000;
         private static const AVATAR:String = "avatar";
         private static const USE_MINIMIZED_OWN_AVATAR_MENU:String = "use_minimized_own_avatar_menu";
 
@@ -1234,7 +1234,7 @@
 
         private function setAvatarHightlightTimer():void
         {
-            this._avatarHighlightTimer = new Timer(_Str_18641);
+            this._avatarHighlightTimer = new Timer(AVATAR_HIGHLIGHT_DURATION_MSEC);
             this._avatarHighlightTimer.addEventListener(TimerEvent.TIMER, this.onAvatarHighlightTimerEvent);
             this._avatarHighlightTimer.start();
         }
