@@ -663,7 +663,7 @@
                             this._Str_24187(_local_9, _local_10);
                             break;
                         case _Str_3919._Str_17835:
-                            this._Str_24567(_local_9, _local_10);
+                            this.acceptBreedingPets(_local_9, _local_10);
                             break;
                         case _Str_3919._Str_16930:
                             this._Str_16495(_local_9, _local_10, true);
@@ -1484,7 +1484,7 @@
             }
         }
 
-        public function _Str_24567(k:int, _arg_2:int):void
+        public function acceptBreedingPets(k:int, _arg_2:int):void
         {
             if (this._breedMonsterPlantsConfirmationView != null)
             {
