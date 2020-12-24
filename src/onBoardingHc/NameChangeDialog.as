@@ -36,7 +36,7 @@
         private var _nameClaimed:Boolean;
         protected var _nameChangeDialog:Sprite;
         private var _dimmer:Dimmer;
-        protected var _Str_1880:TextField;
+        protected var _inputField:TextField;
         protected var _Str_1757:_Str_951;
         protected var _Str_1155:_Str_951;
         private var _Str_1018:Sprite;
@@ -114,13 +114,13 @@
             this._nameChangeDialog.addChild(this._Str_1482);
             this._Str_1482.x = k;
             this._Str_1156 = this._context.getString("name", "Click here to type a name");
-            this._Str_1880 = LoaderUI._Str_1132(this._Str_1156, 14, 0x888888, true, false, true, false);
-            this._nameChangeDialog.addChild(this._Str_1880);
-            this._Str_1880.x = (_local_7.x + 16);
-            this._Str_1880.y = (_local_7.y + int(((_local_7.height - this._Str_1880.height) / 2)));
-            this._Str_1880.width = (_local_7.width - 30);
-            this._Str_1880.addEventListener(MouseEvent.CLICK, this._Str_2136);
-            this._Str_1880.addEventListener(Event.CHANGE, this._Str_1552);
+            this._inputField = LoaderUI._Str_1132(this._Str_1156, 14, 0x888888, true, false, true, false);
+            this._nameChangeDialog.addChild(this._inputField);
+            this._inputField.x = (_local_7.x + 16);
+            this._inputField.y = (_local_7.y + int(((_local_7.height - this._inputField.height) / 2)));
+            this._inputField.width = (_local_7.width - 30);
+            this._inputField.addEventListener(MouseEvent.CLICK, this._Str_2136);
+            this._inputField.addEventListener(Event.CHANGE, this._Str_1552);
             this._Str_1263 = new WaitIndicator(this._style);
             this._nameChangeDialog.addChild(this._Str_1263);
             this._Str_1263.y = (_local_7.y + int((_local_7.height / 2)));
@@ -136,7 +136,7 @@
 
         private function _Str_1333(k:TimerEvent):void
         {
-            this.checkName(this._Str_1880.text);
+            this.checkName(this._inputField.text);
         }
 
         public function _Str_1255(k:Boolean):void
@@ -156,7 +156,7 @@
 
         protected function _Str_2173(k:MouseEvent):void
         {
-            this._context.stage.focus = this._Str_1880;
+            this._context.stage.focus = this._inputField;
             this._Str_2136(null);
         }
 
@@ -167,19 +167,19 @@
                 return;
             }
             this._Str_1513 = true;
-            this._Str_1880.textColor = ((this._style == LoaderUI._Str_1585) ? 0x666666 : 0);
-            this._Str_1880.removeEventListener(MouseEvent.CLICK, this._Str_2136);
+            this._inputField.textColor = ((this._style == LoaderUI._Str_1585) ? 0x666666 : 0);
+            this._inputField.removeEventListener(MouseEvent.CLICK, this._Str_2136);
             this._Str_1552(null);
         }
 
         public function _Str_1171(k:Boolean):void
         {
-            this.claimName(this._Str_1880.text, k);
+            this.claimName(this._inputField.text, k);
         }
 
         private function get _Str_1379():Boolean
         {
-            return (!(this._Str_1880 == null)) && (!(this._Str_1880.text == this._context.getString("name", this._Str_1156)));
+            return (!(this._inputField == null)) && (!(this._inputField.text == this._context.getString("name", this._Str_1156)));
         }
 
         public function dispose():void
@@ -207,7 +207,7 @@
                 this._Str_1263 = null;
             }
             this._dimmer = null;
-            this._Str_1880 = null;
+            this._inputField = null;
             this._Str_1757 = null;
             this._Str_1155 = null;
             this._Str_1018 = null;
@@ -285,7 +285,7 @@
 
         public function _Str_1434(k:String, _arg_2:String, _arg_3:Object, _arg_4:Array):void
         {
-            if (((this._Str_1880 == null) || (!(this._Str_1880.text == k))))
+            if (((this._inputField == null) || (!(this._inputField.text == k))))
             {
                 return;
             }
