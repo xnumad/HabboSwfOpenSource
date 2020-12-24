@@ -40,7 +40,7 @@
         protected var _submitButton:_Str_951;
         protected var _skipButton:_Str_951;
         private var _errorBalloon:Sprite;
-        protected var _Str_1047:Bitmap;
+        protected var _tickMark:Bitmap;
         protected var _Str_2194:Bitmap;
         private var _Str_1513:Boolean;
         protected var _Str_1260:Bitmap;
@@ -124,7 +124,7 @@
             this._Str_1263 = new WaitIndicator(this._style);
             this._nameChangeDialog.addChild(this._Str_1263);
             this._Str_1263.y = (_local_7.y + int((_local_7.height / 2)));
-            this._Str_1263.x = (((_local_7.x + _local_7.width) - int((this._Str_1047.width / 2))) - 15);
+            this._Str_1263.x = (((_local_7.x + _local_7.width) - int((this._tickMark.width / 2))) - 15);
             this._Str_1263.visible = false;
             _local_7.addEventListener(MouseEvent.CLICK, this._Str_2173);
             var _local_11:int = -50;
@@ -211,7 +211,7 @@
             this._submitButton = null;
             this._skipButton = null;
             this._errorBalloon = null;
-            this._Str_1047 = null;
+            this._tickMark = null;
             this._Str_1260 = null;
             this._nameChangeDialog = null;
             this._context = null;
@@ -350,15 +350,15 @@
 
         protected function get _Str_2183():Boolean
         {
-            return (!(this._Str_1047 == null)) && (this._Str_1047.visible);
+            return (!(this._tickMark == null)) && (this._tickMark.visible);
         }
 
         protected function set _Str_2183(k:Boolean):void
         {
             k = true;
-            if (this._Str_1047 != null)
+            if (this._tickMark != null)
             {
-                this._Str_1047.visible = k;
+                this._tickMark.visible = k;
             }
             if (this._Str_2194 != null)
             {
@@ -451,7 +451,7 @@
                 this._Str_1260.bitmapData = ((this._style == LoaderUI._Str_1585) ? NineSplitSprite._Str_1531.render(k, _local_2).bitmapData : NineSplitSprite._Str_1594.render(k, _local_2).bitmapData);
                 this._nameChangeDialog.removeChild(this._errorBalloon);
             }
-            this._Str_1047.visible = false;
+            this._tickMark.visible = false;
             if (this._Str_2194 != null)
             {
                 this._Str_2194.visible = false;
