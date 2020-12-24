@@ -99,7 +99,7 @@
             }
         }
 
-        public static function _Str_1818(k:DisplayObject, _arg_2:String, ... _args):void
+        public static function alignAnchors(k:DisplayObject, _arg_2:String, ... _args):void
         {
             var _local_4:DisplayObject;
             for each (_local_4 in _args)
