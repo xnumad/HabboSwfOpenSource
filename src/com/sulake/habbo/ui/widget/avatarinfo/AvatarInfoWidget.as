@@ -1235,7 +1235,7 @@
         private function setAvatarHightlightTimer():void
         {
             this._avatarHighlightTimer = new Timer(_Str_18641);
-            this._avatarHighlightTimer.addEventListener(TimerEvent.TIMER, this._Str_25227);
+            this._avatarHighlightTimer.addEventListener(TimerEvent.TIMER, this.onAvatarHighlightTimerEvent);
             this._avatarHighlightTimer.start();
         }
 
@@ -1251,7 +1251,7 @@
             this._avatarHighlightTimer = null;
         }
 
-        private function _Str_25227(k:TimerEvent):void
+        private function onAvatarHighlightTimerEvent(k:TimerEvent):void
         {
             this.removeAvatarHighlightTimer();
         }
