@@ -20,7 +20,7 @@
         private var _Str_12168:BitmapData;
         private var _Str_19174:String;
         private var _Str_19510:String;
-        private var _Str_3054:int = -1;
+        private var _placedItemId:int = -1;
         private var _Str_3970:String = "";
         private var _Str_3224:Boolean;
 
@@ -87,12 +87,12 @@
 
         public function get placedItemId():int
         {
-            return this._Str_3054;
+            return this._placedItemId;
         }
 
         public function set placedItemId(k:int):void
         {
-            this._Str_3054 = k;
+            this._placedItemId = k;
         }
 
         public function get _Str_4057():Boolean
