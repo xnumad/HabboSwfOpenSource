@@ -11,7 +11,7 @@
         private var _placedItemId:int;
         private var _placedItemType:String;
         private var _placedInRoom:Boolean;
-        private var _Str_10229:String;
+        private var _petFigureString:String;
 
 
         public function get itemType():String
@@ -46,7 +46,7 @@
 
         public function get petFigureString():String
         {
-            return this._Str_10229;
+            return this._petFigureString;
         }
 
         public function flush():Boolean
@@ -69,7 +69,7 @@
             this._placedItemId = k.readInteger();
             this._placedItemType = k.readString();
             this._placedInRoom = k.readBoolean();
-            this._Str_10229 = k.readString();
+            this._petFigureString = k.readString();
             return true;
         }
     }
