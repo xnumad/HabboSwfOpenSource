@@ -21,7 +21,7 @@
         private var _Str_19174:String;
         private var _Str_19510:String;
         private var _placedItemId:int = -1;
-        private var _Str_3970:String = "";
+        private var _placedItemType:String = "";
         private var _Str_3224:Boolean;
 
         public function RoomWidgetPresentDataUpdateEvent(k:String, _arg_2:int, _arg_3:String, _arg_4:Boolean=false, _arg_5:BitmapData=null, _arg_6:String=null, _arg_7:String=null, _arg_8:Boolean=false, _arg_9:Boolean=false)
@@ -107,12 +107,12 @@
 
         public function get placedItemType():String
         {
-            return this._Str_3970;
+            return this._placedItemType;
         }
 
         public function set placedItemType(k:String):void
         {
-            this._Str_3970 = k;
+            this._placedItemType = k;
         }
     }
 }

@@ -9,7 +9,7 @@
         private var _classId:int;
         private var _productCode:String;
         private var _placedItemId:int;
-        private var _Str_3970:String;
+        private var _placedItemType:String;
         private var _Str_3224:Boolean;
         private var _Str_10229:String;
 
@@ -36,7 +36,7 @@
 
         public function get placedItemType():String
         {
-            return this._Str_3970;
+            return this._placedItemType;
         }
 
         public function get _Str_4057():Boolean
@@ -67,7 +67,7 @@
             this._classId = k.readInteger();
             this._productCode = k.readString();
             this._placedItemId = k.readInteger();
-            this._Str_3970 = k.readString();
+            this._placedItemType = k.readString();
             this._Str_3224 = k.readBoolean();
             this._Str_10229 = k.readString();
             return true;
