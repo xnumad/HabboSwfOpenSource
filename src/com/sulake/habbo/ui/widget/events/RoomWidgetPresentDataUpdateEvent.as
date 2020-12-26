@@ -22,7 +22,7 @@
         private var _Str_19510:String;
         private var _placedItemId:int = -1;
         private var _placedItemType:String = "";
-        private var _Str_3224:Boolean;
+        private var _placedInRoom:Boolean;
 
         public function RoomWidgetPresentDataUpdateEvent(k:String, _arg_2:int, _arg_3:String, _arg_4:Boolean=false, _arg_5:BitmapData=null, _arg_6:String=null, _arg_7:String=null, _arg_8:Boolean=false, _arg_9:Boolean=false)
         {
@@ -97,12 +97,12 @@
 
         public function get _Str_4057():Boolean
         {
-            return this._Str_3224;
+            return this._placedInRoom;
         }
 
         public function set _Str_4057(k:Boolean):void
         {
-            this._Str_3224 = k;
+            this._placedInRoom = k;
         }
 
         public function get placedItemType():String
