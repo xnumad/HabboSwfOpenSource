@@ -27,7 +27,7 @@
         function setScale(_arg_1:Number, _arg_2:Point=null, _arg_3:Point=null, _arg_4:Boolean=false):void;
         function get scale():Number;
         function takeScreenShot():BitmapData;
-        function _Str_20787():void;
+        function skipSpriteVisibilityChecking():void;
         function _Str_22174():void;
         function getId():int;
     }

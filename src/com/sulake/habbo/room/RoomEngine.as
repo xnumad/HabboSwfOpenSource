@@ -4398,7 +4398,7 @@
             }
             if (_arg_5)
             {
-                _local_7._Str_20787();
+                _local_7.skipSpriteVisibilityChecking();
             }
             var _local_8:int = -1;
             if (((!(_arg_4)) && (!(this._roomSessionManager.getSession(this._activeRoomId) == null))))

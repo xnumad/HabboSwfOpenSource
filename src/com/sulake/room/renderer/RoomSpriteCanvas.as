@@ -281,7 +281,7 @@
             return _local_6;
         }
 
-        public function _Str_20787():void
+        public function skipSpriteVisibilityChecking():void
         {
             this._noSpriteVisibilityChecking = true;
             this.render(-1, true);
