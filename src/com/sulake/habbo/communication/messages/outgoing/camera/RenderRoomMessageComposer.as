@@ -43,51 +43,61 @@
         private static function planesString():String
         {
             return StringUtil.makeMagicString(142, 178, 155, 183, 194, 196, 168, 157, 195, 152, 143, 163, 197, 154, 200, 148, 158, 148, 200);
+            //{ "planes" :
         }
 
         private static function spritesString():String
         {
             return StringUtil.makeMagicString(113, 119, 172, 167, 152, 139, 154, 118, 141, 140, 125, 169, 152, 119, 168, 165, 129, 146);
+            //,"sprites" :
         }
 
         private static function modifiersString():String
         {
             return StringUtil.makeMagicString(129, 188, 141, 133, 186, 137, 164, 132, 160, 132, 185, 134, 168, 183, 162, 149, 181, 135);
+            //,"modifiers" :
         }
 
         private static function filtersString():String
         {
             return StringUtil.makeMagicString(131, 190, 163, 186, 162, 159, 146, 177, 172, 172, 132, 136, 170, 186, 164, 151, 164);
+            //,"filters" :
         }
 
         private static function roomIdString():String
         {
             return StringUtil.makeMagicString(122, 181, 177, 127, 144, 130, 147, 129, 125, 157, 126, 145, 142, 145, 170);
+            //,"roomid" :
         }
 
         private static function zoomString():String
         {
             return StringUtil.makeMagicString(126, 132, 128, 180, 166, 134, 158, 167, 151, 148, 133, 132, 181, 159, 146, 158, 159);
+            //,"zoom" :
         }
 
         private static function statusString():String
         {
             return StringUtil.makeMagicString(118, 124, 120, 172, 157, 164, 171, 145, 167, 143, 139, 173, 154, 159, 141, 134, 170);
+            //,"status" :
         }
 
         private static function timestampString():String
         {
             return StringUtil.makeMagicString(137, 178, 196, 192, 164, 143, 165, 144, 193, 158, 164, 155, 143, 144, 163, 191, 160, 153, 149, 173, 169, 173, 195);
+            //,"timestamp" :
         }
 
         private static function checksumString():String
         {
             return StringUtil.makeMagicString(120, 179, 124, 161, 132, 139, 150, 176, 139, 145, 157, 141, 169, 127, 152, 175, 153, 140, 156, 143);
+            //,"checksum" :
         }
 
         private static function jsonEndString():String
         {
             return StringUtil.makeMagicString(136, 148, 159, 145, 168);
+            // }
         }
 
         private static function deflate(k:String):ByteArray
