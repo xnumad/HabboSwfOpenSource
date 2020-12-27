@@ -28,7 +28,7 @@
         private static const MANNEQUIN_MAGIC_X_OFFSET:int = 1;
         private static const MANNEQUIN_MAGIC_Y_OFFSET:int = -16;
         private static const AVATAR_WATER_EFFECT_MAGIC_Y_OFFSET:int = -52;
-        private static const _Str_17558:int = 30;
+        private static const MAX_EXTERNAL_IMAGE_COUNT:int = 30;
 
         private var _Str_6409:Number;
         private var spriteCount:int = 0;
@@ -287,7 +287,7 @@
                 _local_5.width = k.width;
                 _local_5.height = k.height;
                 this._Str_18433++;
-                if (this._Str_18433 > _Str_17558)
+                if (this._Str_18433 > MAX_EXTERNAL_IMAGE_COUNT)
                 {
                     _local_5.name = "box";
                 }
