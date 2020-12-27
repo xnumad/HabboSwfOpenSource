@@ -47,7 +47,7 @@
             return this._creditPrice;
         }
 
-        public function get _Str_19681():int
+        public function get ducketPrice():int
         {
             return this._ducketPrice;
         }

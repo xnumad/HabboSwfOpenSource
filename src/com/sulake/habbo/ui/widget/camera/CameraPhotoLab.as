@@ -387,7 +387,7 @@
             }
             _Str_3498 = new PhotoPurchaseConfirmationDialog(this._widget, ITextWindow(this._window.findChildByName("captionInput")).text);
             //var _local_2:Boolean = this._widget._Str_11986();
-            _Str_3498._Str_24882(this._widget.handler.creditPrice, this._widget.handler._Str_19681, this._widget.handler._Str_22201);
+            _Str_3498._Str_24882(this._widget.handler.creditPrice, this._widget.handler.ducketPrice, this._widget.handler._Str_22201);
             HabboTracking.getInstance().trackEventLog("Stories", "camera", "stories.photo.purchase_dialog_opened");
             /*if (!_local_2)
             {
