@@ -82,7 +82,7 @@
             this._cameraPurchaseOKMessageEvent = new CameraPurchaseOKMessageEvent(this.onPurchaseOK);
             this._cameraPublishStatusMessageEvent = new CameraPublishStatusMessageEvent(this._Str_22298);
             this._competitionStatusMessageEvent = new CompetitionStatusMessageEvent(this._Str_24681);
-            this._initCameraMessageEvent = new InitCameraMessageEvent(this._Str_23954);
+            this._initCameraMessageEvent = new InitCameraMessageEvent(this.onInitCameraEvent);
             this._container.connection.addMessageEvent(this._cameraStorageUrlMessageEvent);
             this._container.connection.addMessageEvent(this._cameraPurchaseOKMessageEvent);
             this._container.connection.addMessageEvent(this._cameraPublishStatusMessageEvent);
@@ -98,7 +98,7 @@
             }
         }
 
-        private function _Str_23954(k:InitCameraMessageEvent):void
+        private function onInitCameraEvent(k:InitCameraMessageEvent):void
         {
             this._creditPrice = k.getParser().getCreditPrice();
             this._ducketPrice = k.getParser().getDucketPrice();
