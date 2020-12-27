@@ -73,7 +73,7 @@
             return this._color;
         }
 
-        public function get _Str_21807():Array
+        public function get maskAssetNames():Array
         {
             return this._maskAssetNames;
         }

@@ -10,7 +10,7 @@
         function set cornerPoints(_arg_1:Vector.<Point>):void;
         function get cornerPoints():Vector.<Point>;
         function get color():uint;
-        function get _Str_21807():Array;
+        function get maskAssetNames():Array;
         function get _Str_20731():Array;
         function get _Str_21810():Array;
         function get _Str_19044():Array;
