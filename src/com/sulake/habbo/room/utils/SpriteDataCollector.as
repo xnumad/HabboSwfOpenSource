@@ -70,7 +70,7 @@
             return _local_3;
         }
 
-        private static function _Str_22564(k:RoomObjectSpriteData, _arg_2:RoomObjectSpriteData):Number
+        private static function sortSpriteDataObjects(k:RoomObjectSpriteData, _arg_2:RoomObjectSpriteData):Number
         {
             if (k.z < _arg_2.z)
             {
@@ -192,7 +192,7 @@
                 }
             }
             _local_6 = addMannequinSprites(_local_6, _arg_3);
-            _local_6.sort(_Str_22564);
+            _local_6.sort(sortSpriteDataObjects);
             for each (_local_9 in _local_6)
             {
                 if ((((((!(_local_9.name == null)) && (_local_9.name.length > 0)) && (!(_local_9.name.indexOf("tile_cursor_") == 0))) && (_Str_20789(_local_9, k, _arg_2))) && ((_arg_4 < 0) || (!(_local_9.objectId == _arg_4)))))
