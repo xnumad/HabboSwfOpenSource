@@ -486,7 +486,7 @@
                     if (this._state == IMAGE_LOADED)
                     {
                         this.setState(WAITING_COMPETITION_SUBMIT_TO_COMPLETE);
-                        this._widget.handler._Str_24461();
+                        this._widget.handler.confirmPhotoCompetitionSubmit();
                     }
                     return;
                 case "buy_button":

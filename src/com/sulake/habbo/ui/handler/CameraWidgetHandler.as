@@ -224,7 +224,7 @@
             this._container.connection.send(new PublishPhotoMessageComposer());
         }
 
-        public function _Str_24461():void
+        public function confirmPhotoCompetitionSubmit():void
         {
             this._container.connection.send(new PhotoCompetitionMessageComposer());
         }
