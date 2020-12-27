@@ -70,7 +70,7 @@
             return StringUtil.makeMagicString(126, 132, 128, 180, 166, 134, 158, 167, 151, 148, 133, 132, 181, 159, 146, 158, 159);
         }
 
-        private static function _Str_20902():String
+        private static function statusString():String
         {
             return StringUtil.makeMagicString(118, 124, 120, 172, 157, 164, 171, 145, 167, 143, 139, 173, 154, 159, 141, 134, 170);
         }
@@ -127,7 +127,7 @@
             var timeLastDigits:int = (this.time % 100);
             this.time = (this.time - timeLastDigits);
             var status:int = (((this.time / 100) % 23) + this.topSecurityLevel);
-            dataStrJsonObj = (dataStrJsonObj + (_Str_20902() + status));
+            dataStrJsonObj = (dataStrJsonObj + (statusString() + status));
             var check:int = dataStrJsonObj.length;
             check = ((check + ((this.time / 100) * 17)) % 1493);
             var bytes:ByteArray = CryptoTools.stringToByteArray(dataStrJsonObj);
