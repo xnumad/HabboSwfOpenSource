@@ -242,7 +242,7 @@
                 k.addEffectData(this._photoLab._Str_22711());
                 k.setZoom(this._photoLab._Str_25820());
             }
-            k._Str_14759();
+            k.compressData();
             if (k._Str_17633())
             {
                 this.handler._Str_11986(k);

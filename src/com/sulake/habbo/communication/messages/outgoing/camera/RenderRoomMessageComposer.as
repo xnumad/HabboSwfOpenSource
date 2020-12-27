@@ -109,7 +109,7 @@
             this.zoomLevel = k;
         }
 
-        public function _Str_14759():void
+        public function compressData():void
         {
             var roomPlanesDataJsonObj:String = JSON.stringify(this.roomPlanesDataArr, function (k:Object, _arg_2:Object):*
             {
@@ -196,7 +196,7 @@
         {
             if (this._array.length == 0)
             {
-                this._Str_14759();
+                this.compressData();
             }
             return this._array[0].length < this.DATA_LENGTH_LIMIT;
         }
