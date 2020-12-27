@@ -347,7 +347,7 @@
                 _local_10.z = _local_5;
                 _local_4.add(_local_6.uniqueId, _local_10);
             }
-            _local_7 = _arg_2._Str_14588();
+            _local_7 = _arg_2.getPlaneSortableSprites();
             _local_7.sortOn("z", Array.NUMERIC);
             _local_7.reverse();
             _local_8 = [];

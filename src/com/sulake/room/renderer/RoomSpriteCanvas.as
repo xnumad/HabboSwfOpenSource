@@ -209,7 +209,7 @@
             return this._roomObjectCache._Str_15625();
         }
 
-        public function _Str_14588():Array
+        public function getPlaneSortableSprites():Array
         {
             return this._roomObjectCache._Str_14588();
         }

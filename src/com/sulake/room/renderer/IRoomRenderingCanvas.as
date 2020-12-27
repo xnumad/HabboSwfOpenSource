@@ -23,7 +23,7 @@
         function set mouseListener(_arg_1:IRoomRenderingCanvasMouseListener):void;
         function handleMouseEvent(_arg_1:int, _arg_2:int, _arg_3:String, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Boolean, _arg_7:Boolean):Boolean;
         function getSortableSpriteList():Vector.<RoomObjectSpriteData>;
-        function _Str_14588():Array;
+        function getPlaneSortableSprites():Array;
         function setScale(_arg_1:Number, _arg_2:Point=null, _arg_3:Point=null, _arg_4:Boolean=false):void;
         function get scale():Number;
         function _Str_21425():BitmapData;
