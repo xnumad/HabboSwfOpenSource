@@ -35,7 +35,7 @@
         private var externalImageCount:int = 0;
 
 
-        private static function _Str_22230(k:Vector.<RoomObjectSpriteData>, _arg_2:RoomEngine):Vector.<RoomObjectSpriteData>
+        private static function addMannequinSprites(k:Vector.<RoomObjectSpriteData>, _arg_2:RoomEngine):Vector.<RoomObjectSpriteData>
         {
             var _local_4:RoomObjectSpriteData;
             var _local_5:IRoomObject;
@@ -191,7 +191,7 @@
                     }
                 }
             }
-            _local_6 = _Str_22230(_local_6, _arg_3);
+            _local_6 = addMannequinSprites(_local_6, _arg_3);
             _local_6.sort(_Str_22564);
             for each (_local_9 in _local_6)
             {
