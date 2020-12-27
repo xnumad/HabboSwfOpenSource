@@ -490,7 +490,7 @@
                     }
                     return;
                 case "buy_button":
-                    if ((((this._state == IMAGE_LOADED) && (this._disclaimerAccepted)) && (this._Str_22012(this._widget.handler._Str_20642, this._widget.handler._Str_19681))))
+                    if ((((this._state == IMAGE_LOADED) && (this._disclaimerAccepted)) && (this._Str_22012(this._widget.handler.creditPrice, this._widget.handler._Str_19681))))
                     {
                         this.setState(WAITING_PURCHASE_TO_COMPLETE);
                         this._widget.handler._Str_23090(this._photoId);

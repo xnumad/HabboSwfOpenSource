@@ -42,7 +42,7 @@
             this._roomDesktop = k;
         }
 
-        public function get _Str_20642():int
+        public function get creditPrice():int
         {
             return this._creditPrice;
         }
