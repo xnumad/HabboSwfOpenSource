@@ -21,7 +21,7 @@
         private var _Str_21496:Array;
         private var _Str_20937:String;
         private var _Str_19366:String;
-        private var _Str_21758:String = "[]";
+        private var effectDataJsonObj:String = "[]";
         private var roomId:int;
         private var zoomLevel:int = 1;
         private var topSecurityLevel:int;
@@ -101,7 +101,7 @@
 
         public function _Str_23815(k:String):void
         {
-            this._Str_21758 = k;
+            this.effectDataJsonObj = k;
         }
 
         public function _Str_24694(k:int):void
@@ -119,7 +119,7 @@
                 }
                 return _arg_2;
             });
-            var dataStrJsonObj:String = (((((((((_Str_19186() + roomPlanesDataJsonObj) + _Str_20418()) + this._Str_20937) + _Str_19227()) + this._Str_19366) + _Str_22011()) + this._Str_21758) + _Str_19373()) + this.roomId);
+            var dataStrJsonObj:String = (((((((((_Str_19186() + roomPlanesDataJsonObj) + _Str_20418()) + this._Str_20937) + _Str_19227()) + this._Str_19366) + _Str_22011()) + this.effectDataJsonObj) + _Str_19373()) + this.roomId);
             if (this.zoomLevel != 1)
             {
                 dataStrJsonObj = (dataStrJsonObj + (_Str_22023() + this.zoomLevel));
