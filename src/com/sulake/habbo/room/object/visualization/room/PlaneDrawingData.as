@@ -98,7 +98,7 @@
             return this._alignBottom;
         }
 
-        public function get _Str_17636():Array
+        public function get assetNameColumns():Array
         {
             return this._assetNames;
         }

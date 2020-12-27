@@ -15,6 +15,6 @@
         function get maskAssetFlipHs():Array;
         function get maskAssetFlipVs():Array;
         function isBottomAligned():Boolean;
-        function get _Str_17636():Array;
+        function get assetNameColumns():Array;
     }
 }

@@ -575,7 +575,7 @@
                                         data._Str_22862(assetNames);
                                     }
                                 }
-                                if (data._Str_17636.length > 0)
+                                if (data.assetNameColumns.length > 0)
                                 {
                                     drawingDatas.push(data);
                                 }

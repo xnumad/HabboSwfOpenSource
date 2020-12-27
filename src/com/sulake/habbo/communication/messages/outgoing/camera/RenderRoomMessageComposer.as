@@ -184,7 +184,7 @@
                     _local_10++;
                 }
                 _local_4.setBottomAligned(_local_3.isBottomAligned());
-                _local_11 = _local_3._Str_17636;
+                _local_11 = _local_3.assetNameColumns;
                 if (_local_11.length != 0)
                 {
                     for each (_local_12 in _local_11)
