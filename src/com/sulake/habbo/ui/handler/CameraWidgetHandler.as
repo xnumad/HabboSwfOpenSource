@@ -219,7 +219,7 @@
             this._container.connection.send(new PurchasePhotoMessageComposer(PhotoId));
         }
 
-        public function _Str_23550():void
+        public function confirmPhotoPublish():void
         {
             this._container.connection.send(new PublishPhotoMessageComposer());
         }
