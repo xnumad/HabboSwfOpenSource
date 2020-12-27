@@ -231,7 +231,7 @@
                     {
                         this._widget._Str_23751();
                         //_local_4 = this._widget.handler._Str_18593();
-                        //if (((!(_local_4 == null)) && (_local_4._Str_17633())))
+                        //if (((!(_local_4 == null)) && (_local_4.isSendable())))
                         //{
                             //_Str_15112[this._Str_3290] = _local_4;
                             this._Str_16078(this._Str_2726.bitmap.clone());

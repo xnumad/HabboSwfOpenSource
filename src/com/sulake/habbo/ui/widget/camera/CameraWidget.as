@@ -243,7 +243,7 @@
                 k.setZoom(this._photoLab._Str_25820());
             }
             k.compressData();
-            if (k._Str_17633())
+            if (k.isSendable())
             {
                 this.handler._Str_11986(k);
                 return true;

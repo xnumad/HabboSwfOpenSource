@@ -192,7 +192,7 @@
             return _local_2;
         }
 
-        public function _Str_17633():Boolean
+        public function isSendable():Boolean
         {
             if (this._array.length == 0)
             {

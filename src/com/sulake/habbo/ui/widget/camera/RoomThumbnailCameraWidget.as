@@ -167,7 +167,7 @@
                         //_local_4 = RoomThumbnailCameraWidgetHandler(this.handler)._Str_18593();
                         //if(_local_4 == null)
                             //return;
-                        //if (((!(_local_4 == null)) && (_local_4._Str_17633())))
+                        //if (((!(_local_4 == null)) && (_local_4.isSendable())))
                         //{
                             //this.handler._Str_11986(_local_4);
                             this._window.findChildByName("button_capture").disable();
