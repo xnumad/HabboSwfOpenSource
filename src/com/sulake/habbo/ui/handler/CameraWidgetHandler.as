@@ -229,7 +229,7 @@
             this._container.connection.send(new PhotoCompetitionMessageComposer());
         }
 
-        public function _Str_18593():RenderRoomMessageComposer
+        public function collectPhotoData():RenderRoomMessageComposer
         {
             return this._roomDesktop.roomEngine.getRenderRoomMessage(this._widget._Str_14786(), this._roomDesktop.roomBackgroundColor) as RenderRoomMessageComposer;
         }

@@ -164,7 +164,7 @@
                 {
                     case "button_capture":
                         this.triggerCameraShutterSound();
-                        //_local_4 = RoomThumbnailCameraWidgetHandler(this.handler)._Str_18593();
+                        //_local_4 = RoomThumbnailCameraWidgetHandler(this.handler).collectPhotoData();
                         //if(_local_4 == null)
                             //return;
                         //if (((!(_local_4 == null)) && (_local_4.isSendable())))

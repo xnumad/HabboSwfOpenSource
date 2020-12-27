@@ -88,7 +88,7 @@
             return this._container;
         }
 
-        public function _Str_18593():RenderRoomThumbnailMessageComposer
+        public function collectPhotoData():RenderRoomThumbnailMessageComposer
         {
             return RenderRoomThumbnailMessageComposer(this._roomDesktop.roomEngine.getRenderRoomMessage(this._widget.viewPort, this._roomDesktop.roomBackgroundColor, true));
         }

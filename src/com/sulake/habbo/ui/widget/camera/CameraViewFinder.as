@@ -230,7 +230,7 @@
                     else
                     {
                         this._widget._Str_23751();
-                        //_local_4 = this._widget.handler._Str_18593();
+                        //_local_4 = this._widget.handler.collectPhotoData();
                         //if (((!(_local_4 == null)) && (_local_4.isSendable())))
                         //{
                             //_Str_15112[this._Str_3290] = _local_4;
