@@ -40,7 +40,7 @@
             this.time = new Date().getTime();
         }
 
-        private static function _Str_19186():String
+        private static function planesString():String
         {
             return StringUtil.makeMagicString(142, 178, 155, 183, 194, 196, 168, 157, 195, 152, 143, 163, 197, 154, 200, 148, 158, 148, 200);
         }
@@ -119,7 +119,7 @@
                 }
                 return _arg_2;
             });
-            var dataStrJsonObj:String = (((((((((_Str_19186() + roomPlanesDataJsonObj) + _Str_20418()) + this.spriteDataJsonObj) + _Str_19227()) + this.roomRenderingModifierJsonObj) + _Str_22011()) + this.effectDataJsonObj) + _Str_19373()) + this.roomId);
+            var dataStrJsonObj:String = (((((((((planesString() + roomPlanesDataJsonObj) + _Str_20418()) + this.spriteDataJsonObj) + _Str_19227()) + this.roomRenderingModifierJsonObj) + _Str_22011()) + this.effectDataJsonObj) + _Str_19373()) + this.roomId);
             if (this.zoomLevel != 1)
             {
                 dataStrJsonObj = (dataStrJsonObj + (_Str_22023() + this.zoomLevel));
