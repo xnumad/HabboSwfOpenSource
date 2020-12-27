@@ -48,7 +48,7 @@
             return (k == null) || (k.length == 0);
         }
 
-        public static function _Str_5503(k:int, ... _args):String
+        public static function makeMagicString(k:int, ... _args):String
         {
             var _local_3:String = "";
             var _local_4:int;
