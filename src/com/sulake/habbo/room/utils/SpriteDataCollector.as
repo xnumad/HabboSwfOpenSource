@@ -32,7 +32,7 @@
 
         private var maxZ:Number;
         private var spriteCount:int = 0;
-        private var _Str_18433:int = 0;
+        private var externalImageCount:int = 0;
 
 
         private static function _Str_22230(k:Vector.<RoomObjectSpriteData>, _arg_2:RoomEngine):Vector.<RoomObjectSpriteData>
@@ -286,8 +286,8 @@
             {
                 _local_5.width = k.width;
                 _local_5.height = k.height;
-                this._Str_18433++;
-                if (this._Str_18433 > MAX_EXTERNAL_IMAGE_COUNT)
+                this.externalImageCount++;
+                if (this.externalImageCount > MAX_EXTERNAL_IMAGE_COUNT)
                 {
                     _local_5.name = "box";
                 }
