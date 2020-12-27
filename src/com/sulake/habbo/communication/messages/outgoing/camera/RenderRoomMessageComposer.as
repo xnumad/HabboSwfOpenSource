@@ -26,11 +26,11 @@
         private var zoomLevel:int = 1;
         private var topSecurityLevel:int;
         private var time:Number;
-        protected var _array:Array;
+        protected var _data:Array;
 
         public function RenderRoomMessageComposer(k:Array, _arg_2:String, _arg_3:String, _arg_4:int, _arg_5:int)
         {
-            this._array = [];
+            this._data = [];
             super();
             this.roomPlanesDataArr = this.getRoomPlanesDataArray(k);
             this.spriteDataJsonObj = _arg_2;
@@ -145,7 +145,7 @@
             dataStrJsonObj = (dataStrJsonObj + (timestampString() + (this.time + checksum)));
             dataStrJsonObj = (dataStrJsonObj + ((checksumString() + ((timeLastDigits + 13) * (check + 29))) + jsonEndString()));
             var deflatedMsg:ByteArray = deflate(dataStrJsonObj);
-            this._array = [deflatedMsg];
+            this._data = [deflatedMsg];
         }
 
         protected function getRoomPlanesDataArray(k:Array):Array
@@ -204,25 +204,25 @@
 
         public function isSendable():Boolean
         {
-            if (this._array.length == 0)
+            if (this._data.length == 0)
             {
                 this.compressData();
             }
-            return this._array[0].length < this.DATA_LENGTH_LIMIT;
+            return this._data[0].length < this.DATA_LENGTH_LIMIT;
         }
 
         public function getMessageArray():Array
         {
-            if (this._array.length == 0)
+            if (this._data.length == 0)
             {
                 throw (new Exception("Render room message sending attempt before packData() is called."));
             }
-            return this._array;
+            return this._data;
         }
 
         public function dispose():void
         {
-            this._array = [];
+            this._data = [];
         }
     }
 }
