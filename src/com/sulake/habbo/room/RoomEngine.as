@@ -4408,7 +4408,7 @@
             var _local_9:SpriteDataCollector = new SpriteDataCollector();
             var _local_10:String = _local_9.getFurniData(k, _local_7, this, _local_8);
             var _local_11:String = _local_9.getRoomRenderingModifiers(this);
-            var _local_12:Array = _local_9._Str_22985(k, _local_7, this, _arg_2);
+            var _local_12:Array = _local_9.getRoomPlanes(k, _local_7, this, _arg_2);
             if (_arg_5)
             {
                 _local_7.resumeSpriteVisibilityChecking();

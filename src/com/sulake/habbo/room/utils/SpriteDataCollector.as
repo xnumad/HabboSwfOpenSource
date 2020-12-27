@@ -368,7 +368,7 @@
             return _local_8;
         }
 
-        public function _Str_22985(k:Rectangle, _arg_2:IRoomRenderingCanvas, _arg_3:RoomEngine, _arg_4:uint):Array
+        public function getRoomPlanes(k:Rectangle, _arg_2:IRoomRenderingCanvas, _arg_3:RoomEngine, _arg_4:uint):Array
         {
             var _local_8:IRoomGeometry;
             var _local_9:Array;
