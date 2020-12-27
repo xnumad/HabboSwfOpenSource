@@ -3374,7 +3374,7 @@
             {
                 return;
             }
-            var bmp:BitmapData = roomCanvas._Str_21425();
+            var bmp:BitmapData = roomCanvas.takeScreenShot();
             if (PlayerVersionCheck.isVersionAtLeast(11, 3))
             {
             }

@@ -255,7 +255,7 @@
             return this._scale;
         }
 
-        public function _Str_21425():BitmapData
+        public function takeScreenShot():BitmapData
         {
             this._noSpriteVisibilityChecking = true;
             var k:Number = this._scale;
