@@ -18,7 +18,7 @@
     {
         private const DATA_LENGTH_LIMIT:int = 8100;
 
-        private var _Str_21496:Array;
+        private var roomPlanesDataArr:Array;
         private var spriteDataJsonObj:String;
         private var roomRenderingModifierJsonObj:String;
         private var effectDataJsonObj:String = "[]";
@@ -32,7 +32,7 @@
         {
             this._array = [];
             super();
-            this._Str_21496 = this._Str_24667(k);
+            this.roomPlanesDataArr = this._Str_24667(k);
             this.spriteDataJsonObj = _arg_2;
             this.roomRenderingModifierJsonObj = _arg_3;
             this.roomId = _arg_4;
@@ -111,7 +111,7 @@
 
         public function _Str_14759():void
         {
-            var roomPlanesDataJsonObj:String = JSON.stringify(this._Str_21496, function (k:Object, _arg_2:Object):*
+            var roomPlanesDataJsonObj:String = JSON.stringify(this.roomPlanesDataArr, function (k:Object, _arg_2:Object):*
             {
                 if (((k == "masks") && (_arg_2.length == 0)))
                 {
