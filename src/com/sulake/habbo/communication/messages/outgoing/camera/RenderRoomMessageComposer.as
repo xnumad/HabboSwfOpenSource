@@ -19,7 +19,7 @@
         private const DATA_LENGTH_LIMIT:int = 8100;
 
         private var _Str_21496:Array;
-        private var _Str_20937:String;
+        private var spriteDataJsonObj:String;
         private var roomRenderingModifierJsonObj:String;
         private var effectDataJsonObj:String = "[]";
         private var roomId:int;
@@ -33,7 +33,7 @@
             this._array = [];
             super();
             this._Str_21496 = this._Str_24667(k);
-            this._Str_20937 = _arg_2;
+            this.spriteDataJsonObj = _arg_2;
             this.roomRenderingModifierJsonObj = _arg_3;
             this.roomId = _arg_4;
             this.topSecurityLevel = _arg_5;
@@ -119,7 +119,7 @@
                 }
                 return _arg_2;
             });
-            var dataStrJsonObj:String = (((((((((_Str_19186() + roomPlanesDataJsonObj) + _Str_20418()) + this._Str_20937) + _Str_19227()) + this.roomRenderingModifierJsonObj) + _Str_22011()) + this.effectDataJsonObj) + _Str_19373()) + this.roomId);
+            var dataStrJsonObj:String = (((((((((_Str_19186() + roomPlanesDataJsonObj) + _Str_20418()) + this.spriteDataJsonObj) + _Str_19227()) + this.roomRenderingModifierJsonObj) + _Str_22011()) + this.effectDataJsonObj) + _Str_19373()) + this.roomId);
             if (this.zoomLevel != 1)
             {
                 dataStrJsonObj = (dataStrJsonObj + (_Str_22023() + this.zoomLevel));
