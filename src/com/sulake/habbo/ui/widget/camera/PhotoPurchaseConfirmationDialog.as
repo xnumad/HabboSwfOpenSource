@@ -493,7 +493,7 @@
                     if ((((this._state == IMAGE_LOADED) && (this._disclaimerAccepted)) && (this._Str_22012(this._widget.handler.creditPrice, this._widget.handler.ducketPrice))))
                     {
                         this.setState(WAITING_PURCHASE_TO_COMPLETE);
-                        this._widget.handler._Str_23090(this._photoId);
+                        this._widget.handler.confirmPhotoPurchase(this._photoId);
                     }
                     return;
                 case "publish_button":

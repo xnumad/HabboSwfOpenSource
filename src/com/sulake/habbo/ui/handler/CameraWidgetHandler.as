@@ -214,7 +214,7 @@
             this._roomDesktop.removeListenerFromStage(k, _arg_2);
         }
 
-        public function _Str_23090(PhotoId:String):void
+        public function confirmPhotoPurchase(PhotoId:String):void
         {
             this._container.connection.send(new PurchasePhotoMessageComposer(PhotoId));
         }
