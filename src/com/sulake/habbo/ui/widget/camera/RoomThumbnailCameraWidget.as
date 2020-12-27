@@ -149,7 +149,7 @@
             }
         }
 
-        public function _Str_25628():void
+        public function triggerCameraShutterSound():void
         {
             this.container._Str_2476.playSound(HabboSoundTypesEnum.CAMERA_SHUTTER);
         }
@@ -163,7 +163,7 @@
                 switch (_arg_2.name)
                 {
                     case "button_capture":
-                        this._Str_25628();
+                        this.triggerCameraShutterSound();
                         //_local_4 = RoomThumbnailCameraWidgetHandler(this.handler)._Str_18593();
                         //if(_local_4 == null)
                             //return;
