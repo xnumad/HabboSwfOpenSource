@@ -27,7 +27,7 @@
     {
         private static const MANNEQUIN_MAGIC_X_OFFSET:int = 1;
         private static const MANNEQUIN_MAGIC_Y_OFFSET:int = -16;
-        private static const _Str_18565:int = -52;
+        private static const AVATAR_WATER_EFFECT_MAGIC_Y_OFFSET:int = -52;
         private static const _Str_17558:int = 30;
 
         private var _Str_6409:Number;
@@ -183,7 +183,7 @@
                                 _local_16.z = (_local_16.z + _local_12);
                                 if (((_local_16.name.indexOf("h_std_fx29_") == 0) || (_local_16.name.indexOf("h_std_fx185_") == 0)))
                                 {
-                                    _local_16.y = (_local_16.y + _Str_18565);
+                                    _local_16.y = (_local_16.y + AVATAR_WATER_EFFECT_MAGIC_Y_OFFSET);
                                 }
                                 _local_6.push(_local_16);
                             }
