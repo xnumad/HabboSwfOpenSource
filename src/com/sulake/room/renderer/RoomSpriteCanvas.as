@@ -287,7 +287,7 @@
             this.render(-1, true);
         }
 
-        public function _Str_22174():void
+        public function resumeSpriteVisibilityChecking():void
         {
             this._noSpriteVisibilityChecking = false;
         }

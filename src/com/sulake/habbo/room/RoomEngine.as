@@ -4411,7 +4411,7 @@
             var _local_12:Array = _local_9._Str_22985(k, _local_7, this, _arg_2);
             if (_arg_5)
             {
-                _local_7._Str_22174();
+                _local_7.resumeSpriteVisibilityChecking();
             }
             if (_arg_3)
             {

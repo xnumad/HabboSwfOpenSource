@@ -28,7 +28,7 @@
         function get scale():Number;
         function takeScreenShot():BitmapData;
         function skipSpriteVisibilityChecking():void;
-        function _Str_22174():void;
+        function resumeSpriteVisibilityChecking():void;
         function getId():int;
     }
 }
