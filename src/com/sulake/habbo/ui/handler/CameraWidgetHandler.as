@@ -71,12 +71,12 @@
         {
             if (((this._container) && (this._container.toolbar)))
             {
-                this._container.toolbar.events.removeEventListener(HabboToolbarEvent.HTE_ICON_CAMERA, this._Str_21956);
+                this._container.toolbar.events.removeEventListener(HabboToolbarEvent.HTE_ICON_CAMERA, this.onCameraRequested);
             }
             this._container = k;
             if (((this._container) && (this._container.toolbar)))
             {
-                this._container.toolbar.events.addEventListener(HabboToolbarEvent.HTE_ICON_CAMERA, this._Str_21956);
+                this._container.toolbar.events.addEventListener(HabboToolbarEvent.HTE_ICON_CAMERA, this.onCameraRequested);
             }
             this._cameraStorageUrlMessageEvent = new CameraStorageUrlMessageEvent(this.onCameraStorageUrlEvent);
             this._cameraPurchaseOKMessageEvent = new CameraPurchaseOKMessageEvent(this.onPurchaseOK);
@@ -193,7 +193,7 @@
             this._widget = k;
         }
 
-        private function _Str_21956(k:HabboToolbarEvent):void
+        private function onCameraRequested(k:HabboToolbarEvent):void
         {
             if (k.type == HabboToolbarEvent.HTE_ICON_CAMERA)
             {
