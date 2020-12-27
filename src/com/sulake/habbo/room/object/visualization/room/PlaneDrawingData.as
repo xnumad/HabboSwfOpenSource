@@ -93,7 +93,7 @@
             return this._maskAssetFlipVs;
         }
 
-        public function _Str_14945():Boolean
+        public function isBottomAligned():Boolean
         {
             return this._alignBottom;
         }

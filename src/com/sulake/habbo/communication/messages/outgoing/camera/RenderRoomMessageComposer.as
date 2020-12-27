@@ -183,7 +183,7 @@
                     _local_4.addMask(new JsonMaskDrawingData(_local_6[_local_10], new JsonPoint(_local_7[_local_10].x, _local_7[_local_10].y), _local_8[_local_10], _local_9[_local_10]));
                     _local_10++;
                 }
-                _local_4.setBottomAligned(_local_3._Str_14945());
+                _local_4.setBottomAligned(_local_3.isBottomAligned());
                 _local_11 = _local_3._Str_17636;
                 if (_local_11.length != 0)
                 {
