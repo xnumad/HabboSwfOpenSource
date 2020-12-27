@@ -32,7 +32,7 @@
         {
             this._array = [];
             super();
-            this.roomPlanesDataArr = this._Str_24667(k);
+            this.roomPlanesDataArr = this.getRoomPlanesDataArray(k);
             this.spriteDataJsonObj = _arg_2;
             this.roomRenderingModifierJsonObj = _arg_3;
             this.roomId = _arg_4;
@@ -138,7 +138,7 @@
             this._array = [deflatedMsg];
         }
 
-        protected function _Str_24667(k:Array):Array
+        protected function getRoomPlanesDataArray(k:Array):Array
         {
             var _local_3:IPlaneDrawingData;
             var _local_4:JsonPlaneDrawingData;
