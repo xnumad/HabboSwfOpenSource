@@ -104,7 +104,7 @@
             this.effectDataJsonObj = k;
         }
 
-        public function _Str_24694(k:int):void
+        public function setZoom(k:int):void
         {
             this.zoomLevel = k;
         }

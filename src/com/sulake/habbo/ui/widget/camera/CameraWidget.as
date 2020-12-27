@@ -240,7 +240,7 @@
             if (this._photoLab)
             {
                 k.addEffectData(this._photoLab._Str_22711());
-                k._Str_24694(this._photoLab._Str_25820());
+                k.setZoom(this._photoLab._Str_25820());
             }
             k._Str_14759();
             if (k._Str_17633())
