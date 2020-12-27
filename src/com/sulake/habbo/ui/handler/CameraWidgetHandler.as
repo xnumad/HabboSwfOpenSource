@@ -80,7 +80,7 @@
             }
             this._cameraStorageUrlMessageEvent = new CameraStorageUrlMessageEvent(this._Str_23768);
             this._cameraPurchaseOKMessageEvent = new CameraPurchaseOKMessageEvent(this.onPurchaseOK);
-            this._cameraPublishStatusMessageEvent = new CameraPublishStatusMessageEvent(this._Str_22298);
+            this._cameraPublishStatusMessageEvent = new CameraPublishStatusMessageEvent(this.onPublishStatus);
             this._competitionStatusMessageEvent = new CompetitionStatusMessageEvent(this._Str_24681);
             this._initCameraMessageEvent = new InitCameraMessageEvent(this.onInitCameraEvent);
             this._container.connection.addMessageEvent(this._cameraStorageUrlMessageEvent);
@@ -113,7 +113,7 @@
             }
         }
 
-        private function _Str_22298(k:CameraPublishStatusMessageEvent):void
+        private function onPublishStatus(k:CameraPublishStatusMessageEvent):void
         {
             if (this._widget)
             {
