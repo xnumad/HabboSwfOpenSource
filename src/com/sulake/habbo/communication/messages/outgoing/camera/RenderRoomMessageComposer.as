@@ -80,7 +80,7 @@
             return StringUtil.makeMagicString(137, 178, 196, 192, 164, 143, 165, 144, 193, 158, 164, 155, 143, 144, 163, 191, 160, 153, 149, 173, 169, 173, 195);
         }
 
-        private static function _Str_21670():String
+        private static function checksumString():String
         {
             return StringUtil.makeMagicString(120, 179, 124, 161, 132, 139, 150, 176, 139, 145, 157, 141, 169, 127, 152, 175, 153, 140, 156, 143);
         }
@@ -133,7 +133,7 @@
             var bytes:ByteArray = CryptoTools.stringToByteArray(dataStrJsonObj);
             var checksum:int = CryptoTools.fletcher100(bytes, check, this.roomId);
             dataStrJsonObj = (dataStrJsonObj + (timestampString() + (this.time + checksum)));
-            dataStrJsonObj = (dataStrJsonObj + ((_Str_21670() + ((timeLastDigits + 13) * (check + 29))) + _Str_20791()));
+            dataStrJsonObj = (dataStrJsonObj + ((checksumString() + ((timeLastDigits + 13) * (check + 29))) + _Str_20791()));
             var deflatedMsg:ByteArray = deflate(dataStrJsonObj);
             this._array = [deflatedMsg];
         }
