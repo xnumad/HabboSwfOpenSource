@@ -174,7 +174,7 @@
                 _local_4.addCornerPoint(_local_5[3].x, _local_5[3].y);
                 _local_4.color = _local_3.color;
                 _local_6 = _local_3.maskAssetNames;
-                _local_7 = _local_3._Str_20731;
+                _local_7 = _local_3.maskAssetLocations;
                 _local_8 = _local_3._Str_21810;
                 _local_9 = _local_3._Str_19044;
                 _local_10 = 0;

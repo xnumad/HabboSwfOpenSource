@@ -78,7 +78,7 @@
             return this._maskAssetNames;
         }
 
-        public function get _Str_20731():Array
+        public function get maskAssetLocations():Array
         {
             return this._maskAssetLocations;
         }

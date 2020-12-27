@@ -11,7 +11,7 @@
         function get cornerPoints():Vector.<Point>;
         function get color():uint;
         function get maskAssetNames():Array;
-        function get _Str_20731():Array;
+        function get maskAssetLocations():Array;
         function get _Str_21810():Array;
         function get _Str_19044():Array;
         function _Str_14945():Boolean;
