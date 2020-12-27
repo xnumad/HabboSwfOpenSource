@@ -12,7 +12,7 @@
         function get color():uint;
         function get maskAssetNames():Array;
         function get maskAssetLocations():Array;
-        function get _Str_21810():Array;
+        function get maskAssetFlipHs():Array;
         function get _Str_19044():Array;
         function _Str_14945():Boolean;
         function get _Str_17636():Array;

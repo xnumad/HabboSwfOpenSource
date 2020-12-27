@@ -83,7 +83,7 @@
             return this._maskAssetLocations;
         }
 
-        public function get _Str_21810():Array
+        public function get maskAssetFlipHs():Array
         {
             return this._maskAssetFlipHs;
         }
