@@ -78,7 +78,7 @@
             {
                 this._container.toolbar.events.addEventListener(HabboToolbarEvent.HTE_ICON_CAMERA, this._Str_21956);
             }
-            this._cameraStorageUrlMessageEvent = new CameraStorageUrlMessageEvent(this._Str_23768);
+            this._cameraStorageUrlMessageEvent = new CameraStorageUrlMessageEvent(this.onCameraStorageUrlEvent);
             this._cameraPurchaseOKMessageEvent = new CameraPurchaseOKMessageEvent(this.onPurchaseOK);
             this._cameraPublishStatusMessageEvent = new CameraPublishStatusMessageEvent(this.onPublishStatus);
             this._competitionStatusMessageEvent = new CompetitionStatusMessageEvent(this.onCompetitionStatus);
@@ -129,7 +129,7 @@
             }
         }
 
-        private function _Str_23768(k:CameraStorageUrlMessageEvent):void
+        private function onCameraStorageUrlEvent(k:CameraStorageUrlMessageEvent):void
         {
             if (!this._widget)
             {
