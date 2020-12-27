@@ -209,7 +209,7 @@
             return _local_10;
         }
 
-        public function _Str_24177(k:RoomEngine):String
+        public function getRoomRenderingModifiers(k:RoomEngine):String
         {
             var _local_2:Object = new Object();
             return JSON.stringify(_local_2);
