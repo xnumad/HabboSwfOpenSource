@@ -49,7 +49,7 @@
 
         public function _Str_20818():void
         {
-            var k:int = (this._scrollView._Str_7317 + (this._scrollView._Str_5924.height - this._background.height));
+            var k:int = (this._scrollView._Str_7317 + (this._scrollView.viewPort.height - this._background.height));
             this._thumbTrack.height = Math.min((this._background.height - 4), Math.max(5, int(((this._background.height - 4) * (this._background.height / this._scrollView._Str_18682)))));
             this._thumbTrack.y = Math.min(((this._background.height - 2) - this._thumbTrack.height), Math.max(2, int((((this._background.height - 4) * (Math.max(1, k) / this._scrollView._Str_18682)) - (this._thumbTrack.height / 2)))));
         }

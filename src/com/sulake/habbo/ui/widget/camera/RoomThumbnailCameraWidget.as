@@ -129,7 +129,7 @@
             }
         }
 
-        public function get _Str_5924():Rectangle
+        public function get viewPort():Rectangle
         {
             var k:Point = new Point(0, 0);
             this._imageWindow.getGlobalPosition(k);

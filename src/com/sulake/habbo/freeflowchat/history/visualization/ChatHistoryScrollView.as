@@ -220,12 +220,12 @@
             }
         }
 
-        public function get _Str_5924():Rectangle
+        public function get viewPort():Rectangle
         {
             return this._viewPort;
         }
 
-        public function set _Str_5924(k:Rectangle):void
+        public function set viewPort(k:Rectangle):void
         {
             this._viewPort = k;
             this._rootDisplayObject.width = k.width;
@@ -239,7 +239,7 @@
             }
             this._clipMask.graphics.clear();
             this._clipMask.graphics.beginFill(0xFFFFFF);
-            this._clipMask.graphics.drawRect(0, 0, this._Str_5924.width, this._Str_5924.height);
+            this._clipMask.graphics.drawRect(0, 0, this.viewPort.width, this.viewPort.height);
             this._rootDisplayObject.mask = this._clipMask;
             this._scrollBar.displayObject.x = (this._viewPort.width - ChatHistoryScrollBar._Str_14287);
             this._Str_12498 = k.height;
@@ -260,7 +260,7 @@
 
         public function _Str_24783():void
         {
-            this._Str_7317 = ((this._historyBuffer.totalHeight - this._Str_5924.height) + 100);
+            this._Str_7317 = ((this._historyBuffer.totalHeight - this.viewPort.height) + 100);
         }
 
         public function get isActive():Boolean
@@ -333,14 +333,14 @@
         private function onAddedToStage(k:Event):void
         {
             var _local_2:Stage = this._rootDisplayObject.stage;
-            this._Str_5924 = new Rectangle(0, 0, _local_2.stageWidth, (_local_2.stageHeight - ChatHistoryLayoutEnum._Str_7235));
+            this.viewPort = new Rectangle(0, 0, _local_2.stageWidth, (_local_2.stageHeight - ChatHistoryLayoutEnum._Str_7235));
         }
 
         private function _Str_11094(k:Event):void
         {
             if (this._registeredStage)
             {
-                this._Str_5924 = new Rectangle(0, 0, this._registeredStage.stageWidth, (this._registeredStage.stageHeight - ChatHistoryLayoutEnum._Str_7235));
+                this.viewPort = new Rectangle(0, 0, this._registeredStage.stageWidth, (this._registeredStage.stageHeight - ChatHistoryLayoutEnum._Str_7235));
             }
         }
 
