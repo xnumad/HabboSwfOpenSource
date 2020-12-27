@@ -117,7 +117,7 @@
             {
                 this._Str_2726.bitmap = new BitmapData(this._Str_17640, this._Str_21362, false, 0);
             }
-            this._Str_2726.bitmap.fillRect(this._Str_2726.bitmap.rect, this._widget.handler._Str_6647.roomBackgroundColor);
+            this._Str_2726.bitmap.fillRect(this._Str_2726.bitmap.rect, this._widget.handler.roomDesktop.roomBackgroundColor);
             var _local_2:Matrix = new Matrix();
             var _local_3:Rectangle = this._Str_14786();
             _local_2.translate(-(_local_3.x), -(_local_3.y));

@@ -177,7 +177,7 @@
                 setTimeout(this._Str_20969, 200);
             }
             var k:int;
-            var _local_2:IHabboQuestEngine = this._widget.handler._Str_6647.questEngine;
+            var _local_2:IHabboQuestEngine = this._widget.handler.roomDesktop.questEngine;
             if (_local_2 != null)
             {
                 k = _local_2.getAchievementLevel("explore", "ACH_CameraPhotoCount");

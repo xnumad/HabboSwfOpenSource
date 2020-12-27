@@ -62,7 +62,7 @@
             return RoomWidgetEnum.CAMERA;
         }
 
-        public function get _Str_6647():RoomDesktop
+        public function get roomDesktop():RoomDesktop
         {
             return this._roomDesktop;
         }
