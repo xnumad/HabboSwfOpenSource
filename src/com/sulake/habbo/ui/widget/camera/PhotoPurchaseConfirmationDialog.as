@@ -497,7 +497,7 @@
                     }
                     return;
                 case "publish_button":
-                    if (((this._state == IMAGE_LOADED) && (this._Str_22012(0, this._widget.handler._Str_22201))))
+                    if (((this._state == IMAGE_LOADED) && (this._Str_22012(0, this._widget.handler.publishDucketPrice))))
                     {
                         this.setState(WAITING_PUBLISH_TO_COMPLETE);
                         this._widget.handler._Str_23550();
