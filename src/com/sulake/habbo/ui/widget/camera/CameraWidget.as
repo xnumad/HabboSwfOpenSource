@@ -42,7 +42,7 @@
             if (this.roomEngine)
             {
                 this.roomEngine.events.addEventListener(RoomEngineEvent.DISPOSED, this.onRoomDisposed);
-                this.roomEngine.events.addEventListener(RoomEngineEvent.ROOM_ZOOMED, this._Str_16937);
+                this.roomEngine.events.addEventListener(RoomEngineEvent.ROOM_ZOOMED, this.onRoomZoomed);
             }
             this.handler._Str_23224();
             var _local_7:IHabboQuestEngine = this.handler._Str_6647.questEngine;
@@ -143,7 +143,7 @@
             this.hide();
         }
 
-        private function _Str_16937(k:RoomEngineEvent):void
+        private function onRoomZoomed(k:RoomEngineEvent):void
         {
             if (((this.roomEngine) && (!(this.roomEngine.getRoomCanvasScale() == 1))))
             {

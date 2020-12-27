@@ -41,7 +41,7 @@
             if (this.roomEngine)
             {
                 this.roomEngine.events.addEventListener(RoomEngineEvent.DISPOSED, this.onRoomDisposed);
-                this.roomEngine.events.addEventListener(RoomEngineEvent.ROOM_ZOOMED, this._Str_16937);
+                this.roomEngine.events.addEventListener(RoomEngineEvent.ROOM_ZOOMED, this.onRoomZoomed);
             }
             (_arg_2 as Component).context.addLinkEventTracker(this);
         }
@@ -141,7 +141,7 @@
             this.destroy();
         }
 
-        private function _Str_16937(k:RoomEngineEvent):void
+        private function onRoomZoomed(k:RoomEngineEvent):void
         {
             if (((this.roomEngine) && (!(this.roomEngine.getRoomCanvasScale() == 1))))
             {
