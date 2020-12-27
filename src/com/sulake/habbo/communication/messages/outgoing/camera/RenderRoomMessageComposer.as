@@ -65,7 +65,7 @@
             return StringUtil.makeMagicString(122, 181, 177, 127, 144, 130, 147, 129, 125, 157, 126, 145, 142, 145, 170);
         }
 
-        private static function _Str_22023():String
+        private static function zoomString():String
         {
             return StringUtil.makeMagicString(126, 132, 128, 180, 166, 134, 158, 167, 151, 148, 133, 132, 181, 159, 146, 158, 159);
         }
@@ -122,7 +122,7 @@
             var dataStrJsonObj:String = (((((((((planesString() + roomPlanesDataJsonObj) + spritesString()) + this.spriteDataJsonObj) + modifiersString()) + this.roomRenderingModifierJsonObj) + filtersString()) + this.effectDataJsonObj) + roomIdString()) + this.roomId);
             if (this.zoomLevel != 1)
             {
-                dataStrJsonObj = (dataStrJsonObj + (_Str_22023() + this.zoomLevel));
+                dataStrJsonObj = (dataStrJsonObj + (zoomString() + this.zoomLevel));
             }
             var timeLastDigits:int = (this.time % 100);
             this.time = (this.time - timeLastDigits);
