@@ -30,7 +30,7 @@
         private static const AVATAR_WATER_EFFECT_MAGIC_Y_OFFSET:int = -52;
         private static const MAX_EXTERNAL_IMAGE_COUNT:int = 30;
 
-        private var _Str_6409:Number;
+        private var maxZ:Number;
         private var spriteCount:int = 0;
         private var _Str_18433:int = 0;
 
@@ -198,9 +198,9 @@
                 if ((((((!(_local_9.name == null)) && (_local_9.name.length > 0)) && (!(_local_9.name.indexOf("tile_cursor_") == 0))) && (_Str_20789(_local_9, k, _arg_2))) && ((_arg_4 < 0) || (!(_local_9.objectId == _arg_4)))))
                 {
                     _local_5.push(this._Str_25132(_local_9, k, _arg_2, _arg_3));
-                    if (!this._Str_6409)
+                    if (!this.maxZ)
                     {
-                        this._Str_6409 = _local_9.z;
+                        this.maxZ = _local_9.z;
                     }
                     this.spriteCount++;
                 }
@@ -310,14 +310,14 @@
             if (_arg_3.length > 0)
             {
                 _local_9 = _arg_3[0].z;
-                if (this._Str_6409)
+                if (this.maxZ)
                 {
-                    _local_9 = Math.max(this._Str_6409, _local_9);
+                    _local_9 = Math.max(this.maxZ, _local_9);
                 }
             }
             else
             {
-                _local_9 = ((this._Str_6409) ? this._Str_6409 : 0);
+                _local_9 = ((this.maxZ) ? this.maxZ : 0);
             }
             _local_9 = (_local_9 + ((this.spriteCount * 1.776104) + (_arg_3.length * 2.31743)));
             var _local_10:IPlaneDrawingData = new PlaneDrawingData(null, _arg_2);
@@ -336,9 +336,9 @@
             var _local_11:IRoomObjectSprite;
             var _local_4:Map = new Map();
             var _local_5:Number = 1;
-            if (this._Str_6409)
+            if (this.maxZ)
             {
-                _local_5 = (_local_5 + this._Str_6409);
+                _local_5 = (_local_5 + this.maxZ);
             }
             for each (_local_6 in k)
             {
