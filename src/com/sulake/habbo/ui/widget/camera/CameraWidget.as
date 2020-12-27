@@ -245,7 +245,7 @@
             k.compressData();
             if (k.isSendable())
             {
-                this.handler._Str_11986(k);
+                this.handler.sendPhotoData(k);
                 return true;
             }
             return false;

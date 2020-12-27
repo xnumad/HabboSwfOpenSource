@@ -234,7 +234,7 @@
             return this._roomDesktop.roomEngine.getRenderRoomMessage(this._widget._Str_14786(), this._roomDesktop.roomBackgroundColor) as RenderRoomMessageComposer;
         }
 
-        public function _Str_11986(k:RenderRoomMessageComposer):void
+        public function sendPhotoData(k:RenderRoomMessageComposer):void
         {
             this._container.connection.send(k);
         }
