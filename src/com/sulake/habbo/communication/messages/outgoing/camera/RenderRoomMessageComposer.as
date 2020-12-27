@@ -16,7 +16,7 @@
 
     public class RenderRoomMessageComposer implements IMessageComposer 
     {
-        private const _Str_22717:int = 8100;
+        private const DATA_LENGTH_LIMIT:int = 8100;
 
         private var _Str_21496:Array;
         private var _Str_20937:String;
@@ -198,7 +198,7 @@
             {
                 this._Str_14759();
             }
-            return this._array[0].length < this._Str_22717;
+            return this._array[0].length < this.DATA_LENGTH_LIMIT;
         }
 
         public function getMessageArray():Array
