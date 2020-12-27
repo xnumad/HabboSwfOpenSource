@@ -26,7 +26,7 @@
     public class SpriteDataCollector 
     {
         private static const MANNEQUIN_MAGIC_X_OFFSET:int = 1;
-        private static const _Str_18197:int = -16;
+        private static const MANNEQUIN_MAGIC_Y_OFFSET:int = -16;
         private static const _Str_18565:int = -52;
         private static const _Str_17558:int = 30;
 
@@ -55,7 +55,7 @@
                             for each (_local_7 in _local_6)
                             {
                                 _local_7.x = (_local_7.x + ((_local_4.x + (_local_4.width / 2)) + MANNEQUIN_MAGIC_X_OFFSET));
-                                _local_7.y = (_local_7.y + ((_local_4.y + _local_4.height) + _Str_18197));
+                                _local_7.y = (_local_7.y + ((_local_4.y + _local_4.height) + MANNEQUIN_MAGIC_Y_OFFSET));
                                 _local_7.z = (_local_7.z + _local_4.z);
                                 _local_3.push(_local_7);
                             }
