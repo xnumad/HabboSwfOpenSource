@@ -226,11 +226,11 @@
             }
         }
 
-        public function _Str_10685(k:CompetitionStatusMessageEvent):void
+        public function competitionStatus(k:CompetitionStatusMessageEvent):void
         {
             if (this._photoLab)
             {
-                this._photoLab._Str_10685(k);
+                this._photoLab.competitionStatus(k);
             }
         }
 

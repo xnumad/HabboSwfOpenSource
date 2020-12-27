@@ -432,11 +432,11 @@
             }
         }
 
-        public function _Str_10685(k:CompetitionStatusMessageEvent):void
+        public function competitionStatus(k:CompetitionStatusMessageEvent):void
         {
             if (_Str_3498)
             {
-                _Str_3498._Str_10685(k);
+                _Str_3498.competitionStatus(k);
             }
         }
 

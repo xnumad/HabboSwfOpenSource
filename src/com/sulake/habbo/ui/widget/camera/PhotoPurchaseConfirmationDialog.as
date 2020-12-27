@@ -389,7 +389,7 @@
             }
         }
 
-        public function _Str_10685(k:CompetitionStatusMessageEvent):void
+        public function competitionStatus(k:CompetitionStatusMessageEvent):void
         {
             var _local_3:IConfirmDialog;
             if (((this._window == null) || (this._window.findChildByName("competition_wrapper") == null)))

@@ -125,7 +125,7 @@
         {
             if (this._widget)
             {
-                this._widget._Str_10685(k);
+                this._widget.competitionStatus(k);
             }
         }
 
