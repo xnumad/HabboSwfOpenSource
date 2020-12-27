@@ -90,7 +90,7 @@
             this._container.connection.addMessageEvent(this._initCameraMessageEvent);
         }
 
-        public function _Str_23224():void
+        public function sendInitCameraMessage():void
         {
             if (this._container.sessionDataManager.isPerkAllowed(PerkEnum.CAMERA))
             {

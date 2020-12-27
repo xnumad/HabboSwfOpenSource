@@ -44,7 +44,7 @@
                 this.roomEngine.events.addEventListener(RoomEngineEvent.DISPOSED, this.onRoomDisposed);
                 this.roomEngine.events.addEventListener(RoomEngineEvent.ROOM_ZOOMED, this.onRoomZoomed);
             }
-            this.handler._Str_23224();
+            this.handler.sendInitCameraMessage();
             var _local_7:IHabboQuestEngine = this.handler.roomDesktop.questEngine;
             if (_local_7 != null)
             {
