@@ -39,7 +39,7 @@
     public class CameraPhotoLab implements IDisposable 
     {
         private static var TEXT_WIDTH_MARGIN:int = 6;
-        private static var _Str_3498:PhotoPurchaseConfirmationDialog;
+        private static var _purchaseConfirmationDialog:PhotoPurchaseConfirmationDialog;
 
         private var _widget:CameraWidget;
         private var _window:IWindowContainer;
@@ -89,9 +89,9 @@
             {
                 return;
             }
-            if (_Str_3498)
+            if (_purchaseConfirmationDialog)
             {
-                _Str_3498.hide();
+                _purchaseConfirmationDialog.hide();
             }
             CameraEffect._Str_21096();
             this._Str_15808 = null;
@@ -372,9 +372,9 @@
 
         private function _Str_19845(k:MouseEvent):void
         {
-            if (_Str_3498)
+            if (_purchaseConfirmationDialog)
             {
-                _Str_3498.hide();
+                _purchaseConfirmationDialog.hide();
             }
             if (this._widget.container.sessionDataManager.isAccountSafetyLocked())
             {
@@ -385,13 +385,13 @@
                 }
                 return;
             }
-            _Str_3498 = new PhotoPurchaseConfirmationDialog(this._widget, ITextWindow(this._window.findChildByName("captionInput")).text);
+            _purchaseConfirmationDialog = new PhotoPurchaseConfirmationDialog(this._widget, ITextWindow(this._window.findChildByName("captionInput")).text);
             //var _local_2:Boolean = this._widget.sendPhotoData();
-            _Str_3498._Str_24882(this._widget.handler.creditPrice, this._widget.handler.ducketPrice, this._widget.handler.publishDucketPrice);
+            _purchaseConfirmationDialog._Str_24882(this._widget.handler.creditPrice, this._widget.handler.ducketPrice, this._widget.handler.publishDucketPrice);
             HabboTracking.getInstance().trackEventLog("Stories", "camera", "stories.photo.purchase_dialog_opened");
             /*if (!_local_2)
             {
-                _Str_3498._Str_19543();
+                _purchaseConfirmationDialog._Str_19543();
                 this._widget.windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
             }*/
             this.hide();
@@ -409,34 +409,34 @@
 
         public function _Str_23866():void
         {
-            if (_Str_3498)
+            if (_purchaseConfirmationDialog)
             {
-                _Str_3498.hide();
-                _Str_3498 = null;
+                _purchaseConfirmationDialog.hide();
+                _purchaseConfirmationDialog = null;
             }
         }
 
         internal function _Str_22386():void
         {
-            if (_Str_3498)
+            if (_purchaseConfirmationDialog)
             {
-                _Str_3498._Str_22361();
+                _purchaseConfirmationDialog._Str_22361();
             }
         }
 
         public function _Str_12205(k:CameraPublishStatusMessageEvent):void
         {
-            if (_Str_3498)
+            if (_purchaseConfirmationDialog)
             {
-                _Str_3498._Str_12205(k);
+                _purchaseConfirmationDialog._Str_12205(k);
             }
         }
 
         public function competitionStatus(k:CompetitionStatusMessageEvent):void
         {
-            if (_Str_3498)
+            if (_purchaseConfirmationDialog)
             {
-                _Str_3498.competitionStatus(k);
+                _purchaseConfirmationDialog.competitionStatus(k);
             }
         }
 
@@ -632,9 +632,9 @@
 
         public function _Str_16763(k:String):void
         {
-            if (_Str_3498)
+            if (_purchaseConfirmationDialog)
             {
-                _Str_3498._Str_24775(k);
+                _purchaseConfirmationDialog._Str_24775(k);
             }
         }
 
