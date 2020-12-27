@@ -351,12 +351,12 @@
             this._Str_17828 = k;
         }
 
-        public function get _Str_6594():int
+        public function get zoomLevel():int
         {
             return this._Str_9022;
         }
 
-        public function set _Str_6594(k:int):void
+        public function set zoomLevel(k:int):void
         {
             if (((k < 1) || (k > 2)))
             {

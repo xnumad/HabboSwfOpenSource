@@ -303,13 +303,13 @@
                         this._Str_16217();
                         break;
                     case "zoom":
-                        if (this._heightMapEditor._Str_6594 == 1)
+                        if (this._heightMapEditor.zoomLevel == 1)
                         {
-                            this._heightMapEditor._Str_6594 = 2;
+                            this._heightMapEditor.zoomLevel = 2;
                         }
                         else
                         {
-                            this._heightMapEditor._Str_6594 = 1;
+                            this._heightMapEditor.zoomLevel = 1;
                         }
                         this._heightMapEditor._Str_9032();
                         break;

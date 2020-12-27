@@ -23,7 +23,7 @@
         private var _Str_19366:String;
         private var _Str_21758:String = "[]";
         private var roomId:int;
-        private var _Str_6594:int = 1;
+        private var zoomLevel:int = 1;
         private var topSecurityLevel:int;
         private var time:Number;
         protected var _array:Array;
@@ -106,7 +106,7 @@
 
         public function _Str_24694(k:int):void
         {
-            this._Str_6594 = k;
+            this.zoomLevel = k;
         }
 
         public function _Str_14759():void
@@ -120,9 +120,9 @@
                 return _arg_2;
             });
             var dataStrJsonObj:String = (((((((((_Str_19186() + roomPlanesDataJsonObj) + _Str_20418()) + this._Str_20937) + _Str_19227()) + this._Str_19366) + _Str_22011()) + this._Str_21758) + _Str_19373()) + this.roomId);
-            if (this._Str_6594 != 1)
+            if (this.zoomLevel != 1)
             {
-                dataStrJsonObj = (dataStrJsonObj + (_Str_22023() + this._Str_6594));
+                dataStrJsonObj = (dataStrJsonObj + (_Str_22023() + this.zoomLevel));
             }
             var timeLastDigits:int = (this.time % 100);
             this.time = (this.time - timeLastDigits);
