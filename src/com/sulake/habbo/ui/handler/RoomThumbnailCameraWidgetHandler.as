@@ -93,7 +93,7 @@
             return RenderRoomThumbnailMessageComposer(this._roomDesktop.roomEngine.getRenderRoomMessage(this._widget.viewPort, this._roomDesktop.roomBackgroundColor, true));
         }
 
-        public function _Str_11986(k:RenderRoomThumbnailMessageComposer):void
+        public function sendPhotoData(k:RenderRoomThumbnailMessageComposer):void
         {
             this._container.connection.send(k);
         }

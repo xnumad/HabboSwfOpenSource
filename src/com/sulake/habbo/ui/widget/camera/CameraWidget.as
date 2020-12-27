@@ -234,7 +234,7 @@
             }
         }
 
-        public function _Str_11986():Boolean
+        public function sendPhotoData():Boolean
         {
             var k:RenderRoomMessageComposer = this._viewFinder.getRenderRoomMessage();
             if (this._photoLab)

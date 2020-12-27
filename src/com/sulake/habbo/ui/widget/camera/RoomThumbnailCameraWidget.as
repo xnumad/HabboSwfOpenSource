@@ -169,7 +169,7 @@
                             //return;
                         //if (((!(_local_4 == null)) && (_local_4.isSendable())))
                         //{
-                            //this.handler._Str_11986(_local_4);
+                            //this.handler.sendPhotoData(_local_4);
                             this._window.findChildByName("button_capture").disable();
                             this._window.findChildByName("button_cancel").disable();
                             this._component.removeUpdateReceiver(this);
