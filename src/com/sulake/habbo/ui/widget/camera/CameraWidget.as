@@ -239,7 +239,7 @@
             var k:RenderRoomMessageComposer = this._viewFinder.getRenderRoomMessage();
             if (this._photoLab)
             {
-                k._Str_23815(this._photoLab._Str_22711());
+                k.addEffectData(this._photoLab._Str_22711());
                 k._Str_24694(this._photoLab._Str_25820());
             }
             k._Str_14759();

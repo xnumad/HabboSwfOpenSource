@@ -99,7 +99,7 @@
         }
 
 
-        public function _Str_23815(k:String):void
+        public function addEffectData(k:String):void
         {
             this.effectDataJsonObj = k;
         }
