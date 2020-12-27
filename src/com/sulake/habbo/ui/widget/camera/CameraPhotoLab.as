@@ -38,7 +38,7 @@
 
     public class CameraPhotoLab implements IDisposable 
     {
-        private static var _Str_10423:int = 6;
+        private static var TEXT_WIDTH_MARGIN:int = 6;
         private static var _Str_3498:PhotoPurchaseConfirmationDialog;
 
         private var _widget:CameraWidget;
@@ -139,7 +139,7 @@
         private function _Str_19878():void
         {
             this._Str_10873.text = (((this._Str_4049.description + " ") + int((this._Str_4049._Str_10615() * 100))) + "%");
-            this._Str_10873.width = (this._Str_10873.textWidth + _Str_10423);
+            this._Str_10873.width = (this._Str_10873.textWidth + TEXT_WIDTH_MARGIN);
         }
 
         internal function _Str_19577(k:String):void
@@ -288,11 +288,11 @@
             var _local_4:IRegionWindow = (this._window.findChildByName("zoom_button") as IRegionWindow);
             var _local_5:IBorderWindow = (_local_4.getChildByName("centerizer") as IBorderWindow);
             var _local_6:ITextWindow = (_local_5.getChildByName("zoom_text") as ITextWindow);
-            _local_6.width = (_local_6.textWidth + _Str_10423);
+            _local_6.width = (_local_6.textWidth + TEXT_WIDTH_MARGIN);
             var _local_7:IRegionWindow = (this._window.findChildByName("save_button") as IRegionWindow);
             var _local_8:IBorderWindow = (_local_7.getChildByName("centerizer") as IBorderWindow);
             var _local_9:ITextWindow = (_local_8.getChildByName("save_text") as ITextWindow);
-            _local_9.width = (_local_9.textWidth + _Str_10423);
+            _local_9.width = (_local_9.textWidth + TEXT_WIDTH_MARGIN);
             var _local_10:IDisplayObjectWrapper = (this._window.findChildByName("save_click_catcher") as IDisplayObjectWrapper);
             var _local_11:Sprite = new Sprite();
             _local_11.graphics.beginFill(0xFF0000, 0);
