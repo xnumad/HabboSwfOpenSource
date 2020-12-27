@@ -204,7 +204,7 @@
             }
         }
 
-        public function _Str_15625():Vector.<RoomObjectSpriteData>
+        public function getSortableSpriteList():Vector.<RoomObjectSpriteData>
         {
             return this._roomObjectCache._Str_15625();
         }

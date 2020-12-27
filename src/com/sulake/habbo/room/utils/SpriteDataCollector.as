@@ -149,7 +149,7 @@
             var _local_15:Point;
             var _local_16:RoomObjectSpriteData;
             var _local_5:Vector.<Object> = new Vector.<Object>();
-            var _local_6:Vector.<RoomObjectSpriteData> = _arg_2._Str_15625();
+            var _local_6:Vector.<RoomObjectSpriteData> = _arg_2.getSortableSpriteList();
             var _local_7:Array = _arg_3.getRoomObjects(_arg_3.activeRoomId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
             for each (_local_8 in _local_7)
             {
