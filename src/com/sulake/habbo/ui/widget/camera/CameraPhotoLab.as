@@ -270,7 +270,7 @@
             this._window.center();
             if (this._widget.component.getProperty("camera.effects.enabled") != "true")
             {
-                this._Str_19845(null);
+                this.openPurchaseConfirmationDialog(null);
                 return;
             }
             this._itemGrid = (this._window.findChildByName("item_grid") as IScrollableGridWindow);
@@ -284,7 +284,7 @@
             this._Str_11677.graphics.beginFill(0xFF0000, 0);
             this._Str_11677.graphics.drawRect(0, 0, _local_3.width, _local_3.height);
             _local_3.setDisplayObject(this._Str_11677);
-            this._Str_11677.addEventListener(MouseEvent.CLICK, this._Str_19845);
+            this._Str_11677.addEventListener(MouseEvent.CLICK, this.openPurchaseConfirmationDialog);
             var _local_4:IRegionWindow = (this._window.findChildByName("zoom_button") as IRegionWindow);
             var _local_5:IBorderWindow = (_local_4.getChildByName("centerizer") as IBorderWindow);
             var _local_6:ITextWindow = (_local_5.getChildByName("zoom_text") as ITextWindow);
@@ -370,7 +370,7 @@
             }
         }
 
-        private function _Str_19845(k:MouseEvent):void
+        private function openPurchaseConfirmationDialog(k:MouseEvent):void
         {
             if (_purchaseConfirmationDialog)
             {
