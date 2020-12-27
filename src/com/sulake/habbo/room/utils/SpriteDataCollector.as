@@ -83,7 +83,7 @@
             return -1;
         }
 
-        private static function _Str_20789(k:RoomObjectSpriteData, _arg_2:Rectangle, _arg_3:IRoomRenderingCanvas):Boolean
+        private static function isSpriteInViewPort(k:RoomObjectSpriteData, _arg_2:Rectangle, _arg_3:IRoomRenderingCanvas):Boolean
         {
             var _local_4:Rectangle = new Rectangle((k.x + _arg_3.screenOffsetX), (k.y + _arg_3.screenOffsetY), k.width, k.height);
             return _local_4.intersects(_arg_2);
@@ -195,7 +195,7 @@
             _local_6.sort(sortSpriteDataObjects);
             for each (_local_9 in _local_6)
             {
-                if ((((((!(_local_9.name == null)) && (_local_9.name.length > 0)) && (!(_local_9.name.indexOf("tile_cursor_") == 0))) && (_Str_20789(_local_9, k, _arg_2))) && ((_arg_4 < 0) || (!(_local_9.objectId == _arg_4)))))
+                if ((((((!(_local_9.name == null)) && (_local_9.name.length > 0)) && (!(_local_9.name.indexOf("tile_cursor_") == 0))) && (isSpriteInViewPort(_local_9, k, _arg_2))) && ((_arg_4 < 0) || (!(_local_9.objectId == _arg_4)))))
                 {
                     _local_5.push(this.getSpriteDataObject(_local_9, k, _arg_2, _arg_3));
                     if (!this.maxZ)
