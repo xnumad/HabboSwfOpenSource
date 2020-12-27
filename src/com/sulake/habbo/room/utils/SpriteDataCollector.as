@@ -89,7 +89,7 @@
             return _local_4.intersects(_arg_2);
         }
 
-        private static function _Str_14110(k:Point, _arg_2:Point, _arg_3:Point, _arg_4:Point):Vector.<Point>
+        private static function sortQuadPoints(k:Point, _arg_2:Point, _arg_3:Point, _arg_4:Point):Vector.<Point>
         {
             var _local_6:Point;
             var _local_5:Vector.<Point> = new Vector.<Point>(0);
@@ -306,7 +306,7 @@
             var _local_5:Point = new Point(k.width, 0);
             var _local_6:Point = new Point(0, k.height);
             var _local_7:Point = new Point(k.width, k.height);
-            var _local_8:Vector.<Point> = _Str_14110(_local_4, _local_5, _local_6, _local_7);
+            var _local_8:Vector.<Point> = sortQuadPoints(_local_4, _local_5, _local_6, _local_7);
             if (_arg_3.length > 0)
             {
                 _local_9 = _arg_3[0].z;
@@ -439,7 +439,7 @@
                     }
                     else
                     {
-                        _local_22 = _Str_14110(_local_15, _local_16, _local_17, _local_18);
+                        _local_22 = sortQuadPoints(_local_15, _local_16, _local_17, _local_18);
                         for each (_local_23 in _local_12._Str_22136(_local_8))
                         {
                             _local_23.cornerPoints = _local_22;
