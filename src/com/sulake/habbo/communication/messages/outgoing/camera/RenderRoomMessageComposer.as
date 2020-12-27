@@ -45,7 +45,7 @@
             return StringUtil.makeMagicString(142, 178, 155, 183, 194, 196, 168, 157, 195, 152, 143, 163, 197, 154, 200, 148, 158, 148, 200);
         }
 
-        private static function _Str_20418():String
+        private static function spritesString():String
         {
             return StringUtil.makeMagicString(113, 119, 172, 167, 152, 139, 154, 118, 141, 140, 125, 169, 152, 119, 168, 165, 129, 146);
         }
@@ -119,7 +119,7 @@
                 }
                 return _arg_2;
             });
-            var dataStrJsonObj:String = (((((((((planesString() + roomPlanesDataJsonObj) + _Str_20418()) + this.spriteDataJsonObj) + _Str_19227()) + this.roomRenderingModifierJsonObj) + _Str_22011()) + this.effectDataJsonObj) + _Str_19373()) + this.roomId);
+            var dataStrJsonObj:String = (((((((((planesString() + roomPlanesDataJsonObj) + spritesString()) + this.spriteDataJsonObj) + _Str_19227()) + this.roomRenderingModifierJsonObj) + _Str_22011()) + this.effectDataJsonObj) + _Str_19373()) + this.roomId);
             if (this.zoomLevel != 1)
             {
                 dataStrJsonObj = (dataStrJsonObj + (_Str_22023() + this.zoomLevel));
