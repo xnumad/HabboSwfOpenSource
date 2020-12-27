@@ -142,7 +142,7 @@
             return this._ht * this._scale;
         }
 
-        public function set _Str_3629(k:int):void
+        public function set screenOffsetX(k:int):void
         {
             this._mouseLocation.x = (this._mouseLocation.x - (k - this._screenOffsetX));
             this._screenOffsetX = k;
@@ -154,7 +154,7 @@
             this._screenOffsetY = k;
         }
 
-        public function get _Str_3629():int
+        public function get screenOffsetX():int
         {
             return this._screenOffsetX;
         }
@@ -246,7 +246,7 @@
                     this._display.rotationX = NaN;
                 }
             }
-            this._Str_3629 = (_arg_3.x - (_arg_2.x * k));
+            this.screenOffsetX = (_arg_3.x - (_arg_2.x * k));
             this._Str_3768 = (_arg_3.y - (_arg_2.y * k));
         }
 

@@ -847,7 +847,7 @@
             {
                 if (this._activeRoomIsDragged)
                 {
-                    _local_4._Str_3629 = (_local_4._Str_3629 + this._activeRoomDragX);
+                    _local_4.screenOffsetX = (_local_4.screenOffsetX + this._activeRoomDragX);
                     _local_4._Str_3768 = (_local_4._Str_3768 + this._activeRoomDragY);
                     this._activeRoomDragX = 0;
                     this._activeRoomDragY = 0;
@@ -952,7 +952,7 @@
                         _local_33.y = (_local_33.y + Math.round((_local_11.height / 2)));
                         if (_local_14 != null)
                         {
-                            _local_14.offset(-(_local_5._Str_3629), -(_local_5._Str_3768));
+                            _local_14.offset(-(_local_5.screenOffsetX), -(_local_5._Str_3768));
                             if (((_local_14.width > 1) && (_local_14.height > 1)))
                             {
                                 _local_29 = (((_local_14.left - _local_33.x) - (_local_7.scale * 0.25)) / _local_24);
@@ -1074,7 +1074,7 @@
                         }
                         if (_local_33 != null)
                         {
-                            _local_33.x = (_local_33.x + _local_5._Str_3629);
+                            _local_33.x = (_local_33.x + _local_5.screenOffsetX);
                             _local_33.y = (_local_33.y + _local_5._Str_3768);
                             _local_15.z = _local_10;
                             _local_15.x = (Math.round((_local_23.x * 2)) / 2);
@@ -1144,7 +1144,7 @@
                         }
                         if (this.useOffsetScrolling)
                         {
-                            _local_5._Str_3629 = -(_local_8.location.x);
+                            _local_5.screenOffsetX = -(_local_8.location.x);
                             _local_5._Str_3768 = -(_local_8.location.y);
                         }
                         else
@@ -1835,7 +1835,7 @@
             {
                 return null;
             }
-            return new Point(_local_3._Str_3629, _local_3._Str_3768);
+            return new Point(_local_3.screenOffsetX, _local_3._Str_3768);
         }
 
         public function setRoomCanvasScreenOffset(k:int, _arg_2:int, _arg_3:Point):Boolean
@@ -1845,7 +1845,7 @@
             {
                 return false;
             }
-            _local_4._Str_3629 = _arg_3.x;
+            _local_4.screenOffsetX = _arg_3.x;
             _local_4._Str_3768 = _arg_3.y;
             return true;
         }
@@ -1910,7 +1910,7 @@
                                             _local_11._Str_8564 = false;
                                             _local_11._Str_8690 = false;
                                         }
-                                        _local_11.resetLocation(new Vector3d(-(k._Str_3629), -(k._Str_3768)));
+                                        _local_11.resetLocation(new Vector3d(-(k.screenOffsetX), -(k._Str_3768)));
                                     }
                                     if (this._cameraCentered)
                                     {
@@ -3830,7 +3830,7 @@
                             _local_8.offset(_local_11.x, _local_11.y);
                             if (_local_9 != null)
                             {
-                                _local_8.offset(((_local_9.width / 2) + _local_9._Str_3629), ((_local_9.height / 2) + _local_9._Str_3768));
+                                _local_8.offset(((_local_9.width / 2) + _local_9.screenOffsetX), ((_local_9.height / 2) + _local_9._Str_3768));
                                 return _local_8;
                             }
                         }
@@ -3863,7 +3863,7 @@
                         {
                             _local_7.x = (_local_7.x * _local_8.scale);
                             _local_7.y = (_local_7.y * _local_8.scale);
-                            _local_7.offset(((_local_8.width / 2) + _local_8._Str_3629), ((_local_8.height / 2) + _local_8._Str_3768));
+                            _local_7.offset(((_local_8.width / 2) + _local_8.screenOffsetX), ((_local_8.height / 2) + _local_8._Str_3768));
                         }
                         return _local_7;
                     }

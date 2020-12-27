@@ -13,9 +13,9 @@
         function initialize(_arg_1:int, _arg_2:int):void;
         function get width():int;
         function get height():int;
-        function set _Str_3629(_arg_1:int):void;
+        function set screenOffsetX(_arg_1:int):void;
         function set _Str_3768(_arg_1:int):void;
-        function get _Str_3629():int;
+        function get screenOffsetX():int;
         function get _Str_3768():int;
         function render(_arg_1:int, _arg_2:Boolean=false):void;
         function get displayObject():DisplayObject;
