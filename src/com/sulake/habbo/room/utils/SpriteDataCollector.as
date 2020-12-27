@@ -197,7 +197,7 @@
             {
                 if ((((((!(_local_9.name == null)) && (_local_9.name.length > 0)) && (!(_local_9.name.indexOf("tile_cursor_") == 0))) && (_Str_20789(_local_9, k, _arg_2))) && ((_arg_4 < 0) || (!(_local_9.objectId == _arg_4)))))
                 {
-                    _local_5.push(this._Str_25132(_local_9, k, _arg_2, _arg_3));
+                    _local_5.push(this.getSpriteDataObject(_local_9, k, _arg_2, _arg_3));
                     if (!this.maxZ)
                     {
                         this.maxZ = _local_9.z;
@@ -215,7 +215,7 @@
             return JSON.stringify(_local_2);
         }
 
-        private function _Str_25132(k:RoomObjectSpriteData, _arg_2:Rectangle, _arg_3:IRoomRenderingCanvas, _arg_4:RoomEngine):Object
+        private function getSpriteDataObject(k:RoomObjectSpriteData, _arg_2:Rectangle, _arg_3:IRoomRenderingCanvas, _arg_4:RoomEngine):Object
         {
             var _local_7:String;
             var _local_9:Array;
