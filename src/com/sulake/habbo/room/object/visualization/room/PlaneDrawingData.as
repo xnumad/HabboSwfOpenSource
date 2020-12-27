@@ -88,7 +88,7 @@
             return this._maskAssetFlipHs;
         }
 
-        public function get _Str_19044():Array
+        public function get maskAssetFlipVs():Array
         {
             return this._maskAssetFlipVs;
         }

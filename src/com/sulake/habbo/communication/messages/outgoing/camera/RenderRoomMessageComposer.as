@@ -176,7 +176,7 @@
                 _local_6 = _local_3.maskAssetNames;
                 _local_7 = _local_3.maskAssetLocations;
                 _local_8 = _local_3.maskAssetFlipHs;
-                _local_9 = _local_3._Str_19044;
+                _local_9 = _local_3.maskAssetFlipVs;
                 _local_10 = 0;
                 while (_local_10 < _local_6.length)
                 {
