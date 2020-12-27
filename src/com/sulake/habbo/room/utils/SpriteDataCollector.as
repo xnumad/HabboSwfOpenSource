@@ -85,7 +85,7 @@
 
         private static function _Str_20789(k:RoomObjectSpriteData, _arg_2:Rectangle, _arg_3:IRoomRenderingCanvas):Boolean
         {
-            var _local_4:Rectangle = new Rectangle((k.x + _arg_3.screenOffsetX), (k.y + _arg_3._Str_3768), k.width, k.height);
+            var _local_4:Rectangle = new Rectangle((k.x + _arg_3.screenOffsetX), (k.y + _arg_3.screenOffsetY), k.width, k.height);
             return _local_4.intersects(_arg_2);
         }
 
@@ -256,7 +256,7 @@
             _local_5.x = (k.x - _arg_2.x);
             _local_5.y = (k.y - _arg_2.y);
             _local_5.x = (_local_5.x + _arg_3.screenOffsetX);
-            _local_5.y = (_local_5.y + _arg_3._Str_3768);
+            _local_5.y = (_local_5.y + _arg_3.screenOffsetY);
             _local_5.z = k.z;
             if (((k.alpha) && (!(k.alpha.toString() == "255"))))
             {
@@ -409,7 +409,7 @@
                     for each (_local_21 in _local_13)
                     {
                         _local_21.offset((_local_10.stageWidth / 2), (_local_10.stageHeight / 2));
-                        _local_21.offset(_arg_2.screenOffsetX, _arg_2._Str_3768);
+                        _local_21.offset(_arg_2.screenOffsetX, _arg_2.screenOffsetY);
                         _local_21.offset(-(k.x), -(k.y));
                         if (_local_21.x < 0)
                         {

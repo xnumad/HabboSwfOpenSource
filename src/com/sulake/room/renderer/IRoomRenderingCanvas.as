@@ -14,9 +14,9 @@
         function get width():int;
         function get height():int;
         function set screenOffsetX(_arg_1:int):void;
-        function set _Str_3768(_arg_1:int):void;
+        function set screenOffsetY(_arg_1:int):void;
         function get screenOffsetX():int;
-        function get _Str_3768():int;
+        function get screenOffsetY():int;
         function render(_arg_1:int, _arg_2:Boolean=false):void;
         function get displayObject():DisplayObject;
         function get geometry():IRoomGeometry;

@@ -148,7 +148,7 @@
             this._screenOffsetX = k;
         }
 
-        public function set _Str_3768(k:int):void
+        public function set screenOffsetY(k:int):void
         {
             this._mouseLocation.y = (this._mouseLocation.y - (k - this._screenOffsetY));
             this._screenOffsetY = k;
@@ -159,7 +159,7 @@
             return this._screenOffsetX;
         }
 
-        public function get _Str_3768():int
+        public function get screenOffsetY():int
         {
             return this._screenOffsetY;
         }
@@ -247,7 +247,7 @@
                 }
             }
             this.screenOffsetX = (_arg_3.x - (_arg_2.x * k));
-            this._Str_3768 = (_arg_3.y - (_arg_2.y * k));
+            this.screenOffsetY = (_arg_3.y - (_arg_2.y * k));
         }
 
         public function get scale():Number
