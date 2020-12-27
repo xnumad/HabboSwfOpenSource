@@ -41,7 +41,7 @@
             this._viewFinder = new CameraViewFinder(this);
             if (this.roomEngine)
             {
-                this.roomEngine.events.addEventListener(RoomEngineEvent.DISPOSED, this._Str_9192);
+                this.roomEngine.events.addEventListener(RoomEngineEvent.DISPOSED, this.onRoomDisposed);
                 this.roomEngine.events.addEventListener(RoomEngineEvent.ROOM_ZOOMED, this._Str_16937);
             }
             this.handler._Str_23224();
@@ -138,7 +138,7 @@
             return window;
         }
 
-        private function _Str_9192(k:RoomEngineEvent):void
+        private function onRoomDisposed(k:RoomEngineEvent):void
         {
             this.hide();
         }

@@ -40,7 +40,7 @@
             this.handler.widget = this;
             if (this.roomEngine)
             {
-                this.roomEngine.events.addEventListener(RoomEngineEvent.DISPOSED, this._Str_9192);
+                this.roomEngine.events.addEventListener(RoomEngineEvent.DISPOSED, this.onRoomDisposed);
                 this.roomEngine.events.addEventListener(RoomEngineEvent.ROOM_ZOOMED, this._Str_16937);
             }
             (_arg_2 as Component).context.addLinkEventTracker(this);
@@ -136,7 +136,7 @@
             return new Rectangle(k.x, k.y, this._imageWindow.width, this._imageWindow.height);
         }
 
-        private function _Str_9192(k:RoomEngineEvent):void
+        private function onRoomDisposed(k:RoomEngineEvent):void
         {
             this.destroy();
         }

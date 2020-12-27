@@ -98,7 +98,7 @@
             }
             if (k.roomEngine)
             {
-                k.roomEngine.events.addEventListener(RoomEngineEvent.DISPOSED, this._Str_9192);
+                k.roomEngine.events.addEventListener(RoomEngineEvent.DISPOSED, this.onRoomDisposed);
             }
             k.registerUpdateReceiver(this, 0);
         }
@@ -140,7 +140,7 @@
             }
             if (((this.windowManager.roomEngine) && (!(this.windowManager.roomEngine.disposed))))
             {
-                this.windowManager.roomEngine.events.removeEventListener(RoomEngineEvent.DISPOSED, this._Str_9192);
+                this.windowManager.roomEngine.events.removeEventListener(RoomEngineEvent.DISPOSED, this.onRoomDisposed);
             }
             this._windowManager.removeUpdateReceiver(this);
             this._windowManager = null;
@@ -594,7 +594,7 @@
             _local_4.scrollV = 0.5;
         }
 
-        private function _Str_9192(k:RoomEngineEvent):void
+        private function onRoomDisposed(k:RoomEngineEvent):void
         {
             this.visible = false;
         }
