@@ -326,7 +326,7 @@
             return _local_10;
         }
 
-        private function _Str_25623(k:Vector.<IRoomPlane>, _arg_2:IRoomRenderingCanvas, _arg_3:RoomEngine):Array
+        private function sortRoomPlanes(k:Vector.<IRoomPlane>, _arg_2:IRoomRenderingCanvas, _arg_3:RoomEngine):Array
         {
             var _local_6:IRoomPlane;
             var _local_7:Array;
@@ -392,7 +392,7 @@
             if (_local_7)
             {
                 _local_8 = _arg_2.geometry;
-                _local_9 = this._Str_25623(_local_7._Str_19113, _arg_2, _arg_3);
+                _local_9 = this.sortRoomPlanes(_local_7._Str_19113, _arg_2, _arg_3);
                 _local_10 = Core.instance.displayObjectContainer.stage;
                 for each (_local_11 in _local_9)
                 {
