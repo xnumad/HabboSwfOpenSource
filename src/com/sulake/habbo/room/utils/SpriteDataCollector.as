@@ -299,7 +299,7 @@
             return _local_5;
         }
 
-        private function _Str_25196(k:Rectangle, _arg_2:uint, _arg_3:Array):IPlaneDrawingData
+        private function makeBackgroundPlane(k:Rectangle, _arg_2:uint, _arg_3:Array):IPlaneDrawingData
         {
             var _local_9:Number;
             var _local_4:Point = new Point(0, 0);
@@ -448,7 +448,7 @@
                         }
                     }
                 }
-                _local_5.unshift(this._Str_25196(k, _arg_4, _local_5));
+                _local_5.unshift(this.makeBackgroundPlane(k, _arg_4, _local_5));
             }
             return _local_5;
         }
