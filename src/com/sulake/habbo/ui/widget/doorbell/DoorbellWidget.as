@@ -122,7 +122,7 @@
             this.removeUser(k);
         }
 
-        public function _Str_23961():void
+        public function denyAll():void
         {
             while (this._users.length > 0)
             {

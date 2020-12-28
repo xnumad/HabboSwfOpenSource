@@ -124,7 +124,7 @@
 
         private function onCloseHandler(k:WindowMouseEvent):void
         {
-            this._doorbell._Str_23961();
+            this._doorbell.denyAll();
         }
 
         private function onButtonClicked(k:WindowMouseEvent):void
