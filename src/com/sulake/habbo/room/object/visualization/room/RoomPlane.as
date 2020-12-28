@@ -376,7 +376,7 @@
             return String(k);
         }
 
-        private function _Str_10518(k:IRoomGeometry, _arg_2:int):Boolean
+        private function needsNewTexture(k:IRoomGeometry, _arg_2:int):Boolean
         {
             var _local_4:String;
             if (k == null)
@@ -410,7 +410,7 @@
             }
             var _local_3:PlaneBitmapData;
             var _local_4:String;
-            if (this._Str_10518(k, _arg_2))
+            if (this.needsNewTexture(k, _arg_2))
             {
                 _local_5 = (this._leftSide.length * k.scale);
                 _local_6 = (this._rightSide.length * k.scale);
@@ -674,7 +674,7 @@
                 this._isVisible = true;
                 this.FLOOR_COLOR = geometry.updateId;
             }
-            if (((geometryChanged) || (this._Str_10518(geometry, timeSinceStartMs))))
+            if (((geometryChanged) || (this.needsNewTexture(geometry, timeSinceStartMs))))
             {
                 if ((((this._bitmapData == null) || (!(this._width == this._bitmapData.width))) || (!(this._height == this._bitmapData.height))))
                 {

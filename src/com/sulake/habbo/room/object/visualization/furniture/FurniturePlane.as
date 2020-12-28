@@ -222,7 +222,7 @@
             return _local_2;
         }
 
-        private function _Str_10518(k:IRoomGeometry):Boolean
+        private function needsNewTexture(k:IRoomGeometry):Boolean
         {
             if (k == null)
             {
@@ -251,7 +251,7 @@
             }
             var _local_3:String = this.getTextureIdentifier(k);
             var _local_4:BitmapData;
-            if (this._Str_10518(k))
+            if (this.needsNewTexture(k))
             {
                 _local_5 = (this._leftSide.length * k.scale);
                 _local_6 = (this._rightSide.length * k.scale);
@@ -328,7 +328,7 @@
                     this._isVisible = true;
                 }
             }
-            if (((this._Str_10518(k)) || (_local_3)))
+            if (((this.needsNewTexture(k)) || (_local_3)))
             {
                 if ((((this._bitmapData == null) || (!(this._width == this._bitmapData.width))) || (!(this._height == this._bitmapData.height))))
                 {
