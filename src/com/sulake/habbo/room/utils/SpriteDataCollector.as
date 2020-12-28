@@ -398,7 +398,7 @@
                 {
                     _local_12 = _local_11.plane;
                     _local_13 = new Vector.<Point>(0);
-                    _local_14 = Vector3d.sum(_local_12.location, _local_12._Str_5424);
+                    _local_14 = Vector3d.sum(_local_12.location, _local_12.leftSide);
                     _local_15 = _local_8.getScreenPoint(_local_12.location);
                     _local_16 = _local_8.getScreenPoint(_local_14);
                     _local_17 = _local_8.getScreenPoint(Vector3d.sum(_local_12.location, _local_12.rightSide));

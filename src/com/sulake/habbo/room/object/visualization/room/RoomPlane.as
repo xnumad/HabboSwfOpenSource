@@ -202,7 +202,7 @@
             return this._type;
         }
 
-        public function get _Str_5424():IVector3d
+        public function get leftSide():IVector3d
         {
             return this._leftSide;
         }
