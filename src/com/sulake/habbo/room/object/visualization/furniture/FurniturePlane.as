@@ -106,7 +106,7 @@
             return this._leftSide;
         }
 
-        public function get _Str_4968():IVector3d
+        public function get rightSide():IVector3d
         {
             return this._rightSide;
         }

@@ -215,9 +215,9 @@
             {
                 _local_3 = (this._planes[_local_2] as RoomPlane);
                 _local_4 = getSprite(_local_2);
-                if (((((!(_local_4 == null)) && (!(_local_3 == null))) && (!(_local_3._Str_5424 == null))) && (!(_local_3._Str_4968 == null))))
+                if (((((!(_local_4 == null)) && (!(_local_3 == null))) && (!(_local_3._Str_5424 == null))) && (!(_local_3.rightSide == null))))
                 {
-                    if (((_local_3.type == RoomPlane.TYPE_WALL) && ((_local_3._Str_5424.length < 1) || (_local_3._Str_4968.length < 1))))
+                    if (((_local_3.type == RoomPlane.TYPE_WALL) && ((_local_3._Str_5424.length < 1) || (_local_3.rightSide.length < 1))))
                     {
                         _local_4.alphaTolerance = AlphaTolerance.MATCH_NOTHING;
                     }
@@ -814,7 +814,7 @@
                                 if (_local_12.type != RoomPlane.TYPE_FLOOR)
                                 {
                                     _local_13 = ((_local_12.relativeDepth + this.wallRelativeDepth) + (Number(_local_10) / 1000));
-                                    if (((_local_12._Str_5424.length < 1) || (_local_12._Str_4968.length < 1)))
+                                    if (((_local_12._Str_5424.length < 1) || (_local_12.rightSide.length < 1)))
                                     {
                                         _local_13 = (_local_13 + (ROOM_DEPTH_OFFSET * 0.5));
                                     }
@@ -947,10 +947,10 @@
                                 _local_15 = Math.abs(Vector3d.scalarProjection(_local_14, _local_3.normal));
                                 if (_local_15 < 0.01)
                                 {
-                                    if (((!(_local_3._Str_5424 == null)) && (!(_local_3._Str_4968 == null))))
+                                    if (((!(_local_3._Str_5424 == null)) && (!(_local_3.rightSide == null))))
                                     {
                                         _local_16 = Vector3d.scalarProjection(_local_14, _local_3._Str_5424);
-                                        _local_17 = Vector3d.scalarProjection(_local_14, _local_3._Str_4968);
+                                        _local_17 = Vector3d.scalarProjection(_local_14, _local_3.rightSide);
                                         if (((_local_3.type == RoomPlane.TYPE_WALL) || ((_local_3.type == RoomPlane.TYPE_LANDSCAPE) && (_local_12 == RoomPlaneBitmapMaskData.HOLE))))
                                         {
                                             _local_3.addBitmapMask(_local_10, _local_16, _local_17);

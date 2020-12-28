@@ -401,8 +401,8 @@
                     _local_14 = Vector3d.sum(_local_12.location, _local_12._Str_5424);
                     _local_15 = _local_8.getScreenPoint(_local_12.location);
                     _local_16 = _local_8.getScreenPoint(_local_14);
-                    _local_17 = _local_8.getScreenPoint(Vector3d.sum(_local_12.location, _local_12._Str_4968));
-                    _local_18 = _local_8.getScreenPoint(Vector3d.sum(_local_14, _local_12._Str_4968));
+                    _local_17 = _local_8.getScreenPoint(Vector3d.sum(_local_12.location, _local_12.rightSide));
+                    _local_18 = _local_8.getScreenPoint(Vector3d.sum(_local_14, _local_12.rightSide));
                     _local_13.push(_local_15, _local_16, _local_17, _local_18);
                     _local_19 = 0;
                     _local_20 = 0;

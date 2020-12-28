@@ -8,7 +8,7 @@
         function get uniqueId():int;
         function get location():IVector3d;
         function get _Str_5424():IVector3d;
-        function get _Str_4968():IVector3d;
+        function get rightSide():IVector3d;
         function get color():uint;
         function getDrawingDatas(_arg_1:IRoomGeometry):Array;
     }

@@ -1397,7 +1397,7 @@
             var _local_2:RoomPlaneData = (this._planes[k] as RoomPlaneData);
             if (_local_2 != null)
             {
-                return _local_2._Str_4968;
+                return _local_2.rightSide;
             }
             return null;
         }
