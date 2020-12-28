@@ -181,7 +181,7 @@
             }
         }
 
-        private function _Str_17642(k:String, _arg_2:BitmapData):Boolean
+        private function cacheTexture(k:String, _arg_2:BitmapData):Boolean
         {
             var _local_3:BitmapData = (this._textures.remove(k) as BitmapData);
             if (((!(_local_3 == null)) && (!(_arg_2 == _local_3))))
@@ -270,7 +270,7 @@
                     _local_4 = new BitmapData(_local_5, _local_6, true, (0xFF000000 | this._color));
                     if (_local_4 != null)
                     {
-                        this._Str_17642(_local_3, _local_4);
+                        this.cacheTexture(_local_3, _local_4);
                     }
                 }
             }

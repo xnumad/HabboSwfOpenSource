@@ -326,7 +326,7 @@
             return null;
         }
 
-        private function _Str_17642(k:String, _arg_2:PlaneBitmapData):Boolean
+        private function cacheTexture(k:String, _arg_2:PlaneBitmapData):Boolean
         {
             var _local_3:PlaneBitmapData = (this._textures.remove(k) as PlaneBitmapData);
             if (_local_3 != null)
@@ -448,7 +448,7 @@
                 if (_local_3 != null)
                 {
                     this.updateMask(_local_3.bitmap, k);
-                    this._Str_17642(_local_4, _local_3);
+                    this.cacheTexture(_local_4, _local_3);
                 }
             }
             else
