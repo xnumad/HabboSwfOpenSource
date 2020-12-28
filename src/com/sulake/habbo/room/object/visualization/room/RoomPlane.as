@@ -718,7 +718,7 @@
                 texture = this.getTexture(geometry, timeSinceStartMs);
                 if (texture != null)
                 {
-                    this._Str_17000(geometry, texture);
+                    this.renderTexture(geometry, texture);
                 }
                 else
                 {
@@ -768,7 +768,7 @@
             this._height = _local_5;
         }
 
-        private function _Str_17000(k:IRoomGeometry, _arg_2:BitmapData):void
+        private function renderTexture(k:IRoomGeometry, _arg_2:BitmapData):void
         {
             if (((((((this._cornerA == null) || (this._cornerB == null)) || (this._cornerC == null)) || (this._cornerD == null)) || (_arg_2 == null)) || (this._bitmapData == null)))
             {
