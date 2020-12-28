@@ -12,7 +12,7 @@
 
     public class DoorbellWidget extends RoomWidgetBase
     {
-        private static const _Str_16464:int = 50;
+        private static const MAX_USERS_ON_DOORBELL_LIST:int = 50;
 
         private var _users:Array;
         private var _view:DoorbellView;
@@ -88,7 +88,7 @@
             {
                 return;
             }
-            if (this._users.length >= _Str_16464)
+            if (this._users.length >= MAX_USERS_ON_DOORBELL_LIST)
             {
                 this.deny(k);
                 return;
