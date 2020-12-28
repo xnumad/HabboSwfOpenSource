@@ -6,7 +6,7 @@
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.ui.widget.events._Str_3436;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetDoorbellEvent;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetLetUserInMessage;
 
@@ -55,9 +55,9 @@
             {
                 return;
             }
-            k.addEventListener(_Str_3436.RWDE_RINGING, this._Str_19983);
-            k.addEventListener(_Str_3436.REJECTED, this._Str_14009);
-            k.addEventListener(_Str_3436.RWDE_ACCEPTED, this._Str_14009);
+            k.addEventListener(RoomWidgetDoorbellEvent.RWDE_RINGING, this._Str_19983);
+            k.addEventListener(RoomWidgetDoorbellEvent.REJECTED, this._Str_14009);
+            k.addEventListener(RoomWidgetDoorbellEvent.RWDE_ACCEPTED, this._Str_14009);
             super.registerUpdateEvents(k);
         }
 
@@ -67,17 +67,17 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_3436.RWDE_RINGING, this._Str_19983);
-            k.removeEventListener(_Str_3436.REJECTED, this._Str_14009);
-            k.removeEventListener(_Str_3436.RWDE_ACCEPTED, this._Str_14009);
+            k.removeEventListener(RoomWidgetDoorbellEvent.RWDE_RINGING, this._Str_19983);
+            k.removeEventListener(RoomWidgetDoorbellEvent.REJECTED, this._Str_14009);
+            k.removeEventListener(RoomWidgetDoorbellEvent.RWDE_ACCEPTED, this._Str_14009);
         }
 
-        private function _Str_19983(k:_Str_3436):void
+        private function _Str_19983(k:RoomWidgetDoorbellEvent):void
         {
             this.addUser(k.userName);
         }
 
-        private function _Str_14009(k:_Str_3436):void
+        private function _Str_14009(k:RoomWidgetDoorbellEvent):void
         {
             this._Str_18587(k.userName);
         }

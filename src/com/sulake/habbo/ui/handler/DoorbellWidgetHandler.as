@@ -7,7 +7,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionDoorbellEvent;
-    import com.sulake.habbo.ui.widget.events._Str_3436;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetDoorbellEvent;
     import flash.events.Event;
 
     public class DoorbellWidgetHandler implements IRoomWidgetHandler 
@@ -71,7 +71,7 @@
                     {
                         return;
                     }
-                    this._container.events.dispatchEvent(new _Str_3436(_Str_3436.RWDE_RINGING, _local_2.userName));
+                    this._container.events.dispatchEvent(new RoomWidgetDoorbellEvent(RoomWidgetDoorbellEvent.RWDE_RINGING, _local_2.userName));
                     return;
                 case RoomSessionDoorbellEvent.REJECTED:
                     _local_2 = (k as RoomSessionDoorbellEvent);
@@ -79,7 +79,7 @@
                     {
                         return;
                     }
-                    this._container.events.dispatchEvent(new _Str_3436(_Str_3436.REJECTED, _local_2.userName));
+                    this._container.events.dispatchEvent(new RoomWidgetDoorbellEvent(RoomWidgetDoorbellEvent.REJECTED, _local_2.userName));
                     return;
                 case RoomSessionDoorbellEvent.RSDE_ACCEPTED:
                     _local_2 = (k as RoomSessionDoorbellEvent);
@@ -87,7 +87,7 @@
                     {
                         return;
                     }
-                    this._container.events.dispatchEvent(new _Str_3436(_Str_3436.RWDE_ACCEPTED, _local_2.userName));
+                    this._container.events.dispatchEvent(new RoomWidgetDoorbellEvent(RoomWidgetDoorbellEvent.RWDE_ACCEPTED, _local_2.userName));
                     return;
             }
         }
