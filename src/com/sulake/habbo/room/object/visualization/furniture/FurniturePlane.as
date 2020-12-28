@@ -320,7 +320,7 @@
                         }
                         return false;
                     }
-                    this._Str_18702(k);
+                    this.updateCorners(k);
                     _local_6 = k.getScreenPosition(this._origin);
                     _local_7 = _local_6.z;
                     _local_8 = Math.max((this._cornerA.z - _local_7), (this._cornerB.z - _local_7), (this._cornerC.z - _local_7), (this._cornerD.z - _local_7));
@@ -367,7 +367,7 @@
             return false;
         }
 
-        private function _Str_18702(k:IRoomGeometry):void
+        private function updateCorners(k:IRoomGeometry):void
         {
             this._cornerA.assign(k.getScreenPosition(this._loc));
             this._cornerB.assign(k.getScreenPosition(Vector3d.sum(this._loc, this._rightSide)));

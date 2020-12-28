@@ -658,7 +658,7 @@
                     }
                     i = (i + 1);
                 }
-                this._Str_18702(geometry);
+                this.updateCorners(geometry);
                 originPos = geometry.getScreenPosition(this._origin);
                 originZ = originPos.z;
                 relativeDepth = (Math.max(this._cornerA.z, this._cornerB.z, this._cornerC.z, this._cornerD.z) - originZ);
@@ -731,7 +731,7 @@
             return false;
         }
 
-        private function _Str_18702(k:IRoomGeometry):void
+        private function updateCorners(k:IRoomGeometry):void
         {
             this._cornerA.assign(k.getScreenPosition(this._location));
             this._cornerB.assign(k.getScreenPosition(Vector3d.sum(this._location, this._rightSide)));
