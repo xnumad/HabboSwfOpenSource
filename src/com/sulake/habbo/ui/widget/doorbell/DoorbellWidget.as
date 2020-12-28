@@ -79,7 +79,7 @@
 
         private function onDoorbellHandled(k:RoomWidgetDoorbellEvent):void
         {
-            this._Str_18587(k.userName);
+            this.removeUser(k.userName);
         }
 
         public function addUser(k:String):void
@@ -97,7 +97,7 @@
             this._view.update();
         }
 
-        public function _Str_18587(k:String):void
+        public function removeUser(k:String):void
         {
             var _local_2:int = this._users.indexOf(k);
             if (_local_2 == -1)
@@ -112,14 +112,14 @@
         {
             var _local_2:RoomWidgetLetUserInMessage = new RoomWidgetLetUserInMessage(k, true);
             messageListener.processWidgetMessage(_local_2);
-            this._Str_18587(k);
+            this.removeUser(k);
         }
 
         public function deny(k:String):void
         {
             var _local_2:RoomWidgetLetUserInMessage = new RoomWidgetLetUserInMessage(k, false);
             messageListener.processWidgetMessage(_local_2);
-            this._Str_18587(k);
+            this.removeUser(k);
         }
 
         public function _Str_23961():void
