@@ -522,7 +522,7 @@
             return Math.round((this._leftSide.length * Math.abs((_local_2.x - _local_3.x))));
         }
 
-        public function _Str_22136(geometry:IRoomGeometry):Array
+        public function getDrawingDatas(geometry:IRoomGeometry):Array
         {
             var maskData:PlaneDrawingData;
             var data:PlaneDrawingData;

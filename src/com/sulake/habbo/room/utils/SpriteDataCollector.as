@@ -440,7 +440,7 @@
                     else
                     {
                         _local_22 = sortQuadPoints(_local_15, _local_16, _local_17, _local_18);
-                        for each (_local_23 in _local_12._Str_22136(_local_8))
+                        for each (_local_23 in _local_12.getDrawingDatas(_local_8))
                         {
                             _local_23.cornerPoints = _local_22;
                             _local_23.z = _local_11.z;

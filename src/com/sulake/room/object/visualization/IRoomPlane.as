@@ -10,6 +10,6 @@
         function get _Str_5424():IVector3d;
         function get _Str_4968():IVector3d;
         function get color():uint;
-        function _Str_22136(_arg_1:IRoomGeometry):Array;
+        function getDrawingDatas(_arg_1:IRoomGeometry):Array;
     }
 }
