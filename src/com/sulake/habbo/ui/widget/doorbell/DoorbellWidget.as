@@ -55,7 +55,7 @@
             {
                 return;
             }
-            k.addEventListener(RoomWidgetDoorbellEvent.RWDE_RINGING, this._Str_19983);
+            k.addEventListener(RoomWidgetDoorbellEvent.RWDE_RINGING, this.onDoorbellRinging);
             k.addEventListener(RoomWidgetDoorbellEvent.REJECTED, this._Str_14009);
             k.addEventListener(RoomWidgetDoorbellEvent.RWDE_ACCEPTED, this._Str_14009);
             super.registerUpdateEvents(k);
@@ -67,12 +67,12 @@
             {
                 return;
             }
-            k.removeEventListener(RoomWidgetDoorbellEvent.RWDE_RINGING, this._Str_19983);
+            k.removeEventListener(RoomWidgetDoorbellEvent.RWDE_RINGING, this.onDoorbellRinging);
             k.removeEventListener(RoomWidgetDoorbellEvent.REJECTED, this._Str_14009);
             k.removeEventListener(RoomWidgetDoorbellEvent.RWDE_ACCEPTED, this._Str_14009);
         }
 
-        private function _Str_19983(k:RoomWidgetDoorbellEvent):void
+        private function onDoorbellRinging(k:RoomWidgetDoorbellEvent):void
         {
             this.addUser(k.userName);
         }
