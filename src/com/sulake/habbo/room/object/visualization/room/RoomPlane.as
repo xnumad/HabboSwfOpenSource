@@ -141,7 +141,7 @@
             {
                 if (!this._canBeVisible)
                 {
-                    this._Str_11000();
+                    this.resetTextureCache();
                 }
                 this._canBeVisible = k;
             }
@@ -246,7 +246,7 @@
         {
             if (k != this._id)
             {
-                this._Str_11000();
+                this.resetTextureCache();
                 this._id = k;
             }
         }
@@ -342,7 +342,7 @@
             return true;
         }
 
-        private function _Str_11000(k:BitmapData=null):void
+        private function resetTextureCache(k:BitmapData=null):void
         {
             var _local_2:int;
             var _local_3:PlaneBitmapData;
@@ -1051,7 +1051,7 @@
                 {
                     this._maskBitmapData.fillRect(this._maskBitmapData.rect, 0xFFFFFF);
                 }
-                this._Str_11000(texture);
+                this.resetTextureCache(texture);
                 normal = geometry.getCoordinatePosition(this._normal);
                 posX = 0;
                 posY = 0;

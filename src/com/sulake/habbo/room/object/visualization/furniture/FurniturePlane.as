@@ -177,7 +177,7 @@
                 this._geometryUpdateId = -1;
                 this._geometryDirX = (this._geometryDirX - 1);
                 this._rotated = k;
-                this._Str_11000();
+                this.resetTextureCache();
             }
         }
 
@@ -192,7 +192,7 @@
             return true;
         }
 
-        private function _Str_11000():void
+        private function resetTextureCache():void
         {
             var k:int;
             var _local_2:BitmapData;
