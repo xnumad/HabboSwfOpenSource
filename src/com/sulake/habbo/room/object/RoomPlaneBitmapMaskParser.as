@@ -14,7 +14,7 @@
             this._masks = new Map();
         }
 
-        public function get _Str_6845():int
+        public function get maskCount():int
         {
             return this._masks.length;
         }
@@ -121,7 +121,7 @@
             var k:XML = <planeMasks/>
             ;
             var _local_2:int;
-            while (_local_2 < this._Str_6845)
+            while (_local_2 < this.maskCount)
             {
                 _local_3 = this.getMaskType(_local_2);
                 _local_4 = this.getMaskCategory(_local_2);
@@ -139,7 +139,7 @@
 
         public function getMaskLocation(k:int):IVector3d
         {
-            if (((k < 0) || (k >= this._Str_6845)))
+            if (((k < 0) || (k >= this.maskCount)))
             {
                 return null;
             }
@@ -153,7 +153,7 @@
 
         public function getMaskType(k:int):String
         {
-            if (((k < 0) || (k >= this._Str_6845)))
+            if (((k < 0) || (k >= this.maskCount)))
             {
                 return null;
             }
@@ -167,7 +167,7 @@
 
         public function getMaskCategory(k:int):String
         {
-            if (((k < 0) || (k >= this._Str_6845)))
+            if (((k < 0) || (k >= this.maskCount)))
             {
                 return null;
             }

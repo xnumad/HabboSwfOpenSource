@@ -928,7 +928,7 @@
                 _local_7++;
             }
             var _local_8:int;
-            while (_local_8 < this._roomPlaneBitmapMaskParser._Str_6845)
+            while (_local_8 < this._roomPlaneBitmapMaskParser.maskCount)
             {
                 _local_10 = this._roomPlaneBitmapMaskParser.getMaskType(_local_8);
                 _local_11 = this._roomPlaneBitmapMaskParser.getMaskLocation(_local_8);

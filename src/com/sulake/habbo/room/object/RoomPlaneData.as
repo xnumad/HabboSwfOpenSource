@@ -131,7 +131,7 @@
             return this._secondaryNormals.length;
         }
 
-        public function get _Str_6845():int
+        public function get maskCount():int
         {
             return this._masks.length;
         }
@@ -155,7 +155,7 @@
 
         private function getMask(k:int):RoomPlaneMaskData
         {
-            if (((k < 0) || (k >= this._Str_6845)))
+            if (((k < 0) || (k >= this.maskCount)))
             {
                 return null;
             }
