@@ -171,7 +171,7 @@
             this._textures.reset();
         }
 
-        protected function _Str_10114(k:String):PlaneTexture
+        protected function getTexture(k:String):PlaneTexture
         {
             return this._textures.getValue(k) as PlaneTexture;
         }
@@ -536,7 +536,7 @@
                         _local_19++;
                     }
                 }
-                _local_12 = this._Str_10114(_local_6);
+                _local_12 = this.getTexture(_local_6);
                 _local_13 = new PlaneMaterialCell(_local_12, _local_8, _local_9, _local_10);
                 _local_2.push(_local_13);
                 _local_4++;

@@ -397,7 +397,7 @@
             return false;
         }
 
-        private function _Str_10114(k:IRoomGeometry, _arg_2:int):BitmapData
+        private function getTexture(k:IRoomGeometry, _arg_2:int):BitmapData
         {
             var _local_5:Number;
             var _local_6:Number;
@@ -715,7 +715,7 @@
                     this._bitmapData.fillRect(this._bitmapData.rect, 0xFFFFFF);
                 }
                 Randomizer.setSeed(this._randomSeed);
-                texture = this._Str_10114(geometry, timeSinceStartMs);
+                texture = this.getTexture(geometry, timeSinceStartMs);
                 if (texture != null)
                 {
                     this._Str_17000(geometry, texture);

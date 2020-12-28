@@ -240,7 +240,7 @@
             return false;
         }
 
-        private function _Str_10114(k:IRoomGeometry, _arg_2:int):BitmapData
+        private function getTexture(k:IRoomGeometry, _arg_2:int):BitmapData
         {
             var _local_5:Number;
             var _local_6:Number;
@@ -356,7 +356,7 @@
                     this._bitmapData.lock();
                     this._bitmapData.fillRect(this._bitmapData.rect, 0xFFFFFF);
                 }
-                _local_9 = this._Str_10114(k, _arg_2);
+                _local_9 = this.getTexture(k, _arg_2);
                 if (_local_9 != null)
                 {
                     this._Str_17000(k, _local_9);
