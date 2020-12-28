@@ -28,7 +28,7 @@
         private var _genderSelectionWindow:IWindowContainer;
         private var _objectId:int = 0;
         private var _objectCategory:int = 0;
-        private var _Str_2337:int = 0;
+        private var _roomId:int = 0;
 
         public function ClothingChangeWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary=null, _arg_4:IHabboLocalizationManager=null)
         {
@@ -77,7 +77,7 @@
             this.hideGenderSelectionInterface();
             this._objectId = k.objectId;
             this._objectCategory = k.objectCategory;
-            this._Str_2337 = k.roomId;
+            this._roomId = k.roomId;
             var _local_2:IAsset = assets.getAssetByName("boygirl");
             var _local_3:XmlAsset = XmlAsset(_local_2);
             if (_local_3 == null)
@@ -146,7 +146,7 @@
 
         private function requestEditor(k:String):void
         {
-            var _local_2:RoomWidgetClothingChangeMessage = new RoomWidgetClothingChangeMessage(RoomWidgetClothingChangeMessage.RWCCM_REQUEST_EDITOR, k, this._objectId, this._objectCategory, this._Str_2337);
+            var _local_2:RoomWidgetClothingChangeMessage = new RoomWidgetClothingChangeMessage(RoomWidgetClothingChangeMessage.RWCCM_REQUEST_EDITOR, k, this._objectId, this._objectCategory, this._roomId);
             messageListener.processWidgetMessage(_local_2);
         }
     }

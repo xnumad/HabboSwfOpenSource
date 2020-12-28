@@ -4,11 +4,11 @@
 
     public class GoToFlatMessageComposer implements IMessageComposer
     {
-        private var _Str_2337:int;
+        private var _roomId:int;
 
         public function GoToFlatMessageComposer(k:int)
         {
-            this._Str_2337 = k;
+            this._roomId = k;
         }
 
         public function dispose():void
@@ -17,7 +17,7 @@
 
         public function getMessageArray():Array
         {
-            return [this._Str_2337];
+            return [this._roomId];
         }
     }
 }
