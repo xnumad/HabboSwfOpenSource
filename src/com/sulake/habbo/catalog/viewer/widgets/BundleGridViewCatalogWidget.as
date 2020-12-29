@@ -36,7 +36,7 @@
                 return false;
             }
             events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
-            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
+            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this.onWidgetsInitialized);
             var k:XmlAsset = (page.viewer.catalog.assets.getAssetByName("gridItem") as XmlAsset);
             this._gridItemLayout = (k.content as XML);
             this._itemGrid = IItemGridWindow(_window.findChildByName("bundleGrid"));
@@ -48,12 +48,12 @@
             if (!disposed)
             {
                 events.removeEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
-                events.removeEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
+                events.removeEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this.onWidgetsInitialized);
                 super.dispose();
             }
         }
 
-        private function _Str_3393(k:_Str_3308):void
+        private function onWidgetsInitialized(k:_Str_3308):void
         {
             var _local_2:IPurchasableOffer;
             if (page.offers.length == 1)

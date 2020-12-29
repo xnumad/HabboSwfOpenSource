@@ -64,7 +64,7 @@
             {
                 return false;
             }
-            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
+            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this.onWidgetsInitialized);
             this._tabs = (_window.findChildByName("groups") as ISelectorWindow);
             if (this._tabs)
             {
@@ -84,7 +84,7 @@
             return true;
         }
 
-        public function _Str_3393(k:_Str_3308):void
+        public function onWidgetsInitialized(k:_Str_3308):void
         {
             var _local_2:int = this._groupIndex[this._selectedGroup];
             var _local_3:IPurchasableOffer = this._groups[this._selectedGroup][_local_2];

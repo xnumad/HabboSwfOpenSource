@@ -25,11 +25,11 @@
             {
                 return false;
             }
-            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
+            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this.onWidgetsInitialized);
             return true;
         }
 
-        public function _Str_3393(k:_Str_3308):void
+        public function onWidgetsInitialized(k:_Str_3308):void
         {
             if (page.offers.length == 0)
             {

@@ -98,7 +98,7 @@
             events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this.onSelectProduct);
             events.addEventListener(CatalogWidgetEvent.COLOUR_INDEX, this._Str_7756);
             events.addEventListener(CatalogWidgetEvent.APPROVE_RESULT, this.onApproveNameResult);
-            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
+            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this.onWidgetsInitialized);
             events.addEventListener(CatalogWidgetEvent.SELLABLE_PET_PALETTES, this._Str_18999);
             return true;
         }
@@ -161,7 +161,7 @@
             }
         }
 
-        private function _Str_3393(k:_Str_3308=null):void
+        private function onWidgetsInitialized(k:_Str_3308=null):void
         {
             var _local_4:int;
             if (this._isDisposed)
@@ -524,7 +524,7 @@
             if (k == this._imageResultId)
             {
                 this._Str_3234(_arg_2, true);
-                this._Str_3393();
+                this.onWidgetsInitialized();
             }
         }
 

@@ -57,7 +57,7 @@
             var k:XmlAsset = (page.viewer.catalog.assets.getAssetByName("badgeGridItem") as XmlAsset);
             this._gridItemLayout = (k.content as XML);
             this._Str_20622();
-            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
+            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this.onWidgetsInitialized);
             this._badgesUpdatedMessageListener = new BadgesEvent(this._Str_22798);
             this._catalog.connection.addMessageEvent(this._badgesUpdatedMessageListener);
             return true;
@@ -74,7 +74,7 @@
             }
         }
 
-        private function _Str_3393(k:_Str_3308):void
+        private function onWidgetsInitialized(k:_Str_3308):void
         {
             if (page.offers.length == 0)
             {

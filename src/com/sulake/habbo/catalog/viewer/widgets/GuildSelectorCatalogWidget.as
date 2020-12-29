@@ -47,7 +47,7 @@
         {
             if (!disposed)
             {
-                events.removeEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
+                events.removeEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this.onWidgetsInitialized);
                 page.dispatchWidgetEvent(new CatalogWidgetGuildSelectedEvent(CatalogWidgetGuildSelectedEvent._Str_15457, "", "", ""));
                 if (this._Str_4025)
                 {
@@ -71,7 +71,7 @@
             {
                 return false;
             }
-            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
+            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this.onWidgetsInitialized);
             _Str_2819(CatalogWidgetEnum.GUILD_SELECTOR);
             this._Str_4978 = window.findChildByName("guild_selector");
             this._Str_15746 = window.findChildByName("members_only");
@@ -94,7 +94,7 @@
             return true;
         }
 
-        private function _Str_3393(k:_Str_3308):void
+        private function onWidgetsInitialized(k:_Str_3308):void
         {
             this._Str_5363.registerGuildSelectorWidget(this);
             events.dispatchEvent(new _Str_3308(CatalogWidgetEvent.EXTRA_PARAM_REQUIRED_FOR_BUY));

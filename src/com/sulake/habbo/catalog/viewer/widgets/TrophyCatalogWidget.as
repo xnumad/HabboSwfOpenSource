@@ -112,11 +112,11 @@
                     }
                 }
             }
-            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this._Str_3393);
+            events.addEventListener(CatalogWidgetEvent.WIDGETS_INITIALIZED, this.onWidgetsInitialized);
             return true;
         }
 
-        private function _Str_3393(k:_Str_3308):void
+        private function onWidgetsInitialized(k:_Str_3308):void
         {
             var _local_4:Offer;
             var _local_2:Array = new Array();
