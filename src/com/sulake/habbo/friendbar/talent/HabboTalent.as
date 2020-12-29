@@ -227,7 +227,7 @@
             return dialog;
         }
 
-        public function _Str_26419(k:String, _arg_2:TalentTrackLevel):void
+        public function testLevelUp(k:String, _arg_2:TalentTrackLevel):void
         {
             this._talentLevelUp.showWindow(k, _arg_2.level, _arg_2._Str_8893, _arg_2._Str_7068);
         }
