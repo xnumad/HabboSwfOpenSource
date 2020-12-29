@@ -188,7 +188,7 @@
             events.dispatchEvent(new SetExtraPurchaseParameterEvent(k.groupId.toString()));
         }
 
-        private function _Str_23401(k:uint, _arg_2:uint):BitmapData
+        private function createGuildColorsBitmap(k:uint, _arg_2:uint):BitmapData
         {
             var _local_3:BitmapData = new BitmapData(_Str_18723, _Str_16811, false, _Str_18419);
             var _local_4:int = ((_local_3.width / 2) + 1);
@@ -209,7 +209,7 @@
 
         private function _Str_23230(k:HabboGroupEntryData):IWindow
         {
-            var _local_2:BitmapData = this._Str_23401(parseInt(k._Str_5845, 16), parseInt(k._Str_6659, 16));
+            var _local_2:BitmapData = this.createGuildColorsBitmap(parseInt(k._Str_5845, 16), parseInt(k._Str_6659, 16));
             var _local_3:XML = (page.viewer.catalog.assets.getAssetByName(GUILD_SELECTOR_WIDGET_ITEM).content as XML);
             var _local_4:IWindowContainer = (page.viewer.catalog.windowManager.buildFromXML(_local_3) as IWindowContainer);
             var _local_5:IBitmapWrapperWindow = (_local_4.findChildByName("guild_colors") as IBitmapWrapperWindow);
