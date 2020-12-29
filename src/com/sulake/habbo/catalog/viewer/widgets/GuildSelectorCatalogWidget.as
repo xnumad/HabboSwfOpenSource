@@ -152,7 +152,7 @@
             return k;
         }
 
-        public function _Str_22864():void
+        public function selectFirstOffer():void
         {
             if ((((page) && (page.offers)) && (page.offers.length > 0)))
             {

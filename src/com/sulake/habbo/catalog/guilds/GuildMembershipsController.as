@@ -50,7 +50,7 @@
             if (((this._guildSelectorWidget) && (!(this._guildSelectorWidget.disposed))))
             {
                 this._guildSelectorWidget.populateAndSelectFavorite(_local_2);
-                this._guildSelectorWidget._Str_22864();
+                this._guildSelectorWidget.selectFirstOffer();
             }
         }
 
