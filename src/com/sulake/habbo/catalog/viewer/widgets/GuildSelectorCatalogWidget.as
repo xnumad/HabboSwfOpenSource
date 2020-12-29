@@ -100,7 +100,7 @@
             events.dispatchEvent(new _Str_3308(CatalogWidgetEvent.EXTRA_PARAM_REQUIRED_FOR_BUY));
         }
 
-        public function _Str_24364(k:Array):void
+        public function populateAndSelectFavorite(k:Array):void
         {
             var _local_7:HabboGroupEntryData;
             var _local_2:int = -1;
