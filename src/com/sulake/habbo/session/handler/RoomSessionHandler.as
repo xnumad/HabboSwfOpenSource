@@ -54,26 +54,26 @@
 
         private function onFlatAccessible(k:FlatAccessibleMessageEvent):void
         {
-            var _local_5:IRoomSession;
-            var _local_2:int = _xxxRoomId;
-            var _local_3:FlatAccessibleMessageParser = k.getParser();
-            if (_local_3 == null)
+            var session:IRoomSession;
+            var roomId:int = _xxxRoomId;
+            var parser:FlatAccessibleMessageParser = k.getParser();
+            if (parser == null)
             {
                 return;
             }
-            var _local_4:String = _local_3.userName;
-            if (((_local_4 == null) || (_local_4.length == 0)))
+            var userName:String = parser.userName;
+            if (((userName == null) || (userName.length == 0)))
             {
-                connection.send(new GoToFlatMessageComposer(_local_2));
+                connection.send(new GoToFlatMessageComposer(roomId));
             }
             else
             {
                 if (((listener) && (listener.events)))
                 {
-                    _local_5 = listener.getSession(_local_2);
-                    if (_local_5 != null)
+                    session = listener.getSession(roomId);
+                    if (session != null)
                     {
-                        listener.events.dispatchEvent(new RoomSessionDoorbellEvent(RoomSessionDoorbellEvent.RSDE_ACCEPTED, _local_5, _local_4));
+                        listener.events.dispatchEvent(new RoomSessionDoorbellEvent(RoomSessionDoorbellEvent.RSDE_ACCEPTED, session, userName));
                     }
                 }
             }

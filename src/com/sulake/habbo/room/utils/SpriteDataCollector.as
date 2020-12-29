@@ -299,31 +299,31 @@
             return _local_5;
         }
 
-        private function makeBackgroundPlane(k:Rectangle, _arg_2:uint, _arg_3:Array):IPlaneDrawingData
+        private function makeBackgroundPlane(viewport:Rectangle, color:uint, planes:Array):IPlaneDrawingData
         {
-            var _local_9:Number;
-            var _local_4:Point = new Point(0, 0);
-            var _local_5:Point = new Point(k.width, 0);
-            var _local_6:Point = new Point(0, k.height);
-            var _local_7:Point = new Point(k.width, k.height);
-            var _local_8:Vector.<Point> = sortQuadPoints(_local_4, _local_5, _local_6, _local_7);
-            if (_arg_3.length > 0)
+            var z:Number;
+            var topleft:Point = new Point(0, 0);
+            var bottomleft:Point = new Point(viewport.width, 0);
+            var topright:Point = new Point(0, viewport.height);
+            var bottomright:Point = new Point(viewport.width, viewport.height);
+            var cornerPoints:Vector.<Point> = sortQuadPoints(topleft, bottomleft, topright, bottomright);
+            if (planes.length > 0)
             {
-                _local_9 = _arg_3[0].z;
+                z = planes[0].z;
                 if (this.maxZ)
                 {
-                    _local_9 = Math.max(this.maxZ, _local_9);
+                    z = Math.max(this.maxZ, z);
                 }
             }
             else
             {
-                _local_9 = ((this.maxZ) ? this.maxZ : 0);
+                z = ((this.maxZ) ? this.maxZ : 0);
             }
-            _local_9 = (_local_9 + ((this.spriteCount * 1.776104) + (_arg_3.length * 2.31743)));
-            var _local_10:IPlaneDrawingData = new PlaneDrawingData(null, _arg_2);
-            _local_10.cornerPoints = _local_8;
-            _local_10.z = _local_9;
-            return _local_10;
+            z = (z + ((this.spriteCount * 1.776104) + (planes.length * 2.31743)));
+            var backgroundPlane:IPlaneDrawingData = new PlaneDrawingData(null, color);
+            backgroundPlane.cornerPoints = cornerPoints;
+            backgroundPlane.z = z;
+            return backgroundPlane;
         }
 
         private function sortRoomPlanes(k:Vector.<IRoomPlane>, _arg_2:IRoomRenderingCanvas, _arg_3:RoomEngine):Array
@@ -368,7 +368,7 @@
             return _local_8;
         }
 
-        public function getRoomPlanes(k:Rectangle, _arg_2:IRoomRenderingCanvas, _arg_3:RoomEngine, _arg_4:uint):Array
+        public function getRoomPlanes(viewport:Rectangle, _arg_2:IRoomRenderingCanvas, _arg_3:RoomEngine, color:uint):Array
         {
             var _local_8:IRoomGeometry;
             var _local_9:Array;
@@ -386,7 +386,7 @@
             var _local_21:Point;
             var _local_22:Vector.<Point>;
             var _local_23:IPlaneDrawingData;
-            var _local_5:Array = [];
+            var planes:Array = [];
             var _local_6:IRoomObject = _arg_3.getRoomObject(_arg_3.activeRoomId, RoomEngine.OBJECT_ID_ROOM, RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM);
             var _local_7:IPlaneVisualization = (_local_6.getVisualization() as IPlaneVisualization);
             if (_local_7)
@@ -410,14 +410,14 @@
                     {
                         _local_21.offset((_local_10.stageWidth / 2), (_local_10.stageHeight / 2));
                         _local_21.offset(_arg_2.screenOffsetX, _arg_2.screenOffsetY);
-                        _local_21.offset(-(k.x), -(k.y));
+                        _local_21.offset(-(viewport.x), -(viewport.y));
                         if (_local_21.x < 0)
                         {
                             _local_19--;
                         }
                         else
                         {
-                            if (_local_21.x >= k.width)
+                            if (_local_21.x >= viewport.width)
                             {
                                 _local_19++;
                             }
@@ -428,7 +428,7 @@
                         }
                         else
                         {
-                            if (_local_21.y >= k.height)
+                            if (_local_21.y >= viewport.height)
                             {
                                 _local_20++;
                             }
@@ -444,13 +444,13 @@
                         {
                             _local_23.cornerPoints = _local_22;
                             _local_23.z = _local_11.z;
-                            _local_5.push(_local_23);
+                            planes.push(_local_23);
                         }
                     }
                 }
-                _local_5.unshift(this.makeBackgroundPlane(k, _arg_4, _local_5));
+                planes.unshift(this.makeBackgroundPlane(viewport, color, planes));
             }
-            return _local_5;
+            return planes;
         }
     }
 }
