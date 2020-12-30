@@ -558,7 +558,7 @@
                 this._nuxIdleTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onNuxIdleTimerComplete);
                 this._nuxIdleTimer = null;
             }
-            this._Str_23223();
+            this.highlightChatInput();
         }
 
         private function _Str_20723(k:TimerEvent):void
@@ -584,7 +584,7 @@
             this._widget.messageListener.processWidgetMessage(k);
         }
 
-        private function _Str_23223():void
+        private function highlightChatInput():void
         {
             this._inputField.text = this.widget.localizations.getLocalization("widgets.chatinput.mode.remind.noobie");
             this._nuxChatReminderTimer = new Timer(500);
