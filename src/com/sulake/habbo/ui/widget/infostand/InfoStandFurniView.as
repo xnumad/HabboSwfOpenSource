@@ -106,7 +106,7 @@
             }
             if (this._customVarsWindow != null)
             {
-                this._customVarsWindow.procedure = this._Str_25802;
+                this._customVarsWindow.procedure = this.customVarsWindowProcedure;
                 this._customVarsItemTemplate = IItemListWindow(this._customVarsWindow.findChildByName("variable_list")).removeListItemAt(0);
             }
             if (this._border != null)
@@ -164,7 +164,7 @@
             }
         }
 
-        private function _Str_25802(k:WindowEvent, _arg_2:IWindow):void
+        private function customVarsWindowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:Map;
             var _local_4:IItemListWindow;
