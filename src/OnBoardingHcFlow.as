@@ -45,7 +45,7 @@
         private var _roomPickerContainer:Sprite;
         private var _roomPicker:RoomPicker;
         private var _disposed:Boolean;
-        private var _Str_1298:IAvatarRenderManager;
+        private var _avatarRenderer:IAvatarRenderManager;
         private var _Str_1429:IContext;
         private var _Str_1018:Sprite;
         private var _Str_865:Boolean;
@@ -71,10 +71,10 @@
             {
                 return;
             }
-            if (this._Str_1298)
+            if (this._avatarRenderer)
             {
-                this._Str_1298.dispose();
-                this._Str_1298 = null;
+                this._avatarRenderer.dispose();
+                this._avatarRenderer = null;
             }
             if (this._Str_1429)
             {
@@ -126,9 +126,9 @@
             (this._Str_1429.assets as AssetLibraryCollection).addAssetLibrary(_local_4);
             k = (new (OnBoardingHcFlow._Str_2240)() as ByteArray);
             var _local_5:XML = new XML(k.readUTFBytes(k.length));
-            this._Str_1298 = new AvatarRenderManager(this._Str_1429, 0, _local_4, true);
-            this._Str_1298._Str_882(_local_5);
-            this._Str_1298.mode = RenderMode.LOCAL_ONLY;
+            this._avatarRenderer = new AvatarRenderManager(this._Str_1429, 0, _local_4, true);
+            this._avatarRenderer._Str_882(_local_5);
+            this._avatarRenderer.mode = RenderMode.LOCAL_ONLY;
         }
 
         public function init(k:String):void
@@ -285,7 +285,7 @@
 
         public function get _Str_1458():IAvatarRenderManager
         {
-            return this._Str_1298;
+            return this._avatarRenderer;
         }
 
         public function get _Str_1857():String
