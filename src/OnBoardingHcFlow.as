@@ -29,7 +29,7 @@
     public class OnBoardingHcFlow extends Sprite implements IUIContext, IDisposable
     {
         public static const NEWUSERFLOWFINISHED:String = "NewUserFlowFinished";
-        private static const _Str_2052:int = 95;
+        private static const LOGO_AREA_HEIGHT:int = 95;
         private static const _Str_1707:int = 5;
         public static var ubuntu_regular:Class = _Str_623;
         public static var ubuntu_bold:Class = _Str_596;
@@ -144,7 +144,7 @@
             this._logoTopSprite.addChild(_local_2);
             this._mainSprite = new Sprite();
             addChild(this._mainSprite);
-            this._mainSprite.y = _Str_2052;
+            this._mainSprite.y = LOGO_AREA_HEIGHT;
             this._mainSprite.x = _Str_1707;
             this._avatarEditor = new AvatarEditor(this);
             this._avatarEditor._Str_2039(this._showHcItems);
@@ -156,7 +156,7 @@
             this._mainSprite.addChild(this._nameChangeContainer);
             this._roomPickerContainer = new Sprite();
             this._roomPickerContainer.x = 0;
-            this._roomPickerContainer.y = _Str_2052;
+            this._roomPickerContainer.y = LOGO_AREA_HEIGHT;
             this._roomPickerContainer.visible = false;
             this._mainSprite.addChild(this._roomPickerContainer);
             if (this._Str_1609)
@@ -232,7 +232,7 @@
             {
                 this._nameChangeContainer.x = this._nameAreaX;
             }
-            this._mainSprite.y = _Str_2052;
+            this._mainSprite.y = LOGO_AREA_HEIGHT;
         }
 
         public function getString(k:String, _arg_2:String):String
