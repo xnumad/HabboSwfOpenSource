@@ -57,7 +57,7 @@
         private var _textIntro:TextField;
         private var _debugText:TextField;
         private var _showHcItems:Boolean;
-        private var _Str_1351:int = 585;
+        private var _nameAreaX:int = 585;
         private var _Str_1884:int = 350;
 
         public function OnBoardingHcFlow()
@@ -150,7 +150,7 @@
             this._avatarEditor._Str_2039(this._showHcItems);
             this._mainSprite.addChild(this._avatarEditor);
             this._nameChangeContainer = new Sprite();
-            this._nameChangeContainer.x = this._Str_1351;
+            this._nameChangeContainer.x = this._nameAreaX;
             this._nameChangeContainer.y = 95;
             this._nameChangeContainer.visible = true;
             this._mainSprite.addChild(this._nameChangeContainer);
@@ -226,11 +226,11 @@
             if (this._avatarEditor)
             {
                 this._avatarEditor.x = _Str_1707;
-                this._Str_1351 = ((this._avatarEditor.x + this._avatarEditor.width) - 125);
+                this._nameAreaX = ((this._avatarEditor.x + this._avatarEditor.width) - 125);
             }
             if (this._nameChangeContainer)
             {
-                this._nameChangeContainer.x = this._Str_1351;
+                this._nameChangeContainer.x = this._nameAreaX;
             }
             this._mainSprite.y = _Str_2052;
         }
@@ -339,7 +339,7 @@
                 this._roomPickerContainer.visible = false;
             }
             this._nameChangeContainer.visible = true;
-            this._nameChangeContainer.x = this._Str_1351;
+            this._nameChangeContainer.x = this._nameAreaX;
             this._nameChangeDialog._Str_1663 = this._avatarEditor.gender;
             this._Str_1606();
             this._Str_1391();
@@ -417,7 +417,7 @@
 
         public function _Str_2051():int
         {
-            return this._Str_1351;
+            return this._nameAreaX;
         }
 
         public function _Str_2203():int
