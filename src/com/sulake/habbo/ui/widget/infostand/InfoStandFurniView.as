@@ -629,7 +629,7 @@
             }
         }
 
-        private function _Str_25006():Map
+        private function getAdFurnitureExtraParams():Map
         {
             var _local_2:String;
             var _local_3:Array;
@@ -734,7 +734,7 @@
             {
                 _local_5.visible = k;
                 _local_7 = ("id: " + this._widget.furniData.id);
-                _local_8 = this._Str_25006();
+                _local_8 = this.getAdFurnitureExtraParams();
                 if (_local_8.length > 0)
                 {
                     _local_4 = true;
