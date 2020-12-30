@@ -48,7 +48,7 @@
         private var _avatarRenderer:IAvatarRenderManager;
         private var _fakeContext:IContext;
         private var _errorBalloon:Sprite;
-        private var _Str_865:Boolean;
+        private var _hcMemeber:Boolean;
         private var _nameClaimed:Boolean;
         private var _Str_845:Sprite;
         private var _Str_1170:Sprite;
@@ -312,7 +312,7 @@
 
         public function _Str_1497(k:Boolean):void
         {
-            this._Str_865 = k;
+            this._hcMemeber = k;
         }
 
         public function _Str_1171():void
