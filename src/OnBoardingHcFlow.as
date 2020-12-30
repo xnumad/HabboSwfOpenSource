@@ -52,7 +52,7 @@
         private var _nameClaimed:Boolean;
         private var _mainSprite:Sprite;
         private var _logoTopSprite:Sprite;
-        private var _Str_2082:String;
+        private var _selectedName:String;
         private var _Str_1885:Boolean;
         private var _Str_2073:TextField;
         private var _Str_1809:TextField;
@@ -290,7 +290,7 @@
 
         public function get _Str_1857():String
         {
-            return this._Str_2082;
+            return this._selectedName;
         }
 
         public function get _Str_2026():Boolean
@@ -347,7 +347,7 @@
 
         public function _Str_642(k:String, _arg_2:Boolean):void
         {
-            this._Str_2082 = k;
+            this._selectedName = k;
             this._Str_1885 = _arg_2;
         }
 
