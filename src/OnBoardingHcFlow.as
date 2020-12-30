@@ -39,7 +39,7 @@
         private static const _Str_1278:Class = OnBoardingHcFlow__Str_1278;
 
         private var _background:Background;
-        private var _Str_1095:AvatarEditor;
+        private var _avatarEditor:AvatarEditor;
         private var _Str_1952:Sprite;
         private var _nameChangeDialog:NameChangeDialog;
         private var _Str_1611:Sprite;
@@ -87,10 +87,10 @@
                 this._background.dispose();
                 this._background = null;
             }
-            if (this._Str_1095)
+            if (this._avatarEditor)
             {
-                this._Str_1095.dispose();
-                this._Str_1095 = null;
+                this._avatarEditor.dispose();
+                this._avatarEditor = null;
             }
             if (this._Str_1952)
             {
@@ -146,9 +146,9 @@
             addChild(this._Str_845);
             this._Str_845.y = _Str_2052;
             this._Str_845.x = _Str_1707;
-            this._Str_1095 = new AvatarEditor(this);
-            this._Str_1095._Str_2039(this._Str_993);
-            this._Str_845.addChild(this._Str_1095);
+            this._avatarEditor = new AvatarEditor(this);
+            this._avatarEditor._Str_2039(this._Str_993);
+            this._Str_845.addChild(this._avatarEditor);
             this._Str_1952 = new Sprite();
             this._Str_1952.x = this._Str_1351;
             this._Str_1952.y = 95;
@@ -223,10 +223,10 @@
             {
                 this._Str_845.x = _Str_1707;
             }
-            if (this._Str_1095)
+            if (this._avatarEditor)
             {
-                this._Str_1095.x = _Str_1707;
-                this._Str_1351 = ((this._Str_1095.x + this._Str_1095.width) - 125);
+                this._avatarEditor.x = _Str_1707;
+                this._Str_1351 = ((this._avatarEditor.x + this._avatarEditor.width) - 125);
             }
             if (this._Str_1952)
             {
@@ -340,7 +340,7 @@
             }
             this._Str_1952.visible = true;
             this._Str_1952.x = this._Str_1351;
-            this._nameChangeDialog._Str_1663 = this._Str_1095.gender;
+            this._nameChangeDialog._Str_1663 = this._avatarEditor.gender;
             this._Str_1606();
             this._Str_1391();
         }
@@ -359,12 +359,12 @@
         public function _Str_943(k:Boolean=true):void
         {
             this._nameClaimed = k;
-            this._Str_1095._Str_943(k);
+            this._avatarEditor._Str_943(k);
         }
 
         public function _Str_909(k:Boolean):void
         {
-            this._Str_1095._Str_909(k);
+            this._avatarEditor._Str_909(k);
         }
 
         private function get _Str_1609():Boolean
@@ -378,8 +378,8 @@
             {
                 return;
             }
-            this._Str_1095.visible = false;
-            this._Str_1095._Str_2238(false);
+            this._avatarEditor.visible = false;
+            this._avatarEditor._Str_2238(false);
             this._Str_1952.visible = false;
             this._Str_1611.visible = true;
             this._roomPicker.init();
