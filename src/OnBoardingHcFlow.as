@@ -56,7 +56,7 @@
         private var _isFemale:Boolean;
         private var _textIntro:TextField;
         private var _debugText:TextField;
-        private var _Str_993:Boolean;
+        private var _showHcItems:Boolean;
         private var _Str_1351:int = 585;
         private var _Str_1884:int = 350;
 
@@ -147,7 +147,7 @@
             this._mainSprite.y = _Str_2052;
             this._mainSprite.x = _Str_1707;
             this._avatarEditor = new AvatarEditor(this);
-            this._avatarEditor._Str_2039(this._Str_993);
+            this._avatarEditor._Str_2039(this._showHcItems);
             this._mainSprite.addChild(this._avatarEditor);
             this._nameChangeContainer = new Sprite();
             this._nameChangeContainer.x = this._Str_1351;
@@ -176,7 +176,7 @@
 
         public function _Str_2031(k:Boolean):void
         {
-            this._Str_993 = k;
+            this._showHcItems = k;
         }
 
         private function _Str_1001(k:Event):void
