@@ -58,7 +58,7 @@
         private var _debugText:TextField;
         private var _showHcItems:Boolean;
         private var _nameAreaX:int = 585;
-        private var _Str_1884:int = 350;
+        private var _nameAreaWidth:int = 350;
 
         public function OnBoardingHcFlow()
         {
@@ -422,7 +422,7 @@
 
         public function _Str_2203():int
         {
-            return this._Str_1884;
+            return this._nameAreaWidth;
         }
     }
 }
