@@ -511,7 +511,7 @@
             this.showButton("move", _local_2);
             this.showButton("rotate", _local_3);
             this.showButton("use", _local_5);
-            this._Str_24537(_local_4);
+            this.showAdFurnitureDetails(_local_4);
             this._Str_22883((k.groupId > 0));
             this._Str_22377(k.isOwner, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout);
             this._Str_22365((k.stuffData.uniqueSerialNumber > 0), k.stuffData);
@@ -702,7 +702,7 @@
             return k;
         }
 
-        private function _Str_24537(k:Boolean):void
+        private function showAdFurnitureDetails(k:Boolean):void
         {
             var _local_6:IWindow;
             var _local_7:String;
