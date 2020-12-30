@@ -330,7 +330,7 @@
                     this._onBoardingHc = new OnBoardingHcFlow();
                     this._onBoardingHc.addEventListener(OnBoardingHcFlow.NEWUSERFLOWFINISHED, this.onNewUserReceptionFinished);
                     stage.addChild(this._onBoardingHc);
-                    this._onBoardingHc._Str_2031(this.showHcItemDuringOnboarding);
+                    this._onBoardingHc.setHcVisibility(this.showHcItemDuringOnboarding);
                     this._onBoardingHc.init(this.onboardingGoToPage);
                     this.updateLoadingBarProgress();
                     this.trackNewReceptionStep(STEP_NUX_ENTERED);

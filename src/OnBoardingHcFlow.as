@@ -174,7 +174,7 @@
             }
         }
 
-        public function _Str_2031(k:Boolean):void
+        public function setHcVisibility(k:Boolean):void
         {
             this._showHcItems = k;
         }
