@@ -46,7 +46,7 @@
         private var _roomPicker:RoomPicker;
         private var _disposed:Boolean;
         private var _avatarRenderer:IAvatarRenderManager;
-        private var _Str_1429:IContext;
+        private var _fakeContext:IContext;
         private var _Str_1018:Sprite;
         private var _Str_865:Boolean;
         private var _nameClaimed:Boolean;
@@ -76,10 +76,10 @@
                 this._avatarRenderer.dispose();
                 this._avatarRenderer = null;
             }
-            if (this._Str_1429)
+            if (this._fakeContext)
             {
-                this._Str_1429.dispose();
-                this._Str_1429 = null;
+                this._fakeContext.dispose();
+                this._fakeContext = null;
             }
             if (this._background)
             {
@@ -116,17 +116,17 @@
 
         private function _Str_1539():void
         {
-            this._Str_1429 = new FakeContext();
+            this._fakeContext = new FakeContext();
             var k:ByteArray = (new (HabboAvatarRenderLib.manifest)() as ByteArray);
             var _local_2:XML = new XML(k.readUTFBytes(k.length));
             var _local_3:XML = new XML("<manifest><library /></manifest>");
             _local_3.library.appendChild(_local_2.component.assets);
             var _local_4:IAssetLibrary = new AssetLibrary("_assetsTemp@", _local_3);
             _local_4.loadFromResource(_local_3, HabboAvatarRenderLib);
-            (this._Str_1429.assets as AssetLibraryCollection).addAssetLibrary(_local_4);
+            (this._fakeContext.assets as AssetLibraryCollection).addAssetLibrary(_local_4);
             k = (new (OnBoardingHcFlow._Str_2240)() as ByteArray);
             var _local_5:XML = new XML(k.readUTFBytes(k.length));
-            this._avatarRenderer = new AvatarRenderManager(this._Str_1429, 0, _local_4, true);
+            this._avatarRenderer = new AvatarRenderManager(this._fakeContext, 0, _local_4, true);
             this._avatarRenderer._Str_882(_local_5);
             this._avatarRenderer.mode = RenderMode.LOCAL_ONLY;
         }
