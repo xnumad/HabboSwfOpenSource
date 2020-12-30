@@ -55,7 +55,7 @@
         private var _selectedName:String;
         private var _isFemale:Boolean;
         private var _textIntro:TextField;
-        private var _Str_1809:TextField;
+        private var _debugText:TextField;
         private var _Str_993:Boolean;
         private var _Str_1351:int = 585;
         private var _Str_1884:int = 350;
