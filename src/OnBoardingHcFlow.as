@@ -40,7 +40,7 @@
 
         private var _background:Background;
         private var _avatarEditor:AvatarEditor;
-        private var _Str_1952:Sprite;
+        private var _nameChangeContainer:Sprite;
         private var _nameChangeDialog:NameChangeDialog;
         private var _Str_1611:Sprite;
         private var _roomPicker:RoomPicker;
@@ -92,9 +92,9 @@
                 this._avatarEditor.dispose();
                 this._avatarEditor = null;
             }
-            if (this._Str_1952)
+            if (this._nameChangeContainer)
             {
-                this._Str_1952 = null;
+                this._nameChangeContainer = null;
             }
             if (this._Str_1611 != null)
             {
@@ -149,11 +149,11 @@
             this._avatarEditor = new AvatarEditor(this);
             this._avatarEditor._Str_2039(this._Str_993);
             this._Str_845.addChild(this._avatarEditor);
-            this._Str_1952 = new Sprite();
-            this._Str_1952.x = this._Str_1351;
-            this._Str_1952.y = 95;
-            this._Str_1952.visible = true;
-            this._Str_845.addChild(this._Str_1952);
+            this._nameChangeContainer = new Sprite();
+            this._nameChangeContainer.x = this._Str_1351;
+            this._nameChangeContainer.y = 95;
+            this._nameChangeContainer.visible = true;
+            this._Str_845.addChild(this._nameChangeContainer);
             this._Str_1611 = new Sprite();
             this._Str_1611.x = 0;
             this._Str_1611.y = _Str_2052;
@@ -228,9 +228,9 @@
                 this._avatarEditor.x = _Str_1707;
                 this._Str_1351 = ((this._avatarEditor.x + this._avatarEditor.width) - 125);
             }
-            if (this._Str_1952)
+            if (this._nameChangeContainer)
             {
-                this._Str_1952.x = this._Str_1351;
+                this._nameChangeContainer.x = this._Str_1351;
             }
             this._Str_845.y = _Str_2052;
         }
@@ -317,7 +317,7 @@
 
         public function _Str_1171():void
         {
-            if (((!(this._nameChangeDialog == null)) && (this._Str_1952.visible)))
+            if (((!(this._nameChangeDialog == null)) && (this._nameChangeContainer.visible)))
             {
                 this._nameChangeDialog._Str_1171(this._Str_1885);
             }
@@ -332,14 +332,14 @@
         {
             if (!this._nameChangeDialog)
             {
-                this._nameChangeDialog = new HitchNameChangeDialog(this, this._Str_1952, this._Str_2203());
+                this._nameChangeDialog = new HitchNameChangeDialog(this, this._nameChangeContainer, this._Str_2203());
             }
             if (this._Str_1611)
             {
                 this._Str_1611.visible = false;
             }
-            this._Str_1952.visible = true;
-            this._Str_1952.x = this._Str_1351;
+            this._nameChangeContainer.visible = true;
+            this._nameChangeContainer.x = this._Str_1351;
             this._nameChangeDialog._Str_1663 = this._avatarEditor.gender;
             this._Str_1606();
             this._Str_1391();
@@ -380,7 +380,7 @@
             }
             this._avatarEditor.visible = false;
             this._avatarEditor._Str_2238(false);
-            this._Str_1952.visible = false;
+            this._nameChangeContainer.visible = false;
             this._Str_1611.visible = true;
             this._roomPicker.init();
             this._Str_1606();
