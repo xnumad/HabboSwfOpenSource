@@ -54,7 +54,7 @@
         private var _logoTopSprite:Sprite;
         private var _selectedName:String;
         private var _isFemale:Boolean;
-        private var _Str_2073:TextField;
+        private var _textIntro:TextField;
         private var _Str_1809:TextField;
         private var _Str_993:Boolean;
         private var _Str_1351:int = 585;
@@ -199,15 +199,15 @@
             {
                 this._roomPickerContainer.x = 0;
             }
-            if (!this._Str_2073)
+            if (!this._textIntro)
             {
-                this._Str_2073 = LoaderUI.createTextField("intro", 40, LoaderUI._Str_1545, false, true, false, false, TextFormatAlign.LEFT);
-                this._Str_2073.x = 185;
-                this._Str_2073.y = 45;
-                this._Str_2073.width = 500;
-                this._Str_2073.multiline = false;
-                this._Str_2073.thickness = 50;
-                this._logoTopSprite.addChild(this._Str_2073);
+                this._textIntro = LoaderUI.createTextField("intro", 40, LoaderUI._Str_1545, false, true, false, false, TextFormatAlign.LEFT);
+                this._textIntro.x = 185;
+                this._textIntro.y = 45;
+                this._textIntro.width = 500;
+                this._textIntro.multiline = false;
+                this._textIntro.thickness = 50;
+                this._logoTopSprite.addChild(this._textIntro);
             }
             var k:int = (this._mainSprite.width + 20);
             if (stage.stageWidth > k)
@@ -389,19 +389,19 @@
 
         public function _Str_1523():void
         {
-            if (this._Str_2073)
+            if (this._textIntro)
             {
-                this._Str_2073.width = 650;
-                this._Str_2073.htmlText = this.getString("onboarding.choose.your.room", "Choose your room");
+                this._textIntro.width = 650;
+                this._textIntro.htmlText = this.getString("onboarding.choose.your.room", "Choose your room");
             }
         }
 
         public function _Str_1391():void
         {
-            if (this._Str_2073)
+            if (this._textIntro)
             {
-                this._Str_2073.width = 650;
-                this._Str_2073.htmlText = this.getString("onboarding.choose.your.style", "My looks");
+                this._textIntro.width = 650;
+                this._textIntro.htmlText = this.getString("onboarding.choose.your.style", "My looks");
             }
         }
 
