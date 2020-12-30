@@ -14,7 +14,7 @@
         protected var _Str_10333:int = -1;
         protected var _Str_17448:int = -1;
         protected var _Str_16588:String = null;
-        protected var _Str_803:String = null;
+        protected var _background:String = null;
         protected var _Str_20337:String = null;
         protected var _Str_18917:* = null;
         protected var _backgroundImage:String = null;
@@ -224,18 +224,18 @@
 
         public function set background(k:String):void
         {
-            this._Str_803 = k;
+            this._background = k;
             this._Str_20337 = k;
         }
 
         public function get background():String
         {
-            return this._Str_803;
+            return this._background;
         }
 
         public function _Str_18749():Boolean
         {
-            return !(this._Str_803 == null);
+            return !(this._background == null);
         }
 
         public function set _Str_23263(k:Boolean):void
@@ -252,13 +252,13 @@
 
         public function _Str_11493():void
         {
-            this._Str_803 = "transparent";
+            this._background = "transparent";
             this._backgroundColor = "transparent";
         }
 
         public function _Str_12711():void
         {
-            this._Str_803 = this._Str_20337;
+            this._background = this._Str_20337;
             this._backgroundColor = this._Str_20596;
         }
 

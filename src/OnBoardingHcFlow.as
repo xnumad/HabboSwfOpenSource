@@ -38,7 +38,7 @@
         public static var _Str_2240:Class = OnBoardingHcFlow__Str_2240;
         private static const _Str_1278:Class = OnBoardingHcFlow__Str_1278;
 
-        private var _Str_803:Background;
+        private var _background:Background;
         private var _Str_1095:AvatarEditor;
         private var _Str_1952:Sprite;
         private var _nameChangeDialog:NameChangeDialog;
@@ -81,11 +81,11 @@
                 this._Str_1429.dispose();
                 this._Str_1429 = null;
             }
-            if (this._Str_803)
+            if (this._background)
             {
-                removeChild(this._Str_803);
-                this._Str_803.dispose();
-                this._Str_803 = null;
+                removeChild(this._background);
+                this._background.dispose();
+                this._background = null;
             }
             if (this._Str_1095)
             {
@@ -134,8 +134,8 @@
         public function init(k:String):void
         {
             stage.addEventListener(Event.RESIZE, this._Str_1001);
-            this._Str_803 = new Background();
-            addChild(this._Str_803);
+            this._background = new Background();
+            addChild(this._background);
             this._Str_1170 = new Sprite();
             addChild(this._Str_1170);
             var _local_2:Bitmap = new _Str_1278();
@@ -191,9 +191,9 @@
         private function _Str_1606():void
         {
             var _local_2:int;
-            if (this._Str_803 != null)
+            if (this._background != null)
             {
-                this._Str_803.resize();
+                this._background.resize();
             }
             if (this._Str_1611)
             {

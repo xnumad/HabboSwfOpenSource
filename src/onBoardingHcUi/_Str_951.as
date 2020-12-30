@@ -23,7 +23,7 @@
         private var _Str_1709:Boolean;
         private var _Str_603:Function;
         private var _Str_1239:uint;
-        private var _Str_803:Sprite;
+        private var _background:Sprite;
         private var _Str_2170:DisplayObject;
         private var _Str_1489:DisplayObject;
         private var _Str_1481:DisplayObject;
@@ -99,16 +99,16 @@
             {
                 removeChildAt(0);
             }
-            this._Str_803 = new Sprite();
-            this._Str_803.addChild(this._Str_2170);
-            this._Str_803.addChild(this._Str_1481);
-            this._Str_803.addChild(this._Str_1755);
-            this._Str_803.addChild(this._Str_1489);
+            this._background = new Sprite();
+            this._background.addChild(this._Str_2170);
+            this._background.addChild(this._Str_1481);
+            this._background.addChild(this._Str_1755);
+            this._background.addChild(this._Str_1489);
             if (this._Str_1268 != null)
             {
-                this._Str_803.addChild(this._Str_1268);
+                this._background.addChild(this._Str_1268);
             }
-            addChild(this._Str_803);
+            addChild(this._background);
             if (this._Str_622 != "")
             {
                 addChild(this._Str_848);
@@ -117,9 +117,9 @@
             }
             if (this.icon != null)
             {
-                this._Str_803.addChild(this.icon);
+                this._background.addChild(this.icon);
                 this.icon.x = 10;
-                this._icon.y = ((this._Str_803.height - this.icon.height) / 2);
+                this._icon.y = ((this._background.height - this.icon.height) / 2);
             }
             this.refresh();
             width = this._Str_873.width;
@@ -189,7 +189,7 @@
             var _local_2:int = 2;
             var _local_3:int = 3;
             var _local_4:int = 4;
-            if (this._Str_803 == null)
+            if (this._background == null)
             {
                 return;
             }
