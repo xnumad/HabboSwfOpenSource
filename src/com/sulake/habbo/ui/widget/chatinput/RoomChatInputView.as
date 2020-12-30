@@ -89,7 +89,7 @@
                 {
                     _local_3 = _local_2.getInteger("nux.noob.chat.reminder.delay", 240);
                     this._nuxIdleTimer = new Timer((_local_3 * 1000), 1);
-                    this._nuxIdleTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_16184);
+                    this._nuxIdleTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onNuxIdleTimerComplete);
                     this._nuxIdleTimer.start();
                 }
             }
@@ -155,7 +155,7 @@
             if (this._nuxIdleTimer != null)
             {
                 this._nuxIdleTimer.reset();
-                this._nuxIdleTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_16184);
+                this._nuxIdleTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onNuxIdleTimerComplete);
                 this._nuxIdleTimer = null;
             }
             if (this._nuxChatReminderTimer != null)
@@ -550,12 +550,12 @@
             this._Str_17137();
         }
 
-        private function _Str_16184(k:TimerEvent):void
+        private function onNuxIdleTimerComplete(k:TimerEvent):void
         {
             if (this._nuxIdleTimer != null)
             {
                 this._nuxIdleTimer.reset();
-                this._nuxIdleTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_16184);
+                this._nuxIdleTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onNuxIdleTimerComplete);
                 this._nuxIdleTimer = null;
             }
             this._Str_23223();
