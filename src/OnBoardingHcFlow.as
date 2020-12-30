@@ -47,7 +47,7 @@
         private var _disposed:Boolean;
         private var _avatarRenderer:IAvatarRenderManager;
         private var _fakeContext:IContext;
-        private var _Str_1018:Sprite;
+        private var _errorBalloon:Sprite;
         private var _Str_865:Boolean;
         private var _nameClaimed:Boolean;
         private var _Str_845:Sprite;
@@ -268,19 +268,19 @@
             var _local_2:TextField = LoaderUI.createTextField(k, 9, 0xFFFFFF, true);
             LoaderUI.addEtching(_local_2, true);
             var _local_3:Bitmap = LoaderUI.createBalloon((_local_2.width + 30), (_local_2.height + 17), -1, true, 11411485);
-            if (this._Str_1018)
+            if (this._errorBalloon)
             {
-                removeChild(this._Str_1018);
+                removeChild(this._errorBalloon);
             }
-            this._Str_1018 = new Sprite();
-            this._Str_1018.addChild(_local_3);
-            this._Str_1018.addChild(_local_2);
+            this._errorBalloon = new Sprite();
+            this._errorBalloon.addChild(_local_3);
+            this._errorBalloon.addChild(_local_2);
             _local_2.x = 15;
             _local_2.y = 14;
-            this._Str_845.addChild(this._Str_1018);
-            this._Str_1018.x = 766;
-            this._Str_1018.y = (541 + 36);
-            this._Str_1018.filters = [new GlowFilter(0, 0.24, 6, 6)];
+            this._Str_845.addChild(this._errorBalloon);
+            this._errorBalloon.x = 766;
+            this._errorBalloon.y = (541 + 36);
+            this._errorBalloon.filters = [new GlowFilter(0, 0.24, 6, 6)];
         }
 
         public function get _Str_1458():IAvatarRenderManager
