@@ -50,7 +50,7 @@
         private var _errorBalloon:Sprite;
         private var _hcMemeber:Boolean;
         private var _nameClaimed:Boolean;
-        private var _Str_845:Sprite;
+        private var _mainSprite:Sprite;
         private var _Str_1170:Sprite;
         private var _Str_2082:String;
         private var _Str_1885:Boolean;
@@ -100,10 +100,10 @@
             {
                 this._roomPickerContainer = null;
             }
-            if (this._Str_845 != null)
+            if (this._mainSprite != null)
             {
-                removeChild(this._Str_845);
-                this._Str_845 = null;
+                removeChild(this._mainSprite);
+                this._mainSprite = null;
             }
             stage.removeChild(this);
             this._disposed = true;
@@ -142,23 +142,23 @@
             _local_2.x = 40;
             _local_2.y = 40;
             this._Str_1170.addChild(_local_2);
-            this._Str_845 = new Sprite();
-            addChild(this._Str_845);
-            this._Str_845.y = _Str_2052;
-            this._Str_845.x = _Str_1707;
+            this._mainSprite = new Sprite();
+            addChild(this._mainSprite);
+            this._mainSprite.y = _Str_2052;
+            this._mainSprite.x = _Str_1707;
             this._avatarEditor = new AvatarEditor(this);
             this._avatarEditor._Str_2039(this._Str_993);
-            this._Str_845.addChild(this._avatarEditor);
+            this._mainSprite.addChild(this._avatarEditor);
             this._nameChangeContainer = new Sprite();
             this._nameChangeContainer.x = this._Str_1351;
             this._nameChangeContainer.y = 95;
             this._nameChangeContainer.visible = true;
-            this._Str_845.addChild(this._nameChangeContainer);
+            this._mainSprite.addChild(this._nameChangeContainer);
             this._roomPickerContainer = new Sprite();
             this._roomPickerContainer.x = 0;
             this._roomPickerContainer.y = _Str_2052;
             this._roomPickerContainer.visible = false;
-            this._Str_845.addChild(this._roomPickerContainer);
+            this._mainSprite.addChild(this._roomPickerContainer);
             if (this._Str_1609)
             {
                 this._roomPicker = new RoomPicker(this, this._roomPickerContainer);
@@ -209,7 +209,7 @@
                 this._Str_2073.thickness = 50;
                 this._Str_1170.addChild(this._Str_2073);
             }
-            var k:int = (this._Str_845.width + 20);
+            var k:int = (this._mainSprite.width + 20);
             if (stage.stageWidth > k)
             {
                 _local_2 = ((stage.stageWidth - k) / 2);
@@ -217,11 +217,11 @@
                 {
                     _local_2 = _Str_1707;
                 }
-                this._Str_845.x = _local_2;
+                this._mainSprite.x = _local_2;
             }
             else
             {
-                this._Str_845.x = _Str_1707;
+                this._mainSprite.x = _Str_1707;
             }
             if (this._avatarEditor)
             {
@@ -232,7 +232,7 @@
             {
                 this._nameChangeContainer.x = this._Str_1351;
             }
-            this._Str_845.y = _Str_2052;
+            this._mainSprite.y = _Str_2052;
         }
 
         public function getString(k:String, _arg_2:String):String
@@ -277,7 +277,7 @@
             this._errorBalloon.addChild(_local_2);
             _local_2.x = 15;
             _local_2.y = 14;
-            this._Str_845.addChild(this._errorBalloon);
+            this._mainSprite.addChild(this._errorBalloon);
             this._errorBalloon.x = 766;
             this._errorBalloon.y = (541 + 36);
             this._errorBalloon.filters = [new GlowFilter(0, 0.24, 6, 6)];
