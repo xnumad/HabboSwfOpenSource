@@ -53,7 +53,7 @@
         private var _mainSprite:Sprite;
         private var _logoTopSprite:Sprite;
         private var _selectedName:String;
-        private var _Str_1885:Boolean;
+        private var _isFemale:Boolean;
         private var _Str_2073:TextField;
         private var _Str_1809:TextField;
         private var _Str_993:Boolean;
@@ -295,7 +295,7 @@
 
         public function get _Str_2026():Boolean
         {
-            return this._Str_1885;
+            return this._isFemale;
         }
 
         public function _Str_931():void
@@ -319,7 +319,7 @@
         {
             if (((!(this._nameChangeDialog == null)) && (this._nameChangeContainer.visible)))
             {
-                this._nameChangeDialog._Str_1171(this._Str_1885);
+                this._nameChangeDialog._Str_1171(this._isFemale);
             }
             else
             {
@@ -348,12 +348,12 @@
         public function _Str_642(k:String, _arg_2:Boolean):void
         {
             this._selectedName = k;
-            this._Str_1885 = _arg_2;
+            this._isFemale = _arg_2;
         }
 
         public function _Str_1829(k:Boolean):void
         {
-            this._Str_1885 = k;
+            this._isFemale = k;
         }
 
         public function _Str_943(k:Boolean=true):void
