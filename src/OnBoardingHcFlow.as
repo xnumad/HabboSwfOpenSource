@@ -51,7 +51,7 @@
         private var _hcMemeber:Boolean;
         private var _nameClaimed:Boolean;
         private var _mainSprite:Sprite;
-        private var _Str_1170:Sprite;
+        private var _logoTopSprite:Sprite;
         private var _Str_2082:String;
         private var _Str_1885:Boolean;
         private var _Str_2073:TextField;
@@ -136,12 +136,12 @@
             stage.addEventListener(Event.RESIZE, this._Str_1001);
             this._background = new Background();
             addChild(this._background);
-            this._Str_1170 = new Sprite();
-            addChild(this._Str_1170);
+            this._logoTopSprite = new Sprite();
+            addChild(this._logoTopSprite);
             var _local_2:Bitmap = new _Str_1278();
             _local_2.x = 40;
             _local_2.y = 40;
-            this._Str_1170.addChild(_local_2);
+            this._logoTopSprite.addChild(_local_2);
             this._mainSprite = new Sprite();
             addChild(this._mainSprite);
             this._mainSprite.y = _Str_2052;
@@ -207,7 +207,7 @@
                 this._Str_2073.width = 500;
                 this._Str_2073.multiline = false;
                 this._Str_2073.thickness = 50;
-                this._Str_1170.addChild(this._Str_2073);
+                this._logoTopSprite.addChild(this._Str_2073);
             }
             var k:int = (this._mainSprite.width + 20);
             if (stage.stageWidth > k)
