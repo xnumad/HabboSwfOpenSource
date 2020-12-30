@@ -30,7 +30,7 @@
     {
         public static const NEWUSERFLOWFINISHED:String = "NewUserFlowFinished";
         private static const LOGO_AREA_HEIGHT:int = 95;
-        private static const _Str_1707:int = 5;
+        private static const MAIN_AREA_MARGIN:int = 5;
         public static var ubuntu_regular:Class = _Str_623;
         public static var ubuntu_bold:Class = _Str_596;
         public static var ubuntu_italic:Class = _Str_605;
@@ -145,7 +145,7 @@
             this._mainSprite = new Sprite();
             addChild(this._mainSprite);
             this._mainSprite.y = LOGO_AREA_HEIGHT;
-            this._mainSprite.x = _Str_1707;
+            this._mainSprite.x = MAIN_AREA_MARGIN;
             this._avatarEditor = new AvatarEditor(this);
             this._avatarEditor._Str_2039(this._showHcItems);
             this._mainSprite.addChild(this._avatarEditor);
@@ -213,19 +213,19 @@
             if (stage.stageWidth > k)
             {
                 _local_2 = ((stage.stageWidth - k) / 2);
-                if (_local_2 < _Str_1707)
+                if (_local_2 < MAIN_AREA_MARGIN)
                 {
-                    _local_2 = _Str_1707;
+                    _local_2 = MAIN_AREA_MARGIN;
                 }
                 this._mainSprite.x = _local_2;
             }
             else
             {
-                this._mainSprite.x = _Str_1707;
+                this._mainSprite.x = MAIN_AREA_MARGIN;
             }
             if (this._avatarEditor)
             {
-                this._avatarEditor.x = _Str_1707;
+                this._avatarEditor.x = MAIN_AREA_MARGIN;
                 this._nameAreaX = ((this._avatarEditor.x + this._avatarEditor.width) - 125);
             }
             if (this._nameChangeContainer)
