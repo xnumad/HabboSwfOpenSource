@@ -20,7 +20,7 @@
         private var _isGroupable:Boolean;
         private var _isRecyclable:Boolean;
         private var _tradable:Boolean;
-        private var _sellable:Boolean;
+        private var _isSellable:Boolean;
         private var _secondsToExpiration:int;
         private var _extra:int;
         private var _flatId:int;
@@ -41,7 +41,7 @@
             this._isRecyclable = k.readBoolean();
             this._tradable = k.readBoolean();
             this._isGroupable = k.readBoolean();
-            this._sellable = k.readBoolean();
+            this._isSellable = k.readBoolean();
             this._secondsToExpiration = k.readInteger();
             this._expirationTimeStamp = getTimer();
             if (this.secondsToExpiration > -1)
@@ -108,9 +108,9 @@
             return this._tradable;
         }
 
-        public function get sellable():Boolean
+        public function get isSellable():Boolean
         {
-            return this._sellable;
+            return this._isSellable;
         }
 
         public function get secondsToExpiration():int
