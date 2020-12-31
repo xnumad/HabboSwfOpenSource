@@ -485,7 +485,7 @@
             var k:IItemGridWindow = (this._view.findChildByName("item_grid") as IItemGridWindow);
             var _local_2:IItemListWindow = (this._view.findChildByName("item_grid_pages") as IItemListWindow);
             this._grid = new FurniGridView(k, _local_2);
-            this._Str_23939();
+            this.populateFilterOptions();
             this._buttonList = (this._view.findChildByName("preview_element_list") as IItemListWindow);
             this._placeInRoomButton = (this._buttonList.removeListItem(this._buttonList.getListItemByName("placeinroom_btn")) as IButtonWindow);
             this._extendRentPeriodButton = (this._buttonList.removeListItem(this._buttonList.getListItemByName("extendrent_btn")) as IButtonWindow);
@@ -801,7 +801,7 @@
             }
         }
 
-        private function _Str_23939():void
+        private function populateFilterOptions():void
         {
             var k:IDropMenuWindow = (this._view.findChildByName("filter.options") as IDropMenuWindow);
             var _local_2:Array = [];
