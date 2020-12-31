@@ -83,7 +83,7 @@
             }
             this._Str_7044();
             this.updatePreview(this._selectedGridItem);
-            this._Str_6511();
+            this.updateContainerVisibility();
         }
 
         public function _Str_12321(k:int):void
@@ -199,7 +199,7 @@
                 return;
             }
             this._currentState = _local_2;
-            this._Str_6511();
+            this.updateContainerVisibility();
             if (this._currentState == this._Str_4660)
             {
                 this._Str_7044();
@@ -324,7 +324,7 @@
             this.placePetToRoom(_local_2.id);
         }
 
-        private function _Str_6511():void
+        private function updateContainerVisibility():void
         {
             if (this._model.controller._Str_9777 != InventoryCategory.PETS)
             {

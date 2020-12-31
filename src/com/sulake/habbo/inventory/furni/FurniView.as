@@ -179,7 +179,7 @@
                 return;
             }
             this._currentState = k;
-            this._Str_6511();
+            this.updateContainerVisibility();
         }
 
         public function _Str_22617():void
@@ -218,7 +218,7 @@
             {
                 return;
             }
-            this._Str_6511();
+            this.updateContainerVisibility();
             var k:Boolean;
             var _local_6:GroupItem = this._model._Str_3968();
             if (((!(_local_6 == null)) && (!(_local_6._Str_3205() == null))))
@@ -611,7 +611,7 @@
             this._buttonList.removeListItem(this._sellInMarketplaceButton);
         }
 
-        private function _Str_6511():void
+        private function updateContainerVisibility():void
         {
             if (!this._isInitialized)
             {
