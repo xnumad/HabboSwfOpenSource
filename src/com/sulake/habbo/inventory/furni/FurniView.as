@@ -545,14 +545,14 @@
             {
                 _local_6 = false;
             }
-            this._Str_6690(this._placeInRoomButton, ((!(_local_2)) && (_local_8)));
-            this._Str_6690(this._extendRentPeriodButton, ((!(_local_2)) && (_local_10)));
-            this._Str_6690(this._buyRentedItemButton, ((!(_local_2)) && (_local_11)));
-            this._Str_6690(this._gotoRoomButton, ((!(_local_2)) && (_local_9)));
-            this._Str_6690(this._offerInTradingCountButton, ((_local_2) && (this._model.controller.getBoolean("multi.item.trading.enabled"))));
-            this._Str_6690(this._offerInTradingButton, _local_2);
-            this._Str_6690(this._sellInMarketplaceButton, _local_6);
-            this._Str_6690(this._useFurnitureButton, _local_7);
+            this.updateButtonAvailability(this._placeInRoomButton, ((!(_local_2)) && (_local_8)));
+            this.updateButtonAvailability(this._extendRentPeriodButton, ((!(_local_2)) && (_local_10)));
+            this.updateButtonAvailability(this._buyRentedItemButton, ((!(_local_2)) && (_local_11)));
+            this.updateButtonAvailability(this._gotoRoomButton, ((!(_local_2)) && (_local_9)));
+            this.updateButtonAvailability(this._offerInTradingCountButton, ((_local_2) && (this._model.controller.getBoolean("multi.item.trading.enabled"))));
+            this.updateButtonAvailability(this._offerInTradingButton, _local_2);
+            this.updateButtonAvailability(this._sellInMarketplaceButton, _local_6);
+            this.updateButtonAvailability(this._useFurnitureButton, _local_7);
             if (((k) && (this._model.isPrivateRoom)))
             {
                 this._placeInRoomButton.enable();
@@ -581,7 +581,7 @@
             }
         }
 
-        private function _Str_6690(k:IInteractiveWindow, _arg_2:Boolean):void
+        private function updateButtonAvailability(k:IInteractiveWindow, _arg_2:Boolean):void
         {
             if (this._buttonList.getListItemByName(k.name) == null)
             {
