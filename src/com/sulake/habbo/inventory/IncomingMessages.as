@@ -139,7 +139,7 @@
             this._com.addHabboConnectionMessageEvent(new OpenConnectionMessageEvent(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new MarketplaceCanMakeOfferResult(this._Str_25747));
             this._com.addHabboConnectionMessageEvent(new TradingOtherNotAllowedEvent(this._Str_22530, TradingOtherNotAllowedParser));
-            this._com.addHabboConnectionMessageEvent(new FurniListEvent(this._Str_25001));
+            this._com.addHabboConnectionMessageEvent(new FurniListEvent(this.onFurniList));
             this._com.addHabboConnectionMessageEvent(new TradingAcceptEvent(this._Str_23770, TradingAcceptParser));
             this._com.addHabboConnectionMessageEvent(new AchievementsScoreEvent(this._Str_18065));
             this._com.addHabboConnectionMessageEvent(new PetAddedToInventoryEvent(this._Str_23427));
@@ -176,7 +176,7 @@
             this._com = null;
         }
 
-        public function _Str_25001(k:FurniListEvent):void
+        public function onFurniList(k:FurniListEvent):void
         {
             var _local_2:FurniListParser = k.getParser();
             if (_local_2 == null)
