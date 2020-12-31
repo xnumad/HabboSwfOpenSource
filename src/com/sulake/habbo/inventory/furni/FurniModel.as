@@ -1333,7 +1333,7 @@
                 {
                     this._view._Str_7221();
                 }
-                this._view._Str_19739();
+                this._view.updateRentedItem();
                 this._imageUpdateCumulativeTime = 0;
             }
         }

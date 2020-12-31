@@ -404,7 +404,7 @@
                     _local_8.text = "";
                 }
             }
-            this._Str_19739();
+            this.updateRentedItem();
         }
 
         public function _Str_12834(k:GroupItem):void
@@ -823,7 +823,7 @@
             this._view.invalidate();
         }
 
-        public function _Str_19739():void
+        public function updateRentedItem():void
         {
             var k:GroupItem = this._model._Str_3968();
             var _local_2:FurnitureItem;
