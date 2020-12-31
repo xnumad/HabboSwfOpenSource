@@ -152,7 +152,7 @@
             {
                 return null;
             }
-            this._Str_20866(false);
+            this.updateActionButtons(false);
             return this._view;
         }
 
@@ -368,7 +368,7 @@
                 }
             }
             var _local_7:Boolean = this._model._Str_7553;
-            this._Str_20866(k);
+            this.updateActionButtons(k);
             if (((_local_6) && (_local_2)))
             {
                 this._view.findChildByName("furni_name").caption = _local_6.name;
@@ -509,7 +509,7 @@
             _local_2.roomPreviewer.modifyRoomCanvas(k.width, k.height);
         }
 
-        private function _Str_20866(k:Boolean):void
+        private function updateActionButtons(k:Boolean):void
         {
             if (this._model._Str_7553)
             {
