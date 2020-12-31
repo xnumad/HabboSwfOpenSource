@@ -212,7 +212,7 @@
             return this._thumbWindowTemplates[k].clone();
         }
 
-        public function _Str_24428(k:Map):void
+        public function insertFurniture(k:Map):void
         {
             var _local_2:FurnitureItem;
             var _local_3:FurniData;

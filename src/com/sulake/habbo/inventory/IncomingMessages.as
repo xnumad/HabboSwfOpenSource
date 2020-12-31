@@ -203,7 +203,7 @@
             {
                 return;
             }
-            _local_3._Str_24428(_local_5);
+            _local_3.insertFurniture(_local_5);
             this._furniMsgFragments = null;
             this._inventory.events.dispatchEvent(new HabboInventoryFurniListParsedEvent(InventoryCategory.FURNI));
         }
