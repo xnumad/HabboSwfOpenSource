@@ -670,7 +670,7 @@
             }
         }
 
-        private function _Str_25193():void
+        private function showNextPreviewItem():void
         {
             this._model._Str_3968()._Str_4405++;
             this._Str_2944();
@@ -697,7 +697,7 @@
                         }
                         break;
                     case "nextItemButton":
-                        this._Str_25193();
+                        this.showNextPreviewItem();
                         break;
                     case "viewItemButton":
                         _local_3 = this._model._Str_3968();
