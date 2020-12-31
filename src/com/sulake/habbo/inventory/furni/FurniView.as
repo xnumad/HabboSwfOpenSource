@@ -515,7 +515,7 @@
             {
                 this._Str_24626();
             }
-            this._parser0();
+            this.removeButtons();
             var _local_2:Boolean = this._model._Str_7553;
             var _local_3:GroupItem = this._model._Str_3968();
             var _local_4:FurnitureItem;
@@ -599,7 +599,7 @@
             }
         }
 
-        private function _parser0():void
+        private function removeButtons():void
         {
             this._buttonList.removeListItem(this._placeInRoomButton);
             this._buttonList.removeListItem(this._extendRentPeriodButton);
