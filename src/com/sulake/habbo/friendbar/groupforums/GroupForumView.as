@@ -418,7 +418,7 @@
             {
                 if (this._threadListView != null)
                 {
-                    this._controller._Str_14770(this._forumData.groupId, _local_2);
+                    this._controller.requestThreadList(this._forumData.groupId, _local_2);
                 }
                 else
                 {
@@ -459,7 +459,7 @@
                 case "back_button":
                     if (this._messageListView != null)
                     {
-                        this._controller._Str_14770(this._forumData.groupId, this._threadsListData.startIndex);
+                        this._controller.requestThreadList(this._forumData.groupId, this._threadsListData.startIndex);
                     }
                     else
                     {

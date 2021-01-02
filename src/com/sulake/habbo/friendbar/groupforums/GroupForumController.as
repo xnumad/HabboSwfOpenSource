@@ -222,7 +222,7 @@
                 return;
             }
             this.initForum(k);
-            this._Str_14770(k, 0);
+            this.requestThreadList(k, 0);
         }
 
         public function get linkPattern():String
@@ -361,7 +361,7 @@
             this._lastReadMessageId = _local_2._Str_12786;
         }
 
-        public function _Str_14770(k:int, _arg_2:int):void
+        public function requestThreadList(k:int, _arg_2:int):void
         {
             if (this._communicationManager)
             {
@@ -469,7 +469,7 @@
             {
                 return;
             }
-            this._Str_14770(this._forumData.groupId, 0);
+            this.requestThreadList(this._forumData.groupId, 0);
         }
 
         public function _Str_24484(k:int, _arg_2:int, _arg_3:String):void
