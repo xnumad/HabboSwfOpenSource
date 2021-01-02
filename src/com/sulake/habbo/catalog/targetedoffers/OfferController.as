@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferNotFoundEvent;
     import com.sulake.habbo.catalog.purse.PurseUpdateEvent;
-    import com.sulake.habbo.communication.messages.outgoing.catalog.GetTargetedOfferComposer;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.GetNextTargetedOfferComposer;
     import com.sulake.habbo.communication.messages.parser.catalog.TargetedOfferParser;
     import com.sulake.habbo.catalog.targetedoffers.data.TargetedOffer;
     import com.sulake.habbo.communication.enum.TargetedOfferTrackingStateEnum;
@@ -62,7 +62,7 @@
 
         public function productDataReady():void
         {
-            this._catalog.connection.send(new GetTargetedOfferComposer());
+            this._catalog.connection.send(new GetNextTargetedOfferComposer());
         }
 
         private function _Str_25111(k:TargetedOfferEvent):void

@@ -650,14 +650,14 @@
 	import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubQueryFurniCountMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetGiftWrappingConfigurationComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RedeemVoucherMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog.GetTargetedOfferComposer;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetNextTargetedOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceRoomItemMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetSellablePetPalettesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetIsOfferGiftableComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.RoomAdPurchaseInitiatedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetDirectClubBuyAvailableComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetHabboBasicMembershipExtendOfferComposer;
-	import com.sulake.habbo.communication.messages.outgoing.catalog.GetNextTargetedOfferComposer;
+	import com.sulake.habbo.communication.messages.outgoing.catalog.GetTargetedOfferComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageExpirationComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.ShopTargetedOfferViewedComposer;
 	import com.sulake.habbo.communication.messages.outgoing.catalog.SetTargetedOfferStateComposer;
@@ -1713,7 +1713,7 @@
             OUTGOING_PACKETS[2468] = UpdateRoomThumbnailMessageComposer;
             OUTGOING_PACKETS[248] = MoveObjectMessageComposer;
             OUTGOING_PACKETS[2486] = GetDailyQuestMessageComposer;
-            OUTGOING_PACKETS[2487] = GetTargetedOfferComposer;
+            OUTGOING_PACKETS[2487] = GetNextTargetedOfferComposer;
             OUTGOING_PACKETS[249] = NewNavigatorSearchComposer;
             OUTGOING_PACKETS[2490] = UniqueIDMessageComposer;
             OUTGOING_PACKETS[2492] = CallForHelpFromPhotoMessageComposer;
@@ -1940,7 +1940,7 @@
             OUTGOING_PACKETS[534] = CallForHelpFromForumThreadMessageComposer;
             OUTGOING_PACKETS[549] = PetSelectedMessageComposer;
             OUTGOING_PACKETS[593] = KickMemberMessageComposer;
-            OUTGOING_PACKETS[596] = GetNextTargetedOfferComposer;
+            OUTGOING_PACKETS[596] = GetTargetedOfferComposer;
             OUTGOING_PACKETS[603] = GetHabboBasicMembershipExtendOfferComposer;
             OUTGOING_PACKETS[633] = GetCraftableProductsComposer;
             OUTGOING_PACKETS[637] = NavigatorRemoveCollapsedCategoryMessageComposer;

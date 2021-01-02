@@ -6,11 +6,10 @@
     {
         private var _array:Array;
 
-        public function GetNextTargetedOfferComposer(k:int)
+        public function GetNextTargetedOfferComposer()
         {
             this._array = [];
             super();
-            this._array.push(k);
         }
 
         public function getMessageArray():Array
