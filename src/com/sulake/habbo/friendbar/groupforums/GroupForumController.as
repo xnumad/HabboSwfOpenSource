@@ -37,11 +37,11 @@
     import com.sulake.habbo.communication.messages.incoming.groupforums.UnreadForumsCountMessageEvent;
     import flash.events.TimerEvent;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadsMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumsListMessageComposer;
     import com.sulake.habbo.communication.messages.parser.groupforums.GetForumsListMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumStatsMessageComposer;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumsListMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadsMessageComposer;
     import com.sulake.habbo.communication.messages.parser.groupforums.GuildForumThreadsParser;
     import com.sulake.habbo.communication.messages.outgoing.groupforums.GetMessagesMessageComposer;
     import com.sulake.habbo.communication.messages.parser.groupforums.MessageData;
@@ -298,7 +298,7 @@
             this._Str_13365();
             this._requestedForumsListCode = k;
             this._requestedGroupID = NO_ID;
-            this._communicationManager.connection.send(new GetThreadsMessageComposer(k, _arg_2, ThreadsListData.PAGE_SIZE));
+            this._communicationManager.connection.send(new GetForumsListMessageComposer(k, _arg_2, ThreadsListData.PAGE_SIZE));
         }
 
         private function _Str_22851(k:ForumsListMessageEvent):void
@@ -365,7 +365,7 @@
         {
             if (this._communicationManager)
             {
-                this._communicationManager.connection.send(new GetForumsListMessageComposer(k, _arg_2, ThreadsListData.PAGE_SIZE));
+                this._communicationManager.connection.send(new GetThreadsMessageComposer(k, _arg_2, ThreadsListData.PAGE_SIZE));
             }
         }
 
@@ -771,7 +771,7 @@
         {
             if (this._mainView != null)
             {
-                this._communicationManager.connection.send(new GetThreadsMessageComposer(FORUMS_LIST_CODE_MY_FORUMS, 0, ThreadsListData.PAGE_SIZE));
+                this._communicationManager.connection.send(new GetForumsListMessageComposer(FORUMS_LIST_CODE_MY_FORUMS, 0, ThreadsListData.PAGE_SIZE));
             }
             else
             {

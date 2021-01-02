@@ -58,12 +58,12 @@
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateForumReadMarkerMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateThreadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumStatsMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumsListMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetUnreadForumsCountMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.UpdateForumSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateThreadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.ModerateMessageMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadsMessageComposer;
+	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetForumsListMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.PostMessageMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetThreadMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.groupforums.GetMessagesMessageComposer;
@@ -1930,7 +1930,7 @@
             OUTGOING_PACKETS[418] = GetGiftWrappingConfigurationComposer;
             OUTGOING_PACKETS[433] = CompetitionRoomsSearchMessageComposer;
             OUTGOING_PACKETS[434] = CancelMarketplaceOfferMessageComposer;
-            OUTGOING_PACKETS[436] = GetForumsListMessageComposer;
+            OUTGOING_PACKETS[436] = GetThreadsMessageComposer;
             OUTGOING_PACKETS[462] = BuildersClubPlaceWallItemMessageComposer;
             OUTGOING_PACKETS[477] = GuideSessionFeedbackMessageComposer;
             OUTGOING_PACKETS[487] = GetClubGiftInfo;
@@ -1971,7 +1971,7 @@
             OUTGOING_PACKETS[865] = ForwardToRandomCompetitionRoomMessageComposer;
             OUTGOING_PACKETS[869] = ScrGetKickbackInfoMessageComposer;
             OUTGOING_PACKETS[872] = RentableSpaceStatusMessageComposer;
-            OUTGOING_PACKETS[873] = GetThreadsMessageComposer;
+            OUTGOING_PACKETS[873] = GetForumsListMessageComposer;
             OUTGOING_PACKETS[875] = UpdateFloorPropertiesMessageComposer;
             OUTGOING_PACKETS[882] = ApproveAllMembershipRequestsMessageComposer;
             OUTGOING_PACKETS[887] = GuideSessionResolvedMessageComposer;

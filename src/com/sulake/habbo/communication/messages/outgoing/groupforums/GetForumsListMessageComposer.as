@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class GetForumsListMessageComposer implements IMessageComposer, IDisposable 
+    public class GetForumsListMessageComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
