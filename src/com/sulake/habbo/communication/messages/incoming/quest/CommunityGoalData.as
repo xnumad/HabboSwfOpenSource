@@ -14,11 +14,11 @@
         private var _percentCompletionTowardsNextLevel:int;
         private var _goalCode:String;
         private var _timeRemainingInSeconds:int;
-        private var _Str_12198:Array;
+        private var _rewardUserLimits:Array;
 
         public function CommunityGoalData(k:IMessageDataWrapper):void
         {
-            this._Str_12198 = [];
+            this._rewardUserLimits = [];
             super();
             this._hasGoalExpired = k.readBoolean();
             this._personalContributionScore = k.readInteger();
@@ -33,19 +33,19 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_12198.push(k.readInteger());
+                this._rewardUserLimits.push(k.readInteger());
                 _local_3++;
             }
         }
 
         public function dispose():void
         {
-            this._Str_12198 = null;
+            this._rewardUserLimits = null;
         }
 
         public function get disposed():Boolean
         {
-            return this._Str_12198 == null;
+            return this._rewardUserLimits == null;
         }
 
         public function get _Str_13028():Boolean
@@ -90,7 +90,7 @@
 
         public function get _Str_20155():Array
         {
-            return this._Str_12198;
+            return this._rewardUserLimits;
         }
 
         public function get goalCode():String
