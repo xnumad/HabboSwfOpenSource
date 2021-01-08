@@ -8,7 +8,7 @@
         private var _hasGoalExpired:Boolean;
         private var _personalContributionScore:int;
         private var _personalContributionRank:int;
-        private var _Str_19093:int;
+        private var _communityTotalScore:int;
         private var _communityHighestAchievedLevel:int;
         private var _scoreRemainingUntilNextLevel:int;
         private var _percentCompletionTowardsNextLevel:int;
@@ -23,7 +23,7 @@
             this._hasGoalExpired = k.readBoolean();
             this._personalContributionScore = k.readInteger();
             this._personalContributionRank = k.readInteger();
-            this._Str_19093 = k.readInteger();
+            this._communityTotalScore = k.readInteger();
             this._communityHighestAchievedLevel = k.readInteger();
             this._scoreRemainingUntilNextLevel = k.readInteger();
             this._percentCompletionTowardsNextLevel = k.readInteger();
@@ -65,7 +65,7 @@
 
         public function get _Str_12030():int
         {
-            return this._Str_19093;
+            return this._communityTotalScore;
         }
 
         public function get communityHighestAchievedLevel():int
