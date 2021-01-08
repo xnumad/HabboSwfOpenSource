@@ -5,14 +5,14 @@
 
     public class CommunityGoalHallOfFameData implements IDisposable 
     {
-        private var _Str_3087:String;
+        private var _goalCode:String;
         private var _hof:Array;
 
         public function CommunityGoalHallOfFameData(k:IMessageDataWrapper):void
         {
             this._hof = [];
             super();
-            this._Str_3087 = k.readString();
+            this._goalCode = k.readString();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
@@ -39,7 +39,7 @@
 
         public function get goalCode():String
         {
-            return this._Str_3087;
+            return this._goalCode;
         }
     }
 }

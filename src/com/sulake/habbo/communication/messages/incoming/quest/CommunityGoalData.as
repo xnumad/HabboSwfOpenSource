@@ -12,7 +12,7 @@
         private var _communityHighestAchievedLevel:int;
         private var _scoreRemainingUntilNextLevel:int;
         private var _percentCompletionTowardsNextLevel:int;
-        private var _Str_3087:String;
+        private var _goalCode:String;
         private var _Str_19794:int;
         private var _Str_12198:Array;
 
@@ -27,7 +27,7 @@
             this._communityHighestAchievedLevel = k.readInteger();
             this._scoreRemainingUntilNextLevel = k.readInteger();
             this._percentCompletionTowardsNextLevel = k.readInteger();
-            this._Str_3087 = k.readString();
+            this._goalCode = k.readString();
             this._Str_19794 = k.readInteger();
             var _local_2:int = k.readInteger();
             var _local_3:int;
@@ -95,7 +95,7 @@
 
         public function get goalCode():String
         {
-            return this._Str_3087;
+            return this._goalCode;
         }
     }
 }
