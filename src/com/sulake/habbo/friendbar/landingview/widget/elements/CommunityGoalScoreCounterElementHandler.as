@@ -15,7 +15,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
     import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
-    import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgress;
+    import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalData;
 
     public class CommunityGoalScoreCounterElementHandler implements IElementHandler, IDisposable, IFloatingElement, ILayoutNameProvider, IDisableAwareElement 
     {
@@ -93,7 +93,7 @@
 
         private function onCommunityGoalProgress(k:CommunityGoalProgressMessageEvent):void
         {
-            var _local_2:CommunityGoalProgress;
+            var _local_2:CommunityGoalData;
             var _local_3:IWidgetWindow;
             var _local_4:_Str_5046;
             if (this._landingView)

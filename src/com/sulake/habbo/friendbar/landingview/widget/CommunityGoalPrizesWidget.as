@@ -4,7 +4,7 @@
     import com.sulake.habbo.friendbar.landingview.interfaces.ISettingsAwareWidget;
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgress;
+    import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalData;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgressMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
@@ -20,7 +20,7 @@
     {
         private var _landingView:HabboLandingView;
         private var _container:IWindowContainer;
-        private var _data:CommunityGoalProgress;
+        private var _data:CommunityGoalData;
         private var _figure:String;
 
         public function CommunityGoalPrizesWidget(k:HabboLandingView)

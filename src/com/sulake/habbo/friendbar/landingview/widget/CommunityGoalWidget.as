@@ -6,7 +6,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
-    import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgress;
+    import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalData;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgressMessageEvent;
@@ -29,7 +29,7 @@
         protected var _landingView:HabboLandingView;
         protected var _communityGoalContainer:IWindowContainer;
         private var _meterNeedle:IStaticBitmapWrapperWindow;
-        protected var _communityProgress:CommunityGoalProgress;
+        protected var _communityProgress:CommunityGoalData;
         private var _communityProgressRequested:Boolean = false;
         private var _buildupDelay:Number = 0;
         private var _buildupProgress:Number = 0;
@@ -243,7 +243,7 @@
             WidgetContainerLayout.applyCommonWidgetSettings(this._communityGoalContainer, k);
         }
 
-        protected function get communityProgress():CommunityGoalProgress
+        protected function get communityProgress():CommunityGoalData
         {
             return this._communityProgress;
         }

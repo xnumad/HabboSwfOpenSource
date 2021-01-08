@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class CommunityGoalProgress implements IDisposable 
+    public class CommunityGoalData implements IDisposable
     {
         private var _Str_20278:Boolean;
         private var _personalContributionScore:int;
@@ -16,7 +16,7 @@
         private var _Str_19794:int;
         private var _Str_12198:Array;
 
-        public function CommunityGoalProgress(k:IMessageDataWrapper):void
+        public function CommunityGoalData(k:IMessageDataWrapper):void
         {
             this._Str_12198 = [];
             super();

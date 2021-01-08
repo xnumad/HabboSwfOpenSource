@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
     import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
-    import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgress;
+    import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalData;
 
     public class CommunityGoalTimerElementHandler extends AbstractTimerElementHandler 
     {
@@ -22,7 +22,7 @@
 
         private function onCommunityGoalProgress(k:CommunityGoalProgressMessageEvent):void
         {
-            var _local_2:CommunityGoalProgress = k.getParser().data;
+            var _local_2:CommunityGoalData = k.getParser().data;
             _Str_14169(((_local_2._Str_13028) ? 0 : _local_2._Str_24637));
         }
     }
