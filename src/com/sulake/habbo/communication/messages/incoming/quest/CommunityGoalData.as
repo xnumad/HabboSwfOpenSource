@@ -5,7 +5,7 @@
 
     public class CommunityGoalData implements IDisposable
     {
-        private var _Str_20278:Boolean;
+        private var _hasGoalExpired:Boolean;
         private var _personalContributionScore:int;
         private var _Str_22026:int;
         private var _Str_19093:int;
@@ -20,7 +20,7 @@
         {
             this._Str_12198 = [];
             super();
-            this._Str_20278 = k.readBoolean();
+            this._hasGoalExpired = k.readBoolean();
             this._personalContributionScore = k.readInteger();
             this._Str_22026 = k.readInteger();
             this._Str_19093 = k.readInteger();
@@ -50,7 +50,7 @@
 
         public function get _Str_13028():Boolean
         {
-            return this._Str_20278;
+            return this._hasGoalExpired;
         }
 
         public function get personalContributionScore():int
