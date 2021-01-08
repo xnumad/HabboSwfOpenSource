@@ -13,7 +13,7 @@
         private var _scoreRemainingUntilNextLevel:int;
         private var _percentCompletionTowardsNextLevel:int;
         private var _goalCode:String;
-        private var _Str_19794:int;
+        private var _timeRemainingInSeconds:int;
         private var _Str_12198:Array;
 
         public function CommunityGoalData(k:IMessageDataWrapper):void
@@ -28,7 +28,7 @@
             this._scoreRemainingUntilNextLevel = k.readInteger();
             this._percentCompletionTowardsNextLevel = k.readInteger();
             this._goalCode = k.readString();
-            this._Str_19794 = k.readInteger();
+            this._timeRemainingInSeconds = k.readInteger();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
@@ -85,7 +85,7 @@
 
         public function get _Str_24637():int
         {
-            return this._Str_19794;
+            return this._timeRemainingInSeconds;
         }
 
         public function get _Str_20155():Array
